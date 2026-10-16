@@ -1,0 +1,39 @@
+# Gradle
+.gradle/
+build/
+!gradle/wrapper/gradle-wrapper.jar
+
+# IDE
+.idea/
+*.iml
+*.ipr
+*.iws
+captures/
+.DS_Store
+*.prof
+
+# Android
+local.properties
+*.apk
+!debug/*.apk
+*.aab
+
+# Environment / locales
+.cxx/
+.jdk/
+/out/
+/native-builds/
+
+# Logs y crashes de Gradle
+**/hs_err_pid*.log
+**/replay_pid*.log
+
+# Modelos de audio (se descargan en build/CI, nunca se commitean)
+models/
+!models/manifest.json
+
+# Certificados y secretos
+*.jks
+*.keystore
+*.properties
+!gradle.properties
