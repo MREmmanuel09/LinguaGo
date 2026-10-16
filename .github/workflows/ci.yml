@@ -30,6 +30,11 @@ jobs:
 
       - name: Setup Android SDK
         uses: android-actions/setup-android@v3
+        with:
+          accept-android-sdk-licenses: true
+          # `tools` ya no existe en el repository.xml moderno y hace fallar el
+          # paso; platform-tools viene preinstalado en el runner.
+          packages: platform-tools
 
       - name: Setup Gradle (cache)
         uses: gradle/actions/setup-gradle@v4
