@@ -19,14 +19,14 @@
                 {
                   "type": "KanaChoose",
                   "id": "es-ja-e1",
-                  "kana": "�‚",
+                  "kana": "あ",
                   "romajiOptions": ["u", "a", "e"],
                   "correctRomaji": "a"
                 },
                 {
                   "type": "KanaChoose",
                   "id": "es-ja-e2",
-                  "kana": "�„",
+                  "kana": "い",
                   "romajiOptions": ["i", "e", "a"],
                   "correctRomaji": "i"
                 },
@@ -40,23 +40,23 @@
                 {
                   "type": "ListenChoose",
                   "id": "es-ja-e4",
-                  "audioText": "�‚",
-                  "options": ["�‚", "�„", "�†"],
+                  "audioText": "あ",
+                  "options": ["あ", "い", "う"],
                   "correctIndex": 0
                 },
                 {
                   "type": "MatchPairs",
                   "id": "es-ja-e5",
                   "pairs": [
-                    {"left": "�‹", "right": "ka"},
+                    {"left": "か", "right": "ka"},
                     {"left": "き", "right": "ki"}
                   ]
                 },
                 {
                   "type": "ListenType",
                   "id": "es-ja-e6",
-                  "transcription": "�‚�„",
-                  "audioText": "�‚�„"
+                  "transcription": "あい",
+                  "audioText": "あい"
                 }
               ]
             },
@@ -67,45 +67,45 @@
                 {
                   "type": "KanjiReading",
                   "id": "es-ja-e7",
-                  "kanji": "人",
-                  "readingOptions": ["ひと", "�„ぬ", "ね�“"],
-                  "correctReading": "ひと"
+                  "kanji": "山",
+                  "readingOptions": ["やま", "かわ", "そら"],
+                  "correctReading": "やま"
                 },
                 {
                   "type": "KanjiReading",
                   "id": "es-ja-e8",
-                  "kanji": "�—�",
-                  "readingOptions": ["にち", "ほ�‚“", "�‚†き"],
-                  "correctReading": "にち"
+                  "kanji": "水",
+                  "readingOptions": ["みず", "かぜ", "つき"],
+                  "correctReading": "みず"
                 },
                 {
                   "type": "ParticleFill",
                   "id": "es-ja-e9",
-                  "sentenceTemplate": "�‚��Ÿ�—_�š社�“�で�™�€‚",
-                  "particles": ["は", "�Œ", "�‚’"],
+                  "sentenceTemplate": "わたし _ がくせいです",
+                  "particles": ["は", "を", "に"],
                   "correctParticle": "は"
                 },
                 {
                   "type": "ParticleFill",
                   "id": "es-ja-e10",
-                  "sentenceTemplate": "�‚Š�‚“�”_�Ÿべま�™�€‚",
-                  "particles": ["�‚’", "に", "�Œ"],
-                  "correctParticle": "�‚’"
+                  "sentenceTemplate": "りんご _ たべます",
+                  "particles": ["を", "は", "が"],
+                  "correctParticle": "を"
                 },
                 {
                   "type": "MatchPairs",
                   "id": "es-ja-e11",
                   "pairs": [
-                    {"left": "なま�ˆ", "right": "nombre"},
-                    {"left": "て�‚“き", "right": "clima"},
-                    {"left": "�‚Š�‚“�”", "right": "manzana"}
+                    {"left": "名前", "right": "nombre"},
+                    {"left": "天気", "right": "clima"},
+                    {"left": "りんご", "right": "manzana"}
                   ]
                 },
                 {
                   "type": "ListenType",
                   "id": "es-ja-e12",
-                  "transcription": "は�„",
-                  "audioText": "は�„"
+                  "transcription": "みず",
+                  "audioText": "みず"
                 }
               ]
             }
