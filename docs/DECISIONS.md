@@ -5,6 +5,29 @@
 
 ---
 
+## Índice
+
+| ADR | Título | Estado |
+|---|---|---|
+| 000 | Convención del registro de decisiones | Aprobado |
+| 001 | Modularización Gradle (21 módulos + build-logic) | Aprobado |
+| 002 | Estado de presentación MVVM+MVI unidireccional | Aprobado |
+| 003 | Audio offline - Strategy Pattern, sherpa-onnx runtime | Aprobado |
+| 004 | FSRS con implementación propia (sin lib externa) | Aprobado |
+| 005 | Persistencia Room + DataStore | Aprobado |
+| 006 | Distribución de modelos - descarga en build/CI, nunca commiteada | Aprobado |
+| 007 | Motor de lección como máquina de estados finita (FSM) | Aprobado |
+| 008 | Licencias y atribución de terceros | Aprobado |
+| 009 | kotlinx.serialization directa sobre el dominio + formato Content JSON v1 | Aprobado |
+| 010 | Voces TTS por idioma y fallback al sistema | Aprobado |
+| 011 | Autenticación Google Drive vía OAuth 2.0 + PKCE | Aprobado |
+| 012 | JSON Schema formal y validación del contenido | Aprobado |
+| 013 | Sincronización cloud - snapshot v1, merge monótono y proveedores | Aprobado |
+| 014 | Cifrado del snapshot y tokens - AES-GCM-256 con Keystore | Aprobado |
+| 015 | OneDrive (appfolder vía MSAL) | Diferido |
+| 016 | Repaso espaciado FSRS-4.5 con vocabulario del contenido | Aprobado |
+
+---
 ## ADR-000: Convención del registro de decisiones
 
 **Estado:** Aprobado
@@ -39,7 +62,7 @@ lugar de kapt; built-in Kotlin de AGP 9 (no se aplica `kotlin-android`).
 Config mínima: minSdk 26 / targetSdk 37 / compileSdk 37 / JVM 17.
 
 **Consecuencias:**
-- Builds paralelos;规矩 de dependencia verificables.
+- Builds paralelos; reglas de dependencia verificables.
 - Convention plugins evita repetición de DSL en 21 módulos.
 - El costo: más archivos de build; mitigado por plugins de convención.
 
@@ -101,27 +124,25 @@ Kokoro / Supertonic; Vosk / Whisper).
 
 **Estado:** Aprobado
 **Fecha:** 2026-10-16
+**Implementado en:** ADR-016 (Fase 5), con el conjunto de pesos FSRS-4.5.
 
-**Contexto:** se necesita repaso espaciado de vocabulario (RFC §3.2
-`GetNextReviewUseCase`). Existen portings de FSRS de la especificación de
-open-spaced-repetition (py-fsrs, fsrs-kotlin, ts-fsrs), todos licencia MIT,
-pero viables con estados de margen de riesgo por su adopción en aplicaciones
-de terceros.
+**Contexto:** se necesita repaso espaciado de vocabulario (RFC §3.2,
+`GetNextReviewUseCase`). Existen portings de FSRS de la especificación
+open-spaced-repetition (py-fsrs, fsrs-kotlin, ts-fsrs), todos con licencia
+MIT, pero con riesgo de adopción y mantenimiento para el caso de uso.
 
-**Decisión:** implementar en `core-domain` el kernel FSRS-5 (fórmulas分别是
-de la especificación abierta) en Kotlin puro, con parámetros por defecto
-(libres) y unit tests que ejecutan tanto la fórmula como la estabilidad.
-Persistencia en Room con `word_progress` (revisados_count, next_review,
-ease?). ADR re-evalúa a Phase 2 si la implementación propia se vuelve un
-punto de proble.
+**Decisión:** implementar en `core-domain` el kernel FSRS (fórmulas de la
+especificación abierta) en Kotlin puro, con parámetros por defecto y unit
+tests sobre fórmula, intervalos y estabilidad. Persistencia del estado en
+Room (`word_progress`). Se re-evaluará si la implementación propia se vuelve
+un problema de mantenimiento.
 
 **Consecuencias:**
 - Sin dependencia externa; todo testeable en aislamiento (I7).
-- Riesgo de implementación-off-con-spec; mitigado con vector de tests
-  basado en casos numeréricas publicados.
+- Riesgo de desviarse de la especificación, mitigado con tests de
+  propiedades (monotonía, rangos) y vectores numéricos publicados.
 
 ---
-
 ## ADR-005: Persistencia Room + DataStore con timestamps de resolución
 
 **Estado:** Aprobado
@@ -428,6 +449,30 @@ root o backup del `filesDir`.
 
 ---
 
+## ADR-015: OneDrive (appfolder vía MSAL) — diferido
+
+**Estado:** Diferido
+**Fecha:** 2026-10-17
+
+**Contexto:** el RFC §6 contempla OneDrive (`appfolder`) como segundo
+proveedor de respaldo. El contrato `CloudProvider` (ADR-013), el selector
+(`DelegatingCloudProvider`) y el flujo de auth (ADR-011) ya soportan N
+proveedores; falta la implementación concreta con MSAL Android y el registro
+de la aplicación en Azure AD (credencial externa, igual que el client id de
+Google).
+
+**Decisión:** se difiere hasta que exista la aplicación registrada en Azure
+y la fase de contenido esté cerrada. El número queda reservado y la
+implementación seguirá el mismo patrón que `GoogleDriveCloudProvider`:
+Strategy + registro del proveedor solo cuando esté configurado.
+
+**Consecuencias:**
+- No hay respaldo nativo para cuentas Microsoft todavía; Google Drive cubre
+  el caso principal y la app sigue 100% funcional offline (I1/I3).
+- El trabajo futuro es acotado: un módulo de cliente (MSAL), un
+  `CloudProvider` nuevo y sus bindings; sin cambios en `SyncEngine`.
+
+---
 ## ADR-016: Repaso espaciado FSRS-4.5 con vocabulario del contenido
 
 **Estado:** Aprobado
@@ -468,4 +513,4 @@ olvida y el progreso por gamificación no se sostiene.
 
 | Tema | Se decide en | ADR previsto |
 |---|---|---|
-| Proveedor OneDrive (appfolder vía MSAL) | Fase 4+ | ADR-015 |
+| Proveedor OneDrive (appfolder vía MSAL) | registrado en ADR-015 como diferido | - |
