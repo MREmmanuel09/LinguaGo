@@ -45,12 +45,12 @@ private val BOTTOM_DESTINATIONS =
     )
 
 /**
- * Shell de la aplicación: NavHost + barra inferior. Onboarding es el
- * destino inicial en Fase 0; el flujo final conectará la home cuando exista
- * progreso guardado.
+ * Shell de la aplicación: NavHost + barra inferior. El destino inicial lo
+ * decide la preferencia de curso (onboarding u home, Fase 1).
  */
 @Composable
 fun LinguaApp(
+    startDestination: String = Routes.ONBOARDING,
     navController: NavHostController = rememberNavController(),
     modifier: Modifier = Modifier,
 ) {
@@ -76,12 +76,12 @@ fun LinguaApp(
     ) { innerPadding ->
         NavHost(
             navController = navController,
-            startDestination = Routes.ONBOARDING,
+            startDestination = startDestination,
             modifier = Modifier.background(MaterialTheme.colorScheme.background),
         ) {
             composable(Routes.ONBOARDING) {
                 OnboardingScreen(
-                    onCourseSelected = { courseId ->
+                    onCourseSelected = { _ ->
                         navController.navigate(Routes.HOME) {
                             popUpTo(Routes.ONBOARDING) { inclusive = true }
                         }
@@ -90,21 +90,27 @@ fun LinguaApp(
                 )
             }
             composable(Routes.HOME) {
-                HomeScreen(streakDays = 0, modifier = Modifier.padding(innerPadding))
+                HomeScreen(
+                    onLessonClick = { courseId, lessonId ->
+                        navController.navigate(Routes.lesson(courseId, lessonId))
+                    },
+                    modifier = Modifier.padding(innerPadding),
+                )
             }
             composable(Routes.LESSON) {
-                LessonScreen(modifier = Modifier.padding(innerPadding))
+                LessonScreen(
+                    onExit = { navController.popBackStack() },
+                    modifier = Modifier.padding(innerPadding),
+                )
             }
             composable(Routes.PROFILE) {
                 ProfileScreen(
-                    streakDays = 0,
-                    totalXp = 0,
-                    lessonsCompleted = 0,
                     modifier = Modifier.padding(innerPadding),
                 )
             }
             composable(Routes.SETTINGS) {
                 SettingsScreen(
+                    onOpenOnboarding = { navController.navigate(Routes.ONBOARDING) },
                     onOpenSync = { navController.navigate(Routes.SYNC) },
                     modifier = Modifier.padding(innerPadding),
                 )

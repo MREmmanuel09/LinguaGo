@@ -211,11 +211,51 @@ de terceros se acredita en la pantalla Ajustes → Licencias y en el
 
 ---
 
+## ADR-009: kotlinx.serialization directa sobre el dominio + formato Content JSON v1
+
+**Estado:** Aprobado
+**Fecha:** 2026-10-16
+
+**Contexto:** los cursos viajan empaquetados en assets como JSON (I1, todo
+offline). Había dos caminos: DTOs intermedios + mapper, o serialización
+directa sobre los modelos de dominio. Además, KGP 2.4 viene embebido en AGP 9
+(sin plugin `kotlin-android`) y el plugin compiler de serialization debía
+probarse con esa combinación.
+
+**Decisión:**
+- Plugin `kotlin("plugin.serialization")` + `libs.kotlinx.serialization.json`
+  en `core-domain`; `core-content` expone `api` el artefacto JSON.
+- Los modelos de dominio (`Course`, `Level`, `Unit`, `Lesson`, `Exercise`,
+  `Language`, ids value class, `CourseSummary`, `MatchPair`) son
+  `@Serializable` y se parsean **directamente** al dominio (sin capa DTO).
+- Polimorfismo de `Exercise` por discriminador `"type"` con **nombres
+  simples** del serializador (`@SerialName("MultipleChoice")`, `"Translate"`,
+  `"MatchPairs"`, ...).
+- Claves JSON de la pareja de idiomas: `from` / `to` vía `@SerialName` en
+  `fromLanguage` / `toLanguage` (kotlinx usa el nombre de la propiedad por
+  defecto y las contrapartes humanas del RFC eran `from`/`to`).
+- `kotlin.Pair<String, String>` **no** se usa (serializa como objeto
+  `{first, second}`, no como arreglo): `Exercise.MatchPair` data class con
+  claves JSON `{left, right}`.
+- Json estricto (reject unknown keys) en `CourseJson`; errores de parseo se
+  traducen a `LinguaError.InvalidContent` y el validador estructural
+  (`CourseValidator`) refuerza reglas que la serialización no cubre
+  (correctIndex in-range, multiset de tokens de OrderWords, lados únicos de
+  MatchPairs, no-solape en Translate).
+
+**Consecuencias:**
+- Menos código y una sola fuente de verdad (el dominio); la migración futura
+  de formato implicará `@Deprecated` serial names o cambios de versión en
+  manifest (Fase 3, ADR-012 documenta el JSON Schema formal).
+- El JSON v1 queda definido por los serial names del dominio; `PackagedContent`
+  es el test de contrato contra los cuatro cursos reales del repo.
+
+---
+
 ## Registro de decisiones pendientes
 
 | Tema | Se decide en | ADR previsto |
 |---|---|---|
-| Plugin serialization con built-in Kotlin (KGP 2.4 embebida en AGP) | Fase 1 | ADR-009 |
 | Elección voz por idioma (lista exacta int8/medium) | Fase 2 | ADR-010 |
 | Google Drive/OneDrive OAuth flow y almacenamiento de tokens | Fase 4 | ADR-011 |
-| Formato Content JSON v1 y validador schemático | Fase 3 | ADR-012 |
+| Appropriates JSON Schema formal y versionado del contenido | Fase 3 | ADR-012 |
