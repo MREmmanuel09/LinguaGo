@@ -1,5 +1,9 @@
 package dev.linguago.feature.lesson
 
+import android.Manifest
+import android.content.pm.PackageManager
+import androidx.activity.compose.rememberLauncherForActivityResult
+import androidx.activity.result.contract.ActivityResultContracts
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
@@ -26,9 +30,11 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
+import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import androidx.core.content.ContextCompat
 import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import dev.linguago.core.domain.model.Exercise
@@ -52,6 +58,22 @@ fun LessonScreen(
     viewModel: LessonViewModel = hiltViewModel(),
 ) {
     val uiState by viewModel.uiState.collectAsStateWithLifecycle()
+
+    /** SpeakRepeat: pide el permiso de micrófono antes de escuchar (I3). */
+    val context = LocalContext.current
+    val micPermission = Manifest.permission.RECORD_AUDIO
+    val micLauncher =
+        rememberLauncherForActivityResult(ActivityResultContracts.RequestPermission()) { granted ->
+            if (granted) viewModel.transcribeSpoken()
+        }
+    val onSpeakRequest: () -> Unit = {
+        if (ContextCompat.checkSelfPermission(context, micPermission) == PackageManager.PERMISSION_GRANTED) {
+            viewModel.transcribeSpoken()
+        } else {
+            micLauncher.launch(micPermission)
+        }
+    }
+
     LessonContent(
         uiState = uiState,
         onPickOption = viewModel::pickOption,
@@ -61,6 +83,8 @@ fun LessonScreen(
         onMatchRight = viewModel::matchLeftTo,
         onSubmitPairs = viewModel::submitMatchedPairs,
         onTypedText = viewModel::submitTypedText,
+        onSpeakRequest = onSpeakRequest,
+        onSkipSpeech = viewModel::skipSpeech,
         onAdvance = viewModel::advance,
         onPlayAudio = viewModel::playAudio,
         onExit = onExit,
@@ -78,6 +102,8 @@ private fun LessonContent(
     onMatchRight: (Int) -> Unit,
     onSubmitPairs: () -> Unit,
     onTypedText: (String) -> Unit,
+    onSpeakRequest: () -> Unit,
+    onSkipSpeech: () -> Unit,
     onAdvance: () -> Unit,
     onPlayAudio: () -> Unit,
     onExit: () -> Unit,
@@ -97,6 +123,8 @@ private fun LessonContent(
                 onMatchRight = onMatchRight,
                 onSubmitPairs = onSubmitPairs,
                 onTypedText = onTypedText,
+                onSpeakRequest = onSpeakRequest,
+                onSkipSpeech = onSkipSpeech,
                 onAdvance = onAdvance,
                 onPlayAudio = onPlayAudio,
                 onExit = onExit,
@@ -115,6 +143,8 @@ private fun ExerciseStage(
     onMatchRight: (Int) -> Unit,
     onSubmitPairs: () -> Unit,
     onTypedText: (String) -> Unit,
+    onSpeakRequest: () -> Unit,
+    onSkipSpeech: () -> Unit,
     onAdvance: () -> Unit,
     onPlayAudio: () -> Unit,
     onExit: () -> Unit,
@@ -166,6 +196,7 @@ private fun ExerciseStage(
                 onMatchLeft = onMatchLeft,
                 onMatchRight = onMatchRight,
                 onTypedText = onTypedText,
+                onSpeakRequest = onSpeakRequest,
                 onPlayAudio = onPlayAudio,
             )
         }
@@ -175,11 +206,13 @@ private fun ExerciseStage(
             feedback = uiState.feedback,
             exercise = exercise,
             chosenCount = uiState.chosenTokens.size,
+            listening = uiState.listening,
             pairsComplete =
                 uiState.matched.size == (exercise as? Exercise.MatchPairs)?.pairs?.size &&
                     exercise.pairs.isNotEmpty(),
             onSubmitTokens = onSubmitTokens,
             onSubmitPairs = onSubmitPairs,
+            onSkipSpeech = onSkipSpeech,
             onAdvance = onAdvance,
         )
     }
@@ -194,6 +227,7 @@ private fun Renderer(
     onMatchLeft: (Int) -> Unit,
     onMatchRight: (Int) -> Unit,
     onTypedText: (String) -> Unit,
+    onSpeakRequest: () -> Unit,
     onPlayAudio: () -> Unit,
 ) {
     when (exercise) {
@@ -212,13 +246,21 @@ private fun Renderer(
                 audioEnabled = uiState.audioAvailable,
                 onTypedText = onTypedText,
             )
+        is Exercise.SpeakRepeat ->
+            SpeechPanel(
+                target = exercise.targetPhrase,
+                listening = uiState.listening,
+                recognized = uiState.recognized,
+                audioAvailable = uiState.audioAvailable,
+                onPlay = onPlayAudio,
+                onRecord = onSpeakRequest,
+            )
         is Exercise.Translate ->
             TokenBoard(header = exercise.sourcePhrase, uiState = uiState, onToggleToken = onToggleToken)
         is Exercise.OrderWords ->
             TokenBoard(header = "Ordena la frase", uiState = uiState, onToggleToken = onToggleToken)
         is Exercise.MatchPairs ->
             MatchBoard(exercise.pairs, uiState, onMatchLeft, onMatchRight)
-        else -> Text(text = "Ejercicio de voz disponible en próximas fases", style = MaterialTheme.typography.bodyMedium)
     }
 }
 
@@ -227,9 +269,11 @@ private fun BottomActions(
     feedback: ExerciseFeedback?,
     exercise: Exercise,
     chosenCount: Int,
+    listening: Boolean,
     pairsComplete: Boolean,
     onSubmitTokens: () -> Unit,
     onSubmitPairs: () -> Unit,
+    onSkipSpeech: () -> Unit,
     onAdvance: () -> Unit,
 ) {
     when {
@@ -259,6 +303,65 @@ private fun BottomActions(
                 enabled = pairsComplete,
                 modifier = Modifier.fillMaxWidth(),
             )
+        exercise is Exercise.SpeakRepeat ->
+            TextButton(
+                onClick = onSkipSpeech,
+                modifier = Modifier.fillMaxWidth(),
+                enabled = !listening,
+            ) { Text(text = "No puedo hablar ahora") }
+    }
+}
+
+/**
+ * Repetición hablada (SpeakRepeat, Fase 2.3): escucha el modelo con TTS y
+ * repite con el micrófono; muestra lo que el STT reconoció. Sin STT o sin
+ * permiso la UI queda inactiva y "No puedo hablar ahora" deja avanzar (I3).
+ */
+@Composable
+private fun SpeechPanel(
+    target: String,
+    listening: Boolean,
+    recognized: String?,
+    audioAvailable: Boolean,
+    onPlay: () -> Unit,
+    onRecord: () -> Unit,
+    modifier: Modifier = Modifier,
+) {
+    val colors = MaterialTheme.colorScheme
+    Column(modifier = modifier, verticalArrangement = Arrangement.spacedBy(12.dp)) {
+        Text(
+            text = "Escucha y repite",
+            style = MaterialTheme.typography.titleLarge,
+            color = colors.onBackground,
+        )
+        AudioPanel(
+            title = target,
+            onPlay = onPlay,
+            enabled = audioAvailable,
+        )
+        Column(
+            modifier =
+                Modifier
+                    .fillMaxWidth()
+                    .clip(RoundedCornerShape(LinguaTokens.RADIUS_CARD_DP.dp))
+                    .background(if (listening) colors.tertiaryContainer else colors.secondaryContainer)
+                    .clickable(enabled = !listening, onClick = onRecord)
+                    .padding(24.dp),
+            horizontalAlignment = Alignment.CenterHorizontally,
+        ) {
+            Text(
+                text = if (listening) "Escuchando…" else "Sostén el botón para repetir",
+                style = MaterialTheme.typography.titleMedium,
+                color = colors.onBackground,
+            )
+            recognized?.let { text ->
+                Text(
+                    text = "Lo que reconoció el micrófono: \"$text\"",
+                    style = MaterialTheme.typography.bodyMedium,
+                    color = colors.onBackground,
+                )
+            }
+        }
     }
 }
 
@@ -588,6 +691,8 @@ private fun LessonScreenPreview() {
             onMatchRight = {},
             onSubmitPairs = {},
             onTypedText = {},
+            onSpeakRequest = {},
+            onSkipSpeech = {},
             onAdvance = {},
             onPlayAudio = {},
             onExit = {},

@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android">
 
+    <!-- Repaso de pronunciación (SpeakRepeat, Fase 2.3): el STT solo usa el
+         micrófono cuando el usuario lo pide; denegarlo degrada a "no listo". -->
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+
     <application
         android:name=".LinguaGoApplication"
         android:allowBackup="true"

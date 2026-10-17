@@ -18,58 +18,41 @@ plugins {
     alias(libs.plugins.detekt) apply false
 }
 
-// Descarga manual de las voces Piper usadas por sherpa-onnx (ADR-003/006/010,
-// Fase 2.2): cada paquete `vits-piper-<voz>.tar.bz2` del tag `tts-models`
-// incluye `<voz>.onnx` + tokens.txt + espeak-ng-data/. Al terminar rellena
-// el SHA-256 del `.onnx` en models/manifest.json.
-//
-// Tarea MANUAL: no está connected al build ni al CI (evita descargar ~150 MB
-// en cada build; sin voces la app degrada al TTS del sistema, I3).
+// Descarga manual de los modelos de voz (ADR-003/006/010, Fase 2.2/2.3):
+// TTS Piper (tag `tts-models` de sherpa-onnx, tar.bz2) y STT Vosk Small
+// (alphacephei.com, zip). Recorre `models/manifest.json` y rellena los
+// SHA-256: TTS = hash del `<voz>.onnx`; STT = `files[]` con hash por
+// archivo. Tarea MANUAL: no esta wired al build ni al CI (no descarga
+// ~300 MB por build; sin modelos la app degrada al TTS del sistema, I3).
 tasks.register("fetchVoiceModels") {
     group = "linguago"
-    description =
-        "Descarga las voces Piper de el tag tts-models de sherpa-onnx y " +
-        "llena el sha256 en models/manifest.json."
+    description = "Descarga los modelos de voz y llena models/manifest.json."
     doLast {
         val modelsDir = File(rootDir, "models")
         val manifestFile = File(modelsDir, "manifest.json")
         val downloadsDir = File(modelsDir, "downloads")
-        val ttsDir = File(modelsDir, "tts")
-        for (id in listOf("en_US-amy-medium", "pt_BR-faber-medium", "fr_FR-siwis-medium")) {
-            val asset = "vits-piper-$id.tar.bz2"
-            val url = "https://github.com/k2-fsa/sherpa-onnx/releases/download/tts-models/$asset"
-            val tarball = File(downloadsDir, asset)
-            if (!tarball.isFile) {
-                downloadsDir.mkdirs()
-                println("Fetch: $url")
-                tarball.parentFile.mkdirs()
-                java.net.URI(url).toURL().openStream().use { input ->
-                    tarball.outputStream().use { output -> input.copyTo(output) }
-                }
+        val baseUrl = "https://alphacephei.com/vosk/models/"
+        downloadsDir.mkdirs()
+        val manifest = JsonSlurper().parse(manifestFile) as MutableMap<Any?, Any?>
+
+        fun fetch(url: String, target: File) {
+            if (target.isFile && target.length() > 0) return
+            println("Fetch: $url")
+            target.parentFile.mkdirs()
+            java.net.URI(url).toURL().openStream().use { input ->
+                target.outputStream().use { output -> input.copyTo(output) }
             }
-            val dir = File(ttsDir, id)
-            if (!File(dir, "$id.onnx").isFile) {
-                ttsDir.mkdirs()
-                println("Extract: $asset -> ${dir.path}")
-                val process = ProcessBuilder("tar", "-xjf", tarball.absolutePath)
-                    .directory(ttsDir)
-                    .redirectErrorStream(true)
-                    .start()
-                val out = process.inputStream.bufferedReader().readText()
-                if (process.waitFor() != 0) {
-                    throw IllegalStateException("tar falló: $out")
-                }
-                val srcDir = File(ttsDir, "vits-piper-$id")
-                if (!srcDir.renameTo(dir)) {
-                    throw Exception("no se puede renombrar ${srcDir.path} -> ${dir.path}")
-                }
-            }
-            val onnx = File(dir, "$id.onnx")
-            require(onnx.isFile && File(dir, "tokens.txt").isFile) {
-                "paquete $id incompleto: faltan tokens/espeak"
-            }
+        }
+
+        fun extract(archive: File, workDir: File): Process =
+            ProcessBuilder("tar", "-xf", archive.absolutePath)
+                .directory(workDir)
+                .redirectErrorStream(true)
+                .start()
+
+        fun sha256Hex(file: File): String {
             val digest = MessageDigest.getInstance("SHA-256")
-            onnx.inputStream().use { input ->
+            file.inputStream().use { input ->
                 val buffer = ByteArray(1 shl 16)
                 var count = input.read(buffer)
                 while (count >= 0) {
@@ -77,21 +60,73 @@ tasks.register("fetchVoiceModels") {
                     count = input.read(buffer)
                 }
             }
-            val sha256 = digest.digest().joinToString("") { "%02x".format(it) }
-            println("SHA-256: $id = $sha256")
-            val manifest = JsonSlurper().parse(manifestFile) as Map<*, *>
-            val entries = (manifest["tts"] as List<*>).map { entry ->
-                val voice = entry as MutableMap<Any?, Any?>
-                if (voice["id"] == id) voice["sha256"] = sha256
-                voice
-            }
-            val output = LinkedHashMap(manifest)
-            output["tts"] = entries
-            manifestFile.writeText(
-                JsonOutput.prettyPrint(JsonOutput.toJson(output)) + "\n",
-            )
+            return digest.digest().joinToString("") { "%02x".format(it) }
         }
-        println("OK: models/manifest.json verificado; instalando voces en assets del app.")
+
+        for (entry in manifest["tts"] as List<*>) {
+            val tts = entry as MutableMap<Any?, Any?>
+            val id = tts["id"] as String
+            val asset = "vits-piper-$id.tar.bz2"
+            val tarball = File(downloadsDir, asset)
+            fetch("https://github.com/k2-fsa/sherpa-onnx/releases/download/tts-models/$asset", tarball)
+            val ttsDir = File(modelsDir, "tts")
+            val dir = File(ttsDir, id)
+            if (!File(dir, "$id.onnx").isFile) {
+                ttsDir.mkdirs()
+                println("Extract: $asset -> ${dir.path}")
+                val process = extract(tarball, ttsDir)
+                val out = process.inputStream.bufferedReader().readText()
+                if (process.waitFor() != 0) throw IllegalStateException("tar falló: $out")
+                val srcDir = File(ttsDir, "vits-piper-$id")
+                if (!srcDir.renameTo(dir)) throw IllegalStateException("no se pudo mover a ${dir.path}")
+            }
+            require(File(dir, "$id.onnx").isFile && File(dir, "tokens.txt").isFile) {
+                "paquete $id incompleto"
+            }
+            val hash = sha256Hex(File(dir, "$id.onnx"))
+            println("SHA-256: tts/$id = $hash")
+            tts["sha256"] = hash
+        }
+
+        for (entry in manifest["stt"] as List<*>) {
+            val stt = entry as MutableMap<Any?, Any?>
+            val path = stt["path"] as String
+            val name = path.substringAfterLast('/')
+            val zip = File(downloadsDir, "$name.zip")
+            fetch(baseUrl + "$name.zip", zip)
+            val sttDir = File(modelsDir, "stt")
+            val dir = File(sttDir, name)
+            if (!File(dir, "conf/model.conf").isFile) {
+                sttDir.mkdirs()
+                println("Extract: zip $name -> ${dir.path}")
+                val process = extract(zip, sttDir)
+                val out = process.inputStream.bufferedReader().readText()
+                if (process.waitFor() != 0) {
+                    println("tar no soportó el zip: $out")
+                    val unzip = ProcessBuilder("unzip", "-o", zip.name).directory(sttDir).start()
+                    if (unzip.waitFor() != 0) throw IllegalStateException("extract falló para $name")
+                }
+            }
+            require(File(dir, "conf/model.conf").isFile) { "paquete $name incompleto" }
+            val files = mutableListOf<MutableMap<String, String>>()
+            dir.walkTopDown().filter { it.isFile }.sorted().forEach { file ->
+                val rel = file.relativeTo(modelsDir).invariantSeparatorsPath
+                val hash = sha256Hex(file)
+                println("SHA-256: $rel = $hash")
+                files.add(
+                    linkedMapOf(
+                        "path" to rel,
+                        "sha256" to hash,
+                    ),
+                )
+            }
+            stt["files"] = files
+        }
+
+        manifestFile.writeText(
+            JsonOutput.prettyPrint(JsonOutput.toJson(manifest)) + "\n",
+        )
+        println("OK: models/manifest.json actualizado; `./gradlew :app:assembleDebug` empaqueta models/ como assets.")
     }
 }
 

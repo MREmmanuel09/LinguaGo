@@ -58,6 +58,8 @@ kotlinx-serialization-json = { module = "org.jetbrains.kotlinx:kotlinx-serializa
 
 # Audio (sherpa-onnx vía JitPack, ADR-003)
 sherpa-onnx = { module = "com.github.k2-fsa.sherpa-onnx:sherpa-onnx", version = "v1.13.5" }
+# STT offline (Vosk Small, Maven Central)
+vosk-android = { module = "com.alphacephei:vosk-android", version = "0.3.47" }
 
 # Tests
 junit4 = { module = "junit:junit", version.ref = "junit" }

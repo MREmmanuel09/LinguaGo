@@ -29,14 +29,20 @@ el ADR-010 define fallback al TTS del sistema para `ja` hasta que aparezca
 una voz verificable. El runtime STT de Fase 2 tampoco cubre `ja` en la
 elección inicial.
 
-## STT (repaso de pronunciación, Fase 2)
+## STT (repaso de pronunciación, Fase 2.3)
 
-| Idioma | Motor | Modelo | Estado |
+| Curso | Motor | Modelo | Estado |
 |---|---|---|---|
-| en/pt/fr | Vosk Small | `vosk-model-small-*` por idioma | pendiente |
+| ES→EN | Vosk Small | `vosk-model-small-en-us-0.15` (~40 MB) | descargable vía `fetchVoiceModels` |
+| ES→PT | Vosk Small | `vosk-model-small-pt-0.3` | descargable vía `fetchVoiceModels` |
+| ES→FR | Vosk Small | `vosk-model-small-fr-0.22` | descargable vía `fetchVoiceModels` |
+| ES→JA | Vosk Small | `vosk-model-small-ja-0.22` | descargable vía `fetchVoiceModels` |
 
-SpeakRepeat queda deshabilitado mientras no exista su modelo; el contenido
-Fase 1 no incluye ejercicios de voz.
+SpeakRepeat usa `VoskSttEngine`: el modelo se verifica **por archivo** en
+`models/manifest.json` (`stt[].files[].sha256`) antes de cargar; sin
+modelo verificado (o sin permiso de micrófono) el panel queda inactivo y
+"No puedo hablar ahora" deja avanzar sin bloquear (invariante I3). La
+norma del grader sigue siendo igualdad de frases normalizadas.
 
 ## Descarga (tarea manual `fetchVoiceModels`)
 

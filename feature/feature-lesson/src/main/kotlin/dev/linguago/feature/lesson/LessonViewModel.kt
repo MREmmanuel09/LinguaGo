@@ -4,6 +4,7 @@ import androidx.lifecycle.SavedStateHandle
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import dagger.hilt.android.lifecycle.HiltViewModel
+import dev.linguago.core.audio.SttEngine
 import dev.linguago.core.audio.TtsEngine
 import dev.linguago.core.common.Result
 import dev.linguago.core.domain.model.CourseId
@@ -51,6 +52,10 @@ data class LessonUiState(
     val matched: Map<Int, Int> = emptyMap(),
     // Audio (Fase 2): disponibilidad de voz en el dispositivo ejercicios listen.
     val audioAvailable: Boolean = false,
+    // Voz del usuario (SpeakRepeat, Fase 2.3).
+    val speechAvailable: Boolean = false,
+    val listening: Boolean = false,
+    val recognized: String? = null,
 )
 
 /**
@@ -67,6 +72,7 @@ class LessonViewModel
         private val submitAnswerUseCase: SubmitAnswerUseCase,
         private val completeLessonUseCase: CompleteLessonUseCase,
         private val ttsEngine: TtsEngine,
+        private val sttEngine: SttEngine,
     ) : ViewModel() {
         private val courseId: String =
             checkNotNull(savedStateHandle[LESSON_COURSE_KEY])
@@ -98,6 +104,25 @@ class LessonViewModel
                     .getOrNull(_uiState.value.index)
                     ?.audioText ?: return
             viewModelScope.launch { ttsEngine.speak(audioText, language) }
+        }
+
+        /** Escucha (una vez) y evalúa la repetición (SpeakRepeat). */
+        fun transcribeSpoken() {
+            val language = targetLanguage ?: return
+            val state = _uiState.value
+            if (state.listening || !state.speechAvailable) return
+            _uiState.update { it.copy(listening = true, recognized = null) }
+            viewModelScope.launch {
+                val result = sttEngine.transcribe(language)
+                _uiState.update { it.copy(listening = false, recognized = result.text.ifBlank { null }) }
+                submitAnswer(ExerciseAnswer.SpokenText(result.text))
+            }
+        }
+
+        /** Sin STT/permiso: indica que no puede hablar y avanza (incorrecto, I3). */
+        fun skipSpeech() {
+            if (_uiState.value.listening) return
+            submitAnswer(ExerciseAnswer.SpokenText(""))
         }
 
         /** El usuario verifica el tablero de tokens (Translate / OrderWords). */
@@ -173,6 +198,7 @@ class LessonViewModel
                     exercises = session.lesson.exercises,
                     index = 0,
                     audioAvailable = ttsEngine.isReadyFor(session.course.toLanguage),
+                    speechAvailable = sttEngine.isReadyFor(session.course.toLanguage),
                 )
             }
             prepareExercise(0)
@@ -220,6 +246,8 @@ class LessonViewModel
                             shuffledRights = emptyList(),
                             matched = emptyMap(),
                             selectedLeft = null,
+                            listening = false,
+                            recognized = null,
                         )
                     }
             }
