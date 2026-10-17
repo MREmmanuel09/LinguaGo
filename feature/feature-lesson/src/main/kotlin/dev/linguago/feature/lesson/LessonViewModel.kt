@@ -13,6 +13,7 @@ import dev.linguago.core.domain.model.Language
 import dev.linguago.core.domain.model.LessonId
 import dev.linguago.core.domain.model.LessonSession
 import dev.linguago.core.domain.model.XP_PER_CORRECT_ANSWER
+import dev.linguago.core.domain.repository.ReviewRepository
 import dev.linguago.core.domain.usecase.CompleteLessonUseCase
 import dev.linguago.core.domain.usecase.ExerciseAnswer
 import dev.linguago.core.domain.usecase.StartLessonUseCase
@@ -73,6 +74,7 @@ class LessonViewModel
         private val completeLessonUseCase: CompleteLessonUseCase,
         private val ttsEngine: TtsEngine,
         private val sttEngine: SttEngine,
+        private val reviewRepository: ReviewRepository,
     ) : ViewModel() {
         private val courseId: String =
             checkNotNull(savedStateHandle[LESSON_COURSE_KEY])
@@ -83,6 +85,7 @@ class LessonViewModel
         val uiState: StateFlow<LessonUiState> = _uiState.asStateFlow()
 
         private var targetLanguage: Language? = null
+        private var session: LessonSession? = null
 
         init {
             viewModelScope.launch {
@@ -190,6 +193,7 @@ class LessonViewModel
         }
 
         private fun startLesson(session: LessonSession) {
+            this.session = session
             targetLanguage = session.course.toLanguage
             _uiState.update {
                 it.copy(
@@ -275,6 +279,9 @@ class LessonViewModel
             val earned = _uiState.value.xpEarned
             viewModelScope.launch {
                 completeLessonUseCase(LessonId(lessonId), earned)
+                session?.let { current ->
+                    reviewRepository.collectFromLesson(current.course, current.lesson)
+                }
                 _uiState.update { it.copy(finished = true, feedback = null) }
             }
         }

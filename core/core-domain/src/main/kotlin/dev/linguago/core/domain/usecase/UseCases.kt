@@ -1,6 +1,7 @@
 package dev.linguago.core.domain.usecase
 
 import dev.linguago.core.common.Result
+import dev.linguago.core.domain.logic.ReviewRating
 import dev.linguago.core.domain.model.Course
 import dev.linguago.core.domain.model.CourseId
 import dev.linguago.core.domain.model.CourseSummary
@@ -58,8 +59,20 @@ public interface UpdateStreakUseCase {
 }
 
 public interface GetNextReviewUseCase {
-    /** Selecciona vocabulario para repaso espaciado (FSRS, Fase 2). */
-    public suspend operator fun invoke(limit: Int): Result<List<WordProgress>>
+    /** Selecciona vocabulario para repaso espaciado (FSRS, ADR-016). */
+    public suspend operator fun invoke(
+        courseId: CourseId,
+        limit: Int,
+    ): Result<List<WordProgress>>
+}
+
+public interface GradeReviewUseCase {
+    /** Califica una tarjeta de repaso y actualiza su estado FSRS. */
+    public suspend operator fun invoke(
+        courseId: CourseId,
+        word: String,
+        rating: ReviewRating,
+    ): Result<WordProgress>
 }
 
 /**

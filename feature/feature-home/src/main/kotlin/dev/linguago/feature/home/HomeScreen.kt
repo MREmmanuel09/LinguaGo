@@ -34,6 +34,7 @@ import dev.linguago.core.ui.theme.LinguaTokens
 @Composable
 fun HomeScreen(
     onLessonClick: (courseId: String, lessonId: String) -> Unit,
+    onStartReview: (courseId: String) -> Unit = {},
     modifier: Modifier = Modifier,
     viewModel: HomeViewModel = hiltViewModel(),
 ) {
@@ -41,6 +42,7 @@ fun HomeScreen(
     HomeContent(
         uiState = uiState,
         onLessonSelected = onLessonClick,
+        onStartReview = onStartReview,
         modifier = modifier,
     )
 }
@@ -49,6 +51,7 @@ fun HomeScreen(
 private fun HomeContent(
     uiState: HomeUiState,
     onLessonSelected: (String, String) -> Unit,
+    onStartReview: (String) -> Unit,
     modifier: Modifier = Modifier,
 ) {
     val colors = MaterialTheme.colorScheme
@@ -83,6 +86,14 @@ private fun HomeContent(
             )
         }
 
+        if (uiState.dueReviews > 0) {
+            val courseId = uiState.courseId
+            ReviewCard(
+                count = uiState.dueReviews,
+                onClick = { courseId?.let(onStartReview) },
+            )
+        }
+
         uiState.units.forEach { unit ->
             val lessonId = unit.nextLessonId
             val courseId = uiState.courseId
@@ -91,6 +102,37 @@ private fun HomeContent(
                 onClick = { if (lessonId != null && courseId != null) onLessonSelected(courseId, lessonId) },
             )
         }
+    }
+}
+
+@Composable
+private fun ReviewCard(
+    count: Int,
+    onClick: () -> Unit,
+    modifier: Modifier = Modifier,
+) {
+    val colors = MaterialTheme.colorScheme
+
+    Column(
+        modifier =
+            modifier
+                .fillMaxWidth()
+                .clip(RoundedCornerShape(LinguaTokens.RADIUS_CARD_DP.dp))
+                .background(colors.primary.copy(alpha = 0.12f))
+                .clickable(onClick = onClick)
+                .padding(16.dp),
+    ) {
+        Text(
+            text = "Repasar ahora",
+            style = MaterialTheme.typography.titleMedium,
+            color = colors.primary,
+        )
+        Spacer(Modifier.height(4.dp))
+        Text(
+            text = "$count tarjetas pendientes de repaso",
+            style = MaterialTheme.typography.bodySmall,
+            color = colors.onSurfaceVariant,
+        )
     }
 }
 
@@ -148,6 +190,7 @@ private fun HomeScreenPreview() {
                         ),
                 ),
             onLessonSelected = { _, _ -> },
+            onStartReview = {},
         )
     }
 }

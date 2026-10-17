@@ -53,6 +53,7 @@ include(
     ":feature:feature-profile",
     ":feature:feature-sync",
     ":feature:feature-settings",
+    ":feature:feature-review",
 )
 
 include(

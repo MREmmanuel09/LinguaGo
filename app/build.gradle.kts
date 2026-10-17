@@ -81,6 +81,7 @@ dependencies {
     implementation(project(":feature:feature-profile"))
     implementation(project(":feature:feature-sync"))
     implementation(project(":feature:feature-settings"))
+    implementation(project(":feature:feature-review"))
 
     implementation(project(":content:content-es-en"))
     implementation(project(":content:content-es-pt"))

@@ -35,9 +35,18 @@ public data class LessonProgress(
 /** XP por respuesta correcta (RFC §3.2, Fase 1). */
 public const val XP_PER_CORRECT_ANSWER: Int = 10
 
+/**
+ * Estado FSRS de una tarjeta de vocabulario (ADR-016, Fase 5).
+ * `stability` = días para decaer a la retención objetivo; `difficulty` =
+ * 1..10. La tarjeta se identifica por la pareja (courseId, word).
+ */
 public data class WordProgress(
     val word: String,
+    val translation: String,
+    val courseId: String,
     val reviewCount: Int,
+    val lastReview: Instant,
     val nextReview: Instant,
-    val easeFactor: Float,
+    val stability: Float,
+    val difficulty: Float,
 )

@@ -38,3 +38,25 @@ public interface LessonProgressDao {
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     public suspend fun upsert(entity: LessonProgressEntity)
 }
+
+/** DAO del repaso espaciado (WordProgress FSRS, ADR-016). */
+@Dao
+public interface WordProgressDao {
+    @Query("SELECT * FROM word_progress WHERE courseId = :courseId")
+    public fun observeAll(courseId: String): Flow<List<WordProgressEntity>>
+
+    @Query("SELECT * FROM word_progress WHERE courseId = :courseId ORDER BY nextReviewEpochMillis ASC")
+    public suspend fun loadAll(courseId: String): List<WordProgressEntity>
+
+    @Query("SELECT * FROM word_progress WHERE courseId = :courseId AND word = :word")
+    public suspend fun load(
+        courseId: String,
+        word: String,
+    ): WordProgressEntity?
+
+    @Insert(onConflict = OnConflictStrategy.REPLACE)
+    public suspend fun upsert(entity: WordProgressEntity)
+
+    @Insert(onConflict = OnConflictStrategy.IGNORE)
+    public suspend fun insertAll(entities: List<WordProgressEntity>)
+}

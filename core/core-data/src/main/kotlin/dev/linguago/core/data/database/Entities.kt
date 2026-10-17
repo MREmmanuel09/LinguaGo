@@ -25,3 +25,22 @@ public data class LessonProgressEntity(
     public val xp: Int,
     public val attempts: Int,
 )
+
+/**
+ * Estado FSRS de una tarjeta de vocabulario (ADR-016). Clave compuesta
+ * (word, courseId): la misma palabra puede existir en cursos distintos.
+ */
+@Entity(
+    tableName = "word_progress",
+    primaryKeys = ["word", "courseId"],
+)
+public data class WordProgressEntity(
+    public val word: String,
+    public val courseId: String,
+    public val translation: String,
+    public val reviewCount: Int,
+    public val lastReviewEpochMillis: Long,
+    public val nextReviewEpochMillis: Long,
+    public val stability: Float,
+    public val difficulty: Float,
+)

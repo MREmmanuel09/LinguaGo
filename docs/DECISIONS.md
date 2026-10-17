@@ -428,6 +428,42 @@ root o backup del `filesDir`.
 
 ---
 
+## ADR-016: Repaso espaciado FSRS-4.5 con vocabulario del contenido
+
+**Estado:** Aprobado
+**Fecha:** 2026-10-17
+
+**Contexto:** el RFC promete repaso espaciado (FSRS) desde Fase 2, pero solo
+existían los contratos (`WordProgress`, `GetNextReviewUseCase`) sin
+persistencia, algoritmo ni UI. Sin repaso, el contenido completado se
+olvida y el progreso por gamificación no se sostiene.
+
+**Decisión:**
+- **Algoritmo:** FSRS-4.5 puro en dominio (`FsrsScheduler`), con los 17
+  parámetros por defecto, retención objetivo 90%, ratings Otra vez/Difícil/
+  Bien/Fácil. "Otra vez" se vuelve a deber en 1 día; el resto usa intervalo
+  derivado de stability. Testeable en JVM sin Android (I7).
+- **Vocabulario:** se extrae de pares explícitos del contenido
+  (`MatchPairs`, `KanaChoose`, `KanjiReading`) al completar una lección
+  (`VocabularyExtractor`). No se toca el JSON de contenido ni el schema.
+- **Persistencia:** nueva tabla Room `word_progress` (clave `word`+`courseId`,
+  columnas stability/difficulty/reviewCount/lastReview/nextReview).
+  DB v2 con migración 1→2 sin pérdida de progreso.
+- **Repaso:** pantalla `feature-review` (N de M, mostrar traducción, 4
+  ratings, cierre). Entrada desde Home solo cuando hay tarjetas vencidas
+  (`Repasar ahora · N`). Sin XP por repaso en esta versión (evita inflar el
+  total; se revisará con métricas reales).
+- **Sync:** el word progress queda **fuera** del snapshot v1: el estado FSRS
+  no es monótono y mezclarlo requiere reglas propias (futuro snapshot v2).
+
+**Consecuencias:**
+- Repaso offline completo y persistente; el merge monótono (ADR-013) no se
+  ve afectado porque no se sincroniza.
+- Cambiar los parámetros FSRS no invalida tarjetas: solo cambia la agenda
+  futura (estado actual sigue siendo válido).
+
+---
+
 ## Registro de decisiones pendientes
 
 | Tema | Se decide en | ADR previsto |

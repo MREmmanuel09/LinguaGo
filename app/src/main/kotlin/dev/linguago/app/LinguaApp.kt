@@ -28,6 +28,7 @@ import dev.linguago.feature.home.HomeScreen
 import dev.linguago.feature.lesson.LessonScreen
 import dev.linguago.feature.onboarding.OnboardingScreen
 import dev.linguago.feature.profile.ProfileScreen
+import dev.linguago.feature.review.ReviewScreen
 import dev.linguago.feature.settings.SettingsScreen
 import dev.linguago.feature.sync.SyncScreen
 
@@ -94,6 +95,9 @@ fun LinguaApp(
                     onLessonClick = { courseId, lessonId ->
                         navController.navigate(Routes.lesson(courseId, lessonId))
                     },
+                    onStartReview = { courseId ->
+                        navController.navigate(Routes.review(courseId))
+                    },
                     modifier = Modifier.padding(innerPadding),
                 )
             }
@@ -123,6 +127,12 @@ fun LinguaApp(
             composable(Routes.SYNC) {
                 SyncScreen(
                     onOpenAccount = { navController.navigate(Routes.AUTH) },
+                    modifier = Modifier.padding(innerPadding),
+                )
+            }
+            composable(Routes.REVIEW) {
+                ReviewScreen(
+                    onExit = { navController.popBackStack() },
                     modifier = Modifier.padding(innerPadding),
                 )
             }

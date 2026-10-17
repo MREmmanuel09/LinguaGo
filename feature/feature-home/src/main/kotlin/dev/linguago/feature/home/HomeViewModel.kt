@@ -9,8 +9,10 @@ import dev.linguago.core.domain.model.CourseId
 import dev.linguago.core.domain.model.Language
 import dev.linguago.core.domain.model.LessonProgress
 import dev.linguago.core.domain.repository.ProgressRepository
+import dev.linguago.core.domain.repository.ReviewRepository
 import dev.linguago.core.domain.repository.SettingsRepository
 import dev.linguago.core.domain.usecase.LoadCourseUseCase
+import kotlinx.coroutines.Job
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.SharingStarted
 import kotlinx.coroutines.flow.StateFlow
@@ -35,6 +37,7 @@ data class HomeUiState(
     val courseId: String? = null,
     val streakDays: Int = 0,
     val totalXp: Int = 0,
+    val dueReviews: Int = 0,
     val courseTitle: String? = null,
     val units: List<UnitTile> = emptyList(),
 )
@@ -51,9 +54,12 @@ class HomeViewModel
         private val loadCourseUseCase: LoadCourseUseCase,
         private val progressRepository: ProgressRepository,
         private val settingsRepository: SettingsRepository,
+        private val reviewRepository: ReviewRepository,
     ) : ViewModel() {
         private val course = MutableStateFlow<Course?>(null)
         private val loading = MutableStateFlow(true)
+        private val dueCount = MutableStateFlow(0)
+        private var dueJob: Job? = null
 
         val uiState: StateFlow<HomeUiState> =
             combine(
@@ -61,13 +67,15 @@ class HomeViewModel
                 progressRepository.observeLessonProgress(),
                 loading,
                 course,
-            ) { streak, lessonProgress, isLoading, courseValue ->
+                dueCount,
+            ) { streak, lessonProgress, isLoading, courseValue, dueReviews ->
                 HomeUiState(
                     loading = isLoading,
                     hasCourse = courseValue != null,
                     courseId = courseValue?.id?.value,
                     streakDays = streak.current,
                     totalXp = streak.totalXp,
+                    dueReviews = dueReviews,
                     courseTitle = courseValue?.let { title(it) },
                     units = courseValue?.let { value -> buildTiles(value, lessonProgress) } ?: emptyList(),
                 )
@@ -84,6 +92,23 @@ class HomeViewModel
                     }
                 }
             }
+            viewModelScope.launch {
+                settingsRepository.selectedCourseId.collect { courseId -> observeReviews(courseId) }
+            }
+        }
+
+        private fun observeReviews(courseId: String?) {
+            dueJob?.cancel()
+            if (courseId == null) {
+                dueCount.value = 0
+                return
+            }
+            dueJob =
+                viewModelScope.launch {
+                    reviewRepository.observeDueCount(CourseId(courseId)).collect { due ->
+                        dueCount.value = due
+                    }
+                }
         }
 
         private suspend fun loadCourse(courseId: String) {

@@ -39,6 +39,7 @@ localmente (TTS Piper + STT Vosk).
 | 4.1 | OAuth 2.0 + PKCE con Google Drive (ADR-011) | ✅ |
 | 4.2 | Cifrado AES-GCM-256 con Keystore (ADR-014) | ✅ |
 | 4.3 | Release config (R8) + documentación | ✅ |
+| 5 | Repaso espaciado FSRS (ADR-016) | ✅ |
 | Pendiente | OneDrive (ADR-015), validación de voz pt/fr/ja en hardware | ⏳ |
 
 ## Módulos
@@ -58,7 +59,7 @@ localmente (TTS Piper + STT Vosk).
 | `content/*` | Assets del contenido pedagógico |
 
 Las decisiones de arquitectura están registradas en
-[docs/DECISIONS.md](docs/DECISIONS.md) (ADRs 000–014).
+[docs/DECISIONS.md](docs/DECISIONS.md) (ADRs 000–016).
 
 ## Compilar y ejecutar
 
