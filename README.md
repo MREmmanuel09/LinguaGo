@@ -40,6 +40,7 @@ localmente (TTS Piper + STT Vosk).
 | 4.2 | Cifrado AES-GCM-256 con Keystore (ADR-014) | ✅ |
 | 4.3 | Release config (R8) + documentación | ✅ |
 | 5 | Repaso espaciado FSRS (ADR-016) | ✅ |
+| 6 | Accesibilidad I8 + tests instrumentados | ✅ |
 | Pendiente | OneDrive (ADR-015), validación de voz pt/fr/ja en hardware | ⏳ |
 
 ## Módulos
@@ -143,10 +144,22 @@ El CI valida `assembleRelease` (R8/shrink) en cada push.
 ./gradlew ktlintFormat                              # autofix de estilo
 ```
 
-- GitHub Actions (`.github/workflows/ci.yml`): gate de calidad, `assembleDebug`
-  y `assembleRelease` en cada push/PR a `main`.
+- GitHub Actions (`.github/workflows/ci.yml`): gate de calidad, `assembleDebug`,
+  `assembleRelease` y tests instrumentados (emulador API 34) en cada push/PR.
 - `validateContent` valida los 4 cursos contra `docs/schemas/course-v1.json`
   (ADR-012) antes de testear.
+
+### Tests instrumentados (accesibilidad)
+
+`ash
+# Con un emulador/dispositivo conectado (API 34+):
+./gradlew :core:core-ui:connectedDebugAndroidTest
+`
+
+Cubren el contrato del design system (invariante I8): roles de TalkBack
+(Button/RadioButton), estado de selección, live region del feedback,
+ProgressBarRangeInfo de la barra, descripción de racha, touch targets
+≥ 48dp y supervivencia a ontScale = 2x.
 
 ## Licencias
 

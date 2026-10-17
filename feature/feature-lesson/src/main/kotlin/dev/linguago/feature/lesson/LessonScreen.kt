@@ -31,6 +31,10 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.platform.LocalContext
+import androidx.compose.ui.semantics.Role
+import androidx.compose.ui.semantics.role
+import androidx.compose.ui.semantics.selected
+import androidx.compose.ui.semantics.semantics
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
@@ -444,6 +448,7 @@ private fun AudioPanel(
                             MaterialTheme.colorScheme.surfaceVariant
                         },
                     ).clickable(enabled = enabled, onClick = onPlay)
+                    .semantics { role = Role.Button }
                     .padding(16.dp),
         ) {
             Text(
@@ -531,7 +536,10 @@ private fun TokenPill(
                 .clip(RoundedCornerShape(12.dp))
                 .background(if (selected) colors.primary else colors.surface)
                 .clickable { onToggle(token) }
-                .padding(horizontal = 12.dp, vertical = 8.dp),
+                .semantics {
+                    role = Role.Button
+                    this.selected = selected
+                }.padding(horizontal = 12.dp, vertical = 14.dp),
     )
 }
 
@@ -608,7 +616,10 @@ private fun MatchTile(
                 .clip(RoundedCornerShape(LinguaTokens.RADIUS_CARD_DP.dp))
                 .background(background)
                 .clickable(enabled = enabled, onClick = onClick)
-                .padding(horizontal = 10.dp, vertical = 12.dp),
+                .semantics {
+                    role = Role.Button
+                    this.selected = selected
+                }.padding(horizontal = 10.dp, vertical = 14.dp),
     )
 }
 

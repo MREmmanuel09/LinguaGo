@@ -15,6 +15,9 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.ColorFilter
 import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.semantics.LiveRegionMode
+import androidx.compose.ui.semantics.liveRegion
+import androidx.compose.ui.semantics.semantics
 import androidx.compose.ui.unit.dp
 import dev.linguago.core.ui.theme.LinguaTokens
 
@@ -37,13 +40,15 @@ fun FeedbackBanner(
                 .fillMaxWidth()
                 .clip(RoundedCornerShape(LinguaTokens.RADIUS_CARD_DP.dp))
                 .background(statusColor.copy(alpha = 0.18f))
-                .padding(horizontal = 16.dp, vertical = 12.dp),
+                .semantics(mergeDescendants = true) {
+                    liveRegion = LiveRegionMode.Polite
+                }.padding(horizontal = 16.dp, vertical = 12.dp),
         verticalAlignment = Alignment.CenterVertically,
         horizontalArrangement = Arrangement.spacedBy(10.dp),
     ) {
         Image(
             painter = painterResource(iconRes),
-            contentDescription = if (isCorrect) "Correcto" else "Incorrecto",
+            contentDescription = null,
             modifier = Modifier.padding(2.dp),
             colorFilter = ColorFilter.tint(statusColor),
         )

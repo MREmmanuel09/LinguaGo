@@ -2,10 +2,10 @@ package dev.linguago.core.ui.components
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
-import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.selection.selectable
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
@@ -15,8 +15,6 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.semantics.Role
-import androidx.compose.ui.semantics.role
-import androidx.compose.ui.semantics.semantics
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import dev.linguago.core.ui.theme.LinguaTokens
@@ -46,8 +44,7 @@ fun OptionCard(
                 .clip(RoundedCornerShape(LinguaTokens.RADIUS_CARD_DP.dp))
                 .background(if (selected) colors.primary.copy(alpha = 0.06f) else Color.Transparent)
                 .border(2.dp, borderColor, RoundedCornerShape(LinguaTokens.RADIUS_CARD_DP.dp))
-                .clickable(enabled = enabled, onClick = onClick)
-                .semantics { role = Role.RadioButton }
+                .selectable(selected = selected, enabled = enabled, role = Role.RadioButton, onClick = onClick)
                 .padding(horizontal = 16.dp, vertical = 14.dp),
         verticalAlignment = Alignment.CenterVertically,
     ) {
