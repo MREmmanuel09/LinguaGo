@@ -252,10 +252,41 @@ probarse con esa combinación.
 
 ---
 
+## ADR-010: Voces TTS por idioma y fallback al sistema
+
+**Estado:** Aprobado
+**Fecha:** 2026-10-16
+
+**Contexto:** los ejercicios de escucha (ListenChoose/ListenType) necesitan
+voz. Piper (sherpa-onnx) no publica todavía una voz japonesa estable con
+modelo descargable verificable; además, integrar el AAR de sherpa-onnx y
+descargar las voces en CI (ADR-006) es trabajo grande que no debe bloquear
+el audio entendible desde ya.
+
+**Decisión:**
+- La voz de Fase 2.1 es el **TTS del sistema** (`SystemTtsEngine` sobre
+  `TextToSpeech`) con locales BCP-47 por idioma: es-ES, en-US, pt-BR,
+  fr-FR, ja-JP (`core-audio`).
+- Voces Piper elegidas para Fase 2.2 (en `models/manifest.json`, verificación
+  SHA-256 antes de cargar): `en_US-amy-medium`, `pt_BR-faber-medium`,
+  `fr_FR-siwis-medium`; para `ja` queda **fallback al sistema** hasta que
+  exista voz publicada estable.
+- El `TtsEngine` concreto se resuelve por DI (`AudioModule`); cambiar
+  System→Piper no toca features ni dominio (Strategy, ADR-003).
+- `isReadyFor` filtra por disponibilidad en el dispositivo: si no hay voz,
+  el chip de audio se muestra inactivo y el ejercicio sigue usable (I3).
+
+**Consecuencias:**
+- Audio funciona sin descargar nada (la mayoría de dispositivos tienen
+  voces offline del sistema); Piper sube calidad cuando llegue Fase 2.2.
+- La calidad de voz depende del dispositivo — mitigación: Piper como
+  default cuando exista manifest verificado.
+
+---
+
 ## Registro de decisiones pendientes
 
 | Tema | Se decide en | ADR previsto |
 |---|---|---|
-| Elección voz por idioma (lista exacta int8/medium) | Fase 2 | ADR-010 |
 | Google Drive/OneDrive OAuth flow y almacenamiento de tokens | Fase 4 | ADR-011 |
 | Appropriates JSON Schema formal y versionado del contenido | Fase 3 | ADR-012 |

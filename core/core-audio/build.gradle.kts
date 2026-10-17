@@ -1,5 +1,6 @@
 plugins {
     id("linguago.android.library")
+    id("linguago.hilt")
 }
 
 android {

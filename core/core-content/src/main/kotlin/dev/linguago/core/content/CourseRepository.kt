@@ -7,8 +7,8 @@ import dev.linguago.core.common.map
 import dev.linguago.core.domain.model.Course
 import dev.linguago.core.domain.model.CourseId
 import dev.linguago.core.domain.model.CourseSummary
-import dev.linguago.core.domain.model.Lesson
 import dev.linguago.core.domain.model.LessonId
+import dev.linguago.core.domain.model.LessonSession
 import dev.linguago.core.domain.repository.CourseRepository
 import dev.linguago.core.domain.usecase.GetAvailableCoursesUseCase
 import dev.linguago.core.domain.usecase.LoadCourseUseCase
@@ -59,7 +59,7 @@ public class StartLessonUseCaseImpl
         override suspend operator fun invoke(
             courseId: CourseId,
             lessonId: LessonId,
-        ): Result<Lesson> =
+        ): Result<LessonSession> =
             loader
                 .loadCourse(courseId)
                 .flatMap { course -> findLesson(course, lessonId) }
@@ -67,11 +67,11 @@ public class StartLessonUseCaseImpl
         private fun findLesson(
             course: Course,
             lessonId: LessonId,
-        ): Result<Lesson> =
+        ): Result<LessonSession> =
             course.levels
                 .flatMap { it.units }
                 .flatMap { it.lessons }
                 .firstOrNull { it.id == lessonId }
-                ?.let { lesson -> Result.success(lesson) }
+                ?.let { lesson -> Result.success(LessonSession(course, lesson)) }
                 ?: Result.error(LinguaError.NotFound)
     }

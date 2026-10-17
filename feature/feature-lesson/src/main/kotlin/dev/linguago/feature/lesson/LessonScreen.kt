@@ -1,6 +1,7 @@
 package dev.linguago.feature.lesson
 
 import androidx.compose.foundation.background
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
@@ -61,6 +62,7 @@ fun LessonScreen(
         onSubmitPairs = viewModel::submitMatchedPairs,
         onTypedText = viewModel::submitTypedText,
         onAdvance = viewModel::advance,
+        onPlayAudio = viewModel::playAudio,
         onExit = onExit,
         modifier = modifier,
     )
@@ -77,6 +79,7 @@ private fun LessonContent(
     onSubmitPairs: () -> Unit,
     onTypedText: (String) -> Unit,
     onAdvance: () -> Unit,
+    onPlayAudio: () -> Unit,
     onExit: () -> Unit,
     modifier: Modifier = Modifier,
 ) {
@@ -95,6 +98,7 @@ private fun LessonContent(
                 onSubmitPairs = onSubmitPairs,
                 onTypedText = onTypedText,
                 onAdvance = onAdvance,
+                onPlayAudio = onPlayAudio,
                 onExit = onExit,
                 modifier = modifier,
             )
@@ -112,6 +116,7 @@ private fun ExerciseStage(
     onSubmitPairs: () -> Unit,
     onTypedText: (String) -> Unit,
     onAdvance: () -> Unit,
+    onPlayAudio: () -> Unit,
     onExit: () -> Unit,
     modifier: Modifier = Modifier,
 ) {
@@ -161,6 +166,7 @@ private fun ExerciseStage(
                 onMatchLeft = onMatchLeft,
                 onMatchRight = onMatchRight,
                 onTypedText = onTypedText,
+                onPlayAudio = onPlayAudio,
             )
         }
 
@@ -188,6 +194,7 @@ private fun Renderer(
     onMatchLeft: (Int) -> Unit,
     onMatchRight: (Int) -> Unit,
     onTypedText: (String) -> Unit,
+    onPlayAudio: () -> Unit,
 ) {
     when (exercise) {
         is Exercise.MultipleChoice -> OptionsStep(exercise.question, exercise.options, onPickOption)
@@ -195,10 +202,16 @@ private fun Renderer(
         is Exercise.KanjiReading -> OptionsStep(exercise.kanji, exercise.readingOptions, onPickOption)
         is Exercise.ParticleFill -> OptionsStep(exercise.sentenceTemplate, exercise.particles, onPickOption)
         is Exercise.ListenChoose -> {
-            AudioPanel(title = "Escucha y elige")
+            AudioPanel(title = "Escucha y elige", onPlay = onPlayAudio, enabled = uiState.audioAvailable)
             OptionsStep("¿Qué escuchaste?", exercise.options, onPickOption)
         }
-        is Exercise.ListenType -> TypePanel(audioTitle = "Escribe lo que escuchas", onTypedText)
+        is Exercise.ListenType ->
+            TypePanel(
+                audioTitle = "Escribe lo que escuchas",
+                onPlay = onPlayAudio,
+                audioEnabled = uiState.audioAvailable,
+                onTypedText = onTypedText,
+            )
         is Exercise.Translate ->
             TokenBoard(header = exercise.sourcePhrase, uiState = uiState, onToggleToken = onToggleToken)
         is Exercise.OrderWords ->
@@ -253,12 +266,14 @@ private fun BottomActions(
 @Composable
 private fun TypePanel(
     audioTitle: String,
+    onPlay: () -> Unit,
+    audioEnabled: Boolean,
     onTypedText: (String) -> Unit,
     modifier: Modifier = Modifier,
 ) {
     var typed by remember(audioTitle) { mutableStateOf("") }
     Column(modifier = modifier.fillMaxWidth(), verticalArrangement = Arrangement.spacedBy(12.dp)) {
-        AudioPanel(title = audioTitle)
+        AudioPanel(title = audioTitle, onPlay = onPlay, enabled = audioEnabled)
         OutlinedTextField(
             value = typed,
             onValueChange = { value -> typed = value },
@@ -297,10 +312,15 @@ private fun OptionsStep(
     }
 }
 
-/** Chip de audio placeholder (I7): sin TTS en Fase 1, no revela la respuesta. */
+/**
+ * Chip de audio (Fase 2): toca para reproducir; si no hay voz disponible
+ * el chip queda inactivo en lugar de bloquear el ejercicio (degradación I1).
+ */
 @Composable
 private fun AudioPanel(
     title: String,
+    onPlay: () -> Unit,
+    enabled: Boolean,
     modifier: Modifier = Modifier,
 ) {
     Column(modifier = modifier, verticalArrangement = Arrangement.spacedBy(10.dp)) {
@@ -314,13 +334,29 @@ private fun AudioPanel(
                 Modifier
                     .fillMaxWidth()
                     .clip(RoundedCornerShape(LinguaTokens.RADIUS_CARD_DP.dp))
-                    .background(MaterialTheme.colorScheme.secondaryContainer)
+                    .background(
+                        if (enabled) {
+                            MaterialTheme.colorScheme.secondaryContainer
+                        } else {
+                            MaterialTheme.colorScheme.surfaceVariant
+                        },
+                    ).clickable(enabled = enabled, onClick = onPlay)
                     .padding(16.dp),
         ) {
             Text(
-                text = "Reproducir audio (disponible pronto)",
+                text =
+                    if (enabled) {
+                        "Reproducir audio (toca aquí)"
+                    } else {
+                        "Voz no disponible en este dispositivo"
+                    },
                 style = MaterialTheme.typography.titleMedium,
-                color = MaterialTheme.colorScheme.onSecondaryContainer,
+                color =
+                    if (enabled) {
+                        MaterialTheme.colorScheme.onSecondaryContainer
+                    } else {
+                        MaterialTheme.colorScheme.onSurfaceVariant
+                    },
             )
         }
     }
@@ -553,6 +589,7 @@ private fun LessonScreenPreview() {
             onSubmitPairs = {},
             onTypedText = {},
             onAdvance = {},
+            onPlayAudio = {},
             onExit = {},
         )
     }

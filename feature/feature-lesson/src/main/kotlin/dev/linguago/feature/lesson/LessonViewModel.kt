@@ -4,11 +4,13 @@ import androidx.lifecycle.SavedStateHandle
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import dagger.hilt.android.lifecycle.HiltViewModel
+import dev.linguago.core.audio.TtsEngine
 import dev.linguago.core.common.Result
 import dev.linguago.core.domain.model.CourseId
 import dev.linguago.core.domain.model.Exercise
-import dev.linguago.core.domain.model.Lesson
+import dev.linguago.core.domain.model.Language
 import dev.linguago.core.domain.model.LessonId
+import dev.linguago.core.domain.model.LessonSession
 import dev.linguago.core.domain.model.XP_PER_CORRECT_ANSWER
 import dev.linguago.core.domain.usecase.CompleteLessonUseCase
 import dev.linguago.core.domain.usecase.ExerciseAnswer
@@ -47,6 +49,8 @@ data class LessonUiState(
     val shuffledRights: List<Int> = emptyList(),
     val selectedLeft: Int? = null,
     val matched: Map<Int, Int> = emptyMap(),
+    // Audio (Fase 2): disponibilidad de voz en el dispositivo ejercicios listen.
+    val audioAvailable: Boolean = false,
 )
 
 /**
@@ -62,6 +66,7 @@ class LessonViewModel
         private val startLessonUseCase: StartLessonUseCase,
         private val submitAnswerUseCase: SubmitAnswerUseCase,
         private val completeLessonUseCase: CompleteLessonUseCase,
+        private val ttsEngine: TtsEngine,
     ) : ViewModel() {
         private val courseId: String =
             checkNotNull(savedStateHandle[LESSON_COURSE_KEY])
@@ -70,6 +75,8 @@ class LessonViewModel
 
         private val _uiState = MutableStateFlow(LessonUiState())
         val uiState: StateFlow<LessonUiState> = _uiState.asStateFlow()
+
+        private var targetLanguage: Language? = null
 
         init {
             viewModelScope.launch {
@@ -82,6 +89,16 @@ class LessonViewModel
 
         /** El usuario elige una opción de lista (MC / ListenChoose / Kana / Kanji / Partícula). */
         fun pickOption(index: Int) = submitAnswer(ExerciseAnswer.OptionPicked(index))
+
+        /** Reproduce el audio del ejercicio actual (escuchar/escribir lo escuchado). */
+        fun playAudio() {
+            val language = targetLanguage ?: return
+            val audioText =
+                _uiState.value.exercises
+                    .getOrNull(_uiState.value.index)
+                    ?.audioText ?: return
+            viewModelScope.launch { ttsEngine.speak(audioText, language) }
+        }
 
         /** El usuario verifica el tablero de tokens (Translate / OrderWords). */
         fun submitTokens() {
@@ -147,13 +164,15 @@ class LessonViewModel
             }
         }
 
-        private fun startLesson(lesson: Lesson) {
+        private fun startLesson(session: LessonSession) {
+            targetLanguage = session.course.toLanguage
             _uiState.update {
                 it.copy(
                     loading = false,
-                    lessonTitle = lesson.title,
-                    exercises = lesson.exercises,
+                    lessonTitle = session.lesson.title,
+                    exercises = session.lesson.exercises,
                     index = 0,
+                    audioAvailable = ttsEngine.isReadyFor(session.course.toLanguage),
                 )
             }
             prepareExercise(0)

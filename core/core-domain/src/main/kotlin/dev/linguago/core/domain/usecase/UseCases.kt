@@ -5,8 +5,8 @@ import dev.linguago.core.domain.model.Course
 import dev.linguago.core.domain.model.CourseId
 import dev.linguago.core.domain.model.CourseSummary
 import dev.linguago.core.domain.model.Exercise
-import dev.linguago.core.domain.model.Lesson
 import dev.linguago.core.domain.model.LessonId
+import dev.linguago.core.domain.model.LessonSession
 import dev.linguago.core.domain.model.StreakState
 import dev.linguago.core.domain.model.WordProgress
 
@@ -26,11 +26,11 @@ public interface GetAvailableCoursesUseCase {
 }
 
 public interface StartLessonUseCase {
-    /** Abre la lección del curso indicado y devuelve su cola de ejercicios. */
+    /** Abre la lección del curso indicado con su cola de ejercicios y curso. */
     public suspend operator fun invoke(
         courseId: CourseId,
         lessonId: LessonId,
-    ): Result<Lesson>
+    ): Result<LessonSession>
 }
 
 public interface SubmitAnswerUseCase {
