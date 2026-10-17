@@ -6,6 +6,9 @@ import dagger.hilt.InstallIn
 import dagger.hilt.components.SingletonComponent
 import dagger.multibindings.IntoMap
 import dev.linguago.core.auth.GoogleDriveCloudProvider
+import dev.linguago.core.auth.KeystoreCryptoService
+import dev.linguago.core.common.CryptoService
+import dev.linguago.core.common.NoOpCryptoService
 import dev.linguago.core.sync.CloudProvider
 import dev.linguago.core.sync.CloudProviderKey
 import kotlinx.serialization.json.Json
@@ -35,6 +38,15 @@ public object AuthModule {
     @Provides
     @Singleton
     public fun secureRandom(): SecureRandom = SecureRandom()
+
+    @Provides
+    @Singleton
+    public fun cryptoService(): CryptoService =
+        try {
+            KeystoreCryptoService()
+        } catch (error: Exception) {
+            NoOpCryptoService()
+        }
 
     @Provides
     @Singleton

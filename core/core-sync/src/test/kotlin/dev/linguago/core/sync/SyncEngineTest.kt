@@ -1,6 +1,7 @@
 package dev.linguago.core.sync
 
 import dev.linguago.core.common.LinguaError
+import dev.linguago.core.common.NoOpCryptoService
 import dev.linguago.core.common.Result
 import dev.linguago.core.domain.model.StreakState
 import dev.linguago.core.domain.model.SyncSnapshot
@@ -88,7 +89,7 @@ public class SyncEngineTest {
                     totalXp = 60,
                     lessons = listOf(SyncSnapshot.LessonEntry("l1", completed = true, xp = 60, attempts = 1)),
                 )
-            val engine = SyncEngine(repo, SnapshotCodec(), cloud)
+            val engine = SyncEngine(repo, SnapshotCodec(), NoOpCryptoService(), cloud)
 
             val result = engine.backup()
 
@@ -114,7 +115,7 @@ public class SyncEngineTest {
                     lessons = listOf(SyncSnapshot.LessonEntry("l2", completed = true, xp = 120, attempts = 2)),
                 )
             cloud.stored = (codec.encode(remote) as Result.Success).value
-            val engine = SyncEngine(repo, codec, cloud)
+            val engine = SyncEngine(repo, codec, NoOpCryptoService(), cloud)
 
             val result = engine.restore()
 
@@ -132,7 +133,7 @@ public class SyncEngineTest {
     @Test
     public fun `sin nube vinculada backup falla con NotLinked`() =
         runTest {
-            val engine = SyncEngine(FakeProgressRepository(), SnapshotCodec(), NoopCloudProvider())
+            val engine = SyncEngine(FakeProgressRepository(), SnapshotCodec(), NoOpCryptoService(), NoopCloudProvider())
 
             val result = engine.backup()
 

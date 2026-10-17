@@ -392,9 +392,44 @@ con OAuth) se decide en Fase 4 (ADR-011); ahora existe `CloudProvider`
 
 ---
 
+## ADR-014: Cifrado del snapshot y tokens — AES-GCM-256 con Keystore
+
+**Estado:** Aprobado
+**Fecha:** 2026-10-17
+
+**Contexto:** ADR-013 deja el snapshot en claro dentro del sandbox cloud y
+los tokens en el DataStore privado de la app. Riesgo: snapshot en text plano
+es legible si alguna vez escapa del sandbox; tokens en claro son legibles con
+root o backup del `filesDir`.
+
+**Decisión:**
+- **Algoritmo:** AES-GCM-256 (`AES/GCM/NoPadding`), IV de 12 bytes
+  aleatorio por cifrado (prefijo al payload), tag GCM de 16 bytes al final.
+  Formato: `IV || ciphertext || tag`.
+- **Clave:** AndroidKeyStore, alias `linguago_crypto_key`, PKCS8
+  (con generación aleatoria). Hardware-backed cuando el dispositivo lo
+  soporte; software cuando no. Sin almacenar la clave en texto.
+- **Punto único de cifrado:** `CryptoService` (core-common) con dos
+  impls: `KeystoreCryptoService` (prod) y `NoOpCryptoService` (tests/dev
+  fallback). El snapshot se cifra en `SyncEngine` (chokepoint de
+  transporte); los tokens se cifran en `TokenStore`.
+- **Fallo limpio:** si el descifrado falla (payload corrupto/ajeno), se
+  devuelve `LinguaError.InvalidContent`/`NotFound` y la sesión se invalida,
+**nunca** se acepta texto plano.
+- **Migración:** tokens en claro preexistentes se detectan en el primer
+  acceso y se re-cifran automáticamente.
+
+**Consecuencias:**
+- Un snapshot robado es inútil sin la clave del dispositivo; el respaldo ya
+  no es "solo sandbox": es sandbox + cifrado.
+- El_keystore genera fallos solo en dispositivos muy degradados; el fallback
+  NoOp preserva el 100% de funcionalidad (I1–I3) a cambio de no cifrar,
+  comportamiento que se documenta.
+
+---
+
 ## Registro de decisiones pendientes
 
 | Tema | Se decide en | ADR previsto |
 |---|---|---|
-| Cifrado del snapshot (y de los tokens) antes de subirlos | Fase 4 | ADR-014 |
 | Proveedor OneDrive (appfolder vía MSAL) | Fase 4+ | ADR-015 |

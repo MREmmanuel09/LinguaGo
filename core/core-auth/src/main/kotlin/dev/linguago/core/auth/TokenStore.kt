@@ -7,6 +7,7 @@ import androidx.datastore.preferences.core.Preferences
 import androidx.datastore.preferences.core.edit
 import androidx.datastore.preferences.core.stringPreferencesKey
 import dagger.hilt.android.qualifiers.ApplicationContext
+import dev.linguago.core.common.CryptoService
 import dev.linguago.core.common.DispatcherProvider
 import dev.linguago.core.common.LinguaError
 import dev.linguago.core.common.Result
@@ -34,6 +35,7 @@ public class TokenStore
     constructor(
         @ApplicationContext private val context: Context,
         private val json: Json,
+        private val crypto: CryptoService,
         private val dispatchers: DispatcherProvider,
     ) : TokenReader {
         private val scope = CoroutineScope(SupervisorJob() + dispatchers.io)
@@ -61,13 +63,14 @@ public class TokenStore
         /** Consulta sincrónica de vinculación (I3: no hace I/O ni red). */
         override fun hasTokens(): Boolean = cached() != null
 
-        /** Persiste una sesión nueva; emite el cambio inmediatamente. */
+        /** Persiste una sesión cifrada; emite el cambio inmediatamente. */
         public suspend fun save(tokens: StoredTokens): Result<Unit> =
             withContext(dispatchers.io) {
                 try {
+                    val plaintext = json.encodeToString(StoredTokens.serializer(), tokens)
+                    val ciphertext = crypto.encrypt(plaintext.toByteArray(Charsets.UTF_8))
                     dataStore.edit { preferences ->
-                        preferences[TOKEN_KEY] =
-                            json.encodeToString(StoredTokens.serializer(), tokens)
+                        preferences[TOKEN_KEY] = ciphertext.toHex()
                     }
                     _state.value = tokens
                     Result.success(Unit)
@@ -95,13 +98,30 @@ public class TokenStore
                 try {
                     val preferences = dataStore.data.first()
                     preferences[TOKEN_KEY]?.let { text ->
-                        json.decodeFromString(StoredTokens.serializer(), text)
+                        val ciphertext = text.hexToByteArray()
+                        val plaintext = crypto.decrypt(ciphertext)?.toString(Charsets.UTF_8)
+                        plaintext?.let { json.decodeFromString(StoredTokens.serializer(), it) }
+                            ?: migrateLegacy(text)
                     }
                 } catch (error: Exception) {
                     null
                 }
             _state.value = tokens
         }
+
+        /** Tokens en claro (pre-ADR-014) se re-cifran en el primer acceso. */
+        private suspend fun migrateLegacy(text: String): StoredTokens? =
+            try {
+                val tokens = json.decodeFromString(StoredTokens.serializer(), text)
+                save(tokens)
+                tokens
+            } catch (error: Exception) {
+                null
+            }
+
+        private fun ByteArray.toHex(): String = joinToString("") { byte -> "%02x".format(byte) }
+
+        private fun String.hexToByteArray(): ByteArray = chunked(2).map { it.toInt(16).toByte() }.toByteArray()
 
         private fun preferencesFile(): File =
             File(context.filesDir, "datastore")
