@@ -284,6 +284,47 @@ el audio entendible desde ya.
 
 ---
 
+## ADR-011: Autenticación Google Drive vía OAuth 2.0 + PKCE (Fase 4)
+
+**Estado:** Aprobado
+**Fecha:** 2026-10-17
+
+**Contexto:** la sincronización (ADR-013) requiere subir/bajar el snapshot
+desde un espacio privado del usuario. Se evaluó Firebase (no: app offline
+sin servicios de Google Cloud, permission I3), GoogleSignIn legacy
+(depends on Play Services SDK sign-in deprecado) y flux con navegador +
+custom scheme identificado en OAuth 2.0 for Native Apps (RFC 8252).
+
+**Decisión:**
+- **Stack:** OAuth 2.0 Authorization Code + PKCE (RFC 7636) con OkHttp y
+  redirect custom (`dev.linguago.oauth://callback`, `OAuthCallbackActivity`
+  en app + intent-filter BROWSABLE). Sin AppAuth ni Play Services: flujo
+  implementado end to end en `core-auth` (`OAuthEngine`, `OAuthSession`,
+  `TokenStore`) — canje/refresh contra `oauth2.googleapis.com/token`.
+- **Permisos:** solo `drive.appdata` (+ `openid profile`): una carpeta
+  sandbox privada de la app en Drive — inaccessible incluso para el
+  usuario en la UI de Drive; el `snapshot` de ADR-013 vive ahí.
+- **Tokens** en DataStore privado de la app (`filesDir/datastore`), con
+  copia en memoria (`TokenStore`) para consultas sincronas de `isLinked`.
+- **Doble proveedor:** el flujo real (`google_drive`) requiere client id
+  (gradle property `googleClientId`); sin él la UI muestra el estado
+  "Sin configurar". Además, en builds debug existe el proveedor de
+  laboratorio `dev_local` que respalda dentro del propio dispositivo para
+  probar el flujo completo auth → sync sin credenciales — bind DI solo en
+  debug (`app/src/debug`), interruptor `@Named("dev_cloud_enabled")`.
+- UI: `feature-auth` nueva AuthScreen (carteleras por proveedor,
+  vincular/desvincular); "Conectar cuenta" en SyncScreen (navega a auth).
+
+**Consecuencias:**
+- Para activar el respaldo REAL: crear un OAuth client (Web app o iOS con
+  scheme custom; se documentará en README) y compilar con
+  `-PgoogleClientId=...`; el resto de la app no cambia.
+- El OneDrive queda **deferido** (ADR-015): el contrato CloudProvider ya
+  lo soporta; solo falta MSAL + redirect msauth.
+- El cifrado del token en reposo queda para ADR-014 (hoy:	aplicación UID-scope solo lectura vía ΔRead).
+
+---
+
 ## ADR-012: JSON Schema formal y validación del contenido
 
 **Estado:** Aprobado
@@ -355,5 +396,5 @@ con OAuth) se decide en Fase 4 (ADR-011); ahora existe `CloudProvider`
 
 | Tema | Se decide en | ADR previsto |
 |---|---|---|
-| Google Drive/OneDrive OAuth flow y almacenamiento de tokens | Fase 4 | ADR-011 |
-| Cifrado del snapshot antes de subirlo al proveedor | Fase 4 | ADR-014 |
+| Cifrado del snapshot (y de los tokens) antes de subirlos | Fase 4 | ADR-014 |
+| Proveedor OneDrive (appfolder vía MSAL) | Fase 4+ | ADR-015 |

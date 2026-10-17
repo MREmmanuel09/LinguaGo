@@ -116,10 +116,15 @@ fun LinguaApp(
                 )
             }
             composable(Routes.AUTH) {
-                AuthScreen(modifier = Modifier.padding(innerPadding))
+                AuthScreen(
+                    modifier = Modifier.padding(innerPadding),
+                )
             }
             composable(Routes.SYNC) {
-                SyncScreen(modifier = Modifier.padding(innerPadding))
+                SyncScreen(
+                    onOpenAccount = { navController.navigate(Routes.AUTH) },
+                    modifier = Modifier.padding(innerPadding),
+                )
             }
         }
     }

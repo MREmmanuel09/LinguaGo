@@ -42,6 +42,7 @@ include(
     ":core:core-audio",
     ":core:core-sync",
     ":core:core-common",
+    ":core:core-auth",
 )
 
 include(

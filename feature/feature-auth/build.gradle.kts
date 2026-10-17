@@ -7,5 +7,7 @@ android {
 }
 
 dependencies {
+    implementation(project(":core:core-auth"))
+    implementation(project(":core:core-common"))
     implementation(platform(libs.compose.bom))
 }

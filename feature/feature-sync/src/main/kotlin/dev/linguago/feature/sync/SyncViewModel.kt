@@ -32,7 +32,7 @@ class SyncViewModel
     @Inject
     constructor(
         private val syncEngine: SyncEngine,
-        cloudProvider: CloudProvider,
+        private val cloudProvider: CloudProvider,
     ) : ViewModel() {
         private val _uiState =
             MutableStateFlow(
@@ -42,6 +42,16 @@ class SyncViewModel
                 ),
             )
         val uiState: StateFlow<SyncUiState> = _uiState.asStateFlow()
+
+        /** Re-lee el proveedor activo (link/unlink cambian al vuelo). */
+        fun refresh() {
+            _uiState.update { current ->
+                current.copy(
+                    providerId = cloudProvider.id,
+                    linked = cloudProvider.isLinked(),
+                )
+            }
+        }
 
         /** Sube el snapshot del progreso local al proveedor cloud. */
         fun backup() {

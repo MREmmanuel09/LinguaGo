@@ -16,4 +16,10 @@ public sealed interface LinguaError {
 
     /** Respaldo/sync solicitado sin una cuenta cloud vinculada (Fase 4). */
     public data object NotLinked : LinguaError
+
+    /** Integración (OAuth/Drive) falta de configuración (client id, red). */
+    public data object NotConfigured : LinguaError
+
+    /** Fallas de red del proveedor cloud (drive/oauth endpoints, Fase 4). */
+    public data object Network : LinguaError
 }

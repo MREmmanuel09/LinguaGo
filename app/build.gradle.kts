@@ -9,6 +9,15 @@ android {
         applicationId = "dev.linguago.app"
         versionCode = 1
         versionName = "0.1.0-alpha"
+
+        buildConfigField(
+            type = "String",
+            name = "GOOGLE_CLIENT_ID",
+            value = "\"${providers.gradleProperty("googleClientId").orElse("").get()}\"",
+        )
+    }
+    buildFeatures {
+        buildConfig = true
     }
     sourceSets {
         getByName("main") {
@@ -27,6 +36,7 @@ dependencies {
     implementation(project(":core:core-content"))
     implementation(project(":core:core-audio"))
     implementation(project(":core:core-sync"))
+    implementation(project(":core:core-auth"))
 
     implementation(project(":feature:feature-onboarding"))
     implementation(project(":feature:feature-auth"))

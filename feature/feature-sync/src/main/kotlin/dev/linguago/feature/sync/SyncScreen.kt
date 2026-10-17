@@ -1,6 +1,7 @@
 package dev.linguago.feature.sync
 
 import androidx.compose.foundation.background
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Spacer
@@ -12,6 +13,7 @@ import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.getValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
@@ -31,13 +33,16 @@ import dev.linguago.core.ui.theme.LinguaTheme
 @Composable
 fun SyncScreen(
     modifier: Modifier = Modifier,
+    onOpenAccount: () -> Unit = {},
     viewModel: SyncViewModel = hiltViewModel(),
 ) {
     val state by viewModel.uiState.collectAsStateWithLifecycle()
+    LaunchedEffect(Unit) { viewModel.refresh() }
     SyncContent(
         state = state,
         onBackup = viewModel::backup,
         onRestore = viewModel::restore,
+        onOpenAccount = onOpenAccount,
         modifier = modifier,
     )
 }
@@ -47,6 +52,7 @@ private fun SyncContent(
     state: SyncUiState,
     onBackup: () -> Unit,
     onRestore: () -> Unit,
+    onOpenAccount: () -> Unit = {},
     modifier: Modifier = Modifier,
 ) {
     val colors = MaterialTheme.colorScheme
@@ -101,6 +107,21 @@ private fun SyncContent(
             onClick = onRestore,
             enabled = state.linked && !state.busy,
             modifier = Modifier.fillMaxWidth(),
+        )
+        Text(
+            text =
+                when (state.linked) {
+                    true -> "Administrar cuenta: Ajustes → Sincronización y cuenta."
+                    false -> "Conectar una cuenta (opcional) para respaldar tu progreso."
+                },
+            style = MaterialTheme.typography.bodyMedium,
+            color = colors.primary,
+            modifier =
+                Modifier
+                    .fillMaxWidth()
+                    .clip(RoundedCornerShape(12.dp))
+                    .clickable(onClick = onOpenAccount)
+                    .padding(vertical = 8.dp),
         )
         state.message?.let { message ->
             Spacer(Modifier.height(4.dp))

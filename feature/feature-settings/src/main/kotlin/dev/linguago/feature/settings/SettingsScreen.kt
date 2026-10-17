@@ -23,7 +23,7 @@ import dev.linguago.core.ui.theme.LinguaTheme
 
 /**
  * Ajustes generales (RFC §2.2): tema claro/oscuro, cambio de curso
- * (onboarding) y sincronización opcional (Fase 4).
+ * (onboarding) y sincronización opcional (Fase 4, ADR-011).
  */
 @Composable
 fun SettingsScreen(
@@ -110,7 +110,7 @@ private fun SettingsContent(
 
         Spacer(Modifier.height(8.dp))
         OptionCard(
-            text = "Sincronización y cuenta (Fase 4)",
+            text = "Sincronización y cuenta",
             selected = false,
             onClick = onOpenSync,
             modifier = Modifier.fillMaxWidth(),
