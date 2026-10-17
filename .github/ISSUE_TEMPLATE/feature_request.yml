@@ -1,0 +1,53 @@
+name: Propuesta de mejora
+description: Una idea para LinguaGo (app, contenido o docs)
+title: "[feat] "
+labels: ["enhancement"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Antes de proponer, revisa los invariantes del
+        [README](../README.md#principios-invariantes): toda propuesta debe
+        respetarlos (offline-first, sin fricción, progreso intocable…).
+  - type: textarea
+    id: problema
+    attributes:
+      label: ¿Qué problema resuelve?
+      description: Describe la necesidad del usuario, no la solución técnica.
+    validations:
+      required: true
+  - type: textarea
+    id: propuesta
+    attributes:
+      label: Propuesta
+      description: ¿Cómo lo harías? Si toca arquitectura, ¿qué ADR implicaría?
+    validations:
+      required: true
+  - type: dropdown
+    id: area
+    attributes:
+      label: Área
+      options:
+        - App (UI/UX)
+        - Audio (TTS/STT)
+        - Contenido (lecciones/ejercicios)
+        - Repaso FSRS
+        - Sincronización/cuentas
+        - Desarrollo (build/CI/docs)
+    validations:
+      required: true
+  - type: textarea
+    id: alternativas
+    attributes:
+      label: Alternativas consideradas
+    validations:
+      required: false
+  - type: checkboxes
+    id: confirmo
+    attributes:
+      label: Confirmo
+      options:
+        - label: Mi propuesta es 100% original (sin material de terceros)
+          required: true
+        - label: Respeto los invariantes del proyecto
+          required: true
