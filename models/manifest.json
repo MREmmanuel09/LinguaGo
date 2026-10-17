@@ -1,0 +1,57 @@
+{
+  "version": 1,
+  "notes": "Los sha256 los llena `fetchVoiceModels` tras descargar cada paquete (ADR-006). tts: un sha por paquete (el .onnx); stt: un file[] con sha por archivo. Campos vacíos = modelo no verificado; el engine no lo carga.",
+  "tts": [
+    {
+      "id": "en_US-amy-medium",
+      "engine": "piper",
+      "language": "en",
+      "path": "tts/en_US-amy-medium",
+      "sha256": ""
+    },
+    {
+      "id": "pt_BR-faber-medium",
+      "engine": "piper",
+      "language": "pt",
+      "path": "tts/pt_BR-faber-medium",
+      "sha256": ""
+    },
+    {
+      "id": "fr_FR-siwis-medium",
+      "engine": "piper",
+      "language": "fr",
+      "path": "tts/fr_FR-siwis-medium",
+      "sha256": ""
+    }
+  ],
+  "stt": [
+    {
+      "id": "vosk-small-en",
+      "engine": "vosk",
+      "language": "en",
+      "path": "stt/vosk-model-small-en-us-0.15",
+      "files": []
+    },
+    {
+      "id": "vosk-small-pt",
+      "engine": "vosk",
+      "language": "pt",
+      "path": "stt/vosk-model-small-pt-0.3",
+      "files": []
+    },
+    {
+      "id": "vosk-small-fr",
+      "engine": "vosk",
+      "language": "fr",
+      "path": "stt/vosk-model-small-fr-0.22",
+      "files": []
+    },
+    {
+      "id": "vosk-small-ja",
+      "engine": "vosk",
+      "language": "ja",
+      "path": "stt/vosk-model-small-ja-0.22",
+      "files": []
+    }
+  ]
+}
