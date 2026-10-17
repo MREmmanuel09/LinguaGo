@@ -1,0 +1,207 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://github.com/MREmmanuel09/LinguaGo/docs/schemas/course-v1.json",
+  "title": "LinguaGo course.json v1",
+  "description": "Contrato formal del contenido pedagógico empaquetado (ADR-012, ADR-009). La jerarquía curso→nivel→unidad→lección→ejercicio espeja el árbol de dominio de core-domain.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["id", "from", "to", "schemaVersion", "levels"],
+  "properties": {
+    "id": { "type": "string", "pattern": "^[a-z]{2}-[a-z]{2}$" },
+    "from": { "const": "es" },
+    "to": { "enum": ["en", "pt", "fr", "ja"] },
+    "schemaVersion": { "const": 1 },
+    "levels": { "type": "array", "minItems": 1, "items": { "$ref": "#/definitions/level" } }
+  },
+  "definitions": {
+    "id": { "type": "string", "pattern": "^[a-z0-9][a-z0-9-]*$" },
+    "exerciseId": { "type": "string", "pattern": "^[a-z0-9][a-z0-9-]*$" },
+    "tokens": { "type": "array", "minItems": 1, "items": { "type": "string", "minLength": 1 } },
+    "audioText": { "type": ["string", "null"], "minLength": 1 },
+    "level": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id", "name", "units"],
+      "properties": {
+        "id": { "$ref": "#/definitions/id" },
+        "name": { "type": "string", "minLength": 1 },
+        "units": { "type": "array", "minItems": 1, "items": { "$ref": "#/definitions/unit" } }
+      }
+    },
+    "unit": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id", "title", "lessons"],
+      "properties": {
+        "id": { "$ref": "#/definitions/id" },
+        "title": { "type": "string", "minLength": 1 },
+        "lessons": { "type": "array", "minItems": 1, "items": { "$ref": "#/definitions/lesson" } }
+      }
+    },
+    "lesson": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id", "title", "exercises"],
+      "properties": {
+        "id": { "$ref": "#/definitions/id" },
+        "title": { "type": "string", "minLength": 1 },
+        "exercises": { "type": "array", "minItems": 1, "items": { "$ref": "#/definitions/exercise" } }
+      }
+    },
+    "exercise": {
+      "type": "object",
+      "oneOf": [
+        { "$ref": "#/definitions/exMultipleChoice" },
+        { "$ref": "#/definitions/exTranslate" },
+        { "$ref": "#/definitions/exMatchPairs" },
+        { "$ref": "#/definitions/exOrderWords" },
+        { "$ref": "#/definitions/exListenChoose" },
+        { "$ref": "#/definitions/exListenType" },
+        { "$ref": "#/definitions/exSpeakRepeat" },
+        { "$ref": "#/definitions/exKanaChoose" },
+        { "$ref": "#/definitions/exKanjiReading" },
+        { "$ref": "#/definitions/exParticleFill" }
+      ],
+      "required": ["type", "id"],
+      "properties": {
+        "type": {},
+        "id": { "$ref": "#/definitions/exerciseId" },
+        "audioText": { "$ref": "#/definitions/audioText" }
+      }
+    },
+    "exMultipleChoice": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["type", "id", "question", "options", "correctIndex"],
+      "properties": {
+        "type": { "const": "MultipleChoice" },
+        "id": { "$ref": "#/definitions/exerciseId" },
+        "question": { "type": "string", "minLength": 1 },
+        "options": { "type": "array", "minItems": 2, "items": { "type": "string", "minLength": 1 } },
+        "correctIndex": { "type": "integer", "minimum": 0 },
+        "audioText": { "$ref": "#/definitions/audioText" }
+      }
+    },
+    "exTranslate": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["type", "id", "sourcePhrase", "correctTokens"],
+      "properties": {
+        "type": { "const": "Translate" },
+        "id": { "$ref": "#/definitions/exerciseId" },
+        "sourcePhrase": { "type": "string", "minLength": 1 },
+        "correctTokens": { "$ref": "#/definitions/tokens" },
+        "distractorTokens": { "type": "array", "items": { "type": "string", "minLength": 1 } },
+        "audioText": { "$ref": "#/definitions/audioText" }
+      }
+    },
+    "exMatchPairs": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["type", "id", "pairs"],
+      "properties": {
+        "type": { "const": "MatchPairs" },
+        "id": { "$ref": "#/definitions/exerciseId" },
+        "pairs": {
+          "type": "array",
+          "minItems": 2,
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["left", "right"],
+            "properties": {
+              "left": { "type": "string", "minLength": 1 },
+              "right": { "type": "string", "minLength": 1 }
+            }
+          }
+        },
+        "audioText": { "$ref": "#/definitions/audioText" }
+      }
+    },
+    "exOrderWords": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["type", "id", "tokens", "answerTokens"],
+      "properties": {
+        "type": { "const": "OrderWords" },
+        "id": { "$ref": "#/definitions/exerciseId" },
+        "tokens": { "$ref": "#/definitions/tokens" },
+        "answerTokens": { "$ref": "#/definitions/tokens" },
+        "audioText": { "$ref": "#/definitions/audioText" }
+      }
+    },
+    "exListenChoose": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["type", "id", "options", "correctIndex", "audioText"],
+      "properties": {
+        "type": { "const": "ListenChoose" },
+        "id": { "$ref": "#/definitions/exerciseId" },
+        "options": { "type": "array", "minItems": 2, "items": { "type": "string", "minLength": 1 } },
+        "correctIndex": { "type": "integer", "minimum": 0 },
+        "audioText": { "type": "string", "minLength": 1 }
+      }
+    },
+    "exListenType": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["type", "id", "transcription", "audioText"],
+      "properties": {
+        "type": { "const": "ListenType" },
+        "id": { "$ref": "#/definitions/exerciseId" },
+        "transcription": { "type": "string", "minLength": 1 },
+        "audioText": { "type": "string", "minLength": 1 }
+      }
+    },
+    "exSpeakRepeat": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["type", "id", "targetPhrase"],
+      "properties": {
+        "type": { "const": "SpeakRepeat" },
+        "id": { "$ref": "#/definitions/exerciseId" },
+        "targetPhrase": { "type": "string", "minLength": 1 },
+        "audioText": { "$ref": "#/definitions/audioText" }
+      }
+    },
+    "exKanaChoose": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["type", "id", "kana", "romajiOptions", "correctRomaji"],
+      "properties": {
+        "type": { "const": "KanaChoose" },
+        "id": { "$ref": "#/definitions/exerciseId" },
+        "kana": { "type": "string", "minLength": 1 },
+        "romajiOptions": { "type": "array", "minItems": 2, "items": { "type": "string", "minLength": 1 } },
+        "correctRomaji": { "type": "string", "minLength": 1 },
+        "audioText": { "$ref": "#/definitions/audioText" }
+      }
+    },
+    "exKanjiReading": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["type", "id", "kanji", "readingOptions", "correctReading"],
+      "properties": {
+        "type": { "const": "KanjiReading" },
+        "id": { "$ref": "#/definitions/exerciseId" },
+        "kanji": { "type": "string", "minLength": 1 },
+        "readingOptions": { "type": "array", "minItems": 2, "items": { "type": "string", "minLength": 1 } },
+        "correctReading": { "type": "string", "minLength": 1 },
+        "audioText": { "$ref": "#/definitions/audioText" }
+      }
+    },
+    "exParticleFill": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["type", "id", "sentenceTemplate", "particles", "correctParticle"],
+      "properties": {
+        "type": { "const": "ParticleFill" },
+        "id": { "$ref": "#/definitions/exerciseId" },
+        "sentenceTemplate": { "type": "string", "minLength": 1 },
+        "particles": { "type": "array", "minItems": 2, "items": { "type": "string", "minLength": 1 } },
+        "correctParticle": { "type": "string", "minLength": 1 },
+        "audioText": { "$ref": "#/definitions/audioText" }
+      }
+    }
+  }
+}

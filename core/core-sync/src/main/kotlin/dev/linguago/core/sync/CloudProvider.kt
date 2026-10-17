@@ -1,5 +1,7 @@
 package dev.linguago.core.sync
 
+import dev.linguago.core.common.Result
+
 /**
  * Contrato de proveedor cloud (RFC §6.1): Google Drive (`appDataFolder`) y
  * OneDrive (`appfolder`) son implementaciones intercambiables vía Strategy.

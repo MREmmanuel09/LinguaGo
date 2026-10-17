@@ -1,11 +1,12 @@
 {
+  "schemaVersion": 1,
   "id": "es-fr",
   "from": "es",
   "to": "fr",
   "levels": [
     {
       "id": "es-fr-lv-1",
-      "name": "Francés de cabeza",
+      "name": "FrancÃ©s de cabeza",
       "units": [
         {
           "id": "es-fr-lv-1-un-1",
@@ -18,7 +19,7 @@
                 {
                   "type": "MultipleChoice",
                   "id": "es-fr-e1",
-                  "question": "¿Cómo se dice «hola»?",
+                  "question": "Â¿CÃ³mo se dice Â«holaÂ»?",
                   "options": ["Bonjour", "Au revoir", "Oui"],
                   "correctIndex": 0
                 },
@@ -32,16 +33,16 @@
                 {
                   "type": "OrderWords",
                   "id": "es-fr-e3",
-                  "tokens": ["Comment", "ça", "va"],
-                  "answerTokens": ["Comment", "ça", "va"]
+                  "tokens": ["Comment", "Ã§a", "va"],
+                  "answerTokens": ["Comment", "Ã§a", "va"]
                 },
                 {
                   "type": "MatchPairs",
                   "id": "es-fr-e4",
                   "pairs": [
-                    {"left": "adiós", "right": "Au revoir"},
+                    {"left": "adiÃ³s", "right": "Au revoir"},
                     {"left": "gracias", "right": "Merci"},
-                    {"left": "sí", "right": "Oui"}
+                    {"left": "sÃ­", "right": "Oui"}
                   ]
                 },
                 {
@@ -54,20 +55,20 @@
                 {
                   "type": "ListenType",
                   "id": "es-fr-e6",
-                  "transcription": "Bonne journée",
-                  "audioText": "Bonne journée"
+                  "transcription": "Bonne journÃ©e",
+                  "audioText": "Bonne journÃ©e"
                 }
               ]
             },
             {
               "id": "es-fr-lv-1-un-1-ls-2",
-              "title": "Se présenter",
+              "title": "Se prÃ©senter",
               "exercises": [
                 {
                   "type": "MultipleChoice",
                   "id": "es-fr-e7",
-                  "question": "Completa: «Me llamo Léa» en francés",
-                  "options": ["Je m'appelle Léa", "J'appelle moi Léa", "Mon nom se Léa"],
+                  "question": "Completa: Â«Me llamo LÃ©aÂ» en francÃ©s",
+                  "options": ["Je m'appelle LÃ©a", "J'appelle moi LÃ©a", "Mon nom se LÃ©a"],
                   "correctIndex": 0
                 },
                 {
@@ -80,15 +81,15 @@
                 {
                   "type": "OrderWords",
                   "id": "es-fr-e9",
-                  "tokens": ["Elle", "est", "ma", "sœur"],
-                  "answerTokens": ["Elle", "est", "ma", "sœur"]
+                  "tokens": ["Elle", "est", "ma", "sÅ“ur"],
+                  "answerTokens": ["Elle", "est", "ma", "sÅ“ur"]
                 },
                 {
                   "type": "MatchPairs",
                   "id": "es-fr-e10",
                   "pairs": [
-                    {"left": "madre", "right": "mère"},
-                    {"left": "hermano", "right": "frère"},
+                    {"left": "madre", "right": "mÃ¨re"},
+                    {"left": "hermano", "right": "frÃ¨re"},
                     {"left": "hijo", "right": "fils"}
                   ]
                 },

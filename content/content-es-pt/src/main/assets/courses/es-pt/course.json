@@ -1,11 +1,12 @@
 {
+  "schemaVersion": 1,
   "id": "es-pt",
   "from": "es",
   "to": "pt",
   "levels": [
     {
       "id": "es-pt-lv-1",
-      "name": "Portugués de arranque",
+      "name": "PortuguÃ©s de arranque",
       "units": [
         {
           "id": "es-pt-lv-1-un-1",
@@ -13,33 +14,33 @@
           "lessons": [
             {
               "id": "es-pt-lv-1-un-1-ls-1",
-              "title": "Saudações",
+              "title": "SaudaÃ§Ãµes",
               "exercises": [
                 {
                   "type": "MultipleChoice",
                   "id": "es-pt-e1",
-                  "question": "¿Cómo se dice «hola»?",
-                  "options": ["Olá", "Tchau", "Sim"],
+                  "question": "Â¿CÃ³mo se dice Â«holaÂ»?",
+                  "options": ["OlÃ¡", "Tchau", "Sim"],
                   "correctIndex": 0
                 },
                 {
                   "type": "Translate",
                   "id": "es-pt-e2",
-                  "sourcePhrase": "Buenos días",
+                  "sourcePhrase": "Buenos dÃ­as",
                   "correctTokens": ["Bom", "dia"],
                   "distractorTokens": ["Boa", "noite"]
                 },
                 {
                   "type": "OrderWords",
                   "id": "es-pt-e3",
-                  "tokens": ["Como", "você", "está"],
-                  "answerTokens": ["Como", "você", "está"]
+                  "tokens": ["Como", "vocÃª", "estÃ¡"],
+                  "answerTokens": ["Como", "vocÃª", "estÃ¡"]
                 },
                 {
                   "type": "MatchPairs",
                   "id": "es-pt-e4",
                   "pairs": [
-                    {"left": "adiós", "right": "Tchau"},
+                    {"left": "adiÃ³s", "right": "Tchau"},
                     {"left": "gracias", "right": "Obrigado"},
                     {"left": "buenas noches", "right": "Boa noite"}
                   ]
@@ -66,37 +67,37 @@
                 {
                   "type": "MultipleChoice",
                   "id": "es-pt-e7",
-                  "question": "Completa: «Me llamo Ana» en portugués",
+                  "question": "Completa: Â«Me llamo AnaÂ» en portuguÃ©s",
                   "options": ["Me chamo Ana", "Meu nome por Ana", "Eu chamo nome Ana"],
                   "correctIndex": 0
                 },
                 {
                   "type": "Translate",
                   "id": "es-pt-e8",
-                  "sourcePhrase": "Soy de México",
-                  "correctTokens": ["Eu", "sou", "do", "México"],
+                  "sourcePhrase": "Soy de MÃ©xico",
+                  "correctTokens": ["Eu", "sou", "do", "MÃ©xico"],
                   "distractorTokens": ["para", "na"]
                 },
                 {
                   "type": "OrderWords",
                   "id": "es-pt-e9",
-                  "tokens": ["Ela", "é", "minha", "irmã"],
-                  "answerTokens": ["Ela", "é", "minha", "irmã"]
+                  "tokens": ["Ela", "Ã©", "minha", "irmÃ£"],
+                  "answerTokens": ["Ela", "Ã©", "minha", "irmÃ£"]
                 },
                 {
                   "type": "MatchPairs",
                   "id": "es-pt-e10",
                   "pairs": [
-                    {"left": "madre", "right": "mãe"},
+                    {"left": "madre", "right": "mÃ£e"},
                     {"left": "hijo", "right": "filho"},
-                    {"left": "hermano", "right": "irmão"}
+                    {"left": "hermano", "right": "irmÃ£o"}
                   ]
                 },
                 {
                   "type": "ListenChoose",
                   "id": "es-pt-e11",
-                  "audioText": "Prazer em conhecê-lo",
-                  "options": ["Prazer em conhecê-lo", "Prazer em comer", "Prazer em dormir"],
+                  "audioText": "Prazer em conhecÃª-lo",
+                  "options": ["Prazer em conhecÃª-lo", "Prazer em comer", "Prazer em dormir"],
                   "correctIndex": 0
                 },
                 {

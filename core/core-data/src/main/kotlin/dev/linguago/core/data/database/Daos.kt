@@ -28,6 +28,10 @@ public interface LessonProgressDao {
     @Query("SELECT * FROM lesson_progress ORDER BY lessonId ASC")
     public fun observeAll(): Flow<List<LessonProgressEntity>>
 
+    /** Lectura puntual de todas las filas (snapshots de sync, ADR-013). */
+    @Query("SELECT * FROM lesson_progress ORDER BY lessonId ASC")
+    public suspend fun snapshotAll(): List<LessonProgressEntity>
+
     @Query("SELECT * FROM lesson_progress WHERE lessonId = :lessonId")
     public suspend fun load(lessonId: String): LessonProgressEntity?
 

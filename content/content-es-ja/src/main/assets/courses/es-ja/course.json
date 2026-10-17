@@ -1,11 +1,12 @@
 {
+  "schemaVersion": 1,
   "id": "es-ja",
   "from": "es",
   "to": "ja",
   "levels": [
     {
       "id": "es-ja-lv-1",
-      "name": "Japonés de sillón",
+      "name": "JaponÃ©s de sillÃ³n",
       "units": [
         {
           "id": "es-ja-lv-1-un-1",
@@ -13,98 +14,98 @@
           "lessons": [
             {
               "id": "es-ja-lv-1-un-1-ls-1",
-              "title": "Hiragana básico",
+              "title": "Hiragana bÃ¡sico",
               "exercises": [
                 {
                   "type": "KanaChoose",
                   "id": "es-ja-e1",
-                  "kana": "あ",
+                  "kana": "ã‚",
                   "romajiOptions": ["u", "a", "e"],
                   "correctRomaji": "a"
                 },
                 {
                   "type": "KanaChoose",
                   "id": "es-ja-e2",
-                  "kana": "い",
+                  "kana": "ã„",
                   "romajiOptions": ["i", "e", "a"],
                   "correctRomaji": "i"
                 },
                 {
                   "type": "KanaChoose",
                   "id": "es-ja-e3",
-                  "kana": "く",
+                  "kana": "ã",
                   "romajiOptions": ["ku", "nu", "me"],
                   "correctRomaji": "ku"
                 },
                 {
                   "type": "ListenChoose",
                   "id": "es-ja-e4",
-                  "audioText": "あ",
-                  "options": ["あ", "い", "う"],
+                  "audioText": "ã‚",
+                  "options": ["ã‚", "ã„", "ã†"],
                   "correctIndex": 0
                 },
                 {
                   "type": "MatchPairs",
                   "id": "es-ja-e5",
                   "pairs": [
-                    {"left": "か", "right": "ka"},
-                    {"left": "き", "right": "ki"}
+                    {"left": "ã‹", "right": "ka"},
+                    {"left": "ã", "right": "ki"}
                   ]
                 },
                 {
                   "type": "ListenType",
                   "id": "es-ja-e6",
-                  "transcription": "あい",
-                  "audioText": "あい"
+                  "transcription": "ã‚ã„",
+                  "audioText": "ã‚ã„"
                 }
               ]
             },
             {
               "id": "es-ja-lv-1-un-1-ls-2",
-              "title": "Kanji y partículas",
+              "title": "Kanji y partÃ­culas",
               "exercises": [
                 {
                   "type": "KanjiReading",
                   "id": "es-ja-e7",
-                  "kanji": "人",
-                  "readingOptions": ["ひと", "いぬ", "ねこ"],
-                  "correctReading": "ひと"
+                  "kanji": "äºº",
+                  "readingOptions": ["ã²ã¨", "ã„ã¬", "ã­ã“"],
+                  "correctReading": "ã²ã¨"
                 },
                 {
                   "type": "KanjiReading",
                   "id": "es-ja-e8",
-                  "kanji": "日",
-                  "readingOptions": ["にち", "ほん", "ゆき"],
-                  "correctReading": "にち"
+                  "kanji": "æ—¥",
+                  "readingOptions": ["ã«ã¡", "ã»ã‚“", "ã‚†ã"],
+                  "correctReading": "ã«ã¡"
                 },
                 {
                   "type": "ParticleFill",
                   "id": "es-ja-e9",
-                  "sentenceTemplate": "わたし_会社員です。",
-                  "particles": ["は", "が", "を"],
-                  "correctParticle": "は"
+                  "sentenceTemplate": "ã‚ãŸã—_ä¼šç¤¾å“¡ã§ã™ã€‚",
+                  "particles": ["ã¯", "ãŒ", "ã‚’"],
+                  "correctParticle": "ã¯"
                 },
                 {
                   "type": "ParticleFill",
                   "id": "es-ja-e10",
-                  "sentenceTemplate": "りんご_食べます。",
-                  "particles": ["を", "に", "が"],
-                  "correctParticle": "を"
+                  "sentenceTemplate": "ã‚Šã‚“ã”_é£Ÿã¹ã¾ã™ã€‚",
+                  "particles": ["ã‚’", "ã«", "ãŒ"],
+                  "correctParticle": "ã‚’"
                 },
                 {
                   "type": "MatchPairs",
                   "id": "es-ja-e11",
                   "pairs": [
-                    {"left": "なまえ", "right": "nombre"},
-                    {"left": "てんき", "right": "clima"},
-                    {"left": "りんご", "right": "manzana"}
+                    {"left": "ãªã¾ãˆ", "right": "nombre"},
+                    {"left": "ã¦ã‚“ã", "right": "clima"},
+                    {"left": "ã‚Šã‚“ã”", "right": "manzana"}
                   ]
                 },
                 {
                   "type": "ListenType",
                   "id": "es-ja-e12",
-                  "transcription": "はい",
-                  "audioText": "はい"
+                  "transcription": "ã¯ã„",
+                  "audioText": "ã¯ã„"
                 }
               ]
             }

@@ -11,8 +11,10 @@ import dev.linguago.core.data.database.StreakProgressEntity
 import dev.linguago.core.domain.model.LessonId
 import dev.linguago.core.domain.model.LessonProgress
 import dev.linguago.core.domain.model.StreakState
+import dev.linguago.core.domain.model.SyncSnapshot
 import dev.linguago.core.domain.repository.ProgressRepository
 import dev.linguago.core.domain.streak.StreakRules
+import dev.linguago.core.domain.sync.mergedWith
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.map
 import kotlinx.coroutines.withContext
@@ -86,6 +88,93 @@ public class ProgressRepositoryImpl
                     Result.error(LinguaError.Unknown)
                 }
             }
+
+        override suspend fun snapshot(): Result<SyncSnapshot> =
+            withContext(dispatchers.io) {
+                try {
+                    val streak = database.streakProgressDao().load()?.toDomain() ?: StreakState.zero()
+                    val lessons = database.lessonProgressDao().snapshotAll()
+                    Result.success(
+                        SyncSnapshot(
+                            exportedAtMillis = System.currentTimeMillis(),
+                            streakCurrent = streak.current,
+                            streakLongest = streak.longest,
+                            streakLastDateEpochDay = streak.lastDate.toEpochDay(),
+                            totalXp = streak.totalXp,
+                            lessons =
+                                lessons.map { entity ->
+                                    SyncSnapshot.LessonEntry(
+                                        lessonId = entity.lessonId,
+                                        completed = entity.completed,
+                                        xp = entity.xp,
+                                        attempts = entity.attempts,
+                                    )
+                                },
+                        ),
+                    )
+                } catch (e: Exception) {
+                    Result.error(LinguaError.Unknown)
+                }
+            }
+
+        override suspend fun restore(snapshot: SyncSnapshot): Result<StreakState> =
+            withContext(dispatchers.io) {
+                try {
+                    val local = currentLocalSnapshot()
+                    val merged = local.mergedWith(snapshot)
+                    database.streakProgressDao().upsert(
+                        StreakProgressEntity(
+                            id = STREAK_SINGLETON_ID,
+                            current = merged.streakCurrent,
+                            longest = merged.streakLongest,
+                            lastDateEpochDay = merged.streakLastDateEpochDay,
+                            totalXp = merged.totalXp,
+                        ),
+                    )
+                    merged.lessons.forEach { entry ->
+                        database.lessonProgressDao().upsert(
+                            LessonProgressEntity(
+                                lessonId = entry.lessonId,
+                                completed = entry.completed,
+                                xp = entry.xp,
+                                attempts = entry.attempts,
+                            ),
+                        )
+                    }
+                    Result.success(
+                        StreakState(
+                            current = merged.streakCurrent,
+                            longest = merged.streakLongest,
+                            lastDate = LocalDate.ofEpochDay(merged.streakLastDateEpochDay),
+                            totalXp = merged.totalXp,
+                        ),
+                    )
+                } catch (e: Exception) {
+                    Result.error(LinguaError.Unknown)
+                }
+            }
+
+        /** Snapshot del estado local, usado como base del merge (I4). */
+        private suspend fun currentLocalSnapshot(): SyncSnapshot {
+            val streak = database.streakProgressDao().load()?.toDomain() ?: StreakState.zero()
+            val lessons = database.lessonProgressDao().snapshotAll()
+            return SyncSnapshot(
+                exportedAtMillis = 0L,
+                streakCurrent = streak.current,
+                streakLongest = streak.longest,
+                streakLastDateEpochDay = streak.lastDate.toEpochDay(),
+                totalXp = streak.totalXp,
+                lessons =
+                    lessons.map { entity ->
+                        SyncSnapshot.LessonEntry(
+                            lessonId = entity.lessonId,
+                            completed = entity.completed,
+                            xp = entity.xp,
+                            attempts = entity.attempts,
+                        )
+                    },
+            )
+        }
     }
 
 /** Mappers entity → dominio (una sola dirección: domain nunca ve entidades). */

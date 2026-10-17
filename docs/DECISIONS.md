@@ -284,9 +284,76 @@ el audio entendible desde ya.
 
 ---
 
+## ADR-012: JSON Schema formal y validación del contenido
+
+**Estado:** Aprobado
+**Fecha:** 2026-10-17
+
+**Contexto:** el contenido vive como JSON (`content-*/…/course.json`) y se
+decodifica con kotlinx-serialization. Sin un contrato formal, un contenido
+malformado (campo faltante, variante de ejercicio nueva sin audioText, ids
+inconsistentes) solo falla cuando la app lo parsea en runtime (I9: "contenido
+inválido ⇒ error visible"), demasiado tarde.
+
+**Decisión:**
+- El contrato del contenido es `docs/schemas/course-v1.json`
+  (draft-07): describe Course→Level→Unit→Lesson→Exercise con `oneOf`
+  sobre las 10 variantes de ejercicio, `additionalProperties: false`,
+  y `schemaVersion: 1` fijo en la raíz.
+- Cada course.json lleva `"schemaVersion": 1`: futuro cambio incompatible
+  ⇒ `schemaVersion` 2 y un codificador que soporte ambas (regla del RFC
+  sobre versiones).
+- La tarea `validateContent` (build raíz, classpath = json-schema-validator
+  de networknt) valida los 4 course.json y **rompe el build** ante cualquier
+  desvío. Corre en CI antes de los tests unitarios.
+
+**Consecuencias:**
+- El contenido imposible de parsear nunca llega a la app: el schema es el
+  test de integración del contenido.
+- La decodificación Kotlin sigue estando en core-content (el schema es el
+  espejo del modelo `@Serializable`; drift posible pero revisado en cambios
+  de contenido).
+
+---
+
+## ADR-013: Sincronización cloud — snapshot v1, merge monótono y NoopCloudProvider
+
+**Estado:** Aprobado
+**Fecha:** 2026-10-17
+
+**Contexto:** Fase 3 requiere lograr "progreso del usuario por gamificación
+visible fuera de la app". El proveedor definitivo (Google Drive appDataFolder
+con OAuth) se decide en Fase 4 (ADR-011); ahora existe `CloudProvider`
+(Strategy, ADR-003) pero sin flujo real ni formato de datos.
+
+**Decisión:**
+- **Formato:** snapshot JSON plano v1 (`SyncSnapshot`, schemaVersion=1,
+  `exportedAtMillis`, streak y lista de lecciones). Sin cifrado: se sube al
+  sandbox privado de la cuenta (appDataFolder/appfolder), que el usuario
+  protege vía su sesión; cifrar el payload se decide en Fase 4.
+- **Merge:** monótono por máximo de campo (`SnapshotMerge.mergedWith`):
+  XP/racha = max(local, remote), lecciones por id con completed = OR;
+  **nunca borra progreso** (I4). No requiere timestamps en Room.
+- **Codec:** `SnapshotCodec` en core-sync: UTF-8 estricto
+  (`ignoreUnknownKeys = false`), rechaza schemaVersion ≠ 1 y JSON inválido
+  con `LinguaError.InvalidContent`.
+- **Proveedor:** `NoopCloudProvider` bindeado por DI hasta Fase 4
+  (id="none", `isLinked=false`, Devuelve `NotLinked`); SyncEngine orquesta
+  snapshot→encode→push y fetch→decode→restore sobre el repositorio.
+- UI: `SyncScreen` + `SyncViewModel` en feature-sync muestran proveedor y
+  disparan backup/restore; sin cuenta vinculada el submit queda inhabilitado.
+
+**Consecuencias:**
+- La Fase 3 deja completamente listo el flujo sincronizable real solo
+  cambia la implementación de `CloudProvider` (ADR-011).
+- El merge monótono no reconcilia cuentas múltiples en usarse en paralelo;
+  suficiente para Fase 3 (una cuenta, un dispositivo).
+
+---
+
 ## Registro de decisiones pendientes
 
 | Tema | Se decide en | ADR previsto |
 |---|---|---|
 | Google Drive/OneDrive OAuth flow y almacenamiento de tokens | Fase 4 | ADR-011 |
-| Appropriates JSON Schema formal y versionado del contenido | Fase 3 | ADR-012 |
+| Cifrado del snapshot antes de subirlo al proveedor | Fase 4 | ADR-014 |

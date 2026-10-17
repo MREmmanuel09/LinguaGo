@@ -13,4 +13,7 @@ public sealed interface LinguaError {
 
     /** Contenido que no supera la validación estructural (core-content). */
     public data object InvalidContent : LinguaError
+
+    /** Respaldo/sync solicitado sin una cuenta cloud vinculada (Fase 4). */
+    public data object NotLinked : LinguaError
 }

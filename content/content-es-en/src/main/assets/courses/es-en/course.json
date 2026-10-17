@@ -1,11 +1,12 @@
 {
+  "schemaVersion": 1,
   "id": "es-en",
   "from": "es",
   "to": "en",
   "levels": [
     {
       "id": "es-en-lv-1",
-      "name": "Inglés esencial",
+      "name": "InglÃ©s esencial",
       "units": [
         {
           "id": "es-en-lv-1-un-1",
@@ -18,14 +19,14 @@
                 {
                   "type": "MultipleChoice",
                   "id": "es-en-e1",
-                  "question": "¿Cómo se dice «hola»?",
+                  "question": "Â¿CÃ³mo se dice Â«holaÂ»?",
                   "options": ["Hello", "Goodbye", "Please"],
                   "correctIndex": 0
                 },
                 {
                   "type": "Translate",
                   "id": "es-en-e2",
-                  "sourcePhrase": "Buenos días",
+                  "sourcePhrase": "Buenos dÃ­as",
                   "correctTokens": ["Good", "morning"],
                   "distractorTokens": ["Goodbye", "night"]
                 },
@@ -39,7 +40,7 @@
                   "type": "MatchPairs",
                   "id": "es-en-e4",
                   "pairs": [
-                    {"left": "adiós", "right": "Goodbye"},
+                    {"left": "adiÃ³s", "right": "Goodbye"},
                     {"left": "gracias", "right": "Thank you"},
                     {"left": "por favor", "right": "Please"}
                   ]
@@ -72,7 +73,7 @@
                 {
                   "type": "MultipleChoice",
                   "id": "es-en-e7",
-                  "question": "Elige la presentación correcta",
+                  "question": "Elige la presentaciÃ³n correcta",
                   "options": ["My name is Ana", "Ana name my is", "Is my name Ana"],
                   "correctIndex": 0
                 },
@@ -126,7 +127,7 @@
                 {
                   "type": "MultipleChoice",
                   "id": "es-en-e13",
-                  "question": "¿Cómo se dice «abuelo»?",
+                  "question": "Â¿CÃ³mo se dice Â«abueloÂ»?",
                   "options": ["grandfather", "grandmother", "nephew"],
                   "correctIndex": 0
                 },
@@ -142,7 +143,7 @@
                   "id": "es-en-e15",
                   "pairs": [
                     {"left": "madre", "right": "mother"},
-                    {"left": "niño", "right": "child"},
+                    {"left": "niÃ±o", "right": "child"},
                     {"left": "primo", "right": "cousin"}
                   ]
                 },
@@ -186,14 +187,14 @@
                 {
                   "type": "MultipleChoice",
                   "id": "es-en-e19",
-                  "question": "¿Cómo se dice «agua»?",
+                  "question": "Â¿CÃ³mo se dice Â«aguaÂ»?",
                   "options": ["water", "wine", "milk"],
                   "correctIndex": 0
                 },
                 {
                   "type": "Translate",
                   "id": "es-en-e20",
-                  "sourcePhrase": "Quiero un café, por favor",
+                  "sourcePhrase": "Quiero un cafÃ©, por favor",
                   "correctTokens": ["I", "want", "a", "coffee", "please"],
                   "distractorTokens": ["tea", "one"]
                 },
@@ -235,12 +236,12 @@
             },
             {
               "id": "es-en-lv-1-un-2-ls-2",
-              "title": "Colores y números",
+              "title": "Colores y nÃºmeros",
               "exercises": [
                 {
                   "type": "MultipleChoice",
                   "id": "es-en-e25",
-                  "question": "¿Cómo se dice «azul»?",
+                  "question": "Â¿CÃ³mo se dice Â«azulÂ»?",
                   "options": ["blue", "red", "white"],
                   "correctIndex": 0
                 },
@@ -294,7 +295,7 @@
                 {
                   "type": "MultipleChoice",
                   "id": "es-en-e31",
-                  "question": "¿Cómo se dice «trabajo» (verbo)?",
+                  "question": "Â¿CÃ³mo se dice Â«trabajoÂ» (verbo)?",
                   "options": ["work", "walk", "word"],
                   "correctIndex": 0
                 },

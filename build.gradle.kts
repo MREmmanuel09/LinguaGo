@@ -1,9 +1,19 @@
 // Composition root de plugins: se declaran aquí con `apply false` para fijar
 // versiones en el classpath; los módulos los aplican via convention plugins
 // de `build-logic` (ver ADR-001).
+import com.fasterxml.jackson.databind.ObjectMapper
+import com.networknt.schema.JsonSchemaFactory
+import com.networknt.schema.SpecVersion
 import groovy.json.JsonOutput
 import groovy.json.JsonSlurper
 import java.security.MessageDigest
+
+buildscript {
+    dependencies {
+        // Validador JSON Schema para la tarea validateContent (ADR-012).
+        classpath("com.networknt:json-schema-validator:1.5.6")
+    }
+}
 
 plugins {
     alias(libs.plugins.android.application) apply false
@@ -134,4 +144,41 @@ tasks.register("fetchVoiceModels") {
         println("OK: models/manifest.json actualizado; `./gradlew :app:assembleDebug` empaqueta models/ como assets.")
     }
 }
+
+// Validación del contenido contra el JSON Schema formal (ADR-012). Corre en
+// CI antes de los tests: un course.json que no cumpla el contrato v1 rompe
+// el build ANTES de que una app empaquete contenido inválido.
+tasks.register("validateContent") {
+    group = "verification"
+    description = "Valida los course.json contra docs/schemas/course-v1.json (ADR-012)."
+    val root = rootDir.absolutePath
+    val schemaFile = File(root, "docs/schemas/course-v1.json")
+    val courseFiles: List<File> =
+        fileTree(rootDir)
+            .matching { include("content/*/src/main/assets/courses/*/course.json") }
+            .files
+            .toList()
+    inputs.file(schemaFile)
+    inputs.files(courseFiles)
+    doLast {
+        val mapper = ObjectMapper()
+        val factory = JsonSchemaFactory.getInstance(SpecVersion.VersionFlag.V7)
+        val schema = factory.getSchema(schemaFile.readText())
+        val failures = mutableListOf<String>()
+        for (courseFile in courseFiles.sorted()) {
+            val messages = schema.validate(mapper.readTree(courseFile.readText()))
+            if (messages.isEmpty()) {
+                println("VALID: ${courseFile.relativeTo(File(root)).path}")
+            } else {
+                println("INVALID: ${courseFile.relativeTo(File(root)).path}")
+                messages.forEach { println("  - $it") }
+                failures.add(courseFile.name)
+            }
+        }
+        if (failures.isNotEmpty()) {
+            throw org.gradle.api.GradleException("validateContent: ${failures.size} course.json no cumplen el schema v1 (ADR-012)")
+        }
+    }
+}
+
 

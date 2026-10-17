@@ -7,5 +7,7 @@ android {
 }
 
 dependencies {
+    implementation(project(":core:core-sync"))
+    implementation(project(":core:core-common"))
     implementation(platform(libs.compose.bom))
 }

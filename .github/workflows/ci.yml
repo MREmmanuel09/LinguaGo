@@ -41,8 +41,8 @@ jobs:
         with:
           cache-read-only: false
 
-      - name: ktlint + detekt + tests
-        run: ./gradlew ktlintCheck detekt test
+      - name: ktlint + detekt + validateContent + tests
+        run: ./gradlew ktlintCheck detekt validateContent test
 
       - name: assembleDebug
         run: ./gradlew assembleDebug

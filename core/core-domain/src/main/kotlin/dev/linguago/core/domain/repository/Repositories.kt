@@ -6,6 +6,7 @@ import dev.linguago.core.domain.model.CourseId
 import dev.linguago.core.domain.model.LessonId
 import dev.linguago.core.domain.model.LessonProgress
 import dev.linguago.core.domain.model.StreakState
+import dev.linguago.core.domain.model.SyncSnapshot
 import kotlinx.coroutines.flow.Flow
 import java.time.LocalDate
 
@@ -37,4 +38,13 @@ public interface ProgressRepository {
 
     /** Observa el progreso de las lecciones completadas hasta hoy. */
     public fun observeLessonProgress(): Flow<List<LessonProgress>>
+
+    /** Construye el snapshot v1 del progreso actual (respaldo, ADR-013). */
+    public suspend fun snapshot(): Result<SyncSnapshot>
+
+    /**
+     * Restaura una copia remota con merge monótono (I4): combina local y
+     * remoto tomando el máximo por campo y devuelve la racha resultante.
+     */
+    public suspend fun restore(snapshot: SyncSnapshot): Result<StreakState>
 }

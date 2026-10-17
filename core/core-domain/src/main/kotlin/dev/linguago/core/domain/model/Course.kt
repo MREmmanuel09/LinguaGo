@@ -16,6 +16,8 @@ public data class Course(
     @SerialName("from") public val fromLanguage: Language,
     @SerialName("to") public val toLanguage: Language,
     val levels: List<Level>,
+    /** Versión del formato de contenido (ADR-012); v1 por defecto. */
+    val schemaVersion: Int = 1,
 )
 
 @Serializable
