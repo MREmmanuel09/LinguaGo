@@ -27,10 +27,11 @@ plugins {
 tasks.register("fetchVoiceModels") {
     group = "linguago"
     description = "Descarga los modelos de voz y llena models/manifest.json."
+    val modelsRoot = rootDir.absolutePath
     doLast {
-        val modelsDir = File(rootDir, "models")
+        val modelsDir = File(modelsRoot, "models")
         val manifestFile = File(modelsDir, "manifest.json")
-        val downloadsDir = File(modelsDir, "downloads")
+        val downloadsDir = File(modelsRoot, ".voice-downloads")
         val baseUrl = "https://alphacephei.com/vosk/models/"
         downloadsDir.mkdirs()
         val manifest = JsonSlurper().parse(manifestFile) as MutableMap<Any?, Any?>
@@ -62,6 +63,10 @@ tasks.register("fetchVoiceModels") {
             }
             return digest.digest().joinToString("") { "%02x".format(it) }
         }
+
+        /** Layouts de vosk: estándar (am/final.mdl) y legacy plano (final.mdl). */
+        fun hasRecognizer(dir: File): Boolean =
+            dir.walkTopDown().any { file -> file.name.equals("final.mdl", ignoreCase = true) }
 
         for (entry in manifest["tts"] as List<*>) {
             val tts = entry as MutableMap<Any?, Any?>
@@ -96,7 +101,7 @@ tasks.register("fetchVoiceModels") {
             fetch(baseUrl + "$name.zip", zip)
             val sttDir = File(modelsDir, "stt")
             val dir = File(sttDir, name)
-            if (!File(dir, "conf/model.conf").isFile) {
+            if (!hasRecognizer(dir)) {
                 sttDir.mkdirs()
                 println("Extract: zip $name -> ${dir.path}")
                 val process = extract(zip, sttDir)
@@ -107,7 +112,7 @@ tasks.register("fetchVoiceModels") {
                     if (unzip.waitFor() != 0) throw IllegalStateException("extract falló para $name")
                 }
             }
-            require(File(dir, "conf/model.conf").isFile) { "paquete $name incompleto" }
+            require(hasRecognizer(dir)) { "paquete $name incompleto" }
             val files = mutableListOf<MutableMap<String, String>>()
             dir.walkTopDown().filter { it.isFile }.sorted().forEach { file ->
                 val rel = file.relativeTo(modelsDir).invariantSeparatorsPath

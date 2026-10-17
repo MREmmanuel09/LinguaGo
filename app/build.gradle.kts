@@ -12,7 +12,8 @@ android {
     }
     sourceSets {
         getByName("main") {
-            // Voz tts/… y manifest.json del tool de descarga (ADR-006).
+            // Voz tts/… y manifest.json del tool de descarga (ADR-006); el
+            // cache de descargas vive fuera de models/ (tarea manual).
             assets.srcDir(rootProject.file("models"))
         }
     }

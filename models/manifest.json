@@ -1,57 +1,293 @@
 {
-  "version": 1,
-  "notes": "Los sha256 los llena `fetchVoiceModels` tras descargar cada paquete (ADR-006). tts: un sha por paquete (el .onnx); stt: un file[] con sha por archivo. Campos vacíos = modelo no verificado; el engine no lo carga.",
-  "tts": [
-    {
-      "id": "en_US-amy-medium",
-      "engine": "piper",
-      "language": "en",
-      "path": "tts/en_US-amy-medium",
-      "sha256": ""
-    },
-    {
-      "id": "pt_BR-faber-medium",
-      "engine": "piper",
-      "language": "pt",
-      "path": "tts/pt_BR-faber-medium",
-      "sha256": ""
-    },
-    {
-      "id": "fr_FR-siwis-medium",
-      "engine": "piper",
-      "language": "fr",
-      "path": "tts/fr_FR-siwis-medium",
-      "sha256": ""
-    }
-  ],
-  "stt": [
-    {
-      "id": "vosk-small-en",
-      "engine": "vosk",
-      "language": "en",
-      "path": "stt/vosk-model-small-en-us-0.15",
-      "files": []
-    },
-    {
-      "id": "vosk-small-pt",
-      "engine": "vosk",
-      "language": "pt",
-      "path": "stt/vosk-model-small-pt-0.3",
-      "files": []
-    },
-    {
-      "id": "vosk-small-fr",
-      "engine": "vosk",
-      "language": "fr",
-      "path": "stt/vosk-model-small-fr-0.22",
-      "files": []
-    },
-    {
-      "id": "vosk-small-ja",
-      "engine": "vosk",
-      "language": "ja",
-      "path": "stt/vosk-model-small-ja-0.22",
-      "files": []
-    }
-  ]
+    "version": 1,
+    "notes": "Los sha256 los llena `fetchVoiceModels` tras descargar cada paquete (ADR-006). tts: un sha por paquete (el .onnx); stt: un file[] con sha por archivo. Campos vac\u00edos = modelo no verificado; el engine no lo carga.",
+    "tts": [
+        {
+            "id": "en_US-amy-medium",
+            "engine": "piper",
+            "language": "en",
+            "path": "tts/en_US-amy-medium",
+            "sha256": "fbaa8e36d8f26fe6f3ebb65cab461e629d8b37a5b7c5fb78fb64317db73e1c25"
+        },
+        {
+            "id": "pt_BR-faber-medium",
+            "engine": "piper",
+            "language": "pt",
+            "path": "tts/pt_BR-faber-medium",
+            "sha256": "956b4f1733903891c4ba0973d0603b2a3d8c09c8432fb3bb5203a90a7431daca"
+        },
+        {
+            "id": "fr_FR-siwis-medium",
+            "engine": "piper",
+            "language": "fr",
+            "path": "tts/fr_FR-siwis-medium",
+            "sha256": "b015076c2bedcff22fbedd5da6ffb49b7d0abb2e3bdc51e1a7906e0000e411ed"
+        }
+    ],
+    "stt": [
+        {
+            "id": "vosk-small-en",
+            "engine": "vosk",
+            "language": "en",
+            "path": "stt/vosk-model-small-en-us-0.15",
+            "files": [
+                {
+                    "path": "stt/vosk-model-small-en-us-0.15/am/final.mdl",
+                    "sha256": "75370a0137f9daf8f469dedd7daa4513ae7a621f03240c6e512e2b50b656a7b6"
+                },
+                {
+                    "path": "stt/vosk-model-small-en-us-0.15/conf/mfcc.conf",
+                    "sha256": "1e2228006d01d805ad1c267fee9f79709ca87ac51bd82b0e3f5c69ba543f0fc4"
+                },
+                {
+                    "path": "stt/vosk-model-small-en-us-0.15/conf/model.conf",
+                    "sha256": "8f14cb1eeb07c762c371db648c6be688d347236155ca0f64fb13b6567a8ce81f"
+                },
+                {
+                    "path": "stt/vosk-model-small-en-us-0.15/graph/disambig_tid.int",
+                    "sha256": "9ad87cc166d0998f08f758f47a6223a120dfffcbee805c4849c3aa5e6bb3c0fc"
+                },
+                {
+                    "path": "stt/vosk-model-small-en-us-0.15/graph/Gr.fst",
+                    "sha256": "023c8b7e30704a9e37765c635c252e608a02f361235bf94abdcf2a5225d85b20"
+                },
+                {
+                    "path": "stt/vosk-model-small-en-us-0.15/graph/HCLr.fst",
+                    "sha256": "5caafba3081e1646545ac6bff0dd7a318e53dcbdc86f237909ce1d2ac1293d34"
+                },
+                {
+                    "path": "stt/vosk-model-small-en-us-0.15/graph/phones/word_boundary.int",
+                    "sha256": "da199d9c991e0e84681ddbb34627b915b26302d50a8fdaa23c51e2bc3a50b5c3"
+                },
+                {
+                    "path": "stt/vosk-model-small-en-us-0.15/ivector/final.dubm",
+                    "sha256": "8c5d7dd69d2122313baaf19f61f35dd3fa18b70c62ac0687e311e1c46e6daca7"
+                },
+                {
+                    "path": "stt/vosk-model-small-en-us-0.15/ivector/final.ie",
+                    "sha256": "3f37faf90c375b9e4740b569398b5829ed9cc07d19be6d441f72c3b71d7efcc6"
+                },
+                {
+                    "path": "stt/vosk-model-small-en-us-0.15/ivector/final.mat",
+                    "sha256": "ddd83586dc5f928cda8738b922c85ffe38fc789cb5f9151a712ca12f37265382"
+                },
+                {
+                    "path": "stt/vosk-model-small-en-us-0.15/ivector/global_cmvn.stats",
+                    "sha256": "33be09afcc80059847a275c3d043b51f1ab954c7c2438ddbbf4745e8ba144ff9"
+                },
+                {
+                    "path": "stt/vosk-model-small-en-us-0.15/ivector/online_cmvn.conf",
+                    "sha256": "a2f3571754b64297cb7efb2e7ca3df61995c5a45fcbb97188f90613552bb2dfe"
+                },
+                {
+                    "path": "stt/vosk-model-small-en-us-0.15/ivector/splice.conf",
+                    "sha256": "9f0c5f7c82d18eaf25d8bce470efa9f7741f88411fe428774bc0a9bb69a24756"
+                },
+                {
+                    "path": "stt/vosk-model-small-en-us-0.15/README",
+                    "sha256": "c0cf286e4f7783306c5f6469b37db69228fb16803b03cae661edb2d7bba64ebb"
+                }
+            ]
+        },
+        {
+            "id": "vosk-small-pt",
+            "engine": "vosk",
+            "language": "pt",
+            "path": "stt/vosk-model-small-pt-0.3",
+            "files": [
+                {
+                    "path": "stt/vosk-model-small-pt-0.3/disambig_tid.int",
+                    "sha256": "ca8970bc50b8ae2452749f75f5a12049e511075f9fc3f63acc1526c280a33748"
+                },
+                {
+                    "path": "stt/vosk-model-small-pt-0.3/final.mdl",
+                    "sha256": "3e10e43ec01cf8d968bcc24c626a2eae2bfa77863bee82f36a554854afa1f147"
+                },
+                {
+                    "path": "stt/vosk-model-small-pt-0.3/Gr.fst",
+                    "sha256": "d81023936f5557c06930802b1db4880f56d6ac51b16ed4e5060ceba06895442c"
+                },
+                {
+                    "path": "stt/vosk-model-small-pt-0.3/HCLr.fst",
+                    "sha256": "8b45be1fa72913d61e37ac0b411177803848f4cda7728f74139b39acd1c0cf36"
+                },
+                {
+                    "path": "stt/vosk-model-small-pt-0.3/ivector/final.dubm",
+                    "sha256": "28dcdc395b13a2085d20f7a2e850ef7e5216ba33ded76391b9690dd60f5143de"
+                },
+                {
+                    "path": "stt/vosk-model-small-pt-0.3/ivector/final.ie",
+                    "sha256": "9345786636c358c9539591da71fb685ae82d8a96ce5de533fb8ac5fdafa965f0"
+                },
+                {
+                    "path": "stt/vosk-model-small-pt-0.3/ivector/final.mat",
+                    "sha256": "e310571390a3183718fce914bb022d297777c7ed860892a1812b576a698ec420"
+                },
+                {
+                    "path": "stt/vosk-model-small-pt-0.3/ivector/global_cmvn.stats",
+                    "sha256": "8848c2dcf9919fbb3db574cbce59f980c3b11107c29adfa1fc42a4faed27e1a8"
+                },
+                {
+                    "path": "stt/vosk-model-small-pt-0.3/ivector/online_cmvn.conf",
+                    "sha256": "a2f3571754b64297cb7efb2e7ca3df61995c5a45fcbb97188f90613552bb2dfe"
+                },
+                {
+                    "path": "stt/vosk-model-small-pt-0.3/ivector/splice.conf",
+                    "sha256": "9f0c5f7c82d18eaf25d8bce470efa9f7741f88411fe428774bc0a9bb69a24756"
+                },
+                {
+                    "path": "stt/vosk-model-small-pt-0.3/mfcc.conf",
+                    "sha256": "d3d4c517da7e6d02ed85803eebf77bca3f7f48c9ab6dc035013250b36187f274"
+                },
+                {
+                    "path": "stt/vosk-model-small-pt-0.3/phones.txt",
+                    "sha256": "dc207b906747b59e9e3da0af30e8f8d6712c9897ad7df06929d4b2cae7ee13f1"
+                },
+                {
+                    "path": "stt/vosk-model-small-pt-0.3/README",
+                    "sha256": "85353085fa2096ef12cac654fa9534b186bef9b56a61f544da3ebfbd006b78bb"
+                },
+                {
+                    "path": "stt/vosk-model-small-pt-0.3/word_boundary.int",
+                    "sha256": "b8f981d84d8765fb15003ac54ec0f9599efa65a00d6d4d60086e5969ad45ff01"
+                }
+            ]
+        },
+        {
+            "id": "vosk-small-fr",
+            "engine": "vosk",
+            "language": "fr",
+            "path": "stt/vosk-model-small-fr-0.22",
+            "files": [
+                {
+                    "path": "stt/vosk-model-small-fr-0.22/am/final.mdl",
+                    "sha256": "580d99752e3f6f31fb4a03403b0b2a3a78b9665937e2823668b46d9c9ce1a1a1"
+                },
+                {
+                    "path": "stt/vosk-model-small-fr-0.22/conf/mfcc.conf",
+                    "sha256": "6c326fea5741c2d78be12f76eb1b36ea2ace040da9e355e4cfe6bb80e5f7d5ab"
+                },
+                {
+                    "path": "stt/vosk-model-small-fr-0.22/conf/model.conf",
+                    "sha256": "d8d91d310a9659fed2d89f8ea4996af6163a43c3ab008cd278e4264120551712"
+                },
+                {
+                    "path": "stt/vosk-model-small-fr-0.22/graph/disambig_tid.int",
+                    "sha256": "fd844580478d2c0dbb01e408f77fce92a343a9fe05c304fea57a0d8e3122d7b1"
+                },
+                {
+                    "path": "stt/vosk-model-small-fr-0.22/graph/Gr.fst",
+                    "sha256": "4d5aefc6af664d1c47979ae3b9eb7e972c196e843ff4eee65e4c7b0c064723cf"
+                },
+                {
+                    "path": "stt/vosk-model-small-fr-0.22/graph/HCLr.fst",
+                    "sha256": "6562aee2cffac5ad2e569584bc8ca22b1bae0ce9e6e03f0f9898d9d7c267eaa5"
+                },
+                {
+                    "path": "stt/vosk-model-small-fr-0.22/graph/phones/word_boundary.int",
+                    "sha256": "262452069835201f18fd4de64c4816a2333a54c80b4114084d75e1c4eb273836"
+                },
+                {
+                    "path": "stt/vosk-model-small-fr-0.22/ivector/final.dubm",
+                    "sha256": "15c6736f097e9a1fbc3811a75a666da39cb9aa4526acea29d25f2a3003357acc"
+                },
+                {
+                    "path": "stt/vosk-model-small-fr-0.22/ivector/final.ie",
+                    "sha256": "bd52bc5aeef1f35349c7a6fd3fb671a4a877ba04181da30d99f2cf01d4b75dd5"
+                },
+                {
+                    "path": "stt/vosk-model-small-fr-0.22/ivector/final.mat",
+                    "sha256": "61818a44ae3519708e9a31701da4ab351f3e19d7bd3e4ddfd820fd7f121cfad0"
+                },
+                {
+                    "path": "stt/vosk-model-small-fr-0.22/ivector/global_cmvn.stats",
+                    "sha256": "9d94d076adc26cd578cc4cf702dc41e5ea6de202f4563d6f0d4b4d4fdbb46bc1"
+                },
+                {
+                    "path": "stt/vosk-model-small-fr-0.22/ivector/online_cmvn.conf",
+                    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+                },
+                {
+                    "path": "stt/vosk-model-small-fr-0.22/ivector/splice.conf",
+                    "sha256": "9f0c5f7c82d18eaf25d8bce470efa9f7741f88411fe428774bc0a9bb69a24756"
+                },
+                {
+                    "path": "stt/vosk-model-small-fr-0.22/README",
+                    "sha256": "a036c27a5f30d95910f739ce9466539a5772cd13541e5fdddfbfae187993f8d8"
+                }
+            ]
+        },
+        {
+            "id": "vosk-small-ja",
+            "engine": "vosk",
+            "language": "ja",
+            "path": "stt/vosk-model-small-ja-0.22",
+            "files": [
+                {
+                    "path": "stt/vosk-model-small-ja-0.22/am/final.mdl",
+                    "sha256": "1df788e2c183f7fb2474c876b987e28ce40cb198db4b1c2dcf094d9b8e3d44e2"
+                },
+                {
+                    "path": "stt/vosk-model-small-ja-0.22/conf/mfcc.conf",
+                    "sha256": "cdb0d516e5b8886092f1d840c628107703a65b571dc3b16b888a9a3978958b96"
+                },
+                {
+                    "path": "stt/vosk-model-small-ja-0.22/conf/model.conf",
+                    "sha256": "d8d91d310a9659fed2d89f8ea4996af6163a43c3ab008cd278e4264120551712"
+                },
+                {
+                    "path": "stt/vosk-model-small-ja-0.22/graph/disambig_tid.int",
+                    "sha256": "af6cd4863c1951e2b0e61f687eac1cac03fc24993f839a9cefab643a83f3470e"
+                },
+                {
+                    "path": "stt/vosk-model-small-ja-0.22/graph/Gr.fst",
+                    "sha256": "4f75f879f5c96b3a5983f8aa1b2df6e4c6f05a845d332d7f2cf410a64f095011"
+                },
+                {
+                    "path": "stt/vosk-model-small-ja-0.22/graph/HCLr.fst",
+                    "sha256": "c0bd905b506cce18ee6a46d0a13d3c8a3310fc7b4a6b76dd99e924ed691cddf9"
+                },
+                {
+                    "path": "stt/vosk-model-small-ja-0.22/graph/phones.txt",
+                    "sha256": "a68f13d4d54a09c05326ec0610ceb2fee0ae59353546630926a44272b94581ea"
+                },
+                {
+                    "path": "stt/vosk-model-small-ja-0.22/graph/phones/word_boundary.int",
+                    "sha256": "da199d9c991e0e84681ddbb34627b915b26302d50a8fdaa23c51e2bc3a50b5c3"
+                },
+                {
+                    "path": "stt/vosk-model-small-ja-0.22/graph/words.txt",
+                    "sha256": "26f18f875e172b710740926eb1c2692c790a1fee68be5f314b1f8c99f9bf2fc6"
+                },
+                {
+                    "path": "stt/vosk-model-small-ja-0.22/ivector/final.dubm",
+                    "sha256": "ebae597e7674342d09ae0d73222260e5fbf0e3d352a3135168d1ca44189029c0"
+                },
+                {
+                    "path": "stt/vosk-model-small-ja-0.22/ivector/final.ie",
+                    "sha256": "71eb575f7d31721c09b1a82d58d8b5c233f73629129df864a30dba206bd25f66"
+                },
+                {
+                    "path": "stt/vosk-model-small-ja-0.22/ivector/final.mat",
+                    "sha256": "4daa60ee31233f147fcc3b17a559bff5112ada7c14fbb20266e6748bc6ba9684"
+                },
+                {
+                    "path": "stt/vosk-model-small-ja-0.22/ivector/global_cmvn.stats",
+                    "sha256": "5ce41441eaa105e0ab07e51ffb37a738a085a96aac3d9431a924de8dc7738ea7"
+                },
+                {
+                    "path": "stt/vosk-model-small-ja-0.22/ivector/online_cmvn.conf",
+                    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+                },
+                {
+                    "path": "stt/vosk-model-small-ja-0.22/ivector/splice.conf",
+                    "sha256": "9f0c5f7c82d18eaf25d8bce470efa9f7741f88411fe428774bc0a9bb69a24756"
+                },
+                {
+                    "path": "stt/vosk-model-small-ja-0.22/README",
+                    "sha256": "258b3b4f34f943d317b0fbca0778cb2669a19e0df84bece557daac8f0c58d6fc"
+                }
+            ]
+        }
+    ]
 }

@@ -530,6 +530,7 @@ private fun TokenPill(
             modifier
                 .clip(RoundedCornerShape(12.dp))
                 .background(if (selected) colors.primary else colors.surface)
+                .clickable { onToggle(token) }
                 .padding(horizontal = 12.dp, vertical = 8.dp),
     )
 }
@@ -606,6 +607,7 @@ private fun MatchTile(
             modifier
                 .clip(RoundedCornerShape(LinguaTokens.RADIUS_CARD_DP.dp))
                 .background(background)
+                .clickable(enabled = enabled, onClick = onClick)
                 .padding(horizontal = 10.dp, vertical = 12.dp),
     )
 }

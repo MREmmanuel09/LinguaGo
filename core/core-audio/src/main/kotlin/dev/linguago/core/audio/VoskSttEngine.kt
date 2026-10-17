@@ -139,10 +139,12 @@ public class VoskSttEngine
             assetPath: String,
             target: File,
         ) {
+            target.mkdirs()
             for (name in context.assets.list(assetPath).orEmpty()) {
                 val childAsset = "$assetPath/$name"
                 val childFile = File(target, name)
                 if (context.assets.list(childAsset).isNullOrEmpty()) {
+                    childFile.parentFile?.mkdirs()
                     context.assets.open(childAsset).use { input ->
                         childFile.outputStream().use { output -> input.copyTo(output) }
                     }

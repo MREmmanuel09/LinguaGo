@@ -4,6 +4,7 @@ import android.content.Context
 import android.media.AudioAttributes
 import android.media.AudioFormat
 import android.media.AudioTrack
+import android.util.Log
 import com.k2fsa.sherpa.onnx.OfflineTts
 import com.k2fsa.sherpa.onnx.OfflineTtsConfig
 import com.k2fsa.sherpa.onnx.OfflineTtsModelConfig
@@ -142,15 +143,26 @@ public class PiperTtsEngine
                     entry.engine == PIPER &&
                         entry.language == language.isoCode &&
                         entry.sha256.isNotBlank()
-                } ?: return null
+                } ?: run {
+                    if (readManifest().isEmpty()) {
+                        Log.w(TAG, "manifest.json no legible o sin entradas tts")
+                    } else {
+                        Log.w(TAG, "sin voz piper para ${language.isoCode}")
+                    }
+                    return null
+                }
             val installed =
                 installedDir(entry)
                     ?: installFromAssets(entry)
-                    ?: return null
+                    ?: run {
+                        Log.w(TAG, "no se pudo instalar ${entry.path}")
+                        return null
+                    }
             if (!ModelIntegrity
                     .sha256Hex(File(installed, "${entry.id}.onnx"))
                     .equals(entry.sha256, ignoreCase = true)
             ) {
+                Log.w(TAG, "sha256 desigual para ${entry.id}")
                 return null
             }
             val voice =
@@ -170,24 +182,33 @@ public class PiperTtsEngine
 
         /** Extrae el paquete `tts/<id>` de assets hacia filesDir (una vez). */
         private fun installFromAssets(entry: VoiceEntry): File? =
-            runCatching {
+            try {
                 val hasAssets = context.assets.list(entry.path)?.isNotEmpty() == true
-                if (!hasAssets) return@runCatching null
-                val outDir = File(context.filesDir, entry.path)
-                outDir.deleteRecursively()
-                copyAssetTree(entry.path, outDir)
-                if (hasVoiceFiles(outDir, entry.id)) outDir else null
-            }.getOrNull()
+                if (!hasAssets) {
+                    Log.w(TAG, "assets.list('${entry.path}') vacío")
+                    null
+                } else {
+                    val outDir = File(context.filesDir, entry.path)
+                    outDir.deleteRecursively()
+                    copyAssetTree(entry.path, outDir)
+                    if (hasVoiceFiles(outDir, entry.id)) outDir else null
+                }
+            } catch (error: Exception) {
+                Log.w(TAG, "install ${entry.path} falló", error)
+                null
+            }
 
         /** Copia recursiva (dir `espeak-ng-data` incluida). */
         private fun copyAssetTree(
             assetPath: String,
             target: File,
         ) {
+            target.mkdirs()
             for (name in context.assets.list(assetPath).orEmpty()) {
                 val childAsset = "$assetPath/$name"
                 val childFile = File(target, name)
                 if (context.assets.list(childAsset).isNullOrEmpty()) {
+                    childFile.parentFile?.mkdirs()
                     context.assets.open(childAsset).use { input ->
                         childFile.outputStream().use { output -> input.copyTo(output) }
                     }
@@ -235,6 +256,7 @@ public class PiperTtsEngine
             const val MIN_CHUNK_SAMPLES = 4096
             const val CHUNKS_PER_SECOND = 8
             const val POLL_MILLIS = 50L
+            const val TAG = "PiperTtsEngine"
         }
     }
 
