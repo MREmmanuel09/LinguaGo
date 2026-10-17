@@ -1,0 +1,24 @@
+# LinguaGo
+
+> LinguaGo es una app Android nativa, offline-first, para aprender idiomas
+> (ES → EN/PT/FR/JA). Clean Architecture con 21 módulos Gradle, lecciones con
+> audio TTS/STT on-device (Piper + Vosk), repaso espaciado FSRS, racha/XP y
+> respaldo opcional cifrado (AES-GCM-256) a Google Drive. Sin backend, sin
+> anuncios, sin login obligatorio. Código MIT; contenido CC BY-SA 4.0.
+
+Documentación principal:
+
+- [README](README.md): visión, estado por fases, setup y compilación.
+- [ARCHITECTURE](ARCHITECTURE.md): capas, módulos, patrones, stack, datos, sync y testing.
+- [ADRs](docs/DECISIONS.md): registro de decisiones 000–016 con índice.
+- [CONTENT_FORMAT](CONTENT_FORMAT.md): cómo escribir cursos y ejercicios (formato v1).
+- [MODELS](docs/MODELS.md): política y estado de los modelos de voz TTS/STT.
+- [CHANGELOG](CHANGELOG.md): historial de versiones (Keep a Changelog).
+
+## Optional
+
+- [AGENTS](AGENTS.md): guía operativa para agentes IA y contribuidores automatizados.
+- [SECURITY](SECURITY.md): política de reporte de vulnerabilidades.
+- [CONTRIBUTING](CONTRIBUTING.md): flujo de contribución y commits.
+- [CODE_OF_CONDUCT](CODE_OF_CONDUCT.md): Contributor Covenant 2.1.
+- [Course schema v1](docs/schemas/course-v1.json): JSON Schema draft-07 del contenido.

@@ -8,14 +8,43 @@ ES → EN · ES → PT · ES → FR · ES → JA — A1 a B2 (y N5–N3 para jap
 
 Código abierto · Sin anuncios · Sin vidas · Sin backend · 100% offline
 
+[![CI](https://github.com/MREmmanuel09/LinguaGo/actions/workflows/ci.yml/badge.svg)](https://github.com/MREmmanuel09/LinguaGo/actions/workflows/ci.yml)
+![version](https://img.shields.io/badge/version-0.2.0-blue)
+![Kotlin](https://img.shields.io/badge/Kotlin-2.4-7F52FF?logo=kotlin&logoColor=white)
+![Android](https://img.shields.io/badge/Android-26%2B-3DDC84?logo=android&logoColor=white)
+![License](https://img.shields.io/badge/license-MIT-green)
+[![Content](https://img.shields.io/badge/content-CC%20BY--SA%204.0-lightgrey)](./LICENSE-CONTENT)
+
 </div>
 
 ---
 
 LinguaGo es una app Android nativa de aprendizaje de idiomas estructurada sobre
 Clean Architecture, con módulos Gradle por feature, motor de lecciones basado en
-máquina de estados, racha diaria progresiva y modelos de voz ligeros integrados
-localmente (TTS Piper + STT Vosk).
+máquina de estados, racha diaria progresiva, **repaso espaciado FSRS** y modelos
+de voz ligeros integrados localmente (TTS Piper + STT Vosk).
+
+```mermaid
+flowchart LR
+    U[Usuario] --> APP[LinguaGo\n100% offline]
+    APP -->|opcional · cifrado AES-GCM| GD[Google Drive\nappDataFolder]
+    APP -->|ADR-015| OD[OneDrive\nappfolder]
+```
+
+## Documentación
+
+| Documento | Contenido |
+|---|---|
+| [ARCHITECTURE.md](ARCHITECTURE.md) | Mapa técnico: capas, módulos, patrones, stack, datos, sync, testing |
+| [docs/DECISIONS.md](docs/DECISIONS.md) | ADRs 000–016 con índice y registro de pendientes |
+| [CONTENT_FORMAT.md](CONTENT_FORMAT.md) | Contrato del contenido v1: cómo escribir lecciones y ejercicios |
+| [docs/MODELS.md](docs/MODELS.md) | Política y estado de los modelos TTS/STT |
+| [docs/schemas/course-v1.json](docs/schemas/course-v1.json) | JSON Schema formal del contenido |
+| [CHANGELOG.md](CHANGELOG.md) | Historial de versiones (Keep a Changelog) |
+| [SECURITY.md](SECURITY.md) | Política de seguridad y reporte de vulnerabilidades |
+| [AGENTS.md](AGENTS.md) | Guía para agentes IA y contribuidores automatizados |
+| [llms.txt](llms.txt) | Índice compacto para consumo por IA (llmstxt.org) |
+| [CONTRIBUTING.md](CONTRIBUTING.md) · [CODE_OF_CONDUCT.md](CODE_OF_CONDUCT.md) | Cómo contribuir |
 
 ## Principios (invariantes)
 
