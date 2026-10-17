@@ -25,6 +25,9 @@ public interface ReviewRepository {
     /** Tarjetas vencidas del curso activo (reactivo, para Home). */
     public fun observeDueCount(courseId: CourseId): Flow<Int>
 
+    /** Total de tarjetas registradas del curso (reactivo, para Progreso). */
+    public fun observeTotalCount(courseId: CourseId): Flow<Int>
+
     /** Cola de repaso: tarjetas vencidas ordenadas por vencimiento. */
     public suspend fun due(
         courseId: CourseId,

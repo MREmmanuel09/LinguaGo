@@ -15,8 +15,8 @@ android {
     namespace = "dev.linguago.app"
     defaultConfig {
         applicationId = "dev.linguago.app"
-        versionCode = 1
-        versionName = "0.1.0-alpha"
+        versionCode = 2
+        versionName = "0.2.0"
 
         buildConfigField("String", "GOOGLE_CLIENT_ID", "\"$googleClientId\"")
         buildConfigField("String", "OAUTH_REDIRECT_SCHEME", "\"$oauthRedirectScheme\"")

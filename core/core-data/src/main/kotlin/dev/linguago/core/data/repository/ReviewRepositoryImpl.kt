@@ -70,6 +70,12 @@ public class ReviewRepositoryImpl
                 .observeAll(courseId.value)
                 .map { entities -> entities.count { it.isDueAt(System.currentTimeMillis()) } }
 
+        override fun observeTotalCount(courseId: CourseId): Flow<Int> =
+            database
+                .wordProgressDao()
+                .observeAll(courseId.value)
+                .map { entities -> entities.size }
+
         override suspend fun due(
             courseId: CourseId,
             limit: Int,

@@ -68,7 +68,20 @@ private fun ProfileContent(
         )
         StatCard(
             label = "Lecciones completadas",
-            value = uiState.lessonsCompleted.toString(),
+            value =
+                when {
+                    uiState.lessonsTotal > 0 ->
+                        "${uiState.lessonsCompleted} de ${uiState.lessonsTotal}"
+                    else -> uiState.lessonsCompleted.toString()
+                },
+        )
+        StatCard(
+            label = "Tarjetas de repaso",
+            value = uiState.reviewCards.toString(),
+        )
+        StatCard(
+            label = "Repaso pendiente hoy",
+            value = uiState.reviewDue.toString(),
         )
         StatCard(
             label = "Mejor racha",
@@ -116,7 +129,10 @@ private fun ProfileScreenPreview() {
                     streakDays = 7,
                     totalXp = 320,
                     lessonsCompleted = 12,
+                    lessonsTotal = 18,
                     longestStreak = 14,
+                    reviewCards = 24,
+                    reviewDue = 5,
                 ),
         )
     }

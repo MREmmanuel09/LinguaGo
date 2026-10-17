@@ -41,6 +41,7 @@ localmente (TTS Piper + STT Vosk).
 | 4.3 | Release config (R8) + documentación | ✅ |
 | 5 | Repaso espaciado FSRS (ADR-016) | ✅ |
 | 6 | Accesibilidad I8 + tests instrumentados | ✅ |
+| 7 | Pulido: stats de progreso y versión 0.2.0 | ✅ |
 | Pendiente | OneDrive (ADR-015), validación de voz pt/fr/ja en hardware | ⏳ |
 
 ## Módulos
