@@ -25,7 +25,10 @@
         </activity>
 
         <!-- Redirect OAuth (ADR-011): el navegador devuelve el code de
-             autorización a este esquema custom, único canal de regreso. -->
+             autorización a este esquema custom, único canal de regreso.
+             El esquema se configura por gradle property (oauthRedirectScheme):
+             por defecto `dev.linguago.oauth`; para Google iOS-client,
+             `com.googleusercontent.apps.<CLIENT_ID>`. -->
         <activity
             android:name=".OAuthCallbackActivity"
             android:exported="true"
@@ -35,9 +38,7 @@
                 <action android:name="android.intent.action.VIEW" />
                 <category android:name="android.intent.category.DEFAULT" />
                 <category android:name="android.intent.category.BROWSABLE" />
-                <data
-                    android:host="callback"
-                    android:scheme="dev.linguago.oauth" />
+                <data android:scheme="${oauthRedirectScheme}" />
             </intent-filter>
         </activity>
     </application>

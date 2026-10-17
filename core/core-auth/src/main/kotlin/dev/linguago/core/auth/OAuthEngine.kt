@@ -163,7 +163,7 @@ public class OAuthEngine
 
         // ---- helpers ----
 
-        private fun redirectUri(): String = "${config.redirectScheme}://${config.redirectHost}"
+        private fun redirectUri(): String = config.redirectUri
 
         /** Estado derivado del verifier (reversible sin una tabla adicional). */
         private fun stateFor(verifier: String): String = verifier.takeLast(16)

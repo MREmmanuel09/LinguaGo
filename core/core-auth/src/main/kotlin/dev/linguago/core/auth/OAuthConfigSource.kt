@@ -18,6 +18,14 @@ public interface OAuthConfigSource {
     public val redirectHost: String
         get() = "callback"
 
+    /**
+     * URI completo de redirect (el que se registra en el proveedor). Por
+     * defecto `scheme://host`; con un cliente iOS de Google se configura
+     * `com.googleusercontent.apps.<CLIENT_ID>:/oauth2redirect`.
+     */
+    public val redirectUri: String
+        get() = "$redirectScheme://$redirectHost"
+
     /** Alcance solicitado: solo el sandbox privado de la app en Drive. */
     public val scope: String
         get() = "https://www.googleapis.com/auth/drive.appdata openid profile"

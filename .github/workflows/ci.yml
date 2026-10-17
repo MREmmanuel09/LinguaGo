@@ -1,4 +1,5 @@
-# CI LinguaGo (RFC §8.2): build + ktlint + detekt + tests por cada push/PR.
+# CI LinguaGo (RFC §8.2): build + ktlint + detekt + tests + release (R8)
+# por cada push/PR.
 name: CI
 
 on:
@@ -14,9 +15,9 @@ concurrency:
 
 jobs:
   build-and-check:
-    name: Build · ktlint · detekt · test
+    name: Build · ktlint · detekt · tests · release
     runs-on: ubuntu-latest
-    timeout-minutes: 45
+    timeout-minutes: 60
 
     steps:
       - name: Checkout
@@ -47,11 +48,21 @@ jobs:
       - name: assembleDebug
         run: ./gradlew assembleDebug
 
+      - name: assembleRelease (R8 + shrink, sin keystore de distribución)
+        run: ./gradlew assembleRelease
+
       - name: Upload APK (debug)
         uses: actions/upload-artifact@v4
         with:
           name: linguago-debug
           path: app/build/outputs/apk/debug/*.apk
+          if-no-files-found: error
+
+      - name: Upload APK (release sin firmar de distribución)
+        uses: actions/upload-artifact@v4
+        with:
+          name: linguago-release-unsigned-dev
+          path: app/build/outputs/apk/release/*.apk
           if-no-files-found: error
 
       - name: Upload test reports (si falla)

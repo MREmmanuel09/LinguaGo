@@ -5,6 +5,7 @@ import android.content.Context
 import android.media.AudioFormat
 import android.media.AudioRecord
 import android.media.MediaRecorder
+import android.util.Log
 import dagger.hilt.android.qualifiers.ApplicationContext
 import dev.linguago.core.domain.model.Language
 import kotlinx.coroutines.Dispatchers
@@ -97,15 +98,19 @@ public class VoskSttEngine
         }
 
         /** Modelo instalado y verificado para el idioma; carga pesada en IO. */
-        private fun locateModel(language: Language): Model? =
-            readManifestStt(language)?.let { entry ->
-                val verified = verifiedDir(entry) ?: installFromAssets(entry) ?: return@let null
-                models.getOrPut(language) {
-                    synchronized(ioLock) {
-                        runCatching { Model(verified.absolutePath) }.getOrNull()
-                    }
-                }
+        private fun locateModel(language: Language): Model? {
+            val entry = readManifestStt(language) ?: return null
+            val verified = verifiedDir(entry) ?: installFromAssets(entry) ?: return null
+            models[language]?.let { return it }
+            return synchronized(ioLock) {
+                models[language]
+                    ?: runCatching { Model(verified.absolutePath) }
+                        .onFailure { error ->
+                            Log.w(TAG, "no se pudo cargar modelo STT para ${language.isoCode}", error)
+                        }.getOrNull()
+                        ?.also { model -> models[language] = model }
             }
+        }
 
         /** filesDir con todos los archivos del manifest presentes y con hash OK. */
         private fun verifiedDir(entry: SttEntry): File? {
@@ -195,6 +200,7 @@ public class VoskSttEngine
         )
 
         private companion object {
+            const val TAG = "VoskSttEngine"
             const val VOSK = "vosk"
             const val VOICE_MANIFEST_ASSET = "manifest.json"
             const val SAMPLE_RATE_HZ = 16000

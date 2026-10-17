@@ -58,11 +58,14 @@ public class PiperTtsEngine
             language: Language,
             voice: PiperVoice,
         ): OfflineTts? =
-            engines.getOrPut(language) {
-                synchronized(ioLock) {
-                    runCatching { OfflineTts(config = buildConfig(voice)) }.getOrNull()
+            engines[language]
+                ?: synchronized(ioLock) {
+                    engines[language]
+                        ?: runCatching { OfflineTts(config = buildConfig(voice)) }
+                            .onFailure { error -> Log.w(TAG, "no se pudo cargar voz ${voice.id}", error) }
+                            .getOrNull()
+                            ?.also { engine -> engines[language] = engine }
                 }
-            }
 
         private fun buildConfig(voice: PiperVoice): OfflineTtsConfig =
             OfflineTtsConfig(
