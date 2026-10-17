@@ -38,15 +38,23 @@ elección inicial.
 SpeakRepeat queda deshabilitado mientras no exista su modelo; el contenido
 Fase 1 no incluye ejercicios de voz.
 
-## Descarga (herramienta planificada, ADR-006)
+## Descarga (tarea manual `fetchVoiceModels`)
+
+Los paquetes vienen del tag `tts-models` de sherpa-onnx: cada
+`vits-piper-<voz>.tar.bz2` incluye `<voz>.onnx` + `tokens.txt` +
+`espeak-ng-data/` (mismo esquema que Piper, listo para el runtime).
 
 ```bash
-# esqueleto previsto (Fase 3): gradle/model-fetch descarga AAR + modelos,
-# verifica SHA-256 y llena models/manifest.json.
-models/
-├── manifest.json          # fuente de verdad de hashes
-└── tts|stt/<archivo>
+./gradlew fetchVoiceModels
 ```
 
-Hasta que la herramienta exista, `manifest.json` sirve de esquema: los
-campos `sha256` vacíos significan *no verificado* y el engine los ignora.
+La tarea (no está connected al build ni al CI) para cada voz:
+
+1. Descarga `https://github.com/k2-fsa/sherpa-onnx/releases/download/
+   tts-models/vits-piper-<voz>.tar.bz2` (cache en `models/downloads/`).
+2. Extrae en `models/tts/<voz>/` (una vez: si existe se salta).
+3. Calcula el **SHA-256** del `<voz>.onnx` y lo graba en
+   `models/manifest.json` (fuente de verdad de hashes, ADR-006).
+4. `models/` es assets del app: al instalar, `PiperTtsEngine` copia el
+   paquete a filesDir, verifica el SHA-256 y carga el runtime; sin
+   voces (repo limpio / CI) degrada al TTS del sistema, I3.

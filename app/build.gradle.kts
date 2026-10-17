@@ -10,6 +10,12 @@ android {
         versionCode = 1
         versionName = "0.1.0-alpha"
     }
+    sourceSets {
+        getByName("main") {
+            // Voz tts/… y manifest.json del tool de descarga (ADR-006).
+            assets.srcDir(rootProject.file("models"))
+        }
+    }
 }
 
 dependencies {

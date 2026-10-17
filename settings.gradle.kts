@@ -25,6 +25,8 @@ dependencyResolutionManagement {
     repositories {
         google()
         mavenCentral()
+        // sherpa-onnx Android AAR se distribuye vía JitPack (ADR-003).
+        maven { url = uri("https://jitpack.io") }
     }
 }
 
