@@ -3,6 +3,7 @@ package dev.linguago.core.domain.usecase
 import dev.linguago.core.common.Result
 import dev.linguago.core.domain.model.Course
 import dev.linguago.core.domain.model.CourseId
+import dev.linguago.core.domain.model.CourseSummary
 import dev.linguago.core.domain.model.Exercise
 import dev.linguago.core.domain.model.Lesson
 import dev.linguago.core.domain.model.LessonId
@@ -11,28 +12,44 @@ import dev.linguago.core.domain.model.WordProgress
 
 /**
  * Use cases clave del dominio (RFC §3.2). Cada interface define el contrato
- * operable por los ViewModels; la implementación vive en el dominio y es
- * independiente de Android (I7).
+ * operable por los ViewModels; la implementación vive en los módulos core
+ * y es independiente de Android (I7).
  */
 public interface LoadCourseUseCase {
     /** Carga completa del curso solicitado (assets → dominio). */
     public suspend operator fun invoke(courseId: CourseId): Result<Course>
 }
 
+public interface GetAvailableCoursesUseCase {
+    /** Lista ligera de los cursos empaquetados en la app. */
+    public suspend operator fun invoke(): Result<List<CourseSummary>>
+}
+
 public interface StartLessonUseCase {
-    /** Inicializa la cola de ejercicios de una lección. */
-    public suspend operator fun invoke(lessonId: LessonId): Result<Lesson>
+    /** Abre la lección del curso indicado y devuelve su cola de ejercicios. */
+    public suspend operator fun invoke(
+        courseId: CourseId,
+        lessonId: LessonId,
+    ): Result<Lesson>
 }
 
 public interface SubmitAnswerUseCase {
     /**
-     * Valida la respuesta por tipo de ejercicio, actualiza XP y progreso.
-     * Devuelve `true` si la respuesta es correcta.
+     * Valida la respuesta por tipo de ejercicio, contabiliza XP (+10 por
+     * respuesta correcta, RFC §3.2) y devuelve `true` si es correcta.
      */
     public suspend operator fun invoke(
         exercise: Exercise,
         answer: ExerciseAnswer,
     ): Result<Boolean>
+}
+
+public interface CompleteLessonUseCase {
+    /** Persiste la finalización de la lección: progreso, XP total y racha. */
+    public suspend operator fun invoke(
+        lessonId: LessonId,
+        xp: Int,
+    ): Result<Unit>
 }
 
 public interface UpdateStreakUseCase {
@@ -41,7 +58,7 @@ public interface UpdateStreakUseCase {
 }
 
 public interface GetNextReviewUseCase {
-    /** Selecciona vocabulario para repaso espaciado (FSRS). */
+    /** Selecciona vocabulario para repaso espaciado (FSRS, Fase 2). */
     public suspend operator fun invoke(limit: Int): Result<List<WordProgress>>
 }
 
@@ -60,7 +77,7 @@ public sealed interface ExerciseAnswer {
         val tokens: List<String>,
     ) : ExerciseAnswer
 
-    /** Mapa de emparejamiento izquierda→derecha por posición de par. */
+    /** Mapa de emparejamiento izquierda→derecha en índices canónicos de pares. */
     public data class MatchedPairs(
         val leftToRight: Map<Int, Int>,
     ) : ExerciseAnswer
@@ -70,7 +87,7 @@ public sealed interface ExerciseAnswer {
         val text: String,
     ) : ExerciseAnswer
 
-    /** Transcripción reconocida del habla (SpeakRepeat). */
+    /** Transcripción reconocida del habla (SpeakRepeat, Fase 2). */
     public data class SpokenText(
         val transcript: String,
     ) : ExerciseAnswer

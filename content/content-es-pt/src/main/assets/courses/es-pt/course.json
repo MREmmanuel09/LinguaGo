@@ -1,0 +1,115 @@
+{
+  "id": "es-pt",
+  "from": "es",
+  "to": "pt",
+  "levels": [
+    {
+      "id": "es-pt-lv-1",
+      "name": "Portugués de arranque",
+      "units": [
+        {
+          "id": "es-pt-lv-1-un-1",
+          "title": "Primeiro contato",
+          "lessons": [
+            {
+              "id": "es-pt-lv-1-un-1-ls-1",
+              "title": "Saudações",
+              "exercises": [
+                {
+                  "type": "MultipleChoice",
+                  "id": "es-pt-e1",
+                  "question": "¿Cómo se dice «hola»?",
+                  "options": ["Olá", "Tchau", "Sim"],
+                  "correctIndex": 0
+                },
+                {
+                  "type": "Translate",
+                  "id": "es-pt-e2",
+                  "sourcePhrase": "Buenos días",
+                  "correctTokens": ["Bom", "dia"],
+                  "distractorTokens": ["Boa", "noite"]
+                },
+                {
+                  "type": "OrderWords",
+                  "id": "es-pt-e3",
+                  "tokens": ["Como", "você", "está"],
+                  "answerTokens": ["Como", "você", "está"]
+                },
+                {
+                  "type": "MatchPairs",
+                  "id": "es-pt-e4",
+                  "pairs": [
+                    {"left": "adiós", "right": "Tchau"},
+                    {"left": "gracias", "right": "Obrigado"},
+                    {"left": "buenas noches", "right": "Boa noite"}
+                  ]
+                },
+                {
+                  "type": "ListenChoose",
+                  "id": "es-pt-e5",
+                  "audioText": "Boa tarde",
+                  "options": ["Boa noite", "Boa tarde", "Bom dia"],
+                  "correctIndex": 1
+                },
+                {
+                  "type": "ListenType",
+                  "id": "es-pt-e6",
+                  "transcription": "Muito obrigado",
+                  "audioText": "Muito obrigado"
+                }
+              ]
+            },
+            {
+              "id": "es-pt-lv-1-un-1-ls-2",
+              "title": "Se apresentar",
+              "exercises": [
+                {
+                  "type": "MultipleChoice",
+                  "id": "es-pt-e7",
+                  "question": "Completa: «Me llamo Ana» en portugués",
+                  "options": ["Me chamo Ana", "Meu nome por Ana", "Eu chamo nome Ana"],
+                  "correctIndex": 0
+                },
+                {
+                  "type": "Translate",
+                  "id": "es-pt-e8",
+                  "sourcePhrase": "Soy de México",
+                  "correctTokens": ["Eu", "sou", "do", "México"],
+                  "distractorTokens": ["para", "na"]
+                },
+                {
+                  "type": "OrderWords",
+                  "id": "es-pt-e9",
+                  "tokens": ["Ela", "é", "minha", "irmã"],
+                  "answerTokens": ["Ela", "é", "minha", "irmã"]
+                },
+                {
+                  "type": "MatchPairs",
+                  "id": "es-pt-e10",
+                  "pairs": [
+                    {"left": "madre", "right": "mãe"},
+                    {"left": "hijo", "right": "filho"},
+                    {"left": "hermano", "right": "irmão"}
+                  ]
+                },
+                {
+                  "type": "ListenChoose",
+                  "id": "es-pt-e11",
+                  "audioText": "Prazer em conhecê-lo",
+                  "options": ["Prazer em conhecê-lo", "Prazer em comer", "Prazer em dormir"],
+                  "correctIndex": 0
+                },
+                {
+                  "type": "ListenType",
+                  "id": "es-pt-e12",
+                  "transcription": "Eu sou brasileiro",
+                  "audioText": "Eu sou brasileiro"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -12,7 +12,18 @@ public data class StreakState(
     val longest: Int,
     val lastDate: LocalDate,
     val totalXp: Int,
-)
+) {
+    public companion object {
+        /** Estado semilla de un usuario nuevo: sin racha, sin XP. */
+        public fun zero(): StreakState =
+            StreakState(
+                current = 0,
+                longest = 0,
+                lastDate = LocalDate.ofEpochDay(0),
+                totalXp = 0,
+            )
+    }
+}
 
 public data class LessonProgress(
     val lessonId: LessonId,
@@ -20,6 +31,9 @@ public data class LessonProgress(
     val xp: Int,
     val attempts: Int,
 )
+
+/** XP por respuesta correcta (RFC §3.2, Fase 1). */
+public const val XP_PER_CORRECT_ANSWER: Int = 10
 
 public data class WordProgress(
     val word: String,

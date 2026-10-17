@@ -1,0 +1,116 @@
+{
+  "id": "es-ja",
+  "from": "es",
+  "to": "ja",
+  "levels": [
+    {
+      "id": "es-ja-lv-1",
+      "name": "Japonés de sillón",
+      "units": [
+        {
+          "id": "es-ja-lv-1-un-1",
+          "title": "De kana a primeras frases",
+          "lessons": [
+            {
+              "id": "es-ja-lv-1-un-1-ls-1",
+              "title": "Hiragana básico",
+              "exercises": [
+                {
+                  "type": "KanaChoose",
+                  "id": "es-ja-e1",
+                  "kana": "あ",
+                  "romajiOptions": ["u", "a", "e"],
+                  "correctRomaji": "a"
+                },
+                {
+                  "type": "KanaChoose",
+                  "id": "es-ja-e2",
+                  "kana": "い",
+                  "romajiOptions": ["i", "e", "a"],
+                  "correctRomaji": "i"
+                },
+                {
+                  "type": "KanaChoose",
+                  "id": "es-ja-e3",
+                  "kana": "く",
+                  "romajiOptions": ["ku", "nu", "me"],
+                  "correctRomaji": "ku"
+                },
+                {
+                  "type": "ListenChoose",
+                  "id": "es-ja-e4",
+                  "audioText": "あ",
+                  "options": ["あ", "い", "う"],
+                  "correctIndex": 0
+                },
+                {
+                  "type": "MatchPairs",
+                  "id": "es-ja-e5",
+                  "pairs": [
+                    {"left": "か", "right": "ka"},
+                    {"left": "き", "right": "ki"}
+                  ]
+                },
+                {
+                  "type": "ListenType",
+                  "id": "es-ja-e6",
+                  "transcription": "あい",
+                  "audioText": "あい"
+                }
+              ]
+            },
+            {
+              "id": "es-ja-lv-1-un-1-ls-2",
+              "title": "Kanji y partículas",
+              "exercises": [
+                {
+                  "type": "KanjiReading",
+                  "id": "es-ja-e7",
+                  "kanji": "人",
+                  "readingOptions": ["ひと", "いぬ", "ねこ"],
+                  "correctReading": "ひと"
+                },
+                {
+                  "type": "KanjiReading",
+                  "id": "es-ja-e8",
+                  "kanji": "日",
+                  "readingOptions": ["にち", "ほん", "ゆき"],
+                  "correctReading": "にち"
+                },
+                {
+                  "type": "ParticleFill",
+                  "id": "es-ja-e9",
+                  "sentenceTemplate": "わたし_会社員です。",
+                  "particles": ["は", "が", "を"],
+                  "correctParticle": "は"
+                },
+                {
+                  "type": "ParticleFill",
+                  "id": "es-ja-e10",
+                  "sentenceTemplate": "りんご_食べます。",
+                  "particles": ["を", "に", "が"],
+                  "correctParticle": "を"
+                },
+                {
+                  "type": "MatchPairs",
+                  "id": "es-ja-e11",
+                  "pairs": [
+                    {"left": "なまえ", "right": "nombre"},
+                    {"left": "てんき", "right": "clima"},
+                    {"left": "りんご", "right": "manzana"}
+                  ]
+                },
+                {
+                  "type": "ListenType",
+                  "id": "es-ja-e12",
+                  "transcription": "はい",
+                  "audioText": "はい"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

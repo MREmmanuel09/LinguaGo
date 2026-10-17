@@ -35,3 +35,7 @@ naming:
 exceptions:
   TooGenericExceptionCaught:
     active: false
+  # La frontera I7 convierte excepciones de IO/JSON en LinguaError: el error
+  # se traslada como valor tipado, la excepción original no se propagará.
+  SwallowedException:
+    active: false

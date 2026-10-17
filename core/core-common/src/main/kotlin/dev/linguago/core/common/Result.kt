@@ -29,6 +29,13 @@ public inline fun <T, R> Result<T>.map(transform: (T) -> R): Result<R> =
         is Result.Error -> this
     }
 
+/** Continúa el flujo en caso de éxito, propagando el error tal cual. */
+public inline fun <T, R> Result<T>.flatMap(transform: (T) -> Result<R>): Result<R> =
+    when (this) {
+        is Result.Success -> transform(value)
+        is Result.Error -> this
+    }
+
 /** Devuelve el valor o `null` si es un error. */
 public fun <T> Result<T>.getOrNull(): T? =
     when (this) {

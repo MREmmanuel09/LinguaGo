@@ -1,0 +1,313 @@
+{
+  "id": "es-en",
+  "from": "es",
+  "to": "en",
+  "levels": [
+    {
+      "id": "es-en-lv-1",
+      "name": "Inglés esencial",
+      "units": [
+        {
+          "id": "es-en-lv-1-un-1",
+          "title": "Primeros pasos",
+          "lessons": [
+            {
+              "id": "es-en-lv-1-un-1-ls-1",
+              "title": "Saludos",
+              "exercises": [
+                {
+                  "type": "MultipleChoice",
+                  "id": "es-en-e1",
+                  "question": "¿Cómo se dice «hola»?",
+                  "options": ["Hello", "Goodbye", "Please"],
+                  "correctIndex": 0
+                },
+                {
+                  "type": "Translate",
+                  "id": "es-en-e2",
+                  "sourcePhrase": "Buenos días",
+                  "correctTokens": ["Good", "morning"],
+                  "distractorTokens": ["Goodbye", "night"]
+                },
+                {
+                  "type": "OrderWords",
+                  "id": "es-en-e3",
+                  "tokens": ["How", "are", "you"],
+                  "answerTokens": ["How", "are", "you"]
+                },
+                {
+                  "type": "MatchPairs",
+                  "id": "es-en-e4",
+                  "pairs": [
+                    {"left": "adiós", "right": "Goodbye"},
+                    {"left": "gracias", "right": "Thank you"},
+                    {"left": "por favor", "right": "Please"}
+                  ]
+                },
+                {
+                  "type": "ListenChoose",
+                  "id": "es-en-e5",
+                  "audioText": "Good evening",
+                  "options": ["Good morning", "Good evening", "Good night"],
+                  "correctIndex": 1
+                },
+                {
+                  "type": "ListenType",
+                  "id": "es-en-e6",
+                  "transcription": "Thank you very much",
+                  "audioText": "Thank you very much"
+                }
+              ]
+            },
+            {
+              "id": "es-en-lv-1-un-1-ls-2",
+              "title": "Presentarse",
+              "exercises": [
+                {
+                  "type": "MultipleChoice",
+                  "id": "es-en-e7",
+                  "question": "Elige la presentación correcta",
+                  "options": ["My name is Ana", "Ana name my is", "Is my name Ana"],
+                  "correctIndex": 0
+                },
+                {
+                  "type": "Translate",
+                  "id": "es-en-e8",
+                  "sourcePhrase": "Soy de Chile",
+                  "correctTokens": ["I", "am", "from", "Chile"],
+                  "distractorTokens": ["to", "is"]
+                },
+                {
+                  "type": "OrderWords",
+                  "id": "es-en-e9",
+                  "tokens": ["She", "is", "my", "sister"],
+                  "answerTokens": ["She", "is", "my", "sister"]
+                },
+                {
+                  "type": "MatchPairs",
+                  "id": "es-en-e10",
+                  "pairs": [
+                    {"left": "hermano", "right": "brother"},
+                    {"left": "hermana", "right": "sister"},
+                    {"left": "amigo", "right": "friend"}
+                  ]
+                },
+                {
+                  "type": "ListenChoose",
+                  "id": "es-en-e11",
+                  "audioText": "What is your name",
+                  "options": ["What is your name", "Who is your name", "Where your name"],
+                  "correctIndex": 0
+                },
+                {
+                  "type": "ListenType",
+                  "id": "es-en-e12",
+                  "transcription": "Nice to meet you",
+                  "audioText": "Nice to meet you"
+                }
+              ]
+            },
+            {
+              "id": "es-en-lv-1-un-1-ls-3",
+              "title": "La familia",
+              "exercises": [
+                {
+                  "type": "MultipleChoice",
+                  "id": "es-en-e13",
+                  "question": "¿Cómo se dice «abuelo»?",
+                  "options": ["grandfather", "grandmother", "nephew"],
+                  "correctIndex": 0
+                },
+                {
+                  "type": "Translate",
+                  "id": "es-en-e14",
+                  "sourcePhrase": "Tengo dos hermanos",
+                  "correctTokens": ["I", "have", "two", "brothers"],
+                  "distractorTokens": ["to", "sisters"]
+                },
+                {
+                  "type": "MatchPairs",
+                  "id": "es-en-e15",
+                  "pairs": [
+                    {"left": "madre", "right": "mother"},
+                    {"left": "niño", "right": "child"},
+                    {"left": "primo", "right": "cousin"}
+                  ]
+                },
+                {
+                  "type": "ListenChoose",
+                  "id": "es-en-e16",
+                  "audioText": "My family is small",
+                  "options": ["My family is small", "My family is big", "My family is new"],
+                  "correctIndex": 0
+                },
+                {
+                  "type": "OrderWords",
+                  "id": "es-en-e17",
+                  "tokens": ["This", "is", "my", "father"],
+                  "answerTokens": ["This", "is", "my", "father"]
+                },
+                {
+                  "type": "ListenType",
+                  "id": "es-en-e18",
+                  "transcription": "We are a big family",
+                  "audioText": "We are a big family"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "es-en-lv-1-un-2",
+          "title": "Vida diaria",
+          "lessons": [
+            {
+              "id": "es-en-lv-1-un-2-ls-1",
+              "title": "Comida y bebida",
+              "exercises": [
+                {
+                  "type": "MultipleChoice",
+                  "id": "es-en-e19",
+                  "question": "¿Cómo se dice «agua»?",
+                  "options": ["water", "wine", "milk"],
+                  "correctIndex": 0
+                },
+                {
+                  "type": "Translate",
+                  "id": "es-en-e20",
+                  "sourcePhrase": "Quiero un café, por favor",
+                  "correctTokens": ["I", "want", "a", "coffee", "please"],
+                  "distractorTokens": ["tea", "one"]
+                },
+                {
+                  "type": "OrderWords",
+                  "id": "es-en-e21",
+                  "tokens": ["The", "waiter", "brings", "the", "menu"],
+                  "answerTokens": ["The", "waiter", "brings", "the", "menu"]
+                },
+                {
+                  "type": "MatchPairs",
+                  "id": "es-en-e22",
+                  "pairs": [
+                    {"left": "pan", "right": "bread"},
+                    {"left": "huevo", "right": "egg"},
+                    {"left": "leche", "right": "milk"}
+                  ]
+                },
+                {
+                  "type": "ListenChoose",
+                  "id": "es-en-e23",
+                  "audioText": "I drink coffee every morning",
+                  "options": ["I water coffee every morning", "I drink coffee every morning", "I drink tea every morning"],
+                  "correctIndex": 1
+                },
+                {
+                  "type": "ListenType",
+                  "id": "es-en-e24",
+                  "transcription": "Water, please",
+                  "audioText": "Water, please"
+                }
+              ]
+            },
+            {
+              "id": "es-en-lv-1-un-2-ls-2",
+              "title": "Colores y números",
+              "exercises": [
+                {
+                  "type": "MultipleChoice",
+                  "id": "es-en-e25",
+                  "question": "¿Cómo se dice «azul»?",
+                  "options": ["blue", "red", "white"],
+                  "correctIndex": 0
+                },
+                {
+                  "type": "Translate",
+                  "id": "es-en-e26",
+                  "sourcePhrase": "Tengo cinco libros",
+                  "correctTokens": ["I", "have", "five", "books"],
+                  "distractorTokens": ["for", "seeds"]
+                },
+                {
+                  "type": "OrderWords",
+                  "id": "es-en-e27",
+                  "tokens": ["My", "favorite", "color", "is", "green"],
+                  "answerTokens": ["My", "favorite", "color", "is", "green"]
+                },
+                {
+                  "type": "MatchPairs",
+                  "id": "es-en-e28",
+                  "pairs": [
+                    {"left": "morado", "right": "purple"},
+                    {"left": "naranja", "right": "orange"},
+                    {"left": "gris", "right": "gray"}
+                  ]
+                },
+                {
+                  "type": "ListenChoose",
+                  "id": "es-en-e29",
+                  "audioText": "Seven, eight, nine",
+                  "options": ["One, two, three", "Seven, eight, nine", "Four, five, six"],
+                  "correctIndex": 1
+                },
+                {
+                  "type": "ListenType",
+                  "id": "es-en-e30",
+                  "transcription": "This is red and white",
+                  "audioText": "This is red and white"
+                }
+              ]
+            },
+            {
+              "id": "es-en-lv-1-un-2-ls-3",
+              "title": "Mi rutina",
+              "exercises": [
+                {
+                  "type": "MultipleChoice",
+                  "id": "es-en-e31",
+                  "question": "¿Cómo se dice «trabajo» (verbo)?",
+                  "options": ["work", "walk", "word"],
+                  "correctIndex": 0
+                },
+                {
+                  "type": "Translate",
+                  "id": "es-en-e32",
+                  "sourcePhrase": "Ella trabaja los lunes",
+                  "correctTokens": ["She", "works", "on", "Mondays"],
+                  "distractorTokens": ["work", "day"]
+                },
+                {
+                  "type": "OrderWords",
+                  "id": "es-en-e33",
+                  "tokens": ["I", "get", "up", "at", "seven"],
+                  "answerTokens": ["I", "get", "up", "at", "seven"]
+                },
+                {
+                  "type": "MatchPairs",
+                  "id": "es-en-e34",
+                  "pairs": [
+                    {"left": "desayunar", "right": "have breakfast"},
+                    {"left": "dormir", "right": "sleep"},
+                    {"left": "estudiar", "right": "study"}
+                  ]
+                },
+                {
+                  "type": "ListenChoose",
+                  "id": "es-en-e35",
+                  "audioText": "I work at home",
+                  "options": ["I walk at home", "I work at home", "I eat at home"],
+                  "correctIndex": 1
+                },
+                {
+                  "type": "ListenType",
+                  "id": "es-en-e36",
+                  "transcription": "She works at home",
+                  "audioText": "She works at home"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,9 +1,17 @@
 plugins {
     id("linguago.android.library")
+    id("linguago.hilt")
 }
 
 android {
     namespace = "dev.linguago.core.data"
+    defaultConfig {
+        consumerProguardFiles()
+    }
+}
+
+ksp {
+    arg("room.schemaLocation", "$projectDir/schemas")
 }
 
 dependencies {
@@ -11,9 +19,10 @@ dependencies {
     implementation(project(":core:core-common"))
 
     api(libs.androidx.datastore.preferences)
-    api(libs.androidx.room.runtime)
-    api(libs.androidx.room.ktx)
-    implementation(libs.kotlinx.coroutines.android)
+    implementation(libs.androidx.room.runtime)
+    implementation(libs.androidx.room.ktx)
+    ksp(libs.androidx.room.compiler)
 
     testImplementation(libs.junit4)
+    testImplementation(libs.kotlinx.coroutines.test)
 }

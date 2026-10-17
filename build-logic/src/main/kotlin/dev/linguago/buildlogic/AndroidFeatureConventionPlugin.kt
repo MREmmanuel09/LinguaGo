@@ -32,6 +32,7 @@ class AndroidFeatureConventionPlugin : Plugin<Project> {
             add("implementation", "androidx.compose.foundation:foundation")
             add("implementation", "androidx.lifecycle:lifecycle-runtime-compose:$lifecycleVersion")
             add("implementation", "androidx.lifecycle:lifecycle-viewmodel-compose:$lifecycleVersion")
+            add("implementation", "androidx.hilt:hilt-navigation-compose:${catalog.stringOf("hiltNavigationCompose")}")
             add("implementation", project(":core:core-ui"))
             add("debugApi", "androidx.compose.ui:ui-tooling")
             add("testImplementation", "junit:junit:$junitVersion")

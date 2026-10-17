@@ -1,16 +1,23 @@
 package dev.linguago.core.domain.model
 
+import kotlinx.serialization.SerialName
+import kotlinx.serialization.Serializable
+
 /**
  * Tipos de ejercicio del sistema (RFC §3.1). Cada tipo queda modelado como
  * data class con parámetros completos y autocodificables en contenido JSON.
- * La validación estructural (respuestas correctas dentro de opciones,
- * tokens únicos, etc.) la hace el contenido validador (core-content, Fase 1).
+ * La discriminación polimórfica usa el discriminator "type" con el nombre
+ * simple del tipo vía @SerialName (ADR-009). La validación estructural
+ * (respuestas correctas dentro de opciones, tokens únicos, etc.) la hace el
+ * validador de contenido (core-content, Fase 1).
  */
+@Serializable
 public sealed interface Exercise {
     public val id: ExerciseId
     public val audioText: String?
 
-    /** Elección única entre opciones con respuesta correcta única. */
+    @Serializable
+    @SerialName("MultipleChoice")
     public data class MultipleChoice(
         override val id: ExerciseId,
         val question: String,
@@ -20,6 +27,8 @@ public sealed interface Exercise {
     ) : Exercise
 
     /** Traducción ensamblando tokens de respuesta/distraídos. */
+    @Serializable
+    @SerialName("Translate")
     public data class Translate(
         override val id: ExerciseId,
         val sourcePhrase: String,
@@ -29,14 +38,25 @@ public sealed interface Exercise {
     ) : Exercise
 
     /** Emparejar conceptos (palabra↔traducción, kana↔romaji, ...). */
+    @Serializable
+    @SerialName("MatchPairs")
     public data class MatchPairs(
         override val id: ExerciseId,
-        /** pares (izquierda, derecha) asociados por identidad — la UI los desordena. */
-        val pairs: List<Pair<String, String>>,
+        /** Pares (izquierda, derecha) asociados por identidad — la UI los desordena. */
+        val pairs: List<MatchPair>,
         override val audioText: String? = null,
     ) : Exercise
 
+    /** Par de conceptos asociados en MatchPairs; el JSON usa {left, right}. */
+    @Serializable
+    public data class MatchPair(
+        val left: String,
+        val right: String,
+    )
+
     /** Ordenar tokens para reconstruir una frase objetivo. */
+    @Serializable
+    @SerialName("OrderWords")
     public data class OrderWords(
         override val id: ExerciseId,
         val tokens: List<String>,
@@ -45,15 +65,19 @@ public sealed interface Exercise {
     ) : Exercise
 
     /** Escuchar y elegir la transcripción entre opciones. */
+    @Serializable
+    @SerialName("ListenChoose")
     public data class ListenChoose(
         override val id: ExerciseId,
         val options: List<String>,
         val correctIndex: Int,
-        /** Ejercicio donde el enunciado es obligatoriamente el audio. */
+        /** Frase cuyo audio es el enunciado del ejercicio (obligatorio). */
         override val audioText: String,
     ) : Exercise
 
     /** Escuchar y escribir la frase exacta (dictado). */
+    @Serializable
+    @SerialName("ListenType")
     public data class ListenType(
         override val id: ExerciseId,
         val transcription: String,
@@ -61,6 +85,8 @@ public sealed interface Exercise {
     ) : Exercise
 
     /** Repetir en voz alta una frase objetivo (STT, Fase 2). */
+    @Serializable
+    @SerialName("SpeakRepeat")
     public data class SpeakRepeat(
         override val id: ExerciseId,
         val targetPhrase: String,
@@ -68,6 +94,8 @@ public sealed interface Exercise {
     ) : Exercise
 
     /** Reconocer kana japonés (romaji entre opciones). */
+    @Serializable
+    @SerialName("KanaChoose")
     public data class KanaChoose(
         override val id: ExerciseId,
         val kana: String,
@@ -77,6 +105,8 @@ public sealed interface Exercise {
     ) : Exercise
 
     /** Reconocer lectura de un kanji entre opciones. */
+    @Serializable
+    @SerialName("KanjiReading")
     public data class KanjiReading(
         override val id: ExerciseId,
         val kanji: String,
@@ -86,6 +116,8 @@ public sealed interface Exercise {
     ) : Exercise
 
     /** Rellenar la partícula que falta en una frase japonesa. */
+    @Serializable
+    @SerialName("ParticleFill")
     public data class ParticleFill(
         override val id: ExerciseId,
         val sentenceTemplate: String,

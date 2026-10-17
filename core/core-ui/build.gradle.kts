@@ -14,5 +14,7 @@ dependencies {
     api(libs.compose.ui.tooling.preview)
     debugApi(libs.compose.ui.tooling)
 
+    implementation(project(":core:core-domain"))
+
     testImplementation(libs.junit4)
 }

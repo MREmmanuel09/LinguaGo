@@ -1,0 +1,115 @@
+{
+  "id": "es-fr",
+  "from": "es",
+  "to": "fr",
+  "levels": [
+    {
+      "id": "es-fr-lv-1",
+      "name": "Francés de cabeza",
+      "units": [
+        {
+          "id": "es-fr-lv-1-un-1",
+          "title": "Premiers mots",
+          "lessons": [
+            {
+              "id": "es-fr-lv-1-un-1-ls-1",
+              "title": "Salutations",
+              "exercises": [
+                {
+                  "type": "MultipleChoice",
+                  "id": "es-fr-e1",
+                  "question": "¿Cómo se dice «hola»?",
+                  "options": ["Bonjour", "Au revoir", "Oui"],
+                  "correctIndex": 0
+                },
+                {
+                  "type": "Translate",
+                  "id": "es-fr-e2",
+                  "sourcePhrase": "Buenas noches",
+                  "correctTokens": ["Bonne", "nuit"],
+                  "distractorTokens": ["Bon", "jour"]
+                },
+                {
+                  "type": "OrderWords",
+                  "id": "es-fr-e3",
+                  "tokens": ["Comment", "ça", "va"],
+                  "answerTokens": ["Comment", "ça", "va"]
+                },
+                {
+                  "type": "MatchPairs",
+                  "id": "es-fr-e4",
+                  "pairs": [
+                    {"left": "adiós", "right": "Au revoir"},
+                    {"left": "gracias", "right": "Merci"},
+                    {"left": "sí", "right": "Oui"}
+                  ]
+                },
+                {
+                  "type": "ListenChoose",
+                  "id": "es-fr-e5",
+                  "audioText": "Merci beaucoup",
+                  "options": ["Merci beaucoup", "Bonne nuit", "Au revoir"],
+                  "correctIndex": 0
+                },
+                {
+                  "type": "ListenType",
+                  "id": "es-fr-e6",
+                  "transcription": "Bonne journée",
+                  "audioText": "Bonne journée"
+                }
+              ]
+            },
+            {
+              "id": "es-fr-lv-1-un-1-ls-2",
+              "title": "Se présenter",
+              "exercises": [
+                {
+                  "type": "MultipleChoice",
+                  "id": "es-fr-e7",
+                  "question": "Completa: «Me llamo Léa» en francés",
+                  "options": ["Je m'appelle Léa", "J'appelle moi Léa", "Mon nom se Léa"],
+                  "correctIndex": 0
+                },
+                {
+                  "type": "Translate",
+                  "id": "es-fr-e8",
+                  "sourcePhrase": "Vengo de Francia",
+                  "correctTokens": ["Je", "viens", "de", "France"],
+                  "distractorTokens": ["aller", "vais"]
+                },
+                {
+                  "type": "OrderWords",
+                  "id": "es-fr-e9",
+                  "tokens": ["Elle", "est", "ma", "sœur"],
+                  "answerTokens": ["Elle", "est", "ma", "sœur"]
+                },
+                {
+                  "type": "MatchPairs",
+                  "id": "es-fr-e10",
+                  "pairs": [
+                    {"left": "madre", "right": "mère"},
+                    {"left": "hermano", "right": "frère"},
+                    {"left": "hijo", "right": "fils"}
+                  ]
+                },
+                {
+                  "type": "ListenChoose",
+                  "id": "es-fr-e11",
+                  "audioText": "Je suis ici",
+                  "options": ["Je suis ici", "Je pars demain", "On va bien"],
+                  "correctIndex": 0
+                },
+                {
+                  "type": "ListenType",
+                  "id": "es-fr-e12",
+                  "transcription": "Merci beaucoup",
+                  "audioText": "Merci beaucoup"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
