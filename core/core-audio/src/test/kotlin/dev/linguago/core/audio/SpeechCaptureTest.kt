@@ -152,6 +152,36 @@ class SpeechCaptureTest {
         assertEquals(1, recognizer.closeCount)
     }
 
+    @Test
+    fun `si falla el recognizer se libera la fuente`() {
+        val clock = FakeClock()
+        val source = FakeSource(clock) { buffer -> fillConstant(buffer, 3277) }
+        val speechCapture =
+            SpeechCapture(
+                createSource = { source },
+                createRecognizer = { error("recognizer roto") },
+                nanoTime = clock::nanoTime,
+                maxCaptureNanos = 3 * CHUNK_NANOS,
+            )
+
+        val failure = runCatching { runBlocking { speechCapture.run { } } }
+
+        assertTrue(failure.exceptionOrNull() is IllegalStateException)
+        assertEquals(1, source.releaseCount)
+    }
+
+    @Test
+    fun `un fallo al liberar la fuente no omite el cierre del recognizer`() {
+        val clock = FakeClock()
+        val source = FakeSource(clock, throwOnRelease = true) { buffer -> fillConstant(buffer, 3277) }
+        val recognizer = FakeRecognizer()
+
+        collectUpdates(capture(clock, source, recognizer))
+
+        assertEquals(1, source.releaseCount)
+        assertEquals(1, recognizer.closeCount)
+    }
+
     private fun capture(
         clock: FakeClock,
         source: PcmSource,
@@ -191,6 +221,7 @@ class SpeechCaptureTest {
 
     private class FakeSource(
         private val clock: FakeClock,
+        private val throwOnRelease: Boolean = false,
         private val fill: (ByteArray) -> Int,
     ) : PcmSource {
         var startCount = 0
@@ -210,6 +241,7 @@ class SpeechCaptureTest {
 
         override fun release() {
             releaseCount++
+            if (throwOnRelease) error("release roto")
         }
     }
 
