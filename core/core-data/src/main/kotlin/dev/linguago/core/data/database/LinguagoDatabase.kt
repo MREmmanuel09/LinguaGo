@@ -7,6 +7,7 @@ import androidx.room.RoomDatabase
  * Base local del progreso (ADR-005: Room sobre el estado del usuario).
  * El contenido pedagógico vive en assets (core-content), no aquí.
  * v2: agrega `word_progress` para el repaso espaciado FSRS (ADR-016).
+ * v3: agrega métricas de producción oral y errores frecuentes (ADR-021).
  */
 @Database(
     entities = [
@@ -14,7 +15,7 @@ import androidx.room.RoomDatabase
         LessonProgressEntity::class,
         WordProgressEntity::class,
     ],
-    version = 2,
+    version = 3,
     exportSchema = true,
 )
 public abstract class LinguagoDatabase : RoomDatabase() {

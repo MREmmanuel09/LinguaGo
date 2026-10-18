@@ -2,8 +2,6 @@ package dev.linguago.core.data.di
 
 import android.content.Context
 import androidx.room.Room
-import androidx.room.migration.Migration
-import androidx.sqlite.db.SupportSQLiteDatabase
 import dagger.Binds
 import dagger.Module
 import dagger.Provides
@@ -12,6 +10,7 @@ import dagger.hilt.android.qualifiers.ApplicationContext
 import dagger.hilt.components.SingletonComponent
 import dev.linguago.core.common.DefaultDispatcherProvider
 import dev.linguago.core.common.DispatcherProvider
+import dev.linguago.core.data.database.DatabaseMigrations
 import dev.linguago.core.data.database.LinguagoDatabase
 import dev.linguago.core.data.preferences.SettingsRepositoryImpl
 import dev.linguago.core.data.repository.CompleteLessonUseCaseImpl
@@ -47,27 +46,8 @@ public object DataModule {
     ): LinguagoDatabase =
         Room
             .databaseBuilder(context, LinguagoDatabase::class.java, DATABASE_NAME)
-            .addMigrations(MIGRATION_1_2)
+            .addMigrations(DatabaseMigrations.MIGRATION_1_2, DatabaseMigrations.MIGRATION_2_3)
             .build()
-
-    /** v2 (ADR-016): tabla de tarjetas FSRS; migración sin pérdida de datos. */
-    private val MIGRATION_1_2 =
-        object : Migration(1, 2) {
-            override fun migrate(db: SupportSQLiteDatabase) {
-                db.execSQL(
-                    "CREATE TABLE IF NOT EXISTS `word_progress` (" +
-                        "`word` TEXT NOT NULL, " +
-                        "`courseId` TEXT NOT NULL, " +
-                        "`translation` TEXT NOT NULL, " +
-                        "`reviewCount` INTEGER NOT NULL, " +
-                        "`lastReviewEpochMillis` INTEGER NOT NULL, " +
-                        "`nextReviewEpochMillis` INTEGER NOT NULL, " +
-                        "`stability` REAL NOT NULL, " +
-                        "`difficulty` REAL NOT NULL, " +
-                        "PRIMARY KEY(`word`, `courseId`))",
-                )
-            }
-        }
 
     @Provides
     @Singleton

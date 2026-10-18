@@ -1,5 +1,6 @@
 package dev.linguago.core.data.database
 
+import androidx.room.ColumnInfo
 import androidx.room.Entity
 import androidx.room.PrimaryKey
 
@@ -24,11 +25,22 @@ public data class LessonProgressEntity(
     public val completed: Boolean,
     public val xp: Int,
     public val attempts: Int,
+    /** Intentos de producción oral libre registrados en la lección. */
+    @ColumnInfo(defaultValue = "0")
+    public val speakingAttempts: Int = 0,
+    /** Mejor fluidez observada en la lección (palabras por minuto). */
+    @ColumnInfo(defaultValue = "0")
+    public val speakingBestWpm: Float = 0f,
+    /** Última puntuación heurística de producción oral (0..1). */
+    @ColumnInfo(defaultValue = "0")
+    public val speakingLastScore: Float = 0f,
 )
 
 /**
  * Estado FSRS de una tarjeta de vocabulario (ADR-016). Clave compuesta
  * (word, courseId): la misma palabra puede existir en cursos distintos.
+ * [errorCount] y [lastErrorType] alimentan el feedback de errores frecuentes
+ * del curso (ADR-021).
  */
 @Entity(
     tableName = "word_progress",
@@ -43,4 +55,9 @@ public data class WordProgressEntity(
     public val nextReviewEpochMillis: Long,
     public val stability: Float,
     public val difficulty: Float,
+    /** Veces que el usuario falló esta tarjeta. */
+    @ColumnInfo(defaultValue = "0")
+    public val errorCount: Int = 0,
+    /** Última categoría de error registrada (grammar, pronunciation...). */
+    public val lastErrorType: String? = null,
 )
