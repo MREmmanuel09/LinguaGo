@@ -436,6 +436,73 @@ class ExerciseGraderTest {
         assertEquals(0, feedback.coveredClusters)
     }
 
+    @Test
+    fun free_spoken_con_gramatica_resuelta_pasa() {
+        val cond = GrammarPointId("cond")
+        val exercise = freeSpeakingExercise(grammarRuleRefs = listOf(cond))
+        val answer =
+            ExerciseAnswer.FreeSpoken(
+                transcript = "deadline split if I had time",
+                durationMillis = 6_000L,
+                selfAssessmentScore = 1.0,
+            )
+        assertTrue(
+            ExerciseGrader.isCorrect(
+                exercise,
+                answer,
+                grammarPoints = listOf(GrammarPoint(cond, "Conditionals")),
+            ),
+        )
+    }
+
+    @Test
+    fun free_spoken_sin_autoevaluacion_suficiente_no_pasa() {
+        val exercise = freeSpeakingExercise()
+        val answer =
+            ExerciseAnswer.FreeSpoken(
+                transcript = "deadline split",
+                durationMillis = 6_000L,
+                selfAssessmentScore = 0.0,
+            )
+        assertFalse(ExerciseGrader.isCorrect(exercise, answer))
+    }
+
+    @Test
+    fun free_speaking_covered_cluster_terms_devuelve_primer_termino() {
+        val exercise =
+            freeSpeakingExercise(
+                conceptClusters =
+                    listOf(
+                        listOf("deadline", "due date"),
+                        listOf("happy", "glad"),
+                    ),
+            )
+        assertEquals(
+            listOf("due date"),
+            FreeSpeakingHeuristicGrader.coveredClusterTerms(exercise, "the due date is fine"),
+        )
+    }
+
+    @Test
+    fun free_speaking_covered_cluster_terms_vacio_sin_coincidencias() {
+        val exercise = freeSpeakingExercise()
+        assertTrue(FreeSpeakingHeuristicGrader.coveredClusterTerms(exercise, "nothing here").isEmpty())
+    }
+
+    private fun freeSpeakingExercise(
+        conceptClusters: List<List<String>> = listOf(listOf("deadline"), listOf("split")),
+        grammarRuleRefs: List<GrammarPointId> = emptyList(),
+    ): Exercise.FreeSpeakingPrompt =
+        Exercise.FreeSpeakingPrompt(
+            id = ExerciseId("fs"),
+            prompt = "Responde oralmente",
+            minTokens = 2,
+            conceptClusters = conceptClusters,
+            modelAnswer = "Modelo",
+            selfAssessmentCriteria = listOf("¿Bien?"),
+            grammarRuleRefs = grammarRuleRefs,
+        )
+
     private fun evaluate(
         transcript: String,
         millis: Long = 6_000L,

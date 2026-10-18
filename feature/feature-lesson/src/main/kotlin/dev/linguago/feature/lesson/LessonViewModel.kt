@@ -9,8 +9,12 @@ import dev.linguago.core.audio.TtsEngine
 import dev.linguago.core.audio.isWarmingUp
 import dev.linguago.core.common.Result
 import dev.linguago.core.domain.logic.CulturalNoteMatcher
+import dev.linguago.core.domain.logic.FreeSpeakingFeedback
+import dev.linguago.core.domain.logic.FreeSpeakingHeuristicGrader
+import dev.linguago.core.domain.logic.SpokenFreeResponse
 import dev.linguago.core.domain.model.CourseId
 import dev.linguago.core.domain.model.Exercise
+import dev.linguago.core.domain.model.GrammarPoint
 import dev.linguago.core.domain.model.Language
 import dev.linguago.core.domain.model.LessonId
 import dev.linguago.core.domain.model.LessonSession
@@ -20,6 +24,8 @@ import dev.linguago.core.domain.usecase.CompleteLessonUseCase
 import dev.linguago.core.domain.usecase.ExerciseAnswer
 import dev.linguago.core.domain.usecase.StartLessonUseCase
 import dev.linguago.core.domain.usecase.SubmitAnswerUseCase
+import kotlinx.coroutines.CancellationException
+import kotlinx.coroutines.Job
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
@@ -36,6 +42,23 @@ data class ExerciseFeedback(
     /** Modismo de la lección presente en el ejercicio (F2.2), si aplica. */
     val idiom: String? = null,
     val culturalNote: String? = null,
+)
+
+/**
+ * Grabación y revisión de una respuesta oral libre (F2.5): energía RMS en
+ * vivo, palabras clave detectadas, transcripción final, desglose heurístico
+ * y autoevaluación por criterio (0 = aún no, 1 = casi, 2 = sí).
+ */
+data class FreeSpeakingState(
+    val recording: Boolean = false,
+    val waveform: List<Float> = emptyList(),
+    val liveKeywords: List<String> = emptyList(),
+    val partialTranscript: String = "",
+    val transcript: String? = null,
+    val durationMillis: Long = 0L,
+    val breakdown: FreeSpeakingFeedback? = null,
+    val grammarLabels: List<String> = emptyList(),
+    val selfAssessment: Map<Int, Int> = emptyMap(),
 )
 
 /**
@@ -61,6 +84,8 @@ data class LessonUiState(
     val matched: Map<Int, Int> = emptyMap(),
     // Cloze (ClozeDragDrop, F2.3): hueco id → opción colocada.
     val clozeFilled: Map<String, String> = emptyMap(),
+    // Producción oral libre (FreeSpeakingPrompt, F2.5).
+    val freeSpeaking: FreeSpeakingState = FreeSpeakingState(),
     // Audio (Fase 2): disponibilidad de voz en el dispositivo ejercicios listen.
     val audioAvailable: Boolean = false,
     // Voz del usuario (SpeakRepeat, Fase 2.3).
@@ -98,6 +123,8 @@ class LessonViewModel
 
         private var targetLanguage: Language? = null
         private var session: LessonSession? = null
+        private var freeSpeakingJob: Job? = null
+        private var freeSpeakingStartedAt = 0L
 
         init {
             viewModelScope.launch {
@@ -125,6 +152,195 @@ class LessonViewModel
                     ?.audioText ?: return
             viewModelScope.launch { ttsEngine.speak(audioText, language, speed) }
         }
+
+        /**
+         * Inicia la captura libre (F2.5): energía RMS y parciales de Vosk
+         * actualizan el visualizador y las ideas clave en vivo (ADR-019/020).
+         */
+        fun startFreeSpeaking() {
+            val language = targetLanguage ?: return
+            val exercise = currentExercise() as? Exercise.FreeSpeakingPrompt ?: return
+            val state = _uiState.value
+            if (state.freeSpeaking.recording || !state.speechAvailable || state.feedback != null) return
+            freeSpeakingStartedAt = System.currentTimeMillis()
+            _uiState.update { it.copy(freeSpeaking = FreeSpeakingState(recording = true)) }
+            freeSpeakingJob =
+                viewModelScope.launch {
+                    var partialTranscript = ""
+                    var finalTranscript = ""
+                    try {
+                        sttEngine.observeTranscription(language).collect { update ->
+                            if (update.partialText.isNotBlank()) partialTranscript = update.partialText
+                            update.finalText?.let { text -> finalTranscript = text }
+                            val keywords =
+                                FreeSpeakingHeuristicGrader.coveredClusterTerms(exercise, partialTranscript)
+                            _uiState.update { current ->
+                                current.copy(
+                                    freeSpeaking =
+                                        current.freeSpeaking.copy(
+                                            waveform =
+                                                (current.freeSpeaking.waveform + amplitudeOf(update.rmsDb))
+                                                    .takeLast(WAVE_BARS),
+                                            liveKeywords = keywords,
+                                            partialTranscript = partialTranscript,
+                                        ),
+                                )
+                            }
+                        }
+                    } catch (cancellation: CancellationException) {
+                        throw cancellation
+                    } catch (_: Exception) {
+                        finalTranscript = partialTranscript
+                    }
+                    freeSpeakingJob = null
+                    finishFreeSpeaking(
+                        transcript = finalTranscript,
+                        durationMillis = System.currentTimeMillis() - freeSpeakingStartedAt,
+                    )
+                }
+        }
+
+        /** Detiene la grabación y pasa al paso de revisión con el parcial actual. */
+        fun stopFreeSpeaking() {
+            val state = _uiState.value
+            if (!state.freeSpeaking.recording) return
+            freeSpeakingJob?.cancel()
+            freeSpeakingJob = null
+            finishFreeSpeaking(
+                transcript = state.freeSpeaking.partialTranscript,
+                durationMillis = System.currentTimeMillis() - freeSpeakingStartedAt,
+            )
+        }
+
+        /** Autoevaluación de un criterio: 0 = aún no, 1 = casi, 2 = sí. */
+        fun rateFreeSpeaking(
+            criterion: Int,
+            level: Int,
+        ) {
+            val exercise = currentExercise() as? Exercise.FreeSpeakingPrompt ?: return
+            if (criterion !in exercise.selfAssessmentCriteria.indices || level !in 0..MAX_SELF_ASSESSMENT_LEVEL) return
+            if (_uiState.value.feedback != null) return
+            _uiState.update { state ->
+                state.copy(
+                    freeSpeaking =
+                        state.freeSpeaking.copy(
+                            selfAssessment = state.freeSpeaking.selfAssessment + (criterion to level),
+                        ),
+                )
+            }
+        }
+
+        /** Evalúa la respuesta oral (autoevaluación incluida) y la envía (F2.5). */
+        fun submitFreeSpeaking() {
+            val exercise = currentExercise() as? Exercise.FreeSpeakingPrompt ?: return
+            val state = _uiState.value
+            if (state.feedback != null) return
+            val transcript = state.freeSpeaking.transcript ?: return
+            val criteria = exercise.selfAssessmentCriteria.size
+            if (state.freeSpeaking.selfAssessment.size < criteria) return
+            val score =
+                if (criteria == 0) {
+                    null
+                } else {
+                    state.freeSpeaking.selfAssessment.values
+                        .map { level -> level / MAX_SELF_ASSESSMENT_LEVEL.toDouble() }
+                        .average()
+                }
+            val response =
+                SpokenFreeResponse(
+                    transcript = transcript,
+                    durationMillis = state.freeSpeaking.durationMillis,
+                    selfAssessmentScore = score,
+                )
+            publishFreeSpeakingBreakdown(exercise, response)
+            submitAnswer(
+                ExerciseAnswer.FreeSpoken(
+                    transcript = transcript,
+                    durationMillis = state.freeSpeaking.durationMillis,
+                    selfAssessmentScore = score,
+                ),
+                session?.lesson?.grammarPoints.orEmpty(),
+            )
+        }
+
+        /** Sin micrófono o sin permiso: registra el intento y deja avanzar (I3). */
+        fun skipFreeSpeaking() {
+            if (_uiState.value.feedback != null) return
+            if (currentExercise() !is Exercise.FreeSpeakingPrompt) return
+            submitAnswer(
+                ExerciseAnswer.FreeSpoken(transcript = "", durationMillis = 0L),
+                session?.lesson?.grammarPoints.orEmpty(),
+            )
+        }
+
+        /** Reproduce la respuesta modelo del ejercicio oral (TTS, F2.5). */
+        fun playModelAnswer() {
+            val language = targetLanguage ?: return
+            val exercise = currentExercise() as? Exercise.FreeSpeakingPrompt ?: return
+            viewModelScope.launch { ttsEngine.speak(exercise.modelAnswer, language) }
+        }
+
+        private fun finishFreeSpeaking(
+            transcript: String,
+            durationMillis: Long,
+        ) {
+            val exercise = currentExercise() as? Exercise.FreeSpeakingPrompt ?: return
+            val response =
+                SpokenFreeResponse(
+                    transcript = transcript,
+                    durationMillis = durationMillis,
+                )
+            val breakdown = evaluateFreeSpeaking(exercise, response)
+            _uiState.update {
+                it.copy(
+                    freeSpeaking =
+                        it.freeSpeaking.copy(
+                            recording = false,
+                            transcript = transcript,
+                            durationMillis = durationMillis,
+                            breakdown = breakdown,
+                            grammarLabels = grammarLabels(breakdown),
+                        ),
+                )
+            }
+        }
+
+        private fun publishFreeSpeakingBreakdown(
+            exercise: Exercise.FreeSpeakingPrompt,
+            response: SpokenFreeResponse,
+        ) {
+            val breakdown = evaluateFreeSpeaking(exercise, response)
+            _uiState.update {
+                it.copy(
+                    freeSpeaking =
+                        it.freeSpeaking.copy(
+                            breakdown = breakdown,
+                            grammarLabels = grammarLabels(breakdown),
+                        ),
+                )
+            }
+        }
+
+        private fun evaluateFreeSpeaking(
+            exercise: Exercise.FreeSpeakingPrompt,
+            response: SpokenFreeResponse,
+        ): FreeSpeakingFeedback =
+            FreeSpeakingHeuristicGrader.evaluate(
+                exercise = exercise,
+                grammarPoints = session?.lesson?.grammarPoints.orEmpty(),
+                response = response,
+            )
+
+        private fun grammarLabels(feedback: FreeSpeakingFeedback): List<String> {
+            val points = session?.lesson?.grammarPoints.orEmpty()
+            return feedback.detectedGrammarRefs.mapNotNull { ref ->
+                points.firstOrNull { point -> point.id == ref }?.label
+            }
+        }
+
+        private fun currentExercise(): Exercise? = _uiState.value.exercises.getOrNull(_uiState.value.index)
+
+        private fun amplitudeOf(rmsDb: Float): Float = ((rmsDb - SILENCE_DB) / -SILENCE_DB).coerceIn(0f, 1f)
 
         /** Escucha (una vez) y evalúa la repetición (SpeakRepeat). */
         fun transcribeSpoken() {
@@ -286,6 +502,7 @@ class LessonViewModel
                             shuffledRights = emptyList(),
                             matched = emptyMap(),
                             clozeFilled = emptyMap(),
+                            freeSpeaking = FreeSpeakingState(),
                             selectedLeft = null,
                         )
                     }
@@ -297,6 +514,7 @@ class LessonViewModel
                             shuffledRights = emptyList(),
                             matched = emptyMap(),
                             clozeFilled = emptyMap(),
+                            freeSpeaking = FreeSpeakingState(),
                             selectedLeft = null,
                         )
                     }
@@ -310,6 +528,7 @@ class LessonViewModel
                             shuffledRights = emptyList(),
                             matched = emptyMap(),
                             clozeFilled = emptyMap(),
+                            freeSpeaking = FreeSpeakingState(),
                             selectedLeft = null,
                         )
                     }
@@ -321,6 +540,7 @@ class LessonViewModel
                             shuffledRights = emptyList(),
                             matched = emptyMap(),
                             clozeFilled = emptyMap(),
+                            freeSpeaking = FreeSpeakingState(),
                             selectedLeft = null,
                             listening = false,
                             recognized = null,
@@ -338,15 +558,19 @@ class LessonViewModel
                     shuffledRights = List(total) { index -> index }.shuffled(),
                     matched = emptyMap(),
                     clozeFilled = emptyMap(),
+                    freeSpeaking = FreeSpeakingState(),
                     selectedLeft = null,
                 )
             }
         }
 
-        private fun submitAnswer(answer: ExerciseAnswer) {
+        private fun submitAnswer(
+            answer: ExerciseAnswer,
+            grammarPoints: List<GrammarPoint> = emptyList(),
+        ) {
             val exercise = _uiState.value.exercises.getOrNull(_uiState.value.index) ?: return
             viewModelScope.launch {
-                when (val result = submitAnswerUseCase(exercise, answer)) {
+                when (val result = submitAnswerUseCase(exercise, answer, grammarPoints)) {
                     is Result.Success -> {
                         val grading = result.value
                         val cultural = session?.let { CulturalNoteMatcher.noteFor(it.lesson, exercise) }
@@ -389,5 +613,8 @@ class LessonViewModel
             const val LESSON_ID_KEY = "lessonId"
             private const val NORMAL_PLAYBACK_SPEED = 1.0f
             private const val SLOW_PLAYBACK_SPEED = 0.75f
+            private const val SILENCE_DB = -60f
+            private const val WAVE_BARS = 48
+            private const val MAX_SELF_ASSESSMENT_LEVEL = 2
         }
     }

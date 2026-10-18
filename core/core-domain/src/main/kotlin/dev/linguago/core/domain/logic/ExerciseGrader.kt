@@ -1,6 +1,7 @@
 package dev.linguago.core.domain.logic
 
 import dev.linguago.core.domain.model.Exercise
+import dev.linguago.core.domain.model.GrammarPoint
 import dev.linguago.core.domain.model.GrammarPointId
 import dev.linguago.core.domain.usecase.ExerciseAnswer
 
@@ -27,12 +28,15 @@ public object ExerciseGrader {
     /**
      * Califica la respuesta y adjunta, en caso de fallo, el `feedbackOnError`
      * del ejercicio (regla y explicación) para el diagnóstico estructurado.
+     * [grammarPoints] resuelve la detección gramatical de `FreeSpeakingPrompt`
+     * (sin catálogo, el grader no exige patrones desconocidos, I3).
      */
     public fun grade(
         exercise: Exercise,
         answer: ExerciseAnswer,
+        grammarPoints: List<GrammarPoint> = emptyList(),
     ): GradingResult {
-        if (isCorrect(exercise, answer)) return GradingResult(isCorrect = true)
+        if (isCorrect(exercise, answer, grammarPoints)) return GradingResult(isCorrect = true)
         val feedback = exercise.feedbackOnError
         return GradingResult(
             isCorrect = false,
@@ -44,6 +48,7 @@ public object ExerciseGrader {
     public fun isCorrect(
         exercise: Exercise,
         answer: ExerciseAnswer,
+        grammarPoints: List<GrammarPoint> = emptyList(),
     ): Boolean =
         when (answer) {
             is ExerciseAnswer.OptionPicked -> gradeOptionPicked(exercise, answer.index)
@@ -51,6 +56,7 @@ public object ExerciseGrader {
             is ExerciseAnswer.MatchedPairs -> gradeMatchedPairs(exercise, answer.leftToRight)
             is ExerciseAnswer.TypedText -> gradeTypoable(exercise, answer.text)
             is ExerciseAnswer.SpokenText -> gradeRepeatable(exercise, answer.transcript)
+            is ExerciseAnswer.FreeSpoken -> gradeFreeSpeaking(exercise, answer, grammarPoints)
             is ExerciseAnswer.ClozeFilled -> gradeCloze(exercise, answer.assignments)
         }
 
@@ -132,6 +138,28 @@ public object ExerciseGrader {
     ): Boolean =
         when (exercise) {
             is Exercise.SpeakRepeat -> normalize(transcript) == normalize(exercise.targetPhrase)
+            else -> false
+        }
+
+    /** Producción libre B2: veredicto determinista del grader heurístico (ADR-019). */
+    private fun gradeFreeSpeaking(
+        exercise: Exercise,
+        answer: ExerciseAnswer.FreeSpoken,
+        grammarPoints: List<GrammarPoint>,
+    ): Boolean =
+        when (exercise) {
+            is Exercise.FreeSpeakingPrompt ->
+                FreeSpeakingHeuristicGrader
+                    .evaluate(
+                        exercise = exercise,
+                        grammarPoints = grammarPoints,
+                        response =
+                            SpokenFreeResponse(
+                                transcript = answer.transcript,
+                                durationMillis = answer.durationMillis,
+                                selfAssessmentScore = answer.selfAssessmentScore,
+                            ),
+                    ).passes
             else -> false
         }
 

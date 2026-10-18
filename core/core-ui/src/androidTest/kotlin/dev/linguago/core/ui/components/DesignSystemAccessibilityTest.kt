@@ -22,6 +22,8 @@ import androidx.compose.ui.unit.Density
 import androidx.compose.ui.unit.dp
 import androidx.test.ext.junit.runners.AndroidJUnit4
 import dev.linguago.core.domain.logic.ClozePassageParser
+import dev.linguago.core.domain.logic.FreeSpeakingFeedback
+import dev.linguago.core.domain.logic.FreeSpeakingVerdict
 import dev.linguago.core.domain.model.Exercise
 import dev.linguago.core.ui.theme.LinguaTheme
 import org.junit.Assert.assertEquals
@@ -359,6 +361,226 @@ public class DesignSystemAccessibilityTest {
 
         compose.onNodeWithText("Reproducir más despacio (0.75x)").assertDoesNotExist()
     }
+
+    @Test
+    public fun freeSpeakingPanel_showsWaveformAndLiveKeywords() {
+        compose.setContent {
+            LinguaTheme {
+                FreeSpeakingPanel(
+                    prompt = "Describe una decisión.",
+                    speechAvailable = true,
+                    recording = true,
+                    waveform = listOf(0.2f, 0.8f),
+                    liveKeywords = listOf("deadline"),
+                    partialTranscript = "the deadline is",
+                    transcript = null,
+                    durationMillis = 0L,
+                    feedback = null,
+                    detectedGrammarLabels = emptyList(),
+                    modelAnswer = "Modelo",
+                    criteria = listOf("Fluidez"),
+                    selfAssessment = emptyMap(),
+                    audioAvailable = true,
+                    onStart = {},
+                    onStop = {},
+                    onRate = { _, _ -> },
+                    onPlayModel = {},
+                    onSkip = {},
+                )
+            }
+        }
+
+        compose.onNodeWithContentDescription("Visualizador de energía de voz").assertIsDisplayed()
+        compose.onNodeWithText("deadline").assertIsDisplayed()
+        compose.onNodeWithText("Detener grabación").assertIsDisplayed()
+    }
+
+    @Test
+    public fun freeSpeakingPanel_reviewShowsHeuristicBreakdown() {
+        compose.setContent {
+            LinguaTheme {
+                FreeSpeakingPanel(
+                    prompt = "Describe una decisión.",
+                    speechAvailable = true,
+                    recording = false,
+                    waveform = emptyList(),
+                    liveKeywords = emptyList(),
+                    partialTranscript = "",
+                    transcript = "Last year I changed jobs.",
+                    durationMillis = 8_000L,
+                    feedback = freeSpeakingFeedback,
+                    detectedGrammarLabels = listOf("Conditionals"),
+                    modelAnswer = "Modelo",
+                    criteria = listOf("Fluidez"),
+                    selfAssessment = emptyMap(),
+                    audioAvailable = true,
+                    onStart = {},
+                    onStop = {},
+                    onRate = { _, _ -> },
+                    onPlayModel = {},
+                    onSkip = {},
+                )
+            }
+        }
+
+        compose.onNodeWithContentDescription("Palabras: 14").assertIsDisplayed()
+        compose.onNodeWithContentDescription("Ideas clave: 2/2").assertIsDisplayed()
+        compose.onNodeWithContentDescription("Gramática detectada: Conditionals").assertIsDisplayed()
+        compose.onNodeWithContentDescription("Ritmo: 108 palabras/min").assertIsDisplayed()
+    }
+
+    @Test
+    public fun freeSpeakingPanel_selfAssessmentHasThreeLevels() {
+        var rated: Pair<Int, Int>? = null
+        compose.setContent {
+            LinguaTheme {
+                FreeSpeakingPanel(
+                    prompt = "Describe una decisión.",
+                    speechAvailable = true,
+                    recording = false,
+                    waveform = emptyList(),
+                    liveKeywords = emptyList(),
+                    partialTranscript = "",
+                    transcript = "Last year I changed jobs.",
+                    durationMillis = 8_000L,
+                    feedback = freeSpeakingFeedback,
+                    detectedGrammarLabels = emptyList(),
+                    modelAnswer = "Modelo",
+                    criteria = listOf("Fluidez"),
+                    selfAssessment = emptyMap(),
+                    audioAvailable = true,
+                    onStart = {},
+                    onStop = {},
+                    onRate = { criterion, level -> rated = criterion to level },
+                    onPlayModel = {},
+                    onSkip = {},
+                )
+            }
+        }
+
+        compose.onNodeWithContentDescription("Criterio 1: Aún no").assertIsDisplayed()
+        compose.onNodeWithContentDescription("Criterio 1: Casi").assertIsDisplayed()
+        compose.onNodeWithContentDescription("Criterio 1: Sí").performClick()
+
+        compose.runOnIdle { assertEquals(0 to 2, rated) }
+    }
+
+    @Test
+    public fun freeSpeakingPanel_modelAnswerPlaybackIsExposed() {
+        var plays = 0
+        compose.setContent {
+            LinguaTheme {
+                FreeSpeakingPanel(
+                    prompt = "Describe una decisión.",
+                    speechAvailable = true,
+                    recording = false,
+                    waveform = emptyList(),
+                    liveKeywords = emptyList(),
+                    partialTranscript = "",
+                    transcript = "Last year I changed jobs.",
+                    durationMillis = 8_000L,
+                    feedback = freeSpeakingFeedback,
+                    detectedGrammarLabels = emptyList(),
+                    modelAnswer = "Modelo",
+                    criteria = listOf("Fluidez"),
+                    selfAssessment = emptyMap(),
+                    audioAvailable = true,
+                    onStart = {},
+                    onStop = {},
+                    onRate = { _, _ -> },
+                    onPlayModel = { plays++ },
+                    onSkip = {},
+                )
+            }
+        }
+
+        compose.onNodeWithText("Escuchar respuesta modelo").performClick()
+
+        compose.runOnIdle { assertEquals(1, plays) }
+    }
+
+    @Test
+    public fun freeSpeakingPanel_withoutSpeechOffersSkip() {
+        var skips = 0
+        compose.setContent {
+            LinguaTheme {
+                FreeSpeakingPanel(
+                    prompt = "Describe una decisión.",
+                    speechAvailable = false,
+                    recording = false,
+                    waveform = emptyList(),
+                    liveKeywords = emptyList(),
+                    partialTranscript = "",
+                    transcript = null,
+                    durationMillis = 0L,
+                    feedback = null,
+                    detectedGrammarLabels = emptyList(),
+                    modelAnswer = "Modelo",
+                    criteria = listOf("Fluidez"),
+                    selfAssessment = emptyMap(),
+                    audioAvailable = true,
+                    onStart = {},
+                    onStop = {},
+                    onRate = { _, _ -> },
+                    onPlayModel = {},
+                    onSkip = { skips++ },
+                )
+            }
+        }
+
+        compose.onNodeWithText("Grabar respuesta").assertIsNotEnabled()
+        compose.onNodeWithText("No puedo hablar ahora").performClick()
+
+        compose.runOnIdle { assertEquals(1, skips) }
+    }
+
+    @Test
+    public fun freeSpeakingPanel_survivesLargeFontScale() {
+        compose.setContent {
+            val density = LocalDensity.current
+            CompositionLocalProvider(
+                LocalDensity provides Density(density = density.density, fontScale = 2f),
+            ) {
+                LinguaTheme {
+                    FreeSpeakingPanel(
+                        prompt = "Describe una decisión.",
+                        speechAvailable = true,
+                        recording = false,
+                        waveform = emptyList(),
+                        liveKeywords = emptyList(),
+                        partialTranscript = "",
+                        transcript = "Last year I changed jobs.",
+                        durationMillis = 8_000L,
+                        feedback = freeSpeakingFeedback,
+                        detectedGrammarLabels = emptyList(),
+                        modelAnswer = "Modelo",
+                        criteria = listOf("Fluidez"),
+                        selfAssessment = emptyMap(),
+                        audioAvailable = true,
+                        onStart = {},
+                        onStop = {},
+                        onRate = { _, _ -> },
+                        onPlayModel = {},
+                        onSkip = {},
+                    )
+                }
+            }
+        }
+
+        compose.onNodeWithText("Last year I changed jobs.").assertIsDisplayed()
+        compose.onNodeWithContentDescription("Criterio 1: Sí").assertIsDisplayed()
+    }
+
+    private val freeSpeakingFeedback =
+        FreeSpeakingFeedback(
+            passes = true,
+            tokenCount = 14,
+            coveredClusters = 2,
+            totalClusters = 2,
+            detectedGrammarRefs = emptyList(),
+            wpm = 108.0,
+            verdict = FreeSpeakingVerdict.Pass,
+        )
 
     private val semanticPairs =
         listOf(

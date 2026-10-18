@@ -58,6 +58,7 @@ import dev.linguago.core.domain.model.ExerciseId
 import dev.linguago.core.ui.components.AudioOnlyPromptPanel
 import dev.linguago.core.ui.components.ClozeDragDropBoard
 import dev.linguago.core.ui.components.FeedbackBanner
+import dev.linguago.core.ui.components.FreeSpeakingPanel
 import dev.linguago.core.ui.components.InfoBanner
 import dev.linguago.core.ui.components.LinguaProgressBar
 import dev.linguago.core.ui.components.OptionCard
@@ -95,6 +96,19 @@ fun LessonScreen(
         }
     }
 
+    /** FreeSpeaking (F2.5): mismo permiso; al concederlo arranca la captura. */
+    val freeSpeakLauncher =
+        rememberLauncherForActivityResult(ActivityResultContracts.RequestPermission()) { granted ->
+            if (granted) viewModel.startFreeSpeaking()
+        }
+    val onFreeSpeakStart: () -> Unit = {
+        if (ContextCompat.checkSelfPermission(context, micPermission) == PackageManager.PERMISSION_GRANTED) {
+            viewModel.startFreeSpeaking()
+        } else {
+            freeSpeakLauncher.launch(micPermission)
+        }
+    }
+
     LessonContent(
         uiState = uiState,
         onPickOption = viewModel::pickOption,
@@ -109,6 +123,12 @@ fun LessonScreen(
         onTypedText = viewModel::submitTypedText,
         onSpeakRequest = onSpeakRequest,
         onSkipSpeech = viewModel::skipSpeech,
+        onFreeSpeakStart = onFreeSpeakStart,
+        onFreeSpeakStop = viewModel::stopFreeSpeaking,
+        onFreeSpeakRate = viewModel::rateFreeSpeaking,
+        onSubmitFreeSpeaking = viewModel::submitFreeSpeaking,
+        onFreeSpeakSkip = viewModel::skipFreeSpeaking,
+        onPlayModelAnswer = viewModel::playModelAnswer,
         onAdvance = viewModel::advance,
         onPlayAudio = viewModel::playAudio,
         onPlaySlow = viewModel::playAudioSlow,
@@ -132,6 +152,12 @@ private fun LessonContent(
     onTypedText: (String) -> Unit,
     onSpeakRequest: () -> Unit,
     onSkipSpeech: () -> Unit,
+    onFreeSpeakStart: () -> Unit,
+    onFreeSpeakStop: () -> Unit,
+    onFreeSpeakRate: (Int, Int) -> Unit,
+    onSubmitFreeSpeaking: () -> Unit,
+    onFreeSpeakSkip: () -> Unit,
+    onPlayModelAnswer: () -> Unit,
     onAdvance: () -> Unit,
     onPlayAudio: () -> Unit,
     onPlaySlow: () -> Unit,
@@ -157,6 +183,12 @@ private fun LessonContent(
                 onTypedText = onTypedText,
                 onSpeakRequest = onSpeakRequest,
                 onSkipSpeech = onSkipSpeech,
+                onFreeSpeakStart = onFreeSpeakStart,
+                onFreeSpeakStop = onFreeSpeakStop,
+                onFreeSpeakRate = onFreeSpeakRate,
+                onSubmitFreeSpeaking = onSubmitFreeSpeaking,
+                onFreeSpeakSkip = onFreeSpeakSkip,
+                onPlayModelAnswer = onPlayModelAnswer,
                 onAdvance = onAdvance,
                 onPlayAudio = onPlayAudio,
                 onPlaySlow = onPlaySlow,
@@ -181,6 +213,12 @@ private fun ExerciseStage(
     onTypedText: (String) -> Unit,
     onSpeakRequest: () -> Unit,
     onSkipSpeech: () -> Unit,
+    onFreeSpeakStart: () -> Unit,
+    onFreeSpeakStop: () -> Unit,
+    onFreeSpeakRate: (Int, Int) -> Unit,
+    onSubmitFreeSpeaking: () -> Unit,
+    onFreeSpeakSkip: () -> Unit,
+    onPlayModelAnswer: () -> Unit,
     onAdvance: () -> Unit,
     onPlayAudio: () -> Unit,
     onPlaySlow: () -> Unit,
@@ -195,6 +233,10 @@ private fun ExerciseStage(
             is Exercise.SemanticMatch -> exercise.pairs.size
             else -> 0
         }
+    val freeSpeakingComplete =
+        exercise is Exercise.FreeSpeakingPrompt &&
+            uiState.freeSpeaking.transcript != null &&
+            uiState.freeSpeaking.selfAssessment.size >= exercise.selfAssessmentCriteria.size
     val progress =
         if (uiState.exercises.isEmpty()) {
             0f
@@ -290,6 +332,11 @@ private fun ExerciseStage(
                     onSpeakRequest = onSpeakRequest,
                     onPlayAudio = onPlayAudio,
                     onPlaySlow = onPlaySlow,
+                    onFreeSpeakStart = onFreeSpeakStart,
+                    onFreeSpeakStop = onFreeSpeakStop,
+                    onFreeSpeakRate = onFreeSpeakRate,
+                    onFreeSpeakSkip = onFreeSpeakSkip,
+                    onPlayModelAnswer = onPlayModelAnswer,
                 )
             }
         }
@@ -305,9 +352,13 @@ private fun ExerciseStage(
                 exercise is Exercise.ClozeDragDrop &&
                     exercise.blanks.isNotEmpty() &&
                     uiState.clozeFilled.size == exercise.blanks.size,
+            freeSpeakingReady =
+                exercise is Exercise.FreeSpeakingPrompt && uiState.freeSpeaking.transcript != null,
+            freeSpeakingComplete = freeSpeakingComplete,
             onSubmitTokens = onSubmitTokens,
             onSubmitPairs = onSubmitPairs,
             onSubmitCloze = onSubmitCloze,
+            onSubmitFreeSpeaking = onSubmitFreeSpeaking,
             onSkipSpeech = onSkipSpeech,
             onAdvance = onAdvance,
         )
@@ -328,6 +379,11 @@ private fun Renderer(
     onSpeakRequest: () -> Unit,
     onPlayAudio: () -> Unit,
     onPlaySlow: () -> Unit,
+    onFreeSpeakStart: () -> Unit,
+    onFreeSpeakStop: () -> Unit,
+    onFreeSpeakRate: (Int, Int) -> Unit,
+    onFreeSpeakSkip: () -> Unit,
+    onPlayModelAnswer: () -> Unit,
 ) {
     when (exercise) {
         is Exercise.MultipleChoice -> OptionsStep(exercise.question, exercise.options, onPickOption)
@@ -391,30 +447,27 @@ private fun Renderer(
                 onClearBlank = onClearCloze,
             )
         is Exercise.FreeSpeakingPrompt ->
-            PlaceholderStep(title = "Producción oral")
-    }
-}
-
-/**
- * Marcador de las mecánicas v2 (F2). El contenido v2 aún no se publica; este
- * paso evita una pantalla vacía si un fixture llegara al motor de lección.
- */
-@Composable
-private fun PlaceholderStep(
-    title: String,
-    modifier: Modifier = Modifier,
-) {
-    Column(modifier = modifier, verticalArrangement = Arrangement.spacedBy(12.dp)) {
-        Text(
-            text = title,
-            style = MaterialTheme.typography.titleLarge,
-            color = MaterialTheme.colorScheme.onBackground,
-        )
-        Text(
-            text = "Esta mecánica se habilitará en la próxima actualización.",
-            style = MaterialTheme.typography.bodyMedium,
-            color = MaterialTheme.colorScheme.onSurfaceVariant,
-        )
+            FreeSpeakingPanel(
+                prompt = exercise.prompt,
+                speechAvailable = uiState.speechAvailable,
+                recording = uiState.freeSpeaking.recording,
+                waveform = uiState.freeSpeaking.waveform,
+                liveKeywords = uiState.freeSpeaking.liveKeywords,
+                partialTranscript = uiState.freeSpeaking.partialTranscript,
+                transcript = uiState.freeSpeaking.transcript,
+                durationMillis = uiState.freeSpeaking.durationMillis,
+                feedback = uiState.freeSpeaking.breakdown,
+                detectedGrammarLabels = uiState.freeSpeaking.grammarLabels,
+                modelAnswer = exercise.modelAnswer,
+                criteria = exercise.selfAssessmentCriteria,
+                selfAssessment = uiState.freeSpeaking.selfAssessment,
+                audioAvailable = uiState.audioAvailable,
+                onStart = onFreeSpeakStart,
+                onStop = onFreeSpeakStop,
+                onRate = onFreeSpeakRate,
+                onPlayModel = onPlayModelAnswer,
+                onSkip = onFreeSpeakSkip,
+            )
     }
 }
 
@@ -426,9 +479,12 @@ private fun BottomActions(
     listening: Boolean,
     pairsComplete: Boolean,
     clozeComplete: Boolean,
+    freeSpeakingReady: Boolean,
+    freeSpeakingComplete: Boolean,
     onSubmitTokens: () -> Unit,
     onSubmitPairs: () -> Unit,
     onSubmitCloze: () -> Unit,
+    onSubmitFreeSpeaking: () -> Unit,
     onSkipSpeech: () -> Unit,
     onAdvance: () -> Unit,
 ) {
@@ -467,6 +523,13 @@ private fun BottomActions(
                 text = "Comprobar",
                 onClick = onSubmitCloze,
                 enabled = clozeComplete,
+                modifier = Modifier.fillMaxWidth(),
+            )
+        exercise is Exercise.FreeSpeakingPrompt && freeSpeakingReady ->
+            PrimaryButton3D(
+                text = "Comprobar",
+                onClick = onSubmitFreeSpeaking,
+                enabled = freeSpeakingComplete,
                 modifier = Modifier.fillMaxWidth(),
             )
         exercise is Exercise.SpeakRepeat ->
@@ -871,6 +934,12 @@ private fun LessonScreenPreview() {
             onTypedText = {},
             onSpeakRequest = {},
             onSkipSpeech = {},
+            onFreeSpeakStart = {},
+            onFreeSpeakStop = {},
+            onFreeSpeakRate = { _, _ -> },
+            onSubmitFreeSpeaking = {},
+            onFreeSpeakSkip = {},
+            onPlayModelAnswer = {},
             onAdvance = {},
             onPlayAudio = {},
             onPlaySlow = {},

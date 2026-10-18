@@ -129,6 +129,22 @@ public object FreeSpeakingHeuristicGrader {
         )
     }
 
+    /**
+     * Términos de las ideas clave ya cubiertas por [transcript] (para la
+     * visualización en vivo): devuelve el primer término que cubre cada
+     * cluster, sin duplicados y con la misma tolerancia a homófonos que la
+     * evaluación final.
+     */
+    public fun coveredClusterTerms(
+        exercise: Exercise.FreeSpeakingPrompt,
+        transcript: String,
+    ): List<String> {
+        val tokens = tokenize(transcript)
+        return exercise.conceptClusters
+            .mapNotNull { cluster -> coveredTerm(cluster, tokens) }
+            .distinct()
+    }
+
     /** Tokeniza en minúsculas conservando contracciones (`i'm` es un token). */
     private fun tokenize(text: String): List<String> =
         text
@@ -140,8 +156,14 @@ public object FreeSpeakingHeuristicGrader {
     private fun isClusterCovered(
         cluster: List<String>,
         tokens: List<String>,
-    ): Boolean =
-        cluster.any { term ->
+    ): Boolean = coveredTerm(cluster, tokens) != null
+
+    /** Primer término del cluster presente en [tokens], o `null` si no hay. */
+    private fun coveredTerm(
+        cluster: List<String>,
+        tokens: List<String>,
+    ): String? =
+        cluster.firstOrNull { term ->
             val words = tokenize(term)
             words.isNotEmpty() && words.all { word -> tokens.any { token -> nearMatch(token, word) } }
         }

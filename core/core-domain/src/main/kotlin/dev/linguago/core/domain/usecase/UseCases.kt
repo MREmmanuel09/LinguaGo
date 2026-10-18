@@ -7,6 +7,7 @@ import dev.linguago.core.domain.model.Course
 import dev.linguago.core.domain.model.CourseId
 import dev.linguago.core.domain.model.CourseSummary
 import dev.linguago.core.domain.model.Exercise
+import dev.linguago.core.domain.model.GrammarPoint
 import dev.linguago.core.domain.model.LessonId
 import dev.linguago.core.domain.model.LessonSession
 import dev.linguago.core.domain.model.StreakState
@@ -44,6 +45,7 @@ public interface SubmitAnswerUseCase {
     public suspend operator fun invoke(
         exercise: Exercise,
         answer: ExerciseAnswer,
+        grammarPoints: List<GrammarPoint> = emptyList(),
     ): Result<GradingResult>
 }
 
@@ -105,6 +107,16 @@ public sealed interface ExerciseAnswer {
     /** Transcripción reconocida del habla (SpeakRepeat, Fase 2). */
     public data class SpokenText(
         val transcript: String,
+    ) : ExerciseAnswer
+
+    /**
+     * Respuesta oral libre B2 (FreeSpeakingPrompt, ADR-019): transcripción,
+     * duración real de la captura y autoevaluación media 0..1 opcional.
+     */
+    public data class FreeSpoken(
+        val transcript: String,
+        val durationMillis: Long,
+        val selfAssessmentScore: Double? = null,
     ) : ExerciseAnswer
 
     /** Huecos rellenados por arrastre: id de hueco → opción elegida (ClozeDragDrop). */
