@@ -1,0 +1,147 @@
+{
+  "schemaVersion": 2,
+  "id": "es-en",
+  "from": "es",
+  "to": "en",
+  "locale": "en-GB",
+  "levels": [
+    {
+      "id": "es-en-lv-9",
+      "name": "B2 · Negociación y matices",
+      "units": [
+        {
+          "id": "es-en-lv-9-un-1",
+          "title": "Negociar sin perder la relación",
+          "lessons": [
+            {
+              "id": "es-en-lv-9-un-1-ls-1",
+              "title": "Plazos y concesiones",
+              "cefrLevel": "B2",
+              "scenario": "Una reunión con un cliente británico para renegociar un plazo de entrega sin romper la relación comercial.",
+              "canDo": "Puedo negociar condiciones y justificar concesiones con matices de cortesía, hipótesis y reformulación.",
+              "grammarPoints": [
+                {
+                  "id": "gp-mixed-conditionals",
+                  "label": "Mixed conditionals",
+                  "description": "Condicionales mixtas para conectar una condición presente con una consecuencia pasada o futura."
+                },
+                {
+                  "id": "gp-hedging",
+                  "label": "Hedging",
+                  "description": "Atenuadores de cortesía: I'm afraid, it seems, perhaps, would."
+                }
+              ],
+              "vocabFrequencyBand": "3000-5000",
+              "culturalNotes": [
+                {
+                  "idiom": "play it by ear",
+                  "note": "En el Reino Unido se usa para decidir sobre la marcha sin comprometerse de antemano; en una negociación suaviza la falta de un plan cerrado.",
+                  "translation": "improvisar según las circunstancias"
+                }
+              ],
+              "exercises": [
+                {
+                  "type": "AudioOnlyPrompt",
+                  "id": "es-en-b2-e1",
+                  "audioText": "I'm afraid we can't bring the deadline forward, but we could phase the delivery.",
+                  "question": "What is the speaker offering?",
+                  "options": [
+                    "A shorter deadline",
+                    "A phased delivery",
+                    "A discount",
+                    "A new contract"
+                  ],
+                  "correctIndex": 1,
+                  "allowSlowPlayback": true,
+                  "feedbackOnError": {
+                    "type": "comprehension",
+                    "explanation": "El hablante rechaza adelantar el plazo, pero ofrece entregar por fases.",
+                    "ruleRef": "gp-hedging"
+                  }
+                },
+                {
+                  "type": "ClozeDragDrop",
+                  "id": "es-en-b2-e2",
+                  "passage": "If we {{b1}} the scope now, we {{b2}} more time for testing.",
+                  "blanks": [
+                    {
+                      "id": "b1",
+                      "answer": "narrow",
+                      "options": ["narrow", "narrowed", "narrowing"]
+                    },
+                    {
+                      "id": "b2",
+                      "answer": "would have",
+                      "options": ["will have", "would have", "had"]
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "La condicional mixta combina presente (If we narrow) con una consecuencia presente o futura (we would have).",
+                    "ruleRef": "gp-mixed-conditionals"
+                  }
+                },
+                {
+                  "type": "SemanticMatch",
+                  "id": "es-en-b2-e3",
+                  "instructions": "Empareja cada intervención con su función pragmática.",
+                  "pairs": [
+                    {
+                      "left": "That's a fair point.",
+                      "right": "Reconocer el argumento del cliente",
+                      "register": "neutral",
+                      "nuance": "Concede sin ceder el punto principal."
+                    },
+                    {
+                      "left": "I'm afraid that won't work for us.",
+                      "right": "Rechazo atenuado",
+                      "register": "formal",
+                      "nuance": "Más cortés que 'that won't work'."
+                    },
+                    {
+                      "left": "Could we revisit this later?",
+                      "right": "Aplazar la decisión",
+                      "register": "formal",
+                      "nuance": "Evita un 'no' directo."
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "register",
+                    "explanation": "Las tres respuestas son corteses; la diferencia está en si conceden, rechazan o aplazan.",
+                    "ruleRef": "gp-hedging"
+                  }
+                },
+                {
+                  "type": "FreeSpeakingPrompt",
+                  "id": "es-en-b2-e4",
+                  "prompt": "Responde al cliente: no puedes adelantar la entrega, pero propón una alternativa con una condición.",
+                  "minTokens": 25,
+                  "conceptClusters": [
+                    ["deadline", "delivery date", "schedule"],
+                    ["phase", "split", "stages"],
+                    ["if", "provided that", "as long as"]
+                  ],
+                  "grammarRuleRefs": ["gp-mixed-conditionals", "gp-hedging"],
+                  "timeLimitSeconds": 60,
+                  "minWpm": 70,
+                  "maxWpm": 160,
+                  "modelAnswer": "I'm afraid we can't bring the deadline forward. However, if we split the delivery into two phases, we could have the first batch ready by Friday, provided that the final specifications are confirmed today.",
+                  "selfAssessmentCriteria": [
+                    "¿Rechacé el plazo con cortesía?",
+                    "¿Propuse una alternativa concreta?",
+                    "¿Usé una condicional y un atenuador?"
+                  ],
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "La respuesta modelo combina un rechazo atenuado con una condicional mixta y una condición explícita.",
+                    "ruleRef": "gp-mixed-conditionals"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

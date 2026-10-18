@@ -1,0 +1,400 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://github.com/MREmmanuel09/LinguaGo/docs/schemas/course-v2.json",
+  "title": "LinguaGo course.json v2",
+  "description": "Contrato formal del contenido pedagógico empaquetado en v2.0 (ADR-018). Mantiene la jerarquía curso→nivel→unidad→lección→ejercicio de v1, añade locale dialectal, metadatos CEFR obligatorios para lecciones B1/B2, feedback de error estructurado y cuatro variantes de ejercicio nuevas. Un ejercicio con forma v1 sigue siendo válido: los campos nuevos son opcionales salvo que la lección se declare B1 o B2.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["id", "from", "to", "schemaVersion", "levels"],
+  "properties": {
+    "id": { "type": "string", "pattern": "^[a-z]{2}-[a-z]{2}$" },
+    "from": { "const": "es" },
+    "to": { "enum": ["en", "pt", "fr", "ja"] },
+    "schemaVersion": { "const": 2 },
+    "locale": { "type": "string", "enum": ["en-US", "en-GB", "pt-BR", "pt-PT", "fr-FR", "ja-JP"] },
+    "levels": { "type": "array", "minItems": 1, "items": { "$ref": "#/definitions/level" } }
+  },
+  "definitions": {
+    "id": { "type": "string", "pattern": "^[a-z0-9][a-z0-9-]*$" },
+    "exerciseId": { "type": "string", "pattern": "^[a-z0-9][a-z0-9-]*$" },
+    "tokens": { "type": "array", "minItems": 1, "items": { "type": "string", "minLength": 1 } },
+    "audioText": { "type": ["string", "null"], "minLength": 1 },
+    "feedbackOnError": {
+      "type": "object",
+      "description": "Feedback estructurado que el grader usa para explicar el error concreto cometido.",
+      "additionalProperties": false,
+      "required": ["type", "explanation"],
+      "properties": {
+        "type": {
+          "enum": ["grammar", "vocabulary", "spelling", "pronunciation", "word_order", "register", "comprehension"]
+        },
+        "explanation": { "type": "string", "minLength": 1 },
+        "ruleRef": { "type": "string", "minLength": 1 }
+      }
+    },
+    "grammarPoint": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id", "label"],
+      "properties": {
+        "id": { "$ref": "#/definitions/id" },
+        "label": { "type": "string", "minLength": 1 },
+        "description": { "type": "string", "minLength": 1 }
+      }
+    },
+    "culturalNote": {
+      "type": "object",
+      "description": "Modismo o referencia cultural con nota de uso; obligatorio al menos uno por lección B1/B2.",
+      "additionalProperties": false,
+      "required": ["idiom", "note"],
+      "properties": {
+        "idiom": { "type": "string", "minLength": 1 },
+        "note": { "type": "string", "minLength": 1 },
+        "translation": { "type": "string", "minLength": 1 }
+      }
+    },
+    "level": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id", "name", "units"],
+      "properties": {
+        "id": { "$ref": "#/definitions/id" },
+        "name": { "type": "string", "minLength": 1 },
+        "units": { "type": "array", "minItems": 1, "items": { "$ref": "#/definitions/unit" } }
+      }
+    },
+    "unit": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id", "title", "lessons"],
+      "properties": {
+        "id": { "$ref": "#/definitions/id" },
+        "title": { "type": "string", "minLength": 1 },
+        "lessons": { "type": "array", "minItems": 1, "items": { "$ref": "#/definitions/lesson" } }
+      }
+    },
+    "lesson": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id", "title", "exercises"],
+      "properties": {
+        "id": { "$ref": "#/definitions/id" },
+        "title": { "type": "string", "minLength": 1 },
+        "cefrLevel": { "enum": ["A1", "A2", "B1", "B2"] },
+        "scenario": { "type": "string", "minLength": 1 },
+        "canDo": { "type": "string", "minLength": 1 },
+        "grammarPoints": {
+          "type": "array",
+          "minItems": 1,
+          "items": { "$ref": "#/definitions/grammarPoint" }
+        },
+        "vocabFrequencyBand": { "enum": ["1000-2000", "2000-3000", "3000-5000", "5000+"] },
+        "culturalNotes": {
+          "type": "array",
+          "minItems": 1,
+          "items": { "$ref": "#/definitions/culturalNote" }
+        },
+        "exercises": { "type": "array", "minItems": 1, "items": { "$ref": "#/definitions/exercise" } }
+      },
+      "allOf": [
+        {
+          "if": {
+            "properties": { "cefrLevel": { "enum": ["B1", "B2"] } },
+            "required": ["cefrLevel"]
+          },
+          "then": {
+            "required": ["scenario", "canDo", "grammarPoints", "vocabFrequencyBand", "culturalNotes"],
+            "properties": {
+              "exercises": {
+                "type": "array",
+                "items": { "required": ["feedbackOnError"] },
+                "contains": {
+                  "type": "object",
+                  "properties": { "type": { "const": "FreeSpeakingPrompt" } },
+                  "required": ["type"]
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "exercise": {
+      "type": "object",
+      "oneOf": [
+        { "$ref": "#/definitions/exMultipleChoice" },
+        { "$ref": "#/definitions/exTranslate" },
+        { "$ref": "#/definitions/exMatchPairs" },
+        { "$ref": "#/definitions/exOrderWords" },
+        { "$ref": "#/definitions/exListenChoose" },
+        { "$ref": "#/definitions/exListenType" },
+        { "$ref": "#/definitions/exSpeakRepeat" },
+        { "$ref": "#/definitions/exKanaChoose" },
+        { "$ref": "#/definitions/exKanjiReading" },
+        { "$ref": "#/definitions/exParticleFill" },
+        { "$ref": "#/definitions/exAudioOnlyPrompt" },
+        { "$ref": "#/definitions/exSemanticMatch" },
+        { "$ref": "#/definitions/exClozeDragDrop" },
+        { "$ref": "#/definitions/exFreeSpeakingPrompt" }
+      ],
+      "required": ["type", "id"],
+      "properties": {
+        "type": {},
+        "id": { "$ref": "#/definitions/exerciseId" },
+        "audioText": { "$ref": "#/definitions/audioText" },
+        "feedbackOnError": { "$ref": "#/definitions/feedbackOnError" }
+      }
+    },
+    "exMultipleChoice": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["type", "id", "question", "options", "correctIndex"],
+      "properties": {
+        "type": { "const": "MultipleChoice" },
+        "id": { "$ref": "#/definitions/exerciseId" },
+        "question": { "type": "string", "minLength": 1 },
+        "options": { "type": "array", "minItems": 2, "items": { "type": "string", "minLength": 1 } },
+        "correctIndex": { "type": "integer", "minimum": 0 },
+        "audioText": { "$ref": "#/definitions/audioText" },
+        "feedbackOnError": { "$ref": "#/definitions/feedbackOnError" }
+      }
+    },
+    "exTranslate": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["type", "id", "sourcePhrase", "correctTokens"],
+      "properties": {
+        "type": { "const": "Translate" },
+        "id": { "$ref": "#/definitions/exerciseId" },
+        "sourcePhrase": { "type": "string", "minLength": 1 },
+        "correctTokens": { "$ref": "#/definitions/tokens" },
+        "distractorTokens": { "type": "array", "items": { "type": "string", "minLength": 1 } },
+        "audioText": { "$ref": "#/definitions/audioText" },
+        "feedbackOnError": { "$ref": "#/definitions/feedbackOnError" }
+      }
+    },
+    "exMatchPairs": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["type", "id", "pairs"],
+      "properties": {
+        "type": { "const": "MatchPairs" },
+        "id": { "$ref": "#/definitions/exerciseId" },
+        "pairs": {
+          "type": "array",
+          "minItems": 2,
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["left", "right"],
+            "properties": {
+              "left": { "type": "string", "minLength": 1 },
+              "right": { "type": "string", "minLength": 1 }
+            }
+          }
+        },
+        "audioText": { "$ref": "#/definitions/audioText" },
+        "feedbackOnError": { "$ref": "#/definitions/feedbackOnError" }
+      }
+    },
+    "exOrderWords": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["type", "id", "tokens", "answerTokens"],
+      "properties": {
+        "type": { "const": "OrderWords" },
+        "id": { "$ref": "#/definitions/exerciseId" },
+        "tokens": { "$ref": "#/definitions/tokens" },
+        "answerTokens": { "$ref": "#/definitions/tokens" },
+        "audioText": { "$ref": "#/definitions/audioText" },
+        "feedbackOnError": { "$ref": "#/definitions/feedbackOnError" }
+      }
+    },
+    "exListenChoose": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["type", "id", "options", "correctIndex", "audioText"],
+      "properties": {
+        "type": { "const": "ListenChoose" },
+        "id": { "$ref": "#/definitions/exerciseId" },
+        "options": { "type": "array", "minItems": 2, "items": { "type": "string", "minLength": 1 } },
+        "correctIndex": { "type": "integer", "minimum": 0 },
+        "audioText": { "type": "string", "minLength": 1 },
+        "feedbackOnError": { "$ref": "#/definitions/feedbackOnError" }
+      }
+    },
+    "exListenType": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["type", "id", "transcription", "audioText"],
+      "properties": {
+        "type": { "const": "ListenType" },
+        "id": { "$ref": "#/definitions/exerciseId" },
+        "transcription": { "type": "string", "minLength": 1 },
+        "audioText": { "type": "string", "minLength": 1 },
+        "feedbackOnError": { "$ref": "#/definitions/feedbackOnError" }
+      }
+    },
+    "exSpeakRepeat": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["type", "id", "targetPhrase"],
+      "properties": {
+        "type": { "const": "SpeakRepeat" },
+        "id": { "$ref": "#/definitions/exerciseId" },
+        "targetPhrase": { "type": "string", "minLength": 1 },
+        "audioText": { "$ref": "#/definitions/audioText" },
+        "feedbackOnError": { "$ref": "#/definitions/feedbackOnError" }
+      }
+    },
+    "exKanaChoose": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["type", "id", "kana", "romajiOptions", "correctRomaji"],
+      "properties": {
+        "type": { "const": "KanaChoose" },
+        "id": { "$ref": "#/definitions/exerciseId" },
+        "kana": { "type": "string", "minLength": 1 },
+        "romajiOptions": { "type": "array", "minItems": 2, "items": { "type": "string", "minLength": 1 } },
+        "correctRomaji": { "type": "string", "minLength": 1 },
+        "audioText": { "$ref": "#/definitions/audioText" },
+        "feedbackOnError": { "$ref": "#/definitions/feedbackOnError" }
+      }
+    },
+    "exKanjiReading": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["type", "id", "kanji", "readingOptions", "correctReading"],
+      "properties": {
+        "type": { "const": "KanjiReading" },
+        "id": { "$ref": "#/definitions/exerciseId" },
+        "kanji": { "type": "string", "minLength": 1 },
+        "readingOptions": { "type": "array", "minItems": 2, "items": { "type": "string", "minLength": 1 } },
+        "correctReading": { "type": "string", "minLength": 1 },
+        "audioText": { "$ref": "#/definitions/audioText" },
+        "feedbackOnError": { "$ref": "#/definitions/feedbackOnError" }
+      }
+    },
+    "exParticleFill": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["type", "id", "sentenceTemplate", "particles", "correctParticle"],
+      "properties": {
+        "type": { "const": "ParticleFill" },
+        "id": { "$ref": "#/definitions/exerciseId" },
+        "sentenceTemplate": { "type": "string", "minLength": 1 },
+        "particles": { "type": "array", "minItems": 2, "items": { "type": "string", "minLength": 1 } },
+        "correctParticle": { "type": "string", "minLength": 1 },
+        "audioText": { "$ref": "#/definitions/audioText" },
+        "feedbackOnError": { "$ref": "#/definitions/feedbackOnError" }
+      }
+    },
+    "exAudioOnlyPrompt": {
+      "type": "object",
+      "description": "Comprensión auditiva sin transcripción visible: el texto solo existe para sintetizar el audio (I1).",
+      "additionalProperties": false,
+      "required": ["type", "id", "audioText", "options", "correctIndex"],
+      "properties": {
+        "type": { "const": "AudioOnlyPrompt" },
+        "id": { "$ref": "#/definitions/exerciseId" },
+        "audioText": { "type": "string", "minLength": 1 },
+        "question": { "type": "string", "minLength": 1 },
+        "options": { "type": "array", "minItems": 2, "items": { "type": "string", "minLength": 1 } },
+        "correctIndex": { "type": "integer", "minimum": 0 },
+        "allowSlowPlayback": { "type": "boolean" },
+        "feedbackOnError": { "$ref": "#/definitions/feedbackOnError" }
+      }
+    },
+    "exSemanticMatch": {
+      "type": "object",
+      "description": "Emparejamiento semántico con matiz de registro; las tarjetas pueden ser multilínea (B2).",
+      "additionalProperties": false,
+      "required": ["type", "id", "pairs"],
+      "properties": {
+        "type": { "const": "SemanticMatch" },
+        "id": { "$ref": "#/definitions/exerciseId" },
+        "instructions": { "type": "string", "minLength": 1 },
+        "pairs": {
+          "type": "array",
+          "minItems": 2,
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["left", "right"],
+            "properties": {
+              "left": { "type": "string", "minLength": 1 },
+              "right": { "type": "string", "minLength": 1 },
+              "register": { "enum": ["neutral", "formal", "informal", "literary", "colloquial"] },
+              "nuance": { "type": "string", "minLength": 1 }
+            }
+          }
+        },
+        "audioText": { "$ref": "#/definitions/audioText" },
+        "feedbackOnError": { "$ref": "#/definitions/feedbackOnError" }
+      }
+    },
+    "exClozeDragDrop": {
+      "type": "object",
+      "description": "Cloze con huecos arrastrables. La plantilla referencia cada hueco con {{id}}.",
+      "additionalProperties": false,
+      "required": ["type", "id", "passage", "blanks"],
+      "properties": {
+        "type": { "const": "ClozeDragDrop" },
+        "id": { "$ref": "#/definitions/exerciseId" },
+        "passage": { "type": "string", "minLength": 1 },
+        "blanks": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["id", "answer", "options"],
+            "properties": {
+              "id": { "$ref": "#/definitions/id" },
+              "answer": { "type": "string", "minLength": 1 },
+              "options": { "type": "array", "minItems": 2, "items": { "type": "string", "minLength": 1 } }
+            }
+          }
+        },
+        "audioText": { "$ref": "#/definitions/audioText" },
+        "feedbackOnError": { "$ref": "#/definitions/feedbackOnError" }
+      }
+    },
+    "exFreeSpeakingPrompt": {
+      "type": "object",
+      "description": "Producción oral libre B2 evaluada offline por heurística determinista (longitud, conceptClusters, grammarRuleRefs, WPM) + autoevaluación (ADR-019). Prohibido LLM.",
+      "additionalProperties": false,
+      "required": ["type", "id", "prompt", "minTokens", "conceptClusters", "modelAnswer", "selfAssessmentCriteria"],
+      "properties": {
+        "type": { "const": "FreeSpeakingPrompt" },
+        "id": { "$ref": "#/definitions/exerciseId" },
+        "prompt": { "type": "string", "minLength": 1 },
+        "minTokens": { "type": "integer", "minimum": 1 },
+        "conceptClusters": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "array",
+            "minItems": 1,
+            "items": { "type": "string", "minLength": 1 }
+          }
+        },
+        "grammarRuleRefs": {
+          "type": "array",
+          "items": { "type": "string", "minLength": 1 }
+        },
+        "timeLimitSeconds": { "type": "integer", "minimum": 10, "maximum": 300 },
+        "minWpm": { "type": "number", "minimum": 0 },
+        "maxWpm": { "type": "number", "minimum": 0 },
+        "modelAnswer": { "type": "string", "minLength": 1 },
+        "selfAssessmentCriteria": {
+          "type": "array",
+          "minItems": 1,
+          "items": { "type": "string", "minLength": 1 }
+        },
+        "audioText": { "$ref": "#/definitions/audioText" },
+        "feedbackOnError": { "$ref": "#/definitions/feedbackOnError" }
+      }
+    }
+  }
+}

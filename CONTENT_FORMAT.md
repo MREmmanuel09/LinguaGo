@@ -5,6 +5,16 @@
 > draft-07, ADR-012/ADR-009); este documento explica cómo escribir contenido
 > que lo cumpla.
 
+## Schema v2 (LinguaGo v2.0)
+
+El curso `es-en` migra a `schemaVersion: 2` (ADR-018): añade `locale`
+dialectal, metadatos CEFR por lección (`cefrLevel`, `scenario`, `canDo`,
+`grammarPoints[]`, `vocabFrequencyBand`, `culturalNotes[]`), `feedbackOnError`
+por ejercicio y las variantes `AudioOnlyPrompt`, `SemanticMatch`,
+`ClozeDragDrop` y `FreeSpeakingPrompt`. La guía completa está en
+[`docs/CONTENT_FORMAT.md`](docs/CONTENT_FORMAT.md). Los cursos `es-pt`,
+`es-fr` y `es-ja` permanecen en v1 y se rigen por este documento.
+
 ## Reglas de oro
 
 1. **UTF-8 sin BOM.** Un BOM (los 3 bytes `EF BB BF` al inicio) rompe el
