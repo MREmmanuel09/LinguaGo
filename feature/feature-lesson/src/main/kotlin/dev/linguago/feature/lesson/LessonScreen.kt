@@ -52,8 +52,10 @@ import androidx.compose.ui.unit.dp
 import androidx.core.content.ContextCompat
 import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
+import dev.linguago.core.domain.logic.ClozePassageParser
 import dev.linguago.core.domain.model.Exercise
 import dev.linguago.core.domain.model.ExerciseId
+import dev.linguago.core.ui.components.ClozeDragDropBoard
 import dev.linguago.core.ui.components.FeedbackBanner
 import dev.linguago.core.ui.components.InfoBanner
 import dev.linguago.core.ui.components.LinguaProgressBar
@@ -99,6 +101,9 @@ fun LessonScreen(
         onMatchLeft = viewModel::selectLeft,
         onMatchRight = viewModel::matchLeftTo,
         onSubmitPairs = viewModel::submitMatchedPairs,
+        onFillCloze = viewModel::fillClozeBlank,
+        onClearCloze = viewModel::clearClozeBlank,
+        onSubmitCloze = viewModel::submitCloze,
         onTypedText = viewModel::submitTypedText,
         onSpeakRequest = onSpeakRequest,
         onSkipSpeech = viewModel::skipSpeech,
@@ -118,6 +123,9 @@ private fun LessonContent(
     onMatchLeft: (Int) -> Unit,
     onMatchRight: (Int) -> Unit,
     onSubmitPairs: () -> Unit,
+    onFillCloze: (String, String) -> Unit,
+    onClearCloze: (String) -> Unit,
+    onSubmitCloze: () -> Unit,
     onTypedText: (String) -> Unit,
     onSpeakRequest: () -> Unit,
     onSkipSpeech: () -> Unit,
@@ -139,6 +147,9 @@ private fun LessonContent(
                 onMatchLeft = onMatchLeft,
                 onMatchRight = onMatchRight,
                 onSubmitPairs = onSubmitPairs,
+                onFillCloze = onFillCloze,
+                onClearCloze = onClearCloze,
+                onSubmitCloze = onSubmitCloze,
                 onTypedText = onTypedText,
                 onSpeakRequest = onSpeakRequest,
                 onSkipSpeech = onSkipSpeech,
@@ -159,6 +170,9 @@ private fun ExerciseStage(
     onMatchLeft: (Int) -> Unit,
     onMatchRight: (Int) -> Unit,
     onSubmitPairs: () -> Unit,
+    onFillCloze: (String, String) -> Unit,
+    onClearCloze: (String) -> Unit,
+    onSubmitCloze: () -> Unit,
     onTypedText: (String) -> Unit,
     onSpeakRequest: () -> Unit,
     onSkipSpeech: () -> Unit,
@@ -258,6 +272,8 @@ private fun ExerciseStage(
                     onToggleToken = onToggleToken,
                     onMatchLeft = onMatchLeft,
                     onMatchRight = onMatchRight,
+                    onFillCloze = onFillCloze,
+                    onClearCloze = onClearCloze,
                     onTypedText = onTypedText,
                     onSpeakRequest = onSpeakRequest,
                     onPlayAudio = onPlayAudio,
@@ -274,8 +290,13 @@ private fun ExerciseStage(
             pairsComplete =
                 uiState.matched.size == (exercise as? Exercise.MatchPairs)?.pairs?.size &&
                     exercise.pairs.isNotEmpty(),
+            clozeComplete =
+                exercise is Exercise.ClozeDragDrop &&
+                    exercise.blanks.isNotEmpty() &&
+                    uiState.clozeFilled.size == exercise.blanks.size,
             onSubmitTokens = onSubmitTokens,
             onSubmitPairs = onSubmitPairs,
+            onSubmitCloze = onSubmitCloze,
             onSkipSpeech = onSkipSpeech,
             onAdvance = onAdvance,
         )
@@ -290,6 +311,8 @@ private fun Renderer(
     onToggleToken: (String) -> Unit,
     onMatchLeft: (Int) -> Unit,
     onMatchRight: (Int) -> Unit,
+    onFillCloze: (String, String) -> Unit,
+    onClearCloze: (String) -> Unit,
     onTypedText: (String) -> Unit,
     onSpeakRequest: () -> Unit,
     onPlayAudio: () -> Unit,
@@ -332,7 +355,13 @@ private fun Renderer(
         is Exercise.SemanticMatch ->
             PlaceholderStep(title = "Emparejamiento semántico")
         is Exercise.ClozeDragDrop ->
-            PlaceholderStep(title = "Completa el texto")
+            ClozeDragDropBoard(
+                segments = remember(exercise.id) { ClozePassageParser.parse(exercise.passage) },
+                options = exercise.blanks.flatMap { blank -> blank.options }.distinct(),
+                filled = uiState.clozeFilled,
+                onAssign = onFillCloze,
+                onClearBlank = onClearCloze,
+            )
         is Exercise.FreeSpeakingPrompt ->
             PlaceholderStep(title = "Producción oral")
     }
@@ -368,8 +397,10 @@ private fun BottomActions(
     chosenCount: Int,
     listening: Boolean,
     pairsComplete: Boolean,
+    clozeComplete: Boolean,
     onSubmitTokens: () -> Unit,
     onSubmitPairs: () -> Unit,
+    onSubmitCloze: () -> Unit,
     onSkipSpeech: () -> Unit,
     onAdvance: () -> Unit,
 ) {
@@ -401,6 +432,13 @@ private fun BottomActions(
                 text = "Comprobar",
                 onClick = onSubmitPairs,
                 enabled = pairsComplete,
+                modifier = Modifier.fillMaxWidth(),
+            )
+        exercise is Exercise.ClozeDragDrop ->
+            PrimaryButton3D(
+                text = "Comprobar",
+                onClick = onSubmitCloze,
+                enabled = clozeComplete,
                 modifier = Modifier.fillMaxWidth(),
             )
         exercise is Exercise.SpeakRepeat ->
@@ -799,6 +837,9 @@ private fun LessonScreenPreview() {
             onMatchLeft = {},
             onMatchRight = {},
             onSubmitPairs = {},
+            onFillCloze = { _, _ -> },
+            onClearCloze = {},
+            onSubmitCloze = {},
             onTypedText = {},
             onSpeakRequest = {},
             onSkipSpeech = {},

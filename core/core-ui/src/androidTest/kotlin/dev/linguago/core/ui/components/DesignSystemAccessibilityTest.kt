@@ -1,6 +1,7 @@
 package dev.linguago.core.ui.components
 
 import androidx.compose.runtime.CompositionLocalProvider
+import androidx.compose.runtime.mutableStateOf
 import androidx.compose.ui.platform.LocalDensity
 import androidx.compose.ui.semantics.LiveRegionMode
 import androidx.compose.ui.semantics.ProgressBarRangeInfo
@@ -20,8 +21,10 @@ import androidx.compose.ui.test.performClick
 import androidx.compose.ui.unit.Density
 import androidx.compose.ui.unit.dp
 import androidx.test.ext.junit.runners.AndroidJUnit4
+import dev.linguago.core.domain.logic.ClozePassageParser
 import dev.linguago.core.ui.theme.LinguaTheme
 import org.junit.Assert.assertEquals
+import org.junit.Assert.assertTrue
 import org.junit.Rule
 import org.junit.Test
 import org.junit.runner.RunWith
@@ -178,6 +181,38 @@ public class DesignSystemAccessibilityTest {
 
         compose.onNodeWithText("Modismo: play it by ear").assertIsDisplayed()
         compose.onNodeWithText("Decidir sobre la marcha.").assertIsDisplayed()
+    }
+
+    @Test
+    public fun clozeBoard_tapModeAssignsAndClears() {
+        val filledTarget = mutableStateOf<Map<String, String>>(emptyMap())
+        compose.setContent {
+            LinguaTheme {
+                ClozeDragDropBoard(
+                    segments = ClozePassageParser.parse("I {{hueco}} tea."),
+                    options = listOf("drink", "make"),
+                    filled = filledTarget.value,
+                    onAssign = { blankId, option -> filledTarget.value = mapOf(blankId to option) },
+                    onClearBlank = { filledTarget.value = emptyMap() },
+                    touchExplorationOverride = true,
+                )
+            }
+        }
+
+        compose.onNodeWithText("drink").performClick()
+        compose.onNodeWithContentDescription("Hueco 1 vacío").performClick()
+
+        compose.onNodeWithContentDescription("Hueco 1: drink").assertIsDisplayed()
+        compose.runOnIdle {
+            assertEquals(setOf("hueco"), filledTarget.value.keys)
+        }
+
+        compose.onNodeWithContentDescription("Hueco 1: drink").performClick()
+
+        compose.onNodeWithContentDescription("Hueco 1 vacío").assertIsDisplayed()
+        compose.runOnIdle {
+            assertTrue(filledTarget.value.isEmpty())
+        }
     }
 
     @Test

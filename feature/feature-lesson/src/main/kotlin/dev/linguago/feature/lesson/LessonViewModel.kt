@@ -59,6 +59,8 @@ data class LessonUiState(
     val shuffledRights: List<Int> = emptyList(),
     val selectedLeft: Int? = null,
     val matched: Map<Int, Int> = emptyMap(),
+    // Cloze (ClozeDragDrop, F2.3): hueco id → opción colocada.
+    val clozeFilled: Map<String, String> = emptyMap(),
     // Audio (Fase 2): disponibilidad de voz en el dispositivo ejercicios listen.
     val audioAvailable: Boolean = false,
     // Voz del usuario (SpeakRepeat, Fase 2.3).
@@ -161,6 +163,34 @@ class LessonViewModel
             _uiState.update { it.copy(selectedLeft = canonicalLeft) }
         }
 
+        /** Coloca una opción en el hueco; si estaba en otro, la traslada. */
+        fun fillClozeBlank(
+            blankId: String,
+            option: String,
+        ) {
+            _uiState.update { state ->
+                val previousHolder =
+                    state.clozeFilled.entries
+                        .firstOrNull { entry -> entry.value == option }
+                        ?.key
+                val withoutPrevious = previousHolder?.let { state.clozeFilled - it } ?: state.clozeFilled
+                state.copy(clozeFilled = withoutPrevious + (blankId to option))
+            }
+        }
+
+        /** Libera un hueco: la opción vuelve al tablero de opciones (F2.3). */
+        fun clearClozeBlank(blankId: String) {
+            _uiState.update { state -> state.copy(clozeFilled = state.clozeFilled - blankId) }
+        }
+
+        /** El usuario verifica el cloze completo (ClozeDragDrop). */
+        fun submitCloze() {
+            val exercise = _uiState.value.exercises.getOrNull(_uiState.value.index) as? Exercise.ClozeDragDrop
+            if (exercise != null && exercise.blanks.isNotEmpty() && _uiState.value.clozeFilled.size == exercise.blanks.size) {
+                submitAnswer(ExerciseAnswer.ClozeFilled(_uiState.value.clozeFilled))
+            }
+        }
+
         /** Empareja la izquierda seleccionada con la derecha (canónica) tocada. */
         fun matchLeftTo(canonicalRight: Int) {
             val left = _uiState.value.selectedLeft ?: return
@@ -245,6 +275,7 @@ class LessonViewModel
                             chosenTokens = emptyList(),
                             shuffledRights = emptyList(),
                             matched = emptyMap(),
+                            clozeFilled = emptyMap(),
                             selectedLeft = null,
                         )
                     }
@@ -255,6 +286,7 @@ class LessonViewModel
                             chosenTokens = emptyList(),
                             shuffledRights = emptyList(),
                             matched = emptyMap(),
+                            clozeFilled = emptyMap(),
                             selectedLeft = null,
                         )
                     }
@@ -265,6 +297,18 @@ class LessonViewModel
                             chosenTokens = emptyList(),
                             shuffledRights = exercise.pairs.indices.shuffled(),
                             matched = emptyMap(),
+                            clozeFilled = emptyMap(),
+                            selectedLeft = null,
+                        )
+                    }
+                is Exercise.ClozeDragDrop ->
+                    _uiState.update {
+                        it.copy(
+                            availableTokens = emptyList(),
+                            chosenTokens = emptyList(),
+                            shuffledRights = emptyList(),
+                            matched = emptyMap(),
+                            clozeFilled = emptyMap(),
                             selectedLeft = null,
                         )
                     }
@@ -275,6 +319,7 @@ class LessonViewModel
                             chosenTokens = emptyList(),
                             shuffledRights = emptyList(),
                             matched = emptyMap(),
+                            clozeFilled = emptyMap(),
                             selectedLeft = null,
                             listening = false,
                             recognized = null,
