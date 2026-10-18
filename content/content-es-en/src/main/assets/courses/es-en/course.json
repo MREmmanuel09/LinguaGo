@@ -2476,6 +2476,2350 @@
           ]
         }
       ]
+    },
+    {
+      "id": "es-en-lv-3",
+      "name": "B2 · Matices y argumentación",
+      "units": [
+        {
+          "id": "es-en-lv-3-un-1",
+          "title": "Negociación y decisiones",
+          "lessons": [
+            {
+              "id": "es-en-lv-3-un-1-ls-1",
+              "title": "Plazos y concesiones",
+              "cefrLevel": "B2",
+              "scenario": "Reunión con un cliente para renegociar una entrega sin romper la relación comercial.",
+              "canDo": "Puedo rechazar una petición con cortesía, justificar concesiones y proponer una alternativa condicionada.",
+              "grammarPoints": [
+                {"id": "gp-mixed-conditionals", "label": "Mixed conditionals", "description": "Condición presente con consecuencia pasada o futura."},
+                {"id": "gp-hedging", "label": "Hedging", "description": "I'm afraid, it seems, perhaps, would."}
+              ],
+              "vocabFrequencyBand": "3000-5000",
+              "culturalNotes": [
+                {"idiom": "play it by ear", "note": "Decidir sobre la marcha sin comprometerse de antemano; en una negociación suaviza la falta de un plan cerrado.", "translation": "improvisar según las circunstancias"}
+              ],
+              "exercises": [
+                {
+                  "type": "ClozeDragDrop",
+                  "id": "es-en-b2-e1",
+                  "passage": "If we {{b1}} the scope last week, we {{b2}} more time now.",
+                  "blanks": [
+                    {"id": "b1", "answer": "had narrowed", "options": ["had narrowed", "narrowed", "would narrow"]},
+                    {"id": "b2", "answer": "would have", "options": ["would have", "will have", "had"]}
+                  ],
+                  "feedbackOnError": {"type": "grammar", "explanation": "La condición pasada ('had narrowed') se combina con una consecuencia presente ('would have').", "ruleRef": "gp-mixed-conditionals"}
+                },
+                {
+                  "type": "ClozeDragDrop",
+                  "id": "es-en-b2-e2",
+                  "passage": "If we {{b1}} a phased delivery earlier, we {{b2}} avoid another delay now.",
+                  "blanks": [
+                    {"id": "b1", "answer": "had proposed", "options": ["had proposed", "proposed", "would propose"]},
+                    {"id": "b2", "answer": "could", "options": ["could", "will", "can"]}
+                  ],
+                  "feedbackOnError": {"type": "grammar", "explanation": "La mixed conditional conecta una acción pasada con una posibilidad presente: 'could avoid'.", "ruleRef": "gp-mixed-conditionals"}
+                },
+                {
+                  "type": "SemanticMatch",
+                  "id": "es-en-b2-e3",
+                  "instructions": "Empareja cada intervención con su función pragmática.",
+                  "pairs": [
+                    {"left": "I'm afraid that won't work for us.", "right": "Rechazo atenuado", "register": "formal", "nuance": "Más cortés que 'that won't work'."},
+                    {"left": "That's a fair point.", "right": "Concesión parcial", "register": "neutral", "nuance": "Reconoce el argumento sin ceder el punto principal."},
+                    {"left": "Could we revisit this later?", "right": "Aplazamiento cortés", "register": "formal", "nuance": "Evita un 'no' directo."}
+                  ],
+                  "feedbackOnError": {"type": "register", "explanation": "Las tres respuestas son corteses; la diferencia está en si conceden, rechazan o aplazan.", "ruleRef": "gp-hedging"}
+                },
+                {
+                  "type": "SemanticMatch",
+                  "id": "es-en-b2-e4",
+                  "instructions": "Distingue la apertura a negociar del límite firme.",
+                  "pairs": [
+                    {"left": "We might need to reconsider the timeline.", "right": "Apertura a negociar", "register": "formal", "nuance": "No promete nada todavía."},
+                    {"left": "Under no circumstances can we accept that clause.", "right": "Límite firme", "register": "formal", "nuance": "La inversión refuerza la negativa."},
+                    {"left": "Let's play it by ear.", "right": "Decisión flexible", "register": "colloquial", "nuance": "Aplaza la decisión sin cerrar la puerta."}
+                  ],
+                  "feedbackOnError": {"type": "register", "explanation": "El atenuador 'might' abre la puerta; 'under no circumstances' la cierra.", "ruleRef": "gp-hedging"}
+                },
+                {
+                  "type": "AudioOnlyPrompt",
+                  "id": "es-en-b2-e5",
+                  "audioText": "I'm afraid we can't bring the deadline forward, but we could phase the delivery.",
+                  "question": "What is the speaker offering?",
+                  "options": ["A shorter deadline", "A phased delivery", "A discount", "A new contract"],
+                  "correctIndex": 1,
+                  "allowSlowPlayback": true,
+                  "feedbackOnError": {"type": "comprehension", "explanation": "El hablante rechaza adelantar el plazo, pero ofrece entregar por fases.", "ruleRef": "gp-hedging"}
+                },
+                {
+                  "type": "AudioOnlyPrompt",
+                  "id": "es-en-b2-e6",
+                  "audioText": "Had we known about the customs delay, we would have built more slack into the schedule.",
+                  "question": "What does the speaker imply?",
+                  "options": ["They knew about the delay in advance", "They would have planned more time if they had known", "The customs delay was caused by the schedule", "They are refusing to change the schedule"],
+                  "correctIndex": 1,
+                  "allowSlowPlayback": false,
+                  "feedbackOnError": {"type": "comprehension", "explanation": "La inversión 'Had we known' equivale a una third conditional con consecuencia pasada.", "ruleRef": "gp-mixed-conditionals"}
+                },
+                {
+                  "type": "MultipleChoice",
+                  "id": "es-en-b2-e7",
+                  "question": "Completa: ___ we known about the delay, we would have informed the client.",
+                  "options": ["Had", "If", "Should"],
+                  "correctIndex": 0,
+                  "feedbackOnError": {"type": "grammar", "explanation": "La inversión de la third conditional omite 'if': 'Had we known…'.", "ruleRef": "gp-mixed-conditionals"}
+                },
+                {
+                  "type": "ListenType",
+                  "id": "es-en-b2-e8",
+                  "transcription": "We would have delivered on time if we had planned the phases better",
+                  "audioText": "We would have delivered on time if we had planned the phases better",
+                  "feedbackOnError": {"type": "spelling", "explanation": "Se escribe 'delivered' con 'e' intermedia y 'phases' con 'ph'.", "ruleRef": "gp-mixed-conditionals"}
+                },
+                {
+                  "type": "SpeakRepeat",
+                  "id": "es-en-b2-e9",
+                  "targetPhrase": "I'm afraid we can't bring the deadline forward.",
+                  "audioText": "I'm afraid we can't bring the deadline forward.",
+                  "feedbackOnError": {"type": "pronunciation", "explanation": "Enlaza 'bring the' y suaviza 'I'm afraid' con entonación descendente.", "ruleRef": "gp-hedging"}
+                },
+                {
+                  "type": "FreeSpeakingPrompt",
+                  "id": "es-en-b2-e10",
+                  "prompt": "Responde al cliente: no puedes adelantar la entrega, pero propón una alternativa con una condición.",
+                  "minTokens": 35,
+                  "conceptClusters": [["deadline", "delivery date", "schedule"], ["phase", "split", "stages"], ["if", "provided that", "as long as"]],
+                  "grammarRuleRefs": ["gp-mixed-conditionals", "gp-hedging"],
+                  "timeLimitSeconds": 75,
+                  "minWpm": 70,
+                  "maxWpm": 160,
+                  "modelAnswer": "I'm afraid we can't bring the deadline forward. However, if we split the delivery into two phases, we could have the first batch ready by Friday, provided that the final specifications are confirmed today. That would give you the core features sooner without compromising quality.",
+                  "selfAssessmentCriteria": ["¿Rechacé el plazo con cortesía?", "¿Propuse una alternativa concreta?", "¿Usé una condicional y un atenuador?"],
+                  "feedbackOnError": {"type": "grammar", "explanation": "La respuesta modelo combina un rechazo atenuado con una condicional mixta y una condición explícita.", "ruleRef": "gp-mixed-conditionals"}
+                }
+              ]
+            },
+            {
+              "id": "es-en-lv-3-un-1-ls-2",
+              "title": "Presupuesto bajo presión",
+              "cefrLevel": "B2",
+              "scenario": "El cliente exige una rebaja que afecta el margen; hay que explorar escenarios sin ceder de inmediato.",
+              "canDo": "Puedo cuantificar una propuesta, plantear escenarios hipotéticos y defender un límite comercial.",
+              "grammarPoints": [
+                {"id": "gp-third-conditional", "label": "Third conditional", "description": "Hipótesis pasadas no realizadas."},
+                {"id": "gp-hedging", "label": "Hedging", "description": "I'm afraid, it seems, perhaps, would."}
+              ],
+              "vocabFrequencyBand": "3000-5000",
+              "culturalNotes": [
+                {"idiom": "ballpark figure", "note": "Cifra aproximada suficiente para orientar una conversación; habitual en presupuestos estadounidenses.", "translation": "cifra aproximada"}
+              ],
+              "exercises": [
+                {
+                  "type": "ClozeDragDrop",
+                  "id": "es-en-b2-e11",
+                  "passage": "If we {{b1}} the discount last quarter, we {{b2}} our margin.",
+                  "blanks": [
+                    {"id": "b1", "answer": "had offered", "options": ["had offered", "offered", "would offer"]},
+                    {"id": "b2", "answer": "would have protected", "options": ["would have protected", "will protect", "protected"]}
+                  ],
+                  "feedbackOnError": {"type": "grammar", "explanation": "La third conditional usa 'had + participio' y 'would have + participio'.", "ruleRef": "gp-third-conditional"}
+                },
+                {
+                  "type": "ClozeDragDrop",
+                  "id": "es-en-b2-e12",
+                  "passage": "If you {{b1}} mentioned the budget earlier, we {{b2}} a different proposal.",
+                  "blanks": [
+                    {"id": "b1", "answer": "had mentioned", "options": ["had mentioned", "mentioned", "would mention"]},
+                    {"id": "b2", "answer": "could have prepared", "options": ["could have prepared", "can prepare", "prepared"]}
+                  ],
+                  "feedbackOnError": {"type": "grammar", "explanation": "La condición pasada no realizada se expresa con 'had mentioned' y 'could have prepared'.", "ruleRef": "gp-third-conditional"}
+                },
+                {
+                  "type": "SemanticMatch",
+                  "id": "es-en-b2-e13",
+                  "instructions": "Empareja cada frase con su función en la negociación.",
+                  "pairs": [
+                    {"left": "Could you give me a ballpark figure?", "right": "Pedir una cifra aproximada", "register": "informal", "nuance": "Suficiente para orientar, sin compromiso formal."},
+                    {"left": "I'm afraid that's below our floor.", "right": "Rechazo de precio", "register": "formal", "nuance": "Marca un límite sin atacar al cliente."},
+                    {"left": "Perhaps we could split the difference.", "right": "Proponer un punto medio", "register": "neutral", "nuance": "Sugiere una cesión mutua."}
+                  ],
+                  "feedbackOnError": {"type": "register", "explanation": "Las tres fórmulas mantienen la relación: piden, rechazan o proponen sin confrontación.", "ruleRef": "gp-hedging"}
+                },
+                {
+                  "type": "SemanticMatch",
+                  "id": "es-en-b2-e14",
+                  "instructions": "Distingue la crítica atenuada del desacuerdo directo.",
+                  "pairs": [
+                    {"left": "That may be slightly optimistic.", "right": "Crítica atenuada", "register": "formal", "nuance": "Cuestiona la cifra sin decirlo abiertamente."},
+                    {"left": "To be honest, the numbers don't add up.", "right": "Desacuerdo directo", "register": "informal", "nuance": "Señala una incoherencia con franqueza."},
+                    {"left": "Would you be open to a volume discount?", "right": "Petición condicional", "register": "formal", "nuance": "Invita a negociar sin exigir."}
+                  ],
+                  "feedbackOnError": {"type": "register", "explanation": "'Slightly optimistic' y 'would you be open' atenúan; 'don't add up' es más directo.", "ruleRef": "gp-hedging"}
+                },
+                {
+                  "type": "AudioOnlyPrompt",
+                  "id": "es-en-b2-e15",
+                  "audioText": "If we had known the volumes earlier, we could have offered a better rate.",
+                  "question": "Why didn't they offer a better rate?",
+                  "options": ["Because the volumes were too low", "Because they didn't know the volumes in time", "Because the client rejected the rate", "Because the rate was already fixed"],
+                  "correctIndex": 1,
+                  "allowSlowPlayback": true,
+                  "feedbackOnError": {"type": "comprehension", "explanation": "La third conditional indica que no conocían los volúmenes cuando hicieron la oferta.", "ruleRef": "gp-third-conditional"}
+                },
+                {
+                  "type": "AudioOnlyPrompt",
+                  "id": "es-en-b2-e16",
+                  "audioText": "The ballpark figure is around ten percent, but I'd need to check the overheads before confirming.",
+                  "question": "What is the speaker doing?",
+                  "options": ["Confirming a final discount", "Giving an approximate figure with a caveat", "Rejecting the negotiation", "Asking for a higher budget"],
+                  "correctIndex": 1,
+                  "allowSlowPlayback": false,
+                  "feedbackOnError": {"type": "comprehension", "explanation": "'Ballpark figure' es aproximado y 'I'd need to check' evita comprometerse.", "ruleRef": "gp-hedging"}
+                },
+                {
+                  "type": "MultipleChoice",
+                  "id": "es-en-b2-e17",
+                  "question": "Completa: If you ___ us the forecast, we would have adjusted the quote.",
+                  "options": ["had sent", "sent", "would send"],
+                  "correctIndex": 0,
+                  "feedbackOnError": {"type": "grammar", "explanation": "La third conditional exige past perfect en la condición: 'had sent'.", "ruleRef": "gp-third-conditional"}
+                },
+                {
+                  "type": "ListenType",
+                  "id": "es-en-b2-e18",
+                  "transcription": "We could have protected the margin if we had renegotiated earlier",
+                  "audioText": "We could have protected the margin if we had renegotiated earlier",
+                  "feedbackOnError": {"type": "spelling", "explanation": "Se escribe 'renegotiated' con 'go' y 'margin' con 'g' final.", "ruleRef": "gp-third-conditional"}
+                },
+                {
+                  "type": "SpeakRepeat",
+                  "id": "es-en-b2-e19",
+                  "targetPhrase": "Had we known the volumes, we could have offered a better rate.",
+                  "audioText": "Had we known the volumes, we could have offered a better rate.",
+                  "feedbackOnError": {"type": "pronunciation", "explanation": "Enlaza 'Had we' y pronuncia 'could have' como /kʊdəv/.", "ruleRef": "gp-third-conditional"}
+                },
+                {
+                  "type": "FreeSpeakingPrompt",
+                  "id": "es-en-b2-e20",
+                  "prompt": "Defiende tu precio ante una petición de rebaja: reconoce la presión, plantea un escenario y pide información.",
+                  "minTokens": 35,
+                  "conceptClusters": [["budget", "discount", "margin"], ["if", "could", "would"], ["forecast", "volume", "terms"]],
+                  "grammarRuleRefs": ["gp-third-conditional", "gp-hedging"],
+                  "timeLimitSeconds": 75,
+                  "minWpm": 70,
+                  "maxWpm": 160,
+                  "modelAnswer": "I'm afraid a ten percent discount would put the margin under real pressure. If you had shared the forecast last month, we could have prepared a different package. Perhaps we could explore a volume-based rate instead; would you be able to confirm the expected volumes by Friday?",
+                  "selfAssessmentCriteria": ["¿Reconocí la presión del cliente?", "¿Usé una hipótesis pasada?", "¿Pedí información concreta?"],
+                  "feedbackOnError": {"type": "grammar", "explanation": "La respuesta modelo defiende el margen con 'I'm afraid' y reformula la rebaja como una hipótesis pasada.", "ruleRef": "gp-third-conditional"}
+                }
+              ]
+            },
+            {
+              "id": "es-en-lv-3-un-1-ls-3",
+              "title": "Quién decide qué",
+              "cefrLevel": "B2",
+              "scenario": "Dos áreas no coinciden sobre quién aprueba un gasto y la decisión se bloquea.",
+              "canDo": "Puedo atribuir responsabilidades con precisión, aclarar procesos y destrabar una decisión.",
+              "grammarPoints": [
+                {"id": "gp-passive-reporting", "label": "Passive reporting structures", "description": "It is said that…, He is believed to…"},
+                {"id": "gp-hedging", "label": "Hedging", "description": "I'm afraid, it seems, perhaps, would."}
+              ],
+              "vocabFrequencyBand": "3000-5000",
+              "culturalNotes": [
+                {"idiom": "in the loop", "note": "Mantener informada a una persona clave de un proceso; evita decisiones tomadas a ciegas.", "translation": "al tanto"}
+              ],
+              "exercises": [
+                {
+                  "type": "ClozeDragDrop",
+                  "id": "es-en-b2-e21",
+                  "passage": "It {{b1}} that the finance team {{b2}} already approved the budget.",
+                  "blanks": [
+                    {"id": "b1", "answer": "is said", "options": ["is said", "says", "said"]},
+                    {"id": "b2", "answer": "has", "options": ["has", "have", "had"]}
+                  ],
+                  "feedbackOnError": {"type": "grammar", "explanation": "La pasiva reportativa es 'It is said that…'.", "ruleRef": "gp-passive-reporting"}
+                },
+                {
+                  "type": "ClozeDragDrop",
+                  "id": "es-en-b2-e22",
+                  "passage": "The decision {{b1}} to have been made before the meeting, although this {{b2}} be confirmed.",
+                  "blanks": [
+                    {"id": "b1", "answer": "is believed", "options": ["is believed", "believes", "believed"]},
+                    {"id": "b2", "answer": "might", "options": ["might", "must", "can't"]}
+                  ],
+                  "feedbackOnError": {"type": "grammar", "explanation": "'Is believed to have been made' reporta sin atribuir la fuente; 'might' añade cautela.", "ruleRef": "gp-passive-reporting"}
+                },
+                {
+                  "type": "SemanticMatch",
+                  "id": "es-en-b2-e23",
+                  "instructions": "Empareja cada frase con su función.",
+                  "pairs": [
+                    {"left": "It is understood that the board will review the proposal.", "right": "Información atribuida", "register": "formal", "nuance": "No identifica la fuente."},
+                    {"left": "I'm afraid I'm not in the loop on that.", "right": "Falta de información", "register": "informal", "nuance": "Admite desconocimiento sin perder credibilidad."},
+                    {"left": "As far as I'm aware, approval is still pending.", "right": "Información limitada", "register": "neutral", "nuance": "Marca el alcance de lo que sabe."}
+                  ],
+                  "feedbackOnError": {"type": "register", "explanation": "Las tres fórmulas limitan la responsabilidad de quien habla sobre la información.", "ruleRef": "gp-hedging"}
+                },
+                {
+                  "type": "SemanticMatch",
+                  "id": "es-en-b2-e24",
+                  "instructions": "Distingue la propuesta reportada de la atribución de responsabilidad.",
+                  "pairs": [
+                    {"left": "It has been suggested that we merge the two teams.", "right": "Propuesta reportada", "register": "formal", "nuance": "Presenta la idea como colectiva."},
+                    {"left": "That decision rests with finance.", "right": "Atribución de responsabilidad", "register": "neutral", "nuance": "Aclara quién decide."},
+                    {"left": "We seem to have different understandings of the process.", "right": "Malentendido atenuado", "register": "formal", "nuance": "Evita culpar a una persona."}
+                  ],
+                  "feedbackOnError": {"type": "register", "explanation": "Las estructuras reportativas y los atenuadores permiten aclarar sin confrontar.", "ruleRef": "gp-passive-reporting"}
+                },
+                {
+                  "type": "AudioOnlyPrompt",
+                  "id": "es-en-b2-e25",
+                  "audioText": "The budget is said to have been approved, but the timeline hasn't been confirmed.",
+                  "question": "What is certain?",
+                  "options": ["Both the budget and the timeline are confirmed", "Only the budget is certain", "Only the timeline is certain", "Neither the budget nor the timeline is certain"],
+                  "correctIndex": 1,
+                  "allowSlowPlayback": true,
+                  "feedbackOnError": {"type": "comprehension", "explanation": "'Is said to have been approved' reporta el presupuesto; el plazo sigue sin confirmar.", "ruleRef": "gp-passive-reporting"}
+                },
+                {
+                  "type": "AudioOnlyPrompt",
+                  "id": "es-en-b2-e26",
+                  "audioText": "As far as I'm aware, the decision rests with the regional director.",
+                  "question": "What is the speaker clarifying?",
+                  "options": ["Who has the authority to decide", "When the decision will be made", "Why the budget was rejected", "How much the decision will cost"],
+                  "correctIndex": 0,
+                  "allowSlowPlayback": false,
+                  "feedbackOnError": {"type": "comprehension", "explanation": "'Rests with' indica dónde está la autoridad; 'as far as I'm aware' limita la certeza.", "ruleRef": "gp-hedging"}
+                },
+                {
+                  "type": "MultipleChoice",
+                  "id": "es-en-b2-e27",
+                  "question": "Completa: The report ___ to have been delayed by the audit.",
+                  "options": ["is believed", "believes", "believed"],
+                  "correctIndex": 0,
+                  "feedbackOnError": {"type": "grammar", "explanation": "La pasiva reportativa es 'is believed to have been delayed'.", "ruleRef": "gp-passive-reporting"}
+                },
+                {
+                  "type": "ListenType",
+                  "id": "es-en-b2-e28",
+                  "transcription": "It has been suggested that we postpone the final decision",
+                  "audioText": "It has been suggested that we postpone the final decision",
+                  "feedbackOnError": {"type": "spelling", "explanation": "Se escribe 'suggested' con doble 'g' y 'postpone' conserva la 't' final del prefijo 'post-'.", "ruleRef": "gp-passive-reporting"}
+                },
+                {
+                  "type": "SpeakRepeat",
+                  "id": "es-en-b2-e29",
+                  "targetPhrase": "The budget is said to have been approved.",
+                  "audioText": "The budget is said to have been approved.",
+                  "feedbackOnError": {"type": "pronunciation", "explanation": "Enlaza 'said to have' y pronuncia 'approved' con /d/ final.", "ruleRef": "gp-passive-reporting"}
+                },
+                {
+                  "type": "FreeSpeakingPrompt",
+                  "id": "es-en-b2-e30",
+                  "prompt": "Aclara quién aprueba el gasto: evita acusaciones, cita la información disponible y propón el siguiente paso.",
+                  "minTokens": 35,
+                  "conceptClusters": [["approve", "approval", "authority"], ["it is said", "believed", "understood"], ["process", "decision", "deadline"]],
+                  "grammarRuleRefs": ["gp-passive-reporting", "gp-hedging"],
+                  "timeLimitSeconds": 75,
+                  "minWpm": 70,
+                  "maxWpm": 160,
+                  "modelAnswer": "As far as I'm aware, the final approval rests with finance, although it is said that the regional director can sign off smaller amounts. I'm afraid I'm not in the loop on the latest update. Perhaps we could confirm the process in writing so that everyone knows who decides what before Friday.",
+                  "selfAssessmentCriteria": ["¿Aclaré quién decide?", "¿Evité acusar a alguien?", "¿Propuse un siguiente paso?"],
+                  "feedbackOnError": {"type": "grammar", "explanation": "La respuesta modelo usa 'it is said' y 'as far as I'm aware' para atribuir sin acusar.", "ruleRef": "gp-passive-reporting"}
+                }
+              ]
+            },
+            {
+              "id": "es-en-lv-3-un-1-ls-4",
+              "title": "Concesiones sin perder terreno",
+              "cefrLevel": "B2",
+              "scenario": "Una negociación avanza y cada parte debe ceder algo sin aparecer como débil.",
+              "canDo": "Puedo plantear un intercambio equilibrado, condicionar una concesión y proteger mis prioridades.",
+              "grammarPoints": [
+                {"id": "gp-wish-if-only", "label": "Wish / if only", "description": "Deseos y arrepentimientos."},
+                {"id": "gp-mixed-conditionals", "label": "Mixed conditionals", "description": "Condición presente con consecuencia pasada o futura."}
+              ],
+              "vocabFrequencyBand": "3000-5000",
+              "culturalNotes": [
+                {"idiom": "win-win", "note": "Acuerdo que ambas partes consideran beneficioso; se usa para vender una concesión como inversión.", "translation": "todos ganan"}
+              ],
+              "exercises": [
+                {
+                  "type": "ClozeDragDrop",
+                  "id": "es-en-b2-e31",
+                  "passage": "If only we {{b1}} more flexibility on the price, we {{b2}} explore a different structure.",
+                  "blanks": [
+                    {"id": "b1", "answer": "had", "options": ["had", "have", "having"]},
+                    {"id": "b2", "answer": "could", "options": ["could", "will", "can"]}
+                  ],
+                  "feedbackOnError": {"type": "grammar", "explanation": "'If only + pasado' expresa un deseo irreal y 'could' la consecuencia posible.", "ruleRef": "gp-wish-if-only"}
+                },
+                {
+                  "type": "ClozeDragDrop",
+                  "id": "es-en-b2-e32",
+                  "passage": "If we {{b1}} agreed to that clause last year, we {{b2}} in a stronger position now.",
+                  "blanks": [
+                    {"id": "b1", "answer": "hadn't", "options": ["hadn't", "didn't", "wouldn't"]},
+                    {"id": "b2", "answer": "would be", "options": ["would be", "will be", "were"]}
+                  ],
+                  "feedbackOnError": {"type": "grammar", "explanation": "La condición pasada con consecuencia presente forma una mixed conditional: 'would be'.", "ruleRef": "gp-mixed-conditionals"}
+                },
+                {
+                  "type": "SemanticMatch",
+                  "id": "es-en-b2-e33",
+                  "instructions": "Empareja cada deseo o concesión con su función.",
+                  "pairs": [
+                    {"left": "I wish we had more flexibility on the price.", "right": "Deseo presente", "register": "neutral", "nuance": "Señala una limitación sin cerrar la negociación."},
+                    {"left": "If only we had locked the rate earlier.", "right": "Arrepentimiento pasado", "register": "formal", "nuance": "Reconoce un error de cálculo."},
+                    {"left": "We're prepared to move on delivery, provided that the scope stays the same.", "right": "Concesión condicionada", "register": "formal", "nuance": "Cede en un punto para proteger otro."}
+                  ],
+                  "feedbackOnError": {"type": "register", "explanation": "'Wish' y 'if only' expresan deseo o arrepentimiento; 'provided that' condiciona la concesión.", "ruleRef": "gp-wish-if-only"}
+                },
+                {
+                  "type": "SemanticMatch",
+                  "id": "es-en-b2-e34",
+                  "instructions": "Distingue beneficio mutuo, resistencia y cesión.",
+                  "pairs": [
+                    {"left": "That would be a win-win for both sides.", "right": "Beneficio mutuo", "register": "informal", "nuance": "Presenta el acuerdo como ventaja compartida."},
+                    {"left": "We'd be reluctant to accept that trade-off.", "right": "Resistencia atenuada", "register": "formal", "nuance": "Muestra desacuerdo sin romper la conversación."},
+                    {"left": "Perhaps we can meet halfway on the payment terms.", "right": "Propuesta de cesión", "register": "neutral", "nuance": "Invita a una concesión recíproca."}
+                  ],
+                  "feedbackOnError": {"type": "register", "explanation": "'Would' y 'perhaps' permiten resistir o ceder sin perder la relación.", "ruleRef": "gp-mixed-conditionals"}
+                },
+                {
+                  "type": "AudioOnlyPrompt",
+                  "id": "es-en-b2-e35",
+                  "audioText": "If only we had locked the exchange rate, we wouldn't be renegotiating the price now.",
+                  "question": "What is the speaker expressing?",
+                  "options": ["A future plan", "Regret about a past decision", "A refusal to negotiate", "A request for a discount"],
+                  "correctIndex": 1,
+                  "allowSlowPlayback": true,
+                  "feedbackOnError": {"type": "comprehension", "explanation": "'If only' expresa arrepentimiento por no haber fijado el tipo de cambio antes.", "ruleRef": "gp-wish-if-only"}
+                },
+                {
+                  "type": "AudioOnlyPrompt",
+                  "id": "es-en-b2-e36",
+                  "audioText": "We'd be prepared to extend the warranty, provided that you commit to a longer contract.",
+                  "question": "What is the condition for extending the warranty?",
+                  "options": ["A higher price", "A longer contract", "A faster delivery", "A smaller order"],
+                  "correctIndex": 1,
+                  "allowSlowPlayback": false,
+                  "feedbackOnError": {"type": "comprehension", "explanation": "'Provided that' introduce la condición: un contrato más largo.", "ruleRef": "gp-mixed-conditionals"}
+                },
+                {
+                  "type": "MultipleChoice",
+                  "id": "es-en-b2-e37",
+                  "question": "Completa: If only we ___ the rate earlier.",
+                  "options": ["had locked", "locked", "have locked"],
+                  "correctIndex": 0,
+                  "feedbackOnError": {"type": "grammar", "explanation": "'If only' sobre el pasado exige past perfect: 'had locked'.", "ruleRef": "gp-wish-if-only"}
+                },
+                {
+                  "type": "ListenType",
+                  "id": "es-en-b2-e38",
+                  "transcription": "We're prepared to move on delivery if the scope stays the same",
+                  "audioText": "We're prepared to move on delivery if the scope stays the same",
+                  "feedbackOnError": {"type": "spelling", "explanation": "Se escribe 'prepared' con 're' y 'scope' como palabra única.", "ruleRef": "gp-mixed-conditionals"}
+                },
+                {
+                  "type": "SpeakRepeat",
+                  "id": "es-en-b2-e39",
+                  "targetPhrase": "If only we had locked the rate earlier.",
+                  "audioText": "If only we had locked the rate earlier.",
+                  "feedbackOnError": {"type": "pronunciation", "explanation": "Pronuncia 'had locked' como /həd lɒkt/ y baja la entonación en 'earlier'.", "ruleRef": "gp-wish-if-only"}
+                },
+                {
+                  "type": "FreeSpeakingPrompt",
+                  "id": "es-en-b2-e40",
+                  "prompt": "Ofrece una concesión sin parecer débil: condiciónala, explica el beneficio mutuo y protege tu prioridad.",
+                  "minTokens": 35,
+                  "conceptClusters": [["concede", "flexibility", "trade-off"], ["provided that", "if", "unless"], ["win-win", "benefit", "priority"]],
+                  "grammarRuleRefs": ["gp-wish-if-only", "gp-mixed-conditionals"],
+                  "timeLimitSeconds": 75,
+                  "minWpm": 70,
+                  "maxWpm": 160,
+                  "modelAnswer": "We'd be prepared to move on the delivery date, provided that the scope and the payment terms stay unchanged. If only we had locked the earlier rate, we could offer more flexibility on price today. Still, this trade-off would be a win-win: you get the product sooner, and we protect the quality.",
+                  "selfAssessmentCriteria": ["¿Condicioné la concesión?", "¿Expliqué el beneficio mutuo?", "¿Protegí una prioridad?"],
+                  "feedbackOnError": {"type": "grammar", "explanation": "La respuesta modelo condiciona la cesión con 'provided that' y usa 'if only' para justificar el límite.", "ruleRef": "gp-mixed-conditionals"}
+                }
+              ]
+            },
+            {
+              "id": "es-en-lv-3-un-1-ls-5",
+              "title": "Cerrar el trato",
+              "cefrLevel": "B2",
+              "scenario": "La negociación llega al tramo final y hay que confirmar términos y próximos pasos por escrito.",
+              "canDo": "Puedo resumir un acuerdo, precisar condiciones y confirmar compromisos con registro formal.",
+              "grammarPoints": [
+                {"id": "gp-inversion-negative-adverbials", "label": "Inversion with negative adverbials", "description": "Not only…, Under no circumstances…, Rarely…"},
+                {"id": "gp-cleft-sentences", "label": "Cleft sentences", "description": "What matters is…, It was X that…"}
+              ],
+              "vocabFrequencyBand": "3000-5000",
+              "culturalNotes": [
+                {"idiom": "cut to the chase", "note": "Ir directo al punto importante sin rodeos; habitual al cerrar una negociación.", "translation": "ir al grano"}
+              ],
+              "exercises": [
+                {
+                  "type": "ClozeDragDrop",
+                  "id": "es-en-b2-e41",
+                  "passage": "{{b1}} no circumstances {{b2}} we accept a penalty clause.",
+                  "blanks": [
+                    {"id": "b1", "answer": "Under", "options": ["Under", "On", "In"]},
+                    {"id": "b2", "answer": "can", "options": ["can", "we can", "could"]}
+                  ],
+                  "feedbackOnError": {"type": "grammar", "explanation": "La inversión negativa es 'Under no circumstances can we…'.", "ruleRef": "gp-inversion-negative-adverbials"}
+                },
+                {
+                  "type": "ClozeDragDrop",
+                  "id": "es-en-b2-e42",
+                  "passage": "{{b1}} was the impact of the delay {{b2}} we had to renegotiate the launch.",
+                  "blanks": [
+                    {"id": "b1", "answer": "Such", "options": ["Such", "So", "What"]},
+                    {"id": "b2", "answer": "that", "options": ["that", "than", "which"]}
+                  ],
+                  "feedbackOnError": {"type": "grammar", "explanation": "'Such was the impact that…' invierte el orden para enfatizar la consecuencia.", "ruleRef": "gp-inversion-negative-adverbials"}
+                },
+                {
+                  "type": "SemanticMatch",
+                  "id": "es-en-b2-e43",
+                  "instructions": "Empareja cada estructura con su efecto.",
+                  "pairs": [
+                    {"left": "Not only did we meet the deadline, but we also reduced costs.", "right": "Énfasis con inversión", "register": "formal", "nuance": "Destaca dos logros encadenados."},
+                    {"left": "What matters most is the delivery date.", "right": "Cleft de foco", "register": "neutral", "nuance": "Desplaza el foco al plazo."},
+                    {"left": "It was the client who requested the change.", "right": "Cleft de agente", "register": "formal", "nuance": "Atribuye la acción con precisión."}
+                  ],
+                  "feedbackOnError": {"type": "register", "explanation": "La inversión y las cleft sentences reordenan la información para enfatizar un punto.", "ruleRef": "gp-cleft-sentences"}
+                },
+                {
+                  "type": "SemanticMatch",
+                  "id": "es-en-b2-e44",
+                  "instructions": "Distingue el cierre formal del informal.",
+                  "pairs": [
+                    {"left": "Rarely have I seen such a clear proposal.", "right": "Elogio formal", "register": "formal", "nuance": "La inversión añade intensidad."},
+                    {"left": "Let's cut to the chase: what's the final price?", "right": "Ir al grano", "register": "informal", "nuance": "Acelera la conversación."},
+                    {"left": "That's a deal.", "right": "Cierre informal", "register": "informal", "nuance": "Confirma el acuerdo sin detalle."}
+                  ],
+                  "feedbackOnError": {"type": "register", "explanation": "El registro determina si el cierre suena protocolario o directo.", "ruleRef": "gp-inversion-negative-adverbials"}
+                },
+                {
+                  "type": "AudioOnlyPrompt",
+                  "id": "es-en-b2-e45",
+                  "audioText": "Not only did they accept the terms, but they also signed the contract the same day.",
+                  "question": "What happened?",
+                  "options": ["They rejected the terms and delayed the contract", "They accepted the terms and signed immediately", "They signed before reading the terms", "They asked for a new contract"],
+                  "correctIndex": 1,
+                  "allowSlowPlayback": true,
+                  "feedbackOnError": {"type": "comprehension", "explanation": "La inversión 'Not only did they accept…' añade un segundo logro: firmar el mismo día.", "ruleRef": "gp-inversion-negative-adverbials"}
+                },
+                {
+                  "type": "AudioOnlyPrompt",
+                  "id": "es-en-b2-e46",
+                  "audioText": "What we need is a binding agreement, not another draft.",
+                  "question": "What is the speaker asking for?",
+                  "options": ["Another draft", "A final, legally binding agreement", "A shorter meeting", "A new negotiation"],
+                  "correctIndex": 1,
+                  "allowSlowPlayback": false,
+                  "feedbackOnError": {"type": "comprehension", "explanation": "La cleft 'What we need is…' focaliza la petición: un acuerdo vinculante.", "ruleRef": "gp-cleft-sentences"}
+                },
+                {
+                  "type": "MultipleChoice",
+                  "id": "es-en-b2-e47",
+                  "question": "Completa: ___ had the meeting started when the client called.",
+                  "options": ["Hardly", "Hard", "Scarcely than"],
+                  "correctIndex": 0,
+                  "feedbackOnError": {"type": "grammar", "explanation": "La inversión correcta es 'Hardly had… when…'.", "ruleRef": "gp-inversion-negative-adverbials"}
+                },
+                {
+                  "type": "ListenType",
+                  "id": "es-en-b2-e48",
+                  "transcription": "Under no circumstances can we accept a penalty clause",
+                  "audioText": "Under no circumstances can we accept a penalty clause",
+                  "feedbackOnError": {"type": "spelling", "explanation": "Se escribe 'circumstances' con 'c' inicial y 'clause' con 'au'.", "ruleRef": "gp-inversion-negative-adverbials"}
+                },
+                {
+                  "type": "SpeakRepeat",
+                  "id": "es-en-b2-e49",
+                  "targetPhrase": "Not only did we meet the deadline, but we also reduced costs.",
+                  "audioText": "Not only did we meet the deadline, but we also reduced costs.",
+                  "feedbackOnError": {"type": "pronunciation", "explanation": "Enlaza 'Not only did we' y da énfasis a 'also'.", "ruleRef": "gp-inversion-negative-adverbials"}
+                },
+                {
+                  "type": "FreeSpeakingPrompt",
+                  "id": "es-en-b2-e50",
+                  "prompt": "Cierra la negociación: resume los términos, enfatiza lo conseguido y confirma el siguiente paso por escrito.",
+                  "minTokens": 35,
+                  "conceptClusters": [["agreement", "terms", "contract"], ["not only", "what matters", "it was"], ["sign", "confirm", "deadline"]],
+                  "grammarRuleRefs": ["gp-inversion-negative-adverbials", "gp-cleft-sentences"],
+                  "timeLimitSeconds": 75,
+                  "minWpm": 70,
+                  "maxWpm": 160,
+                  "modelAnswer": "What matters most is that we have a binding agreement. Not only did we protect the delivery date, but we also kept the original scope. Under no circumstances should the payment terms change after signing. I'll send the final contract today so that both teams can confirm it by Friday.",
+                  "selfAssessmentCriteria": ["¿Resumí los términos?", "¿Enfatigué un logro?", "¿Confirmé el siguiente paso?"],
+                  "feedbackOnError": {"type": "grammar", "explanation": "La respuesta modelo combina una cleft sentence con inversiones negativas para cerrar con firmeza.", "ruleRef": "gp-cleft-sentences"}
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "es-en-lv-3-un-2",
+          "title": "Opinión y debate",
+          "lessons": [
+            {
+              "id": "es-en-lv-3-un-2-ls-1",
+              "title": "Un debate ético",
+              "cefrLevel": "B2",
+              "scenario": "Un equipo discute si aceptar un contrato dudoso; hay que argumentar sin atacar a nadie.",
+              "canDo": "Puedo presentar una postura ética, reconocer matices y responder a un contraargumento.",
+              "grammarPoints": [
+                {"id": "gp-cleft-sentences", "label": "Cleft sentences", "description": "What matters is…, It was X that…"},
+                {"id": "gp-passive-reporting", "label": "Passive reporting structures", "description": "It is said that…, He is believed to…"}
+              ],
+              "vocabFrequencyBand": "3000-5000",
+              "culturalNotes": [
+                {"idiom": "play devil's advocate", "note": "Defender una postura contraria para probar un argumento; no implica compartir esa opinión.", "translation": "hacer de abogado del diablo"}
+              ],
+              "exercises": [
+                {
+                  "type": "ClozeDragDrop",
+                  "id": "es-en-b2-e51",
+                  "passage": "What {{b1}} most is not the profit, but whether we could {{b2}} the decision to our own team.",
+                  "blanks": [
+                    {"id": "b1", "answer": "matters", "options": ["matters", "matter", "mattering"]},
+                    {"id": "b2", "answer": "justify", "options": ["justify", "justified", "justifying"]}
+                  ],
+                  "feedbackOnError": {"type": "grammar", "explanation": "La cleft 'What matters most is…' focaliza el criterio ético; tras 'could' se usa el infinitivo 'justify'.", "ruleRef": "gp-cleft-sentences"}
+                },
+                {
+                  "type": "ClozeDragDrop",
+                  "id": "es-en-b2-e52",
+                  "passage": "It {{b1}} that the client has {{b2}} the terms, and the board is believed {{b3}} have approved them.",
+                  "blanks": [
+                    {"id": "b1", "answer": "is said", "options": ["is said", "says", "said"]},
+                    {"id": "b2", "answer": "accepted", "options": ["accepted", "accept", "accepting"]},
+                    {"id": "b3", "answer": "to", "options": ["to", "for", "that"]}
+                  ],
+                  "feedbackOnError": {"type": "grammar", "explanation": "La pasiva reportativa usa 'It is said that…' y 'is believed to have…' para atribuir sin identificar la fuente.", "ruleRef": "gp-passive-reporting"}
+                },
+                {
+                  "type": "SemanticMatch",
+                  "id": "es-en-b2-e53",
+                  "instructions": "Empareja cada intervención con su función en el debate.",
+                  "pairs": [
+                    {"left": "It is said that the contract is legal.", "right": "Información atribuida", "register": "formal", "nuance": "No identifica la fuente."},
+                    {"left": "What concerns me is the precedent it sets.", "right": "Preocupación ética", "register": "formal", "nuance": "Desplaza el foco al principio."},
+                    {"left": "I'm not convinced that the ends justify the means.", "right": "Rechazo de un atajo moral", "register": "neutral", "nuance": "Niega la premisa sin atacar a nadie."}
+                  ],
+                  "feedbackOnError": {"type": "register", "explanation": "La pasiva reportativa atribuye información y la cleft pone el foco en el principio ético.", "ruleRef": "gp-cleft-sentences"}
+                },
+                {
+                  "type": "SemanticMatch",
+                  "id": "es-en-b2-e54",
+                  "instructions": "Distingue el contraargumento exploratorio del desacuerdo cortés.",
+                  "pairs": [
+                    {"left": "Let me play devil's advocate for a moment.", "right": "Contraargumento exploratorio", "register": "formal", "nuance": "Anuncia una objeción sin comprometerse con ella."},
+                    {"left": "That may be true, but it assumes the client will stay.", "right": "Objeción a una premisa", "register": "neutral", "nuance": "Concede antes de rebatir."},
+                    {"left": "With respect, I see it differently.", "right": "Desacuerdo cortés", "register": "formal", "nuance": "Marca distancia sin hostilidad."}
+                  ],
+                  "feedbackOnError": {"type": "register", "explanation": "Las tres fórmulas permiten discrepar sin convertir el debate en un ataque personal.", "ruleRef": "gp-passive-reporting"}
+                },
+                {
+                  "type": "AudioOnlyPrompt",
+                  "id": "es-en-b2-e55",
+                  "audioText": "It is said that the contract is legal, but what worries me is the message it sends to our team.",
+                  "question": "What is the speaker's main concern?",
+                  "options": ["The price of the contract", "The message the decision sends", "The client's deadline", "The legal fees"],
+                  "correctIndex": 1,
+                  "allowSlowPlayback": true,
+                  "feedbackOnError": {"type": "comprehension", "explanation": "La hablante no discute la legalidad: le preocupa el mensaje que transmite aceptar el contrato.", "ruleRef": "gp-cleft-sentences"}
+                },
+                {
+                  "type": "AudioOnlyPrompt",
+                  "id": "es-en-b2-e56",
+                  "audioText": "The report is believed to be accurate, but not only was the sample small, it also excluded two key regions. I'd verify the figures before we repeat them.",
+                  "question": "What does the speaker recommend?",
+                  "options": ["Repeating the figures immediately", "Verifying the figures first", "Ignoring the report", "Expanding the contract"],
+                  "correctIndex": 1,
+                  "allowSlowPlayback": false,
+                  "feedbackOnError": {"type": "comprehension", "explanation": "El hablante reconoce la atribución de precisión, pero pide verificar por el muestreo limitado.", "ruleRef": "gp-passive-reporting"}
+                },
+                {
+                  "type": "MultipleChoice",
+                  "id": "es-en-b2-e57",
+                  "question": "Completa: ___ matters is how we justify the decision.",
+                  "options": ["What", "It", "That"],
+                  "correctIndex": 0,
+                  "feedbackOnError": {"type": "grammar", "explanation": "La cleft sentence se construye con 'What matters is…', no con 'It matters is…'.", "ruleRef": "gp-cleft-sentences"}
+                },
+                {
+                  "type": "OrderWords",
+                  "id": "es-en-b2-e58",
+                  "tokens": ["It", "is", "said", "that", "the", "supplier", "has", "accepted", "the", "terms", "believed"],
+                  "answerTokens": ["It", "is", "said", "that", "the", "supplier", "has", "accepted", "the", "terms"],
+                  "feedbackOnError": {"type": "word_order", "explanation": "La pasiva reportativa sigue el orden 'It is said that + sujeto + verbo'.", "ruleRef": "gp-passive-reporting"}
+                },
+                {
+                  "type": "SpeakRepeat",
+                  "id": "es-en-b2-e59",
+                  "targetPhrase": "Let me play devil's advocate for a moment.",
+                  "audioText": "Let me play devil's advocate for a moment.",
+                  "feedbackOnError": {"type": "pronunciation", "explanation": "Enlaza 'play devil's' y da énfasis a 'devil's advocate', la expresión clave.", "ruleRef": "gp-cleft-sentences"}
+                },
+                {
+                  "type": "FreeSpeakingPrompt",
+                  "id": "es-en-b2-e60",
+                  "prompt": "Debate si aceptar un contrato dudoso: presenta tu postura, reconoce un matiz y responde a un contraargumento sin atacar a nadie.",
+                  "minTokens": 40,
+                  "conceptClusters": [["ethics", "principle", "values"], ["evidence", "assumption", "consequence"], ["it is said", "it is believed", "what matters"]],
+                  "grammarRuleRefs": ["gp-cleft-sentences", "gp-passive-reporting"],
+                  "timeLimitSeconds": 80,
+                  "minWpm": 70,
+                  "maxWpm": 160,
+                  "modelAnswer": "What matters here is not only the profit but the precedent we set. It is said that the contract is legal, yet I'm not convinced that legality settles the ethical question. I accept that the client may walk away, but I believe we should ask for an independent review before we decide.",
+                  "selfAssessmentCriteria": ["¿Presenté una postura ética?", "¿Reconocí un matiz?", "¿Respondí sin atacar a nadie?"],
+                  "feedbackOnError": {"type": "grammar", "explanation": "La respuesta modelo usa una cleft para fijar el criterio y una pasiva reportativa para atribuir la información.", "ruleRef": "gp-cleft-sentences"}
+                }
+              ]
+            },
+            {
+              "id": "es-en-lv-3-un-2-ls-2",
+              "title": "Matizar una crítica",
+              "cefrLevel": "B2",
+              "scenario": "Hay que señalar un fallo en el trabajo de un colega sin desmotivarlo.",
+              "canDo": "Puedo formular una crítica constructiva, atenuar el tono y proponer una mejora concreta.",
+              "grammarPoints": [
+                {"id": "gp-hedging", "label": "Hedging", "description": "I'm afraid, it seems, perhaps, would."},
+                {"id": "gp-register-shifts", "label": "Register shifts", "description": "Formal/informal, atenuación y distancia."}
+              ],
+              "vocabFrequencyBand": "3000-5000",
+              "culturalNotes": [
+                {"idiom": "beat around the bush", "note": "Evitar decir algo incómodo de forma indirecta; en feedback profesional puede sonar evasivo si se abusa.", "translation": "andar con rodeos"}
+              ],
+              "exercises": [
+                {
+                  "type": "ClozeDragDrop",
+                  "id": "es-en-b2-e61",
+                  "passage": "It {{b1}} to me that the tone {{b2}} be softened before we send the feedback.",
+                  "blanks": [
+                    {"id": "b1", "answer": "seems", "options": ["seems", "seem", "seeming"]},
+                    {"id": "b2", "answer": "could", "options": ["could", "can", "must"]}
+                  ],
+                  "feedbackOnError": {"type": "grammar", "explanation": "'It seems to me' presenta la opinión como percepción; 'could' atenúa la recomendación.", "ruleRef": "gp-hedging"}
+                },
+                {
+                  "type": "ClozeDragDrop",
+                  "id": "es-en-b2-e62",
+                  "passage": "Perhaps we {{b1}} reframe the feedback so that it {{b2}} less defensive, and I {{b3}} suggest starting with the strongest point.",
+                  "blanks": [
+                    {"id": "b1", "answer": "could", "options": ["could", "can", "will"]},
+                    {"id": "b2", "answer": "sounds", "options": ["sounds", "sound", "sounding"]},
+                    {"id": "b3", "answer": "would", "options": ["would", "will", "must"]}
+                  ],
+                  "feedbackOnError": {"type": "grammar", "explanation": "Los atenuadores 'perhaps', 'could' y 'would' reducen la presión de la crítica.", "ruleRef": "gp-hedging"}
+                },
+                {
+                  "type": "SemanticMatch",
+                  "id": "es-en-b2-e63",
+                  "instructions": "Empareja cada comentario con su estrategia de crítica.",
+                  "pairs": [
+                    {"left": "There's some room to tighten the argument.", "right": "Crítica indirecta", "register": "formal", "nuance": "Señala una mejora sin nombrar un fallo grave."},
+                    {"left": "The structure works; the evidence needs more depth.", "right": "Crítica equilibrada", "register": "neutral", "nuance": "Reconoce lo positivo antes de corregir."},
+                    {"left": "I'd push back on that assumption.", "right": "Desacuerdo atenuado", "register": "neutral", "nuance": "La expresión suaviza el rechazo."}
+                  ],
+                  "feedbackOnError": {"type": "register", "explanation": "La crítica constructiva combina reconocimiento, precisión y atenuación.", "ruleRef": "gp-hedging"}
+                },
+                {
+                  "type": "SemanticMatch",
+                  "id": "es-en-b2-e64",
+                  "instructions": "Distingue el registro de cada petición de cambio.",
+                  "pairs": [
+                    {"left": "Could you possibly revisit the wording?", "right": "Petición formal", "register": "formal", "nuance": "El condicional añade distancia."},
+                    {"left": "Give it another look, would you?", "right": "Petición informal", "register": "informal", "nuance": "El tag question resta autoridad."},
+                    {"left": "I wonder whether the tone might be softened.", "right": "Atenuación indirecta", "register": "formal", "nuance": "La duda reportada evita una orden."}
+                  ],
+                  "feedbackOnError": {"type": "register", "explanation": "El mismo cambio suena distinto según el condicional, el tag question o la duda indirecta.", "ruleRef": "gp-register-shifts"}
+                },
+                {
+                  "type": "AudioOnlyPrompt",
+                  "id": "es-en-b2-e65",
+                  "audioText": "I'm afraid the tone might come across as a little blunt, so perhaps we could reframe the opening.",
+                  "question": "What is the speaker suggesting?",
+                  "options": ["Changing the opening", "Cancelling the feedback", "Praising the tone", "Sending it unchanged"],
+                  "correctIndex": 0,
+                  "allowSlowPlayback": true,
+                  "feedbackOnError": {"type": "comprehension", "explanation": "El hablante suaviza la crítica y propone reescribir la apertura.", "ruleRef": "gp-hedging"}
+                },
+                {
+                  "type": "AudioOnlyPrompt",
+                  "id": "es-en-b2-e66",
+                  "audioText": "The analysis is strong, but I'd suggest we acknowledge the counterargument before we present the recommendation. That way, the proposal will seem more balanced and less defensive.",
+                  "question": "Why does the speaker mention the counterargument?",
+                  "options": ["To make the proposal more balanced", "To delay the meeting", "To reject the analysis", "To praise the wording"],
+                  "correctIndex": 0,
+                  "allowSlowPlayback": false,
+                  "feedbackOnError": {"type": "comprehension", "explanation": "Reconocer la objeción busca equilibrar el documento, no retrasar la reunión.", "ruleRef": "gp-register-shifts"}
+                },
+                {
+                  "type": "MultipleChoice",
+                  "id": "es-en-b2-e67",
+                  "question": "Completa: It ___ that the wording could be softer.",
+                  "options": ["seems", "seem", "seeming"],
+                  "correctIndex": 0,
+                  "feedbackOnError": {"type": "grammar", "explanation": "El sujeto anticipado 'It' exige la tercera persona singular 'seems'.", "ruleRef": "gp-hedging"}
+                },
+                {
+                  "type": "OrderWords",
+                  "id": "es-en-b2-e68",
+                  "tokens": ["Perhaps", "we", "could", "reframe", "the", "feedback", "more", "carefully", "careful"],
+                  "answerTokens": ["Perhaps", "we", "could", "reframe", "the", "feedback", "more", "carefully"],
+                  "feedbackOnError": {"type": "word_order", "explanation": "La propuesta atenuada sigue el orden 'Perhaps we could + infinitivo + adverbio'.", "ruleRef": "gp-hedging"}
+                },
+                {
+                  "type": "SpeakRepeat",
+                  "id": "es-en-b2-e69",
+                  "targetPhrase": "I'm afraid the tone might come across as a little blunt.",
+                  "audioText": "I'm afraid the tone might come across as a little blunt.",
+                  "feedbackOnError": {"type": "pronunciation", "explanation": "Enlaza 'come across as' y baja la entonación en 'a little blunt' para suavizar.", "ruleRef": "gp-hedging"}
+                },
+                {
+                  "type": "FreeSpeakingPrompt",
+                  "id": "es-en-b2-e70",
+                  "prompt": "Da feedback a un colega sobre una propuesta: reconoce un acierto, señala un fallo sin desmotivar y sugiere una mejora concreta.",
+                  "minTokens": 38,
+                  "conceptClusters": [["feedback", "tone", "wording"], ["strength", "improve", "reframe"], ["I'm afraid", "perhaps", "might"]],
+                  "grammarRuleRefs": ["gp-hedging", "gp-register-shifts"],
+                  "timeLimitSeconds": 75,
+                  "minWpm": 70,
+                  "maxWpm": 160,
+                  "modelAnswer": "I'm afraid the opening might come across as a little blunt. The structure works well, and the recommendation is clear; perhaps we could reframe the first paragraph so that the evidence feels less defensive. I'd suggest starting with the strongest point and then acknowledging the counterargument.",
+                  "selfAssessmentCriteria": ["¿Reconocí un acierto?", "¿Atenué la crítica?", "¿Propuse una mejora concreta?"],
+                  "feedbackOnError": {"type": "grammar", "explanation": "La respuesta modelo equilibra elogio y crítica mediante atenuadores y un cambio de registro.", "ruleRef": "gp-hedging"}
+                }
+              ]
+            },
+            {
+              "id": "es-en-lv-3-un-2-ls-3",
+              "title": "Ironía y registro",
+              "cefrLevel": "B2",
+              "scenario": "Un comentario irónico se interpretó literalmente en una reunión formal.",
+              "canDo": "Puedo reconocer ironía, ajustar el registro y explicar un malentendido pragmático.",
+              "grammarPoints": [
+                {"id": "gp-register-shifts", "label": "Register shifts", "description": "Formal/informal, atenuación y distancia."},
+                {"id": "gp-discourse-markers", "label": "Discourse markers", "description": "However, that said, in other words, all in all."}
+              ],
+              "vocabFrequencyBand": "3000-5000",
+              "culturalNotes": [
+                {"idiom": "read the room", "note": "Interpretar el ambiente antes de hablar; en inglés profesional evita comentarios fuera de lugar.", "translation": "captar el ambiente"}
+              ],
+              "exercises": [
+                {
+                  "type": "ClozeDragDrop",
+                  "id": "es-en-b2-e71",
+                  "passage": "{{b1}} the comment was meant ironically, the literal reading {{b2}} have caused offence.",
+                  "blanks": [
+                    {"id": "b1", "answer": "Although", "options": ["Although", "Despite", "However"]},
+                    {"id": "b2", "answer": "may", "options": ["may", "can", "must"]}
+                  ],
+                  "feedbackOnError": {"type": "grammar", "explanation": "'Although' introduce una concesión y 'may have caused' especula sobre el efecto.", "ruleRef": "gp-discourse-markers"}
+                },
+                {
+                  "type": "ClozeDragDrop",
+                  "id": "es-en-b2-e72",
+                  "passage": "That said, {{b1}} we should clarify the register; {{b2}}, not every joke lands in a formal meeting.",
+                  "blanks": [
+                    {"id": "b1", "answer": "perhaps", "options": ["perhaps", "maybe not", "certainly"]},
+                    {"id": "b2", "answer": "in other words", "options": ["in other words", "on the contrary", "likewise"]}
+                  ],
+                  "feedbackOnError": {"type": "grammar", "explanation": "'That said' matiza lo anterior; 'in other words' reformula la idea con claridad.", "ruleRef": "gp-discourse-markers"}
+                },
+                {
+                  "type": "SemanticMatch",
+                  "id": "es-en-b2-e73",
+                  "instructions": "Empareja cada comentario con su efecto pragmático.",
+                  "pairs": [
+                    {"left": "Well, that went smoothly.", "right": "Ironía", "register": "informal", "nuance": "Dice lo contrario de lo que el contexto muestra."},
+                    {"left": "With all due respect...", "right": "Desacuerdo formal", "register": "formal", "nuance": "Anuncia una objeción con distancia."},
+                    {"left": "No offence, but...", "right": "Crítica informal", "register": "informal", "nuance": "Aviso que no siempre evita la ofensa."}
+                  ],
+                  "feedbackOnError": {"type": "register", "explanation": "La ironía depende del contexto; las otras fórmulas marcan distancia o informalidad.", "ruleRef": "gp-register-shifts"}
+                },
+                {
+                  "type": "SemanticMatch",
+                  "id": "es-en-b2-e74",
+                  "instructions": "Distingue la función de cada marcador del discurso.",
+                  "pairs": [
+                    {"left": "To put it another way...", "right": "Reformulación", "register": "formal", "nuance": "Aclara una idea con otras palabras."},
+                    {"left": "That said...", "right": "Concesión", "register": "neutral", "nuance": "Acepta parte de lo anterior antes de matizar."},
+                    {"left": "Ironically...", "right": "Contraste inesperado", "register": "literary", "nuance": "Señala una contradicción significativa."}
+                  ],
+                  "feedbackOnError": {"type": "register", "explanation": "Los marcadores ordenan la argumentación y hacen explícita la relación entre ideas.", "ruleRef": "gp-discourse-markers"}
+                },
+                {
+                  "type": "AudioOnlyPrompt",
+                  "id": "es-en-b2-e75",
+                  "audioText": "Well, that went smoothly, said the manager as the projector caught fire.",
+                  "question": "What does the speaker probably mean?",
+                  "options": ["The meeting went very well", "The meeting was chaotic", "The meeting was cancelled", "The speaker missed the meeting"],
+                  "correctIndex": 1,
+                  "allowSlowPlayback": true,
+                  "feedbackOnError": {"type": "comprehension", "explanation": "La contradicción entre 'smoothly' y el proyector incendiándose marca ironía.", "ruleRef": "gp-register-shifts"}
+                },
+                {
+                  "type": "AudioOnlyPrompt",
+                  "id": "es-en-b2-e76",
+                  "audioText": "I wasn't sure whether he was being sarcastic, so I read the room before responding. That said, the comment was probably an understatement rather than a joke.",
+                  "question": "What did the speaker do before responding?",
+                  "options": ["Read the room", "Left the meeting", "Laughed loudly", "Changed the topic"],
+                  "correctIndex": 0,
+                  "allowSlowPlayback": false,
+                  "feedbackOnError": {"type": "comprehension", "explanation": "El hablante observó el ambiente antes de contestar y luego matizó con 'that said'.", "ruleRef": "gp-discourse-markers"}
+                },
+                {
+                  "type": "MultipleChoice",
+                  "id": "es-en-b2-e77",
+                  "question": "Completa: ___, the joke was lost on the audience.",
+                  "options": ["That said", "In other words", "Likewise"],
+                  "correctIndex": 0,
+                  "feedbackOnError": {"type": "grammar", "explanation": "'That said' introduce una concesión o matiz tras una idea previa.", "ruleRef": "gp-discourse-markers"}
+                },
+                {
+                  "type": "ListenType",
+                  "id": "es-en-b2-e78",
+                  "transcription": "The irony was lost on the audience because the tone was too literal",
+                  "audioText": "The irony was lost on the audience because the tone was too literal",
+                  "feedbackOnError": {"type": "spelling", "explanation": "Escribe 'irony' con 'y' final y 'literal' sin doble 'l' en inglés.", "ruleRef": "gp-register-shifts"}
+                },
+                {
+                  "type": "SpeakRepeat",
+                  "id": "es-en-b2-e79",
+                  "targetPhrase": "I think he was being ironic; the context made it clear.",
+                  "audioText": "I think he was being ironic; the context made it clear.",
+                  "feedbackOnError": {"type": "pronunciation", "explanation": "Marca el contraste con una pausa breve antes de 'the context' y baja la entonación final.", "ruleRef": "gp-register-shifts"}
+                },
+                {
+                  "type": "FreeSpeakingPrompt",
+                  "id": "es-en-b2-e80",
+                  "prompt": "Explica un malentendido por ironía en una reunión: describe el contexto, aclara la intención y ajusta el registro.",
+                  "minTokens": 40,
+                  "conceptClusters": [["irony", "sarcasm", "literal"], ["context", "tone", "implication"], ["in other words", "that said", "to clarify"]],
+                  "grammarRuleRefs": ["gp-register-shifts", "gp-discourse-markers"],
+                  "timeLimitSeconds": 80,
+                  "minWpm": 70,
+                  "maxWpm": 160,
+                  "modelAnswer": "In the meeting, I said that the schedule was ambitious, but I meant it ironically because we had already missed two deadlines. That said, I should have read the room: the new colleague took my comment literally. In other words, the tone was too subtle for a formal setting, so I clarified that I was criticising the plan, not the team.",
+                  "selfAssessmentCriteria": ["¿Describí el contexto?", "¿Aclaré la intención irónica?", "¿Ajusté el registro?"],
+                  "feedbackOnError": {"type": "register", "explanation": "La respuesta modelo explica la ironía, reconoce el efecto literal y reformula con marcadores.", "ruleRef": "gp-register-shifts"}
+                }
+              ]
+            },
+            {
+              "id": "es-en-lv-3-un-2-ls-4",
+              "title": "Rebatir con evidencia",
+              "cefrLevel": "B2",
+              "scenario": "Alguien defiende una afirmación con datos incompletos y hay que responder con rigor.",
+              "canDo": "Puedo evaluar una fuente, señalar sesgos y rebatir con datos sin sonar dogmático.",
+              "grammarPoints": [
+                {"id": "gp-passive-reporting", "label": "Passive reporting structures", "description": "It is said that…, He is believed to…"},
+                {"id": "gp-inversion-negative-adverbials", "label": "Inversion with negative adverbials", "description": "Not only…, Under no circumstances…, Rarely…"}
+              ],
+              "vocabFrequencyBand": "3000-5000",
+              "culturalNotes": [
+                {"idiom": "take it with a grain of salt", "note": "Recibir una información con escepticismo razonable; no equivale a rechazarla por completo.", "translation": "tomarlo con cautela"}
+              ],
+              "exercises": [
+                {
+                  "type": "ClozeDragDrop",
+                  "id": "es-en-b2-e81",
+                  "passage": "Not only {{b1}} the data incomplete, but the sample {{b2}} also too small.",
+                  "blanks": [
+                    {"id": "b1", "answer": "were", "options": ["were", "was", "are"]},
+                    {"id": "b2", "answer": "was", "options": ["was", "were", "is"]}
+                  ],
+                  "feedbackOnError": {"type": "grammar", "explanation": "Tras 'Not only' se invierte el auxiliar: 'Not only were the data…'; 'sample' es singular.", "ruleRef": "gp-inversion-negative-adverbials"}
+                },
+                {
+                  "type": "ClozeDragDrop",
+                  "id": "es-en-b2-e82",
+                  "passage": "It {{b1}} that the figure was exaggerated; under no circumstances {{b2}} we present it as fact before {{b3}} it.",
+                  "blanks": [
+                    {"id": "b1", "answer": "is claimed", "options": ["is claimed", "claims", "claimed"]},
+                    {"id": "b2", "answer": "should", "options": ["should", "we should", "do"]},
+                    {"id": "b3", "answer": "verifying", "options": ["verifying", "verify", "verified"]}
+                  ],
+                  "feedbackOnError": {"type": "grammar", "explanation": "La pasiva reportativa atribuye la afirmación y la inversión negativa refuerza la prohibición.", "ruleRef": "gp-passive-reporting"}
+                },
+                {
+                  "type": "SemanticMatch",
+                  "id": "es-en-b2-e83",
+                  "instructions": "Clasifica cada valoración de la evidencia.",
+                  "pairs": [
+                    {"left": "The claim is based on a single source.", "right": "Evidencia débil", "register": "neutral", "nuance": "Un solo origen no permite generalizar."},
+                    {"left": "The sample is representative.", "right": "Evidencia sólida", "register": "formal", "nuance": "El grupo refleja la población estudiada."},
+                    {"left": "The statistic is misleading.", "right": "Dato engañoso", "register": "formal", "nuance": "La cifra existe, pero induce a error."}
+                  ],
+                  "feedbackOnError": {"type": "vocabulary", "explanation": "Distinguir fuente, muestra y presentación evita confundir un dato con una conclusión.", "ruleRef": "gp-passive-reporting"}
+                },
+                {
+                  "type": "SemanticMatch",
+                  "id": "es-en-b2-e84",
+                  "instructions": "Distingue el tono de cada réplica.",
+                  "pairs": [
+                    {"left": "That may be true, but the evidence is incomplete.", "right": "Réplica cautelosa", "register": "neutral", "nuance": "Concede sin aceptar la conclusión."},
+                    {"left": "Rarely have I seen such a biased sample.", "right": "Crítica enfática", "register": "formal", "nuance": "La inversión intensifica el reproche."},
+                    {"left": "I'd take that figure with a grain of salt.", "right": "Escepticismo moderado", "register": "informal", "nuance": "Duda sin rechazar por completo."}
+                  ],
+                  "feedbackOnError": {"type": "register", "explanation": "La inversión y el modismo cambian la intensidad del escepticismo.", "ruleRef": "gp-inversion-negative-adverbials"}
+                },
+                {
+                  "type": "AudioOnlyPrompt",
+                  "id": "es-en-b2-e85",
+                  "audioText": "The report is said to be independent, but its funding comes from the company it evaluates.",
+                  "question": "What is the problem?",
+                  "options": ["The report is too short", "The report may not be independent", "The company rejected the report", "The funding was not disclosed"],
+                  "correctIndex": 1,
+                  "allowSlowPlayback": true,
+                  "feedbackOnError": {"type": "comprehension", "explanation": "El conflicto de interés cuestiona la independencia que se le atribuye al informe.", "ruleRef": "gp-passive-reporting"}
+                },
+                {
+                  "type": "AudioOnlyPrompt",
+                  "id": "es-en-b2-e86",
+                  "audioText": "Not only was the statistic taken out of context, but the sample excluded half the participants. I'd suggest we verify the source before repeating the claim.",
+                  "question": "What should they do before repeating the claim?",
+                  "options": ["Verify the source", "Publish the statistic", "Expand the conclusion", "Ignore the sample"],
+                  "correctIndex": 0,
+                  "allowSlowPlayback": false,
+                  "feedbackOnError": {"type": "comprehension", "explanation": "La doble objeción lleva a la recomendación de verificar la fuente antes de difundir la cifra.", "ruleRef": "gp-inversion-negative-adverbials"}
+                },
+                {
+                  "type": "MultipleChoice",
+                  "id": "es-en-b2-e87",
+                  "question": "Completa: Under no circumstances ___ we ignore the source of the data.",
+                  "options": ["should", "we should", "do"],
+                  "correctIndex": 0,
+                  "feedbackOnError": {"type": "grammar", "explanation": "La inversión negativa coloca el modal antes del sujeto: 'Under no circumstances should we…'.", "ruleRef": "gp-inversion-negative-adverbials"}
+                },
+                {
+                  "type": "ListenType",
+                  "id": "es-en-b2-e88",
+                  "transcription": "Not only was the sample small but the source was also biased",
+                  "audioText": "Not only was the sample small but the source was also biased",
+                  "feedbackOnError": {"type": "spelling", "explanation": "Escribe 'biased' con 's' intermedia y recuerda la inversión 'was the sample'.", "ruleRef": "gp-inversion-negative-adverbials"}
+                },
+                {
+                  "type": "SpeakRepeat",
+                  "id": "es-en-b2-e89",
+                  "targetPhrase": "I'd take that figure with a grain of salt.",
+                  "audioText": "I'd take that figure with a grain of salt.",
+                  "feedbackOnError": {"type": "pronunciation", "explanation": "Enlaza 'take that figure' y pronuncia con claridad 'grain of salt'.", "ruleRef": "gp-passive-reporting"}
+                },
+                {
+                  "type": "FreeSpeakingPrompt",
+                  "id": "es-en-b2-e90",
+                  "prompt": "Rebate una afirmación basada en datos incompletos: evalúa la fuente, señala el sesgo y propone cómo verificarla.",
+                  "minTokens": 40,
+                  "conceptClusters": [["claim", "source", "evidence"], ["bias", "misleading", "sample"], ["not only", "under no circumstances", "it is said"]],
+                  "grammarRuleRefs": ["gp-passive-reporting", "gp-inversion-negative-adverbials"],
+                  "timeLimitSeconds": 80,
+                  "minWpm": 70,
+                  "maxWpm": 160,
+                  "modelAnswer": "It is said that the survey proves the policy works, but I'd take that claim with a grain of salt. Not only was the sample self-selected, but the questions were misleading. Under no circumstances should we present the result as representative until an independent source verifies the methodology and the raw data.",
+                  "selfAssessmentCriteria": ["¿Evalué la fuente?", "¿Señalé un sesgo concreto?", "¿Propuse una verificación?"],
+                  "feedbackOnError": {"type": "grammar", "explanation": "La respuesta modelo combina pasiva reportativa, inversión negativa y escepticismo moderado.", "ruleRef": "gp-passive-reporting"}
+                }
+              ]
+            },
+            {
+              "id": "es-en-lv-3-un-2-ls-5",
+              "title": "Llegar a un acuerdo",
+              "cefrLevel": "B2",
+              "scenario": "Dos posturas enfrentadas deben converger en una propuesta común para presentar al equipo.",
+              "canDo": "Puedo mediar entre posturas, reformular concesiones y redactar una conclusión compartida.",
+              "grammarPoints": [
+                {"id": "gp-subjunctive-mood", "label": "Subjunctive mood", "description": "I suggest that he be…, It is essential that…"},
+                {"id": "gp-hedging", "label": "Hedging", "description": "I'm afraid, it seems, perhaps, would."}
+              ],
+              "vocabFrequencyBand": "3000-5000",
+              "culturalNotes": [
+                {"idiom": "meet halfway", "note": "Ceder parcialmente para alcanzar un acuerdo; implica movimiento de ambas partes, no solo de una.", "translation": "llegar a un punto medio"}
+              ],
+              "exercises": [
+                {
+                  "type": "ClozeDragDrop",
+                  "id": "es-en-b2-e91",
+                  "passage": "It is essential that every voice {{b1}} heard before we {{b2}} a final decision.",
+                  "blanks": [
+                    {"id": "b1", "answer": "be", "options": ["be", "is", "was"]},
+                    {"id": "b2", "answer": "make", "options": ["make", "made", "making"]}
+                  ],
+                  "feedbackOnError": {"type": "grammar", "explanation": "Tras 'It is essential that' se usa el subjuntivo 'be'; el verbo principal va en presente tras 'before we'.", "ruleRef": "gp-subjunctive-mood"}
+                },
+                {
+                  "type": "ClozeDragDrop",
+                  "id": "es-en-b2-e92",
+                  "passage": "I suggest that the team {{b1}} the proposal, and it is vital that we {{b2}} the objections before {{b3}} the agreement.",
+                  "blanks": [
+                    {"id": "b1", "answer": "review", "options": ["review", "reviews", "reviewed"]},
+                    {"id": "b2", "answer": "address", "options": ["address", "addresses", "addressed"]},
+                    {"id": "b3", "answer": "signing", "options": ["signing", "sign", "signed"]}
+                  ],
+                  "feedbackOnError": {"type": "grammar", "explanation": "El subjuntivo mantiene la forma base tras 'suggest that' e 'it is vital that'; tras preposición se usa gerundio.", "ruleRef": "gp-subjunctive-mood"}
+                },
+                {
+                  "type": "SemanticMatch",
+                  "id": "es-en-b2-e93",
+                  "instructions": "Empareja cada intervención con su función en la mediación.",
+                  "pairs": [
+                    {"left": "It is important that both sides feel heard.", "right": "Mediación", "register": "formal", "nuance": "Prioriza el proceso sobre el resultado."},
+                    {"left": "I'm afraid we're talking past each other.", "right": "Desacuerdo de comunicación", "register": "neutral", "nuance": "El problema es la escucha, no la postura."},
+                    {"left": "Let's meet halfway.", "right": "Concesión mutua", "register": "informal", "nuance": "Propone un intercambio equilibrado."}
+                  ],
+                  "feedbackOnError": {"type": "register", "explanation": "La mediación nombra el problema de comunicación y propone una concesión recíproca.", "ruleRef": "gp-subjunctive-mood"}
+                },
+                {
+                  "type": "SemanticMatch",
+                  "id": "es-en-b2-e94",
+                  "instructions": "Distingue el grado de compromiso de cada propuesta.",
+                  "pairs": [
+                    {"left": "Would it be possible to revisit the timeline?", "right": "Propuesta formal", "register": "formal", "nuance": "El condicional evita una imposición."},
+                    {"left": "Perhaps we could settle this informally.", "right": "Propuesta atenuada", "register": "neutral", "nuance": "Abre una vía sin compromiso."},
+                    {"left": "I'd rather we didn't rush the outcome.", "right": "Preferencia prudente", "register": "formal", "nuance": "Expresa cautela con cortesía."}
+                  ],
+                  "feedbackOnError": {"type": "register", "explanation": "Los atenuadores permiten proponer sin cerrar la negociación antes de tiempo.", "ruleRef": "gp-hedging"}
+                },
+                {
+                  "type": "AudioOnlyPrompt",
+                  "id": "es-en-b2-e95",
+                  "audioText": "I suggest that we address the objection now, before it becomes a reason to delay the agreement.",
+                  "question": "What does the speaker want to do?",
+                  "options": ["Address the objection now", "Delay the agreement", "Ignore the objection", "Cancel the meeting"],
+                  "correctIndex": 0,
+                  "allowSlowPlayback": true,
+                  "feedbackOnError": {"type": "comprehension", "explanation": "La propuesta es resolver la objeción ahora para que no retrase el acuerdo.", "ruleRef": "gp-subjunctive-mood"}
+                },
+                {
+                  "type": "AudioOnlyPrompt",
+                  "id": "es-en-b2-e96",
+                  "audioText": "It is essential that the team review the proposal, but I'm afraid we shouldn't ask them to decide today. Perhaps we could facilitate a shorter session tomorrow and settle the remaining points then.",
+                  "question": "What does the speaker propose?",
+                  "options": ["A shorter session tomorrow", "A final decision today", "A new proposal", "A longer meeting"],
+                  "correctIndex": 0,
+                  "allowSlowPlayback": false,
+                  "feedbackOnError": {"type": "comprehension", "explanation": "El hablante pide revisar la propuesta y propone una sesión más corta al día siguiente.", "ruleRef": "gp-hedging"}
+                },
+                {
+                  "type": "MultipleChoice",
+                  "id": "es-en-b2-e97",
+                  "question": "Completa: It is vital that she ___ the meeting before we sign.",
+                  "options": ["attend", "attends", "attended"],
+                  "correctIndex": 0,
+                  "feedbackOnError": {"type": "grammar", "explanation": "El subjuntivo tras 'It is vital that' usa la forma base 'attend'.", "ruleRef": "gp-subjunctive-mood"}
+                },
+                {
+                  "type": "OrderWords",
+                  "id": "es-en-b2-e98",
+                  "tokens": ["I", "suggest", "that", "we", "meet", "halfway", "on", "the", "remaining", "points", "met"],
+                  "answerTokens": ["I", "suggest", "that", "we", "meet", "halfway", "on", "the", "remaining", "points"],
+                  "feedbackOnError": {"type": "word_order", "explanation": "Tras 'I suggest that' se usa el subjuntivo 'we meet', no 'we met'.", "ruleRef": "gp-subjunctive-mood"}
+                },
+                {
+                  "type": "SpeakRepeat",
+                  "id": "es-en-b2-e99",
+                  "targetPhrase": "Let's meet halfway on the remaining points.",
+                  "audioText": "Let's meet halfway on the remaining points.",
+                  "feedbackOnError": {"type": "pronunciation", "explanation": "Enlaza 'meet halfway' y baja la entonación para cerrar la propuesta.", "ruleRef": "gp-hedging"}
+                },
+                {
+                  "type": "FreeSpeakingPrompt",
+                  "id": "es-en-b2-e100",
+                  "prompt": "Media entre dos posturas: reformula una objeción, propón una concesión mutua y cierra con una conclusión compartida.",
+                  "minTokens": 40,
+                  "conceptClusters": [["common ground", "proposal", "outcome"], ["objection", "concession", "settle"], ["I suggest", "perhaps", "it is essential"]],
+                  "grammarRuleRefs": ["gp-subjunctive-mood", "gp-hedging"],
+                  "timeLimitSeconds": 80,
+                  "minWpm": 70,
+                  "maxWpm": 160,
+                  "modelAnswer": "It is essential that both teams feel their objection has been heard. I suggest that we meet halfway: the product team accepts the shorter timeline, and finance provides an additional reviewer. Perhaps we could settle the remaining points in a short session tomorrow so that the final proposal reflects a shared outcome.",
+                  "selfAssessmentCriteria": ["¿Reformulé una objeción?", "¿Propuse una concesión mutua?", "¿Cerré con una conclusión compartida?"],
+                  "feedbackOnError": {"type": "grammar", "explanation": "La respuesta modelo usa el subjuntivo para la propuesta y atenuadores para mantener la negociación abierta.", "ruleRef": "gp-subjunctive-mood"}
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "es-en-lv-3-un-3",
+          "title": "Narrativa y matices",
+          "lessons": [
+            {
+              "id": "es-en-lv-3-un-3-ls-1",
+              "title": "El día que todo cambió",
+              "cefrLevel": "B2",
+              "scenario": "Contar un giro inesperado en una carrera profesional y lo que se aprendió después.",
+              "canDo": "Puedo narrar un cambio vital con detalle, ordenar los hechos y reflexionar sobre sus efectos.",
+              "grammarPoints": [
+                {"id": "gp-narrative-tenses", "label": "Narrative tenses", "description": "Pasado simple, continuo y perfecto en relatos."},
+                {"id": "gp-mixed-conditionals", "label": "Mixed conditionals", "description": "Condición presente con consecuencia pasada o futura."}
+              ],
+              "vocabFrequencyBand": "3000-5000",
+              "culturalNotes": [
+                {"idiom": "out of the blue", "note": "De forma totalmente inesperada; se usa para introducir un giro que no se anticipaba.", "translation": "de la nada"}
+              ],
+              "exercises": [
+                {
+                  "type": "ClozeDragDrop",
+                  "id": "es-en-b2-e101",
+                  "passage": "I {{b1}} in the office when my manager called; she told me that the project {{b2}} cancelled.",
+                  "blanks": [
+                    {"id": "b1", "answer": "was working", "options": ["was working", "worked", "had worked"]},
+                    {"id": "b2", "answer": "had been", "options": ["had been", "has been", "was being"]}
+                  ],
+                  "feedbackOnError": {"type": "grammar", "explanation": "El pasado continuo sitúa la acción interrumpida; el pasado perfecto reporta una decisión anterior.", "ruleRef": "gp-narrative-tenses"}
+                },
+                {
+                  "type": "ClozeDragDrop",
+                  "id": "es-en-b2-e102",
+                  "passage": "If I {{b1}} the opportunity then, I {{b2}} be in this role today, and I sometimes wonder what {{b3}} have happened otherwise.",
+                  "blanks": [
+                    {"id": "b1", "answer": "hadn't taken", "options": ["hadn't taken", "didn't take", "wouldn't take"]},
+                    {"id": "b2", "answer": "wouldn't", "options": ["wouldn't", "won't", "hadn't"]},
+                    {"id": "b3", "answer": "could", "options": ["could", "can", "must"]}
+                  ],
+                  "feedbackOnError": {"type": "grammar", "explanation": "La mixed conditional conecta una decisión pasada con una consecuencia presente.", "ruleRef": "gp-mixed-conditionals"}
+                },
+                {
+                  "type": "SemanticMatch",
+                  "id": "es-en-b2-e103",
+                  "instructions": "Empareja cada fragmento con su función narrativa.",
+                  "pairs": [
+                    {"left": "Out of the blue, she offered me the role.", "right": "Giro inesperado", "register": "neutral", "nuance": "Rompe la expectativa de la historia."},
+                    {"left": "Looking back, I realise how lucky I was.", "right": "Reflexión con retrospectiva", "register": "formal", "nuance": "Interpreta los hechos desde el presente."},
+                    {"left": "Everything happened so fast that I barely slept.", "right": "Secuencia acelerada", "register": "informal", "nuance": "Prioriza la sensación de velocidad sobre el detalle."}
+                  ],
+                  "feedbackOnError": {"type": "register", "explanation": "Los marcadores narrativos orientan al oyente sobre el giro, la reflexión y el ritmo.", "ruleRef": "gp-narrative-tenses"}
+                },
+                {
+                  "type": "SemanticMatch",
+                  "id": "es-en-b2-e104",
+                  "instructions": "Distingue la relación temporal de cada estructura.",
+                  "pairs": [
+                    {"left": "I had been working there for years when it happened.", "right": "Contexto pasado anterior", "register": "neutral", "nuance": "Prepara el escenario antes del hecho principal."},
+                    {"left": "I was about to leave when the phone rang.", "right": "Acción interrumpida", "register": "neutral", "nuance": "El pasado continuo marca la interrupción."},
+                    {"left": "By the time I arrived, the decision had been made.", "right": "Anterioridad completada", "register": "formal", "nuance": "El pasado perfecto sitúa el hecho antes de la llegada."}
+                  ],
+                  "feedbackOnError": {"type": "grammar", "explanation": "Cada tiempo verbal ordena los hechos de forma distinta dentro del relato.", "ruleRef": "gp-narrative-tenses"}
+                },
+                {
+                  "type": "AudioOnlyPrompt",
+                  "id": "es-en-b2-e105",
+                  "audioText": "Out of the blue, my manager offered me a role abroad. I hadn't even applied for it.",
+                  "question": "What happened unexpectedly?",
+                  "options": ["The speaker applied for a role", "The speaker was offered a role abroad", "The manager cancelled a project", "The speaker refused a promotion"],
+                  "correctIndex": 1,
+                  "allowSlowPlayback": true,
+                  "feedbackOnError": {"type": "comprehension", "explanation": "El giro es la oferta inesperada de un puesto en el extranjero.", "ruleRef": "gp-narrative-tenses"}
+                },
+                {
+                  "type": "AudioOnlyPrompt",
+                  "id": "es-en-b2-e106",
+                  "audioText": "I was preparing to leave when the call came. If I had ignored it, I wouldn't be leading this team today.",
+                  "question": "What does the speaker imply?",
+                  "options": ["The call changed the speaker's career", "The speaker missed the call", "The team was already successful", "The speaker regrets answering"],
+                  "correctIndex": 0,
+                  "allowSlowPlayback": false,
+                  "feedbackOnError": {"type": "comprehension", "explanation": "La mixed conditional muestra que responder la llamada cambió su situación actual.", "ruleRef": "gp-mixed-conditionals"}
+                },
+                {
+                  "type": "MultipleChoice",
+                  "id": "es-en-b2-e107",
+                  "question": "Completa: If I ___ the offer, I wouldn't be here now.",
+                  "options": ["had accepted", "accepted", "would accept"],
+                  "correctIndex": 0,
+                  "feedbackOnError": {"type": "grammar", "explanation": "La consecuencia presente exige una condición pasada: 'If I had accepted…'.", "ruleRef": "gp-mixed-conditionals"}
+                },
+                {
+                  "type": "OrderWords",
+                  "id": "es-en-b2-e108",
+                  "tokens": ["The", "day", "everything", "changed", "came", "out", "of", "the", "blue", "suddenly"],
+                  "answerTokens": ["The", "day", "everything", "changed", "came", "out", "of", "the", "blue"],
+                  "feedbackOnError": {"type": "word_order", "explanation": "El modismo 'out of the blue' se coloca al final del enunciado.", "ruleRef": "gp-narrative-tenses"}
+                },
+                {
+                  "type": "SpeakRepeat",
+                  "id": "es-en-b2-e109",
+                  "targetPhrase": "Out of the blue, everything changed.",
+                  "audioText": "Out of the blue, everything changed.",
+                  "feedbackOnError": {"type": "pronunciation", "explanation": "Enlaza 'out of' y da énfasis a 'blue' para marcar el giro.", "ruleRef": "gp-narrative-tenses"}
+                },
+                {
+                  "type": "FreeSpeakingPrompt",
+                  "id": "es-en-b2-e110",
+                  "prompt": "Narra un giro inesperado en tu carrera: ordena los hechos, explica qué cambió y reflexiona con retrospectiva.",
+                  "minTokens": 42,
+                  "conceptClusters": [["turning point", "out of the blue", "sudden"], ["realise", "regret", "hindsight"], ["if", "would", "had"]],
+                  "grammarRuleRefs": ["gp-narrative-tenses", "gp-mixed-conditionals"],
+                  "timeLimitSeconds": 85,
+                  "minWpm": 70,
+                  "maxWpm": 160,
+                  "modelAnswer": "I was working on a project I disliked when a former colleague called out of the blue. She offered me a role I hadn't applied for. Looking back, that call was the turning point. If I hadn't accepted it, I wouldn't have met the team I now lead, although I sometimes regret not negotiating the salary.",
+                  "selfAssessmentCriteria": ["¿Ordené los hechos?", "¿Expliqué el giro?", "¿Reflexioné con retrospectiva?"],
+                  "feedbackOnError": {"type": "grammar", "explanation": "La respuesta modelo combina pasados narrativos con una mixed conditional de retrospectiva.", "ruleRef": "gp-mixed-conditionals"}
+                }
+              ]
+            },
+            {
+              "id": "es-en-lv-3-un-3-ls-2",
+              "title": "Una decisión que pesa",
+              "cefrLevel": "B2",
+              "scenario": "Hay que elegir entre dos ofertas laborales con costes personales distintos.",
+              "canDo": "Puedo sopesar opciones, expresar arrepentimiento hipotético y justificar una decisión difícil.",
+              "grammarPoints": [
+                {"id": "gp-third-conditional", "label": "Third conditional", "description": "Hipótesis pasadas no realizadas."},
+                {"id": "gp-wish-if-only", "label": "Wish / if only", "description": "Deseos y arrepentimientos."}
+              ],
+              "vocabFrequencyBand": "3000-5000",
+              "culturalNotes": [
+                {"idiom": "bite the bullet", "note": "Afrontar una decisión difícil y desagradable; sugiere aceptar un coste a cambio de avanzar.", "translation": "armarse de valor"}
+              ],
+              "exercises": [
+                {
+                  "type": "ClozeDragDrop",
+                  "id": "es-en-b2-e111",
+                  "passage": "If I {{b1}} more time, I {{b2}} have taken the job in Berlin.",
+                  "blanks": [
+                    {"id": "b1", "answer": "had had", "options": ["had had", "have had", "would have"]},
+                    {"id": "b2", "answer": "would", "options": ["would", "will", "should"]}
+                  ],
+                  "feedbackOnError": {"type": "grammar", "explanation": "La third conditional usa 'If I had had… I would have taken…'.", "ruleRef": "gp-third-conditional"}
+                },
+                {
+                  "type": "ClozeDragDrop",
+                  "id": "es-en-b2-e112",
+                  "passage": "I wish I {{b1}} more carefully before accepting; if only I {{b2}} asked about the travel, and I {{b3}} not have underestimated the cost.",
+                  "blanks": [
+                    {"id": "b1", "answer": "had thought", "options": ["had thought", "thought", "would think"]},
+                    {"id": "b2", "answer": "had", "options": ["had", "have", "would"]},
+                    {"id": "b3", "answer": "might", "options": ["might", "must", "can"]}
+                  ],
+                  "feedbackOnError": {"type": "grammar", "explanation": "'I wish' y 'if only' expresan arrepentimiento con pasado perfecto; 'might not have' especula sobre una consecuencia.", "ruleRef": "gp-wish-if-only"}
+                },
+                {
+                  "type": "SemanticMatch",
+                  "id": "es-en-b2-e113",
+                  "instructions": "Empareja cada expresión con su función en la decisión.",
+                  "pairs": [
+                    {"left": "I'm having second thoughts.", "right": "Duda posterior", "register": "neutral", "nuance": "Reabre una decisión que parecía tomada."},
+                    {"left": "We need to weigh up the risks.", "right": "Evaluación de opciones", "register": "formal", "nuance": "Compara costes y beneficios antes de actuar."},
+                    {"left": "I've decided to bite the bullet.", "right": "Decisión valiente", "register": "informal", "nuance": "Acepta un coste para avanzar."}
+                  ],
+                  "feedbackOnError": {"type": "vocabulary", "explanation": "Las tres expresiones describen momentos distintos del proceso de decisión.", "ruleRef": "gp-wish-if-only"}
+                },
+                {
+                  "type": "SemanticMatch",
+                  "id": "es-en-b2-e114",
+                  "instructions": "Distingue el deseo del arrepentimiento hipotético.",
+                  "pairs": [
+                    {"left": "If only I had waited.", "right": "Arrepentimiento", "register": "neutral", "nuance": "Lamenta una acción pasada concreta."},
+                    {"left": "I wish I could start over.", "right": "Deseo irreal", "register": "informal", "nuance": "Imagina una situación que no puede cambiar."},
+                    {"left": "Had I known, I would have negotiated.", "right": "Third conditional invertida", "register": "formal", "nuance": "La inversión sustituye a 'if' y añade énfasis."}
+                  ],
+                  "feedbackOnError": {"type": "grammar", "explanation": "'If only', 'wish' y la inversión 'Had I known' expresan distintos grados de arrepentimiento.", "ruleRef": "gp-wish-if-only"}
+                },
+                {
+                  "type": "AudioOnlyPrompt",
+                  "id": "es-en-b2-e115",
+                  "audioText": "I had second thoughts about the offer, but I decided to bite the bullet and accept it.",
+                  "question": "What did the speaker do?",
+                  "options": ["Rejected the offer", "Accepted the offer despite doubts", "Asked for more time", "Withdrew the application"],
+                  "correctIndex": 1,
+                  "allowSlowPlayback": true,
+                  "feedbackOnError": {"type": "comprehension", "explanation": "El hablante tenía dudas, pero aceptó la oferta y afrontó la decisión.", "ruleRef": "gp-wish-if-only"}
+                },
+                {
+                  "type": "AudioOnlyPrompt",
+                  "id": "es-en-b2-e116",
+                  "audioText": "If I had known how much travel was involved, I would have asked for a higher salary. I wish I had negotiated harder before signing.",
+                  "question": "What does the speaker regret?",
+                  "options": ["Not negotiating harder", "Accepting a lower salary than offered", "Travelling too little", "Signing a different contract"],
+                  "correctIndex": 0,
+                  "allowSlowPlayback": false,
+                  "feedbackOnError": {"type": "comprehension", "explanation": "El arrepentimiento es no haber negociado mejor antes de firmar.", "ruleRef": "gp-third-conditional"}
+                },
+                {
+                  "type": "MultipleChoice",
+                  "id": "es-en-b2-e117",
+                  "question": "Completa: If she ___ the risks, she wouldn't have accepted.",
+                  "options": ["had weighed", "weighed", "would weigh"],
+                  "correctIndex": 0,
+                  "feedbackOnError": {"type": "grammar", "explanation": "La tercera condicional exige pasado perfecto en la condición: 'had weighed'.", "ruleRef": "gp-third-conditional"}
+                },
+                {
+                  "type": "ListenType",
+                  "id": "es-en-b2-e118",
+                  "transcription": "I wish I had asked more questions before accepting the offer",
+                  "audioText": "I wish I had asked more questions before accepting the offer",
+                  "feedbackOnError": {"type": "spelling", "explanation": "Escribe 'questions' con 't' y 'accepting' con doble 'c' y una 'p'.", "ruleRef": "gp-wish-if-only"}
+                },
+                {
+                  "type": "SpeakRepeat",
+                  "id": "es-en-b2-e119",
+                  "targetPhrase": "I've decided to bite the bullet and accept.",
+                  "audioText": "I've decided to bite the bullet and accept.",
+                  "feedbackOnError": {"type": "pronunciation", "explanation": "Enlaza 'bite the bullet' y baja la entonación en 'accept' para cerrar la decisión.", "ruleRef": "gp-wish-if-only"}
+                },
+                {
+                  "type": "FreeSpeakingPrompt",
+                  "id": "es-en-b2-e120",
+                  "prompt": "Elige entre dos ofertas laborales: sopesa los costes personales, expresa un arrepentimiento hipotético y justifica tu decisión.",
+                  "minTokens": 42,
+                  "conceptClusters": [["decision", "risk", "second thoughts"], ["sacrifice", "commit", "weigh up"], ["if only", "wish", "had"]],
+                  "grammarRuleRefs": ["gp-third-conditional", "gp-wish-if-only"],
+                  "timeLimitSeconds": 85,
+                  "minWpm": 70,
+                  "maxWpm": 160,
+                  "modelAnswer": "I'm weighing up a stable job against a more creative role that pays less. If I had more savings, I would have taken the creative offer without hesitation, but I have to consider my family. I wish I didn't have to choose, yet I've decided to bite the bullet and accept the stable role for now.",
+                  "selfAssessmentCriteria": ["¿Sopesé costes personales?", "¿Expresé un arrepentimiento hipotético?", "¿Justifiqué la decisión?"],
+                  "feedbackOnError": {"type": "grammar", "explanation": "La respuesta modelo combina wish/if only con una tercera condicional para justificar la renuncia.", "ruleRef": "gp-wish-if-only"}
+                }
+              ]
+            },
+            {
+              "id": "es-en-lv-3-un-3-ls-3",
+              "title": "Contar un malentendido",
+              "cefrLevel": "B2",
+              "scenario": "Un mensaje ambiguo provocó una discusión; hay que reconstruir qué dijo cada parte.",
+              "canDo": "Puedo reconstruir un diálogo, atribuir palabras con precisión y aclarar una interpretación errónea.",
+              "grammarPoints": [
+                {"id": "gp-reported-speech-b2", "label": "Advanced reported speech", "description": "Verbos de habla y desplazamiento de tiempos."},
+                {"id": "gp-narrative-tenses", "label": "Narrative tenses", "description": "Pasado simple, continuo y perfecto en relatos."}
+              ],
+              "vocabFrequencyBand": "3000-5000",
+              "culturalNotes": [
+                {"idiom": "get the wrong end of the stick", "note": "Interpretar algo al revés; se usa cuando alguien entiende lo contrario de lo que se dijo.", "translation": "entenderlo todo al revés"}
+              ],
+              "exercises": [
+                {
+                  "type": "ClozeDragDrop",
+                  "id": "es-en-b2-e121",
+                  "passage": "She said she {{b1}} waiting for an answer and asked why I {{b2}} replied.",
+                  "blanks": [
+                    {"id": "b1", "answer": "had been", "options": ["had been", "has been", "was being"]},
+                    {"id": "b2", "answer": "hadn't", "options": ["hadn't", "didn't", "haven't"]}
+                  ],
+                  "feedbackOnError": {"type": "grammar", "explanation": "En reported speech, el pasado perfecto continuo y el pasado perfecto simple desplazan los tiempos originales.", "ruleRef": "gp-reported-speech-b2"}
+                },
+                {
+                  "type": "ClozeDragDrop",
+                  "id": "es-en-b2-e122",
+                  "passage": "He told me he {{b1}} the message, but later admitted he {{b2}} it, and we agreed that we {{b3}} clarify it together.",
+                  "blanks": [
+                    {"id": "b1", "answer": "had sent", "options": ["had sent", "sent", "has sent"]},
+                    {"id": "b2", "answer": "had misread", "options": ["had misread", "misread", "was misreading"]},
+                    {"id": "b3", "answer": "would", "options": ["would", "will", "must"]}
+                  ],
+                  "feedbackOnError": {"type": "grammar", "explanation": "Los hechos anteriores se reportan con pasado perfecto y el acuerdo futuro con 'would'.", "ruleRef": "gp-reported-speech-b2"}
+                },
+                {
+                  "type": "SemanticMatch",
+                  "id": "es-en-b2-e123",
+                  "instructions": "Empareja cada frase con su función en la aclaración.",
+                  "pairs": [
+                    {"left": "That's not what I meant.", "right": "Aclaración", "register": "neutral", "nuance": "Corrige la interpretación sin negar los hechos."},
+                    {"left": "You got the wrong end of the stick.", "right": "Malinterpretación", "register": "informal", "nuance": "Señala que se entendió lo contrario."},
+                    {"left": "Let's clear this up.", "right": "Resolver el malentendido", "register": "neutral", "nuance": "Propone pasar de la discusión a la solución."}
+                  ],
+                  "feedbackOnError": {"type": "register", "explanation": "La aclaración distingue intención, interpretación y solución.", "ruleRef": "gp-reported-speech-b2"}
+                },
+                {
+                  "type": "SemanticMatch",
+                  "id": "es-en-b2-e124",
+                  "instructions": "Distingue qué se reporta en cada estructura.",
+                  "pairs": [
+                    {"left": "She said she would call.", "right": "Promesa reportada", "register": "neutral", "nuance": "'Would' desplaza el futuro original."},
+                    {"left": "He asked whether I had seen it.", "right": "Pregunta reportada", "register": "formal", "nuance": "La pregunta de sí/no usa 'whether'."},
+                    {"left": "They told us not to worry.", "right": "Consejo reportado", "register": "neutral", "nuance": "El imperativo pasa a infinitivo negativo."}
+                  ],
+                  "feedbackOnError": {"type": "grammar", "explanation": "Cada verbo de habla exige una estructura distinta al reportar.", "ruleRef": "gp-reported-speech-b2"}
+                },
+                {
+                  "type": "AudioOnlyPrompt",
+                  "id": "es-en-b2-e125",
+                  "audioText": "She said she had sent the file, but I hadn't received it, so we checked the address.",
+                  "question": "What caused the problem?",
+                  "options": ["The file was too large", "The address was wrong", "She forgot to write", "The email was deleted"],
+                  "correctIndex": 1,
+                  "allowSlowPlayback": true,
+                  "feedbackOnError": {"type": "comprehension", "explanation": "Al comprobar la dirección descubren el origen del malentendido.", "ruleRef": "gp-reported-speech-b2"}
+                },
+                {
+                  "type": "AudioOnlyPrompt",
+                  "id": "es-en-b2-e126",
+                  "audioText": "He asked why I hadn't replied, and I explained that I had never seen his message. It turned out that he had sent it to the wrong address.",
+                  "question": "What happened?",
+                  "options": ["The speaker ignored the message", "The message went to the wrong address", "He never wrote the message", "The speaker deleted the message"],
+                  "correctIndex": 1,
+                  "allowSlowPlayback": false,
+                  "feedbackOnError": {"type": "comprehension", "explanation": "El mensaje se envió a una dirección equivocada, no fue ignorado.", "ruleRef": "gp-reported-speech-b2"}
+                },
+                {
+                  "type": "MultipleChoice",
+                  "id": "es-en-b2-e127",
+                  "question": "Completa: She asked me where I ___ the file.",
+                  "options": ["had seen", "did see", "have seen"],
+                  "correctIndex": 0,
+                  "feedbackOnError": {"type": "grammar", "explanation": "La pregunta reportada desplaza el pasado simple a pasado perfecto: 'had seen'.", "ruleRef": "gp-reported-speech-b2"}
+                },
+                {
+                  "type": "OrderWords",
+                  "id": "es-en-b2-e128",
+                  "tokens": ["He", "asked", "me", "why", "I", "had", "not", "replied", "to", "the", "message", "did"],
+                  "answerTokens": ["He", "asked", "me", "why", "I", "had", "not", "replied", "to", "the", "message"],
+                  "feedbackOnError": {"type": "word_order", "explanation": "La pregunta reportada mantiene el orden de afirmación y usa 'had not replied'.", "ruleRef": "gp-reported-speech-b2"}
+                },
+                {
+                  "type": "SpeakRepeat",
+                  "id": "es-en-b2-e129",
+                  "targetPhrase": "Let's clear this up before it gets worse.",
+                  "audioText": "Let's clear this up before it gets worse.",
+                  "feedbackOnError": {"type": "pronunciation", "explanation": "Enlaza 'clear this up' y marca 'before' para separar la propuesta de la advertencia.", "ruleRef": "gp-narrative-tenses"}
+                },
+                {
+                  "type": "FreeSpeakingPrompt",
+                  "id": "es-en-b2-e130",
+                  "prompt": "Reconstruye un malentendido por mensaje: explica qué dijo cada parte, atribuye las palabras con precisión y aclara la interpretación errónea.",
+                  "minTokens": 42,
+                  "conceptClusters": [["misunderstanding", "assume", "misinterpret"], ["version", "blame", "clear up"], ["she said", "he asked", "had"]],
+                  "grammarRuleRefs": ["gp-reported-speech-b2", "gp-narrative-tenses"],
+                  "timeLimitSeconds": 85,
+                  "minWpm": 70,
+                  "maxWpm": 160,
+                  "modelAnswer": "She told me she had sent the brief on Monday, and I said I had never received it. I assumed she had forgotten, while she thought I was ignoring her. We checked the messages and realised she had used my old address. We cleared it up by forwarding the file, and I apologised for blaming her too quickly.",
+                  "selfAssessmentCriteria": ["¿Reconstruí ambas versiones?", "¿Atribuí las palabras con precisión?", "¿Aclaré la interpretación errónea?"],
+                  "feedbackOnError": {"type": "grammar", "explanation": "La respuesta modelo usa reported speech y pasados narrativos para reconstruir el diálogo.", "ruleRef": "gp-reported-speech-b2"}
+                }
+              ]
+            },
+            {
+              "id": "es-en-lv-3-un-3-ls-4",
+              "title": "Humor y sarcasmo",
+              "cefrLevel": "B2",
+              "scenario": "En una sobremesa alguien bromea y otra persona se lo toma en serio.",
+              "canDo": "Puedo distinguir humor de ofensa, aclarar una broma y adaptar el tono a la audiencia.",
+              "grammarPoints": [
+                {"id": "gp-register-shifts", "label": "Register shifts", "description": "Formal/informal, atenuación y distancia."},
+                {"id": "gp-ellipsis-substitution", "label": "Ellipsis and substitution", "description": "so do I, neither did she, one/ones."}
+              ],
+              "vocabFrequencyBand": "3000-5000",
+              "culturalNotes": [
+                {"idiom": "pull someone's leg", "note": "Gastar una broma cariñosa, no engañar de verdad; el tono y el contexto indican que no hay intención de dañar.", "translation": "tomar el pelo"}
+              ],
+              "exercises": [
+                {
+                  "type": "ClozeDragDrop",
+                  "id": "es-en-b2-e131",
+                  "passage": "I thought the joke was funny, but she {{b1}}, so I apologised and {{b2}} it more clearly.",
+                  "blanks": [
+                    {"id": "b1", "answer": "didn't", "options": ["didn't", "doesn't", "wasn't"]},
+                    {"id": "b2", "answer": "explained", "options": ["explained", "explain", "explaining"]}
+                  ],
+                  "feedbackOnError": {"type": "grammar", "explanation": "La elipsis 'she didn't' sustituye a 'didn't find it funny'; el verbo narrativo va en pasado.", "ruleRef": "gp-ellipsis-substitution"}
+                },
+                {
+                  "type": "ClozeDragDrop",
+                  "id": "es-en-b2-e132",
+                  "passage": "He can be quite deadpan, and so {{b1}} his brother; they both {{b2}} a very dry sense of humour, and neither of them {{b3}} offence easily.",
+                  "blanks": [
+                    {"id": "b1", "answer": "can", "options": ["can", "does", "is"]},
+                    {"id": "b2", "answer": "have", "options": ["have", "has", "having"]},
+                    {"id": "b3", "answer": "takes", "options": ["takes", "take", "taking"]}
+                  ],
+                  "feedbackOnError": {"type": "grammar", "explanation": "'So can his brother' usa sustitución con el modal; 'neither of them takes' concuerda en singular.", "ruleRef": "gp-ellipsis-substitution"}
+                },
+                {
+                  "type": "SemanticMatch",
+                  "id": "es-en-b2-e133",
+                  "instructions": "Empareja cada reacción con su intención.",
+                  "pairs": [
+                    {"left": "I was just pulling your leg.", "right": "Broma cariñosa", "register": "informal", "nuance": "Aclara que no había intención de ofender."},
+                    {"left": "No offence taken.", "right": "Reacción tranquila", "register": "neutral", "nuance": "Cierra la posibilidad de conflicto."},
+                    {"left": "That went down like a lead balloon.", "right": "Broma fallida", "register": "informal", "nuance": "La imagen expresa rechazo inmediato del público."}
+                  ],
+                  "feedbackOnError": {"type": "register", "explanation": "El contexto y el tono distinguen una broma cariñosa de una ofensa real.", "ruleRef": "gp-register-shifts"}
+                },
+                {
+                  "type": "SemanticMatch",
+                  "id": "es-en-b2-e134",
+                  "instructions": "Distingue qué sustituye cada respuesta breve.",
+                  "pairs": [
+                    {"left": "So do I.", "right": "Acuerdo con elipsis", "register": "informal", "nuance": "Sustituye una opinión positiva ya expresada."},
+                    {"left": "Neither did she.", "right": "Acuerdo negativo", "register": "neutral", "nuance": "Confirma que tampoco ocurrió en su caso."},
+                    {"left": "I thought so.", "right": "Confirmación breve", "register": "informal", "nuance": "Evita repetir toda la suposición."}
+                  ],
+                  "feedbackOnError": {"type": "grammar", "explanation": "La elipsis evita repetir información conocida y mantiene el ritmo de la conversación.", "ruleRef": "gp-ellipsis-substitution"}
+                },
+                {
+                  "type": "AudioOnlyPrompt",
+                  "id": "es-en-b2-e135",
+                  "audioText": "I was only pulling your leg; I didn't mean to offend you.",
+                  "question": "What was the speaker's intention?",
+                  "options": ["To insult the listener", "To play a harmless joke", "To end the conversation", "To apologise for a mistake"],
+                  "correctIndex": 1,
+                  "allowSlowPlayback": true,
+                  "feedbackOnError": {"type": "comprehension", "explanation": "El hablante aclara que era una broma y que no pretendía ofender.", "ruleRef": "gp-register-shifts"}
+                },
+                {
+                  "type": "AudioOnlyPrompt",
+                  "id": "es-en-b2-e136",
+                  "audioText": "She told the joke deadpan, so nobody laughed at first. Then someone realised she was being self-deprecating, and the room relaxed.",
+                  "question": "Why did nobody laugh at first?",
+                  "options": ["The joke was offensive", "The delivery was deadpan", "The room was empty", "She forgot the ending"],
+                  "correctIndex": 1,
+                  "allowSlowPlayback": false,
+                  "feedbackOnError": {"type": "comprehension", "explanation": "El tono neutro de la broma hizo que el público tardara en reconocer el humor.", "ruleRef": "gp-register-shifts"}
+                },
+                {
+                  "type": "MultipleChoice",
+                  "id": "es-en-b2-e137",
+                  "question": "Completa: I enjoyed the film, and so ___ my sister.",
+                  "options": ["did", "does", "was"],
+                  "correctIndex": 0,
+                  "feedbackOnError": {"type": "grammar", "explanation": "La sustitución con 'so' copia el auxiliar del pasado: 'so did my sister'.", "ruleRef": "gp-ellipsis-substitution"}
+                },
+                {
+                  "type": "ListenType",
+                  "id": "es-en-b2-e138",
+                  "transcription": "I was only pulling your leg so don't take it seriously",
+                  "audioText": "I was only pulling your leg so don't take it seriously",
+                  "feedbackOnError": {"type": "spelling", "explanation": "Escribe 'pulling' con doble 'l' y 'seriously' con 'ous' final.", "ruleRef": "gp-register-shifts"}
+                },
+                {
+                  "type": "SpeakRepeat",
+                  "id": "es-en-b2-e139",
+                  "targetPhrase": "I was only pulling your leg.",
+                  "audioText": "I was only pulling your leg.",
+                  "feedbackOnError": {"type": "pronunciation", "explanation": "Enlaza 'pulling your' y suaviza el tono para que la aclaración suene cariñosa.", "ruleRef": "gp-register-shifts"}
+                },
+                {
+                  "type": "FreeSpeakingPrompt",
+                  "id": "es-en-b2-e140",
+                  "prompt": "Aclara una broma que alguien se tomó en serio: explica la intención, adapta el tono y evita que la otra persona se sienta ofendida.",
+                  "minTokens": 40,
+                  "conceptClusters": [["joke", "tease", "playful"], ["offend", "take seriously", "apologise"], ["so", "neither", "didn't"]],
+                  "grammarRuleRefs": ["gp-register-shifts", "gp-ellipsis-substitution"],
+                  "timeLimitSeconds": 80,
+                  "minWpm": 70,
+                  "maxWpm": 160,
+                  "modelAnswer": "I was only pulling your leg when I said the presentation was disastrous. I didn't mean to offend you, and I'm sorry it landed badly. I thought you would find it funny, but clearly the timing was wrong. Let me explain what I actually meant, and I'll keep the jokes for less stressful moments.",
+                  "selfAssessmentCriteria": ["¿Expliqué la intención?", "¿Adapté el tono?", "¿Evité que la persona se sintiera ofendida?"],
+                  "feedbackOnError": {"type": "register", "explanation": "La respuesta modelo aclara la broma, pide disculpas y ajusta el registro para reparar el malentendido.", "ruleRef": "gp-register-shifts"}
+                }
+              ]
+            },
+            {
+              "id": "es-en-lv-3-un-3-ls-5",
+              "title": "El hubiera no existe",
+              "cefrLevel": "B2",
+              "scenario": "Alguien se lamenta por una oportunidad perdida y hay que ayudarle a cerrar el tema.",
+              "canDo": "Puedo consolar con empatía, reformular un arrepentimiento y proponer una perspectiva futura.",
+              "grammarPoints": [
+                {"id": "gp-mixed-conditionals", "label": "Mixed conditionals", "description": "Condición presente con consecuencia pasada o futura."},
+                {"id": "gp-participle-clauses", "label": "Participle clauses", "description": "Having said that…, Faced with…"}
+              ],
+              "vocabFrequencyBand": "3000-5000",
+              "culturalNotes": [
+                {"idiom": "no use crying over spilt milk", "note": "Lamentarse no cambia lo ocurrido; se usa para animar a aceptar un hecho y seguir adelante.", "translation": "a lo hecho, pecho"}
+              ],
+              "exercises": [
+                {
+                  "type": "ClozeDragDrop",
+                  "id": "es-en-b2-e141",
+                  "passage": "If I {{b1}} so focused on work, I {{b2}} have missed my daughter's concert.",
+                  "blanks": [
+                    {"id": "b1", "answer": "weren't", "options": ["weren't", "hadn't been", "wouldn't be"]},
+                    {"id": "b2", "answer": "wouldn't", "options": ["wouldn't", "won't", "hadn't"]}
+                  ],
+                  "feedbackOnError": {"type": "grammar", "explanation": "La mixed conditional conecta una condición presente ('weren't so focused') con una consecuencia pasada ('wouldn't have missed').", "ruleRef": "gp-mixed-conditionals"}
+                },
+                {
+                  "type": "ClozeDragDrop",
+                  "id": "es-en-b2-e142",
+                  "passage": "Having {{b1}} the opportunity, she decided to move on; looking back, she {{b2}} have handled it differently, but she has {{b3}} learned to accept it.",
+                  "blanks": [
+                    {"id": "b1", "answer": "missed", "options": ["missed", "miss", "missing"]},
+                    {"id": "b2", "answer": "could", "options": ["could", "can", "must"]},
+                    {"id": "b3", "answer": "finally", "options": ["finally", "final", "finality"]}
+                  ],
+                  "feedbackOnError": {"type": "grammar", "explanation": "La participle clause 'Having missed…' indica una causa previa; 'could have handled' expresa una posibilidad pasada.", "ruleRef": "gp-participle-clauses"}
+                },
+                {
+                  "type": "SemanticMatch",
+                  "id": "es-en-b2-e143",
+                  "instructions": "Empareja cada frase con su función emocional.",
+                  "pairs": [
+                    {"left": "It's no use crying over spilt milk.", "right": "Aceptar lo ocurrido", "register": "informal", "nuance": "Anima a dejar de lamentarse por algo irreversible."},
+                    {"left": "I've made my peace with it.", "right": "Cierre emocional", "register": "neutral", "nuance": "Indica que el conflicto interno se ha resuelto."},
+                    {"left": "That chapter is behind me.", "right": "Perspectiva futura", "register": "informal", "nuance": "Marca distancia y apertura a lo que viene."}
+                  ],
+                  "feedbackOnError": {"type": "register", "explanation": "Las tres expresiones describen distintas etapas del cierre emocional.", "ruleRef": "gp-mixed-conditionals"}
+                },
+                {
+                  "type": "SemanticMatch",
+                  "id": "es-en-b2-e144",
+                  "instructions": "Distingue la relación que introduce cada estructura.",
+                  "pairs": [
+                    {"left": "Having lost the contract, we reviewed our proposal.", "right": "Causa previa", "register": "formal", "nuance": "La acción anterior explica la revisión."},
+                    {"left": "Faced with the setback, she stayed calm.", "right": "Situación adversa", "register": "formal", "nuance": "La participle describe el contexto de la reacción."},
+                    {"left": "Had I known, I would have waited.", "right": "Hipótesis pasada", "register": "formal", "nuance": "La inversión sustituye a 'if' en la tercera condicional."}
+                  ],
+                  "feedbackOnError": {"type": "grammar", "explanation": "Las participle clauses comprimen causa y contexto; la inversión presenta una hipótesis pasada.", "ruleRef": "gp-participle-clauses"}
+                },
+                {
+                  "type": "AudioOnlyPrompt",
+                  "id": "es-en-b2-e145",
+                  "audioText": "It's no use crying over spilt milk. The opportunity is gone, but the lesson isn't.",
+                  "question": "What is the speaker's message?",
+                  "options": ["The opportunity can be recovered", "The lesson is more valuable than regret", "The speaker is angry about the milk", "They should stop learning"],
+                  "correctIndex": 1,
+                  "allowSlowPlayback": true,
+                  "feedbackOnError": {"type": "comprehension", "explanation": "El modismo resta valor al lamento y desplaza el foco a la lección aprendida.", "ruleRef": "gp-mixed-conditionals"}
+                },
+                {
+                  "type": "AudioOnlyPrompt",
+                  "id": "es-en-b2-e146",
+                  "audioText": "Having missed the deadline, we had to renegotiate. If we were better organised, we wouldn't have lost the client, but we've learned to move on.",
+                  "question": "What did the team learn?",
+                  "options": ["To blame the client", "To move on after a setback", "To ignore deadlines", "To cancel the contract"],
+                  "correctIndex": 1,
+                  "allowSlowPlayback": false,
+                  "feedbackOnError": {"type": "comprehension", "explanation": "El equipo acepta la pérdida, extrae una lección y decide seguir adelante.", "ruleRef": "gp-participle-clauses"}
+                },
+                {
+                  "type": "MultipleChoice",
+                  "id": "es-en-b2-e147",
+                  "question": "Completa: ___ missed the deadline, we had to apologise.",
+                  "options": ["Having", "Have", "Had"],
+                  "correctIndex": 0,
+                  "feedbackOnError": {"type": "grammar", "explanation": "La participle clause de causa previa se forma con 'Having + participio'.", "ruleRef": "gp-participle-clauses"}
+                },
+                {
+                  "type": "OrderWords",
+                  "id": "es-en-b2-e148",
+                  "tokens": ["It", "is", "no", "use", "crying", "over", "spilt", "milk", "useful"],
+                  "answerTokens": ["It", "is", "no", "use", "crying", "over", "spilt", "milk"],
+                  "feedbackOnError": {"type": "word_order", "explanation": "El modismo fijo es 'It is no use crying over spilt milk'.", "ruleRef": "gp-participle-clauses"}
+                },
+                {
+                  "type": "SpeakRepeat",
+                  "id": "es-en-b2-e149",
+                  "targetPhrase": "It's no use crying over spilt milk.",
+                  "audioText": "It's no use crying over spilt milk.",
+                  "feedbackOnError": {"type": "pronunciation", "explanation": "Enlaza 'no use' y pronuncia 'spilt milk' con claridad al final.", "ruleRef": "gp-mixed-conditionals"}
+                },
+                {
+                  "type": "FreeSpeakingPrompt",
+                  "id": "es-en-b2-e150",
+                  "prompt": "Consuela a alguien por una oportunidad perdida: muestra empatía, reformula el arrepentimiento y propón una perspectiva futura.",
+                  "minTokens": 42,
+                  "conceptClusters": [["regret", "accept", "move on"], ["lesson", "perspective", "closure"], ["if", "having", "would"]],
+                  "grammarRuleRefs": ["gp-mixed-conditionals", "gp-participle-clauses"],
+                  "timeLimitSeconds": 85,
+                  "minWpm": 70,
+                  "maxWpm": 160,
+                  "modelAnswer": "I understand why you keep thinking about the offer you turned down. Having missed that chance, you now see the risks more clearly, but it's no use crying over spilt milk. If you were less hard on yourself, you wouldn't have missed the lessons this experience has taught you. Let's use that perspective for the next opportunity.",
+                  "selfAssessmentCriteria": ["¿Mostré empatía?", "¿Reformulé el arrepentimiento?", "¿Propuse una perspectiva futura?"],
+                  "feedbackOnError": {"type": "grammar", "explanation": "La respuesta modelo combina una participle clause con una mixed conditional y el modismo de cierre.", "ruleRef": "gp-participle-clauses"}
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "es-en-lv-3-un-4",
+          "title": "Sociedad y medios",
+          "lessons": [
+            {
+              "id": "es-en-lv-3-un-4-ls-1",
+              "title": "Leer entre líneas",
+              "cefrLevel": "B2",
+              "scenario": "Un titular sugiere algo que el artículo no afirma; hay que detectar la intención editorial.",
+              "canDo": "Puedo analizar un titular, distinguir hecho de interpretación y explicar una omisión.",
+              "grammarPoints": [
+                {"id": "gp-passive-reporting", "label": "Passive reporting structures", "description": "It is said that…, He is believed to…"},
+                {"id": "gp-hedging", "label": "Hedging", "description": "I'm afraid, it seems, perhaps, would."}
+              ],
+              "vocabFrequencyBand": "3000-5000",
+              "culturalNotes": [
+                {"idiom": "read between the lines", "note": "Inferir lo que no se dice explícitamente; en prensa ayuda a detectar encuadres y omisiones.", "translation": "leer entre líneas"}
+              ],
+              "exercises": [
+                {
+                  "type": "ClozeDragDrop",
+                  "id": "es-en-b2-e151",
+                  "passage": "The article {{b1}} to be based on a single anonymous source, and it {{b2}} not be reliable.",
+                  "blanks": [
+                    {"id": "b1", "answer": "is said", "options": ["is said", "says", "said"]},
+                    {"id": "b2", "answer": "may", "options": ["may", "must", "will"]}
+                  ],
+                  "feedbackOnError": {"type": "grammar", "explanation": "La pasiva reportativa atribuye la información y 'may' introduce cautela sobre su fiabilidad.", "ruleRef": "gp-passive-reporting"}
+                },
+                {
+                  "type": "ClozeDragDrop",
+                  "id": "es-en-b2-e152",
+                  "passage": "It {{b1}} that the outlet has {{b2}} the story, but {{b3}} we should read between the lines before sharing it.",
+                  "blanks": [
+                    {"id": "b1", "answer": "is claimed", "options": ["is claimed", "claims", "claiming"]},
+                    {"id": "b2", "answer": "framed", "options": ["framed", "frame", "framing"]},
+                    {"id": "b3", "answer": "perhaps", "options": ["perhaps", "certainly", "never"]}
+                  ],
+                  "feedbackOnError": {"type": "grammar", "explanation": "La pasiva reportativa presenta la versión del medio y 'perhaps' suaviza la recomendación crítica.", "ruleRef": "gp-passive-reporting"}
+                },
+                {
+                  "type": "SemanticMatch",
+                  "id": "es-en-b2-e153",
+                  "instructions": "Empareja cada fenómeno con su descripción periodística.",
+                  "pairs": [
+                    {"left": "The headline implies a threat without stating it.", "right": "Insinuación", "register": "formal", "nuance": "Sugiere una conclusión que el texto no afirma."},
+                    {"left": "The article omits the context of the protest.", "right": "Omisión", "register": "neutral", "nuance": "La ausencia de datos cambia la interpretación."},
+                    {"left": "The outlet has a clear editorial spin.", "right": "Sesgo editorial", "register": "formal", "nuance": "El enfoque favorece una posición política."}
+                  ],
+                  "feedbackOnError": {"type": "vocabulary", "explanation": "Insinuación, omisión y sesgo son mecanismos distintos de encuadre informativo.", "ruleRef": "gp-hedging"}
+                },
+                {
+                  "type": "SemanticMatch",
+                  "id": "es-en-b2-e154",
+                  "instructions": "Distingue la interpretación atenuada de la lectura crítica directa.",
+                  "pairs": [
+                    {"left": "It could be argued that the timing is political.", "right": "Interpretación atenuada", "register": "formal", "nuance": "Presenta la crítica como posibilidad."},
+                    {"left": "The timing is, shall we say, convenient.", "right": "Ironía formal", "register": "formal", "nuance": "El eufemismo insinúa una intención."},
+                    {"left": "I'd read between the lines here.", "right": "Lectura crítica", "register": "neutral", "nuance": "Invita a buscar lo no dicho."}
+                  ],
+                  "feedbackOnError": {"type": "register", "explanation": "La atenuación y la ironía permiten señalar un sesgo sin acusar directamente.", "ruleRef": "gp-hedging"}
+                },
+                {
+                  "type": "AudioOnlyPrompt",
+                  "id": "es-en-b2-e155",
+                  "audioText": "The headline says prices are soaring, but the article only mentions a small increase in one region.",
+                  "question": "What is the problem with the headline?",
+                  "options": ["It exaggerates the scope of the increase", "It ignores a price decrease", "It quotes too many sources", "It focuses on one region"],
+                  "correctIndex": 0,
+                  "allowSlowPlayback": true,
+                  "feedbackOnError": {"type": "comprehension", "explanation": "El titular generaliza un aumento pequeño y localizado, exagerando su alcance.", "ruleRef": "gp-passive-reporting"}
+                },
+                {
+                  "type": "AudioOnlyPrompt",
+                  "id": "es-en-b2-e156",
+                  "audioText": "It is claimed that the policy has failed, but the evidence comes from an outlet with a clear editorial stance. I'd read between the lines before accepting that framing.",
+                  "question": "What does the speaker advise?",
+                  "options": ["Accepting the policy failure", "Questioning the source and framing", "Ignoring all news", "Reading only the headline"],
+                  "correctIndex": 1,
+                  "allowSlowPlayback": false,
+                  "feedbackOnError": {"type": "comprehension", "explanation": "La recomendación es cuestionar la fuente y el encuadre antes de aceptar la conclusión.", "ruleRef": "gp-hedging"}
+                },
+                {
+                  "type": "MultipleChoice",
+                  "id": "es-en-b2-e157",
+                  "question": "Completa: It ___ that the story was exaggerated.",
+                  "options": ["is believed", "believes", "believing"],
+                  "correctIndex": 0,
+                  "feedbackOnError": {"type": "grammar", "explanation": "La pasiva reportativa impersonal es 'It is believed that…'.", "ruleRef": "gp-passive-reporting"}
+                },
+                {
+                  "type": "ListenType",
+                  "id": "es-en-b2-e158",
+                  "transcription": "The headline suggests a crisis but the article tells a different story",
+                  "audioText": "The headline suggests a crisis but the article tells a different story",
+                  "feedbackOnError": {"type": "spelling", "explanation": "Escribe 'headline' como una sola palabra y 'different' con doble 'f'.", "ruleRef": "gp-passive-reporting"}
+                },
+                {
+                  "type": "SpeakRepeat",
+                  "id": "es-en-b2-e159",
+                  "targetPhrase": "I'd read between the lines before sharing that.",
+                  "audioText": "I'd read between the lines before sharing that.",
+                  "feedbackOnError": {"type": "pronunciation", "explanation": "Enlaza 'read between the' y baja la entonación en 'before sharing that'.", "ruleRef": "gp-hedging"}
+                },
+                {
+                  "type": "FreeSpeakingPrompt",
+                  "id": "es-en-b2-e160",
+                  "prompt": "Analiza un titular ambiguo: distingue el hecho de la interpretación, explica qué se omite y justifica tu lectura.",
+                  "minTokens": 42,
+                  "conceptClusters": [["headline", "framing", "coverage"], ["omission", "insinuate", "spin"], ["it is claimed", "may", "perhaps"]],
+                  "grammarRuleRefs": ["gp-passive-reporting", "gp-hedging"],
+                  "timeLimitSeconds": 85,
+                  "minWpm": 70,
+                  "maxWpm": 160,
+                  "modelAnswer": "The headline says the city is facing a crisis, but the article only reports a short delay in one service. It is claimed that the problem is widespread, yet the coverage omits the regional context. I'd read between the lines: the framing suggests a systemic failure, while the evidence points to a local incident. Perhaps we should verify the source before sharing it.",
+                  "selfAssessmentCriteria": ["¿Distingui hecho e interpretación?", "¿Expliqué una omisión?", "¿Justifiqué mi lectura?"],
+                  "feedbackOnError": {"type": "grammar", "explanation": "La respuesta modelo usa pasiva reportativa y atenuadores para analizar el encuadre sin afirmar intenciones ocultas.", "ruleRef": "gp-passive-reporting"}
+                }
+              ]
+            },
+            {
+              "id": "es-en-lv-3-un-4-ls-2",
+              "title": "Noticias que manipulan",
+              "cefrLevel": "B2",
+              "scenario": "Una noticia viral mezcla datos reales con exageraciones; hay que verificar antes de compartir.",
+              "canDo": "Puedo evaluar la fiabilidad de una noticia, describir técnicas de manipulación y argumentar con fuentes.",
+              "grammarPoints": [
+                {"id": "gp-passive-reporting", "label": "Passive reporting structures", "description": "It is said that…, He is believed to…"},
+                {"id": "gp-nominalization", "label": "Nominalization", "description": "Convertir acciones en sustantivos para un registro formal."}
+              ],
+              "vocabFrequencyBand": "3000-5000",
+              "culturalNotes": [
+                {"idiom": "sugarcoat", "note": "Presentar algo negativo de forma más agradable de lo que es; en prensa puede ocultar la gravedad de un despido o recorte.", "translation": "endulzar la realidad"}
+              ],
+              "exercises": [
+                {
+                  "type": "ClozeDragDrop",
+                  "id": "es-en-b2-e161",
+                  "passage": "The report {{b1}} to have been verified, but the {{b2}} of the data was selective.",
+                  "blanks": [
+                    {"id": "b1", "answer": "is claimed", "options": ["is claimed", "claims", "claiming"]},
+                    {"id": "b2", "answer": "presentation", "options": ["presentation", "present", "presented"]}
+                  ],
+                  "feedbackOnError": {"type": "grammar", "explanation": "La pasiva reportativa atribuye la verificación y la nominalización 'presentation' formaliza la crítica.", "ruleRef": "gp-passive-reporting"}
+                },
+                {
+                  "type": "ClozeDragDrop",
+                  "id": "es-en-b2-e162",
+                  "passage": "The {{b1}} of the story relies on {{b2}} language, and the {{b3}} of the source is never explained.",
+                  "blanks": [
+                    {"id": "b1", "answer": "framing", "options": ["framing", "frame", "framed"]},
+                    {"id": "b2", "answer": "sensational", "options": ["sensational", "sensation", "sensationally"]},
+                    {"id": "b3", "answer": "selection", "options": ["selection", "select", "selective"]}
+                  ],
+                  "feedbackOnError": {"type": "grammar", "explanation": "Las nominalizaciones 'framing', 'selection' y el adjetivo 'sensational' concentran la crítica en el tratamiento informativo.", "ruleRef": "gp-nominalization"}
+                },
+                {
+                  "type": "SemanticMatch",
+                  "id": "es-en-b2-e163",
+                  "instructions": "Empareja cada técnica con su efecto.",
+                  "pairs": [
+                    {"left": "The clickbait headline promises a shocking secret.", "right": "Titular sensacionalista", "register": "informal", "nuance": "Prioriza el clic sobre la precisión."},
+                    {"left": "The story distorts the original data.", "right": "Distorsión", "register": "formal", "nuance": "Cambia el sentido de la evidencia."},
+                    {"left": "They sugarcoat the layoffs as a restructuring.", "right": "Suavizar lo negativo", "register": "formal", "nuance": "El eufemismo reduce el impacto emocional."}
+                  ],
+                  "feedbackOnError": {"type": "vocabulary", "explanation": "Sensacionalismo, distorsión y eufemismo son estrategias distintas de manipulación.", "ruleRef": "gp-nominalization"}
+                },
+                {
+                  "type": "SemanticMatch",
+                  "id": "es-en-b2-e164",
+                  "instructions": "Distingue el registro nominal del verbal.",
+                  "pairs": [
+                    {"left": "The implementation of the policy was delayed.", "right": "Registro nominal formal", "register": "formal", "nuance": "Convierte la acción en sustantivo y aumenta la distancia."},
+                    {"left": "They implemented the policy late.", "right": "Registro verbal directo", "register": "neutral", "nuance": "Identifica la acción y el agente con claridad."},
+                    {"left": "The verification of claims is essential.", "right": "Nominalización técnica", "register": "formal", "nuance": "Aporta precisión y tono institucional."}
+                  ],
+                  "feedbackOnError": {"type": "register", "explanation": "La nominalización formaliza el discurso, pero puede ocultar quién realiza la acción.", "ruleRef": "gp-nominalization"}
+                },
+                {
+                  "type": "AudioOnlyPrompt",
+                  "id": "es-en-b2-e165",
+                  "audioText": "The article is said to be verified, but the headline sugarcoats the layoffs.",
+                  "question": "What is the contradiction?",
+                  "options": ["The article is verified but the headline minimizes the layoffs", "The headline is accurate but the article is not", "The layoffs were cancelled", "The article has no headline"],
+                  "correctIndex": 0,
+                  "allowSlowPlayback": true,
+                  "feedbackOnError": {"type": "comprehension", "explanation": "La verificación atribuida contrasta con un titular que suaviza un despido grave.", "ruleRef": "gp-passive-reporting"}
+                },
+                {
+                  "type": "AudioOnlyPrompt",
+                  "id": "es-en-b2-e166",
+                  "audioText": "The manipulation is subtle: the story uses a dramatic headline, omits the source and presents correlation as causation. I'd verify it before sharing.",
+                  "question": "Which techniques does the speaker mention?",
+                  "options": ["Dramatic headline, missing source and false causation", "Long interviews and expert quotes", "Balanced reporting and corrections", "Anonymous sources and legal review"],
+                  "correctIndex": 0,
+                  "allowSlowPlayback": false,
+                  "feedbackOnError": {"type": "comprehension", "explanation": "El hablante enumera tres técnicas: titular dramático, fuente omitida y correlación presentada como causa.", "ruleRef": "gp-nominalization"}
+                },
+                {
+                  "type": "MultipleChoice",
+                  "id": "es-en-b2-e167",
+                  "question": "Completa: It ___ that the figures were distorted.",
+                  "options": ["is alleged", "alleges", "alleging"],
+                  "correctIndex": 0,
+                  "feedbackOnError": {"type": "grammar", "explanation": "La estructura impersonal es 'It is alleged that…', con pasiva reportativa.", "ruleRef": "gp-passive-reporting"}
+                },
+                {
+                  "type": "OrderWords",
+                  "id": "es-en-b2-e168",
+                  "tokens": ["The", "article", "was", "said", "to", "have", "been", "verified", "verified", "claim"],
+                  "answerTokens": ["The", "article", "was", "said", "to", "have", "been", "verified"],
+                  "feedbackOnError": {"type": "word_order", "explanation": "La pasiva reportativa con infinitivo perfecto es 'was said to have been verified'.", "ruleRef": "gp-passive-reporting"}
+                },
+                {
+                  "type": "SpeakRepeat",
+                  "id": "es-en-b2-e169",
+                  "targetPhrase": "They sugarcoated the layoffs in the headline.",
+                  "audioText": "They sugarcoated the layoffs in the headline.",
+                  "feedbackOnError": {"type": "pronunciation", "explanation": "Enlaza 'sugarcoated the' y pronuncia 'layoffs' con diptongo inicial.", "ruleRef": "gp-nominalization"}
+                },
+                {
+                  "type": "FreeSpeakingPrompt",
+                  "id": "es-en-b2-e170",
+                  "prompt": "Evalúa una noticia viral: describe las técnicas de manipulación, cuestiona la fuente y propone cómo verificarla antes de compartirla.",
+                  "minTokens": 42,
+                  "conceptClusters": [["manipulate", "distort", "sensationalism"], ["source", "verify", "fact-check"], ["it is said", "the presentation", "the selection"]],
+                  "grammarRuleRefs": ["gp-passive-reporting", "gp-nominalization"],
+                  "timeLimitSeconds": 85,
+                  "minWpm": 70,
+                  "maxWpm": 160,
+                  "modelAnswer": "The story is said to be verified, but the presentation of the data is selective and the headline is pure sensationalism. It distorts a correlation as if it proved causation. I'd fact-check the original report, identify the source and compare it with an independent outlet. Otherwise, sharing it would only amplify the manipulation.",
+                  "selfAssessmentCriteria": ["¿Describí técnicas concretas?", "¿Cuestioné la fuente?", "¿Propuse una verificación?"],
+                  "feedbackOnError": {"type": "grammar", "explanation": "La respuesta modelo usa nominalizaciones y pasiva reportativa para analizar la manipulación con registro formal.", "ruleRef": "gp-nominalization"}
+                }
+              ]
+            },
+            {
+              "id": "es-en-lv-3-un-4-ls-3",
+              "title": "El elefante en la sala",
+              "cefrLevel": "B2",
+              "scenario": "En una comida familiar todos evitan hablar de las fotos que un pariente publicó sin permiso.",
+              "canDo": "Puedo nombrar un tema incómodo con tacto, describir tensiones y proponer hablarlo.",
+              "grammarPoints": [
+                {"id": "gp-subjunctive-mood", "label": "Subjunctive mood", "description": "I suggest that he be…, It is essential that…"},
+                {"id": "gp-cleft-sentences", "label": "Cleft sentences", "description": "What matters is…, It was X that…"}
+              ],
+              "vocabFrequencyBand": "3000-5000",
+              "culturalNotes": [
+                {"idiom": "the elephant in the room", "note": "Problema evidente que todos evitan mencionar; nombrarlo puede romper la tensión, pero requiere tacto.", "translation": "el tema que nadie quiere tocar"}
+              ],
+              "exercises": [
+                {
+                  "type": "ClozeDragDrop",
+                  "id": "es-en-b2-e171",
+                  "passage": "It is essential that we {{b1}} the issue directly, even if it {{b2}} uncomfortable.",
+                  "blanks": [
+                    {"id": "b1", "answer": "address", "options": ["address", "addresses", "addressed"]},
+                    {"id": "b2", "answer": "feels", "options": ["feels", "feel", "felt"]}
+                  ],
+                  "feedbackOnError": {"type": "grammar", "explanation": "Tras 'It is essential that' se usa el subjuntivo 'address'; la concesión 'even if it feels' mantiene el presente.", "ruleRef": "gp-subjunctive-mood"}
+                },
+                {
+                  "type": "ClozeDragDrop",
+                  "id": "es-en-b2-e172",
+                  "passage": "What {{b1}} me most is that no one {{b2}} consent before sharing the photos; I suggest that we {{b3}} the conversation today.",
+                  "blanks": [
+                    {"id": "b1", "answer": "worries", "options": ["worries", "worry", "worrying"]},
+                    {"id": "b2", "answer": "asked", "options": ["asked", "asks", "asking"]},
+                    {"id": "b3", "answer": "have", "options": ["have", "has", "had"]}
+                  ],
+                  "feedbackOnError": {"type": "grammar", "explanation": "La cleft 'What worries me…' focaliza la preocupación; 'suggest that we have' exige subjuntivo.", "ruleRef": "gp-cleft-sentences"}
+                },
+                {
+                  "type": "SemanticMatch",
+                  "id": "es-en-b2-e173",
+                  "instructions": "Empareja cada intervención con su estrategia comunicativa.",
+                  "pairs": [
+                    {"left": "There's an elephant in the room.", "right": "Tema evidente no mencionado", "register": "informal", "nuance": "Nombra la tensión sin entrar aún en el contenido."},
+                    {"left": "I don't want to make this uncomfortable.", "right": "Evasión cortés", "register": "neutral", "nuance": "Protege a los presentes, pero aplaza el problema."},
+                    {"left": "We need to talk about the photos.", "right": "Confrontación directa", "register": "neutral", "nuance": "Pone el tema sobre la mesa sin rodeos."}
+                  ],
+                  "feedbackOnError": {"type": "register", "explanation": "El mismo tema puede nombrarse con evasión, tacto o confrontación directa.", "ruleRef": "gp-subjunctive-mood"}
+                },
+                {
+                  "type": "SemanticMatch",
+                  "id": "es-en-b2-e174",
+                  "instructions": "Distingue la estructura de cada intervención.",
+                  "pairs": [
+                    {"left": "It is important that everyone be heard.", "right": "Subjuntivo formal", "register": "formal", "nuance": "La forma base 'be' marca distancia y respeto."},
+                    {"left": "What matters is that we respect her privacy.", "right": "Cleft de foco", "register": "neutral", "nuance": "Desplaza el foco al principio ético."},
+                    {"left": "I'd rather we didn't expose the issue publicly.", "right": "Preferencia atenuada", "register": "formal", "nuance": "El condicional evita una prohibición directa."}
+                  ],
+                  "feedbackOnError": {"type": "grammar", "explanation": "El subjuntivo y la cleft permiten marcar prioridades sin acusar a nadie.", "ruleRef": "gp-cleft-sentences"}
+                },
+                {
+                  "type": "AudioOnlyPrompt",
+                  "id": "es-en-b2-e175",
+                  "audioText": "We all know there's an elephant in the room, but nobody wants to mention the photos.",
+                  "question": "What is the speaker referring to?",
+                  "options": ["A literal elephant", "An obvious topic everyone avoids", "A family photograph album", "A cancelled dinner"],
+                  "correctIndex": 1,
+                  "allowSlowPlayback": true,
+                  "feedbackOnError": {"type": "comprehension", "explanation": "El modismo señala un tema evidente que todos evitan mencionar.", "ruleRef": "gp-cleft-sentences"}
+                },
+                {
+                  "type": "AudioOnlyPrompt",
+                  "id": "es-en-b2-e176",
+                  "audioText": "It is essential that we discuss consent before sharing any more family pictures. What worries me is not the photos themselves, but the fact that nobody asked her permission.",
+                  "question": "What is the speaker's main concern?",
+                  "options": ["The quality of the photos", "The lack of consent", "The number of pictures", "The family dinner"],
+                  "correctIndex": 1,
+                  "allowSlowPlayback": false,
+                  "feedbackOnError": {"type": "comprehension", "explanation": "La preocupación no son las fotos, sino que nadie pidió permiso.", "ruleRef": "gp-cleft-sentences"}
+                },
+                {
+                  "type": "MultipleChoice",
+                  "id": "es-en-b2-e177",
+                  "question": "Completa: It is essential that we ___ the issue directly.",
+                  "options": ["address", "addresses", "addressed"],
+                  "correctIndex": 0,
+                  "feedbackOnError": {"type": "grammar", "explanation": "El subjuntivo tras 'It is essential that' usa la forma base 'address'.", "ruleRef": "gp-subjunctive-mood"}
+                },
+                {
+                  "type": "OrderWords",
+                  "id": "es-en-b2-e178",
+                  "tokens": ["I", "suggest", "that", "we", "discuss", "the", "elephant", "in", "the", "room", "discussed"],
+                  "answerTokens": ["I", "suggest", "that", "we", "discuss", "the", "elephant", "in", "the", "room"],
+                  "feedbackOnError": {"type": "word_order", "explanation": "Tras 'I suggest that' se usa el subjuntivo 'we discuss', no el pasado.", "ruleRef": "gp-subjunctive-mood"}
+                },
+                {
+                  "type": "SpeakRepeat",
+                  "id": "es-en-b2-e179",
+                  "targetPhrase": "Let's address the elephant in the room.",
+                  "audioText": "Let's address the elephant in the room.",
+                  "feedbackOnError": {"type": "pronunciation", "explanation": "Enlaza 'address the' y marca el acento de 'elephant' en la primera sílaba.", "ruleRef": "gp-cleft-sentences"}
+                },
+                {
+                  "type": "FreeSpeakingPrompt",
+                  "id": "es-en-b2-e180",
+                  "prompt": "Nombra un tema incómodo en una comida familiar: describe la tensión, propón hablarlo con tacto y protege la privacidad de los implicados.",
+                  "minTokens": 42,
+                  "conceptClusters": [["uncomfortable", "confront", "expose"], ["consent", "privacy", "transparency"], ["what matters", "I suggest", "essential"]],
+                  "grammarRuleRefs": ["gp-subjunctive-mood", "gp-cleft-sentences"],
+                  "timeLimitSeconds": 85,
+                  "minWpm": 70,
+                  "maxWpm": 160,
+                  "modelAnswer": "I think we should address the elephant in the room: the photos were shared without consent. What matters is not who posted them first, but that everyone feels safe. I suggest that we speak privately with the person involved and agree on clear boundaries. It is essential that we listen before we confront anyone in front of the family.",
+                  "selfAssessmentCriteria": ["¿Nombré el tema con tacto?", "¿Describí la tensión?", "¿Propuse hablarlo?"],
+                  "feedbackOnError": {"type": "grammar", "explanation": "La respuesta modelo combina subjuntivo y cleft para nombrar el conflicto y priorizar la privacidad.", "ruleRef": "gp-subjunctive-mood"}
+                }
+              ]
+            },
+            {
+              "id": "es-en-lv-3-un-4-ls-4",
+              "title": "Debate sobre privacidad",
+              "cefrLevel": "B2",
+              "scenario": "Un panel discute los límites de la vigilancia digital; hay que defender derechos y riesgos.",
+              "canDo": "Puedo debatir sobre privacidad, matizar riesgos y proponer salvaguardas con registro formal.",
+              "grammarPoints": [
+                {"id": "gp-inversion-negative-adverbials", "label": "Inversion with negative adverbials", "description": "Not only…, Under no circumstances…, Rarely…"},
+                {"id": "gp-hedging", "label": "Hedging", "description": "I'm afraid, it seems, perhaps, would."}
+              ],
+              "vocabFrequencyBand": "3000-5000",
+              "culturalNotes": [
+                {"idiom": "slippery slope", "note": "Objeción de que un primer paso llevará inevitablemente a un extremo peor; conviene acompañarla de evidencia, no usarla como argumento automático.", "translation": "pendiente resbaladiza"}
+              ],
+              "exercises": [
+                {
+                  "type": "ClozeDragDrop",
+                  "id": "es-en-b2-e181",
+                  "passage": "Under no circumstances {{b1}} we share personal data without consent, and rarely {{b2}} users read the terms.",
+                  "blanks": [
+                    {"id": "b1", "answer": "should", "options": ["should", "we should", "do"]},
+                    {"id": "b2", "answer": "do", "options": ["do", "does", "are"]}
+                  ],
+                  "feedbackOnError": {"type": "grammar", "explanation": "Las expresiones negativas al inicio exigen inversión: 'should we' y 'do users'.", "ruleRef": "gp-inversion-negative-adverbials"}
+                },
+                {
+                  "type": "ClozeDragDrop",
+                  "id": "es-en-b2-e182",
+                  "passage": "Not only {{b1}} the breach expose names, but it {{b2}} also have revealed locations; it {{b3}} be described as a serious failure.",
+                  "blanks": [
+                    {"id": "b1", "answer": "did", "options": ["did", "does", "was"]},
+                    {"id": "b2", "answer": "may", "options": ["may", "must", "can"]},
+                    {"id": "b3", "answer": "could", "options": ["could", "can", "must"]}
+                  ],
+                  "feedbackOnError": {"type": "grammar", "explanation": "La inversión 'Not only did…' enfatiza el primer problema; 'may have' y 'could be' añaden cautela.", "ruleRef": "gp-inversion-negative-adverbials"}
+                },
+                {
+                  "type": "SemanticMatch",
+                  "id": "es-en-b2-e183",
+                  "instructions": "Empareja cada término con su definición en el debate.",
+                  "pairs": [
+                    {"left": "The breach exposed sensitive data.", "right": "Filtración", "register": "formal", "nuance": "Acceso no autorizado a información protegida."},
+                    {"left": "Encryption protects the messages.", "right": "Cifrado", "register": "formal", "nuance": "Convierte el contenido en datos ilegibles sin la clave."},
+                    {"left": "Users can remain anonymous.", "right": "Anonimato", "register": "neutral", "nuance": "La identidad no queda vinculada a la actividad."}
+                  ],
+                  "feedbackOnError": {"type": "vocabulary", "explanation": "Filtración, cifrado y anonimato describen riesgos y protecciones distintos.", "ruleRef": "gp-hedging"}
+                },
+                {
+                  "type": "SemanticMatch",
+                  "id": "es-en-b2-e184",
+                  "instructions": "Distingue la objeción de la salvaguarda.",
+                  "pairs": [
+                    {"left": "If we accept this, it's a slippery slope.", "right": "Objeción de pendiente resbaladiza", "register": "neutral", "nuance": "Predice una escalada sin demostrarla."},
+                    {"left": "I'm afraid the regulation may be too broad.", "right": "Crítica atenuada", "register": "formal", "nuance": "Señala un riesgo sin rechazar la norma entera."},
+                    {"left": "Under no circumstances should we weaken encryption.", "right": "Límite firme", "register": "formal", "nuance": "La inversión cierra la posibilidad de concesión."}
+                  ],
+                  "feedbackOnError": {"type": "register", "explanation": "La atenuación permite criticar una medida, mientras la inversión marca un límite sin matices.", "ruleRef": "gp-inversion-negative-adverbials"}
+                },
+                {
+                  "type": "AudioOnlyPrompt",
+                  "id": "es-en-b2-e185",
+                  "audioText": "Under no circumstances should we weaken encryption; the risk of a breach is too high.",
+                  "question": "What is the speaker's position?",
+                  "options": ["Encryption should be weakened", "Encryption must remain strong", "The breach was harmless", "The risk is unknown"],
+                  "correctIndex": 1,
+                  "allowSlowPlayback": true,
+                  "feedbackOnError": {"type": "comprehension", "explanation": "La inversión negativa expresa una oposición firme a debilitar el cifrado.", "ruleRef": "gp-inversion-negative-adverbials"}
+                },
+                {
+                  "type": "AudioOnlyPrompt",
+                  "id": "es-en-b2-e186",
+                  "audioText": "I'm afraid the proposal may create a slippery slope. Not only would it require more tracking, but it could also undermine anonymity. Perhaps we could set clearer limits before approving it.",
+                  "question": "What does the speaker propose?",
+                  "options": ["Approving the proposal immediately", "Setting clearer limits first", "Removing all tracking", "Ignoring anonymity"],
+                  "correctIndex": 1,
+                  "allowSlowPlayback": false,
+                  "feedbackOnError": {"type": "comprehension", "explanation": "El hablante critica el riesgo y propone límites más claros antes de aprobar la medida.", "ruleRef": "gp-hedging"}
+                },
+                {
+                  "type": "MultipleChoice",
+                  "id": "es-en-b2-e187",
+                  "question": "Completa: Rarely ___ users read the terms before accepting.",
+                  "options": ["do", "did", "are"],
+                  "correctIndex": 0,
+                  "feedbackOnError": {"type": "grammar", "explanation": "'Rarely' al inicio exige inversión con el auxiliar de presente: 'Rarely do users read…'.", "ruleRef": "gp-inversion-negative-adverbials"}
+                },
+                {
+                  "type": "ListenType",
+                  "id": "es-en-b2-e188",
+                  "transcription": "Under no circumstances should we share personal data without consent",
+                  "audioText": "Under no circumstances should we share personal data without consent",
+                  "feedbackOnError": {"type": "spelling", "explanation": "Escribe 'circumstances' con 'c' inicial y 'consent' con 's' final.", "ruleRef": "gp-inversion-negative-adverbials"}
+                },
+                {
+                  "type": "SpeakRepeat",
+                  "id": "es-en-b2-e189",
+                  "targetPhrase": "Under no circumstances should we weaken encryption.",
+                  "audioText": "Under no circumstances should we weaken encryption.",
+                  "feedbackOnError": {"type": "pronunciation", "explanation": "Haz una pausa breve tras 'circumstances' y enfatiza 'weaken'.", "ruleRef": "gp-inversion-negative-adverbials"}
+                },
+                {
+                  "type": "FreeSpeakingPrompt",
+                  "id": "es-en-b2-e190",
+                  "prompt": "Debate sobre la vigilancia digital: defiende un derecho, matiza un riesgo y propón una salvaguarda concreta.",
+                  "minTokens": 42,
+                  "conceptClusters": [["privacy", "regulation", "protection"], ["breach", "track", "anonymity"], ["under no circumstances", "not only", "perhaps"]],
+                  "grammarRuleRefs": ["gp-inversion-negative-adverbials", "gp-hedging"],
+                  "timeLimitSeconds": 85,
+                  "minWpm": 70,
+                  "maxWpm": 160,
+                  "modelAnswer": "Under no circumstances should companies track users without explicit consent. Not only does this threaten anonymity, but it also increases the impact of any breach. I'm afraid the current regulation is too vague, so perhaps we could require independent audits and clear limits on data retention. That would protect privacy without blocking legitimate security measures.",
+                  "selfAssessmentCriteria": ["¿Defendí un derecho?", "¿Matizé un riesgo?", "¿Propuse una salvaguarda?"],
+                  "feedbackOnError": {"type": "grammar", "explanation": "La respuesta modelo combina inversiones negativas con atenuadores para defender una salvaguarda sin sonar dogmática.", "ruleRef": "gp-inversion-negative-adverbials"}
+                }
+              ]
+            },
+            {
+              "id": "es-en-lv-3-un-4-ls-5",
+              "title": "Propuestas para el futuro",
+              "cefrLevel": "B2",
+              "scenario": "Un foro ciudadano pide propuestas concretas sobre tecnología y convivencia.",
+              "canDo": "Puedo formular propuestas, anticipar consecuencias y cerrar con una llamada a la acción.",
+              "grammarPoints": [
+                {"id": "gp-third-conditional", "label": "Third conditional", "description": "Hipótesis pasadas no realizadas."},
+                {"id": "gp-modals-speculation-past", "label": "Past modals of speculation", "description": "must have, might have, can't have."}
+              ],
+              "vocabFrequencyBand": "3000-5000",
+              "culturalNotes": [
+                {"idiom": "game changer", "note": "Innovación que transforma las reglas de un ámbito; se usa para señalar un impacto estructural, no una mejora menor.", "translation": "cambio radical"}
+              ],
+              "exercises": [
+                {
+                  "type": "ClozeDragDrop",
+                  "id": "es-en-b2-e191",
+                  "passage": "If we {{b1}} invested in public transport earlier, the city {{b2}} have reduced emissions sooner.",
+                  "blanks": [
+                    {"id": "b1", "answer": "had", "options": ["had", "have", "would"]},
+                    {"id": "b2", "answer": "could", "options": ["could", "can", "must"]}
+                  ],
+                  "feedbackOnError": {"type": "grammar", "explanation": "La third conditional usa 'If we had invested… could have reduced…'.", "ruleRef": "gp-third-conditional"}
+                },
+                {
+                  "type": "ClozeDragDrop",
+                  "id": "es-en-b2-e192",
+                  "passage": "The innovation {{b1}} have been a game changer, but it {{b2}} have failed without regulation; if we {{b3}} a clear framework now, we could scale it safely.",
+                  "blanks": [
+                    {"id": "b1", "answer": "might", "options": ["might", "must", "can"]},
+                    {"id": "b2", "answer": "could", "options": ["could", "will", "should"]},
+                    {"id": "b3", "answer": "set", "options": ["set", "sets", "setting"]}
+                  ],
+                  "feedbackOnError": {"type": "grammar", "explanation": "Los modales de especulación pasada ('might have been', 'could have failed') evalúan posibilidades; la condición presente usa 'if we set'.", "ruleRef": "gp-modals-speculation-past"}
+                },
+                {
+                  "type": "SemanticMatch",
+                  "id": "es-en-b2-e193",
+                  "instructions": "Empareja cada valoración con su función.",
+                  "pairs": [
+                    {"left": "The trend is likely to continue.", "right": "Predicción", "register": "formal", "nuance": "Anticipa una evolución sin certeza absoluta."},
+                    {"left": "This could be a game changer.", "right": "Innovación transformadora", "register": "neutral", "nuance": "Señala un impacto estructural potencial."},
+                    {"left": "We need a sustainable framework.", "right": "Marco sostenible", "register": "formal", "nuance": "Propone reglas que puedan mantenerse en el tiempo."}
+                  ],
+                  "feedbackOnError": {"type": "vocabulary", "explanation": "Predicción, cambio radical y marco sostenible describen niveles distintos de impacto.", "ruleRef": "gp-modals-speculation-past"}
+                },
+                {
+                  "type": "SemanticMatch",
+                  "id": "es-en-b2-e194",
+                  "instructions": "Distingue la deducción de la hipótesis no realizada.",
+                  "pairs": [
+                    {"left": "It must have been a mistake.", "right": "Deducción fuerte", "register": "neutral", "nuance": "La evidencia hace muy probable la conclusión."},
+                    {"left": "It might have worked.", "right": "Posibilidad pasada", "register": "neutral", "nuance": "No afirma que ocurriera."},
+                    {"left": "Had we acted sooner, we would have avoided it.", "right": "Third conditional invertida", "register": "formal", "nuance": "La inversión sustituye a 'if' y enfatiza la hipótesis."}
+                  ],
+                  "feedbackOnError": {"type": "grammar", "explanation": "'Must have' expresa deducción, 'might have' posibilidad y la inversión una hipótesis pasada contrafactual.", "ruleRef": "gp-modals-speculation-past"}
+                },
+                {
+                  "type": "AudioOnlyPrompt",
+                  "id": "es-en-b2-e195",
+                  "audioText": "If we had invested in public transport earlier, we could have reduced emissions much sooner.",
+                  "question": "What does the speaker imply?",
+                  "options": ["The city invested early", "The city missed an earlier opportunity", "Emissions are no longer a problem", "Public transport caused the emissions"],
+                  "correctIndex": 1,
+                  "allowSlowPlayback": true,
+                  "feedbackOnError": {"type": "comprehension", "explanation": "La tercera condicional lamenta una inversión que no se hizo a tiempo.", "ruleRef": "gp-third-conditional"}
+                },
+                {
+                  "type": "AudioOnlyPrompt",
+                  "id": "es-en-b2-e196",
+                  "audioText": "The proposal might have been a game changer, but without a clear framework it could have failed. I'd suggest we set measurable goals before scaling it.",
+                  "question": "What does the speaker recommend?",
+                  "options": ["Scaling immediately", "Setting measurable goals first", "Abandoning the proposal", "Removing the framework"],
+                  "correctIndex": 1,
+                  "allowSlowPlayback": false,
+                  "feedbackOnError": {"type": "comprehension", "explanation": "El hablante reconoce el potencial, pero pide objetivos medibles antes de escalar.", "ruleRef": "gp-modals-speculation-past"}
+                },
+                {
+                  "type": "MultipleChoice",
+                  "id": "es-en-b2-e197",
+                  "question": "Completa: If we had acted sooner, we ___ have avoided the crisis.",
+                  "options": ["could", "can", "must"],
+                  "correctIndex": 0,
+                  "feedbackOnError": {"type": "grammar", "explanation": "La consecuencia pasada no realizada se expresa con 'could have avoided'.", "ruleRef": "gp-third-conditional"}
+                },
+                {
+                  "type": "OrderWords",
+                  "id": "es-en-b2-e198",
+                  "tokens": ["This", "innovation", "could", "be", "a", "game", "changer", "for", "society", "changed"],
+                  "answerTokens": ["This", "innovation", "could", "be", "a", "game", "changer", "for", "society"],
+                  "feedbackOnError": {"type": "word_order", "explanation": "El modismo 'game changer' se usa como sustantivo compuesto tras 'a'.", "ruleRef": "gp-modals-speculation-past"}
+                },
+                {
+                  "type": "SpeakRepeat",
+                  "id": "es-en-b2-e199",
+                  "targetPhrase": "This could be a game changer for society.",
+                  "audioText": "This could be a game changer for society.",
+                  "feedbackOnError": {"type": "pronunciation", "explanation": "Enlaza 'game changer' y da énfasis a 'society' al cerrar la propuesta.", "ruleRef": "gp-modals-speculation-past"}
+                },
+                {
+                  "type": "FreeSpeakingPrompt",
+                  "id": "es-en-b2-e200",
+                  "prompt": "Presenta una propuesta tecnológica para el foro ciudadano: anticipa consecuencias, evalúa riesgos y cierra con una llamada a la acción.",
+                  "minTokens": 45,
+                  "conceptClusters": [["prediction", "trend", "innovation"], ["impact", "framework", "sustainable"], ["if", "might have", "could"]],
+                  "grammarRuleRefs": ["gp-third-conditional", "gp-modals-speculation-past"],
+                  "timeLimitSeconds": 90,
+                  "minWpm": 70,
+                  "maxWpm": 160,
+                  "modelAnswer": "This platform could be a game changer for local participation, but only if we set a sustainable framework. Had we launched it without safeguards, it might have amplified misinformation instead of reducing it. I propose measurable goals, independent oversight and a public review after six months. If we act now, we can turn a promising trend into lasting change.",
+                  "selfAssessmentCriteria": ["¿Presenté una propuesta?", "¿Anticipé consecuencias?", "¿Cerré con una llamada a la acción?"],
+                  "feedbackOnError": {"type": "grammar", "explanation": "La respuesta modelo combina tercera condicional y modales de especulación pasada para anticipar riesgos.", "ruleRef": "gp-third-conditional"}
+                }
+              ]
+            }
+          ]
+        }
+      ]
     }
   ]
 }
