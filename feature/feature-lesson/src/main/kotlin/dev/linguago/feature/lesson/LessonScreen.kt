@@ -23,7 +23,9 @@ import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.Text
 import androidx.compose.material3.TextButton
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableIntStateOf
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
@@ -44,9 +46,11 @@ import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import dev.linguago.core.domain.model.Exercise
 import dev.linguago.core.domain.model.ExerciseId
 import dev.linguago.core.ui.components.FeedbackBanner
+import dev.linguago.core.ui.components.InfoBanner
 import dev.linguago.core.ui.components.LinguaProgressBar
 import dev.linguago.core.ui.components.OptionCard
 import dev.linguago.core.ui.components.PrimaryButton3D
+import dev.linguago.core.ui.haptics.rememberLinguaHaptics
 import dev.linguago.core.ui.theme.LinguaTheme
 import dev.linguago.core.ui.theme.LinguaTokens
 
@@ -163,6 +167,24 @@ private fun ExerciseStage(
             (uiState.index + 1) / uiState.exercises.size.toFloat()
         }
 
+    // Haptics semánticos (F2.1): confirmación/error al evaluar y tick al
+    // acoplar tokens o parejas. Se disparan solo al crecer la respuesta.
+    val haptics = rememberLinguaHaptics()
+    LaunchedEffect(uiState.feedback, uiState.index) {
+        val feedback = uiState.feedback ?: return@LaunchedEffect
+        if (feedback.isCorrect) haptics.confirm() else haptics.error()
+    }
+    var lastChosenCount by remember { mutableIntStateOf(uiState.chosenTokens.size) }
+    LaunchedEffect(uiState.chosenTokens.size) {
+        if (uiState.chosenTokens.size > lastChosenCount) haptics.tick()
+        lastChosenCount = uiState.chosenTokens.size
+    }
+    var lastMatchedCount by remember { mutableIntStateOf(uiState.matched.size) }
+    LaunchedEffect(uiState.matched.size) {
+        if (uiState.matched.size > lastMatchedCount) haptics.tick()
+        lastMatchedCount = uiState.matched.size
+    }
+
     Column(
         modifier =
             modifier
@@ -183,6 +205,10 @@ private fun ExerciseStage(
             TextButton(onClick = onExit) { Text(text = "Salir") }
         }
         LinguaProgressBar(progress = progress)
+        if (uiState.voiceWarmingUp) {
+            Spacer(Modifier.height(8.dp))
+            InfoBanner(message = "Preparando motor de voz offline…")
+        }
         Spacer(Modifier.height(16.dp))
 
         Column(

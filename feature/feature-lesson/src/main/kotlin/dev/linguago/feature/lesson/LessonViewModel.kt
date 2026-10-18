@@ -6,6 +6,7 @@ import androidx.lifecycle.viewModelScope
 import dagger.hilt.android.lifecycle.HiltViewModel
 import dev.linguago.core.audio.SttEngine
 import dev.linguago.core.audio.TtsEngine
+import dev.linguago.core.audio.isWarmingUp
 import dev.linguago.core.common.Result
 import dev.linguago.core.domain.model.CourseId
 import dev.linguago.core.domain.model.Exercise
@@ -56,6 +57,8 @@ data class LessonUiState(
     val audioAvailable: Boolean = false,
     // Voz del usuario (SpeakRepeat, Fase 2.3).
     val speechAvailable: Boolean = false,
+    // Warmup de motores (F2.1): la UI avisa sin bloquear (I3).
+    val voiceWarmingUp: Boolean = false,
     val listening: Boolean = false,
     val recognized: String? = null,
 )
@@ -211,11 +214,14 @@ class LessonViewModel
             viewModelScope.launch { ttsEngine.warmUp(language) }
             viewModelScope.launch { sttEngine.warmUp(language) }
             viewModelScope.launch {
-                combine(ttsEngine.stateFor(language), sttEngine.stateFor(language)) { _, _ -> Unit }.collect {
+                combine(ttsEngine.stateFor(language), sttEngine.stateFor(language)) { tts, stt ->
+                    tts.isWarmingUp || stt.isWarmingUp
+                }.collect { warmingUp ->
                     _uiState.update { state ->
                         state.copy(
                             audioAvailable = ttsEngine.isReadyFor(language),
                             speechAvailable = sttEngine.isReadyFor(language),
+                            voiceWarmingUp = warmingUp,
                         )
                     }
                 }

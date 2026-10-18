@@ -127,6 +127,20 @@ public class DesignSystemAccessibilityTest {
     }
 
     @Test
+    public fun infoBanner_isPoliteLiveRegion() {
+        compose.setContent {
+            LinguaTheme {
+                InfoBanner(message = "Preparando motor de voz offline…")
+            }
+        }
+
+        compose
+            .onNodeWithText("Preparando motor de voz offline…")
+            .assertIsDisplayed()
+            .assert(SemanticsMatcher.expectValue(SemanticsProperties.LiveRegion, LiveRegionMode.Polite))
+    }
+
+    @Test
     public fun primaryButton_survivesLargeFontScale() {
         compose.setContent {
             val density = LocalDensity.current

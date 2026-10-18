@@ -27,3 +27,20 @@ public sealed interface AudioEngineState {
         public val reason: String,
     ) : AudioEngineState
 }
+
+/**
+ * `true` mientras el motor prepara sus modelos (verificación, extracción o
+ * carga). La UI lo usa para avisar sin bloquear el avance de la lección (I3).
+ */
+public val AudioEngineState.isWarmingUp: Boolean
+    get() =
+        when (this) {
+            AudioEngineState.Verifying,
+            AudioEngineState.Extracting,
+            AudioEngineState.Loading,
+            -> true
+            AudioEngineState.Idle,
+            AudioEngineState.Ready,
+            is AudioEngineState.Degraded,
+            -> false
+        }
