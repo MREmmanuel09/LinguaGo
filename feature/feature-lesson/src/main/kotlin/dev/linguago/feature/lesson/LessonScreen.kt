@@ -4,6 +4,14 @@ import android.Manifest
 import android.content.pm.PackageManager
 import androidx.activity.compose.rememberLauncherForActivityResult
 import androidx.activity.result.contract.ActivityResultContracts
+import androidx.compose.animation.AnimatedContent
+import androidx.compose.animation.core.Spring
+import androidx.compose.animation.core.spring
+import androidx.compose.animation.fadeIn
+import androidx.compose.animation.fadeOut
+import androidx.compose.animation.slideInHorizontally
+import androidx.compose.animation.slideOutHorizontally
+import androidx.compose.animation.togetherWith
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
@@ -39,6 +47,7 @@ import androidx.compose.ui.semantics.selected
 import androidx.compose.ui.semantics.semantics
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
+import androidx.compose.ui.unit.IntOffset
 import androidx.compose.ui.unit.dp
 import androidx.core.content.ContextCompat
 import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
@@ -218,17 +227,42 @@ private fun ExerciseStage(
                     .verticalScroll(rememberScrollState()),
             verticalArrangement = Arrangement.spacedBy(12.dp),
         ) {
-            Renderer(
-                exercise = exercise,
-                uiState = uiState,
-                onPickOption = onPickOption,
-                onToggleToken = onToggleToken,
-                onMatchLeft = onMatchLeft,
-                onMatchRight = onMatchRight,
-                onTypedText = onTypedText,
-                onSpeakRequest = onSpeakRequest,
-                onPlayAudio = onPlayAudio,
-            )
+            AnimatedContent(
+                targetState = uiState.index,
+                transitionSpec = {
+                    val slide =
+                        spring<IntOffset>(
+                            dampingRatio = Spring.DampingRatioLowBouncy,
+                            stiffness = Spring.StiffnessMediumLow,
+                        )
+                    val fade =
+                        spring<Float>(
+                            dampingRatio = Spring.DampingRatioLowBouncy,
+                            stiffness = Spring.StiffnessMediumLow,
+                        )
+                    (
+                        slideInHorizontally(animationSpec = slide) { width -> width / 6 } +
+                            fadeIn(animationSpec = fade)
+                    ).togetherWith(
+                        slideOutHorizontally(animationSpec = slide) { width -> -width / 6 } +
+                            fadeOut(animationSpec = fade),
+                    )
+                },
+                label = "exercise_transition",
+            ) { index ->
+                val step = uiState.exercises.getOrNull(index) ?: return@AnimatedContent
+                Renderer(
+                    exercise = step,
+                    uiState = uiState,
+                    onPickOption = onPickOption,
+                    onToggleToken = onToggleToken,
+                    onMatchLeft = onMatchLeft,
+                    onMatchRight = onMatchRight,
+                    onTypedText = onTypedText,
+                    onSpeakRequest = onSpeakRequest,
+                    onPlayAudio = onPlayAudio,
+                )
+            }
         }
 
         Spacer(Modifier.height(12.dp))
@@ -344,6 +378,9 @@ private fun BottomActions(
             FeedbackBanner(
                 isCorrect = feedback.isCorrect,
                 message = if (feedback.isCorrect) "¡Correcto!" else "Revisa la respuesta y sigue",
+                diagnostic = feedback.diagnostic,
+                idiom = feedback.idiom,
+                culturalNote = feedback.culturalNote,
             )
             Spacer(Modifier.height(8.dp))
             PrimaryButton3D(

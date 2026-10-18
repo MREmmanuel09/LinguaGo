@@ -1,6 +1,7 @@
 package dev.linguago.core.domain.usecase
 
 import dev.linguago.core.common.Result
+import dev.linguago.core.domain.logic.GradingResult
 import dev.linguago.core.domain.logic.ReviewRating
 import dev.linguago.core.domain.model.Course
 import dev.linguago.core.domain.model.CourseId
@@ -37,12 +38,13 @@ public interface StartLessonUseCase {
 public interface SubmitAnswerUseCase {
     /**
      * Valida la respuesta por tipo de ejercicio, contabiliza XP (+10 por
-     * respuesta correcta, RFC §3.2) y devuelve `true` si es correcta.
+     * respuesta correcta, RFC §3.2) y devuelve la calificación completa:
+     * corrección más el `feedbackOnError` concreto del ejercicio (ADR-018).
      */
     public suspend operator fun invoke(
         exercise: Exercise,
         answer: ExerciseAnswer,
-    ): Result<Boolean>
+    ): Result<GradingResult>
 }
 
 public interface CompleteLessonUseCase {

@@ -8,6 +8,7 @@ import dev.linguago.core.audio.SttEngine
 import dev.linguago.core.audio.TtsEngine
 import dev.linguago.core.audio.isWarmingUp
 import dev.linguago.core.common.Result
+import dev.linguago.core.domain.logic.CulturalNoteMatcher
 import dev.linguago.core.domain.model.CourseId
 import dev.linguago.core.domain.model.Exercise
 import dev.linguago.core.domain.model.Language
@@ -30,6 +31,11 @@ import javax.inject.Inject
 /** Feedback de la respuesta evaluada, visible hasta que el usuario avanza. */
 data class ExerciseFeedback(
     val isCorrect: Boolean,
+    /** Explicación concreta del `feedbackOnError` (ADR-018); `null` en v1. */
+    val diagnostic: String? = null,
+    /** Modismo de la lección presente en el ejercicio (F2.2), si aplica. */
+    val idiom: String? = null,
+    val culturalNote: String? = null,
 )
 
 /**
@@ -282,11 +288,23 @@ class LessonViewModel
             viewModelScope.launch {
                 when (val result = submitAnswerUseCase(exercise, answer)) {
                     is Result.Success -> {
-                        val correct = result.value
+                        val grading = result.value
+                        val cultural = session?.let { CulturalNoteMatcher.noteFor(it.lesson, exercise) }
                         _uiState.update { state ->
                             state.copy(
-                                feedback = ExerciseFeedback(isCorrect = correct),
-                                xpEarned = if (correct) state.xpEarned + XP_PER_CORRECT_ANSWER else state.xpEarned,
+                                feedback =
+                                    ExerciseFeedback(
+                                        isCorrect = grading.isCorrect,
+                                        diagnostic = grading.diagnosticFeedback,
+                                        idiom = cultural?.idiom,
+                                        culturalNote = cultural?.note,
+                                    ),
+                                xpEarned =
+                                    if (grading.isCorrect) {
+                                        state.xpEarned + XP_PER_CORRECT_ANSWER
+                                    } else {
+                                        state.xpEarned
+                                    },
                             )
                         }
                     }

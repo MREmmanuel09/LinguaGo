@@ -141,6 +141,46 @@ public class DesignSystemAccessibilityTest {
     }
 
     @Test
+    public fun feedbackBanner_expandsSpecificDiagnostic() {
+        compose.setContent {
+            LinguaTheme {
+                FeedbackBanner(
+                    isCorrect = false,
+                    message = "Revisa la respuesta y sigue",
+                    diagnostic = "Usa el pasado simple en la segunda frase.",
+                )
+            }
+        }
+
+        compose.onNodeWithText("Usa el pasado simple en la segunda frase.").assertIsDisplayed()
+
+        compose.onNodeWithText("Ocultar detalle").performClick()
+
+        compose.onNodeWithText("Usa el pasado simple en la segunda frase.").assertDoesNotExist()
+    }
+
+    @Test
+    public fun feedbackBanner_revealsCulturalNoteOnDemand() {
+        compose.setContent {
+            LinguaTheme {
+                FeedbackBanner(
+                    isCorrect = true,
+                    message = "¡Correcto!",
+                    idiom = "play it by ear",
+                    culturalNote = "Decidir sobre la marcha.",
+                )
+            }
+        }
+
+        compose.onNodeWithText("Modismo: play it by ear").assertDoesNotExist()
+
+        compose.onNodeWithText("Ver nota cultural").performClick()
+
+        compose.onNodeWithText("Modismo: play it by ear").assertIsDisplayed()
+        compose.onNodeWithText("Decidir sobre la marcha.").assertIsDisplayed()
+    }
+
+    @Test
     public fun primaryButton_survivesLargeFontScale() {
         compose.setContent {
             val density = LocalDensity.current

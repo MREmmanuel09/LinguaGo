@@ -4,6 +4,7 @@ import dev.linguago.core.common.Result
 import dev.linguago.core.common.flatMap
 import dev.linguago.core.common.map
 import dev.linguago.core.domain.logic.ExerciseGrader
+import dev.linguago.core.domain.logic.GradingResult
 import dev.linguago.core.domain.model.Exercise
 import dev.linguago.core.domain.model.LessonId
 import dev.linguago.core.domain.model.StreakState
@@ -32,11 +33,11 @@ public class SubmitAnswerUseCaseImpl
         override suspend operator fun invoke(
             exercise: Exercise,
             answer: ExerciseAnswer,
-        ): Result<Boolean> {
-            val correct = ExerciseGrader.isCorrect(exercise, answer)
-            if (!correct) return Result.success(false)
+        ): Result<GradingResult> {
+            val grading = ExerciseGrader.grade(exercise, answer)
+            if (!grading.isCorrect) return Result.success(grading)
             return when (val xpResult = progressRepository.addXp(XP_PER_CORRECT_ANSWER)) {
-                is Result.Success -> Result.success(true)
+                is Result.Success -> Result.success(grading)
                 is Result.Error -> Result.error(xpResult.error)
             }
         }
