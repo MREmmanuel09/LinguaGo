@@ -208,7 +208,7 @@ Rutas en `app/.../Routes.kt`. La barra inferior muestra Inicio/Progreso/Ajustes;
 
 CI (`.github/workflows/ci.yml`), dos jobs por push/PR:
 
-1. **Build · ktlint · detekt · tests · release**: `ktlintCheck detekt validateContent test` + `assembleDebug` + `assembleRelease` (R8) + artefactos.
+1. **Build · ktlint · detekt · tests · release**: `ktlintCheck detekt validateContent test` + `assembleFullDebug` + `assembleFullRelease` + `assembleEnRelease` (R8) + artefactos.
 2. **Instrumented · core-ui (API 34)**: emulador con KVM + `:core:core-ui:connectedDebugAndroidTest`.
 
 Comandos locales:

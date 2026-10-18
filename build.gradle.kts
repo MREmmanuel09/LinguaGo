@@ -141,7 +141,7 @@ tasks.register("fetchVoiceModels") {
         manifestFile.writeText(
             JsonOutput.prettyPrint(JsonOutput.toJson(manifest)) + "\n",
         )
-        println("OK: models/manifest.json actualizado; `./gradlew :app:assembleDebug` empaqueta models/ como assets.")
+        println("OK: models/manifest.json actualizado; `./gradlew :app:assembleFullDebug` empaqueta models/ como assets.")
     }
 }
 

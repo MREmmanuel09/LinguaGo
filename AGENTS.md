@@ -23,10 +23,11 @@ $env:JAVA_HOME = "C:\Program Files\Android\Android Studio\jbr"   # JBR de Androi
 
 ./gradlew ktlintCheck detekt validateContent test   # gate completo (= CI job 1)
 ./gradlew ktlintFormat                              # autofix de estilo (llamada separada)
-./gradlew :app:assembleDebug                        # APK debug (assets con models/, pesado)
-./gradlew :app:assembleRelease                      # valida R8 (firma debug si no hay keystore)
+./gradlew :app:assembleFullDebug                    # APK debug con los 4 idiomas (pesado)
+./gradlew :app:assembleEnDebug                      # APK de un idioma (flavors en/pt/fr/ja + full)
+./gradlew :app:assembleEnRelease                    # valida R8 por flavor (firma debug si no hay keystore)
 ./gradlew :core:core-ui:connectedDebugAndroidTest   # tests instrumentados (emulador/dispositivo)
-./gradlew validateContent                           # JSON Schema v1 de los 4 cursos
+./gradlew validateContent                           # JSON Schema v1/v2 de los cursos + fixtures
 ```
 
 Emulador local: AVD `Medium_Phone_API_37.0`. En CI los instrumentados corren
@@ -91,8 +92,8 @@ en un emulador **API 34**.
    escribe el ADR antes del código.
 2. Cambio mínimo y enfocado; tests unitarios para lógica nueva.
 3. Gate local: `ktlintFormat` → `ktlintCheck detekt validateContent test`;
-   `assembleDebug`/`assembleRelease` si toca app; `connectedDebugAndroidTest`
-   si toca UI.
+   `assembleFullDebug`/`assemble<Flavor>Release` si toca app;
+   `connectedDebugAndroidTest` si toca UI.
 4. Commit Conventional (en español) y PR usando la plantilla.
 5. Deja que CI (2 jobs: calidad+release, instrumented API 34) valide.
 

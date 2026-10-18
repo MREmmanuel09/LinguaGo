@@ -102,8 +102,11 @@ cd LinguaGo
 # Si el SDK no está en la ruta por defecto, crea local.properties:
 #   sdk.dir=C\:\\Users\\TU_USUARIO\\AppData\\Local\\Android\\Sdk
 
-./gradlew assembleDebug
-# APK en app/build/outputs/apk/debug/
+./gradlew assembleFullDebug
+# APK debug con los 4 idiomas en app/build/outputs/apk/full/debug/
+./gradlew assembleEnDebug
+# APK solo inglés (flavors en/pt/fr/ja); universal + arm64-v8a en
+# app/build/outputs/apk/en/debug/
 ```
 
 ### Modelos de voz (TTS Piper / STT Vosk)
@@ -145,8 +148,10 @@ ni red. No se compila en release.
 ## Release y firma
 
 ```bash
-# Build release con R8 + resource shrinker
-./gradlew assembleRelease
+# Build release con R8 + resource shrinker (todos los idiomas)
+./gradlew assembleFullRelease
+# Por idioma (ADR-017): en/pt/fr/ja → app/build/outputs/apk/<flavor>/release/
+./gradlew assembleEnRelease
 ```
 
 Sin keystore configurado, el release se firma con la clave **debug** solo
@@ -161,11 +166,11 @@ linguago.keyPassword=…
 ```
 
 ```bash
-./gradlew assembleRelease
-# APK firmado en app/build/outputs/apk/release/
+./gradlew assembleEnRelease
+# APK firmado en app/build/outputs/apk/en/release/
 ```
 
-El CI valida `assembleRelease` (R8/shrink) en cada push.
+El CI valida `assembleFullRelease` + `assembleEnRelease` (R8/shrink) en cada push.
 
 ## Calidad y CI
 
@@ -174,8 +179,9 @@ El CI valida `assembleRelease` (R8/shrink) en cada push.
 ./gradlew ktlintFormat                              # autofix de estilo
 ```
 
-- GitHub Actions (`.github/workflows/ci.yml`): gate de calidad, `assembleDebug`,
-  `assembleRelease` y tests instrumentados (emulador API 34) en cada push/PR.
+- GitHub Actions (`.github/workflows/ci.yml`): gate de calidad, `assembleFullDebug`,
+  `assembleFullRelease` + `assembleEnRelease` (R8) y tests instrumentados
+  (emulador API 34) en cada push/PR.
 - `validateContent` valida los 4 cursos contra `docs/schemas/course-v1.json`
   (ADR-012) antes de testear.
 

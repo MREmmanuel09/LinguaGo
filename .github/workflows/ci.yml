@@ -45,24 +45,31 @@ jobs:
       - name: ktlint + detekt + validateContent + tests
         run: ./gradlew ktlintCheck detekt validateContent test
 
-      - name: assembleDebug
-        run: ./gradlew assembleDebug
+      - name: assembleDebug (full, todos los idiomas)
+        run: ./gradlew assembleFullDebug
 
       - name: assembleRelease (R8 + shrink, sin keystore de distribución)
-        run: ./gradlew assembleRelease
+        run: ./gradlew assembleFullRelease assembleEnRelease
 
-      - name: Upload APK (debug)
+      - name: Upload APK (debug full)
         uses: actions/upload-artifact@v4
         with:
           name: linguago-debug
-          path: app/build/outputs/apk/debug/*.apk
+          path: app/build/outputs/apk/full/debug/*.apk
           if-no-files-found: error
 
-      - name: Upload APK (release sin firmar de distribución)
+      - name: Upload APK (release full sin firmar de distribución)
         uses: actions/upload-artifact@v4
         with:
           name: linguago-release-unsigned-dev
-          path: app/build/outputs/apk/release/*.apk
+          path: app/build/outputs/apk/full/release/*.apk
+          if-no-files-found: error
+
+      - name: Upload APK (release en, flavor por idioma)
+        uses: actions/upload-artifact@v4
+        with:
+          name: linguago-en-release
+          path: app/build/outputs/apk/en/release/*.apk
           if-no-files-found: error
 
       - name: Upload test reports (si falla)

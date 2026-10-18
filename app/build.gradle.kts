@@ -1,7 +1,53 @@
+import org.gradle.api.tasks.Sync
+
 plugins {
     id("linguago.android.application")
     id("linguago.hilt")
 }
+
+// Distribución por idioma (ADR-017): cada flavor empaqueta SOLO los modelos
+// de voz de su idioma; `full` (dev/CI) lleva los cuatro. Sin límite duro por
+// flavor: se monitoriza el peso (holgura bajo 2 GB en GitHub Releases) sin
+// bloquear el release por diferencias de ±5 MB.
+val modelsRoot = rootProject.file("models")
+val voiceAssetsByFlavor: Map<String, List<String>> =
+    linkedMapOf(
+        "en" to
+            listOf(
+                "tts/en_US-amy-medium",
+                "stt/vosk-model-small-en-us-0.15",
+            ),
+        "pt" to
+            listOf(
+                "tts/pt_BR-faber-medium",
+                "stt/vosk-model-small-pt-0.3",
+            ),
+        "fr" to
+            listOf(
+                "tts/fr_FR-siwis-medium",
+                "stt/vosk-model-small-fr-0.22",
+            ),
+        "ja" to listOf("stt/vosk-model-small-ja-0.22"),
+        "full" to listOf("tts", "stt"),
+    )
+
+// Una tarea Sync por flavor (registrada una sola vez): copia SOLO los
+// modelos del idioma a build/generated/voiceAssets/<flavor> con las rutas
+// de assets que esperan los motores (tts/<voz>, stt/<modelo>).
+val syncVoiceAssetsByFlavor: Map<String, TaskProvider<Sync>> =
+    voiceAssetsByFlavor.mapValues { (flavor, paths) ->
+        val camel = flavor.replaceFirstChar { it.uppercase() }
+        val dest =
+            layout.buildDirectory
+                .dir("generated/voiceAssets/$flavor")
+                .get()
+                .asFile
+        tasks.register<Sync>("sync${camel}VoiceAssets") {
+            into(dest)
+            paths.forEach { rel -> into(rel) { from(File(modelsRoot, rel)) } }
+            from(File(modelsRoot, "manifest.json"))
+        }
+    }
 
 // Configuración de distribución (ADR-011): ninguna credencial vive en el
 // repo. Todo se pasa por gradle properties / local.properties.
@@ -55,12 +101,34 @@ android {
     buildFeatures {
         buildConfig = true
     }
-    sourceSets {
-        getByName("main") {
-            // Voz tts/stt y manifest.json del tool de descarga (ADR-006); el
-            // caché de descargas vive fuera de models/ (tarea manual).
-            assets.srcDir(rootProject.file("models"))
+    flavorDimensions += "language"
+    productFlavors {
+        create("en") { dimension = "language" }
+        create("pt") { dimension = "language" }
+        create("fr") { dimension = "language" }
+        create("ja") { dimension = "language" }
+        create("full") { dimension = "language" }
+    }
+    // Un APK universal por flavor + su variante arm64-v8a (ADR-017).
+    splits {
+        abi {
+            isEnable = true
+            reset()
+            include("arm64-v8a")
+            isUniversalApk = true
         }
+    }
+}
+
+// Los modelos viven fuera del sourceSet main: cada variante genera su
+// directorio de assets con Sync (rutas relativas estables a models/) y lo
+// registra como directorio generado, de modo que AGP cablea la dependencia
+// hacia todos los consumidores (merge de assets, lint, empaquetado).
+androidComponents {
+    onVariants { variant ->
+        val flavorName = variant.flavorName ?: return@onVariants
+        val syncTask = syncVoiceAssetsByFlavor[flavorName] ?: return@onVariants
+        variant.sources.assets?.addGeneratedSourceDirectory(syncTask) { task -> task.destinationDirectory }
     }
 }
 
