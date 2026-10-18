@@ -9,9 +9,10 @@ import android.util.Log
 import dagger.hilt.android.qualifiers.ApplicationContext
 import dev.linguago.core.domain.model.Language
 import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.currentCoroutineContext
-import kotlinx.coroutines.ensureActive
+import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.StateFlow
+import kotlinx.coroutines.flow.flow
+import kotlinx.coroutines.flow.flowOn
 import kotlinx.coroutines.withContext
 import org.json.JSONArray
 import org.json.JSONObject
@@ -28,8 +29,9 @@ import javax.inject.Singleton
  * forma atómica la primera vez y se verifican por archivo (SHA-256,
  * ADR-006: `files[].sha256`). El warmup ([warmUp]) carga `org.vosk.Model`
  * (JNA) en `Dispatchers.IO` con Mutex por idioma y estado observable
- * ([stateFor]); [isReadyFor] solo lee memoria. Sin modelo verificado degrada
- * (I3: el ejercicio nunca se bloquea).
+ * ([stateFor]); [isReadyFor] solo lee memoria. [observeTranscription] emite
+ * el streaming (RMS + parciales) y [transcribe] lo reduce al resultado
+ * final. Sin modelo verificado degrada (I3: el ejercicio nunca se bloquea).
  */
 @Singleton
 public class VoskSttEngine
@@ -50,10 +52,23 @@ public class VoskSttEngine
             }
         }
 
+        override fun observeTranscription(language: Language): Flow<SpeechCaptureUpdate> =
+            flow {
+                if (!isReadyFor(language)) warmUp(language)
+                val model = models[language] ?: return@flow
+                SpeechCapture(
+                    source = AudioRecordSource(sampleRateHz = SAMPLE_RATE_HZ),
+                    recognizer = VoskStreamRecognizer(model = model, sampleRateHz = SAMPLE_RATE_HZ),
+                    nanoTime = System::nanoTime,
+                ).run { update -> emit(update) }
+            }.flowOn(Dispatchers.IO)
+
         override suspend fun transcribe(language: Language): TranscriptionResult {
-            if (!isReadyFor(language)) warmUp(language)
-            val model = models[language] ?: return EMPTY_RESULT
-            return withContext(Dispatchers.IO) { recordOnce(model) }
+            var finalText: String? = null
+            observeTranscription(language).collect { update -> update.finalText?.let { finalText = it } }
+            val text = finalText.orEmpty()
+            val confidence = if (text.isBlank()) MEANINGLESS_CONFIDENCE else CONFIDENT
+            return TranscriptionResult(text = text.trim(), confidence = confidence)
         }
 
         /** Verifica, extrae y carga el modelo en IO; publica el estado. */
@@ -91,59 +106,6 @@ public class VoskSttEngine
             }
             models[language] = model
             state.value = AudioEngineState.Ready
-        }
-
-        /** Captura por ~6 s el micrófono (16 kHz mono PCM) y transcribe. */
-        @SuppressLint("MissingPermission")
-        private suspend fun recordOnce(model: Model): TranscriptionResult {
-            val minBuffer =
-                AudioRecord
-                    .getMinBufferSize(
-                        SAMPLE_RATE_HZ,
-                        AudioFormat.CHANNEL_IN_MONO,
-                        AudioFormat.ENCODING_PCM_16BIT,
-                    ).coerceAtLeast(CHUNK_BYTES)
-            val recognizer = Recognizer(model, SAMPLE_RATE_HZ.toFloat())
-            val recorder =
-                AudioRecord(
-                    MediaRecorder.AudioSource.MIC,
-                    SAMPLE_RATE_HZ,
-                    AudioFormat.CHANNEL_IN_MONO,
-                    AudioFormat.ENCODING_PCM_16BIT,
-                    minBuffer,
-                )
-            val buffer = ByteArray(CHUNK_BYTES)
-            var text = ""
-            var finalHit = false
-            try {
-                recorder.startRecording()
-                val deadline = System.nanoTime() + MAX_CAPTURE_NANOS
-                while (!finalHit && System.nanoTime() < deadline) {
-                    currentCoroutineContext().ensureActive()
-                    val read = recorder.read(buffer, 0, buffer.size)
-                    if (read > 0) {
-                        if (recognizer.acceptWaveForm(buffer, read)) {
-                            text = JSONObject(recognizer.result).optString("text", "")
-                            if (text.isNotBlank()) {
-                                finalHit = true
-                            }
-                        }
-                        if (!finalHit) {
-                            val partial = JSONObject(recognizer.partialResult).optString("partial", "")
-                            if (partial.isNotBlank()) text = partial
-                        }
-                    }
-                }
-                if (text.isBlank()) {
-                    text = JSONObject(recognizer.finalResult).optString("text", "")
-                }
-            } finally {
-                runCatching { recorder.stop() }
-                runCatching { recorder.release() }
-                runCatching { recognizer.close() }
-            }
-            val confidence = if (text.isBlank()) MEANINGLESS_CONFIDENCE else CONFIDENT
-            return TranscriptionResult(text = text.trim(), confidence = confidence)
         }
 
         /** filesDir con todos los archivos del manifest presentes y con hash OK. */
@@ -239,11 +201,63 @@ public class VoskSttEngine
             const val TAG = "VoskSttEngine"
             const val VOSK = "vosk"
             const val VOICE_MANIFEST_ASSET = "manifest.json"
-            const val SAMPLE_RATE_HZ = 16000
-            const val CHUNK_BYTES = 8192
-            const val MAX_CAPTURE_NANOS = 6_000_000_000L
             const val CONFIDENT = 1f
             const val MEANINGLESS_CONFIDENCE = 0f
-            val EMPTY_RESULT = TranscriptionResult(text = "", confidence = 0f)
         }
     }
+
+/** Fuente PCM real: AudioRecord 16 kHz mono 16-bit (ADR-020). */
+@SuppressLint("MissingPermission")
+private class AudioRecordSource(
+    sampleRateHz: Int,
+) : PcmSource {
+    private val recorder =
+        AudioRecord(
+            MediaRecorder.AudioSource.MIC,
+            sampleRateHz,
+            AudioFormat.CHANNEL_IN_MONO,
+            AudioFormat.ENCODING_PCM_16BIT,
+            AudioRecord
+                .getMinBufferSize(
+                    sampleRateHz,
+                    AudioFormat.CHANNEL_IN_MONO,
+                    AudioFormat.ENCODING_PCM_16BIT,
+                ).coerceAtLeast(SpeechCapture.STREAM_CHUNK_BYTES),
+        )
+
+    override fun start() {
+        recorder.startRecording()
+    }
+
+    override fun read(buffer: ByteArray): Int = recorder.read(buffer, 0, buffer.size)
+
+    override fun release() {
+        runCatching { recorder.stop() }
+        runCatching { recorder.release() }
+    }
+}
+
+/** Adaptador de `org.vosk.Recognizer` (JNA); el JSON no entra al bucle. */
+private class VoskStreamRecognizer(
+    model: Model,
+    sampleRateHz: Int,
+) : StreamRecognizer {
+    private val recognizer = Recognizer(model, sampleRateHz.toFloat())
+
+    override fun acceptWaveForm(
+        buffer: ByteArray,
+        length: Int,
+    ): Boolean = recognizer.acceptWaveForm(buffer, length)
+
+    override fun resultText(): String = JSONObject(recognizer.result).optString("text", "")
+
+    override fun partialText(): String = JSONObject(recognizer.partialResult).optString("partial", "")
+
+    override fun finalText(): String = JSONObject(recognizer.finalResult).optString("text", "")
+
+    override fun close() {
+        runCatching { recognizer.close() }
+    }
+}
+
+private const val SAMPLE_RATE_HZ = 16000

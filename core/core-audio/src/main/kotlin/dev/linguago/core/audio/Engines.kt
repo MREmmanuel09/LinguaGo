@@ -1,6 +1,7 @@
 package dev.linguago.core.audio
 
 import dev.linguago.core.domain.model.Language
+import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.StateFlow
 
 /**
@@ -39,6 +40,13 @@ interface SttEngine {
 
     /** Pre-calienta el motor en `Dispatchers.IO` (idempotente y concurrente). */
     suspend fun warmUp(language: Language)
+
+    /**
+     * Captura en vivo (ADR-020): emite energía RMS cada ~50 ms y los
+     * parciales de Vosk; la última emisión trae el texto final. El flujo
+     * cierra micrófono y recognizer al completarse o cancelarse.
+     */
+    fun observeTranscription(language: Language): Flow<SpeechCaptureUpdate>
 
     /** Reconoce el habla del usuario y devuelve la transcripción. */
     suspend fun transcribe(language: Language): TranscriptionResult
