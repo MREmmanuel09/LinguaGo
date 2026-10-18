@@ -24,6 +24,11 @@ internal class WarmupStateRegistry {
     /** `true` si el idioma ya quedó listo tras un warmup previo. */
     fun isReady(language: Language): Boolean = stateOf(language).value is AudioEngineState.Ready
 
+    /** Vuelve a [AudioEngineState.Idle] tras liberar el recurso nativo. */
+    fun reset(language: Language) {
+        stateOf(language).value = AudioEngineState.Idle
+    }
+
     /** Ejecuta [block] bajo el lock del idioma salvo que ya esté listo. */
     suspend fun warmUpOnce(
         language: Language,

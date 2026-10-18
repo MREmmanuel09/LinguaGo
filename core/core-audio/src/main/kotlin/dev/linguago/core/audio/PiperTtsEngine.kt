@@ -15,6 +15,8 @@ import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.currentCoroutineContext
 import kotlinx.coroutines.ensureActive
 import kotlinx.coroutines.flow.StateFlow
+import kotlinx.coroutines.sync.Mutex
+import kotlinx.coroutines.sync.withLock
 import kotlinx.coroutines.withContext
 import org.json.JSONArray
 import org.json.JSONObject
@@ -38,8 +40,9 @@ public class PiperTtsEngine
     constructor(
         @ApplicationContext private val context: Context,
     ) : TtsEngine {
-        private val engines = ConcurrentHashMap<Language, OfflineTts>()
+        private val lanes = ConcurrentHashMap<Language, NativeSerialLane<OfflineTts>>()
         private val voices = ConcurrentHashMap<Language, PiperVoice>()
+        private val lifecycle = Mutex()
         private val warmup = WarmupStateRegistry()
 
         override fun isReadyFor(language: Language): Boolean = warmup.isReady(language)
@@ -58,15 +61,18 @@ public class PiperTtsEngine
             speed: Float,
         ) {
             if (!isReadyFor(language)) warmUp(language)
-            val engine = engines[language] ?: return
-            withContext(Dispatchers.IO) {
-                val audio = engine.generate(text = text, sid = 0, speed = speed)
-                playBlocking(audio.samples, audio.sampleRate)
+            lane(language).use { engine ->
+                withContext(Dispatchers.IO) {
+                    currentCoroutineContext().ensureActive()
+                    val audio = engine.generate(text = text, sid = 0, speed = speed)
+                    currentCoroutineContext().ensureActive()
+                    playBlocking(audio.samples, audio.sampleRate)
+                }
             }
         }
 
         /** Verifica, extrae e instancia la voz en IO; publica el estado. */
-        private fun warmUpBlocking(language: Language) {
+        private suspend fun warmUpBlocking(language: Language) {
             val state = warmup.stateOf(language)
             state.value = AudioEngineState.Verifying
             val entry =
@@ -96,7 +102,7 @@ public class PiperTtsEngine
         }
 
         /** Instancia el motor nativo y publica Ready/Degraded. */
-        private fun finishWarmup(
+        private suspend fun finishWarmup(
             language: Language,
             voice: PiperVoice,
         ) {
@@ -107,10 +113,34 @@ public class PiperTtsEngine
                 state.value = AudioEngineState.Degraded("carga de ${voice.id} falló")
                 return
             }
-            voices[language] = voice
-            engines[language] = engine
-            state.value = AudioEngineState.Ready
+            lifecycle.withLock {
+                if (!lane(language).install(engine)) {
+                    state.value = AudioEngineState.Degraded("motor TTS liberado durante la carga")
+                    return
+                }
+                voices[language] = voice
+                state.value = AudioEngineState.Ready
+            }
         }
+
+        /**
+         * Libera los motores JNI cacheados tras esperar a que terminen las
+         * síntesis activas (ADR-022). El próximo [warmUp] vuelve a cargarlos.
+         */
+        public suspend fun release() {
+            withContext(Dispatchers.IO) {
+                lifecycle.withLock {
+                    for (language in lanes.keys.toList()) {
+                        lanes.remove(language)?.close()
+                        voices.remove(language)
+                        warmup.reset(language)
+                    }
+                }
+            }
+        }
+
+        private fun lane(language: Language): NativeSerialLane<OfflineTts> =
+            lanes.computeIfAbsent(language) { NativeSerialLane { engine -> engine.release() } }
 
         /** Voz instalada en filesDir con onnx verificado por SHA-256. */
         private fun verifiedVoice(entry: VoiceEntry): PiperVoice? {
@@ -202,8 +232,8 @@ public class PiperTtsEngine
                     Thread.sleep(POLL_MILLIS)
                 }
             } finally {
-                track.stop()
-                track.release()
+                runCatching { track.stop() }
+                runCatching { track.release() }
             }
         }
 

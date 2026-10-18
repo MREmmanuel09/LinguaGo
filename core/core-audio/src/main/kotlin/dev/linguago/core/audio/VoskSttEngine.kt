@@ -13,6 +13,8 @@ import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.flow
 import kotlinx.coroutines.flow.flowOn
+import kotlinx.coroutines.sync.Mutex
+import kotlinx.coroutines.sync.withLock
 import kotlinx.coroutines.withContext
 import org.json.JSONArray
 import org.json.JSONObject
@@ -39,7 +41,8 @@ public class VoskSttEngine
     constructor(
         @ApplicationContext private val context: Context,
     ) : SttEngine {
-        private val models = ConcurrentHashMap<Language, Model>()
+        private val lanes = ConcurrentHashMap<Language, NativeSerialLane<Model>>()
+        private val lifecycle = Mutex()
         private val warmup = WarmupStateRegistry()
 
         override fun isReadyFor(language: Language): Boolean = warmup.isReady(language)
@@ -55,12 +58,15 @@ public class VoskSttEngine
         override fun observeTranscription(language: Language): Flow<SpeechCaptureUpdate> =
             flow {
                 if (!isReadyFor(language)) warmUp(language)
-                val model = models[language] ?: return@flow
-                SpeechCapture(
-                    source = AudioRecordSource(sampleRateHz = SAMPLE_RATE_HZ),
-                    recognizer = VoskStreamRecognizer(model = model, sampleRateHz = SAMPLE_RATE_HZ),
-                    nanoTime = System::nanoTime,
-                ).run { update -> emit(update) }
+                lane(language).use { model ->
+                    SpeechCapture(
+                        createSource = { AudioRecordSource(sampleRateHz = SAMPLE_RATE_HZ) },
+                        createRecognizer = {
+                            VoskStreamRecognizer(model = model, sampleRateHz = SAMPLE_RATE_HZ)
+                        },
+                        nanoTime = System::nanoTime,
+                    ).run { update -> emit(update) }
+                }
             }.flowOn(Dispatchers.IO)
 
         override suspend fun transcribe(language: Language): TranscriptionResult {
@@ -72,7 +78,7 @@ public class VoskSttEngine
         }
 
         /** Verifica, extrae y carga el modelo en IO; publica el estado. */
-        private fun warmUpBlocking(language: Language) {
+        private suspend fun warmUpBlocking(language: Language) {
             val state = warmup.stateOf(language)
             state.value = AudioEngineState.Verifying
             val entry = readManifestStt(language)
@@ -104,9 +110,32 @@ public class VoskSttEngine
                 state.value = AudioEngineState.Degraded("carga de ${entry.dir} falló")
                 return
             }
-            models[language] = model
-            state.value = AudioEngineState.Ready
+            lifecycle.withLock {
+                if (!lane(language).install(model)) {
+                    state.value = AudioEngineState.Degraded("motor STT liberado durante la carga")
+                    return
+                }
+                state.value = AudioEngineState.Ready
+            }
         }
+
+        /**
+         * Libera los modelos JNA cacheados tras esperar a que terminen las
+         * capturas activas (ADR-022). El próximo [warmUp] vuelve a cargarlos.
+         */
+        public suspend fun release() {
+            withContext(Dispatchers.IO) {
+                lifecycle.withLock {
+                    for (language in lanes.keys.toList()) {
+                        lanes.remove(language)?.close()
+                        warmup.reset(language)
+                    }
+                }
+            }
+        }
+
+        private fun lane(language: Language): NativeSerialLane<Model> =
+            lanes.computeIfAbsent(language) { NativeSerialLane { model -> model.close() } }
 
         /** filesDir con todos los archivos del manifest presentes y con hash OK. */
         private fun verifiedDir(entry: SttEntry): File? {

@@ -53,11 +53,18 @@ internal interface StreamRecognizer {
  * los casos libera la fuente y cierra el recognizer en `finally`.
  */
 internal class SpeechCapture(
-    private val source: PcmSource,
-    private val recognizer: StreamRecognizer,
+    private val createSource: () -> PcmSource,
+    private val createRecognizer: () -> StreamRecognizer,
     private val nanoTime: () -> Long,
     private val maxCaptureNanos: Long = DEFAULT_MAX_CAPTURE_NANOS,
 ) {
+    constructor(
+        source: PcmSource,
+        recognizer: StreamRecognizer,
+        nanoTime: () -> Long,
+        maxCaptureNanos: Long = DEFAULT_MAX_CAPTURE_NANOS,
+    ) : this({ source }, { recognizer }, nanoTime, maxCaptureNanos)
+
     /**
      * Captura hasta el endpoint/plazo y devuelve el texto final; la última
      * emisión lleva [SpeechCaptureUpdate.finalText] no nulo.
@@ -69,8 +76,12 @@ internal class SpeechCapture(
         var endpointHit = false
         var readFailed = false
         var rmsDb = SILENCE_DB
-        source.start()
+        val source = createSource()
+        var recognizer: StreamRecognizer? = null
         try {
+            val activeRecognizer = createRecognizer()
+            recognizer = activeRecognizer
+            source.start()
             val deadline = nanoTime() + maxCaptureNanos
             while (!endpointHit && !readFailed && nanoTime() < deadline) {
                 currentCoroutineContext().ensureActive()
@@ -79,20 +90,20 @@ internal class SpeechCapture(
                     readFailed = true
                 } else if (read > 0) {
                     rmsDb = rmsDbOf(buffer, read)
-                    if (recognizer.acceptWaveForm(buffer, read)) {
-                        text = recognizer.resultText()
+                    if (activeRecognizer.acceptWaveForm(buffer, read)) {
+                        text = activeRecognizer.resultText()
                         if (text.isNotBlank()) endpointHit = true
                     }
-                    if (!endpointHit) partial = recognizer.partialText()
+                    if (!endpointHit) partial = activeRecognizer.partialText()
                     emit(SpeechCaptureUpdate(rmsDb = rmsDb, partialText = partial))
                 }
             }
-            if (!endpointHit) text = partial.ifBlank { recognizer.finalText() }
+            if (!endpointHit) text = partial.ifBlank { activeRecognizer.finalText() }
             emit(SpeechCaptureUpdate(rmsDb = rmsDb, partialText = partial, finalText = text))
             return text
         } finally {
-            source.release()
-            recognizer.close()
+            runCatching { source.release() }
+            runCatching { recognizer?.close() }
         }
     }
 
