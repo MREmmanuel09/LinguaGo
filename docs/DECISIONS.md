@@ -26,6 +26,11 @@
 | 014 | Cifrado del snapshot y tokens - AES-GCM-256 con Keystore | Aprobado |
 | 015 | OneDrive (appfolder vía MSAL) | Diferido |
 | 016 | Repaso espaciado FSRS-4.5 con vocabulario del contenido | Aprobado |
+| 017 | Particionamiento por Product Flavors de idioma | Propuesto |
+| 018 | Schema JSON v2 dual y Regla de No-Aplanamiento Pedagógico | Propuesto |
+| 019 | Evaluación de producción oral libre B2 sin LLMs (heurística + autoevaluación) | Propuesto |
+| 020 | Inicialización asíncrona no bloqueante de motores nativos (Vosk/Piper) | Propuesto |
+| 021 | Migración Room v2→v3 con test instrumentado de regresión de estado | Propuesto |
 
 ---
 ## ADR-000: Convención del registro de decisiones
@@ -506,6 +511,176 @@ olvida y el progreso por gamificación no se sostiene.
   ve afectado porque no se sincroniza.
 - Cambiar los parámetros FSRS no invalida tarjetas: solo cambia la agenda
   futura (estado actual sigue siendo válido).
+
+---
+
+## ADR-017: Particionamiento por Product Flavors de idioma
+
+**Estado:** Propuesto
+**Fecha:** 2026-10-17
+
+**Contexto:** el APK release monolítico de v0.2.0 pesa 508.36 MB (debug
+528.28 MB) porque empaqueta los cuatro cursos con sus modelos TTS/STT
+(`models/` = 510.55 MB: 232.26 MB de Piper y 278.27 MB de Vosk). Ese tamaño
+dificulta la distribución en F-Droid y en GitHub Releases. La distribución
+debe seguir siendo FOSS y sin Play Feature Delivery (vetado por I6).
+
+**Decisión:** definir Product Flavors por idioma (`en`, `pt`, `fr`, `ja`) en
+`:app`, con sourceSets que empaqueten únicamente `models/tts/<lang>` y
+`models/stt/<lang>` del curso correspondiente. Cada APK se mide
+individualmente. No se fija un límite duro por flavor: el total de los cuatro
+flavors debe caber bajo 2 GB (límite de GitHub Releases), con holgura
+esperada de ~700-800 MB total. Se monitoriza el peso pero no se bloquea el
+release por diferencias de ±5 MB. La integridad SHA-256 de los modelos se
+mantiene intacta (`ModelIntegrityTest`).
+
+**Consecuencias:**
+- Se reduce el APK de 508.36 MB a un rango estimado de 100–170 MB por flavor.
+- Cambiar a un segundo curso desde Ajustes mantiene el texto al 100% (JSON
+  incluido) y degrada el audio a `SystemTtsEngine` si el modelo no está en el
+  flavor instalado (I3).
+- Más variantes de build que validar en CI; el Configuration Cache de
+  AGP 9.4.1 exige materializar los sourceSets sin capturar `fileTree`.
+
+**Invariantes protegidos:** I1 (offline), I3 (degradación limpia), I6 (FOSS y
+distribución sin Play Feature Delivery).
+
+---
+
+## ADR-018: Schema JSON v2 dual y Regla de No-Aplanamiento Pedagógico
+
+**Estado:** Propuesto
+**Fecha:** 2026-10-17
+
+**Contexto:** el contrato v1 (`docs/schemas/course-v1.json`) solo describe
+jerarquía y ejercicios A1/A2. Escalar `es-en` a B2 real exige metadatos
+pedagógicos que hoy no existen (nivel CEFR, escenario, objetivos can-do,
+gramática, banda de frecuencia, feedback de error estructurado) y nuevas
+mecánicas. Reescribir los cuatro cursos a la vez sin revisores nativos
+introduciría regresiones pedagógicas y rompería la paridad de `es-pt`,
+`es-fr` y `es-ja`.
+
+**Decisión:** crear `docs/schemas/course-v2.json` (draft-07) y mantener
+coexistencia dual v1/v2. `validateContent` inspecciona `schemaVersion` y
+enruta cada `course.json` a su schema. Solo `es-en` migra a v2; `es-pt`,
+`es-fr` y `es-ja` permanecen en v1 con sus 17 lecciones A1/A2. Toda lección
+v2 declarada `B1` o `B2` debe incluir obligatoriamente `cefrLevel`,
+`scenario`, `canDo`, `grammarPoints[]`, `vocabFrequencyBand`,
+`feedbackOnError` estructurado, al menos un `FreeSpeakingPrompt` y al menos
+un modismo con nota cultural. El validador estructural falla si falta
+cualquiera de estos elementos (Regla de No-Aplanamiento Pedagógico).
+
+**Consecuencias:**
+- El contenido B2 imposible de parsear o pedagógicamente incompleto rompe el
+  build antes de llegar a la app (I9).
+- Los modelos de `core-domain` usan valores por defecto seguros para v1
+  (`cefrLevel = A1`, `locale = null`, `feedbackOnError = null`), de modo que
+  el contenido existente sigue cargando sin cambios.
+- El drift entre schema y modelos `@Serializable` se cubre con tests de
+  contrato y con `PackagedContentTest`.
+
+**Invariantes protegidos:** I1 (contenido empaquetado), I4 (ids históricos
+preservados), I9 (validación estática en CI).
+
+---
+
+## ADR-019: Evaluación de producción oral libre B2 sin LLMs (heurística + autoevaluación)
+
+**Estado:** Propuesto
+**Fecha:** 2026-10-17
+
+**Contexto:** `FreeSpeakingPrompt` requiere evaluar producción oral libre en
+B2. Un juicio semántico y pragmático real exige un modelo de lenguaje, pero
+los LLMs on-device (SLM cuantizados de ~1B) rompen el presupuesto de APK y de
+RAM y agotan la batería, mientras que las APIs cloud violan I1/I2. Existe una
+incompatibilidad real entre evaluación semántica abierta y el invariante
+offline.
+
+**Decisión:** aplicar el Permiso de Imposibilidad y declarar la limitación.
+Opción A (descartada): embeber un SLM cuantizado vía JNI; rompe el
+presupuesto de peso, provoca OOM en dispositivos de 3–4 GB y degrada la
+batería. Opción B (elegida): `FreeSpeakingHeuristicGrader` en `core-domain`,
+determinista y puro, que combina cuatro señales sobre la transcripción de
+Vosk: longitud mínima de tokens, cobertura de `conceptClusters`, detección de
+patrones de los `grammarPoints` exigidos y fluidez en WPM sobre la ventana de
+voz activa. El resultado se complementa con una rúbrica obligatoria de
+autoevaluación del estudiante frente a una respuesta modelo (texto y audio
+Piper).
+
+**Consecuencias:**
+- Evaluación 100% offline, testeable en JVM y sin dependencias nuevas (I7).
+- Trade-off asumido: puede aceptar una frase con keywords válidas pero
+  incoherencia pragmática sutil (falso positivo estimado ~10–15%); se mitiga
+  con la autoevaluación reflexiva y la respuesta canónica audible.
+- El falso negativo por reconocimiento imperfecto de Vosk se acota con
+  distancia de edición en la cobertura léxica y no bloquea el avance (I3).
+
+**Invariantes protegidos:** I1 (offline), I2 (sin backend), I3 (sin
+fricción), I7 (testabilidad).
+
+---
+
+## ADR-020: Inicialización asíncrona no bloqueante de motores nativos (Vosk/Piper)
+
+**Estado:** Propuesto
+**Fecha:** 2026-10-17
+
+**Contexto:** `LessonViewModel.startLesson()` llama hoy a
+`ttsEngine.isReadyFor()` y `sttEngine.isReadyFor()` de forma síncrona. Esas
+funciones extraen árboles de assets a `filesDir`, calculan SHA-256 de hasta
+94 MB e instancian `org.vosk.Model` / `OfflineTts` en el hilo llamante, lo
+que produce jank y riesgo de ANR al abrir una lección. Además
+`SttEngine.transcribe()` es una suspensión opaca de ~6 s que no expone
+parciales ni energía acústica a la UI.
+
+**Decisión:** prohibir I/O, hashing y carga nativa dentro de `isReadyFor()`.
+`core-audio` expone un estado reactivo `StateFlow<AudioEngineState>`
+(`Idle`, `Verifying`, `Extracting`, `Loading`, `Ready`, `Degraded`) y realiza
+el warmup en `Dispatchers.IO` con `Mutex` por idioma y extracción atómica
+(directorio temporal + `renameTo`). Se añade
+`observeTranscription(language): Flow<SpeechCaptureUpdate>` que emite
+`partialResult` y RMS cada ~50 ms, con cancelación cooperativa y cierre
+garantizado de `AudioRecord` y `Recognizer` en `finally`.
+
+**Consecuencias:**
+- Entrar a `LessonScreen` deja de hacer lecturas de disco en el hilo
+  principal (verificable con `StrictMode.detectDiskReads()`).
+- El streaming habilita el visualizador de onda y el feedback en tiempo real
+  de Fase 2 sin cambiar el contrato de dominio.
+- Mayor complejidad de concurrencia (Mutex, ciclo de vida nativo); se cubre
+  con tests de estrés en Fase 4.
+
+**Invariantes protegidos:** I3 (sin fricción), I8 (UX y accesibilidad
+responsivas).
+
+---
+
+## ADR-021: Migración Room v2→v3 con test instrumentado de regresión de estado
+
+**Estado:** Propuesto
+**Fecha:** 2026-10-17
+
+**Contexto:** v2.0 necesita persistir métricas locales de producción oral y
+registro de errores frecuentes. Cualquier cambio de schema en Room puede
+destruir progreso si la migración es incorrecta. I4 exige que el progreso del
+usuario sea intocable, también durante un upgrade de la app.
+
+**Decisión:** subir `LinguagoDatabase` a `version = 3` con `MIGRATION_2_3`
+explícita en `DataModule.kt` y el JSON de schema exportado en
+`core-data/schemas/.../3.json` (commiteado). Ningún cambio de schema se
+fusiona sin un test instrumentado bloqueante (`Migration2To3Test` con
+`MigrationTestHelper`) que parte de una base v2 con el estado exacto de un
+usuario v0.2.0 —8/17 lecciones completadas, 3 tarjetas FSRS en estado
+`learning` y racha de 5 días— aplica las migraciones y verifica que el estado
+persiste íntegro.
+
+**Consecuencias:**
+- El upgrade no puede perder progreso sin romper CI (I4).
+- La migración es determinista y reproducible en emulador API 34/37.
+- Prohibido `fallbackToDestructiveMigration`; cualquier error de migración
+  debe ser visible y corregible, no silencioso.
+
+**Invariantes protegidos:** I4 (progreso intocable), I7 (testabilidad).
 
 ---
 
