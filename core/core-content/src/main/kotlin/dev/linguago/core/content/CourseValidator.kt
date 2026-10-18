@@ -1,6 +1,7 @@
 package dev.linguago.core.content
 
 import dev.linguago.core.content.CourseValidation.Invalid
+import dev.linguago.core.domain.model.CefrLevel
 import dev.linguago.core.domain.model.Course
 import dev.linguago.core.domain.model.Exercise
 import dev.linguago.core.domain.model.Lesson
@@ -59,10 +60,97 @@ public object CourseValidator {
                         val exerciseFailure = validateExercise(lesson, exercise)
                         if (exerciseFailure != null) return exerciseFailure
                     }
+                    val pedagogyFailure = validateLessonPedagogy(lesson)
+                    if (pedagogyFailure != null) return pedagogyFailure
                 }
             }
         }
         return CourseValidation.Valid
+    }
+
+    /**
+     * Regla de No-Aplanamiento Pedagógico (ADR-018): una lección B1/B2 debe
+     * declarar su escenario, can-do, gramática, banda léxica y notas
+     * culturales, además de feedback de error en cada ejercicio y al menos
+     * una producción oral libre.
+     */
+    private fun validateLessonPedagogy(lesson: Lesson): CourseValidation.Invalid? {
+        val requiresCefrMetadata =
+            lesson.cefrLevel == CefrLevel.B1 || lesson.cefrLevel == CefrLevel.B2
+        if (requiresCefrMetadata) {
+            if (lesson.scenario.isNullOrBlank()) {
+                return Invalid("Lección '${lesson.id.value}' B1/B2 requiere scenario")
+            }
+            if (lesson.canDo.isNullOrBlank()) {
+                return Invalid("Lección '${lesson.id.value}' B1/B2 requiere canDo")
+            }
+            if (lesson.grammarPoints.isEmpty()) {
+                return Invalid("Lección '${lesson.id.value}' B1/B2 requiere grammarPoints no vacío")
+            }
+            if (lesson.vocabFrequencyBand == null) {
+                return Invalid("Lección '${lesson.id.value}' B1/B2 requiere vocabFrequencyBand")
+            }
+            if (lesson.culturalNotes.isEmpty()) {
+                return Invalid("Lección '${lesson.id.value}' B1/B2 requiere al menos una culturalNote")
+            }
+            val exerciseWithoutFeedback = lesson.exercises.firstOrNull { it.feedbackOnError == null }
+            if (exerciseWithoutFeedback != null) {
+                return Invalid(
+                    "Lección '${lesson.id.value}' B1/B2 requiere feedbackOnError en todos los ejercicios " +
+                        "(falta en '${exerciseWithoutFeedback.id.value}')",
+                )
+            }
+            if (lesson.exercises.none { it is Exercise.FreeSpeakingPrompt }) {
+                return Invalid("Lección '${lesson.id.value}' B1/B2 requiere al menos un FreeSpeakingPrompt")
+            }
+        }
+
+        if (lesson.scenario?.isBlank() == true) {
+            return Invalid("Lección '${lesson.id.value}' requiere scenario no vacío si se declara")
+        }
+        if (lesson.canDo?.isBlank() == true) {
+            return Invalid("Lección '${lesson.id.value}' requiere canDo no vacío si se declara")
+        }
+        if (lesson.grammarPoints.any { point -> point.id.value.isBlank() || point.label.isBlank() }) {
+            return Invalid("Lección '${lesson.id.value}' requiere grammarPoints con id y label no vacíos")
+        }
+        if (lesson.grammarPoints
+                .map { it.id }
+                .distinct()
+                .size != lesson.grammarPoints.size
+        ) {
+            return Invalid("Lección '${lesson.id.value}' requiere ids de grammarPoints únicos")
+        }
+        if (lesson.culturalNotes.any { note ->
+                note.idiom.isBlank() || note.note.isBlank() || note.translation?.isBlank() == true
+            }
+        ) {
+            return Invalid("Lección '${lesson.id.value}' requiere culturalNotes con idioma y nota no vacíos")
+        }
+        val grammarIds = lesson.grammarPoints.map { it.id }.toSet()
+        for (exercise in lesson.exercises) {
+            val feedback = exercise.feedbackOnError
+            if (feedback != null && feedback.explanation.isBlank()) {
+                return Invalid("Ejercicio '${exercise.id.value}' requiere feedbackOnError con explicación")
+            }
+            val ruleRef = feedback?.ruleRef
+            if (ruleRef != null && ruleRef !in grammarIds) {
+                return Invalid(
+                    "Ejercicio '${exercise.id.value}' referencia ruleRef '${ruleRef.value}' " +
+                        "que no existe en grammarPoints",
+                )
+            }
+            if (exercise is Exercise.FreeSpeakingPrompt) {
+                val missingRef = exercise.grammarRuleRefs.firstOrNull { it !in grammarIds }
+                if (missingRef != null) {
+                    return Invalid(
+                        "Ejercicio '${exercise.id.value}' referencia grammarRuleRefs '${missingRef.value}' " +
+                            "que no existe en grammarPoints",
+                    )
+                }
+            }
+        }
+        return null
     }
 
     private fun validateExercise(

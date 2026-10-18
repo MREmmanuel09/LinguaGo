@@ -273,6 +273,7 @@ usar LLMs on-device o cloud.
 ./gradlew ktlintCheck detekt validateContent test
 ```
 
-Estado F0.1: `validateContent` aún valida solo `course-v1.json`; el routing
-v1/v2 se implementa en F0.3. Hasta entonces, el fixture B2 se valida contra
-`course-v2.json` en los tests de contrato.
+Estado F0.3: `validateContent` enruta cada `course.json` y cada fixture por
+su `schemaVersion` y lo valida contra `course-v1.json` o `course-v2.json`.
+Los cursos `es-pt`, `es-fr` y `es-ja` siguen en v1; el fixture B2 de
+`es-en` se valida contra v2 en cada corrida.

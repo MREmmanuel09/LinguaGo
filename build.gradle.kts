@@ -145,38 +145,58 @@ tasks.register("fetchVoiceModels") {
     }
 }
 
-// Validación del contenido contra el JSON Schema formal (ADR-012). Corre en
-// CI antes de los tests: un course.json que no cumpla el contrato v1 rompe
-// el build ANTES de que una app empaquete contenido inválido.
+// Validación del contenido contra el JSON Schema formal (ADR-012/ADR-018).
+// Corre en CI antes de los tests: cada course.json y cada fixture se enruta
+// por su `schemaVersion` (v1 o v2) y se valida contra el contrato que declara.
 tasks.register("validateContent") {
     group = "verification"
-    description = "Valida los course.json contra docs/schemas/course-v1.json (ADR-012)."
+    description = "Valida course.json y fixtures contra course-v1.json o course-v2.json según schemaVersion."
     val root = rootDir.absolutePath
-    val schemaFile = File(root, "docs/schemas/course-v1.json")
-    val courseFiles: List<File> =
+    val schemaV1File = File(root, "docs/schemas/course-v1.json")
+    val schemaV2File = File(root, "docs/schemas/course-v2.json")
+    val contentFiles: List<File> =
         fileTree(rootDir)
-            .matching { include("content/*/src/main/assets/courses/*/course.json") }
+            .matching {
+                include("content/*/src/main/assets/courses/*/course.json")
+                include("content/*/src/main/assets/courses/*/fixtures/*.json")
+            }
             .files
             .toList()
-    inputs.file(schemaFile)
-    inputs.files(courseFiles)
+    inputs.files(schemaV1File, schemaV2File)
+    inputs.files(contentFiles)
     doLast {
         val mapper = ObjectMapper()
         val factory = JsonSchemaFactory.getInstance(SpecVersion.VersionFlag.V7)
-        val schema = factory.getSchema(schemaFile.readText())
+        val schemas =
+            mapOf(
+                1 to factory.getSchema(schemaV1File.readText()),
+                2 to factory.getSchema(schemaV2File.readText()),
+            )
         val failures = mutableListOf<String>()
-        for (courseFile in courseFiles.sorted()) {
-            val messages = schema.validate(mapper.readTree(courseFile.readText()))
+        for (contentFile in contentFiles.sorted()) {
+            val relative = contentFile.relativeTo(File(root)).path
+            val tree = mapper.readTree(contentFile.readText())
+            val version = tree.get("schemaVersion")?.takeIf { node -> node.isInt }?.asInt()
+            val schema = version?.let { schemas[it] }
+            if (schema == null) {
+                println("INVALID: $relative")
+                println("  - schemaVersion ausente o no soportado (se esperaba 1 o 2)")
+                failures.add(relative)
+                continue
+            }
+            val messages = schema.validate(tree)
             if (messages.isEmpty()) {
-                println("VALID: ${courseFile.relativeTo(File(root)).path}")
+                println("VALID (v$version): $relative")
             } else {
-                println("INVALID: ${courseFile.relativeTo(File(root)).path}")
+                println("INVALID (v$version): $relative")
                 messages.forEach { println("  - $it") }
-                failures.add(courseFile.name)
+                failures.add(relative)
             }
         }
         if (failures.isNotEmpty()) {
-            throw org.gradle.api.GradleException("validateContent: ${failures.size} course.json no cumplen el schema v1 (ADR-012)")
+            throw org.gradle.api.GradleException(
+                "validateContent: ${failures.size} archivos de contenido no cumplen su schema (ADR-012/ADR-018)",
+            )
         }
     }
 }
