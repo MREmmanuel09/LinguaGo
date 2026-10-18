@@ -151,6 +151,7 @@ DataStore (privado de la app):
   - **STT**: `VoskSttEngine` (modelos small por idioma) para SpeakRepeat; usa **JNA**.
 - Los modelos **no se commitean**: se descargan con `./gradlew fetchVoiceModels` (fuera de CI) y se verifican por **SHA-256** contra `models/manifest.json` antes de cargar (`ModelIntegrity`). Hash inválido ⇒ modelo desactivado.
 - Sin modelos/permiso, los ejercicios degradan sin bloquear (I3): audio deshabilitado y "No puedo hablar ahora".
+- Ciclo de vida nativo (ADR-022): `NativeSerialLane` serializa el uso y cierre de `Model`/`OfflineTts` por idioma; `close()` espera la operación activa y `release()` resetea el warmup. `SpeechCapture` crea y libera fuente/recognizer de forma tolerante a fallos.
 - R8: `app/proguard-rules.pro` mantiene serializers, sherpa-onnx, Vosk y **JNA** (sin keeps, el STT revienta con `UnsatisfiedLinkError`).
 
 ## 8. Autenticación y sincronización (ADR-011/013/014/016)

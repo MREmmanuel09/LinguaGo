@@ -117,7 +117,7 @@ Medición ejecutada sobre `app/build/outputs/apk/` y `models/`:
 ### Fase 4: QA en Hardware Físico, Stress Térmico/RAM (JNA/ONNX) y Baseline Profiles
 *Objetivo: Auditar el comportamiento nativo C++ (Vosk JNA + sherpa-onnx) en silicio ARM real, eliminar fugas de memoria nativa y sellar el rendimiento con Baseline Profiles.*
 
-- [ ] **F4.1 — Auditoría de Ciclo de Vida Nativo JNA/JNI y Stress Test de Memoria (`core-audio`)** | `[DeepSeek V4 Pro]` | El manejo de punteros nativos en JNA (`org.vosk.Model`, `org.vosk.Recognizer`) y JNI (`OfflineTts`) ante cancelaciones abruptas de corrutinas (`ViewModel.onCleared()` en mitad de grabación o síntesis) requiere sincronización determinista de cierre para evitar `SIGSEGV` o fugas en el `Native Heap` | Implementación de liberación segura con ref-counting o cola serializada en `VoskSttEngine` y `PiperTtsEngine`; test instrumentado de stress que ejecuta 50 ciclos consecutivos de `startLesson → playAudio → transcribeSpoken (cancelado a los 500ms) → exit` en dispositivo/emulador con delta de Native Heap `< 15 MB` tras GC y **0 crashes nativos (`Tombstones`)** | `[L]`
+- [x] **F4.1 — Auditoría de Ciclo de Vida Nativo JNA/JNI y Stress Test de Memoria (`core-audio`)** | `[DeepSeek V4 Pro]` | El manejo de punteros nativos en JNA (`org.vosk.Model`, `org.vosk.Recognizer`) y JNI (`OfflineTts`) ante cancelaciones abruptas de corrutinas (`ViewModel.onCleared()` en mitad de grabación o síntesis) requiere sincronización determinista de cierre para evitar `SIGSEGV` o fugas en el `Native Heap` | Implementación de liberación segura con ref-counting o cola serializada en `VoskSttEngine` y `PiperTtsEngine`; test instrumentado de stress que ejecuta 50 ciclos consecutivos de `startLesson → playAudio → transcribeSpoken (cancelado a los 500ms) → exit` en dispositivo/emulador con delta de Native Heap `< 15 MB` tras GC y **0 crashes nativos (`Tombstones`)** | `[L]`
 - [ ] **F4.2 — Generación de Baseline Profiles y Macrobenchmark de Arranque/Jank (`:baselineprofile`)** | `[DeepSeek V4.1 Flash]` | N/A | Módulo/configuración de Baseline Profile que recorre: Cold Start → Home → Apertura de Lección B2 → Interacción `ClozeDragDrop` → Pantalla de Repaso FSRS; archivo `app/src/main/baseline-prof.txt` generado y commiteado; reducción de tiempo de Cold Start ≥15% en dispositivo físico | `[M]`
 - [ ] **F4.3 — Verificación de Reglas R8/ProGuard para Nuevos Modelos v2 y Smoke Test de Flavors Release** | `[DeepSeek V4.1 Flash]` | N/A | Revisión de `app/proguard-rules.pro` asegurando keeps para todos los nuevos subtipos `@Serializable` de `Exercise` y estructuras de `course-v2.json` sin debilitar la ofuscación; `./gradlew :app:assembleEnRelease :app:assemblePtRelease :app:assembleFrRelease :app:assembleJaRelease` compilan limpiamente y pasan smoke test de inicio de lección + STT/TTS en release minificado | `[S]`
 
@@ -129,7 +129,7 @@ Medición ejecutada sobre `app/build/outputs/apk/` y `models/`:
 
 ## 3. Anexos Obligatorios
 
-### Anexo A: Decision Log (ADR-017 a ADR-021)
+### Anexo A: Decision Log (ADR-017 a ADR-022)
 
 | ADR | Título | Decisión Arquitectónica | Invariantes Protegidos | Estado |
 |---|---|---|---|---|
@@ -138,6 +138,7 @@ Medición ejecutada sobre `app/build/outputs/apk/` y `models/`:
 | **ADR-019** | **Evaluación de Producción Oral Libre B2 sin LLMs (Permiso de Imposibilidad)** | Se prohíben LLMs on-device y cloud. `FreeSpeakingPrompt` se califica mediante un motor heurístico determinista en `core-domain` (longitud, cobertura de `conceptClusters`, detección de patrones de `grammarPoints` y fluidez `WPM` sobre transcripción Vosk) combinado con autoevaluación guiada del usuario frente a un modelo de audio Piper. | `I1` (Offline), `I2` (Sin backend), `I3` (Sin fricción), `I7` (Testabilidad) | Propuesto |
 | **ADR-020** | **Inicialización Asíncrona No-Bloqueante de Motores Nativos (Vosk/Piper)** | Se prohíbe realizar extracción de assets, hashing SHA-256 o carga de modelos C++ dentro de llamadas síncronas de `isReadyFor()`. `core-audio` expone un estado reactivo de warmup en `Dispatchers.IO` y streaming de `partialResult` + RMS. | `I3` (Sin fricción), `I8` (UX/Accesibilidad) | Propuesto |
 | **ADR-021** | **Migración Room v2→v3 con Test Instrumentado de Regresión de Estado** | Ningún cambio en `LinguagoDatabase` se fusiona sin el test instrumentado bloqueante (`Migration2To3Test`) que verifica la preservación íntegra de 8/17 lecciones, 3 tarjetas FSRS en `learning` y racha de 5 días. | `I4` (Progreso intocable) | Propuesto |
+| **ADR-022** | **Cierre Determinista de Recursos Nativos JNA/JNI bajo Cancelación** | Los modelos Vosk y motores Piper se serializan por idioma con `NativeSerialLane`; el cierre espera a la operación nativa activa en `NonCancellable`, rechaza instalaciones tardías y resetea el warmup. Un stress instrumentado de 50 ciclos cancela STT/TTS y exige delta de Native Heap < 15 MB y 0 crashes nativos. | `I1` (Offline), `I3` (Sin fricción), `I7` (Testabilidad) | Propuesto |
 
 ---
 

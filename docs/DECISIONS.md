@@ -684,6 +684,71 @@ persiste íntegro.
 
 ---
 
+## ADR-022: Cierre determinista de recursos nativos JNA/JNI bajo cancelación
+
+**Estado:** Propuesto
+**Fecha:** 2026-10-18
+
+**Contexto:** `VoskSttEngine` mantiene `org.vosk.Model` (JNA) y
+`PiperTtsEngine` mantiene `OfflineTts` (JNI sherpa-onnx) en mapas por idioma.
+Las operaciones de captura y síntesis pueden cancelarse en mitad de una
+llamada nativa (`AudioRecord.read()`, `acceptWaveForm()`, `generate()`), por
+ejemplo al salir de una lección. Si otra corrutina libera el puntero mientras
+la llamada nativa sigue en curso, `libvosk.so`/`libsherpa-onnx-jni.so` pueden
+leer memoria liberada y provocar `SIGSEGV`. Los cierres aislados en `finally`
+no bastan: hace falta que el cierre espere a la operación nativa y que una
+liberación posterior no pueda colarse durante un warmup.
+
+**Decisión:** serializar cada recurso nativo por idioma con
+`NativeSerialLane<T>` (cola serializada, sin ref-counting). La lane conserva
+un `Mutex` por recurso, aloja un único puntero y expone:
+
+- `use {}`: retiene el lock durante toda la operación nativa; si la corrutina
+  se cancela, el bloque termina y el lock se libera.
+- `close()`: adquiere el lock en `NonCancellable`, espera a que no haya uso
+  activo y libera el recurso; marca la lane como cerrada para rechazar
+  instalaciones tardías y cerrarlas al instante.
+- `install()`: intercambia el recurso bajo el lock y cierra el anterior; un
+  `lifecycle: Mutex` por motor serializa `install()` con `release()`.
+
+`SpeechCapture` crea `AudioRecord` y `Recognizer` dentro del `try` y cierra
+ambos en `finally` con `runCatching` independientes, de modo que un fallo al
+crear el recognizer no deja la fuente abierta y un fallo al liberar la fuente
+no omite el cierre del recognizer. `PiperTtsEngine` ejecuta `generate()` y
+`playBlocking()` bajo la misma lane, comprueba la cancelación antes y después
+de la síntesis y libera `AudioTrack` con `runCatching`. `release()` en ambos
+motores espera las operaciones activas, libera los recursos, resetea el
+warmup (`WarmupStateRegistry.reset`) y permite recargar en el siguiente
+`warmUp()`.
+
+El contrato se verifica con `NativeAudioStressTest` (instrumentado, flavor
+`en`/`full`): 10 ciclos de calentamiento para estabilizar las arenas nativas,
+baseline tras GC, 50 ciclos de `startLesson → playAudio → transcribeSpoken`
+cancelado a los 500 ms, TTS cancelado cada 5 ciclos a los 250 ms, tres rondas
+de GC y delta de `Debug.getNativeHeapAllocatedSize()` menor que 15 MB. Al
+final consulta `ActivityManager.getHistoricalProcessExitReasons` para exigir
+cero `REASON_CRASH_NATIVE`.
+
+**Consecuencias:**
+- Un idioma ejecuta una síntesis/captura nativa a la vez; dos peticiones
+  simultáneas se serializan. Es aceptable porque la UI reproduce un prompt
+  cada vez y los ejercicios de voz son secuenciales.
+- El cierre es determinista ante cancelación y no compite con
+  `acceptWaveForm()`/`generate()`; las liberaciones se encapsulan para que un
+  fallo en `AudioRecord.release()`/`AudioTrack.release()` no oculte el resto.
+- La lane rechaza recursos instalados tras `close()` y evita fugas durante
+  una carrera warmup/release; el recurso se recarga de forma perezosa.
+- Medición local en emulador API 37 x86_64: 50 ciclos con delta de **95 952
+  bytes (~0.09 MB)** y 0 crashes nativos. La validación en hardware ARM
+  físico sigue siendo parte del checkpoint humano de Fase 4.
+- Trade-off asumido: el baseline se toma tras el calentamiento para excluir
+  la expansión inicial de las arenas de los runtimes nativos; el test sigue
+  midiendo 50 ciclos completos después de ese baseline.
+
+**Invariantes protegidos:** I1 (offline), I3 (sin fricción), I7 (testabilidad).
+
+---
+
 ## Registro de decisiones pendientes
 
 | Tema | Se decide en | ADR previsto |
