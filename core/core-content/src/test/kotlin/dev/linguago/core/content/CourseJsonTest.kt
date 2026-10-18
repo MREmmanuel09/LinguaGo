@@ -1,5 +1,6 @@
 package dev.linguago.core.content
 
+import dev.linguago.core.domain.model.CourseLocale
 import dev.linguago.core.domain.model.Exercise
 import dev.linguago.core.domain.model.ExerciseId
 import dev.linguago.core.domain.model.Language
@@ -72,6 +73,20 @@ class CourseJsonTest {
     }
 
     @Test
+    fun resuelve_variantes_dialectales_v2() {
+        assertEquals(CourseLocale.ENGLISH_US, CourseLocale.fromBcp47("en-US"))
+        assertEquals(CourseLocale.ENGLISH_GB, CourseLocale.fromBcp47("en-GB"))
+        assertEquals(CourseLocale.PORTUGUESE_BR, CourseLocale.fromBcp47("pt-BR"))
+        assertEquals(CourseLocale.PORTUGUESE_PT, CourseLocale.fromBcp47("pt-PT"))
+        assertNull(CourseLocale.fromBcp47("en-AU"))
+
+        val british = CourseJson.parseCourse(CURSO_V2_EN_GB)
+        assertNotNull(british)
+        assertEquals(CourseLocale.ENGLISH_GB, british!!.locale)
+        assertEquals(2, british.schemaVersion)
+    }
+
+    @Test
     fun json_malformado_devuelve_null_sin_excepciones() {
         assertNull(CourseJson.parseCourse(CURSO_JSON_NO_JSON))
         assertNull(CourseJson.parseManifest(MANIFEST_SIN_TITULO))
@@ -115,6 +130,39 @@ class CourseJsonTest {
                              "audioText": "t"},
                             {"type": "KanaChoose", "id": "e6", "kana": "あ",
                              "romajiOptions": ["a"], "correctRomaji": "a"}
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+            """.trimIndent()
+
+        private val CURSO_V2_EN_GB =
+            """
+            {
+              "id": "es-en",
+              "from": "es",
+              "to": "en",
+              "schemaVersion": 2,
+              "locale": "en-GB",
+              "levels": [
+                {
+                  "id": "lv-1",
+                  "name": "Nivel",
+                  "units": [
+                    {
+                      "id": "un-1",
+                      "title": "Unidad",
+                      "lessons": [
+                        {
+                          "id": "ls-1",
+                          "title": "Lección",
+                          "exercises": [
+                            {"type": "MultipleChoice", "id": "e1", "question": "q",
+                             "options": ["a", "b"], "correctIndex": 0}
                           ]
                         }
                       ]

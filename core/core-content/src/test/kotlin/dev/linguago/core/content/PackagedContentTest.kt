@@ -1,7 +1,12 @@
 package dev.linguago.core.content
 
+import dev.linguago.core.domain.logic.VocabularyExtractor
+import dev.linguago.core.domain.model.CefrLevel
 import dev.linguago.core.domain.model.CourseLocale
+import dev.linguago.core.domain.model.Exercise
+import dev.linguago.core.domain.model.VocabFrequencyBand
 import org.junit.Assert.assertEquals
+import org.junit.Assert.assertNull
 import org.junit.Assert.assertTrue
 import org.junit.Test
 import java.io.File
@@ -45,15 +50,116 @@ class PackagedContentTest {
         assertEquals(CourseLocale.ENGLISH_US, course.locale)
 
         val lessons = course.levels.flatMap { level -> level.units.flatMap { unit -> unit.lessons } }
-        assertEquals(HISTORIC_LESSON_IDS, lessons.map { lesson -> lesson.id.value })
+        val historicLessons = lessons.filter { lesson -> lesson.id.value.startsWith(HISTORIC_LESSON_PREFIX) }
+        assertEquals(HISTORIC_LESSON_IDS, historicLessons.map { lesson -> lesson.id.value })
 
-        val exercises = lessons.flatMap { lesson -> lesson.exercises }
-        assertEquals(HISTORIC_EXERCISE_IDS, exercises.map { exercise -> exercise.id.value })
+        val historicExercises = historicLessons.flatMap { lesson -> lesson.exercises }
+        assertEquals(HISTORIC_EXERCISE_IDS, historicExercises.map { exercise -> exercise.id.value })
         assertTrue(
             "La migración debe enriquecer feedbackOnError en todos los ejercicios",
-            exercises.all { exercise -> exercise.feedbackOnError != null },
+            lessons
+                .flatMap { lesson -> lesson.exercises }
+                .all { exercise -> exercise.feedbackOnError != null },
         )
     }
+
+    @Test
+    fun es_en_v2_integra_bloques_b1_b2_completos() {
+        val course = CourseJson.parseCourse(readAsset("es-en", COURSE_FILE))
+        assertTrue("es-en debe decodificar en v2", course != null)
+
+        val lessons = course!!.levels.flatMap { level -> level.units.flatMap { unit -> unit.lessons } }
+        val b1Lessons = lessons.filter { lesson -> lesson.cefrLevel == CefrLevel.B1 }
+        val b2Lessons = lessons.filter { lesson -> lesson.cefrLevel == CefrLevel.B2 }
+        assertEquals(20, b1Lessons.size)
+        assertEquals(20, b2Lessons.size)
+        assertEquals((1..180).map { index -> "es-en-b1-e$index" }, b1Lessons.flatMap { lesson -> lesson.exercises }.map { it.id.value })
+        assertEquals((1..200).map { index -> "es-en-b2-e$index" }, b2Lessons.flatMap { lesson -> lesson.exercises }.map { it.id.value })
+
+        val allExercises = lessons.flatMap { lesson -> lesson.exercises }
+        assertEquals(422, allExercises.size)
+        assertEquals(allExercises.size, allExercises.map { exercise -> exercise.id.value }.distinct().size)
+
+        for (lesson in b2Lessons) {
+            assertEquals("La lección ${lesson.id.value} debe tener 10 ejercicios", 10, lesson.exercises.size)
+            assertEquals(VocabFrequencyBand.BAND_3000_5000, lesson.vocabFrequencyBand)
+            assertTrue(lesson.exercises.all { exercise -> exercise.feedbackOnError != null })
+            assertEquals(1, lesson.exercises.count { exercise -> exercise is Exercise.FreeSpeakingPrompt })
+        }
+        assertEquals(40, b2Lessons.flatMap { it.exercises }.count { it is Exercise.ClozeDragDrop })
+        assertEquals(40, b2Lessons.flatMap { it.exercises }.count { it is Exercise.SemanticMatch })
+        assertEquals(40, b2Lessons.flatMap { it.exercises }.count { it is Exercise.AudioOnlyPrompt })
+    }
+
+    @Test
+    fun es_en_v2_no_colisiona_vocabulario_fsrs() {
+        val course = CourseJson.parseCourse(readAsset("es-en", COURSE_FILE))
+        assertTrue("es-en debe decodificar en v2", course != null)
+
+        val lessons = course!!.levels.flatMap { level -> level.units.flatMap { unit -> unit.lessons } }
+        val b2Lessons = lessons.filter { lesson -> lesson.cefrLevel == CefrLevel.B2 }
+        assertTrue(
+            "Cada lección B2 debe aportar vocabulario revisable (al menos su modismo)",
+            b2Lessons.all { lesson -> VocabularyExtractor.fromLesson(lesson).isNotEmpty() },
+        )
+
+        val sources = lessons.flatMap { lesson -> VocabularyExtractor.fromLesson(lesson) }.map { pair -> pair.source.lowercase() }
+        val collisions = sources.groupingBy { source -> source }.eachCount().filterValues { count -> count > 1 }
+        assertTrue("Colisiones de vocabulario FSRS: $collisions", collisions.isEmpty())
+
+        val idioms = b2Lessons.flatMap { lesson -> lesson.culturalNotes }.map { note -> note.idiom.lowercase() }
+        assertEquals(idioms.size, idioms.distinct().size)
+    }
+
+    @Test
+    fun cursos_v1_permanecen_congelados() {
+        val expectations =
+            mapOf(
+                "es-pt" to
+                    v1Expectation(
+                        courseId = "es-pt",
+                        lessonCount = 2,
+                        exerciseCount = 12,
+                    ),
+                "es-fr" to
+                    v1Expectation(
+                        courseId = "es-fr",
+                        lessonCount = 2,
+                        exerciseCount = 12,
+                    ),
+                "es-ja" to
+                    v1Expectation(
+                        courseId = "es-ja",
+                        lessonCount = 2,
+                        exerciseCount = 12,
+                    ),
+            )
+        for ((courseId, expected) in expectations) {
+            val course = CourseJson.parseCourse(readAsset(courseId, COURSE_FILE))
+            assertTrue("El curso $courseId no decodifica", course != null)
+            assertEquals("$courseId debe seguir en v1", 1, course!!.schemaVersion)
+            assertNull("$courseId no debe declarar locale dialectal en v1", course.locale)
+
+            val lessons = course.levels.flatMap { level -> level.units.flatMap { unit -> unit.lessons } }
+            assertEquals(expected.lessonIds, lessons.map { lesson -> lesson.id.value })
+            assertEquals(expected.exerciseIds, lessons.flatMap { lesson -> lesson.exercises }.map { exercise -> exercise.id.value })
+        }
+    }
+
+    private fun v1Expectation(
+        courseId: String,
+        lessonCount: Int,
+        exerciseCount: Int,
+    ): V1Expectation =
+        V1Expectation(
+            lessonIds = (1..lessonCount).map { index -> "$courseId-lv-1-un-1-ls-$index" },
+            exerciseIds = (1..exerciseCount).map { index -> "$courseId-e$index" },
+        )
+
+    private data class V1Expectation(
+        val lessonIds: List<String>,
+        val exerciseIds: List<String>,
+    )
 
     /** Layout del repo relativo al directorio de trabajo del módulo. */
     private fun readAsset(
@@ -83,6 +189,7 @@ class PackagedContentTest {
         private const val MANIFEST_FILE = "manifest.json"
         private const val COURSE_FILE = "course.json"
         private const val SEARCH_DEPTH_UP = 4
+        private const val HISTORIC_LESSON_PREFIX = "es-en-lv-1-"
 
         private val HISTORIC_LESSON_IDS =
             listOf(
