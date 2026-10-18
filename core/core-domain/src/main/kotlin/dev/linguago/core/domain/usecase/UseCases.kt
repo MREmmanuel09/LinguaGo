@@ -104,4 +104,9 @@ public sealed interface ExerciseAnswer {
     public data class SpokenText(
         val transcript: String,
     ) : ExerciseAnswer
+
+    /** Huecos rellenados por arrastre: id de hueco → opción elegida (ClozeDragDrop). */
+    public data class ClozeFilled(
+        val assignments: Map<String, String>,
+    ) : ExerciseAnswer
 }
