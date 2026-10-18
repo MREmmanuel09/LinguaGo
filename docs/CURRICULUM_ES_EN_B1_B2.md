@@ -229,15 +229,15 @@ evita duplicados y fija la etiqueta visible.
 
 ## 6. Criterios de aceptación de F3.3/F3.4
 
-- [ ] 20 lecciones B1 integradas con 9 ejercicios cada una (180) y los ids de
+- [x] 20 lecciones B1 integradas con 9 ejercicios cada una (180) y los ids de
       los rangos de la matriz.
-- [ ] 20 lecciones B2 integradas con 10 ejercicios cada una (200) y predominio
+- [x] 20 lecciones B2 integradas con 10 ejercicios cada una (200) y predominio
       de `ClozeDragDrop`, `SemanticMatch`, `AudioOnlyPrompt` y
       `FreeSpeakingPrompt`.
-- [ ] Cada lección B1/B2 con `scenario`, `canDo`, `grammarPoints[]`,
+- [x] Cada lección B1/B2 con `scenario`, `canDo`, `grammarPoints[]`,
       `vocabFrequencyBand`, `culturalNotes[]` y `feedbackOnError` en todos los
       ejercicios.
-- [ ] `validateContent` en verde para `es-en` v2 y sin regresiones en los otros
+- [x] `validateContent` en verde para `es-en` v2 y sin regresiones en los otros
       tres cursos (v1).
-- [ ] Test de unicidad global de `lesson.id`/`exercise.id` y de no-colisión de
+- [x] Test de unicidad global de `lesson.id`/`exercise.id` y de no-colisión de
       vocabulario FSRS.
