@@ -1,5 +1,6 @@
 package dev.linguago.core.content
 
+import dev.linguago.core.domain.model.CourseLocale
 import org.junit.Assert.assertEquals
 import org.junit.Assert.assertTrue
 import org.junit.Test
@@ -36,6 +37,24 @@ class PackagedContentTest {
         }
     }
 
+    @Test
+    fun es_en_v2_conserva_ids_historicos_y_feedback() {
+        val course = CourseJson.parseCourse(readAsset("es-en", COURSE_FILE))
+        assertTrue("es-en debe seguir decodificando en v2", course != null)
+        assertEquals(2, course!!.schemaVersion)
+        assertEquals(CourseLocale.ENGLISH_US, course.locale)
+
+        val lessons = course.levels.flatMap { level -> level.units.flatMap { unit -> unit.lessons } }
+        assertEquals(HISTORIC_LESSON_IDS, lessons.map { lesson -> lesson.id.value })
+
+        val exercises = lessons.flatMap { lesson -> lesson.exercises }
+        assertEquals(HISTORIC_EXERCISE_IDS, exercises.map { exercise -> exercise.id.value })
+        assertTrue(
+            "La migración debe enriquecer feedbackOnError en todos los ejercicios",
+            exercises.all { exercise -> exercise.feedbackOnError != null },
+        )
+    }
+
     /** Layout del repo relativo al directorio de trabajo del módulo. */
     private fun readAsset(
         courseId: String,
@@ -64,5 +83,61 @@ class PackagedContentTest {
         private const val MANIFEST_FILE = "manifest.json"
         private const val COURSE_FILE = "course.json"
         private const val SEARCH_DEPTH_UP = 4
+
+        private val HISTORIC_LESSON_IDS =
+            listOf(
+                "es-en-lv-1-un-1-ls-1",
+                "es-en-lv-1-un-1-ls-2",
+                "es-en-lv-1-un-1-ls-3",
+                "es-en-lv-1-un-2-ls-1",
+                "es-en-lv-1-un-2-ls-2",
+                "es-en-lv-1-un-2-ls-3",
+            )
+
+        private val HISTORIC_EXERCISE_IDS =
+            listOf(
+                "es-en-e1",
+                "es-en-e2",
+                "es-en-e3",
+                "es-en-e4",
+                "es-en-e5",
+                "es-en-e6",
+                "es-en-e37",
+                "es-en-e7",
+                "es-en-e8",
+                "es-en-e9",
+                "es-en-e10",
+                "es-en-e11",
+                "es-en-e12",
+                "es-en-e38",
+                "es-en-e13",
+                "es-en-e14",
+                "es-en-e15",
+                "es-en-e16",
+                "es-en-e17",
+                "es-en-e18",
+                "es-en-e39",
+                "es-en-e19",
+                "es-en-e20",
+                "es-en-e21",
+                "es-en-e22",
+                "es-en-e23",
+                "es-en-e24",
+                "es-en-e40",
+                "es-en-e25",
+                "es-en-e26",
+                "es-en-e27",
+                "es-en-e28",
+                "es-en-e29",
+                "es-en-e30",
+                "es-en-e41",
+                "es-en-e31",
+                "es-en-e32",
+                "es-en-e33",
+                "es-en-e34",
+                "es-en-e35",
+                "es-en-e36",
+                "es-en-e42",
+            )
     }
 }
