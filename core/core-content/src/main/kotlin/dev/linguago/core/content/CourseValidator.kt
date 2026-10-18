@@ -22,6 +22,7 @@ public sealed interface CourseValidation {
 
 public object CourseValidator {
     private const val tokenSeparator = " "
+    private val PLACEHOLDER_PATTERN = Regex("\\{\\{([^}]+)\\}\\}")
 
     public fun validate(course: Course): CourseValidation {
         if (course.levels.isEmpty()) return Invalid("Curso '${course.id.value}' sin niveles")
@@ -104,6 +105,10 @@ public object CourseValidator {
             is Exercise.MatchPairs -> validateMatchPairs(exercise)
             is Exercise.ListenType -> validateNotBlank(exercise.transcription, exercise)
             is Exercise.SpeakRepeat -> validateNotBlank(exercise.targetPhrase, exercise)
+            is Exercise.AudioOnlyPrompt -> validateAudioOnlyPrompt(exercise)
+            is Exercise.SemanticMatch -> validateSemanticMatch(exercise)
+            is Exercise.ClozeDragDrop -> validateClozeDragDrop(exercise)
+            is Exercise.FreeSpeakingPrompt -> validateFreeSpeakingPrompt(exercise)
         }
 
     private fun requirePresentIndex(
@@ -186,6 +191,92 @@ public object CourseValidator {
         val rights = pairs.map { it.right }
         if (lefts.distinct().size != pairs.size || rights.distinct().size != pairs.size) {
             return Invalid("Ejercicio '${exercise.id.value}' requiere lados únicos por par")
+        }
+        return null
+    }
+
+    private fun validateAudioOnlyPrompt(exercise: Exercise.AudioOnlyPrompt): CourseValidation.Invalid? {
+        if (exercise.audioText.isBlank()) {
+            return Invalid("Ejercicio '${exercise.id.value}' requiere un enunciado de audio no vacío")
+        }
+        if (exercise.question?.isBlank() == true) {
+            return Invalid("Ejercicio '${exercise.id.value}' requiere una pregunta no vacía si se declara")
+        }
+        return requirePresentIndex(exercise.options, exercise.correctIndex, exercise.id.value)
+    }
+
+    private fun validateSemanticMatch(exercise: Exercise.SemanticMatch): CourseValidation.Invalid? {
+        val pairs = exercise.pairs
+        if (pairs.isEmpty()) {
+            return Invalid("Ejercicio '${exercise.id.value}' requiere al menos un par semántico")
+        }
+        if (pairs.any { pair -> pair.left.isBlank() || pair.right.isBlank() }) {
+            return Invalid("Ejercicio '${exercise.id.value}' requiere pares semánticos con lados no vacíos")
+        }
+        if (pairs.map { it.left }.distinct().size != pairs.size || pairs.map { it.right }.distinct().size != pairs.size) {
+            return Invalid("Ejercicio '${exercise.id.value}' requiere lados semánticos únicos por par")
+        }
+        if (exercise.instructions?.isBlank() == true || pairs.any { it.nuance?.isBlank() == true }) {
+            return Invalid("Ejercicio '${exercise.id.value}' requiere instrucciones y matices no vacíos si se declaran")
+        }
+        return null
+    }
+
+    private fun validateClozeDragDrop(exercise: Exercise.ClozeDragDrop): CourseValidation.Invalid? {
+        if (exercise.passage.isBlank()) {
+            return Invalid("Ejercicio '${exercise.id.value}' requiere un texto de cloze no vacío")
+        }
+        val blanks = exercise.blanks
+        if (blanks.isEmpty()) {
+            return Invalid("Ejercicio '${exercise.id.value}' requiere al menos un hueco")
+        }
+        if (blanks.any { blank -> !isCompleteBlank(blank) }) {
+            return Invalid("Ejercicio '${exercise.id.value}' requiere huecos con respuesta dentro de sus opciones")
+        }
+        if (blanks.map { it.id }.distinct().size != blanks.size) {
+            return Invalid("Ejercicio '${exercise.id.value}' requiere ids de hueco únicos")
+        }
+        val placeholders =
+            PLACEHOLDER_PATTERN
+                .findAll(exercise.passage)
+                .map { match -> match.groupValues[1] }
+                .toSet()
+        if (placeholders != blanks.map { it.id }.toSet()) {
+            return Invalid(
+                "Ejercicio '${exercise.id.value}' requiere que los huecos {{id}} del texto " +
+                    "coincidan exactamente con blanks[]",
+            )
+        }
+        return null
+    }
+
+    private fun isCompleteBlank(blank: Exercise.ClozeBlank): Boolean {
+        if (blank.id.isBlank() || blank.answer.isBlank()) return false
+        return blank.options.isNotEmpty() && blank.answer in blank.options
+    }
+
+    private fun validateFreeSpeakingPrompt(exercise: Exercise.FreeSpeakingPrompt): CourseValidation.Invalid? {
+        if (exercise.prompt.isBlank() || exercise.modelAnswer.isBlank()) {
+            return Invalid("Ejercicio '${exercise.id.value}' requiere consigna y respuesta modelo no vacías")
+        }
+        if (exercise.minTokens < 1) {
+            return Invalid("Ejercicio '${exercise.id.value}' requiere minTokens >= 1")
+        }
+        if (exercise.conceptClusters.isEmpty() ||
+            exercise.conceptClusters.any { cluster -> cluster.isEmpty() || cluster.any { it.isBlank() } }
+        ) {
+            return Invalid("Ejercicio '${exercise.id.value}' requiere conceptClusters no vacíos y sin términos en blanco")
+        }
+        if (exercise.selfAssessmentCriteria.isEmpty() || exercise.selfAssessmentCriteria.any { it.isBlank() }) {
+            return Invalid("Ejercicio '${exercise.id.value}' requiere criterios de autoevaluación no vacíos")
+        }
+        val minWpm = exercise.minWpm
+        val maxWpm = exercise.maxWpm
+        if (minWpm != null && maxWpm != null && minWpm > maxWpm) {
+            return Invalid("Ejercicio '${exercise.id.value}' requiere minWpm <= maxWpm")
+        }
+        if (exercise.timeLimitSeconds != null && exercise.timeLimitSeconds !in 10..300) {
+            return Invalid("Ejercicio '${exercise.id.value}' requiere timeLimitSeconds entre 10 y 300")
         }
         return null
     }

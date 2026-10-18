@@ -29,6 +29,7 @@ public object ExerciseGrader {
         when (exercise) {
             is Exercise.MultipleChoice -> index == exercise.correctIndex
             is Exercise.ListenChoose -> index == exercise.correctIndex
+            is Exercise.AudioOnlyPrompt -> index == exercise.correctIndex
             is Exercise.KanaChoose -> exercise.romajiOptions.getOrNull(index) == exercise.correctRomaji
             is Exercise.KanjiReading -> exercise.readingOptions.getOrNull(index) == exercise.correctReading
             is Exercise.ParticleFill -> exercise.particles.getOrNull(index) == exercise.correctParticle
@@ -55,6 +56,10 @@ public object ExerciseGrader {
     ): Boolean =
         when (exercise) {
             is Exercise.MatchPairs ->
+                exercise.pairs.indices.all { index ->
+                    leftToRight[index] == index
+                }
+            is Exercise.SemanticMatch ->
                 exercise.pairs.indices.all { index ->
                     leftToRight[index] == index
                 }

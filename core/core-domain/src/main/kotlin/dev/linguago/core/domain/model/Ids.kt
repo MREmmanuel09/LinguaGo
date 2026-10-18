@@ -36,3 +36,9 @@ public value class LessonId(
 public value class ExerciseId(
     public val value: String,
 )
+
+@JvmInline
+@Serializable
+public value class GrammarPointId(
+    public val value: String,
+)

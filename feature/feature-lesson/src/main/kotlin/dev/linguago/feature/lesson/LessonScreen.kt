@@ -243,6 +243,10 @@ private fun Renderer(
             AudioPanel(title = "Escucha y elige", onPlay = onPlayAudio, enabled = uiState.audioAvailable)
             OptionsStep("¿Qué escuchaste?", exercise.options, onPickOption)
         }
+        is Exercise.AudioOnlyPrompt -> {
+            AudioPanel(title = "Escucha y elige", onPlay = onPlayAudio, enabled = uiState.audioAvailable)
+            OptionsStep(exercise.question ?: "¿Qué escuchaste?", exercise.options, onPickOption)
+        }
         is Exercise.ListenType ->
             TypePanel(
                 audioTitle = "Escribe lo que escuchas",
@@ -265,6 +269,35 @@ private fun Renderer(
             TokenBoard(header = "Ordena la frase", uiState = uiState, onToggleToken = onToggleToken)
         is Exercise.MatchPairs ->
             MatchBoard(exercise.pairs, uiState, onMatchLeft, onMatchRight)
+        is Exercise.SemanticMatch ->
+            PlaceholderStep(title = "Emparejamiento semántico")
+        is Exercise.ClozeDragDrop ->
+            PlaceholderStep(title = "Completa el texto")
+        is Exercise.FreeSpeakingPrompt ->
+            PlaceholderStep(title = "Producción oral")
+    }
+}
+
+/**
+ * Marcador de las mecánicas v2 (F2). El contenido v2 aún no se publica; este
+ * paso evita una pantalla vacía si un fixture llegara al motor de lección.
+ */
+@Composable
+private fun PlaceholderStep(
+    title: String,
+    modifier: Modifier = Modifier,
+) {
+    Column(modifier = modifier, verticalArrangement = Arrangement.spacedBy(12.dp)) {
+        Text(
+            text = title,
+            style = MaterialTheme.typography.titleLarge,
+            color = MaterialTheme.colorScheme.onBackground,
+        )
+        Text(
+            text = "Esta mecánica se habilitará en la próxima actualización.",
+            style = MaterialTheme.typography.bodyMedium,
+            color = MaterialTheme.colorScheme.onSurfaceVariant,
+        )
     }
 }
 

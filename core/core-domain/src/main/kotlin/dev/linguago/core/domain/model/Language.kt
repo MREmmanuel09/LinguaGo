@@ -32,3 +32,37 @@ public enum class Language(
         public fun fromIsoCode(isoCode: String): Language? = entries.firstOrNull { it.isoCode == isoCode }
     }
 }
+
+/**
+ * Variante dialectal de destino declarada por un curso v2 (ADR-018).
+ * Se serializa como etiqueta BCP-47; `null` significa la variante por
+ * defecto del idioma (comportamiento de los cursos v1).
+ */
+@Serializable
+public enum class CourseLocale(
+    public val bcp47: String,
+) {
+    @SerialName("en-US")
+    ENGLISH_US("en-US"),
+
+    @SerialName("en-GB")
+    ENGLISH_GB("en-GB"),
+
+    @SerialName("pt-BR")
+    PORTUGUESE_BR("pt-BR"),
+
+    @SerialName("pt-PT")
+    PORTUGUESE_PT("pt-PT"),
+
+    @SerialName("fr-FR")
+    FRENCH_FR("fr-FR"),
+
+    @SerialName("ja-JP")
+    JAPANESE_JP("ja-JP"),
+    ;
+
+    public companion object {
+        /** Resuelve la variante desde su etiqueta BCP-47 si existe. */
+        public fun fromBcp47(tag: String): CourseLocale? = entries.firstOrNull { it.bcp47 == tag }
+    }
+}
