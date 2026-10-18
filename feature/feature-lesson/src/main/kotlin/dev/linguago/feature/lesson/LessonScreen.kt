@@ -55,12 +55,14 @@ import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import dev.linguago.core.domain.logic.ClozePassageParser
 import dev.linguago.core.domain.model.Exercise
 import dev.linguago.core.domain.model.ExerciseId
+import dev.linguago.core.ui.components.AudioOnlyPromptPanel
 import dev.linguago.core.ui.components.ClozeDragDropBoard
 import dev.linguago.core.ui.components.FeedbackBanner
 import dev.linguago.core.ui.components.InfoBanner
 import dev.linguago.core.ui.components.LinguaProgressBar
 import dev.linguago.core.ui.components.OptionCard
 import dev.linguago.core.ui.components.PrimaryButton3D
+import dev.linguago.core.ui.components.SemanticMatchBoard
 import dev.linguago.core.ui.haptics.rememberLinguaHaptics
 import dev.linguago.core.ui.theme.LinguaTheme
 import dev.linguago.core.ui.theme.LinguaTokens
@@ -109,6 +111,7 @@ fun LessonScreen(
         onSkipSpeech = viewModel::skipSpeech,
         onAdvance = viewModel::advance,
         onPlayAudio = viewModel::playAudio,
+        onPlaySlow = viewModel::playAudioSlow,
         onExit = onExit,
         modifier = modifier,
     )
@@ -131,6 +134,7 @@ private fun LessonContent(
     onSkipSpeech: () -> Unit,
     onAdvance: () -> Unit,
     onPlayAudio: () -> Unit,
+    onPlaySlow: () -> Unit,
     onExit: () -> Unit,
     modifier: Modifier = Modifier,
 ) {
@@ -155,6 +159,7 @@ private fun LessonContent(
                 onSkipSpeech = onSkipSpeech,
                 onAdvance = onAdvance,
                 onPlayAudio = onPlayAudio,
+                onPlaySlow = onPlaySlow,
                 onExit = onExit,
                 modifier = modifier,
             )
@@ -178,11 +183,18 @@ private fun ExerciseStage(
     onSkipSpeech: () -> Unit,
     onAdvance: () -> Unit,
     onPlayAudio: () -> Unit,
+    onPlaySlow: () -> Unit,
     onExit: () -> Unit,
     modifier: Modifier = Modifier,
 ) {
     val colors = MaterialTheme.colorScheme
     val exercise = uiState.exercises.getOrNull(uiState.index) ?: return
+    val totalPairs =
+        when (exercise) {
+            is Exercise.MatchPairs -> exercise.pairs.size
+            is Exercise.SemanticMatch -> exercise.pairs.size
+            else -> 0
+        }
     val progress =
         if (uiState.exercises.isEmpty()) {
             0f
@@ -277,6 +289,7 @@ private fun ExerciseStage(
                     onTypedText = onTypedText,
                     onSpeakRequest = onSpeakRequest,
                     onPlayAudio = onPlayAudio,
+                    onPlaySlow = onPlaySlow,
                 )
             }
         }
@@ -287,9 +300,7 @@ private fun ExerciseStage(
             exercise = exercise,
             chosenCount = uiState.chosenTokens.size,
             listening = uiState.listening,
-            pairsComplete =
-                uiState.matched.size == (exercise as? Exercise.MatchPairs)?.pairs?.size &&
-                    exercise.pairs.isNotEmpty(),
+            pairsComplete = totalPairs > 0 && uiState.matched.size == totalPairs,
             clozeComplete =
                 exercise is Exercise.ClozeDragDrop &&
                     exercise.blanks.isNotEmpty() &&
@@ -316,6 +327,7 @@ private fun Renderer(
     onTypedText: (String) -> Unit,
     onSpeakRequest: () -> Unit,
     onPlayAudio: () -> Unit,
+    onPlaySlow: () -> Unit,
 ) {
     when (exercise) {
         is Exercise.MultipleChoice -> OptionsStep(exercise.question, exercise.options, onPickOption)
@@ -327,8 +339,16 @@ private fun Renderer(
             OptionsStep("¿Qué escuchaste?", exercise.options, onPickOption)
         }
         is Exercise.AudioOnlyPrompt -> {
-            AudioPanel(title = "Escucha y elige", onPlay = onPlayAudio, enabled = uiState.audioAvailable)
-            OptionsStep(exercise.question ?: "¿Qué escuchaste?", exercise.options, onPickOption)
+            AudioOnlyPromptPanel(
+                question = exercise.question,
+                audioAvailable = uiState.audioAvailable,
+                allowSlowPlayback = exercise.allowSlowPlayback,
+                transcript = exercise.audioText,
+                revealTranscript = uiState.feedback != null,
+                onPlay = onPlayAudio,
+                onPlaySlow = onPlaySlow,
+            )
+            OptionsStep("¿Qué escuchaste?", exercise.options, onPickOption)
         }
         is Exercise.ListenType ->
             TypePanel(
@@ -353,7 +373,15 @@ private fun Renderer(
         is Exercise.MatchPairs ->
             MatchBoard(exercise.pairs, uiState, onMatchLeft, onMatchRight)
         is Exercise.SemanticMatch ->
-            PlaceholderStep(title = "Emparejamiento semántico")
+            SemanticMatchBoard(
+                pairs = exercise.pairs,
+                shuffledRights = uiState.shuffledRights,
+                selectedLeft = uiState.selectedLeft,
+                matched = uiState.matched,
+                onSelectLeft = onMatchLeft,
+                onSelectRight = onMatchRight,
+                instructions = exercise.instructions,
+            )
         is Exercise.ClozeDragDrop ->
             ClozeDragDropBoard(
                 segments = remember(exercise.id) { ClozePassageParser.parse(exercise.passage) },
@@ -427,7 +455,7 @@ private fun BottomActions(
                 enabled = chosenCount > 0,
                 modifier = Modifier.fillMaxWidth(),
             )
-        exercise is Exercise.MatchPairs ->
+        exercise is Exercise.MatchPairs || exercise is Exercise.SemanticMatch ->
             PrimaryButton3D(
                 text = "Comprobar",
                 onClick = onSubmitPairs,
@@ -845,6 +873,7 @@ private fun LessonScreenPreview() {
             onSkipSpeech = {},
             onAdvance = {},
             onPlayAudio = {},
+            onPlaySlow = {},
             onExit = {},
         )
     }

@@ -54,9 +54,11 @@ public class SystemTtsEngine
         override suspend fun speak(
             text: String,
             language: Language,
+            speed: Float,
         ) {
             require(initialized) { "SystemTtsEngine no está inicializado" }
             if (tts.setLanguage(language.toLocale()) == TextToSpeech.LANG_NOT_SUPPORTED) return
+            tts.setSpeechRate(speed)
 
             suspendCancellableCoroutine { continuation ->
                 val utteranceId = "linguago-${utteranceIds.incrementAndGet()}"

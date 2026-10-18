@@ -22,6 +22,7 @@ import androidx.compose.ui.unit.Density
 import androidx.compose.ui.unit.dp
 import androidx.test.ext.junit.runners.AndroidJUnit4
 import dev.linguago.core.domain.logic.ClozePassageParser
+import dev.linguago.core.domain.model.Exercise
 import dev.linguago.core.ui.theme.LinguaTheme
 import org.junit.Assert.assertEquals
 import org.junit.Assert.assertTrue
@@ -230,4 +231,148 @@ public class DesignSystemAccessibilityTest {
 
         compose.onNodeWithText("Continuar").assertIsDisplayed()
     }
+
+    @Test
+    public fun semanticMatchBoard_rendersMultilineNuanceAndRegister() {
+        compose.setContent {
+            LinguaTheme {
+                SemanticMatchBoard(
+                    pairs = semanticPairs,
+                    shuffledRights = listOf(0, 1),
+                    selectedLeft = null,
+                    matched = emptyMap(),
+                    onSelectLeft = {},
+                    onSelectRight = {},
+                )
+            }
+        }
+
+        compose.onNodeWithText("I'm knackered").assertIsDisplayed()
+        compose.onNodeWithText("Coloquial").assertIsDisplayed()
+        compose
+            .onNodeWithText("Cansancio extremo, registro británico informal.")
+            .assertIsDisplayed()
+    }
+
+    @Test
+    public fun semanticMatchBoard_announcesMatchedAssociation() {
+        compose.setContent {
+            LinguaTheme {
+                SemanticMatchBoard(
+                    pairs = semanticPairs,
+                    shuffledRights = listOf(1, 0),
+                    selectedLeft = null,
+                    matched = mapOf(0 to 0),
+                    onSelectLeft = {},
+                    onSelectRight = {},
+                )
+            }
+        }
+
+        compose
+            .onNodeWithContentDescription("I'm knackered. Emparejado con Estoy agotado")
+            .assertIsDisplayed()
+    }
+
+    @Test
+    public fun semanticMatchBoard_survivesLargeFontScale() {
+        compose.setContent {
+            val density = LocalDensity.current
+            CompositionLocalProvider(
+                LocalDensity provides Density(density = density.density, fontScale = 2f),
+            ) {
+                LinguaTheme {
+                    SemanticMatchBoard(
+                        pairs = semanticPairs,
+                        shuffledRights = listOf(0, 1),
+                        selectedLeft = null,
+                        matched = emptyMap(),
+                        onSelectLeft = {},
+                        onSelectRight = {},
+                    )
+                }
+            }
+        }
+
+        compose.onNodeWithText("I'm knackered").assertIsDisplayed().assertHeightIsAtLeast(48.dp)
+    }
+
+    @Test
+    public fun audioOnlyPanel_playsSlowlyWhenAllowed() {
+        var slowPlays = 0
+        compose.setContent {
+            LinguaTheme {
+                AudioOnlyPromptPanel(
+                    audioAvailable = true,
+                    allowSlowPlayback = true,
+                    transcript = null,
+                    revealTranscript = false,
+                    onPlay = {},
+                    onPlaySlow = { slowPlays++ },
+                )
+            }
+        }
+
+        compose.onNodeWithText("Reproducir más despacio (0.75x)").performClick()
+
+        compose.runOnIdle { assertEquals(1, slowPlays) }
+    }
+
+    @Test
+    public fun audioOnlyPanel_hidesTranscriptUntilRevealed() {
+        val revealed = mutableStateOf(false)
+        compose.setContent {
+            LinguaTheme {
+                AudioOnlyPromptPanel(
+                    audioAvailable = true,
+                    allowSlowPlayback = false,
+                    transcript = "The weather is nice today.",
+                    revealTranscript = revealed.value,
+                    onPlay = {},
+                    onPlaySlow = {},
+                )
+            }
+        }
+
+        compose.onNodeWithText("The weather is nice today.").assertDoesNotExist()
+
+        revealed.value = true
+        compose.waitForIdle()
+
+        compose.onNodeWithText("The weather is nice today.").assertIsDisplayed()
+    }
+
+    @Test
+    public fun audioOnlyPanel_hidesSlowButtonWhenNotAllowed() {
+        compose.setContent {
+            LinguaTheme {
+                AudioOnlyPromptPanel(
+                    audioAvailable = true,
+                    allowSlowPlayback = false,
+                    transcript = null,
+                    revealTranscript = false,
+                    onPlay = {},
+                    onPlaySlow = {},
+                )
+            }
+        }
+
+        compose.onNodeWithText("Reproducir más despacio (0.75x)").assertDoesNotExist()
+    }
+
+    private val semanticPairs =
+        listOf(
+            Exercise.SemanticPair(
+                left = "I'm knackered",
+                right = "Estoy agotado",
+                register = Exercise.SemanticRegister.COLLOQUIAL,
+                nuance = "Cansancio extremo, registro británico informal.",
+            ),
+            Exercise.SemanticPair(
+                left = "I am exhausted",
+                right = "Estoy exhausto",
+                register = Exercise.SemanticRegister.FORMAL,
+                nuance = "Registro neutro y formal; válido por escrito.",
+            ),
+        )
 }

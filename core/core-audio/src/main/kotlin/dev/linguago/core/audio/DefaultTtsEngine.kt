@@ -29,11 +29,12 @@ public class DefaultTtsEngine
         override suspend fun speak(
             text: String,
             language: Language,
+            speed: Float,
         ) {
             if (piper.isReadyFor(language)) {
-                piper.speak(text, language)
+                piper.speak(text, language, speed)
             } else {
-                system.speak(text, language)
+                system.speak(text, language, speed)
             }
         }
     }

@@ -55,11 +55,12 @@ public class PiperTtsEngine
         override suspend fun speak(
             text: String,
             language: Language,
+            speed: Float,
         ) {
             if (!isReadyFor(language)) warmUp(language)
             val engine = engines[language] ?: return
             withContext(Dispatchers.IO) {
-                val audio = engine.generate(text = text, sid = 0, speed = SPEAK_SPEED)
+                val audio = engine.generate(text = text, sid = 0, speed = speed)
                 playBlocking(audio.samples, audio.sampleRate)
             }
         }
@@ -267,7 +268,6 @@ public class PiperTtsEngine
             const val ESPEAK_DIR = "espeak-ng-data"
             const val VOICE_MANIFEST_ASSET = "manifest.json"
             const val NUM_THREADS = 2
-            const val SPEAK_SPEED = 1.0f
             const val MIN_BUFFER_BYTES = 8192
             const val MIN_CHUNK_SAMPLES = 4096
             const val CHUNKS_PER_SECOND = 8

@@ -112,13 +112,18 @@ class LessonViewModel
         fun pickOption(index: Int) = submitAnswer(ExerciseAnswer.OptionPicked(index))
 
         /** Reproduce el audio del ejercicio actual (escuchar/escribir lo escuchado). */
-        fun playAudio() {
+        fun playAudio() = speakCurrent(NORMAL_PLAYBACK_SPEED)
+
+        /** Reproduce el audio a 0.75x para comprensión con apoyo (F2.4). */
+        fun playAudioSlow() = speakCurrent(SLOW_PLAYBACK_SPEED)
+
+        private fun speakCurrent(speed: Float) {
             val language = targetLanguage ?: return
             val audioText =
                 _uiState.value.exercises
                     .getOrNull(_uiState.value.index)
                     ?.audioText ?: return
-            viewModelScope.launch { ttsEngine.speak(audioText, language) }
+            viewModelScope.launch { ttsEngine.speak(audioText, language, speed) }
         }
 
         /** Escucha (una vez) y evalúa la repetición (SpeakRepeat). */
@@ -149,11 +154,16 @@ class LessonViewModel
         /** El usuario envía el dictado libre (ListenType). */
         fun submitTypedText(text: String) = submitAnswer(ExerciseAnswer.TypedText(text))
 
-        /** El usuario verifica todas las parejas establecidas (MatchPairs). */
+        /** El usuario verifica todas las parejas establecidas (MatchPairs / SemanticMatch). */
         fun submitMatchedPairs() {
             val current = _uiState.value.exercises.getOrNull(_uiState.value.index)
-            val total = (current as? Exercise.MatchPairs)?.pairs?.size ?: 0
-            if (_uiState.value.matched.size == total && total > 0) {
+            val total =
+                when (current) {
+                    is Exercise.MatchPairs -> current.pairs.size
+                    is Exercise.SemanticMatch -> current.pairs.size
+                    else -> 0
+                }
+            if (total > 0 && _uiState.value.matched.size == total) {
                 submitAnswer(ExerciseAnswer.MatchedPairs(_uiState.value.matched))
             }
         }
@@ -290,17 +300,8 @@ class LessonViewModel
                             selectedLeft = null,
                         )
                     }
-                is Exercise.MatchPairs ->
-                    _uiState.update {
-                        it.copy(
-                            availableTokens = emptyList(),
-                            chosenTokens = emptyList(),
-                            shuffledRights = exercise.pairs.indices.shuffled(),
-                            matched = emptyMap(),
-                            clozeFilled = emptyMap(),
-                            selectedLeft = null,
-                        )
-                    }
+                is Exercise.MatchPairs -> preparePairs(exercise.pairs.size)
+                is Exercise.SemanticMatch -> preparePairs(exercise.pairs.size)
                 is Exercise.ClozeDragDrop ->
                     _uiState.update {
                         it.copy(
@@ -325,6 +326,20 @@ class LessonViewModel
                             recognized = null,
                         )
                     }
+            }
+        }
+
+        /** Prepara el tablero de parejas de `SemanticMatch`/`MatchPairs`. */
+        private fun preparePairs(total: Int) {
+            _uiState.update {
+                it.copy(
+                    availableTokens = emptyList(),
+                    chosenTokens = emptyList(),
+                    shuffledRights = List(total) { index -> index }.shuffled(),
+                    matched = emptyMap(),
+                    clozeFilled = emptyMap(),
+                    selectedLeft = null,
+                )
             }
         }
 
@@ -372,5 +387,7 @@ class LessonViewModel
         companion object {
             const val LESSON_COURSE_KEY = "courseId"
             const val LESSON_ID_KEY = "lessonId"
+            private const val NORMAL_PLAYBACK_SPEED = 1.0f
+            private const val SLOW_PLAYBACK_SPEED = 0.75f
         }
     }
