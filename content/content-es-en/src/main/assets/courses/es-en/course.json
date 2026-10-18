@@ -526,6 +526,1956 @@
           ]
         }
       ]
+    },
+    {
+      "id": "es-en-lv-2",
+      "name": "B1 · Autonomía en contextos reales",
+      "units": [
+        {
+          "id": "es-en-lv-2-un-1",
+          "title": "Trabajo y comunicación",
+          "lessons": [
+            {
+              "id": "es-en-lv-2-un-1-ls-1",
+              "title": "La reunión que no empieza",
+              "cefrLevel": "B1",
+              "scenario": "Una reunión de equipo se retrasa y hay que aclarar qué se dijo y acordar el siguiente paso.",
+              "canDo": "Puedo resumir lo acordado en una reunión, aclarar un malentendido y confirmar acciones con cortesía.",
+              "grammarPoints": [
+                {"id": "gp-reported-speech", "label": "Reported speech", "description": "Ajuste de tiempos y pronombres al contar lo dicho."},
+                {"id": "gp-indirect-questions", "label": "Indirect questions", "description": "Cortesía con Could you tell me…?"}
+              ],
+              "vocabFrequencyBand": "2000-3000",
+              "culturalNotes": [
+                {"idiom": "touch base", "note": "Retomar contacto breve para alinear; frecuente en oficinas estadounidenses.", "translation": "ponerse en contacto"}
+              ],
+              "exercises": [
+                {
+                  "type": "MultipleChoice",
+                  "id": "es-en-b1-e1",
+                  "question": "Elige la pregunta indirecta correcta.",
+                  "options": ["Could you tell me when the meeting starts?", "Could you tell me when does the meeting start?", "Could you tell me when starts the meeting?"],
+                  "correctIndex": 0,
+                  "feedbackOnError": {"type": "word_order", "explanation": "En preguntas indirectas el orden es sujeto + verbo: 'when the meeting starts', sin invertir.", "ruleRef": "gp-indirect-questions"}
+                },
+                {
+                  "type": "Translate",
+                  "id": "es-en-b1-e2",
+                  "sourcePhrase": "¿Podrías decirme qué dijo ella?",
+                  "correctTokens": ["Could", "you", "tell", "me", "what", "she", "said"],
+                  "distractorTokens": ["did", "say"],
+                  "feedbackOnError": {"type": "grammar", "explanation": "Tras 'Could you tell me' no se usa el auxiliar 'did': el verbo va en pasado, 'what she said'.", "ruleRef": "gp-indirect-questions"}
+                },
+                {
+                  "type": "OrderWords",
+                  "id": "es-en-b1-e3",
+                  "tokens": ["She", "said", "the", "meeting", "had", "been", "moved"],
+                  "answerTokens": ["She", "said", "the", "meeting", "had", "been", "moved"],
+                  "feedbackOnError": {"type": "grammar", "explanation": "En reported speech el pasado retrocede: 'the meeting had been moved'.", "ruleRef": "gp-reported-speech"}
+                },
+                {
+                  "type": "MatchPairs",
+                  "id": "es-en-b1-e4",
+                  "pairs": [
+                    {"left": "I'll send it", "right": "He said he would send it"},
+                    {"left": "We need more time", "right": "They said they needed more time"},
+                    {"left": "The client called", "right": "She said the client had called"}
+                  ],
+                  "feedbackOnError": {"type": "grammar", "explanation": "Al reportar, 'will' pasa a 'would', el presente a pasado y el pasado a past perfect.", "ruleRef": "gp-reported-speech"}
+                },
+                {
+                  "type": "ListenChoose",
+                  "id": "es-en-b1-e5",
+                  "audioText": "She said the client had already approved the agenda.",
+                  "options": ["El cliente aprobó la agenda antes de la reunión", "El cliente aprobará la agenda mañana", "El cliente no ha visto la agenda"],
+                  "correctIndex": 0,
+                  "feedbackOnError": {"type": "comprehension", "explanation": "El past perfect 'had approved' sitúa la aprobación antes del momento en que se habla.", "ruleRef": "gp-reported-speech"}
+                },
+                {
+                  "type": "ListenType",
+                  "id": "es-en-b1-e6",
+                  "transcription": "He asked me to follow up on the action items",
+                  "audioText": "He asked me to follow up on the action items",
+                  "feedbackOnError": {"type": "spelling", "explanation": "Se escribe 'follow up' separado como verbo y 'action items' en dos palabras.", "ruleRef": "gp-reported-speech"}
+                },
+                {
+                  "type": "SpeakRepeat",
+                  "id": "es-en-b1-e7",
+                  "targetPhrase": "Could you tell me when the meeting starts?",
+                  "audioText": "Could you tell me when the meeting starts?",
+                  "feedbackOnError": {"type": "pronunciation", "explanation": "Enlaza 'tell me' y baja la entonación al final de la pregunta indirecta.", "ruleRef": "gp-indirect-questions"}
+                },
+                {
+                  "type": "ClozeDragDrop",
+                  "id": "es-en-b1-e8",
+                  "passage": "She said the deadline {{b1}} moved, so we {{b2}} to reschedule the review.",
+                  "blanks": [
+                    {"id": "b1", "answer": "had been", "options": ["had been", "has been", "was being"]},
+                    {"id": "b2", "answer": "needed", "options": ["needed", "need", "needing"]}
+                  ],
+                  "feedbackOnError": {"type": "grammar", "explanation": "El pasado de 'has been moved' se reporta como 'had been moved', y 'need' pasa a 'needed'.", "ruleRef": "gp-reported-speech"}
+                },
+                {
+                  "type": "FreeSpeakingPrompt",
+                  "id": "es-en-b1-e9",
+                  "prompt": "Resume la reunión: explica qué se acordó, quién lo dijo y confirma el siguiente paso.",
+                  "minTokens": 20,
+                  "conceptClusters": [["agreed", "agreement", "decided"], ["deadline", "action item", "follow up"], ["could you tell me", "can you confirm", "do you know"]],
+                  "grammarRuleRefs": ["gp-reported-speech", "gp-indirect-questions"],
+                  "timeLimitSeconds": 60,
+                  "minWpm": 60,
+                  "maxWpm": 150,
+                  "modelAnswer": "Ana said the client had approved the agenda, but we still needed to confirm the deadline. Could you tell me who is following up on the action items? Let's reschedule the review for Thursday and share the minutes with the team.",
+                  "selfAssessmentCriteria": ["¿Resumí lo acordado?", "¿Atribuí lo dicho a alguien?", "¿Confirmé el siguiente paso?"],
+                  "feedbackOnError": {"type": "grammar", "explanation": "La respuesta modelo reporta decisiones con past perfect y usa una pregunta indirecta para confirmar.", "ruleRef": "gp-reported-speech"}
+                }
+              ]
+            },
+            {
+              "id": "es-en-lv-2-un-1-ls-2",
+              "title": "Correos que no se malinterpretan",
+              "cefrLevel": "B1",
+              "scenario": "Un correo con un plazo ajustado puede sonar brusco; hay que reescribirlo sin perder firmeza.",
+              "canDo": "Puedo redactar un correo profesional claro, justificar un plazo y suavizar una petición.",
+              "grammarPoints": [
+                {"id": "gp-passive-voice", "label": "Passive voice", "description": "Enfoque en la acción o el resultado."},
+                {"id": "gp-linkers-contrast", "label": "Contrast linkers", "description": "although, however, despite."}
+              ],
+              "vocabFrequencyBand": "2000-3000",
+              "culturalNotes": [
+                {"idiom": "on the same page", "note": "Compartir la misma interpretación antes de actuar; se usa para evitar malentendidos.", "translation": "estar alineados"}
+              ],
+              "exercises": [
+                {
+                  "type": "MultipleChoice",
+                  "id": "es-en-b1-e10",
+                  "question": "Completa: The report ___ by Friday.",
+                  "options": ["must be sent", "must send", "must been sent"],
+                  "correctIndex": 0,
+                  "feedbackOnError": {"type": "grammar", "explanation": "La pasiva con modal es 'must be + participio': 'must be sent'.", "ruleRef": "gp-passive-voice"}
+                },
+                {
+                  "type": "Translate",
+                  "id": "es-en-b1-e11",
+                  "sourcePhrase": "El correo fue enviado ayer, aunque faltaba el archivo.",
+                  "correctTokens": ["The", "email", "was", "sent", "yesterday", "although", "the", "file", "was", "missing"],
+                  "distractorTokens": ["despite", "attached"],
+                  "feedbackOnError": {"type": "grammar", "explanation": "La pasiva es 'was sent' y 'although' introduce una cláusula completa, no un sustantivo.", "ruleRef": "gp-linkers-contrast"}
+                },
+                {
+                  "type": "OrderWords",
+                  "id": "es-en-b1-e12",
+                  "tokens": ["The", "draft", "was", "reviewed", "before", "the", "meeting"],
+                  "answerTokens": ["The", "draft", "was", "reviewed", "before", "the", "meeting"],
+                  "feedbackOnError": {"type": "word_order", "explanation": "En la pasiva el orden es sujeto + be + participio: 'The draft was reviewed'.", "ruleRef": "gp-passive-voice"}
+                },
+                {
+                  "type": "MatchPairs",
+                  "id": "es-en-b1-e13",
+                  "pairs": [
+                    {"left": "Could you please confirm the deadline?", "right": "Petición cortés"},
+                    {"left": "I'm afraid the deadline is fixed.", "right": "Rechazo atenuado"},
+                    {"left": "Just following up on my last email.", "right": "Recordatorio breve"}
+                  ],
+                  "feedbackOnError": {"type": "register", "explanation": "Las tres fórmulas son profesionales: piden, rechazan o recuerdan sin sonar agresivas.", "ruleRef": "gp-linkers-contrast"}
+                },
+                {
+                  "type": "ListenChoose",
+                  "id": "es-en-b1-e14",
+                  "audioText": "The invoice was sent yesterday, but the payment hasn't arrived.",
+                  "options": ["La factura se envió, pero el pago no llegó", "El pago llegó antes que la factura", "La factura no se envió todavía"],
+                  "correctIndex": 0,
+                  "feedbackOnError": {"type": "comprehension", "explanation": "El audio contrasta 'was sent' (hecho pasado) con 'hasn't arrived' (situación pendiente).", "ruleRef": "gp-linkers-contrast"}
+                },
+                {
+                  "type": "ListenType",
+                  "id": "es-en-b1-e15",
+                  "transcription": "The attachment was missing from the email",
+                  "audioText": "The attachment was missing from the email",
+                  "feedbackOnError": {"type": "spelling", "explanation": "Se escribe 'attachment' con doble 't' y 'missing' con doble 's'.", "ruleRef": "gp-passive-voice"}
+                },
+                {
+                  "type": "SpeakRepeat",
+                  "id": "es-en-b1-e16",
+                  "targetPhrase": "Although the deadline is tight, we can deliver on Friday.",
+                  "audioText": "Although the deadline is tight, we can deliver on Friday.",
+                  "feedbackOnError": {"type": "pronunciation", "explanation": "Haz una pausa breve tras 'tight' y enlaza 'deliver on' sin separar las palabras.", "ruleRef": "gp-linkers-contrast"}
+                },
+                {
+                  "type": "ClozeDragDrop",
+                  "id": "es-en-b1-e17",
+                  "passage": "Although the client {{b1}} the first draft, the final version {{b2}} yesterday.",
+                  "blanks": [
+                    {"id": "b1", "answer": "approved", "options": ["approved", "approve", "approving"]},
+                    {"id": "b2", "answer": "was sent", "options": ["was sent", "sent", "is sending"]}
+                  ],
+                  "feedbackOnError": {"type": "grammar", "explanation": "La primera cláusula va en pasado simple y la segunda en pasiva: 'was sent'.", "ruleRef": "gp-passive-voice"}
+                },
+                {
+                  "type": "FreeSpeakingPrompt",
+                  "id": "es-en-b1-e18",
+                  "prompt": "Reescribe el correo en tono profesional: confirma el plazo sin sonar brusco y explica qué falta.",
+                  "minTokens": 22,
+                  "conceptClusters": [["confirm", "acknowledge", "let you know"], ["deadline", "Friday", "schedule"], ["although", "however", "despite"]],
+                  "grammarRuleRefs": ["gp-passive-voice", "gp-linkers-contrast"],
+                  "timeLimitSeconds": 60,
+                  "minWpm": 60,
+                  "maxWpm": 150,
+                  "modelAnswer": "Dear Sam, I'm afraid the deadline is tight, but we can still deliver on Friday. However, the final attachment was missing from yesterday's email. Could you please confirm that the signed file is available so we can send the revised draft?",
+                  "selfAssessmentCriteria": ["¿Confirmé el plazo con cortesía?", "¿Expliqué qué faltaba?", "¿Usé un conector de contraste?"],
+                  "feedbackOnError": {"type": "register", "explanation": "La respuesta modelo combina una disculpa breve, una pasiva y 'however' para mantener un tono profesional.", "ruleRef": "gp-linkers-contrast"}
+                }
+              ]
+            },
+            {
+              "id": "es-en-lv-2-un-1-ls-3",
+              "title": "Pequeñas conversaciones de oficina",
+              "cefrLevel": "B1",
+              "scenario": "Pausa de café con una persona recién incorporada al equipo.",
+              "canDo": "Puedo iniciar y mantener small talk, preguntar por experiencia previa y cerrar la conversación con naturalidad.",
+              "grammarPoints": [
+                {"id": "gp-question-tags", "label": "Question tags", "description": "Confirmar información con entonación."},
+                {"id": "gp-present-perfect-vs-past-simple", "label": "Present perfect vs past simple", "description": "Experiencias y eventos terminados con marcadores temporales."}
+              ],
+              "vocabFrequencyBand": "1000-2000",
+              "culturalNotes": [
+                {"idiom": "break the ice", "note": "Romper la tensión inicial en una conversación nueva; típico en el primer día de trabajo.", "translation": "romper el hielo"}
+              ],
+              "exercises": [
+                {
+                  "type": "MultipleChoice",
+                  "id": "es-en-b1-e19",
+                  "question": "Completa: You're new here, ___?",
+                  "options": ["aren't you", "don't you", "isn't it"],
+                  "correctIndex": 0,
+                  "feedbackOnError": {"type": "grammar", "explanation": "El tag repite el auxiliar 'are' y el pronombre 'you': 'aren't you?'.", "ruleRef": "gp-question-tags"}
+                },
+                {
+                  "type": "Translate",
+                  "id": "es-en-b1-e20",
+                  "sourcePhrase": "¿Has trabajado antes en un equipo remoto?",
+                  "correctTokens": ["Have", "you", "worked", "in", "a", "remote", "team", "before"],
+                  "distractorTokens": ["Did", "work"],
+                  "feedbackOnError": {"type": "grammar", "explanation": "Con 'before' y una experiencia sin fecha se usa present perfect: 'Have you worked…?'.", "ruleRef": "gp-present-perfect-vs-past-simple"}
+                },
+                {
+                  "type": "OrderWords",
+                  "id": "es-en-b1-e21",
+                  "tokens": ["You", "started", "on", "Monday", "didn't", "you"],
+                  "answerTokens": ["You", "started", "on", "Monday", "didn't", "you"],
+                  "feedbackOnError": {"type": "word_order", "explanation": "El tag va al final y usa el auxiliar del pasado: 'didn't you'.", "ruleRef": "gp-question-tags"}
+                },
+                {
+                  "type": "MatchPairs",
+                  "id": "es-en-b1-e22",
+                  "pairs": [
+                    {"left": "How long have you worked here?", "right": "Preguntar por duración"},
+                    {"left": "When did you join the team?", "right": "Preguntar por una fecha pasada"},
+                    {"left": "You're on the design team, aren't you?", "right": "Confirmar información"}
+                  ],
+                  "feedbackOnError": {"type": "grammar", "explanation": "'How long' pide duración con present perfect; 'When' pide un momento concreto en pasado.", "ruleRef": "gp-present-perfect-vs-past-simple"}
+                },
+                {
+                  "type": "ListenChoose",
+                  "id": "es-en-b1-e23",
+                  "audioText": "I've worked remotely for three years, but I joined this team last month.",
+                  "options": ["Trabaja en remoto desde hace tres años y se unió al equipo el mes pasado", "Trabajó en remoto tres años y dejó el equipo el mes pasado", "Se unió al equipo hace tres años y ahora trabaja en remoto"],
+                  "correctIndex": 0,
+                  "feedbackOnError": {"type": "comprehension", "explanation": "El present perfect expresa duración y el past simple marca 'last month'.", "ruleRef": "gp-present-perfect-vs-past-simple"}
+                },
+                {
+                  "type": "ListenType",
+                  "id": "es-en-b1-e24",
+                  "transcription": "Have you met the new project manager yet?",
+                  "audioText": "Have you met the new project manager yet?",
+                  "feedbackOnError": {"type": "spelling", "explanation": "Se escribe 'project manager' en dos palabras y 'yet' al final de la pregunta.", "ruleRef": "gp-present-perfect-vs-past-simple"}
+                },
+                {
+                  "type": "SpeakRepeat",
+                  "id": "es-en-b1-e25",
+                  "targetPhrase": "You've already met the team, haven't you?",
+                  "audioText": "You've already met the team, haven't you?",
+                  "feedbackOnError": {"type": "pronunciation", "explanation": "Contrae 'You have' en 'You've' y sube la entonación en el tag 'haven't you?'.", "ruleRef": "gp-question-tags"}
+                },
+                {
+                  "type": "ClozeDragDrop",
+                  "id": "es-en-b1-e26",
+                  "passage": "I {{b1}} in Madrid since 2019, but I {{b2}} to Lisbon last month.",
+                  "blanks": [
+                    {"id": "b1", "answer": "have worked", "options": ["have worked", "worked", "work"]},
+                    {"id": "b2", "answer": "moved", "options": ["moved", "have moved", "move"]}
+                  ],
+                  "feedbackOnError": {"type": "grammar", "explanation": "'Since 2019' pide present perfect; 'last month' pide past simple.", "ruleRef": "gp-present-perfect-vs-past-simple"}
+                },
+                {
+                  "type": "FreeSpeakingPrompt",
+                  "id": "es-en-b1-e27",
+                  "prompt": "Preséntate a un compañero nuevo: cuenta qué has hecho y cuándo empezaste aquí.",
+                  "minTokens": 20,
+                  "conceptClusters": [["worked", "experience", "project"], ["since", "for", "last"], ["team", "role", "department"]],
+                  "grammarRuleRefs": ["gp-present-perfect-vs-past-simple", "gp-question-tags"],
+                  "timeLimitSeconds": 60,
+                  "minWpm": 60,
+                  "maxWpm": 150,
+                  "modelAnswer": "I've worked remotely for three years, but I joined this team last month. I started on Monday, didn't I? Have you met the new project manager yet? She's worked here since 2022 and knows the onboarding process well.",
+                  "selfAssessmentCriteria": ["¿Usé present perfect para experiencia?", "¿Usé pasado para una fecha concreta?", "¿Hice una pregunta con tag?"],
+                  "feedbackOnError": {"type": "grammar", "explanation": "La respuesta modelo alterna present perfect para experiencia y past simple para fechas concretas.", "ruleRef": "gp-present-perfect-vs-past-simple"}
+                }
+              ]
+            },
+            {
+              "id": "es-en-lv-2-un-1-ls-4",
+              "title": "Una llamada difícil",
+              "cefrLevel": "B1",
+              "scenario": "Un cliente enfadado llama por un error de facturación y exige una solución inmediata.",
+              "canDo": "Puedo gestionar una queja telefónica, disculparme sin excusas y proponer una salida concreta.",
+              "grammarPoints": [
+                {"id": "gp-modals-obligation", "label": "Modals of obligation", "description": "have to, should, ought to."},
+                {"id": "gp-modals-deduction", "label": "Modals of deduction", "description": "must, might, can't para deducir."}
+              ],
+              "vocabFrequencyBand": "2000-3000",
+              "culturalNotes": [
+                {"idiom": "the ball is in your court", "note": "La siguiente decisión corresponde a la otra persona; útil para cerrar una llamada sin presión.", "translation": "la pelota está en tu tejado"}
+              ],
+              "exercises": [
+                {
+                  "type": "MultipleChoice",
+                  "id": "es-en-b1-e28",
+                  "question": "Es casi seguro un error de facturación: It ___ a billing error.",
+                  "options": ["must be", "must being", "can be"],
+                  "correctIndex": 0,
+                  "feedbackOnError": {"type": "grammar", "explanation": "Para una deducción fuerte se usa 'must + infinitivo': 'must be'.", "ruleRef": "gp-modals-deduction"}
+                },
+                {
+                  "type": "Translate",
+                  "id": "es-en-b1-e29",
+                  "sourcePhrase": "Debemos disculparnos y resolver el problema hoy.",
+                  "correctTokens": ["We", "must", "apologize", "and", "resolve", "the", "problem", "today"],
+                  "distractorTokens": ["should", "solve"],
+                  "feedbackOnError": {"type": "grammar", "explanation": "Una obligación fuerte se expresa con 'must + verbo'; 'should' suaviza la obligación.", "ruleRef": "gp-modals-obligation"}
+                },
+                {
+                  "type": "OrderWords",
+                  "id": "es-en-b1-e30",
+                  "tokens": ["It", "might", "be", "a", "duplicate", "charge"],
+                  "answerTokens": ["It", "might", "be", "a", "duplicate", "charge"],
+                  "feedbackOnError": {"type": "word_order", "explanation": "El modal va antes del verbo: 'might be', no 'be might'.", "ruleRef": "gp-modals-deduction"}
+                },
+                {
+                  "type": "MatchPairs",
+                  "id": "es-en-b1-e31",
+                  "pairs": [
+                    {"left": "I'm sorry about that.", "right": "Disculpa"},
+                    {"left": "I'll look into it right away.", "right": "Compromiso de acción"},
+                    {"left": "It must be a system error.", "right": "Deducción"}
+                  ],
+                  "feedbackOnError": {"type": "register", "explanation": "La disculpa reconoce el problema, el compromiso fija una acción y la deducción explica la causa probable.", "ruleRef": "gp-modals-deduction"}
+                },
+                {
+                  "type": "ListenChoose",
+                  "id": "es-en-b1-e32",
+                  "audioText": "It can't be a duplicate because the payment was cancelled.",
+                  "options": ["No puede ser un duplicado porque el pago se canceló", "Debe ser un duplicado porque el pago se canceló", "Podría ser un duplicado si el pago se cancela"],
+                  "correctIndex": 0,
+                  "feedbackOnError": {"type": "comprehension", "explanation": "'Can't be' expresa una deducción negativa fuerte: es imposible.", "ruleRef": "gp-modals-deduction"}
+                },
+                {
+                  "type": "ListenType",
+                  "id": "es-en-b1-e33",
+                  "transcription": "I'll put you through to the billing team",
+                  "audioText": "I'll put you through to the billing team",
+                  "feedbackOnError": {"type": "spelling", "explanation": "La expresión telefónica es 'put you through', con 'through' al final.", "ruleRef": "gp-modals-obligation"}
+                },
+                {
+                  "type": "SpeakRepeat",
+                  "id": "es-en-b1-e34",
+                  "targetPhrase": "We must resolve this today; it might be our mistake.",
+                  "audioText": "We must resolve this today; it might be our mistake.",
+                  "feedbackOnError": {"type": "pronunciation", "explanation": "Pronuncia 'must' con /st/ claro y haz una pausa breve antes de 'it might'.", "ruleRef": "gp-modals-obligation"}
+                },
+                {
+                  "type": "ClozeDragDrop",
+                  "id": "es-en-b1-e35",
+                  "passage": "It {{b1}} be a duplicate charge, so we {{b2}} check the invoice before refunding.",
+                  "blanks": [
+                    {"id": "b1", "answer": "might", "options": ["might", "must", "can't"]},
+                    {"id": "b2", "answer": "must", "options": ["must", "might", "can't"]}
+                  ],
+                  "feedbackOnError": {"type": "grammar", "explanation": "'Might' expresa posibilidad y 'must' una obligación antes de reembolsar.", "ruleRef": "gp-modals-deduction"}
+                },
+                {
+                  "type": "FreeSpeakingPrompt",
+                  "id": "es-en-b1-e36",
+                  "prompt": "Atiende la queja: discúlpate, explica qué pudo pasar y propone una solución con plazo.",
+                  "minTokens": 22,
+                  "conceptClusters": [["sorry", "apologize", "apologies"], ["refund", "fix", "resolve"], ["must", "might", "should"]],
+                  "grammarRuleRefs": ["gp-modals-obligation", "gp-modals-deduction"],
+                  "timeLimitSeconds": 60,
+                  "minWpm": 60,
+                  "maxWpm": 150,
+                  "modelAnswer": "I'm sorry about the incorrect charge. It might be a duplicate payment, but it must be checked before we refund it. I'll look into it right away and put you through to billing. We must resolve this today.",
+                  "selfAssessmentCriteria": ["¿Me disculpé sin excusas?", "¿Expliqué una causa probable?", "¿Propuse una solución con plazo?"],
+                  "feedbackOnError": {"type": "grammar", "explanation": "La respuesta modelo usa 'might' para la causa probable y 'must' para la obligación de actuar.", "ruleRef": "gp-modals-deduction"}
+                }
+              ]
+            },
+            {
+              "id": "es-en-lv-2-un-1-ls-5",
+              "title": "El proyecto se retrasa",
+              "cefrLevel": "B1",
+              "scenario": "El equipo no llegará a la fecha comprometida y debe explicarlo con un plan alternativo.",
+              "canDo": "Puedo explicar un retraso, asumir responsabilidad y presentar un plan con hitos y condiciones.",
+              "grammarPoints": [
+                {"id": "gp-future-forms", "label": "Future forms", "description": "will, going to y presente continuo."},
+                {"id": "gp-first-conditional", "label": "First conditional", "description": "Condición real con consecuencia futura."}
+              ],
+              "vocabFrequencyBand": "2000-3000",
+              "culturalNotes": [
+                {"idiom": "cut it fine", "note": "Dejar un margen demasiado ajustado; se usa al hablar de plazos y riesgos.", "translation": "ir muy justo de tiempo"}
+              ],
+              "exercises": [
+                {
+                  "type": "MultipleChoice",
+                  "id": "es-en-b1-e37",
+                  "question": "Completa: We ___ the client tomorrow to explain the delay.",
+                  "options": ["are going to call", "are call", "will calling"],
+                  "correctIndex": 0,
+                  "feedbackOnError": {"type": "grammar", "explanation": "Un plan previsto se expresa con 'be going to + infinitivo': 'are going to call'.", "ruleRef": "gp-future-forms"}
+                },
+                {
+                  "type": "Translate",
+                  "id": "es-en-b1-e38",
+                  "sourcePhrase": "Si ajustamos el alcance, entregaremos la primera fase el viernes.",
+                  "correctTokens": ["If", "we", "adjust", "the", "scope", "we", "will", "deliver", "the", "first", "phase", "on", "Friday"],
+                  "distractorTokens": ["would", "delivery"],
+                  "feedbackOnError": {"type": "grammar", "explanation": "La first conditional usa presente en la condición y 'will + verbo' en la consecuencia.", "ruleRef": "gp-first-conditional"}
+                },
+                {
+                  "type": "OrderWords",
+                  "id": "es-en-b1-e39",
+                  "tokens": ["We", "are", "going", "to", "revise", "the", "timeline"],
+                  "answerTokens": ["We", "are", "going", "to", "revise", "the", "timeline"],
+                  "feedbackOnError": {"type": "word_order", "explanation": "La estructura es sujeto + be + going to + verbo: 'We are going to revise'.", "ruleRef": "gp-future-forms"}
+                },
+                {
+                  "type": "MatchPairs",
+                  "id": "es-en-b1-e40",
+                  "pairs": [
+                    {"left": "I'll send it now.", "right": "Decisión espontánea"},
+                    {"left": "We're going to revise the plan.", "right": "Plan previsto"},
+                    {"left": "We're meeting the client at ten.", "right": "Cita acordada"}
+                  ],
+                  "feedbackOnError": {"type": "grammar", "explanation": "'Will' para decisiones del momento, 'going to' para planes y presente continuo para citas acordadas.", "ruleRef": "gp-future-forms"}
+                },
+                {
+                  "type": "ListenChoose",
+                  "id": "es-en-b1-e41",
+                  "audioText": "If we don't scope this down, we'll miss the deadline.",
+                  "options": ["Reducir el alcance es necesario para cumplir el plazo", "Ya han perdido el plazo y no hay solución", "El alcance no afecta a la fecha de entrega"],
+                  "correctIndex": 0,
+                  "feedbackOnError": {"type": "comprehension", "explanation": "La condicional advierte de una consecuencia futura si no se reduce el alcance.", "ruleRef": "gp-first-conditional"}
+                },
+                {
+                  "type": "ListenType",
+                  "id": "es-en-b1-e42",
+                  "transcription": "We'll share a revised timeline by Thursday",
+                  "audioText": "We'll share a revised timeline by Thursday",
+                  "feedbackOnError": {"type": "spelling", "explanation": "Se escribe 'We'll' con apóstrofo y 'timeline' como una sola palabra.", "ruleRef": "gp-future-forms"}
+                },
+                {
+                  "type": "SpeakRepeat",
+                  "id": "es-en-b1-e43",
+                  "targetPhrase": "If we adjust the scope, we'll deliver the first phase on Friday.",
+                  "audioText": "If we adjust the scope, we'll deliver the first phase on Friday.",
+                  "feedbackOnError": {"type": "pronunciation", "explanation": "Haz una pausa breve tras la condición y contrae 'we will' en 'we'll'.", "ruleRef": "gp-first-conditional"}
+                },
+                {
+                  "type": "ClozeDragDrop",
+                  "id": "es-en-b1-e44",
+                  "passage": "If we {{b1}} the scope, we {{b2}} the deadline.",
+                  "blanks": [
+                    {"id": "b1", "answer": "reduce", "options": ["reduce", "reduced", "reducing"]},
+                    {"id": "b2", "answer": "will meet", "options": ["will meet", "met", "meeting"]}
+                  ],
+                  "feedbackOnError": {"type": "grammar", "explanation": "La condición va en presente ('reduce') y la consecuencia con 'will': 'will meet'.", "ruleRef": "gp-first-conditional"}
+                },
+                {
+                  "type": "FreeSpeakingPrompt",
+                  "id": "es-en-b1-e45",
+                  "prompt": "Explica el retraso al cliente: asume responsabilidad, propone un plan y condiciónalo a una decisión.",
+                  "minTokens": 25,
+                  "conceptClusters": [["delay", "late", "behind schedule"], ["plan", "milestone", "phase"], ["if", "unless", "provided"]],
+                  "grammarRuleRefs": ["gp-future-forms", "gp-first-conditional"],
+                  "timeLimitSeconds": 60,
+                  "minWpm": 60,
+                  "maxWpm": 150,
+                  "modelAnswer": "I'm afraid we're behind schedule. We underestimated the scope, and if we reduce the testing phase now, we'll deliver the first milestone on Friday. We're going to share a revised timeline by Thursday and will confirm the next steps with you.",
+                  "selfAssessmentCriteria": ["¿Asumí el retraso con claridad?", "¿Propuse un plan concreto?", "¿Usé una condicional real?"],
+                  "feedbackOnError": {"type": "grammar", "explanation": "La respuesta modelo usa 'going to' para el plan y una first conditional para la entrega del viernes.", "ruleRef": "gp-first-conditional"}
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "es-en-lv-2-un-2",
+          "title": "Viajes y trámites",
+          "lessons": [
+            {
+              "id": "es-en-lv-2-un-2-ls-1",
+              "title": "En el aeropuerto",
+              "cefrLevel": "B1",
+              "scenario": "Un vuelo se cancela y la aerolínea ofrece una ruta con escala; hay que reclamar y reorganizar.",
+              "canDo": "Puedo explicar un problema de viaje, pedir una alternativa y entender condiciones de reembolso.",
+              "grammarPoints": [
+                {"id": "gp-present-perfect-for-since", "label": "Present perfect with for/since", "description": "Duración hasta el presente."},
+                {"id": "gp-modals-obligation", "label": "Modals of obligation", "description": "have to, should, ought to."}
+              ],
+              "vocabFrequencyBand": "2000-3000",
+              "culturalNotes": [
+                {"idiom": "check in", "note": "Registrarse en un vuelo u hotel; también significa reportarse con alguien.", "translation": "facturar / registrarse"}
+              ],
+              "exercises": [
+                {
+                  "type": "MultipleChoice",
+                  "id": "es-en-b1-e46",
+                  "question": "Completa: Our flight has been delayed ___ two hours.",
+                  "options": ["for", "since", "during"],
+                  "correctIndex": 0,
+                  "feedbackOnError": {"type": "grammar", "explanation": "'For' acompaña una duración ('two hours'); 'since' exige un punto de inicio.", "ruleRef": "gp-present-perfect-for-since"}
+                },
+                {
+                  "type": "Translate",
+                  "id": "es-en-b1-e47",
+                  "sourcePhrase": "Hemos estado esperando desde las seis.",
+                  "correctTokens": ["We", "have", "been", "waiting", "since", "six"],
+                  "distractorTokens": ["for", "waited"],
+                  "feedbackOnError": {"type": "grammar", "explanation": "Con una hora de inicio se usa 'since six' y el present perfect continuo.", "ruleRef": "gp-present-perfect-for-since"}
+                },
+                {
+                  "type": "OrderWords",
+                  "id": "es-en-b1-e48",
+                  "tokens": ["You", "have", "to", "rebook", "the", "flight", "today"],
+                  "answerTokens": ["You", "have", "to", "rebook", "the", "flight", "today"],
+                  "feedbackOnError": {"type": "word_order", "explanation": "'Have to + verbo' expresa obligación: 'You have to rebook'.", "ruleRef": "gp-modals-obligation"}
+                },
+                {
+                  "type": "MatchPairs",
+                  "id": "es-en-b1-e49",
+                  "pairs": [
+                    {"left": "Has the flight been cancelled?", "right": "Preguntar por el estado del vuelo"},
+                    {"left": "You have to go to gate 12.", "right": "Indicar una obligación"},
+                    {"left": "We've been waiting for an hour.", "right": "Expresar duración"}
+                  ],
+                  "feedbackOnError": {"type": "grammar", "explanation": "'Has been cancelled' usa pasiva, 'have to' obligación y 'have been waiting' duración.", "ruleRef": "gp-present-perfect-for-since"}
+                },
+                {
+                  "type": "ListenChoose",
+                  "id": "es-en-b1-e50",
+                  "audioText": "The flight has been cancelled, so you have to rebook at the service desk.",
+                  "options": ["El vuelo se canceló y hay que reprogramarlo en el mostrador", "El vuelo sale más tarde y hay que pagar en el mostrador", "El vuelo está completo y hay que esperar en la puerta"],
+                  "correctIndex": 0,
+                  "feedbackOnError": {"type": "comprehension", "explanation": "'Has been cancelled' indica el problema y 'have to rebook' la obligación derivada.", "ruleRef": "gp-modals-obligation"}
+                },
+                {
+                  "type": "ListenType",
+                  "id": "es-en-b1-e51",
+                  "transcription": "Please proceed to gate twelve with your boarding pass",
+                  "audioText": "Please proceed to gate twelve with your boarding pass",
+                  "feedbackOnError": {"type": "spelling", "explanation": "Se escribe 'proceed' con doble 'e' y 'boarding pass' en dos palabras.", "ruleRef": "gp-modals-obligation"}
+                },
+                {
+                  "type": "SpeakRepeat",
+                  "id": "es-en-b1-e52",
+                  "targetPhrase": "We've been waiting at the gate since six o'clock.",
+                  "audioText": "We've been waiting at the gate since six o'clock.",
+                  "feedbackOnError": {"type": "pronunciation", "explanation": "Contrae 'We have' en 'We've' y enlaza 'since six' sin pausa.", "ruleRef": "gp-present-perfect-for-since"}
+                },
+                {
+                  "type": "ClozeDragDrop",
+                  "id": "es-en-b1-e53",
+                  "passage": "We {{b1}} here since noon, and we {{b2}} rebook the flight before the desk closes.",
+                  "blanks": [
+                    {"id": "b1", "answer": "have been", "options": ["have been", "are", "were"]},
+                    {"id": "b2", "answer": "have to", "options": ["have to", "has to", "having to"]}
+                  ],
+                  "feedbackOnError": {"type": "grammar", "explanation": "'Since noon' pide present perfect y la obligación con 'we' es 'have to'.", "ruleRef": "gp-present-perfect-for-since"}
+                },
+                {
+                  "type": "FreeSpeakingPrompt",
+                  "id": "es-en-b1-e54",
+                  "prompt": "Explica el problema en el aeropuerto: qué pasó, cuánto llevas esperando y qué necesitas.",
+                  "minTokens": 22,
+                  "conceptClusters": [["cancelled", "delayed", "problem"], ["since", "for", "hour"], ["rebook", "alternative", "gate"]],
+                  "grammarRuleRefs": ["gp-present-perfect-for-since", "gp-modals-obligation"],
+                  "timeLimitSeconds": 60,
+                  "minWpm": 60,
+                  "maxWpm": 150,
+                  "modelAnswer": "Our flight has been cancelled, and we've been waiting at the service desk for two hours. We have to rebook before the desk closes, but we need an alternative that arrives today. Could you tell us which gate we should go to?",
+                  "selfAssessmentCriteria": ["¿Expliqué qué ocurrió?", "¿Indiqué cuánto llevaba esperando?", "¿Pedí una alternativa concreta?"],
+                  "feedbackOnError": {"type": "grammar", "explanation": "La respuesta modelo usa present perfect con 'for' y una obligación con 'have to'.", "ruleRef": "gp-present-perfect-for-since"}
+                }
+              ]
+            },
+            {
+              "id": "es-en-lv-2-un-2-ls-2",
+              "title": "Reservar y cambiar un hotel",
+              "cefrLevel": "B1",
+              "scenario": "El hotel confirma una habitación equivocada y hay que negociar un cambio sin pagar de más.",
+              "canDo": "Puedo reservar, modificar y confirmar alojamiento, comparando opciones y condiciones.",
+              "grammarPoints": [
+                {"id": "gp-second-conditional", "label": "Second conditional", "description": "Hipótesis improbable y consejo."},
+                {"id": "gp-indirect-questions", "label": "Indirect questions", "description": "Cortesía con Could you tell me…?"}
+              ],
+              "vocabFrequencyBand": "2000-3000",
+              "culturalNotes": [
+                {"idiom": "up in the air", "note": "Sin decidir o sin confirmar todavía; frecuente al hablar de reservas y planes.", "translation": "en el aire"}
+              ],
+              "exercises": [
+                {
+                  "type": "MultipleChoice",
+                  "id": "es-en-b1-e55",
+                  "question": "Completa: If we changed the dates, ___ a cheaper room?",
+                  "options": ["would we get", "will we get", "did we get"],
+                  "correctIndex": 0,
+                  "feedbackOnError": {"type": "grammar", "explanation": "La second conditional usa 'would + verbo' en la consecuencia.", "ruleRef": "gp-second-conditional"}
+                },
+                {
+                  "type": "Translate",
+                  "id": "es-en-b1-e56",
+                  "sourcePhrase": "¿Podrías decirme si hay una habitación disponible?",
+                  "correctTokens": ["Could", "you", "tell", "me", "if", "there", "is", "a", "room", "available"],
+                  "distractorTokens": ["has", "free"],
+                  "feedbackOnError": {"type": "grammar", "explanation": "La pregunta indirecta usa 'if there is', sin invertir el orden.", "ruleRef": "gp-indirect-questions"}
+                },
+                {
+                  "type": "OrderWords",
+                  "id": "es-en-b1-e57",
+                  "tokens": ["If", "I", "were", "you", "I", "would", "confirm", "the", "booking"],
+                  "answerTokens": ["If", "I", "were", "you", "I", "would", "confirm", "the", "booking"],
+                  "feedbackOnError": {"type": "word_order", "explanation": "La estructura es 'If I were you, I would + verbo'.", "ruleRef": "gp-second-conditional"}
+                },
+                {
+                  "type": "MatchPairs",
+                  "id": "es-en-b1-e58",
+                  "pairs": [
+                    {"left": "Could you tell me the price?", "right": "Preguntar el precio con cortesía"},
+                    {"left": "If we arrived earlier, we could check in.", "right": "Plantear una hipótesis"},
+                    {"left": "I'd like to change my reservation.", "right": "Solicitar un cambio"}
+                  ],
+                  "feedbackOnError": {"type": "register", "explanation": "'Could you tell me' y 'I'd like' son fórmulas corteses; 'if… could' plantea una hipótesis.", "ruleRef": "gp-second-conditional"}
+                },
+                {
+                  "type": "ListenChoose",
+                  "id": "es-en-b1-e59",
+                  "audioText": "If you booked directly with us, we could offer a free upgrade.",
+                  "options": ["La mejora depende de haber reservado directamente", "La mejora es gratis para todos los clientes", "La mejora solo se ofrece al llegar al hotel"],
+                  "correctIndex": 0,
+                  "feedbackOnError": {"type": "comprehension", "explanation": "La second conditional presenta la mejora como posibilidad condicionada.", "ruleRef": "gp-second-conditional"}
+                },
+                {
+                  "type": "ListenType",
+                  "id": "es-en-b1-e60",
+                  "transcription": "I'd like to change my reservation to Friday",
+                  "audioText": "I'd like to change my reservation to Friday",
+                  "feedbackOnError": {"type": "spelling", "explanation": "Se escribe 'I'd like' con apóstrofo y 'reservation' con 's' intermedia.", "ruleRef": "gp-indirect-questions"}
+                },
+                {
+                  "type": "SpeakRepeat",
+                  "id": "es-en-b1-e61",
+                  "targetPhrase": "Could you tell me if breakfast is included?",
+                  "audioText": "Could you tell me if breakfast is included?",
+                  "feedbackOnError": {"type": "pronunciation", "explanation": "Enlaza 'tell me if' y baja la entonación al final de la pregunta indirecta.", "ruleRef": "gp-indirect-questions"}
+                },
+                {
+                  "type": "ClozeDragDrop",
+                  "id": "es-en-b1-e62",
+                  "passage": "If we {{b1}} the reservation, we {{b2}} a better rate.",
+                  "blanks": [
+                    {"id": "b1", "answer": "changed", "options": ["changed", "change", "changing"]},
+                    {"id": "b2", "answer": "would get", "options": ["would get", "will get", "got"]}
+                  ],
+                  "feedbackOnError": {"type": "grammar", "explanation": "La condición hipotética va en pasado y la consecuencia con 'would'.", "ruleRef": "gp-second-conditional"}
+                },
+                {
+                  "type": "FreeSpeakingPrompt",
+                  "id": "es-en-b1-e63",
+                  "prompt": "Llama al hotel: pide cambiar la reserva, pregunta por disponibilidad y explica tu condición.",
+                  "minTokens": 22,
+                  "conceptClusters": [["change", "modify", "reservation"], ["available", "room", "rate"], ["if", "could", "would"]],
+                  "grammarRuleRefs": ["gp-second-conditional", "gp-indirect-questions"],
+                  "timeLimitSeconds": 60,
+                  "minWpm": 60,
+                  "maxWpm": 150,
+                  "modelAnswer": "I'd like to change my reservation to Friday. Could you tell me if a room is available that night? If you had a quieter room, we would gladly pay a little more. I'd also like to confirm that breakfast is included in the rate.",
+                  "selfAssessmentCriteria": ["¿Pedí el cambio con cortesía?", "¿Pregunté por disponibilidad?", "¿Usé una hipótesis con 'would'?"],
+                  "feedbackOnError": {"type": "grammar", "explanation": "La respuesta modelo combina preguntas indirectas y una second conditional para negociar el cambio.", "ruleRef": "gp-second-conditional"}
+                }
+              ]
+            },
+            {
+              "id": "es-en-lv-2-un-2-ls-3",
+              "title": "Perderse en la ciudad",
+              "cefrLevel": "B1",
+              "scenario": "El GPS falla y hay que pedir indicaciones para llegar a una dirección concreta.",
+              "canDo": "Puedo pedir y dar indicaciones, describir un recorrido y confirmar que entendí.",
+              "grammarPoints": [
+                {"id": "gp-relative-clauses", "label": "Defining relative clauses", "description": "who/which/that para identificar personas y cosas."},
+                {"id": "gp-prepositions-place-movement", "label": "Prepositions of place and movement", "description": "Indicaciones y ubicación."}
+              ],
+              "vocabFrequencyBand": "1000-2000",
+              "culturalNotes": [
+                {"idiom": "off the beaten track", "note": "Fuera de las rutas habituales o turísticas; se usa para recomendar lugares poco conocidos.", "translation": "fuera de lo habitual"}
+              ],
+              "exercises": [
+                {
+                  "type": "MultipleChoice",
+                  "id": "es-en-b1-e64",
+                  "question": "Completa: The bank is the building ___ next to the station.",
+                  "options": ["which is", "who is", "where is"],
+                  "correctIndex": 0,
+                  "feedbackOnError": {"type": "grammar", "explanation": "Para cosas se usa 'which/that'; 'who' es para personas.", "ruleRef": "gp-relative-clauses"}
+                },
+                {
+                  "type": "Translate",
+                  "id": "es-en-b1-e65",
+                  "sourcePhrase": "El museo que está junto al parque abre a las diez.",
+                  "correctTokens": ["The", "museum", "that", "is", "next", "to", "the", "park", "opens", "at", "ten"],
+                  "distractorTokens": ["who", "in"],
+                  "feedbackOnError": {"type": "grammar", "explanation": "La relativa de cosa usa 'that/which' y la hora lleva 'at'.", "ruleRef": "gp-relative-clauses"}
+                },
+                {
+                  "type": "OrderWords",
+                  "id": "es-en-b1-e66",
+                  "tokens": ["Go", "past", "the", "bakery", "and", "turn", "left"],
+                  "answerTokens": ["Go", "past", "the", "bakery", "and", "turn", "left"],
+                  "feedbackOnError": {"type": "word_order", "explanation": "La indicación sigue el orden imperativo + preposición + punto de referencia.", "ruleRef": "gp-prepositions-place-movement"}
+                },
+                {
+                  "type": "MatchPairs",
+                  "id": "es-en-b1-e67",
+                  "pairs": [
+                    {"left": "Go straight ahead.", "right": "Seguir recto"},
+                    {"left": "Turn right at the corner.", "right": "Girar a la derecha"},
+                    {"left": "It's across from the station.", "right": "Está enfrente de la estación"}
+                  ],
+                  "feedbackOnError": {"type": "vocabulary", "explanation": "'Straight ahead', 'at the corner' y 'across from' son las preposiciones clave de la ruta.", "ruleRef": "gp-prepositions-place-movement"}
+                },
+                {
+                  "type": "ListenChoose",
+                  "id": "es-en-b1-e68",
+                  "audioText": "Go past the bakery, then take the second street on your left.",
+                  "options": ["Hay que pasar la panadería y girar en la segunda calle a la izquierda", "Hay que girar en la primera calle a la derecha", "Hay que volver a la panadería y seguir recto"],
+                  "correctIndex": 0,
+                  "feedbackOnError": {"type": "comprehension", "explanation": "'Past' indica pasar de largo y 'second street on your left' la calle exacta.", "ruleRef": "gp-prepositions-place-movement"}
+                },
+                {
+                  "type": "ListenType",
+                  "id": "es-en-b1-e69",
+                  "transcription": "The pharmacy is between the bank and the subway station",
+                  "audioText": "The pharmacy is between the bank and the subway station",
+                  "feedbackOnError": {"type": "spelling", "explanation": "Se escribe 'pharmacy' con 'ph' y 'subway station' en dos palabras.", "ruleRef": "gp-prepositions-place-movement"}
+                },
+                {
+                  "type": "SpeakRepeat",
+                  "id": "es-en-b1-e70",
+                  "targetPhrase": "Go past the bakery and turn left at the roundabout.",
+                  "audioText": "Go past the bakery and turn left at the roundabout.",
+                  "feedbackOnError": {"type": "pronunciation", "explanation": "Enlaza 'past the' y pronuncia 'roundabout' con acento en la primera sílaba.", "ruleRef": "gp-prepositions-place-movement"}
+                },
+                {
+                  "type": "ClozeDragDrop",
+                  "id": "es-en-b1-e71",
+                  "passage": "The hotel {{b1}} is near the station has a café {{b2}} serves breakfast.",
+                  "blanks": [
+                    {"id": "b1", "answer": "which", "options": ["which", "who", "where"]},
+                    {"id": "b2", "answer": "that", "options": ["that", "who", "where"]}
+                  ],
+                  "feedbackOnError": {"type": "grammar", "explanation": "Ambas relativas identifican cosas: 'which' y 'that'.", "ruleRef": "gp-relative-clauses"}
+                },
+                {
+                  "type": "FreeSpeakingPrompt",
+                  "id": "es-en-b1-e72",
+                  "prompt": "Da indicaciones desde la estación hasta tu hotel, mencionando dos puntos de referencia.",
+                  "minTokens": 22,
+                  "conceptClusters": [["turn", "go", "walk"], ["left", "right", "straight"], ["next to", "across from", "between"]],
+                  "grammarRuleRefs": ["gp-relative-clauses", "gp-prepositions-place-movement"],
+                  "timeLimitSeconds": 60,
+                  "minWpm": 60,
+                  "maxWpm": 150,
+                  "modelAnswer": "From the station, go straight ahead and turn left at the roundabout. Walk past the bakery that is on the corner, then take the second street on your right. My hotel is the building between the bank and the pharmacy, across from the park.",
+                  "selfAssessmentCriteria": ["¿Di un recorrido claro?", "¿Usé dos puntos de referencia?", "¿Empleé preposiciones de lugar?"],
+                  "feedbackOnError": {"type": "grammar", "explanation": "La respuesta modelo encadena imperativos, preposiciones de movimiento y una relativa para identificar el edificio.", "ruleRef": "gp-relative-clauses"}
+                }
+              ]
+            },
+            {
+              "id": "es-en-lv-2-un-2-ls-4",
+              "title": "Una queja con solución",
+              "cefrLevel": "B1",
+              "scenario": "Un pedido llegó dañado y la tienda propone un cambio; hay que decidir qué exigir.",
+              "canDo": "Puedo describir un defecto, reclamar una solución y aceptar o rechazar una propuesta.",
+              "grammarPoints": [
+                {"id": "gp-past-continuous-vs-past-simple", "label": "Past continuous vs past simple", "description": "Acciones interrumpidas y contexto."},
+                {"id": "gp-linkers-purpose", "label": "Purpose linkers", "description": "to, so that, in order to."}
+              ],
+              "vocabFrequencyBand": "2000-3000",
+              "culturalNotes": [
+                {"idiom": "the last straw", "note": "El problema final que agota la paciencia; se usa cuando ya no se tolera más.", "translation": "la gota que colma el vaso"}
+              ],
+              "exercises": [
+                {
+                  "type": "MultipleChoice",
+                  "id": "es-en-b1-e73",
+                  "question": "Completa: I was opening the box when I ___ the damage.",
+                  "options": ["noticed", "was noticing", "notice"],
+                  "correctIndex": 0,
+                  "feedbackOnError": {"type": "grammar", "explanation": "La acción que interrumpe va en past simple: 'noticed'.", "ruleRef": "gp-past-continuous-vs-past-simple"}
+                },
+                {
+                  "type": "Translate",
+                  "id": "es-en-b1-e74",
+                  "sourcePhrase": "Estaba revisando el pedido cuando vi el defecto.",
+                  "correctTokens": ["I", "was", "checking", "the", "order", "when", "I", "saw", "the", "defect"],
+                  "distractorTokens": ["checked", "see"],
+                  "feedbackOnError": {"type": "grammar", "explanation": "El contexto va en past continuous ('was checking') y la interrupción en past simple ('saw').", "ruleRef": "gp-past-continuous-vs-past-simple"}
+                },
+                {
+                  "type": "OrderWords",
+                  "id": "es-en-b1-e75",
+                  "tokens": ["We", "called", "to", "ask", "for", "a", "replacement"],
+                  "answerTokens": ["We", "called", "to", "ask", "for", "a", "replacement"],
+                  "feedbackOnError": {"type": "word_order", "explanation": "'To + infinitivo' expresa propósito: 'to ask for a replacement'.", "ruleRef": "gp-linkers-purpose"}
+                },
+                {
+                  "type": "MatchPairs",
+                  "id": "es-en-b1-e76",
+                  "pairs": [
+                    {"left": "to ask for a refund", "right": "Propósito: pedir un reembolso"},
+                    {"left": "so that we can exchange it", "right": "Propósito con sujeto explícito"},
+                    {"left": "in order to resolve the issue", "right": "Propósito con registro formal"}
+                  ],
+                  "feedbackOnError": {"type": "grammar", "explanation": "'To' y 'in order to' van seguidos de infinitivo; 'so that' introduce una cláusula.", "ruleRef": "gp-linkers-purpose"}
+                },
+                {
+                  "type": "ListenChoose",
+                  "id": "es-en-b1-e77",
+                  "audioText": "I was unpacking the order when I noticed the screen was cracked.",
+                  "options": ["La pantalla estaba rota y se dio cuenta al desembalar", "La pantalla se rompió después de llamar a la tienda", "El pedido llegó sin pantalla"],
+                  "correctIndex": 0,
+                  "feedbackOnError": {"type": "comprehension", "explanation": "El past continuous sitúa la acción en curso y 'noticed' marca el descubrimiento.", "ruleRef": "gp-past-continuous-vs-past-simple"}
+                },
+                {
+                  "type": "ListenType",
+                  "id": "es-en-b1-e78",
+                  "transcription": "Could you send a replacement or a return label?",
+                  "audioText": "Could you send a replacement or a return label?",
+                  "feedbackOnError": {"type": "spelling", "explanation": "Se escribe 'replacement' con 'e' final y 'return label' en dos palabras.", "ruleRef": "gp-linkers-purpose"}
+                },
+                {
+                  "type": "SpeakRepeat",
+                  "id": "es-en-b1-e79",
+                  "targetPhrase": "I was checking the order when I noticed the defect.",
+                  "audioText": "I was checking the order when I noticed the defect.",
+                  "feedbackOnError": {"type": "pronunciation", "explanation": "Enlaza 'checking the' y pronuncia 'noticed' con la /t/ final clara.", "ruleRef": "gp-past-continuous-vs-past-simple"}
+                },
+                {
+                  "type": "ClozeDragDrop",
+                  "id": "es-en-b1-e80",
+                  "passage": "I {{b1}} the box when I {{b2}} the damage, so I called to ask for a replacement.",
+                  "blanks": [
+                    {"id": "b1", "answer": "was opening", "options": ["was opening", "opened", "open"]},
+                    {"id": "b2", "answer": "noticed", "options": ["noticed", "was noticing", "notice"]}
+                  ],
+                  "feedbackOnError": {"type": "grammar", "explanation": "El past continuous describe la acción en curso y el past simple la interrupción.", "ruleRef": "gp-past-continuous-vs-past-simple"}
+                },
+                {
+                  "type": "FreeSpeakingPrompt",
+                  "id": "es-en-b1-e81",
+                  "prompt": "Explica el problema al servicio de atención: qué estabas haciendo, qué viste y qué solución pides.",
+                  "minTokens": 22,
+                  "conceptClusters": [["was", "when", "noticed"], ["damaged", "defect", "broken"], ["replacement", "refund", "return"]],
+                  "grammarRuleRefs": ["gp-past-continuous-vs-past-simple", "gp-linkers-purpose"],
+                  "timeLimitSeconds": 60,
+                  "minWpm": 60,
+                  "maxWpm": 150,
+                  "modelAnswer": "I was unpacking the order when I noticed the screen was cracked. I called to ask for a replacement or a refund, because the product was damaged before I used it. Could you send a return label so that we can resolve this quickly?",
+                  "selfAssessmentCriteria": ["¿Describí la acción en curso?", "¿Expliqué el defecto?", "¿Pedí una solución concreta?"],
+                  "feedbackOnError": {"type": "grammar", "explanation": "La respuesta modelo usa past continuous para el contexto, past simple para el hallazgo y 'so that' para el propósito.", "ruleRef": "gp-past-continuous-vs-past-simple"}
+                }
+              ]
+            },
+            {
+              "id": "es-en-lv-2-un-2-ls-5",
+              "title": "Trámites y papeleo",
+              "cefrLevel": "B1",
+              "scenario": "Renovar un documento exige formularios, fotocopias y una cita; falta un requisito.",
+              "canDo": "Puedo explicar un trámite, preguntar requisitos y resolver una incidencia administrativa.",
+              "grammarPoints": [
+                {"id": "gp-passive-voice", "label": "Passive voice", "description": "Enfoque en la acción o el resultado."},
+                {"id": "gp-countable-uncountable", "label": "Countable/uncountable quantifiers", "description": "some, any, much, many, a lot of."}
+              ],
+              "vocabFrequencyBand": "2000-3000",
+              "culturalNotes": [
+                {"idiom": "red tape", "note": "Burocracia excesiva que retrasa un proceso; se usa con tono crítico pero neutro.", "translation": "papeleo excesivo"}
+              ],
+              "exercises": [
+                {
+                  "type": "MultipleChoice",
+                  "id": "es-en-b1-e82",
+                  "question": "Completa: The form must ___ before Friday.",
+                  "options": ["be submitted", "submit", "submitting"],
+                  "correctIndex": 0,
+                  "feedbackOnError": {"type": "grammar", "explanation": "La pasiva con modal es 'must be submitted'.", "ruleRef": "gp-passive-voice"}
+                },
+                {
+                  "type": "Translate",
+                  "id": "es-en-b1-e83",
+                  "sourcePhrase": "Se necesita una fotocopia del pasaporte y dos fotos.",
+                  "correctTokens": ["We", "need", "a", "copy", "of", "the", "passport", "and", "two", "photos"],
+                  "distractorTokens": ["some", "photo"],
+                  "feedbackOnError": {"type": "grammar", "explanation": "'Copy' y 'photo' son contables: 'a copy', 'two photos'.", "ruleRef": "gp-countable-uncountable"}
+                },
+                {
+                  "type": "OrderWords",
+                  "id": "es-en-b1-e84",
+                  "tokens": ["The", "application", "was", "approved", "after", "two", "weeks"],
+                  "answerTokens": ["The", "application", "was", "approved", "after", "two", "weeks"],
+                  "feedbackOnError": {"type": "word_order", "explanation": "La pasiva sigue sujeto + was + participio: 'was approved'.", "ruleRef": "gp-passive-voice"}
+                },
+                {
+                  "type": "MatchPairs",
+                  "id": "es-en-b1-e85",
+                  "pairs": [
+                    {"left": "a piece of information", "right": "Incontable con piece"},
+                    {"left": "a few documents", "right": "Contable en plural"},
+                    {"left": "some paperwork", "right": "Incontable"}
+                  ],
+                  "feedbackOnError": {"type": "grammar", "explanation": "'Information' y 'paperwork' son incontables; 'documents' es contable plural.", "ruleRef": "gp-countable-uncountable"}
+                },
+                {
+                  "type": "ListenChoose",
+                  "id": "es-en-b1-e86",
+                  "audioText": "Your application has been received, but a signature is required.",
+                  "options": ["La solicitud se recibió, pero falta una firma", "La solicitud se rechazó por falta de firma", "La firma se envió junto con la solicitud"],
+                  "correctIndex": 0,
+                  "feedbackOnError": {"type": "comprehension", "explanation": "Ambas cláusulas son pasivas: se recibió la solicitud y se requiere una firma.", "ruleRef": "gp-passive-voice"}
+                },
+                {
+                  "type": "ListenType",
+                  "id": "es-en-b1-e87",
+                  "transcription": "Please bring a photocopy of your passport",
+                  "audioText": "Please bring a photocopy of your passport",
+                  "feedbackOnError": {"type": "spelling", "explanation": "Se escribe 'photocopy' junto y 'passport' con doble 's'.", "ruleRef": "gp-countable-uncountable"}
+                },
+                {
+                  "type": "SpeakRepeat",
+                  "id": "es-en-b1-e88",
+                  "targetPhrase": "The application was approved after two weeks.",
+                  "audioText": "The application was approved after two weeks.",
+                  "feedbackOnError": {"type": "pronunciation", "explanation": "Pronuncia 'approved' con /d/ final y enlaza 'after two'.", "ruleRef": "gp-passive-voice"}
+                },
+                {
+                  "type": "ClozeDragDrop",
+                  "id": "es-en-b1-e89",
+                  "passage": "The form {{b1}} yesterday, but {{b2}} information is still missing.",
+                  "blanks": [
+                    {"id": "b1", "answer": "was submitted", "options": ["was submitted", "submitted", "submits"]},
+                    {"id": "b2", "answer": "some", "options": ["some", "many", "a"]}
+                  ],
+                  "feedbackOnError": {"type": "grammar", "explanation": "La pasiva es 'was submitted' e 'information' es incontable: 'some information'.", "ruleRef": "gp-passive-voice"}
+                },
+                {
+                  "type": "FreeSpeakingPrompt",
+                  "id": "es-en-b1-e90",
+                  "prompt": "Explica tu trámite en la oficina: qué documento se necesita, qué falta y cuándo estará listo.",
+                  "minTokens": 22,
+                  "conceptClusters": [["form", "application", "document"], ["need", "require", "missing"], ["copy", "signature", "appointment"]],
+                  "grammarRuleRefs": ["gp-passive-voice", "gp-countable-uncountable"],
+                  "timeLimitSeconds": 60,
+                  "minWpm": 60,
+                  "maxWpm": 150,
+                  "modelAnswer": "The application was submitted last week, but I was told that a signature is required. I need to bring a photocopy of my passport and two photos. Could you tell me how much information is still missing and when the document will be ready?",
+                  "selfAssessmentCriteria": ["¿Expliqué qué se necesita?", "¿Mencioné qué falta?", "¿Pregunté por el plazo?"],
+                  "feedbackOnError": {"type": "grammar", "explanation": "La respuesta modelo usa pasivas para el proceso y cuantificadores correctos con nombres contables e incontables.", "ruleRef": "gp-passive-voice"}
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "es-en-lv-2-un-3",
+          "title": "Salud y bienestar",
+          "lessons": [
+            {
+              "id": "es-en-lv-2-un-3-ls-1",
+              "title": "En la consulta",
+              "cefrLevel": "B1",
+              "scenario": "En una consulta médica hay que describir síntomas y responder preguntas de seguimiento.",
+              "canDo": "Puedo describir síntomas, indicar cuándo empezaron y entender instrucciones de tratamiento.",
+              "grammarPoints": [
+                {"id": "gp-present-perfect-vs-past-simple", "label": "Present perfect vs past simple", "description": "Experiencias y eventos terminados con marcadores temporales."},
+                {"id": "gp-modals-deduction", "label": "Modals of deduction", "description": "must, might, can't para deducir."}
+              ],
+              "vocabFrequencyBand": "2000-3000",
+              "culturalNotes": [
+                {"idiom": "under the weather", "note": "Sentirse mal de salud, sin especificar gravedad; registro informal y frecuente.", "translation": "pachucho"}
+              ],
+              "exercises": [
+                {
+                  "type": "MultipleChoice",
+                  "id": "es-en-b1-e91",
+                  "question": "Completa: I ___ this cough for a week.",
+                  "options": ["have had", "had", "have"],
+                  "correctIndex": 0,
+                  "feedbackOnError": {"type": "grammar", "explanation": "Con 'for a week' y un síntoma que continúa se usa present perfect: 'have had'.", "ruleRef": "gp-present-perfect-vs-past-simple"}
+                },
+                {
+                  "type": "Translate",
+                  "id": "es-en-b1-e92",
+                  "sourcePhrase": "¿Desde cuándo tienes estos síntomas?",
+                  "correctTokens": ["How", "long", "have", "you", "had", "these", "symptoms"],
+                  "distractorTokens": ["since", "did"],
+                  "feedbackOnError": {"type": "grammar", "explanation": "'How long' pide duración con present perfect; 'since' se usa en la respuesta con un punto de inicio.", "ruleRef": "gp-present-perfect-vs-past-simple"}
+                },
+                {
+                  "type": "OrderWords",
+                  "id": "es-en-b1-e93",
+                  "tokens": ["It", "might", "be", "an", "allergy"],
+                  "answerTokens": ["It", "might", "be", "an", "allergy"],
+                  "feedbackOnError": {"type": "word_order", "explanation": "El modal precede al verbo: 'might be'.", "ruleRef": "gp-modals-deduction"}
+                },
+                {
+                  "type": "MatchPairs",
+                  "id": "es-en-b1-e94",
+                  "pairs": [
+                    {"left": "It must be a virus.", "right": "Deducción fuerte"},
+                    {"left": "It might be an allergy.", "right": "Posibilidad"},
+                    {"left": "I've had a fever since Monday.", "right": "Duración hasta ahora"}
+                  ],
+                  "feedbackOnError": {"type": "grammar", "explanation": "'Must be' expresa seguridad, 'might be' posibilidad y 'have had' duración.", "ruleRef": "gp-modals-deduction"}
+                },
+                {
+                  "type": "ListenChoose",
+                  "id": "es-en-b1-e95",
+                  "audioText": "I've had a sore throat since Monday, and I felt dizzy this morning.",
+                  "options": ["Le duele la garganta desde el lunes y hoy se mareó", "Le dolía la garganta el lunes y ya está mejor", "Se mareó la semana pasada y no tiene dolor de garganta"],
+                  "correctIndex": 0,
+                  "feedbackOnError": {"type": "comprehension", "explanation": "'Have had since Monday' indica duración y 'felt' un episodio concreto de hoy.", "ruleRef": "gp-present-perfect-vs-past-simple"}
+                },
+                {
+                  "type": "ListenType",
+                  "id": "es-en-b1-e96",
+                  "transcription": "Take one tablet twice a day after meals",
+                  "audioText": "Take one tablet twice a day after meals",
+                  "feedbackOnError": {"type": "spelling", "explanation": "Se escribe 'twice' con 'w' y 'meals' en plural.", "ruleRef": "gp-present-perfect-vs-past-simple"}
+                },
+                {
+                  "type": "SpeakRepeat",
+                  "id": "es-en-b1-e97",
+                  "targetPhrase": "I've had these symptoms since Monday.",
+                  "audioText": "I've had these symptoms since Monday.",
+                  "feedbackOnError": {"type": "pronunciation", "explanation": "Contrae 'I have' en 'I've' y pronuncia 'symptoms' con acento en la primera sílaba.", "ruleRef": "gp-present-perfect-vs-past-simple"}
+                },
+                {
+                  "type": "ClozeDragDrop",
+                  "id": "es-en-b1-e98",
+                  "passage": "I {{b1}} this cough for a week, and it {{b2}} be an allergy.",
+                  "blanks": [
+                    {"id": "b1", "answer": "have had", "options": ["have had", "had", "have"]},
+                    {"id": "b2", "answer": "might", "options": ["might", "must", "can't"]}
+                  ],
+                  "feedbackOnError": {"type": "grammar", "explanation": "La duración pide present perfect y la sospecha se expresa con 'might'.", "ruleRef": "gp-present-perfect-vs-past-simple"}
+                },
+                {
+                  "type": "FreeSpeakingPrompt",
+                  "id": "es-en-b1-e99",
+                  "prompt": "Describe tus síntomas al médico: desde cuándo los tienes, qué empeoró y qué necesitas.",
+                  "minTokens": 22,
+                  "conceptClusters": [["since", "for", "week"], ["cough", "fever", "pain"], ["worse", "dizzy", "treatment"]],
+                  "grammarRuleRefs": ["gp-present-perfect-vs-past-simple", "gp-modals-deduction"],
+                  "timeLimitSeconds": 60,
+                  "minWpm": 60,
+                  "maxWpm": 150,
+                  "modelAnswer": "I've had a sore throat and a cough since Monday, and I felt dizzy this morning. The fever started two days ago and it might be getting worse. Could you tell me what treatment you recommend and whether I should stay home?",
+                  "selfAssessmentCriteria": ["¿Indiqué desde cuándo tengo los síntomas?", "¿Describí un empeoramiento?", "¿Pregunté por el tratamiento?"],
+                  "feedbackOnError": {"type": "grammar", "explanation": "La respuesta modelo combina present perfect para la duración, past simple para el episodio de hoy y 'might' para la sospecha.", "ruleRef": "gp-present-perfect-vs-past-simple"}
+                }
+              ]
+            },
+            {
+              "id": "es-en-lv-2-un-3-ls-2",
+              "title": "Consejos de bienestar",
+              "cefrLevel": "B1",
+              "scenario": "Una amiga no duerme por el estrés y pide consejo sin sentirse juzgada.",
+              "canDo": "Puedo dar consejos con suavidad, sugerir cambios concretos y valorar opciones.",
+              "grammarPoints": [
+                {"id": "gp-modals-obligation", "label": "Modals of obligation", "description": "have to, should, ought to."},
+                {"id": "gp-first-conditional", "label": "First conditional", "description": "Condición real con consecuencia futura."}
+              ],
+              "vocabFrequencyBand": "1000-2000",
+              "culturalNotes": [
+                {"idiom": "burn the candle at both ends", "note": "Descansar poco por hacer demasiadas cosas a la vez; se usa con tono comprensivo.", "translation": "vivir a mil"}
+              ],
+              "exercises": [
+                {
+                  "type": "MultipleChoice",
+                  "id": "es-en-b1-e100",
+                  "question": "Completa: You ___ try to reduce screen time before bed.",
+                  "options": ["should", "must to", "should to"],
+                  "correctIndex": 0,
+                  "feedbackOnError": {"type": "grammar", "explanation": "'Should' va seguido de infinitivo sin 'to': 'should try'.", "ruleRef": "gp-modals-obligation"}
+                },
+                {
+                  "type": "Translate",
+                  "id": "es-en-b1-e101",
+                  "sourcePhrase": "Si reduces la cafeína, dormirás mejor.",
+                  "correctTokens": ["If", "you", "reduce", "caffeine", "you", "will", "sleep", "better"],
+                  "distractorTokens": ["reduced", "would"],
+                  "feedbackOnError": {"type": "grammar", "explanation": "La first conditional usa presente en la condición y 'will' en el resultado.", "ruleRef": "gp-first-conditional"}
+                },
+                {
+                  "type": "OrderWords",
+                  "id": "es-en-b1-e102",
+                  "tokens": ["You", "ought", "to", "take", "a", "break"],
+                  "answerTokens": ["You", "ought", "to", "take", "a", "break"],
+                  "feedbackOnError": {"type": "word_order", "explanation": "'Ought to' expresa recomendación y va unido antes del verbo.", "ruleRef": "gp-modals-obligation"}
+                },
+                {
+                  "type": "MatchPairs",
+                  "id": "es-en-b1-e103",
+                  "pairs": [
+                    {"left": "You should get more rest.", "right": "Consejo"},
+                    {"left": "You have to take a break.", "right": "Obligación"},
+                    {"left": "If you rest, you'll feel better.", "right": "Consecuencia futura"}
+                  ],
+                  "feedbackOnError": {"type": "grammar", "explanation": "'Should' aconseja, 'have to' obliga y la first conditional plantea una consecuencia.", "ruleRef": "gp-modals-obligation"}
+                },
+                {
+                  "type": "ListenChoose",
+                  "id": "es-en-b1-e104",
+                  "audioText": "If you cut down on caffeine, you'll probably sleep better.",
+                  "options": ["Reducir la cafeína probablemente mejorará el sueño", "Dejar la cafeína empeorará el sueño", "La cafeína no influye en el sueño"],
+                  "correctIndex": 0,
+                  "feedbackOnError": {"type": "comprehension", "explanation": "La condicional presenta una mejora probable si se reduce la cafeína.", "ruleRef": "gp-first-conditional"}
+                },
+                {
+                  "type": "ListenType",
+                  "id": "es-en-b1-e105",
+                  "transcription": "Try to keep a regular sleep routine",
+                  "audioText": "Try to keep a regular sleep routine",
+                  "feedbackOnError": {"type": "spelling", "explanation": "Se escribe 'routine' con 'ou' y 'sleep' como adjetivo invariable.", "ruleRef": "gp-modals-obligation"}
+                },
+                {
+                  "type": "SpeakRepeat",
+                  "id": "es-en-b1-e106",
+                  "targetPhrase": "You should take a break if you feel stressed.",
+                  "audioText": "You should take a break if you feel stressed.",
+                  "feedbackOnError": {"type": "pronunciation", "explanation": "Enlaza 'take a' y pronuncia 'stressed' con /st/ inicial y /t/ final.", "ruleRef": "gp-first-conditional"}
+                },
+                {
+                  "type": "ClozeDragDrop",
+                  "id": "es-en-b1-e107",
+                  "passage": "If you {{b1}} a regular routine, you {{b2}} better.",
+                  "blanks": [
+                    {"id": "b1", "answer": "keep", "options": ["keep", "kept", "keeping"]},
+                    {"id": "b2", "answer": "will sleep", "options": ["will sleep", "slept", "sleeping"]}
+                  ],
+                  "feedbackOnError": {"type": "grammar", "explanation": "La condición real va en presente y la consecuencia con 'will'.", "ruleRef": "gp-first-conditional"}
+                },
+                {
+                  "type": "FreeSpeakingPrompt",
+                  "id": "es-en-b1-e108",
+                  "prompt": "Da consejos a una amiga con insomnio: sugiere dos cambios y explica qué pasará si los aplica.",
+                  "minTokens": 22,
+                  "conceptClusters": [["should", "ought to", "try"], ["sleep", "routine", "caffeine"], ["if", "will", "better"]],
+                  "grammarRuleRefs": ["gp-modals-obligation", "gp-first-conditional"],
+                  "timeLimitSeconds": 60,
+                  "minWpm": 60,
+                  "maxWpm": 150,
+                  "modelAnswer": "You should try to keep a regular sleep routine and cut down on caffeine after lunch. You don't have to change everything at once. If you go to bed at the same time every night, you'll probably fall asleep faster and feel better during the day.",
+                  "selfAssessmentCriteria": ["¿Di dos consejos concretos?", "¿Evité un tono juzgador?", "¿Expliqué una consecuencia con 'if'?"],
+                  "feedbackOnError": {"type": "grammar", "explanation": "La respuesta modelo suaviza los consejos con 'should' y usa una first conditional para explicar el resultado.", "ruleRef": "gp-first-conditional"}
+                }
+              ]
+            },
+            {
+              "id": "es-en-lv-2-un-3-ls-3",
+              "title": "Cambiar hábitos",
+              "cefrLevel": "B1",
+              "scenario": "Un plan de ejercicio fracasó el mes pasado y hay que ajustarlo a la rutina real.",
+              "canDo": "Puedo hablar de hábitos pasados y presentes, explicar un cambio y proponer un plan sostenible.",
+              "grammarPoints": [
+                {"id": "gp-used-to", "label": "Used to", "description": "Hábitos pasados que ya no ocurren."},
+                {"id": "gp-gerund-infinitive", "label": "Gerund vs infinitive", "description": "Verbos que rigen -ing o to + infinitivo."}
+              ],
+              "vocabFrequencyBand": "1000-2000",
+              "culturalNotes": [
+                {"idiom": "get back on track", "note": "Retomar un plan después de una interrupción; se usa sin connotación de fracaso.", "translation": "retomar el rumbo"}
+              ],
+              "exercises": [
+                {
+                  "type": "MultipleChoice",
+                  "id": "es-en-b1-e109",
+                  "question": "Completa: I ___ run every morning, but I stopped last year.",
+                  "options": ["used to", "use to", "am used to"],
+                  "correctIndex": 0,
+                  "feedbackOnError": {"type": "grammar", "explanation": "Un hábito pasado que ya no ocurre se expresa con 'used to + infinitivo'.", "ruleRef": "gp-used-to"}
+                },
+                {
+                  "type": "Translate",
+                  "id": "es-en-b1-e110",
+                  "sourcePhrase": "Solía ir al gimnasio, pero dejé de ir en invierno.",
+                  "correctTokens": ["I", "used", "to", "go", "to", "the", "gym", "but", "I", "stopped", "going", "in", "winter"],
+                  "distractorTokens": ["use", "stop"],
+                  "feedbackOnError": {"type": "grammar", "explanation": "'Used to go' marca el hábito pasado y 'stop' rige gerundio: 'stopped going'.", "ruleRef": "gp-gerund-infinitive"}
+                },
+                {
+                  "type": "OrderWords",
+                  "id": "es-en-b1-e111",
+                  "tokens": ["I", "enjoy", "walking", "after", "work"],
+                  "answerTokens": ["I", "enjoy", "walking", "after", "work"],
+                  "feedbackOnError": {"type": "word_order", "explanation": "'Enjoy' va seguido de gerundio: 'enjoy walking'.", "ruleRef": "gp-gerund-infinitive"}
+                },
+                {
+                  "type": "MatchPairs",
+                  "id": "es-en-b1-e112",
+                  "pairs": [
+                    {"left": "I used to train daily.", "right": "Hábito pasado"},
+                    {"left": "I enjoy walking.", "right": "Verbo + gerundio"},
+                    {"left": "I want to start again.", "right": "Verbo + infinitivo"}
+                  ],
+                  "feedbackOnError": {"type": "grammar", "explanation": "'Used to' marca hábito pasado; 'enjoy' pide -ing y 'want' pide to + infinitivo.", "ruleRef": "gp-gerund-infinitive"}
+                },
+                {
+                  "type": "ListenChoose",
+                  "id": "es-en-b1-e113",
+                  "audioText": "I used to train every day, but now I prefer walking.",
+                  "options": ["Antes entrenaba a diario y ahora prefiere caminar", "Entrena a diario y prefiere caminar", "Antes caminaba y ahora entrena a diario"],
+                  "correctIndex": 0,
+                  "feedbackOnError": {"type": "comprehension", "explanation": "'Used to' describe el hábito anterior y 'prefer walking' el presente.", "ruleRef": "gp-used-to"}
+                },
+                {
+                  "type": "ListenType",
+                  "id": "es-en-b1-e114",
+                  "transcription": "I want to start with short workouts",
+                  "audioText": "I want to start with short workouts",
+                  "feedbackOnError": {"type": "spelling", "explanation": "Se escribe 'workouts' junto y 'short' con 'sh' inicial.", "ruleRef": "gp-gerund-infinitive"}
+                },
+                {
+                  "type": "SpeakRepeat",
+                  "id": "es-en-b1-e115",
+                  "targetPhrase": "I used to train every day, but now I prefer walking.",
+                  "audioText": "I used to train every day, but now I prefer walking.",
+                  "feedbackOnError": {"type": "pronunciation", "explanation": "Pronuncia 'used to' como /juːstə/ y enlaza 'prefer walking'.", "ruleRef": "gp-used-to"}
+                },
+                {
+                  "type": "ClozeDragDrop",
+                  "id": "es-en-b1-e116",
+                  "passage": "I {{b1}} run every day, but I stopped {{b2}} so hard after my injury.",
+                  "blanks": [
+                    {"id": "b1", "answer": "used to", "options": ["used to", "use to", "using to"]},
+                    {"id": "b2", "answer": "training", "options": ["training", "to train", "train"]}
+                  ],
+                  "feedbackOnError": {"type": "grammar", "explanation": "'Used to' marca el hábito pasado y 'stop' exige gerundio: 'stopped training'.", "ruleRef": "gp-gerund-infinitive"}
+                },
+                {
+                  "type": "FreeSpeakingPrompt",
+                  "id": "es-en-b1-e117",
+                  "prompt": "Cuenta cómo era tu rutina antes y qué has cambiado para retomar el ejercicio.",
+                  "minTokens": 22,
+                  "conceptClusters": [["used to", "before", "routine"], ["now", "changed", "start"], ["enjoy", "want", "plan"]],
+                  "grammarRuleRefs": ["gp-used-to", "gp-gerund-infinitive"],
+                  "timeLimitSeconds": 60,
+                  "minWpm": 60,
+                  "maxWpm": 150,
+                  "modelAnswer": "I used to train every day, but I stopped going to the gym after my injury. Now I want to start with short workouts and I enjoy walking after work. If I keep a simple routine, I'll get back on track without burning out again.",
+                  "selfAssessmentCriteria": ["¿Describí un hábito pasado?", "¿Expliqué qué cambié?", "¿Usé gerundio o infinitivo correctamente?"],
+                  "feedbackOnError": {"type": "grammar", "explanation": "La respuesta modelo contrasta 'used to' con el presente y usa 'enjoy walking' y 'want to start'.", "ruleRef": "gp-gerund-infinitive"}
+                }
+              ]
+            },
+            {
+              "id": "es-en-lv-2-un-3-ls-4",
+              "title": "Una urgencia",
+              "cefrLevel": "B1",
+              "scenario": "Alguien se ha lesionado y hay que llamar a urgencias y describir la situación con calma.",
+              "canDo": "Puedo pedir ayuda urgente, describir qué pasó y responder preguntas de forma breve y clara.",
+              "grammarPoints": [
+                {"id": "gp-past-continuous-vs-past-simple", "label": "Past continuous vs past simple", "description": "Acciones interrumpidas y contexto."},
+                {"id": "gp-indirect-questions", "label": "Indirect questions", "description": "Cortesía con Could you tell me…?"}
+              ],
+              "vocabFrequencyBand": "2000-3000",
+              "culturalNotes": [
+                {"idiom": "in good hands", "note": "Estar atendido por alguien competente y confiable; tranquiliza en situaciones médicas.", "translation": "en buenas manos"}
+              ],
+              "exercises": [
+                {
+                  "type": "MultipleChoice",
+                  "id": "es-en-b1-e118",
+                  "question": "Completa: I ___ when the accident happened.",
+                  "options": ["was walking", "walked", "walk"],
+                  "correctIndex": 0,
+                  "feedbackOnError": {"type": "grammar", "explanation": "La acción en curso al ocurrir el accidente va en past continuous: 'was walking'.", "ruleRef": "gp-past-continuous-vs-past-simple"}
+                },
+                {
+                  "type": "Translate",
+                  "id": "es-en-b1-e119",
+                  "sourcePhrase": "¿Podrías decirme si él está consciente?",
+                  "correctTokens": ["Could", "you", "tell", "me", "if", "he", "is", "conscious"],
+                  "distractorTokens": ["does", "awake"],
+                  "feedbackOnError": {"type": "grammar", "explanation": "La pregunta indirecta usa 'if he is', sin auxiliar 'does'.", "ruleRef": "gp-indirect-questions"}
+                },
+                {
+                  "type": "OrderWords",
+                  "id": "es-en-b1-e120",
+                  "tokens": ["He", "was", "riding", "his", "bike", "when", "he", "fell"],
+                  "answerTokens": ["He", "was", "riding", "his", "bike", "when", "he", "fell"],
+                  "feedbackOnError": {"type": "word_order", "explanation": "El past continuous describe la acción en curso y 'when' introduce la interrupción.", "ruleRef": "gp-past-continuous-vs-past-simple"}
+                },
+                {
+                  "type": "MatchPairs",
+                  "id": "es-en-b1-e121",
+                  "pairs": [
+                    {"left": "Call an ambulance!", "right": "Pedir ayuda urgente"},
+                    {"left": "He was bleeding.", "right": "Describir una lesión"},
+                    {"left": "Is he conscious?", "right": "Confirmar el estado"}
+                  ],
+                  "feedbackOnError": {"type": "comprehension", "explanation": "En una urgencia se pide ayuda, se describe la lesión y se confirma el estado.", "ruleRef": "gp-past-continuous-vs-past-simple"}
+                },
+                {
+                  "type": "ListenChoose",
+                  "id": "es-en-b1-e122",
+                  "audioText": "She was crossing the street when she fell, but she is conscious.",
+                  "options": ["Se cayó al cruzar y está consciente", "Se cayó después de llegar a casa y está inconsciente", "Estaba consciente antes de cruzar y no se cayó"],
+                  "correctIndex": 0,
+                  "feedbackOnError": {"type": "comprehension", "explanation": "El past continuous sitúa la caída durante el cruce y el presente confirma que está consciente.", "ruleRef": "gp-past-continuous-vs-past-simple"}
+                },
+                {
+                  "type": "ListenType",
+                  "id": "es-en-b1-e123",
+                  "transcription": "Please stay on the line until help arrives",
+                  "audioText": "Please stay on the line until help arrives",
+                  "feedbackOnError": {"type": "spelling", "explanation": "Se escribe 'line' con 'i' larga y 'arrives' con doble 'r'.", "ruleRef": "gp-indirect-questions"}
+                },
+                {
+                  "type": "SpeakRepeat",
+                  "id": "es-en-b1-e124",
+                  "targetPhrase": "He was riding his bike when he fell.",
+                  "audioText": "He was riding his bike when he fell.",
+                  "feedbackOnError": {"type": "pronunciation", "explanation": "Enlaza 'riding his' y pronuncia 'fell' con vocal corta.", "ruleRef": "gp-past-continuous-vs-past-simple"}
+                },
+                {
+                  "type": "ClozeDragDrop",
+                  "id": "es-en-b1-e125",
+                  "passage": "While I {{b1}} for the bus, I {{b2}} someone call for help.",
+                  "blanks": [
+                    {"id": "b1", "answer": "was waiting", "options": ["was waiting", "waited", "wait"]},
+                    {"id": "b2", "answer": "heard", "options": ["heard", "was hearing", "hear"]}
+                  ],
+                  "feedbackOnError": {"type": "grammar", "explanation": "Con 'while' se usa past continuous para el contexto y past simple para el evento.", "ruleRef": "gp-past-continuous-vs-past-simple"}
+                },
+                {
+                  "type": "FreeSpeakingPrompt",
+                  "id": "es-en-b1-e126",
+                  "prompt": "Llama a urgencias: describe qué estaba pasando, qué lesión hay y pregunta qué hacer.",
+                  "minTokens": 22,
+                  "conceptClusters": [["was", "when", "fell"], ["bleeding", "injury", "conscious"], ["could you tell me", "should", "help"]],
+                  "grammarRuleRefs": ["gp-past-continuous-vs-past-simple", "gp-indirect-questions"],
+                  "timeLimitSeconds": 60,
+                  "minWpm": 60,
+                  "maxWpm": 150,
+                  "modelAnswer": "My friend was crossing the street when she fell and hurt her leg. She is conscious, but she was bleeding a little. Could you tell me if we should move her, or should we wait for the ambulance? We are in front of the pharmacy on Main Street.",
+                  "selfAssessmentCriteria": ["¿Describí qué estaba pasando?", "¿Expliqué la lesión?", "¿Pregunté qué hacer?"],
+                  "feedbackOnError": {"type": "grammar", "explanation": "La respuesta modelo usa past continuous para el contexto, past simple para la caída y una pregunta indirecta para pedir instrucciones.", "ruleRef": "gp-indirect-questions"}
+                }
+              ]
+            },
+            {
+              "id": "es-en-lv-2-un-3-ls-5",
+              "title": "Comparar opciones de salud",
+              "cefrLevel": "B1",
+              "scenario": "Dos seguros médicos ofrecen coberturas distintas y hay que elegir con presupuesto limitado.",
+              "canDo": "Puedo comparar servicios, preguntar por coberturas y justificar una elección.",
+              "grammarPoints": [
+                {"id": "gp-comparatives", "label": "Comparatives and superlatives", "description": "Comparar opciones y servicios."},
+                {"id": "gp-linkers-contrast", "label": "Contrast linkers", "description": "although, however, despite."}
+              ],
+              "vocabFrequencyBand": "2000-3000",
+              "culturalNotes": [
+                {"idiom": "cost an arm and a leg", "note": "Ser muy caro; se usa con tono informal para quejarse de un precio.", "translation": "costar un ojo de la cara"}
+              ],
+              "exercises": [
+                {
+                  "type": "MultipleChoice",
+                  "id": "es-en-b1-e127",
+                  "question": "Completa: This plan is ___ than the other one.",
+                  "options": ["more expensive", "expensiver", "most expensive"],
+                  "correctIndex": 0,
+                  "feedbackOnError": {"type": "grammar", "explanation": "El comparativo de 'expensive' es 'more expensive'; 'most' es superlativo.", "ruleRef": "gp-comparatives"}
+                },
+                {
+                  "type": "Translate",
+                  "id": "es-en-b1-e128",
+                  "sourcePhrase": "Aunque la cobertura es más amplia, la prima es más alta.",
+                  "correctTokens": ["Although", "the", "coverage", "is", "wider", "the", "premium", "is", "higher"],
+                  "distractorTokens": ["despite", "more high"],
+                  "feedbackOnError": {"type": "grammar", "explanation": "'Although' introduce una cláusula y 'higher' es el comparativo de 'high'.", "ruleRef": "gp-linkers-contrast"}
+                },
+                {
+                  "type": "OrderWords",
+                  "id": "es-en-b1-e129",
+                  "tokens": ["The", "deductible", "is", "lower", "than", "I", "expected"],
+                  "answerTokens": ["The", "deductible", "is", "lower", "than", "I", "expected"],
+                  "feedbackOnError": {"type": "word_order", "explanation": "El comparativo sigue el orden 'lower than + cláusula'.", "ruleRef": "gp-comparatives"}
+                },
+                {
+                  "type": "MatchPairs",
+                  "id": "es-en-b1-e130",
+                  "pairs": [
+                    {"left": "although", "right": "Contraste con una cláusula"},
+                    {"left": "despite", "right": "Contraste con un sustantivo"},
+                    {"left": "however", "right": "Contraste entre oraciones"}
+                  ],
+                  "feedbackOnError": {"type": "grammar", "explanation": "'Although' + cláusula, 'despite' + sustantivo y 'however' separa dos oraciones.", "ruleRef": "gp-linkers-contrast"}
+                },
+                {
+                  "type": "ListenChoose",
+                  "id": "es-en-b1-e131",
+                  "audioText": "Although the premium is higher, the deductible is much lower.",
+                  "options": ["La prima es más alta, pero el deducible es mucho más bajo", "La prima y el deducible son más altos", "La prima es más baja y el deducible también"],
+                  "correctIndex": 0,
+                  "feedbackOnError": {"type": "comprehension", "explanation": "'Although' contrasta una prima alta con un deducible bajo.", "ruleRef": "gp-linkers-contrast"}
+                },
+                {
+                  "type": "ListenType",
+                  "id": "es-en-b1-e132",
+                  "transcription": "The cheaper plan covers fewer clinics",
+                  "audioText": "The cheaper plan covers fewer clinics",
+                  "feedbackOnError": {"type": "spelling", "explanation": "Se escribe 'cheaper' con 'ea' y 'clinics' con 'c' inicial.", "ruleRef": "gp-comparatives"}
+                },
+                {
+                  "type": "SpeakRepeat",
+                  "id": "es-en-b1-e133",
+                  "targetPhrase": "Although the premium is higher, the coverage is much wider.",
+                  "audioText": "Although the premium is higher, the coverage is much wider.",
+                  "feedbackOnError": {"type": "pronunciation", "explanation": "Haz una pausa tras 'higher' y pronuncia 'wider' con diptongo /aɪ/.", "ruleRef": "gp-comparatives"}
+                },
+                {
+                  "type": "ClozeDragDrop",
+                  "id": "es-en-b1-e134",
+                  "passage": "Although this plan {{b1}} a higher premium, it {{b2}} better coverage.",
+                  "blanks": [
+                    {"id": "b1", "answer": "has", "options": ["has", "have", "having"]},
+                    {"id": "b2", "answer": "offers", "options": ["offers", "offer", "offering"]}
+                  ],
+                  "feedbackOnError": {"type": "grammar", "explanation": "Con sujeto singular en presente se usa 'has' y 'offers'.", "ruleRef": "gp-comparatives"}
+                },
+                {
+                  "type": "FreeSpeakingPrompt",
+                  "id": "es-en-b1-e135",
+                  "prompt": "Compara dos seguros médicos y justifica cuál eliges aunque tengan desventajas.",
+                  "minTokens": 24,
+                  "conceptClusters": [["coverage", "premium", "deductible"], ["more", "less", "than"], ["although", "however", "despite"]],
+                  "grammarRuleRefs": ["gp-comparatives", "gp-linkers-contrast"],
+                  "timeLimitSeconds": 60,
+                  "minWpm": 60,
+                  "maxWpm": 150,
+                  "modelAnswer": "The first plan has a lower premium, but the deductible is higher than the second one. Although the second plan costs an arm and a leg, it offers wider coverage and more clinics. I would choose the second option despite the price, because I need regular check-ups.",
+                  "selfAssessmentCriteria": ["¿Comparé dos opciones?", "¿Expresé una concesión?", "¿Justifiqué la elección?"],
+                  "feedbackOnError": {"type": "grammar", "explanation": "La respuesta modelo usa comparativos y 'although/despite' para equilibrar ventajas y desventajas.", "ruleRef": "gp-comparatives"}
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "es-en-lv-2-un-4",
+          "title": "Cultura y ocio",
+          "lessons": [
+            {
+              "id": "es-en-lv-2-un-4-ls-1",
+              "title": "Planear el fin de semana",
+              "cefrLevel": "B1",
+              "scenario": "Dos amigos tienen planes incompatibles y deben llegar a una propuesta común.",
+              "canDo": "Puedo proponer planes, mostrar acuerdo o desacuerdo y cerrar una cita concreta.",
+              "grammarPoints": [
+                {"id": "gp-future-forms", "label": "Future forms", "description": "will, going to y presente continuo."},
+                {"id": "gp-question-tags", "label": "Question tags", "description": "Confirmar información con entonación."}
+              ],
+              "vocabFrequencyBand": "1000-2000",
+              "culturalNotes": [
+                {"idiom": "have a blast", "note": "Disfrutar mucho de una actividad; registro informal y entusiasta.", "translation": "pasárselo genial"}
+              ],
+              "exercises": [
+                {
+                  "type": "MultipleChoice",
+                  "id": "es-en-b1-e136",
+                  "question": "Completa: ___ we meet at seven?",
+                  "options": ["Shall", "Will", "Do"],
+                  "correctIndex": 0,
+                  "feedbackOnError": {"type": "grammar", "explanation": "'Shall we…?' es la fórmula habitual para proponer un plan.", "ruleRef": "gp-future-forms"}
+                },
+                {
+                  "type": "Translate",
+                  "id": "es-en-b1-e137",
+                  "sourcePhrase": "Quedamos el sábado, ¿no?",
+                  "correctTokens": ["We're", "meeting", "on", "Saturday", "aren't", "we"],
+                  "distractorTokens": ["don't", "us"],
+                  "feedbackOnError": {"type": "grammar", "explanation": "El tag de 'We are meeting' es 'aren't we?'.", "ruleRef": "gp-question-tags"}
+                },
+                {
+                  "type": "OrderWords",
+                  "id": "es-en-b1-e138",
+                  "tokens": ["Let's", "go", "to", "the", "cinema", "on", "Friday"],
+                  "answerTokens": ["Let's", "go", "to", "the", "cinema", "on", "Friday"],
+                  "feedbackOnError": {"type": "word_order", "explanation": "'Let's + infinitivo' propone una actividad conjunta.", "ruleRef": "gp-future-forms"}
+                },
+                {
+                  "type": "MatchPairs",
+                  "id": "es-en-b1-e139",
+                  "pairs": [
+                    {"left": "Shall we meet at seven?", "right": "Sugerencia"},
+                    {"left": "We're meeting at seven.", "right": "Cita acordada"},
+                    {"left": "I'll pick you up.", "right": "Decisión espontánea"}
+                  ],
+                  "feedbackOnError": {"type": "grammar", "explanation": "'Shall we' sugiere, el presente continuo fija una cita y 'will' decide en el momento.", "ruleRef": "gp-future-forms"}
+                },
+                {
+                  "type": "ListenChoose",
+                  "id": "es-en-b1-e140",
+                  "audioText": "We're meeting at seven, aren't we? I'll book the tickets if you confirm.",
+                  "options": ["Confirman la hora y él comprará las entradas", "Ya compraron las entradas y no necesitan confirmar", "Van a cambiar la hora de la cita"],
+                  "correctIndex": 0,
+                  "feedbackOnError": {"type": "comprehension", "explanation": "El tag confirma la hora y 'I'll book' expresa una decisión condicionada.", "ruleRef": "gp-question-tags"}
+                },
+                {
+                  "type": "ListenType",
+                  "id": "es-en-b1-e141",
+                  "transcription": "Let's meet outside the cinema at seven",
+                  "audioText": "Let's meet outside the cinema at seven",
+                  "feedbackOnError": {"type": "spelling", "explanation": "Se escribe 'Let's' con apóstrofo y 'outside' junto.", "ruleRef": "gp-future-forms"}
+                },
+                {
+                  "type": "SpeakRepeat",
+                  "id": "es-en-b1-e142",
+                  "targetPhrase": "We're meeting at seven, aren't we?",
+                  "audioText": "We're meeting at seven, aren't we?",
+                  "feedbackOnError": {"type": "pronunciation", "explanation": "Contrae 'We are' y sube la entonación en 'aren't we?'.", "ruleRef": "gp-question-tags"}
+                },
+                {
+                  "type": "ClozeDragDrop",
+                  "id": "es-en-b1-e143",
+                  "passage": "We {{b1}} at seven, and I {{b2}} the tickets tonight.",
+                  "blanks": [
+                    {"id": "b1", "answer": "are meeting", "options": ["are meeting", "meet", "met"]},
+                    {"id": "b2", "answer": "will book", "options": ["will book", "booked", "booking"]}
+                  ],
+                  "feedbackOnError": {"type": "grammar", "explanation": "El presente continuo fija la cita y 'will' anuncia una decisión para esta noche.", "ruleRef": "gp-future-forms"}
+                },
+                {
+                  "type": "FreeSpeakingPrompt",
+                  "id": "es-en-b1-e144",
+                  "prompt": "Propón un plan de fin de semana, confirma la hora y cierra la cita.",
+                  "minTokens": 20,
+                  "conceptClusters": [["let's", "shall", "plan"], ["meet", "seven", "Saturday"], ["cinema", "tickets", "outside"]],
+                  "grammarRuleRefs": ["gp-future-forms", "gp-question-tags"],
+                  "timeLimitSeconds": 60,
+                  "minWpm": 60,
+                  "maxWpm": 150,
+                  "modelAnswer": "Shall we go to the cinema on Saturday? We're meeting outside at seven, aren't we? I'll book the tickets if you confirm before Friday. I think we'll have a blast with the new comedy, but let me know if you prefer another plan.",
+                  "selfAssessmentCriteria": ["¿Propuse un plan concreto?", "¿Confirmé la hora con un tag?", "¿Cerré la cita?"],
+                  "feedbackOnError": {"type": "grammar", "explanation": "La respuesta modelo combina 'shall', presente continuo para la cita, 'will' para decidir y un tag de confirmación.", "ruleRef": "gp-future-forms"}
+                }
+              ]
+            },
+            {
+              "id": "es-en-lv-2-un-4-ls-2",
+              "title": "Recomendar una serie",
+              "cefrLevel": "B1",
+              "scenario": "Alguien pide una recomendación y hay que describir la trama sin destriparla.",
+              "canDo": "Puedo recomendar una serie, describir personajes y argumentar por qué vale la pena.",
+              "grammarPoints": [
+                {"id": "gp-relative-clauses", "label": "Defining relative clauses", "description": "who/which/that para identificar personas y cosas."},
+                {"id": "gp-present-perfect-vs-past-simple", "label": "Present perfect vs past simple", "description": "Experiencias y eventos terminados con marcadores temporales."}
+              ],
+              "vocabFrequencyBand": "2000-3000",
+              "culturalNotes": [
+                {"idiom": "a must-see", "note": "Algo que merece mucho la pena ver; se usa en recomendaciones entusiastas.", "translation": "de obligada visualización"}
+              ],
+              "exercises": [
+                {
+                  "type": "MultipleChoice",
+                  "id": "es-en-b1-e145",
+                  "question": "Completa: It's a series ___ everyone is talking about.",
+                  "options": ["that", "who", "where"],
+                  "correctIndex": 0,
+                  "feedbackOnError": {"type": "grammar", "explanation": "Para una cosa se usa 'that/which'; 'who' es para personas.", "ruleRef": "gp-relative-clauses"}
+                },
+                {
+                  "type": "Translate",
+                  "id": "es-en-b1-e146",
+                  "sourcePhrase": "He visto la primera temporada, pero no el final.",
+                  "correctTokens": ["I", "have", "seen", "the", "first", "season", "but", "not", "the", "ending"],
+                  "distractorTokens": ["saw", "end"],
+                  "feedbackOnError": {"type": "grammar", "explanation": "Una experiencia sin fecha concreta va en present perfect: 'have seen'.", "ruleRef": "gp-present-perfect-vs-past-simple"}
+                },
+                {
+                  "type": "OrderWords",
+                  "id": "es-en-b1-e147",
+                  "tokens": ["The", "series", "that", "you", "recommended", "is", "gripping"],
+                  "answerTokens": ["The", "series", "that", "you", "recommended", "is", "gripping"],
+                  "feedbackOnError": {"type": "word_order", "explanation": "La relativa 'that you recommended' se coloca tras el sustantivo.", "ruleRef": "gp-relative-clauses"}
+                },
+                {
+                  "type": "MatchPairs",
+                  "id": "es-en-b1-e148",
+                  "pairs": [
+                    {"left": "It's a must-see.", "right": "Muy recomendable"},
+                    {"left": "I've seen it.", "right": "Experiencia sin fecha"},
+                    {"left": "I watched it last night.", "right": "Evento pasado concreto"}
+                  ],
+                  "feedbackOnError": {"type": "grammar", "explanation": "'I've seen' expresa experiencia y 'watched last night' un momento concreto.", "ruleRef": "gp-present-perfect-vs-past-simple"}
+                },
+                {
+                  "type": "ListenChoose",
+                  "id": "es-en-b1-e149",
+                  "audioText": "I've seen the first season, but I haven't watched the finale yet.",
+                  "options": ["Vio la primera temporada, pero no el final", "No vio la primera temporada ni el final", "Ya vio el final y recomienda la serie"],
+                  "correctIndex": 0,
+                  "feedbackOnError": {"type": "comprehension", "explanation": "'Have seen' confirma la experiencia y 'haven't watched yet' indica lo pendiente.", "ruleRef": "gp-present-perfect-vs-past-simple"}
+                },
+                {
+                  "type": "ListenType",
+                  "id": "es-en-b1-e150",
+                  "transcription": "The plot is gripping and the cast is excellent",
+                  "audioText": "The plot is gripping and the cast is excellent",
+                  "feedbackOnError": {"type": "spelling", "explanation": "Se escribe 'gripping' con doble 'p' y 'excellent' con doble 'l'.", "ruleRef": "gp-relative-clauses"}
+                },
+                {
+                  "type": "SpeakRepeat",
+                  "id": "es-en-b1-e151",
+                  "targetPhrase": "The series that you recommended is really gripping.",
+                  "audioText": "The series that you recommended is really gripping.",
+                  "feedbackOnError": {"type": "pronunciation", "explanation": "Enlaza 'that you' y pronuncia 'gripping' con acento en la primera sílaba.", "ruleRef": "gp-relative-clauses"}
+                },
+                {
+                  "type": "ClozeDragDrop",
+                  "id": "es-en-b1-e152",
+                  "passage": "I {{b1}} the first season last week, but I {{b2}} the finale yet.",
+                  "blanks": [
+                    {"id": "b1", "answer": "watched", "options": ["watched", "have watched", "watch"]},
+                    {"id": "b2", "answer": "haven't watched", "options": ["haven't watched", "didn't watch", "don't watch"]}
+                  ],
+                  "feedbackOnError": {"type": "grammar", "explanation": "'Last week' pide past simple y 'yet' pide present perfect negativo.", "ruleRef": "gp-present-perfect-vs-past-simple"}
+                },
+                {
+                  "type": "FreeSpeakingPrompt",
+                  "id": "es-en-b1-e153",
+                  "prompt": "Recomienda una serie: describe la trama sin spoilers y explica por qué vale la pena.",
+                  "minTokens": 22,
+                  "conceptClusters": [["series", "season", "episode"], ["plot", "character", "cast"], ["recommend", "must-see", "gripping"]],
+                  "grammarRuleRefs": ["gp-relative-clauses", "gp-present-perfect-vs-past-simple"],
+                  "timeLimitSeconds": 60,
+                  "minWpm": 60,
+                  "maxWpm": 150,
+                  "modelAnswer": "I've seen a series that you would love. It's about a family that moves to a small town, and the plot is gripping without being predictable. The cast is excellent. I watched the first season last week, and I haven't stopped thinking about the finale since.",
+                  "selfAssessmentCriteria": ["¿Recomendé sin destripar la trama?", "¿Describí personajes o trama?", "¿Expliqué por qué vale la pena?"],
+                  "feedbackOnError": {"type": "grammar", "explanation": "La respuesta modelo usa relativas para describir la serie y alterna present perfect con past simple.", "ruleRef": "gp-relative-clauses"}
+                }
+              ]
+            },
+            {
+              "id": "es-en-lv-2-un-4-ls-3",
+              "title": "Un concierto inolvidable",
+              "cefrLevel": "B1",
+              "scenario": "Contar a un grupo de amigos cómo fue un concierto al que no pudieron ir.",
+              "canDo": "Puedo narrar una experiencia pasada, describir el ambiente y expresar una reacción.",
+              "grammarPoints": [
+                {"id": "gp-past-continuous-vs-past-simple", "label": "Past continuous vs past simple", "description": "Acciones interrumpidas y contexto."},
+                {"id": "gp-used-to", "label": "Used to", "description": "Hábitos pasados que ya no ocurren."}
+              ],
+              "vocabFrequencyBand": "2000-3000",
+              "culturalNotes": [
+                {"idiom": "once in a blue moon", "note": "Algo que ocurre muy rara vez; se usa con tono coloquial.", "translation": "de uvas a peras"}
+              ],
+              "exercises": [
+                {
+                  "type": "MultipleChoice",
+                  "id": "es-en-b1-e154",
+                  "question": "Completa: The crowd ___ when the band came on stage.",
+                  "options": ["was cheering", "cheered", "cheers"],
+                  "correctIndex": 0,
+                  "feedbackOnError": {"type": "grammar", "explanation": "La acción en curso al entrar la banda va en past continuous: 'was cheering'.", "ruleRef": "gp-past-continuous-vs-past-simple"}
+                },
+                {
+                  "type": "Translate",
+                  "id": "es-en-b1-e155",
+                  "sourcePhrase": "Solía ir a conciertos, pero ahora voy rara vez.",
+                  "correctTokens": ["I", "used", "to", "go", "to", "concerts", "but", "now", "I", "rarely", "go"],
+                  "distractorTokens": ["use", "went"],
+                  "feedbackOnError": {"type": "grammar", "explanation": "'Used to go' marca el hábito pasado y 'rarely go' el presente.", "ruleRef": "gp-used-to"}
+                },
+                {
+                  "type": "OrderWords",
+                  "id": "es-en-b1-e156",
+                  "tokens": ["We", "were", "waiting", "when", "the", "band", "started"],
+                  "answerTokens": ["We", "were", "waiting", "when", "the", "band", "started"],
+                  "feedbackOnError": {"type": "word_order", "explanation": "El past continuous describe la espera y 'when' introduce el inicio.", "ruleRef": "gp-past-continuous-vs-past-simple"}
+                },
+                {
+                  "type": "MatchPairs",
+                  "id": "es-en-b1-e157",
+                  "pairs": [
+                    {"left": "The crowd was cheering.", "right": "Acción en curso"},
+                    {"left": "The band came on stage.", "right": "Acción puntual"},
+                    {"left": "I used to go to concerts.", "right": "Hábito pasado"}
+                  ],
+                  "feedbackOnError": {"type": "grammar", "explanation": "El past continuous describe el ambiente; el past simple marca el evento y 'used to' el hábito.", "ruleRef": "gp-used-to"}
+                },
+                {
+                  "type": "ListenChoose",
+                  "id": "es-en-b1-e158",
+                  "audioText": "We were waiting outside when the band started playing.",
+                  "options": ["Esperaban fuera cuando la banda empezó a tocar", "La banda empezó a tocar y después salieron", "Esperaron fuera porque la banda no tocó"],
+                  "correctIndex": 0,
+                  "feedbackOnError": {"type": "comprehension", "explanation": "'Were waiting' sitúa la espera en curso y 'started' marca el comienzo.", "ruleRef": "gp-past-continuous-vs-past-simple"}
+                },
+                {
+                  "type": "ListenType",
+                  "id": "es-en-b1-e159",
+                  "transcription": "The encore was the best part of the night",
+                  "audioText": "The encore was the best part of the night",
+                  "feedbackOnError": {"type": "spelling", "explanation": "Se escribe 'encore' con 'c' y 'night' con 'gh' muda.", "ruleRef": "gp-past-continuous-vs-past-simple"}
+                },
+                {
+                  "type": "SpeakRepeat",
+                  "id": "es-en-b1-e160",
+                  "targetPhrase": "We were waiting outside when the band started playing.",
+                  "audioText": "We were waiting outside when the band started playing.",
+                  "feedbackOnError": {"type": "pronunciation", "explanation": "Enlaza 'waiting outside' y pronuncia 'started' con /t/ final clara.", "ruleRef": "gp-past-continuous-vs-past-simple"}
+                },
+                {
+                  "type": "ClozeDragDrop",
+                  "id": "es-en-b1-e161",
+                  "passage": "We {{b1}} outside when the doors {{b2}}.",
+                  "blanks": [
+                    {"id": "b1", "answer": "were waiting", "options": ["were waiting", "waited", "wait"]},
+                    {"id": "b2", "answer": "opened", "options": ["opened", "were opening", "open"]}
+                  ],
+                  "feedbackOnError": {"type": "grammar", "explanation": "La acción en curso va en past continuous y el evento puntual en past simple.", "ruleRef": "gp-past-continuous-vs-past-simple"}
+                },
+                {
+                  "type": "FreeSpeakingPrompt",
+                  "id": "es-en-b1-e162",
+                  "prompt": "Narra un concierto memorable: qué pasaba antes, qué ocurrió y cómo te sentiste.",
+                  "minTokens": 22,
+                  "conceptClusters": [["was", "waiting", "before"], ["started", "encore", "crowd"], ["amazing", "felt", "night"]],
+                  "grammarRuleRefs": ["gp-past-continuous-vs-past-simple", "gp-used-to"],
+                  "timeLimitSeconds": 60,
+                  "minWpm": 60,
+                  "maxWpm": 150,
+                  "modelAnswer": "I used to go to concerts every month, but now I go once in a blue moon. Last year we were waiting outside when the doors opened, and the crowd started cheering. When the band played the encore, everyone was singing. It was an unforgettable night.",
+                  "selfAssessmentCriteria": ["¿Narré una experiencia pasada?", "¿Describí el ambiente?", "¿Expresé una reacción?"],
+                  "feedbackOnError": {"type": "grammar", "explanation": "La respuesta modelo alterna past continuous para el contexto y past simple para los eventos, con 'used to' para el hábito.", "ruleRef": "gp-past-continuous-vs-past-simple"}
+                }
+              ]
+            },
+            {
+              "id": "es-en-lv-2-un-4-ls-4",
+              "title": "Cultura y choque de costumbres",
+              "cefrLevel": "B1",
+              "scenario": "Una costumbre local se interpretó mal y hay que aclararlo sin estereotipos.",
+              "canDo": "Puedo describir diferencias culturales, preguntar con respeto y corregir un malentendido.",
+              "grammarPoints": [
+                {"id": "gp-comparatives", "label": "Comparatives and superlatives", "description": "Comparar opciones y servicios."},
+                {"id": "gp-modals-deduction", "label": "Modals of deduction", "description": "must, might, can't para deducir."}
+              ],
+              "vocabFrequencyBand": "2000-3000",
+              "culturalNotes": [
+                {"idiom": "culture shock", "note": "Desorientación al enfrentarse a costumbres distintas; no implica rechazo.", "translation": "choque cultural"}
+              ],
+              "exercises": [
+                {
+                  "type": "MultipleChoice",
+                  "id": "es-en-b1-e163",
+                  "question": "Completa: In some countries, it's ___ to arrive a little late.",
+                  "options": ["more polite", "politer than", "most polite"],
+                  "correctIndex": 0,
+                  "feedbackOnError": {"type": "grammar", "explanation": "El comparativo de 'polite' es 'more polite'; 'politer than' necesita un segundo término.", "ruleRef": "gp-comparatives"}
+                },
+                {
+                  "type": "Translate",
+                  "id": "es-en-b1-e164",
+                  "sourcePhrase": "Puede ser una costumbre local, no una falta de respeto.",
+                  "correctTokens": ["It", "might", "be", "a", "local", "custom", "not", "a", "lack", "of", "respect"],
+                  "distractorTokens": ["must", "disrespect"],
+                  "feedbackOnError": {"type": "grammar", "explanation": "'Might be' expresa posibilidad y 'lack of respect' es la colocación correcta.", "ruleRef": "gp-modals-deduction"}
+                },
+                {
+                  "type": "OrderWords",
+                  "id": "es-en-b1-e165",
+                  "tokens": ["It", "might", "be", "rude", "to", "point", "at", "people"],
+                  "answerTokens": ["It", "might", "be", "rude", "to", "point", "at", "people"],
+                  "feedbackOnError": {"type": "word_order", "explanation": "La estructura es 'It might be + adjetivo + to + verbo'.", "ruleRef": "gp-modals-deduction"}
+                },
+                {
+                  "type": "MatchPairs",
+                  "id": "es-en-b1-e166",
+                  "pairs": [
+                    {"left": "It might be normal here.", "right": "Posibilidad cultural"},
+                    {"left": "It must be important.", "right": "Deducción fuerte"},
+                    {"left": "It's more common than at home.", "right": "Comparación"}
+                  ],
+                  "feedbackOnError": {"type": "grammar", "explanation": "'Might' abre la posibilidad, 'must' la certeza y 'more common than' compara.", "ruleRef": "gp-modals-deduction"}
+                },
+                {
+                  "type": "ListenChoose",
+                  "id": "es-en-b1-e167",
+                  "audioText": "It might be polite to bring a small gift when you visit someone.",
+                  "options": ["Llevar un regalo pequeño puede ser una cortesía", "Llevar un regalo es obligatorio y caro", "No se debe llevar ningún regalo a una visita"],
+                  "correctIndex": 0,
+                  "feedbackOnError": {"type": "comprehension", "explanation": "'Might be polite' presenta la costumbre como posibilidad cortés, no como obligación.", "ruleRef": "gp-modals-deduction"}
+                },
+                {
+                  "type": "ListenType",
+                  "id": "es-en-b1-e168",
+                  "transcription": "It is polite to take off your shoes indoors",
+                  "audioText": "It is polite to take off your shoes indoors",
+                  "feedbackOnError": {"type": "spelling", "explanation": "Se escribe 'indoors' junto y 'shoes' con 'oe'.", "ruleRef": "gp-modals-deduction"}
+                },
+                {
+                  "type": "SpeakRepeat",
+                  "id": "es-en-b1-e169",
+                  "targetPhrase": "It might be a local custom, not a lack of respect.",
+                  "audioText": "It might be a local custom, not a lack of respect.",
+                  "feedbackOnError": {"type": "pronunciation", "explanation": "Enlaza 'might be a' y haz una pausa breve antes de 'not a lack'.", "ruleRef": "gp-modals-deduction"}
+                },
+                {
+                  "type": "ClozeDragDrop",
+                  "id": "es-en-b1-e170",
+                  "passage": "It {{b1}} be rude to refuse, so it's {{b2}} to accept politely.",
+                  "blanks": [
+                    {"id": "b1", "answer": "might", "options": ["might", "must", "can't"]},
+                    {"id": "b2", "answer": "better", "options": ["better", "good", "more good"]}
+                  ],
+                  "feedbackOnError": {"type": "grammar", "explanation": "'Might' expresa posibilidad y 'better' es el comparativo irregular de 'good'.", "ruleRef": "gp-modals-deduction"}
+                },
+                {
+                  "type": "FreeSpeakingPrompt",
+                  "id": "es-en-b1-e171",
+                  "prompt": "Explica una diferencia cultural que te sorprendió y evita juzgarla como falta de respeto.",
+                  "minTokens": 24,
+                  "conceptClusters": [["custom", "tradition", "greeting"], ["might", "must", "polite"], ["more", "than", "different"]],
+                  "grammarRuleRefs": ["gp-comparatives", "gp-modals-deduction"],
+                  "timeLimitSeconds": 60,
+                  "minWpm": 60,
+                  "maxWpm": 150,
+                  "modelAnswer": "When I first arrived, I was surprised that people arrived a little later than in my country. I thought it might be rude, but it was actually a local custom. Here it's more polite to greet everyone before starting. It must be important to them, so I adapted quickly.",
+                  "selfAssessmentCriteria": ["¿Describí la diferencia cultural?", "¿Evité estereotipos?", "¿Usé una deducción con modal?"],
+                  "feedbackOnError": {"type": "grammar", "explanation": "La respuesta modelo compara costumbres y usa 'might' y 'must' para interpretarlas sin juzgar.", "ruleRef": "gp-modals-deduction"}
+                }
+              ]
+            },
+            {
+              "id": "es-en-lv-2-un-4-ls-5",
+              "title": "Reseñar un restaurante",
+              "cefrLevel": "B1",
+              "scenario": "Hay que escribir una reseña equilibrada de un restaurante recién abierto.",
+              "canDo": "Puedo describir una experiencia gastronómica, valorar servicio y precio, y recomendar o advertir.",
+              "grammarPoints": [
+                {"id": "gp-passive-voice", "label": "Passive voice", "description": "Enfoque en la acción o el resultado."},
+                {"id": "gp-linkers-purpose", "label": "Purpose linkers", "description": "to, so that, in order to."}
+              ],
+              "vocabFrequencyBand": "2000-3000",
+              "culturalNotes": [
+                {"idiom": "hole in the wall", "note": "Local pequeño y sencillo, a menudo con comida excelente; tono cariñoso.", "translation": "sitio de barrio"}
+              ],
+              "exercises": [
+                {
+                  "type": "MultipleChoice",
+                  "id": "es-en-b1-e172",
+                  "question": "Completa: The restaurant ___ by a local chef last year.",
+                  "options": ["was opened", "opened", "is opening"],
+                  "correctIndex": 0,
+                  "feedbackOnError": {"type": "grammar", "explanation": "La pasiva es 'was opened'; el foco está en el restaurante, no en el chef.", "ruleRef": "gp-passive-voice"}
+                },
+                {
+                  "type": "Translate",
+                  "id": "es-en-b1-e173",
+                  "sourcePhrase": "El servicio fue lento, pero la comida estaba deliciosa.",
+                  "correctTokens": ["The", "service", "was", "slow", "but", "the", "food", "was", "delicious"],
+                  "distractorTokens": ["is", "tasty"],
+                  "feedbackOnError": {"type": "grammar", "explanation": "La reseña de una visita pasada usa 'was' en ambas cláusulas.", "ruleRef": "gp-passive-voice"}
+                },
+                {
+                  "type": "OrderWords",
+                  "id": "es-en-b1-e174",
+                  "tokens": ["We", "went", "there", "to", "celebrate", "a", "birthday"],
+                  "answerTokens": ["We", "went", "there", "to", "celebrate", "a", "birthday"],
+                  "feedbackOnError": {"type": "word_order", "explanation": "'To + infinitivo' expresa el propósito de la visita.", "ruleRef": "gp-linkers-purpose"}
+                },
+                {
+                  "type": "MatchPairs",
+                  "id": "es-en-b1-e175",
+                  "pairs": [
+                    {"left": "The restaurant was opened last year.", "right": "Pasiva"},
+                    {"left": "We went there to celebrate.", "right": "Propósito con infinitivo"},
+                    {"left": "We sat outside so that we could talk.", "right": "Propósito con sujeto"}
+                  ],
+                  "feedbackOnError": {"type": "grammar", "explanation": "La pasiva destaca el resultado; 'to' y 'so that' expresan propósito.", "ruleRef": "gp-passive-voice"}
+                },
+                {
+                  "type": "ListenChoose",
+                  "id": "es-en-b1-e176",
+                  "audioText": "The restaurant was recommended by a friend, but the service was slow.",
+                  "options": ["Un amigo lo recomendó, pero el servicio fue lento", "El servicio fue rápido y un amigo lo recomendó", "El restaurante no fue recomendado y el servicio fue lento"],
+                  "correctIndex": 0,
+                  "feedbackOnError": {"type": "comprehension", "explanation": "La pasiva 'was recommended' indica el origen de la recomendación y 'but' el contraste.", "ruleRef": "gp-passive-voice"}
+                },
+                {
+                  "type": "ListenType",
+                  "id": "es-en-b1-e177",
+                  "transcription": "The portions were generous and the prices were fair",
+                  "audioText": "The portions were generous and the prices were fair",
+                  "feedbackOnError": {"type": "spelling", "explanation": "Se escribe 'generous' con 'ous' final y 'fair' con 'ai'.", "ruleRef": "gp-passive-voice"}
+                },
+                {
+                  "type": "SpeakRepeat",
+                  "id": "es-en-b1-e178",
+                  "targetPhrase": "The restaurant was recommended by a friend.",
+                  "audioText": "The restaurant was recommended by a friend.",
+                  "feedbackOnError": {"type": "pronunciation", "explanation": "Enlaza 'was recommended' y pronuncia 'recommended' con acento en la tercera sílaba.", "ruleRef": "gp-passive-voice"}
+                },
+                {
+                  "type": "ClozeDragDrop",
+                  "id": "es-en-b1-e179",
+                  "passage": "The restaurant {{b1}} last month, and we went there {{b2}} a birthday.",
+                  "blanks": [
+                    {"id": "b1", "answer": "was opened", "options": ["was opened", "opened", "is opening"]},
+                    {"id": "b2", "answer": "to celebrate", "options": ["to celebrate", "celebrate", "celebrating"]}
+                  ],
+                  "feedbackOnError": {"type": "grammar", "explanation": "La pasiva es 'was opened' y el propósito se expresa con 'to + infinitivo'.", "ruleRef": "gp-passive-voice"}
+                },
+                {
+                  "type": "FreeSpeakingPrompt",
+                  "id": "es-en-b1-e180",
+                  "prompt": "Reseña un restaurante: describe la experiencia, valora servicio y precio, y recomienda o advierte.",
+                  "minTokens": 24,
+                  "conceptClusters": [["restaurant", "food", "service"], ["delicious", "slow", "price"], ["recommend", "worth", "avoid"]],
+                  "grammarRuleRefs": ["gp-passive-voice", "gp-linkers-purpose"],
+                  "timeLimitSeconds": 60,
+                  "minWpm": 60,
+                  "maxWpm": 150,
+                  "modelAnswer": "This small restaurant was recommended by a friend, and we went there to celebrate a birthday. The food was delicious and the portions were generous, although the service was slow. The prices were fair for the quality. I would recommend it for a relaxed dinner, but not if you are in a hurry.",
+                  "selfAssessmentCriteria": ["¿Describí la experiencia?", "¿Valoré servicio y precio?", "¿Recomendé o advertí con claridad?"],
+                  "feedbackOnError": {"type": "grammar", "explanation": "La respuesta modelo usa pasivas para describir el restaurante y 'to celebrate' para el propósito de la visita.", "ruleRef": "gp-passive-voice"}
+                }
+              ]
+            }
+          ]
+        }
+      ]
     }
   ]
 }
