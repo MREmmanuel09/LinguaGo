@@ -1,8 +1,9 @@
 {
-  "schemaVersion": 1,
+  "schemaVersion": 2,
   "id": "es-en",
   "from": "es",
   "to": "en",
+  "locale": "en-US",
   "levels": [
     {
       "id": "es-en-lv-1",
@@ -15,26 +16,40 @@
             {
               "id": "es-en-lv-1-un-1-ls-1",
               "title": "Saludos",
+              "cefrLevel": "A1",
+              "vocabFrequencyBand": "1000-2000",
               "exercises": [
                 {
                   "type": "MultipleChoice",
                   "id": "es-en-e1",
                   "question": "¿Cómo se dice «hola»?",
                   "options": ["Hello", "Goodbye", "Please"],
-                  "correctIndex": 0
+                  "correctIndex": 0,
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "«Hola» se traduce como 'Hello'; 'Goodbye' es «adiós» y 'Please' es «por favor»."
+                  }
                 },
                 {
                   "type": "Translate",
                   "id": "es-en-e2",
                   "sourcePhrase": "Buenos días",
                   "correctTokens": ["Good", "morning"],
-                  "distractorTokens": ["Goodbye", "night"]
+                  "distractorTokens": ["Goodbye", "night"],
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "'Good morning' es «buenos días»; 'Goodbye' es una despedida y 'night' aparece en 'good night'."
+                  }
                 },
                 {
                   "type": "OrderWords",
                   "id": "es-en-e3",
                   "tokens": ["How", "are", "you"],
-                  "answerTokens": ["How", "are", "you"]
+                  "answerTokens": ["How", "are", "you"],
+                  "feedbackOnError": {
+                    "type": "word_order",
+                    "explanation": "El orden correcto es 'How are you': partícula interrogativa + verbo + pronombre."
+                  }
                 },
                 {
                   "type": "MatchPairs",
@@ -43,52 +58,82 @@
                     {"left": "adiós", "right": "Goodbye"},
                     {"left": "gracias", "right": "Thank you"},
                     {"left": "por favor", "right": "Please"}
-                  ]
+                  ],
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "Cada fórmula de cortesía tiene su par: 'adiós→Goodbye', 'gracias→Thank you', 'por favor→Please'."
+                  }
                 },
                 {
                   "type": "ListenChoose",
                   "id": "es-en-e5",
                   "audioText": "Good evening",
                   "options": ["Good morning", "Good evening", "Good night"],
-                  "correctIndex": 1
+                  "correctIndex": 1,
+                  "feedbackOnError": {
+                    "type": "comprehension",
+                    "explanation": "El audio dice 'Good evening' («buenas tardes/noches»); 'Good morning' es por la mañana y 'Good night' es una despedida."
+                  }
                 },
                 {
                   "type": "ListenType",
                   "id": "es-en-e6",
                   "transcription": "Thank you very much",
-                  "audioText": "Thank you very much"
+                  "audioText": "Thank you very much",
+                  "feedbackOnError": {
+                    "type": "spelling",
+                    "explanation": "La frase completa es 'Thank you very much'; 'very much' intensifica el agradecimiento y 'you' va separado."
+                  }
                 },
                 {
                   "type": "SpeakRepeat",
                   "id": "es-en-e37",
                   "targetPhrase": "Good evening",
-                  "audioText": "Good evening"
+                  "audioText": "Good evening",
+                  "feedbackOnError": {
+                    "type": "pronunciation",
+                    "explanation": "Pronuncia 'Good evening' con el acento en 'EVE-ning' y sin separar las dos palabras."
+                  }
                 }
               ]
             },
             {
               "id": "es-en-lv-1-un-1-ls-2",
               "title": "Presentarse",
+              "cefrLevel": "A1",
+              "vocabFrequencyBand": "1000-2000",
               "exercises": [
                 {
                   "type": "MultipleChoice",
                   "id": "es-en-e7",
                   "question": "Elige la presentación correcta",
                   "options": ["My name is Ana", "Ana name my is", "Is my name Ana"],
-                  "correctIndex": 0
+                  "correctIndex": 0,
+                  "feedbackOnError": {
+                    "type": "word_order",
+                    "explanation": "La estructura inglesa es posesivo + nombre + verbo: 'My name is Ana'; en una afirmación el verbo no se mueve al inicio."
+                  }
                 },
                 {
                   "type": "Translate",
                   "id": "es-en-e8",
                   "sourcePhrase": "Soy de Chile",
                   "correctTokens": ["I", "am", "from", "Chile"],
-                  "distractorTokens": ["to", "is"]
+                  "distractorTokens": ["to", "is"],
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "'I am from Chile' usa 'from' para origen; 'to' indica destino e 'is' no concuerda con 'I'."
+                  }
                 },
                 {
                   "type": "OrderWords",
                   "id": "es-en-e9",
                   "tokens": ["She", "is", "my", "sister"],
-                  "answerTokens": ["She", "is", "my", "sister"]
+                  "answerTokens": ["She", "is", "my", "sister"],
+                  "feedbackOnError": {
+                    "type": "word_order",
+                    "explanation": "El orden es sujeto + verbo + posesivo + sustantivo: 'She is my sister'."
+                  }
                 },
                 {
                   "type": "MatchPairs",
@@ -97,46 +142,72 @@
                     {"left": "hermano", "right": "brother"},
                     {"left": "hermana", "right": "sister"},
                     {"left": "amigo", "right": "friend"}
-                  ]
+                  ],
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "Revisa el parentesco: 'hermano→brother', 'hermana→sister', 'amigo→friend'."
+                  }
                 },
                 {
                   "type": "ListenChoose",
                   "id": "es-en-e11",
                   "audioText": "What is your name",
                   "options": ["What is your name", "Who is your name", "Where your name"],
-                  "correctIndex": 0
+                  "correctIndex": 0,
+                  "feedbackOnError": {
+                    "type": "comprehension",
+                    "explanation": "El audio pregunta 'What is your name' («¿cómo te llamas?»); 'Who' pregunta por persona y 'Where' por lugar."
+                  }
                 },
                 {
                   "type": "ListenType",
                   "id": "es-en-e12",
                   "transcription": "Nice to meet you",
-                  "audioText": "Nice to meet you"
+                  "audioText": "Nice to meet you",
+                  "feedbackOnError": {
+                    "type": "spelling",
+                    "explanation": "Se escribe 'Nice to meet you'; 'meet' lleva doble 'e' y 'you' va como palabra separada."
+                  }
                 },
                 {
                   "type": "SpeakRepeat",
                   "id": "es-en-e38",
                   "targetPhrase": "Nice to meet you",
-                  "audioText": "Nice to meet you"
+                  "audioText": "Nice to meet you",
+                  "feedbackOnError": {
+                    "type": "pronunciation",
+                    "explanation": "En 'Nice to meet you' une 'meet' y 'you' sin pausa y pronuncia la /s/ final de 'nice'."
+                  }
                 }
               ]
             },
             {
               "id": "es-en-lv-1-un-1-ls-3",
               "title": "La familia",
+              "cefrLevel": "A1",
+              "vocabFrequencyBand": "1000-2000",
               "exercises": [
                 {
                   "type": "MultipleChoice",
                   "id": "es-en-e13",
                   "question": "¿Cómo se dice «abuelo»?",
                   "options": ["grandfather", "grandmother", "nephew"],
-                  "correctIndex": 0
+                  "correctIndex": 0,
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "'grandfather' es «abuelo»; 'grandmother' es «abuela» y 'nephew' es «sobrino»."
+                  }
                 },
                 {
                   "type": "Translate",
                   "id": "es-en-e14",
                   "sourcePhrase": "Tengo dos hermanos",
                   "correctTokens": ["I", "have", "two", "brothers"],
-                  "distractorTokens": ["to", "sisters"]
+                  "distractorTokens": ["to", "sisters"],
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "Con 'I' se usa 'have': 'I have two brothers'; 'to' no expresa posesión y 'sisters' cambia el significado."
+                  }
                 },
                 {
                   "type": "MatchPairs",
@@ -145,32 +216,52 @@
                     {"left": "madre", "right": "mother"},
                     {"left": "niño", "right": "child"},
                     {"left": "primo", "right": "cousin"}
-                  ]
+                  ],
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "Los pares correctos son 'madre→mother', 'niño→child', 'primo→cousin'; no confundas 'cousin' con 'uncle'."
+                  }
                 },
                 {
                   "type": "ListenChoose",
                   "id": "es-en-e16",
                   "audioText": "My family is small",
                   "options": ["My family is small", "My family is big", "My family is new"],
-                  "correctIndex": 0
+                  "correctIndex": 0,
+                  "feedbackOnError": {
+                    "type": "comprehension",
+                    "explanation": "El audio dice 'My family is small' («mi familia es pequeña»); 'big' es lo contrario y 'new' no describe tamaño."
+                  }
                 },
                 {
                   "type": "OrderWords",
                   "id": "es-en-e17",
                   "tokens": ["This", "is", "my", "father"],
-                  "answerTokens": ["This", "is", "my", "father"]
+                  "answerTokens": ["This", "is", "my", "father"],
+                  "feedbackOnError": {
+                    "type": "word_order",
+                    "explanation": "Demostrativo + verbo + posesivo + sustantivo: 'This is my father'."
+                  }
                 },
                 {
                   "type": "ListenType",
                   "id": "es-en-e18",
                   "transcription": "We are a big family",
-                  "audioText": "We are a big family"
+                  "audioText": "We are a big family",
+                  "feedbackOnError": {
+                    "type": "spelling",
+                    "explanation": "La frase es 'We are a big family'; 'We' va con 'are' y el artículo 'a' precede al adjetivo."
+                  }
                 },
                 {
                   "type": "SpeakRepeat",
                   "id": "es-en-e39",
                   "targetPhrase": "My family is small",
-                  "audioText": "My family is small"
+                  "audioText": "My family is small",
+                  "feedbackOnError": {
+                    "type": "pronunciation",
+                    "explanation": "Pronuncia 'My family is small' enlazando 'family is' y sin alargar la vocal de 'is'."
+                  }
                 }
               ]
             }
@@ -183,26 +274,40 @@
             {
               "id": "es-en-lv-1-un-2-ls-1",
               "title": "Comida y bebida",
+              "cefrLevel": "A1",
+              "vocabFrequencyBand": "1000-2000",
               "exercises": [
                 {
                   "type": "MultipleChoice",
                   "id": "es-en-e19",
                   "question": "¿Cómo se dice «agua»?",
                   "options": ["water", "wine", "milk"],
-                  "correctIndex": 0
+                  "correctIndex": 0,
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "'water' es «agua»; 'wine' es «vino» y 'milk' es «leche»."
+                  }
                 },
                 {
                   "type": "Translate",
                   "id": "es-en-e20",
                   "sourcePhrase": "Quiero un café, por favor",
                   "correctTokens": ["I", "want", "a", "coffee", "please"],
-                  "distractorTokens": ["tea", "one"]
+                  "distractorTokens": ["tea", "one"],
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "'I want a coffee, please' usa 'a' ante un sustantivo contable singular; 'tea' y 'one' cambiarían el pedido."
+                  }
                 },
                 {
                   "type": "OrderWords",
                   "id": "es-en-e21",
                   "tokens": ["The", "waiter", "brings", "the", "menu"],
-                  "answerTokens": ["The", "waiter", "brings", "the", "menu"]
+                  "answerTokens": ["The", "waiter", "brings", "the", "menu"],
+                  "feedbackOnError": {
+                    "type": "word_order",
+                    "explanation": "Sujeto + verbo + objeto directo: 'The waiter brings the menu'."
+                  }
                 },
                 {
                   "type": "MatchPairs",
@@ -211,52 +316,82 @@
                     {"left": "pan", "right": "bread"},
                     {"left": "huevo", "right": "egg"},
                     {"left": "leche", "right": "milk"}
-                  ]
+                  ],
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "'pan→bread', 'huevo→egg', 'leche→milk'; 'bread' es incontable y no lleva plural en este contexto."
+                  }
                 },
                 {
                   "type": "ListenChoose",
                   "id": "es-en-e23",
                   "audioText": "I drink coffee every morning",
                   "options": ["I water coffee every morning", "I drink coffee every morning", "I drink tea every morning"],
-                  "correctIndex": 1
+                  "correctIndex": 1,
+                  "feedbackOnError": {
+                    "type": "comprehension",
+                    "explanation": "El audio dice 'I drink coffee every morning'; 'water' no funciona como verbo aquí y 'tea' cambia la bebida."
+                  }
                 },
                 {
                   "type": "ListenType",
                   "id": "es-en-e24",
                   "transcription": "Water, please",
-                  "audioText": "Water, please"
+                  "audioText": "Water, please",
+                  "feedbackOnError": {
+                    "type": "spelling",
+                    "explanation": "Se escribe 'Water, please' con mayúscula inicial y coma antes de 'please'."
+                  }
                 },
                 {
                   "type": "SpeakRepeat",
                   "id": "es-en-e40",
                   "targetPhrase": "I want a coffee, please",
-                  "audioText": "I want a coffee, please"
+                  "audioText": "I want a coffee, please",
+                  "feedbackOnError": {
+                    "type": "pronunciation",
+                    "explanation": "En 'I want a coffee, please' enlaza 'want a' y pronuncia 'coffee' con acento en la primera sílaba."
+                  }
                 }
               ]
             },
             {
               "id": "es-en-lv-1-un-2-ls-2",
               "title": "Colores y números",
+              "cefrLevel": "A1",
+              "vocabFrequencyBand": "1000-2000",
               "exercises": [
                 {
                   "type": "MultipleChoice",
                   "id": "es-en-e25",
                   "question": "¿Cómo se dice «azul»?",
                   "options": ["blue", "red", "white"],
-                  "correctIndex": 0
+                  "correctIndex": 0,
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "'blue' es «azul»; 'red' es «rojo» y 'white' es «blanco»."
+                  }
                 },
                 {
                   "type": "Translate",
                   "id": "es-en-e26",
                   "sourcePhrase": "Tengo cinco libros",
                   "correctTokens": ["I", "have", "five", "books"],
-                  "distractorTokens": ["for", "seeds"]
+                  "distractorTokens": ["for", "seeds"],
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "'I have five books' usa 'five' para «cinco»; 'for' es preposición y 'seeds' significa «semillas»."
+                  }
                 },
                 {
                   "type": "OrderWords",
                   "id": "es-en-e27",
                   "tokens": ["My", "favorite", "color", "is", "green"],
-                  "answerTokens": ["My", "favorite", "color", "is", "green"]
+                  "answerTokens": ["My", "favorite", "color", "is", "green"],
+                  "feedbackOnError": {
+                    "type": "word_order",
+                    "explanation": "Posesivo + adjetivo + sustantivo + verbo + color: 'My favorite color is green'."
+                  }
                 },
                 {
                   "type": "MatchPairs",
@@ -265,52 +400,82 @@
                     {"left": "morado", "right": "purple"},
                     {"left": "naranja", "right": "orange"},
                     {"left": "gris", "right": "gray"}
-                  ]
+                  ],
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "'morado→purple', 'naranja→orange', 'gris→gray' en inglés estadounidense; en británico se escribe 'grey'."
+                  }
                 },
                 {
                   "type": "ListenChoose",
                   "id": "es-en-e29",
                   "audioText": "Seven, eight, nine",
                   "options": ["One, two, three", "Seven, eight, nine", "Four, five, six"],
-                  "correctIndex": 1
+                  "correctIndex": 1,
+                  "feedbackOnError": {
+                    "type": "comprehension",
+                    "explanation": "El audio enumera 'Seven, eight, nine'; las otras opciones son secuencias numéricas distintas."
+                  }
                 },
                 {
                   "type": "ListenType",
                   "id": "es-en-e30",
                   "transcription": "This is red and white",
-                  "audioText": "This is red and white"
+                  "audioText": "This is red and white",
+                  "feedbackOnError": {
+                    "type": "spelling",
+                    "explanation": "La frase es 'This is red and white'; 'This' lleva 's' final y 'and' une los dos colores."
+                  }
                 },
                 {
                   "type": "SpeakRepeat",
                   "id": "es-en-e41",
                   "targetPhrase": "My favorite color is green",
-                  "audioText": "My favorite color is green"
+                  "audioText": "My favorite color is green",
+                  "feedbackOnError": {
+                    "type": "pronunciation",
+                    "explanation": "Pronuncia 'My favorite color is green' con acento en 'FA-vor-ite' y la vocal larga de 'green'."
+                  }
                 }
               ]
             },
             {
               "id": "es-en-lv-1-un-2-ls-3",
               "title": "Mi rutina",
+              "cefrLevel": "A2",
+              "vocabFrequencyBand": "1000-2000",
               "exercises": [
                 {
                   "type": "MultipleChoice",
                   "id": "es-en-e31",
                   "question": "¿Cómo se dice «trabajo» (verbo)?",
                   "options": ["work", "walk", "word"],
-                  "correctIndex": 0
+                  "correctIndex": 0,
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "'work' como verbo es «trabajar»; 'walk' es «caminar» y 'word' es «palabra»."
+                  }
                 },
                 {
                   "type": "Translate",
                   "id": "es-en-e32",
                   "sourcePhrase": "Ella trabaja los lunes",
                   "correctTokens": ["She", "works", "on", "Mondays"],
-                  "distractorTokens": ["work", "day"]
+                  "distractorTokens": ["work", "day"],
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "Con 'she' el presente añade -s: 'She works on Mondays'; 'work' sin -s y 'day' no forman el día de la semana."
+                  }
                 },
                 {
                   "type": "OrderWords",
                   "id": "es-en-e33",
                   "tokens": ["I", "get", "up", "at", "seven"],
-                  "answerTokens": ["I", "get", "up", "at", "seven"]
+                  "answerTokens": ["I", "get", "up", "at", "seven"],
+                  "feedbackOnError": {
+                    "type": "word_order",
+                    "explanation": "El phrasal verb 'get up' se mantiene unido: 'I get up at seven'."
+                  }
                 },
                 {
                   "type": "MatchPairs",
@@ -319,26 +484,42 @@
                     {"left": "desayunar", "right": "have breakfast"},
                     {"left": "dormir", "right": "sleep"},
                     {"left": "estudiar", "right": "study"}
-                  ]
+                  ],
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "'desayunar→have breakfast', 'dormir→sleep', 'estudiar→study'; la colocación correcta es 'have breakfast'."
+                  }
                 },
                 {
                   "type": "ListenChoose",
                   "id": "es-en-e35",
                   "audioText": "I work at home",
                   "options": ["I walk at home", "I work at home", "I eat at home"],
-                  "correctIndex": 1
+                  "correctIndex": 1,
+                  "feedbackOnError": {
+                    "type": "comprehension",
+                    "explanation": "El audio dice 'I work at home'; 'walk' y 'eat' cambian la actividad y no el lugar."
+                  }
                 },
                 {
                   "type": "ListenType",
                   "id": "es-en-e36",
                   "transcription": "She works at home",
-                  "audioText": "She works at home"
+                  "audioText": "She works at home",
+                  "feedbackOnError": {
+                    "type": "spelling",
+                    "explanation": "Se escribe 'She works at home'; 'works' lleva -s y 'home' no necesita la preposición 'to'."
+                  }
                 },
                 {
                   "type": "SpeakRepeat",
                   "id": "es-en-e42",
                   "targetPhrase": "I work at home",
-                  "audioText": "I work at home"
+                  "audioText": "I work at home",
+                  "feedbackOnError": {
+                    "type": "pronunciation",
+                    "explanation": "En 'I work at home' enlaza 'work at' y pronuncia 'home' con la /h/ aspirada."
+                  }
                 }
               ]
             }
