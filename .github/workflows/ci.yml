@@ -76,7 +76,7 @@ jobs:
           if-no-files-found: ignore
 
   instrumented:
-    name: Instrumented · core-ui (API 34)
+    name: Instrumented · core-ui + core-data (API 34)
     runs-on: ubuntu-latest
     timeout-minutes: 40
 
@@ -107,7 +107,7 @@ jobs:
           sudo udevadm control --reload-rules
           sudo udevadm trigger --name-match=kvm
 
-      - name: connectedDebugAndroidTest (accesibilidad del design system)
+      - name: connectedDebugAndroidTest (accesibilidad + migración Room)
         uses: reactivecircus/android-emulator-runner@v2
         with:
           api-level: 34
@@ -115,7 +115,7 @@ jobs:
           arch: x86_64
           disable-animations: true
           emulator-options: -no-window -gpu swiftshader_indirect -no-snapshot -noaudio -no-boot-anim
-          script: ./gradlew :core:core-ui:connectedDebugAndroidTest
+          script: ./gradlew :core:core-ui:connectedDebugAndroidTest :core:core-data:connectedDebugAndroidTest
 
       - name: Upload instrumented reports (si falla)
         if: failure()

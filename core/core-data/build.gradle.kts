@@ -6,7 +6,14 @@ plugins {
 android {
     namespace = "dev.linguago.core.data"
     defaultConfig {
+        testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
         consumerProguardFiles()
+    }
+    sourceSets {
+        getByName("androidTest") {
+            // Schemas exportados para MigrationTestHelper (ADR-021).
+            assets.srcDir("$projectDir/schemas")
+        }
     }
 }
 
@@ -25,4 +32,9 @@ dependencies {
 
     testImplementation(libs.junit4)
     testImplementation(libs.kotlinx.coroutines.test)
+
+    androidTestImplementation(libs.junit4)
+    androidTestImplementation(libs.androidx.test.ext.junit)
+    androidTestImplementation(libs.androidx.test.runner)
+    androidTestImplementation(libs.androidx.room.testing)
 }
