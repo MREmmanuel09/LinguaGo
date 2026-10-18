@@ -21,6 +21,7 @@ import dev.linguago.core.domain.usecase.SubmitAnswerUseCase
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
+import kotlinx.coroutines.flow.combine
 import kotlinx.coroutines.flow.update
 import kotlinx.coroutines.launch
 import javax.inject.Inject
@@ -194,18 +195,31 @@ class LessonViewModel
 
         private fun startLesson(session: LessonSession) {
             this.session = session
-            targetLanguage = session.course.toLanguage
+            val language = session.course.toLanguage
+            targetLanguage = language
             _uiState.update {
                 it.copy(
                     loading = false,
                     lessonTitle = session.lesson.title,
                     exercises = session.lesson.exercises,
                     index = 0,
-                    audioAvailable = ttsEngine.isReadyFor(session.course.toLanguage),
-                    speechAvailable = sttEngine.isReadyFor(session.course.toLanguage),
+                    audioAvailable = ttsEngine.isReadyFor(language),
+                    speechAvailable = sttEngine.isReadyFor(language),
                 )
             }
             prepareExercise(0)
+            viewModelScope.launch { ttsEngine.warmUp(language) }
+            viewModelScope.launch { sttEngine.warmUp(language) }
+            viewModelScope.launch {
+                combine(ttsEngine.stateFor(language), sttEngine.stateFor(language)) { _, _ -> Unit }.collect {
+                    _uiState.update { state ->
+                        state.copy(
+                            audioAvailable = ttsEngine.isReadyFor(language),
+                            speechAvailable = sttEngine.isReadyFor(language),
+                        )
+                    }
+                }
+            }
         }
 
         /** Prepara los paneles de respuesta del ejercicio `index`. */

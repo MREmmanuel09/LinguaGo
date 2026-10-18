@@ -11,6 +11,7 @@ import dev.linguago.core.domain.model.Language
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.currentCoroutineContext
 import kotlinx.coroutines.ensureActive
+import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.withContext
 import org.json.JSONArray
 import org.json.JSONObject
@@ -22,11 +23,13 @@ import javax.inject.Inject
 import javax.inject.Singleton
 
 /**
- * STT offline con Vosk Small (ADR-003, Fase 2.3). Los paquetes `vosk-*`
- * los deja `fetchVoiceModels` (assets); se instalan en filesDir la primera
- * vez y se verifican por archivo (SHA-256, ADR-006: `files[].sha256`).
- * Sin modelo verificado queda no listo y SpeakRepeat degrada (I3: el
- * ejercicio nunca se bloquea).
+ * STT offline con Vosk Small (ADR-003/ADR-020, Fase 2.3). Los paquetes
+ * `vosk-*` los deja `fetchVoiceModels` (assets); se instalan en filesDir de
+ * forma atómica la primera vez y se verifican por archivo (SHA-256,
+ * ADR-006: `files[].sha256`). El warmup ([warmUp]) carga `org.vosk.Model`
+ * (JNA) en `Dispatchers.IO` con Mutex por idioma y estado observable
+ * ([stateFor]); [isReadyFor] solo lee memoria. Sin modelo verificado degrada
+ * (I3: el ejercicio nunca se bloquea).
  */
 @Singleton
 public class VoskSttEngine
@@ -35,13 +38,59 @@ public class VoskSttEngine
         @ApplicationContext private val context: Context,
     ) : SttEngine {
         private val models = ConcurrentHashMap<Language, Model>()
-        private val ioLock = Any()
+        private val warmup = WarmupStateRegistry()
 
-        override fun isReadyFor(language: Language): Boolean = locateModel(language) != null
+        override fun isReadyFor(language: Language): Boolean = warmup.isReady(language)
+
+        override fun stateFor(language: Language): StateFlow<AudioEngineState> = warmup.stateOf(language)
+
+        override suspend fun warmUp(language: Language) {
+            warmup.warmUpOnce(language) {
+                withContext(Dispatchers.IO) { warmUpBlocking(language) }
+            }
+        }
 
         override suspend fun transcribe(language: Language): TranscriptionResult {
-            val model = models[language] ?: locateModel(language) ?: return EMPTY_RESULT
+            if (!isReadyFor(language)) warmUp(language)
+            val model = models[language] ?: return EMPTY_RESULT
             return withContext(Dispatchers.IO) { recordOnce(model) }
+        }
+
+        /** Verifica, extrae y carga el modelo en IO; publica el estado. */
+        private fun warmUpBlocking(language: Language) {
+            val state = warmup.stateOf(language)
+            state.value = AudioEngineState.Verifying
+            val entry = readManifestStt(language)
+            if (entry == null) {
+                Log.w(TAG, "sin modelo vosk para ${language.isoCode}")
+                state.value = AudioEngineState.Degraded("sin modelo vosk para ${language.isoCode}")
+                return
+            }
+            val installed = verifiedDir(entry)
+            val dir =
+                if (installed != null) {
+                    installed
+                } else {
+                    state.value = AudioEngineState.Extracting
+                    extractModel(entry)
+                }
+            if (dir == null) {
+                Log.w(TAG, "no se pudo instalar ${entry.dir}")
+                state.value = AudioEngineState.Degraded("instalación de ${entry.dir} falló")
+                return
+            }
+            state.value = AudioEngineState.Loading
+            val model =
+                runCatching { Model(dir.absolutePath) }
+                    .onFailure { error ->
+                        Log.w(TAG, "no se pudo cargar modelo STT para ${language.isoCode}", error)
+                    }.getOrNull()
+            if (model == null) {
+                state.value = AudioEngineState.Degraded("carga de ${entry.dir} falló")
+                return
+            }
+            models[language] = model
+            state.value = AudioEngineState.Ready
         }
 
         /** Captura por ~6 s el micrófono (16 kHz mono PCM) y transcribe. */
@@ -97,47 +146,34 @@ public class VoskSttEngine
             return TranscriptionResult(text = text.trim(), confidence = confidence)
         }
 
-        /** Modelo instalado y verificado para el idioma; carga pesada en IO. */
-        private fun locateModel(language: Language): Model? {
-            val entry = readManifestStt(language) ?: return null
-            val verified = verifiedDir(entry) ?: installFromAssets(entry) ?: return null
-            models[language]?.let { return it }
-            return synchronized(ioLock) {
-                models[language]
-                    ?: runCatching { Model(verified.absolutePath) }
-                        .onFailure { error ->
-                            Log.w(TAG, "no se pudo cargar modelo STT para ${language.isoCode}", error)
-                        }.getOrNull()
-                        ?.also { model -> models[language] = model }
-            }
-        }
-
         /** filesDir con todos los archivos del manifest presentes y con hash OK. */
         private fun verifiedDir(entry: SttEntry): File? {
             if (entry.files.isEmpty()) return null
             val dir = File(context.filesDir, entry.dir)
             if (!dir.isDirectory) return null
-            val allVerified =
-                entry.files.all { expected ->
-                    val candidate = File(context.filesDir, expected.path)
-                    candidate.isFile &&
-                        ModelIntegrity
-                            .sha256Hex(candidate)
-                            .equals(expected.sha256, ignoreCase = true)
-                }
-            return if (allVerified) dir else null
+            return dir.takeIf { filesValid(it, entry) }
         }
 
-        /** Extrae el paquete `stt/<id>` de assets hacia filesDir (una vez). */
-        private fun installFromAssets(entry: SttEntry): File? =
-            runCatching {
-                val hasAssets = context.assets.list(entry.dir)?.isNotEmpty() == true
-                if (!hasAssets) return@runCatching null
-                val outDir = File(context.filesDir, entry.dir)
-                outDir.deleteRecursively()
-                copyAssetTree(entry.dir, outDir)
-                outDir
-            }.getOrNull()
+        private fun filesValid(
+            dir: File,
+            entry: SttEntry,
+        ): Boolean =
+            entry.files.all { expected ->
+                val candidate = File(dir, expected.path.removePrefix("${entry.dir}/"))
+                candidate.isFile &&
+                    ModelIntegrity
+                        .sha256Hex(candidate)
+                        .equals(expected.sha256, ignoreCase = true)
+            }
+
+        /** Extrae `stt/<id>` a staging y lo publica con rename atómico. */
+        private fun extractModel(entry: SttEntry): File? =
+            AtomicInstall.install(
+                stagingDir = File(context.filesDir, "${entry.dir}.staging"),
+                targetDir = File(context.filesDir, entry.dir),
+                copy = { dir -> copyAssetTree(entry.dir, dir) },
+                verify = { dir -> filesValid(dir, entry) },
+            )
 
         /** Copia recursiva (vosk zip: conf/, am/, graph/ incluidos). */
         private fun copyAssetTree(

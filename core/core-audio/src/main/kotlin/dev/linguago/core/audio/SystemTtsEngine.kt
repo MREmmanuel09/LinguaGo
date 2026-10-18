@@ -5,6 +5,7 @@ import android.speech.tts.TextToSpeech
 import android.speech.tts.UtteranceProgressListener
 import dagger.hilt.android.qualifiers.ApplicationContext
 import dev.linguago.core.domain.model.Language
+import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.suspendCancellableCoroutine
 import java.util.concurrent.atomic.AtomicInteger
 import javax.inject.Inject
@@ -24,6 +25,7 @@ public class SystemTtsEngine
         @ApplicationContext context: Context,
     ) : TtsEngine {
         private val utteranceIds = AtomicInteger(0)
+        private val warmup = WarmupStateRegistry()
 
         @Volatile
         private var initialized: Boolean = false
@@ -35,6 +37,19 @@ public class SystemTtsEngine
 
         override fun isReadyFor(language: Language): Boolean =
             initialized && tts.isLanguageAvailable(language.toLocale()) >= TextToSpeech.LANG_AVAILABLE
+
+        override fun stateFor(language: Language): StateFlow<AudioEngineState> = warmup.stateOf(language)
+
+        override suspend fun warmUp(language: Language) {
+            warmup.warmUpOnce(language) {
+                warmup.stateOf(language).value =
+                    if (isReadyFor(language)) {
+                        AudioEngineState.Ready
+                    } else {
+                        AudioEngineState.Degraded("voz del sistema no disponible para ${language.isoCode}")
+                    }
+            }
+        }
 
         override suspend fun speak(
             text: String,

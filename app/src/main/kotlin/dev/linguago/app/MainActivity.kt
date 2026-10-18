@@ -1,6 +1,7 @@
 package dev.linguago.app
 
 import android.os.Bundle
+import android.os.StrictMode
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
@@ -15,7 +16,8 @@ import javax.inject.Inject
 /**
  * Única Activity del sistema: toda la navegación es Compose (RFC §2.1).
  * El tema (SYSTEM/LIGHT/DARK) y el destino inicial (onboarding/home) se
- * observan desde SettingsRepository (Fase 1).
+ * observan desde SettingsRepository (Fase 1). En debug activa StrictMode
+ * (detectDiskReads + penaltyLog) para vigilar el hilo principal (ADR-020).
  */
 @AndroidEntryPoint
 class MainActivity : ComponentActivity() {
@@ -23,6 +25,15 @@ class MainActivity : ComponentActivity() {
     lateinit var settingsRepository: SettingsRepository
 
     override fun onCreate(savedInstanceState: Bundle?) {
+        if (BuildConfig.DEBUG) {
+            StrictMode.setThreadPolicy(
+                StrictMode.ThreadPolicy
+                    .Builder()
+                    .detectDiskReads()
+                    .penaltyLog()
+                    .build(),
+            )
+        }
         enableEdgeToEdge()
         super.onCreate(savedInstanceState)
         setContent {

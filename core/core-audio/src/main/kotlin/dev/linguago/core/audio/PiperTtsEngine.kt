@@ -14,6 +14,7 @@ import dev.linguago.core.domain.model.Language
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.currentCoroutineContext
 import kotlinx.coroutines.ensureActive
+import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.withContext
 import org.json.JSONArray
 import org.json.JSONObject
@@ -23,11 +24,13 @@ import javax.inject.Inject
 import javax.inject.Singleton
 
 /**
- * TTS offline Piper via sherpa-onnx (ADR-003/ADR-010, Fase 2.2). Carga los
- * paquetes `vits-piper-<voz>` dejados por `fetchVoiceModels` (assets), los
- * instala en filesDir la primera vez, verifica SHA-256 (ModelIntegrity) y
- * sintetiza. Sin voz instalada queda no listo y [DefaultTtsEngine] cae al
- * TTS del sistema.
+ * TTS offline Piper via sherpa-onnx (ADR-003/ADR-010/ADR-020, Fase 2.2).
+ * Carga los paquetes `vits-piper-<voz>` dejados por `fetchVoiceModels`
+ * (assets), los instala en filesDir de forma atómica la primera vez,
+ * verifica SHA-256 (ModelIntegrity) y sintetiza. El warmup ([warmUp]) corre
+ * siempre en `Dispatchers.IO` con Mutex por idioma y estado observable
+ * ([stateFor]); [isReadyFor] solo lee memoria. Sin voz instalada degrada y
+ * [DefaultTtsEngine] cae al TTS del sistema.
  */
 @Singleton
 public class PiperTtsEngine
@@ -37,35 +40,109 @@ public class PiperTtsEngine
     ) : TtsEngine {
         private val engines = ConcurrentHashMap<Language, OfflineTts>()
         private val voices = ConcurrentHashMap<Language, PiperVoice>()
-        private val ioLock = Any()
+        private val warmup = WarmupStateRegistry()
 
-        override fun isReadyFor(language: Language): Boolean = locateVoice(language) != null
+        override fun isReadyFor(language: Language): Boolean = warmup.isReady(language)
+
+        override fun stateFor(language: Language): StateFlow<AudioEngineState> = warmup.stateOf(language)
+
+        override suspend fun warmUp(language: Language) {
+            warmup.warmUpOnce(language) {
+                withContext(Dispatchers.IO) { warmUpBlocking(language) }
+            }
+        }
 
         override suspend fun speak(
             text: String,
             language: Language,
         ) {
-            val voice = voices[language] ?: locateVoice(language) ?: return
+            if (!isReadyFor(language)) warmUp(language)
+            val engine = engines[language] ?: return
             withContext(Dispatchers.IO) {
-                val engine = engineFor(language, voice) ?: return@withContext
                 val audio = engine.generate(text = text, sid = 0, speed = SPEAK_SPEED)
                 playBlocking(audio.samples, audio.sampleRate)
             }
         }
 
-        /** Pesado (segundos la primera vez): siempre en IO; protegido por [ioLock]. */
-        private fun engineFor(
+        /** Verifica, extrae e instancia la voz en IO; publica el estado. */
+        private fun warmUpBlocking(language: Language) {
+            val state = warmup.stateOf(language)
+            state.value = AudioEngineState.Verifying
+            val entry =
+                readManifest().firstOrNull { entry ->
+                    entry.engine == PIPER &&
+                        entry.language == language.isoCode &&
+                        entry.sha256.isNotBlank()
+                }
+            if (entry == null) {
+                Log.w(TAG, "sin voz piper verificada para ${language.isoCode}")
+                state.value = AudioEngineState.Degraded("sin voz piper para ${language.isoCode}")
+                return
+            }
+            val installed = verifiedVoice(entry)
+            if (installed != null) {
+                finishWarmup(language, installed)
+                return
+            }
+            state.value = AudioEngineState.Extracting
+            val extracted = extractVoice(entry)
+            if (extracted == null) {
+                Log.w(TAG, "no se pudo instalar ${entry.path}")
+                state.value = AudioEngineState.Degraded("instalación de ${entry.path} falló")
+                return
+            }
+            finishWarmup(language, extracted)
+        }
+
+        /** Instancia el motor nativo y publica Ready/Degraded. */
+        private fun finishWarmup(
             language: Language,
             voice: PiperVoice,
-        ): OfflineTts? =
-            engines[language]
-                ?: synchronized(ioLock) {
-                    engines[language]
-                        ?: runCatching { OfflineTts(config = buildConfig(voice)) }
-                            .onFailure { error -> Log.w(TAG, "no se pudo cargar voz ${voice.id}", error) }
-                            .getOrNull()
-                            ?.also { engine -> engines[language] = engine }
-                }
+        ) {
+            val state = warmup.stateOf(language)
+            state.value = AudioEngineState.Loading
+            val engine = loadEngine(voice)
+            if (engine == null) {
+                state.value = AudioEngineState.Degraded("carga de ${voice.id} falló")
+                return
+            }
+            voices[language] = voice
+            engines[language] = engine
+            state.value = AudioEngineState.Ready
+        }
+
+        /** Voz instalada en filesDir con onnx verificado por SHA-256. */
+        private fun verifiedVoice(entry: VoiceEntry): PiperVoice? {
+            val dir = File(context.filesDir, entry.path)
+            return if (voiceFilesValid(dir, entry)) PiperVoice(dir = dir, id = entry.id) else null
+        }
+
+        private fun voiceFilesValid(
+            dir: File,
+            entry: VoiceEntry,
+        ): Boolean =
+            hasVoiceFiles(dir, entry.id) &&
+                ModelIntegrity
+                    .sha256Hex(File(dir, "${entry.id}.onnx"))
+                    .equals(entry.sha256, ignoreCase = true)
+
+        /** Extrae `tts/<id>` a staging y lo publica con rename atómico. */
+        private fun extractVoice(entry: VoiceEntry): PiperVoice? {
+            val installed =
+                AtomicInstall.install(
+                    stagingDir = File(context.filesDir, "${entry.path}.staging"),
+                    targetDir = File(context.filesDir, entry.path),
+                    copy = { dir -> copyAssetTree(entry.path, dir) },
+                    verify = { dir -> voiceFilesValid(dir, entry) },
+                ) ?: return null
+            return PiperVoice(dir = installed, id = entry.id)
+        }
+
+        /** Instanciación nativa (JNI, pesada): solo desde el warmup en IO. */
+        private fun loadEngine(voice: PiperVoice): OfflineTts? =
+            runCatching { OfflineTts(config = buildConfig(voice)) }
+                .onFailure { error -> Log.w(TAG, "no se pudo cargar voz ${voice.id}", error) }
+                .getOrNull()
 
         private fun buildConfig(voice: PiperVoice): OfflineTtsConfig =
             OfflineTtsConfig(
@@ -136,70 +213,6 @@ public class PiperTtsEngine
                     AudioFormat.CHANNEL_OUT_MONO,
                     AudioFormat.ENCODING_PCM_FLOAT,
                 ).coerceAtLeast(MIN_BUFFER_BYTES)
-
-        /** Localiza la voz instalada (copiada desde assets y verificada). */
-        private fun locateVoice(language: Language): PiperVoice? {
-            val cached = voices[language]
-            if (cached != null) return cached
-            val entry =
-                readManifest().firstOrNull { entry ->
-                    entry.engine == PIPER &&
-                        entry.language == language.isoCode &&
-                        entry.sha256.isNotBlank()
-                } ?: run {
-                    if (readManifest().isEmpty()) {
-                        Log.w(TAG, "manifest.json no legible o sin entradas tts")
-                    } else {
-                        Log.w(TAG, "sin voz piper para ${language.isoCode}")
-                    }
-                    return null
-                }
-            val installed =
-                installedDir(entry)
-                    ?: installFromAssets(entry)
-                    ?: run {
-                        Log.w(TAG, "no se pudo instalar ${entry.path}")
-                        return null
-                    }
-            if (!ModelIntegrity
-                    .sha256Hex(File(installed, "${entry.id}.onnx"))
-                    .equals(entry.sha256, ignoreCase = true)
-            ) {
-                Log.w(TAG, "sha256 desigual para ${entry.id}")
-                return null
-            }
-            val voice =
-                PiperVoice(
-                    dir = installed,
-                    id = entry.id,
-                )
-            voices[language] = voice
-            return voice
-        }
-
-        /** Dir en filesDir con onnx + tokens + espeak-ng-data ya instalados. */
-        private fun installedDir(entry: VoiceEntry): File? {
-            val dir = File(context.filesDir, entry.path)
-            return dir.takeIf { hasVoiceFiles(it, entry.id) }
-        }
-
-        /** Extrae el paquete `tts/<id>` de assets hacia filesDir (una vez). */
-        private fun installFromAssets(entry: VoiceEntry): File? =
-            try {
-                val hasAssets = context.assets.list(entry.path)?.isNotEmpty() == true
-                if (!hasAssets) {
-                    Log.w(TAG, "assets.list('${entry.path}') vacío")
-                    null
-                } else {
-                    val outDir = File(context.filesDir, entry.path)
-                    outDir.deleteRecursively()
-                    copyAssetTree(entry.path, outDir)
-                    if (hasVoiceFiles(outDir, entry.id)) outDir else null
-                }
-            } catch (error: Exception) {
-                Log.w(TAG, "install ${entry.path} falló", error)
-                null
-            }
 
         /** Copia recursiva (dir `espeak-ng-data` incluida). */
         private fun copyAssetTree(
