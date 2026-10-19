@@ -3,6 +3,7 @@ import org.gradle.api.tasks.Sync
 plugins {
     id("linguago.android.application")
     id("linguago.hilt")
+    id("androidx.baselineprofile")
 }
 
 // Distribución por idioma (ADR-017): cada flavor empaqueta SOLO los modelos
@@ -121,6 +122,13 @@ android {
     }
 }
 
+// El perfil se genera para el flavor `en`: el baseline se versiona en
+// `app/src/main/baseline-prof.txt` para que todos los flavors lo reutilicen,
+// y el startup permanece en `app/src/enRelease/generated/baselineProfiles`.
+baselineProfile {
+    saveInSrc = true
+}
+
 // Los modelos viven fuera del sourceSet main: cada variante genera su
 // directorio de assets con Sync (rutas relativas estables a models/) y lo
 // registra como directorio generado, de modo que AGP cablea la dependencia
@@ -138,6 +146,7 @@ dependencies {
     implementation(project(":core:core-domain"))
     implementation(project(":core:core-ui"))
     implementation(project(":core:core-data"))
+    compileOnly(libs.androidx.room.runtime)
     implementation(project(":core:core-content"))
     implementation(project(":core:core-audio"))
     implementation(project(":core:core-sync"))
@@ -161,6 +170,9 @@ dependencies {
     implementation(libs.androidx.activity.compose)
     implementation(libs.androidx.navigation.compose)
     implementation(libs.kotlinx.coroutines.android)
+    implementation(libs.androidx.profileinstaller)
+
+    baselineProfile(project(":baselineprofile"))
 
     testImplementation(libs.junit4)
 

@@ -390,22 +390,24 @@ private fun Renderer(
         is Exercise.KanaChoose -> OptionsStep(exercise.kana, exercise.romajiOptions, onPickOption)
         is Exercise.KanjiReading -> OptionsStep(exercise.kanji, exercise.readingOptions, onPickOption)
         is Exercise.ParticleFill -> OptionsStep(exercise.sentenceTemplate, exercise.particles, onPickOption)
-        is Exercise.ListenChoose -> {
-            AudioPanel(title = "Escucha y elige", onPlay = onPlayAudio, enabled = uiState.audioAvailable)
-            OptionsStep("¿Qué escuchaste?", exercise.options, onPickOption)
-        }
-        is Exercise.AudioOnlyPrompt -> {
-            AudioOnlyPromptPanel(
-                question = exercise.question,
-                audioAvailable = uiState.audioAvailable,
-                allowSlowPlayback = exercise.allowSlowPlayback,
-                transcript = exercise.audioText,
-                revealTranscript = uiState.feedback != null,
-                onPlay = onPlayAudio,
-                onPlaySlow = onPlaySlow,
-            )
-            OptionsStep("¿Qué escuchaste?", exercise.options, onPickOption)
-        }
+        is Exercise.ListenChoose ->
+            Column(verticalArrangement = Arrangement.spacedBy(12.dp)) {
+                AudioPanel(title = "Escucha y elige", onPlay = onPlayAudio, enabled = uiState.audioAvailable)
+                OptionsStep("¿Qué escuchaste?", exercise.options, onPickOption)
+            }
+        is Exercise.AudioOnlyPrompt ->
+            Column(verticalArrangement = Arrangement.spacedBy(12.dp)) {
+                AudioOnlyPromptPanel(
+                    question = exercise.question,
+                    audioAvailable = uiState.audioAvailable,
+                    allowSlowPlayback = exercise.allowSlowPlayback,
+                    transcript = exercise.audioText,
+                    revealTranscript = uiState.feedback != null,
+                    onPlay = onPlayAudio,
+                    onPlaySlow = onPlaySlow,
+                )
+                OptionsStep("¿Qué escuchaste?", exercise.options, onPickOption)
+            }
         is Exercise.ListenType ->
             TypePanel(
                 audioTitle = "Escribe lo que escuchas",

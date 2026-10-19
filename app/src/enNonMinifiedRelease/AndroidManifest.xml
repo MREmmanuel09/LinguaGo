@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <application>
+        <!-- Solo existe en la variante nonMinifiedRelease que usa el generador
+             de Baseline Profiles. No se empaqueta en debug ni en release. -->
+        <activity
+            android:name=".BenchmarkSeedActivity"
+            android:exported="true"
+            android:noHistory="true"
+            android:theme="@style/Theme.LinguaGo" />
+    </application>
+
+</manifest>
