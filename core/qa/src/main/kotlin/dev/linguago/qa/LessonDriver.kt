@@ -58,6 +58,7 @@ internal class LessonDriver(
         cursor: LessonCursor,
     ): Boolean {
         var index = cursor.index
+        val usedSlots = mutableSetOf<Int>()
         while (index < expected.size()) {
             cursor.index = index
             if (!awaitInLesson(scenario.title)) return false
@@ -85,13 +86,30 @@ internal class LessonDriver(
                 }
             }
 
-            val exercise = expected.exerciseAt(index) ?: return false
+            val base = expected.exerciseAt(index)
+            var exercise = base ?: return false
             val kind = awaitKind(exercise)
-            if (kind != exercise.kind) {
+            if (kind == ExerciseKind.UNKNOWN) {
                 report.addRaceSuspect(
-                    "lección '${scenario.title}' idx $index: esperado ${exercise.kind}, detectado $kind; visible='${dumpVisibleTexts()}'",
+                    "lección '${scenario.title}' idx $index: pantalla sin ejercicio reconocible; visible='${dumpVisibleTexts()}'",
                 )
                 return false
+            }
+            if (kind != exercise.kind) {
+                val reslot = expected.indexOfFirstUnusedWithKind(kind, usedSlots)
+                if (reslot == null || reslot == index) {
+                    report.addRaceSuspect(
+                        "lección '${scenario.title}' idx $index: esperado ${exercise.kind}, detectado $kind y sin re-slot disponible; visible='${dumpVisibleTexts()}'",
+                    )
+                    return false
+                }
+                // La app reordena su cola al reanudar tras perder la actividad:
+                // el orden del curso es solo una línea base. Se conduce el
+                // ejercicio visible con los datos del primer slot sin usar.
+                usedSlots += reslot
+                exercise = expected.exerciseAt(reslot)!!
+            } else {
+                usedSlots += index
             }
 
             val wrong = index % 4 == 3

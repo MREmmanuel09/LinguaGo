@@ -49,6 +49,17 @@ internal class CourseAnswers(
 ) {
     fun exerciseAt(index: Int): ExpectedExercise? = exercises.getOrNull(index)
 
+    /**
+     * La app reordena su cola de ejercicios al reanudar una lección tras
+     * perder la actividad (perturbaciones R8/expulsivas), así que el índice
+     * del curso es solo una línea base. Este resolver devuelve el índice del
+     * primer ejercicio sin usar del tipo visible en pantalla.
+     */
+    fun indexOfFirstUnusedWithKind(
+        kind: ExerciseKind,
+        used: Set<Int>,
+    ): Int? = exercises.withIndex().firstOrNull { (i, e) -> e.kind == kind && i !in used }?.index
+
     fun size(): Int = exercises.size
 
     companion object {
