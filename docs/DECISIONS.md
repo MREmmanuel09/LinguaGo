@@ -31,6 +31,9 @@
 | 019 | Evaluación de producción oral libre B2 sin LLMs (heurística + autoevaluación) | Propuesto |
 | 020 | Inicialización asíncrona no bloqueante de motores nativos (Vosk/Piper) | Propuesto |
 | 021 | Migración Room v2→v3 con test instrumentado de regresión de estado | Propuesto |
+| 022 | Cierre determinista de recursos nativos JNA/JNI bajo cancelación | Propuesto |
+| 023 | Baseline Profiles y Macrobenchmark del flujo crítico | Propuesto |
+| 024 | RELEASE GATE F4: módulo QA de sesión instrumentada contra `enRelease` | Propuesto |
 
 ---
 ## ADR-000: Convención del registro de decisiones
@@ -746,6 +749,138 @@ cero `REASON_CRASH_NATIVE`.
   midiendo 50 ciclos completos después de ese baseline.
 
 **Invariantes protegidos:** I1 (offline), I3 (sin fricción), I7 (testabilidad).
+
+---
+
+## ADR-023: Baseline Profiles y Macrobenchmark del flujo crítico
+
+**Estado:** Propuesto
+**Fecha:** 2026-10-18
+
+**Contexto:** el arranque en frío y la navegación hasta la primera lección y
+el repaso son la ruta crítica percibida por el usuario. Sin perfil, ART
+compila el código en cada instalación y el coste se nota especialmente en
+hardware modesto. El roadmap exige perfilar Cold Start → Home → apertura de
+lección B2 → interacción `ClozeDragDrop` → pantalla de Repaso FSRS, medir el
+efecto y mantener la app offline (I1) sin fricción (I3).
+
+**Decisión:** se añade el módulo `:baselineprofile` (`com.android.test`,
+self-instrumenting) que apunta a `:app` y solo instrumenta el flavor `en`.
+`BaselineProfileGenerator` genera `startupProfile` y
+`criticalJourneyProfile` con UiAutomator y selectores estables. La navegación
+usa `tapClickableAncestor` para tolerar el fling de Compose que consume el
+primer toque. `BenchmarkSeedActivity`, presente solo en
+`enNonMinifiedRelease`, fija el curso `es-en` y siembra 20 tarjetas FSRS
+vencidas para que el repaso sea determinista y sobreviva a las pasadas
+sucesivas de `BaselineProfileRule`.
+
+Con `saveInSrc = true`, AGP escribe ambos perfiles en
+`app/src/enRelease/generated/baselineProfiles/`. El baseline se copia a
+`app/src/main/baseline-prof.txt` y se versiona para que los cuatro flavors
+de idioma lo reutilicen; el startup permanece en
+`app/src/enRelease/generated/baselineProfiles/startup-prof.txt`.
+`profileinstaller` queda como dependencia de `:app`. Los benchmarks
+`StartupBenchmark` usan `StartupTimingMetric` y `FrameTimingMetric`,
+`StartupMode.COLD` y 5 iteraciones, comparando
+`CompilationMode.Partial(BaselineProfileMode.Require)` con
+`CompilationMode.None()`. En emulador se suprime el error `EMULATOR` solo
+para el smoke local; no se acepta como evidencia de rendimiento.
+
+**Consecuencias:**
+- Añade un módulo de test (`:baselineprofile`): el proyecto pasa de 21 a 22
+  módulos Gradle; `build-logic` sigue como included build.
+- Medición preliminar en emulador API 37 x86_64 (2026-10-18): TTID mediana
+  de **560.60 ms sin perfil** y **493.65 ms con perfil** (−11.9 %). No alcanza
+  el objetivo de ≥15 %, pero el emulador no representa ARM físico; la
+  validación definitiva sigue en el checkpoint humano de Fase 4.
+- En la ventana de scroll de Home se registraron 68 frames por pasada y un
+  P95 de `frameDurationCpuMs` de 89.70 ms sin perfil frente a 80.04 ms con
+  perfil. La ventana incluye el arranque COLD, así que solo vale como smoke.
+- El baseline versionado pesa ~2.42 MB y el startup ~2.07 MB. Deben
+  regenerarse cuando cambien de forma significativa la navegación o las
+  pantallas del recorrido, y revisar el diff en el PR.
+- Regeneración: `:app:generateEnBaselineProfile`. Macrobenchmark:
+  `:baselineprofile:connectedEnBenchmarkReleaseAndroidTest`.
+- `suppressErrors = "EMULATOR"` es exclusivamente local; CI y hardware real
+  deben ejecutar sin esa supresión.
+
+**Invariantes protegidos:** I3 (sin fricción), I7 (testabilidad).
+
+---
+
+## ADR-024: RELEASE GATE F4 — módulo QA de sesión instrumentada contra `enRelease`
+
+**Fecha:** 2026-10-19 · **Estado:** Propuesto
+
+**Contexto:** F4.3 ya valida los 4 flavors release con granularidad de
+smoke manual; ROADMAP_V2.md (Fase 4) exige además un RELEASE GATE: una
+sesión de uso real suficientemente larga (≥20 min) contra la variante
+release minificada (R8) que exponga fugas de memoria, degradación térmica,
+rachas de UI race y caminos STT/TTS degradados, con reporte objetivo y
+auditable antes de declarar `v2.0` estable.
+
+**Decisión:** se añade el módulo `:core:qa` (`com.android.test`,
+self-instrumenting sobre `:app`, flavor `en`, buildType `release`
+firmado con debug para pruebas). Allí vive
+`ReleaseGateF4Test`: orquesta 3 lecciones B2 (`Plazos y concesiones`,
+`Presupuesto bajo presión`, `Quién decide qué`) leídas del `course.json`
+de `content-es-en`, conguela métricas de
+thermal/RAM/nativeHeap/`fd` en baseline y en cada iteración. También
+perturbaciones exploratorias por índice de ejercicio: rotación
+(user_rotation vía shell, `setOrientationLeft` rompe el árbol
+UiAutomator), `trim-memory RUNNING_CRITICAL`, `always_finish_activities`,
+doble-tap en Continuar, cancelación de TTS/STT, notificación durante
+recording, 5 min en background, fontScale 2× / modo oscuro / locale `en-US`.
+El reporte JSON se escribe en el almacenamiento externo y se copia a
+`/data/local/tmp/` porque AGP desinstala ambos APK al terminar (wipe de
+`/Android/data`). Puede ejecutarse predeterminadamente en modo completo y
+smoke con overrides:
+- Smoke (~15 min): `:core:qa:connectedEnReleaseAndroidTest
+  -Pandroid.testInstrumentationRunnerArguments.linguago.releasegate.durationMinutes=1
+  -Pandroid.testInstrumentationRunnerArguments.linguago.releasegate.minLessons=1`.
+- Completo: sin overrides (20 min objetivo). Los veredictos no-PASS se
+  muestran como lo que son: fallas por criterio objetivo.
+
+**Limitaciones documentadas (importantes):**
+- `fd_count` no es medible en una app release no-debuggable
+  (`/proc/<pid>/fd` denegado): queda `null` y esa prueba no vota.
+- En el emulador API 37 x86_64 no hay micrófono ni gestión térmica real:
+  los caminos STT/FREE_SPEAKING degradan al SKIP oficial del panel (I3:
+  nunca bloquear) y quedan documentados como verificación subjetiva
+  humana sobre hardware físico.
+- La RAM pico del proceso (~400-500 MB) incluye los modelos Piper/Vosk
+  residentes; el gate reporta el peak junto con la traza por iteración
+  para que el criterio de fuga se juzgue con la curva completa y no con
+  un solo valor.
+- Las verificaciones subjetivas (TalkBack, haptics, "sensación" de
+  latencia del audio) se registran en `manual_checks` como pendientes de
+  human reviewer: la automatización no inventa ese veredicto.
+
+**Alternativas consideradas:**
+- Test dentro de `app/src/androidTest`: mezclado con el código de la app
+  y metría el job de instrumentados; descartado por separación de capas
+  (la QA de release vive en su propio módulo).
+- Macrobenchmark (`BenchmarkRule`): describe un micro-recorrido, no
+  permite el acumulador de wall-clock (20 min), perturbaciones del
+ Ventana o intents IO externos; descartado para este propósito (se queda
+  en `:baselineprofile` para rendimiento puro).
+- Correrlo por subcomandos ad-hoc del build: no consistencia ni
+  reporte determinable; descartado.
+
+**Consecuencias:**
+- El proyecto pasa de 22 a 23 módulos Gradle (commit y conteos
+  actualizados en ARCHITECTURE.md / AGENTS.md / llms.txt).
+- Los veredictos de cada corrida viven en
+  `docs/qa/release-gate-f4-results.json` (artefacto reproducible: el
+  test y el driver son deterministas frente a `course.json`).
+- El módulo reutilizará el patrón de test self-instrumenting con flavor
+  dim explícito ya establecido por `:baselineprofile` (build-logic se
+  mantiene intacta).
+
+**Invariantes protegidos:** I3 (sin degradar UX por artefactos de QA: el
+gate usa los caminos oficiales de la app), I4 (no corrompe el progreso:
+lleva seeds y restauración de estado), I7 (testabilidad: veredicto
+objetivo y repetible).
 
 ---
 

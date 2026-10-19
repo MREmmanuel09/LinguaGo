@@ -37,10 +37,11 @@ flowchart TB
 **Regla de dependencia:** las capas externas dependen de las internas, nunca
 al revés. El dominio no conoce Compose, Room, Drive ni JNI.
 
-## 2. Módulos Gradle (21 + build-logic)
+## 2. Módulos Gradle (23 + build-logic)
 
 ```
 app/                       → Composition root: MainActivity, navegación, DI de app, OAuthCallbackActivity
+baselineprofile/           → Macrobenchmark y generación de Baseline Profiles (com.android.test)
 core/
   core-common/             → Result, LinguaError, DispatcherProvider, CryptoService (contrato)
   core-domain/             → Entidades, reglas puras, contratos de repositorio y use cases (Kotlin puro)
@@ -50,6 +51,7 @@ core/
   core-audio/              → Contratos TtsEngine/SttEngine + System/Piper/Vosk + integridad SHA-256
   core-auth/               → OAuth 2.0 PKCE, TokenStore cifrado, Google Drive REST, Keystore
   core-sync/               → CloudProvider (Strategy), selector, SyncEngine, SnapshotCodec
+  core-qa/                 → RELEASE GATE F4 (ADR-024): sesión instrumentada de uso real + perturbaciones (com.android.test)
 feature/
   feature-onboarding/      → Selección de curso
   feature-home/            → Ruta de aprendizaje + entrada al repaso
@@ -206,6 +208,7 @@ Rutas en `app/.../Routes.kt`. La barra inferior muestra Inicio/Progreso/Ajustes;
 | Unit tests (JVM) | `core-domain`, `core-sync`, `core-auth` | graders, reglas de racha, FSRS, merge de snapshots, codec, OAuth/Drive con MockWebServer, cifrado |
 | Instrumented | `core-ui` (`src/androidTest`) | contrato de accesibilidad I8: roles TalkBack, live regions, touch targets ≥48dp, fontScale 2x |
 | Contenido | tarea `validateContent` | los 4 `course.json` contra el schema v1 |
+| Rendimiento (ADR-023) | `:baselineprofile` (`com.android.test`) | recorrido Cold Start → Home → lección B2 → `ClozeDragDrop` → repaso FSRS; TTID y frames con/sin Baseline Profile |
 
 CI (`.github/workflows/ci.yml`), dos jobs por push/PR:
 
@@ -218,7 +221,12 @@ Comandos locales:
 ./gradlew ktlintCheck detekt validateContent test   # gate completo
 ./gradlew ktlintFormat                              # autofix de estilo
 ./gradlew :core:core-ui:connectedDebugAndroidTest   # instrumentados (emulador/dispositivo)
+./gradlew :app:generateEnBaselineProfile             # regenera baseline/startup
+./gradlew :baselineprofile:connectedEnBenchmarkReleaseAndroidTest  # macrobenchmark
 ```
+
+El baseline se versiona en `app/src/main/baseline-prof.txt`; el startup en
+`app/src/enRelease/generated/baselineProfiles/startup-prof.txt`.
 
 ## 11. Nombres de paquetes
 

@@ -33,6 +33,7 @@ dependencyResolutionManagement {
 rootProject.name = "LinguaGo"
 
 include(":app")
+include(":baselineprofile")
 
 include(
     ":core:core-domain",
@@ -43,6 +44,8 @@ include(
     ":core:core-sync",
     ":core:core-common",
     ":core:core-auth",
+    // QA de release (F4.3): sesión de 20 min + exploración de puntos débiles.
+    ":core:qa",
 )
 
 include(

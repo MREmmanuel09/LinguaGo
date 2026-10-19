@@ -36,7 +36,7 @@ flowchart LR
 | Documento | Contenido |
 |---|---|
 | [ARCHITECTURE.md](ARCHITECTURE.md) | Mapa técnico: capas, módulos, patrones, stack, datos, sync, testing |
-| [docs/DECISIONS.md](docs/DECISIONS.md) | ADRs 000–016 con índice y registro de pendientes |
+| [docs/DECISIONS.md](docs/DECISIONS.md) | ADRs 000–023 con índice y registro de pendientes |
 | [CONTENT_FORMAT.md](CONTENT_FORMAT.md) | Contrato del contenido v1: cómo escribir lecciones y ejercicios |
 | [docs/MODELS.md](docs/MODELS.md) | Política y estado de los modelos TTS/STT |
 | [docs/schemas/course-v1.json](docs/schemas/course-v1.json) | JSON Schema formal del contenido |
@@ -90,7 +90,7 @@ flowchart LR
 | `content/*` | Assets del contenido pedagógico |
 
 Las decisiones de arquitectura están registradas en
-[docs/DECISIONS.md](docs/DECISIONS.md) (ADRs 000–016).
+[docs/DECISIONS.md](docs/DECISIONS.md) (ADRs 000–023).
 
 ## Compilar y ejecutar
 

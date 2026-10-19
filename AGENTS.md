@@ -8,13 +8,14 @@
 ## Qué es este repositorio
 
 App Android nativa **offline-first** de aprendizaje de idiomas (ES→EN/PT/FR/JA)
-con 21 módulos Gradle, Clean Architecture, TTS/STT on-device, repaso espaciado
+con 23 módulos Gradle, Clean Architecture, TTS/STT on-device, repaso espaciado
 **FSRS** y respaldo opcional **cifrado** a Google Drive. Código MIT, contenido
 CC BY-SA 4.0. Invariantes I1–I9 en el README: **no se rompen**.
 
-Estructura rápida: `app/` (composition root) · `core/*` (dominio, datos, ui,
-content, audio, auth, sync, common) · `feature/*` (pantallas) · `content/*`
-(cursos como assets) · `build-logic/` (convention plugins) · `docs/`.
+Estructura rápida: `app/` (composition root) · `baselineprofile/` (macrobenchmark)
+· `core/*` (dominio, datos, ui, content, audio, auth, sync, common) ·
+`feature/*` (pantallas) · `content/*` (cursos como assets) · `build-logic/`
+(convention plugins) · `docs/`.
 
 ## Comandos esenciales (Windows PowerShell)
 
