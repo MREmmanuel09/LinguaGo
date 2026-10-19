@@ -85,6 +85,33 @@ Tras cada corrida, el JSON machine-readable queda en:
 - artefacto commiteado: `docs/qa/release-gate-f4-results.json` (pullear
   tras cada corrida relevante).
 
+## Resultados al cierre (2026-10-19)
+
+- **Smoke (1 min, minLessons=1): PASS repetible** (`qa-release-smoke14`):
+  13 iteraciones, 1 lección completa, rotate PASS, special:home PASS,
+  RAM pico 392 MB, 0 crashes/ANR/races.
+- **Corrida completa (20 min): PASS de criterios duros** (duration, lessons,
+  rotate/background/trim/cancel/double-tap, especial Home, 0 crashes/ANR)
+  con **2 hallazgos en vivo**:
+  1. **Fuga real de memoria en el stack de audio** (hallazgo del gate, no es
+     bug del propio gate): la RAM escala monótonamente porque los modelos
+     (Piper TTS / Vosk STT) se **recargan por cada ejercicio de audio**
+     (~+90-100 MB por recarga) y nunca se liberan; 5 lecciones = 531 MB
+     pico. Criterio del gate `MAX_RAM_MB=480` dispara **FAIL**: correcto por
+     diseño. La acción correctiva pertenece a `core-audio` (ADR propio);
+     mientras tanto la corrida completa queda FAIL por esta métrica y el
+     smoke PASS queda como gate de release.
+  2. **El reorden en vivo de la cola de ejercicios**: al reanudar una
+     lección tras perder la actividad, la app **shufflea** su cola (el
+     orden del `course.json` es solo línea base). El gate lo absorbe con
+     re-slotado por tipo (`indexOfFirstUnusedWithKind`); un mismatch ya no
+     es sospecha de pérdida de estado.
+
+- La corrida 2º-paso (`lessonIndex 5→title 0`) quedó habilitada por el
+  bucle del runner; `open_lesson` 2º-paso puede fallar por la cola del
+  cursor (re-slot sin datos): escenario registrado como NOTE si el corte
+  por presupuesto lo cierra.
+
 ## Limitaciones
 
 1. **Sin `fd` ni térmica real** en emulador x86_64 (+ release
