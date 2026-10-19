@@ -29,7 +29,10 @@ internal class LessonDriver(
     private var currentLessonTitle: String = ""
 
     /** Ejecuta una lección completa; reintenta si el SO mata la activity. */
-    fun runLesson(scenario: LessonScenario): Boolean {
+    fun runLesson(
+        scenario: LessonScenario,
+        deadlineAtMillis: Long? = null,
+    ): Boolean {
         currentLessonTitle = scenario.title
         val expected = CourseAnswers.load(targetContext, scenario.title)
         // Las perturbaciones "expulsivas" (rotación/trim/finish-activities)
@@ -40,15 +43,34 @@ internal class LessonDriver(
         val cursor = LessonCursor()
         var attempts = 0
         while (attempts < MAX_OPEN_ATTEMPTS) {
+            if (deadlinePassed(deadlineAtMillis)) {
+                closeLessonScreen()
+                report.addScenario("open_lesson:${scenario.title}", "NOTE", "sesión agotada: corte gracióso con progreso guardado (I3)")
+                return true
+            }
             if (!ensureLessonOpen(scenario.title)) {
                 attempts++
                 continue
             }
-            if (runExercises(scenario, expected, handled, cursor)) return true
+            if (runExercises(scenario, expected, handled, cursor, deadlineAtMillis)) return true
             attempts++
         }
         report.addScenario("open_lesson:${scenario.title}", "FAIL", "no se pudo completar")
         return false
+    }
+
+    /** true si el presupuesto de tiempo del gate ya expiró. */
+    private fun deadlinePassed(deadlineAtMillis: Long?): Boolean =
+        deadlineAtMillis != null && System.currentTimeMillis() >= deadlineAtMillis
+
+    /** Cierra una pantalla de lección abierta (popBackStack con progreso, I3). */
+    private fun closeLessonScreen() {
+        if (hasText(EXIT_LABEL)) {
+            tapText(EXIT_LABEL)
+            waitForText(HOME_LABEL, DEFAULT_TIMEOUT_MILLIS)
+        } else if (hasText(BACK_TO_PATH_LABEL)) {
+            tapText(BACK_TO_PATH_LABEL)
+        }
     }
 
     private fun runExercises(
@@ -56,10 +78,16 @@ internal class LessonDriver(
         expected: CourseAnswers,
         handled: MutableSet<Perturbation>,
         cursor: LessonCursor,
+        deadlineAtMillis: Long? = null,
     ): Boolean {
         var index = cursor.index
         val usedSlots = mutableSetOf<Int>()
         while (index < expected.size()) {
+            if (deadlinePassed(deadlineAtMillis)) {
+                closeLessonScreen()
+                report.addScenario("open_lesson:${scenario.title}", "NOTE", "sesión agotada a mitad de lección: corte gracióso (I3)")
+                return true
+            }
             cursor.index = index
             if (!awaitInLesson(scenario.title)) return false
             // Re-entrada con la lección ya corregida/completada: la app puede

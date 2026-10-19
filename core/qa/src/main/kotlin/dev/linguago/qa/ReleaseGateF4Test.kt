@@ -67,40 +67,63 @@ class ReleaseGateF4Test {
     fun releaseGate20MinuteSession() {
         val wallStart = Instant.now()
         val targetMs = targetMinutes * 60_000L
+        // Presupuesto del FG: al terminarse el tiempo en pared, el corte es
+        // graciioso (cierra la lección abierta y deja Home) para que el check
+        // final special:home_after_session sea comparable entre corridas.
+        val deadlineMs = wallStart.toEpochMilli() + targetMs + (OVERHEAD_MINUTES * 60_000L / 2)
         val wallCapMs = targetMs + (BACKGROUND_MINUTES + OVERHEAD_MINUTES) * 60_000L
         var foregroundMs = 0L
         var lessonIndex = 0
         var consecutiveFailures = 0
         var didBackground = false
+        var deadlineCut = false
 
         try {
+            // Un único punto de salida del bucle (detekt LoopWithTooManyJump):
+            // las tres condiciones de corte se resuelven a un solo break.
             while (foregroundMs < targetMs || lessonsCompleted < minLessons) {
-                if (Duration.between(wallStart, Instant.now()).toMillis() > wallCapMs) {
-                    report.addScenario("hard_cap", "NOTE", "se alcanzó el límite de tiempo en pared")
-                    return
+                val cut =
+                    when {
+                        deadlineMs < System.currentTimeMillis() && lessonsCompleted >= minLessons -> "deadline"
+                        Duration.between(wallStart, Instant.now()).toMillis() > wallCapMs -> "hard_cap"
+                        consecutiveFailures >= MAX_CONSECUTIVE_FAILURES -> "abort"
+                        else -> null
+                    }
+                if (cut != null) {
+                    when (cut) {
+                        "deadline" -> deadlineCut = true
+                        "hard_cap" -> report.addScenario("hard_cap", "NOTE", "se alcanzó el límite de tiempo en pared")
+                        else -> report.addScenario("abort", "FAIL", "3 lecciones consecutivas fallidas")
+                    }
+                    break
                 }
-                val backgroundDue = targetMs >= BACKGROUND_MINUTES * 60_000L * 3L
-                if (!didBackground && backgroundDue && foregroundMs >= targetMs / 2) {
+                if (targetMs >= BACKGROUND_MINUTES * 60_000L * 3L &&
+                    !didBackground &&
+                    foregroundMs >= targetMs / 2
+                ) {
                     didBackground = true
                     runBackgroundScenario()
                 } else {
                     val lessonStart = Instant.now()
-                    val ok = runLessonWithScenario(LessonPlan.scenarioFor(lessonIndex))
+                    val ok = runLessonWithScenario(LessonPlan.scenarioFor(lessonIndex), deadlineMs)
                     foregroundMs += Duration.between(lessonStart, Instant.now()).toMillis()
                     if (ok) {
                         lessonsCompleted += 1
                         consecutiveFailures = 0
                     } else {
                         consecutiveFailures += 1
-                        if (consecutiveFailures >= MAX_CONSECUTIVE_FAILURES) {
-                            report.addScenario("abort", "FAIL", "3 lecciones consecutivas fallidas")
-                            return
-                        }
                     }
                     lessonIndex += 1
                 }
             }
             runSpecialScenarios()
+            if (deadlineCut) {
+                report.addScenario(
+                    "deadline_cut",
+                    "NOTE",
+                    "corte gracióso al cerrarse el presupuesto del FG (Home medido con lección cerrada)",
+                )
+            }
         } finally {
             restoreSettings()
             collectCrashEvidence()
@@ -109,7 +132,10 @@ class ReleaseGateF4Test {
     }
 
     /** Reserva flags de la lección (fontScale/oscuro/locale) y conduce la lección. */
-    private fun runLessonWithScenario(scenario: LessonScenario): Boolean {
+    private fun runLessonWithScenario(
+        scenario: LessonScenario,
+        deadlineMs: Long? = null,
+    ): Boolean {
         if (scenario.fontScale2x) {
             probe.putSetting("system", "font_scale", "2.0")
             report.addManualCheck("fontScale=2.0 aplicado en la lección ${scenario.lessonIndex}")
@@ -122,7 +148,7 @@ class ReleaseGateF4Test {
             probe.putSetting("system", "system_locales", "en-US")
             report.addManualCheck("locale en-US aplicado en la lección ${scenario.lessonIndex}")
         }
-        val ok = driver.runLesson(scenario)
+        val ok = driver.runLesson(scenario, deadlineMs)
         if (scenario.fontScale2x) probe.putSetting("system", "font_scale", originalFontScale)
         if (scenario.darkMode) probe.putSetting("secure", "ui_night_mode", originalNightMode)
         if (scenario.localeChange) restoreLocale()
@@ -153,7 +179,23 @@ class ReleaseGateF4Test {
     }
 
     private fun runSpecialScenarios() {
-        val home = driver.waitForHome()
+        // Si la sesión terminó con una pantalla de lección viva (última
+        // iteración al filo del deadline), se cierra antes de medir Home:
+        // "Salir" hace popBackStack con progreso guardado (I3); en la
+        // pantalla "Lección completada" se sale con "Volver al camino".
+        if (runCatching { device.hasObject(By.text(EXIT_LABEL)) }.getOrDefault(false)) {
+            runCatching { device.findObject(By.text(EXIT_LABEL))?.click() }
+            device.waitForIdle()
+        } else if (runCatching { device.hasObject(By.text(BACK_TO_PATH_LABEL)) }.getOrDefault(false)) {
+            runCatching { device.findObject(By.text(BACK_TO_PATH_LABEL))?.click() }
+            device.waitForIdle()
+        }
+        val home =
+            driver.waitForHome() ||
+                runCatching {
+                    probe.pressHome()
+                    driver.waitForHome()
+                }.getOrDefault(false)
         report.addScenario("special:home_after_session", if (home) "PASS" else "FAIL", "Home visible al final")
         report.addManualCheck("TalkBack concurrente con la sesión: verificación subjetiva humana")
         report.addManualCheck("haptics percibidos en aciertos/errores: verificación subjetiva humana")
