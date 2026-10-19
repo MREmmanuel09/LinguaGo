@@ -28,6 +28,7 @@ internal const val FREE_SPEAK_RECORD: String = "Grabar respuesta"
 internal const val FREE_SPEAK_STOP: String = "Detener grabación"
 internal const val FREE_SPEAK_TRANSCRIPT: String = "Lo que entendimos"
 internal const val FREE_SPEAK_SKIP: String = "No puedo hablar ahora"
+
 // Al reabrir la lección a mitad del panel en revisión, el título y el prompt
 // quedan fuera del viewport y Compose los excluye del árbol: los marcadores
 // de abajo del panel son los que sobreviven.

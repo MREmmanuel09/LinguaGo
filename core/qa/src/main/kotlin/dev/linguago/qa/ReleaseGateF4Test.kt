@@ -220,11 +220,16 @@ class ReleaseGateF4Test {
             probe.shell("am force-stop $TARGET_PACKAGE")
             return
         }
-        device.findObject(By.text(COURSE_TILE_LABEL))?.click()
-        device.waitForIdle()
-        device.findObject(By.text(START_COURSE_LABEL))?.click()
-        device.waitForIdle()
-        device.wait(Until.hasObject(By.text(HOME_LABEL)), DEFAULT_TIMEOUT_MILLIS)
+        repeat(2) {
+            runCatching { device.findObject(By.text(COURSE_TILE_LABEL))?.click() }
+            device.waitForIdle()
+            runCatching { device.findObject(By.text(START_COURSE_LABEL))?.click() }
+            device.waitForIdle()
+            if (device.wait(Until.hasObject(By.text(HOME_LABEL)), 6_000L) != null) return@repeat
+        }
+        if (device.wait(Until.hasObject(By.text(HOME_LABEL)), DEFAULT_TIMEOUT_MILLIS) == null) {
+            error("seedCourseSelection: no llegó a Home")
+        }
         // Deja la app viva en Home: el baseline debe medir un proceso real.
         probe.launchApp()
         device.waitForIdle()

@@ -5,8 +5,8 @@ import android.util.Log
 import android.view.accessibility.AccessibilityNodeInfo
 import androidx.test.platform.app.InstrumentationRegistry
 import androidx.test.uiautomator.By
+import androidx.test.uiautomator.BySelector
 import androidx.test.uiautomator.UiDevice
-import androidx.test.uiautomator.UiObject2
 import androidx.test.uiautomator.Until
 
 /** Acción resultante de conducir un ejercicio. */
@@ -214,12 +214,13 @@ internal class LessonDriver(
         exercise: ExpectedExercise,
         wrong: Boolean,
     ): FlowAction {
-        val field = device.findObject(By.clazz("android.widget.EditText"))
+        val field =
+            runCatching { device.findObject(By.clazz("android.widget.EditText")) }.getOrNull()
         if (field == null) {
             report.addScenario("listen_type", "ERROR", "no se encontró el EditText")
             return FlowAction.ABORT
         }
-        field.text = if (wrong) "respuesta incorrecta" else exercise.transcription
+        runCatching { field.text = if (wrong) "respuesta incorrecta" else exercise.transcription }
         tapText(CHECK_LABEL)
         return FlowAction.CONTINUE
     }
@@ -391,9 +392,15 @@ internal class LessonDriver(
         if (hasText(FINISH_LABEL)) return true
         if (!waitForText(CONTINUE_LABEL, EXERCISE_TIMEOUT_MILLIS)) return false
         if (perturbation == Perturbation.DOUBLE_TAP_CONTINUE) {
-            val button = device.findObject(By.text(CONTINUE_LABEL))
-            button?.click()
-            button?.click()
+            runCatching {
+                val button = device.findObject(By.text(CONTINUE_LABEL))
+                button?.click()
+                button?.click()
+            }.onFailure {
+                // Si el árbol muere entre taps, el objetivo del escenario no
+                // se pierde: tapText reintenta con nodos frescos en el test.
+                tapText(CONTINUE_LABEL, 5_000)
+            }
             sleep(2_500)
             val detected = awaitKind(next)
             val expectedKind = next?.kind
@@ -445,6 +452,14 @@ internal class LessonDriver(
 
     private fun ensureLessonOpen(title: String): Boolean {
         if (awaitInLesson(title)) return true
+        if (hasText(EXIT_LABEL)) {
+            // Reanudada con una lección distinta abierta: relanzar la app
+            // siempre recae en esta pantalla (el runner no llega a Home) y el
+            // tile objetivo queda inalcanzable. "Salir" hace popBackStack y
+            // guarda progreso (I3), dejando el camino navegable de nuevo.
+            report.addScenario("open_dump:$title", "NOTE", "lección ajena abierta; se cierra")
+            tapText(EXIT_LABEL)
+        }
         if (!awaitHome()) {
             probe.pressHome()
             if (!awaitHome()) {
@@ -586,8 +601,6 @@ internal class LessonDriver(
 
     private fun hasDescPrefix(prefix: String): Boolean = device.hasObject(By.descStartsWith(prefix))
 
-    private fun hasDesc(description: String): Boolean = device.hasObject(By.desc(description))
-
     private fun hasEditText(): Boolean = device.findObject(By.clazz("android.widget.EditText")) != null
 
     private fun waitForText(
@@ -599,21 +612,45 @@ internal class LessonDriver(
 
     private fun waitFeedback(): Boolean = device.wait(Until.hasObject(By.text(CONTINUE_LABEL)), STT_TIMEOUT_MILLIS)
 
+    /**
+     * UiAutomator lanza [androidx.test.uiautomator.StaleObjectException] cuando
+     * el árbol se reconstruye entre `findObject` y `click` (visto en la corrida
+     * de 20 min en el tránsito Continuar→siguiente ejercicio). Todo tap pasa
+     * por aquí: cada intento re-resuelve el nodo fresco y reintenta; el speed
+     * `click()` existe (void), así que "éxito" = no lanzó excepción.
+     */
+    private fun tapFresh(selector: BySelector): Boolean {
+        repeat(3) {
+            val result =
+                runCatching {
+                    val node = device.findObject(selector)
+                    if (node != null) {
+                        node.click()
+                        true
+                    } else {
+                        false
+                    }
+                }.getOrDefault(false)
+            if (result) {
+                device.waitForIdle()
+                return true
+            }
+            sleep(700)
+        }
+        return false
+    }
+
     private fun tapText(
         text: String,
         timeout: Long = DEFAULT_TIMEOUT_MILLIS,
     ): Boolean {
         if (!waitForText(text, timeout)) return false
-        device.findObject(By.text(text))?.click()
-        device.waitForIdle()
-        return true
+        return tapFresh(By.text(text))
     }
 
     private fun tapDesc(description: String): Boolean {
         if (!waitForDesc(description)) return false
-        device.findObject(By.desc(description))?.click()
-        device.waitForIdle()
-        return true
+        return tapFresh(By.desc(description))
     }
 
     /**
@@ -625,17 +662,14 @@ internal class LessonDriver(
      */
     private fun tapDescScrolled(description: String): Boolean {
         repeat(4) {
-            if (hasDesc(description)) {
-                val chip = device.findObject(By.desc(description))
-                if (chip != null) {
-                    val bounds = chip.visibleBounds
-                    if (bounds.top >= 0 && device.displayHeight - bounds.top > 120) {
-                        chip.click()
-                        device.waitForIdle()
-                        return true
-                    }
-                }
-            }
+            val insideViewport =
+                runCatching {
+                    val chip = device.findObject(By.desc(description))
+                    chip != null &&
+                        chip.visibleBounds.top >= 0 &&
+                        device.displayHeight - chip.visibleBounds.top > 120
+                }.getOrDefault(false)
+            if (insideViewport) return tapFresh(By.desc(description))
             device.swipe(
                 device.displayWidth / 2,
                 (device.displayHeight * 0.75f).toInt(),
@@ -649,10 +683,7 @@ internal class LessonDriver(
     }
 
     private fun tapLabel(label: String) {
-        val exact: UiObject2? = device.findObject(By.text(label))
-        val target = exact ?: device.findObject(By.textContains(label))
-        target?.click()
-        device.waitForIdle()
+        if (!tapFresh(By.text(label))) tapFresh(By.textContains(label))
     }
 
     private fun tapClickableAncestor(
@@ -660,13 +691,17 @@ internal class LessonDriver(
         expectedText: String,
     ): Boolean {
         repeat(3) {
-            val label = device.findObject(By.text(text)) ?: return@repeat
-            val target =
-                generateSequence(label.parent) { node -> node.parent }
-                    .firstOrNull { node -> node.isClickable }
-                    ?: label
-            target.click()
-            if (device.wait(Until.hasObject(By.text(expectedText)), 5_000L)) return true
+            val nitido =
+                runCatching {
+                    val label = device.findObject(By.text(text)) ?: return false
+                    val target =
+                        generateSequence(label.parent) { node -> node.parent }
+                            .firstOrNull { node -> node.isClickable }
+                            ?: label
+                    target.click()
+                    true
+                }.getOrDefault(false)
+            if (nitido && device.wait(Until.hasObject(By.text(expectedText)), 5_000L)) return true
         }
         return false
     }
