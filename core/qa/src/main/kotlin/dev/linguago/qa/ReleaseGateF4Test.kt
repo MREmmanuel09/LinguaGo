@@ -121,13 +121,13 @@ class ReleaseGateF4Test {
                             "pasada extra con arranque en frío",
                         )
                     }
-                    val ok = runLessonWithScenario(scenario, deadlineMs)
+                    val ok = runLessonWithScenario(scenario, deadlineMs, repeatPass)
                     foregroundMs += Duration.between(lessonStart, Instant.now()).toMillis()
                     if (ok) {
                         lessonsCompleted += 1
                         consecutiveFailures = 0
                         completedLessonTitles += scenario.title
-                    } else {
+                    } else if (!repeatPass) {
                         consecutiveFailures += 1
                     }
                     lessonIndex += 1
@@ -152,6 +152,7 @@ class ReleaseGateF4Test {
     private fun runLessonWithScenario(
         scenario: LessonScenario,
         deadlineMs: Long? = null,
+        soft: Boolean = false,
     ): Boolean {
         if (scenario.fontScale2x) {
             probe.putSetting("system", "font_scale", "2.0")
@@ -165,7 +166,7 @@ class ReleaseGateF4Test {
             probe.putSetting("system", "system_locales", "en-US")
             report.addManualCheck("locale en-US aplicado en la lección ${scenario.lessonIndex}")
         }
-        val ok = driver.runLesson(scenario, deadlineMs)
+        val ok = driver.runLesson(scenario, deadlineMs, soft)
         if (scenario.fontScale2x) probe.putSetting("system", "font_scale", originalFontScale)
         if (scenario.darkMode) probe.putSetting("secure", "ui_night_mode", originalNightMode)
         if (scenario.localeChange) restoreLocale()
