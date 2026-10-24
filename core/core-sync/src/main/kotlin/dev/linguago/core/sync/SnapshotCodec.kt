@@ -10,8 +10,10 @@ import javax.inject.Singleton
 
 /**
  * Codec JSON del snapshot (ADR-013): parseo estricto (sin claves extra) y
- * verificación de versión del formato. Un payload de versión desconocida se
- * rechaza como InvalidContent (I4: nunca aplica mutaciones de otro formato).
+ * verificación de versión del formato. Se aceptan versiones anteriores para
+ * no perder respaldos existentes (v1 → 10 vidas por defecto, ADR-025); una
+ * versión futura se rechaza como InvalidContent (I4: nunca aplica mutaciones
+ * de otro formato).
  */
 @Singleton
 public class SnapshotCodec
@@ -43,7 +45,8 @@ public class SnapshotCodec
                         SyncSnapshot.serializer(),
                         payload.toString(Charsets.UTF_8),
                     )
-                if (decoded.schemaVersion == SyncSnapshot.SCHEMA_VERSION) {
+                val supported = decoded.schemaVersion in LEGACY_MIN_VERSION..SyncSnapshot.SCHEMA_VERSION
+                if (supported) {
                     Result.success(decoded)
                 } else {
                     Result.error(LinguaError.InvalidContent)
@@ -53,4 +56,9 @@ public class SnapshotCodec
             } catch (error: IllegalArgumentException) {
                 Result.error(LinguaError.InvalidContent)
             }
+
+        private companion object {
+            /** Versión mínima aceptada (v1 sin vidas, ADR-013). */
+            const val LEGACY_MIN_VERSION = 1
+        }
     }

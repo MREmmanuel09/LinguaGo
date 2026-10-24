@@ -60,3 +60,19 @@ public interface WordProgressDao {
     @Insert(onConflict = OnConflictStrategy.IGNORE)
     public suspend fun insertAll(entities: List<WordProgressEntity>)
 }
+
+/**
+ * DAO de vidas (ADR-025). Registro singleton con escrituras REPLACE: el
+ * repositorio aplica la regeneración por epoch antes de escribir.
+ */
+@Dao
+public interface HeartsProgressDao {
+    @Query("SELECT * FROM hearts_progress WHERE id = 1")
+    public suspend fun load(): HeartsProgressEntity?
+
+    @Query("SELECT * FROM hearts_progress WHERE id = 1")
+    public fun observe(): Flow<HeartsProgressEntity?>
+
+    @Insert(onConflict = OnConflictStrategy.REPLACE)
+    public suspend fun upsert(entity: HeartsProgressEntity)
+}

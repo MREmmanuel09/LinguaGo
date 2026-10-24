@@ -2,12 +2,13 @@ package dev.linguago.core.sync
 
 import dev.linguago.core.common.LinguaError
 import dev.linguago.core.common.Result
+import dev.linguago.core.domain.hearts.HEARTS_MAX
 import dev.linguago.core.domain.model.SyncSnapshot
 import org.junit.Assert.assertEquals
 import org.junit.Assert.assertTrue
 import org.junit.Test
 
-/** Codec del snapshot v1 (ADR-013): ida y vuelta + rechazo de formatos. */
+/** Codec del snapshot v2 (ADR-013/ADR-025): ida y vuelta + compatibilidad v1. */
 public class SnapshotCodecTest {
     private val codec = SnapshotCodec()
 
@@ -40,7 +41,22 @@ public class SnapshotCodecTest {
     @Test
     public fun `encode incluye la version del formato`() {
         val encoded = String((codec.encode(snapshot) as Result.Success).value, Charsets.UTF_8)
-        assertTrue(encoded.contains("\"schemaVersion\":1"))
+        assertTrue(encoded.contains("\"schemaVersion\":2"))
+    }
+
+    @Test
+    public fun `un snapshot v1 decodifica con diez vidas por defecto`() {
+        val payload =
+            """
+            {"schemaVersion":1,"exportedAtMillis":0,"streakCurrent":0,"streakLongest":0,
+             "streakLastDateEpochDay":0,"totalXp":0,"lessons":[]}
+            """.trimIndent().toByteArray()
+
+        val decoded = (codec.decode(payload) as Result.Success).value
+
+        assertEquals(1, decoded.schemaVersion)
+        assertEquals(HEARTS_MAX, decoded.heartsCurrent)
+        assertEquals(0L, decoded.heartsLastRegenEpochSecond)
     }
 
     @Test

@@ -54,4 +54,22 @@ public object DatabaseMigrations {
                 )
             }
         }
+
+    /**
+     * v3→v4 (ADR-025): crea la tabla singleton `hearts_progress`. Sin seed:
+     * la primera lectura publica 10 vidas, y el progreso existente queda
+     * intacto (I4).
+     */
+    public val MIGRATION_3_4: Migration =
+        object : Migration(3, 4) {
+            override fun migrate(db: SupportSQLiteDatabase) {
+                db.execSQL(
+                    "CREATE TABLE IF NOT EXISTS `hearts_progress` (" +
+                        "`id` INTEGER NOT NULL, " +
+                        "`hearts` INTEGER NOT NULL, " +
+                        "`lastRegenEpochSecond` INTEGER NOT NULL, " +
+                        "PRIMARY KEY(`id`))",
+                )
+            }
+        }
 }

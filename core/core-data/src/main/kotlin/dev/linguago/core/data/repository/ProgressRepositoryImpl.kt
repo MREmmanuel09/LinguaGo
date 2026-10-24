@@ -3,11 +3,15 @@ package dev.linguago.core.data.repository
 import dev.linguago.core.common.DispatcherProvider
 import dev.linguago.core.common.LinguaError
 import dev.linguago.core.common.Result
+import dev.linguago.core.data.database.HeartsProgressEntity
 import dev.linguago.core.data.database.LessonProgressDao
 import dev.linguago.core.data.database.LessonProgressEntity
 import dev.linguago.core.data.database.LinguagoDatabase
 import dev.linguago.core.data.database.StreakProgressDao
 import dev.linguago.core.data.database.StreakProgressEntity
+import dev.linguago.core.domain.hearts.HEARTS_MAX
+import dev.linguago.core.domain.hearts.HeartsRules
+import dev.linguago.core.domain.hearts.HeartsState
 import dev.linguago.core.domain.model.LessonId
 import dev.linguago.core.domain.model.LessonProgress
 import dev.linguago.core.domain.model.StreakState
@@ -94,6 +98,7 @@ public class ProgressRepositoryImpl
                 try {
                     val streak = database.streakProgressDao().load()?.toDomain() ?: StreakState.zero()
                     val lessons = database.lessonProgressDao().snapshotAll()
+                    val hearts = effectiveHearts()
                     Result.success(
                         SyncSnapshot(
                             exportedAtMillis = System.currentTimeMillis(),
@@ -110,6 +115,8 @@ public class ProgressRepositoryImpl
                                         attempts = entity.attempts,
                                     )
                                 },
+                            heartsCurrent = hearts.hearts,
+                            heartsLastRegenEpochSecond = hearts.lastRegenEpochSecond,
                         ),
                     )
                 } catch (e: Exception) {
@@ -141,6 +148,15 @@ public class ProgressRepositoryImpl
                             ),
                         )
                     }
+                    // Vidas (ADR-025): mínimo de vidas y máximo del ancla de
+                    // regeneración; una penalización no resucita al sincronizar.
+                    database.heartsProgressDao().upsert(
+                        HeartsProgressEntity(
+                            id = HEARTS_SINGLETON_ID,
+                            hearts = merged.heartsCurrent,
+                            lastRegenEpochSecond = merged.heartsLastRegenEpochSecond,
+                        ),
+                    )
                     Result.success(
                         StreakState(
                             current = merged.streakCurrent,
@@ -158,6 +174,7 @@ public class ProgressRepositoryImpl
         private suspend fun currentLocalSnapshot(): SyncSnapshot {
             val streak = database.streakProgressDao().load()?.toDomain() ?: StreakState.zero()
             val lessons = database.lessonProgressDao().snapshotAll()
+            val hearts = effectiveHearts()
             return SyncSnapshot(
                 exportedAtMillis = 0L,
                 streakCurrent = streak.current,
@@ -173,7 +190,16 @@ public class ProgressRepositoryImpl
                             attempts = entity.attempts,
                         )
                     },
+                heartsCurrent = hearts.hearts,
+                heartsLastRegenEpochSecond = hearts.lastRegenEpochSecond,
             )
+        }
+
+        /** Vidas efectivas aplicando la regeneración por tiempo (ADR-025). */
+        private suspend fun effectiveHearts(): HeartsState {
+            val now = System.currentTimeMillis() / 1000L
+            val stored = database.heartsProgressDao().load()
+            return HeartsRules.regenerated(stored?.toDomain() ?: HeartsRules.initial(now), now)
         }
     }
 
@@ -203,4 +229,12 @@ private fun LessonProgressEntity.toDomain(): LessonProgress =
         attempts = attempts,
     )
 
+private fun HeartsProgressEntity.toDomain(): HeartsState =
+    HeartsState(
+        hearts = hearts,
+        max = HEARTS_MAX,
+        lastRegenEpochSecond = lastRegenEpochSecond,
+    )
+
 private const val STREAK_SINGLETON_ID = 1L
+private const val HEARTS_SINGLETON_ID = 1L

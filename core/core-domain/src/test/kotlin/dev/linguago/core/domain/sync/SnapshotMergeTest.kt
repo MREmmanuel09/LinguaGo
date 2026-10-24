@@ -1,11 +1,12 @@
 package dev.linguago.core.domain.sync
 
+import dev.linguago.core.domain.hearts.HEARTS_MAX
 import dev.linguago.core.domain.model.SyncSnapshot
 import org.junit.Assert.assertEquals
 import org.junit.Assert.assertTrue
 import org.junit.Test
 
-/** Merge monótono de snapshots (ADR-013, I4: nunca borra progreso). */
+/** Merge monótono de snapshots (ADR-013/ADR-025, I4: nunca borra progreso). */
 public class SnapshotMergeTest {
     private fun entry(
         lessonId: String,
@@ -27,6 +28,8 @@ public class SnapshotMergeTest {
         totalXp: Int = 0,
         lessons: List<SyncSnapshot.LessonEntry> = emptyList(),
         exportedAtMillis: Long = 0,
+        hearts: Int = HEARTS_MAX,
+        heartsLastRegen: Long = 0L,
     ): SyncSnapshot =
         SyncSnapshot(
             exportedAtMillis = exportedAtMillis,
@@ -35,6 +38,8 @@ public class SnapshotMergeTest {
             streakLastDateEpochDay = lastDay,
             totalXp = totalXp,
             lessons = lessons,
+            heartsCurrent = hearts,
+            heartsLastRegenEpochSecond = heartsLastRegen,
         )
 
     @Test
@@ -99,5 +104,27 @@ public class SnapshotMergeTest {
             snapshot(streakCurrent = 6, totalXp = 80, lastDay = 15, lessons = listOf(entry("l2", xp = 5)))
 
         assertEquals(local.mergedWith(remote), remote.mergedWith(local))
+    }
+
+    @Test
+    public fun `vidas toman el minimo y el ancla de regeneracion el maximo`() {
+        val local = snapshot(hearts = 4, heartsLastRegen = 100L)
+        val remote = snapshot(hearts = 8, heartsLastRegen = 250L)
+
+        val merged = local.mergedWith(remote)
+
+        assertEquals(4, merged.heartsCurrent)
+        assertEquals(250L, merged.heartsLastRegenEpochSecond)
+    }
+
+    @Test
+    public fun `un snapshot viejo sin vidas no resucita una penalizacion`() {
+        val local = snapshot(hearts = 3, heartsLastRegen = 500L)
+        val legacy = snapshot(hearts = HEARTS_MAX, heartsLastRegen = 0L)
+
+        val merged = local.mergedWith(legacy)
+
+        assertEquals(3, merged.heartsCurrent)
+        assertEquals(500L, merged.heartsLastRegenEpochSecond)
     }
 }

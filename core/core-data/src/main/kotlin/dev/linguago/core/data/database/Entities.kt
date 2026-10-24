@@ -37,6 +37,18 @@ public data class LessonProgressEntity(
 )
 
 /**
+ * Vidas del alumno (ADR-025). Registro singleton: máximo 10, +1 cada 60 s.
+ * [lastRegenEpochSecond] ancla la regeneración por tiempo, de modo que el
+ * paso del tiempo con la app cerrada también recupera vidas.
+ */
+@Entity(tableName = "hearts_progress")
+public data class HeartsProgressEntity(
+    @PrimaryKey public val id: Long,
+    public val hearts: Int,
+    public val lastRegenEpochSecond: Long,
+)
+
+/**
  * Estado FSRS de una tarjeta de vocabulario (ADR-016). Clave compuesta
  * (word, courseId): la misma palabra puede existir en cursos distintos.
  * [errorCount] y [lastErrorType] alimentan el feedback de errores frecuentes

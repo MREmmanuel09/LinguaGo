@@ -14,18 +14,24 @@ import dev.linguago.core.data.database.DatabaseMigrations
 import dev.linguago.core.data.database.LinguagoDatabase
 import dev.linguago.core.data.preferences.SettingsRepositoryImpl
 import dev.linguago.core.data.repository.CompleteLessonUseCaseImpl
+import dev.linguago.core.data.repository.ConsumeHeartUseCaseImpl
 import dev.linguago.core.data.repository.GetNextReviewUseCaseImpl
 import dev.linguago.core.data.repository.GradeReviewUseCaseImpl
+import dev.linguago.core.data.repository.HeartsRepositoryImpl
+import dev.linguago.core.data.repository.ObserveHeartsUseCaseImpl
 import dev.linguago.core.data.repository.ProgressRepositoryImpl
 import dev.linguago.core.data.repository.ReviewRepositoryImpl
 import dev.linguago.core.data.repository.SubmitAnswerUseCaseImpl
 import dev.linguago.core.data.repository.UpdateStreakUseCaseImpl
+import dev.linguago.core.domain.repository.HeartsRepository
 import dev.linguago.core.domain.repository.ProgressRepository
 import dev.linguago.core.domain.repository.ReviewRepository
 import dev.linguago.core.domain.repository.SettingsRepository
 import dev.linguago.core.domain.usecase.CompleteLessonUseCase
+import dev.linguago.core.domain.usecase.ConsumeHeartUseCase
 import dev.linguago.core.domain.usecase.GetNextReviewUseCase
 import dev.linguago.core.domain.usecase.GradeReviewUseCase
+import dev.linguago.core.domain.usecase.ObserveHeartsUseCase
 import dev.linguago.core.domain.usecase.SubmitAnswerUseCase
 import dev.linguago.core.domain.usecase.UpdateStreakUseCase
 import javax.inject.Singleton
@@ -46,8 +52,11 @@ public object DataModule {
     ): LinguagoDatabase =
         Room
             .databaseBuilder(context, LinguagoDatabase::class.java, DATABASE_NAME)
-            .addMigrations(DatabaseMigrations.MIGRATION_1_2, DatabaseMigrations.MIGRATION_2_3)
-            .build()
+            .addMigrations(
+                DatabaseMigrations.MIGRATION_1_2,
+                DatabaseMigrations.MIGRATION_2_3,
+                DatabaseMigrations.MIGRATION_3_4,
+            ).build()
 
     @Provides
     @Singleton
@@ -76,6 +85,15 @@ public abstract class DataRepositoryModule {
 
     @Binds
     public abstract fun bindsReviewRepository(impl: ReviewRepositoryImpl): ReviewRepository
+
+    @Binds
+    public abstract fun bindsHeartsRepository(impl: HeartsRepositoryImpl): HeartsRepository
+
+    @Binds
+    public abstract fun bindsObserveHeartsUseCase(impl: ObserveHeartsUseCaseImpl): ObserveHeartsUseCase
+
+    @Binds
+    public abstract fun bindsConsumeHeartUseCase(impl: ConsumeHeartUseCaseImpl): ConsumeHeartUseCase
 
     @Binds
     public abstract fun bindsGetNextReviewUseCase(impl: GetNextReviewUseCaseImpl): GetNextReviewUseCase
