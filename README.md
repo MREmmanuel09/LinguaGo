@@ -50,7 +50,9 @@ flowchart LR
 
 1. **Offline-first estricto** — ninguna ruta crítica de aprendizaje necesita red.
 2. **Sin backend propio** — la nube es opcional y solo como respaldo (Google Drive).
-3. **Sin fricción** — no hay login obligatorio, ni vidas, ni anuncios, ni esperas.
+3. **Sin fricción** — no hay login obligatorio, ni anuncios, ni esperas
+   permanentes. Las vidas (ADR-025) penalizan el error pero se recuperan en
+   ≤10 min y nunca bloquean el acceso.
 4. **Progreso intocable** — la sincronización nunca elimina avances del usuario.
 5. **Identidad original** — cero elementos de terceros en marca, arte o contenido.
 6. **Código abierto real** — MIT para código, CC BY-SA 4.0 para contenido.

@@ -34,6 +34,8 @@
 | 022 | Cierre determinista de recursos nativos JNA/JNI bajo cancelación | Propuesto |
 | 023 | Baseline Profiles y Macrobenchmark del flujo crítico | Propuesto |
 | 024 | RELEASE GATE F4: módulo QA de sesión instrumentada contra `enRelease` | Propuesto |
+| 025 | Vidas con penalización no bloqueante y XP diferido | Aprobado |
+| 026 | Learning Path lineal y lenguaje visual flat-3D («Feather») | Aprobado |
 
 ---
 ## ADR-000: Convención del registro de decisiones
@@ -892,6 +894,113 @@ java/native/graphics/private-other de cada iteración queda en el JSON.
 gate usa los caminos oficiales de la app), I4 (no corrompe el progreso:
 lleva seeds y restauración de estado), I7 (testabilidad: veredicto
 objetivo y repetible).
+
+---
+
+## ADR-025: Vidas con penalización no bloqueante y XP diferido
+
+**Estado:** Aprobado
+**Fecha:** 2026-10-24
+
+**Contexto:** el rediseño gamificado (ADR-026) introduce un coste del error
+para incentivar la precisión. El invariante I3 prohibía "vidas" y esperas, y
+además el XP se persistía por respuesta correcta
+(`SubmitAnswerUseCaseImpl`) y se volvía a sumar al completar la lección
+(`CompleteLessonUseCaseImpl`): eso hacía imposible "perder el XP de la clase"
+y duplicaba el total acumulado.
+
+**Decisión:**
+- Vidas máximas **10**, arranque con 10 y **+1 cada 60 s**. Estado
+  `HeartsState(hearts, max, lastRegenEpochSecond)` persistido en Room v4
+  (tabla `hearts_progress`); al leer se aplica la regeneración por epoch
+  (incluido el arranque en frío).
+- Consumo: respuesta incorrecta en lección −1; `Otra vez` en repaso FSRS −1;
+  el SKIP de voz nunca consume.
+- A 0 vidas la lección se **cancela**: no se persiste `xpEarned`, no se llama
+  a `CompleteLessonUseCase` (sin progreso, sin racha, sin `attempts`). El
+  repaso FSRS nunca se bloquea: a 0 vidas continúa sin penalizar.
+- **XP diferido:** `SubmitAnswerUseCase` solo califica; el XP se persiste una
+  única vez en `CompleteLessonUseCase` (`markLessonCompleted` + `addXp` +
+  racha). Se elimina el `addXp` por respuesta y con ello el doble conteo.
+- Repetir una lección completada otorga **XP completo** y `attempts++`
+  (decisión de producto).
+- Sync: `SyncSnapshot` añade `heartsCurrent` y
+  `heartsLastRegenEpochSecond` con defaults (10 / 0); el merge normaliza la
+  regeneración en ambos lados y toma el **mínimo** (las vidas perdidas no
+  resucitan al sincronizar). Los snapshots antiguos decodifican con 10 vidas.
+- **I3 se reinterpreta:** "sin fricción" = sin login obligatorio, anuncios ni
+  esperas permanentes. Las vidas devuelven el acceso en ≤10 min y nunca
+  cierran el camino.
+
+**Alternativas consideradas:** (a) no añadir vidas (rechazada: se quiere
+coste del error); (b) vidas comprables o con backend (rechazada: viola I1/I2);
+(c) bloqueo permanente a 0 vidas (rechazada: viola I3).
+
+**Consecuencias:**
+- Room v3→v4 con `MIGRATION_3_4` y test instrumentado `Migration3To4Test`.
+- Nuevos contratos de dominio: `HeartsState`, `HeartsRules`,
+  `ObserveHeartsUseCase`, `ConsumeHeartUseCase`, `RegisterAnswerUseCase`.
+- `LessonViewModel` gana `hearts` y `lessonCancelled`; `ReviewViewModel`
+  consume en `Otra vez`.
+- El Release Gate F4 limita los fallos intencionales del driver (presupuesto
+  por lección) para no cancelar lecciones durante la sesión.
+- README y ARCHITECTURE actualizan el texto de I3.
+
+**Invariantes protegidos:** I3 (redefinido), I4 (las vidas no son progreso;
+el XP sigue siendo monótono), I8.
+
+---
+
+## ADR-026: Learning Path lineal y lenguaje visual flat-3D («Feather»)
+
+**Estado:** Aprobado
+**Fecha:** 2026-10-24
+
+**Contexto:** Home muestra hoy tarjetas de unidad en una columna
+(`UnitCard`), sin camino ni narrativa de progreso. Se quiere un único camino
+lineal animado, con cofres por unidad, mascota y HUD de racha/vidas/XP,
+manteniendo la identidad púrpura existente (RFC §7) y sin arte de terceros
+(I5).
+
+**Decisión:**
+- **Camino lineal único:** se aplana `course.levels → units → lessons` en el
+  orden del curso (que ya es la rampa de dificultad A1→B2). Tras cada unidad
+  se inserta un nodo `Chest` independiente; la última lección sigue siendo
+  rejugable.
+- **Desbloqueo:** una lección sin completar está `Locked` si algún predecesor
+  lineal no está completado; las completadas siempre son clicables
+  (repetición con XP completo, ADR-025).
+- **Identidad visual "Feather"** (nombre interno del sistema de diseño, sin
+  dependencia externa): lenguaje flat-3D (borde inferior 4dp, sin sombras
+  difusas), radios 20–24dp en componentes nuevos (12/16 existentes se
+  conservan), púrpura actual + oro para cofres y rojo para corazones. Tokens
+  aditivos en `core-ui/LinguaTokens.kt`.
+- **Movimiento:** Compose nativo primero (`animate*AsState`, `spring`,
+  `Canvas`, `AnimatedContent`); Rive/Lottie solo si el arte final lo exige,
+  midiendo el APK (presupuesto 100–170 MB por flavor).
+- **Mascota original** (colibrí "Lumi", placeholder vectorial en Fase 6 y
+  arte final después).
+- El camino se activa con `BuildConfig.LEARNING_PATH_V2` y mantiene
+  `UnitCard` como fallback.
+- **HUD:** racha, vidas y nivel visual derivado (`totalXp / 100 + 1`), sin
+  persistir nivel.
+
+**Alternativas consideradas:** (a) camino por unidad (rechazada: se quiere
+uno solo); (b) cambiar la paleta a verde (rechazada: identidad original I5);
+(c) empezar con Rive/Lottie (rechazada: jank y tamaño antes de validar el
+diseño).
+
+**Consecuencias:**
+- Nuevos composables en `core-ui` (`PathNode`, `HeartsIndicator`,
+  `LiquidXpBar`, `ConfettiBurst`, `ChestNode`).
+- `HomeUiState` gana campos aditivos (`pathNodes`, `hearts`, `level`,
+  `xpIntoLevel`); `onLessonClick` no cambia.
+- `docs/DESIGN_SYSTEM.md` es la fuente de verdad de tokens y componentes.
+- Regenerar baseline profile y macrobenchmark; actualizar el driver del gate
+  F4.
+- Sin arte de terceros.
+
+**Invariantes protegidos:** I5, I8, I1.
 
 ---
 

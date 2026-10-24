@@ -246,7 +246,7 @@ Raíz `dev.linguago.*` — refleja la ruta del módulo:
 |---|---|---|
 | I1 | Offline-first estricto | todo el contenido y modelos son assets; sync es opcional |
 | I2 | Sin backend propio | Drive/OneDrive solo como respaldo del usuario |
-| I3 | Sin fricción | degradación limpia (audio/STT/sync deshabilitados sin bloquear) |
+| I3 | Sin fricción | degradación limpia sin bloquear; vidas con recuperación ≤10 min (ADR-025) |
 | I4 | Progreso intocable | merge monótono, upserts acumulativos, XP nunca decrece |
 | I5 | Identidad original | tokens/íconos propios en `core-ui` |
 | I6 | Código abierto | MIT + CC BY-SA 4.0 |
