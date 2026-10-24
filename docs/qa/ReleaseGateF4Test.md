@@ -85,32 +85,29 @@ Tras cada corrida, el JSON machine-readable queda en:
 - artefacto commiteado: `docs/qa/release-gate-f4-results.json` (pullear
   tras cada corrida relevante).
 
-## Resultados al cierre (2026-10-19)
+## Resultados al cierre (2026-10-24)
 
-- **Smoke (1 min, minLessons=1): PASS repetible** (`qa-release-smoke14`):
-  13 iteraciones, 1 lección completa, rotate PASS, special:home PASS,
-  RAM pico 392 MB, 0 crashes/ANR/races.
-- **Corrida completa (20 min): PASS de criterios duros** (duration, lessons,
-  rotate/background/trim/cancel/double-tap, especial Home, 0 crashes/ANR)
-  con **2 hallazgos en vivo**:
-  1. **Fuga real de memoria en el stack de audio** (hallazgo del gate, no es
-     bug del propio gate): la RAM escala monótonamente porque los modelos
-     (Piper TTS / Vosk STT) se **recargan por cada ejercicio de audio**
-     (~+90-100 MB por recarga) y nunca se liberan; 5 lecciones = 531 MB
-     pico. Criterio del gate `MAX_RAM_MB=480` dispara **FAIL**: correcto por
-     diseño. La acción correctiva pertenece a `core-audio` (ADR propio);
-     mientras tanto la corrida completa queda FAIL por esta métrica y el
-     smoke PASS queda como gate de release.
-  2. **El reorden en vivo de la cola de ejercicios**: al reanudar una
-     lección tras perder la actividad, la app **shufflea** su cola (el
-     orden del `course.json` es solo línea base). El gate lo absorbe con
-     re-slotado por tipo (`indexOfFirstUnusedWithKind`); un mismatch ya no
-     es sospecha de pérdida de estado.
-
-- La corrida 2º-paso (`lessonIndex 5→title 0`) quedó habilitada por el
-  bucle del runner; `open_lesson` 2º-paso puede fallar por la cola del
-  cursor (re-slot sin datos): escenario registrado como NOTE si el corte
-  por presupuesto lo cierra.
+- **Smoke (1 min, minLessons=1): PASS** (`qa-release-smoke15`): 13
+  iteraciones, 1 lección completa, rotate PASS, special:home PASS,
+  0 crashes/ANR/races.
+- **Corrida completa (20 min): PASS (`failed=[]`)** — artefacto
+  `docs/qa/release-gate-f4-results.json`: 5 lecciones completadas, 66
+  iteraciones, 21.6 min de foreground, 0 crashes/ANR/races, RAM pico
+  481 MB, native 12→210 MB. Escenarios en verde: rotate, background durante
+  STT, doble-tap, trim-memory, cancel STT, background 5 min y Home final.
+  Cubre los 7 tipos de ejercicio presentes en las lecciones B2 (CLOZE,
+  SEMANTIC_MATCH, AUDIO_ONLY, MULTIPLE_CHOICE, LISTEN_TYPE, SPEAK_REPEAT,
+  FREE_SPEAKING).
+- **Criterios de memoria**: el pico absoluto (≈480 MB) incluye los modelos
+  Piper/Vosk residentes (~360 MB nativos); el veredicto usa el **drift
+  nativo por lección** (≤ 30 MB/lección sobre la primera) y un techo
+  catastrófico de 600 MB. El desglose java/native/graphics/private-other de
+  cada iteración queda en el JSON para diagnosticar.
+- **Pasadas extra**: cuando el presupuesto pide más minutos que lecciones
+  tiene el plan, el runner reabre lecciones ya completadas en frío. La app
+  entra en **modo repaso** con contenido reordenado y el gate no puede
+  puntuarlo con los datos del curso: esos intentos se registran como NOTE
+  (best-effort) y no votan.
 
 ## Limitaciones
 

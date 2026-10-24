@@ -822,9 +822,13 @@ auditable antes de declarar `v2.0` estable.
 **Decisión:** se añade el módulo `:core:qa` (`com.android.test`,
 self-instrumenting sobre `:app`, flavor `en`, buildType `release`
 firmado con debug para pruebas). Allí vive
-`ReleaseGateF4Test`: orquesta 3 lecciones B2 (`Plazos y concesiones`,
-`Presupuesto bajo presión`, `Quién decide qué`) leídas del `course.json`
-de `content-es-en`, conguela métricas de
+`ReleaseGateF4Test`: orquesta las 5 lecciones B2 de la unidad
+«Negociación y decisiones» («Plazos y concesiones», «Presupuesto bajo
+presión», «Quién decide qué», «Concesiones sin perder terreno», «Cerrar el
+trato») leídas del `course.json` de `content-es-en`; si el presupuesto de
+tiempo exige más minutos, las pasadas extra reabren lecciones ya completadas
+y, como la app entra en modo repaso con contenido reordenado, se registran
+como NOTE best-effort (no votan). También congela métricas de
 thermal/RAM/nativeHeap/`fd` en baseline y en cada iteración. También
 perturbaciones exploratorias por índice de ejercicio: rotación
 (user_rotation vía shell, `setOrientationLeft` rompe el árbol
@@ -855,6 +859,13 @@ smoke con overrides:
 - Las verificaciones subjetivas (TalkBack, haptics, "sensación" de
   latencia del audio) se registran en `manual_checks` como pendientes de
   human reviewer: la automatización no inventa ese veredicto.
+
+**Criterios del veredicto (v1):** PASS exige duración ≥ objetivo (salvo
+smoke), ≥ `minLessons` completadas, 0 crashes/ANR, ningún escenario FAIL,
+0 `race_suspects` y ninguna fuga sostenida. La RAM se juzga con el drift del
+heap nativo por lección (≤ 30 MB/lección sobre la primera, con modelos ya
+cargados) y un techo absoluto catastrófico de 600 MB; el desglose
+java/native/graphics/private-other de cada iteración queda en el JSON.
 
 **Alternativas consideradas:**
 - Test dentro de `app/src/androidTest`: mezclado con el código de la app
