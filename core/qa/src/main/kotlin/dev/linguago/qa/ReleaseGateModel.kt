@@ -39,6 +39,9 @@ internal data class IterationRecord(
     val durationMs: Long,
     val ramMb: Int?,
     val nativeHeapMb: Int?,
+    val javaHeapMb: Int?,
+    val graphicsMb: Int?,
+    val privateOtherMb: Int?,
     val fdCount: Int?,
     val thermalStatus: String,
     val outcome: String,
@@ -221,6 +224,9 @@ internal class ReleaseGateReport(
                                 put("duration_ms", record.durationMs)
                                 put("ram_mb", record.ramMb ?: JSONObject.NULL)
                                 put("native_heap_mb", record.nativeHeapMb ?: JSONObject.NULL)
+                                put("java_heap_mb", record.javaHeapMb ?: JSONObject.NULL)
+                                put("graphics_mb", record.graphicsMb ?: JSONObject.NULL)
+                                put("private_other_mb", record.privateOtherMb ?: JSONObject.NULL)
                                 put("fd_count", record.fdCount ?: JSONObject.NULL)
                                 put("thermal_status", record.thermalStatus)
                                 put("outcome", record.outcome)

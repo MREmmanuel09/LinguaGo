@@ -33,18 +33,30 @@ internal class DeviceProbe(
             ?.toIntOrNull()
     }
 
-    /** PSS total de la app en MB (línea `TOTAL PSS: ...`). */
-    fun totalPssMb(): Int? {
+    /**
+     * Desglose de memoria (MB) de un único `dumpsys meminfo`. Permite separar
+     * el crecimiento Java (churn de Compose/estado) del nativo (modelos JNI)
+     * y de gráficos, para diagnosticar fugas en la corrida larga.
+     */
+    fun memSnapshot(): MemSnapshot {
         val output = shell("dumpsys meminfo $TARGET_PACKAGE")
-        val match = Regex("TOTAL(?: PSS)?:\\s*(\\d+)").find(output) ?: return null
-        return match.groupValues[1].toIntOrNull()?.let { (it + 512) / 1024 }
-    }
 
-    /** Native Heap de la app en MB. */
-    fun nativeHeapMb(): Int? {
-        val output = shell("dumpsys meminfo $TARGET_PACKAGE")
-        val match = Regex("Native Heap\\s+(\\d+)").find(output) ?: return null
-        return match.groupValues[1].toIntOrNull()?.let { (it + 512) / 1024 }
+        fun section(name: String): Int? =
+            Regex("$name:?\\s+(\\d+)")
+                .find(output)
+                ?.groupValues
+                ?.get(1)
+                ?.toIntOrNull()
+                ?.let { (it + 512) / 1024 }
+        return MemSnapshot(
+            totalPssMb = section("TOTAL(?: PSS)?"),
+            javaHeapMb = section("Java Heap"),
+            nativeHeapMb = section("Native Heap"),
+            codeMb = section("Code"),
+            graphicsMb = section("Graphics"),
+            privateOtherMb = section("Private Other"),
+            systemMb = section("System"),
+        )
     }
 
     /** Cantidad de fds abiertos; null si Android impide leer `/proc/<pid>/fd`. */
@@ -103,3 +115,14 @@ internal class DeviceProbe(
             .onFailure { Log.w("ReleaseGate", "shell falló: $command: ${it.message}") }
             .getOrDefault("")
 }
+
+/** Desglose de memoria (MB) leído de un `dumpsys meminfo`. */
+internal data class MemSnapshot(
+    val totalPssMb: Int?,
+    val javaHeapMb: Int?,
+    val nativeHeapMb: Int?,
+    val codeMb: Int?,
+    val graphicsMb: Int?,
+    val privateOtherMb: Int?,
+    val systemMb: Int?,
+)

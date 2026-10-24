@@ -480,14 +480,18 @@ internal class LessonDriver(
         if (probe.detectRestart()) report.incrementRestarts()
         val thermal = ThermalStatus.fromCode(probe.thermalRaw())
         report.noteThermal(thermal)
+        val mem = probe.memSnapshot()
         report.addIteration(
             IterationRecord(
                 lessonIndex = scenario.lessonIndex,
                 lessonTitle = scenario.title,
                 step = kind.name,
                 durationMs = System.currentTimeMillis() - startedAt,
-                ramMb = probe.totalPssMb(),
-                nativeHeapMb = probe.nativeHeapMb(),
+                ramMb = mem.totalPssMb,
+                nativeHeapMb = mem.nativeHeapMb,
+                javaHeapMb = mem.javaHeapMb,
+                graphicsMb = mem.graphicsMb,
+                privateOtherMb = mem.privateOtherMb,
                 fdCount = probe.fdCount(),
                 thermalStatus = thermal.label,
                 outcome = outcome,

@@ -36,6 +36,7 @@ class ReleaseGateF4Test {
     private var originalNightMode: String = "0"
     private var originalLocale: String? = null
     private var lessonsCompleted: Int = 0
+    private val completedLessonTitles = mutableSetOf<String>()
 
     @Before
     fun setUp() {
@@ -105,11 +106,27 @@ class ReleaseGateF4Test {
                     runBackgroundScenario()
                 } else {
                     val lessonStart = Instant.now()
-                    val ok = runLessonWithScenario(LessonPlan.scenarioFor(lessonIndex), deadlineMs)
+                    val scenario = LessonPlan.scenarioFor(lessonIndex)
+                    // Segunda pasada sobre una lección ya completada (el plazo
+                    // exige más minutos que lecciones tiene el plan): arranque
+                    // en frío para validar reanudación sin cursores mezclados.
+                    val repeatPass = scenario.title in completedLessonTitles
+                    if (repeatPass) {
+                        probe.shell("am force-stop $TARGET_PACKAGE")
+                        probe.launchApp()
+                        driver.waitForHome()
+                        report.addScenario(
+                            "repeat_pass:${scenario.title}",
+                            "NOTE",
+                            "pasada extra con arranque en frío",
+                        )
+                    }
+                    val ok = runLessonWithScenario(scenario, deadlineMs)
                     foregroundMs += Duration.between(lessonStart, Instant.now()).toMillis()
                     if (ok) {
                         lessonsCompleted += 1
                         consecutiveFailures = 0
+                        completedLessonTitles += scenario.title
                     } else {
                         consecutiveFailures += 1
                     }
@@ -207,10 +224,9 @@ class ReleaseGateF4Test {
         foregroundMs: Long,
     ) {
         val thermal = ThermalStatus.fromCode(probe.thermalRaw())
-        val ram = probe.totalPssMb()
-        val nativeHeap = probe.nativeHeapMb()
+        val mem = probe.memSnapshot()
         val fd = probe.fdCount()
-        report.finish(nowIso(), foregroundMs, thermal, ram, nativeHeap, fd)
+        report.finish(nowIso(), foregroundMs, thermal, mem.totalPssMb, mem.nativeHeapMb, fd)
         val json = report.toJson()
         writeReport(json)
         Log.i(LOG_TAG, "Veredicto=${json.optString("verdict")} failed=${json.optJSONArray("failed_criteria")}")
@@ -218,11 +234,14 @@ class ReleaseGateF4Test {
 
     private fun captureBaselines() {
         val thermal = ThermalStatus.fromCode(probe.thermalRaw())
-        val ram = probe.totalPssMb()
-        val nativeHeap = probe.nativeHeapMb()
+        val mem = probe.memSnapshot()
         val fd = probe.fdCount()
-        report.setBaselines(thermal, ram, nativeHeap, fd)
-        Log.i(LOG_TAG, "Baseline: thermal=${thermal.label} ram=${ram}Mb native=${nativeHeap}Mb fd=$fd")
+        report.setBaselines(thermal, mem.totalPssMb, mem.nativeHeapMb, fd)
+        Log.i(
+            LOG_TAG,
+            "Baseline: thermal=${thermal.label} ram=${mem.totalPssMb}Mb " +
+                "native=${mem.nativeHeapMb}Mb java=${mem.javaHeapMb}Mb fd=$fd",
+        )
     }
 
     private fun clearLogBuffers() {
