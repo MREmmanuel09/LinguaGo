@@ -9,7 +9,6 @@ import dev.linguago.core.domain.model.Exercise
 import dev.linguago.core.domain.model.GrammarPoint
 import dev.linguago.core.domain.model.LessonId
 import dev.linguago.core.domain.model.StreakState
-import dev.linguago.core.domain.model.XP_PER_CORRECT_ANSWER
 import dev.linguago.core.domain.repository.ProgressRepository
 import dev.linguago.core.domain.usecase.CompleteLessonUseCase
 import dev.linguago.core.domain.usecase.ExerciseAnswer
@@ -20,31 +19,29 @@ import javax.inject.Inject
 import javax.inject.Singleton
 
 /**
- * Casos de uso de progreso concretados (RFC §3.2, Fase 1): cada respuesta
- * correcta suma XP (+10) y completar una lección marca progreso y racha del
- * día. La decisión acertada/fallida vive en el dominio (ExerciseGrader);
- * aquí solo se orquesta el efecto sobre el repositorio.
+ * Casos de uso de progreso concretados (RFC §3.2, Fase 1, ADR-025): cada
+ * respuesta se califica sin tocar el XP persistido; el XP de la sesión se
+ * persiste UNA sola vez al completar la lección, junto con la racha. La
+ * decisión acertada/fallida vive en el dominio (ExerciseGrader); aquí solo se
+ * orquesta la calificación o el efecto sobre el repositorio.
  */
 @Singleton
 public class SubmitAnswerUseCaseImpl
     @Inject
-    constructor(
-        private val progressRepository: ProgressRepository,
-    ) : SubmitAnswerUseCase {
+    constructor() : SubmitAnswerUseCase {
         override suspend operator fun invoke(
             exercise: Exercise,
             answer: ExerciseAnswer,
             grammarPoints: List<GrammarPoint>,
-        ): Result<GradingResult> {
-            val grading = ExerciseGrader.grade(exercise, answer, grammarPoints)
-            if (!grading.isCorrect) return Result.success(grading)
-            return when (val xpResult = progressRepository.addXp(XP_PER_CORRECT_ANSWER)) {
-                is Result.Success -> Result.success(grading)
-                is Result.Error -> Result.error(xpResult.error)
-            }
-        }
+        ): Result<GradingResult> = Result.success(ExerciseGrader.grade(exercise, answer, grammarPoints))
     }
 
+/**
+ * Persiste la finalización de la lección (ADR-025): progreso, XP de la sesión
+ * y actividad diaria. Es el ÚNICO punto donde se suma XP al total; si la
+ * lección se cancela por quedarse sin vidas, este caso de uso no se llama y
+ * el XP en memoria se descarta.
+ */
 @Singleton
 public class CompleteLessonUseCaseImpl
     @Inject

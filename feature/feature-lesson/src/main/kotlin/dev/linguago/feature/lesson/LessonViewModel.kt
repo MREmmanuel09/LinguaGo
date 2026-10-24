@@ -98,8 +98,9 @@ data class LessonUiState(
 
 /**
  * Motor de aprendizaje (RFC §3.2). Cada respuesta pasa por el
- * SubmitAnswerUseCase (grader puro + XP +10 por acierto) y al final la
- * lección se persiste con CompleteLessonUseCase (racha y XP total).
+ * SubmitAnswerUseCase (grader puro, sin tocar XP) y el XP de la sesión se
+ * acumula en memoria; al final la lección se persiste con
+ * CompleteLessonUseCase (racha y XP total), único punto de escritura (ADR-025).
  */
 @HiltViewModel
 class LessonViewModel

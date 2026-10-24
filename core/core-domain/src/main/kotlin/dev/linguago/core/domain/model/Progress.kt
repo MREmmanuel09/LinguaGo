@@ -32,7 +32,10 @@ public data class LessonProgress(
     val attempts: Int,
 )
 
-/** XP por respuesta correcta (RFC §3.2, Fase 1). */
+/**
+ * XP por respuesta correcta acumulada en la sesión. Se persiste una sola vez
+ * al completar la lección (ADR-025); nunca se escribe por respuesta.
+ */
 public const val XP_PER_CORRECT_ANSWER: Int = 10
 
 /**
