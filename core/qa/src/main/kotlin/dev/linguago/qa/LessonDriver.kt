@@ -73,6 +73,11 @@ internal class LessonDriver(
         }
     }
 
+    // Cada salida del bucle corresponde a un estado real distinto (re-entrada
+    // sin Home, tipo no reconocido, candidatos agotados, respuesta abortada,
+    // avance fallido, fin de lección); extraerlas a una máquina de estados
+    // oscurecería el flujo en vivo.
+    @Suppress("LoopWithTooManyJumpStatements")
     private fun runExercises(
         scenario: LessonScenario,
         expected: CourseAnswers,
@@ -114,38 +119,46 @@ internal class LessonDriver(
                 }
             }
 
-            val base = expected.exerciseAt(index)
-            var exercise = base ?: return false
-            val kind = awaitKind(exercise)
+            val base = expected.exerciseAt(index) ?: return false
+            val kind = awaitKind(base)
             if (kind == ExerciseKind.UNKNOWN) {
                 report.addRaceSuspect(
                     "lección '${scenario.title}' idx $index: pantalla sin ejercicio reconocible; visible='${dumpVisibleTexts()}'",
                 )
                 return false
             }
-            if (kind != exercise.kind) {
-                val reslot = expected.indexOfFirstUnusedWithKind(kind, usedSlots)
-                if (reslot == null || reslot == index) {
-                    report.addRaceSuspect(
-                        "lección '${scenario.title}' idx $index: esperado ${exercise.kind}, detectado $kind y sin re-slot disponible; visible='${dumpVisibleTexts()}'",
-                    )
-                    return false
+            // La app reordena su cola al reanudar tras perder la actividad (el
+            // orden del curso es solo una línea base) y puede repetir tipos:
+            // se conduce el ejercicio visible probando los slots sin usar del
+            // mismo tipo hasta que uno acepte la interacción.
+            val candidates =
+                if (perturbation == Perturbation.NONE) {
+                    candidateSlots(expected, kind, index, usedSlots)
+                } else {
+                    listOf(index)
                 }
-                // La app reordena su cola al reanudar tras perder la actividad:
-                // el orden del curso es solo una línea base. Se conduce el
-                // ejercicio visible con los datos del primer slot sin usar.
-                usedSlots += reslot
-                exercise = expected.exerciseAt(reslot)!!
-            } else {
-                usedSlots += index
+            if (candidates.isEmpty()) {
+                report.addRaceSuspect(
+                    "lección '${scenario.title}' idx $index: esperado ${base.kind}, detectado $kind y sin candidatos; visible='${dumpVisibleTexts()}'",
+                )
+                return false
             }
-
             val wrong = index % 4 == 3
             val startedAt = System.currentTimeMillis()
-            val action = performAnswer(exercise, kind, perturbation, wrong)
+            var action = FlowAction.ABORT
+            var chosenSlot = candidates.first()
+            for (slot in candidates) {
+                val candidate = expected.exerciseAt(slot) ?: continue
+                action = performAnswer(candidate, kind, perturbation, wrong)
+                if (action != FlowAction.ABORT) {
+                    chosenSlot = slot
+                    break
+                }
+            }
             if (action != FlowAction.CONTINUE) return false
+            usedSlots += chosenSlot
 
-            val hasFeedback = waitFeedback()
+            val hasFeedback = waitFeedback(kind == ExerciseKind.SPEAK_REPEAT || kind == ExerciseKind.FREE_SPEAKING)
             val outcome =
                 when {
                     hasText(CORRECT_LABEL) -> "correct"
@@ -166,6 +179,25 @@ internal class LessonDriver(
             index++
         }
         return finishLesson()
+    }
+
+    /**
+     * Slots candidatos para el ejercicio visible: el propio índice si coincide
+     * con el tipo detectado y, si no (reorden en vivo), los slots sin usar del
+     * mismo tipo. Acotado a [MAX_SLOT_CANDIDATES] para no alargar el intento.
+     */
+    private fun candidateSlots(
+        expected: CourseAnswers,
+        kind: ExerciseKind,
+        index: Int,
+        used: Set<Int>,
+    ): List<Int> {
+        val sameKind = expected.indicesWithKind(kind)
+        val ordered = mutableListOf<Int>()
+        if (kind == expected.exerciseAt(index)?.kind && index !in used) ordered += index
+        sameKind.filterTo(ordered) { it !in used && it !in ordered }
+        if (ordered.isEmpty()) ordered += sameKind.take(2)
+        return ordered.distinct().take(MAX_SLOT_CANDIDATES)
     }
 
     private fun performAnswer(
@@ -218,8 +250,10 @@ internal class LessonDriver(
             // desincroniza el índice con el tamaño y lanza OOB cuando hay
             // ≥2 pares (hallado en vivo: "Index 2 out of bounds for length 1").
             val right = if (wrong && rights.size > 1) rights[(index + 1) % rights.size] else rights[index]
-            tapLabel(left)
-            tapLabel(right)
+            // Datos de otro slot del mismo tipo (reorden en vivo) no están en
+            // pantalla: se corta el intento en vez de esperar feedback que
+            // nunca llegará, y el llamador prueba el siguiente candidato.
+            if (!tapLabel(left) || !tapLabel(right)) return FlowAction.ABORT
         }
         tapText(CHECK_LABEL)
         return FlowAction.CONTINUE
@@ -660,7 +694,11 @@ internal class LessonDriver(
 
     private fun waitForDesc(description: String): Boolean = device.wait(Until.hasObject(By.desc(description)), EXERCISE_TIMEOUT_MILLIS)
 
-    private fun waitFeedback(): Boolean = device.wait(Until.hasObject(By.text(CONTINUE_LABEL)), STT_TIMEOUT_MILLIS)
+    private fun waitFeedback(voice: Boolean): Boolean =
+        device.wait(
+            Until.hasObject(By.text(CONTINUE_LABEL)),
+            if (voice) STT_TIMEOUT_MILLIS else FEEDBACK_TIMEOUT_MILLIS,
+        )
 
     /**
      * UiAutomator lanza [androidx.test.uiautomator.StaleObjectException] cuando
@@ -732,8 +770,9 @@ internal class LessonDriver(
         return tapDesc(description)
     }
 
-    private fun tapLabel(label: String) {
-        if (!tapFresh(By.text(label))) tapFresh(By.textContains(label))
+    private fun tapLabel(label: String): Boolean {
+        if (tapFresh(By.text(label))) return true
+        return tapFresh(By.textContains(label))
     }
 
     private fun tapClickableAncestor(
@@ -783,6 +822,7 @@ internal class LessonDriver(
 
     private companion object {
         const val MAX_OPEN_ATTEMPTS = 3
+        const val MAX_SLOT_CANDIDATES = 3
     }
 
     /**

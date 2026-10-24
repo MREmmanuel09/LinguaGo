@@ -177,15 +177,24 @@ internal class ReleaseGateReport(
             failedCriteria += "scenarios: ${failedScenarios.map { it.name }}"
         }
         val fdStartLocal = fdStart
-        val nativeHeapStartLocal = nativeHeapStart
         if (fdStartLocal != null && fdEndMb != null && fdEndMb - fdStartLocal > MAX_FD_GROWTH) {
             failedCriteria += "fd_leak: $fdStartLocal -> $fdEndMb"
         }
-        if (nativeHeapStartLocal != null &&
-            nativeHeapEndMb != null &&
-            nativeHeapEndMb - nativeHeapStartLocal > MAX_NATIVE_HEAP_GROWTH_MB
-        ) {
-            failedCriteria += "native_heap: $nativeHeapStartLocal -> ${nativeHeapEndMb}MB"
+        // Fuga nativa: pendiente por lección sobre el pico de la primera
+        // (con modelos ya cargados). Comparar extremos del segmento evita
+        // confundir el salto inicial de carga con una fuga sostenida.
+        val nativeByLesson =
+            iterations
+                .groupBy { it.lessonIndex }
+                .mapNotNull { (_, group) -> group.mapNotNull { it.nativeHeapMb }.maxOrNull() }
+        if (nativeByLesson.size >= 2) {
+            val drift = nativeByLesson.last() - nativeByLesson.first()
+            val budget = MAX_NATIVE_GROWTH_PER_LESSON_MB * (nativeByLesson.size - 1)
+            if (drift > budget) {
+                failedCriteria +=
+                    "native_drift: ${nativeByLesson.first()}->${nativeByLesson.last()}MB " +
+                    "(${drift}MB > ${budget}MB en ${nativeByLesson.size} lecciones)"
+            }
         }
         if (iterations.isEmpty()) failedCriteria += "no_iterations"
     }

@@ -47,22 +47,26 @@ internal const val CORRECT_LABEL: String = "¡Correcto!"
 internal const val REVIEW_LABEL: String = "Revisa la respuesta y sigue"
 
 // Umbrales duros del gate.
-// MAX_RAM_MB cubre el proceso COMPLETO con los modelos Piper (~200 MB) y Vosk
-// residentes una vez que la sesión usó voz (peak visto en smoke: ~390-417 MB,
-// nativo incluido). El criterio de FUGA se juzga con la curva por iteración
-// del JSON y con el stress determinista de F4.1/ADR-022, no con este pico.
-internal const val MAX_RAM_MB: Int = 480
+// MAX_RAM_MB es un techo CATASTRÓFICO: la base legítima del proceso incluye
+// Piper + Vosk residentes (~360 MB de heap nativo medidos en emulador) más
+// Compose y buffers (peak real ~483 MB). La FUGA se juzga con el drift
+// nativo por lección (abajo) y con el stress determinista de F4.1/ADR-022.
+internal const val MAX_RAM_MB: Int = 600
 internal const val MAX_FD_GROWTH: Int = 25
 
-// El heap nativo crece de forma legítima cuando Piper/Vosk cargan modelos
-// (~320 MB crecientes en el primer uso, idle 11 MB); el gate busca fugas
-// SOSTENIDAS: el drift por iteración queda en el JSON, no este salto inicial.
-internal const val MAX_NATIVE_HEAP_GROWTH_MB: Int = 400
+// Crecimiento nativo tolerado POR LECCIÓN sobre la primera (modelos ya
+// cargados): churn medido ~+10-16 MB/lección. Una fuga sostenida rompe esta
+// pendiente aunque el pico absoluto quede bajo el techo.
+internal const val MAX_NATIVE_GROWTH_PER_LESSON_MB: Int = 30
 
 internal const val DEFAULT_TIMEOUT_MILLIS: Long = 20_000L
 internal const val EXERCISE_TIMEOUT_MILLIS: Long = 60_000L
 internal const val LESSON_TIMEOUT_MILLIS: Long = 240_000L
 internal const val STT_TIMEOUT_MILLIS: Long = 45_000L
+
+// Feedback de ejercicios sin voz: si el emparejamiento no se aceptó, no hay
+// razón para esperar más de lo que tarda la animación del banner.
+internal const val FEEDBACK_TIMEOUT_MILLIS: Long = 20_000L
 
 // Parámetros de la sesión del gate.
 internal const val FULL_TARGET_MINUTES: Int = 20

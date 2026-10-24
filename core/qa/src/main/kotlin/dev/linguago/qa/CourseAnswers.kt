@@ -52,13 +52,11 @@ internal class CourseAnswers(
     /**
      * La app reordena su cola de ejercicios al reanudar una lección tras
      * perder la actividad (perturbaciones R8/expulsivas), así que el índice
-     * del curso es solo una línea base. Este resolver devuelve el índice del
-     * primer ejercicio sin usar del tipo visible en pantalla.
+     * del curso es solo una línea base. Índices de todos los ejercicios del
+     * tipo indicado, en orden de curso.
      */
-    fun indexOfFirstUnusedWithKind(
-        kind: ExerciseKind,
-        used: Set<Int>,
-    ): Int? = exercises.withIndex().firstOrNull { (i, e) -> e.kind == kind && i !in used }?.index
+    fun indicesWithKind(kind: ExerciseKind): List<Int> =
+        exercises.withIndex().filter { (_, exercise) -> exercise.kind == kind }.map { it.index }
 
     fun size(): Int = exercises.size
 
