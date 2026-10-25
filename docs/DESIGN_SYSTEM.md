@@ -135,4 +135,6 @@ Reglas:
   capturada en emulador con el test `DesignGalleryScreenshotTest`.
 - `docs/qa/feather/phase5-path-light.png` y `phase5-path-dark.png`: camino
   lineal real en Home (debug con `LEARNING_PATH_V2`), capturado en emulador.
+- `docs/qa/feather/phase6-reward.png`, `phase6-cancel.png` y
+  `phase6-chest.png`: hojas de victoria, lección cancelada y cofre de unidad.
 

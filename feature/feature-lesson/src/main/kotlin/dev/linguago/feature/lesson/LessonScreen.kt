@@ -22,7 +22,6 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
-import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.verticalScroll
@@ -56,13 +55,16 @@ import dev.linguago.core.domain.logic.ClozePassageParser
 import dev.linguago.core.domain.model.Exercise
 import dev.linguago.core.domain.model.ExerciseId
 import dev.linguago.core.ui.components.AudioOnlyPromptPanel
+import dev.linguago.core.ui.components.CancelledLessonSheet
 import dev.linguago.core.ui.components.ClozeDragDropBoard
 import dev.linguago.core.ui.components.FeedbackBanner
 import dev.linguago.core.ui.components.FreeSpeakingPanel
+import dev.linguago.core.ui.components.HeartsIndicator
 import dev.linguago.core.ui.components.InfoBanner
-import dev.linguago.core.ui.components.LinguaProgressBar
+import dev.linguago.core.ui.components.LiquidXpBar
 import dev.linguago.core.ui.components.OptionCard
 import dev.linguago.core.ui.components.PrimaryButton3D
+import dev.linguago.core.ui.components.RewardSheet
 import dev.linguago.core.ui.components.SemanticMatchBoard
 import dev.linguago.core.ui.haptics.rememberLinguaHaptics
 import dev.linguago.core.ui.theme.LinguaTheme
@@ -167,7 +169,8 @@ private fun LessonContent(
     when {
         uiState.loading -> Loading(modifier)
         uiState.invalid -> Invalid(modifier, onExit)
-        uiState.finished -> Finish(uiState, onExit, modifier)
+        uiState.lessonCancelled -> CancelledLessonSheet(xpLost = uiState.xpEarned, onExit = onExit, modifier = modifier)
+        uiState.finished -> RewardSheet(xpEarned = uiState.xpEarned, onContinue = onExit, modifier = modifier)
         else ->
             ExerciseStage(
                 uiState = uiState,
@@ -281,7 +284,14 @@ private fun ExerciseStage(
             )
             TextButton(onClick = onExit) { Text(text = "Salir") }
         }
-        LinguaProgressBar(progress = progress)
+        Row(
+            modifier = Modifier.fillMaxWidth(),
+            verticalAlignment = Alignment.CenterVertically,
+            horizontalArrangement = Arrangement.spacedBy(8.dp),
+        ) {
+            HeartsIndicator(hearts = uiState.hearts)
+            LiquidXpBar(progress = progress, modifier = Modifier.weight(1f))
+        }
         if (uiState.voiceWarmingUp) {
             Spacer(Modifier.height(8.dp))
             InfoBanner(message = "Preparando motor de voz offline…")
@@ -877,29 +887,6 @@ private fun Invalid(
             style = MaterialTheme.typography.bodyMedium,
         )
         TextButton(onClick = onExit) { Text(text = "Salir") }
-    }
-}
-
-@Composable
-private fun Finish(
-    uiState: LessonUiState,
-    onExit: () -> Unit,
-    modifier: Modifier = Modifier,
-) {
-    Column(
-        modifier = modifier.fillMaxSize(),
-        verticalArrangement = Arrangement.Center,
-        horizontalAlignment = Alignment.CenterHorizontally,
-    ) {
-        Text(text = "Lección completada", style = MaterialTheme.typography.headlineMedium)
-        Spacer(Modifier.height(8.dp))
-        Text(text = "XP +${uiState.xpEarned}", style = MaterialTheme.typography.titleMedium)
-        Spacer(Modifier.height(24.dp))
-        PrimaryButton3D(
-            text = "Volver al camino",
-            onClick = onExit,
-            modifier = Modifier.width(220.dp),
-        )
     }
 }
 

@@ -3,6 +3,7 @@ package dev.linguago.feature.review
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
@@ -26,6 +27,7 @@ import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import dev.linguago.core.domain.logic.ReviewRating
 import dev.linguago.core.domain.model.WordProgress
+import dev.linguago.core.ui.components.HeartsIndicator
 import dev.linguago.core.ui.components.PrimaryButton3D
 import dev.linguago.core.ui.theme.LinguaTheme
 import dev.linguago.core.ui.theme.LinguaTokens
@@ -71,11 +73,18 @@ private fun ReviewContent(
                 .padding(24.dp),
         verticalArrangement = Arrangement.spacedBy(16.dp),
     ) {
-        Text(
-            text = "Repaso",
-            style = MaterialTheme.typography.headlineMedium,
-            color = colors.onBackground,
-        )
+        Row(
+            modifier = Modifier.fillMaxWidth(),
+            verticalAlignment = Alignment.CenterVertically,
+        ) {
+            Text(
+                text = "Repaso",
+                style = MaterialTheme.typography.headlineMedium,
+                color = colors.onBackground,
+                modifier = Modifier.weight(1f),
+            )
+            HeartsIndicator(hearts = state.hearts)
+        }
 
         when {
             state.loading ->
@@ -103,6 +112,11 @@ private fun ReviewContent(
                 Text(
                     text = "Tarjeta ${state.index + 1} de ${state.total}",
                     style = MaterialTheme.typography.labelLarge,
+                    color = colors.onSurfaceVariant,
+                )
+                Text(
+                    text = "Marcar «Otra vez» cuesta 1 vida. Sé honesto: el repaso se adapta a ti.",
+                    style = MaterialTheme.typography.bodySmall,
                     color = colors.onSurfaceVariant,
                 )
 

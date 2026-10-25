@@ -33,7 +33,8 @@ import dev.linguago.core.ui.theme.LinguaTokens
  * Camino lineal en zigzag (ADR-026): cabeceras de unidad, nodos flotantes y
  * conectores curvos. Se desplaza al nodo activo al abrir Home y mantiene la
  * posición del usuario entre recomposiciones. Los cofres se delegan en
- * [onChestClick] (la hoja de recompensa llega en la Etapa 6).
+ * [onChestClick] con el título de la unidad (la celebración llega en la
+ * Etapa 6).
  */
 @Composable
 fun LearningPath(
@@ -81,7 +82,7 @@ fun LearningPath(
                                 node = item.node,
                                 onClick = { id ->
                                     val lessonId = item.lessonId
-                                    if (lessonId != null) onLessonClick(lessonId) else onChestClick(id)
+                                    if (lessonId != null) onLessonClick(lessonId) else onChestClick(item.node.label)
                                 },
                             )
                             Spacer(Modifier.weight((0.5f - row.bias).coerceAtLeast(0.06f)))

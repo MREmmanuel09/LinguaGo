@@ -20,6 +20,7 @@ import dev.linguago.core.data.repository.GradeReviewUseCaseImpl
 import dev.linguago.core.data.repository.HeartsRepositoryImpl
 import dev.linguago.core.data.repository.ObserveHeartsUseCaseImpl
 import dev.linguago.core.data.repository.ProgressRepositoryImpl
+import dev.linguago.core.data.repository.RegisterAnswerUseCaseImpl
 import dev.linguago.core.data.repository.ReviewRepositoryImpl
 import dev.linguago.core.data.repository.SubmitAnswerUseCaseImpl
 import dev.linguago.core.data.repository.UpdateStreakUseCaseImpl
@@ -32,6 +33,7 @@ import dev.linguago.core.domain.usecase.ConsumeHeartUseCase
 import dev.linguago.core.domain.usecase.GetNextReviewUseCase
 import dev.linguago.core.domain.usecase.GradeReviewUseCase
 import dev.linguago.core.domain.usecase.ObserveHeartsUseCase
+import dev.linguago.core.domain.usecase.RegisterAnswerUseCase
 import dev.linguago.core.domain.usecase.SubmitAnswerUseCase
 import dev.linguago.core.domain.usecase.UpdateStreakUseCase
 import javax.inject.Singleton
@@ -94,6 +96,9 @@ public abstract class DataRepositoryModule {
 
     @Binds
     public abstract fun bindsConsumeHeartUseCase(impl: ConsumeHeartUseCaseImpl): ConsumeHeartUseCase
+
+    @Binds
+    public abstract fun bindsRegisterAnswerUseCase(impl: RegisterAnswerUseCaseImpl): RegisterAnswerUseCase
 
     @Binds
     public abstract fun bindsGetNextReviewUseCase(impl: GetNextReviewUseCaseImpl): GetNextReviewUseCase

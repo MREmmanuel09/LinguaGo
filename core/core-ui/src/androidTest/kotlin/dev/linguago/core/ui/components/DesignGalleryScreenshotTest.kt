@@ -56,15 +56,40 @@ public class DesignGalleryScreenshotTest {
         capture(name = "feather-phase3-dark.png", mode = ThemeMode.DARK)
     }
 
+    @Test
+    public fun captura_recompensa() {
+        capture(name = "feather-phase6-reward.png", mode = ThemeMode.LIGHT) {
+            RewardSheet(xpEarned = 80, onContinue = {})
+        }
+    }
+
+    @Test
+    public fun captura_leccion_cancelada() {
+        capture(name = "feather-phase6-cancel.png", mode = ThemeMode.LIGHT) {
+            CancelledLessonSheet(xpLost = 40, onExit = {})
+        }
+    }
+
+    @Test
+    public fun captura_cofre() {
+        capture(name = "feather-phase6-chest.png", mode = ThemeMode.LIGHT) {
+            ChestRewardSheet(unitTitle = "Primeros pasos", onDismiss = {})
+        }
+    }
+
     private fun capture(
         name: String,
         mode: ThemeMode,
+        content: @Composable () -> Unit = { Gallery() },
     ) {
         compose.setContent {
             LinguaTheme(themeMode = mode) {
-                Gallery()
+                content()
             }
         }
+        compose.waitForIdle()
+        // Deja terminar contadores y confeti antes de capturar.
+        compose.mainClock.advanceTimeBy(1_500)
         compose.waitForIdle()
 
         val context = InstrumentationRegistry.getInstrumentation().targetContext

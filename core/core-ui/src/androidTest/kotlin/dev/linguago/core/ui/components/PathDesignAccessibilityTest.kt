@@ -180,4 +180,53 @@ public class PathDesignAccessibilityTest {
             .assertIsDisplayed()
             .assertHeightIsAtLeast(48.dp)
     }
+
+    @Test
+    public fun rewardSheet_showsXpAndContinues() {
+        var continued = 0
+        compose.setContent {
+            LinguaTheme {
+                RewardSheet(xpEarned = 80, onContinue = { continued++ })
+            }
+        }
+
+        compose.onNodeWithText("¡Lección completada!").assertIsDisplayed()
+        compose.mainClock.advanceTimeBy(1_000)
+        compose.onNodeWithText("+80 XP").assertIsDisplayed()
+        compose.onNodeWithText("Volver al camino").performClick()
+
+        compose.runOnIdle { assertEquals(1, continued) }
+    }
+
+    @Test
+    public fun cancelledSheet_explainsLostXpAndExits() {
+        var exits = 0
+        compose.setContent {
+            LinguaTheme {
+                CancelledLessonSheet(xpLost = 40, onExit = { exits++ })
+            }
+        }
+
+        compose.onNodeWithText("Te quedaste sin vidas").assertIsDisplayed()
+        compose.onNodeWithText("La lección se canceló y no se guardaron los 40 XP.").assertIsDisplayed()
+        compose.onNodeWithText("Volver al camino").performClick()
+
+        compose.runOnIdle { assertEquals(1, exits) }
+    }
+
+    @Test
+    public fun chestSheet_celebratesCompletedUnit() {
+        var dismissed = 0
+        compose.setContent {
+            LinguaTheme {
+                ChestRewardSheet(unitTitle = "Primeros pasos", onDismiss = { dismissed++ })
+            }
+        }
+
+        compose.onNodeWithText("¡Unidad completada!").assertIsDisplayed()
+        compose.onNodeWithText("Primeros pasos").assertIsDisplayed()
+        compose.onNodeWithText("Seguir").performClick()
+
+        compose.runOnIdle { assertEquals(1, dismissed) }
+    }
 }

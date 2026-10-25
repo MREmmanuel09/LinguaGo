@@ -8,6 +8,7 @@ import dev.linguago.core.audio.SttEngine
 import dev.linguago.core.audio.TtsEngine
 import dev.linguago.core.audio.isWarmingUp
 import dev.linguago.core.common.Result
+import dev.linguago.core.domain.hearts.HEARTS_MAX
 import dev.linguago.core.domain.logic.CulturalNoteMatcher
 import dev.linguago.core.domain.logic.FreeSpeakingFeedback
 import dev.linguago.core.domain.logic.FreeSpeakingHeuristicGrader
@@ -22,8 +23,9 @@ import dev.linguago.core.domain.model.XP_PER_CORRECT_ANSWER
 import dev.linguago.core.domain.repository.ReviewRepository
 import dev.linguago.core.domain.usecase.CompleteLessonUseCase
 import dev.linguago.core.domain.usecase.ExerciseAnswer
+import dev.linguago.core.domain.usecase.ObserveHeartsUseCase
+import dev.linguago.core.domain.usecase.RegisterAnswerUseCase
 import dev.linguago.core.domain.usecase.StartLessonUseCase
-import dev.linguago.core.domain.usecase.SubmitAnswerUseCase
 import kotlinx.coroutines.CancellationException
 import kotlinx.coroutines.Job
 import kotlinx.coroutines.flow.MutableStateFlow
@@ -64,7 +66,8 @@ data class FreeSpeakingState(
 /**
  * Estado del motor de lección (ADR-002: FSM). `exercises` nunca cambia
  * durante la sesión; lo mutable es el índice actual, los paneles de
- * respuesta (tokens/parejas) y el feedback (I3: sin vidas ni penalización).
+ * respuesta (tokens/parejas) y el feedback. Las vidas son una penalización
+ * no bloqueante (ADR-025): a 0 la lección se cancela y no se guarda su XP.
  */
 data class LessonUiState(
     val loading: Boolean = true,
@@ -75,6 +78,10 @@ data class LessonUiState(
     val xpEarned: Int = 0,
     val feedback: ExerciseFeedback? = null,
     val finished: Boolean = false,
+    /** Vidas vigentes; se actualizan al responder (ADR-025). */
+    val hearts: Int = HEARTS_MAX,
+    /** `true` cuando el jugador se quedó sin vidas y la lección no se guarda. */
+    val lessonCancelled: Boolean = false,
     // Tablero de tokens (Translate / OrderWords)
     val availableTokens: List<String> = emptyList(),
     val chosenTokens: List<String> = emptyList(),
@@ -108,8 +115,9 @@ class LessonViewModel
     constructor(
         savedStateHandle: SavedStateHandle,
         private val startLessonUseCase: StartLessonUseCase,
-        private val submitAnswerUseCase: SubmitAnswerUseCase,
+        private val registerAnswerUseCase: RegisterAnswerUseCase,
         private val completeLessonUseCase: CompleteLessonUseCase,
+        private val observeHeartsUseCase: ObserveHeartsUseCase,
         private val ttsEngine: TtsEngine,
         private val sttEngine: SttEngine,
         private val reviewRepository: ReviewRepository,
@@ -128,6 +136,11 @@ class LessonViewModel
         private var freeSpeakingStartedAt = 0L
 
         init {
+            viewModelScope.launch {
+                observeHeartsUseCase().collect { hearts ->
+                    _uiState.update { state -> state.copy(hearts = hearts.hearts) }
+                }
+            }
             viewModelScope.launch {
                 when (val result = startLessonUseCase(CourseId(courseId), LessonId(lessonId))) {
                     is Result.Success -> startLesson(result.value)
@@ -271,6 +284,7 @@ class LessonViewModel
             submitAnswer(
                 ExerciseAnswer.FreeSpoken(transcript = "", durationMillis = 0L),
                 session?.lesson?.grammarPoints.orEmpty(),
+                consumeHeart = false,
             )
         }
 
@@ -359,7 +373,7 @@ class LessonViewModel
         /** Sin STT/permiso: indica que no puede hablar y avanza (incorrecto, I3). */
         fun skipSpeech() {
             if (_uiState.value.listening) return
-            submitAnswer(ExerciseAnswer.SpokenText(""))
+            submitAnswer(ExerciseAnswer.SpokenText(""), consumeHeart = false)
         }
 
         /** El usuario verifica el tablero de tokens (Translate / OrderWords). */
@@ -449,6 +463,7 @@ class LessonViewModel
         /** Continúa al siguiente ejercicio (o finaliza la lección). */
         fun advance() {
             val state = _uiState.value
+            if (state.lessonCancelled) return
             if (state.feedback == null) return
             val nextIndex = state.index + 1
             if (nextIndex < state.exercises.size) {
@@ -568,12 +583,14 @@ class LessonViewModel
         private fun submitAnswer(
             answer: ExerciseAnswer,
             grammarPoints: List<GrammarPoint> = emptyList(),
+            consumeHeart: Boolean = true,
         ) {
             val exercise = _uiState.value.exercises.getOrNull(_uiState.value.index) ?: return
             viewModelScope.launch {
-                when (val result = submitAnswerUseCase(exercise, answer, grammarPoints)) {
+                when (val result = registerAnswerUseCase(exercise, answer, grammarPoints, consumeHeart)) {
                     is Result.Success -> {
-                        val grading = result.value
+                        val outcome = result.value
+                        val grading = outcome.grading
                         val cultural = session?.let { CulturalNoteMatcher.noteFor(it.lesson, exercise) }
                         _uiState.update { state ->
                             state.copy(
@@ -590,6 +607,8 @@ class LessonViewModel
                                     } else {
                                         state.xpEarned
                                     },
+                                hearts = outcome.hearts?.hearts ?: state.hearts,
+                                lessonCancelled = outcome.lessonCancelled,
                             )
                         }
                     }
@@ -599,6 +618,7 @@ class LessonViewModel
         }
 
         private fun finishLesson() {
+            if (_uiState.value.lessonCancelled) return
             val earned = _uiState.value.xpEarned
             viewModelScope.launch {
                 completeLessonUseCase(LessonId(lessonId), earned)

@@ -4,6 +4,7 @@ import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
@@ -16,13 +17,22 @@ import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.remember
+import androidx.compose.runtime.setValue
+import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import androidx.compose.ui.window.Dialog
+import androidx.compose.ui.window.DialogProperties
 import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
+import dev.linguago.core.ui.components.ChestRewardSheet
+import dev.linguago.core.ui.components.HeartsIndicator
 import dev.linguago.core.ui.components.LinguaProgressBar
+import dev.linguago.core.ui.components.LiquidXpBar
 import dev.linguago.core.ui.components.StreakIndicator
 import dev.linguago.core.ui.components.path.PathNodeState
 import dev.linguago.core.ui.components.path.PathNodeUi
@@ -102,6 +112,7 @@ private fun PathHomeContent(
     modifier: Modifier = Modifier,
 ) {
     val colors = MaterialTheme.colorScheme
+    var chestUnit by remember { mutableStateOf<String?>(null) }
 
     Column(
         modifier =
@@ -111,13 +122,23 @@ private fun PathHomeContent(
                 .padding(horizontal = 24.dp, vertical = 24.dp),
         verticalArrangement = Arrangement.spacedBy(12.dp),
     ) {
-        HomeHeader(uiState = uiState, onStartReview = onStartReview)
+        HomeHeader(uiState = uiState, onStartReview = onStartReview, showHud = true)
         val courseId = uiState.courseId
         LearningPath(
             items = uiState.pathItems,
             onLessonClick = { lessonId -> courseId?.let { onLessonSelected(it, lessonId) } },
+            onChestClick = { unitTitle -> chestUnit = unitTitle },
             modifier = Modifier.weight(1f),
         )
+    }
+
+    chestUnit?.let { unitTitle ->
+        Dialog(
+            onDismissRequest = { chestUnit = null },
+            properties = DialogProperties(usePlatformDefaultWidth = false),
+        ) {
+            ChestRewardSheet(unitTitle = unitTitle, onDismiss = { chestUnit = null })
+        }
     }
 }
 
@@ -126,6 +147,7 @@ private fun PathHomeContent(
 private fun HomeHeader(
     uiState: HomeUiState,
     onStartReview: (String) -> Unit,
+    showHud: Boolean = false,
     modifier: Modifier = Modifier,
 ) {
     val colors = MaterialTheme.colorScheme
@@ -134,7 +156,16 @@ private fun HomeHeader(
         modifier = modifier,
         verticalArrangement = Arrangement.spacedBy(16.dp),
     ) {
-        StreakIndicator(days = uiState.streakDays)
+        Row(
+            modifier = Modifier.fillMaxWidth(),
+            verticalAlignment = Alignment.CenterVertically,
+        ) {
+            StreakIndicator(days = uiState.streakDays)
+            if (showHud) {
+                Spacer(Modifier.weight(1f))
+                HeartsIndicator(hearts = uiState.hearts)
+            }
+        }
 
         Text(
             text =
@@ -146,6 +177,17 @@ private fun HomeHeader(
             style = MaterialTheme.typography.headlineMedium,
             color = colors.onBackground,
         )
+
+        if (showHud) {
+            Column(verticalArrangement = Arrangement.spacedBy(4.dp)) {
+                Text(
+                    text = "Nivel ${uiState.level}",
+                    style = MaterialTheme.typography.labelLarge,
+                    color = colors.onSurfaceVariant,
+                )
+                LiquidXpBar(progress = uiState.xpIntoLevel)
+            }
+        }
 
         if (uiState.loading && uiState.courseTitle == null) {
             Text(
