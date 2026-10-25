@@ -8,13 +8,12 @@ internal const val PACKAGE_NAME: String = "dev.linguago.app"
 internal const val HOME_TAB_LABEL: String = "Inicio"
 internal const val COURSE_TILE_LABEL: String = "Español → Inglés"
 internal const val START_COURSE_LABEL: String = "Comenzar"
-internal const val B2_UNIT_TITLE: String = "Negociación y decisiones"
-internal const val B2_LESSON_TITLE: String = "Plazos y concesiones"
+internal const val FIRST_LESSON_DESC_PREFIX: String = "Lección: Saludos."
+internal const val FIRST_OPTION_LABEL: String = "Hello"
 internal const val REVIEW_CARD_TITLE: String = "Repasar ahora"
 internal const val REVIEW_SCREEN_TITLE: String = "Repaso"
 internal const val SHOW_TRANSLATION_LABEL: String = "Mostrar traducción"
 internal const val GOOD_RATING_LABEL: String = "Bien"
-internal const val CHECK_LABEL: String = "Comprobar"
 internal const val CONTINUE_LABEL: String = "Continuar"
 internal const val EXIT_LESSON_LABEL: String = "Salir"
 
@@ -63,25 +62,6 @@ internal fun awaitHome(uiDevice: UiDevice) {
     }
 }
 
-internal fun scrollToText(
-    uiDevice: UiDevice,
-    text: String,
-    maxSwipes: Int = 8,
-): Boolean {
-    repeat(maxSwipes) {
-        if (uiDevice.hasObject(By.text(text))) return true
-        uiDevice.swipe(
-            uiDevice.displayWidth / 2,
-            (uiDevice.displayHeight * 0.75f).toInt(),
-            uiDevice.displayWidth / 2,
-            (uiDevice.displayHeight * 0.30f).toInt(),
-            20,
-        )
-        uiDevice.waitForIdle()
-    }
-    return uiDevice.hasObject(By.text(text))
-}
-
 internal fun scrollToTop(
     uiDevice: UiDevice,
     marker: String,
@@ -101,31 +81,33 @@ internal fun scrollToTop(
     return uiDevice.hasObject(By.text(marker))
 }
 
-internal fun openB2Lesson(uiDevice: UiDevice) {
-    check(scrollToText(uiDevice, B2_UNIT_TITLE)) {
-        "No se encontró la unidad B2 en Home"
+/**
+ * Abre el primer nodo del Camino (ADR-026). El perfil se genera con el
+ * `BenchmarkSeedActivity`, que deja el progreso vacío: el primer nodo
+ * disponible es "Saludos".
+ */
+internal fun openFirstLesson(uiDevice: UiDevice) {
+    check(
+        uiDevice.wait(
+            Until.hasObject(By.descStartsWith(FIRST_LESSON_DESC_PREFIX)),
+            DEFAULT_TIMEOUT_MILLIS,
+        ),
+    ) {
+        "No se encontró el nodo de la primera lección en el camino"
     }
-    check(tapClickableAncestor(uiDevice, B2_UNIT_TITLE, B2_LESSON_TITLE)) {
-        "No se abrió la lección B2"
+    val node = uiDevice.findObject(By.descStartsWith(FIRST_LESSON_DESC_PREFIX))
+    check(node.isEnabled) { "El nodo de la primera lección está bloqueado" }
+    node.click()
+    check(uiDevice.wait(Until.hasObject(By.text(EXIT_LESSON_LABEL)), DEFAULT_TIMEOUT_MILLIS)) {
+        "No se abrió la lección desde el camino"
     }
 }
 
-internal fun interactWithCloze(uiDevice: UiDevice) {
-    tapText(uiDevice, "had narrowed")
-    tapDescription(uiDevice, "Hueco 1 vacío")
-    check(uiDevice.wait(Until.hasObject(By.desc("Hueco 1: had narrowed")), DEFAULT_TIMEOUT_MILLIS)) {
-        "El primer hueco del cloze no se rellenó"
-    }
-
-    tapText(uiDevice, "would have")
-    tapDescription(uiDevice, "Hueco 2 vacío")
-    check(uiDevice.wait(Until.hasObject(By.desc("Hueco 2: would have")), DEFAULT_TIMEOUT_MILLIS)) {
-        "El segundo hueco del cloze no se rellenó"
-    }
-
-    tapText(uiDevice, CHECK_LABEL)
+/** Responde el primer ejercicio (MultipleChoice de "Saludos") y avanza. */
+internal fun interactWithFirstExercise(uiDevice: UiDevice) {
+    tapText(uiDevice, FIRST_OPTION_LABEL)
     check(uiDevice.wait(Until.hasObject(By.text(CONTINUE_LABEL)), DEFAULT_TIMEOUT_MILLIS)) {
-        "No apareció el feedback del cloze"
+        "No apareció el feedback del primer ejercicio"
     }
     tapText(uiDevice, CONTINUE_LABEL)
 }
@@ -176,16 +158,5 @@ private fun tapText(
         "No apareció el texto '$text'"
     }
     uiDevice.findObject(By.text(text)).click()
-    uiDevice.waitForIdle()
-}
-
-private fun tapDescription(
-    uiDevice: UiDevice,
-    description: String,
-) {
-    check(uiDevice.wait(Until.hasObject(By.desc(description)), DEFAULT_TIMEOUT_MILLIS)) {
-        "No apareció el elemento '$description'"
-    }
-    uiDevice.findObject(By.desc(description)).click()
     uiDevice.waitForIdle()
 }

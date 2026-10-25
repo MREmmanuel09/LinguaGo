@@ -3,13 +3,15 @@
 > ADR-024 · módulo `:core:qa` (`com.android.test`, self-instrumenting sobre `:app`,
 > flavor `en`) · ROADMAP_V2.md F4.4.
 
-El gate conduce **3 lecciones B2 reales** de `content-es-en` en la app
-**release minificada (R8)**, aplicando perturbaciones del entorno en puntos
-deterministas y juntando métricas por ejercicio, con un veredicto objetivo
-por criterios (`verdict: PASS|FAIL` en el reporte JSON). Todo lo que la
-automatización no puede juzgar (sensación de latencia, TalkBack, haptics)
-queda registrado en `manual_checks` como verificación subjetiva humana —
-no se inventan veredictos.
+El gate conduce **las 5 primeras lecciones del Camino (A1)** de
+`content-es-en` en la app **release minificada (R8)**, aplicando
+perturbaciones del entorno en puntos deterministas y juntando métricas por
+ejercicio, con un veredicto objetivo por criterios (`verdict: PASS|FAIL` en
+el reporte JSON). El camino lineal (ADR-026) bloquea B2 hasta completar el
+recorrido, por eso el gate conduce las primeras lecciones disponibles. Todo
+lo que la automatización no puede juzgar (sensación de latencia, TalkBack,
+haptics) queda registrado en `manual_checks` como verificación subjetiva
+humana — no se inventan veredictos.
 
 ## Alistamiento
 
@@ -38,21 +40,37 @@ Bajo PowerShell el wrapper con props `-P...` debe invocarse vía `cmd /c`
 
 ## Lecciones cubiertas
 
-Ordem B2 "Negociación y decisiones":
-`Plazos y concesiones`, `Presupuesto bajo presión`, `Quién decide qué`
-(10 ejercicios cada una; tipos cubiertos por el driver: `ClozeDragDrop`,
-`SemanticMatch`, `AudioOnlyPrompt`, `MultipleChoice`, `ListenType`,
-`OrderWords`, `SpeakRepeat`, `FreeSpeakingPrompt`).
+Las 5 primeras del Camino (A1): `Saludos`, `Presentarse`, `La familia`,
+`Comida y bebida`, `Colores y números` (7 ejercicios cada una; tipos
+cubiertos: `MultipleChoice`, `Translate`/`OrderWords` vía tokens,
+`MatchPairs`, `ListenChoose`, `ListenType`, `SpeakRepeat`).
+
+### Navegación con el camino (ADR-026)
+
+El driver localiza cada nodo por `contentDescription`
+(`Lección: <título>.<estado>`), desplaza el `LazyColumn` en ambos sentidos y
+solo toca nodos habilitados. Si el nodo está bloqueado, el intento falla y el
+gate lo reporta.
+
+### Vidas (ADR-025)
+
+El driver falla a propósito para ejercitar el banner de error, con
+**presupuesto de 2 fallos por lección** y solo si las vidas visibles son
+> 3. Así la sesión no cancela lecciones por la penalización y conserva la
+cobertura del feedback de error.
 
 ## Perturbaciones por lección
 
 | Lección | Ejercicio (idx) | Perturbación |
 |---|---|---|
 | 1 | 2 | `ROTATE` (rotación por shell settings) |
-| 1 | 7 | `DOUBLE_TAP_CONTINUE` |
-| 2 | 8 | `BACKGROUND_DURING_STT` / `TRIM_MEMORY` |
-| 2 | 9 | `DONT_KEEP_ACTIVITIES` |
-| 3 | mix | `FONT_SCALE_2X`, `DARK_MODE`, `LOCALE_CHANGE`, `CANCEL_TTS`/`CANCEL_STT`, `NOTIFICATION_DURING_RECORDING` |
+| 2 | 6 | `BACKGROUND_DURING_STT` |
+| 3 | 3 | `DOUBLE_TAP_CONTINUE` |
+| 4 | 6 | `NOTIFICATION_DURING_RECORDING` |
+| 5 | 0 | `TRIM_MEMORY` |
+| 6 (pasada extra) | 6 | `CANCEL_STT` |
+| 7 (pasada extra) | 4 | `CANCEL_TTS` |
+| 8-10 | - | `FONT_SCALE_2X`, `DARK_MODE`, `LOCALE_CHANGE` |
 
 El `LessonDriver` responde cada ejercicio con los datos deterministas de
 `CourseAnswers` (leídos de `course.json`); un 25 % de los ejercicios se
@@ -85,29 +103,37 @@ Tras cada corrida, el JSON machine-readable queda en:
 - artefacto commiteado: `docs/qa/release-gate-f4-results.json` (pullear
   tras cada corrida relevante).
 
-## Resultados al cierre (2026-10-24)
+## Resultados al cierre (2026-10-25)
 
-- **Smoke (1 min, minLessons=1): PASS** (`qa-release-smoke15`): 13
-  iteraciones, 1 lección completa, rotate PASS, special:home PASS,
-  0 crashes/ANR/races.
+- **Smoke (1 min, minLessons=1): PASS**: 10 iteraciones, 1 lección
+  completa, rotate PASS, special:home PASS, 0 crashes/ANR/races, RAM pico
+  277 MB.
 - **Corrida completa (20 min): PASS (`failed=[]`)** — artefacto
-  `docs/qa/release-gate-f4-results.json`: 5 lecciones completadas, 66
-  iteraciones, 21.6 min de foreground, 0 crashes/ANR/races, RAM pico
-  481 MB, native 12→210 MB. Escenarios en verde: rotate, background durante
-  STT, doble-tap, trim-memory, cancel STT, background 5 min y Home final.
-  Cubre los 7 tipos de ejercicio presentes en las lecciones B2 (CLOZE,
-  SEMANTIC_MATCH, AUDIO_ONLY, MULTIPLE_CHOICE, LISTEN_TYPE, SPEAK_REPEAT,
-  FREE_SPEAKING).
-- **Criterios de memoria**: el pico absoluto (≈480 MB) incluye los modelos
-  Piper/Vosk residentes (~360 MB nativos); el veredicto usa el **drift
-  nativo por lección** (≤ 30 MB/lección sobre la primera) y un techo
-  catastrófico de 600 MB. El desglose java/native/graphics/private-other de
-  cada iteración queda en el JSON para diagnosticar.
+  `docs/qa/release-gate-f4-results.json`: 5 lecciones completadas, 38
+  iteraciones, 20.8 min de foreground, 0 crashes/ANR/races, RAM pico
+  318 MB. Escenarios en verde: rotate, background durante STT, doble-tap,
+  notificación durante grabación, trim-memory, background 5 min y Home
+  final. Cubre `MultipleChoice`, `Translate`/`OrderWords`,
+  `MatchPairs`/`SemanticMatch`, `ListenChoose`, `ListenType` y
+  `SpeakRepeat` de las 5 primeras lecciones del Camino (A1).
+- **Camino lineal (ADR-026)**: el driver localiza los nodos por
+  `contentDescription`, desplaza el `LazyColumn` en ambos sentidos y
+  respeta los nodos bloqueados. El camino bloquea B2 hasta completar el
+  recorrido, por eso el gate conduce A1.
+- **Vidas (ADR-025)**: presupuesto de 2 fallos por lección y solo con
+  vidas > 3; los `SpeakRepeat` sin perturbación usan el SKIP oficial (no
+  consumen vida). La sesión no canceló ninguna lección.
+- **Criterios de memoria**: el pico absoluto (~320 MB) incluye los modelos
+  Piper/Vosk residentes; el veredicto usa el **drift nativo por lección**
+  (≤ 30 MB/lección sobre la primera) y un techo catastrófico de 600 MB.
+  El desglose java/native/graphics/private-other de cada iteración queda en
+  el JSON para diagnosticar.
 - **Pasadas extra**: cuando el presupuesto pide más minutos que lecciones
-  tiene el plan, el runner reabre lecciones ya completadas en frío. La app
-  entra en **modo repaso** con contenido reordenado y el gate no puede
-  puntuarlo con los datos del curso: esos intentos se registran como NOTE
-  (best-effort) y no votan.
+  tiene el plan, el runner intenta reabrir lecciones ya completadas en
+  frío. La app entra en **modo repaso** con contenido reordenado y el gate
+  no puede puntuarlo con los datos del curso: esos intentos se registran
+  como NOTE (best-effort) y no votan.
+
 
 ## Limitaciones
 

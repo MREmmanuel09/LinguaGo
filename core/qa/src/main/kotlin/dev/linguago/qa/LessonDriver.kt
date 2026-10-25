@@ -161,7 +161,10 @@ internal class LessonDriver(
                 }
                 return false
             }
-            val wrong = index % 4 == 3
+            val wantsWrong = index % 4 == 3 && cursor.wrongsUsed < MAX_WRONG_ANSWERS_PER_LESSON
+            val hearts = if (wantsWrong) currentHearts() else null
+            val wrong = wantsWrong && (hearts ?: DEFAULT_HEARTS) > MIN_HEARTS_TO_ANSWER_WRONG
+            if (wrong) cursor.wrongsUsed += 1
             val startedAt = System.currentTimeMillis()
             var action = FlowAction.ABORT
             var chosenSlot = candidates.first()
@@ -342,7 +345,25 @@ internal class LessonDriver(
             report.addScenario("speak_repeat", "ERROR", "ni micrófono ni skip")
             return FlowAction.ABORT
         }
+        // Sin perturbación de voz, usar el SKIP oficial: no consume vida y el
+        // ejercicio avanza igual (I3). Las perturbaciones de STT sí graban.
+        if (perturbation == Perturbation.NONE && hasText(SPEAK_SKIP_LABEL)) {
+            tapText(SPEAK_SKIP_LABEL)
+            return FlowAction.CONTINUE
+        }
         tapText(SPEAK_HOLD_LABEL)
+        if (perturbation == Perturbation.NOTIFICATION_DURING_RECORDING) {
+            sleep(1_200)
+            val output = probe.shell("cmd notification post -S bigtext -t 'Gate F4' tag 'prueba'")
+            sleep(1_200)
+            val stillListening = hasText(SPEAK_LISTENING_LABEL)
+            val posted = output.isNotBlank() && !output.contains("error", ignoreCase = true)
+            report.addScenario(
+                "notification_during_recording",
+                if (stillListening && posted) "PASS" else "NOTE",
+                "grabando=$stillListening posted=$posted out='${output.trim()}'",
+            )
+        }
         if (perturbation == Perturbation.BACKGROUND_DURING_STT) {
             sleep(1_200)
             probe.pressHome()
@@ -569,8 +590,16 @@ internal class LessonDriver(
                 if (!awaitHome()) return false
             }
         }
-        resetHomeScroll()
+        // El camino (ADR-026) auto-desplaza al nodo activo; no hay que volver
+        // al principio como en la lista de tarjetas de unidad.
+        if (!hasDescPrefix("Lección: ")) resetHomeScroll()
         return openLessonFromHome(title)
+    }
+
+    /** Vidas visibles en el HUD de la lección (ADR-025), si están en el árbol. */
+    private fun currentHearts(): Int? {
+        val match = Regex("(\\d+) de 10 vidas").find(dumpVisibleTexts()) ?: return null
+        return match.groupValues[1].toIntOrNull()
     }
 
     /** Vuelve el listado de Home arriba para partir siempre del mismo estado. */
@@ -588,15 +617,59 @@ internal class LessonDriver(
     }
 
     private fun openLessonFromHome(title: String): Boolean {
+        val descPrefix = "Lección: $title."
         repeat(4) {
+            // Camino lineal (ADR-026): el nodo se localiza por contentDescription.
+            if (tapDescPrefix(descPrefix)) return true
             if (hasText(title) && tapClickableAncestor(title, EXIT_LABEL)) return true
+            if (scrollToDescPrefix(descPrefix) && tapDescPrefix(descPrefix)) return true
             if (scrollToText(title) && tapClickableAncestor(title, EXIT_LABEL)) return true
-            if (!device.hasObject(By.text(title))) {
-                tapClickableAncestor(B2_UNIT_TITLE, title)
+            if (!device.hasObject(By.text(title)) && !hasDescPrefix(descPrefix)) {
+                tapClickableAncestor(FIRST_UNIT_TITLE, title)
             }
         }
         report.addScenario("open_dump:$title", "NOTE", dumpVisibleTexts())
         return false
+    }
+
+    /** Toca un nodo del camino por prefijo de descripción si está habilitado. */
+    private fun tapDescPrefix(prefix: String): Boolean {
+        val node =
+            runCatching { device.findObject(By.descStartsWith(prefix)) }
+                .getOrNull() ?: return false
+        if (!node.isEnabled) return false
+        return runCatching {
+            node.click()
+            device.waitForIdle()
+            true
+        }.getOrDefault(false)
+    }
+
+    /** Busca un nodo del camino: primero arriba (completadas) y luego abajo. */
+    private fun scrollToDescPrefix(prefix: String): Boolean {
+        repeat(12) {
+            if (hasDescPrefix(prefix)) return true
+            device.swipe(
+                device.displayWidth / 2,
+                (device.displayHeight * 0.30f).toInt(),
+                device.displayWidth / 2,
+                (device.displayHeight * 0.75f).toInt(),
+                16,
+            )
+            device.waitForIdle()
+        }
+        repeat(14) {
+            if (hasDescPrefix(prefix)) return true
+            device.swipe(
+                device.displayWidth / 2,
+                (device.displayHeight * 0.75f).toInt(),
+                device.displayWidth / 2,
+                (device.displayHeight * 0.30f).toInt(),
+                16,
+            )
+            device.waitForIdle()
+        }
+        return hasDescPrefix(prefix)
     }
 
     /**
@@ -679,7 +752,7 @@ internal class LessonDriver(
             hasText(AUDIO_PLAY_LABEL) && hasText(AUDIO_ONLY_PROMPT) -> ExerciseKind.AUDIO_ONLY
             hasDescPrefix(CLOZE_BLANK_PREFIX) -> ExerciseKind.CLOZE
             hasText(ORDER_WORDS_TITLE) -> ExerciseKind.ORDER_WORDS
-            hasText(SEMANTIC_MATCH_TITLE) -> ExerciseKind.SEMANTIC_MATCH
+            hasText(SEMANTIC_MATCH_TITLE) || hasText(MATCH_PAIRS_TITLE) -> ExerciseKind.SEMANTIC_MATCH
             hasEditText() -> ExerciseKind.LISTEN_TYPE
             else -> ExerciseKind.UNKNOWN
         }
@@ -851,5 +924,6 @@ internal class LessonDriver(
      */
     private class LessonCursor(
         var index: Int = 0,
+        var wrongsUsed: Int = 0,
     )
 }

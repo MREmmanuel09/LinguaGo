@@ -110,6 +110,9 @@ Reglas:
 - **Vidas:** 10 corazones; un solo nodo de accesibilidad ("3 de 10 vidas").
 - **XP:** barra líquida hacia el siguiente nivel visual
   (`totalXp / 100 + 1`, sin persistir nivel) y contador animado al ganar XP.
+- **Mascota:** Lumi, colibrí original (`ic_lumi`, `LumiMascot`), flota junto
+  al nodo activo y aparece en la victoria. Es decorativa para TalkBack y
+  respeta la escala de animaciones del sistema.
 
 ## 8. Accesibilidad (I8)
 
@@ -137,4 +140,7 @@ Reglas:
   lineal real en Home (debug con `LEARNING_PATH_V2`), capturado en emulador.
 - `docs/qa/feather/phase6-reward.png`, `phase6-cancel.png` y
   `phase6-chest.png`: hojas de victoria, lección cancelada y cofre de unidad.
+- `docs/qa/feather/phase7-path-lumi-light.png`, `phase7-path-lumi-dark.png`
+  y `phase7-font2x.png`: camino final con Lumi en release, modo oscuro y
+  escala de fuente 2×.
 

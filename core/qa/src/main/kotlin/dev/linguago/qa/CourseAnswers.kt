@@ -113,7 +113,7 @@ internal class CourseAnswers(
                         clozeDistractors = distractors,
                     )
                 }
-                "SemanticMatch" -> {
+                "SemanticMatch", "MatchPairs" -> {
                     val pairs = json.getJSONArray("pairs")
                     val lefts = mutableListOf<String>()
                     val rights = mutableListOf<String>()
@@ -128,6 +128,20 @@ internal class CourseAnswers(
                         pairRights = rights,
                     )
                 }
+                "ListenChoose" ->
+                    ExpectedExercise(
+                        type = type,
+                        kind = ExerciseKind.AUDIO_ONLY,
+                        options = options,
+                        correctIndex = correctIndex,
+                    )
+                "Translate" ->
+                    ExpectedExercise(
+                        type = type,
+                        kind = ExerciseKind.ORDER_WORDS,
+                        prompt = json.optString("sourcePhrase"),
+                        answerTokens = json.optJSONArray("correctTokens").toStringList(),
+                    )
                 "AudioOnlyPrompt" ->
                     ExpectedExercise(
                         type = type,

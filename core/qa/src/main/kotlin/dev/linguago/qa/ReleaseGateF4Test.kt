@@ -56,7 +56,7 @@ class ReleaseGateF4Test {
         originalNightMode = probe.setting("secure", "ui_night_mode")
         originalLocale = probe.setting("system", "system_locales").takeIf { it != "null" }
 
-        report.startSession(nowIso(), targetMinutes.toLong(), smoke)
+        report.startSession(nowIso(), targetMinutes.toLong(), smoke, minLessons)
         Log.i(LOG_TAG, "Gate F4: target=${targetMinutes}min smoke=$smoke minLessons=$minLessons")
 
         grantPermissions(instrumentation)

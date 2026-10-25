@@ -27,14 +27,18 @@ internal data class LessonScenario(
 )
 
 internal object LessonPlan {
-    /** Las 5 lecciones de la unidad B2 "Negociación y decisiones". */
+    /**
+     * Las 5 primeras lecciones del Camino (A1). El camino lineal de ADR-026
+     * bloquea B2 hasta completar el recorrido, así que el gate conduce las
+     * primeras lecciones disponibles; siguen siendo contenido real validado.
+     */
     val lessonTitles: List<String> =
         listOf(
-            "Plazos y concesiones",
-            "Presupuesto bajo presión",
-            "Quién decide qué",
-            "Concesiones sin perder terreno",
-            "Cerrar el trato",
+            "Saludos",
+            "Presentarse",
+            "La familia",
+            "Comida y bebida",
+            "Colores y números",
         )
 
     fun titleFor(lessonIndex: Int): String = lessonTitles[lessonIndex % lessonTitles.size]
@@ -43,12 +47,13 @@ internal object LessonPlan {
         val title = titleFor(lessonIndex)
         val perturbations =
             when (lessonIndex) {
+                // A1 tiene 7 ejercicios: las perturbaciones caen en índices válidos.
                 0 -> mapOf(2 to Perturbation.ROTATE)
-                1 -> mapOf(8 to Perturbation.BACKGROUND_DURING_STT)
-                2 -> mapOf(9 to Perturbation.DOUBLE_TAP_CONTINUE)
-                3 -> mapOf(9 to Perturbation.NOTIFICATION_DURING_RECORDING)
+                1 -> mapOf(6 to Perturbation.BACKGROUND_DURING_STT)
+                2 -> mapOf(3 to Perturbation.DOUBLE_TAP_CONTINUE)
+                3 -> mapOf(6 to Perturbation.NOTIFICATION_DURING_RECORDING)
                 4 -> mapOf(0 to Perturbation.TRIM_MEMORY)
-                5 -> mapOf(8 to Perturbation.CANCEL_STT)
+                5 -> mapOf(6 to Perturbation.CANCEL_STT)
                 6 -> mapOf(4 to Perturbation.CANCEL_TTS)
                 else -> emptyMap()
             }

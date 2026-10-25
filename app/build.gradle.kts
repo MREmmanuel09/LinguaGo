@@ -91,7 +91,7 @@ android {
             buildConfigField("boolean", "LEARNING_PATH_V2", "true")
         }
         release {
-            buildConfigField("boolean", "LEARNING_PATH_V2", "false")
+            buildConfigField("boolean", "LEARNING_PATH_V2", "true")
             isMinifyEnabled = true
             isShrinkResources = true
             proguardFiles(

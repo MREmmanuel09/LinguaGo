@@ -824,19 +824,23 @@ auditable antes de declarar `v2.0` estable.
 **Decisión:** se añade el módulo `:core:qa` (`com.android.test`,
 self-instrumenting sobre `:app`, flavor `en`, buildType `release`
 firmado con debug para pruebas). Allí vive
-`ReleaseGateF4Test`: orquesta las 5 lecciones B2 de la unidad
-«Negociación y decisiones» («Plazos y concesiones», «Presupuesto bajo
-presión», «Quién decide qué», «Concesiones sin perder terreno», «Cerrar el
-trato») leídas del `course.json` de `content-es-en`; si el presupuesto de
-tiempo exige más minutos, las pasadas extra reabren lecciones ya completadas
-y, como la app entra en modo repaso con contenido reordenado, se registran
-como NOTE best-effort (no votan). También congela métricas de
-thermal/RAM/nativeHeap/`fd` en baseline y en cada iteración. También
-perturbaciones exploratorias por índice de ejercicio: rotación
+`ReleaseGateF4Test`: orquesta las 5 primeras lecciones del Camino (A1:
+«Saludos», «Presentarse», «La familia», «Comida y bebida», «Colores y
+números») leídas del `course.json` de `content-es-en`. El camino lineal
+(ADR-026) bloquea B2 hasta completar el recorrido, así que el gate conduce
+las primeras lecciones disponibles; siguen siendo contenido real validado.
+Si el presupuesto de tiempo exige más minutos, las pasadas extra reabren
+lecciones ya completadas y, como la app entra en modo repaso con contenido
+reordenado, se registran como NOTE best-effort (no votan). También congela
+métricas de thermal/RAM/nativeHeap/`fd` en baseline y en cada iteración.
+Incluye perturbaciones exploratorias por índice de ejercicio: rotación
 (user_rotation vía shell, `setOrientationLeft` rompe el árbol
 UiAutomator), `trim-memory RUNNING_CRITICAL`, `always_finish_activities`,
 doble-tap en Continuar, cancelación de TTS/STT, notificación durante
 recording, 5 min en background, fontScale 2× / modo oscuro / locale `en-US`.
+El driver navega los nodos del camino por `contentDescription` y acota los
+fallos intencionales (2 por lección, y solo con vidas > 3) para no cancelar
+la lección por la penalización de ADR-025.
 El reporte JSON se escribe en el almacenamiento externo y se copia a
 `/data/local/tmp/` porque AGP desinstala ambos APK al terminar (wipe de
 `/Android/data`). Puede ejecutarse predeterminadamente en modo completo y

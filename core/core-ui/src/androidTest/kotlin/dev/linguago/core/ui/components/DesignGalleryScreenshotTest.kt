@@ -139,6 +139,7 @@ public class DesignGalleryScreenshotTest {
             ) {
                 HeartsIndicator(hearts = 7)
                 StreakIndicator(days = 5)
+                LumiMascot(size = 40.dp)
             }
 
             Column(verticalArrangement = Arrangement.spacedBy(6.dp)) {

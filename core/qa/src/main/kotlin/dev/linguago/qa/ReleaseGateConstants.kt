@@ -7,11 +7,11 @@ internal const val MAIN_ACTIVITY: String = "dev.linguago.app.MainActivity"
 internal const val HOME_LABEL: String = "Inicio"
 internal const val COURSE_TILE_LABEL: String = "Español → Inglés"
 internal const val START_COURSE_LABEL: String = "Comenzar"
-internal const val B2_UNIT_TITLE: String = "Negociación y decisiones"
+internal const val FIRST_UNIT_TITLE: String = "Primeros pasos"
 internal const val EXIT_LABEL: String = "Salir"
 internal const val CONTINUE_LABEL: String = "Continuar"
 internal const val CHECK_LABEL: String = "Comprobar"
-internal const val FINISH_LABEL: String = "Lección completada"
+internal const val FINISH_LABEL: String = "¡Lección completada!"
 internal const val BACK_TO_PATH_LABEL: String = "Volver al camino"
 
 internal const val CLOZE_BLANK_PREFIX: String = "Hueco "
@@ -41,6 +41,7 @@ internal const val AUDIO_ONLY_PROMPT: String = "Escucha y elige"
 
 internal const val ORDER_WORDS_TITLE: String = "Ordena la frase"
 internal const val SEMANTIC_MATCH_TITLE: String = "Equivalentes"
+internal const val MATCH_PAIRS_TITLE: String = "Empareja las columnas"
 internal const val DICTATION_LABEL: String = "Tu dictado"
 
 internal const val CORRECT_LABEL: String = "¡Correcto!"
@@ -73,6 +74,14 @@ internal const val FULL_TARGET_MINUTES: Int = 20
 internal const val BACKGROUND_MINUTES: Long = 5L
 internal const val OVERHEAD_MINUTES: Long = 12L
 internal const val MAX_CONSECUTIVE_FAILURES: Int = 3
+
+// Vidas (ADR-025): el driver falla a propósito para ejercitar el banner de
+// error, pero con presupuesto acotado para no cancelar la lección. Si las
+// vidas bajan del umbral, responde correcto. Cada lección reiniciada recibe
+// dos fallos como máximo.
+internal const val MAX_WRONG_ANSWERS_PER_LESSON: Int = 2
+internal const val MIN_HEARTS_TO_ANSWER_WRONG: Int = 3
+internal const val DEFAULT_HEARTS: Int = 10
 internal const val CRASH_LOOKAHEAD_LINES: Int = 6
 internal const val MAX_LOG_LINE_CHARS: Int = 300
 internal const val LOG_TAG: String = "ReleaseGate"

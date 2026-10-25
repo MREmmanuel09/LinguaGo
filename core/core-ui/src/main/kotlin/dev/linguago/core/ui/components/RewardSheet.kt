@@ -55,6 +55,11 @@ fun RewardSheet(
     ) {
         ConfettiBurst(playKey = 1, modifier = Modifier.fillMaxSize())
         LinguaCard3D(modifier = Modifier.padding(24.dp)) {
+            LumiMascot(
+                size = 44.dp,
+                modifier = Modifier.align(Alignment.CenterHorizontally),
+            )
+            Spacer(Modifier.height(8.dp))
             Text(
                 text = "¡Lección completada!",
                 style = MaterialTheme.typography.headlineMedium,

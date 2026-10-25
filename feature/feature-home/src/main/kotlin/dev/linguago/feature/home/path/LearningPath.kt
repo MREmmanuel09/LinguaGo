@@ -2,6 +2,7 @@ package dev.linguago.feature.home.path
 
 import androidx.compose.foundation.Canvas
 import androidx.compose.foundation.layout.Arrangement
+import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.Row
@@ -9,6 +10,7 @@ import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
+import androidx.compose.foundation.layout.offset
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
@@ -24,6 +26,7 @@ import androidx.compose.ui.graphics.Path
 import androidx.compose.ui.graphics.StrokeCap
 import androidx.compose.ui.graphics.drawscope.Stroke
 import androidx.compose.ui.unit.dp
+import dev.linguago.core.ui.components.LumiMascot
 import dev.linguago.core.ui.components.path.PathNode
 import dev.linguago.core.ui.components.path.PathNodeState
 import dev.linguago.core.ui.components.path.UnitHeader
@@ -78,13 +81,26 @@ fun LearningPath(
                             verticalAlignment = Alignment.CenterVertically,
                         ) {
                             Spacer(Modifier.weight((0.5f + row.bias).coerceAtLeast(0.06f)))
-                            PathNode(
-                                node = item.node,
-                                onClick = { id ->
-                                    val lessonId = item.lessonId
-                                    if (lessonId != null) onLessonClick(lessonId) else onChestClick(item.node.label)
-                                },
-                            )
+                            Box {
+                                PathNode(
+                                    node = item.node,
+                                    onClick = { id ->
+                                        val lessonId = item.lessonId
+                                        if (lessonId != null) onLessonClick(lessonId) else onChestClick(item.node.label)
+                                    },
+                                )
+                                if (item.node.state == PathNodeState.AVAILABLE ||
+                                    item.node.state == PathNodeState.IN_PROGRESS
+                                ) {
+                                    LumiMascot(
+                                        size = 26.dp,
+                                        modifier =
+                                            Modifier
+                                                .align(Alignment.TopEnd)
+                                                .offset(x = 6.dp, y = (-14).dp),
+                                    )
+                                }
+                            }
                             Spacer(Modifier.weight((0.5f - row.bias).coerceAtLeast(0.06f)))
                         }
                         val nextBias = row.nextBias

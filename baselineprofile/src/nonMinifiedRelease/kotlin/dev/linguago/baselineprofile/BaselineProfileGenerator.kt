@@ -43,8 +43,8 @@ class BaselineProfileGenerator {
             pressHome()
             startActivityAndWait()
             awaitHome(device)
-            openB2Lesson(device)
-            interactWithCloze(device)
+            openFirstLesson(device)
+            interactWithFirstExercise(device)
             exitLesson(device)
             openReview(device)
         }

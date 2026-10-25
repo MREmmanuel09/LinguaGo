@@ -75,15 +75,18 @@ internal class ReleaseGateReport(
     private var nativeHeapEnd: Int? = null
     private var processRestarts: Int = 0
     private var lessonsCompleted: Int = 0
+    private var requiredLessons: Int = 1
 
     fun startSession(
         isoNow: String,
         targetMinutes: Long,
         smoke: Boolean,
+        minLessons: Int = 1,
     ) {
         startedAt = isoNow
         targetDurationMs = targetMinutes * 60_000L
         smokeOnly = smoke
+        requiredLessons = minLessons
     }
 
     fun setBaselines(
@@ -164,6 +167,9 @@ internal class ReleaseGateReport(
         val peakRam = listOfNotNull(ramStart, ramEnd, iterations.mapNotNull { it.ramMb }.maxOrNull()).maxOrNull()
         if (targetDurationMs > 0 && durationMs < targetDurationMs && !smokeOnly) {
             failedCriteria += "duration: ${durationMs / 1000}s < target ${targetDurationMs / 1000}s"
+        }
+        if (lessonsCompleted < requiredLessons) {
+            failedCriteria += "lessons: $lessonsCompleted < $requiredLessons"
         }
         if (crashes.isNotEmpty()) failedCriteria += "crashes: ${crashes.size}"
         if (anrs.isNotEmpty()) failedCriteria += "anrs: ${anrs.size}"

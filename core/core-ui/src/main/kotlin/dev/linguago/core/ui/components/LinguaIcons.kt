@@ -20,4 +20,5 @@ object LinguaIcons {
     val ChestRes: Int = R.drawable.ic_chest
     val LockRes: Int = R.drawable.ic_lock
     val PlayRes: Int = R.drawable.ic_play
+    val LumiRes: Int = R.drawable.ic_lumi
 }
