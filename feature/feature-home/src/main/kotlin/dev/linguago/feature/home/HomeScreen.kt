@@ -24,27 +24,42 @@ import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import dev.linguago.core.ui.components.LinguaProgressBar
 import dev.linguago.core.ui.components.StreakIndicator
+import dev.linguago.core.ui.components.path.PathNodeState
+import dev.linguago.core.ui.components.path.PathNodeUi
 import dev.linguago.core.ui.theme.LinguaTheme
 import dev.linguago.core.ui.theme.LinguaTokens
+import dev.linguago.feature.home.path.LearningPath
+import dev.linguago.feature.home.path.PathItem
 
 /**
- * Ruta de aprendizaje del curso activo (RFC §2.3). Las tarjetas de unidad
- * muestran el avance local y abren la siguiente lección sin completar.
+ * Ruta de aprendizaje del curso activo (RFC §2.3). Con [pathEnabled] se
+ * muestra el camino lineal en zigzag (ADR-026); sin él, las tarjetas de
+ * unidad originales se mantienen intactas como fallback.
  */
 @Composable
 fun HomeScreen(
     onLessonClick: (courseId: String, lessonId: String) -> Unit,
     onStartReview: (courseId: String) -> Unit = {},
+    pathEnabled: Boolean = false,
     modifier: Modifier = Modifier,
     viewModel: HomeViewModel = hiltViewModel(),
 ) {
     val uiState by viewModel.uiState.collectAsStateWithLifecycle()
-    HomeContent(
-        uiState = uiState,
-        onLessonSelected = onLessonClick,
-        onStartReview = onStartReview,
-        modifier = modifier,
-    )
+    if (pathEnabled && uiState.pathItems.isNotEmpty()) {
+        PathHomeContent(
+            uiState = uiState,
+            onLessonSelected = onLessonClick,
+            onStartReview = onStartReview,
+            modifier = modifier,
+        )
+    } else {
+        HomeContent(
+            uiState = uiState,
+            onLessonSelected = onLessonClick,
+            onStartReview = onStartReview,
+            modifier = modifier,
+        )
+    }
 }
 
 @Composable
@@ -63,6 +78,60 @@ private fun HomeContent(
                 .background(colors.background)
                 .verticalScroll(rememberScrollState())
                 .padding(horizontal = 24.dp, vertical = 24.dp),
+        verticalArrangement = Arrangement.spacedBy(16.dp),
+    ) {
+        HomeHeader(uiState = uiState, onStartReview = onStartReview)
+
+        uiState.units.forEach { unit ->
+            val lessonId = unit.nextLessonId
+            val courseId = uiState.courseId
+            UnitCard(
+                tile = unit,
+                onClick = { if (lessonId != null && courseId != null) onLessonSelected(courseId, lessonId) },
+            )
+        }
+    }
+}
+
+/** Camino lineal: cabecera fija + zigzag desplazable con auto-scroll al nodo activo. */
+@Composable
+private fun PathHomeContent(
+    uiState: HomeUiState,
+    onLessonSelected: (String, String) -> Unit,
+    onStartReview: (String) -> Unit,
+    modifier: Modifier = Modifier,
+) {
+    val colors = MaterialTheme.colorScheme
+
+    Column(
+        modifier =
+            modifier
+                .fillMaxSize()
+                .background(colors.background)
+                .padding(horizontal = 24.dp, vertical = 24.dp),
+        verticalArrangement = Arrangement.spacedBy(12.dp),
+    ) {
+        HomeHeader(uiState = uiState, onStartReview = onStartReview)
+        val courseId = uiState.courseId
+        LearningPath(
+            items = uiState.pathItems,
+            onLessonClick = { lessonId -> courseId?.let { onLessonSelected(it, lessonId) } },
+            modifier = Modifier.weight(1f),
+        )
+    }
+}
+
+/** Cabecera común a ambos modos: racha, curso y repaso pendiente. */
+@Composable
+private fun HomeHeader(
+    uiState: HomeUiState,
+    onStartReview: (String) -> Unit,
+    modifier: Modifier = Modifier,
+) {
+    val colors = MaterialTheme.colorScheme
+
+    Column(
+        modifier = modifier,
         verticalArrangement = Arrangement.spacedBy(16.dp),
     ) {
         StreakIndicator(days = uiState.streakDays)
@@ -91,15 +160,6 @@ private fun HomeContent(
             ReviewCard(
                 count = uiState.dueReviews,
                 onClick = { courseId?.let(onStartReview) },
-            )
-        }
-
-        uiState.units.forEach { unit ->
-            val lessonId = unit.nextLessonId
-            val courseId = uiState.courseId
-            UnitCard(
-                tile = unit,
-                onClick = { if (lessonId != null && courseId != null) onLessonSelected(courseId, lessonId) },
             )
         }
     }
@@ -187,6 +247,42 @@ private fun HomeScreenPreview() {
                         listOf(
                             UnitTile("un-1", "Primeros pasos", completed = 1, total = 3, nextLessonId = "ls-2"),
                             UnitTile("un-2", "Vida diaria", completed = 0, total = 3, nextLessonId = "ls-4"),
+                        ),
+                ),
+            onLessonSelected = { _, _ -> },
+            onStartReview = {},
+        )
+    }
+}
+
+@Preview(showBackground = true, name = "Camino lineal")
+@Composable
+private fun HomePathPreview() {
+    LinguaTheme {
+        PathHomeContent(
+            uiState =
+                HomeUiState(
+                    loading = false,
+                    hasCourse = true,
+                    courseId = "es-en",
+                    streakDays = 5,
+                    totalXp = 240,
+                    hearts = 7,
+                    level = 3,
+                    xpIntoLevel = 0.4f,
+                    courseTitle = "Español → Inglés",
+                    pathItems =
+                        listOf(
+                            PathItem.Header("un-1", "Primeros pasos", completed = 2, total = 3),
+                            PathItem.Node(PathNodeUi("ls-1", "Saludos", PathNodeState.COMPLETED), lessonId = "ls-1"),
+                            PathItem.Node(PathNodeUi("ls-2", "Presentarse", PathNodeState.COMPLETED), lessonId = "ls-2"),
+                            PathItem.Node(PathNodeUi("ls-3", "La familia", PathNodeState.AVAILABLE), lessonId = "ls-3"),
+                            PathItem.Node(
+                                PathNodeUi("chest:un-1", "Primeros pasos", PathNodeState.CHEST_LOCKED),
+                                lessonId = null,
+                            ),
+                            PathItem.Header("un-2", "Vida diaria", completed = 0, total = 3),
+                            PathItem.Node(PathNodeUi("ls-4", "Comida y bebida", PathNodeState.LOCKED), lessonId = "ls-4"),
                         ),
                 ),
             onLessonSelected = { _, _ -> },

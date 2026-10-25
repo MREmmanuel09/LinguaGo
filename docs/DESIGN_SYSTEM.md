@@ -133,4 +133,6 @@ Reglas:
 - `docs/qa/feather/phase3-light.png` y `phase3-dark.png`: galería de los
   componentes de la Etapa 3 (nodos, cofre, vidas, XP líquido, tarjeta 3D),
   capturada en emulador con el test `DesignGalleryScreenshotTest`.
+- `docs/qa/feather/phase5-path-light.png` y `phase5-path-dark.png`: camino
+  lineal real en Home (debug con `LEARNING_PATH_V2`), capturado en emulador.
 

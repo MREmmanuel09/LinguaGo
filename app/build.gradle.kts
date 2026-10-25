@@ -85,7 +85,13 @@ android {
         }
     }
     buildTypes {
+        debug {
+            // El rediseño del camino se puede probar en debug antes de abrirlo
+            // en release (ADR-026). Release queda con el fallback actual.
+            buildConfigField("boolean", "LEARNING_PATH_V2", "true")
+        }
         release {
+            buildConfigField("boolean", "LEARNING_PATH_V2", "false")
             isMinifyEnabled = true
             isShrinkResources = true
             proguardFiles(
@@ -112,9 +118,17 @@ android {
         create("full") { dimension = "language" }
     }
     // Un APK universal por flavor + su variante arm64-v8a (ADR-017).
+    // `-Plinguago.splits=false` empaqueta todas las ABIs de las dependencias:
+    // útil para probar en emuladores x86_64; por defecto se mantiene arm64.
+    val abiSplitsEnabled =
+        providers
+            .gradleProperty("linguago.splits")
+            .orElse("true")
+            .get()
+            .toBoolean()
     splits {
         abi {
-            isEnable = true
+            isEnable = abiSplitsEnabled
             reset()
             include("arm64-v8a")
             isUniversalApk = true

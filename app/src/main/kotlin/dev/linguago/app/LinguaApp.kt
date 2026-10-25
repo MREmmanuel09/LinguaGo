@@ -98,6 +98,7 @@ fun LinguaApp(
                     onStartReview = { courseId ->
                         navController.navigate(Routes.review(courseId))
                     },
+                    pathEnabled = BuildConfig.LEARNING_PATH_V2,
                     modifier = Modifier.padding(innerPadding),
                 )
             }
