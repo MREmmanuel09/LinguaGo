@@ -6,6 +6,47 @@ El formato sigue [Keep a Changelog](https://keepachangelog.com/es-ES/1.1.0/)
 y el versionado sigue [SemVer](https://semver.org/lang/es/).
 Pre-1.0: los cambios incompatibles pueden ocurrir en `0.y.0`.
 
+## [1.0.0] — 2026-10-25
+
+Primera versión final. Rediseño UI/UX "Feather" y camino de aprendizaje
+guiado (ADR-026), con vidas no bloqueantes y XP diferido (ADR-025).
+
+### Agregado
+
+- **Camino de aprendizaje lineal** en Home: zigzag con nodos flotantes,
+  cabeceras de unidad, conectores curvos y cofres al completar cada unidad.
+  Activo en release con `LEARNING_PATH_V2`.
+- **Vidas (10) con regeneración rápida** (1/min): el fallo cuesta una vida;
+  a 0 la lección se cancela sin guardar XP ni progreso, y el acceso nunca
+  queda bloqueado de forma permanente.
+- **HUD del alumno**: racha, corazones, nivel visual y barra de XP líquida.
+- **Recompensas**: hoja de victoria con contador de XP animado, confeti y
+  cofre de unidad; hoja de lección cancelada con salida inmediata.
+- **Lumi**, mascota original (colibrí vectorial), junto al nodo activo y en
+  la victoria.
+- **Repaso FSRS**: `Otra vez` consume una vida, sin bloquear la sesión.
+- **Baseline profile regenerado** con el journey del Camino (Cold Start →
+  Home → primer nodo → MultipleChoice → Repaso FSRS).
+- **Release Gate F4** adaptado al camino y a las vidas: conduce las 5
+  primeras lecciones A1, presupuesto de 2 fallos por lección y navegación
+  por nodos; corrida completa de 20 min PASS (`failed=[]`).
+
+### Cambiado
+
+- **XP diferido**: cada respuesta solo califica; el XP se persiste una vez
+  al completar la lección (ADR-025).
+- Room **v4** (`hearts_progress`) con migración 3→4 y test instrumentado.
+- `SyncSnapshot` **v2** con vidas y compatibilidad con snapshots v1.
+- README: "sin vidas" pasa a "vidas con recuperación rápida" (I3
+  reinterpretado en ADR-025).
+
+### Corregido
+
+- **Doble conteo de XP** (suma por respuesta + al completar).
+- Contraste del conector del camino en modo oscuro.
+- Icono de cofre ilegible a tamaño grande (rediseñado con cerradura).
+- Navegación del Release Gate con la UI del camino.
+
 ## [0.2.0] — 2026-10-17
 
 Fases 4.2 → 7: seguridad, release, repaso espaciado, accesibilidad y pulido.
