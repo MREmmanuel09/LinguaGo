@@ -29,6 +29,18 @@ object LinguaTokens {
     const val DARK_FG_MUTED_HEX = 0xFFA5A1B8
     const val DARK_BORDER_HEX = 0xFF34304A
 
+    // Tokens extendidos del camino (ADR-026): oro de cofre y corazones.
+    const val CHEST_GOLD_HEX = 0xFFFFD700
+    const val CHEST_EDGE_HEX = 0xFFB8860B
+    const val HEART_RED_HEX = 0xFFFF6B6B
+    const val HEART_EMPTY_HEX = 0xFFDFE6E9
+
+    // Variantes oscuras de los tokens extendidos (ADR-026).
+    const val DARK_CHEST_GOLD_HEX = 0xFFE6C200
+    const val DARK_CHEST_EDGE_HEX = 0xFF8A6A00
+    const val DARK_HEART_RED_HEX = 0xFFE05A5A
+    const val DARK_HEART_EMPTY_HEX = 0xFF4A4560
+
     val Primary = Color(PRIMARY_HEX)
     val PrimaryEdge = Color(PRIMARY_EDGE_HEX)
     val Accent = Color(ACCENT_HEX)
@@ -47,4 +59,9 @@ object LinguaTokens {
     const val RADIUS_BUTTON_DP = 16
     const val RADIUS_CARD_DP = 12
     const val EDGE_BUTTON_DP = 4
+
+    // Radios nuevos del camino (ADR-026); los existentes no se migran aún.
+    const val RADIUS_CARD_LARGE_DP = 20
+    const val RADIUS_NODE_DP = 24
+    const val RADIUS_PILL_DP = 999
 }

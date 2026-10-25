@@ -127,3 +127,10 @@ Reglas:
   aprueba los tokens extendidos de este documento).
 - Prohibido introducir iconos, ilustraciones o mascotas de terceros.
 - Los componentes nuevos se documentan aquí antes de usarse en una pantalla.
+
+## 10. Referencias visuales
+
+- `docs/qa/feather/phase3-light.png` y `phase3-dark.png`: galería de los
+  componentes de la Etapa 3 (nodos, cofre, vidas, XP líquido, tarjeta 3D),
+  capturada en emulador con el test `DesignGalleryScreenshotTest`.
+

@@ -38,4 +38,21 @@ class LinguaTokensTest {
         assertEquals(12, LinguaTokens.RADIUS_CARD_DP)
         assertEquals(4, LinguaTokens.EDGE_BUTTON_DP)
     }
+
+    @Test
+    fun tokens_extendidos_del_camino() {
+        assertEquals(0xFFFFD700L, LinguaTokens.CHEST_GOLD_HEX)
+        assertEquals(0xFFB8860BL, LinguaTokens.CHEST_EDGE_HEX)
+        assertEquals(0xFFFF6B6BL, LinguaTokens.HEART_RED_HEX)
+        assertEquals(0xFFDFE6E9L, LinguaTokens.HEART_EMPTY_HEX)
+        assertEquals(0xFFE6C200L, LinguaTokens.DARK_CHEST_GOLD_HEX)
+        assertEquals(0xFFE05A5AL, LinguaTokens.DARK_HEART_RED_HEX)
+    }
+
+    @Test
+    fun radii_nuevos_del_camino() {
+        assertEquals(20, LinguaTokens.RADIUS_CARD_LARGE_DP)
+        assertEquals(24, LinguaTokens.RADIUS_NODE_DP)
+        assertEquals(999, LinguaTokens.RADIUS_PILL_DP)
+    }
 }
