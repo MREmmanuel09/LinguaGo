@@ -95,6 +95,31 @@ public class PathDesignAccessibilityTest {
     }
 
     @Test
+    public fun pathNode_lockedChestIsDisabled() {
+        var clicks = 0
+        compose.setContent {
+            LinguaTheme {
+                PathNode(
+                    node = PathNodeUi("chest:u1", "Primeros pasos", PathNodeState.CHEST_LOCKED),
+                    onClick = { clicks++ },
+                )
+            }
+        }
+
+        compose
+            .onNodeWithContentDescription("Cofre: Primeros pasos")
+            .assertIsNotEnabled()
+            .assert(
+                SemanticsMatcher.expectValue(
+                    SemanticsProperties.StateDescription,
+                    "Cofre bloqueado",
+                ),
+            ).performClick()
+
+        compose.runOnIdle { assertEquals(0, clicks) }
+    }
+
+    @Test
     public fun heartsIndicator_isSingleAccessibilityNode() {
         compose.setContent {
             LinguaTheme {

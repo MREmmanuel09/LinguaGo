@@ -105,6 +105,7 @@ public class DesignGalleryScreenshotTest {
             Row(horizontalArrangement = Arrangement.spacedBy(12.dp)) {
                 PathNode(PathNodeUi("n4", "Completada", PathNodeState.COMPLETED), onClick = {})
                 PathNode(PathNodeUi("n5", "Cofre", PathNodeState.CHEST), onClick = {})
+                PathNode(PathNodeUi("n6", "Cofre bloqueado", PathNodeState.CHEST_LOCKED), onClick = {})
             }
 
             Row(

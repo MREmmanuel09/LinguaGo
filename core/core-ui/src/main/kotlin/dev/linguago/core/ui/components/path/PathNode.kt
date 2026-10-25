@@ -54,6 +54,9 @@ enum class PathNodeState {
     IN_PROGRESS,
     COMPLETED,
     CHEST,
+
+    /** Cofre de una unidad aún no completada: visible pero inerte. */
+    CHEST_LOCKED,
 }
 
 /**
@@ -110,6 +113,12 @@ fun PathNode(
             iconRes = LinguaIcons.ChestRes
             iconTint = LinguaTokens.Fg
         }
+        PathNodeState.CHEST_LOCKED -> {
+            body = colors.surfaceVariant
+            edge = colors.outline
+            iconRes = LinguaIcons.ChestRes
+            iconTint = colors.onSurfaceVariant
+        }
         PathNodeState.LOCKED -> {
             body = colors.surfaceVariant
             edge = colors.outline
@@ -125,7 +134,9 @@ fun PathNode(
             PathNodeState.IN_PROGRESS -> "En progreso"
             PathNodeState.COMPLETED -> "Completada"
             PathNodeState.CHEST -> "Cofre"
+            PathNodeState.CHEST_LOCKED -> "Cofre bloqueado"
         }
+    val isChest = node.state == PathNodeState.CHEST || node.state == PathNodeState.CHEST_LOCKED
 
     val transition = rememberInfiniteTransition(label = "pathNodePulse")
     val pulse by transition.animateFloat(
@@ -159,7 +170,7 @@ fun PathNode(
                     role = Role.Button
                     this.stateDescription = stateLabel
                     contentDescription =
-                        if (node.state == PathNodeState.CHEST) {
+                        if (isChest) {
                             "Cofre: ${node.label}"
                         } else {
                             "Lección: ${node.label}. $stateLabel"
@@ -167,7 +178,7 @@ fun PathNode(
                 }.clickable(
                     interactionSource = interaction,
                     indication = null,
-                    enabled = node.state != PathNodeState.LOCKED,
+                    enabled = node.state != PathNodeState.LOCKED && node.state != PathNodeState.CHEST_LOCKED,
                     onClick = { onClick(node.id) },
                 ),
         contentAlignment = Alignment.Center,

@@ -4,14 +4,19 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import dagger.hilt.android.lifecycle.HiltViewModel
 import dev.linguago.core.common.Result
+import dev.linguago.core.domain.hearts.HEARTS_MAX
 import dev.linguago.core.domain.model.Course
 import dev.linguago.core.domain.model.CourseId
 import dev.linguago.core.domain.model.Language
 import dev.linguago.core.domain.model.LessonProgress
+import dev.linguago.core.domain.repository.HeartsRepository
 import dev.linguago.core.domain.repository.ProgressRepository
 import dev.linguago.core.domain.repository.ReviewRepository
 import dev.linguago.core.domain.repository.SettingsRepository
 import dev.linguago.core.domain.usecase.LoadCourseUseCase
+import dev.linguago.feature.home.path.PathItem
+import dev.linguago.feature.home.path.buildPathItems
+import dev.linguago.feature.home.path.xpLevelFor
 import kotlinx.coroutines.Job
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.SharingStarted
@@ -40,6 +45,10 @@ data class HomeUiState(
     val dueReviews: Int = 0,
     val courseTitle: String? = null,
     val units: List<UnitTile> = emptyList(),
+    val pathItems: List<PathItem> = emptyList(),
+    val hearts: Int = HEARTS_MAX,
+    val level: Int = 1,
+    val xpIntoLevel: Float = 0f,
 )
 
 /**
@@ -53,6 +62,7 @@ class HomeViewModel
     constructor(
         private val loadCourseUseCase: LoadCourseUseCase,
         private val progressRepository: ProgressRepository,
+        private val heartsRepository: HeartsRepository,
         private val settingsRepository: SettingsRepository,
         private val reviewRepository: ReviewRepository,
     ) : ViewModel() {
@@ -63,12 +73,15 @@ class HomeViewModel
 
         val uiState: StateFlow<HomeUiState> =
             combine(
-                progressRepository.observeStreak(),
+                combine(progressRepository.observeStreak(), heartsRepository.observe()) { streak, hearts ->
+                    streak to hearts
+                },
                 progressRepository.observeLessonProgress(),
                 loading,
                 course,
                 dueCount,
-            ) { streak, lessonProgress, isLoading, courseValue, dueReviews ->
+            ) { (streak, hearts), lessonProgress, isLoading, courseValue, dueReviews ->
+                val xp = xpLevelFor(streak.totalXp)
                 HomeUiState(
                     loading = isLoading,
                     hasCourse = courseValue != null,
@@ -78,6 +91,10 @@ class HomeViewModel
                     dueReviews = dueReviews,
                     courseTitle = courseValue?.let { title(it) },
                     units = courseValue?.let { value -> buildTiles(value, lessonProgress) } ?: emptyList(),
+                    pathItems = courseValue?.let { value -> buildPathItems(value, lessonProgress) } ?: emptyList(),
+                    hearts = hearts.hearts,
+                    level = xp.level,
+                    xpIntoLevel = xp.progressToNext,
                 )
             }.stateIn(viewModelScope, SharingStarted.WhileSubscribed(5000), HomeUiState())
 
