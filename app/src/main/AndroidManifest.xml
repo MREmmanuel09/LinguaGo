@@ -4,6 +4,8 @@
     <!-- Repaso de pronunciación (SpeakRepeat, Fase 2.3): el STT solo usa el
          micrófono cuando el usuario lo pide; denegarlo degrada a "no listo". -->
     <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <!-- Feedback háptico (ADR-027): permiso normal, sin solicitud en runtime. -->
+    <uses-permission android:name="android.permission.VIBRATE" />
 
     <application
         android:name=".LinguaGoApplication"

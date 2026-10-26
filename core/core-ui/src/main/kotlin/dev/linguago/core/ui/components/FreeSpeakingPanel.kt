@@ -3,7 +3,6 @@ package dev.linguago.core.ui.components
 import androidx.compose.foundation.Canvas
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
-import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.ExperimentalLayoutApi
@@ -36,6 +35,9 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import dev.linguago.core.domain.logic.FreeSpeakingFeedback
 import dev.linguago.core.domain.logic.FreeSpeakingVerdict
+import dev.linguago.core.ui.feedback.FeedbackCue
+import dev.linguago.core.ui.feedback.LocalInteractionFeedback
+import dev.linguago.core.ui.feedback.feedbackClickable
 import dev.linguago.core.ui.theme.LinguaTheme
 import dev.linguago.core.ui.theme.LinguaTokens
 import kotlin.math.roundToInt
@@ -63,6 +65,7 @@ public fun FreeSpeakingPanel(
     criteria: List<String>,
     selfAssessment: Map<Int, Int>,
     audioAvailable: Boolean,
+    enabled: Boolean = true,
     onStart: () -> Unit,
     onStop: () -> Unit,
     onRate: (criterion: Int, level: Int) -> Unit,
@@ -100,12 +103,14 @@ public fun FreeSpeakingPanel(
                     criteria = criteria,
                     selfAssessment = selfAssessment,
                     audioAvailable = audioAvailable,
+                    enabled = enabled,
                     onRate = onRate,
                     onPlayModel = onPlayModel,
                 )
             else ->
                 ReadySection(
                     speechAvailable = speechAvailable,
+                    enabled = enabled,
                     onStart = onStart,
                     onSkip = onSkip,
                 )
@@ -160,10 +165,12 @@ private fun ReviewSection(
     criteria: List<String>,
     selfAssessment: Map<Int, Int>,
     audioAvailable: Boolean,
+    enabled: Boolean,
     onRate: (criterion: Int, level: Int) -> Unit,
     onPlayModel: () -> Unit,
 ) {
     val colors = MaterialTheme.colorScheme
+    val feedbackPlayer = LocalInteractionFeedback.current
     Column(
         modifier =
             Modifier
@@ -204,7 +211,13 @@ private fun ReviewSection(
             color = colors.onSurfaceVariant,
         )
         Text(text = modelAnswer, style = MaterialTheme.typography.bodyMedium, color = colors.onSurface)
-        TextButton(onClick = onPlayModel, enabled = audioAvailable) {
+        TextButton(
+            onClick = {
+                feedbackPlayer.play(FeedbackCue.TAP)
+                onPlayModel()
+            },
+            enabled = audioAvailable,
+        ) {
             Text(text = "Escuchar respuesta modelo")
         }
     }
@@ -212,17 +225,24 @@ private fun ReviewSection(
         HeuristicBreakdown(feedback = feedback, detectedGrammarLabels = detectedGrammarLabels)
     }
     if (criteria.isNotEmpty()) {
-        SelfAssessment(criteria = criteria, selfAssessment = selfAssessment, onRate = onRate)
+        SelfAssessment(
+            criteria = criteria,
+            selfAssessment = selfAssessment,
+            enabled = enabled,
+            onRate = onRate,
+        )
     }
 }
 
 @Composable
 private fun ReadySection(
     speechAvailable: Boolean,
+    enabled: Boolean,
     onStart: () -> Unit,
     onSkip: () -> Unit,
 ) {
     val colors = MaterialTheme.colorScheme
+    val feedback = LocalInteractionFeedback.current
     Text(
         text =
             if (speechAvailable) {
@@ -236,10 +256,17 @@ private fun ReadySection(
     PrimaryButton3D(
         text = "Grabar respuesta",
         onClick = onStart,
-        enabled = speechAvailable,
+        enabled = speechAvailable && enabled,
         modifier = Modifier.fillMaxWidth(),
     )
-    TextButton(onClick = onSkip, modifier = Modifier.fillMaxWidth()) {
+    TextButton(
+        onClick = {
+            feedback.play(FeedbackCue.TAP)
+            onSkip()
+        },
+        enabled = enabled,
+        modifier = Modifier.fillMaxWidth(),
+    ) {
         Text(text = "No puedo hablar ahora")
     }
 }
@@ -355,6 +382,7 @@ private fun BreakdownRow(
 private fun SelfAssessment(
     criteria: List<String>,
     selfAssessment: Map<Int, Int>,
+    enabled: Boolean,
     onRate: (criterion: Int, level: Int) -> Unit,
 ) {
     Column(verticalArrangement = Arrangement.spacedBy(10.dp)) {
@@ -383,6 +411,7 @@ private fun SelfAssessment(
                         LevelChip(
                             label = label,
                             selected = selfAssessment[index] == level,
+                            enabled = enabled,
                             description = "Criterio ${index + 1}: $label",
                             onClick = { onRate(index, level) },
                             modifier = Modifier.weight(1f),
@@ -398,6 +427,7 @@ private fun SelfAssessment(
 private fun LevelChip(
     label: String,
     selected: Boolean,
+    enabled: Boolean,
     description: String,
     onClick: () -> Unit,
     modifier: Modifier = Modifier,
@@ -415,7 +445,7 @@ private fun LevelChip(
                 .clip(RoundedCornerShape(8.dp))
                 .background(if (selected) colors.primary else Color.Transparent)
                 .border(2.dp, if (selected) colors.primary else colors.outline, RoundedCornerShape(8.dp))
-                .clickable(onClick = onClick)
+                .feedbackClickable(FeedbackCue.SELECT, enabled = enabled, onClick = onClick)
                 .semantics {
                     role = Role.RadioButton
                     this.selected = selected

@@ -63,6 +63,33 @@ public data class CulturalNote(
     public val translation: String? = null,
 )
 
+/**
+ * Micro-clase breve de gramática y reglas previa a los ejercicios (ADR-028).
+ * No se califica, no consume vidas ni XP y siempre se puede saltar.
+ */
+@Serializable
+public data class MicroLesson(
+    public val title: String,
+    public val goals: List<String> = emptyList(),
+    public val sections: List<MicroLessonSection> = emptyList(),
+)
+
+/** Sección de la micro-clase con una regla/explicación y ejemplos opcionales. */
+@Serializable
+public data class MicroLessonSection(
+    public val heading: String,
+    public val body: String,
+    public val examples: List<MicroLessonExample> = emptyList(),
+)
+
+/** Ejemplo bilingüe de la micro-clase; `note` aclara el uso. */
+@Serializable
+public data class MicroLessonExample(
+    public val source: String,
+    public val target: String,
+    public val note: String? = null,
+)
+
 @Serializable
 public data class Level(
     val id: LevelId,
@@ -94,4 +121,6 @@ public data class Lesson(
     public val vocabFrequencyBand: VocabFrequencyBand? = null,
     /** Modismos con nota cultural; obligatorios en B1/B2. */
     public val culturalNotes: List<CulturalNote> = emptyList(),
+    /** Micro-clase opcional de gramática/reglas (ADR-028). */
+    public val microLesson: MicroLesson? = null,
 )

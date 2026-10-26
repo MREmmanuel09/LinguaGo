@@ -2,7 +2,7 @@
   "$schema": "http://json-schema.org/draft-07/schema#",
   "$id": "https://github.com/MREmmanuel09/LinguaGo/docs/schemas/course-v2.json",
   "title": "LinguaGo course.json v2",
-  "description": "Contrato formal del contenido pedagógico empaquetado en v2.0 (ADR-018). Mantiene la jerarquía curso→nivel→unidad→lección→ejercicio de v1, añade locale dialectal, metadatos CEFR obligatorios para lecciones B1/B2, feedback de error estructurado y cuatro variantes de ejercicio nuevas. Un ejercicio con forma v1 sigue siendo válido: los campos nuevos son opcionales salvo que la lección se declare B1 o B2.",
+  "description": "Contrato formal del contenido pedagógico empaquetado en v2.0 (ADR-018). Mantiene la jerarquía curso→nivel→unidad→lección→ejercicio de v1, añade locale dialectal, metadatos CEFR obligatorios para lecciones B1/B2, feedback de error y de acierto estructurado y cuatro variantes de ejercicio nuevas. Un ejercicio con forma v1 sigue siendo válido: los campos nuevos son opcionales salvo que la lección se declare B1 o B2.",
   "type": "object",
   "additionalProperties": false,
   "required": ["id", "from", "to", "schemaVersion", "levels"],
@@ -32,6 +32,16 @@
         "ruleRef": { "type": "string", "minLength": 1 }
       }
     },
+    "feedbackOnSuccess": {
+      "type": "object",
+      "description": "Explicación que el grader devuelve cuando la respuesta es correcta (ADR-028).",
+      "additionalProperties": false,
+      "required": ["explanation"],
+      "properties": {
+        "explanation": { "type": "string", "minLength": 1 },
+        "ruleRef": { "type": "string", "minLength": 1 }
+      }
+    },
     "grammarPoint": {
       "type": "object",
       "additionalProperties": false,
@@ -51,6 +61,49 @@
         "idiom": { "type": "string", "minLength": 1 },
         "note": { "type": "string", "minLength": 1 },
         "translation": { "type": "string", "minLength": 1 }
+      }
+    },
+    "microLessonExample": {
+      "type": "object",
+      "description": "Ejemplo bilingüe de una micro-clase de gramática (ADR-028).",
+      "additionalProperties": false,
+      "required": ["source", "target"],
+      "properties": {
+        "source": { "type": "string", "minLength": 1 },
+        "target": { "type": "string", "minLength": 1 },
+        "note": { "type": "string", "minLength": 1 }
+      }
+    },
+    "microLessonSection": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["heading", "body"],
+      "properties": {
+        "heading": { "type": "string", "minLength": 1 },
+        "body": { "type": "string", "minLength": 1 },
+        "examples": {
+          "type": "array",
+          "items": { "$ref": "#/definitions/microLessonExample" }
+        }
+      }
+    },
+    "microLesson": {
+      "type": "object",
+      "description": "Clase breve de gramática y reglas previa a los ejercicios; no se califica, no consume vidas ni XP y es saltable (ADR-028).",
+      "additionalProperties": false,
+      "required": ["title", "goals", "sections"],
+      "properties": {
+        "title": { "type": "string", "minLength": 1 },
+        "goals": {
+          "type": "array",
+          "minItems": 1,
+          "items": { "type": "string", "minLength": 1 }
+        },
+        "sections": {
+          "type": "array",
+          "minItems": 1,
+          "items": { "$ref": "#/definitions/microLessonSection" }
+        }
       }
     },
     "level": {
@@ -94,6 +147,7 @@
           "minItems": 1,
           "items": { "$ref": "#/definitions/culturalNote" }
         },
+        "microLesson": { "$ref": "#/definitions/microLesson" },
         "exercises": { "type": "array", "minItems": 1, "items": { "$ref": "#/definitions/exercise" } }
       },
       "allOf": [
@@ -142,7 +196,8 @@
         "type": {},
         "id": { "$ref": "#/definitions/exerciseId" },
         "audioText": { "$ref": "#/definitions/audioText" },
-        "feedbackOnError": { "$ref": "#/definitions/feedbackOnError" }
+        "feedbackOnError": { "$ref": "#/definitions/feedbackOnError" },
+        "feedbackOnSuccess": { "$ref": "#/definitions/feedbackOnSuccess" }
       }
     },
     "exMultipleChoice": {
@@ -156,7 +211,8 @@
         "options": { "type": "array", "minItems": 2, "items": { "type": "string", "minLength": 1 } },
         "correctIndex": { "type": "integer", "minimum": 0 },
         "audioText": { "$ref": "#/definitions/audioText" },
-        "feedbackOnError": { "$ref": "#/definitions/feedbackOnError" }
+        "feedbackOnError": { "$ref": "#/definitions/feedbackOnError" },
+        "feedbackOnSuccess": { "$ref": "#/definitions/feedbackOnSuccess" }
       }
     },
     "exTranslate": {
@@ -170,7 +226,8 @@
         "correctTokens": { "$ref": "#/definitions/tokens" },
         "distractorTokens": { "type": "array", "items": { "type": "string", "minLength": 1 } },
         "audioText": { "$ref": "#/definitions/audioText" },
-        "feedbackOnError": { "$ref": "#/definitions/feedbackOnError" }
+        "feedbackOnError": { "$ref": "#/definitions/feedbackOnError" },
+        "feedbackOnSuccess": { "$ref": "#/definitions/feedbackOnSuccess" }
       }
     },
     "exMatchPairs": {
@@ -194,7 +251,8 @@
           }
         },
         "audioText": { "$ref": "#/definitions/audioText" },
-        "feedbackOnError": { "$ref": "#/definitions/feedbackOnError" }
+        "feedbackOnError": { "$ref": "#/definitions/feedbackOnError" },
+        "feedbackOnSuccess": { "$ref": "#/definitions/feedbackOnSuccess" }
       }
     },
     "exOrderWords": {
@@ -207,7 +265,8 @@
         "tokens": { "$ref": "#/definitions/tokens" },
         "answerTokens": { "$ref": "#/definitions/tokens" },
         "audioText": { "$ref": "#/definitions/audioText" },
-        "feedbackOnError": { "$ref": "#/definitions/feedbackOnError" }
+        "feedbackOnError": { "$ref": "#/definitions/feedbackOnError" },
+        "feedbackOnSuccess": { "$ref": "#/definitions/feedbackOnSuccess" }
       }
     },
     "exListenChoose": {
@@ -220,7 +279,8 @@
         "options": { "type": "array", "minItems": 2, "items": { "type": "string", "minLength": 1 } },
         "correctIndex": { "type": "integer", "minimum": 0 },
         "audioText": { "type": "string", "minLength": 1 },
-        "feedbackOnError": { "$ref": "#/definitions/feedbackOnError" }
+        "feedbackOnError": { "$ref": "#/definitions/feedbackOnError" },
+        "feedbackOnSuccess": { "$ref": "#/definitions/feedbackOnSuccess" }
       }
     },
     "exListenType": {
@@ -232,7 +292,8 @@
         "id": { "$ref": "#/definitions/exerciseId" },
         "transcription": { "type": "string", "minLength": 1 },
         "audioText": { "type": "string", "minLength": 1 },
-        "feedbackOnError": { "$ref": "#/definitions/feedbackOnError" }
+        "feedbackOnError": { "$ref": "#/definitions/feedbackOnError" },
+        "feedbackOnSuccess": { "$ref": "#/definitions/feedbackOnSuccess" }
       }
     },
     "exSpeakRepeat": {
@@ -244,7 +305,8 @@
         "id": { "$ref": "#/definitions/exerciseId" },
         "targetPhrase": { "type": "string", "minLength": 1 },
         "audioText": { "$ref": "#/definitions/audioText" },
-        "feedbackOnError": { "$ref": "#/definitions/feedbackOnError" }
+        "feedbackOnError": { "$ref": "#/definitions/feedbackOnError" },
+        "feedbackOnSuccess": { "$ref": "#/definitions/feedbackOnSuccess" }
       }
     },
     "exKanaChoose": {
@@ -258,7 +320,8 @@
         "romajiOptions": { "type": "array", "minItems": 2, "items": { "type": "string", "minLength": 1 } },
         "correctRomaji": { "type": "string", "minLength": 1 },
         "audioText": { "$ref": "#/definitions/audioText" },
-        "feedbackOnError": { "$ref": "#/definitions/feedbackOnError" }
+        "feedbackOnError": { "$ref": "#/definitions/feedbackOnError" },
+        "feedbackOnSuccess": { "$ref": "#/definitions/feedbackOnSuccess" }
       }
     },
     "exKanjiReading": {
@@ -272,7 +335,8 @@
         "readingOptions": { "type": "array", "minItems": 2, "items": { "type": "string", "minLength": 1 } },
         "correctReading": { "type": "string", "minLength": 1 },
         "audioText": { "$ref": "#/definitions/audioText" },
-        "feedbackOnError": { "$ref": "#/definitions/feedbackOnError" }
+        "feedbackOnError": { "$ref": "#/definitions/feedbackOnError" },
+        "feedbackOnSuccess": { "$ref": "#/definitions/feedbackOnSuccess" }
       }
     },
     "exParticleFill": {
@@ -286,7 +350,8 @@
         "particles": { "type": "array", "minItems": 2, "items": { "type": "string", "minLength": 1 } },
         "correctParticle": { "type": "string", "minLength": 1 },
         "audioText": { "$ref": "#/definitions/audioText" },
-        "feedbackOnError": { "$ref": "#/definitions/feedbackOnError" }
+        "feedbackOnError": { "$ref": "#/definitions/feedbackOnError" },
+        "feedbackOnSuccess": { "$ref": "#/definitions/feedbackOnSuccess" }
       }
     },
     "exAudioOnlyPrompt": {
@@ -302,7 +367,8 @@
         "options": { "type": "array", "minItems": 2, "items": { "type": "string", "minLength": 1 } },
         "correctIndex": { "type": "integer", "minimum": 0 },
         "allowSlowPlayback": { "type": "boolean" },
-        "feedbackOnError": { "$ref": "#/definitions/feedbackOnError" }
+        "feedbackOnError": { "$ref": "#/definitions/feedbackOnError" },
+        "feedbackOnSuccess": { "$ref": "#/definitions/feedbackOnSuccess" }
       }
     },
     "exSemanticMatch": {
@@ -330,7 +396,8 @@
           }
         },
         "audioText": { "$ref": "#/definitions/audioText" },
-        "feedbackOnError": { "$ref": "#/definitions/feedbackOnError" }
+        "feedbackOnError": { "$ref": "#/definitions/feedbackOnError" },
+        "feedbackOnSuccess": { "$ref": "#/definitions/feedbackOnSuccess" }
       }
     },
     "exClozeDragDrop": {
@@ -357,7 +424,8 @@
           }
         },
         "audioText": { "$ref": "#/definitions/audioText" },
-        "feedbackOnError": { "$ref": "#/definitions/feedbackOnError" }
+        "feedbackOnError": { "$ref": "#/definitions/feedbackOnError" },
+        "feedbackOnSuccess": { "$ref": "#/definitions/feedbackOnSuccess" }
       }
     },
     "exFreeSpeakingPrompt": {

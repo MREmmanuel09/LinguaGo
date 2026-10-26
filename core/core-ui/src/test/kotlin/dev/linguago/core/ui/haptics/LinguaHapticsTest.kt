@@ -2,6 +2,7 @@ package dev.linguago.core.ui.haptics
 
 import androidx.compose.ui.hapticfeedback.HapticFeedback
 import androidx.compose.ui.hapticfeedback.HapticFeedbackType
+import dev.linguago.core.ui.feedback.FeedbackCue
 import kotlinx.coroutines.runBlocking
 import org.junit.Assert.assertEquals
 import org.junit.Test
@@ -39,6 +40,23 @@ class LinguaHapticsTest {
 
         assertEquals(
             listOf(HapticFeedbackType.Reject, HapticFeedbackType.Reject),
+            recorded,
+        )
+    }
+
+    @Test
+    fun `play traduce los cues de sonido a haptica`() {
+        haptics.play(FeedbackCue.CORRECT)
+        haptics.play(FeedbackCue.SNAP)
+        haptics.play(FeedbackCue.INCORRECT)
+
+        assertEquals(
+            listOf(
+                HapticFeedbackType.Confirm,
+                HapticFeedbackType.TextHandleMove,
+                HapticFeedbackType.Reject,
+                HapticFeedbackType.Reject,
+            ),
             recorded,
         )
     }

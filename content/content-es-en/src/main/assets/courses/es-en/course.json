@@ -18,6 +18,31 @@
               "title": "Saludos",
               "cefrLevel": "A1",
               "vocabFrequencyBand": "1000-2000",
+              "microLesson": {
+                "title": "Saludos, despedidas y cortesía",
+                "goals": [
+                  "Reconocer saludos, despedidas y fórmulas de cortesía.",
+                  "Distinguir cuándo usar 'Hello', 'Good morning' y 'Goodbye'."
+                ],
+                "sections": [
+                  {
+                    "heading": "Saludos y momentos del día",
+                    "body": "'Hello' es un saludo neutro. 'Good morning' se usa antes del mediodía; 'Good afternoon' y 'Good evening' según avanza el día.",
+                    "examples": [
+                      {"source": "Buenas tardes", "target": "Good afternoon", "note": "Después del mediodía."},
+                      {"source": "Buenas noches (saludo)", "target": "Good evening", "note": "Al llegar, no al despedirse."}
+                    ]
+                  },
+                  {
+                    "heading": "Despedidas y cortesía",
+                    "body": "'Goodbye' cierra la conversación. 'Please', 'Thank you' y 'You're welcome' son fórmulas de cortesía; no equivalen a un saludo.",
+                    "examples": [
+                      {"source": "Hasta luego", "target": "See you later"},
+                      {"source": "De nada", "target": "You're welcome"}
+                    ]
+                  }
+                ]
+              },
               "exercises": [
                 {
                   "type": "MultipleChoice",
@@ -28,6 +53,9 @@
                   "feedbackOnError": {
                     "type": "vocabulary",
                     "explanation": "«Hola» se traduce como 'Hello'; 'Goodbye' es «adiós» y 'Please' es «por favor»."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "«Hola» se dice 'Hello'. Las otras opciones son una despedida y una fórmula de cortesía."
                   }
                 },
                 {
@@ -39,6 +67,9 @@
                   "feedbackOnError": {
                     "type": "vocabulary",
                     "explanation": "'Good morning' es «buenos días»; 'Goodbye' es una despedida y 'night' aparece en 'good night'."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La fórmula correcta es 'Good morning': 'Good' aporta el saludo y 'morning' indica la mañana."
                   }
                 },
                 {
@@ -49,6 +80,9 @@
                   "feedbackOnError": {
                     "type": "word_order",
                     "explanation": "El orden correcto es 'How are you': partícula interrogativa + verbo + pronombre."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "El orden es 'How are you': pregunta con 'How', verbo 'are' y pronombre 'you'."
                   }
                 },
                 {
@@ -61,7 +95,10 @@
                   ],
                   "feedbackOnError": {
                     "type": "vocabulary",
-                    "explanation": "Cada fórmula de cortesía tiene su par: 'adiós→Goodbye', 'gracias→Thank you', 'por favor→Please'."
+                    "explanation": "Cada fórmula de cortesía tiene su par: 'adiós'→'Goodbye', 'gracias'→'Thank you', 'por favor'→'Please'."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Cada fórmula de cortesía se une con su traducción exacta: 'adiós'→'Goodbye', 'gracias'→'Thank you' y 'por favor'→'Please'."
                   }
                 },
                 {

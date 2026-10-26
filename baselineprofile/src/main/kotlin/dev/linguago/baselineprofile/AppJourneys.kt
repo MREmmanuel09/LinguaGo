@@ -16,6 +16,8 @@ internal const val SHOW_TRANSLATION_LABEL: String = "Mostrar traducción"
 internal const val GOOD_RATING_LABEL: String = "Bien"
 internal const val CONTINUE_LABEL: String = "Continuar"
 internal const val EXIT_LESSON_LABEL: String = "Salir"
+internal const val BRIEF_START_LABEL: String = "Empezar lección"
+internal const val BRIEF_RESUME_LABEL: String = "Volver a la lección"
 
 private const val DEFAULT_TIMEOUT_MILLIS: Long = 20_000L
 
@@ -105,6 +107,10 @@ internal fun openFirstLesson(uiDevice: UiDevice) {
 
 /** Responde el primer ejercicio (MultipleChoice de "Saludos") y avanza. */
 internal fun interactWithFirstExercise(uiDevice: UiDevice) {
+    when {
+        uiDevice.hasObject(By.text(BRIEF_START_LABEL)) -> tapText(uiDevice, BRIEF_START_LABEL)
+        uiDevice.hasObject(By.text(BRIEF_RESUME_LABEL)) -> tapText(uiDevice, BRIEF_RESUME_LABEL)
+    }
     tapText(uiDevice, FIRST_OPTION_LABEL)
     check(uiDevice.wait(Until.hasObject(By.text(CONTINUE_LABEL)), DEFAULT_TIMEOUT_MILLIS)) {
         "No apareció el feedback del primer ejercicio"

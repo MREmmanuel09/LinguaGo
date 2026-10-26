@@ -12,15 +12,17 @@ import kotlinx.coroutines.flow.stateIn
 import kotlinx.coroutines.launch
 import javax.inject.Inject
 
-/** Estado de ajustes: tema elegido y curso seleccionado (null si aún no hay). */
+/** Estado de ajustes: tema, curso y preferencias sensoriales (ADR-027). */
 data class SettingsUiState(
     val themeMode: ThemeMode = ThemeMode.SYSTEM,
     val selectedCourseId: String? = null,
+    val soundEffectsEnabled: Boolean = true,
+    val hapticsEnabled: Boolean = true,
 )
 
 /**
- * Ajustes observados y mutables (Fase 1): tema claro/oscuro y curso activo
- * persisten en DataStore vía SettingsRepository.
+ * Ajustes observados y mutables (Fase 1): tema, curso activo y feedback
+ * sensorial persisten en DataStore vía SettingsRepository.
  */
 @HiltViewModel
 class SettingsViewModel
@@ -32,14 +34,35 @@ class SettingsViewModel
             combine(
                 settingsRepository.themeMode,
                 settingsRepository.selectedCourseId,
-            ) { themeMode, courseId ->
-                SettingsUiState(themeMode = themeMode, selectedCourseId = courseId)
+                settingsRepository.soundEffectsEnabled,
+                settingsRepository.hapticsEnabled,
+            ) { themeMode, courseId, soundEnabled, hapticsEnabled ->
+                SettingsUiState(
+                    themeMode = themeMode,
+                    selectedCourseId = courseId,
+                    soundEffectsEnabled = soundEnabled,
+                    hapticsEnabled = hapticsEnabled,
+                )
             }.stateIn(viewModelScope, SharingStarted.WhileSubscribed(5000), SettingsUiState())
 
         /** Cambia el tema preferido y lo persiste. */
         fun setTheme(mode: ThemeMode) {
             viewModelScope.launch {
                 settingsRepository.updateThemeMode(mode)
+            }
+        }
+
+        /** Activa o desactiva los SFX (ADR-027). */
+        fun setSoundEffectsEnabled(enabled: Boolean) {
+            viewModelScope.launch {
+                settingsRepository.updateSoundEffectsEnabled(enabled)
+            }
+        }
+
+        /** Activa o desactiva la háptica (ADR-027). */
+        fun setHapticsEnabled(enabled: Boolean) {
+            viewModelScope.launch {
+                settingsRepository.updateHapticsEnabled(enabled)
             }
         }
 

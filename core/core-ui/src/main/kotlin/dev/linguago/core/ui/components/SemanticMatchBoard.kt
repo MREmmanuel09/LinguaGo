@@ -2,7 +2,6 @@ package dev.linguago.core.ui.components
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
-import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
@@ -25,6 +24,8 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import dev.linguago.core.domain.model.Exercise
+import dev.linguago.core.ui.feedback.FeedbackCue
+import dev.linguago.core.ui.feedback.feedbackClickable
 import dev.linguago.core.ui.theme.LinguaTheme
 import dev.linguago.core.ui.theme.LinguaTokens
 
@@ -44,6 +45,7 @@ public fun SemanticMatchBoard(
     onSelectRight: (Int) -> Unit,
     modifier: Modifier = Modifier,
     instructions: String? = null,
+    enabled: Boolean = true,
 ) {
     Column(modifier = modifier.fillMaxWidth(), verticalArrangement = Arrangement.spacedBy(12.dp)) {
         Text(
@@ -59,7 +61,7 @@ public fun SemanticMatchBoard(
                 nuance = pair.nuance,
                 association = association,
                 selected = selectedLeft == left,
-                enabled = true,
+                enabled = enabled,
                 onClick = { onSelectLeft(left) },
                 modifier = Modifier.fillMaxWidth(),
             )
@@ -77,7 +79,7 @@ public fun SemanticMatchBoard(
                 nuance = null,
                 association = null,
                 selected = false,
-                enabled = !taken,
+                enabled = enabled && !taken,
                 onClick = { onSelectRight(right) },
                 modifier = Modifier.fillMaxWidth(),
             )
@@ -117,7 +119,7 @@ private fun SemanticTile(
                 .clip(RoundedCornerShape(LinguaTokens.RADIUS_CARD_DP.dp))
                 .background(background)
                 .border(2.dp, borderColor, RoundedCornerShape(LinguaTokens.RADIUS_CARD_DP.dp))
-                .clickable(enabled = enabled, onClick = onClick)
+                .feedbackClickable(FeedbackCue.SELECT, enabled = enabled, onClick = onClick)
                 .semantics(mergeDescendants = true) {
                     role = Role.Button
                     this.selected = selected

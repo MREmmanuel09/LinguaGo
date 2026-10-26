@@ -59,6 +59,58 @@ lección B1/B2**:
 | `explanation` | Sí | Explicación concreta del error cometido (no un mensaje genérico). |
 | `ruleRef` | No | `id` de un `grammarPoints[]` de la misma lección. |
 
+### `feedbackOnSuccess` (por ejercicio)
+
+Objeto **opcional** para reforzar el acierto explicando por qué la respuesta
+es correcta (ADR-028). Si falta, la UI muestra la respuesta canónica y usa
+`grammarPoints[].description` o, en su defecto, el `feedbackOnError` del
+ejercicio como apoyo:
+
+```json
+"feedbackOnSuccess": {
+  "explanation": "La opción correcta usa el atenuador 'I'm afraid' para rechazar sin romper la relación.",
+  "ruleRef": "gp-hedging"
+}
+```
+
+| Campo | Obligatorio | Regla |
+|---|---|---|
+| `explanation` | Sí | Explicación concreta del acierto, no un mensaje genérico. |
+| `ruleRef` | No | `id` de un `grammarPoints[]` de la misma lección. |
+
+### `microLesson` (por lección)
+
+Clase breve de **gramática y reglas** que se muestra antes de los ejercicios
+(ADR-028). No se califica, no consume vidas ni XP y se puede saltar; se
+reabre con “Guía”. Es opcional: si falta, la app construye una versión de
+respaldo con `scenario`, `canDo`, `grammarPoints` y `culturalNotes`.
+
+```json
+"microLesson": {
+  "title": "Saludos y cortesía",
+  "goals": ["Reconocer saludos.", "Distinguir una despedida."],
+  "sections": [
+    {
+      "heading": "Saludos y momentos del día",
+      "body": "'Hello' es neutro; 'Good morning' se usa por la mañana.",
+      "examples": [
+        {"source": "Buenas tardes", "target": "Good afternoon", "note": "Después del mediodía."}
+      ]
+    }
+  ]
+}
+```
+
+| Campo | Obligatorio | Regla |
+|---|---|---|
+| `title` | Sí | Título de la micro-clase. |
+| `goals` | Sí | ≥ 1 objetivo no vacío. |
+| `sections` | Sí | ≥ 1 sección con `heading` y `body` no vacíos. |
+| `examples` | No | `source` y `target` no vacíos; `note` opcional. |
+
+Regla editorial: los ejemplos deben explicar la regla, no copiar los
+enunciados de los ejercicios ni adelantar sus respuestas.
+
 ## Nuevas variantes de ejercicio
 
 Además de las 10 variantes de v1 (que siguen siendo válidas sin campos
@@ -118,7 +170,8 @@ usar LLMs on-device o cloud.
 ## Retrocompatibilidad v1 → v2
 
 - Las 10 variantes de v1 conservan sus campos obligatorios originales; los
-  campos nuevos (`feedbackOnError`) son opcionales en A1/A2.
+  campos nuevos (`feedbackOnError` y `feedbackOnSuccess`) son opcionales en
+  A1/A2.
 - Una lección sin `cefrLevel` es válida y se interpreta como `A1`; por tanto
   un ejercicio con forma v1 sigue siendo válido dentro de v2.
 - Los cursos existentes (`es-pt`, `es-fr`, `es-ja`) no se migran en v2.0:

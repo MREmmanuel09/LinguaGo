@@ -1,7 +1,6 @@
 package dev.linguago.feature.sync
 
 import androidx.compose.foundation.background
-import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Spacer
@@ -23,6 +22,8 @@ import androidx.compose.ui.unit.dp
 import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import dev.linguago.core.ui.components.PrimaryButton3D
+import dev.linguago.core.ui.feedback.FeedbackCue
+import dev.linguago.core.ui.feedback.feedbackClickable
 import dev.linguago.core.ui.theme.LinguaTheme
 
 /**
@@ -120,7 +121,7 @@ private fun SyncContent(
                 Modifier
                     .fillMaxWidth()
                     .clip(RoundedCornerShape(12.dp))
-                    .clickable(onClick = onOpenAccount)
+                    .feedbackClickable(FeedbackCue.TAP, onClick = onOpenAccount)
                     .padding(vertical = 8.dp),
         )
         state.message?.let { message ->

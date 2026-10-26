@@ -29,6 +29,27 @@ public class ExerciseGraderFeedbackTest {
         assertTrue(result.isCorrect)
         assertEquals(null, result.matchedErrorRuleId)
         assertEquals(null, result.diagnosticFeedback)
+        assertEquals(null, result.successExplanation)
+        assertEquals(null, result.matchedSuccessRuleId)
+    }
+
+    @Test
+    public fun grade_correcto_adjunta_explicacion_de_acierto() {
+        val exercise =
+            multipleChoiceConFeedback(ruleRef = GrammarPointId("gp-mixed"))
+                .copy(
+                    feedbackOnSuccess =
+                        Exercise.FeedbackOnSuccess(
+                            explanation = "La opción correcta mantiene la condicional mixta.",
+                            ruleRef = GrammarPointId("gp-mixed"),
+                        ),
+                )
+        val result = ExerciseGrader.grade(exercise, ExerciseAnswer.OptionPicked(0))
+
+        assertTrue(result.isCorrect)
+        assertEquals("La opción correcta mantiene la condicional mixta.", result.successExplanation)
+        assertEquals(GrammarPointId("gp-mixed"), result.matchedSuccessRuleId)
+        assertEquals(null, result.diagnosticFeedback)
     }
 
     @Test

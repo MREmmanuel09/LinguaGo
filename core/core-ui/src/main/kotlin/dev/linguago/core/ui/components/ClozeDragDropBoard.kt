@@ -4,7 +4,6 @@ import android.content.Context
 import android.view.accessibility.AccessibilityManager
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
-import androidx.compose.foundation.clickable
 import androidx.compose.foundation.gestures.detectDragGestures
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
@@ -45,6 +44,8 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.zIndex
 import dev.linguago.core.domain.logic.ClozePassageParser
 import dev.linguago.core.domain.logic.ClozeSegment
+import dev.linguago.core.ui.feedback.FeedbackCue
+import dev.linguago.core.ui.feedback.feedbackClickable
 import dev.linguago.core.ui.theme.LinguaTheme
 
 /**
@@ -65,6 +66,7 @@ public fun ClozeDragDropBoard(
     onClearBlank: (blankId: String) -> Unit,
     modifier: Modifier = Modifier,
     touchExplorationOverride: Boolean? = null,
+    enabled: Boolean = true,
 ) {
     val colors = MaterialTheme.colorScheme
     val tapMode = touchExplorationOverride ?: rememberTouchExplorationEnabled()
@@ -104,6 +106,7 @@ public fun ClozeDragDropBoard(
                             blankId = segment.id,
                             option = filled[segment.id],
                             isTarget = drag.target == segment.id,
+                            enabled = enabled,
                             register = { coordinates -> drag.blankCoords[segment.id] = coordinates },
                             onClick = {
                                 val chosen = selectedOption
@@ -129,6 +132,7 @@ public fun ClozeDragDropBoard(
                     option = option,
                     selected = selectedOption == option,
                     dragging = drag.dragging == option,
+                    enabled = enabled,
                     drag = drag,
                     register = { coordinates -> drag.optionCoords[option] = coordinates },
                     onSelect = { selectedOption = if (selectedOption == option) null else option },
@@ -183,6 +187,7 @@ private fun ClozeBlankSlot(
     blankId: String,
     option: String?,
     isTarget: Boolean,
+    enabled: Boolean,
     register: (LayoutCoordinates) -> Unit,
     onClick: () -> Unit,
 ) {
@@ -205,9 +210,11 @@ private fun ClozeBlankSlot(
                         isTarget -> colors.primary.copy(alpha = 0.12f)
                         else -> colors.surfaceVariant
                     },
-                ).clickable(enabled = true, role = Role.Button, onClick = onClick)
-                .semantics { contentDescription = description }
-                .padding(horizontal = 12.dp, vertical = 12.dp),
+                ).feedbackClickable(FeedbackCue.SELECT, enabled = enabled, onClick = onClick)
+                .semantics {
+                    role = Role.Button
+                    contentDescription = description
+                }.padding(horizontal = 12.dp, vertical = 12.dp),
         contentAlignment = Alignment.Center,
     ) {
         Text(
@@ -224,6 +231,7 @@ private fun ClozeOptionChip(
     option: String,
     selected: Boolean,
     dragging: Boolean,
+    enabled: Boolean,
     drag: ClozeDragState,
     register: (LayoutCoordinates) -> Unit,
     onSelect: () -> Unit,
@@ -253,12 +261,13 @@ private fun ClozeOptionChip(
                         dragging || selected -> colors.primary
                         else -> colors.surface
                     },
-                ).clickable { onSelect() }
+                ).feedbackClickable(FeedbackCue.SELECT, enabled = enabled, onClick = onSelect)
                 .semantics {
                     role = Role.Button
                     this.selected = selected
                 }.padding(horizontal = 12.dp, vertical = 14.dp)
-                .pointerInput(option) {
+                .pointerInput(option, enabled) {
+                    if (!enabled) return@pointerInput
                     detectDragGestures(
                         onDragStart = { start ->
                             val coordinates = drag.optionCoords[option]

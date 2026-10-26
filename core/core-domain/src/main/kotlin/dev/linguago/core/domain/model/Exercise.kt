@@ -16,6 +16,7 @@ public sealed interface Exercise {
     public val id: ExerciseId
     public val audioText: String?
     public val feedbackOnError: FeedbackOnError?
+    public val feedbackOnSuccess: FeedbackOnSuccess?
 
     /** Categoría del error para el feedback estructurado de v2 (ADR-018). */
     @Serializable
@@ -46,6 +47,13 @@ public sealed interface Exercise {
     @Serializable
     public data class FeedbackOnError(
         public val type: FeedbackErrorType,
+        public val explanation: String,
+        public val ruleRef: GrammarPointId? = null,
+    )
+
+    /** Explicación del acierto: por qué la respuesta correcta lo es (ADR-028). */
+    @Serializable
+    public data class FeedbackOnSuccess(
         public val explanation: String,
         public val ruleRef: GrammarPointId? = null,
     )
@@ -95,6 +103,7 @@ public sealed interface Exercise {
         val correctIndex: Int,
         override val audioText: String? = null,
         override val feedbackOnError: FeedbackOnError? = null,
+        override val feedbackOnSuccess: FeedbackOnSuccess? = null,
     ) : Exercise
 
     /** Traducción ensamblando tokens de respuesta/distraídos. */
@@ -107,6 +116,7 @@ public sealed interface Exercise {
         val distractorTokens: List<String> = emptyList(),
         override val audioText: String? = null,
         override val feedbackOnError: FeedbackOnError? = null,
+        override val feedbackOnSuccess: FeedbackOnSuccess? = null,
     ) : Exercise
 
     /** Emparejar conceptos (palabra↔traducción, kana↔romaji, ...). */
@@ -118,6 +128,7 @@ public sealed interface Exercise {
         val pairs: List<MatchPair>,
         override val audioText: String? = null,
         override val feedbackOnError: FeedbackOnError? = null,
+        override val feedbackOnSuccess: FeedbackOnSuccess? = null,
     ) : Exercise
 
     /** Par de conceptos asociados en MatchPairs; el JSON usa {left, right}. */
@@ -136,6 +147,7 @@ public sealed interface Exercise {
         val answerTokens: List<String>,
         override val audioText: String? = null,
         override val feedbackOnError: FeedbackOnError? = null,
+        override val feedbackOnSuccess: FeedbackOnSuccess? = null,
     ) : Exercise
 
     /** Escuchar y elegir la transcripción entre opciones. */
@@ -148,6 +160,7 @@ public sealed interface Exercise {
         /** Frase cuyo audio es el enunciado del ejercicio (obligatorio). */
         override val audioText: String,
         override val feedbackOnError: FeedbackOnError? = null,
+        override val feedbackOnSuccess: FeedbackOnSuccess? = null,
     ) : Exercise
 
     /** Escuchar y escribir la frase exacta (dictado). */
@@ -158,6 +171,7 @@ public sealed interface Exercise {
         val transcription: String,
         override val audioText: String,
         override val feedbackOnError: FeedbackOnError? = null,
+        override val feedbackOnSuccess: FeedbackOnSuccess? = null,
     ) : Exercise
 
     /** Repetir en voz alta una frase objetivo (STT, Fase 2). */
@@ -168,6 +182,7 @@ public sealed interface Exercise {
         val targetPhrase: String,
         override val audioText: String? = null,
         override val feedbackOnError: FeedbackOnError? = null,
+        override val feedbackOnSuccess: FeedbackOnSuccess? = null,
     ) : Exercise
 
     /** Reconocer kana japonés (romaji entre opciones). */
@@ -180,6 +195,7 @@ public sealed interface Exercise {
         val correctRomaji: String,
         override val audioText: String? = null,
         override val feedbackOnError: FeedbackOnError? = null,
+        override val feedbackOnSuccess: FeedbackOnSuccess? = null,
     ) : Exercise
 
     /** Reconocer lectura de un kanji entre opciones. */
@@ -192,6 +208,7 @@ public sealed interface Exercise {
         val correctReading: String,
         override val audioText: String? = null,
         override val feedbackOnError: FeedbackOnError? = null,
+        override val feedbackOnSuccess: FeedbackOnSuccess? = null,
     ) : Exercise
 
     /** Rellenar la partícula que falta en una frase japonesa. */
@@ -204,6 +221,7 @@ public sealed interface Exercise {
         val correctParticle: String,
         override val audioText: String? = null,
         override val feedbackOnError: FeedbackOnError? = null,
+        override val feedbackOnSuccess: FeedbackOnSuccess? = null,
     ) : Exercise
 
     /**
@@ -220,6 +238,7 @@ public sealed interface Exercise {
         val question: String? = null,
         val allowSlowPlayback: Boolean = false,
         override val feedbackOnError: FeedbackOnError? = null,
+        override val feedbackOnSuccess: FeedbackOnSuccess? = null,
     ) : Exercise
 
     /** Emparejamiento semántico con matiz de registro (v2, B2). */
@@ -231,6 +250,7 @@ public sealed interface Exercise {
         val instructions: String? = null,
         override val audioText: String? = null,
         override val feedbackOnError: FeedbackOnError? = null,
+        override val feedbackOnSuccess: FeedbackOnSuccess? = null,
     ) : Exercise
 
     /**
@@ -245,6 +265,7 @@ public sealed interface Exercise {
         val blanks: List<ClozeBlank>,
         override val audioText: String? = null,
         override val feedbackOnError: FeedbackOnError? = null,
+        override val feedbackOnSuccess: FeedbackOnSuccess? = null,
     ) : Exercise
 
     /**
@@ -267,5 +288,6 @@ public sealed interface Exercise {
         val maxWpm: Double? = null,
         override val audioText: String? = null,
         override val feedbackOnError: FeedbackOnError? = null,
+        override val feedbackOnSuccess: FeedbackOnSuccess? = null,
     ) : Exercise
 }

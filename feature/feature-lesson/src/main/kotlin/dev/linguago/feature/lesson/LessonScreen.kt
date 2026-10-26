@@ -5,8 +5,12 @@ import android.content.pm.PackageManager
 import androidx.activity.compose.rememberLauncherForActivityResult
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.compose.animation.AnimatedContent
+import androidx.compose.animation.animateColorAsState
 import androidx.compose.animation.core.Spring
+import androidx.compose.animation.core.animateFloatAsState
+import androidx.compose.animation.core.snap
 import androidx.compose.animation.core.spring
+import androidx.compose.animation.core.tween
 import androidx.compose.animation.fadeIn
 import androidx.compose.animation.fadeOut
 import androidx.compose.animation.slideInHorizontally
@@ -16,12 +20,19 @@ import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.ExperimentalLayoutApi
+import androidx.compose.foundation.layout.FlowRow
+import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
+import androidx.compose.foundation.layout.heightIn
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.lazy.LazyRow
+import androidx.compose.foundation.lazy.itemsIndexed
+import androidx.compose.foundation.lazy.rememberLazyListState
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.verticalScroll
@@ -33,18 +44,17 @@ import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableIntStateOf
-import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
+import androidx.compose.ui.graphics.graphicsLayer
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.semantics.Role
 import androidx.compose.ui.semantics.role
 import androidx.compose.ui.semantics.selected
 import androidx.compose.ui.semantics.semantics
-import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.IntOffset
 import androidx.compose.ui.unit.dp
@@ -63,12 +73,19 @@ import dev.linguago.core.ui.components.HeartsIndicator
 import dev.linguago.core.ui.components.InfoBanner
 import dev.linguago.core.ui.components.LiquidXpBar
 import dev.linguago.core.ui.components.OptionCard
+import dev.linguago.core.ui.components.OptionStatus
 import dev.linguago.core.ui.components.PrimaryButton3D
+import dev.linguago.core.ui.components.PuzzleMatchBoard
+import dev.linguago.core.ui.components.PuzzlePairUi
 import dev.linguago.core.ui.components.RewardSheet
-import dev.linguago.core.ui.components.SemanticMatchBoard
-import dev.linguago.core.ui.haptics.rememberLinguaHaptics
+import dev.linguago.core.ui.components.displayText
+import dev.linguago.core.ui.feedback.FeedbackCue
+import dev.linguago.core.ui.feedback.LocalInteractionFeedback
+import dev.linguago.core.ui.feedback.feedbackClickable
+import dev.linguago.core.ui.theme.LinguaMotion
 import dev.linguago.core.ui.theme.LinguaTheme
 import dev.linguago.core.ui.theme.LinguaTokens
+import dev.linguago.core.ui.util.rememberAnimationsEnabled
 
 /**
  * Motor de lección (RFC §2.3, ADR-002). Renderiza cada ejercicio según su
@@ -118,11 +135,13 @@ fun LessonScreen(
         onSubmitTokens = viewModel::submitTokens,
         onMatchLeft = viewModel::selectLeft,
         onMatchRight = viewModel::matchLeftTo,
+        onUnpair = viewModel::unpair,
         onSubmitPairs = viewModel::submitMatchedPairs,
         onFillCloze = viewModel::fillClozeBlank,
         onClearCloze = viewModel::clearClozeBlank,
         onSubmitCloze = viewModel::submitCloze,
-        onTypedText = viewModel::submitTypedText,
+        onTypedTextChange = viewModel::updateTypedText,
+        onSubmitTyped = viewModel::submitTypedText,
         onSpeakRequest = onSpeakRequest,
         onSkipSpeech = viewModel::skipSpeech,
         onFreeSpeakStart = onFreeSpeakStart,
@@ -131,9 +150,13 @@ fun LessonScreen(
         onSubmitFreeSpeaking = viewModel::submitFreeSpeaking,
         onFreeSpeakSkip = viewModel::skipFreeSpeaking,
         onPlayModelAnswer = viewModel::playModelAnswer,
+        onRetry = viewModel::retry,
+        onReveal = viewModel::revealAnswer,
         onAdvance = viewModel::advance,
         onPlayAudio = viewModel::playAudio,
         onPlaySlow = viewModel::playAudioSlow,
+        onBeginLesson = viewModel::beginLesson,
+        onOpenBrief = viewModel::openBrief,
         onExit = onExit,
         modifier = modifier,
     )
@@ -147,11 +170,13 @@ private fun LessonContent(
     onSubmitTokens: () -> Unit,
     onMatchLeft: (Int) -> Unit,
     onMatchRight: (Int) -> Unit,
+    onUnpair: (Int) -> Unit,
     onSubmitPairs: () -> Unit,
     onFillCloze: (String, String) -> Unit,
     onClearCloze: (String) -> Unit,
     onSubmitCloze: () -> Unit,
-    onTypedText: (String) -> Unit,
+    onTypedTextChange: (String) -> Unit,
+    onSubmitTyped: () -> Unit,
     onSpeakRequest: () -> Unit,
     onSkipSpeech: () -> Unit,
     onFreeSpeakStart: () -> Unit,
@@ -160,17 +185,33 @@ private fun LessonContent(
     onSubmitFreeSpeaking: () -> Unit,
     onFreeSpeakSkip: () -> Unit,
     onPlayModelAnswer: () -> Unit,
+    onRetry: () -> Unit,
+    onReveal: () -> Unit,
     onAdvance: () -> Unit,
     onPlayAudio: () -> Unit,
     onPlaySlow: () -> Unit,
+    onBeginLesson: () -> Unit,
+    onOpenBrief: () -> Unit,
     onExit: () -> Unit,
     modifier: Modifier = Modifier,
 ) {
+    val feedback = LocalInteractionFeedback.current
+    LaunchedEffect(uiState.finished) {
+        if (uiState.finished) feedback.play(FeedbackCue.COMPLETE)
+    }
     when {
         uiState.loading -> Loading(modifier)
         uiState.invalid -> Invalid(modifier, onExit)
         uiState.lessonCancelled -> CancelledLessonSheet(xpLost = uiState.xpEarned, onExit = onExit, modifier = modifier)
         uiState.finished -> RewardSheet(xpEarned = uiState.xpEarned, onContinue = onExit, modifier = modifier)
+        uiState.briefVisible && uiState.brief != null ->
+            LessonBriefScreen(
+                brief = uiState.brief,
+                startLabel = if (uiState.briefSeen) "Volver a la lección" else "Empezar lección",
+                onStart = onBeginLesson,
+                onExit = onExit,
+                modifier = modifier,
+            )
         else ->
             ExerciseStage(
                 uiState = uiState,
@@ -179,11 +220,13 @@ private fun LessonContent(
                 onSubmitTokens = onSubmitTokens,
                 onMatchLeft = onMatchLeft,
                 onMatchRight = onMatchRight,
+                onUnpair = onUnpair,
                 onSubmitPairs = onSubmitPairs,
                 onFillCloze = onFillCloze,
                 onClearCloze = onClearCloze,
                 onSubmitCloze = onSubmitCloze,
-                onTypedText = onTypedText,
+                onTypedTextChange = onTypedTextChange,
+                onSubmitTyped = onSubmitTyped,
                 onSpeakRequest = onSpeakRequest,
                 onSkipSpeech = onSkipSpeech,
                 onFreeSpeakStart = onFreeSpeakStart,
@@ -192,9 +235,12 @@ private fun LessonContent(
                 onSubmitFreeSpeaking = onSubmitFreeSpeaking,
                 onFreeSpeakSkip = onFreeSpeakSkip,
                 onPlayModelAnswer = onPlayModelAnswer,
+                onRetry = onRetry,
+                onReveal = onReveal,
                 onAdvance = onAdvance,
                 onPlayAudio = onPlayAudio,
                 onPlaySlow = onPlaySlow,
+                onOpenBrief = onOpenBrief,
                 onExit = onExit,
                 modifier = modifier,
             )
@@ -209,11 +255,13 @@ private fun ExerciseStage(
     onSubmitTokens: () -> Unit,
     onMatchLeft: (Int) -> Unit,
     onMatchRight: (Int) -> Unit,
+    onUnpair: (Int) -> Unit,
     onSubmitPairs: () -> Unit,
     onFillCloze: (String, String) -> Unit,
     onClearCloze: (String) -> Unit,
     onSubmitCloze: () -> Unit,
-    onTypedText: (String) -> Unit,
+    onTypedTextChange: (String) -> Unit,
+    onSubmitTyped: () -> Unit,
     onSpeakRequest: () -> Unit,
     onSkipSpeech: () -> Unit,
     onFreeSpeakStart: () -> Unit,
@@ -222,9 +270,12 @@ private fun ExerciseStage(
     onSubmitFreeSpeaking: () -> Unit,
     onFreeSpeakSkip: () -> Unit,
     onPlayModelAnswer: () -> Unit,
+    onRetry: () -> Unit,
+    onReveal: () -> Unit,
     onAdvance: () -> Unit,
     onPlayAudio: () -> Unit,
     onPlaySlow: () -> Unit,
+    onOpenBrief: () -> Unit,
     onExit: () -> Unit,
     modifier: Modifier = Modifier,
 ) {
@@ -247,21 +298,27 @@ private fun ExerciseStage(
             (uiState.index + 1) / uiState.exercises.size.toFloat()
         }
 
-    // Haptics semánticos (F2.1): confirmación/error al evaluar y tick al
-    // acoplar tokens o parejas. Se disparan solo al crecer la respuesta.
-    val haptics = rememberLinguaHaptics()
+    // Feedback sensorial (ADR-027): acierto/error al evaluar y encaje al
+    // añadir o quitar tokens y parejas. Es un refuerzo, no la única señal.
+    val feedback = LocalInteractionFeedback.current
     LaunchedEffect(uiState.feedback, uiState.index) {
-        val feedback = uiState.feedback ?: return@LaunchedEffect
-        if (feedback.isCorrect) haptics.confirm() else haptics.error()
+        val current = uiState.feedback ?: return@LaunchedEffect
+        feedback.play(if (current.isCorrect) FeedbackCue.CORRECT else FeedbackCue.INCORRECT)
     }
-    var lastChosenCount by remember { mutableIntStateOf(uiState.chosenTokens.size) }
-    LaunchedEffect(uiState.chosenTokens.size) {
-        if (uiState.chosenTokens.size > lastChosenCount) haptics.tick()
+    var lastChosenCount by remember(uiState.index) { mutableIntStateOf(uiState.chosenTokens.size) }
+    LaunchedEffect(uiState.chosenTokens.size, uiState.index) {
+        when {
+            uiState.chosenTokens.size > lastChosenCount -> feedback.play(FeedbackCue.SNAP)
+            uiState.chosenTokens.size < lastChosenCount -> feedback.play(FeedbackCue.DESELECT)
+        }
         lastChosenCount = uiState.chosenTokens.size
     }
-    var lastMatchedCount by remember { mutableIntStateOf(uiState.matched.size) }
-    LaunchedEffect(uiState.matched.size) {
-        if (uiState.matched.size > lastMatchedCount) haptics.tick()
+    var lastMatchedCount by remember(uiState.index) { mutableIntStateOf(uiState.matched.size) }
+    LaunchedEffect(uiState.matched.size, uiState.index) {
+        when {
+            uiState.matched.size > lastMatchedCount -> feedback.play(FeedbackCue.SNAP)
+            uiState.matched.size < lastMatchedCount -> feedback.play(FeedbackCue.DESELECT)
+        }
         lastMatchedCount = uiState.matched.size
     }
 
@@ -282,7 +339,18 @@ private fun ExerciseStage(
                 color = colors.onBackground,
                 modifier = Modifier.weight(1f),
             )
-            TextButton(onClick = onExit) { Text(text = "Salir") }
+            TextButton(
+                onClick = {
+                    feedback.play(FeedbackCue.TAP)
+                    onOpenBrief()
+                },
+            ) { Text(text = "Guía") }
+            TextButton(
+                onClick = {
+                    feedback.play(FeedbackCue.TAP)
+                    onExit()
+                },
+            ) { Text(text = "Salir") }
         }
         Row(
             modifier = Modifier.fillMaxWidth(),
@@ -336,9 +404,11 @@ private fun ExerciseStage(
                     onToggleToken = onToggleToken,
                     onMatchLeft = onMatchLeft,
                     onMatchRight = onMatchRight,
+                    onUnpair = onUnpair,
                     onFillCloze = onFillCloze,
                     onClearCloze = onClearCloze,
-                    onTypedText = onTypedText,
+                    onTypedTextChange = onTypedTextChange,
+                    onSubmitTyped = onSubmitTyped,
                     onSpeakRequest = onSpeakRequest,
                     onPlayAudio = onPlayAudio,
                     onPlaySlow = onPlaySlow,
@@ -370,6 +440,8 @@ private fun ExerciseStage(
             onSubmitCloze = onSubmitCloze,
             onSubmitFreeSpeaking = onSubmitFreeSpeaking,
             onSkipSpeech = onSkipSpeech,
+            onRetry = onRetry,
+            onReveal = onReveal,
             onAdvance = onAdvance,
         )
     }
@@ -383,9 +455,11 @@ private fun Renderer(
     onToggleToken: (String) -> Unit,
     onMatchLeft: (Int) -> Unit,
     onMatchRight: (Int) -> Unit,
+    onUnpair: (Int) -> Unit,
     onFillCloze: (String, String) -> Unit,
     onClearCloze: (String) -> Unit,
-    onTypedText: (String) -> Unit,
+    onTypedTextChange: (String) -> Unit,
+    onSubmitTyped: () -> Unit,
     onSpeakRequest: () -> Unit,
     onPlayAudio: () -> Unit,
     onPlaySlow: () -> Unit,
@@ -396,34 +470,95 @@ private fun Renderer(
     onPlayModelAnswer: () -> Unit,
 ) {
     when (exercise) {
-        is Exercise.MultipleChoice -> OptionsStep(exercise.question, exercise.options, onPickOption)
-        is Exercise.KanaChoose -> OptionsStep(exercise.kana, exercise.romajiOptions, onPickOption)
-        is Exercise.KanjiReading -> OptionsStep(exercise.kanji, exercise.readingOptions, onPickOption)
-        is Exercise.ParticleFill -> OptionsStep(exercise.sentenceTemplate, exercise.particles, onPickOption)
+        is Exercise.MultipleChoice ->
+            OptionsStep(
+                prompt = exercise.question,
+                options = exercise.options,
+                selectedIndex = uiState.selectedOption,
+                correctIndex = exercise.correctIndex,
+                answerLocked = uiState.answerLocked,
+                revealAnswer = uiState.feedback?.correctAnswer != null,
+                onPickOption = onPickOption,
+            )
+        is Exercise.KanaChoose ->
+            OptionsStep(
+                prompt = exercise.kana,
+                options = exercise.romajiOptions,
+                selectedIndex = uiState.selectedOption,
+                correctIndex = exercise.romajiOptions.indexOf(exercise.correctRomaji),
+                answerLocked = uiState.answerLocked,
+                revealAnswer = uiState.feedback?.correctAnswer != null,
+                onPickOption = onPickOption,
+            )
+        is Exercise.KanjiReading ->
+            OptionsStep(
+                prompt = exercise.kanji,
+                options = exercise.readingOptions,
+                selectedIndex = uiState.selectedOption,
+                correctIndex = exercise.readingOptions.indexOf(exercise.correctReading),
+                answerLocked = uiState.answerLocked,
+                revealAnswer = uiState.feedback?.correctAnswer != null,
+                onPickOption = onPickOption,
+            )
+        is Exercise.ParticleFill ->
+            OptionsStep(
+                prompt = exercise.sentenceTemplate,
+                options = exercise.particles,
+                selectedIndex = uiState.selectedOption,
+                correctIndex = exercise.particles.indexOf(exercise.correctParticle),
+                answerLocked = uiState.answerLocked,
+                revealAnswer = uiState.feedback?.correctAnswer != null,
+                onPickOption = onPickOption,
+            )
         is Exercise.ListenChoose ->
             Column(verticalArrangement = Arrangement.spacedBy(12.dp)) {
-                AudioPanel(title = "Escucha y elige", onPlay = onPlayAudio, enabled = uiState.audioAvailable)
-                OptionsStep("¿Qué escuchaste?", exercise.options, onPickOption)
+                AudioPanel(
+                    title = "Escucha y elige",
+                    onPlay = onPlayAudio,
+                    onPlaySlow = onPlaySlow,
+                    enabled = uiState.audioAvailable,
+                )
+                OptionsStep(
+                    prompt = "¿Qué escuchaste?",
+                    options = exercise.options,
+                    selectedIndex = uiState.selectedOption,
+                    correctIndex = exercise.correctIndex,
+                    answerLocked = uiState.answerLocked,
+                    revealAnswer = uiState.feedback?.correctAnswer != null,
+                    onPickOption = onPickOption,
+                )
             }
         is Exercise.AudioOnlyPrompt ->
             Column(verticalArrangement = Arrangement.spacedBy(12.dp)) {
                 AudioOnlyPromptPanel(
                     question = exercise.question,
                     audioAvailable = uiState.audioAvailable,
-                    allowSlowPlayback = exercise.allowSlowPlayback,
+                    allowSlowPlayback = exercise.allowSlowPlayback || uiState.feedback != null,
                     transcript = exercise.audioText,
-                    revealTranscript = uiState.feedback != null,
+                    revealTranscript = uiState.feedback?.correctAnswer != null,
                     onPlay = onPlayAudio,
                     onPlaySlow = onPlaySlow,
                 )
-                OptionsStep("¿Qué escuchaste?", exercise.options, onPickOption)
+                OptionsStep(
+                    prompt = "¿Qué escuchaste?",
+                    options = exercise.options,
+                    selectedIndex = uiState.selectedOption,
+                    correctIndex = exercise.correctIndex,
+                    answerLocked = uiState.answerLocked,
+                    revealAnswer = uiState.feedback?.correctAnswer != null,
+                    onPickOption = onPickOption,
+                )
             }
         is Exercise.ListenType ->
             TypePanel(
                 audioTitle = "Escribe lo que escuchas",
+                value = uiState.typedText,
+                onValueChange = onTypedTextChange,
+                onSubmit = onSubmitTyped,
                 onPlay = onPlayAudio,
+                onPlaySlow = onPlaySlow,
                 audioEnabled = uiState.audioAvailable,
-                onTypedText = onTypedText,
+                enabled = !uiState.answerLocked,
             )
         is Exercise.SpeakRepeat ->
             SpeechPanel(
@@ -431,24 +566,57 @@ private fun Renderer(
                 listening = uiState.listening,
                 recognized = uiState.recognized,
                 audioAvailable = uiState.audioAvailable,
+                answerLocked = uiState.answerLocked,
                 onPlay = onPlayAudio,
+                onPlaySlow = onPlaySlow,
                 onRecord = onSpeakRequest,
             )
         is Exercise.Translate ->
-            TokenBoard(header = exercise.sourcePhrase, uiState = uiState, onToggleToken = onToggleToken)
+            TokenBoard(
+                header = exercise.sourcePhrase,
+                uiState = uiState,
+                answerLocked = uiState.answerLocked,
+                onToggleToken = onToggleToken,
+            )
         is Exercise.OrderWords ->
-            TokenBoard(header = "Ordena la frase", uiState = uiState, onToggleToken = onToggleToken)
+            OrderWordsBoard(
+                uiState = uiState,
+                answerLocked = uiState.answerLocked,
+                onToggleToken = onToggleToken,
+            )
         is Exercise.MatchPairs ->
-            MatchBoard(exercise.pairs, uiState, onMatchLeft, onMatchRight)
-        is Exercise.SemanticMatch ->
-            SemanticMatchBoard(
-                pairs = exercise.pairs,
+            PuzzleMatchBoard(
+                pairs = exercise.pairs.map { pair -> PuzzlePairUi(left = pair.left, right = pair.right) },
                 shuffledRights = uiState.shuffledRights,
                 selectedLeft = uiState.selectedLeft,
                 matched = uiState.matched,
                 onSelectLeft = onMatchLeft,
-                onSelectRight = onMatchRight,
-                instructions = exercise.instructions,
+                onMatchRight = onMatchRight,
+                onUnpair = onUnpair,
+                instructions = "Empareja las columnas",
+                enabled = !uiState.answerLocked,
+                result = uiState.feedback?.isCorrect,
+            )
+        is Exercise.SemanticMatch ->
+            PuzzleMatchBoard(
+                pairs =
+                    exercise.pairs.map { pair ->
+                        PuzzlePairUi(
+                            left = pair.left,
+                            right = pair.right,
+                            rightBadge = pair.register?.let(::semanticRegisterLabel),
+                            rightDetail = pair.nuance,
+                        )
+                    },
+                shuffledRights = uiState.shuffledRights,
+                selectedLeft = uiState.selectedLeft,
+                matched = uiState.matched,
+                onSelectLeft = onMatchLeft,
+                onMatchRight = onMatchRight,
+                onUnpair = onUnpair,
+                instructions = exercise.instructions ?: "Empareja cada expresión con su equivalente",
+                enabled = !uiState.answerLocked,
+                result = uiState.feedback?.isCorrect,
             )
         is Exercise.ClozeDragDrop ->
             ClozeDragDropBoard(
@@ -457,6 +625,7 @@ private fun Renderer(
                 filled = uiState.clozeFilled,
                 onAssign = onFillCloze,
                 onClearBlank = onClearCloze,
+                enabled = !uiState.answerLocked,
             )
         is Exercise.FreeSpeakingPrompt ->
             FreeSpeakingPanel(
@@ -474,6 +643,7 @@ private fun Renderer(
                 criteria = exercise.selfAssessmentCriteria,
                 selfAssessment = uiState.freeSpeaking.selfAssessment,
                 audioAvailable = uiState.audioAvailable,
+                enabled = !uiState.answerLocked,
                 onStart = onFreeSpeakStart,
                 onStop = onFreeSpeakStop,
                 onRate = onFreeSpeakRate,
@@ -498,8 +668,11 @@ private fun BottomActions(
     onSubmitCloze: () -> Unit,
     onSubmitFreeSpeaking: () -> Unit,
     onSkipSpeech: () -> Unit,
+    onRetry: () -> Unit,
+    onReveal: () -> Unit,
     onAdvance: () -> Unit,
 ) {
+    val feedbackPlayer = LocalInteractionFeedback.current
     when {
         feedback != null -> {
             FeedbackBanner(
@@ -508,7 +681,37 @@ private fun BottomActions(
                 diagnostic = feedback.diagnostic,
                 idiom = feedback.idiom,
                 culturalNote = feedback.culturalNote,
+                successExplanation = feedback.successExplanation,
+                correctAnswer = feedback.correctAnswer?.displayText(),
             )
+            if (feedback.retryAvailable) {
+                Spacer(Modifier.height(4.dp))
+                Row(
+                    modifier = Modifier.fillMaxWidth(),
+                    horizontalArrangement = Arrangement.spacedBy(8.dp),
+                ) {
+                    TextButton(
+                        onClick = {
+                            feedbackPlayer.play(FeedbackCue.TAP)
+                            onRetry()
+                        },
+                        modifier = Modifier.weight(1f),
+                    ) {
+                        Text(text = "Reintentar")
+                    }
+                    if (feedback.correctAnswer == null) {
+                        TextButton(
+                            onClick = {
+                                feedbackPlayer.play(FeedbackCue.TAP)
+                                onReveal()
+                            },
+                            modifier = Modifier.weight(1f),
+                        ) {
+                            Text(text = "Ver respuesta")
+                        }
+                    }
+                }
+            }
             Spacer(Modifier.height(8.dp))
             PrimaryButton3D(
                 text = "Continuar",
@@ -546,7 +749,10 @@ private fun BottomActions(
             )
         exercise is Exercise.SpeakRepeat ->
             TextButton(
-                onClick = onSkipSpeech,
+                onClick = {
+                    feedbackPlayer.play(FeedbackCue.TAP)
+                    onSkipSpeech()
+                },
                 modifier = Modifier.fillMaxWidth(),
                 enabled = !listening,
             ) { Text(text = "No puedo hablar ahora") }
@@ -564,7 +770,9 @@ private fun SpeechPanel(
     listening: Boolean,
     recognized: String?,
     audioAvailable: Boolean,
+    answerLocked: Boolean,
     onPlay: () -> Unit,
+    onPlaySlow: () -> Unit,
     onRecord: () -> Unit,
     modifier: Modifier = Modifier,
 ) {
@@ -578,6 +786,7 @@ private fun SpeechPanel(
         AudioPanel(
             title = target,
             onPlay = onPlay,
+            onPlaySlow = onPlaySlow,
             enabled = audioAvailable,
         )
         Column(
@@ -586,12 +795,20 @@ private fun SpeechPanel(
                     .fillMaxWidth()
                     .clip(RoundedCornerShape(LinguaTokens.RADIUS_CARD_DP.dp))
                     .background(if (listening) colors.tertiaryContainer else colors.secondaryContainer)
-                    .clickable(enabled = !listening, onClick = onRecord)
-                    .padding(24.dp),
+                    .feedbackClickable(
+                        cue = FeedbackCue.TAP,
+                        enabled = !listening && !answerLocked,
+                        onClick = onRecord,
+                    ).padding(24.dp),
             horizontalAlignment = Alignment.CenterHorizontally,
         ) {
             Text(
-                text = if (listening) "Escuchando…" else "Sostén el botón para repetir",
+                text =
+                    when {
+                        listening -> "Escuchando…"
+                        answerLocked -> "Respuesta enviada"
+                        else -> "Sostén el botón para repetir"
+                    },
                 style = MaterialTheme.typography.titleMedium,
                 color = colors.onBackground,
             )
@@ -610,24 +827,33 @@ private fun SpeechPanel(
 @Composable
 private fun TypePanel(
     audioTitle: String,
+    value: String,
+    onValueChange: (String) -> Unit,
+    onSubmit: () -> Unit,
     onPlay: () -> Unit,
+    onPlaySlow: () -> Unit,
     audioEnabled: Boolean,
-    onTypedText: (String) -> Unit,
+    enabled: Boolean,
     modifier: Modifier = Modifier,
 ) {
-    var typed by remember(audioTitle) { mutableStateOf("") }
     Column(modifier = modifier.fillMaxWidth(), verticalArrangement = Arrangement.spacedBy(12.dp)) {
-        AudioPanel(title = audioTitle, onPlay = onPlay, enabled = audioEnabled)
+        AudioPanel(
+            title = audioTitle,
+            onPlay = onPlay,
+            onPlaySlow = onPlaySlow,
+            enabled = audioEnabled,
+        )
         OutlinedTextField(
-            value = typed,
-            onValueChange = { value -> typed = value },
+            value = value,
+            onValueChange = onValueChange,
             label = { Text(text = "Tu dictado") },
+            enabled = enabled,
             modifier = Modifier.fillMaxWidth(),
         )
         PrimaryButton3D(
             text = "Comprobar",
-            onClick = { onTypedText(typed) },
-            enabled = typed.isNotBlank(),
+            onClick = onSubmit,
+            enabled = enabled && value.isNotBlank(),
             modifier = Modifier.fillMaxWidth(),
         )
     }
@@ -637,6 +863,10 @@ private fun TypePanel(
 private fun OptionsStep(
     prompt: String,
     options: List<String>,
+    selectedIndex: Int?,
+    correctIndex: Int,
+    answerLocked: Boolean,
+    revealAnswer: Boolean,
     onPickOption: (Int) -> Unit,
     modifier: Modifier = Modifier,
 ) {
@@ -647,9 +877,18 @@ private fun OptionsStep(
             color = MaterialTheme.colorScheme.onBackground,
         )
         options.forEachIndexed { index, option ->
+            val status =
+                when {
+                    !revealAnswer -> OptionStatus.NEUTRAL
+                    index == correctIndex -> OptionStatus.CORRECT
+                    index == selectedIndex -> OptionStatus.INCORRECT
+                    else -> OptionStatus.NEUTRAL
+                }
             OptionCard(
                 text = option,
-                selected = false,
+                selected = selectedIndex == index,
+                enabled = !answerLocked,
+                status = status,
                 onClick = { onPickOption(index) },
             )
         }
@@ -666,7 +905,9 @@ private fun AudioPanel(
     onPlay: () -> Unit,
     enabled: Boolean,
     modifier: Modifier = Modifier,
+    onPlaySlow: (() -> Unit)? = null,
 ) {
+    val feedback = LocalInteractionFeedback.current
     Column(modifier = modifier, verticalArrangement = Arrangement.spacedBy(10.dp)) {
         Text(
             text = title,
@@ -684,7 +925,7 @@ private fun AudioPanel(
                         } else {
                             MaterialTheme.colorScheme.surfaceVariant
                         },
-                    ).clickable(enabled = enabled, onClick = onPlay)
+                    ).feedbackClickable(FeedbackCue.TAP, enabled = enabled, onClick = onPlay)
                     .semantics { role = Role.Button }
                     .padding(16.dp),
         ) {
@@ -704,13 +945,35 @@ private fun AudioPanel(
                     },
             )
         }
+        if (onPlaySlow != null && enabled) {
+            TextButton(
+                onClick = {
+                    feedback.play(FeedbackCue.TAP)
+                    onPlaySlow()
+                },
+                modifier = Modifier.fillMaxWidth(),
+            ) {
+                Text(text = "Reproducir más despacio (0.75x)")
+            }
+        }
     }
 }
 
+private fun semanticRegisterLabel(register: Exercise.SemanticRegister): String =
+    when (register) {
+        Exercise.SemanticRegister.NEUTRAL -> "Neutro"
+        Exercise.SemanticRegister.FORMAL -> "Formal"
+        Exercise.SemanticRegister.INFORMAL -> "Informal"
+        Exercise.SemanticRegister.LITERARY -> "Literario"
+        Exercise.SemanticRegister.COLLOQUIAL -> "Coloquial"
+    }
+
+@OptIn(ExperimentalLayoutApi::class)
 @Composable
 private fun TokenBoard(
     header: String,
     uiState: LessonUiState,
+    answerLocked: Boolean,
     onToggleToken: (String) -> Unit,
     modifier: Modifier = Modifier,
 ) {
@@ -742,15 +1005,117 @@ private fun TokenBoard(
                 )
             }
             uiState.chosenTokens.forEach { token ->
-                TokenPill(token = token, selected = true, onToggle = onToggleToken)
+                TokenPill(
+                    token = token,
+                    selected = true,
+                    enabled = !answerLocked,
+                    onToggle = onToggleToken,
+                )
             }
         }
-        Row(
+        Text(
+            text = "Palabras disponibles",
+            style = MaterialTheme.typography.labelLarge,
+            color = MaterialTheme.colorScheme.onSurfaceVariant,
+        )
+        FlowRow(
             modifier = Modifier.fillMaxWidth(),
             horizontalArrangement = Arrangement.spacedBy(8.dp),
+            verticalArrangement = Arrangement.spacedBy(8.dp),
         ) {
             uiState.availableTokens.forEach { token ->
-                TokenPill(token = token, selected = false, onToggle = onToggleToken)
+                TokenPill(
+                    token = token,
+                    selected = false,
+                    enabled = !answerLocked,
+                    onToggle = onToggleToken,
+                )
+            }
+        }
+    }
+}
+
+@OptIn(ExperimentalLayoutApi::class)
+@Composable
+private fun OrderWordsBoard(
+    uiState: LessonUiState,
+    answerLocked: Boolean,
+    onToggleToken: (String) -> Unit,
+    modifier: Modifier = Modifier,
+) {
+    val listState = rememberLazyListState()
+    LaunchedEffect(uiState.chosenTokens.size) {
+        if (uiState.chosenTokens.isNotEmpty()) {
+            listState.animateScrollToItem(uiState.chosenTokens.lastIndex)
+        }
+    }
+
+    Column(modifier = modifier, verticalArrangement = Arrangement.spacedBy(12.dp)) {
+        Text(
+            text = "Ordena la frase",
+            style = MaterialTheme.typography.titleLarge,
+            color = MaterialTheme.colorScheme.onBackground,
+        )
+        Text(
+            text = "Tu respuesta",
+            style = MaterialTheme.typography.labelLarge,
+            color = MaterialTheme.colorScheme.onSurfaceVariant,
+        )
+        Column(
+            modifier =
+                Modifier
+                    .fillMaxWidth()
+                    .heightIn(min = 56.dp)
+                    .clip(RoundedCornerShape(LinguaTokens.RADIUS_CARD_DP.dp))
+                    .background(MaterialTheme.colorScheme.surfaceVariant)
+                    .padding(vertical = 8.dp),
+            verticalArrangement = Arrangement.Center,
+        ) {
+            if (uiState.chosenTokens.isEmpty()) {
+                Text(
+                    text = "Toca las palabras de abajo",
+                    style = MaterialTheme.typography.bodySmall,
+                    color = MaterialTheme.colorScheme.onSurfaceVariant,
+                    modifier = Modifier.padding(horizontal = 12.dp),
+                )
+            } else {
+                LazyRow(
+                    state = listState,
+                    modifier = Modifier.fillMaxWidth(),
+                    contentPadding = PaddingValues(horizontal = 12.dp),
+                    horizontalArrangement = Arrangement.spacedBy(8.dp),
+                ) {
+                    itemsIndexed(
+                        items = uiState.chosenTokens,
+                        key = { index, _ -> "chosen-$index" },
+                    ) { _, token ->
+                        TokenPill(
+                            token = token,
+                            selected = true,
+                            enabled = !answerLocked,
+                            onToggle = onToggleToken,
+                        )
+                    }
+                }
+            }
+        }
+        Text(
+            text = "Palabras disponibles",
+            style = MaterialTheme.typography.labelLarge,
+            color = MaterialTheme.colorScheme.onSurfaceVariant,
+        )
+        FlowRow(
+            modifier = Modifier.fillMaxWidth(),
+            horizontalArrangement = Arrangement.spacedBy(8.dp),
+            verticalArrangement = Arrangement.spacedBy(8.dp),
+        ) {
+            uiState.availableTokens.forEach { token ->
+                TokenPill(
+                    token = token,
+                    selected = false,
+                    enabled = !answerLocked,
+                    onToggle = onToggleToken,
+                )
             }
         }
     }
@@ -760,103 +1125,44 @@ private fun TokenBoard(
 private fun TokenPill(
     token: String,
     selected: Boolean,
+    enabled: Boolean,
     onToggle: (String) -> Unit,
     modifier: Modifier = Modifier,
 ) {
     val colors = MaterialTheme.colorScheme
+    val animations = rememberAnimationsEnabled()
+    val background by animateColorAsState(
+        targetValue = if (selected) colors.primary else colors.surface,
+        animationSpec = if (animations) tween(durationMillis = 160) else snap(),
+        label = "tokenBackground",
+    )
+    val contentColor by animateColorAsState(
+        targetValue = if (selected) colors.onPrimary else colors.onSurface,
+        animationSpec = if (animations) tween(durationMillis = 160) else snap(),
+        label = "tokenContent",
+    )
+    val scale by animateFloatAsState(
+        targetValue = if (selected && animations) 1.03f else 1f,
+        animationSpec = LinguaMotion.SpringSnappy,
+        label = "tokenScale",
+    )
+
     Text(
         text = token,
         style = MaterialTheme.typography.bodyMedium,
-        color = if (selected) colors.onPrimary else colors.onSurface,
+        color = contentColor,
         modifier =
             modifier
-                .clip(RoundedCornerShape(12.dp))
-                .background(if (selected) colors.primary else colors.surface)
-                .clickable { onToggle(token) }
+                .graphicsLayer {
+                    scaleX = scale
+                    scaleY = scale
+                }.clip(RoundedCornerShape(12.dp))
+                .background(background)
+                .clickable(enabled = enabled) { onToggle(token) }
                 .semantics {
                     role = Role.Button
                     this.selected = selected
                 }.padding(horizontal = 12.dp, vertical = 14.dp),
-    )
-}
-
-@Composable
-private fun MatchBoard(
-    pairs: List<Exercise.MatchPair>,
-    uiState: LessonUiState,
-    onMatchLeft: (Int) -> Unit,
-    onMatchRight: (Int) -> Unit,
-    modifier: Modifier = Modifier,
-) {
-    Column(modifier = modifier, verticalArrangement = Arrangement.spacedBy(12.dp)) {
-        Text(
-            text = "Empareja las columnas",
-            style = MaterialTheme.typography.titleLarge,
-            color = MaterialTheme.colorScheme.onBackground,
-        )
-        pairs.forEachIndexed { left, pair ->
-            val matchedRight = uiState.matched[left]
-            MatchTile(
-                label =
-                    if (matchedRight != null) {
-                        "${pair.left} → ${pairs[matchedRight].right}"
-                    } else {
-                        pair.left
-                    },
-                selected = uiState.selectedLeft == left,
-                onClick = { onMatchLeft(left) },
-                modifier = Modifier.fillMaxWidth(),
-            )
-        }
-        Text(
-            text = "Derechas",
-            style = MaterialTheme.typography.labelLarge,
-            color = MaterialTheme.colorScheme.onSurfaceVariant,
-        )
-        Column(verticalArrangement = Arrangement.spacedBy(8.dp)) {
-            uiState.shuffledRights.forEach { right ->
-                val taken = uiState.matched.containsValue(right)
-                MatchTile(
-                    label = pairs[right].right,
-                    selected = false,
-                    enabled = !taken,
-                    onClick = { onMatchRight(right) },
-                    modifier = Modifier.fillMaxWidth(),
-                )
-            }
-        }
-    }
-}
-
-@Composable
-private fun MatchTile(
-    label: String,
-    selected: Boolean,
-    onClick: () -> Unit,
-    modifier: Modifier = Modifier,
-    enabled: Boolean = true,
-) {
-    val colors = MaterialTheme.colorScheme
-    val background =
-        when {
-            !enabled -> colors.surfaceVariant.copy(alpha = 0.5f)
-            selected -> colors.primaryContainer
-            else -> colors.surface
-        }
-    Text(
-        text = label,
-        style = MaterialTheme.typography.bodyMedium,
-        fontWeight = if (selected) FontWeight.SemiBold else FontWeight.Normal,
-        color = colors.onSurface,
-        modifier =
-            modifier
-                .clip(RoundedCornerShape(LinguaTokens.RADIUS_CARD_DP.dp))
-                .background(background)
-                .clickable(enabled = enabled, onClick = onClick)
-                .semantics {
-                    role = Role.Button
-                    this.selected = selected
-                }.padding(horizontal = 10.dp, vertical = 14.dp),
     )
 }
 
@@ -916,11 +1222,13 @@ private fun LessonScreenPreview() {
             onSubmitTokens = {},
             onMatchLeft = {},
             onMatchRight = {},
+            onUnpair = {},
             onSubmitPairs = {},
             onFillCloze = { _, _ -> },
             onClearCloze = {},
             onSubmitCloze = {},
-            onTypedText = {},
+            onTypedTextChange = {},
+            onSubmitTyped = {},
             onSpeakRequest = {},
             onSkipSpeech = {},
             onFreeSpeakStart = {},
@@ -929,9 +1237,12 @@ private fun LessonScreenPreview() {
             onSubmitFreeSpeaking = {},
             onFreeSpeakSkip = {},
             onPlayModelAnswer = {},
+            onRetry = {},
+            onReveal = {},
             onAdvance = {},
             onPlayAudio = {},
             onPlaySlow = {},
+            onOpenBrief = {},
             onExit = {},
         )
     }

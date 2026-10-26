@@ -1,7 +1,6 @@
 package dev.linguago.core.ui.components
 
 import androidx.compose.foundation.background
-import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxWidth
@@ -21,6 +20,9 @@ import androidx.compose.ui.semantics.role
 import androidx.compose.ui.semantics.semantics
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import dev.linguago.core.ui.feedback.FeedbackCue
+import dev.linguago.core.ui.feedback.LocalInteractionFeedback
+import dev.linguago.core.ui.feedback.feedbackClickable
 import dev.linguago.core.ui.theme.LinguaTheme
 import dev.linguago.core.ui.theme.LinguaTokens
 
@@ -42,6 +44,7 @@ public fun AudioOnlyPromptPanel(
     question: String? = null,
 ) {
     val colors = MaterialTheme.colorScheme
+    val feedback = LocalInteractionFeedback.current
     Column(modifier = modifier.fillMaxWidth(), verticalArrangement = Arrangement.spacedBy(10.dp)) {
         Text(
             text = "Escucha y elige",
@@ -62,7 +65,7 @@ public fun AudioOnlyPromptPanel(
                     .heightIn(min = 48.dp)
                     .clip(RoundedCornerShape(LinguaTokens.RADIUS_CARD_DP.dp))
                     .background(if (audioAvailable) colors.secondaryContainer else colors.surfaceVariant)
-                    .clickable(enabled = audioAvailable, onClick = onPlay)
+                    .feedbackClickable(FeedbackCue.TAP, enabled = audioAvailable, onClick = onPlay)
                     .semantics { role = Role.Button }
                     .padding(16.dp),
         ) {
@@ -79,7 +82,10 @@ public fun AudioOnlyPromptPanel(
         }
         if (allowSlowPlayback && audioAvailable) {
             TextButton(
-                onClick = onPlaySlow,
+                onClick = {
+                    feedback.play(FeedbackCue.TAP)
+                    onPlaySlow()
+                },
                 modifier = Modifier.fillMaxWidth().heightIn(min = 48.dp),
             ) {
                 Text(text = "Reproducir más despacio (0.75x)")

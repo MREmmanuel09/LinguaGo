@@ -1,7 +1,6 @@
 package dev.linguago.feature.home
 
 import androidx.compose.foundation.background
-import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
@@ -36,6 +35,8 @@ import dev.linguago.core.ui.components.LiquidXpBar
 import dev.linguago.core.ui.components.StreakIndicator
 import dev.linguago.core.ui.components.path.PathNodeState
 import dev.linguago.core.ui.components.path.PathNodeUi
+import dev.linguago.core.ui.feedback.FeedbackCue
+import dev.linguago.core.ui.feedback.feedbackClickable
 import dev.linguago.core.ui.theme.LinguaTheme
 import dev.linguago.core.ui.theme.LinguaTokens
 import dev.linguago.feature.home.path.LearningPath
@@ -221,7 +222,7 @@ private fun ReviewCard(
                 .fillMaxWidth()
                 .clip(RoundedCornerShape(LinguaTokens.RADIUS_CARD_DP.dp))
                 .background(colors.primary.copy(alpha = 0.12f))
-                .clickable(onClick = onClick)
+                .feedbackClickable(FeedbackCue.TAP, onClick = onClick)
                 .padding(16.dp),
     ) {
         Text(
@@ -253,8 +254,11 @@ private fun UnitCard(
                 .fillMaxWidth()
                 .clip(RoundedCornerShape(LinguaTokens.RADIUS_CARD_DP.dp))
                 .background(colors.surfaceVariant)
-                .clickable(enabled = tile.nextLessonId != null, onClick = onClick)
-                .padding(16.dp),
+                .feedbackClickable(
+                    cue = FeedbackCue.TAP,
+                    enabled = tile.nextLessonId != null,
+                    onClick = onClick,
+                ).padding(16.dp),
     ) {
         Text(
             text = tile.title,

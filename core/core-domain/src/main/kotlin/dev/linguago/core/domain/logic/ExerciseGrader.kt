@@ -6,9 +6,9 @@ import dev.linguago.core.domain.model.GrammarPointId
 import dev.linguago.core.domain.usecase.ExerciseAnswer
 
 /**
- * Resultado de calificar una respuesta (ADR-018): corrección más el
- * `feedbackOnError` estructurado concreto del ejercicio fallado, para que la
- * UI explique el error real en lugar de un mensaje genérico.
+ * Resultado de calificar una respuesta (ADR-018/ADR-028): corrección más el
+ * feedback estructurado del ejercicio, de error al fallar o de acierto al
+ * acertar, para que la UI explique el resultado real.
  */
 public data class GradingResult(
     public val isCorrect: Boolean,
@@ -16,6 +16,10 @@ public data class GradingResult(
     public val matchedErrorRuleId: GrammarPointId? = null,
     /** Explicación del error concreto; `null` si el ejercicio no la define. */
     public val diagnosticFeedback: String? = null,
+    /** Explicación del acierto (ADR-028); `null` si el ejercicio no la define. */
+    public val successExplanation: String? = null,
+    /** `ruleRef` del feedback de acierto (regla gramatical) cuando existe. */
+    public val matchedSuccessRuleId: GrammarPointId? = null,
 )
 
 /**
@@ -26,8 +30,8 @@ public data class GradingResult(
  */
 public object ExerciseGrader {
     /**
-     * Califica la respuesta y adjunta, en caso de fallo, el `feedbackOnError`
-     * del ejercicio (regla y explicación) para el diagnóstico estructurado.
+     * Califica la respuesta y adjunta el feedback estructurado del ejercicio:
+     * `feedbackOnError` al fallar y `feedbackOnSuccess` al acertar (ADR-028).
      * [grammarPoints] resuelve la detección gramatical de `FreeSpeakingPrompt`
      * (sin catálogo, el grader no exige patrones desconocidos, I3).
      */
@@ -36,7 +40,14 @@ public object ExerciseGrader {
         answer: ExerciseAnswer,
         grammarPoints: List<GrammarPoint> = emptyList(),
     ): GradingResult {
-        if (isCorrect(exercise, answer, grammarPoints)) return GradingResult(isCorrect = true)
+        if (isCorrect(exercise, answer, grammarPoints)) {
+            val success = exercise.feedbackOnSuccess
+            return GradingResult(
+                isCorrect = true,
+                successExplanation = success?.explanation,
+                matchedSuccessRuleId = success?.ruleRef,
+            )
+        }
         val feedback = exercise.feedbackOnError
         return GradingResult(
             isCorrect = false,

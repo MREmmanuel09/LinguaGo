@@ -36,6 +36,10 @@
 | 024 | RELEASE GATE F4: módulo QA de sesión instrumentada contra `enRelease` | Propuesto |
 | 025 | Vidas con penalización no bloqueante y XP diferido | Aprobado |
 | 026 | Learning Path lineal y lenguaje visual flat-3D («Feather») | Aprobado |
+| 027 | Feedback multisensorial (sonido, háptica y ajustes) | Aprobado |
+| 028 | Micro-clases de gramática y feedback de acierto | Aprobado |
+| 029 | Tableros de respuesta horizontales y emparejamiento puzzle | Aprobado |
+| 030 | Reintentos pedagógicos, vidas y fairness de XP | Aprobado |
 
 ---
 ## ADR-000: Convención del registro de decisiones
@@ -1005,6 +1009,227 @@ diseño).
 - Sin arte de terceros.
 
 **Invariantes protegidos:** I5, I8, I1.
+
+---
+
+## ADR-027: Feedback multisensorial (sonido, háptica y ajustes)
+
+**Estado:** Aprobado
+**Fecha:** 2026-10-25
+
+**Contexto:** la app solo emite audio de voz (TTS/STT) y háptica muy limitada
+en la lección (`confirm`, `tick`, `error`). No hay efectos de sonido de
+interfaz, no existe ajuste para desactivarlos y los botones/opciones no tienen
+respuesta sensorial consistente. Se quiere reforzar cada interacción sin
+depender de red, sin arte de terceros (I5) y sin afectar a la accesibilidad
+(I8).
+
+**Decisión:**
+- **SFX originales de LinguaGo**, sintetizados en el repo y guardados como
+  WAV PCM mono en `core-ui/src/main/res/raw`. No se descargan packs CC0 ni se
+  usan samples de terceros: el sonido es parte de la identidad (I5). Un script
+  en `tools/` permite regenerarlos.
+- Set mínimo de eventos: `TAP`, `SELECT`, `DESELECT`, `SNAP`, `CORRECT`,
+  `INCORRECT`, `COMPLETE`. Duración total del set &lt; 150 KB y volumen bajo
+  (~0,45) para no tapar el TTS.
+- Reproducción con `SoundPool` desde `core-ui`, con `AudioAttributes`
+  `USAGE_ASSISTANCE_SONIFICATION` y un único `SoundPool` liberado al salir de
+  composición. Sin nuevas dependencias.
+- **Háptica rica** con `VibrationEffect` (minSdk 26): pulso de selección,
+  encaje, acierto, error y completado. Se respeta el ajuste del sistema
+  (`HAPTIC_FEEDBACK_ENABLED`) y el ajuste propio de la app. `VIBRATE` es un
+  permiso normal y se declara en el manifest de la app.
+- **Contrato único de feedback:** `InteractionFeedback.play(cue)` combina
+  sonido y háptica; `LocalInteractionFeedback` lo distribuye y
+  `Modifier.feedbackClickable(cue)` lo aplica en componentes compartidos. Los
+  componentes no conocen `SoundPool` ni `Vibrator`.
+- **Ajustes persistentes** en DataStore: `soundEffectsEnabled` y
+  `hapticsEnabled`, ambos `true` por defecto. El composition root
+  (`MainActivity`/`LinguaApp`) provee `LocalFeedbackSettings`.
+- No se emite SFX por cada tecla del dictado; solo por eventos significativos.
+  El teclado puede usar tick háptico opcional.
+- Las animaciones de confirmación respetan `rememberAnimationsEnabled()`; el
+  sonido y la háptica son refuerzos, nunca la única señal de estado.
+
+**Alternativas consideradas:** (a) usar `ToneGenerator` para todo (rechazada:
+sonidos pobres y difíciles de distinguir); (b) usar `playSoundEffect` del
+sistema para todo (rechazada: no permite identidad propia ni eventos como
+“encaje”); (c) packs de sonidos CC0 (rechazada: I5 exige arte original);
+(d) háptica solo con `performHapticFeedback` (rechazada: no permite patrones).
+
+**Consecuencias:**
+- Nuevo paquete `core-ui/feedback` y assets `sfx_*.wav`.
+- `SettingsRepository` y `SettingsScreen` ganan dos preferencias.
+- `LinguaHaptics` amplía su API y conserva el fallback por si el dispositivo
+  no tiene vibrador o no soporta amplitudes.
+- Los componentes compartidos (`OptionCard`, `PrimaryButton3D`, `PathNode`,
+  tableros y celdas de audio) emiten feedback sin cambios en cada pantalla.
+
+**Invariantes protegidos:** I1 (todo local), I5 (sonido original), I8
+(accesibilidad y ajustes).
+
+---
+
+## ADR-028: Micro-clases de gramática y feedback de acierto
+
+**Estado:** Aprobado
+**Fecha:** 2026-10-25
+
+**Contexto:** el contenido ya declara `scenario`, `canDo`, `grammarPoints`
+(con `description`) y `culturalNotes`, pero la UI no los muestra antes de la
+lección. Tampoco existe una explicación cuando el alumno acierta:
+`feedbackOnError` solo se usa al fallar. El alumno necesita una preparación
+corta de **gramática y reglas** que le permita afrontar los ejercicios, y una
+confirmación que refuerce el porqué de la respuesta correcta.
+
+**Decisión:**
+- La **micro-clase de materia** es una explicación breve de gramática/reglas
+  y ejemplos, previa a los ejercicios. No es un ejercicio, no se califica, no
+  consume vidas ni XP y siempre se puede saltar o reabrir.
+- La **cápsula de mecánica** (cómo se responde, qué significa cada sonido,
+  cómo se reintenta) es UI genérica por tipo de ejercicio y no forma parte del
+  contenido pedagógico.
+- Se añade un campo **opcional** `microLesson` a la lección v2:
+  ```json
+  "microLesson": {
+    "title": "Condicionales mixtos",
+    "goals": ["...", "..."],
+    "sections": [
+      {
+        "heading": "Regla",
+        "body": "...",
+        "examples": [
+          {"source": "...", "target": "...", "note": "..."}
+        ]
+      }
+    ]
+  }
+  ```
+  Es aditivo y opcional: no cambia `schemaVersion` ni rompe cursos v1. Si no
+  existe, la UI construye un fallback con `grammarPoints[].description`,
+  `scenario`, `canDo` y `culturalNotes`.
+- Se añade un campo **opcional** `feedbackOnSuccess` a cada ejercicio v2:
+  ```json
+  "feedbackOnSuccess": {
+    "explanation": "Por qué la respuesta es correcta.",
+    "ruleRef": "gp-mixed-conditionals"
+  }
+  ```
+  El grader lo devuelve solo en acierto; en error se mantiene
+  `feedbackOnError`. Si falta, la UI muestra la respuesta correcta y, cuando
+  exista, la descripción de la regla referenciada.
+- **Regla editorial:** los ejemplos de la micro-clase no deben copiar los
+  enunciados de los ejercicios; explican la regla, no adelantan respuestas.
+- La micro-clase se muestra antes del primer ejercicio, con opción de saltar;
+  se reabre desde el botón “Guía” de la cabecera. No bloquea el avance (I3).
+- Todo el contenido sigue empaquetado y validado offline (`validateContent`).
+
+**Alternativas consideradas:** (a) pantalla de teoría separada por lección
+(rechazada: añade navegación y fricción); (b) generar explicaciones de acierto
+solo con plantillas (rechazada como único mecanismo: útil como fallback, pero
+no reemplaza la explicación pedagógica); (c) reutilizar `feedbackOnError` en
+aciertos (rechazada: confunde el diagnóstico del error con el refuerzo).
+
+**Consecuencias:**
+- `Lesson` gana `microLesson`; `Exercise` gana `feedbackOnSuccess`; ambos con
+  default `null`.
+- `CourseValidator`, JSON Schema v2 y `docs/CONTENT_FORMAT.md` se actualizan
+  en la fase de implementación.
+- La autoría de micro-clases y explicaciones de acierto se hace por lección;
+  el fallback garantiza que ninguna lección quede sin preparación.
+- `GradingResult` gana `successExplanation`/`matchedRuleId` y la UI puede
+  mostrar “por qué” sin romper el flujo de error.
+
+**Invariantes protegidos:** I1, I3, I8.
+
+---
+
+## ADR-029: Tableros de respuesta horizontales y emparejamiento puzzle
+
+**Estado:** Aprobado
+**Fecha:** 2026-10-25
+
+**Contexto:** `OrderWords` apila la frase elegida en una columna vertical y el
+banco de palabras en un `Row` que se desborda; `MatchPairs` muestra dos listas
+verticales con selección, sin una mecánica manipulativa. Se quiere una
+experiencia más natural: frase horizontal y parejas que encajan como piezas
+de rompecabezas, sin pistas de color ni de forma.
+
+**Decisión:**
+- **OrderWords:** la respuesta se construye en una tira horizontal con scroll
+  y auto-scroll al último token; el banco usa `FlowRow` para envolver sin
+  desbordar. Los tokens se identifican por índice/ID, no por texto, para
+  soportar palabras repetidas. `Translate` conserva su tablero vertical.
+- **MatchPairs:** tablero de piezas con una forma genérica de pestaña/ranura;
+  todas las piezas comparten color y formato para no revelar la pareja. La
+  pieza izquierda tiene ranura y la derecha pestaña; se puede tocar o
+  arrastrar. Al comprobar, las parejas incorrectas se separan y las correctas
+  quedan encajadas. No se cambia el `ExerciseGrader`.
+- **SemanticMatch:** reutiliza la mecánica con una variante de texto largo y
+  badges de registro/matiz; nunca usa color por pareja.
+- **Accesibilidad:** emparejar por toque es siempre suficiente; cada pieza
+  anuncia lado, texto y estado. Objetivos ≥ 48 dp. Reduced motion elimina
+  rebotes y sacudidas.
+- Sin dependencias nuevas: Compose nativo (`Canvas`, `Path`, `Animatable`,
+  `pointerInput`) y arte propio (I5).
+
+**Alternativas consideradas:** (a) mantener listas y solo cambiar colores
+(rechazada: no resuelve el diseño); (b) validar cada encaje como correcto sin
+“Comprobar” (rechazada: rompe la semántica de vidas/XP y el grader);
+(c) usar una librería de drag-and-drop (rechazada: dependencia innecesaria).
+
+**Consecuencias:**
+- Nuevos composables `OrderWordsBoard` y `PuzzleMatchBoard`; sustituyen al
+  tablero vertical anterior para `OrderWords` y `MatchPairs`.
+- Tests de UI para añadir/quitar, encajar/separar y TalkBack.
+- El gate F4 actualiza la detección del tablero por su etiqueta fija.
+
+**Invariantes protegidos:** I5, I8, I3.
+
+---
+
+## ADR-030: Reintentos pedagógicos, vidas y fairness de XP
+
+**Estado:** Aprobado
+**Fecha:** 2026-10-25
+
+**Contexto:** hoy no se puede reintentar un audio, un dictado o una frase
+después de fallar. `submitAnswer` tampoco bloquea reenvíos tras el feedback,
+lo que permite duplicar XP en algunos tipos. Se quiere una corrección real:
+escuchar de nuevo, corregir y volver a intentar sin castigar dos veces.
+
+**Decisión:**
+- La FSM de lección gana un estado de reintento:
+  `Answering → Graded → Retry → Answering`. El feedback deja de ser terminal
+  para los tipos reintentables.
+- Solo se reintentan los tipos de escucha/producción: `ListenChoose`,
+  `AudioOnlyPrompt`, `ListenType`, `SpeakRepeat` y `FreeSpeakingPrompt`.
+  En reconocimiento (opción, ordenar, emparejar, cloze) se revela la respuesta
+  y se explica; no hay reintento.
+- **Vidas:** el primer fallo consume 1 vida; los reintentos no consumen más.
+  El SKIP de voz sigue sin consumir.
+- **XP:** se otorga como máximo una vez por ejercicio. Un acierto tras
+  reintento puede otorgar el XP del ejercicio, pero nunca duplicarlo.
+- **Respuesta correcta:** en tipos reintentables no se revela la transcripción
+  al primer fallo; se ofrece “Reintentar” y, si el alumno se rinde,
+  “Ver respuesta”. En tipos no reintentables se revela al fallar.
+- El estado de intentos (`retryCount`) es de sesión; no se persiste en Room
+  en esta fase.
+- Repetir audio y reproducción lenta (0.75x) están disponibles sin coste.
+
+**Alternativas consideradas:** (a) reintentos infinitos con penalización por
+cada intento (rechazada: castiga la corrección); (b) no revelar nunca la
+respuesta (rechazada: bloquea el aprendizaje); (c) persistir intentos en Room
+(se deja para una fase posterior con migración).
+
+**Consecuencias:**
+- `LessonViewModel` gana guardas de envío, contador de intentos y control de
+  XP/vidas por ejercicio.
+- `TypePanel` deja de guardar el texto en estado local.
+- Nuevos botones de reintento/reproducción en `BottomActions`.
+- Tests de FSM para no duplicar XP ni vidas y para el flujo de reintento.
+
+**Invariantes protegidos:** I3, I4, I8.
 
 ---
 

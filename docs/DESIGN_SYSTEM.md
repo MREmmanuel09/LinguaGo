@@ -123,7 +123,80 @@ Reglas:
 - Respetar `fontScale` 2.0×, `ANIMATOR_duration_scale` y modo oscuro.
 - El camino mantiene un orden de foco lógico y anuncia el estado del nodo.
 
-## 9. Gobernanza
+## 9. Feedback sensorial
+
+El feedback sensorial (ADR-027) refuerza la interacción; nunca es la única
+señal de estado (I8).
+
+### Sonido
+
+| Cue | Cuándo | Carácter |
+|---|---|---|
+| `TAP` | Navegación y botones neutros | Tick muy corto |
+| `SELECT` | Elegir opción, token o pieza | Click suave ascendente |
+| `DESELECT` | Quitar una selección | Click suave descendente |
+| `SNAP` | Encajar token o pareja | Golpe corto de madera |
+| `CORRECT` | Respuesta correcta | Arpegio breve y luminoso |
+| `INCORRECT` | Respuesta incorrecta | Dos notas graves, sin dureza |
+| `COMPLETE` | Lección/unidad completada | Arpegio mayor con cola |
+
+- SFX originales, sintetizados en el repo; sin samples de terceros (I5).
+- `SoundPool` único, volumen ~0,45, sin red.
+- No se emite sonido por cada tecla del dictado.
+- Ajuste de usuario `Efectos de sonido`; por defecto activo.
+
+### Háptica
+
+| Cue | Patrón |
+|---|---|
+| `SELECT` / `DESELECT` | Pulso ligero (≈8–10 ms) |
+| `SNAP` | Dos pulsos muy cortos |
+| `CORRECT` | Patrón ascendente breve |
+| `INCORRECT` | Doble pulso seco |
+| `COMPLETE` | Patrón corto de celebración |
+
+- `VibrationEffect` en API 26+; fallback a `performHapticFeedback` si el
+  dispositivo no tiene vibrador.
+- Se respeta el ajuste del sistema y el ajuste `Vibración` de la app.
+- Ajuste por defecto activo; nunca sustituye a icono/texto.
+
+### Estados de respuesta
+
+- Tras calificar, la opción correcta se marca en `ACCENT` y la elegida
+  incorrecta en `DESTRUCTIVE`, siempre con icono de check/close además del
+  color (I8).
+- El banner de acierto muestra la explicación y la respuesta canónica; el
+  banner de error mantiene el diagnóstico y añade la respuesta.
+- En ejercicios reintentables la respuesta se oculta hasta pulsar
+  “Ver respuesta” o agotar el reintento.
+
+### Tableros de respuesta
+
+- **OrderWords:** la frase se construye en una tira horizontal con scroll;
+  el banco de palabras envuelve en `FlowRow`.
+- **MatchPairs / SemanticMatch:** piezas de rompecabezas con pestaña/ranura
+  **genérica**; todas usan el mismo color y formato para no dar pistas.
+- Se puede tocar o arrastrar; al comprobar, las parejas correctas quedan
+  verdes y las incorrectas se separan en coral. Alternativa táctil siempre
+  disponible para TalkBack.
+
+### Micro-clase
+
+- Pantalla previa a los ejercicios (ADR-028), saltable y reabrible con
+  “Guía”.
+- Usa `LinguaCard3D` para objetivos, reglas/ejemplos y mecánicas; botón
+  primario fijo al pie para no perder el avance.
+- No muestra HUD de vidas/XP ni consume ninguno; todo el contenido es local.
+
+### Movimiento
+
+- Confirmaciones: 150–250 ms. Celebraciones: 400–700 ms.
+- Opción seleccionada: escala 1,02 + color; acierto: pop del check; error:
+  sacudida corta.
+- Reduced motion: estado final sin rebote, sin confeti y sin sacudida.
+- El sonido y la animación de un mismo evento se disparan juntos.
+
+## 10. Gobernanza
 
 - Los valores canónicos viven en `LinguaTokens.kt`.
 - Añadir tokens es aditivo y requiere ADR si altera la identidad (ADR-026 ya
@@ -131,7 +204,7 @@ Reglas:
 - Prohibido introducir iconos, ilustraciones o mascotas de terceros.
 - Los componentes nuevos se documentan aquí antes de usarse en una pantalla.
 
-## 10. Referencias visuales
+## 11. Referencias visuales
 
 - `docs/qa/feather/phase3-light.png` y `phase3-dark.png`: galería de los
   componentes de la Etapa 3 (nodos, cofre, vidas, XP líquido, tarjeta 3D),

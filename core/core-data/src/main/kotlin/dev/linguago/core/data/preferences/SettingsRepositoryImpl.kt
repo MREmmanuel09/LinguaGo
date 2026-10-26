@@ -2,6 +2,7 @@ package dev.linguago.core.data.preferences
 
 import android.content.Context
 import androidx.datastore.preferences.core.Preferences
+import androidx.datastore.preferences.core.booleanPreferencesKey
 import androidx.datastore.preferences.core.edit
 import androidx.datastore.preferences.core.emptyPreferences
 import androidx.datastore.preferences.core.stringPreferencesKey
@@ -39,6 +40,16 @@ public class SettingsRepositoryImpl
                 .catch { e -> emit(recoveryPreferences(e)) }
                 .map { preferences -> decodeThemeMode(preferences[PrefKeys.THEME_MODE]) }
 
+        override val soundEffectsEnabled: Flow<Boolean> =
+            context.userPreferences.data
+                .catch { e -> emit(recoveryPreferences(e)) }
+                .map { preferences -> preferences[PrefKeys.SOUND_EFFECTS_ENABLED] ?: true }
+
+        override val hapticsEnabled: Flow<Boolean> =
+            context.userPreferences.data
+                .catch { e -> emit(recoveryPreferences(e)) }
+                .map { preferences -> preferences[PrefKeys.HAPTICS_ENABLED] ?: true }
+
         override suspend fun updateSelectedCourse(courseId: String?) {
             context.userPreferences.edit { preferences ->
                 if (courseId == null) {
@@ -55,6 +66,18 @@ public class SettingsRepositoryImpl
             }
         }
 
+        override suspend fun updateSoundEffectsEnabled(enabled: Boolean) {
+            context.userPreferences.edit { preferences ->
+                preferences[PrefKeys.SOUND_EFFECTS_ENABLED] = enabled
+            }
+        }
+
+        override suspend fun updateHapticsEnabled(enabled: Boolean) {
+            context.userPreferences.edit { preferences ->
+                preferences[PrefKeys.HAPTICS_ENABLED] = enabled
+            }
+        }
+
         private fun recoveryPreferences(throwable: Throwable): Preferences =
             if (throwable is IOException) emptyPreferences() else throw throwable
 
@@ -64,5 +87,7 @@ public class SettingsRepositoryImpl
         private object PrefKeys {
             val SELECTED_COURSE_ID = stringPreferencesKey("selected_course_id")
             val THEME_MODE = stringPreferencesKey("theme_mode")
+            val SOUND_EFFECTS_ENABLED = booleanPreferencesKey("sound_effects_enabled")
+            val HAPTICS_ENABLED = booleanPreferencesKey("haptics_enabled")
         }
     }

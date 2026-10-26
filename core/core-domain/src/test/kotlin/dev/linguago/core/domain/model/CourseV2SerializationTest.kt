@@ -33,6 +33,7 @@ class CourseV2SerializationTest {
         assertTrue(lesson.grammarPoints.isEmpty())
         assertNull(lesson.vocabFrequencyBand)
         assertTrue(lesson.culturalNotes.isEmpty())
+        assertNull(lesson.microLesson)
         assertNull(lesson.exercises.first().feedbackOnError)
     }
 
@@ -119,6 +120,45 @@ class CourseV2SerializationTest {
         assertEquals(Exercise.FeedbackErrorType.WORD_ORDER, feedback?.type)
         assertEquals("El orden de los tokens cambia el sentido.", feedback?.explanation)
         assertEquals(GrammarPointId("gp-word-order"), feedback?.ruleRef)
+    }
+
+    @Test
+    fun feedback_on_success_decodifica_explicacion_y_rule_ref() {
+        val exercise =
+            json.decodeFromString(Exercise.serializer(), FEEDBACK_ON_SUCCESS) as Exercise.MultipleChoice
+        val feedback = exercise.feedbackOnSuccess
+
+        assertEquals("La opción correcta sigue la regla.", feedback?.explanation)
+        assertEquals(GrammarPointId("gp-hedging"), feedback?.ruleRef)
+        assertNull(exercise.feedbackOnError)
+    }
+
+    @Test
+    fun micro_lesson_decodifica_reglas_y_ejemplos() {
+        val lesson = json.decodeFromString(Lesson.serializer(), LESSON_WITH_MICRO)
+        val micro = lesson.microLesson
+
+        assertEquals("Saludos y cortesía", micro?.title)
+        assertEquals(2, micro?.goals?.size)
+        assertEquals("Saludos", micro?.sections?.first()?.heading)
+        assertEquals(
+            "Good afternoon",
+            micro
+                ?.sections
+                ?.first()
+                ?.examples
+                ?.first()
+                ?.target,
+        )
+        assertEquals(
+            "Después del mediodía.",
+            micro
+                ?.sections
+                ?.first()
+                ?.examples
+                ?.first()
+                ?.note,
+        )
     }
 
     @Test
@@ -325,6 +365,40 @@ class CourseV2SerializationTest {
             }
             """
 
+        private const val LESSON_WITH_MICRO =
+            """
+            {
+              "id": "ls-micro",
+              "title": "Saludos",
+              "microLesson": {
+                "title": "Saludos y cortesía",
+                "goals": ["Reconocer saludos.", "Distinguir despedidas."],
+                "sections": [
+                  {
+                    "heading": "Saludos",
+                    "body": "Good morning se usa por la mañana.",
+                    "examples": [
+                      {
+                        "source": "Buenas tardes",
+                        "target": "Good afternoon",
+                        "note": "Después del mediodía."
+                      }
+                    ]
+                  }
+                ]
+              },
+              "exercises": [
+                {
+                  "type": "MultipleChoice",
+                  "id": "e1",
+                  "question": "¿Hola?",
+                  "options": ["Hello", "Bye"],
+                  "correctIndex": 0
+                }
+              ]
+            }
+            """
+
         private const val FEEDBACK_ON_ERROR =
             """
             {
@@ -337,6 +411,21 @@ class CourseV2SerializationTest {
                 "type": "word_order",
                 "explanation": "El orden de los tokens cambia el sentido.",
                 "ruleRef": "gp-word-order"
+              }
+            }
+            """
+
+        private const val FEEDBACK_ON_SUCCESS =
+            """
+            {
+              "type": "MultipleChoice",
+              "id": "e-success",
+              "question": "Elige la opción cortés",
+              "options": ["I'm afraid...", "No."],
+              "correctIndex": 0,
+              "feedbackOnSuccess": {
+                "explanation": "La opción correcta sigue la regla.",
+                "ruleRef": "gp-hedging"
               }
             }
             """

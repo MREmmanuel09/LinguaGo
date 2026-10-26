@@ -62,17 +62,48 @@ public object CourseValidator {
                     }
                     val pedagogyFailure = validateLessonPedagogy(lesson)
                     if (pedagogyFailure != null) return pedagogyFailure
+                    val microFailure = validateMicroLesson(lesson)
+                    if (microFailure != null) return microFailure
                 }
             }
         }
         return CourseValidation.Valid
     }
 
+    /** Valida la micro-clase de gramática/reglas si la lección la declara (ADR-028). */
+    private fun validateMicroLesson(lesson: Lesson): CourseValidation.Invalid? {
+        val micro = lesson.microLesson ?: return null
+        if (micro.title.isBlank()) {
+            return Invalid("Lección '${lesson.id.value}' requiere microLesson.title no vacío")
+        }
+        if (micro.goals.isEmpty() || micro.goals.any { it.isBlank() }) {
+            return Invalid("Lección '${lesson.id.value}' requiere microLesson.goals no vacíos")
+        }
+        if (micro.sections.isEmpty()) {
+            return Invalid("Lección '${lesson.id.value}' requiere al menos una sección en microLesson")
+        }
+        for (section in micro.sections) {
+            if (section.heading.isBlank() || section.body.isBlank()) {
+                return Invalid("Lección '${lesson.id.value}' requiere microLesson.sections con heading y body")
+            }
+            if (section.examples.any { example ->
+                    example.source.isBlank() ||
+                        example.target.isBlank() ||
+                        example.note?.isBlank() == true
+                }
+            ) {
+                return Invalid("Lección '${lesson.id.value}' requiere microLesson.examples con source/target")
+            }
+        }
+        return null
+    }
+
     /**
      * Regla de No-Aplanamiento Pedagógico (ADR-018): una lección B1/B2 debe
      * declarar su escenario, can-do, gramática, banda léxica y notas
      * culturales, además de feedback de error en cada ejercicio y al menos
-     * una producción oral libre.
+     * una producción oral libre. El feedback de acierto es opcional, pero si
+     * existe debe ser coherente con las reglas de la lección.
      */
     private fun validateLessonPedagogy(lesson: Lesson): CourseValidation.Invalid? {
         val requiresCefrMetadata =
@@ -137,6 +168,17 @@ public object CourseValidator {
             if (ruleRef != null && ruleRef !in grammarIds) {
                 return Invalid(
                     "Ejercicio '${exercise.id.value}' referencia ruleRef '${ruleRef.value}' " +
+                        "que no existe en grammarPoints",
+                )
+            }
+            val success = exercise.feedbackOnSuccess
+            if (success != null && success.explanation.isBlank()) {
+                return Invalid("Ejercicio '${exercise.id.value}' requiere feedbackOnSuccess con explicación")
+            }
+            val successRuleRef = success?.ruleRef
+            if (successRuleRef != null && successRuleRef !in grammarIds) {
+                return Invalid(
+                    "Ejercicio '${exercise.id.value}' referencia feedbackOnSuccess.ruleRef '${successRuleRef.value}' " +
                         "que no existe en grammarPoints",
                 )
             }

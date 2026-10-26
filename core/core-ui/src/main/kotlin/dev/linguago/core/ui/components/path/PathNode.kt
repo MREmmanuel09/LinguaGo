@@ -41,6 +41,8 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import dev.linguago.core.ui.components.LinguaIcons
+import dev.linguago.core.ui.feedback.FeedbackCue
+import dev.linguago.core.ui.feedback.LocalInteractionFeedback
 import dev.linguago.core.ui.theme.LinguaMotion
 import dev.linguago.core.ui.theme.LinguaTheme
 import dev.linguago.core.ui.theme.LinguaTokens
@@ -83,6 +85,7 @@ fun PathNode(
     val extended = linguaExtendedColors()
     val animations = rememberAnimationsEnabled()
     val colors = MaterialTheme.colorScheme
+    val feedback = LocalInteractionFeedback.current
 
     val body: Color
     val edge: Color
@@ -179,7 +182,10 @@ fun PathNode(
                     interactionSource = interaction,
                     indication = null,
                     enabled = node.state != PathNodeState.LOCKED && node.state != PathNodeState.CHEST_LOCKED,
-                    onClick = { onClick(node.id) },
+                    onClick = {
+                        feedback.play(FeedbackCue.TAP)
+                        onClick(node.id)
+                    },
                 ),
         contentAlignment = Alignment.Center,
     ) {

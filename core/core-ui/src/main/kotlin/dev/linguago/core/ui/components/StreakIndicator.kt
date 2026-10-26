@@ -23,20 +23,22 @@ import androidx.compose.ui.semantics.semantics
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import dev.linguago.core.ui.theme.LinguaTokens
+import dev.linguago.core.ui.util.rememberAnimationsEnabled
 
 /**
  * Indicador de racha (RFC §7.2): llama `--warning` con animación de pulso
- * suave, junto al número de días.
+ * suave, junto al número de días. Respeta la escala de animaciones (I8).
  */
 @Composable
 fun StreakIndicator(
     days: Int,
     modifier: Modifier = Modifier,
 ) {
+    val animations = rememberAnimationsEnabled()
     val transition = rememberInfiniteTransition(label = "streakPulse")
     val pulse by transition.animateFloat(
-        initialValue = 0.85f,
-        targetValue = 1.15f,
+        initialValue = 1f,
+        targetValue = if (animations) 1.15f else 1f,
         animationSpec =
             infiniteRepeatable(
                 animation = tween<Float>(durationMillis = 700),

@@ -11,6 +11,7 @@ import androidx.compose.material3.NavigationBarItemDefaults
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.CompositionLocalProvider
 import androidx.compose.runtime.getValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.ColorFilter
@@ -23,6 +24,9 @@ import androidx.navigation.compose.composable
 import androidx.navigation.compose.currentBackStackEntryAsState
 import androidx.navigation.compose.rememberNavController
 import dev.linguago.core.ui.components.LinguaIcons
+import dev.linguago.core.ui.feedback.FeedbackCue
+import dev.linguago.core.ui.feedback.LocalInteractionFeedback
+import dev.linguago.core.ui.feedback.rememberInteractionFeedback
 import dev.linguago.feature.auth.AuthScreen
 import dev.linguago.feature.home.HomeScreen
 import dev.linguago.feature.lesson.LessonScreen
@@ -47,7 +51,8 @@ private val BOTTOM_DESTINATIONS =
 
 /**
  * Shell de la aplicación: NavHost + barra inferior. El destino inicial lo
- * decide la preferencia de curso (onboarding u home, Fase 1).
+ * decide la preferencia de curso (onboarding u home, Fase 1). Provee el
+ * feedback sensorial global (ADR-027).
  */
 @Composable
 fun LinguaApp(
@@ -58,84 +63,87 @@ fun LinguaApp(
     val backStackEntry by navController.currentBackStackEntryAsState()
     val currentRoute = backStackEntry?.destination?.route
     val showBottomBar = currentRoute in BOTTOM_DESTINATIONS.map { it.route }
+    val feedback = rememberInteractionFeedback()
 
-    Scaffold(
-        modifier = modifier,
-        bottomBar = {
-            if (showBottomBar) {
-                LinguaBottomBar(
-                    currentRoute = currentRoute,
-                    onRouteSelected = { route ->
-                        navController.navigate(route) {
-                            popUpTo(Routes.HOME) { inclusive = route == Routes.HOME }
-                            launchSingleTop = true
-                        }
-                    },
-                )
-            }
-        },
-    ) { innerPadding ->
-        NavHost(
-            navController = navController,
-            startDestination = startDestination,
-            modifier = Modifier.background(MaterialTheme.colorScheme.background),
-        ) {
-            composable(Routes.ONBOARDING) {
-                OnboardingScreen(
-                    onCourseSelected = { _ ->
-                        navController.navigate(Routes.HOME) {
-                            popUpTo(Routes.ONBOARDING) { inclusive = true }
-                        }
-                    },
-                    modifier = Modifier.padding(innerPadding),
-                )
-            }
-            composable(Routes.HOME) {
-                HomeScreen(
-                    onLessonClick = { courseId, lessonId ->
-                        navController.navigate(Routes.lesson(courseId, lessonId))
-                    },
-                    onStartReview = { courseId ->
-                        navController.navigate(Routes.review(courseId))
-                    },
-                    pathEnabled = BuildConfig.LEARNING_PATH_V2,
-                    modifier = Modifier.padding(innerPadding),
-                )
-            }
-            composable(Routes.LESSON) {
-                LessonScreen(
-                    onExit = { navController.popBackStack() },
-                    modifier = Modifier.padding(innerPadding),
-                )
-            }
-            composable(Routes.PROFILE) {
-                ProfileScreen(
-                    modifier = Modifier.padding(innerPadding),
-                )
-            }
-            composable(Routes.SETTINGS) {
-                SettingsScreen(
-                    onOpenOnboarding = { navController.navigate(Routes.ONBOARDING) },
-                    onOpenSync = { navController.navigate(Routes.SYNC) },
-                    modifier = Modifier.padding(innerPadding),
-                )
-            }
-            composable(Routes.AUTH) {
-                AuthScreen(
-                    modifier = Modifier.padding(innerPadding),
-                )
-            }
-            composable(Routes.SYNC) {
-                SyncScreen(
-                    onOpenAccount = { navController.navigate(Routes.AUTH) },
-                    modifier = Modifier.padding(innerPadding),
-                )
-            }
-            composable(Routes.REVIEW) {
-                ReviewScreen(
-                    onExit = { navController.popBackStack() },
-                    modifier = Modifier.padding(innerPadding),
-                )
+    CompositionLocalProvider(LocalInteractionFeedback provides feedback) {
+        Scaffold(
+            modifier = modifier,
+            bottomBar = {
+                if (showBottomBar) {
+                    LinguaBottomBar(
+                        currentRoute = currentRoute,
+                        onRouteSelected = { route ->
+                            navController.navigate(route) {
+                                popUpTo(Routes.HOME) { inclusive = route == Routes.HOME }
+                                launchSingleTop = true
+                            }
+                        },
+                    )
+                }
+            },
+        ) { innerPadding ->
+            NavHost(
+                navController = navController,
+                startDestination = startDestination,
+                modifier = Modifier.background(MaterialTheme.colorScheme.background),
+            ) {
+                composable(Routes.ONBOARDING) {
+                    OnboardingScreen(
+                        onCourseSelected = { _ ->
+                            navController.navigate(Routes.HOME) {
+                                popUpTo(Routes.ONBOARDING) { inclusive = true }
+                            }
+                        },
+                        modifier = Modifier.padding(innerPadding),
+                    )
+                }
+                composable(Routes.HOME) {
+                    HomeScreen(
+                        onLessonClick = { courseId, lessonId ->
+                            navController.navigate(Routes.lesson(courseId, lessonId))
+                        },
+                        onStartReview = { courseId ->
+                            navController.navigate(Routes.review(courseId))
+                        },
+                        pathEnabled = BuildConfig.LEARNING_PATH_V2,
+                        modifier = Modifier.padding(innerPadding),
+                    )
+                }
+                composable(Routes.LESSON) {
+                    LessonScreen(
+                        onExit = { navController.popBackStack() },
+                        modifier = Modifier.padding(innerPadding),
+                    )
+                }
+                composable(Routes.PROFILE) {
+                    ProfileScreen(
+                        modifier = Modifier.padding(innerPadding),
+                    )
+                }
+                composable(Routes.SETTINGS) {
+                    SettingsScreen(
+                        onOpenOnboarding = { navController.navigate(Routes.ONBOARDING) },
+                        onOpenSync = { navController.navigate(Routes.SYNC) },
+                        modifier = Modifier.padding(innerPadding),
+                    )
+                }
+                composable(Routes.AUTH) {
+                    AuthScreen(
+                        modifier = Modifier.padding(innerPadding),
+                    )
+                }
+                composable(Routes.SYNC) {
+                    SyncScreen(
+                        onOpenAccount = { navController.navigate(Routes.AUTH) },
+                        modifier = Modifier.padding(innerPadding),
+                    )
+                }
+                composable(Routes.REVIEW) {
+                    ReviewScreen(
+                        onExit = { navController.popBackStack() },
+                        modifier = Modifier.padding(innerPadding),
+                    )
+                }
             }
         }
     }
@@ -148,6 +156,8 @@ private fun LinguaBottomBar(
     onRouteSelected: (String) -> Unit,
 ) {
     val colors = MaterialTheme.colorScheme
+    val feedback = LocalInteractionFeedback.current
+
     NavigationBar(
         containerColor = colors.surfaceVariant,
         tonalElevation = 0.dp,
@@ -156,7 +166,10 @@ private fun LinguaBottomBar(
             val selected = currentRoute == destination.route
             NavigationBarItem(
                 selected = selected,
-                onClick = { onRouteSelected(destination.route) },
+                onClick = {
+                    feedback.play(FeedbackCue.TAP)
+                    onRouteSelected(destination.route)
+                },
                 icon = {
                     Image(
                         painter = painterResource(destination.iconRes),

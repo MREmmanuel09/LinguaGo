@@ -13,6 +13,9 @@ import dev.linguago.core.domain.model.Lesson
 import dev.linguago.core.domain.model.LessonId
 import dev.linguago.core.domain.model.Level
 import dev.linguago.core.domain.model.LevelId
+import dev.linguago.core.domain.model.MicroLesson
+import dev.linguago.core.domain.model.MicroLessonExample
+import dev.linguago.core.domain.model.MicroLessonSection
 import dev.linguago.core.domain.model.Unit
 import dev.linguago.core.domain.model.UnitId
 import dev.linguago.core.domain.model.VocabFrequencyBand
@@ -267,6 +270,90 @@ class CourseValidatorTest {
     }
 
     @Test
+    fun rechaza_feedback_on_success_sin_explicacion() {
+        waits_for_invalid(
+            cursoConLeccion(
+                b2Lesson(
+                    exercises =
+                        listOf(
+                            freeSpeaking(
+                                feedbackOnSuccess =
+                                    Exercise.FeedbackOnSuccess(
+                                        explanation = "   ",
+                                    ),
+                            ),
+                        ),
+                ),
+            ),
+            "feedbackOnSuccess",
+        )
+    }
+
+    @Test
+    fun rechaza_feedback_on_success_con_rule_ref_inexistente() {
+        waits_for_invalid(
+            cursoConLeccion(
+                b2Lesson(
+                    exercises =
+                        listOf(
+                            freeSpeaking(
+                                feedbackOnSuccess =
+                                    Exercise.FeedbackOnSuccess(
+                                        explanation = "Explica el acierto",
+                                        ruleRef = GrammarPointId("gp-missing"),
+                                    ),
+                            ),
+                        ),
+                ),
+            ),
+            "feedbackOnSuccess.ruleRef",
+        )
+    }
+
+    @Test
+    fun admite_micro_lesson_valida() {
+        assertEquals(
+            CourseValidation.Valid,
+            CourseValidator.validate(cursoConLeccion(lessonConMicro(microValida()))),
+        )
+    }
+
+    @Test
+    fun rechaza_micro_lesson_sin_objetivos() {
+        waits_for_invalid(
+            cursoConLeccion(lessonConMicro(microValida().copy(goals = emptyList()))),
+            "microLesson.goals",
+        )
+    }
+
+    @Test
+    fun rechaza_micro_lesson_sin_secciones() {
+        waits_for_invalid(
+            cursoConLeccion(lessonConMicro(microValida().copy(sections = emptyList()))),
+            "microLesson",
+        )
+    }
+
+    @Test
+    fun rechaza_micro_lesson_con_ejemplo_incompleto() {
+        val micro =
+            microValida().copy(
+                sections =
+                    listOf(
+                        MicroLessonSection(
+                            heading = "Regla",
+                            body = "Cuerpo",
+                            examples = listOf(MicroLessonExample(source = "Hola", target = " ")),
+                        ),
+                    ),
+            )
+        waits_for_invalid(
+            cursoConLeccion(lessonConMicro(micro)),
+            "microLesson.examples",
+        )
+    }
+
+    @Test
     fun rechaza_grammar_point_sin_label() {
         waits_for_invalid(
             cursoConLeccion(
@@ -383,6 +470,28 @@ class CourseValidatorTest {
         )
     }
 
+    private fun lessonConMicro(micro: MicroLesson): Lesson =
+        Lesson(
+            id = LessonId("ls-micro"),
+            title = "Lección con micro-clase",
+            exercises = listOf(mcCorrecta()),
+            microLesson = micro,
+        )
+
+    private fun microValida(): MicroLesson =
+        MicroLesson(
+            title = "Reglas",
+            goals = listOf("Reconocer la regla."),
+            sections =
+                listOf(
+                    MicroLessonSection(
+                        heading = "Regla",
+                        body = "Cuerpo de la regla.",
+                        examples = listOf(MicroLessonExample(source = "Hola", target = "Hello")),
+                    ),
+                ),
+        )
+
     private fun mcCorrecta(id: String = "e1"): Exercise.MultipleChoice =
         Exercise.MultipleChoice(
             id = ExerciseId(id),
@@ -406,6 +515,7 @@ class CourseValidatorTest {
         minWpm: Double? = null,
         maxWpm: Double? = null,
         feedbackOnError: Exercise.FeedbackOnError? = errorFeedback(),
+        feedbackOnSuccess: Exercise.FeedbackOnSuccess? = null,
     ): Exercise.FreeSpeakingPrompt =
         Exercise.FreeSpeakingPrompt(
             id = ExerciseId("e-free"),
@@ -418,6 +528,7 @@ class CourseValidatorTest {
             minWpm = minWpm,
             maxWpm = maxWpm,
             feedbackOnError = feedbackOnError,
+            feedbackOnSuccess = feedbackOnSuccess,
         )
 
     private fun b2Lesson(

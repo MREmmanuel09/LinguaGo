@@ -109,6 +109,7 @@ internal class LessonDriver(
             }
             cursor.index = index
             if (!awaitInLesson(scenario.title)) return false
+            dismissBriefIfPresent()
             // Re-entrada con la lección ya corregida/completada: la app puede
             // retomar EN el último ejercicio (curso del cursor) o directamente
             // en "Lección completada" cuando el check previo pasó sin que el
@@ -703,7 +704,22 @@ internal class LessonDriver(
         }
     }
 
-    private fun awaitInLesson(title: String): Boolean = waitForText(title, DEFAULT_TIMEOUT_MILLIS) && hasText(EXIT_LABEL)
+    private fun awaitInLesson(title: String): Boolean {
+        val deadline = System.currentTimeMillis() + DEFAULT_TIMEOUT_MILLIS
+        while (System.currentTimeMillis() < deadline) {
+            if (hasText(EXIT_LABEL) && (hasText(title) || hasText(BRIEF_TITLE))) return true
+            sleep(200)
+        }
+        return false
+    }
+
+    /** La micro-clase (ADR-028) aparece antes del primer ejercicio. */
+    private fun dismissBriefIfPresent() {
+        when {
+            hasText(BRIEF_START_LABEL) -> tapText(BRIEF_START_LABEL)
+            hasText(BRIEF_RESUME_LABEL) -> tapText(BRIEF_RESUME_LABEL)
+        }
+    }
 
     /** Público: el test lo usa para verificar persistencia tras background. */
     fun waitForHome(): Boolean = awaitHome()
