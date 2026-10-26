@@ -6,6 +6,52 @@ El formato sigue [Keep a Changelog](https://keepachangelog.com/es-ES/1.1.0/)
 y el versionado sigue [SemVer](https://semver.org/lang/es/).
 Pre-1.0: los cambios incompatibles pueden ocurrir en `0.y.0`.
 
+## [1.1.0] - 2026-10-25
+
+Versión centrada en la experiencia de aprendizaje: feedback sensorial,
+micro-clases de gramática, explicación de aciertos, reintentos y tableros
+manipulativos.
+
+### Agregado
+
+- **Feedback sensorial global** (ADR-027): SFX originales para selección,
+  encaje, acierto, error y completado; háptica con `VibrationEffect`; ajustes
+  independientes de sonido y vibración.
+- **Micro-clases de gramática y reglas** (ADR-028) antes de los ejercicios,
+  con objetivos, ejemplos, mecánicas y botón “Guía” para reabrir. Si la
+  lección no trae `microLesson`, se genera desde sus metadatos.
+- **Feedback de acierto**: `feedbackOnSuccess` opcional y explicación de
+  respaldo con la respuesta correcta visible; opciones correcta/incorrecta
+  marcadas con color e icono.
+- **Reintentos pedagógicos** (ADR-030) para escucha, dictado y voz: un
+  reintento sin consumir otra vida, XP máximo una vez y respuesta oculta
+  hasta agotar el reintento o pedir “Ver respuesta”.
+- **Audio repetible y a 0.75x** para escucha, dictado y repetición oral.
+- **OrderWords horizontal**: frase en tira con scroll y banco de palabras que
+  envuelve, sin desbordes.
+- **Emparejamiento tipo rompecabezas** (ADR-029) con piezas de pestaña/ranura
+  del mismo color, toque o arrastre, separación de parejas y corrección
+  visual al comprobar.
+- Tests de `AnswerKey`, `RetryPolicy`, micro-clases, schema/validador y
+  tablero puzzle.
+
+### Cambiado
+
+- Schema v2 aditivo: `microLesson` y `feedbackOnSuccess`, validados en build
+  y en runtime sin cambiar `schemaVersion`.
+- Las respuestas se bloquean al enviarse y tras el feedback; se evita el
+  doble envío y el doble XP.
+- Gate F4 y baseline profile cierran la micro-clase y reconocen los nuevos
+  tableros por etiquetas estables.
+- README, design system y ADRs 027–030 actualizados.
+
+### Corregido
+
+- Reenvío de respuestas en opciones y dictado tras el feedback.
+- Revelado prematuro de la respuesta correcta en ejercicios reintentables.
+- Desborde horizontal del banco de palabras.
+- Detección del gate para `SemanticMatch`/`MatchPairs` con el tablero puzzle.
+
 ## [1.0.0] — 2026-10-25
 
 Primera versión final. Rediseño UI/UX "Feather" y camino de aprendizaje

@@ -10,7 +10,7 @@ Código abierto · Sin anuncios · Sin backend · 100% offline · Vidas con
 recuperación rápida
 
 [![CI](https://github.com/MREmmanuel09/LinguaGo/actions/workflows/ci.yml/badge.svg)](https://github.com/MREmmanuel09/LinguaGo/actions/workflows/ci.yml)
-![version](https://img.shields.io/badge/version-1.0.0-blue)
+![version](https://img.shields.io/badge/version-1.1.0-blue)
 ![Kotlin](https://img.shields.io/badge/Kotlin-2.4-7F52FF?logo=kotlin&logoColor=white)
 ![Android](https://img.shields.io/badge/Android-26%2B-3DDC84?logo=android&logoColor=white)
 ![License](https://img.shields.io/badge/license-MIT-green)
@@ -34,10 +34,10 @@ flowchart LR
 
 ## Descargar APK
 
-**[LinguaGo 1.0.0 — APK global](https://github.com/MREmmanuel09/LinguaGo/releases/tag/v1.0.0)**
+**[LinguaGo 1.1.0 — APK global](https://github.com/MREmmanuel09/LinguaGo/releases/tag/v1.1.0)**
 (firma de desarrollo; instalación manual con "origen desconocido").
 
-- Android 8.0+ · **arm64** · ~508 MB (incluye los 4 cursos y sus modelos de voz).
+- Android 8.0+ · APK global universal (~509 MB) o variante **arm64** (~392 MB), con los 4 cursos y sus modelos de voz.
 - Checksums en el release (`SHA256SUMS.txt`).
 - Es una firma de desarrollo: si más adelante se publica con un keystore de
   distribución, habrá que desinstalar antes de instalar la nueva firma.
@@ -47,7 +47,7 @@ flowchart LR
 | Documento | Contenido |
 |---|---|
 | [ARCHITECTURE.md](ARCHITECTURE.md) | Mapa técnico: capas, módulos, patrones, stack, datos, sync, testing |
-| [docs/DECISIONS.md](docs/DECISIONS.md) | ADRs 000–026 con índice y registro de pendientes |
+| [docs/DECISIONS.md](docs/DECISIONS.md) | ADRs 000–030 con índice y registro de pendientes |
 | [CONTENT_FORMAT.md](CONTENT_FORMAT.md) | Contrato del contenido v1: cómo escribir lecciones y ejercicios |
 | [docs/MODELS.md](docs/MODELS.md) | Política y estado de los modelos TTS/STT |
 | [docs/schemas/course-v1.json](docs/schemas/course-v1.json) | JSON Schema formal del contenido |
@@ -85,6 +85,7 @@ flowchart LR
 | 6 | Accesibilidad I8 + tests instrumentados | ✅ |
 | 7 | Pulido: stats de progreso y versión 0.2.0 | ✅ |
 | 8 | Rediseño "Feather", camino guiado, vidas y release 1.0.0 (ADR-025/026) | ✅ |
+| 9 | Feedback sensorial, micro-clases, reintentos y tableros + release 1.1.0 (ADR-027–030) | ✅ |
 | Pendiente | OneDrive (ADR-015), validación de voz pt/fr/ja en hardware | ⏳ |
 
 ## Módulos
@@ -104,7 +105,7 @@ flowchart LR
 | `content/*` | Assets del contenido pedagógico |
 
 Las decisiones de arquitectura están registradas en
-[docs/DECISIONS.md](docs/DECISIONS.md) (ADRs 000–023).
+[docs/DECISIONS.md](docs/DECISIONS.md) (ADRs 000–030).
 
 ## Compilar y ejecutar
 

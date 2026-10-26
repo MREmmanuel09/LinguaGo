@@ -62,8 +62,8 @@ android {
     namespace = "dev.linguago.app"
     defaultConfig {
         applicationId = "dev.linguago.app"
-        versionCode = 3
-        versionName = "1.0.0"
+        versionCode = 4
+        versionName = "1.1.0"
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
 
         buildConfigField("String", "GOOGLE_CLIENT_ID", "\"$googleClientId\"")
