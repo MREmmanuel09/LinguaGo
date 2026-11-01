@@ -1,5 +1,10 @@
 package dev.linguago.core.ui.components
 
+import androidx.compose.animation.core.LinearEasing
+import androidx.compose.animation.core.animateFloat
+import androidx.compose.animation.core.infiniteRepeatable
+import androidx.compose.animation.core.rememberInfiniteTransition
+import androidx.compose.animation.core.tween
 import androidx.compose.foundation.Canvas
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
@@ -17,6 +22,7 @@ import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.material3.TextButton
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.getValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
@@ -40,7 +46,10 @@ import dev.linguago.core.ui.feedback.LocalInteractionFeedback
 import dev.linguago.core.ui.feedback.feedbackClickable
 import dev.linguago.core.ui.theme.LinguaTheme
 import dev.linguago.core.ui.theme.LinguaTokens
+import dev.linguago.core.ui.util.rememberAnimationsEnabled
+import kotlin.math.PI
 import kotlin.math.roundToInt
+import kotlin.math.sin
 
 /**
  * Producción oral libre B2 (F2.5, ADR-019): grabación con visualizador de
@@ -279,6 +288,17 @@ private fun RmsWaveform(
 ) {
     val activeColor = MaterialTheme.colorScheme.primary
     val idleColor = MaterialTheme.colorScheme.outlineVariant
+    val animations = rememberAnimationsEnabled()
+    val transition = rememberInfiniteTransition(label = "rmsWave")
+    val phase by transition.animateFloat(
+        initialValue = 0f,
+        targetValue = (2f * PI).toFloat(),
+        animationSpec =
+            infiniteRepeatable(
+                animation = tween(durationMillis = 1_100, easing = LinearEasing),
+            ),
+        label = "rmsWavePhase",
+    )
     Canvas(
         modifier =
             modifier
@@ -294,11 +314,18 @@ private fun RmsWaveform(
         val minHeight = 4.dp.toPx()
         val centerY = size.height / 2f
         for (index in 0 until WAVE_BARS) {
-            val level = visible.getOrNull(index - start) ?: 0f
-            val barHeight = (minHeight + level.coerceIn(0f, 1f) * (size.height - minHeight))
+            val level = (visible.getOrNull(index - start) ?: 0f).coerceIn(0f, 1f)
+            val pulse =
+                if (animations) {
+                    0.12f * ((sin(phase + index * 0.6f) + 1f) / 2f)
+                } else {
+                    0f
+                }
+            val drawn = (level + pulse).coerceAtMost(1f)
+            val barHeight = (minHeight + drawn * (size.height - minHeight))
             val x = index * slot + (slot - barWidth) / 2f
             drawRoundRect(
-                color = if (level > 0f) activeColor else idleColor,
+                color = if (drawn > 0.02f) activeColor else idleColor,
                 topLeft = Offset(x, centerY - barHeight / 2f),
                 size = Size(barWidth, barHeight),
                 cornerRadius = CornerRadius(barWidth / 2f, barWidth / 2f),

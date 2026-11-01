@@ -1,5 +1,6 @@
 package dev.linguago.core.ui.components
 
+import androidx.compose.material3.Text
 import androidx.compose.runtime.CompositionLocalProvider
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.ui.platform.LocalDensity
@@ -91,6 +92,51 @@ public class DesignSystemAccessibilityTest {
             .assertIsSelected()
             .assert(SemanticsMatcher.expectValue(SemanticsProperties.Role, Role.RadioButton))
             .assertHeightIsAtLeast(48.dp)
+    }
+
+    @Test
+    public fun tokenChip_reportsButtonRoleAndSelection() {
+        compose.setContent {
+            LinguaTheme {
+                TokenChip(token = "hola", selected = true, onToggle = {})
+            }
+        }
+
+        compose
+            .onNodeWithText("hola")
+            .assertIsSelected()
+            .assert(SemanticsMatcher.expectValue(SemanticsProperties.Role, Role.Button))
+            .assertHeightIsAtLeast(48.dp)
+    }
+
+    @Test
+    public fun flipCard_revealsBackAndReportsState() {
+        val revealed = mutableStateOf(false)
+        compose.setContent {
+            LinguaTheme {
+                FlipCard3D(
+                    revealed = revealed.value,
+                    onFlip = { revealed.value = true },
+                    front = { Text("hermano") },
+                    back = { Text("brother") },
+                )
+            }
+        }
+
+        compose.onNodeWithText("hermano").assertIsDisplayed()
+        compose.onNodeWithText("brother").assertDoesNotExist()
+
+        compose.onNodeWithText("hermano").performClick()
+        compose.waitForIdle()
+
+        compose.onNodeWithText("brother").assertIsDisplayed()
+        compose
+            .onNode(
+                SemanticsMatcher.expectValue(
+                    SemanticsProperties.StateDescription,
+                    "Traducción visible",
+                ),
+            ).assertExists()
     }
 
     @Test

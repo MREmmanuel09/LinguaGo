@@ -40,6 +40,11 @@
 | 028 | Micro-clases de gramática y feedback de acierto | Aprobado |
 | 029 | Tableros de respuesta horizontales y emparejamiento puzzle | Aprobado |
 | 030 | Reintentos pedagógicos, vidas y fairness de XP | Aprobado |
+| 031 | Profundidad táctil 3D y sonido cálido v2 («Feather 2.0», Fase 1) | Aprobado |
+| 032 | Lumi expresiva, banners de unidad por etapa y camino vivo (Fase 2) | Aprobado |
+| 033 | Lección viva: panel de feedback, combos, ondas y fichas animadas (Fase 3) | Aprobado |
+| 034 | Flashcards 3D y calificación semántica en el repaso (Fase 4) | Aprobado |
+| 035 | Bento de progreso, onboarding ilustrado y transiciones (Fase 5) | Aprobado |
 
 ---
 ## ADR-000: Convención del registro de decisiones
@@ -1230,6 +1235,285 @@ respuesta (rechazada: bloquea el aprendizaje); (c) persistir intentos en Room
 - Tests de FSM para no duplicar XP ni vidas y para el flujo de reintento.
 
 **Invariantes protegidos:** I3, I4, I8.
+
+---
+
+## ADR-031: Profundidad táctil 3D y sonido cálido v2 («Feather 2.0», Fase 1)
+
+**Estado:** Aprobado
+**Fecha:** 2026-10-31
+
+**Contexto:** el lenguaje "Feather" (ADR-026) definió cuerpo + borde inferior,
+pero la implementación se quedó a medias: `PrimaryButton3D` solo escala al
+presionar y `OptionCard` es un borde plano sin volumen. Los SFX de ADR-027 son
+senoidales muy secos y faltan eventos para cofre, giro de tarjeta y pérdida de
+vida. El resultado se percibe plano y poco táctil. Se quiere una base física
+consistente y un set de sonido más cálido sin dependencias externas ni arte de
+terceros (I5) y sin romper accesibilidad (I8).
+
+**Decisión:**
+- **Física de hundimiento real:** todo control flat-3D (botones, tarjetas de
+  opción, nodos, chips) desplaza su cuerpo `PRESS_DEPTH_DP = 4 dp` sobre el
+  borde inferior al presionarse y vuelve con `LinguaMotion.SpringBouncy`; la
+  escala ya no es la única señal de presión.
+- **Bisel de luz superior:** un degradado blanco con `HIGHLIGHT_ALPHA = 0.18`
+  en el tercio superior del cuerpo da volumen sin sombras difusas ni coste de
+  render. Ambos valores son tokens aditivos en `LinguaTokens.kt`.
+- **`TokenChip` compartido:** los tokens de `OrderWords` dejan de ser un
+  componente privado de `feature-lesson` y pasan a `core-ui` con la misma
+  física 3D, semántica `Role.Button` + `selected` y cues `SELECT`/`DESELECT`.
+- **SFX v2 originales:** el generador `tools/generate_sfx.ps1` incorpora
+  síntesis con armónicos y envolventes percusivas (timbre de madera/marimba y
+  acordes suaves) en lugar de senos puros. Se sintetizan a **22,05 kHz** mono
+  16-bit (suficiente para sonidos de UI) para que el set completo, con cuatro
+  cues nuevos, siga bajo el presupuesto de 150 KB de ADR-027. Sigue siendo
+  arte original sintetizado en el repo (I5), sin samples externos.
+- **Nuevos cues:** `STREAK_COMBO` (racha de aciertos), `CARD_FLIP` (revelar
+  tarjeta de repaso), `HEART_LOST` (pérdida de vida) y `CHEST_OPEN`
+  (desbloqueo de cofre). Cada uno tiene sonido, patrón háptico y fallback
+  `performHapticFeedback`.
+- **Conexión inmediata:** `ChestRewardSheet` emite `CHEST_OPEN` al mostrarse,
+  `ReviewScreen` emite `CARD_FLIP` al revelar y `LessonScreen` emite
+  `HEART_LOST` cuando bajan las vidas. `STREAK_COMBO` queda disponible para
+  la coreografía de combos de la Fase 3.
+- **Accesibilidad y rendimiento:** con `rememberAnimationsEnabled() == false`
+  el hundimiento se aplica en estado final (sin rebote); el sonido y la
+  háptica siguen siendo refuerzos, nunca la única señal. Sin librerías nuevas.
+
+**Alternativas consideradas:** (a) escalar en vez de hundir (rechazada: se
+percibe plano y no usa el borde inferior); (b) sombras difusas y `elevation`
+(rechazada: coste de render y rompe el lenguaje flat-3D); (c) packs de SFX
+externos (rechazada: I5 exige identidad propia); (d) dejar `TokenPill` privado
+(rechazada: duplica física y estilos entre pantallas).
+
+**Consecuencias:**
+- `LinguaTokens` gana `PRESS_DEPTH_DP` y `HIGHLIGHT_ALPHA`; `LinguaMotion`
+  reutiliza sus springs existentes.
+- `PrimaryButton3D`, `OptionCard`, `PathNode` y el nuevo `TokenChip` comparten
+  la misma física de hundimiento y bisel.
+- Se regeneran los WAV de `core-ui/res/raw` y se añaden cuatro archivos.
+- `FeedbackCue`, `UiSoundPlayer` y `LinguaHaptics` se amplían; los tests de
+  háptica cubren los nuevos cues.
+- No cambia el contrato de ninguna pantalla ni el estado de presentación.
+
+**Invariantes protegidos:** I1 (todo local), I5 (sonido y arte originales), I8
+(accesibilidad, reduced motion y ajustes de sonido/háptica).
+
+---
+
+## ADR-032: Lumi expresiva, banners de unidad por etapa y camino vivo (Fase 2)
+
+**Estado:** Aprobado
+**Fecha:** 2026-10-31
+
+**Contexto:** Lumi existe como un vector monocromo teñido de un solo color y
+solo flota verticalmente; no reacciona al contexto. Las cabeceras de unidad
+del camino son texto plano sin jerarquía visual ni progreso integrado, y los
+conectores entre nodos son trazos estáticos. La app sigue sintiéndose plana en
+la pantalla principal. Se quiere una mascota con identidad y emociones, un
+camino con etapas legibles y movimiento con propósito, sin arte de terceros
+(I5) ni coste de rendimiento.
+
+**Decisión:**
+- **Lumi multicapa original:** el vector `ic_lumi.xml` se rediseña con capas
+  de color propias (cuerpo púrpura, pecho claro, ala turquesa, pico ámbar y
+  ojo oscuro con brillo). Se pinta con `Image` sin `tint`; el parámetro `tint`
+  desaparece de `LumiMascot`.
+- **`LumiMood`:** `IDLE` (flote suave), `HAPPY` (rebote + destellos),
+  `ENCOURAGING` (balanceo empático) y `LISTENING` (pulso atento). Cada mood
+  define duración y transformaciones; con `rememberAnimationsEnabled() ==
+  false` se muestra el estado final sin movimiento (I8). Lumi sigue siendo
+  decorativa para TalkBack (`contentDescription = null`).
+- **`PathStage` (A1→B2):** enum en `core-ui` que mapea la etapa a tokens
+  existentes, sin hex nuevos: A1→`ACCENT`, A2→`INFO`, B1→`PRIMARY`,
+  B2→`WARNING`. La etapa se asigna por **índice del nivel** en la rampa del
+  curso (0→A1, 1→A2, 2→B1, 3→B2), no por el nombre editorial del nivel; no se
+  persiste.
+- **`UnitHeader` como banner 3D:** cuerpo con borde inferior, bisel de luz,
+  insignia de etapa con su color, título, contador y barra de progreso
+  integrada. Mantiene semántica de heading y el texto "N de M lecciones".
+- **Camino vivo:** el conector del tramo activo dibuja un punto que recorre la
+  curva (`PathMeasure`); sin animaciones del sistema el punto no se muestra.
+  El color del tramo completado se conserva.
+- **Sin dependencias nuevas:** Compose nativo (`Canvas`, `PathMeasure`,
+  `graphicsLayer`). Sin Rive/Lottie.
+
+**Alternativas consideradas:** (a) seguir tiñendo Lumi de un color (rechazada:
+pierde identidad y expresividad); (b) mapear la etapa por el nombre del nivel
+(rechazada: los nombres son editoriales, no etiquetas CEFR); (c) usar
+`LinearProgressIndicator` de Material dentro del banner (rechazada: añade
+semántica anidada y rompe el lenguaje 3D); (d) animar el trazo completo del
+conector (rechazada: más caro y visualmente ruidoso que un punto).
+
+**Consecuencias:**
+- `PathItem.Header` gana `stage: PathStage = PathStage.A1` (aditivo).
+- `LumiMascot` gana `mood`; `RewardSheet` usa `HAPPY` y el camino usa `IDLE`
+  o `ENCOURAGING` según el nodo activo.
+- `UnitHeader` gana `stage`; las llamadas existentes siguen compilando por el
+  valor por defecto.
+- Tests del adaptador cubren la asignación de etapas; la galería visual puede
+  capturar los cuatro moods.
+
+**Invariantes protegidos:** I1, I5 (arte original), I8 (reduced motion y
+TalkBack).
+
+---
+
+## ADR-033: Lección viva — panel de feedback, combos, ondas y fichas animadas (Fase 3)
+
+**Estado:** Aprobado
+**Fecha:** 2026-10-31
+
+**Contexto:** el feedback de la lección aparece como un banner plano que empuja
+el contenido y comparte el espacio con botones sueltos; no hay refuerzo de
+racha de aciertos, los paneles de audio no comunican visualmente que se está
+reproduciendo o escuchando, y las fichas de los tableros se mueven sin
+transiciones. La lección se siente estática pese a tener ya sonido y háptica.
+
+**Decisión:**
+- **Panel de feedback deslizante:** al calificar, el bloque de feedback
+  (banner + reintento/ver respuesta + Continuar) entra desde abajo con
+  `slideInVertically + fadeIn` sobre un `LinguaCard3D`, con Lumi `HAPPY` en
+  acierto y `ENCOURAGING` en error. Con reduced motion solo hay fundido o
+  estado final, sin desplazamiento.
+- **Combo de aciertos:** `LessonUiState.combo` cuenta aciertos consecutivos
+  (se reinicia al fallar) y vive solo en la sesión; no se persiste. A partir
+  de 2 se muestra una insignia animada con llama y el cue `STREAK_COMBO`
+  sustituye al `CORRECT` (nunca se solapan). Es refuerzo, no la única señal.
+- **Ondas de audio reactivas:** nuevo `VoiceWaveIndicator(active)` en
+  `core-ui` (barras con fase animada; estado bajo y estático si no está
+  activo). `LessonUiState.speaking` se enciende mientras el `TtsEngine.speak`
+  suspendido está en curso, de modo que las ondas reflejan reproducción real;
+  en `SpeakRepeat` reflejan la escucha del micrófono y en `FreeSpeakingPanel`
+  la energía RMS real se complementa con un pulso suave mientras graba.
+- **Fichas animadas:** las fichas elegidas de `OrderWords` usan
+  `animateItem()` en la `LazyRow`; las piezas de `ClozeDragDropBoard` y
+  `PuzzleMatchBoard` escalan suavemente mientras se arrastran (elevación
+  visual sin sombras difusas).
+- **Sin dependencias nuevas** y sin cambios de contrato del grader ni del
+  contenido.
+
+**Alternativas consideradas:** (a) mantener el banner plano y solo añadir
+sonido (rechazada: no resuelve la percepción estática); (b) animar ondas con
+amplitud simulada durante el TTS (rechazada: sería deshonesto; se usa el
+estado real de `speak`); (c) persistir el combo (rechazada: es refuerzo de
+sesión, no progreso); (d) usar librerías de animación (rechazada: Compose
+nativo basta).
+
+**Consecuencias:**
+- `LessonUiState` gana `combo` y `speaking` (aditivos, con default).
+- `AudioOnlyPromptPanel` gana `speaking: Boolean = false`; `AudioPanel` y
+  `SpeechPanel` internos lo consumen.
+- Nuevo `VoiceWaveIndicator` público en `core-ui`.
+- El panel de feedback cambia de composición, no de mensajes ni de
+  accesibilidad (live region se conserva en `FeedbackBanner`).
+- Tests unitarios cubren el combo (incremento y reinicio).
+
+**Invariantes protegidos:** I1 (todo local), I3 (nada bloquea), I8 (reduced
+motion, TalkBack y ajustes de sonido/háptica).
+
+---
+
+## ADR-034: Flashcards 3D y calificación semántica en el repaso (Fase 4)
+
+**Estado:** Aprobado
+**Fecha:** 2026-10-31
+
+**Contexto:** el repaso muestra la palabra, un botón para revelar y cuatro
+botones idénticos apilados. No hay sensación de tarjeta física, no se puede
+escuchar la pronunciación y la calificación FSRS no comunica su semántica
+(reintentar, difícil, bien, fácil). Se quiere una interacción de flashcard
+real sin dependencias nuevas ni romper I3/I8.
+
+**Decisión:**
+- **`FlipCard3D` en `core-ui`:** tarjeta con cuerpo flat-3D (borde inferior y
+  bisel) que gira en `rotationY` al tocarla y muestra la cara frontal
+  (palabra) o trasera (traducción). Usa `cameraDistance` para perspectiva,
+  `tween(520)` y, con reduced motion, cambio instantáneo sin giro. La tarjeta
+  es un botón accesible (`Role.Button`, `stateDescription` y
+  `onClickLabel`) y conserva el texto real para TalkBack.
+- **Pronunciación:** `ReviewViewModel` carga el curso para conocer el idioma
+  meta e inyecta `TtsEngine`; `speakTranslation()` reproduce la traducción y
+  expone `speaking` (para `VoiceWaveIndicator`) y `speechAvailable` (si el
+  motor está listo). Sin voz, el botón queda deshabilitado y el repaso sigue
+  (I1, I3).
+- **Botonera semántica:** una fila de cuatro botones 3D compactos con color
+  por intención: `AGAIN` coral, `HARD` ámbar (texto oscuro por contraste),
+  `GOOD` turquesa y `EASY` púrpura. `PrimaryButton3D` gana parámetros
+  opcionales de color de cuerpo/borde/contenido y `compact` (altura mínima
+  48 dp, tipografía `labelLarge`), sin cambiar su comportamiento por defecto.
+- **Orden de la pantalla:** cabecera y progreso, tarjeta 3D, botón
+  “Mostrar traducción” antes de revelar; tras revelar, pronunciación y fila
+  de calificación. El cue `CARD_FLIP` sigue acompañando el revelado.
+- **Sin dependencias nuevas.**
+
+**Alternativas consideradas:** (a) mantener la lista de botones (rechazada:
+no comunica intención y se siente plana); (b) usar `AnimatedContent` con
+escala en vez de giro 3D (rechazada: se pidió una flashcard física);
+(c) pronunciar la palabra de origen (rechazada: el objetivo es el idioma
+meta); (d) crear un botón nuevo solo para el repaso (rechazada: se extiende
+`PrimaryButton3D` de forma aditiva).
+
+**Consecuencias:**
+- Nuevo `FlipCard3D` público en `core-ui`.
+- `PrimaryButton3D` gana `bodyColor`, `edgeColor`, `contentColor` y `compact`
+  con valores por defecto compatibles.
+- `ReviewUiState` gana `speaking` y `speechAvailable`; `ReviewViewModel`
+  inyecta `CourseRepository` y `TtsEngine`.
+- `ReviewScreen` reorganiza su contenido; el contrato FSRS y las vidas no
+  cambian.
+
+**Invariantes protegidos:** I1 (voz local), I3 (nunca bloquea), I8
+(TalkBack, contraste y reduced motion).
+
+---
+
+## ADR-035: Bento de progreso, onboarding ilustrado y transiciones (Fase 5)
+
+**Estado:** Aprobado
+**Fecha:** 2026-10-31
+
+**Contexto:** el perfil es una lista de cajas grises apiladas, el onboarding
+usa tarjetas planas sin identidad por idioma y la navegación cambia de
+pantalla sin transición. Son las últimas pantallas que rompen el lenguaje
+flat-3D del resto de la app.
+
+**Decisión:**
+- **Perfil Bento:** tarjeta héroe con anillo de dominio animado (lecciones
+  completadas / totales), Lumi y nivel visual derivado del XP; cuadrícula 2×2
+  de tarjetas 3D (XP, lecciones, tarjetas, repaso pendiente) y tarjeta de
+  racha a ancho completo con mejor marca. Todo usa `LinguaCard3D` y tokens
+  existentes; sin nuevas dependencias.
+- **Iconos originales nuevos:** `ic_star` (XP) e `ic_cards` (repaso) en
+  `core-ui`, registrados en `LinguaIcons` (I5). No se usan packs externos.
+- **Onboarding ilustrado:** Lumi `HAPPY` en la bienvenida, insignia de idioma
+  con color por destino (`EN`→`INFO`, `PT`→`ACCENT`, `FR`→`PRIMARY`,
+  `JA`→`WARNING`) y un panel de confirmación animado al seleccionar el curso.
+  La selección sigue siendo `OptionCard` (RadioButton) para conservar I8.
+- **Nivel y dominio:** `ProfileStats` centraliza `levelFor`/`xpIntoLevelFor`
+  (100 XP por nivel, mismo criterio que el camino) con test unitario; no se
+  persiste nada nuevo.
+- **Transiciones de navegación:** `NavHost` usa fundido entre pestañas y
+  deslizamiento lateral para Lección y Repaso, con `pop` inverso. Con
+  reduced motion las duraciones son 0 (cambio instantáneo).
+- **Sin cambios de contrato** en repositorios, rutas ni contenido.
+
+**Alternativas consideradas:** (a) mantener la lista de tarjetas del perfil
+(rechazada: no jerarquiza la información); (b) crear arte raster por idioma
+(rechazada: peso de APK e I5; basta insignia tipográfica original);
+(c) transición global única (rechazada: las pestañas no deben deslizarse como
+una lección); (d) animar el anillo con `infiniteRepeatable` (rechazada: debe
+reflejar el valor real, no decorar).
+
+**Consecuencias:**
+- `ProfileUiState` gana `level` y `xpIntoLevel` (aditivos).
+- Nuevo `ProfileStats` con test; nuevos `ic_star`/`ic_cards`.
+- `ProfileScreen` y `OnboardingScreen` se reorganizan; `LinguaApp` añade
+  transiciones.
+- Sin nuevas dependencias ni cambios de esquema.
+
+**Invariantes protegidos:** I1, I5 (arte original), I8 (reduced motion,
+TalkBack y contraste).
 
 ---
 

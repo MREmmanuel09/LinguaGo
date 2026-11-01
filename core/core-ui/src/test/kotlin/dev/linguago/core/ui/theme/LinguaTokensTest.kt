@@ -55,4 +55,10 @@ class LinguaTokensTest {
         assertEquals(24, LinguaTokens.RADIUS_NODE_DP)
         assertEquals(999, LinguaTokens.RADIUS_PILL_DP)
     }
+
+    @Test
+    fun fisica_tactil_3d() {
+        assertEquals(4, LinguaTokens.PRESS_DEPTH_DP)
+        assertEquals(0.18f, LinguaTokens.HIGHLIGHT_ALPHA, 0.0001f)
+    }
 }

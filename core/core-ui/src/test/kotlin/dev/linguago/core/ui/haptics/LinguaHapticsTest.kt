@@ -60,4 +60,23 @@ class LinguaHapticsTest {
             recorded,
         )
     }
+
+    @Test
+    fun `los cues nuevos usan el fallback correcto sin vibrador`() {
+        haptics.play(FeedbackCue.STREAK_COMBO)
+        haptics.play(FeedbackCue.CARD_FLIP)
+        haptics.play(FeedbackCue.HEART_LOST)
+        haptics.play(FeedbackCue.CHEST_OPEN)
+
+        assertEquals(
+            listOf(
+                HapticFeedbackType.Confirm,
+                HapticFeedbackType.TextHandleMove,
+                HapticFeedbackType.Reject,
+                HapticFeedbackType.Confirm,
+                HapticFeedbackType.Confirm,
+            ),
+            recorded,
+        )
+    }
 }

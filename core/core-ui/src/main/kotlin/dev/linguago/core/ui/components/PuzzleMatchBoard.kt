@@ -1,5 +1,6 @@
 package dev.linguago.core.ui.components
 
+import androidx.compose.animation.core.animateFloatAsState
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
@@ -55,7 +56,9 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.zIndex
 import dev.linguago.core.ui.feedback.FeedbackCue
 import dev.linguago.core.ui.feedback.LocalInteractionFeedback
+import dev.linguago.core.ui.theme.LinguaMotion
 import dev.linguago.core.ui.theme.LinguaTokens
+import dev.linguago.core.ui.util.rememberAnimationsEnabled
 
 /**
  * Emparejamiento tipo rompecabezas (ADR-029): las piezas izquierdas tienen una
@@ -83,6 +86,12 @@ public fun PuzzleMatchBoard(
     val leftCoords = remember { mutableMapOf<Int, LayoutCoordinates>() }
     val drag = remember(pairs) { PuzzleDragState() }
     val freeRights = shuffledRights.filterNot { right -> matched.containsValue(right) }
+    val animations = rememberAnimationsEnabled()
+    val dragScale by animateFloatAsState(
+        targetValue = if (drag.draggingRight != null && animations) 1.06f else 1f,
+        animationSpec = LinguaMotion.SpringSnappy,
+        label = "puzzleDragScale",
+    )
 
     Column(modifier = modifier.fillMaxWidth(), verticalArrangement = Arrangement.spacedBy(12.dp)) {
         Text(
@@ -195,6 +204,8 @@ public fun PuzzleMatchBoard(
                                     if (dragging) {
                                         translationX = drag.offset.value.x
                                         translationY = drag.offset.value.y
+                                        scaleX = dragScale
+                                        scaleY = dragScale
                                     }
                                 }.onGloballyPositioned { coordinates -> drag.rightCoords[right] = coordinates }
                                 .pointerInput(right, enabled, matched) {

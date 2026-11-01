@@ -1,5 +1,12 @@
 package dev.linguago.app
 
+import androidx.compose.animation.EnterTransition
+import androidx.compose.animation.ExitTransition
+import androidx.compose.animation.core.tween
+import androidx.compose.animation.fadeIn
+import androidx.compose.animation.fadeOut
+import androidx.compose.animation.slideInHorizontally
+import androidx.compose.animation.slideOutHorizontally
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.padding
@@ -27,6 +34,7 @@ import dev.linguago.core.ui.components.LinguaIcons
 import dev.linguago.core.ui.feedback.FeedbackCue
 import dev.linguago.core.ui.feedback.LocalInteractionFeedback
 import dev.linguago.core.ui.feedback.rememberInteractionFeedback
+import dev.linguago.core.ui.util.rememberAnimationsEnabled
 import dev.linguago.feature.auth.AuthScreen
 import dev.linguago.feature.home.HomeScreen
 import dev.linguago.feature.lesson.LessonScreen
@@ -64,6 +72,7 @@ fun LinguaApp(
     val currentRoute = backStackEntry?.destination?.route
     val showBottomBar = currentRoute in BOTTOM_DESTINATIONS.map { it.route }
     val feedback = rememberInteractionFeedback()
+    val animations = rememberAnimationsEnabled()
 
     CompositionLocalProvider(LocalInteractionFeedback provides feedback) {
         Scaffold(
@@ -86,6 +95,10 @@ fun LinguaApp(
                 navController = navController,
                 startDestination = startDestination,
                 modifier = Modifier.background(MaterialTheme.colorScheme.background),
+                enterTransition = { tabEnter(animations) },
+                exitTransition = { tabExit(animations) },
+                popEnterTransition = { tabEnter(animations) },
+                popExitTransition = { tabExit(animations) },
             ) {
                 composable(Routes.ONBOARDING) {
                     OnboardingScreen(
@@ -109,7 +122,13 @@ fun LinguaApp(
                         modifier = Modifier.padding(innerPadding),
                     )
                 }
-                composable(Routes.LESSON) {
+                composable(
+                    route = Routes.LESSON,
+                    enterTransition = { pushEnter(animations) },
+                    exitTransition = { pushExit(animations) },
+                    popEnterTransition = { popEnter(animations) },
+                    popExitTransition = { popExit(animations) },
+                ) {
                     LessonScreen(
                         onExit = { navController.popBackStack() },
                         modifier = Modifier.padding(innerPadding),
@@ -138,7 +157,13 @@ fun LinguaApp(
                         modifier = Modifier.padding(innerPadding),
                     )
                 }
-                composable(Routes.REVIEW) {
+                composable(
+                    route = Routes.REVIEW,
+                    enterTransition = { pushEnter(animations) },
+                    exitTransition = { pushExit(animations) },
+                    popEnterTransition = { popEnter(animations) },
+                    popExitTransition = { popExit(animations) },
+                ) {
                     ReviewScreen(
                         onExit = { navController.popBackStack() },
                         modifier = Modifier.padding(innerPadding),
@@ -148,6 +173,36 @@ fun LinguaApp(
         }
     }
 }
+
+private fun tabEnter(animations: Boolean): EnterTransition = fadeIn(animationSpec = tween(durationMillis = if (animations) 220 else 0))
+
+private fun tabExit(animations: Boolean): ExitTransition = fadeOut(animationSpec = tween(durationMillis = if (animations) 160 else 0))
+
+private fun pushEnter(animations: Boolean): EnterTransition =
+    if (animations) {
+        slideInHorizontally(animationSpec = tween(durationMillis = 260)) { it } +
+            fadeIn(animationSpec = tween(durationMillis = 260))
+    } else {
+        fadeIn(animationSpec = tween(durationMillis = 0))
+    }
+
+private fun pushExit(animations: Boolean): ExitTransition =
+    if (animations) {
+        slideOutHorizontally(animationSpec = tween(durationMillis = 220)) { -it / 4 } +
+            fadeOut(animationSpec = tween(durationMillis = 180))
+    } else {
+        fadeOut(animationSpec = tween(durationMillis = 0))
+    }
+
+private fun popEnter(animations: Boolean): EnterTransition = tabEnter(animations)
+
+private fun popExit(animations: Boolean): ExitTransition =
+    if (animations) {
+        slideOutHorizontally(animationSpec = tween(durationMillis = 240)) { it } +
+            fadeOut(animationSpec = tween(durationMillis = 180))
+    } else {
+        fadeOut(animationSpec = tween(durationMillis = 0))
+    }
 
 /** Barra inferior con íconos de identidad propia (I5). */
 @Composable

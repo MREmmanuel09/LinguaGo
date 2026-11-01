@@ -73,6 +73,13 @@ public class LinguaHaptics internal constructor(
                 hapticFeedback.performHapticFeedback(HapticFeedbackType.Confirm)
                 hapticFeedback.performHapticFeedback(HapticFeedbackType.Confirm)
             }
+            FeedbackCue.STREAK_COMBO -> hapticFeedback.performHapticFeedback(HapticFeedbackType.Confirm)
+            FeedbackCue.CARD_FLIP -> hapticFeedback.performHapticFeedback(HapticFeedbackType.TextHandleMove)
+            FeedbackCue.HEART_LOST -> hapticFeedback.performHapticFeedback(HapticFeedbackType.Reject)
+            FeedbackCue.CHEST_OPEN -> {
+                hapticFeedback.performHapticFeedback(HapticFeedbackType.Confirm)
+                hapticFeedback.performHapticFeedback(HapticFeedbackType.Confirm)
+            }
             FeedbackCue.TAP,
             FeedbackCue.SELECT,
             FeedbackCue.DESELECT,
@@ -105,6 +112,22 @@ public class LinguaHaptics internal constructor(
                 HapticPattern(
                     timings = longArrayOf(0, 12, 24, 12, 24, 12, 40, 22),
                     amplitudes = intArrayOf(0, 110, 0, 150, 0, 190, 0, 230),
+                )
+            FeedbackCue.STREAK_COMBO ->
+                HapticPattern(
+                    timings = longArrayOf(0, 10, 24, 12),
+                    amplitudes = intArrayOf(0, 120, 0, 180),
+                )
+            FeedbackCue.CARD_FLIP -> HapticPattern(longArrayOf(0, 8), intArrayOf(0, 50))
+            FeedbackCue.HEART_LOST ->
+                HapticPattern(
+                    timings = longArrayOf(0, 30, 40, 30),
+                    amplitudes = intArrayOf(0, 140, 0, 170),
+                )
+            FeedbackCue.CHEST_OPEN ->
+                HapticPattern(
+                    timings = longArrayOf(0, 10, 20, 10, 20, 10, 50, 24),
+                    amplitudes = intArrayOf(0, 110, 0, 150, 0, 190, 0, 240),
                 )
         }
 

@@ -42,6 +42,7 @@ public fun AudioOnlyPromptPanel(
     onPlaySlow: () -> Unit,
     modifier: Modifier = Modifier,
     question: String? = null,
+    speaking: Boolean = false,
 ) {
     val colors = MaterialTheme.colorScheme
     val feedback = LocalInteractionFeedback.current
@@ -79,6 +80,12 @@ public fun AudioOnlyPromptPanel(
                 style = MaterialTheme.typography.titleMedium,
                 color = if (audioAvailable) colors.onSecondaryContainer else colors.onSurfaceVariant,
             )
+            if (audioAvailable) {
+                VoiceWaveIndicator(
+                    active = speaking,
+                    modifier = Modifier.fillMaxWidth().padding(top = 8.dp),
+                )
+            }
         }
         if (allowSlowPlayback && audioAvailable) {
             TextButton(

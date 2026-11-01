@@ -1,5 +1,11 @@
 package dev.linguago.feature.home.path
 
+import androidx.compose.animation.core.LinearEasing
+import androidx.compose.animation.core.RepeatMode
+import androidx.compose.animation.core.animateFloat
+import androidx.compose.animation.core.infiniteRepeatable
+import androidx.compose.animation.core.rememberInfiniteTransition
+import androidx.compose.animation.core.tween
 import androidx.compose.foundation.Canvas
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
@@ -18,19 +24,23 @@ import androidx.compose.foundation.lazy.rememberLazyListState
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
+import androidx.compose.runtime.getValue
 import androidx.compose.runtime.remember
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.Path
+import androidx.compose.ui.graphics.PathMeasure
 import androidx.compose.ui.graphics.StrokeCap
 import androidx.compose.ui.graphics.drawscope.Stroke
 import androidx.compose.ui.unit.dp
 import dev.linguago.core.ui.components.LumiMascot
+import dev.linguago.core.ui.components.LumiMood
 import dev.linguago.core.ui.components.path.PathNode
 import dev.linguago.core.ui.components.path.PathNodeState
 import dev.linguago.core.ui.components.path.UnitHeader
 import dev.linguago.core.ui.theme.LinguaTokens
+import dev.linguago.core.ui.util.rememberAnimationsEnabled
 
 /**
  * Camino lineal en zigzag (ADR-026): cabeceras de unidad, nodos flotantes y
@@ -72,6 +82,7 @@ fun LearningPath(
                         title = item.title,
                         completed = item.completed,
                         total = item.total,
+                        stage = item.stage,
                         modifier = Modifier.padding(top = 20.dp, bottom = 6.dp),
                     )
                 is PathItem.Node -> {
@@ -94,6 +105,12 @@ fun LearningPath(
                                 ) {
                                     LumiMascot(
                                         size = 26.dp,
+                                        mood =
+                                            if (item.node.state == PathNodeState.IN_PROGRESS) {
+                                                LumiMood.ENCOURAGING
+                                            } else {
+                                                LumiMood.IDLE
+                                            },
                                         modifier =
                                             Modifier
                                                 .align(Alignment.TopEnd)
@@ -114,6 +131,9 @@ fun LearningPath(
                                     } else {
                                         MaterialTheme.colorScheme.outline
                                     },
+                                animated =
+                                    item.node.state == PathNodeState.AVAILABLE ||
+                                        item.node.state == PathNodeState.IN_PROGRESS,
                             )
                         }
                     }
@@ -123,13 +143,27 @@ fun LearningPath(
     }
 }
 
-/** Conector curvo entre dos nodos; el color refleja si el tramo está hecho. */
+/** Conector curvo entre dos nodos; el punto viaja por el tramo activo (ADR-032). */
 @Composable
 private fun PathConnector(
     fromBias: Float,
     toBias: Float,
     color: Color,
+    animated: Boolean,
 ) {
+    val animations = rememberAnimationsEnabled()
+    val transition = rememberInfiniteTransition(label = "pathConnector")
+    val progress by transition.animateFloat(
+        initialValue = 0f,
+        targetValue = 1f,
+        animationSpec =
+            infiniteRepeatable(
+                animation = tween(durationMillis = 1_600, easing = LinearEasing),
+                repeatMode = RepeatMode.Restart,
+            ),
+        label = "pathConnectorProgress",
+    )
+
     Canvas(
         modifier =
             Modifier
@@ -155,6 +189,17 @@ private fun PathConnector(
             color = color,
             style = Stroke(width = 6.dp.toPx(), cap = StrokeCap.Round),
         )
+        if (animated && animations) {
+            val measure = PathMeasure().apply { setPath(path, false) }
+            if (measure.length > 0f) {
+                val point = measure.getPosition(measure.length * progress)
+                drawCircle(
+                    color = LinguaTokens.Primary,
+                    radius = 3.dp.toPx(),
+                    center = point,
+                )
+            }
+        }
     }
 }
 

@@ -5,19 +5,20 @@ import android.content.pm.PackageManager
 import androidx.activity.compose.rememberLauncherForActivityResult
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.compose.animation.AnimatedContent
-import androidx.compose.animation.animateColorAsState
 import androidx.compose.animation.core.Spring
-import androidx.compose.animation.core.animateFloatAsState
-import androidx.compose.animation.core.snap
 import androidx.compose.animation.core.spring
 import androidx.compose.animation.core.tween
 import androidx.compose.animation.fadeIn
 import androidx.compose.animation.fadeOut
+import androidx.compose.animation.scaleIn
+import androidx.compose.animation.scaleOut
 import androidx.compose.animation.slideInHorizontally
+import androidx.compose.animation.slideInVertically
 import androidx.compose.animation.slideOutHorizontally
+import androidx.compose.animation.slideOutVertically
 import androidx.compose.animation.togetherWith
+import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
-import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.ExperimentalLayoutApi
@@ -30,6 +31,7 @@ import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.heightIn
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.lazy.LazyRow
 import androidx.compose.foundation.lazy.itemsIndexed
 import androidx.compose.foundation.lazy.rememberLazyListState
@@ -49,12 +51,14 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
-import androidx.compose.ui.graphics.graphicsLayer
+import androidx.compose.ui.graphics.ColorFilter
 import androidx.compose.ui.platform.LocalContext
+import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.semantics.Role
+import androidx.compose.ui.semantics.contentDescription
 import androidx.compose.ui.semantics.role
-import androidx.compose.ui.semantics.selected
 import androidx.compose.ui.semantics.semantics
+import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.IntOffset
 import androidx.compose.ui.unit.dp
@@ -71,18 +75,23 @@ import dev.linguago.core.ui.components.FeedbackBanner
 import dev.linguago.core.ui.components.FreeSpeakingPanel
 import dev.linguago.core.ui.components.HeartsIndicator
 import dev.linguago.core.ui.components.InfoBanner
+import dev.linguago.core.ui.components.LinguaCard3D
+import dev.linguago.core.ui.components.LinguaIcons
 import dev.linguago.core.ui.components.LiquidXpBar
+import dev.linguago.core.ui.components.LumiMascot
+import dev.linguago.core.ui.components.LumiMood
 import dev.linguago.core.ui.components.OptionCard
 import dev.linguago.core.ui.components.OptionStatus
 import dev.linguago.core.ui.components.PrimaryButton3D
 import dev.linguago.core.ui.components.PuzzleMatchBoard
 import dev.linguago.core.ui.components.PuzzlePairUi
 import dev.linguago.core.ui.components.RewardSheet
+import dev.linguago.core.ui.components.TokenChip
+import dev.linguago.core.ui.components.VoiceWaveIndicator
 import dev.linguago.core.ui.components.displayText
 import dev.linguago.core.ui.feedback.FeedbackCue
 import dev.linguago.core.ui.feedback.LocalInteractionFeedback
 import dev.linguago.core.ui.feedback.feedbackClickable
-import dev.linguago.core.ui.theme.LinguaMotion
 import dev.linguago.core.ui.theme.LinguaTheme
 import dev.linguago.core.ui.theme.LinguaTokens
 import dev.linguago.core.ui.util.rememberAnimationsEnabled
@@ -199,6 +208,11 @@ private fun LessonContent(
     LaunchedEffect(uiState.finished) {
         if (uiState.finished) feedback.play(FeedbackCue.COMPLETE)
     }
+    var previousHearts by remember { mutableIntStateOf(uiState.hearts) }
+    LaunchedEffect(uiState.hearts) {
+        if (uiState.hearts < previousHearts) feedback.play(FeedbackCue.HEART_LOST)
+        previousHearts = uiState.hearts
+    }
     when {
         uiState.loading -> Loading(modifier)
         uiState.invalid -> Invalid(modifier, onExit)
@@ -303,7 +317,13 @@ private fun ExerciseStage(
     val feedback = LocalInteractionFeedback.current
     LaunchedEffect(uiState.feedback, uiState.index) {
         val current = uiState.feedback ?: return@LaunchedEffect
-        feedback.play(if (current.isCorrect) FeedbackCue.CORRECT else FeedbackCue.INCORRECT)
+        feedback.play(
+            when {
+                !current.isCorrect -> FeedbackCue.INCORRECT
+                uiState.combo >= 2 -> FeedbackCue.STREAK_COMBO
+                else -> FeedbackCue.CORRECT
+            },
+        )
     }
     var lastChosenCount by remember(uiState.index) { mutableIntStateOf(uiState.chosenTokens.size) }
     LaunchedEffect(uiState.chosenTokens.size, uiState.index) {
@@ -359,6 +379,10 @@ private fun ExerciseStage(
         ) {
             HeartsIndicator(hearts = uiState.hearts)
             LiquidXpBar(progress = progress, modifier = Modifier.weight(1f))
+        }
+        if (uiState.combo >= 2) {
+            Spacer(Modifier.height(8.dp))
+            ComboBadge(combo = uiState.combo)
         }
         if (uiState.voiceWarmingUp) {
             Spacer(Modifier.height(8.dp))
@@ -447,6 +471,49 @@ private fun ExerciseStage(
     }
 }
 
+/** Insignia de racha de aciertos de la sesión (ADR-033). */
+@Composable
+private fun ComboBadge(combo: Int) {
+    val animations = rememberAnimationsEnabled()
+    Row(
+        modifier =
+            Modifier
+                .clip(RoundedCornerShape(LinguaTokens.RADIUS_PILL_DP.dp))
+                .background(LinguaTokens.Warning.copy(alpha = 0.20f))
+                .semantics(mergeDescendants = true) { contentDescription = "$combo aciertos seguidos" }
+                .padding(horizontal = 10.dp, vertical = 4.dp),
+        verticalAlignment = Alignment.CenterVertically,
+        horizontalArrangement = Arrangement.spacedBy(6.dp),
+    ) {
+        Image(
+            painter = painterResource(LinguaIcons.FlameRes),
+            contentDescription = null,
+            modifier = Modifier.size(16.dp),
+            colorFilter = ColorFilter.tint(LinguaTokens.Warning),
+        )
+        AnimatedContent(
+            targetState = combo,
+            transitionSpec = {
+                if (animations) {
+                    (scaleIn(initialScale = 0.6f) + fadeIn()) togetherWith
+                        (scaleOut(targetScale = 0.6f) + fadeOut())
+                } else {
+                    fadeIn(animationSpec = tween(durationMillis = 0)) togetherWith
+                        fadeOut(animationSpec = tween(durationMillis = 0))
+                }
+            },
+            label = "comboCount",
+        ) { value ->
+            Text(
+                text = "$value seguidas",
+                style = MaterialTheme.typography.labelLarge,
+                fontWeight = FontWeight.Bold,
+                color = MaterialTheme.colorScheme.onSurface,
+            )
+        }
+    }
+}
+
 @Composable
 private fun Renderer(
     exercise: Exercise,
@@ -517,6 +584,7 @@ private fun Renderer(
                     onPlay = onPlayAudio,
                     onPlaySlow = onPlaySlow,
                     enabled = uiState.audioAvailable,
+                    speaking = uiState.speaking,
                 )
                 OptionsStep(
                     prompt = "¿Qué escuchaste?",
@@ -538,6 +606,7 @@ private fun Renderer(
                     revealTranscript = uiState.feedback?.correctAnswer != null,
                     onPlay = onPlayAudio,
                     onPlaySlow = onPlaySlow,
+                    speaking = uiState.speaking,
                 )
                 OptionsStep(
                     prompt = "¿Qué escuchaste?",
@@ -559,6 +628,7 @@ private fun Renderer(
                 onPlaySlow = onPlaySlow,
                 audioEnabled = uiState.audioAvailable,
                 enabled = !uiState.answerLocked,
+                speaking = uiState.speaking,
             )
         is Exercise.SpeakRepeat ->
             SpeechPanel(
@@ -570,6 +640,7 @@ private fun Renderer(
                 onPlay = onPlayAudio,
                 onPlaySlow = onPlaySlow,
                 onRecord = onSpeakRequest,
+                speaking = uiState.speaking,
             )
         is Exercise.Translate ->
             TokenBoard(
@@ -672,53 +743,144 @@ private fun BottomActions(
     onReveal: () -> Unit,
     onAdvance: () -> Unit,
 ) {
-    val feedbackPlayer = LocalInteractionFeedback.current
-    when {
-        feedback != null -> {
-            FeedbackBanner(
-                isCorrect = feedback.isCorrect,
-                message = if (feedback.isCorrect) "¡Correcto!" else "Revisa la respuesta y sigue",
-                diagnostic = feedback.diagnostic,
-                idiom = feedback.idiom,
-                culturalNote = feedback.culturalNote,
-                successExplanation = feedback.successExplanation,
-                correctAnswer = feedback.correctAnswer?.displayText(),
+    val animations = rememberAnimationsEnabled()
+    AnimatedContent(
+        targetState = feedback,
+        transitionSpec = {
+            val enter =
+                if (animations) {
+                    slideInVertically(animationSpec = tween(durationMillis = 220)) { it / 2 } +
+                        fadeIn(animationSpec = tween(durationMillis = 220))
+                } else {
+                    fadeIn(animationSpec = tween(durationMillis = 0))
+                }
+            val exit =
+                if (animations) {
+                    slideOutVertically(animationSpec = tween(durationMillis = 220)) { it / 2 } +
+                        fadeOut(animationSpec = tween(durationMillis = 160))
+                } else {
+                    fadeOut(animationSpec = tween(durationMillis = 0))
+                }
+            if (targetState != null) {
+                enter togetherWith exit
+            } else {
+                fadeIn(animationSpec = tween(durationMillis = if (animations) 220 else 0)) togetherWith exit
+            }
+        },
+        label = "bottomActions",
+    ) { current ->
+        if (current != null) {
+            FeedbackPanel(
+                feedback = current,
+                onRetry = onRetry,
+                onReveal = onReveal,
+                onAdvance = onAdvance,
             )
-            if (feedback.retryAvailable) {
-                Spacer(Modifier.height(4.dp))
-                Row(
-                    modifier = Modifier.fillMaxWidth(),
-                    horizontalArrangement = Arrangement.spacedBy(8.dp),
-                ) {
-                    TextButton(
-                        onClick = {
-                            feedbackPlayer.play(FeedbackCue.TAP)
-                            onRetry()
-                        },
-                        modifier = Modifier.weight(1f),
+        } else {
+            ActionButtons(
+                exercise = exercise,
+                chosenCount = chosenCount,
+                listening = listening,
+                pairsComplete = pairsComplete,
+                clozeComplete = clozeComplete,
+                freeSpeakingReady = freeSpeakingReady,
+                freeSpeakingComplete = freeSpeakingComplete,
+                onSubmitTokens = onSubmitTokens,
+                onSubmitPairs = onSubmitPairs,
+                onSubmitCloze = onSubmitCloze,
+                onSubmitFreeSpeaking = onSubmitFreeSpeaking,
+                onSkipSpeech = onSkipSpeech,
+            )
+        }
+    }
+}
+
+/** Panel de feedback deslizante con Lumi y las acciones de cierre (ADR-033). */
+@Composable
+private fun FeedbackPanel(
+    feedback: ExerciseFeedback,
+    onRetry: () -> Unit,
+    onReveal: () -> Unit,
+    onAdvance: () -> Unit,
+) {
+    val feedbackPlayer = LocalInteractionFeedback.current
+    LinguaCard3D(
+        modifier = Modifier.fillMaxWidth(),
+        contentPadding = PaddingValues(12.dp),
+    ) {
+        Row(horizontalArrangement = Arrangement.spacedBy(10.dp)) {
+            LumiMascot(
+                size = 30.dp,
+                mood = if (feedback.isCorrect) LumiMood.HAPPY else LumiMood.ENCOURAGING,
+            )
+            Column(
+                modifier = Modifier.weight(1f),
+                verticalArrangement = Arrangement.spacedBy(8.dp),
+            ) {
+                FeedbackBanner(
+                    isCorrect = feedback.isCorrect,
+                    message = if (feedback.isCorrect) "¡Correcto!" else "Revisa la respuesta y sigue",
+                    diagnostic = feedback.diagnostic,
+                    idiom = feedback.idiom,
+                    culturalNote = feedback.culturalNote,
+                    successExplanation = feedback.successExplanation,
+                    correctAnswer = feedback.correctAnswer?.displayText(),
+                )
+                if (feedback.retryAvailable) {
+                    Row(
+                        modifier = Modifier.fillMaxWidth(),
+                        horizontalArrangement = Arrangement.spacedBy(8.dp),
                     ) {
-                        Text(text = "Reintentar")
-                    }
-                    if (feedback.correctAnswer == null) {
                         TextButton(
                             onClick = {
                                 feedbackPlayer.play(FeedbackCue.TAP)
-                                onReveal()
+                                onRetry()
                             },
                             modifier = Modifier.weight(1f),
                         ) {
-                            Text(text = "Ver respuesta")
+                            Text(text = "Reintentar")
+                        }
+                        if (feedback.correctAnswer == null) {
+                            TextButton(
+                                onClick = {
+                                    feedbackPlayer.play(FeedbackCue.TAP)
+                                    onReveal()
+                                },
+                                modifier = Modifier.weight(1f),
+                            ) {
+                                Text(text = "Ver respuesta")
+                            }
                         }
                     }
                 }
+                PrimaryButton3D(
+                    text = "Continuar",
+                    onClick = onAdvance,
+                    modifier = Modifier.fillMaxWidth(),
+                )
             }
-            Spacer(Modifier.height(8.dp))
-            PrimaryButton3D(
-                text = "Continuar",
-                onClick = onAdvance,
-                modifier = Modifier.fillMaxWidth(),
-            )
         }
+    }
+}
+
+/** Acciones previas a calificar según el tipo de ejercicio. */
+@Composable
+private fun ActionButtons(
+    exercise: Exercise,
+    chosenCount: Int,
+    listening: Boolean,
+    pairsComplete: Boolean,
+    clozeComplete: Boolean,
+    freeSpeakingReady: Boolean,
+    freeSpeakingComplete: Boolean,
+    onSubmitTokens: () -> Unit,
+    onSubmitPairs: () -> Unit,
+    onSubmitCloze: () -> Unit,
+    onSubmitFreeSpeaking: () -> Unit,
+    onSkipSpeech: () -> Unit,
+) {
+    val feedbackPlayer = LocalInteractionFeedback.current
+    when {
         exercise is Exercise.Translate || exercise is Exercise.OrderWords ->
             PrimaryButton3D(
                 text = "Comprobar",
@@ -775,6 +937,7 @@ private fun SpeechPanel(
     onPlaySlow: () -> Unit,
     onRecord: () -> Unit,
     modifier: Modifier = Modifier,
+    speaking: Boolean = false,
 ) {
     val colors = MaterialTheme.colorScheme
     Column(modifier = modifier, verticalArrangement = Arrangement.spacedBy(12.dp)) {
@@ -788,6 +951,7 @@ private fun SpeechPanel(
             onPlay = onPlay,
             onPlaySlow = onPlaySlow,
             enabled = audioAvailable,
+            speaking = speaking,
         )
         Column(
             modifier =
@@ -819,6 +983,10 @@ private fun SpeechPanel(
                     color = colors.onBackground,
                 )
             }
+            VoiceWaveIndicator(
+                active = listening,
+                modifier = Modifier.fillMaxWidth().padding(top = 8.dp),
+            )
         }
     }
 }
@@ -835,6 +1003,7 @@ private fun TypePanel(
     audioEnabled: Boolean,
     enabled: Boolean,
     modifier: Modifier = Modifier,
+    speaking: Boolean = false,
 ) {
     Column(modifier = modifier.fillMaxWidth(), verticalArrangement = Arrangement.spacedBy(12.dp)) {
         AudioPanel(
@@ -842,6 +1011,7 @@ private fun TypePanel(
             onPlay = onPlay,
             onPlaySlow = onPlaySlow,
             enabled = audioEnabled,
+            speaking = speaking,
         )
         OutlinedTextField(
             value = value,
@@ -906,6 +1076,7 @@ private fun AudioPanel(
     enabled: Boolean,
     modifier: Modifier = Modifier,
     onPlaySlow: (() -> Unit)? = null,
+    speaking: Boolean = false,
 ) {
     val feedback = LocalInteractionFeedback.current
     Column(modifier = modifier, verticalArrangement = Arrangement.spacedBy(10.dp)) {
@@ -944,6 +1115,12 @@ private fun AudioPanel(
                         MaterialTheme.colorScheme.onSurfaceVariant
                     },
             )
+            if (enabled) {
+                VoiceWaveIndicator(
+                    active = speaking,
+                    modifier = Modifier.fillMaxWidth().padding(top = 8.dp),
+                )
+            }
         }
         if (onPlaySlow != null && enabled) {
             TextButton(
@@ -1005,7 +1182,7 @@ private fun TokenBoard(
                 )
             }
             uiState.chosenTokens.forEach { token ->
-                TokenPill(
+                TokenChip(
                     token = token,
                     selected = true,
                     enabled = !answerLocked,
@@ -1024,7 +1201,7 @@ private fun TokenBoard(
             verticalArrangement = Arrangement.spacedBy(8.dp),
         ) {
             uiState.availableTokens.forEach { token ->
-                TokenPill(
+                TokenChip(
                     token = token,
                     selected = false,
                     enabled = !answerLocked,
@@ -1089,11 +1266,12 @@ private fun OrderWordsBoard(
                         items = uiState.chosenTokens,
                         key = { index, _ -> "chosen-$index" },
                     ) { _, token ->
-                        TokenPill(
+                        TokenChip(
                             token = token,
                             selected = true,
                             enabled = !answerLocked,
                             onToggle = onToggleToken,
+                            modifier = Modifier.animateItem(),
                         )
                     }
                 }
@@ -1110,7 +1288,7 @@ private fun OrderWordsBoard(
             verticalArrangement = Arrangement.spacedBy(8.dp),
         ) {
             uiState.availableTokens.forEach { token ->
-                TokenPill(
+                TokenChip(
                     token = token,
                     selected = false,
                     enabled = !answerLocked,
@@ -1119,51 +1297,6 @@ private fun OrderWordsBoard(
             }
         }
     }
-}
-
-@Composable
-private fun TokenPill(
-    token: String,
-    selected: Boolean,
-    enabled: Boolean,
-    onToggle: (String) -> Unit,
-    modifier: Modifier = Modifier,
-) {
-    val colors = MaterialTheme.colorScheme
-    val animations = rememberAnimationsEnabled()
-    val background by animateColorAsState(
-        targetValue = if (selected) colors.primary else colors.surface,
-        animationSpec = if (animations) tween(durationMillis = 160) else snap(),
-        label = "tokenBackground",
-    )
-    val contentColor by animateColorAsState(
-        targetValue = if (selected) colors.onPrimary else colors.onSurface,
-        animationSpec = if (animations) tween(durationMillis = 160) else snap(),
-        label = "tokenContent",
-    )
-    val scale by animateFloatAsState(
-        targetValue = if (selected && animations) 1.03f else 1f,
-        animationSpec = LinguaMotion.SpringSnappy,
-        label = "tokenScale",
-    )
-
-    Text(
-        text = token,
-        style = MaterialTheme.typography.bodyMedium,
-        color = contentColor,
-        modifier =
-            modifier
-                .graphicsLayer {
-                    scaleX = scale
-                    scaleY = scale
-                }.clip(RoundedCornerShape(12.dp))
-                .background(background)
-                .clickable(enabled = enabled) { onToggle(token) }
-                .semantics {
-                    role = Role.Button
-                    this.selected = selected
-                }.padding(horizontal = 12.dp, vertical = 14.dp),
-    )
 }
 
 @Composable

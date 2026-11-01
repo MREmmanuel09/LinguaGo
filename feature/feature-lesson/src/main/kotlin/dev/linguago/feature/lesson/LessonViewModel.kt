@@ -92,6 +92,10 @@ data class LessonUiState(
     val exercises: List<Exercise> = emptyList(),
     val index: Int = 0,
     val xpEarned: Int = 0,
+    /** Aciertos consecutivos de la sesión (ADR-033); no se persiste. */
+    val combo: Int = 0,
+    /** `true` mientras el TTS suspendido está reproduciendo (ADR-033). */
+    val speaking: Boolean = false,
     val feedback: ExerciseFeedback? = null,
     /** Opción elegida por el usuario para pintar el estado correcto/incorrecto. */
     val selectedOption: Int? = null,
@@ -204,7 +208,14 @@ class LessonViewModel
                 _uiState.value.exercises
                     .getOrNull(_uiState.value.index)
                     ?.audioText ?: return
-            viewModelScope.launch { ttsEngine.speak(audioText, language, speed) }
+            viewModelScope.launch {
+                _uiState.update { it.copy(speaking = true) }
+                try {
+                    ttsEngine.speak(audioText, language, speed)
+                } finally {
+                    _uiState.update { it.copy(speaking = false) }
+                }
+            }
         }
 
         /**
@@ -749,6 +760,7 @@ class LessonViewModel
                                     retryCount = current.retryCount,
                                     allowRetry = allowRetry,
                                 )
+                            val nextCombo = ComboRules.next(current.combo, grading.isCorrect)
                             current.copy(
                                 feedback =
                                     ExerciseFeedback(
@@ -780,6 +792,7 @@ class LessonViewModel
                                     },
                                 xpAwardedForExercise = current.xpAwardedForExercise || grading.isCorrect,
                                 hearts = outcome.hearts?.hearts ?: current.hearts,
+                                combo = nextCombo,
                                 lessonCancelled = outcome.lessonCancelled,
                                 answerLocked = true,
                                 submitting = false,

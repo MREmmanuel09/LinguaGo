@@ -2,6 +2,7 @@ package dev.linguago.core.ui.components
 
 import android.content.Context
 import android.view.accessibility.AccessibilityManager
+import androidx.compose.animation.core.animateFloatAsState
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
 import androidx.compose.foundation.gestures.detectDragGestures
@@ -46,7 +47,9 @@ import dev.linguago.core.domain.logic.ClozePassageParser
 import dev.linguago.core.domain.logic.ClozeSegment
 import dev.linguago.core.ui.feedback.FeedbackCue
 import dev.linguago.core.ui.feedback.feedbackClickable
+import dev.linguago.core.ui.theme.LinguaMotion
 import dev.linguago.core.ui.theme.LinguaTheme
+import dev.linguago.core.ui.util.rememberAnimationsEnabled
 
 /**
  * Tablero de cloze con arrastre (F2.3): el pasaje se pinta con `FlowRow` y
@@ -238,6 +241,12 @@ private fun ClozeOptionChip(
     onAssigned: (blankId: String, option: String) -> Unit,
 ) {
     val colors = MaterialTheme.colorScheme
+    val animations = rememberAnimationsEnabled()
+    val scale by animateFloatAsState(
+        targetValue = if (dragging && animations) 1.06f else 1f,
+        animationSpec = LinguaMotion.SpringSnappy,
+        label = "clozeDragScale",
+    )
     Text(
         text = option,
         style = MaterialTheme.typography.bodyMedium,
@@ -255,6 +264,8 @@ private fun ClozeOptionChip(
                         translationX = drag.dragOffset.value.x
                         translationY = drag.dragOffset.value.y
                     }
+                    scaleX = scale
+                    scaleY = scale
                 }.clip(RoundedCornerShape(12.dp))
                 .background(
                     when {

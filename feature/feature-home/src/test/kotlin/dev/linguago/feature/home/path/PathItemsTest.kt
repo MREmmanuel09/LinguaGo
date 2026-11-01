@@ -12,6 +12,7 @@ import dev.linguago.core.domain.model.Unit
 import dev.linguago.core.domain.model.UnitId
 import dev.linguago.core.ui.components.path.PathNodeState
 import dev.linguago.core.ui.components.path.PathNodeUi
+import dev.linguago.core.ui.components.path.PathStage
 import org.junit.Assert.assertEquals
 import org.junit.Assert.assertTrue
 import org.junit.Test
@@ -98,6 +99,27 @@ class PathItemsTest {
     @Test
     fun `curso vacio no produce items`() {
         assertTrue(buildPathItems(course(), emptyList()).isEmpty())
+    }
+
+    @Test
+    fun `la etapa se asigna por el indice del nivel del curso`() {
+        val multiLevel =
+            Course(
+                id = CourseId("es-en"),
+                fromLanguage = Language.SPANISH,
+                toLanguage = Language.ENGLISH,
+                levels =
+                    listOf(
+                        Level(id = LevelId("lv-1"), name = "A", units = listOf(unit("u-1", "l-1"))),
+                        Level(id = LevelId("lv-2"), name = "B", units = listOf(unit("u-2", "l-2"))),
+                        Level(id = LevelId("lv-3"), name = "C", units = listOf(unit("u-3", "l-3"))),
+                        Level(id = LevelId("lv-4"), name = "D", units = listOf(unit("u-4", "l-4"))),
+                    ),
+            )
+
+        val stages = headers(buildPathItems(multiLevel, emptyList())).map { it.stage }
+
+        assertEquals(listOf(PathStage.A1, PathStage.A2, PathStage.B1, PathStage.B2), stages)
     }
 
     @Test

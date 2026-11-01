@@ -4,11 +4,14 @@ import androidx.lifecycle.SavedStateHandle
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import dagger.hilt.android.lifecycle.HiltViewModel
+import dev.linguago.core.audio.TtsEngine
 import dev.linguago.core.common.Result
 import dev.linguago.core.domain.hearts.HEARTS_MAX
 import dev.linguago.core.domain.logic.ReviewRating
 import dev.linguago.core.domain.model.CourseId
+import dev.linguago.core.domain.model.Language
 import dev.linguago.core.domain.model.WordProgress
+import dev.linguago.core.domain.repository.CourseRepository
 import dev.linguago.core.domain.repository.ReviewRepository
 import dev.linguago.core.domain.usecase.ConsumeHeartUseCase
 import dev.linguago.core.domain.usecase.ObserveHeartsUseCase
@@ -31,6 +34,10 @@ public data class ReviewUiState(
     public val message: String? = null,
     /** Vidas vigentes; `Otra vez` consume una (ADR-025). */
     public val hearts: Int = HEARTS_MAX,
+    /** `true` mientras se reproduce la pronunciación (ADR-034). */
+    public val speaking: Boolean = false,
+    /** `true` si hay voz lista para el idioma meta (ADR-034). */
+    public val speechAvailable: Boolean = false,
 )
 
 /**
@@ -46,11 +53,14 @@ public class ReviewViewModel
         private val reviewRepository: ReviewRepository,
         private val observeHeartsUseCase: ObserveHeartsUseCase,
         private val consumeHeartUseCase: ConsumeHeartUseCase,
+        private val courseRepository: CourseRepository,
+        private val ttsEngine: TtsEngine,
     ) : ViewModel() {
         private val courseId: CourseId =
             CourseId(checkNotNull(savedStateHandle[REVIEW_COURSE_KEY]))
 
         private var queue: List<WordProgress> = emptyList()
+        private var targetLanguage: Language? = null
 
         private val _uiState = MutableStateFlow(ReviewUiState())
         public val uiState: StateFlow<ReviewUiState> = _uiState.asStateFlow()
@@ -61,12 +71,39 @@ public class ReviewViewModel
                     _uiState.update { it.copy(hearts = hearts.hearts) }
                 }
             }
+            viewModelScope.launch {
+                when (val result = courseRepository.loadCourse(courseId)) {
+                    is Result.Success -> {
+                        val language = result.value.toLanguage
+                        targetLanguage = language
+                        ttsEngine.warmUp(language)
+                        _uiState.update { it.copy(speechAvailable = ttsEngine.isReadyFor(language)) }
+                    }
+                    is Result.Error -> Unit
+                }
+            }
             load()
         }
 
         /** Muestra la traducción de la tarjeta actual. */
         public fun reveal() {
             _uiState.update { current -> current.copy(revealed = true) }
+        }
+
+        /** Reproduce la pronunciación de la traducción (ADR-034). */
+        public fun speakTranslation() {
+            val state = _uiState.value
+            val card = state.current ?: return
+            val language = targetLanguage ?: return
+            if (state.speaking) return
+            viewModelScope.launch {
+                _uiState.update { it.copy(speaking = true) }
+                try {
+                    ttsEngine.speak(card.translation, language)
+                } finally {
+                    _uiState.update { it.copy(speaking = false) }
+                }
+            }
         }
 
         /** Califica la tarjeta actual y avanza a la siguiente. */

@@ -57,6 +57,7 @@ fun RewardSheet(
         LinguaCard3D(modifier = Modifier.padding(24.dp)) {
             LumiMascot(
                 size = 44.dp,
+                mood = LumiMood.HAPPY,
                 modifier = Modifier.align(Alignment.CenterHorizontally),
             )
             Spacer(Modifier.height(8.dp))

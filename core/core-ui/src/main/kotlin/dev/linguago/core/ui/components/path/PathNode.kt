@@ -16,9 +16,12 @@ import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.offset
+import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.shape.CircleShape
+import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
@@ -37,10 +40,12 @@ import androidx.compose.ui.semantics.heading
 import androidx.compose.ui.semantics.role
 import androidx.compose.ui.semantics.semantics
 import androidx.compose.ui.semantics.stateDescription
+import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import dev.linguago.core.ui.components.LinguaIcons
+import dev.linguago.core.ui.components.topHighlight
 import dev.linguago.core.ui.feedback.FeedbackCue
 import dev.linguago.core.ui.feedback.LocalInteractionFeedback
 import dev.linguago.core.ui.theme.LinguaMotion
@@ -202,7 +207,14 @@ fun PathNode(
                 Modifier
                     .fillMaxSize()
                     .clip(CircleShape)
-                    .background(body),
+                    .background(body)
+                    .then(
+                        if (node.state == PathNodeState.LOCKED || node.state == PathNodeState.CHEST_LOCKED) {
+                            Modifier
+                        } else {
+                            Modifier.topHighlight()
+                        },
+                    ),
             contentAlignment = Alignment.Center,
         ) {
             Icon(
@@ -238,31 +250,107 @@ fun ChestNode(
     }
 }
 
-/** Cabecera de unidad dentro del camino lineal (ADR-026). */
+/** Cabecera de unidad como banner flat-3D con etapa y progreso (ADR-032). */
 @Composable
 fun UnitHeader(
     title: String,
     completed: Int,
     total: Int,
     modifier: Modifier = Modifier,
+    stage: PathStage? = null,
 ) {
-    Column(
+    val colors = MaterialTheme.colorScheme
+    val accent = stage?.accent ?: LinguaTokens.Accent
+    val target = if (total > 0) completed.toFloat() / total else 0f
+    val animations = rememberAnimationsEnabled()
+    val progress by animateFloatAsState(
+        targetValue = target.coerceIn(0f, 1f),
+        animationSpec = tween(durationMillis = if (animations) 600 else 0),
+        label = "unitHeaderProgress",
+    )
+    val shape = RoundedCornerShape(LinguaTokens.RADIUS_CARD_LARGE_DP.dp)
+
+    Box(
         modifier =
             modifier
                 .fillMaxWidth()
-                .semantics(mergeDescendants = true) { heading() },
-        verticalArrangement = Arrangement.spacedBy(2.dp),
+                .padding(bottom = LinguaTokens.PRESS_DEPTH_DP.dp),
     ) {
-        Text(
-            text = title,
-            style = MaterialTheme.typography.titleLarge,
-            color = MaterialTheme.colorScheme.onBackground,
+        Box(
+            modifier =
+                Modifier
+                    .matchParentSize()
+                    .offset(y = LinguaTokens.PRESS_DEPTH_DP.dp)
+                    .clip(shape)
+                    .background(colors.outline.copy(alpha = 0.55f)),
         )
-        Text(
-            text = "$completed de $total lecciones",
-            style = MaterialTheme.typography.bodySmall,
-            color = MaterialTheme.colorScheme.onSurfaceVariant,
-        )
+        Column(
+            modifier =
+                Modifier
+                    .fillMaxWidth()
+                    .clip(shape)
+                    .background(colors.surfaceVariant)
+                    .topHighlight()
+                    .semantics(mergeDescendants = true) { heading() }
+                    .padding(horizontal = 16.dp, vertical = 14.dp),
+            verticalArrangement = Arrangement.spacedBy(10.dp),
+        ) {
+            Row(
+                modifier = Modifier.fillMaxWidth(),
+                verticalAlignment = Alignment.CenterVertically,
+                horizontalArrangement = Arrangement.spacedBy(12.dp),
+            ) {
+                stage?.let { current ->
+                    Box(
+                        modifier =
+                            Modifier
+                                .size(40.dp)
+                                .clip(CircleShape)
+                                .background(current.accent),
+                        contentAlignment = Alignment.Center,
+                    ) {
+                        Text(
+                            text = current.label,
+                            style = MaterialTheme.typography.labelLarge,
+                            color = current.onAccent,
+                            fontWeight = FontWeight.Bold,
+                        )
+                    }
+                }
+                Column(
+                    modifier = Modifier.weight(1f),
+                    verticalArrangement = Arrangement.spacedBy(2.dp),
+                ) {
+                    Text(
+                        text = title,
+                        style = MaterialTheme.typography.titleLarge,
+                        color = colors.onBackground,
+                    )
+                    Text(
+                        text = "$completed de $total lecciones",
+                        style = MaterialTheme.typography.bodySmall,
+                        color = colors.onSurfaceVariant,
+                    )
+                }
+            }
+            Box(
+                modifier =
+                    Modifier
+                        .fillMaxWidth()
+                        .height(8.dp)
+                        .clip(RoundedCornerShape(4.dp))
+                        .background(colors.outline.copy(alpha = 0.25f)),
+            ) {
+                Box(
+                    modifier =
+                        Modifier
+                            .fillMaxWidth(fraction = progress)
+                            .height(8.dp)
+                            .clip(RoundedCornerShape(4.dp))
+                            .background(accent),
+                )
+            }
+        }
     }
 }
 

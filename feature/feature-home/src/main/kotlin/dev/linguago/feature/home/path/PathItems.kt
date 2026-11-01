@@ -4,18 +4,20 @@ import dev.linguago.core.domain.model.Course
 import dev.linguago.core.domain.model.LessonProgress
 import dev.linguago.core.ui.components.path.PathNodeState
 import dev.linguago.core.ui.components.path.PathNodeUi
+import dev.linguago.core.ui.components.path.PathStage
 
 /**
  * Elemento del camino lineal (ADR-026): cabecera de unidad o nodo
  * interactivo. La UI de la Etapa 5 lo renderiza en un `LazyColumn`.
  */
 sealed interface PathItem {
-    /** Cabecera de unidad con su avance. */
+    /** Cabecera de unidad con su avance y etapa CEFR (ADR-032). */
     data class Header(
         val unitId: String,
         val title: String,
         val completed: Int,
         val total: Int,
+        val stage: PathStage = PathStage.A1,
     ) : PathItem
 
     /** Nodo del camino; [lessonId] es `null` para los cofres. */
@@ -57,10 +59,11 @@ fun buildPathItems(
     val attemptsById = lessonProgress.associate { it.lessonId.value to it.attempts }
     val items = mutableListOf<PathItem>()
     var unlocked = true
-    course.levels.forEach { level ->
+    course.levels.forEachIndexed { levelIndex, level ->
+        val stage = PathStage.entries.getOrElse(levelIndex) { PathStage.B2 }
         level.units.forEach { unit ->
             val completedInUnit = unit.lessons.count { it.id.value in completedIds }
-            items += PathItem.Header(unit.id.value, unit.title, completedInUnit, unit.lessons.size)
+            items += PathItem.Header(unit.id.value, unit.title, completedInUnit, unit.lessons.size, stage)
             unit.lessons.forEach { lesson ->
                 val id = lesson.id.value
                 val state =

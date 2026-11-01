@@ -14,12 +14,15 @@ import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import dev.linguago.core.ui.feedback.FeedbackCue
+import dev.linguago.core.ui.feedback.LocalInteractionFeedback
 import dev.linguago.core.ui.theme.LinguaTheme
 import dev.linguago.core.ui.theme.linguaExtendedColors
 
@@ -35,6 +38,8 @@ fun ChestRewardSheet(
     modifier: Modifier = Modifier,
 ) {
     val extended = linguaExtendedColors()
+    val feedback = LocalInteractionFeedback.current
+    LaunchedEffect(Unit) { feedback.play(FeedbackCue.CHEST_OPEN) }
 
     Box(
         modifier =

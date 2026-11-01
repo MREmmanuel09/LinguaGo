@@ -25,4 +25,16 @@ public enum class FeedbackCue {
 
     /** Lección o unidad completada. */
     COMPLETE,
+
+    /** Racha de aciertos consecutivos (ADR-031). */
+    STREAK_COMBO,
+
+    /** Giro/revelado de una tarjeta de repaso (ADR-031). */
+    CARD_FLIP,
+
+    /** Pérdida de una vida (ADR-031). */
+    HEART_LOST,
+
+    /** Apertura del cofre de unidad (ADR-031). */
+    CHEST_OPEN,
 }

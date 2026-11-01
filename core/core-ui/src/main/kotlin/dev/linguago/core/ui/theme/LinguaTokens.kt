@@ -64,4 +64,8 @@ object LinguaTokens {
     const val RADIUS_CARD_LARGE_DP = 20
     const val RADIUS_NODE_DP = 24
     const val RADIUS_PILL_DP = 999
+
+    // Física flat-3D (ADR-031): hundimiento del cuerpo y bisel de luz.
+    const val PRESS_DEPTH_DP = 4
+    const val HIGHLIGHT_ALPHA = 0.18f
 }

@@ -28,6 +28,10 @@ public data class ProfileUiState(
     val longestStreak: Int = 0,
     val reviewCards: Int = 0,
     val reviewDue: Int = 0,
+    /** Nivel visual derivado del XP (ADR-035). */
+    val level: Int = 1,
+    /** Avance 0..1 hacia el siguiente nivel visual (ADR-035). */
+    val xpIntoLevel: Float = 0f,
 )
 
 /**
@@ -69,6 +73,8 @@ public class ProfileViewModel
                             ?.sumOf { unit -> unit.lessons.size } ?: 0,
                     reviewCards = cards,
                     reviewDue = due,
+                    level = ProfileStats.levelFor(streak.totalXp),
+                    xpIntoLevel = ProfileStats.xpIntoLevelFor(streak.totalXp),
                 )
             }.stateIn(viewModelScope, SharingStarted.WhileSubscribed(5000), ProfileUiState())
 

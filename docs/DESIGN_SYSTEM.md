@@ -61,9 +61,14 @@ de implementar la Fase 3 (oro más apagado, rojo más profundo, vacío oscuro).
 | `RADIUS_NODE_DP` | 24 | Nodos del camino |
 | `RADIUS_PILL_DP` | 999 | Chips y píldoras |
 | `EDGE_BUTTON_DP` | 4 | Borde inferior 3D |
+| `PRESS_DEPTH_DP` | 4 | Hundimiento del cuerpo al presionar (ADR-031) |
+| `HIGHLIGHT_ALPHA` | 0.18 | Bisel de luz superior (ADR-031) |
 
 Regla: el borde inferior se dibuja como una segunda caja del mismo ancho,
-desplazada hacia abajo; el componente se desplaza 2 dp al presionarse.
+desplazada hacia abajo; al presionar, el cuerpo se desplaza `PRESS_DEPTH_DP`
+hacia abajo (tapa el borde) y vuelve con `SpringBouncy`. La escala ya no es la
+única señal de presión. El bisel superior es un degradado blanco de
+`HIGHLIGHT_ALPHA` que se desvanece hacia la mitad del cuerpo.
 
 ## 4. Tipografía
 
@@ -80,6 +85,8 @@ desplazada hacia abajo; el componente se desplaza 2 dp al presionarse.
 | `SpringBouncy` | `spring(dampingRatio = 0.55f, stiffness = MediumLow)` | Rebote de nodo al tocar |
 | `SpringSnappy` | `spring(dampingRatio = 1f, stiffness = High)` | Presión, contadores, corazones |
 
+- Presión física (ADR-031): el cuerpo baja `PRESS_DEPTH_DP` y vuelve con
+  `SpringBouncy`; el bisel de luz permanece estático.
 - Duraciones cortas: 150–250 ms para interacción; 400–700 ms para
   celebraciones.
 - **Reduced motion:** si `ValueAnimator.areAnimatorsEnabled()` es `false`,
@@ -96,6 +103,22 @@ desplazada hacia abajo; el componente se desplaza 2 dp al presionarse.
 | | `Locked` | `BORDER` + candado |
 | | `Chest` | `CHEST_GOLD` + cofre |
 
+### Etapas del camino (ADR-032)
+
+La etapa se deriva del índice del nivel del curso (no se persiste):
+
+| Etapa | Color | Uso |
+|---|---|---|
+| `A1` | `ACCENT` | Niveles iniciales |
+| `A2` | `INFO` | Niveles básicos |
+| `B1` | `PRIMARY` | Niveles intermedios |
+| `B2` | `WARNING` | Niveles avanzados |
+
+- `UnitHeader` es un banner flat-3D con insignia de etapa, título, contador y
+  barra de progreso integrada.
+- El conector del tramo activo dibuja un punto que recorre la curva; con
+  reduced motion el punto no aparece.
+
 Reglas:
 - Nodo de 72 dp (objetivo táctil ≥ 48 dp, I8).
 - El nodo `Available` es el único con animación continua.
@@ -110,9 +133,11 @@ Reglas:
 - **Vidas:** 10 corazones; un solo nodo de accesibilidad ("3 de 10 vidas").
 - **XP:** barra líquida hacia el siguiente nivel visual
   (`totalXp / 100 + 1`, sin persistir nivel) y contador animado al ganar XP.
-- **Mascota:** Lumi, colibrí original (`ic_lumi`, `LumiMascot`), flota junto
-  al nodo activo y aparece en la victoria. Es decorativa para TalkBack y
-  respeta la escala de animaciones del sistema.
+- **Mascota:** Lumi, colibrí original multicapa (`ic_lumi`, `LumiMascot`),
+  flota junto al nodo activo y aparece en la victoria. Moods (ADR-032):
+  `IDLE` (flote), `HAPPY` (rebote + destellos), `ENCOURAGING` (balanceo) y
+  `LISTENING` (pulso). Es decorativa para TalkBack y respeta la escala de
+  animaciones del sistema.
 
 ## 8. Accesibilidad (I8)
 
@@ -139,8 +164,15 @@ señal de estado (I8).
 | `CORRECT` | Respuesta correcta | Arpegio breve y luminoso |
 | `INCORRECT` | Respuesta incorrecta | Dos notas graves, sin dureza |
 | `COMPLETE` | Lección/unidad completada | Arpegio mayor con cola |
+| `STREAK_COMBO` | Racha de aciertos (Fase 3) | Dos notas ascendentes y brillantes |
+| `CARD_FLIP` | Revelar tarjeta de repaso | Roce suave de papel |
+| `HEART_LOST` | Pérdida de vida | Dos notas graves y cortas |
+| `CHEST_OPEN` | Desbloqueo de cofre | Fanfarria breve con brillo |
 
 - SFX originales, sintetizados en el repo; sin samples de terceros (I5).
+- Síntesis v2 (ADR-031): armónicos y envolventes percusivas (timbre cálido
+  tipo madera/marimba), no senos puros; 22,05 kHz mono para mantener el set
+  completo bajo 150 KB.
 - `SoundPool` único, volumen ~0,45, sin red.
 - No se emite sonido por cada tecla del dictado.
 - Ajuste de usuario `Efectos de sonido`; por defecto activo.
@@ -154,6 +186,10 @@ señal de estado (I8).
 | `CORRECT` | Patrón ascendente breve |
 | `INCORRECT` | Doble pulso seco |
 | `COMPLETE` | Patrón corto de celebración |
+| `STREAK_COMBO` | Dos pulsos ascendentes breves |
+| `CARD_FLIP` | Tick ligero |
+| `HEART_LOST` | Dos pulsos graves suaves |
+| `CHEST_OPEN` | Patrón de celebración |
 
 - `VibrationEffect` en API 26+; fallback a `performHapticFeedback` si el
   dispositivo no tiene vibrador.
@@ -195,6 +231,46 @@ señal de estado (I8).
   sacudida corta.
 - Reduced motion: estado final sin rebote, sin confeti y sin sacudida.
 - El sonido y la animación de un mismo evento se disparan juntos.
+
+### Lección viva (ADR-033)
+
+- **Panel de feedback:** banner + acciones + Continuar dentro de
+  `LinguaCard3D`, entra deslizándose desde abajo; Lumi `HAPPY`/`ENCOURAGING`.
+- **Combo:** insignia con llama desde 2 aciertos seguidos; el cue
+  `STREAK_COMBO` sustituye a `CORRECT` (sin solaparse). Se reinicia al fallar.
+- **Ondas:** `VoiceWaveIndicator(active)` refleja reproducción TTS real o
+  escucha; en producción libre se suma al RMS real. Sin animación continua si
+  reduced motion está activo.
+- **Fichas:** `animateItem()` al añadir/quitar en la tira horizontal; escala
+  al arrastrar en cloze y puzzle.
+
+### Repaso (ADR-034)
+
+- **`FlipCard3D`:** tarjeta flat-3D que gira en `rotationY` (520 ms) al
+  tocarla; con reduced motion cambia sin giro. Cara frontal = palabra, cara
+  trasera = traducción + pronunciación.
+- **Calificación semántica:** fila de cuatro botones 3D compactos:
+
+| Rating | Color | Texto |
+|---|---|---|
+| `AGAIN` | `DESTRUCTIVE` | Otra vez |
+| `HARD` | `WARNING` | Difícil (texto oscuro) |
+| `GOOD` | `ACCENT` | Bien |
+| `EASY` | `PRIMARY` | Fácil |
+
+- **Pronunciación:** `VoiceWaveIndicator(active = speaking)` junto al botón;
+  sin voz disponible el botón queda deshabilitado (I3).
+
+### Perfil, onboarding y navegación (ADR-035)
+
+- **Perfil Bento:** héroe con anillo de dominio animado y nivel; cuadrícula
+  2×2 de tarjetas 3D (XP, lecciones, tarjetas, pendientes) y racha a ancho
+  completo con mejor marca.
+- **Iconos:** `ic_star` (XP) e `ic_cards` (repaso), originales de LinguaGo.
+- **Onboarding:** Lumi `HAPPY`, insignia por idioma (`EN` `INFO`, `PT`
+  `ACCENT`, `FR` `PRIMARY`, `JA` `WARNING`) y panel de confirmación animado.
+- **Navegación:** fundido entre pestañas; Lección y Repaso entran/salen
+  deslizándose lateralmente. Reduced motion ⇒ duración 0.
 
 ## 10. Gobernanza
 

@@ -42,6 +42,10 @@ internal class SoundPoolSoundEffectPlayer(
             FeedbackCue.CORRECT to load(R.raw.sfx_correct),
             FeedbackCue.INCORRECT to load(R.raw.sfx_incorrect),
             FeedbackCue.COMPLETE to load(R.raw.sfx_complete),
+            FeedbackCue.STREAK_COMBO to load(R.raw.sfx_combo),
+            FeedbackCue.CARD_FLIP to load(R.raw.sfx_flip),
+            FeedbackCue.HEART_LOST to load(R.raw.sfx_heart_lost),
+            FeedbackCue.CHEST_OPEN to load(R.raw.sfx_chest_open),
         )
 
     @Volatile
