@@ -10,7 +10,7 @@ Código abierto · Sin anuncios · Sin backend · 100% offline · Vidas con
 recuperación rápida
 
 [![CI](https://github.com/MREmmanuel09/LinguaGo/actions/workflows/ci.yml/badge.svg)](https://github.com/MREmmanuel09/LinguaGo/actions/workflows/ci.yml)
-![version](https://img.shields.io/badge/version-1.2.0-blue)
+![version](https://img.shields.io/badge/version-1.2.1-blue)
 ![Kotlin](https://img.shields.io/badge/Kotlin-2.4-7F52FF?logo=kotlin&logoColor=white)
 ![Android](https://img.shields.io/badge/Android-26%2B-3DDC84?logo=android&logoColor=white)
 ![License](https://img.shields.io/badge/license-MIT-green)
@@ -34,7 +34,7 @@ flowchart LR
 
 ## Descargar APK
 
-**[LinguaGo 1.2.0 — APK global](https://github.com/MREmmanuel09/LinguaGo/releases/tag/v1.2.0)**
+**[LinguaGo 1.2.1 — APK global](https://github.com/MREmmanuel09/LinguaGo/releases/tag/v1.2.1)**
 (firma de desarrollo; instalación manual con "origen desconocido").
 
 - Android 8.0+ · APK global universal (~509 MB) o variante **arm64** (~392 MB), con los 4 cursos y sus modelos de voz.
@@ -47,7 +47,7 @@ flowchart LR
 | Documento | Contenido |
 |---|---|
 | [ARCHITECTURE.md](ARCHITECTURE.md) | Mapa técnico: capas, módulos, patrones, stack, datos, sync, testing |
-| [docs/DECISIONS.md](docs/DECISIONS.md) | ADRs 000–035 con índice y registro de pendientes |
+| [docs/DECISIONS.md](docs/DECISIONS.md) | ADRs 000–036 con índice y registro de pendientes |
 | [CONTENT_FORMAT.md](CONTENT_FORMAT.md) | Contrato del contenido v1: cómo escribir lecciones y ejercicios |
 | [docs/MODELS.md](docs/MODELS.md) | Política y estado de los modelos TTS/STT |
 | [docs/schemas/course-v1.json](docs/schemas/course-v1.json) | JSON Schema formal del contenido |
@@ -87,6 +87,7 @@ flowchart LR
 | 8 | Rediseño "Feather", camino guiado, vidas y release 1.0.0 (ADR-025/026) | ✅ |
 | 9 | Feedback sensorial, micro-clases, reintentos y tableros + release 1.1.0 (ADR-027–030) | ✅ |
 | 10 | "Feather 2.0": táctil 3D, Lumi expresiva, lección viva, repaso 3D y Bento + release 1.2.0 (ADR-031–035) | ✅ |
+| 11 | Claridad pedagógica: brief temático, traducción long-press, validación explícita, emparejamiento bidireccional y corrección final + release 1.2.1 (ADR-036) | ✅ |
 | Pendiente | OneDrive (ADR-015), validación de voz pt/fr/ja en hardware | ⏳ |
 
 ## Módulos
@@ -106,7 +107,7 @@ flowchart LR
 | `content/*` | Assets del contenido pedagógico |
 
 Las decisiones de arquitectura están registradas en
-[docs/DECISIONS.md](docs/DECISIONS.md) (ADRs 000–035).
+[docs/DECISIONS.md](docs/DECISIONS.md) (ADRs 000–036).
 
 ## Compilar y ejecutar
 

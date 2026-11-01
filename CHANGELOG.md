@@ -6,6 +6,41 @@ El formato sigue [Keep a Changelog](https://keepachangelog.com/es-ES/1.1.0/)
 y el versionado sigue [SemVer](https://semver.org/lang/es/).
 Pre-1.0: los cambios incompatibles pueden ocurrir en `0.y.0`.
 
+## [1.2.1] - 2026-10-31
+
+Parche centrado en la claridad pedagógica de la lección (ADR-036).
+
+### Agregado
+
+- **Traducción al mantener pulsada una palabra** en opciones y fichas: nota
+  emergente encima de la palabra, oculta al soltar y con acción de
+  accesibilidad “Ver traducción”.
+- **Tabla final de resultados** con aciertos, errores y nota en porcentaje
+  sobre el primer intento (2 errores de 10 → 80 %).
+- **Ventana de corrección antes de terminar** para repetir solo los ejercicios
+  fallados, sin XP ni vidas; la nota no cambia.
+- Tests de `LessonScoring`, del brief temático y del emparejamiento inverso.
+
+### Cambiado
+
+- **“Antes de empezar”** explica el tema (gramática, objetivos y ejemplos) y
+  ya no incluye mecánicas de interfaz.
+- Los **ejercicios de opción** validan solo al pulsar “Siguiente”; tocar una
+  opción ya no revela acierto/error.
+- **Formar frases** (`Translate`) usa una tira horizontal con scroll, igual
+  que `OrderWords`.
+- **Emparejamiento bidireccional:** se puede empezar por la columna izquierda
+  o por la derecha.
+- Glosario de apoyo derivado de `MatchPairs`, notas culturales y ejemplos de
+  micro-clase (cobertura parcial hasta autorizar `glossary` en el contenido).
+
+### Corregido
+
+- Validación inmediata al seleccionar una palabra.
+- Disposición vertical al construir frases.
+- Selección limitada a la columna izquierda en el emparejamiento.
+- Falta de medición porcentual y de corrección de errores al finalizar.
+
 ## [1.2.0] - 2026-10-31
 
 Versión centrada en la experiencia visual, sonora e interactiva ("Feather
