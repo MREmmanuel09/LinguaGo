@@ -84,4 +84,49 @@ class PuzzleMatchBoardTest {
         compose.runOnIdle { assertEquals(emptyMap<Int, Int>(), matched.value) }
         compose.onNodeWithText("Hello").assertIsDisplayed()
     }
+
+    @Test
+    fun tocar_derecha_y_izquierda_encaja_la_pareja() {
+        val selectedLeft = mutableStateOf<Int?>(null)
+        val selectedRight = mutableStateOf<Int?>(null)
+        val matched = mutableStateOf<Map<Int, Int>>(emptyMap())
+
+        compose.setContent {
+            LinguaTheme {
+                PuzzleMatchBoard(
+                    pairs = pairs,
+                    shuffledRights = listOf(0, 1),
+                    selectedLeft = selectedLeft.value,
+                    selectedRight = selectedRight.value,
+                    matched = matched.value,
+                    onSelectLeft = { left ->
+                        val right = selectedRight.value
+                        if (right != null) {
+                            matched.value = matched.value + (left to right)
+                            selectedLeft.value = null
+                            selectedRight.value = null
+                        } else {
+                            selectedLeft.value = left
+                        }
+                    },
+                    onMatchRight = { right ->
+                        val left = selectedLeft.value
+                        if (left != null) {
+                            matched.value = matched.value + (left to right)
+                            selectedLeft.value = null
+                            selectedRight.value = null
+                        } else {
+                            selectedRight.value = right
+                        }
+                    },
+                    onUnpair = { left -> matched.value = matched.value - left },
+                )
+            }
+        }
+
+        compose.onNodeWithText("Hello").performClick()
+        compose.onNodeWithText("hola").performClick()
+
+        compose.runOnIdle { assertEquals(mapOf(0 to 0), matched.value) }
+    }
 }

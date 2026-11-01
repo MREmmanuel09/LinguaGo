@@ -140,10 +140,11 @@ fun LessonScreen(
     LessonContent(
         uiState = uiState,
         onPickOption = viewModel::pickOption,
+        onSubmitSelection = viewModel::submitSelection,
         onToggleToken = viewModel::toggleToken,
         onSubmitTokens = viewModel::submitTokens,
         onMatchLeft = viewModel::selectLeft,
-        onMatchRight = viewModel::matchLeftTo,
+        onMatchRight = viewModel::selectRight,
         onUnpair = viewModel::unpair,
         onSubmitPairs = viewModel::submitMatchedPairs,
         onFillCloze = viewModel::fillClozeBlank,
@@ -162,6 +163,8 @@ fun LessonScreen(
         onRetry = viewModel::retry,
         onReveal = viewModel::revealAnswer,
         onAdvance = viewModel::advance,
+        onRetryMistakes = viewModel::retryMistakes,
+        onDismissMistakes = viewModel::dismissMistakeReview,
         onPlayAudio = viewModel::playAudio,
         onPlaySlow = viewModel::playAudioSlow,
         onBeginLesson = viewModel::beginLesson,
@@ -175,6 +178,7 @@ fun LessonScreen(
 private fun LessonContent(
     uiState: LessonUiState,
     onPickOption: (Int) -> Unit,
+    onSubmitSelection: () -> Unit,
     onToggleToken: (String) -> Unit,
     onSubmitTokens: () -> Unit,
     onMatchLeft: (Int) -> Unit,
@@ -197,6 +201,8 @@ private fun LessonContent(
     onRetry: () -> Unit,
     onReveal: () -> Unit,
     onAdvance: () -> Unit,
+    onRetryMistakes: () -> Unit,
+    onDismissMistakes: () -> Unit,
     onPlayAudio: () -> Unit,
     onPlaySlow: () -> Unit,
     onBeginLesson: () -> Unit,
@@ -217,7 +223,23 @@ private fun LessonContent(
         uiState.loading -> Loading(modifier)
         uiState.invalid -> Invalid(modifier, onExit)
         uiState.lessonCancelled -> CancelledLessonSheet(xpLost = uiState.xpEarned, onExit = onExit, modifier = modifier)
-        uiState.finished -> RewardSheet(xpEarned = uiState.xpEarned, onContinue = onExit, modifier = modifier)
+        uiState.finished ->
+            RewardSheet(
+                xpEarned = uiState.xpEarned,
+                correct = uiState.score.correct,
+                incorrect = uiState.score.incorrect,
+                percentage = uiState.score.percentage,
+                onContinue = onExit,
+                modifier = modifier,
+            )
+        uiState.showMistakeReview ->
+            MistakeReviewSheet(
+                mistakeCount = uiState.mistakes.size,
+                total = uiState.totalExercises,
+                onRetry = onRetryMistakes,
+                onSeeResults = onDismissMistakes,
+                modifier = modifier,
+            )
         uiState.briefVisible && uiState.brief != null ->
             LessonBriefScreen(
                 brief = uiState.brief,
@@ -230,6 +252,7 @@ private fun LessonContent(
             ExerciseStage(
                 uiState = uiState,
                 onPickOption = onPickOption,
+                onSubmitSelection = onSubmitSelection,
                 onToggleToken = onToggleToken,
                 onSubmitTokens = onSubmitTokens,
                 onMatchLeft = onMatchLeft,
@@ -265,6 +288,7 @@ private fun LessonContent(
 private fun ExerciseStage(
     uiState: LessonUiState,
     onPickOption: (Int) -> Unit,
+    onSubmitSelection: () -> Unit,
     onToggleToken: (String) -> Unit,
     onSubmitTokens: () -> Unit,
     onMatchLeft: (Int) -> Unit,
@@ -449,6 +473,7 @@ private fun ExerciseStage(
         BottomActions(
             feedback = uiState.feedback,
             exercise = exercise,
+            selectedOption = uiState.selectedOption,
             chosenCount = uiState.chosenTokens.size,
             listening = uiState.listening,
             pairsComplete = totalPairs > 0 && uiState.matched.size == totalPairs,
@@ -459,6 +484,7 @@ private fun ExerciseStage(
             freeSpeakingReady =
                 exercise is Exercise.FreeSpeakingPrompt && uiState.freeSpeaking.transcript != null,
             freeSpeakingComplete = freeSpeakingComplete,
+            onSubmitSelection = onSubmitSelection,
             onSubmitTokens = onSubmitTokens,
             onSubmitPairs = onSubmitPairs,
             onSubmitCloze = onSubmitCloze,
@@ -544,8 +570,10 @@ private fun Renderer(
                 selectedIndex = uiState.selectedOption,
                 correctIndex = exercise.correctIndex,
                 answerLocked = uiState.answerLocked,
-                revealAnswer = uiState.feedback?.correctAnswer != null,
+                graded = uiState.feedback != null,
+                revealCorrect = uiState.feedback?.correctAnswer != null,
                 onPickOption = onPickOption,
+                glossary = uiState.glossary,
             )
         is Exercise.KanaChoose ->
             OptionsStep(
@@ -554,8 +582,10 @@ private fun Renderer(
                 selectedIndex = uiState.selectedOption,
                 correctIndex = exercise.romajiOptions.indexOf(exercise.correctRomaji),
                 answerLocked = uiState.answerLocked,
-                revealAnswer = uiState.feedback?.correctAnswer != null,
+                graded = uiState.feedback != null,
+                revealCorrect = uiState.feedback?.correctAnswer != null,
                 onPickOption = onPickOption,
+                glossary = uiState.glossary,
             )
         is Exercise.KanjiReading ->
             OptionsStep(
@@ -564,8 +594,10 @@ private fun Renderer(
                 selectedIndex = uiState.selectedOption,
                 correctIndex = exercise.readingOptions.indexOf(exercise.correctReading),
                 answerLocked = uiState.answerLocked,
-                revealAnswer = uiState.feedback?.correctAnswer != null,
+                graded = uiState.feedback != null,
+                revealCorrect = uiState.feedback?.correctAnswer != null,
                 onPickOption = onPickOption,
+                glossary = uiState.glossary,
             )
         is Exercise.ParticleFill ->
             OptionsStep(
@@ -574,8 +606,10 @@ private fun Renderer(
                 selectedIndex = uiState.selectedOption,
                 correctIndex = exercise.particles.indexOf(exercise.correctParticle),
                 answerLocked = uiState.answerLocked,
-                revealAnswer = uiState.feedback?.correctAnswer != null,
+                graded = uiState.feedback != null,
+                revealCorrect = uiState.feedback?.correctAnswer != null,
                 onPickOption = onPickOption,
+                glossary = uiState.glossary,
             )
         is Exercise.ListenChoose ->
             Column(verticalArrangement = Arrangement.spacedBy(12.dp)) {
@@ -592,8 +626,10 @@ private fun Renderer(
                     selectedIndex = uiState.selectedOption,
                     correctIndex = exercise.correctIndex,
                     answerLocked = uiState.answerLocked,
-                    revealAnswer = uiState.feedback?.correctAnswer != null,
+                    graded = uiState.feedback != null,
+                    revealCorrect = uiState.feedback?.correctAnswer != null,
                     onPickOption = onPickOption,
+                    glossary = uiState.glossary,
                 )
             }
         is Exercise.AudioOnlyPrompt ->
@@ -614,8 +650,10 @@ private fun Renderer(
                     selectedIndex = uiState.selectedOption,
                     correctIndex = exercise.correctIndex,
                     answerLocked = uiState.answerLocked,
-                    revealAnswer = uiState.feedback?.correctAnswer != null,
+                    graded = uiState.feedback != null,
+                    revealCorrect = uiState.feedback?.correctAnswer != null,
                     onPickOption = onPickOption,
+                    glossary = uiState.glossary,
                 )
             }
         is Exercise.ListenType ->
@@ -660,6 +698,7 @@ private fun Renderer(
                 pairs = exercise.pairs.map { pair -> PuzzlePairUi(left = pair.left, right = pair.right) },
                 shuffledRights = uiState.shuffledRights,
                 selectedLeft = uiState.selectedLeft,
+                selectedRight = uiState.selectedRight,
                 matched = uiState.matched,
                 onSelectLeft = onMatchLeft,
                 onMatchRight = onMatchRight,
@@ -681,6 +720,7 @@ private fun Renderer(
                     },
                 shuffledRights = uiState.shuffledRights,
                 selectedLeft = uiState.selectedLeft,
+                selectedRight = uiState.selectedRight,
                 matched = uiState.matched,
                 onSelectLeft = onMatchLeft,
                 onMatchRight = onMatchRight,
@@ -728,12 +768,14 @@ private fun Renderer(
 private fun BottomActions(
     feedback: ExerciseFeedback?,
     exercise: Exercise,
+    selectedOption: Int?,
     chosenCount: Int,
     listening: Boolean,
     pairsComplete: Boolean,
     clozeComplete: Boolean,
     freeSpeakingReady: Boolean,
     freeSpeakingComplete: Boolean,
+    onSubmitSelection: () -> Unit,
     onSubmitTokens: () -> Unit,
     onSubmitPairs: () -> Unit,
     onSubmitCloze: () -> Unit,
@@ -779,12 +821,14 @@ private fun BottomActions(
         } else {
             ActionButtons(
                 exercise = exercise,
+                selectedOption = selectedOption,
                 chosenCount = chosenCount,
                 listening = listening,
                 pairsComplete = pairsComplete,
                 clozeComplete = clozeComplete,
                 freeSpeakingReady = freeSpeakingReady,
                 freeSpeakingComplete = freeSpeakingComplete,
+                onSubmitSelection = onSubmitSelection,
                 onSubmitTokens = onSubmitTokens,
                 onSubmitPairs = onSubmitPairs,
                 onSubmitCloze = onSubmitCloze,
@@ -867,12 +911,14 @@ private fun FeedbackPanel(
 @Composable
 private fun ActionButtons(
     exercise: Exercise,
+    selectedOption: Int?,
     chosenCount: Int,
     listening: Boolean,
     pairsComplete: Boolean,
     clozeComplete: Boolean,
     freeSpeakingReady: Boolean,
     freeSpeakingComplete: Boolean,
+    onSubmitSelection: () -> Unit,
     onSubmitTokens: () -> Unit,
     onSubmitPairs: () -> Unit,
     onSubmitCloze: () -> Unit,
@@ -881,6 +927,18 @@ private fun ActionButtons(
 ) {
     val feedbackPlayer = LocalInteractionFeedback.current
     when {
+        exercise is Exercise.MultipleChoice ||
+            exercise is Exercise.KanaChoose ||
+            exercise is Exercise.KanjiReading ||
+            exercise is Exercise.ParticleFill ||
+            exercise is Exercise.ListenChoose ||
+            exercise is Exercise.AudioOnlyPrompt ->
+            PrimaryButton3D(
+                text = "Siguiente",
+                onClick = onSubmitSelection,
+                enabled = selectedOption != null,
+                modifier = Modifier.fillMaxWidth(),
+            )
         exercise is Exercise.Translate || exercise is Exercise.OrderWords ->
             PrimaryButton3D(
                 text = "Comprobar",
@@ -1036,9 +1094,11 @@ private fun OptionsStep(
     selectedIndex: Int?,
     correctIndex: Int,
     answerLocked: Boolean,
-    revealAnswer: Boolean,
+    graded: Boolean,
+    revealCorrect: Boolean,
     onPickOption: (Int) -> Unit,
     modifier: Modifier = Modifier,
+    glossary: Map<String, String> = emptyMap(),
 ) {
     Column(modifier = modifier, verticalArrangement = Arrangement.spacedBy(12.dp)) {
         Text(
@@ -1049,9 +1109,14 @@ private fun OptionsStep(
         options.forEachIndexed { index, option ->
             val status =
                 when {
-                    !revealAnswer -> OptionStatus.NEUTRAL
-                    index == correctIndex -> OptionStatus.CORRECT
-                    index == selectedIndex -> OptionStatus.INCORRECT
+                    !graded -> OptionStatus.NEUTRAL
+                    index == selectedIndex ->
+                        if (index == correctIndex) {
+                            OptionStatus.CORRECT
+                        } else {
+                            OptionStatus.INCORRECT
+                        }
+                    revealCorrect && index == correctIndex -> OptionStatus.CORRECT
                     else -> OptionStatus.NEUTRAL
                 }
             OptionCard(
@@ -1060,6 +1125,7 @@ private fun OptionsStep(
                 enabled = !answerLocked,
                 status = status,
                 onClick = { onPickOption(index) },
+                translation = glossary[option.trim().lowercase()],
             )
         }
     }
@@ -1154,6 +1220,13 @@ private fun TokenBoard(
     onToggleToken: (String) -> Unit,
     modifier: Modifier = Modifier,
 ) {
+    val listState = rememberLazyListState()
+    LaunchedEffect(uiState.chosenTokens.size) {
+        if (uiState.chosenTokens.isNotEmpty()) {
+            listState.animateScrollToItem(uiState.chosenTokens.lastIndex)
+        }
+    }
+
     Column(modifier = modifier, verticalArrangement = Arrangement.spacedBy(12.dp)) {
         Text(
             text = header,
@@ -1169,25 +1242,40 @@ private fun TokenBoard(
             modifier =
                 Modifier
                     .fillMaxWidth()
+                    .heightIn(min = 56.dp)
                     .clip(RoundedCornerShape(LinguaTokens.RADIUS_CARD_DP.dp))
                     .background(MaterialTheme.colorScheme.surfaceVariant)
-                    .padding(12.dp),
-            verticalArrangement = Arrangement.spacedBy(8.dp),
+                    .padding(vertical = 8.dp),
+            verticalArrangement = Arrangement.Center,
         ) {
             if (uiState.chosenTokens.isEmpty()) {
                 Text(
-                    text = "Toca las palabras de abajo",
+                    text = "Toca las palabras para construir la frase de izquierda a derecha",
                     style = MaterialTheme.typography.bodySmall,
                     color = MaterialTheme.colorScheme.onSurfaceVariant,
+                    modifier = Modifier.padding(horizontal = 12.dp),
                 )
-            }
-            uiState.chosenTokens.forEach { token ->
-                TokenChip(
-                    token = token,
-                    selected = true,
-                    enabled = !answerLocked,
-                    onToggle = onToggleToken,
-                )
+            } else {
+                LazyRow(
+                    state = listState,
+                    modifier = Modifier.fillMaxWidth(),
+                    contentPadding = PaddingValues(horizontal = 12.dp),
+                    horizontalArrangement = Arrangement.spacedBy(8.dp),
+                ) {
+                    itemsIndexed(
+                        items = uiState.chosenTokens,
+                        key = { index, _ -> "chosen-$index" },
+                    ) { _, token ->
+                        TokenChip(
+                            token = token,
+                            selected = true,
+                            enabled = !answerLocked,
+                            onToggle = onToggleToken,
+                            modifier = Modifier.animateItem(),
+                            translation = uiState.translationFor(token),
+                        )
+                    }
+                }
             }
         }
         Text(
@@ -1206,11 +1294,14 @@ private fun TokenBoard(
                     selected = false,
                     enabled = !answerLocked,
                     onToggle = onToggleToken,
+                    translation = uiState.translationFor(token),
                 )
             }
         }
     }
 }
+
+private fun LessonUiState.translationFor(token: String): String? = glossary[token.trim().lowercase()]
 
 @OptIn(ExperimentalLayoutApi::class)
 @Composable
@@ -1272,6 +1363,7 @@ private fun OrderWordsBoard(
                             enabled = !answerLocked,
                             onToggle = onToggleToken,
                             modifier = Modifier.animateItem(),
+                            translation = uiState.translationFor(token),
                         )
                     }
                 }
@@ -1293,6 +1385,7 @@ private fun OrderWordsBoard(
                     selected = false,
                     enabled = !answerLocked,
                     onToggle = onToggleToken,
+                    translation = uiState.translationFor(token),
                 )
             }
         }
@@ -1351,6 +1444,7 @@ private fun LessonScreenPreview() {
         ExerciseStage(
             uiState = previewState,
             onPickOption = {},
+            onSubmitSelection = {},
             onToggleToken = {},
             onSubmitTokens = {},
             onMatchLeft = {},

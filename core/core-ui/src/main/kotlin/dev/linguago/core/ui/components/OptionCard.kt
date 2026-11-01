@@ -7,8 +7,7 @@ import androidx.compose.animation.core.tween
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
-import androidx.compose.foundation.interaction.MutableInteractionSource
-import androidx.compose.foundation.interaction.collectIsPressedAsState
+import androidx.compose.foundation.gestures.detectTapGestures
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
@@ -16,20 +15,29 @@ import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.offset
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
-import androidx.compose.foundation.selection.selectable
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
+import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.ColorFilter
+import androidx.compose.ui.input.pointer.pointerInput
 import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.semantics.CustomAccessibilityAction
 import androidx.compose.ui.semantics.Role
+import androidx.compose.ui.semantics.customActions
+import androidx.compose.ui.semantics.disabled
+import androidx.compose.ui.semantics.onClick
+import androidx.compose.ui.semantics.role
+import androidx.compose.ui.semantics.selected
 import androidx.compose.ui.semantics.semantics
 import androidx.compose.ui.semantics.stateDescription
 import androidx.compose.ui.text.font.FontWeight
@@ -56,6 +64,7 @@ fun OptionCard(
     enabled: Boolean = true,
     leading: (@Composable () -> Unit)? = null,
     status: OptionStatus = OptionStatus.NEUTRAL,
+    translation: String? = null,
 ) {
     val colors = MaterialTheme.colorScheme
     val feedback = LocalInteractionFeedback.current
@@ -104,8 +113,12 @@ fun OptionCard(
         animationSpec = if (animations) tween(durationMillis = 180) else snap(),
         label = "optionContent",
     )
-    val interaction = remember { MutableInteractionSource() }
-    val pressed by interaction.collectIsPressedAsState()
+    var pressed by remember { mutableStateOf(false) }
+    var showTranslation by remember { mutableStateOf(false) }
+    LaunchedEffect(text, translation) {
+        pressed = false
+        showTranslation = false
+    }
     val press by animateFloatAsState(
         targetValue = if (pressed && animations) 1f else 0f,
         animationSpec = if (animations) LinguaMotion.SpringBouncy else snap(),
@@ -136,20 +149,50 @@ fun OptionCard(
                     .background(background)
                     .topHighlight()
                     .border(2.dp, borderColor, shape)
-                    .selectable(
-                        selected = selected,
-                        enabled = enabled,
-                        role = Role.RadioButton,
-                        interactionSource = interaction,
-                        indication = null,
-                        onClick = {
-                            feedback.play(FeedbackCue.SELECT)
-                            onClick()
-                        },
-                    ).semantics {
+                    .pointerInput(enabled, translation) {
+                        detectTapGestures(
+                            onPress = {
+                                if (enabled) {
+                                    pressed = true
+                                    tryAwaitRelease()
+                                    pressed = false
+                                    showTranslation = false
+                                }
+                            },
+                            onLongPress = {
+                                if (enabled && translation != null) showTranslation = true
+                            },
+                            onTap = {
+                                if (enabled) {
+                                    feedback.play(FeedbackCue.SELECT)
+                                    onClick()
+                                }
+                            },
+                        )
+                    }.semantics {
+                        role = Role.RadioButton
+                        this.selected = selected
+                        if (enabled) {
+                            onClick(label = if (selected) "Elegir" else "Seleccionar") {
+                                feedback.play(FeedbackCue.SELECT)
+                                onClick()
+                                true
+                            }
+                        } else {
+                            disabled()
+                        }
                         if (status != OptionStatus.NEUTRAL) {
                             stateDescription =
                                 if (status == OptionStatus.CORRECT) "Respuesta correcta" else "Respuesta incorrecta"
+                        }
+                        if (translation != null) {
+                            customActions =
+                                listOf(
+                                    CustomAccessibilityAction("Ver traducción") {
+                                        showTranslation = true
+                                        true
+                                    },
+                                )
                         }
                     }.padding(horizontal = 16.dp, vertical = 14.dp),
             verticalAlignment = Alignment.CenterVertically,
@@ -175,6 +218,13 @@ fun OptionCard(
                     colorFilter = ColorFilter.tint(contentColor),
                 )
             }
+        }
+        if (translation != null) {
+            TranslationTooltip(
+                translation = translation,
+                visible = showTranslation,
+                onDismiss = { showTranslation = false },
+            )
         }
     }
 }

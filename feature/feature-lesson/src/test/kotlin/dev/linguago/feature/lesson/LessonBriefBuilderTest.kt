@@ -50,7 +50,6 @@ class LessonBriefBuilderTest {
                 .single()
                 .target,
         )
-        assertEquals("Elegir la opción", brief.mechanics.single().title)
     }
 
     @Test
@@ -81,24 +80,6 @@ class LessonBriefBuilderTest {
         )
         assertTrue(brief.sections[1].body.contains("I'm afraid"))
         assertTrue(brief.sections[2].body.contains("play it by ear"))
-        assertEquals("Emparejar", brief.mechanics.single().title)
-    }
-
-    @Test
-    fun `agrupa mecanicas repetidas y conserva el orden de aparicion`() {
-        val lesson =
-            lesson(
-                exercises =
-                    listOf(
-                        multipleChoice("e1"),
-                        orderWords("e2"),
-                        multipleChoice("e3"),
-                    ),
-            )
-
-        val brief = LessonBriefBuilder.build(lesson)
-
-        assertEquals(listOf("Elegir la opción", "Ordenar la frase"), brief.mechanics.map { it.title })
     }
 
     @Test
@@ -106,8 +87,7 @@ class LessonBriefBuilderTest {
         val brief = LessonBriefBuilder.build(lesson())
 
         assertEquals(listOf("Practicar «Lección de prueba» con ejercicios cortos."), brief.goals)
-        assertEquals("En esta lección", brief.sections.single().heading)
-        assertEquals("Elegir la opción", brief.mechanics.single().title)
+        assertEquals("Tema de la lección", brief.sections.single().heading)
     }
 
     private fun lesson(
@@ -135,13 +115,6 @@ class LessonBriefBuilderTest {
             question = "Elige",
             options = listOf("a", "b"),
             correctIndex = 0,
-        )
-
-    private fun orderWords(id: String): Exercise.OrderWords =
-        Exercise.OrderWords(
-            id = ExerciseId(id),
-            tokens = listOf("How", "are", "you"),
-            answerTokens = listOf("How", "are", "you"),
         )
 
     private fun matchPairs(): Exercise.MatchPairs =

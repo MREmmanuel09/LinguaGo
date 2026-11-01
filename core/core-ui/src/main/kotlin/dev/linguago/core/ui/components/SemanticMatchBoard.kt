@@ -46,6 +46,7 @@ public fun SemanticMatchBoard(
     modifier: Modifier = Modifier,
     instructions: String? = null,
     enabled: Boolean = true,
+    selectedRight: Int? = null,
 ) {
     Column(modifier = modifier.fillMaxWidth(), verticalArrangement = Arrangement.spacedBy(12.dp)) {
         Text(
@@ -78,7 +79,7 @@ public fun SemanticMatchBoard(
                 register = null,
                 nuance = null,
                 association = null,
-                selected = false,
+                selected = selectedRight == right,
                 enabled = enabled && !taken,
                 onClick = { onSelectRight(right) },
                 modifier = Modifier.fillMaxWidth(),

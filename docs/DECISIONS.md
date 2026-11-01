@@ -45,6 +45,7 @@
 | 033 | Lección viva: panel de feedback, combos, ondas y fichas animadas (Fase 3) | Aprobado |
 | 034 | Flashcards 3D y calificación semántica en el repaso (Fase 4) | Aprobado |
 | 035 | Bento de progreso, onboarding ilustrado y transiciones (Fase 5) | Aprobado |
+| 036 | Ajustes pedagógicos de la lección: brief temático, validación explícita, emparejamiento bidireccional y corrección final | Aprobado |
 
 ---
 ## ADR-000: Convención del registro de decisiones
@@ -1514,6 +1515,73 @@ reflejar el valor real, no decorar).
 
 **Invariantes protegidos:** I1, I5 (arte original), I8 (reduced motion,
 TalkBack y contraste).
+
+---
+
+## ADR-036: Ajustes pedagógicos de la lección
+
+**Estado:** Aprobado
+**Fecha:** 2026-10-31
+
+**Contexto:** la micro-clase previa (“Antes de empezar”) incluye una sección
+de mecánicas de interfaz que compite con la explicación del tema; los
+ejercicios de opción validan al tocar una palabra, sin dar tiempo a elegir;
+`Translate` construye la frase en vertical; el emparejamiento solo acepta
+empezar por la columna izquierda; y la lección termina sin una medición
+porcentual ni una oportunidad de corregir los fallos. Se quiere una
+experiencia más clara y formativa sin romper I1/I3/I8.
+
+**Decisión:**
+- **Brief temático:** se elimina `mechanics` del brief y de su UI. “Antes de
+  empezar” explica gramática, tema, objetivos y ejemplos. Si no hay
+  `microLesson`, se usa `scenario`, `canDo` y `grammarPoints`; el último
+  recurso es una sección temática con el título y nivel, nunca instrucciones
+  de juego. (Sustituye parcialmente ADR-028.)
+- **Glosario y tooltip:** se deriva un glosario de la lección desde
+  `VocabularyExtractor` (MatchPairs, notas culturales) y
+  `microLesson.examples`, con clave en el idioma meta en minúsculas. Al
+  mantener pulsada una ficha se muestra su traducción en un popup **encima**
+  de ella; se oculta al soltar y no interfiere con la selección. Sin entrada
+  de glosario no se muestra popup. La cobertura total requerirá un campo
+  opcional `glossary` en el contenido (fase posterior).
+- **Validación explícita:** en ejercicios de opción
+  (`MultipleChoice`, `ListenChoose`, `AudioOnlyPrompt`, `KanaChoose`,
+  `KanjiReading`, `ParticleFill`) tocar solo selecciona; el grader se invoca
+  con “Siguiente”. Tokens, cloze y parejas conservan “Comprobar”.
+- **Formar frases horizontal:** `TokenBoard` (Translate) usa una tira
+  horizontal con scroll y `animateItem`, igual que `OrderWords`.
+- **Emparejamiento bidireccional:** nuevo `selectedRight`; se puede empezar
+  por cualquiera de las dos columnas. El arrastre y la separación se
+  conservan; se ignoran piezas ya emparejadas.
+- **Medición final:** se cuenta el **primer intento** de cada ejercicio
+  (acierto/error). La nota es `aciertos / total` en porcentaje entero y se
+  muestra en `RewardSheet` junto a aciertos y errores. Los reintentos y la
+  corrección no modifican la nota.
+- **Corrección antes de terminar:** si hay fallos, al llegar al final se
+  muestra una hoja con el número de errores y dos acciones: “Repetir errores”
+  (principal) y “Ver resultados” (secundaria, respeta I3). La repetición usa
+  solo los ejercicios fallados, sin XP ni vidas, y al terminar muestra la
+  tabla final. (Complementa ADR-030.)
+
+**Alternativas consideradas:** (a) mantener las mecánicas en el brief
+(rechazada: el alumno necesita el tema, no instrucciones); (b) inventar
+traducciones o empaquetar un diccionario externo (rechazada: I5 y calidad);
+(c) validar al seleccionar (rechazada: impide cambiar de opinión); (d) nota
+sobre el resultado tras corregir (rechazada: la corrección es formativa);
+(e) bloqueo obligatorio de la ventana de corrección (rechazada: I3).
+
+**Consecuencias:**
+- `LessonBriefUi`/`LessonBriefBuilder` pierden `mechanics`.
+- `LessonUiState` gana `glossary`, `selectedRight`, contadores de score,
+  `mistakes`, `showMistakeReview` y `correctingMistakes`.
+- `TokenChip` gana `translation` y popup de long-press; los tableros de
+  parejas ganan `selectedRight`.
+- `RewardSheet` gana tabla opcional de resultados; nuevo `MistakeReviewSheet`
+  y `LessonScoring` con test.
+- Sin cambios de esquema ni dependencias nuevas.
+
+**Invariantes protegidos:** I1 (offline), I3 (nada bloquea), I8 (TalkBack,
+reduced motion y contraste).
 
 ---
 

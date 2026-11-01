@@ -16,11 +16,13 @@ import dev.linguago.core.domain.logic.FreeSpeakingHeuristicGrader
 import dev.linguago.core.domain.logic.GradingResult
 import dev.linguago.core.domain.logic.RetryPolicy
 import dev.linguago.core.domain.logic.SpokenFreeResponse
+import dev.linguago.core.domain.logic.VocabularyExtractor
 import dev.linguago.core.domain.logic.answerKey
 import dev.linguago.core.domain.model.CourseId
 import dev.linguago.core.domain.model.Exercise
 import dev.linguago.core.domain.model.GrammarPoint
 import dev.linguago.core.domain.model.Language
+import dev.linguago.core.domain.model.Lesson
 import dev.linguago.core.domain.model.LessonId
 import dev.linguago.core.domain.model.LessonSession
 import dev.linguago.core.domain.model.XP_PER_CORRECT_ANSWER
@@ -122,7 +124,18 @@ data class LessonUiState(
     // Parejas (MatchPairs): orden de dibujo de las derechas + estado de asocio
     val shuffledRights: List<Int> = emptyList(),
     val selectedLeft: Int? = null,
+    val selectedRight: Int? = null,
     val matched: Map<Int, Int> = emptyMap(),
+    // Glosario de apoyo (ADR-036): palabra en idioma meta → traducción de origen.
+    val glossary: Map<String, String> = emptyMap(),
+    // Resultado de la sesión (ADR-036): primer intento por ejercicio.
+    val totalExercises: Int = 0,
+    val correctCount: Int = 0,
+    val incorrectCount: Int = 0,
+    val score: LessonScore = LessonScore(),
+    val mistakes: List<Exercise> = emptyList(),
+    val showMistakeReview: Boolean = false,
+    val correctingMistakes: Boolean = false,
     // Cloze (ClozeDragDrop, F2.3): hueco id → opción colocada.
     val clozeFilled: Map<String, String> = emptyMap(),
     // Producción oral libre (FreeSpeakingPrompt, F2.5).
@@ -168,6 +181,8 @@ class LessonViewModel
         private var session: LessonSession? = null
         private var freeSpeakingJob: Job? = null
         private var freeSpeakingStartedAt = 0L
+        private val gradedExercises = mutableSetOf<String>()
+        private var finishing = false
 
         init {
             viewModelScope.launch {
@@ -187,7 +202,14 @@ class LessonViewModel
         fun pickOption(index: Int) {
             if (_uiState.value.answerLocked) return
             _uiState.update { it.copy(selectedOption = index) }
-            submitAnswer(ExerciseAnswer.OptionPicked(index))
+        }
+
+        /** Valida la opción elegida solo cuando el usuario pulsa “Siguiente” (ADR-036). */
+        fun submitSelection() {
+            val state = _uiState.value
+            if (state.answerLocked || state.feedback != null) return
+            val selected = state.selectedOption ?: return
+            submitAnswer(ExerciseAnswer.OptionPicked(selected))
         }
 
         /** Actualiza el dictado sin perderlo al recomponer o reintentar. */
@@ -456,10 +478,45 @@ class LessonViewModel
             }
         }
 
-        /** Toca una izquierda (canónica) para elegir el origen de la pareja. */
+        /** Elige una pieza izquierda; si había una derecha, empareja (ADR-036). */
         fun selectLeft(canonicalLeft: Int) {
-            if (_uiState.value.answerLocked) return
-            _uiState.update { it.copy(selectedLeft = canonicalLeft) }
+            val state = _uiState.value
+            if (state.answerLocked || state.matched.containsKey(canonicalLeft)) return
+            val right = state.selectedRight
+            if (right != null) {
+                pair(canonicalLeft, right)
+            } else {
+                _uiState.update { it.copy(selectedLeft = canonicalLeft, selectedRight = null) }
+            }
+        }
+
+        /** Elige una pieza derecha; si había una izquierda, empareja (ADR-036). */
+        fun selectRight(canonicalRight: Int) {
+            val state = _uiState.value
+            if (state.answerLocked || state.matched.containsValue(canonicalRight)) return
+            val left = state.selectedLeft
+            if (left != null) {
+                pair(left, canonicalRight)
+            } else {
+                _uiState.update { it.copy(selectedRight = canonicalRight, selectedLeft = null) }
+            }
+        }
+
+        private fun pair(
+            left: Int,
+            right: Int,
+        ) {
+            _uiState.update { state ->
+                if (state.matched.containsKey(left) || state.matched.containsValue(right)) {
+                    state
+                } else {
+                    state.copy(
+                        matched = state.matched + (left to right),
+                        selectedLeft = null,
+                        selectedRight = null,
+                    )
+                }
+            }
         }
 
         /** Separa una pareja ya encajada para poder reasignarla (ADR-029). */
@@ -469,6 +526,7 @@ class LessonViewModel
                 state.copy(
                     matched = state.matched - canonicalLeft,
                     selectedLeft = null,
+                    selectedRight = null,
                 )
             }
         }
@@ -503,18 +561,6 @@ class LessonViewModel
             }
         }
 
-        /** Empareja la izquierda seleccionada con la derecha (canónica) tocada. */
-        fun matchLeftTo(canonicalRight: Int) {
-            if (_uiState.value.answerLocked) return
-            val left = _uiState.value.selectedLeft ?: return
-            _uiState.update { state ->
-                state.copy(
-                    matched = state.matched + (left to canonicalRight),
-                    selectedLeft = null,
-                )
-            }
-        }
-
         /** Toca un token del tablero: alterna entre elegidos y disponibles. */
         fun toggleToken(token: String) {
             if (_uiState.value.answerLocked) return
@@ -542,9 +588,52 @@ class LessonViewModel
             if (nextIndex < state.exercises.size) {
                 _uiState.update { it.copy(index = nextIndex, feedback = null) }
                 prepareExercise(nextIndex)
+            } else if (!state.correctingMistakes && state.mistakes.isNotEmpty()) {
+                _uiState.update { it.copy(showMistakeReview = true, feedback = null) }
             } else {
                 finishLesson()
             }
+        }
+
+        /** Repite solo los ejercicios fallados antes de cerrar la lección (ADR-036). */
+        fun retryMistakes() {
+            val state = _uiState.value
+            if (state.mistakes.isEmpty()) {
+                finishLesson()
+                return
+            }
+            _uiState.update {
+                it.copy(
+                    exercises = state.mistakes,
+                    index = 0,
+                    correctingMistakes = true,
+                    showMistakeReview = false,
+                    feedback = null,
+                    selectedOption = null,
+                    typedText = "",
+                    answerLocked = false,
+                    submitting = false,
+                    retryCount = 0,
+                    heartConsumedForExercise = false,
+                    xpAwardedForExercise = false,
+                    listening = false,
+                    recognized = null,
+                    availableTokens = emptyList(),
+                    chosenTokens = emptyList(),
+                    shuffledRights = emptyList(),
+                    selectedLeft = null,
+                    selectedRight = null,
+                    matched = emptyMap(),
+                    clozeFilled = emptyMap(),
+                    freeSpeaking = FreeSpeakingState(),
+                )
+            }
+            prepareExercise(0)
+        }
+
+        /** Cierra la corrección y muestra la tabla final sin repetir (ADR-036). */
+        fun dismissMistakeReview() {
+            finishLesson()
         }
 
         /**
@@ -612,6 +701,8 @@ class LessonViewModel
             val language = session.course.toLanguage
             targetLanguage = language
             val brief = LessonBriefBuilder.build(session.lesson)
+            gradedExercises.clear()
+            finishing = false
             _uiState.update {
                 it.copy(
                     loading = false,
@@ -621,6 +712,14 @@ class LessonViewModel
                     briefSeen = false,
                     exercises = session.lesson.exercises,
                     index = 0,
+                    glossary = buildGlossary(session.lesson),
+                    totalExercises = session.lesson.exercises.size,
+                    correctCount = 0,
+                    incorrectCount = 0,
+                    score = LessonScore(total = session.lesson.exercises.size),
+                    mistakes = emptyList(),
+                    showMistakeReview = false,
+                    correctingMistakes = false,
                     audioAvailable = ttsEngine.isReadyFor(language),
                     speechAvailable = sttEngine.isReadyFor(language),
                 )
@@ -643,6 +742,30 @@ class LessonViewModel
             }
         }
 
+        /** Glosario de apoyo de la lección: palabra meta → traducción de origen (ADR-036). */
+        private fun buildGlossary(lesson: Lesson): Map<String, String> {
+            val glossary = mutableMapOf<String, String>()
+            lesson.microLesson
+                ?.sections
+                .orEmpty()
+                .flatMap { section -> section.examples }
+                .forEach { example ->
+                    val key = example.target.trim().lowercase()
+                    if (key.isNotEmpty() && example.source.isNotBlank()) {
+                        glossary[key] = example.source.trim()
+                    }
+                }
+            VocabularyExtractor
+                .fromLesson(lesson)
+                .forEach { pair ->
+                    val key = pair.target.trim().lowercase()
+                    if (key.isNotEmpty() && pair.source.isNotBlank()) {
+                        glossary[key] = pair.source.trim()
+                    }
+                }
+            return glossary
+        }
+
         /** Prepara los paneles de respuesta del ejercicio `index`. */
         private fun prepareExercise(index: Int) {
             val exercise = _uiState.value.exercises.getOrNull(index) ?: return
@@ -650,6 +773,7 @@ class LessonViewModel
                 it.copy(
                     feedback = null,
                     selectedOption = null,
+                    selectedRight = null,
                     typedText = "",
                     answerLocked = false,
                     submitting = false,
@@ -671,6 +795,7 @@ class LessonViewModel
                             clozeFilled = emptyMap(),
                             freeSpeaking = FreeSpeakingState(),
                             selectedLeft = null,
+                            selectedRight = null,
                         )
                     }
                 is Exercise.OrderWords ->
@@ -683,6 +808,7 @@ class LessonViewModel
                             clozeFilled = emptyMap(),
                             freeSpeaking = FreeSpeakingState(),
                             selectedLeft = null,
+                            selectedRight = null,
                         )
                     }
                 is Exercise.MatchPairs -> preparePairs(exercise.pairs.size)
@@ -697,6 +823,7 @@ class LessonViewModel
                             clozeFilled = emptyMap(),
                             freeSpeaking = FreeSpeakingState(),
                             selectedLeft = null,
+                            selectedRight = null,
                         )
                     }
                 else ->
@@ -709,6 +836,7 @@ class LessonViewModel
                             clozeFilled = emptyMap(),
                             freeSpeaking = FreeSpeakingState(),
                             selectedLeft = null,
+                            selectedRight = null,
                             listening = false,
                             recognized = null,
                         )
@@ -727,6 +855,7 @@ class LessonViewModel
                     clozeFilled = emptyMap(),
                     freeSpeaking = FreeSpeakingState(),
                     selectedLeft = null,
+                    selectedRight = null,
                 )
             }
         }
@@ -740,18 +869,22 @@ class LessonViewModel
             val state = _uiState.value
             if (state.feedback != null || state.answerLocked || state.submitting) return
             val exercise = state.exercises.getOrNull(state.index) ?: return
+            val correction = state.correctingMistakes
             val shouldConsumeHeart =
-                RetryPolicy.shouldRequestHeartConsumption(consumeHeart, state.heartConsumedForExercise)
+                !correction &&
+                    RetryPolicy.shouldRequestHeartConsumption(consumeHeart, state.heartConsumedForExercise)
             _uiState.update { it.copy(submitting = true, answerLocked = true) }
             viewModelScope.launch {
                 when (val result = registerAnswerUseCase(exercise, answer, grammarPoints, shouldConsumeHeart)) {
                     is Result.Success -> {
                         val outcome = result.value
                         val grading = outcome.grading
+                        val firstGrading = gradedExercises.add(exercise.id.value)
                         val cultural = session?.let { CulturalNoteMatcher.noteFor(it.lesson, exercise) }
                         _uiState.update { current ->
                             val awardXp =
-                                RetryPolicy.shouldAwardXp(grading.isCorrect, current.xpAwardedForExercise)
+                                !correction &&
+                                    RetryPolicy.shouldAwardXp(grading.isCorrect, current.xpAwardedForExercise)
                             val consumed = shouldConsumeHeart && !grading.isCorrect
                             val canRetry =
                                 RetryPolicy.canRetry(
@@ -761,6 +894,10 @@ class LessonViewModel
                                     allowRetry = allowRetry,
                                 )
                             val nextCombo = ComboRules.next(current.combo, grading.isCorrect)
+                            val correctDelta = if (firstGrading && grading.isCorrect) 1 else 0
+                            val incorrectDelta = if (firstGrading && !grading.isCorrect) 1 else 0
+                            val nextCorrect = current.correctCount + correctDelta
+                            val nextIncorrect = current.incorrectCount + incorrectDelta
                             current.copy(
                                 feedback =
                                     ExerciseFeedback(
@@ -793,6 +930,15 @@ class LessonViewModel
                                 xpAwardedForExercise = current.xpAwardedForExercise || grading.isCorrect,
                                 hearts = outcome.hearts?.hearts ?: current.hearts,
                                 combo = nextCombo,
+                                correctCount = nextCorrect,
+                                incorrectCount = nextIncorrect,
+                                score = LessonScoring.score(current.totalExercises, nextCorrect),
+                                mistakes =
+                                    if (firstGrading && !grading.isCorrect) {
+                                        current.mistakes + exercise
+                                    } else {
+                                        current.mistakes
+                                    },
                                 lessonCancelled = outcome.lessonCancelled,
                                 answerLocked = true,
                                 submitting = false,
@@ -864,14 +1010,24 @@ class LessonViewModel
         }
 
         private fun finishLesson() {
-            if (_uiState.value.lessonCancelled) return
-            val earned = _uiState.value.xpEarned
+            val state = _uiState.value
+            if (finishing || state.lessonCancelled || state.finished) return
+            finishing = true
+            val earned = state.xpEarned
             viewModelScope.launch {
                 completeLessonUseCase(LessonId(lessonId), earned)
                 session?.let { current ->
                     reviewRepository.collectFromLesson(current.course, current.lesson)
                 }
-                _uiState.update { it.copy(finished = true, feedback = null) }
+                _uiState.update {
+                    it.copy(
+                        finished = true,
+                        feedback = null,
+                        showMistakeReview = false,
+                        score = LessonScoring.score(it.totalExercises, it.correctCount),
+                    )
+                }
+                finishing = false
             }
         }
 

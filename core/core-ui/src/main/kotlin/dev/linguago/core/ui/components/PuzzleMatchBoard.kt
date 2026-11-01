@@ -80,6 +80,7 @@ public fun PuzzleMatchBoard(
     instructions: String? = null,
     enabled: Boolean = true,
     result: Boolean? = null,
+    selectedRight: Int? = null,
 ) {
     val colors = MaterialTheme.colorScheme
     val feedback = LocalInteractionFeedback.current
@@ -247,7 +248,7 @@ public fun PuzzleMatchBoard(
                             label = pair.right,
                             edge = PuzzleEdge.TAB,
                             status = OptionStatus.NEUTRAL,
-                            selected = false,
+                            selected = selectedRight == right,
                             enabled = enabled,
                             onClick = { onMatchRight(right) },
                             badge = pair.rightBadge,

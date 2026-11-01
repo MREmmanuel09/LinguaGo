@@ -261,6 +261,21 @@ señal de estado (I8).
 - **Pronunciación:** `VoiceWaveIndicator(active = speaking)` junto al botón;
   sin voz disponible el botón queda deshabilitado (I3).
 
+### Ajustes pedagógicos de la lección (ADR-036)
+
+- **“Antes de empezar”** explica el tema (gramática, objetivos y ejemplos);
+  no incluye instrucciones de interfaz.
+- **Traducción al mantener pulsada una ficha:** popup encima de la palabra,
+  oculto al soltar; acción “Ver traducción” para TalkBack.
+- **Validación explícita:** en ejercicios de opción se elige y luego se pulsa
+  “Siguiente”; no hay marca de acierto/error al tocar.
+- **Formar frases horizontal:** tira con scroll y `animateItem`.
+- **Emparejamiento bidireccional:** se puede empezar por izquierda o derecha.
+- **Resultado final:** tabla con aciertos, errores y nota en porcentaje
+  (primer intento).
+- **Corrección final:** hoja con “Repetir errores” (solo fallados, sin XP ni
+  vidas) y “Ver resultados”.
+
 ### Perfil, onboarding y navegación (ADR-035)
 
 - **Perfil Bento:** héroe con anillo de dominio animado y nivel; cuadrícula

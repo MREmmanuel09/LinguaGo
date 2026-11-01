@@ -114,32 +114,6 @@ fun LessonBriefScreen(
                     LessonBriefSectionCard(section)
                 }
             }
-
-            if (brief.mechanics.isNotEmpty()) {
-                SectionTitle("Cómo se juega")
-                brief.mechanics.forEach { mechanic ->
-                    LinguaCard3D {
-                        Column(verticalArrangement = Arrangement.spacedBy(3.dp)) {
-                            Text(
-                                text = mechanic.title,
-                                style = MaterialTheme.typography.titleMedium,
-                                color = colors.onSurface,
-                            )
-                            Text(
-                                text = mechanic.description,
-                                style = MaterialTheme.typography.bodySmall,
-                                color = colors.onSurfaceVariant,
-                            )
-                        }
-                    }
-                }
-            }
-
-            Text(
-                text = "Esta introducción no consume vidas ni XP. Puedes volver a abrirla con «Guía».",
-                style = MaterialTheme.typography.bodySmall,
-                color = colors.onSurfaceVariant,
-            )
         }
 
         Spacer(Modifier.height(12.dp))
@@ -225,13 +199,6 @@ private fun LessonBriefScreenPreview() {
                                             note = "Después del mediodía.",
                                         ),
                                     ),
-                            ),
-                        ),
-                    mechanics =
-                        listOf(
-                            MechanicHint(
-                                title = "Elegir la opción",
-                                description = "Toca la opción correcta y revisa el porqué.",
                             ),
                         ),
                 ),
