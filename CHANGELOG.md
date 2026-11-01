@@ -6,6 +6,44 @@ El formato sigue [Keep a Changelog](https://keepachangelog.com/es-ES/1.1.0/)
 y el versionado sigue [SemVer](https://semver.org/lang/es/).
 Pre-1.0: los cambios incompatibles pueden ocurrir en `0.y.0`.
 
+## [1.2.0] - 2026-10-31
+
+Versión centrada en la experiencia visual, sonora e interactiva ("Feather
+2.0"): profundidad táctil, Lumi expresiva, lección viva, repaso 3D y pantallas
+de perfil y onboarding renovadas.
+
+### Agregado
+
+- **Física táctil 3D** (ADR-031): hundimiento sobre el borde inferior, bisel de
+  luz y `TokenChip` compartido; SFX cálidos v2 (22,05 kHz) y nuevos cues
+  `STREAK_COMBO`, `CARD_FLIP`, `HEART_LOST` y `CHEST_OPEN`.
+- **Lumi multicapa y expresiva** (ADR-032) con moods `IDLE`, `HAPPY`,
+  `ENCOURAGING` y `LISTENING`; `PathStage` A1–B2, banners de unidad 3D y punto
+  animado en el conector del camino.
+- **Lección viva** (ADR-033): panel de feedback deslizante con Lumi, combo de
+  aciertos, ondas de audio TTS/STT y animaciones de fichas.
+- **Repaso 3D** (ADR-034): `FlipCard3D`, pronunciación TTS y botonera FSRS
+  semántica (coral, ámbar, turquesa y púrpura).
+- **Perfil Bento y onboarding ilustrado** (ADR-035): anillo de dominio, nivel,
+  estadísticas 3D, racha con mejor marca, insignias por idioma y transiciones
+  de navegación.
+- Iconos originales `ic_star`/`ic_cards`; tests de combo, etapas, tokens,
+  háptica, perfil y accesibilidad de la tarjeta 3D.
+
+### Cambiado
+
+- `PrimaryButton3D` acepta colores semánticos y variante compacta.
+- `ReviewViewModel` inyecta `CourseRepository` y `TtsEngine` para pronunciar
+  la traducción; `feature-review` depende de `core-audio`.
+- `ProfileUiState` gana nivel y avance de XP; `LessonUiState` gana combo y
+  estado de reproducción.
+- Documentación: ADR-031 a ADR-035 y `docs/DESIGN_SYSTEM.md`.
+
+### Notas
+
+- Todo sigue siendo 100% local y offline; sin dependencias nuevas ni cambios
+  de esquema. Reduced motion y TalkBack se mantienen (I1/I5/I8).
+
 ## [1.1.0] - 2026-10-25
 
 Versión centrada en la experiencia de aprendizaje: feedback sensorial,
