@@ -10,7 +10,7 @@ Código abierto · Sin anuncios · Sin backend · 100% offline · Vidas con
 recuperación rápida
 
 [![CI](https://github.com/MREmmanuel09/LinguaGo/actions/workflows/ci.yml/badge.svg)](https://github.com/MREmmanuel09/LinguaGo/actions/workflows/ci.yml)
-![version](https://img.shields.io/badge/version-1.2.1-blue)
+![version](https://img.shields.io/badge/version-2.0.0-blue)
 ![Kotlin](https://img.shields.io/badge/Kotlin-2.4-7F52FF?logo=kotlin&logoColor=white)
 ![Android](https://img.shields.io/badge/Android-26%2B-3DDC84?logo=android&logoColor=white)
 ![License](https://img.shields.io/badge/license-MIT-green)
@@ -40,7 +40,7 @@ flowchart LR
 
 ## Descargar APK
 
-**[LinguaGo 1.2.1 — APK global](https://github.com/MREmmanuel09/LinguaGo/releases/tag/v1.2.1)**
+**[LinguaGo 2.0.0 — APK global](https://github.com/MREmmanuel09/LinguaGo/releases/tag/v2.0.0)**
 (firma de desarrollo; instalación manual con "origen desconocido").
 
 - Android 8.0+ · APK global universal (~509 MB) o variante **arm64** (~392 MB), con los 4 cursos y sus modelos de voz.
@@ -96,6 +96,7 @@ flowchart LR
 | 9 | Feedback sensorial, micro-clases, reintentos y tableros + release 1.1.0 (ADR-027–030) | ✅ |
 | 10 | "Feather 2.0": táctil 3D, Lumi expresiva, lección viva, repaso 3D y Bento + release 1.2.0 (ADR-031–035) | ✅ |
 | 11 | Claridad pedagógica: brief temático, traducción long-press, validación explícita, emparejamiento bidireccional y corrección final + release 1.2.1 (ADR-036) | ✅ |
+| 12 | Contenido B2 completo, schema v2 en cursos de arranque, glosario y accesibilidad AA + release 2.0.0 (ADR-037–041) | ✅ |
 | Pendiente | OneDrive (ADR-015), validación de voz pt/fr/ja en hardware | ⏳ |
 
 ## Módulos

@@ -6,7 +6,10 @@ El formato sigue [Keep a Changelog](https://keepachangelog.com/es-ES/1.1.0/)
 y el versionado sigue [SemVer](https://semver.org/lang/es/).
 Pre-1.0: los cambios incompatibles pueden ocurrir en `0.y.0`.
 
-## [Unreleased]
+## [2.0.0] - 2026-11-02
+
+Release de contenido y experiencia: B2 completo en los cuatro cursos, cursos
+de arranque migrados a schema v2, glosario por lección y accesibilidad AA.
 
 ### Cambiado
 
