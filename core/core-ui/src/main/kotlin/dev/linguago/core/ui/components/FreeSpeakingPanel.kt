@@ -46,6 +46,7 @@ import dev.linguago.core.ui.feedback.LocalInteractionFeedback
 import dev.linguago.core.ui.feedback.feedbackClickable
 import dev.linguago.core.ui.theme.LinguaTheme
 import dev.linguago.core.ui.theme.LinguaTokens
+import dev.linguago.core.ui.theme.linguaExtendedColors
 import dev.linguago.core.ui.util.rememberAnimationsEnabled
 import kotlin.math.PI
 import kotlin.math.roundToInt
@@ -75,6 +76,7 @@ public fun FreeSpeakingPanel(
     selfAssessment: Map<Int, Int>,
     audioAvailable: Boolean,
     enabled: Boolean = true,
+    glossary: Map<String, List<String>> = emptyMap(),
     onStart: () -> Unit,
     onStop: () -> Unit,
     onRate: (criterion: Int, level: Int) -> Unit,
@@ -89,8 +91,9 @@ public fun FreeSpeakingPanel(
             style = MaterialTheme.typography.titleLarge,
             color = colors.onBackground,
         )
-        Text(
+        WordGlossaryText(
             text = prompt,
+            glossary = glossary,
             style = MaterialTheme.typography.bodyLarge,
             color = colors.onBackground,
         )
@@ -109,6 +112,7 @@ public fun FreeSpeakingPanel(
                     feedback = feedback,
                     detectedGrammarLabels = detectedGrammarLabels,
                     modelAnswer = modelAnswer,
+                    glossary = glossary,
                     criteria = criteria,
                     selfAssessment = selfAssessment,
                     audioAvailable = audioAvailable,
@@ -171,6 +175,7 @@ private fun ReviewSection(
     feedback: FreeSpeakingFeedback?,
     detectedGrammarLabels: List<String>,
     modelAnswer: String,
+    glossary: Map<String, List<String>>,
     criteria: List<String>,
     selfAssessment: Map<Int, Int>,
     audioAvailable: Boolean,
@@ -219,7 +224,12 @@ private fun ReviewSection(
             style = MaterialTheme.typography.labelLarge,
             color = colors.onSurfaceVariant,
         )
-        Text(text = modelAnswer, style = MaterialTheme.typography.bodyMedium, color = colors.onSurface)
+        WordGlossaryText(
+            text = modelAnswer,
+            glossary = glossary,
+            style = MaterialTheme.typography.bodyMedium,
+            color = colors.onSurface,
+        )
         TextButton(
             onClick = {
                 feedbackPlayer.play(FeedbackCue.TAP)
@@ -368,13 +378,22 @@ private fun HeuristicBreakdown(
             style = MaterialTheme.typography.titleMedium,
             color = colors.onSecondaryContainer,
         )
-        BreakdownRow(label = "Palabras", value = feedback.tokenCount.toString())
-        BreakdownRow(label = "Ideas clave", value = "${feedback.coveredClusters}/${feedback.totalClusters}")
-        BreakdownRow(
-            label = "Gramática detectada",
-            value = if (detectedGrammarLabels.isEmpty()) "Ninguna" else detectedGrammarLabels.joinToString(", "),
-        )
-        BreakdownRow(label = "Ritmo", value = "${feedback.wpm.roundToInt()} palabras/min")
+        if (feedback.tokenCount == 0 || feedback.coveredClusters == 0) {
+            Text(
+                text = "No te hemos entendido. Inténtalo de nuevo leyendo la frase completa.",
+                style = MaterialTheme.typography.bodyMedium,
+                color = linguaExtendedColors().destructiveInk,
+            )
+        }
+        if (feedback.tokenCount > 0) {
+            BreakdownRow(label = "Palabras", value = feedback.tokenCount.toString())
+            BreakdownRow(label = "Ideas clave", value = "${feedback.coveredClusters}/${feedback.totalClusters}")
+            BreakdownRow(
+                label = "Gramática detectada",
+                value = if (detectedGrammarLabels.isEmpty()) "Ninguna" else detectedGrammarLabels.joinToString(", "),
+            )
+            BreakdownRow(label = "Ritmo", value = "${feedback.wpm.roundToInt()} palabras/min")
+        }
     }
 }
 

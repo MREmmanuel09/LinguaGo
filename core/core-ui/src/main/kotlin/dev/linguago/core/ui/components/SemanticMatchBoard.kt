@@ -28,6 +28,7 @@ import dev.linguago.core.ui.feedback.FeedbackCue
 import dev.linguago.core.ui.feedback.feedbackClickable
 import dev.linguago.core.ui.theme.LinguaTheme
 import dev.linguago.core.ui.theme.LinguaTokens
+import dev.linguago.core.ui.theme.linguaExtendedColors
 
 /**
  * Emparejamiento semántico B2 (F2.4): tarjetas multilínea con registro y
@@ -157,7 +158,7 @@ private fun SemanticTile(
                 text = "→ $association",
                 style = MaterialTheme.typography.bodyMedium,
                 fontWeight = FontWeight.SemiBold,
-                color = colors.primary,
+                color = linguaExtendedColors().primaryInk,
             )
         }
     }

@@ -35,6 +35,7 @@ import dev.linguago.core.ui.feedback.FeedbackCue
 import dev.linguago.core.ui.feedback.LocalInteractionFeedback
 import dev.linguago.core.ui.theme.LinguaMotion
 import dev.linguago.core.ui.theme.LinguaTokens
+import dev.linguago.core.ui.theme.linguaExtendedColors
 import dev.linguago.core.ui.util.rememberAnimationsEnabled
 
 /**
@@ -42,7 +43,8 @@ import dev.linguago.core.ui.util.rememberAnimationsEnabled
  * coral (`--destructive`) para errores. En aciertos muestra la explicación
  * del porqué y la respuesta canónica (ADR-028); en errores mantiene el
  * diagnóstico expandible. Si hay una nota cultural aplicable, puede
- * expandirse. No bloquea el avance (I3) y se anuncia como live region (I8).
+ * expandirse. La respuesta canónica admite long-press de traducciones
+ * (ADR-040). No bloquea el avance (I3) y se anuncia como live region (I8).
  */
 @Composable
 public fun FeedbackBanner(
@@ -54,8 +56,12 @@ public fun FeedbackBanner(
     culturalNote: String? = null,
     successExplanation: String? = null,
     correctAnswer: String? = null,
+    glossary: Map<String, List<String>> = emptyMap(),
 ) {
     val statusColor = if (isCorrect) LinguaTokens.Accent else LinguaTokens.Destructive
+    val extended = linguaExtendedColors()
+    // El fondo usa el color crudo; el texto y el icono, la tinta en AA (ADR-037).
+    val ink = if (isCorrect) extended.accentInk else extended.destructiveInk
     val iconRes = if (isCorrect) LinguaIcons.CheckRes else LinguaIcons.CloseRes
     val hasDetails = diagnostic != null || culturalNote != null
     val feedback = LocalInteractionFeedback.current
@@ -68,7 +74,8 @@ public fun FeedbackBanner(
         label = "feedbackIconScale",
     )
     var expanded by remember(isCorrect, message, diagnostic, idiom, culturalNote) {
-        mutableStateOf(!isCorrect && diagnostic != null)
+        // Colapsado por defecto: el primer botón siempre es "Ver por qué" (ADR-037).
+        mutableStateOf(false)
     }
 
     Column(
@@ -101,11 +108,11 @@ public fun FeedbackBanner(
                             scaleX = iconScale
                             scaleY = iconScale
                         },
-                colorFilter = ColorFilter.tint(statusColor),
+                colorFilter = ColorFilter.tint(ink),
             )
             Text(
                 text = message,
-                color = statusColor,
+                color = ink,
                 style = MaterialTheme.typography.bodyMedium,
             )
         }
@@ -125,10 +132,11 @@ public fun FeedbackBanner(
                     )
                 }
                 correctAnswer?.let { answer ->
-                    Text(
+                    WordGlossaryText(
                         text = "Respuesta correcta: $answer",
-                        color = MaterialTheme.colorScheme.onSurfaceVariant,
+                        glossary = glossary,
                         style = MaterialTheme.typography.bodySmall,
+                        color = MaterialTheme.colorScheme.onSurfaceVariant,
                     )
                 }
             }

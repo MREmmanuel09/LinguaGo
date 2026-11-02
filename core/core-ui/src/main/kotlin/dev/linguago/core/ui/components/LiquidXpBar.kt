@@ -17,7 +17,9 @@ import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
+import androidx.compose.ui.geometry.CornerRadius
 import androidx.compose.ui.graphics.Path
+import androidx.compose.ui.graphics.drawscope.Stroke
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import dev.linguago.core.ui.theme.LinguaTheme
@@ -53,6 +55,7 @@ fun LiquidXpBar(
             ),
         label = "liquidXpPhase",
     )
+    val trackBorder = MaterialTheme.colorScheme.outlineVariant
 
     Canvas(
         modifier =
@@ -63,24 +66,32 @@ fun LiquidXpBar(
                 .background(MaterialTheme.colorScheme.surfaceVariant)
                 .progressSemantics(target),
     ) {
-        if (animated <= 0f) return@Canvas
-        val fillWidth = size.width * animated
-        val amplitude = size.height * 0.16f
-        val baseY = size.height * 0.20f
-        val wavePhase = if (animations) phase else 0f
-        val wavelength = (size.width / 6f).coerceAtLeast(1f)
-        val path =
-            Path().apply {
-                moveTo(0f, size.height)
-                lineTo(fillWidth, size.height)
-                var x = fillWidth
-                while (x >= 0f) {
-                    lineTo(x, baseY + amplitude * sin(wavePhase + x / wavelength))
-                    x -= 6f
+        if (animated > 0f) {
+            val fillWidth = size.width * animated
+            val amplitude = size.height * 0.16f
+            val baseY = size.height * 0.20f
+            val wavePhase = if (animations) phase else 0f
+            val wavelength = (size.width / 6f).coerceAtLeast(1f)
+            val path =
+                Path().apply {
+                    moveTo(0f, size.height)
+                    lineTo(fillWidth, size.height)
+                    var x = fillWidth
+                    while (x >= 0f) {
+                        lineTo(x, baseY + amplitude * sin(wavePhase + x / wavelength))
+                        x -= 6f
+                    }
+                    close()
                 }
-                close()
-            }
-        drawPath(path = path, color = LinguaTokens.Accent)
+            drawPath(path = path, color = LinguaTokens.Accent)
+        }
+        // Límites del track visibles en ambos temas (ADR-037).
+        drawRoundRect(
+            color = trackBorder,
+            size = size,
+            style = Stroke(width = 1.dp.toPx()),
+            cornerRadius = CornerRadius(size.height / 2f),
+        )
     }
 }
 

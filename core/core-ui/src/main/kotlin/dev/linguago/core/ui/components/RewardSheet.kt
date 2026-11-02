@@ -26,6 +26,7 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import dev.linguago.core.ui.theme.LinguaTheme
+import dev.linguago.core.ui.theme.linguaExtendedColors
 import dev.linguago.core.ui.util.rememberAnimationsEnabled
 import kotlin.math.roundToInt
 
@@ -158,7 +159,7 @@ private fun ScoreRow(
                     MaterialTheme.typography.bodyMedium
                 },
             fontWeight = if (emphasized) FontWeight.Bold else FontWeight.Medium,
-            color = if (emphasized) colors.primary else colors.onSurface,
+            color = if (emphasized) linguaExtendedColors().primaryInk else colors.onSurface,
         )
     }
 }

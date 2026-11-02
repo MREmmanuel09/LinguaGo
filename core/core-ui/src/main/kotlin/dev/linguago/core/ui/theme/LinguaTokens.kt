@@ -41,6 +41,19 @@ object LinguaTokens {
     const val DARK_HEART_RED_HEX = 0xFFE05A5A
     const val DARK_HEART_EMPTY_HEX = 0xFF4A4560
 
+    // Tintas sobre color (ADR-037): texto e iconos de estado sobre los
+    // fondos tintados, con ratio WCAG AA ≥ 4.5:1 verificado por test JVM.
+    // Modo claro: tintas oscuras sobre tintes claros.
+    const val PRIMARY_INK_HEX = 0xFF4A3DB8
+    const val ACCENT_INK_HEX = 0xFF00695A
+    const val DESTRUCTIVE_INK_HEX = 0xFFA33B22
+
+    // Modo oscuro: tintas claras sobre tintes oscuros. El acento base ya
+    // cumple AA en oscuro, así que la tinta mantiene su valor canónico.
+    const val DARK_PRIMARY_INK_HEX = 0xFFB8AEF5
+    const val DARK_ACCENT_INK_HEX = 0xFF00B894
+    const val DARK_DESTRUCTIVE_INK_HEX = 0xFFFF9B82
+
     val Primary = Color(PRIMARY_HEX)
     val PrimaryEdge = Color(PRIMARY_EDGE_HEX)
     val Accent = Color(ACCENT_HEX)
@@ -54,6 +67,15 @@ object LinguaTokens {
     val Fg = Color(FG_HEX)
     val FgMuted = Color(FG_MUTED_HEX)
     val Border = Color(BORDER_HEX)
+
+    // Tintas sobre color (ADR-037) — se resuelven por tema en
+    // `linguaExtendedColors()`.
+    val PrimaryInk = Color(PRIMARY_INK_HEX)
+    val AccentInk = Color(ACCENT_INK_HEX)
+    val DestructiveInk = Color(DESTRUCTIVE_INK_HEX)
+    val DarkPrimaryInk = Color(DARK_PRIMARY_INK_HEX)
+    val DarkAccentInk = Color(DARK_ACCENT_INK_HEX)
+    val DarkDestructiveInk = Color(DARK_DESTRUCTIVE_INK_HEX)
 
     // Radio canónicos (§7.2) en dp
     const val RADIUS_BUTTON_DP = 16

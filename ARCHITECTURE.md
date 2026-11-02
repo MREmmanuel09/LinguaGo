@@ -141,9 +141,9 @@ DataStore (privado de la app):
 
 - El contenido vive como **assets** en `content/*/src/main/assets/courses/<id>/`:
   `manifest.json` (tarjeta ligera) + `course.json` (curso completo).
-- El contrato formal es `docs/schemas/course-v1.json` (draft-07) y su guía de autoría está en `CONTENT_FORMAT.md`.
+- El contrato formal es `docs/schemas/course-v1.json` (v1) y `course-v2.json` (v2, ADR-018); la guía de autoría está en `CONTENT_FORMAT.md` y `docs/CONTENT_FORMAT.md`.
 - `core-content` decodifica con kotlinx-serialization directo sobre el dominio (sin DTOs) y valida estructura al cargar; un contenido inválido produce `InvalidContent` visible, nunca una sesión rota (I9).
-- **Gates**: `./gradlew validateContent` valida los 4 cursos contra el schema; corre en CI antes de los tests.
+- **Gates**: `./gradlew validateContent` valida los 4 cursos contra su schema v1/v2; corre en CI antes de los tests.
 - Regla de oro de autoría: **UTF-8 sin BOM** (un BOM rompe el parseo).
 
 ## 7. Audio offline (ADR-003/006/010)

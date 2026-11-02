@@ -46,6 +46,11 @@
 | 034 | Flashcards 3D y calificación semántica en el repaso (Fase 4) | Aprobado |
 | 035 | Bento de progreso, onboarding ilustrado y transiciones (Fase 5) | Aprobado |
 | 036 | Ajustes pedagógicos de la lección: brief temático, validación explícita, emparejamiento bidireccional y corrección final | Aprobado |
+| 037 | Accesibilidad AA: tintas sobre color y HUD de vidas numérico | Aprobado |
+| 038 | Guía de origen opcional en OrderWords | Aprobado |
+| 039 | Tolerancia a diacríticos en la evaluación | Aprobado |
+| 040 | Glosario por lección, long-press de palabras y etapa del camino por CEFR | Aprobado |
+| 041 | Migración de los cursos de arranque pt/fr/ja a schema v2 | Aprobado |
 
 ---
 ## ADR-000: Convención del registro de decisiones
@@ -593,6 +598,11 @@ cualquiera de estos elementos (Regla de No-Aplanamiento Pedagógico).
   el contenido existente sigue cargando sin cambios.
 - El drift entre schema y modelos `@Serializable` se cubre con tests de
   contrato y con `PackagedContentTest`.
+
+**Actualización (2026-11-02):** los tres cursos de arranque se migraron a v2
+mediante ADR-041 conservando sus ids; después los tres llegaron a **60
+lecciones (A1–B2 completo)/526 ejercicios**. Los tests fijan ese contrato. La
+revisión lingüística nativa de B1–B2 sigue pendiente.
 
 **Invariantes protegidos:** I1 (contenido empaquetado), I4 (ids históricos
 preservados), I9 (validación estática en CI).
@@ -1582,6 +1592,232 @@ sobre el resultado tras corregir (rechazada: la corrección es formativa);
 
 **Invariantes protegidos:** I1 (offline), I3 (nada bloquea), I8 (TalkBack,
 reduced motion y contraste).
+
+---
+
+## ADR-037: Accesibilidad AA: tintas sobre color y HUD de vidas numérico
+
+**Estado:** Aprobado
+**Fecha:** 2026-11-01
+
+**Contexto:** la revisión manual en emulador y la revisión de video de la
+app (2026-11-01) confirman que los estados con color pincelan texto con el
+color crudo sobre fondos tintados del mismo tono: en modo claro,
+`Accent`/`Destructive` sobre su tinte 12% rinde ~2.3:1 y ~2.8:1; en modo
+oscuro el estado seleccionado (`primary` sobre tinte 6%) rinde ~3.1:1. Todo
+por debajo del mínimo WCAG AA 4.5:1 que exige I8. Además, la fila de 10
+corazones de `HeartsIndicator` ocupa ~218dp de cabecera en lección, home y
+repaso, saturando la zona superior, y el track de `LiquidXpBar` apenas se
+distingue del fondo en oscuro.
+
+**Decisión:**
+1. **Tintas sobre color**: nuevos tokens `PRIMARY_INK`, `ACCENT_INK` y
+   `DESTRUCTIVE_INK` (más variantes oscuras) en `LinguaTokens`, resueltos por
+   tema en `linguaExtendedColors()` siguiendo el patrón de los corazones
+   (ADR-026). Los colores crudos siguen siendo los fondos tintados, bordes e
+   iconografía grande; la tinta solo colorea texto e iconos de estado en
+   `OptionCard`, `PuzzleMatchBoard`, `SemanticMatchBoard`, `FeedbackBanner` y
+   los enlaces `primary` de home, repaso, sincronización y cabecera de
+   lección. Un test JVM verifica el ratio WCAG ≥ 4.5:1 de cada tinta contra
+   su tinte calculado por composición alfa, todo desde los hex canónicos.
+2. **HUD de vidas numérico**: `HeartsCounter` (píldora `❤ 8/10` con pulso
+   animado al cambiar) sustituye a `HeartsIndicator` como único representante
+   de vidas en lección, home y repaso. La semántica TalkBack mantiene
+   “N de max vidas” y el latido por pérdida de vida de ADR-026/ADR-027.
+3. **Límites del progreso**: `LiquidXpBar` dibuja un borde de 1dp alrededor
+   del track para que los extremos de la barra sean visibles en ambos temas.
+4. `PrimaryButton3D` deshabilitado baja el alpha de cuerpo/borde de 0.45 a
+   0.35 para que se distinga de un botón activo.
+
+**Alternativas consideradas:** (a) relleno sólido con texto blanco estilo
+Duolingo (rechazada: exigiría oscurecer `Accent`/`Destructive` y rompe
+§7.1/ADR-031); (b) sobrescribir `colorScheme.primary` en oscuro (rechazada:
+rompe los rellenos sólidos con `onPrimary` blanco, p. ej. `TokenChip`
+seleccionado); (c) mantener los 10 corazones con tamaño menor (rechazada: la
+fila sigue consumiendo ancho de cabecera sin aportar información legible a
+distancia).
+
+**Consecuencias:**
+- Los hex existentes no cambian (la identidad se preserva); solo se añaden
+  tintas, con test de identidad y de contraste en `core-ui`.
+- `HeartsIndicator` se elimina: su único representante pasa a ser
+  `HeartsCounter`; se actualizan previews, `DesignGalleryScreenshotTest` y
+  `PathDesignAccessibilityTest`.
+- El estilo Feather se conserva: fondos tintados al 6–12% + texto en tinta
+  oscura (claro) o clara (oscuro).
+- Sin cambios de esquema, de contenido ni de dependencias.
+
+**Invariantes protegidos:** I5 (identidad original), I8 (contraste AA y
+TalkBack), I7 (la lógica de vidas no cambia).
+
+---
+
+## ADR-038: Guía de origen opcional en OrderWords
+
+**Estado:** Aprobado
+**Fecha:** 2026-11-02
+
+**Contexto:** `OrderWords` presenta solo los tokens objetivo y la
+instrucción genérica "Toca las palabras de abajo". Sin frase de referencia ni
+audio, el alumno no puede saber qué oración reconstruir: la revisión manual
+en emulador y el video de la lección B2 "Correos que no se malinterpretan"
+confirman la adivinanza ciega tanto en A1 como en B2.
+
+**Decisión:** añadir `sourcePhrase` **opcional** a `Exercise.OrderWords` y a
+`course-v1.json` (retrocompatible: ausente = ejercicio sin guía).
+`OrderWordsBoard` muestra la frase de origen sobre la zona de respuesta y, si
+el ejercicio declara `audioText`, ofrece el reproductor con la frase hablada
+(título neutro para no revelar el texto). El validador rechaza
+`sourcePhrase` en blanco si se declara. Los 39 ejercicios `OrderWords`
+existentes (35 es-en, 2 es-fr, 2 es-pt) reciben su frase guía en un cambio
+de contenido separado del código.
+
+**Alternativas consideradas:** (a) derivar la guía de los ejemplos de la
+micro-clase o del glosario (rechazada: solo 0/35 frases coinciden y el
+glosario es palabra a palabra); (b) traducir con un modelo generativo
+(rechazada: I1/I5, la app no usa LLM).
+
+**Consecuencias:** campo opcional nuevo en dominio, esquema, validador y
+`CONTENT_FORMAT.md`; contenido actualizado sin romper ejercicios previos;
+sin cambios de datos persistidos ni dependencias nuevas.
+
+**Invariantes protegidos:** I1 (offline), I5 (contenido propio), I7
+(validador y grader testeables).
+
+---
+
+## ADR-039: Tolerancia a diacríticos en la evaluación
+
+**Estado:** Aprobado
+**Fecha:** 2026-11-02
+
+**Contexto:** la evaluación normaliza minúsculas, puntuación y espacios, pero
+no los diacríticos: en el dictado francés "Bonne journee" falla y cuesta una
+vida frente a "Bonne journée" (prueba manual en emulador, 2026-11-01). En
+teclados sin distribución francesa escribir é/è exige pulsación larga, así
+que la exigencia penaliza el medio y no la competencia.
+
+**Decisión:** `ExerciseGrader.normalize()` descompone en NFD y elimina los
+signos combinantes **latinos** (U+0300–U+036F) antes de comparar. El rango es
+deliberadamente estrecho para no tocar los signos de sonoridad del japonés
+(U+3099/U+309A), que distinguen が/か y deben seguir contando. Aplica a
+Translate, OrderWords, ListenType y SpeakRepeat (todos usan `normalize`).
+
+**Alternativas consideradas:** (a) mantener estricto con aviso "falta
+tilde" (rechazada por el usuario en la decisión de diseño); (b) usar
+`\p{Mn}` genérico (rechazada: rompería kana con dakuten).
+
+**Consecuencias:** el dictado y las frases aceptan texto sin tildes ni
+diéresis; se añade test de regresión que fija el comportamiento japonés sin
+cambios; sin cambios de contenido ni de esquema.
+
+**Invariantes protegidos:** I7 (grader puro y testeable), I3 (sin fricción
+injustificada).
+
+---
+
+## ADR-040: Glosario por lección, long-press de palabras y etapa del camino por CEFR
+
+**Estado:** Aprobado
+**Fecha:** 2026-11-02
+
+**Contexto:** el long-press de traducción existía solo en las fichas de
+tokens y en las opciones, con **una** traducción por palabra y un glosario
+derivado únicamente de los ejemplos de la micro-clase y del vocabulario
+revisable (pares de `MatchPairs` e idiomas). En los enunciados, la frase
+origen y los pasajes no había forma de consultar una palabra. Además, el
+camino asignaba la etapa CEFR por el **índice** del nivel del curso
+(`PathStage.entries[levelIndex]`): con los niveles A1/B1/B2 actuales, el
+nivel B1 se mostraba como “A2” y el B2 como “B1”, reforzando la sensación de
+salto de dificultad.
+
+**Decisión:**
+1. `glossary` **opcional** por lección en schema v2: lista de entradas
+   `{term, translations[]}` con una o varias traducciones. Se fusiona con los
+   ejemplos de la micro-clase y el vocabulario revisable
+   (`LessonGlossary.fromLesson`, dominio puro). Para traducciones de una sola
+   palabra se añade el reverso (español→inglés), de modo que el long-press
+   también responde en enunciados y frases origen.
+2. Nuevo componente `WordGlossaryText` (core-ui): divide el texto en
+   palabras, detecta la pulsada con `TextLayoutResult` y ancla la burbuja
+   sobre ella (`TranslationTooltip` con término + lista). Se usa en
+   enunciados, frase origen de Translate, guía de OrderWords y respuesta
+   modelo de producción oral. Las fichas y opciones pasan a
+   `translations: List<String>?`.
+3. Accesibilidad: acción “Ver traducciones” para TalkBack que abre la lista
+   de palabras traducibles del texto (I8).
+4. `PathStage` se deriva del `cefrLevel` de la primera lección del nivel
+   (ADR-032 dejaba de depender del índice); el nivel mixto A1/A2 conserva la
+   etapa de su primera lección.
+
+**Alternativas consideradas:** (a) un diccionario bilingüe embebido
+(rechazada por ahora: licencia de terceros e I5, tamaño y atribución);
+(b) derivar palabras de los ejemplos con alineación automática (rechazada:
+traducciones erróneas en frases largas); (c) mantener la etapa por índice
+(rechazada: etiqueta niveles equivocados).
+
+**Consecuencias:** modelo, esquema v2, validador y `docs/CONTENT_FORMAT.md`
+ganan el campo; `LessonUiState.glossary` pasa a `Map<String, List<String>>`;
+fichas y opciones cambian de `translation: String?` a
+`translations: List<String>?`; las 6 lecciones A1 de es-en estrenan glosario
+curado (el resto llega por tandas). El progreso guardado no cambia: solo se
+tocan ids de lección, no de ejercicio.
+
+**Actualización (cierre de UX):** el long-press también cubre el pasaje de
+`ClozeDragDrop` y la respuesta canónica del `FeedbackBanner`. `Mi rutina` se
+movió del nivel A1 al A2 conservando su id (progreso intacto), así que la
+rampa queda A1 5 / A2 17 / B1 20 / B2 22 = 64 lecciones y 554 ejercicios.
+`ContentRampTest` añade la comprobación de que cada nivel agrupa un solo
+CEFR, para que no vuelva a colarse una lección A2 en A1.
+
+**Actualización posterior (A1):** se añadió la unidad `es-en-a1-un-3`
+“Vida cotidiana y entorno” con 5 lecciones y 35 ejercicios, así que A1 pasa
+a 10 lecciones y el curso a **69 lecciones y 589 ejercicios**.
+
+**Invariantes protegidos:** I1 (offline), I5 (contenido propio), I7
+(glosario y lookup puros y testeables), I8 (acción TalkBack).
+
+---
+
+## ADR-041: Migración de los cursos de arranque pt/fr/ja a schema v2
+
+**Estado:** Aprobado
+**Fecha:** 2026-11-02
+**Reemplaza parcialmente:** ADR-018 (paridad v1 de los cursos de arranque).
+
+**Contexto:** `es-pt`, `es-fr` y `es-ja` quedaron como cursos de arranque en
+v1: 2 lecciones y 12 ejercicios cada uno, sin `glossary`, `cefrLevel` ni
+`feedbackOnError`. La UI compartida ya ofrecía long-press de traducciones y
+feedback estructurado, pero esos cursos no podían aprovecharlos. Mantener v1
+también obligaba a un test de congelación que impedía mejorar su contenido.
+
+**Decisión:** migrar los tres cursos a `schemaVersion: 2` conservando el 100 %
+de los ids de lección y de ejercicio. Cada lección declara `cefrLevel: A1`,
+`vocabFrequencyBand: 1000-2000`, `canDo`, `microLesson` y un `glossary` curado;
+todos los ejercicios reciben `feedbackOnError` específico. La migración
+mantiene el alcance de entonces: **2 lecciones y 12 ejercicios por curso**,
+sin inventar niveles ni añadir ejercicios nuevos en ese paso. `locale` queda en `pt-BR`, `fr-FR` y `ja-JP`.
+El test `cursos_de_arranque_migran_a_v2_sin_cambiar_ids` sustituye al de
+congelación v1 y verifica ids, conteos, glosario, micro-clase y feedback.
+
+**Alternativas consideradas:** (a) dejar v1 y limitarse a corregir la
+documentación (rechazada: la experiencia de long-press y feedback seguía
+siendo desigual); (b) reescribir ahora los tres cursos completos A1–B2
+(rechazada: sin revisión nativa y fuera del alcance); (c) migrar a v2 y
+ampliar por fases (elegida).
+
+**Consecuencias:** los tres cursos ganan glosario y feedback sin cambiar su
+alcance; `validateContent` los enruta a v2; el test de congelación v1 se
+reemplaza; la expansión A1/A2/B1/B2 se completó después (ver actualización),
+aunque la revisión lingüística nativa sigue pendiente. La migración no toca
+ids, así que el progreso guardado se conserva.
+
+**Actualización posterior:** `es-pt`, `es-fr` y `es-ja` se ampliaron a **60
+lecciones y 526 ejercicios** cada uno (A1–B2 completo). Los ids históricos y
+la migración a v2 se mantienen.
+
+**Invariantes protegidos:** I1 (offline), I4 (ids y progreso), I5 (contenido
+propio), I8 (acción TalkBack), I9 (validación en CI).
 
 ---
 

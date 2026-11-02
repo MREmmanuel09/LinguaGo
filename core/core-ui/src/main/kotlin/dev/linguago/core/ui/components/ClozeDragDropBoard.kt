@@ -57,7 +57,8 @@ import dev.linguago.core.ui.util.rememberAnimationsEnabled
  * táctil de equivalencia 1:1 es el camino natural con TalkBack. Durante el
  * arrastre no hay recomposiciones por frame: el delta del gesto solo se lee
  * en la fase de `graphicsLayer`, la colisión usa `LayoutCoordinates` y la
- * única recomposición es el resaltado del hueco objetivo (I8, I3).
+ * única recomposición es el resaltado del hueco objetivo (I8, I3). El pasaje
+ * usa `WordGlossaryText` para consultar traducciones con long-press (ADR-040).
  */
 @OptIn(ExperimentalLayoutApi::class)
 @Composable
@@ -70,6 +71,7 @@ public fun ClozeDragDropBoard(
     modifier: Modifier = Modifier,
     touchExplorationOverride: Boolean? = null,
     enabled: Boolean = true,
+    glossary: Map<String, List<String>> = emptyMap(),
 ) {
     val colors = MaterialTheme.colorScheme
     val tapMode = touchExplorationOverride ?: rememberTouchExplorationEnabled()
@@ -98,8 +100,9 @@ public fun ClozeDragDropBoard(
             segments.forEach { segment ->
                 when (segment) {
                     is ClozeSegment.Text ->
-                        Text(
+                        WordGlossaryText(
                             text = segment.value,
+                            glossary = glossary,
                             style = MaterialTheme.typography.bodyLarge,
                             color = colors.onBackground,
                         )

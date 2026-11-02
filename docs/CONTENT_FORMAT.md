@@ -1,9 +1,10 @@
 # Formato de contenido v2 — LinguaGo v2.0
 
 > Guía de autoría del contrato [`docs/schemas/course-v2.json`](schemas/course-v2.json)
-> (JSON Schema draft-07, ADR-018). El formato v1 sigue vigente para `es-pt`,
-> `es-fr` y `es-ja`; su guía canónica es [`../CONTENT_FORMAT.md`](../CONTENT_FORMAT.md).
-> Alcance de v2.0: **solo el curso `es-en`** (A1→B2 profundo).
+> (JSON Schema draft-07, ADR-018). El formato v1 se conserva como referencia
+> histórica en [`../CONTENT_FORMAT.md`](../CONTENT_FORMAT.md). Desde ADR-041,
+> `es-pt`, `es-fr` y `es-ja` usan v2 con 60 lecciones (A1–B2 completo) cada uno.
+> `es-en` cubre A1→B2 profundo.
 
 ## Reglas de oro de v2
 
@@ -111,6 +112,32 @@ respaldo con `scenario`, `canDo`, `grammarPoints` y `culturalNotes`.
 Regla editorial: los ejemplos deben explicar la regla, no copiar los
 enunciados de los ejercicios ni adelantar sus respuestas.
 
+### `glossary` (por lección)
+
+Glosario curado para el **long-press de palabras** (ADR-040): al mantener el
+dedo sobre una palabra del enunciado, la frase origen, una ficha u opción se
+muestra una burbuja con el término y sus traducciones. Admite **varias
+traducciones** por término (`bank → banco, orilla`) y, para traducciones de
+una sola palabra, el reverso (español→inglés) se deriva automáticamente. Es
+opcional; el glosario también incorpora los ejemplos de la micro-clase y el
+vocabulario revisable (pares de `MatchPairs`, kana/kanji e idiomas).
+
+```json
+"glossary": [
+  { "term": "hello", "translations": ["hola"] },
+  { "term": "evening", "translations": ["tarde", "noche"] },
+  { "term": "bank", "translations": ["banco", "orilla"] }
+]
+```
+
+| Campo | Obligatorio | Regla |
+|---|---|---|
+| `term` | Sí | Término en el idioma meta, no vacío; único por lección. |
+| `translations` | Sí | ≥ 1 traducción no vacía; se listan todas en la burbuja. |
+
+Regla editorial: usar el vocabulario clave de la lección y no repetir al
+detalle palabras funcionales sin valor pedagógico.
+
 ## Nuevas variantes de ejercicio
 
 Además de las 10 variantes de v1 (que siguen siendo válidas sin campos
@@ -174,8 +201,9 @@ usar LLMs on-device o cloud.
   A1/A2.
 - Una lección sin `cefrLevel` es válida y se interpreta como `A1`; por tanto
   un ejercicio con forma v1 sigue siendo válido dentro de v2.
-- Los cursos existentes (`es-pt`, `es-fr`, `es-ja`) no se migran en v2.0:
-  siguen en `schemaVersion: 1` y se validan contra `course-v1.json`.
+- Los cursos `es-pt`, `es-fr` y `es-ja` se migraron a v2 en ADR-041
+  conservando sus ids históricos. Después, los tres llegaron a 60 lecciones
+  (A1–B2 completo)/526 ejercicios; se validan contra `course-v2.json`.
 - El fixture de contrato vive en
   `content/content-es-en/src/main/assets/courses/es-en/fixtures/leccion-b2-minimal.json`
   y se usa en los tests de F0.3.
@@ -328,5 +356,5 @@ usar LLMs on-device o cloud.
 
 Estado F0.3: `validateContent` enruta cada `course.json` y cada fixture por
 su `schemaVersion` y lo valida contra `course-v1.json` o `course-v2.json`.
-Los cursos `es-pt`, `es-fr` y `es-ja` siguen en v1; el fixture B2 de
-`es-en` se valida contra v2 en cada corrida.
+Los cuatro cursos están en v2 desde ADR-041; el fixture B2 de `es-en` también
+se valida contra v2 en cada corrida.

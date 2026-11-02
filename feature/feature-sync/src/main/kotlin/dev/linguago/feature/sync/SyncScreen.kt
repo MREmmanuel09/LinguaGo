@@ -25,6 +25,7 @@ import dev.linguago.core.ui.components.PrimaryButton3D
 import dev.linguago.core.ui.feedback.FeedbackCue
 import dev.linguago.core.ui.feedback.feedbackClickable
 import dev.linguago.core.ui.theme.LinguaTheme
+import dev.linguago.core.ui.theme.linguaExtendedColors
 
 /**
  * Estado de sincronización en la nube (RFC §6, ADR-013). La app entera es
@@ -116,7 +117,7 @@ private fun SyncContent(
                     false -> "Conectar una cuenta (opcional) para respaldar tu progreso."
                 },
             style = MaterialTheme.typography.bodyMedium,
-            color = colors.primary,
+            color = linguaExtendedColors().primaryInk,
             modifier =
                 Modifier
                     .fillMaxWidth()

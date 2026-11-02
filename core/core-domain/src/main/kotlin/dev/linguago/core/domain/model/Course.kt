@@ -104,6 +104,13 @@ public data class Unit(
     val lessons: List<Lesson>,
 )
 
+/** Entrada del glosario de la lección (ADR-040): término y sus traducciones. */
+@Serializable
+public data class GlossaryEntry(
+    public val term: String,
+    public val translations: List<String> = emptyList(),
+)
+
 @Serializable
 public data class Lesson(
     val id: LessonId,
@@ -123,4 +130,6 @@ public data class Lesson(
     public val culturalNotes: List<CulturalNote> = emptyList(),
     /** Micro-clase opcional de gramática/reglas (ADR-028). */
     public val microLesson: MicroLesson? = null,
+    /** Glosario curado de la lección para el long-press (ADR-040). */
+    public val glossary: List<GlossaryEntry> = emptyList(),
 )

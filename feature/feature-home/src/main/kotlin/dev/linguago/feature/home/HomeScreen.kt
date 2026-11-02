@@ -29,7 +29,7 @@ import androidx.compose.ui.window.DialogProperties
 import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import dev.linguago.core.ui.components.ChestRewardSheet
-import dev.linguago.core.ui.components.HeartsIndicator
+import dev.linguago.core.ui.components.HeartsCounter
 import dev.linguago.core.ui.components.LinguaProgressBar
 import dev.linguago.core.ui.components.LiquidXpBar
 import dev.linguago.core.ui.components.StreakIndicator
@@ -39,6 +39,7 @@ import dev.linguago.core.ui.feedback.FeedbackCue
 import dev.linguago.core.ui.feedback.feedbackClickable
 import dev.linguago.core.ui.theme.LinguaTheme
 import dev.linguago.core.ui.theme.LinguaTokens
+import dev.linguago.core.ui.theme.linguaExtendedColors
 import dev.linguago.feature.home.path.LearningPath
 import dev.linguago.feature.home.path.PathItem
 
@@ -164,7 +165,7 @@ private fun HomeHeader(
             StreakIndicator(days = uiState.streakDays)
             if (showHud) {
                 Spacer(Modifier.weight(1f))
-                HeartsIndicator(hearts = uiState.hearts)
+                HeartsCounter(hearts = uiState.hearts)
             }
         }
 
@@ -228,7 +229,7 @@ private fun ReviewCard(
         Text(
             text = "Repasar ahora",
             style = MaterialTheme.typography.titleMedium,
-            color = colors.primary,
+            color = linguaExtendedColors().primaryInk,
         )
         Spacer(Modifier.height(4.dp))
         Text(

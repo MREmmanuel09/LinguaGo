@@ -64,6 +64,8 @@ public object CourseValidator {
                     if (pedagogyFailure != null) return pedagogyFailure
                     val microFailure = validateMicroLesson(lesson)
                     if (microFailure != null) return microFailure
+                    val glossaryFailure = validateLessonGlossary(lesson)
+                    if (glossaryFailure != null) return glossaryFailure
                 }
             }
         }
@@ -94,6 +96,29 @@ public object CourseValidator {
             ) {
                 return Invalid("Lección '${lesson.id.value}' requiere microLesson.examples con source/target")
             }
+        }
+        return null
+    }
+
+    /** Valida el glosario curado de la lección si se declara (ADR-040). */
+    private fun validateLessonGlossary(lesson: Lesson): CourseValidation.Invalid? {
+        for (entry in lesson.glossary) {
+            if (entry.term.isBlank()) {
+                return Invalid("Lección '${lesson.id.value}' requiere glossary con término no vacío")
+            }
+            if (entry.translations.isEmpty() || entry.translations.any { it.isBlank() }) {
+                return Invalid(
+                    "Lección '${lesson.id.value}' requiere glossary con traducciones no vacías " +
+                        "('${entry.term}')",
+                )
+            }
+        }
+        if (lesson.glossary
+                .map { entry -> entry.term.lowercase() }
+                .distinct()
+                .size != lesson.glossary.size
+        ) {
+            return Invalid("Lección '${lesson.id.value}' requiere términos de glossary únicos")
         }
         return null
     }
@@ -292,6 +317,9 @@ public object CourseValidator {
         }
         if (exercise.tokens.isEmpty()) {
             return Invalid("Ejercicio '${exercise.id.value}' requiere tokens no vacíos")
+        }
+        if (exercise.sourcePhrase?.isBlank() == true) {
+            return Invalid("Ejercicio '${exercise.id.value}' requiere sourcePhrase no vacío si se declara")
         }
         val available = exercise.tokens.groupingBy { it }.eachCount()
         val needed = answer.groupingBy { it }.eachCount()

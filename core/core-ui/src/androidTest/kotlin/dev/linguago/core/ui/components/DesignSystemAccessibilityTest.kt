@@ -1,5 +1,6 @@
 package dev.linguago.core.ui.components
 
+import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.runtime.CompositionLocalProvider
 import androidx.compose.runtime.mutableStateOf
@@ -7,6 +8,7 @@ import androidx.compose.ui.platform.LocalDensity
 import androidx.compose.ui.semantics.LiveRegionMode
 import androidx.compose.ui.semantics.ProgressBarRangeInfo
 import androidx.compose.ui.semantics.Role
+import androidx.compose.ui.semantics.SemanticsActions
 import androidx.compose.ui.semantics.SemanticsProperties
 import androidx.compose.ui.test.SemanticsMatcher
 import androidx.compose.ui.test.assert
@@ -16,9 +18,11 @@ import androidx.compose.ui.test.assertIsNotEnabled
 import androidx.compose.ui.test.assertIsSelected
 import androidx.compose.ui.test.assertRangeInfoEquals
 import androidx.compose.ui.test.junit4.createComposeRule
+import androidx.compose.ui.test.longClick
 import androidx.compose.ui.test.onNodeWithContentDescription
 import androidx.compose.ui.test.onNodeWithText
 import androidx.compose.ui.test.performClick
+import androidx.compose.ui.test.performTouchInput
 import androidx.compose.ui.unit.Density
 import androidx.compose.ui.unit.dp
 import androidx.test.ext.junit.runners.AndroidJUnit4
@@ -193,6 +197,80 @@ public class DesignSystemAccessibilityTest {
     }
 
     @Test
+    public fun wordGlossaryText_muestraTraduccionesAlMantenerPulsado() {
+        compose.setContent {
+            LinguaTheme {
+                WordGlossaryText(
+                    text = "bank",
+                    glossary = mapOf("bank" to listOf("banco", "orilla")),
+                    style = MaterialTheme.typography.bodyLarge,
+                )
+            }
+        }
+
+        compose.onNodeWithText("bank").performTouchInput { longClick() }
+
+        compose.onNodeWithText("banco").assertIsDisplayed()
+        compose.onNodeWithText("orilla").assertIsDisplayed()
+    }
+
+    @Test
+    public fun wordGlossaryText_resuelveModismosPorFrase() {
+        compose.setContent {
+            LinguaTheme {
+                WordGlossaryText(
+                    text = "play it by ear",
+                    glossary = mapOf("play it by ear" to listOf("improvisar según las circunstancias")),
+                    style = MaterialTheme.typography.bodyLarge,
+                )
+            }
+        }
+
+        compose.onNodeWithText("play it by ear").performTouchInput { longClick() }
+
+        compose.onNodeWithText("improvisar según las circunstancias").assertIsDisplayed()
+    }
+
+    @Test
+    public fun clozeBoard_glossaryExposesTranslationsAction() {
+        compose.setContent {
+            LinguaTheme {
+                ClozeDragDropBoard(
+                    segments = ClozePassageParser.parse("I {{hueco}} tea."),
+                    options = listOf("drink", "make"),
+                    filled = emptyMap(),
+                    onAssign = { _, _ -> },
+                    onClearBlank = {},
+                    touchExplorationOverride = true,
+                    glossary = mapOf("tea" to listOf("té")),
+                )
+            }
+        }
+
+        compose
+            .onNodeWithText(" tea.", useUnmergedTree = true)
+            .assert(SemanticsMatcher.keyIsDefined(SemanticsActions.CustomActions))
+    }
+
+    @Test
+    public fun feedbackBanner_glossaryExposesTranslationsAction() {
+        compose.setContent {
+            LinguaTheme {
+                FeedbackBanner(
+                    isCorrect = true,
+                    message = "¡Correcto!",
+                    correctAnswer = "tea",
+                    glossary = mapOf("tea" to listOf("té")),
+                )
+            }
+        }
+
+        compose
+            .onNodeWithText("Respuesta correcta: tea", useUnmergedTree = true)
+            .assert(SemanticsMatcher.keyIsDefined(SemanticsActions.CustomActions))
+    }
+
+    @Test
     public fun feedbackBanner_expandsSpecificDiagnostic() {
         compose.setContent {
             LinguaTheme {
@@ -203,6 +281,11 @@ public class DesignSystemAccessibilityTest {
                 )
             }
         }
+
+        // Colapsado por defecto (ADR-037): el primer botón es "Ver por qué".
+        compose.onNodeWithText("Usa el pasado simple en la segunda frase.").assertDoesNotExist()
+
+        compose.onNodeWithText("Ver por qué").performClick()
 
         compose.onNodeWithText("Usa el pasado simple en la segunda frase.").assertIsDisplayed()
 

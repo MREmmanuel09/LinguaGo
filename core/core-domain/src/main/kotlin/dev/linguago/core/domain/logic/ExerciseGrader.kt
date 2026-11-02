@@ -4,6 +4,7 @@ import dev.linguago.core.domain.model.Exercise
 import dev.linguago.core.domain.model.GrammarPoint
 import dev.linguago.core.domain.model.GrammarPointId
 import dev.linguago.core.domain.usecase.ExerciseAnswer
+import java.text.Normalizer
 
 /**
  * Resultado de calificar una respuesta (ADR-018/ADR-028): corrección más el
@@ -175,17 +176,20 @@ public object ExerciseGrader {
         }
 
     /**
-     * Normalización de frases libres: minúsculas, sin puntuación (incluida la
-     * japonesa) y con espacios colapsados. Exige que ambas frases produzcan
-     * la misma secuencia de palabras.
+     * Normalización de frases libres: minúsculas, sin diacríticos latinos
+     * (ADR-039), sin puntuación (incluida la japonesa) y con espacios
+     * colapsados. Exige que ambas frases produzcan la misma secuencia de
+     * palabras.
      */
     private fun normalize(text: String): String =
-        text
-            .lowercase()
+        Normalizer
+            .normalize(text.lowercase(), Normalizer.Form.NFD)
+            .replace(LATIN_DIACRITICS, "")
             .replace(PUNCTUATION, " ")
             .replace(WHITESPACE, " ")
             .trim()
 
+    private val LATIN_DIACRITICS = Regex("[\\u0300-\\u036F]")
     private val PUNCTUATION = Regex("[\\p{P}]")
     private val WHITESPACE = Regex("\\s+")
 

@@ -145,12 +145,20 @@ public object FreeSpeakingHeuristicGrader {
             .distinct()
     }
 
-    /** Tokeniza en minúsculas conservando contracciones (`i'm` es un token). */
-    private fun tokenize(text: String): List<String> =
-        text
-            .lowercase()
+    /**
+     * Tokeniza en minúsculas conservando contracciones (`i'm` es un token).
+     * El japonés no separa palabras con espacios: para no contar una frase
+     * entera como un solo token, se tokeniza por caracteres.
+     */
+    private fun tokenize(text: String): List<String> {
+        val lower = text.lowercase()
+        if (JAPANESE_PATTERN.containsMatchIn(lower)) {
+            return lower.filter { char -> char.isLetterOrDigit() }.map { char -> char.toString() }
+        }
+        return lower
             .split(TOKEN_SEPARATOR)
             .filter { token -> token.isNotBlank() }
+    }
 
     /** Un cluster queda cubierto si alguno de sus términos (o sinónimos) aparece. */
     private fun isClusterCovered(
@@ -218,6 +226,7 @@ public object FreeSpeakingHeuristicGrader {
     }
 
     private val TOKEN_SEPARATOR = Regex("[^\\p{L}\\p{N}']+")
+    private val JAPANESE_PATTERN = Regex("[\\u3040-\\u30FF\\u3400-\\u4DBF\\u4E00-\\u9FFF]")
     private const val MILLIS_PER_MINUTE = 60_000
     private const val MIN_CLUSTER_COVERAGE = 1
     private const val MAX_EDIT_DISTANCE = 2

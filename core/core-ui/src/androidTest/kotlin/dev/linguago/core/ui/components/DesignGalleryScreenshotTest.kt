@@ -137,7 +137,7 @@ public class DesignGalleryScreenshotTest {
                 verticalAlignment = Alignment.CenterVertically,
                 horizontalArrangement = Arrangement.spacedBy(24.dp),
             ) {
-                HeartsIndicator(hearts = 7)
+                HeartsCounter(hearts = 7)
                 StreakIndicator(days = 5)
                 LumiMascot(size = 40.dp)
             }

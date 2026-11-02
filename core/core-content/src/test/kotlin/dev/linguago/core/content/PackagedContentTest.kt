@@ -6,7 +6,6 @@ import dev.linguago.core.domain.model.CourseLocale
 import dev.linguago.core.domain.model.Exercise
 import dev.linguago.core.domain.model.VocabFrequencyBand
 import org.junit.Assert.assertEquals
-import org.junit.Assert.assertNull
 import org.junit.Assert.assertTrue
 import org.junit.Test
 import java.io.File
@@ -72,12 +71,32 @@ class PackagedContentTest {
         val b1Lessons = lessons.filter { lesson -> lesson.cefrLevel == CefrLevel.B1 }
         val b2Lessons = lessons.filter { lesson -> lesson.cefrLevel == CefrLevel.B2 }
         assertEquals(20, b1Lessons.size)
-        assertEquals(20, b2Lessons.size)
+        assertEquals(22, b2Lessons.size)
         assertEquals((1..180).map { index -> "es-en-b1-e$index" }, b1Lessons.flatMap { lesson -> lesson.exercises }.map { it.id.value })
-        assertEquals((1..200).map { index -> "es-en-b2-e$index" }, b2Lessons.flatMap { lesson -> lesson.exercises }.map { it.id.value })
+        assertEquals((1..220).map { index -> "es-en-b2-e$index" }, b2Lessons.flatMap { lesson -> lesson.exercises }.map { it.id.value })
+
+        val a2Lessons = lessons.filter { lesson -> lesson.id.value.startsWith("es-en-a2-") }
+        assertEquals(16, a2Lessons.size)
+        assertTrue(
+            "Las 16 lecciones del bloque A2 deben declarar cefrLevel A2",
+            a2Lessons.all { lesson ->
+                lesson.cefrLevel == CefrLevel.A2
+            },
+        )
+        val allA2Lessons = lessons.filter { lesson -> lesson.cefrLevel == CefrLevel.A2 }
+        assertEquals("El nivel A2 incluye el bloque nuevo y 'Mi rutina'", 17, allA2Lessons.size)
+        assertTrue(
+            "'Mi rutina' debe vivir en el nivel A2",
+            allA2Lessons.any { lesson -> lesson.id.value == "es-en-lv-1-un-2-ls-3" },
+        )
+        assertEquals(
+            (1..112).map { index -> "es-en-a2-e$index" },
+            a2Lessons.flatMap { lesson -> lesson.exercises }.map { it.id.value },
+        )
+        assertTrue("Cada lección A2 debe tener 7 ejercicios", a2Lessons.all { lesson -> lesson.exercises.size == 7 })
 
         val allExercises = lessons.flatMap { lesson -> lesson.exercises }
-        assertEquals(422, allExercises.size)
+        assertEquals(589, allExercises.size)
         assertEquals(allExercises.size, allExercises.map { exercise -> exercise.id.value }.distinct().size)
 
         for (lesson in b2Lessons) {
@@ -86,9 +105,132 @@ class PackagedContentTest {
             assertTrue(lesson.exercises.all { exercise -> exercise.feedbackOnError != null })
             assertEquals(1, lesson.exercises.count { exercise -> exercise is Exercise.FreeSpeakingPrompt })
         }
-        assertEquals(40, b2Lessons.flatMap { it.exercises }.count { it is Exercise.ClozeDragDrop })
-        assertEquals(40, b2Lessons.flatMap { it.exercises }.count { it is Exercise.SemanticMatch })
-        assertEquals(40, b2Lessons.flatMap { it.exercises }.count { it is Exercise.AudioOnlyPrompt })
+        assertEquals(44, b2Lessons.flatMap { it.exercises }.count { it is Exercise.ClozeDragDrop })
+        assertEquals(44, b2Lessons.flatMap { it.exercises }.count { it is Exercise.SemanticMatch })
+        assertEquals(44, b2Lessons.flatMap { it.exercises }.count { it is Exercise.AudioOnlyPrompt })
+    }
+
+    @Test
+    fun cursos_de_arranque_estrenan_b2() {
+        for (courseId in listOf("es-fr", "es-pt", "es-ja")) {
+            val course = CourseJson.parseCourse(readAsset(courseId, COURSE_FILE))
+            assertTrue("$courseId debe decodificar en v2", course != null)
+            val lessons = course!!.levels.flatMap { level -> level.units.flatMap { unit -> unit.lessons } }
+            val b2Lessons = lessons.filter { lesson -> lesson.cefrLevel == CefrLevel.B2 }
+            assertEquals("$courseId debe tener 22 lecciones B2", 22, b2Lessons.size)
+            assertEquals(
+                (1..3).flatMap { unit -> (1..4).map { lesson -> "$courseId-b2-un-$unit-ls-$lesson" } } +
+                    (4..5).flatMap { unit -> (1..5).map { lesson -> "$courseId-b2-un-$unit-ls-$lesson" } },
+                b2Lessons.map { lesson -> lesson.id.value },
+            )
+            assertEquals(
+                (1..220).map { index -> "$courseId-b2-e$index" },
+                b2Lessons.flatMap { lesson -> lesson.exercises }.map { exercise -> exercise.id.value },
+            )
+            assertTrue(
+                "Cada lección B2 de $courseId debe tener 10 ejercicios",
+                b2Lessons.all { lesson -> lesson.exercises.size == 10 },
+            )
+            assertTrue(
+                "Cada lección B2 de $courseId debe tener scenario y canDo",
+                b2Lessons.all { lesson -> !lesson.scenario.isNullOrBlank() && !lesson.canDo.isNullOrBlank() },
+            )
+            assertTrue(
+                "Cada lección B2 de $courseId debe tener 2 focos gramaticales",
+                b2Lessons.all { lesson -> lesson.grammarPoints.size == 2 },
+            )
+            assertTrue(
+                "Cada lección B2 de $courseId debe tener nota cultural",
+                b2Lessons.all { lesson -> lesson.culturalNotes.isNotEmpty() },
+            )
+            assertTrue(
+                "Cada lección B2 de $courseId debe tener microLesson y glosario",
+                b2Lessons.all { lesson -> lesson.microLesson != null && lesson.glossary.isNotEmpty() },
+            )
+            assertTrue(
+                "Todos los ejercicios B2 de $courseId deben tener feedbackOnError",
+                b2Lessons.flatMap { lesson -> lesson.exercises }.all { exercise -> exercise.feedbackOnError != null },
+            )
+            assertEquals(
+                "Cada lección B2 de $courseId debe tener un FreeSpeakingPrompt",
+                22,
+                b2Lessons.sumOf { lesson -> lesson.exercises.count { exercise -> exercise is Exercise.FreeSpeakingPrompt } },
+            )
+        }
+    }
+
+    @Test
+    fun cursos_de_arranque_amplian_b1() {
+        for (courseId in listOf("es-fr", "es-pt", "es-ja")) {
+            val course = CourseJson.parseCourse(readAsset(courseId, COURSE_FILE))
+            assertTrue("El curso $courseId no decodifica", course != null)
+            val lessons = course!!.levels.flatMap { level -> level.units.flatMap { unit -> unit.lessons } }
+            val b1Lessons = lessons.filter { lesson -> lesson.cefrLevel == CefrLevel.B1 }
+            assertEquals("$courseId debe tener 20 lecciones B1", 20, b1Lessons.size)
+            assertEquals(
+                (1..5).flatMap { unit -> (1..4).map { lesson -> "$courseId-b1-un-$unit-ls-$lesson" } },
+                b1Lessons.map { lesson -> lesson.id.value },
+            )
+            assertEquals(
+                (1..180).map { index -> "$courseId-b1-e$index" },
+                b1Lessons.flatMap { lesson -> lesson.exercises }.map { exercise -> exercise.id.value },
+            )
+            assertTrue(
+                "Cada lección B1 de $courseId debe tener 9 ejercicios",
+                b1Lessons.all { lesson -> lesson.exercises.size == 9 },
+            )
+            assertTrue(
+                "Cada lección B1 de $courseId debe tener scenario y canDo",
+                b1Lessons.all { lesson -> !lesson.scenario.isNullOrBlank() && !lesson.canDo.isNullOrBlank() },
+            )
+            assertTrue(
+                "Cada lección B1 de $courseId debe tener 2 focos gramaticales",
+                b1Lessons.all { lesson -> lesson.grammarPoints.size == 2 },
+            )
+            assertTrue(
+                "Cada lección B1 de $courseId debe tener nota cultural",
+                b1Lessons.all { lesson -> lesson.culturalNotes.isNotEmpty() },
+            )
+            assertTrue(
+                "Cada lección B1 de $courseId debe tener microLesson y glosario",
+                b1Lessons.all { lesson -> lesson.microLesson != null && lesson.glossary.isNotEmpty() },
+            )
+            assertTrue(
+                "Todos los ejercicios B1 de $courseId deben tener feedbackOnError",
+                b1Lessons.flatMap { lesson -> lesson.exercises }.all { exercise -> exercise.feedbackOnError != null },
+            )
+            assertEquals(
+                "Cada lección B1 de $courseId debe tener un FreeSpeakingPrompt",
+                20,
+                b1Lessons.sumOf { lesson -> lesson.exercises.count { exercise -> exercise is Exercise.FreeSpeakingPrompt } },
+            )
+        }
+    }
+
+    @Test
+    fun es_en_a1_estrena_unidad_de_vida_cotidiana() {
+        val course = CourseJson.parseCourse(readAsset("es-en", COURSE_FILE))
+        assertTrue("es-en debe decodificar en v2", course != null)
+
+        val lessons = course!!.levels.flatMap { level -> level.units.flatMap { unit -> unit.lessons } }
+        val a1Lessons = lessons.filter { lesson -> lesson.cefrLevel == CefrLevel.A1 }
+        assertEquals("A1 debe tener 10 lecciones", 10, a1Lessons.size)
+        assertTrue("Cada lección A1 debe tener 7 ejercicios", a1Lessons.all { lesson -> lesson.exercises.size == 7 })
+        assertTrue("Cada lección A1 debe tener microLesson", a1Lessons.all { lesson -> lesson.microLesson != null })
+        assertTrue("Cada lección A1 debe tener canDo", a1Lessons.all { lesson -> !lesson.canDo.isNullOrBlank() })
+
+        val newA1Lessons = lessons.filter { lesson -> lesson.id.value.startsWith("es-en-a1-") }
+        assertEquals(5, newA1Lessons.size)
+        assertEquals(
+            (1..35).map { index -> "es-en-a1-e$index" },
+            newA1Lessons.flatMap { lesson -> lesson.exercises }.map { exercise -> exercise.id.value },
+        )
+        assertTrue(newA1Lessons.all { lesson -> lesson.microLesson != null })
+        assertTrue(newA1Lessons.all { lesson -> lesson.glossary.isNotEmpty() })
+        assertTrue(
+            "Todos los ejercicios A1 nuevos deben tener feedbackOnError",
+            newA1Lessons.flatMap { lesson -> lesson.exercises }.all { exercise -> exercise.feedbackOnError != null },
+        )
     }
 
     @Test
@@ -112,51 +254,106 @@ class PackagedContentTest {
     }
 
     @Test
-    fun cursos_v1_permanecen_congelados() {
+    fun cursos_de_arranque_migran_a_v2_y_amplian_a1() {
         val expectations =
             mapOf(
-                "es-pt" to
-                    v1Expectation(
-                        courseId = "es-pt",
-                        lessonCount = 2,
-                        exerciseCount = 12,
-                    ),
-                "es-fr" to
-                    v1Expectation(
-                        courseId = "es-fr",
-                        lessonCount = 2,
-                        exerciseCount = 12,
-                    ),
-                "es-ja" to
-                    v1Expectation(
-                        courseId = "es-ja",
-                        lessonCount = 2,
-                        exerciseCount = 12,
-                    ),
+                "es-pt" to expandedStarterExpectation("es-pt", CourseLocale.PORTUGUESE_BR),
+                "es-fr" to expandedStarterExpectation("es-fr", CourseLocale.FRENCH_FR),
+                "es-ja" to expandedStarterExpectation("es-ja", CourseLocale.JAPANESE_JP),
             )
         for ((courseId, expected) in expectations) {
             val course = CourseJson.parseCourse(readAsset(courseId, COURSE_FILE))
             assertTrue("El curso $courseId no decodifica", course != null)
-            assertEquals("$courseId debe seguir en v1", 1, course!!.schemaVersion)
-            assertNull("$courseId no debe declarar locale dialectal en v1", course.locale)
+            assertEquals("$courseId debe estar en v2", 2, course!!.schemaVersion)
+            assertEquals("Locale inesperado en $courseId", expected.locale, course.locale)
 
             val lessons = course.levels.flatMap { level -> level.units.flatMap { unit -> unit.lessons } }
-            assertEquals(expected.lessonIds, lessons.map { lesson -> lesson.id.value })
-            assertEquals(expected.exerciseIds, lessons.flatMap { lesson -> lesson.exercises }.map { exercise -> exercise.id.value })
+            val a1Lessons = lessons.filter { lesson -> lesson.cefrLevel == CefrLevel.A1 }
+            assertEquals("Número de lecciones A1 inesperado en $courseId", expected.lessonIds.size, a1Lessons.size)
+            assertEquals(expected.lessonIds, a1Lessons.map { lesson -> lesson.id.value })
+            assertEquals(
+                "Ids de ejercicio A1 inesperados en $courseId",
+                expected.exerciseIds,
+                a1Lessons.flatMap { lesson -> lesson.exercises }.map { exercise -> exercise.id.value },
+            )
+            assertTrue(
+                "Cada lección A1 de $courseId debe tener 7 ejercicios",
+                a1Lessons.all { lesson -> lesson.exercises.size == 7 },
+            )
+            assertTrue(
+                "Cada lección A1 de $courseId debe tener microLesson",
+                a1Lessons.all { lesson -> lesson.microLesson != null },
+            )
+            assertTrue(
+                "Cada lección A1 de $courseId debe tener glosario curado",
+                a1Lessons.all { lesson -> lesson.glossary.isNotEmpty() },
+            )
+            assertTrue(
+                "Todos los ejercicios A1 de $courseId deben tener feedbackOnError",
+                a1Lessons.flatMap { lesson -> lesson.exercises }.all { exercise -> exercise.feedbackOnError != null },
+            )
         }
     }
 
-    private fun v1Expectation(
+    @Test
+    fun cursos_de_arranque_amplian_a2() {
+        for (courseId in listOf("es-fr", "es-pt", "es-ja")) {
+            val course = CourseJson.parseCourse(readAsset(courseId, COURSE_FILE))
+            assertTrue("El curso $courseId no decodifica", course != null)
+            val lessons = course!!.levels.flatMap { level -> level.units.flatMap { unit -> unit.lessons } }
+            val a2Lessons = lessons.filter { lesson -> lesson.cefrLevel == CefrLevel.A2 }
+            assertEquals("$courseId debe tener 8 lecciones A2", 8, a2Lessons.size)
+            assertEquals(
+                (1..2).flatMap { unit -> (1..4).map { lesson -> "$courseId-a2-un-$unit-ls-$lesson" } },
+                a2Lessons.map { lesson -> lesson.id.value },
+            )
+            assertEquals(
+                (1..56).map { index -> "$courseId-a2-e$index" },
+                a2Lessons.flatMap { lesson -> lesson.exercises }.map { exercise -> exercise.id.value },
+            )
+            assertTrue(
+                "Cada lección A2 de $courseId debe tener 7 ejercicios",
+                a2Lessons.all { lesson -> lesson.exercises.size == 7 },
+            )
+            assertTrue(
+                "Cada lección A2 de $courseId debe tener microLesson",
+                a2Lessons.all { lesson -> lesson.microLesson != null },
+            )
+            assertTrue(
+                "Cada lección A2 de $courseId debe tener glosario curado",
+                a2Lessons.all { lesson -> lesson.glossary.isNotEmpty() },
+            )
+            assertTrue(
+                "Todos los ejercicios A2 de $courseId deben tener feedbackOnError",
+                a2Lessons.flatMap { lesson -> lesson.exercises }.all { exercise -> exercise.feedbackOnError != null },
+            )
+        }
+    }
+
+    private fun expandedStarterExpectation(
         courseId: String,
-        lessonCount: Int,
-        exerciseCount: Int,
-    ): V1Expectation =
-        V1Expectation(
-            lessonIds = (1..lessonCount).map { index -> "$courseId-lv-1-un-1-ls-$index" },
-            exerciseIds = (1..exerciseCount).map { index -> "$courseId-e$index" },
+        locale: CourseLocale,
+    ): StarterExpectation =
+        StarterExpectation(
+            locale = locale,
+            lessonIds =
+                historicLessonIds(courseId) +
+                    (2..3).flatMap { unit -> (1..4).map { lesson -> "$courseId-a1-un-$unit-ls-$lesson" } },
+            exerciseIds =
+                historicExerciseIds(courseId) +
+                    (1..56).map { index -> "$courseId-a1-e$index" },
         )
 
-    private data class V1Expectation(
+    private fun historicLessonIds(courseId: String): List<String> = (1..2).map { index -> "$courseId-lv-1-un-1-ls-$index" }
+
+    private fun historicExerciseIds(courseId: String): List<String> =
+        (1..6).map { index -> "$courseId-e$index" } +
+            "$courseId-e13" +
+            (7..12).map { index -> "$courseId-e$index" } +
+            "$courseId-e14"
+
+    private data class StarterExpectation(
+        val locale: CourseLocale,
         val lessonIds: List<String>,
         val exerciseIds: List<String>,
     )

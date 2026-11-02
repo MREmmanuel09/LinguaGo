@@ -56,8 +56,8 @@ fun PrimaryButton3D(
 ) {
     val resolvedBody = bodyColor ?: LinguaTokens.Primary
     val resolvedEdge = edgeColor ?: LinguaTokens.PrimaryEdge
-    val body = if (enabled) resolvedBody else resolvedBody.copy(alpha = 0.45f)
-    val edge = if (enabled) resolvedEdge else resolvedEdge.copy(alpha = 0.45f)
+    val body = if (enabled) resolvedBody else resolvedBody.copy(alpha = 0.35f)
+    val edge = if (enabled) resolvedEdge else resolvedEdge.copy(alpha = 0.35f)
     val feedback = LocalInteractionFeedback.current
     val animations = rememberAnimationsEnabled()
     val interaction = remember { MutableInteractionSource() }

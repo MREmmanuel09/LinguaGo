@@ -58,6 +58,7 @@ import dev.linguago.core.ui.feedback.FeedbackCue
 import dev.linguago.core.ui.feedback.LocalInteractionFeedback
 import dev.linguago.core.ui.theme.LinguaMotion
 import dev.linguago.core.ui.theme.LinguaTokens
+import dev.linguago.core.ui.theme.linguaExtendedColors
 import dev.linguago.core.ui.util.rememberAnimationsEnabled
 
 /**
@@ -83,6 +84,7 @@ public fun PuzzleMatchBoard(
     selectedRight: Int? = null,
 ) {
     val colors = MaterialTheme.colorScheme
+    val extended = linguaExtendedColors()
     val feedback = LocalInteractionFeedback.current
     val leftCoords = remember { mutableMapOf<Int, LayoutCoordinates>() }
     val drag = remember(pairs) { PuzzleDragState() }
@@ -102,16 +104,14 @@ public fun PuzzleMatchBoard(
             modifier = Modifier.semantics { heading() },
         )
         Text(
-            text =
-                "Toca una pieza de la izquierda y luego su pareja, o arrastra la pieza derecha. " +
-                    "Toca una pareja encajada para separarla.",
-            style = MaterialTheme.typography.bodySmall,
+            text = "Toca una pieza y luego su pareja (o arrástrala). Toca una pareja para separarla.",
+            style = MaterialTheme.typography.bodyMedium,
             color = colors.onSurfaceVariant,
         )
         Text(
             text = "Piezas del rompecabezas",
             style = MaterialTheme.typography.labelLarge,
-            color = colors.primary,
+            color = extended.primaryInk,
         )
 
         pairs.forEachIndexed { left, pair ->
@@ -331,6 +331,7 @@ private fun PuzzlePiece(
     hovered: Boolean = false,
 ) {
     val colors = MaterialTheme.colorScheme
+    val extended = linguaExtendedColors()
     val shape = remember(edge) { PuzzlePieceShape(edge) }
     val background =
         when (status) {
@@ -359,8 +360,8 @@ private fun PuzzlePiece(
     val horizontalPadding = PUZZLE_TAB_DP + 6.dp
     val contentColor =
         when (status) {
-            OptionStatus.CORRECT -> LinguaTokens.Accent
-            OptionStatus.INCORRECT -> LinguaTokens.Destructive
+            OptionStatus.CORRECT -> extended.accentInk
+            OptionStatus.INCORRECT -> extended.destructiveInk
             OptionStatus.NEUTRAL -> colors.onSurface
         }
 
@@ -411,7 +412,7 @@ private fun PuzzlePiece(
             Text(
                 text = text,
                 style = MaterialTheme.typography.labelSmall,
-                color = colors.primary,
+                color = extended.primaryInk,
             )
         }
         detail?.let { text ->

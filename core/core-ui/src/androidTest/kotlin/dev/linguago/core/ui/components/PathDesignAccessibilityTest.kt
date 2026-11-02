@@ -120,10 +120,10 @@ public class PathDesignAccessibilityTest {
     }
 
     @Test
-    public fun heartsIndicator_isSingleAccessibilityNode() {
+    public fun heartsCounter_isSingleAccessibilityNode() {
         compose.setContent {
             LinguaTheme {
-                HeartsIndicator(hearts = 7)
+                HeartsCounter(hearts = 7)
             }
         }
 

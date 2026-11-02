@@ -1,25 +1,34 @@
 # Currículo `es-en` B1–B2 — Matriz CEFR y contrato de autoría (F3.2)
 
-> Especificación de las 40 lecciones nuevas de `content/content-es-en` para
+> Especificación de las 40 lecciones nuevas originales de
+> `content/content-es-en` (más las 2 del puente B1→B2) para
 > `schemaVersion: 2` (ADR-018). Es el contrato que guían F3.3 (B1) y F3.4 (B2):
 > toda lección debe cumplir aquí sus metadatos, foco gramatical, escenario,
 > can-do, banda léxica, modismo y reparto de ejercicios. La fuente formal de
 > campos es [`docs/schemas/course-v2.json`](schemas/course-v2.json).
+
+> **Nota de vigencia (2026-11-02):** después de F3.3/F3.4 el camino evolucionó
+> (ADR-040): B1 se reordenó de fácil a difícil y B2 estrenó la unidad puente
+> `es-en-lv-3-un-0` (2 lecciones). B1 conserva 20 lecciones/180 ejercicios;
+> B2 pasa a 22 lecciones/220 ejercicios (`es-en-b2-e1`…`e220`). Los rangos de
+> ejercicio de las matrices siguientes son los de la redacción original; la
+> fuente de verdad vigente es `course.json` + `ContentRampTest`.
 
 ## 1. Estructura objetivo
 
 | Nivel | `level.id` | Nombre | Unidades | Lecciones | Ejercicios |
 |---|---|---|---|---|---|
 | B1 | `es-en-lv-2` | B1 · Autonomía en contextos reales | 4 | 20 (5/unidad) | 180 (9/lección) |
-| B2 | `es-en-lv-3` | B2 · Matices y argumentación | 4 | 20 (5/unidad) | 200 (10/lección) |
+| B2 | `es-en-lv-3` | B2 · Matices y argumentación | 5 | 22 (2 puente + 20) | 220 (10/lección) |
 
-- El nivel A1/A2 existente (`es-en-lv-1`) no se toca: sus ids históricos están
-  congelados por el test de regresión de F3.1 (I4).
+- El nivel A1/A2 existente (`es-en-lv-1`) conserva sus ids históricos
+  congelados por el test de regresión de F3.1 (I4). El nivel A2 se añadió
+  después y `Mi rutina` se movió allí conservando su id (ADR-040).
 - `locale` se mantiene en `en-US` para todo el curso.
 - Los ids de lección siguen el patrón existente:
   `es-en-lv-2-un-<u>-ls-<l>` y `es-en-lv-3-un-<u>-ls-<l>`.
 - Los ejercicios usan rangos consecutivos por lección:
-  B1 `es-en-b1-e1`…`es-en-b1-e180`; B2 `es-en-b2-e1`…`es-en-b2-e200`.
+  B1 `es-en-b1-e1`…`es-en-b1-e180`; B2 `es-en-b2-e1`…`es-en-b2-e220`.
   El rango exacto de cada lección figura en las matrices; no se reutiliza
   ningún id y `PackagedContentTest` lo verifica (F3.4).
 - Prohibido en `es-en` v2: `KanaChoose`, `KanjiReading`, `ParticleFill`
@@ -238,6 +247,6 @@ evita duplicados y fija la etiqueta visible.
       `vocabFrequencyBand`, `culturalNotes[]` y `feedbackOnError` en todos los
       ejercicios.
 - [x] `validateContent` en verde para `es-en` v2 y sin regresiones en los otros
-      tres cursos (v1).
+      tres cursos (migrados a v2 en ADR-041).
 - [x] Test de unicidad global de `lesson.id`/`exercise.id` y de no-colisión de
       vocabulario FSRS.

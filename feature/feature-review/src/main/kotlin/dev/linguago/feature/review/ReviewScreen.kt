@@ -14,7 +14,6 @@ import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
-import androidx.compose.material3.TextButton
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.getValue
@@ -30,10 +29,10 @@ import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import dev.linguago.core.domain.logic.ReviewRating
 import dev.linguago.core.domain.model.WordProgress
+import dev.linguago.core.ui.components.AudioPlayerCard
 import dev.linguago.core.ui.components.FlipCard3D
-import dev.linguago.core.ui.components.HeartsIndicator
+import dev.linguago.core.ui.components.HeartsCounter
 import dev.linguago.core.ui.components.PrimaryButton3D
-import dev.linguago.core.ui.components.VoiceWaveIndicator
 import dev.linguago.core.ui.feedback.FeedbackCue
 import dev.linguago.core.ui.feedback.LocalInteractionFeedback
 import dev.linguago.core.ui.theme.LinguaTheme
@@ -96,7 +95,7 @@ private fun ReviewContent(
                 color = colors.onBackground,
                 modifier = Modifier.weight(1f),
             )
-            HeartsIndicator(hearts = state.hearts)
+            HeartsCounter(hearts = state.hearts)
         }
 
         when {
@@ -177,17 +176,16 @@ private fun ReviewContent(
                                 modifier = Modifier.fillMaxWidth(),
                             )
                             Spacer(Modifier.height(12.dp))
-                            TextButton(
-                                onClick = {
+                            AudioPlayerCard(
+                                title = "Pronunciación",
+                                playing = state.speaking,
+                                enabled = state.speechAvailable,
+                                onPlay = {
                                     feedback.play(FeedbackCue.TAP)
                                     onSpeak()
                                 },
-                                enabled = state.speechAvailable && !state.speaking,
                                 modifier = Modifier.fillMaxWidth(),
-                            ) {
-                                Text(text = "Escuchar pronunciación")
-                            }
-                            VoiceWaveIndicator(active = state.speaking)
+                            )
                         },
                     )
                 }

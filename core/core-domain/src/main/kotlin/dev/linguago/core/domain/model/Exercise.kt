@@ -145,6 +145,8 @@ public sealed interface Exercise {
         override val id: ExerciseId,
         val tokens: List<String>,
         val answerTokens: List<String>,
+        /** Frase de origen que guía el ejercicio (ADR-038). */
+        val sourcePhrase: String? = null,
         override val audioText: String? = null,
         override val feedbackOnError: FeedbackOnError? = null,
         override val feedbackOnSuccess: FeedbackOnSuccess? = null,

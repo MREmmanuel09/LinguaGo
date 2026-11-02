@@ -127,6 +127,7 @@
         "id": { "$ref": "#/definitions/exerciseId" },
         "tokens": { "$ref": "#/definitions/tokens" },
         "answerTokens": { "$ref": "#/definitions/tokens" },
+        "sourcePhrase": { "type": "string", "minLength": 1 },
         "audioText": { "$ref": "#/definitions/audioText" }
       }
     },

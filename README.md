@@ -4,7 +4,7 @@
 
 **Aprende idiomas offline, sin fricción, con todo el contenido desde la instalación.**
 
-ES → EN · ES → PT · ES → FR · ES → JA — A1 a B2 (y N5–N3 para japonés)
+ES → EN — A1 a B2 · ES → PT, ES → FR y ES → JA — A1 a B2
 
 Código abierto · Sin anuncios · Sin backend · 100% offline · Vidas con
 recuperación rápida
@@ -24,6 +24,12 @@ LinguaGo es una app Android nativa de aprendizaje de idiomas estructurada sobre
 Clean Architecture, con módulos Gradle por feature, motor de lecciones basado en
 máquina de estados, racha diaria progresiva, **repaso espaciado FSRS** y modelos
 de voz ligeros integrados localmente (TTS Piper + STT Vosk).
+
+El curso insignia **ES→EN** cubre A1–B2 (69 lecciones y 589 ejercicios).
+**ES→PT**, **ES→FR** y **ES→JA** tienen 60 lecciones y 526 ejercicios cada
+uno: A1 10, A2 8, B1 20 y B2 completo 22. Todos usan schema v2, glosario y
+feedback. La revisión lingüística nativa de B1–B2 sigue pendiente. En total,
+el proyecto empaqueta **249 lecciones y 2.167 ejercicios**.
 
 ```mermaid
 flowchart LR
@@ -47,10 +53,12 @@ flowchart LR
 | Documento | Contenido |
 |---|---|
 | [ARCHITECTURE.md](ARCHITECTURE.md) | Mapa técnico: capas, módulos, patrones, stack, datos, sync, testing |
-| [docs/DECISIONS.md](docs/DECISIONS.md) | ADRs 000–036 con índice y registro de pendientes |
-| [CONTENT_FORMAT.md](CONTENT_FORMAT.md) | Contrato del contenido v1: cómo escribir lecciones y ejercicios |
+| [docs/DECISIONS.md](docs/DECISIONS.md) | ADRs 000–041 con índice y registro de pendientes |
+| [docs/CONTENT_FORMAT.md](docs/CONTENT_FORMAT.md) | Contrato del contenido v2: lecciones, ejercicios, micro-clase y glosario |
+| [CONTENT_FORMAT.md](CONTENT_FORMAT.md) | Guía histórica del contrato v1 |
 | [docs/MODELS.md](docs/MODELS.md) | Política y estado de los modelos TTS/STT |
-| [docs/schemas/course-v1.json](docs/schemas/course-v1.json) | JSON Schema formal del contenido |
+| [docs/schemas/course-v1.json](docs/schemas/course-v1.json) | JSON Schema formal del contenido v1 |
+| [docs/schemas/course-v2.json](docs/schemas/course-v2.json) | JSON Schema formal del contenido v2 |
 | [CHANGELOG.md](CHANGELOG.md) | Historial de versiones (Keep a Changelog) |
 | [SECURITY.md](SECURITY.md) | Política de seguridad y reporte de vulnerabilidades |
 | [AGENTS.md](AGENTS.md) | Guía para agentes IA y contribuidores automatizados |
@@ -199,8 +207,9 @@ El CI valida `assembleFullRelease` + `assembleEnRelease` (R8/shrink) en cada pus
 - GitHub Actions (`.github/workflows/ci.yml`): gate de calidad, `assembleFullDebug`,
   `assembleFullRelease` + `assembleEnRelease` (R8) y tests instrumentados
   (emulador API 34) en cada push/PR.
-- `validateContent` valida los 4 cursos contra `docs/schemas/course-v1.json`
-  (ADR-012) antes de testear.
+- `validateContent` valida los 4 cursos contra su schema correspondiente
+  (`docs/schemas/course-v1.json` o `course-v2.json`, ADR-012/ADR-018) antes de
+  testear.
 
 ### Tests instrumentados (accesibilidad)
 

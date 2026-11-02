@@ -61,4 +61,14 @@ class LinguaTokensTest {
         assertEquals(4, LinguaTokens.PRESS_DEPTH_DP)
         assertEquals(0.18f, LinguaTokens.HIGHLIGHT_ALPHA, 0.0001f)
     }
+
+    @Test
+    fun tintas_sobre_color_adr_037() {
+        assertEquals(0xFF4A3DB8L, LinguaTokens.PRIMARY_INK_HEX)
+        assertEquals(0xFF00695AL, LinguaTokens.ACCENT_INK_HEX)
+        assertEquals(0xFFA33B22L, LinguaTokens.DESTRUCTIVE_INK_HEX)
+        assertEquals(0xFFB8AEF5L, LinguaTokens.DARK_PRIMARY_INK_HEX)
+        assertEquals(0xFF00B894L, LinguaTokens.DARK_ACCENT_INK_HEX)
+        assertEquals(0xFFFF9B82L, LinguaTokens.DARK_DESTRUCTIVE_INK_HEX)
+    }
 }

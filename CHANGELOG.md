@@ -6,6 +6,44 @@ El formato sigue [Keep a Changelog](https://keepachangelog.com/es-ES/1.1.0/)
 y el versionado sigue [SemVer](https://semver.org/lang/es/).
 Pre-1.0: los cambios incompatibles pueden ocurrir en `0.y.0`.
 
+## [Unreleased]
+
+### Cambiado
+
+- **Cursos de arranque `es-pt`, `es-fr` y `es-ja` migrados a schema v2**
+  (ADR-041) conservando sus ids históricos: ahora declaran `cefrLevel: A1`,
+  micro-clase, glosario curado y `feedbackOnError` específico.
+- **`es-pt`, `es-fr` y `es-ja` ampliados a 38 lecciones/306 ejercicios**
+  cada uno: 10 A1, 8 A2 y **B1 completo** (20 lecciones), con pasado, planes,
+  comparaciones, viajes, salud, trabajo, opiniones, trámites, bienestar,
+  cultura, ocio, ciudad y servicios, además de kana y partículas en japonés.
+- **`es-pt`, `es-fr` y `es-ja` inician B2** con la Unidad 1 de negociación
+  y decisiones (4 lecciones/40 ejercicios cada uno): condicional, hipótesis,
+  pasiva reportativa y estructuras cleft.
+- **B2.2 de opinión y debate** en los tres idiomas (4 lecciones/40 ejercicios
+  cada uno): concesión, atenuación de la crítica, ironía/registro y rebatir
+  con evidencia.
+- **B2.3 de narrativa y matices** en los tres idiomas (4 lecciones/40
+  ejercicios cada uno): tiempos del relato, decisiones difíciles, discurso
+  reportado y arrepentimiento.
+- **B2.4 de sociedad y medios** en los tres idiomas (5 lecciones/50
+  ejercicios cada uno): leer entre líneas, manipulación mediática, temas
+  incómodos, privacidad y propuestas de futuro.
+- **B2.5 de proyectos y futuro** en los tres idiomas (5 lecciones/50
+  ejercicios cada uno): presentar un proyecto de barrio, defender una causa,
+  negociar con la administración, presentar un balance y cerrar un debate
+  sobre el futuro. Con esto B2 queda completo (22 lecciones/220 ejercicios
+  por curso).
+
+### Corregido
+
+- **Evaluación oral japonesa:** el heurístico ya no cuenta una frase japonesa
+  entera como un solo token; tokeniza por caracteres y cubre los clústeres
+  conceptuales sin depender de espacios.
+- **`es-en` ampliado y reorganizado** en A1 10 / A2 17 / B1 20 / B2 22 (69
+  lecciones y 589 ejercicios), con la unidad A1 “Vida cotidiana y entorno”,
+  la unidad puente B1→B2 y `ContentRampTest`.
+
 ## [1.2.1] - 2026-10-31
 
 Parche centrado en la claridad pedagógica de la lección (ADR-036).

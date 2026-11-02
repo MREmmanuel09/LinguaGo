@@ -98,6 +98,19 @@ class ExerciseGraderTest {
     }
 
     @Test
+    fun listen_type_acepta_dictado_sin_tildes() {
+        val exercise =
+            Exercise.ListenType(
+                id = ejercicioId("lt-tildes"),
+                transcription = "Bonne journée",
+                audioText = "Bonne journée",
+            )
+        assertEquals(true, ExerciseGrader.isCorrect(exercise, ExerciseAnswer.TypedText("Bonne journee")))
+        assertEquals(true, ExerciseGrader.isCorrect(exercise, ExerciseAnswer.TypedText("bonne JOURNÉE")))
+        assertEquals(false, ExerciseGrader.isCorrect(exercise, ExerciseAnswer.TypedText("Bonne soiree")))
+    }
+
+    @Test
     fun answer_type_inesperado_es_incorrecto_sin_excepciones() {
         val exercise =
             Exercise.MultipleChoice(
@@ -384,6 +397,19 @@ class ExerciseGraderTest {
     fun free_speaking_clusters_en_otro_alfabeto_se_cubren() {
         val feedback = evaluate("こんにちは", minTokens = 1, conceptClusters = listOf(listOf("こんにちは")))
         assertEquals(1, feedback.coveredClusters)
+        assertTrue(feedback.passes)
+    }
+
+    @Test
+    fun free_speaking_japones_cuenta_caracteres_y_cubre_clusters() {
+        val feedback =
+            evaluate(
+                "私は待つべきだと思います",
+                minTokens = 10,
+                conceptClusters = listOf(listOf("待つ"), listOf("思います")),
+            )
+        assertEquals(12, feedback.tokenCount)
+        assertEquals(2, feedback.coveredClusters)
         assertTrue(feedback.passes)
     }
 

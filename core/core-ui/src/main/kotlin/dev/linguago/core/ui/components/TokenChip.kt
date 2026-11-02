@@ -29,6 +29,7 @@ import androidx.compose.ui.semantics.onClick
 import androidx.compose.ui.semantics.role
 import androidx.compose.ui.semantics.selected
 import androidx.compose.ui.semantics.semantics
+import androidx.compose.ui.text.style.TextDecoration
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import dev.linguago.core.ui.feedback.FeedbackCue
@@ -36,15 +37,16 @@ import dev.linguago.core.ui.feedback.LocalInteractionFeedback
 import dev.linguago.core.ui.theme.LinguaMotion
 import dev.linguago.core.ui.theme.LinguaTheme
 import dev.linguago.core.ui.theme.LinguaTokens
+import dev.linguago.core.ui.theme.linguaExtendedColors
 import dev.linguago.core.ui.util.rememberAnimationsEnabled
 
 /**
  * Ficha de palabra del tablero de respuesta (ADR-031, ADR-036): cuerpo con
  * borde inferior 3D, bisel de luz y hundimiento al presionar. Comparte la
  * física de `PrimaryButton3D`/`OptionCard` y emite `SELECT`/`DESELECT` según su
- * estado. Si [translation] existe, mantener pulsada la ficha muestra la
- * traducción en un popup encima, sin tapar la palabra; se oculta al soltar.
- * Semántica de botón con estado y acción “Ver traducción” para TalkBack (I8).
+ * estado. Si [translations] existe, mantener pulsada la ficha muestra las
+ * traducciones en un popup encima, sin tapar la palabra; se oculta al soltar.
+ * Semántica de botón con estado y acción “Ver traducciones” para TalkBack (I8).
  */
 @Composable
 public fun TokenChip(
@@ -53,29 +55,47 @@ public fun TokenChip(
     onToggle: (String) -> Unit,
     modifier: Modifier = Modifier,
     enabled: Boolean = true,
-    translation: String? = null,
+    translations: List<String>? = null,
+    status: OptionStatus = OptionStatus.NEUTRAL,
 ) {
     val colors = MaterialTheme.colorScheme
+    val extended = linguaExtendedColors()
     val feedback = LocalInteractionFeedback.current
     val animations = rememberAnimationsEnabled()
     val background by animateColorAsState(
-        targetValue = if (selected) colors.primary else colors.surface,
+        targetValue =
+            when (status) {
+                OptionStatus.CORRECT -> LinguaTokens.Accent.copy(alpha = 0.12f)
+                OptionStatus.INCORRECT -> LinguaTokens.Destructive.copy(alpha = 0.12f)
+                OptionStatus.NEUTRAL -> if (selected) colors.primary else colors.surface
+            },
         animationSpec = if (animations) tween(durationMillis = 160) else snap(),
         label = "tokenBackground",
     )
     val edgeColor by animateColorAsState(
-        targetValue = if (selected) LinguaTokens.PrimaryEdge else colors.outline.copy(alpha = 0.55f),
+        targetValue =
+            when (status) {
+                OptionStatus.CORRECT -> LinguaTokens.Accent.copy(alpha = 0.62f)
+                OptionStatus.INCORRECT -> LinguaTokens.Destructive.copy(alpha = 0.62f)
+                OptionStatus.NEUTRAL ->
+                    if (selected) LinguaTokens.PrimaryEdge else colors.outline.copy(alpha = 0.55f)
+            },
         animationSpec = if (animations) tween(durationMillis = 160) else snap(),
         label = "tokenEdge",
     )
     val contentColor by animateColorAsState(
-        targetValue = if (selected) colors.onPrimary else colors.onSurface,
+        targetValue =
+            when (status) {
+                OptionStatus.CORRECT -> extended.accentInk
+                OptionStatus.INCORRECT -> extended.destructiveInk
+                OptionStatus.NEUTRAL -> if (selected) colors.onPrimary else colors.onSurface
+            },
         animationSpec = if (animations) tween(durationMillis = 160) else snap(),
         label = "tokenContent",
     )
     var pressed by remember { mutableStateOf(false) }
     var showTranslation by remember { mutableStateOf(false) }
-    LaunchedEffect(token, translation) {
+    LaunchedEffect(token, translations) {
         pressed = false
         showTranslation = false
     }
@@ -99,13 +119,14 @@ public fun TokenChip(
             text = token,
             style = MaterialTheme.typography.bodyMedium,
             color = contentColor,
+            textDecoration = if (status == OptionStatus.INCORRECT) TextDecoration.LineThrough else null,
             modifier =
                 Modifier
                     .offset(y = (press * LinguaTokens.PRESS_DEPTH_DP).dp)
                     .clip(shape)
                     .background(background)
                     .topHighlight()
-                    .pointerInput(enabled, token, translation) {
+                    .pointerInput(enabled, token, translations) {
                         detectTapGestures(
                             onPress = {
                                 if (enabled) {
@@ -116,7 +137,7 @@ public fun TokenChip(
                                 }
                             },
                             onLongPress = {
-                                if (enabled && translation != null) showTranslation = true
+                                if (enabled && translations != null) showTranslation = true
                             },
                             onTap = {
                                 if (enabled) {
@@ -137,10 +158,10 @@ public fun TokenChip(
                         } else {
                             disabled()
                         }
-                        if (translation != null) {
+                        if (translations != null) {
                             customActions =
                                 listOf(
-                                    CustomAccessibilityAction("Ver traducción") {
+                                    CustomAccessibilityAction("Ver traducciones") {
                                         showTranslation = true
                                         true
                                     },
@@ -148,9 +169,9 @@ public fun TokenChip(
                         }
                     }.padding(horizontal = 12.dp, vertical = 14.dp),
         )
-        if (translation != null) {
+        if (translations != null) {
             TranslationTooltip(
-                translation = translation,
+                translations = translations,
                 visible = showTranslation,
                 onDismiss = { showTranslation = false },
             )
@@ -162,6 +183,6 @@ public fun TokenChip(
 @Composable
 private fun TokenChipPreview() {
     LinguaTheme {
-        TokenChip(token = "hola", selected = false, onToggle = {}, translation = "hello")
+        TokenChip(token = "hola", selected = false, onToggle = {}, translations = listOf("hello"))
     }
 }

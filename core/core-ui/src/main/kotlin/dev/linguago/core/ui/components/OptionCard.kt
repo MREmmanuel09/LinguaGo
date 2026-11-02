@@ -46,6 +46,7 @@ import dev.linguago.core.ui.feedback.FeedbackCue
 import dev.linguago.core.ui.feedback.LocalInteractionFeedback
 import dev.linguago.core.ui.theme.LinguaMotion
 import dev.linguago.core.ui.theme.LinguaTokens
+import dev.linguago.core.ui.theme.linguaExtendedColors
 import dev.linguago.core.ui.util.rememberAnimationsEnabled
 
 /**
@@ -64,9 +65,10 @@ fun OptionCard(
     enabled: Boolean = true,
     leading: (@Composable () -> Unit)? = null,
     status: OptionStatus = OptionStatus.NEUTRAL,
-    translation: String? = null,
+    translations: List<String>? = null,
 ) {
     val colors = MaterialTheme.colorScheme
+    val extended = linguaExtendedColors()
     val feedback = LocalInteractionFeedback.current
     val animations = rememberAnimationsEnabled()
     val backgroundTarget =
@@ -89,9 +91,10 @@ fun OptionCard(
         }
     val contentTarget =
         when (status) {
-            OptionStatus.CORRECT -> LinguaTokens.Accent
-            OptionStatus.INCORRECT -> LinguaTokens.Destructive
-            OptionStatus.NEUTRAL -> if (selected) colors.primary else colors.onSurface
+            // Tintas sobre color: texto e icono de estado en AA (ADR-037).
+            OptionStatus.CORRECT -> extended.accentInk
+            OptionStatus.INCORRECT -> extended.destructiveInk
+            OptionStatus.NEUTRAL -> if (selected) extended.primaryInk else colors.onSurface
         }
     val background by animateColorAsState(
         targetValue = backgroundTarget,
@@ -115,7 +118,7 @@ fun OptionCard(
     )
     var pressed by remember { mutableStateOf(false) }
     var showTranslation by remember { mutableStateOf(false) }
-    LaunchedEffect(text, translation) {
+    LaunchedEffect(text, translations) {
         pressed = false
         showTranslation = false
     }
@@ -149,7 +152,7 @@ fun OptionCard(
                     .background(background)
                     .topHighlight()
                     .border(2.dp, borderColor, shape)
-                    .pointerInput(enabled, translation) {
+                    .pointerInput(enabled, translations) {
                         detectTapGestures(
                             onPress = {
                                 if (enabled) {
@@ -160,7 +163,7 @@ fun OptionCard(
                                 }
                             },
                             onLongPress = {
-                                if (enabled && translation != null) showTranslation = true
+                                if (enabled && translations != null) showTranslation = true
                             },
                             onTap = {
                                 if (enabled) {
@@ -169,7 +172,7 @@ fun OptionCard(
                                 }
                             },
                         )
-                    }.semantics {
+                    }.semantics(mergeDescendants = true) {
                         role = Role.RadioButton
                         this.selected = selected
                         if (enabled) {
@@ -185,10 +188,10 @@ fun OptionCard(
                             stateDescription =
                                 if (status == OptionStatus.CORRECT) "Respuesta correcta" else "Respuesta incorrecta"
                         }
-                        if (translation != null) {
+                        if (translations != null) {
                             customActions =
                                 listOf(
-                                    CustomAccessibilityAction("Ver traducción") {
+                                    CustomAccessibilityAction("Ver traducciones") {
                                         showTranslation = true
                                         true
                                     },
@@ -219,9 +222,9 @@ fun OptionCard(
                 )
             }
         }
-        if (translation != null) {
+        if (translations != null) {
             TranslationTooltip(
-                translation = translation,
+                translations = translations,
                 visible = showTranslation,
                 onDismiss = { showTranslation = false },
             )

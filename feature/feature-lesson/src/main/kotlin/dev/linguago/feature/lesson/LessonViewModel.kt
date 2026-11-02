@@ -14,15 +14,14 @@ import dev.linguago.core.domain.logic.CulturalNoteMatcher
 import dev.linguago.core.domain.logic.FreeSpeakingFeedback
 import dev.linguago.core.domain.logic.FreeSpeakingHeuristicGrader
 import dev.linguago.core.domain.logic.GradingResult
+import dev.linguago.core.domain.logic.LessonGlossary
 import dev.linguago.core.domain.logic.RetryPolicy
 import dev.linguago.core.domain.logic.SpokenFreeResponse
-import dev.linguago.core.domain.logic.VocabularyExtractor
 import dev.linguago.core.domain.logic.answerKey
 import dev.linguago.core.domain.model.CourseId
 import dev.linguago.core.domain.model.Exercise
 import dev.linguago.core.domain.model.GrammarPoint
 import dev.linguago.core.domain.model.Language
-import dev.linguago.core.domain.model.Lesson
 import dev.linguago.core.domain.model.LessonId
 import dev.linguago.core.domain.model.LessonSession
 import dev.linguago.core.domain.model.XP_PER_CORRECT_ANSWER
@@ -127,7 +126,7 @@ data class LessonUiState(
     val selectedRight: Int? = null,
     val matched: Map<Int, Int> = emptyMap(),
     // Glosario de apoyo (ADR-036): palabra en idioma meta → traducción de origen.
-    val glossary: Map<String, String> = emptyMap(),
+    val glossary: Map<String, List<String>> = emptyMap(),
     // Resultado de la sesión (ADR-036): primer intento por ejercicio.
     val totalExercises: Int = 0,
     val correctCount: Int = 0,
@@ -712,7 +711,7 @@ class LessonViewModel
                     briefSeen = false,
                     exercises = session.lesson.exercises,
                     index = 0,
-                    glossary = buildGlossary(session.lesson),
+                    glossary = LessonGlossary.fromLesson(session.lesson),
                     totalExercises = session.lesson.exercises.size,
                     correctCount = 0,
                     incorrectCount = 0,
@@ -740,30 +739,6 @@ class LessonViewModel
                     }
                 }
             }
-        }
-
-        /** Glosario de apoyo de la lección: palabra meta → traducción de origen (ADR-036). */
-        private fun buildGlossary(lesson: Lesson): Map<String, String> {
-            val glossary = mutableMapOf<String, String>()
-            lesson.microLesson
-                ?.sections
-                .orEmpty()
-                .flatMap { section -> section.examples }
-                .forEach { example ->
-                    val key = example.target.trim().lowercase()
-                    if (key.isNotEmpty() && example.source.isNotBlank()) {
-                        glossary[key] = example.source.trim()
-                    }
-                }
-            VocabularyExtractor
-                .fromLesson(lesson)
-                .forEach { pair ->
-                    val key = pair.target.trim().lowercase()
-                    if (key.isNotEmpty() && pair.source.isNotBlank()) {
-                        glossary[key] = pair.source.trim()
-                    }
-                }
-            return glossary
         }
 
         /** Prepara los paneles de respuesta del ejercicio `index`. */

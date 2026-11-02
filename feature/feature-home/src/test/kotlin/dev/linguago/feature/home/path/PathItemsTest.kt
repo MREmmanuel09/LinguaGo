@@ -1,5 +1,6 @@
 package dev.linguago.feature.home.path
 
+import dev.linguago.core.domain.model.CefrLevel
 import dev.linguago.core.domain.model.Course
 import dev.linguago.core.domain.model.CourseId
 import dev.linguago.core.domain.model.Language
@@ -102,7 +103,7 @@ class PathItemsTest {
     }
 
     @Test
-    fun `la etapa se asigna por el indice del nivel del curso`() {
+    fun `la etapa se asigna por el cefr de las lecciones del nivel`() {
         val multiLevel =
             Course(
                 id = CourseId("es-en"),
@@ -110,16 +111,37 @@ class PathItemsTest {
                 toLanguage = Language.ENGLISH,
                 levels =
                     listOf(
-                        Level(id = LevelId("lv-1"), name = "A", units = listOf(unit("u-1", "l-1"))),
-                        Level(id = LevelId("lv-2"), name = "B", units = listOf(unit("u-2", "l-2"))),
-                        Level(id = LevelId("lv-3"), name = "C", units = listOf(unit("u-3", "l-3"))),
-                        Level(id = LevelId("lv-4"), name = "D", units = listOf(unit("u-4", "l-4"))),
+                        level("lv-1", "u-1", lesson("l-1", CefrLevel.A1)),
+                        level("lv-2", "u-2", lesson("l-2", CefrLevel.A2)),
+                        level("lv-3", "u-3", lesson("l-3", CefrLevel.B1)),
+                        level("lv-4", "u-4", lesson("l-4", CefrLevel.B2)),
                     ),
             )
 
         val stages = headers(buildPathItems(multiLevel, emptyList())).map { it.stage }
 
         assertEquals(listOf(PathStage.A1, PathStage.A2, PathStage.B1, PathStage.B2), stages)
+    }
+
+    @Test
+    fun `el nivel mixto toma la etapa de su primera leccion`() {
+        val mixed =
+            Course(
+                id = CourseId("es-en"),
+                fromLanguage = Language.SPANISH,
+                toLanguage = Language.ENGLISH,
+                levels =
+                    listOf(
+                        level(
+                            "lv-1",
+                            "u-1",
+                            lesson("l-1", CefrLevel.A1),
+                            lesson("l-2", CefrLevel.A2),
+                        ),
+                    ),
+            )
+
+        assertEquals(listOf(PathStage.A1), headers(buildPathItems(mixed, emptyList())).map { it.stage })
     }
 
     @Test
@@ -131,7 +153,27 @@ class PathItemsTest {
         assertEquals(XpLevel(level = 1, progressToNext = 0f), xpLevelFor(-10))
     }
 
-    private fun lesson(id: String): Lesson = Lesson(id = LessonId(id), title = "Lección $id", exercises = emptyList())
+    private fun lesson(
+        id: String,
+        cefrLevel: CefrLevel = CefrLevel.A1,
+    ): Lesson =
+        Lesson(
+            id = LessonId(id),
+            title = "Lección $id",
+            exercises = emptyList(),
+            cefrLevel = cefrLevel,
+        )
+
+    private fun level(
+        id: String,
+        unitId: String,
+        vararg lessons: Lesson,
+    ): Level =
+        Level(
+            id = LevelId(id),
+            name = "Nivel $id",
+            units = listOf(Unit(id = UnitId(unitId), title = "Unidad $unitId", lessons = lessons.toList())),
+        )
 
     private fun unit(
         id: String,

@@ -1,5 +1,6 @@
 package dev.linguago.feature.home.path
 
+import dev.linguago.core.domain.model.CefrLevel
 import dev.linguago.core.domain.model.Course
 import dev.linguago.core.domain.model.LessonProgress
 import dev.linguago.core.ui.components.path.PathNodeState
@@ -33,6 +34,15 @@ data class XpLevel(
     val progressToNext: Float,
 )
 
+/** Etapa CEFR del camino derivada del contenido de la lección (ADR-040). */
+private fun stageFor(level: CefrLevel): PathStage =
+    when (level) {
+        CefrLevel.A1 -> PathStage.A1
+        CefrLevel.A2 -> PathStage.A2
+        CefrLevel.B1 -> PathStage.B1
+        CefrLevel.B2 -> PathStage.B2
+    }
+
 /** XP necesaria para subir de nivel visual. */
 const val XP_PER_LEVEL: Int = 100
 
@@ -60,7 +70,14 @@ fun buildPathItems(
     val items = mutableListOf<PathItem>()
     var unlocked = true
     course.levels.forEachIndexed { levelIndex, level ->
-        val stage = PathStage.entries.getOrElse(levelIndex) { PathStage.B2 }
+        // La etapa se deriva del contenido (ADR-032): depender del índice
+        // etiquetaba B1 como A2 y B2 como B1 (corregido en ADR-040).
+        val stage =
+            level.units
+                .flatMap { unit -> unit.lessons }
+                .firstOrNull()
+                ?.let { lesson -> stageFor(lesson.cefrLevel) }
+                ?: PathStage.entries.getOrElse(levelIndex) { PathStage.B2 }
         level.units.forEach { unit ->
             val completedInUnit = unit.lessons.count { it.id.value in completedIds }
             items += PathItem.Header(unit.id.value, unit.title, completedInUnit, unit.lessons.size, stage)

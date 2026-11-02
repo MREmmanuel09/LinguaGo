@@ -13,7 +13,9 @@ dialectal, metadatos CEFR por lección (`cefrLevel`, `scenario`, `canDo`,
 por ejercicio y las variantes `AudioOnlyPrompt`, `SemanticMatch`,
 `ClozeDragDrop` y `FreeSpeakingPrompt`. La guía completa está en
 [`docs/CONTENT_FORMAT.md`](docs/CONTENT_FORMAT.md). Los cursos `es-pt`,
-`es-fr` y `es-ja` permanecen en v1 y se rigen por este documento.
+`es-fr` y `es-ja` migraron a v2 en ADR-041 conservando sus ids históricos;
+después los tres llegaron a 60 lecciones (A1–B2 completo). Este documento v1
+se conserva como referencia histórica.
 
 ## Reglas de oro
 
@@ -132,8 +134,12 @@ define, es la frase que el TTS pronuncia.
 
 ### OrderWords — ordenar la frase
 
+`sourcePhrase` es opcional (ADR-038) y muestra la frase de origen como guía.
+Si el ejercicio declara `audioText`, la UI ofrece además el audio de la frase.
+
 ```json
 { "type": "OrderWords", "id": "es-en-e4",
+  "sourcePhrase": "¿Cómo estás?",
   "tokens": ["How", "are", "you"],
   "answerTokens": ["How", "are", "you"] }
 ```
