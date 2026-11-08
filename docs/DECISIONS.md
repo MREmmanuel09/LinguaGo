@@ -51,6 +51,8 @@
 | 039 | Tolerancia a diacríticos en la evaluación | Aprobado |
 | 040 | Glosario por lección, long-press de palabras y etapa del camino por CEFR | Aprobado |
 | 041 | Migración de los cursos de arranque pt/fr/ja a schema v2 | Aprobado |
+| 042 | Expansión progresiva a C1/C2 con rampa verificada y protocolo de lotes | Aprobado |
+| 043 | Captura de voz tolerante y evaluación oral sin falsos negativos | Aprobado |
 
 ---
 ## ADR-000: Convención del registro de decisiones
@@ -1818,6 +1820,125 @@ la migración a v2 se mantienen.
 
 **Invariantes protegidos:** I1 (offline), I4 (ids y progreso), I5 (contenido
 propio), I8 (acción TalkBack), I9 (validación en CI).
+
+---
+
+## ADR-042: Expansión progresiva a C1/C2 con rampa verificada y protocolo de lotes
+
+**Estado:** Aprobado (MREmmanuel09, 2026-11-08)
+**Fecha:** 2026-11-08
+**Plan de referencia:** [docs/PLAN_EXPANSION_C1_C2.md](PLAN_EXPANSION_C1_C2.md)
+
+**Contexto:** el contenido 2.0.0 cubre A1–B2 en los cuatro cursos (249
+lecciones / 2.167 ejercicios). `CefrLevel` y `VocabFrequencyBand` del dominio
+no admiten C1/C2, el schema v2 no los declara y la rampa está verificada por
+tests solo hasta B2. La app debe crecer manteniendo y escalando la dificultad
+de forma progresiva en los cuatro idiomas.
+
+**Decisión:**
+1. Se extiende `CefrLevel` con `C1`, `C2` y `VocabFrequencyBand` con
+   `8000-12000` y `12000+`. Cambio estrictamente aditivo: sin
+   `schemaVersion: 3` ni migraciones; los cursos existentes siguen válidos
+   porque no usan los valores nuevos.
+2. El validador y el schema exigen a C1/C2 los mismos metadatos pedagógicos
+   que a B1/B2 (`scenario`, `canDo`, 2 `grammarPoints`, banda léxica,
+   ≥1 `culturalNote` y `feedbackOnError` en todos los ejercicios).
+3. Escalones de dificultad por nivel, verificados con `ContentRampTest`
+   extendido: 11 ejercicios por lección en C1 y 12 en C2, topes de 38 y 48
+   tokens por frase y ≥1 (C1) / 2 (C2) `FreeSpeakingPrompt` con
+   `grammarRuleRefs`. La rampa global `A1→A2→B1→B2→C1→C2` no retrocede.
+4. Cada nivel entra primero por `es-en` como piloto y luego se replica en
+   `es-fr`, `es-pt` y `es-ja` manteniendo el esqueleto de unidades; un
+   release por nivel (2.1.0 – 2.4.0 según el plan).
+5. Los ids históricos no se tocan y los nuevos siguen el patrón del curso
+   sin reciclar identificadores ya existentes: el progreso guardado depende
+   de la identidad de ejercicios y lecciones.
+6. Protocolo por lote (una unidad del curso): redacción → rampa → gate local
+   (`ktlintCheck detekt validateContent test`) → humo manual en emulador →
+   commit `content:`. Nada de acumular deudas de contenido.
+
+**Alternativas consideradas:** (a) `schemaVersion: 3` con migración
+(rechazada: rompe retrocompatibilidad sin ganancia); (b) añadir niveles solo
+a `es-en` (rechazada: desiguala los cuatro cursos); (c) sustituir lecciones
+de B2 para liberar presupuesto (rechazada: viola el no-retroceso y el
+progreso guardado).
+
+**Consecuencias:** +168 lecciones y +1.920 ejercicios al cerrar el plan (417
+lecciones / 4.087 ejercicios totales). El camino de aprendizaje gana dos
+etapas (C1, C2) en `PathItems`. Peso estimado: < 2 MB de JSON por APK. La
+revisión lingüística nativa se reordena por prioridad y sigue siendo el
+mayor riesgo abierto; el gate mecánico evita regresiones de dificultad.
+
+**Invariantes protegidos:** I1 (offline), I4 (progreso e ids), I5
+(contenido propio CC BY-SA), I9 (contenido validado en CI).
+
+---
+
+## ADR-043: Captura de voz tolerante y evaluación oral sin falsos negativos
+
+**Estado:** Aprobado
+**Fecha:** 2026-11-08
+**Se aplica en:** release 2.0.1 (hotfix de voz)
+
+**Contexto:** con pronunciación correcta, la producción oral libre fallaba
+por dos causas ajenas al estudiante. Primera la captura: el endpoint de
+Vosk corta en pausas breves (~0,3 s) y el tope de captura era 6 s, de modo
+que la transcripción llegaba truncada y de ahí `TOO_SHORT`/`LOW_COVERAGE`
+("no registra bien"). Segunda el grader: `FreeSpeakingHeuristicGrader` no
+normalizaba diacríticos (el grader de escritura sí, ADR-039), la tolerancia
+difusa empezaba en 5 caracteres, la cadencia WPM se juzgaba sin margen y una
+autoevaluación < 0,5 bloqueaba el paso aunque todas las señales objetivas
+fueran buenas ("no lo pasa como bueno").
+
+**Decisión:**
+1. `SpeechCapture` (ADR-020) gana tres constantes de fábrica:
+   `DEFAULT_MIN_CAPTURE_NANOS` = 1,5 s — un endpoint con texto antes de ese
+   umbral es prematuro: su enunciado se concatena y la captura continúa —,
+   `DEFAULT_ENDPOINT_GRACE_NANOS` = 1,2 s — tras un enunciado válido se
+   sigue escuchando; si llega otro se concatena y la gracia se reinicia; si
+   expira en silencio, la captura termina — y `DEFAULT_MAX_CAPTURE_NANOS` =
+   10 s (antes 6 s). El texto acumulado se compone con `merge`, que deduplica
+   por `endsWith` la repetición que Vosk reintroduce en `finalResult`. Los
+   parámetros nuevos van al final de los constructores: usos y tests
+   posicionales siguen compilando.
+2. `FreeSpeakingHeuristicGrader` (ADR-019): `tokenize` normaliza NFD y
+   filtra las marcas `[\u0300-\u036F]`, igual que la evaluación escrita
+   (ADR-039); la rama japonesa no se normaliza (sus dakuten son contenido,
+   no acentos, y el conteo por caracteres del test depende de ello). La
+   tolerancia difusa (distancia ≤ 2) aplica desde 4 caracteres para
+   absorber la fonética en palabras cortas. La cadencia admite un margen del
+   ±20 %: es válida entre `minWpm/1.2` y `maxWpm*1.2`. La autoevaluación pasa
+   a ser informativa: se reporta en `FreeSpeakingFeedback.advisories` y nunca
+   bloquea `passes`; el enum conserva `LOW_SELF_ASSESSMENT` por
+   compatibilidad.
+3. El catálogo de hedging se amplía con formulaciones frecuentes (*i guess*,
+   *i wonder*, *i suppose*, *it might*, *kind of*, *sort of* y
+   *to be honest*), para que la gramática declarada no dependa de una sola
+   muletilla.
+4. La UI no cambia: `FreeSpeakingPanel` y `LessonViewModel` ya leen el
+   desglose como lo tienen; `advisories` no se presenta como fallo.
+
+**Alternativas consideradas:** (a) subir el umbral de silencio de Vosk
+(rechazada: depende del modelo/versión en producción y no es testeable en
+JVM); (b) descartar el enunciado prematuro sin concatenarlo (rechazada: una
+respuesta breve y válida se perdería); (c) un LLM en dispositivos que avale
+el audio (rechazada: ADR-019 descarta el modelo en dispositivo por peso, RAM
+y batería, además de I1); (d) depender solo del `finalResult` de Vosk
+(rechazada: cuando el stream termina sin endpoint llega vacío y se pierden
+los parciales ya emitidos).
+
+**Consecuencias:** la captura sobrevive pausas de hasta ~1,2 s entre frases
+y enunciados cortos al inicio; pasan transcripciones correctas con tildes
+omitidas por Vosk, WPM desplazado por el micrófono o autoevaluación dura.
+Siguen fallando la longitud mínima real, la cobertura insuficiente y la
+gramática exigida no detectada. Coste: hasta 1,2 s adicionales de grabación
+cuando la voz termina en silencio, imperceptible para el usuario. El
+contrato de los tests de captura (recuento de chunks) se conserva; los
+tests de endpoint dejan la gracia en 0 para reproducir el corte antiguo de
+2.0.0 y se añaden los casos prematuro/gracia/concatenación.
+
+**Invariantes protegidos:** I1 (STT on-device), I3 (sin fricción), I4
+(nada elimina progreso), I7 (evaluación determinista testeable en JVM).
 
 ---
 

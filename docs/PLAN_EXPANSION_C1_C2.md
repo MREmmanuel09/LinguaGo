@@ -3,8 +3,16 @@
 > Propuesta elaborada sobre el contenido de **2.0.0** (249 lecciones / 2.167
 > ejercicios). Define cómo crecer **los cuatro cursos** manteniendo y escalando
 > la dificultad de forma progresiva, con puerta de calidad automatizada en cada
-> lote. Incluye el borrador de **ADR-042** para registrar la decisión antes de
-> tocar código.
+> lote. **[Actualización 2026-11-08]** ADR-042 fue **aprobado** y se incorpora
+> el hotfix de voz 2.0.1 (**ADR-043**) como prerrequisito: la evaluación oral
+> tolerante beneficia directamente la producción de C1/C2 (sección 14).
+
+## 0. Historial de revisiones
+
+| Fecha | Versión | Cambio |
+|---|---|---|
+| 2026-11-07 | 1.0 | Plan inicial propuesto (borrador ADR-042). |
+| 2026-11-08 | 1.1 | ADR-042 aprobado; el 2.0.1 (hotfix de voz, ADR-043) se integra como paso previo; referencias de invariantes corregidas. |
 
 ## 1. Objetivo y alcance
 
@@ -171,8 +179,10 @@ meter C1/C2 al máximo; debe seguir las convenciones del repo (clean arch,
 - `PathItems` y tests de captura en `core-ui` (`DesignGallery…`,
   `Path…`) están referenciados por `PathStage`; ampliarlo obliga a sustentar
   los fixtures de accesibilidad AA también.
-- No hay tipos de ejercicio nuevos: **cero cambios en `ExerciseGrader`,
-  `FreeSpeakingHeuristicGrader` ni Room/FSRS** (invariante I4: progreso).
+- No hay tipos de ejercicio nuevos: **cero cambios en el grader de tipos de
+  ejercicio ni en Room/FSRS** (invariante I4: progreso). La tolerancia del
+  `FreeSpeakingHeuristicGrader` ya se ajustó en el hotfix de voz 2.0.1
+  (ADR-043, sección 14), de modo que C1/C2 llega con el evaluador ya robusto.
 
 ## 8. Producción por lotes y releases
 
@@ -182,11 +192,12 @@ el piloto (gate verde + humo manual en emulador API 37).
 
 | Release | Contenido nuevo | Lecciones nuevas | Ejercicios nuevos | Totales acumulados (curso × cursos) |
 |---|---|---:|---:|---|
+| 2.0.1 | **Hotfix de voz (ADR-043): captura tolerante + evaluación oral sin falsos negativos** | 0 | 0 | 249 lecciones |
 | 2.1.0 | Infra (7.1–7.8) + **C1 completo en `es-en`** | 24 (en) | 264 | 93 lecciones `es-en` |
 | 2.2.0 | **C1 completo en `es-fr`, `es-pt`, `es-ja`** | 72 (fr/pt/ja) | 792 | 84 lecciones × 3 (fr/pt/ja) |
 | 2.3.0 | **C2 completo en `es-en`** | 18 (en) | 216 | 111 lecciones `es-en` |
 | 2.4.0 | **C2 completo en `es-fr`, `es-pt`, `es-ja`** | 54 (fr/pt/ja) | 648 | 102 lecciones × 3 (fr/pt/ja) |
-| `2.5.0` | (Opcional) refinamiento nativo + revisión B2/C1/C2 | 0 | 0 | — |
+| 2.5.0 | (Opcional) refinamiento nativo + revisión B2/C1/C2 | 0 | 0 | — |
 
 **Total acumulado al final (versión 2.4.x):**
 
@@ -267,12 +278,13 @@ siguiente. Unidad × 4 cursos ≈ 16–24 lecciones / 176–300 ejercicios.
   2 `grammarPoints`, banda léxica, ≥ 1 `culturalNote`, micro-clase, glosario
   y `feedbackOnError`/`feedbackOnSuccess`).
 
-## 13. ADR-042 (borrador para `docs/DECISIONS.md`)
+## 13. ADR-042 (aprobado y registrado en `docs/DECISIONS.md`)
 
-> **ADR-042: Escalado progresivo a C1/C2 con rampa verificada y protocolo de
-> lotes de contenido**
+> **ADR-042: Expansión progresiva a C1/C2 con rampa verificada y protocolo
+> de lotes** — **Estado: Aprobado (2026-11-08).** El texto definitivo vive en
+> [docs/DECISIONS.md](DECISIONS.md); este resumen queda como referencia.
 
-- **Estado:** Propuesta (registrar cuando se apruebe el plan).
+- **Estado:** Aprobado (2026-11-08).
 - **Contexto:** El contenido 2.0.0 cubre A1–B2 en los cuatro cursos
   (249/2.167). El CEFR `CefrLevel` del dominio y el esquema v2 no admiten
   C1/C2; la rampa está verificada por `ContentRampTest` hasta B2.
@@ -290,10 +302,49 @@ siguiente. Unidad × 4 cursos ≈ 16–24 lecciones / 176–300 ejercicios.
   4. Cada nivel entra por `es-en` como piloto y luego se replica en fr/pt/ja
      manteniendo el esqueleto de unidades (secciones 5 y 6).
   5. Los ids históricos no se tocan; los nuevos siguen el patrón del curso y
-     nunca se recicla un id que ya existió (I3), porque el progreso guardado
-     depende de la identidad de los ejercicios.
+     nunca se recicla un id que ya existió (I4: progreso intocable), porque
+     el progreso guardado depende de la identidad de los ejercicios.
 - **Consecuencias:** +168 lecciones / +1.920 ejercicios (417 lecciones y
   4.087 ejercicios en total). El camino de la UI gana dos etapas (C1/C2) en
   la ruta de aprendizaje (`PathItems`). Los requisitos de producción crecen
   (lotes por unidad); el validador informa la rampa y evita regresiones de
   dificultad.
+
+## 14. Hotfix de voz ya incorporado (2.0.1 | ADR-043)
+
+En 2.0.0 la producción oral fallaba con pronunciación correcta: Vosk cortaba
+en pausas breves (~0,3 s) dejando la transcripción truncada, y el
+`FreeSpeakingHeuristicGrader` no toleraba diacríticos, marcaba WPM fuera de
+rango sin margen y bloqueaba por autoevaluación baja aunque todo lo demás
+estuviera bien (ejercicios "no pasa" por razones ajenas al estudiante).
+
+**Qué cambió (ya implementado, testeado y publicado en 2.0.1):**
+
+| Zona | Cambio |
+|---|---|
+| `SpeechCapture` (ADR-020) | Endpoints prematuros: antes de 1,5 s se concatena el enunciado y la captura sigue; tras un enunciado válido hay 1,2 s de gracia que se reinicia si llega otra frase; el tope de captura sube de 6 s a 10 s. |
+| Concatenación | `merge` compone los enunciados (dedupe por `endsWith`): ya no se pierde el resto de la frase. |
+| `tokenize` (ADR-039/043) | Normalización NFD sin marcas `[\u0300-\u036F]`: "café" ≡ "cafe" en ambas direcciones. La rama japonesa no se normaliza (dakuten). |
+| Tolerancia difusa | Distancia ≤ 2 desde 4 caracteres (antes 5): absorbe la fonética de Vosk en palabras cortas. |
+| Cadencia WPM | Margen del ±20 % (`minWpm/1.2`, `maxWpm*1.2`): el ritmo natural o el micrófono ya no fallan la respuesta. |
+| Autoevaluación | Informativa (`advisories`): nunca bloquea `passes`; las únicas señales que fallan son las objetivas (longitud, cobertura, gramática, cadencia extrema). |
+| Hedging | Catálogo ampliado (*i guess*, *i wonder*, *i suppose*, *it might*, *kind of*, *sort of*, *to be honest*). |
+
+**Impacto en este plan:**
+
+1. Los `FreeSpeakingPrompt` de C1/C2 (monólogo + debate en C2) se apoyan en
+   un STT que ya no trunca la primera frase: menos `TOO_SHORT` y
+   `LOW_COVERAGE` falsos en fr/pt/ja.
+2. Las tildes que Vosk omite en francés y portugués ya no se cobran como
+   error: la evaluación de producción queda alineada con la escrita
+   (ADR-039).
+3. **Restricción declarada para la redacción C1/C2:** la captura sigue
+   teniendo un tope de 10 s. Los prompts se escriben para respuestas
+   verificables de ~2–3 frases (12–20 tokens): el concepto se cubre con
+   `conceptClusters` y `minTokens` calibrados (~8–12). Los monólogos largos
+   y los audios de referencia viven en `AudioOnlyPrompt`/`modelAnswer`, no
+   como exigencia del STT. Encadenar varias sesiones de captura queda
+   diferido.
+4. El humo manual del protocolo de lote (sección 9) incluye la prueba de
+   voz: decir la respuesta modelo completa y verificar que la captura
+   compone toda la frase y que el veredicto es `Pass`.
