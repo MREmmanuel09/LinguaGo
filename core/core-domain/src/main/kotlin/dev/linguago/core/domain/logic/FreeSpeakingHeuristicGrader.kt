@@ -3,6 +3,7 @@ package dev.linguago.core.domain.logic
 import dev.linguago.core.domain.model.Exercise
 import dev.linguago.core.domain.model.GrammarPoint
 import dev.linguago.core.domain.model.GrammarPointId
+import java.text.Normalizer
 
 /** Motivos deterministas por los que un `FreeSpeakingPrompt` puede no pasar. */
 public enum class FreeSpeakingReason {
@@ -41,17 +42,24 @@ public data class FreeSpeakingFeedback(
     public val detectedGrammarRefs: List<GrammarPointId>,
     public val wpm: Double,
     public val verdict: FreeSpeakingVerdict,
+    /**
+     * Señales informativas que no bloquean el paso (ADR-043): la
+     * autoevaluación baja se reporta aquí en lugar de fallar el ejercicio.
+     */
+    public val advisories: List<FreeSpeakingReason> = emptyList(),
 )
 
 /**
  * Evaluación 100% offline y determinista de [Exercise.FreeSpeakingPrompt]
  * (ADR-019; prohibido cualquier LLM on-device o cloud). Combina cuatro
  * señales objetivas sobre la transcripción — longitud mínima de tokens,
- * cobertura de `conceptClusters` con tolerancia a homófonos de Vosk
- * (distancia de edición acotada), detección por patrones de los
- * `grammarPoints` exigidos y cadencia WPM — con la autoevaluación del
- * estudiante. Un grammarPoint sin patrón conocido no se exige, para no
- * bloquear contenido válido por un catálogo incompleto (I3).
+ * cobertura de `conceptClusters` con tolerancia a la fonética de Vosk
+ * (diacríticos normalizados según ADR-039 y distancia de edición acotada
+ * según ADR-043), detección por patrones de los `grammarPoints` exigidos y
+ * cadencia WPM con un margen de tolerancia (ADR-043). La autoevaluación es
+ * informativa: se reporta en [FreeSpeakingFeedback.advisories] y nunca
+ * bloquea el paso (ADR-043). Un grammarPoint sin patrón conocido no se
+ * exige, para no bloquear contenido válido por un catálogo incompleto (I3).
  */
 public object FreeSpeakingHeuristicGrader {
     /**
@@ -101,15 +109,22 @@ public object FreeSpeakingHeuristicGrader {
             } else {
                 0.0
             }
-        val belowMin = exercise.minWpm != null && wpm < exercise.minWpm
-        val aboveMax = exercise.maxWpm != null && wpm > exercise.maxWpm
+        val minWpm = exercise.minWpm
+        val maxWpm = exercise.maxWpm
+        // ADR-043: la cadencia admite un margen del ±20% (min/1.2, max*1.2),
+        // porque Vosk y el micrófono escalan tiempos sin señalar error real.
+        val belowMin = minWpm != null && wpm < minWpm / WPM_TOLERANCE
+        val aboveMax = maxWpm != null && wpm > maxWpm * WPM_TOLERANCE
         if (belowMin || aboveMax) {
             reasons += FreeSpeakingReason.WPM_OUT_OF_RANGE
         }
 
+        // ADR-043: la autoevaluación es informativa; solo las señales
+        // objetivas componen el veredicto.
+        val advisories = mutableListOf<FreeSpeakingReason>()
         val selfScore = response.selfAssessmentScore
         if (selfScore != null && selfScore < SELF_ASSESSMENT_THRESHOLD) {
-            reasons += FreeSpeakingReason.LOW_SELF_ASSESSMENT
+            advisories += FreeSpeakingReason.LOW_SELF_ASSESSMENT
         }
 
         val verdict =
@@ -126,6 +141,7 @@ public object FreeSpeakingHeuristicGrader {
             detectedGrammarRefs = detectedRefs,
             wpm = wpm,
             verdict = verdict,
+            advisories = advisories,
         )
     }
 
@@ -146,16 +162,19 @@ public object FreeSpeakingHeuristicGrader {
     }
 
     /**
-     * Tokeniza en minúsculas conservando contracciones (`i'm` es un token).
-     * El japonés no separa palabras con espacios: para no contar una frase
-     * entera como un solo token, se tokeniza por caracteres.
+     * Tokeniza en minúsculas conservando contracciones (`i'm` es un token) y
+     * sin diacríticos latinos: NFD expone las tildes como marcas combinantes
+     * que se filtran, igual que la evaluación escrita (ADR-039). El japonés
+     * no separa palabras con espacios y sus dakuten son contenido, no
+     * acentos, así que su rama no se normaliza (ADR-043).
      */
     private fun tokenize(text: String): List<String> {
         val lower = text.lowercase()
         if (JAPANESE_PATTERN.containsMatchIn(lower)) {
             return lower.filter { char -> char.isLetterOrDigit() }.map { char -> char.toString() }
         }
-        return lower
+        val plain = Normalizer.normalize(lower, Normalizer.Form.NFD).replace(COMBINING_MARK, "")
+        return plain
             .split(TOKEN_SEPARATOR)
             .filter { token -> token.isNotBlank() }
     }
@@ -226,17 +245,28 @@ public object FreeSpeakingHeuristicGrader {
     }
 
     private val TOKEN_SEPARATOR = Regex("[^\\p{L}\\p{N}']+")
+    private val COMBINING_MARK = Regex("[\\u0300-\\u036F]")
     private val JAPANESE_PATTERN = Regex("[\\u3040-\\u30FF\\u3400-\\u4DBF\\u4E00-\\u9FFF]")
     private const val MILLIS_PER_MINUTE = 60_000
     private const val MIN_CLUSTER_COVERAGE = 1
     private const val MAX_EDIT_DISTANCE = 2
-    private const val MIN_LENGTH_FOR_FUZZY = 5
+
+    /** A partir de esta longitud se tolera la fonética de Vosk (ADR-043). */
+    private const val MIN_LENGTH_FOR_FUZZY = 4
     private const val SELF_ASSESSMENT_THRESHOLD = 0.5
+
+    /** Margen de cadencia: WPM válido entre min/1.2 y max*1.2 (ADR-043). */
+    private const val WPM_TOLERANCE = 1.2
 
     private val CONDITIONAL_PATTERN =
         Regex("\\bif\\b|\\bunless\\b|\\bprovided that\\b|\\bas long as\\b|\\bwould\\b|\\bcould\\b|\\bshould\\b", RegexOption.IGNORE_CASE)
     private val HEDGING_PATTERN =
-        Regex("\\bi'm afraid\\b|\\bperhaps\\b|\\bmaybe\\b|\\bit seems\\b|\\bprobably\\b|\\bpossibly\\b", RegexOption.IGNORE_CASE)
+        Regex(
+            "\\bi'm afraid\\b|\\bperhaps\\b|\\bmaybe\\b|\\bit seems\\b|\\bprobably\\b|\\bpossibly\\b" +
+                "|\\bi wonder\\b|\\bit might\\b|\\bi suppose\\b|\\bi guess\\b|\\bkind of\\b|\\bsort of\\b|" +
+                "\\bto be honest\\b",
+            RegexOption.IGNORE_CASE,
+        )
     private val PASSIVE_PATTERN =
         Regex("\\b(?:am|is|are|was|were|been|being|be)\\s+[\\w'-]+ed\\b", RegexOption.IGNORE_CASE)
     private val COMPARATIVE_PATTERN =

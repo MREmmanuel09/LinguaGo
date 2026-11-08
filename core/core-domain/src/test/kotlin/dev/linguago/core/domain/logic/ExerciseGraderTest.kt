@@ -186,6 +186,27 @@ class ExerciseGraderTest {
     }
 
     @Test
+    fun free_speaking_tildes_no_bloquean_el_cluster() {
+        val feedback = evaluate("el café está bueno", minTokens = 4, conceptClusters = listOf(listOf("cafe")))
+        assertTrue(feedback.passes)
+        assertEquals(1, feedback.coveredClusters)
+    }
+
+    @Test
+    fun free_speaking_cluster_con_tildes_matchea_transcripcion_sin_tildes() {
+        val feedback = evaluate("cafe", minTokens = 1, conceptClusters = listOf(listOf("café")))
+        assertTrue(feedback.passes)
+        assertEquals(1, feedback.coveredClusters)
+    }
+
+    @Test
+    fun free_speaking_fuzzy_aplica_desde_cuatro_caracteres() {
+        val feedback = evaluate("la meza es larga", minTokens = 4, conceptClusters = listOf(listOf("mesa")))
+        assertTrue(feedback.passes)
+        assertEquals(1, feedback.coveredClusters)
+    }
+
+    @Test
     fun free_speaking_un_cluster_de_tres_no_alcanza_cobertura() {
         val feedback =
             evaluate(
@@ -262,6 +283,21 @@ class ExerciseGraderTest {
     }
 
     @Test
+    fun free_speaking_hedging_detecta_mas_formulaciones() {
+        val ref = GrammarPointId("gp-hedge")
+        val feedback =
+            evaluate(
+                "I guess it could work",
+                minTokens = 4,
+                conceptClusters = listOf(listOf("work")),
+                grammarRuleRefs = listOf(ref),
+                grammarPoints = listOf(GrammarPoint(ref, "Hedging")),
+            )
+        assertTrue(feedback.passes)
+        assertEquals(listOf(ref), feedback.detectedGrammarRefs)
+    }
+
+    @Test
     fun free_speaking_wpm_bajo_minimo_marca_rango() {
         val feedback =
             evaluate(
@@ -309,12 +345,53 @@ class ExerciseGraderTest {
     }
 
     @Test
-    fun free_speaking_autoevaluacion_baja_no_pasa() {
-        val feedback = evaluate("deadline split", minTokens = 2, selfAssessmentScore = 0.4)
+    fun free_speaking_wpm_bajo_el_minimo_dentro_del_margen_pasa() {
+        val feedback =
+            evaluate(
+                "one",
+                millis = 60_000L,
+                minTokens = 1,
+                conceptClusters = listOf(listOf("one")),
+                minWpm = 1.2,
+            )
+        assertTrue(feedback.passes)
+    }
+
+    @Test
+    fun free_speaking_wpm_sobre_el_maximo_dentro_del_margen_pasa() {
+        val feedback =
+            evaluate(
+                "one",
+                millis = 60_000L,
+                minTokens = 1,
+                conceptClusters = listOf(listOf("one")),
+                maxWpm = 0.85,
+            )
+        assertTrue(feedback.passes)
+    }
+
+    @Test
+    fun free_speaking_wpm_muy_lejos_del_rango_sigue_fallando() {
+        val feedback =
+            evaluate(
+                "one",
+                millis = 60_000L,
+                minTokens = 1,
+                conceptClusters = listOf(listOf("one")),
+                minWpm = 3.0,
+            )
         assertFalse(feedback.passes)
         assertTrue(
-            (feedback.verdict as FreeSpeakingVerdict.NeedsWork).reasons.contains(FreeSpeakingReason.LOW_SELF_ASSESSMENT),
+            (feedback.verdict as FreeSpeakingVerdict.NeedsWork).reasons.contains(FreeSpeakingReason.WPM_OUT_OF_RANGE),
         )
+    }
+
+    @Test
+    fun free_speaking_autoevaluacion_baja_es_advisory_y_pasa() {
+        val feedback = evaluate("deadline split", minTokens = 2, selfAssessmentScore = 0.4)
+        assertTrue(feedback.passes)
+        assertTrue(feedback.verdict is FreeSpeakingVerdict.Pass)
+        assertTrue(feedback.advisories.contains(FreeSpeakingReason.LOW_SELF_ASSESSMENT))
     }
 
     @Test
@@ -482,7 +559,7 @@ class ExerciseGraderTest {
     }
 
     @Test
-    fun free_spoken_sin_autoevaluacion_suficiente_no_pasa() {
+    fun free_spoken_autoevaluacion_cero_no_bloquea() {
         val exercise = freeSpeakingExercise()
         val answer =
             ExerciseAnswer.FreeSpoken(
@@ -490,7 +567,7 @@ class ExerciseGraderTest {
                 durationMillis = 6_000L,
                 selfAssessmentScore = 0.0,
             )
-        assertFalse(ExerciseGrader.isCorrect(exercise, answer))
+        assertTrue(ExerciseGrader.isCorrect(exercise, answer))
     }
 
     @Test

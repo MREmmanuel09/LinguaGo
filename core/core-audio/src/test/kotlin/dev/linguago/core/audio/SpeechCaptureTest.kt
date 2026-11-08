@@ -72,7 +72,7 @@ class SpeechCaptureTest {
                     ),
             )
 
-        val updates = collectUpdates(capture(clock, source, recognizer))
+        val updates = collectUpdates(capture(clock, source, recognizer, endpointGraceNanos = 0L))
 
         assertEquals(2, source.readCount)
         assertEquals(3, updates.size)
@@ -85,10 +85,58 @@ class SpeechCaptureTest {
         val source = FakeSource(clock) { buffer -> fillConstant(buffer, 3277) }
         val recognizer = FakeRecognizer(steps = listOf(FakeRecognizer.Step(endpoint = true)), finalText = "resto")
 
-        val updates = collectUpdates(capture(clock, source, recognizer))
+        val updates = collectUpdates(capture(clock, source, recognizer, endpointGraceNanos = 0L))
 
         assertEquals(3, source.readCount)
         assertEquals("resto", updates.last().finalText)
+    }
+
+    @Test
+    fun `el endpoint prematuro se concatena y la captura continúa`() {
+        val clock = FakeClock()
+        val source = FakeSource(clock) { buffer -> fillConstant(buffer, 3277) }
+        val recognizer =
+            FakeRecognizer(
+                steps =
+                    listOf(
+                        FakeRecognizer.Step(endpoint = true, result = "buenos"),
+                        FakeRecognizer.Step(endpoint = false),
+                        FakeRecognizer.Step(endpoint = true, result = "días"),
+                    ),
+            )
+
+        val updates = collectUpdates(capture(clock, source, recognizer, minCaptureNanos = 2 * CHUNK_NANOS))
+
+        assertEquals(3, source.readCount)
+        assertEquals("buenos días", updates.last().finalText)
+    }
+
+    @Test
+    fun `la gracia del endpoint concatena el enunciado siguiente`() {
+        val clock = FakeClock()
+        val source = FakeSource(clock) { buffer -> fillConstant(buffer, 3277) }
+        val recognizer =
+            FakeRecognizer(
+                steps =
+                    listOf(
+                        FakeRecognizer.Step(endpoint = true, result = "buenos"),
+                        FakeRecognizer.Step(endpoint = true, result = "días"),
+                    ),
+            )
+
+        val updates =
+            collectUpdates(
+                capture(
+                    clock,
+                    source,
+                    recognizer,
+                    maxCaptureNanos = 8 * CHUNK_NANOS,
+                    endpointGraceNanos = 2 * CHUNK_NANOS,
+                ),
+            )
+
+        assertEquals(3, source.readCount)
+        assertEquals("buenos días", updates.last().finalText)
     }
 
     @Test
@@ -187,7 +235,9 @@ class SpeechCaptureTest {
         source: PcmSource,
         recognizer: StreamRecognizer,
         maxCaptureNanos: Long = 3 * CHUNK_NANOS,
-    ): SpeechCapture = SpeechCapture(source, recognizer, clock::nanoTime, maxCaptureNanos)
+        minCaptureNanos: Long = 0L,
+        endpointGraceNanos: Long = 0L,
+    ): SpeechCapture = SpeechCapture(source, recognizer, clock::nanoTime, maxCaptureNanos, minCaptureNanos, endpointGraceNanos)
 
     private fun collectUpdates(capture: SpeechCapture): List<SpeechCaptureUpdate> =
         runBlocking {
