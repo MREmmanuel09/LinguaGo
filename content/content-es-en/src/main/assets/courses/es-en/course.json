@@ -12391,6 +12391,1525 @@
               ]
             }
           ]
+        },
+        {
+          "id": "es-en-lv-4-un-3",
+          "title": "Trámites y autoridades",
+          "lessons": [
+            {
+              "id": "es-en-c1-un-3-ls-1",
+              "title": "Reclamar por escrito",
+              "cefrLevel": "C1",
+              "scenario": "Un servicio no llegó en el plazo prometido y hay que presentar una reclamación formal sin perder la calma.",
+              "canDo": "Puedo redactar una reclamación formal, describir los hechos y pedir una acción concreta con cortesía firme.",
+              "grammarPoints": [
+                {
+                  "id": "gp-c1-formal-complaints",
+                  "label": "Reclamación formal",
+                  "description": "I am writing to..., I would appreciate it if..., I expect..."
+                },
+                {
+                  "id": "gp-c1-passive-causative",
+                  "label": "Causativa pasiva",
+                  "description": "have the matter reviewed, get the issue resolved."
+                }
+              ],
+              "vocabFrequencyBand": "8000-12000",
+              "culturalNotes": [
+                {
+                  "idiom": "go by the book",
+                  "note": "Seguir las normas al pie de la letra; en una reclamación, conviene citar el procedimiento antes de exigir una compensación.",
+                  "translation": "seguir las reglas al pie de la letra"
+                }
+              ],
+              "microLesson": {
+                "title": "Reclamar con precisión",
+                "goals": [
+                  "Separar hechos, petición y plazo en una reclamación.",
+                  "Pedir acción con estructuras causativas y cortesía formal."
+                ],
+                "sections": [
+                  {
+                    "heading": "La estructura de una reclamación",
+                    "body": "I am writing to lodge a complaint about... abre con el objeto. Tras los hechos, I would appreciate it if you could... formula la petición. Have the matter reviewed by... o expect the issue to get resolved by... fijan la acción y el plazo.",
+                    "examples": [
+                      {
+                        "source": "Le agradecería que revisara el asunto con urgencia.",
+                        "target": "I would appreciate it if you could review the matter urgently.",
+                        "note": "La cortesía formal no resta firmeza."
+                      },
+                      {
+                        "source": "Haremos revisar el asunto por el equipo legal.",
+                        "target": "We will have the matter reviewed by the legal team.",
+                        "note": "Causativa: have + objeto + participio."
+                      }
+                    ]
+                  }
+                ]
+              },
+              "glossary": [
+                {
+                  "term": "complaint",
+                  "translations": [
+                    "reclamación",
+                    "queja"
+                  ]
+                },
+                {
+                  "term": "refund",
+                  "translations": [
+                    "reembolso"
+                  ]
+                },
+                {
+                  "term": "receipt",
+                  "translations": [
+                    "recibo"
+                  ]
+                },
+                {
+                  "term": "resolve",
+                  "translations": [
+                    "resolver"
+                  ]
+                },
+                {
+                  "term": "escalate",
+                  "translations": [
+                    "escalar",
+                    "elevar"
+                  ]
+                },
+                {
+                  "term": "compensation",
+                  "translations": [
+                    "compensación",
+                    "indemnización"
+                  ]
+                },
+                {
+                  "term": "acknowledge",
+                  "translations": [
+                    "acusar recibo",
+                    "reconocer"
+                  ]
+                },
+                {
+                  "term": "inquiry",
+                  "translations": [
+                    "consulta",
+                    "averiguación"
+                  ]
+                },
+                {
+                  "term": "evidence",
+                  "translations": [
+                    "prueba",
+                    "evidencia"
+                  ]
+                },
+                {
+                  "term": "procedure",
+                  "translations": [
+                    "procedimiento"
+                  ]
+                }
+              ],
+              "exercises": [
+                {
+                  "type": "ClozeDragDrop",
+                  "id": "es-en-c1-e89",
+                  "passage": "I am writing to {{b1}} a formal complaint about the delay, and I would {{b2}} it if you could review the matter.",
+                  "blanks": [
+                    {
+                      "id": "b1",
+                      "answer": "lodge",
+                      "options": [
+                        "lodge",
+                        "lodging",
+                        "lodged"
+                      ]
+                    },
+                    {
+                      "id": "b2",
+                      "answer": "appreciate",
+                      "options": [
+                        "appreciate",
+                        "appreciated",
+                        "appreciation"
+                      ]
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "Tras 'to' va el infinitivo 'lodge'; la fórmula fija es 'I would appreciate it if'.",
+                    "ruleRef": "gp-c1-formal-complaints"
+                  }
+                },
+                {
+                  "type": "ClozeDragDrop",
+                  "id": "es-en-c1-e90",
+                  "passage": "We will {{b1}} the matter reviewed by the legal team and expect to {{b2}} the issue resolved by Friday.",
+                  "blanks": [
+                    {
+                      "id": "b1",
+                      "answer": "have",
+                      "options": [
+                        "have",
+                        "has",
+                        "having"
+                      ]
+                    },
+                    {
+                      "id": "b2",
+                      "answer": "get",
+                      "options": [
+                        "get",
+                        "got",
+                        "getting"
+                      ]
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "La causativa 'have the matter reviewed' y 'get the issue resolved' colocan el participio tras el objeto.",
+                    "ruleRef": "gp-c1-passive-causative"
+                  }
+                },
+                {
+                  "type": "SemanticMatch",
+                  "id": "es-en-c1-e91",
+                  "instructions": "Ordena la función de cada parte de la reclamación.",
+                  "pairs": [
+                    {
+                      "left": "I am writing to lodge a formal complaint about the delay.",
+                      "right": "Objeto de la reclamación",
+                      "register": "formal",
+                      "nuance": "Abre el escrito con el motivo exacto."
+                    },
+                    {
+                      "left": "The service was due on 3 May, but no delivery was attempted.",
+                      "right": "Hechos",
+                      "register": "formal",
+                      "nuance": "Datos verificables, sin adjetivos."
+                    },
+                    {
+                      "left": "I would appreciate a refund within ten working days.",
+                      "right": "Petición con plazo",
+                      "register": "formal",
+                      "nuance": "Concreta la acción y el límite temporal."
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "register",
+                    "explanation": "Una reclamación eficaz separa objeto, hechos y petición con plazo.",
+                    "ruleRef": "gp-c1-formal-complaints"
+                  }
+                },
+                {
+                  "type": "ListenChoose",
+                  "id": "es-en-c1-e92",
+                  "audioText": "I am writing to lodge a formal complaint about the delay. I would appreciate it if you could review the matter urgently.",
+                  "options": [
+                    "A praise letter",
+                    "A formal complaint",
+                    "A sales enquiry",
+                    "A job application"
+                  ],
+                  "correctIndex": 1,
+                  "feedbackOnError": {
+                    "type": "comprehension",
+                    "explanation": "'Lodge a formal complaint' identifica el propósito del escrito.",
+                    "ruleRef": "gp-c1-formal-complaints"
+                  }
+                },
+                {
+                  "type": "AudioOnlyPrompt",
+                  "id": "es-en-c1-e93",
+                  "audioText": "The service was due on 3 May, but no delivery was attempted. We have had the matter reviewed by our legal team and expect a refund within ten working days.",
+                  "question": "What are the two facts stated?",
+                  "options": [
+                    "The delay and the refund request",
+                    "The refund and the legal review",
+                    "The legal review and the new price",
+                    "The delivery date and a discount"
+                  ],
+                  "correctIndex": 0,
+                  "allowSlowPlayback": true,
+                  "feedbackOnError": {
+                    "type": "comprehension",
+                    "explanation": "La llamante describe el retraso y pide un reembolso en un plazo concreto.",
+                    "ruleRef": "gp-c1-passive-causative"
+                  }
+                },
+                {
+                  "type": "MultipleChoice",
+                  "id": "es-en-c1-e94",
+                  "question": "Completa: I would appreciate it if you ___ the matter urgently.",
+                  "options": [
+                    "could review",
+                    "review",
+                    "will review"
+                  ],
+                  "correctIndex": 0,
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "La fórmula cortés pide 'could' + infinitivo: 'could review'.",
+                    "ruleRef": "gp-c1-formal-complaints"
+                  }
+                },
+                {
+                  "type": "Translate",
+                  "id": "es-en-c1-e95",
+                  "sourcePhrase": "Escribo para presentar una reclamación formal sobre el retraso.",
+                  "correctTokens": [
+                    "I",
+                    "am",
+                    "writing",
+                    "to",
+                    "file",
+                    "a",
+                    "formal",
+                    "complaint",
+                    "about",
+                    "the",
+                    "delay"
+                  ],
+                  "distractorTokens": [
+                    "present",
+                    "formalize"
+                  ],
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "La fórmula formal es 'file a formal complaint about'; 'present' no es la colocación habitual aquí.",
+                    "ruleRef": "gp-c1-formal-complaints"
+                  }
+                },
+                {
+                  "type": "ListenType",
+                  "id": "es-en-c1-e96",
+                  "transcription": "We have had the matter reviewed by the legal team",
+                  "audioText": "We have had the matter reviewed by the legal team",
+                  "feedbackOnError": {
+                    "type": "spelling",
+                    "explanation": "La causativa 'have had the matter reviewed' encadena dos participios.",
+                    "ruleRef": "gp-c1-passive-causative"
+                  }
+                },
+                {
+                  "type": "SpeakRepeat",
+                  "id": "es-en-c1-e97",
+                  "targetPhrase": "I would appreciate it if you could review the matter and confirm the refund in writing.",
+                  "audioText": "I would appreciate it if you could review the matter and confirm the refund in writing.",
+                  "feedbackOnError": {
+                    "type": "pronunciation",
+                    "explanation": "Enlaza 'appreciate it if' y pronuncia 'refund' con acento en la primera sílaba.",
+                    "ruleRef": "gp-c1-formal-complaints"
+                  }
+                },
+                {
+                  "type": "MatchPairs",
+                  "id": "es-en-c1-e98",
+                  "pairs": [
+                    {
+                      "left": "lodge a complaint",
+                      "right": "presentar una reclamación"
+                    },
+                    {
+                      "left": "request a refund",
+                      "right": "solicitar un reembolso"
+                    },
+                    {
+                      "left": "escalate the matter",
+                      "right": "elevar el asunto"
+                    },
+                    {
+                      "left": "acknowledge receipt",
+                      "right": "acusar recibo"
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "Las colocaciones administrativas fijan el registro de la reclamación.",
+                    "ruleRef": "gp-c1-formal-complaints"
+                  }
+                },
+                {
+                  "type": "FreeSpeakingPrompt",
+                  "id": "es-en-c1-e99",
+                  "prompt": "Presenta una reclamación formal por un retraso: describe el hecho, pide una acción concreta y fija un plazo razonable.",
+                  "minTokens": 15,
+                  "conceptClusters": [
+                    [
+                      "I am writing",
+                      "lodge",
+                      "complaint"
+                    ],
+                    [
+                      "refund",
+                      "resolve",
+                      "review"
+                    ],
+                    [
+                      "deadline",
+                      "within",
+                      "confirm"
+                    ]
+                  ],
+                  "grammarRuleRefs": [
+                    "gp-c1-formal-complaints",
+                    "gp-c1-passive-causative"
+                  ],
+                  "timeLimitSeconds": 30,
+                  "minWpm": 70,
+                  "maxWpm": 160,
+                  "modelAnswer": "I am writing to lodge a formal complaint about the delay: the service was due on 3 May, but no delivery was attempted. I would appreciate it if you could review the matter and confirm a refund within ten working days.",
+                  "selfAssessmentCriteria": [
+                    "¿Describí los hechos sin adjetivos?",
+                    "¿Pedí una acción concreta?",
+                    "¿Fijé un plazo razonable?"
+                  ],
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "La respuesta modelo sigue el orden objeto-hechos-petición con cortesía formal.",
+                    "ruleRef": "gp-c1-formal-complaints"
+                  }
+                }
+              ]
+            },
+            {
+              "id": "es-en-c1-un-3-ls-2",
+              "title": "Leer la letra pequeña",
+              "cefrLevel": "C1",
+              "scenario": "Antes de firmar un contrato de alquiler, hay que detectar cláusulas abusivas o ambiguas.",
+              "canDo": "Puedo interpretar obligaciones y exenciones en un contrato y pedir una aclaración por escrito.",
+              "grammarPoints": [
+                {
+                  "id": "gp-c1-legal-modals",
+                  "label": "Modales legales",
+                  "description": "shall, must, may not, is entitled to..."
+                },
+                {
+                  "id": "gp-c1-nominal-density",
+                  "label": "Densidad nominal",
+                  "description": "Nominalizaciones que condensan obligaciones y condiciones."
+                }
+              ],
+              "vocabFrequencyBand": "8000-12000",
+              "culturalNotes": [
+                {
+                  "idiom": "the fine print",
+                  "note": "Las condiciones secundarias de un contrato, a menudo decisivas; leerlas evita aceptar obligaciones que no se esperaban.",
+                  "translation": "la letra pequeña"
+                }
+              ],
+              "microLesson": {
+                "title": "Leer obligaciones y exenciones",
+                "goals": [
+                  "Distinguir shall (obligación) de may (permiso).",
+                  "Detectar qué cubre y qué no cubre una cláusula."
+                ],
+                "sections": [
+                  {
+                    "heading": "Los verbos del contrato",
+                    "body": "Shall impone una obligación contractual; must expresa una exigencia; may not prohíbe; is entitled to reconoce un derecho. La densidad nominal (termination, exemption, breach) condensa acciones en sustantivos y exige leer despacio.",
+                    "examples": [
+                      {
+                        "source": "El inquilino deberá avisar por escrito.",
+                        "target": "The tenant shall give notice in writing.",
+                        "note": "Shall es la obligación contractual estándar."
+                      },
+                      {
+                        "source": "La exención no cubre daños por uso indebido.",
+                        "target": "The exemption does not cover damage caused by misuse.",
+                        "note": "La negación recae sobre 'cover'."
+                      }
+                    ]
+                  }
+                ]
+              },
+              "glossary": [
+                {
+                  "term": "clause",
+                  "translations": [
+                    "cláusula"
+                  ]
+                },
+                {
+                  "term": "liability",
+                  "translations": [
+                    "responsabilidad civil"
+                  ]
+                },
+                {
+                  "term": "warranty",
+                  "translations": [
+                    "garantía"
+                  ]
+                },
+                {
+                  "term": "terminate",
+                  "translations": [
+                    "rescindir",
+                    "terminar"
+                  ]
+                },
+                {
+                  "term": "entitlement",
+                  "translations": [
+                    "derecho",
+                    "titularidad"
+                  ]
+                },
+                {
+                  "term": "breach",
+                  "translations": [
+                    "incumplimiento"
+                  ]
+                },
+                {
+                  "term": "consent",
+                  "translations": [
+                    "consentimiento"
+                  ]
+                },
+                {
+                  "term": "renewal",
+                  "translations": [
+                    "renovación"
+                  ]
+                },
+                {
+                  "term": "exemption",
+                  "translations": [
+                    "exención"
+                  ]
+                },
+                {
+                  "term": "binding",
+                  "translations": [
+                    "vinculante"
+                  ]
+                }
+              ],
+              "exercises": [
+                {
+                  "type": "ClozeDragDrop",
+                  "id": "es-en-c1-e100",
+                  "passage": "The tenant {{b1}} give notice in writing, and any renewal {{b2}} be approved by the landlord.",
+                  "blanks": [
+                    {
+                      "id": "b1",
+                      "answer": "shall",
+                      "options": [
+                        "shall",
+                        "should",
+                        "would"
+                      ]
+                    },
+                    {
+                      "id": "b2",
+                      "answer": "must",
+                      "options": [
+                        "must",
+                        "might",
+                        "could"
+                      ]
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "'Shall' impone la obligación contractual y 'must' exige la aprobación del arrendador.",
+                    "ruleRef": "gp-c1-legal-modals"
+                  }
+                },
+                {
+                  "type": "ClozeDragDrop",
+                  "id": "es-en-c1-e101",
+                  "passage": "The warranty {{b1}} not cover damage caused by misuse, and the exemption is {{b2}} only in writing.",
+                  "blanks": [
+                    {
+                      "id": "b1",
+                      "answer": "does",
+                      "options": [
+                        "does",
+                        "do",
+                        "is"
+                      ]
+                    },
+                    {
+                      "id": "b2",
+                      "answer": "binding",
+                      "options": [
+                        "binding",
+                        "bind",
+                        "bound"
+                      ]
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "La negación con 'does not cover' y el adjetivo 'binding' describen el alcance de la cláusula.",
+                    "ruleRef": "gp-c1-nominal-density"
+                  }
+                },
+                {
+                  "type": "SemanticMatch",
+                  "id": "es-en-c1-e102",
+                  "instructions": "Empareja cada cláusula con su efecto jurídico.",
+                  "pairs": [
+                    {
+                      "left": "The tenant shall give notice in writing.",
+                      "right": "Obligación del inquilino",
+                      "register": "formal",
+                      "nuance": "Shall marca deber contractual."
+                    },
+                    {
+                      "left": "The tenant is entitled to a renewal.",
+                      "right": "Derecho reconocido",
+                      "register": "formal",
+                      "nuance": "La parte puede exigir la renovación."
+                    },
+                    {
+                      "left": "Subletting may not be authorized without consent.",
+                      "right": "Prohibición condicionada",
+                      "register": "formal",
+                      "nuance": "May not prohíbe salvo consentimiento."
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "register",
+                    "explanation": "Los modales legales distinguen obligación, derecho y prohibición.",
+                    "ruleRef": "gp-c1-legal-modals"
+                  }
+                },
+                {
+                  "type": "ListenChoose",
+                  "id": "es-en-c1-e103",
+                  "audioText": "The tenant shall give notice in writing, and any renewal must be approved by the landlord.",
+                  "options": [
+                    "The tenant may renew automatically",
+                    "The tenant must notify in writing and seek approval",
+                    "The landlord must renew without conditions",
+                    "No notice is required"
+                  ],
+                  "correctIndex": 1,
+                  "feedbackOnError": {
+                    "type": "comprehension",
+                    "explanation": "Shall y must convierten la renovación en un procedimiento con aviso y aprobación.",
+                    "ruleRef": "gp-c1-legal-modals"
+                  }
+                },
+                {
+                  "type": "AudioOnlyPrompt",
+                  "id": "es-en-c1-e104",
+                  "audioText": "The warranty does not cover damage caused by misuse, and the exemption is binding only in writing. If you need clarification, request it before signing.",
+                  "question": "What does the speaker recommend?",
+                  "options": [
+                    "Signing immediately",
+                    "Requesting clarification before signing",
+                    "Ignoring the exemption",
+                    "Subletting the property"
+                  ],
+                  "correctIndex": 1,
+                  "allowSlowPlayback": true,
+                  "feedbackOnError": {
+                    "type": "comprehension",
+                    "explanation": "La recomendación es aclarar por escrito antes de firmar.",
+                    "ruleRef": "gp-c1-nominal-density"
+                  }
+                },
+                {
+                  "type": "MultipleChoice",
+                  "id": "es-en-c1-e105",
+                  "question": "Completa: The tenant ___ give notice in writing.",
+                  "options": [
+                    "shall",
+                    "should",
+                    "would"
+                  ],
+                  "correctIndex": 0,
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "En un contrato, 'shall' expresa la obligación vinculante.",
+                    "ruleRef": "gp-c1-legal-modals"
+                  }
+                },
+                {
+                  "type": "Translate",
+                  "id": "es-en-c1-e106",
+                  "sourcePhrase": "El contrato no cubre daños causados por un uso indebido.",
+                  "correctTokens": [
+                    "The",
+                    "contract",
+                    "does",
+                    "not",
+                    "cover",
+                    "damage",
+                    "caused",
+                    "by",
+                    "misuse"
+                  ],
+                  "distractorTokens": [
+                    "covers",
+                    "misused"
+                  ],
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "La negación usa 'does not cover' y el participio 'caused by' modifica 'damage'.",
+                    "ruleRef": "gp-c1-nominal-density"
+                  }
+                },
+                {
+                  "type": "ListenType",
+                  "id": "es-en-c1-e107",
+                  "transcription": "The exemption is binding only in writing",
+                  "audioText": "The exemption is binding only in writing",
+                  "feedbackOnError": {
+                    "type": "spelling",
+                    "explanation": "Escribe 'exemption' con 'ex-' y 'binding' con 'b-i-n-d'.",
+                    "ruleRef": "gp-c1-legal-modals"
+                  }
+                },
+                {
+                  "type": "SpeakRepeat",
+                  "id": "es-en-c1-e108",
+                  "targetPhrase": "The tenant is entitled to a renewal, but the landlord must approve it in writing.",
+                  "audioText": "The tenant is entitled to a renewal, but the landlord must approve it in writing.",
+                  "feedbackOnError": {
+                    "type": "pronunciation",
+                    "explanation": "Enlaza 'entitled to a' y marca el contraste con 'but'.",
+                    "ruleRef": "gp-c1-legal-modals"
+                  }
+                },
+                {
+                  "type": "MatchPairs",
+                  "id": "es-en-c1-e109",
+                  "pairs": [
+                    {
+                      "left": "a binding clause",
+                      "right": "una cláusula vinculante"
+                    },
+                    {
+                      "left": "an exemption",
+                      "right": "una exención"
+                    },
+                    {
+                      "left": "terminate the agreement",
+                      "right": "rescindir el acuerdo"
+                    },
+                    {
+                      "left": "breach of contract",
+                      "right": "incumplimiento de contrato"
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "El léxico contractual nombra obligaciones, exenciones y rupturas.",
+                    "ruleRef": "gp-c1-nominal-density"
+                  }
+                },
+                {
+                  "type": "FreeSpeakingPrompt",
+                  "id": "es-en-c1-e110",
+                  "prompt": "Explica una cláusula ambigua de un contrato: di qué obliga, qué exención incluye y qué aclaración pedirías antes de firmar.",
+                  "minTokens": 15,
+                  "conceptClusters": [
+                    [
+                      "shall",
+                      "must",
+                      "entitled"
+                    ],
+                    [
+                      "clause",
+                      "exemption",
+                      "renewal"
+                    ],
+                    [
+                      "clarify",
+                      "in writing",
+                      "sign"
+                    ]
+                  ],
+                  "grammarRuleRefs": [
+                    "gp-c1-legal-modals",
+                    "gp-c1-nominal-density"
+                  ],
+                  "timeLimitSeconds": 30,
+                  "minWpm": 70,
+                  "maxWpm": 160,
+                  "modelAnswer": "The tenant shall give notice in writing, and any renewal must be approved by the landlord. The exemption is binding only in writing, so I would request clarification of the warranty before signing.",
+                  "selfAssessmentCriteria": [
+                    "¿Distinguí obligación y derecho?",
+                    "¿Expliqué la exención?",
+                    "¿Pedí aclaración por escrito?"
+                  ],
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "La respuesta modelo usa shall, must y entitled para describir el contrato con precisión.",
+                    "ruleRef": "gp-c1-legal-modals"
+                  }
+                }
+              ]
+            },
+            {
+              "id": "es-en-c1-un-3-ls-3",
+              "title": "Asuntos médicos complejos",
+              "cefrLevel": "C1",
+              "scenario": "En una consulta, hay que explicar síntomas persistentes y entender un historial con varias pruebas.",
+              "canDo": "Puedo describir síntomas con precisión temporal, reportar lo que dijo un especialista y pedir un seguimiento.",
+              "grammarPoints": [
+                {
+                  "id": "gp-c1-reported-symptoms",
+                  "label": "Síntomas reportados",
+                  "description": "She said that..., the specialist asked whether..., reported speech con tiempos."
+                },
+                {
+                  "id": "gp-c1-precision-adverbs",
+                  "label": "Adverbios de precisión",
+                  "description": "precisely, approximately, on and off, consistently."
+                }
+              ],
+              "vocabFrequencyBand": "8000-12000",
+              "culturalNotes": [
+                {
+                  "idiom": "on the mend",
+                  "note": "Estar recuperándose tras una enfermedad; en una consulta, sirve para describir una mejoría gradual sin declararla terminada.",
+                  "translation": "en recuperación"
+                }
+              ],
+              "microLesson": {
+                "title": "Describir el cuerpo con palabras",
+                "goals": [
+                  "Reportar síntomas con tiempos y frecuencia exactos.",
+                  "Distinguir lo que dijo el especialista de la propia interpretación."
+                ],
+                "sections": [
+                  {
+                    "heading": "El historial en palabras",
+                    "body": "She said she had had the symptoms since March retrocede el tiempo al reportar. The specialist asked whether the dosage had been changed convierte la pregunta en indirecta. Los adverbios (exactly, approximately, on and off, consistently) calibran la descripción.",
+                    "examples": [
+                      {
+                        "source": "El especialista preguntó si la dosis había cambiado.",
+                        "target": "The specialist asked whether the dosage had been changed.",
+                        "note": "Pregunta indirecta con whether."
+                      },
+                      {
+                        "source": "El dolor aparece de forma intermitente desde marzo.",
+                        "target": "The pain comes and goes on and off since March.",
+                        "note": "On and off describe intermitencia."
+                      }
+                    ]
+                  }
+                ]
+              },
+              "glossary": [
+                {
+                  "term": "symptom",
+                  "translations": [
+                    "síntoma"
+                  ]
+                },
+                {
+                  "term": "diagnosis",
+                  "translations": [
+                    "diagnóstico"
+                  ]
+                },
+                {
+                  "term": "prescription",
+                  "translations": [
+                    "receta"
+                  ]
+                },
+                {
+                  "term": "referral",
+                  "translations": [
+                    "derivación médica"
+                  ]
+                },
+                {
+                  "term": "chronic",
+                  "translations": [
+                    "crónico",
+                    "crónica"
+                  ]
+                },
+                {
+                  "term": "dosage",
+                  "translations": [
+                    "dosis"
+                  ]
+                },
+                {
+                  "term": "follow-up",
+                  "translations": [
+                    "seguimiento"
+                  ]
+                },
+                {
+                  "term": "persistent",
+                  "translations": [
+                    "persistente"
+                  ]
+                },
+                {
+                  "term": "recovery",
+                  "translations": [
+                    "recuperación"
+                  ]
+                },
+                {
+                  "term": "allergy",
+                  "translations": [
+                    "alergia"
+                  ]
+                }
+              ],
+              "exercises": [
+                {
+                  "type": "ClozeDragDrop",
+                  "id": "es-en-c1-e111",
+                  "passage": "The specialist asked how long I {{b1}} had the symptoms and whether the dosage {{b2}} changed.",
+                  "blanks": [
+                    {
+                      "id": "b1",
+                      "answer": "had",
+                      "options": [
+                        "had",
+                        "have",
+                        "has"
+                      ]
+                    },
+                    {
+                      "id": "b2",
+                      "answer": "had been",
+                      "options": [
+                        "had been",
+                        "has been",
+                        "was being"
+                      ]
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "En la pregunta indirecta, el pasado retrocede a 'had had' y la pasiva a 'had been changed'.",
+                    "ruleRef": "gp-c1-reported-symptoms"
+                  }
+                },
+                {
+                  "type": "ClozeDragDrop",
+                  "id": "es-en-c1-e112",
+                  "passage": "I have been taking the prescription {{b1}} March, {{b2}} the side effects have persisted.",
+                  "blanks": [
+                    {
+                      "id": "b1",
+                      "answer": "since",
+                      "options": [
+                        "since",
+                        "for",
+                        "from"
+                      ]
+                    },
+                    {
+                      "id": "b2",
+                      "answer": "although",
+                      "options": [
+                        "although",
+                        "despite",
+                        "however"
+                      ]
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "'Since' marca el punto de inicio de un estado continuo; 'although' introduce una cláusula concesiva.",
+                    "ruleRef": "gp-c1-precision-adverbs"
+                  }
+                },
+                {
+                  "type": "SemanticMatch",
+                  "id": "es-en-c1-e113",
+                  "instructions": "Distingue la frecuencia que describe cada síntoma.",
+                  "pairs": [
+                    {
+                      "left": "The pain comes and goes on and off.",
+                      "right": "Síntoma intermitente",
+                      "register": "neutral",
+                      "nuance": "Aparece y desaparece sin patrón fijo."
+                    },
+                    {
+                      "left": "The cough has been persistent for six weeks.",
+                      "right": "Síntoma continuo",
+                      "register": "formal",
+                      "nuance": "No ha remitido en el periodo indicado."
+                    },
+                    {
+                      "left": "The specialist asked whether the dosage had changed.",
+                      "right": "Pregunta indirecta del especialista",
+                      "register": "formal",
+                      "nuance": "Reporta la pregunta sin citarla literalmente."
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "register",
+                    "explanation": "La precisión temporal distingue un síntoma intermitente de uno persistente.",
+                    "ruleRef": "gp-c1-precision-adverbs"
+                  }
+                },
+                {
+                  "type": "ListenChoose",
+                  "id": "es-en-c1-e114",
+                  "audioText": "The specialist asked whether the dosage had been changed, and I said the symptoms had persisted since March.",
+                  "options": [
+                    "The dosage changed last month",
+                    "The symptoms persisted since March",
+                    "The specialist prescribed a new medicine",
+                    "The patient recovered in March"
+                  ],
+                  "correctIndex": 1,
+                  "feedbackOnError": {
+                    "type": "comprehension",
+                    "explanation": "El reported speech conserva la fecha de inicio y la falta de cambio de dosis.",
+                    "ruleRef": "gp-c1-reported-symptoms"
+                  }
+                },
+                {
+                  "type": "AudioOnlyPrompt",
+                  "id": "es-en-c1-e115",
+                  "audioText": "The specialist asked how long I had had the symptoms. I have been taking the prescription since March, but they have persisted, on and off, for six weeks.",
+                  "question": "How long have the symptoms persisted?",
+                  "options": [
+                    "Since March only",
+                    "For six weeks, on and off",
+                    "For two days",
+                    "Since last year"
+                  ],
+                  "correctIndex": 1,
+                  "allowSlowPlayback": true,
+                  "feedbackOnError": {
+                    "type": "comprehension",
+                    "explanation": "La paciente precisa la duración: seis semanas intermitentes.",
+                    "ruleRef": "gp-c1-precision-adverbs"
+                  }
+                },
+                {
+                  "type": "MultipleChoice",
+                  "id": "es-en-c1-e116",
+                  "question": "Completa: She said she ___ the symptoms for six weeks.",
+                  "options": [
+                    "had had",
+                    "has had",
+                    "have"
+                  ],
+                  "correctIndex": 0,
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "El reported speech retrocede el presente perfecto a past perfect: 'had had'.",
+                    "ruleRef": "gp-c1-reported-symptoms"
+                  }
+                },
+                {
+                  "type": "Translate",
+                  "id": "es-en-c1-e117",
+                  "sourcePhrase": "Llevo con estos síntomas desde marzo y no han remitido.",
+                  "correctTokens": [
+                    "I",
+                    "have",
+                    "had",
+                    "these",
+                    "symptoms",
+                    "since",
+                    "March",
+                    "and",
+                    "they",
+                    "have",
+                    "not",
+                    "eased"
+                  ],
+                  "distractorTokens": [
+                    "for",
+                    "improved"
+                  ],
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "Desde un punto concreto se usa 'since'; 'eased' describe que no han remitido.",
+                    "ruleRef": "gp-c1-precision-adverbs"
+                  }
+                },
+                {
+                  "type": "ListenType",
+                  "id": "es-en-c1-e118",
+                  "transcription": "The specialist asked whether the dosage had been changed",
+                  "audioText": "The specialist asked whether the dosage had been changed",
+                  "feedbackOnError": {
+                    "type": "spelling",
+                    "explanation": "Escribe 'whether' con 'wh-' y 'dosage' con una sola 's'.",
+                    "ruleRef": "gp-c1-reported-symptoms"
+                  }
+                },
+                {
+                  "type": "SpeakRepeat",
+                  "id": "es-en-c1-e119",
+                  "targetPhrase": "I have been taking the prescription since March, but the symptoms have persisted on and off.",
+                  "audioText": "I have been taking the prescription since March, but the symptoms have persisted on and off.",
+                  "feedbackOnError": {
+                    "type": "pronunciation",
+                    "explanation": "Enlaza 'been taking' y marca 'on and off' como expresión fija.",
+                    "ruleRef": "gp-c1-precision-adverbs"
+                  }
+                },
+                {
+                  "type": "MatchPairs",
+                  "id": "es-en-c1-e120",
+                  "pairs": [
+                    {
+                      "left": "a follow-up appointment",
+                      "right": "una cita de seguimiento"
+                    },
+                    {
+                      "left": "a chronic condition",
+                      "right": "una enfermedad crónica"
+                    },
+                    {
+                      "left": "a referral",
+                      "right": "una derivación médica"
+                    },
+                    {
+                      "left": "persistent symptoms",
+                      "right": "síntomas persistentes"
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "El vocabulario sanitario formal nombra el seguimiento y la derivación.",
+                    "ruleRef": "gp-c1-reported-symptoms"
+                  }
+                },
+                {
+                  "type": "FreeSpeakingPrompt",
+                  "id": "es-en-c1-e121",
+                  "prompt": "Explica a un especialista unos síntomas persistentes: cuándo empezaron, con qué frecuencia aparecen y qué tratamiento sigues.",
+                  "minTokens": 15,
+                  "conceptClusters": [
+                    [
+                      "since",
+                      "for",
+                      "on and off"
+                    ],
+                    [
+                      "symptom",
+                      "persistent",
+                      "dosage"
+                    ],
+                    [
+                      "follow-up",
+                      "referral",
+                      "recovery"
+                    ]
+                  ],
+                  "grammarRuleRefs": [
+                    "gp-c1-reported-symptoms",
+                    "gp-c1-precision-adverbs"
+                  ],
+                  "timeLimitSeconds": 30,
+                  "minWpm": 70,
+                  "maxWpm": 160,
+                  "modelAnswer": "I have had these symptoms since March, and they come and go on and off. The specialist asked whether the dosage had been changed, but I have been taking the same prescription and the symptoms have persisted.",
+                  "selfAssessmentCriteria": [
+                    "¿Precisé cuándo empezaron?",
+                    "¿Describí la frecuencia?",
+                    "¿Mencioné el tratamiento actual?"
+                  ],
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "La respuesta modelo combina since, on and off y reported speech para ordenar el historial.",
+                    "ruleRef": "gp-c1-reported-symptoms"
+                  }
+                }
+              ]
+            },
+            {
+              "id": "es-en-c1-un-3-ls-4",
+              "title": "Trámites y plazos",
+              "cefrLevel": "C1",
+              "scenario": "Una solicitud está a punto de caducar y hay que pedir una prórroga con plazo y confirmación por escrito.",
+              "canDo": "Puedo gestionar un trámite con futuro perfecto, peticiones corteses y confirmación escrita.",
+              "grammarPoints": [
+                {
+                  "id": "gp-c1-future-perfect",
+                  "label": "Futuro perfecto",
+                  "description": "will have received by..., will have been processed by..."
+                },
+                {
+                  "id": "gp-c1-polite-requests",
+                  "label": "Peticiones corteses",
+                  "description": "I would be grateful if you could..., would you mind...?"
+                }
+              ],
+              "vocabFrequencyBand": "8000-12000",
+              "culturalNotes": [
+                {
+                  "idiom": "against the clock",
+                  "note": "Trabajar con el tiempo en contra; en un trámite, obliga a priorizar el plazo oficial sobre la comodidad.",
+                  "translation": "contrarreloj"
+                }
+              ],
+              "microLesson": {
+                "title": "Pedir tiempo sin perder el plazo",
+                "goals": [
+                  "Proyectar resultados con futuro perfecto.",
+                  "Formular peticiones corteses y confirmar por escrito."
+                ],
+                "sections": [
+                  {
+                    "heading": "El plazo como estructura",
+                    "body": "By Friday, we will have received the certificate sitúa un resultado antes de una fecha. I would be grateful if you could confirm... pide acción con cortesía. El cierre 'please confirm in writing' convierte la gestión en un compromiso verificable.",
+                    "examples": [
+                      {
+                        "source": "Para el viernes, habremos recibido el certificado.",
+                        "target": "By Friday, we will have received the certificate.",
+                        "note": "Futuro perfecto con by + fecha."
+                      },
+                      {
+                        "source": "Le agradecería que confirmara la cita por escrito.",
+                        "target": "I would be grateful if you could confirm the appointment in writing.",
+                        "note": "Petición cortés con could."
+                      }
+                    ]
+                  }
+                ]
+              },
+              "glossary": [
+                {
+                  "term": "application",
+                  "translations": [
+                    "solicitud"
+                  ]
+                },
+                {
+                  "term": "extension",
+                  "translations": [
+                    "prórroga",
+                    "ampliación"
+                  ]
+                },
+                {
+                  "term": "approval",
+                  "translations": [
+                    "aprobación"
+                  ]
+                },
+                {
+                  "term": "certificate",
+                  "translations": [
+                    "certificado"
+                  ]
+                },
+                {
+                  "term": "appointment",
+                  "translations": [
+                    "cita"
+                  ]
+                },
+                {
+                  "term": "submit",
+                  "translations": [
+                    "presentar",
+                    "entregar"
+                  ]
+                },
+                {
+                  "term": "requirement",
+                  "translations": [
+                    "requisito"
+                  ]
+                },
+                {
+                  "term": "confirmation",
+                  "translations": [
+                    "confirmación"
+                  ]
+                },
+                {
+                  "term": "penalty",
+                  "translations": [
+                    "sanción",
+                    "penalización"
+                  ]
+                },
+                {
+                  "term": "processing",
+                  "translations": [
+                    "tramitación",
+                    "procesamiento"
+                  ]
+                }
+              ],
+              "exercises": [
+                {
+                  "type": "ClozeDragDrop",
+                  "id": "es-en-c1-e122",
+                  "passage": "By Friday, we {{b1}} have received the certificate, and the application {{b2}} have been processed.",
+                  "blanks": [
+                    {
+                      "id": "b1",
+                      "answer": "will",
+                      "options": [
+                        "will",
+                        "would",
+                        "have"
+                      ]
+                    },
+                    {
+                      "id": "b2",
+                      "answer": "will",
+                      "options": [
+                        "will",
+                        "would",
+                        "has"
+                      ]
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "El futuro perfecto se forma con 'will have + participio' en activa y pasiva.",
+                    "ruleRef": "gp-c1-future-perfect"
+                  }
+                },
+                {
+                  "type": "ClozeDragDrop",
+                  "id": "es-en-c1-e123",
+                  "passage": "I {{b1}} be grateful if you {{b2}} confirm the appointment in writing.",
+                  "blanks": [
+                    {
+                      "id": "b1",
+                      "answer": "would",
+                      "options": [
+                        "would",
+                        "will",
+                        "am"
+                      ]
+                    },
+                    {
+                      "id": "b2",
+                      "answer": "could",
+                      "options": [
+                        "could",
+                        "can",
+                        "will"
+                      ]
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "'I would be grateful if you could' es la fórmula cortés estándar en trámites.",
+                    "ruleRef": "gp-c1-polite-requests"
+                  }
+                },
+                {
+                  "type": "SemanticMatch",
+                  "id": "es-en-c1-e124",
+                  "instructions": "Empareja cada frase con su función administrativa.",
+                  "pairs": [
+                    {
+                      "left": "By Friday, we will have received the certificate.",
+                      "right": "Proyección de plazo",
+                      "register": "formal",
+                      "nuance": "El futuro perfecto fija un resultado antes de la fecha."
+                    },
+                    {
+                      "left": "I would be grateful if you could confirm the appointment.",
+                      "right": "Petición cortés",
+                      "register": "formal",
+                      "nuance": "Pide confirmación sin imponer."
+                    },
+                    {
+                      "left": "Please confirm the extension in writing.",
+                      "right": "Cierre verificable",
+                      "register": "formal",
+                      "nuance": "Convierte la gestión en un compromiso registrado."
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "register",
+                    "explanation": "Los trámites combinan proyección, petición y confirmación.",
+                    "ruleRef": "gp-c1-polite-requests"
+                  }
+                },
+                {
+                  "type": "ListenChoose",
+                  "id": "es-en-c1-e125",
+                  "audioText": "I would be grateful if you could confirm the appointment in writing before Friday.",
+                  "options": [
+                    "A demand with no deadline",
+                    "A polite request for written confirmation",
+                    "A cancellation",
+                    "A complaint about the certificate"
+                  ],
+                  "correctIndex": 1,
+                  "feedbackOnError": {
+                    "type": "comprehension",
+                    "explanation": "La fórmula 'I would be grateful if you could' suaviza la petición y fija el plazo.",
+                    "ruleRef": "gp-c1-polite-requests"
+                  }
+                },
+                {
+                  "type": "AudioOnlyPrompt",
+                  "id": "es-en-c1-e126",
+                  "audioText": "By Friday, we will have received the certificate, and the application will have been processed. I would be grateful if you could send a confirmation letter that same day.",
+                  "question": "What does the speaker expect by Friday?",
+                  "options": [
+                    "Only the certificate",
+                    "The certificate and the processed application",
+                    "A new application",
+                    "A penalty notice"
+                  ],
+                  "correctIndex": 1,
+                  "allowSlowPlayback": true,
+                  "feedbackOnError": {
+                    "type": "comprehension",
+                    "explanation": "El futuro perfecto proyecta dos resultados antes del viernes.",
+                    "ruleRef": "gp-c1-future-perfect"
+                  }
+                },
+                {
+                  "type": "MultipleChoice",
+                  "id": "es-en-c1-e127",
+                  "question": "Completa: By next week, we ___ have submitted the application.",
+                  "options": [
+                    "will",
+                    "would",
+                    "have"
+                  ],
+                  "correctIndex": 0,
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "El futuro perfecto con 'by' exige 'will have + participio'.",
+                    "ruleRef": "gp-c1-future-perfect"
+                  }
+                },
+                {
+                  "type": "Translate",
+                  "id": "es-en-c1-e128",
+                  "sourcePhrase": "Le agradecería que confirmara la cita por escrito.",
+                  "correctTokens": [
+                    "I",
+                    "would",
+                    "be",
+                    "grateful",
+                    "if",
+                    "you",
+                    "could",
+                    "confirm",
+                    "the",
+                    "appointment",
+                    "in",
+                    "writing"
+                  ],
+                  "distractorTokens": [
+                    "will",
+                    "confirmed"
+                  ],
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "La fórmula cortés pide 'would be grateful' y 'could confirm'.",
+                    "ruleRef": "gp-c1-polite-requests"
+                  }
+                },
+                {
+                  "type": "ListenType",
+                  "id": "es-en-c1-e129",
+                  "transcription": "By Friday, the application will have been processed",
+                  "audioText": "By Friday, the application will have been processed",
+                  "feedbackOnError": {
+                    "type": "spelling",
+                    "explanation": "Escribe 'processed' con doble 's' y 'application' con '-tion'.",
+                    "ruleRef": "gp-c1-future-perfect"
+                  }
+                },
+                {
+                  "type": "SpeakRepeat",
+                  "id": "es-en-c1-e130",
+                  "targetPhrase": "I would be grateful if you could confirm the extension in writing before Friday.",
+                  "audioText": "I would be grateful if you could confirm the extension in writing before Friday.",
+                  "feedbackOnError": {
+                    "type": "pronunciation",
+                    "explanation": "Enlaza 'would be' y marca 'in writing' como cierre de la petición.",
+                    "ruleRef": "gp-c1-polite-requests"
+                  }
+                },
+                {
+                  "type": "MatchPairs",
+                  "id": "es-en-c1-e131",
+                  "pairs": [
+                    {
+                      "left": "submit an application",
+                      "right": "presentar una solicitud"
+                    },
+                    {
+                      "left": "meet the deadline",
+                      "right": "cumplir el plazo"
+                    },
+                    {
+                      "left": "request an extension",
+                      "right": "solicitar una prórroga"
+                    },
+                    {
+                      "left": "a confirmation letter",
+                      "right": "una carta de confirmación"
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "Las colocaciones administrativas describen cada paso del trámite.",
+                    "ruleRef": "gp-c1-polite-requests"
+                  }
+                },
+                {
+                  "type": "FreeSpeakingPrompt",
+                  "id": "es-en-c1-e132",
+                  "prompt": "Llama para gestionar una prórroga: explica qué falta, proyecta la entrega con un plazo y pide confirmación por escrito.",
+                  "minTokens": 15,
+                  "conceptClusters": [
+                    [
+                      "will have",
+                      "by Friday",
+                      "deadline"
+                    ],
+                    [
+                      "extension",
+                      "application",
+                      "submit"
+                    ],
+                    [
+                      "grateful",
+                      "confirm",
+                      "in writing"
+                    ]
+                  ],
+                  "grammarRuleRefs": [
+                    "gp-c1-future-perfect",
+                    "gp-c1-polite-requests"
+                  ],
+                  "timeLimitSeconds": 30,
+                  "minWpm": 70,
+                  "maxWpm": 160,
+                  "modelAnswer": "By Friday, we will have submitted the missing certificate, so the application will have been completed. I would be grateful if you could confirm the extension in writing, because we are working against the clock.",
+                  "selfAssessmentCriteria": [
+                    "¿Proyecté el resultado con un plazo?",
+                    "¿Pedí la prórroga con cortesía?",
+                    "¿Solicité confirmación escrita?"
+                  ],
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "La respuesta modelo usa futuro perfecto para el plazo y 'I would be grateful if' para la petición.",
+                    "ruleRef": "gp-c1-future-perfect"
+                  }
+                }
+              ]
+            }
+          ]
         }
         ]
       }
