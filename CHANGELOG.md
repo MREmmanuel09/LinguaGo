@@ -6,6 +6,35 @@ El formato sigue [Keep a Changelog](https://keepachangelog.com/es-ES/1.1.0/)
 y el versionado sigue [SemVer](https://semver.org/lang/es/).
 Pre-1.0: los cambios incompatibles pueden ocurrir en `0.y.0`.
 
+## [2.1.0] - 2026-11-08
+
+Expansión a C1 (ADR-042): infraestructura de niveles avanzados y piloto C1
+completo en `es-en`, con el evaluador oral ya robustecido por el hotfix 2.0.1.
+
+### Añadido
+
+- **Infraestructura C1/C2:** `CefrLevel` incorpora `C1` y `C2`, y
+  `VocabFrequencyBand` las bandas `8000-12000` y `12000+`. El schema v2 y el
+  validador amplían la regla de No-Aplanamiento a B1/B2/C1/C2 **sin**
+  `schemaVersion: 3` (cambio aditivo; los cursos existentes siguen válidos).
+- **Rampa C1/C2 verificada:** `ContentRampTest` fija los escalones (C1 11
+  ejercicios/38 tokens; C2 12/48) y `validateContent` imprime un informe por
+  curso con lecciones por CEFR, ejercicios, cobertura de feedback y frase más
+  larga.
+- **Etapas C1/C2 en el camino** (`PathStage`) con etiquetas y contraste AA,
+  derivadas del CEFR real de cada nivel.
+- **C1 completo en `es-en`:** nivel `es-en-lv-4` con 24 lecciones y 264
+  ejercicios, organizados en seis unidades (consolidación, argumentación,
+  trámites, liderazgo, proyecto integrador y evaluación global). Cada lección
+  incluye micro-clase, glosario curado, nota cultural y un `FreeSpeakingPrompt`;
+  el curso acumula ahora **93 lecciones y 853 ejercicios**.
+
+### Cambiado
+
+- Los totales de contrato de `es-en` se actualizan junto con el contenido
+  (69→93 lecciones, 589→853 ejercicios) y las lecciones C1 usan la banda léxica
+  `8000-12000` con dos focos gramaticales.
+
 ## [2.0.1] - 2026-11-08
 
 Hotfix de voz (ADR-043): la evaluación oral ya no falla cuando la
