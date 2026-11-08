@@ -10875,7 +10875,1523 @@
                 ]
               }
             ]
-          }
+          },
+        {
+          "id": "es-en-lv-4-un-2",
+          "title": "Argumentación y matiz",
+          "lessons": [
+            {
+              "id": "es-en-c1-un-2-ls-1",
+              "title": "Conceder sin ceder",
+              "cefrLevel": "C1",
+              "scenario": "En un comité, hay que reconocer los puntos válidos de la propuesta contraria sin abandonar la propia tesis.",
+              "canDo": "Puedo conceder un punto con estructuras concesivas y reforzar mi tesis con inversión enfática.",
+              "grammarPoints": [
+                {
+                  "id": "gp-c1-concession",
+                  "label": "Concesión",
+                  "description": "While..., although..., whereas..., even though..."
+                },
+                {
+                  "id": "gp-c1-inversion",
+                  "label": "Inversión enfática",
+                  "description": "Not only does..., little did..., rarely have we..."
+                }
+              ],
+              "vocabFrequencyBand": "8000-12000",
+              "culturalNotes": [
+                {
+                  "idiom": "draw the line",
+                  "note": "Fijar un límite que no se cruza; en un debate, concede el punto menor y marca dónde termina la concesión.",
+                  "translation": "marcar el límite"
+                }
+              ],
+              "microLesson": {
+                "title": "Conceder para fortalecer la tesis",
+                "goals": [
+                  "Reconocer un punto válido sin ceder el conjunto.",
+                  "Reforzar la postura con inversión enfática."
+                ],
+                "sections": [
+                  {
+                    "heading": "La concesión como estrategia",
+                    "body": "While introduce una concesión con cláusula completa; whereas contrasta dos realidades; even though subraya la sorpresa. Después, la inversión Not only does... but it also... presenta dos ventajas en orden de fuerza creciente.",
+                    "examples": [
+                      {
+                        "source": "Aunque la propuesta tiene mérito, no aborda el coste real.",
+                        "target": "While the proposal has merit, it fails to address the real cost.",
+                        "note": "While + cláusula completa."
+                      },
+                      {
+                        "source": "El plan no solo reduce costes, sino que también genera confianza.",
+                        "target": "Not only does the plan reduce costs, but it also builds trust.",
+                        "note": "Tras 'not only' se invierte el auxiliar."
+                      }
+                    ]
+                  }
+                ]
+              },
+              "glossary": [
+                {
+                  "term": "concede",
+                  "translations": [
+                    "conceder",
+                    "admitir"
+                  ]
+                },
+                {
+                  "term": "merit",
+                  "translations": [
+                    "mérito",
+                    "valor"
+                  ]
+                },
+                {
+                  "term": "objection",
+                  "translations": [
+                    "objeción"
+                  ]
+                },
+                {
+                  "term": "valid",
+                  "translations": [
+                    "válido",
+                    "válida"
+                  ]
+                },
+                {
+                  "term": "premise",
+                  "translations": [
+                    "premisa"
+                  ]
+                },
+                {
+                  "term": "stance",
+                  "translations": [
+                    "postura"
+                  ]
+                },
+                {
+                  "term": "flaw",
+                  "translations": [
+                    "fallo",
+                    "defecto"
+                  ]
+                },
+                {
+                  "term": "whereas",
+                  "translations": [
+                    "mientras que"
+                  ]
+                },
+                {
+                  "term": "albeit",
+                  "translations": [
+                    "aunque",
+                    "si bien"
+                  ]
+                },
+                {
+                  "term": "undermine",
+                  "translations": [
+                    "socavar",
+                    "debilitar"
+                  ]
+                }
+              ],
+              "exercises": [
+                {
+                  "type": "ClozeDragDrop",
+                  "id": "es-en-c1-e45",
+                  "passage": "{{b1}} the proposal has merit, it fails to address the real cost.",
+                  "blanks": [
+                    {
+                      "id": "b1",
+                      "answer": "While",
+                      "options": [
+                        "While",
+                        "Despite",
+                        "However"
+                      ]
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "'While' introduce una cláusula completa de concesión; 'despite' pediría un sustantivo.",
+                    "ruleRef": "gp-c1-concession"
+                  }
+                },
+                {
+                  "type": "ClozeDragDrop",
+                  "id": "es-en-c1-e46",
+                  "passage": "Not {{b1}} does the plan reduce costs, but it also {{b2}} trust.",
+                  "blanks": [
+                    {
+                      "id": "b1",
+                      "answer": "only",
+                      "options": [
+                        "only",
+                        "just",
+                        "even"
+                      ]
+                    },
+                    {
+                      "id": "b2",
+                      "answer": "builds",
+                      "options": [
+                        "builds",
+                        "build",
+                        "building"
+                      ]
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "La estructura 'Not only does X, but it also Y' invierte el auxiliar y coordina dos ventajas.",
+                    "ruleRef": "gp-c1-inversion"
+                  }
+                },
+                {
+                  "type": "SemanticMatch",
+                  "id": "es-en-c1-e47",
+                  "instructions": "Distingue qué movimiento argumentativo hace cada frase.",
+                  "pairs": [
+                    {
+                      "left": "While the proposal has merit, it ignores the cost.",
+                      "right": "Concesión seguida de objeción",
+                      "register": "formal",
+                      "nuance": "Reconoce un punto y lo limita después."
+                    },
+                    {
+                      "left": "The plan is cheaper, whereas the old system was safer.",
+                      "right": "Contraste de dos realidades",
+                      "register": "formal",
+                      "nuance": "Whereas compara dos proposiciones completas."
+                    },
+                    {
+                      "left": "Not only does it save time, but it also reduces risk.",
+                      "right": "Énfasis acumulativo",
+                      "register": "formal",
+                      "nuance": "La inversión refuerza la segunda ventaja."
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "register",
+                    "explanation": "Conceder no es ceder: la concesión prepara una objeción más precisa.",
+                    "ruleRef": "gp-c1-concession"
+                  }
+                },
+                {
+                  "type": "ListenChoose",
+                  "id": "es-en-c1-e48",
+                  "audioText": "While the proposal has merit, it fails to address the real cost.",
+                  "options": [
+                    "The proposal is perfect",
+                    "The proposal has value but a serious gap",
+                    "The proposal has no merit",
+                    "The cost is irrelevant"
+                  ],
+                  "correctIndex": 1,
+                  "feedbackOnError": {
+                    "type": "comprehension",
+                    "explanation": "La concesión reconoce el mérito y la objeción señala el coste.",
+                    "ruleRef": "gp-c1-concession"
+                  }
+                },
+                {
+                  "type": "AudioOnlyPrompt",
+                  "id": "es-en-c1-e49",
+                  "audioText": "While the proposal has merit, it fails to address the real cost. Not only does it underestimate the timeline, but it also ignores the staffing gap.",
+                  "question": "What are the two objections?",
+                  "options": [
+                    "Cost and timeline only",
+                    "Timeline and staffing",
+                    "Staffing and cost",
+                    "Cost and staffing"
+                  ],
+                  "correctIndex": 1,
+                  "allowSlowPlayback": true,
+                  "feedbackOnError": {
+                    "type": "comprehension",
+                    "explanation": "La inversión 'not only... but also' añade dos objeciones: el plazo y la plantilla.",
+                    "ruleRef": "gp-c1-inversion"
+                  }
+                },
+                {
+                  "type": "MultipleChoice",
+                  "id": "es-en-c1-e50",
+                  "question": "Completa: Not only ___ the plan reduce costs, but it also builds trust.",
+                  "options": [
+                    "does",
+                    "do",
+                    "did"
+                  ],
+                  "correctIndex": 0,
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "Con sujeto singular en presente, la inversión usa 'does'.",
+                    "ruleRef": "gp-c1-inversion"
+                  }
+                },
+                {
+                  "type": "Translate",
+                  "id": "es-en-c1-e51",
+                  "sourcePhrase": "Aunque la propuesta tiene mérito, no aborda el coste real.",
+                  "correctTokens": [
+                    "While",
+                    "the",
+                    "proposal",
+                    "has",
+                    "merit",
+                    "it",
+                    "fails",
+                    "to",
+                    "address",
+                    "the",
+                    "real",
+                    "cost"
+                  ],
+                  "distractorTokens": [
+                    "Despite",
+                    "addressing"
+                  ],
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "'While' pide cláusula completa; 'despite' iría con sustantivo.",
+                    "ruleRef": "gp-c1-concession"
+                  }
+                },
+                {
+                  "type": "ListenType",
+                  "id": "es-en-c1-e52",
+                  "transcription": "Not only does the plan reduce costs, but it also builds trust",
+                  "audioText": "Not only does the plan reduce costs, but it also builds trust",
+                  "feedbackOnError": {
+                    "type": "spelling",
+                    "explanation": "Escribe la inversión completa: 'Not only does... but it also...'.",
+                    "ruleRef": "gp-c1-inversion"
+                  }
+                },
+                {
+                  "type": "SpeakRepeat",
+                  "id": "es-en-c1-e53",
+                  "targetPhrase": "While the proposal has merit, it fails to address the real cost.",
+                  "audioText": "While the proposal has merit, it fails to address the real cost.",
+                  "feedbackOnError": {
+                    "type": "pronunciation",
+                    "explanation": "Marca la pausa tras 'merit' y acentúa 'real cost'.",
+                    "ruleRef": "gp-c1-concession"
+                  }
+                },
+                {
+                  "type": "MatchPairs",
+                  "id": "es-en-c1-e54",
+                  "pairs": [
+                    {
+                      "left": "concede a point",
+                      "right": "conceder un punto"
+                    },
+                    {
+                      "left": "a valid objection",
+                      "right": "una objeción válida"
+                    },
+                    {
+                      "left": "the core premise",
+                      "right": "la premisa central"
+                    },
+                    {
+                      "left": "address the cost",
+                      "right": "abordar el coste"
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "El léxico del debate distingue premisas, objeciones y concesiones.",
+                    "ruleRef": "gp-c1-concession"
+                  }
+                },
+                {
+                  "type": "FreeSpeakingPrompt",
+                  "id": "es-en-c1-e55",
+                  "prompt": "Concede un punto al adversario sin renunciar a tu tesis: reconoce lo válido, marca el límite y reformula tu postura.",
+                  "minTokens": 15,
+                  "conceptClusters": [
+                    [
+                      "while",
+                      "although",
+                      "whereas"
+                    ],
+                    [
+                      "merit",
+                      "valid",
+                      "point"
+                    ],
+                    [
+                      "not only",
+                      "also",
+                      "however"
+                    ]
+                  ],
+                  "grammarRuleRefs": [
+                    "gp-c1-concession",
+                    "gp-c1-inversion"
+                  ],
+                  "timeLimitSeconds": 30,
+                  "minWpm": 70,
+                  "maxWpm": 160,
+                  "modelAnswer": "While the proposal has merit, it fails to address the real cost: not only does it underestimate the timeline, but it also ignores the staffing gap. I concede the point about flexibility, yet the budget remains the limit we cannot cross.",
+                  "selfAssessmentCriteria": [
+                    "¿Reconocí un punto válido?",
+                    "¿Marqué el límite con claridad?",
+                    "¿Reforcé mi tesis sin agresividad?"
+                  ],
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "La respuesta modelo concede con 'while', refuerza con inversión y cierra con un límite explícito.",
+                    "ruleRef": "gp-c1-inversion"
+                  }
+                }
+              ]
+            },
+            {
+              "id": "es-en-c1-un-2-ls-2",
+              "title": "Atenuar la crítica",
+              "cefrLevel": "C1",
+              "scenario": "Un compañero presenta un trabajo con problemas y hay que corregirlo sin desmotivarlo.",
+              "canDo": "Puedo expresar crítica con modalidad epistémica, suavizar el impacto y separar la persona del problema.",
+              "grammarPoints": [
+                {
+                  "id": "gp-c1-epistemic-modality",
+                  "label": "Modalidad epistémica",
+                  "description": "may well, might, could, be likely to..."
+                },
+                {
+                  "id": "gp-c1-softeners",
+                  "label": "Atenuadores",
+                  "description": "somewhat, a bit, to some extent, I wonder if..."
+                }
+              ],
+              "vocabFrequencyBand": "8000-12000",
+              "culturalNotes": [
+                {
+                  "idiom": "soften the blow",
+                  "note": "Reducir el impacto de una mala noticia o crítica; en feedback, permite señalar el problema sin humillar.",
+                  "translation": "suavizar el golpe"
+                }
+              ],
+              "microLesson": {
+                "title": "Criticar sin herir",
+                "goals": [
+                  "Separar el juicio sobre el trabajo del juicio sobre la persona.",
+                  "Combinar modales y atenuadores para bajar la intensidad."
+                ],
+                "sections": [
+                  {
+                    "heading": "Bajar la intensidad sin perder precisión",
+                    "body": "May well reconoce la posibilidad de que la crítica sea cierta; might y could la presentan como hipótesis. Los atenuadores (somewhat, a bit, to some extent) reducen el alcance; I wonder if abre una pregunta en lugar de una acusación.",
+                    "examples": [
+                      {
+                        "source": "Me pregunto si el tono fue demasiado directo.",
+                        "target": "I wonder if the tone was a bit too direct.",
+                        "note": "La pregunta retórica suaviza la corrección."
+                      },
+                      {
+                        "source": "La crítica puede ser válida, pero el momento la debilita.",
+                        "target": "The criticism may well be valid, but the timing undermines it.",
+                        "note": "May well acepta la crítica antes de matizarla."
+                      }
+                    ]
+                  }
+                ]
+              },
+              "glossary": [
+                {
+                  "term": "mitigate",
+                  "translations": [
+                    "mitigar",
+                    "atenuar"
+                  ]
+                },
+                {
+                  "term": "criticism",
+                  "translations": [
+                    "crítica"
+                  ]
+                },
+                {
+                  "term": "defensive",
+                  "translations": [
+                    "defensivo",
+                    "defensiva"
+                  ]
+                },
+                {
+                  "term": "constructive",
+                  "translations": [
+                    "constructivo",
+                    "constructiva"
+                  ]
+                },
+                {
+                  "term": "implicit",
+                  "translations": [
+                    "implícito",
+                    "implícita"
+                  ]
+                },
+                {
+                  "term": "tone",
+                  "translations": [
+                    "tono"
+                  ]
+                },
+                {
+                  "term": "acknowledge",
+                  "translations": [
+                    "reconocer"
+                  ]
+                },
+                {
+                  "term": "improvement",
+                  "translations": [
+                    "mejora"
+                  ]
+                },
+                {
+                  "term": "precise",
+                  "translations": [
+                    "preciso",
+                    "precisa"
+                  ]
+                },
+                {
+                  "term": "wording",
+                  "translations": [
+                    "formulación",
+                    "redacción"
+                  ]
+                }
+              ],
+              "exercises": [
+                {
+                  "type": "ClozeDragDrop",
+                  "id": "es-en-c1-e56",
+                  "passage": "I {{b1}} if the current tone is {{b2}} too defensive.",
+                  "blanks": [
+                    {
+                      "id": "b1",
+                      "answer": "wonder",
+                      "options": [
+                        "wonder",
+                        "wondering",
+                        "wondered"
+                      ]
+                    },
+                    {
+                      "id": "b2",
+                      "answer": "somewhat",
+                      "options": [
+                        "somewhat",
+                        "somehow",
+                        "sometimes"
+                      ]
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "'I wonder if' abre una pregunta atenuada y 'somewhat' reduce el alcance del adjetivo.",
+                    "ruleRef": "gp-c1-softeners"
+                  }
+                },
+                {
+                  "type": "ClozeDragDrop",
+                  "id": "es-en-c1-e57",
+                  "passage": "The criticism {{b1}} well be valid, but the timing {{b2}} likely to undermine the message.",
+                  "blanks": [
+                    {
+                      "id": "b1",
+                      "answer": "may",
+                      "options": [
+                        "may",
+                        "must",
+                        "can't"
+                      ]
+                    },
+                    {
+                      "id": "b2",
+                      "answer": "is",
+                      "options": [
+                        "is",
+                        "are",
+                        "be"
+                      ]
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "'May well' reconoce la posibilidad y 'is likely to' expresa probabilidad con sujeto singular.",
+                    "ruleRef": "gp-c1-epistemic-modality"
+                  }
+                },
+                {
+                  "type": "SemanticMatch",
+                  "id": "es-en-c1-e58",
+                  "instructions": "Empareja cada crítica con el grado de atenuación que usa.",
+                  "pairs": [
+                    {
+                      "left": "I wonder if the wording could be clearer.",
+                      "right": "Crítica muy atenuada",
+                      "register": "formal",
+                      "nuance": "Convierte el defecto en una pregunta."
+                    },
+                    {
+                      "left": "The report is somewhat repetitive in the middle.",
+                      "right": "Crítica parcial",
+                      "register": "neutral",
+                      "nuance": "'Somewhat' limita la crítica a una parte."
+                    },
+                    {
+                      "left": "The argument may well be right, but the evidence is thin.",
+                      "right": "Crítica concesiva",
+                      "register": "formal",
+                      "nuance": "Acepta la tesis y ataca la prueba."
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "register",
+                    "explanation": "La atenuación no oculta el problema: lo sitúa con precisión.",
+                    "ruleRef": "gp-c1-softeners"
+                  }
+                },
+                {
+                  "type": "ListenChoose",
+                  "id": "es-en-c1-e59",
+                  "audioText": "I wonder if the tone was a bit too direct in the last meeting.",
+                  "options": [
+                    "The speaker praises the tone",
+                    "The speaker suggests the tone was too direct",
+                    "The speaker demands an apology",
+                    "The speaker ignores the issue"
+                  ],
+                  "correctIndex": 1,
+                  "feedbackOnError": {
+                    "type": "comprehension",
+                    "explanation": "'I wonder if' y 'a bit' presentan la crítica como observación, no como ataque.",
+                    "ruleRef": "gp-c1-softeners"
+                  }
+                },
+                {
+                  "type": "AudioOnlyPrompt",
+                  "id": "es-en-c1-e60",
+                  "audioText": "The criticism may well be valid, but the timing is likely to undermine the message. I wonder if we could raise it privately first.",
+                  "question": "What does the speaker suggest?",
+                  "options": [
+                    "Ignoring the criticism",
+                    "Raising the issue privately first",
+                    "Repeating the criticism in public",
+                    "Changing the message completely"
+                  ],
+                  "correctIndex": 1,
+                  "allowSlowPlayback": true,
+                  "feedbackOnError": {
+                    "type": "comprehension",
+                    "explanation": "La propuesta final suaviza el canal: primero en privado.",
+                    "ruleRef": "gp-c1-softeners"
+                  }
+                },
+                {
+                  "type": "MultipleChoice",
+                  "id": "es-en-c1-e61",
+                  "question": "Completa: I wonder ___ the feedback was too direct.",
+                  "options": [
+                    "whether",
+                    "that",
+                    "what"
+                  ],
+                  "correctIndex": 0,
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "'I wonder whether/if' introduce una pregunta indirecta de sí o no.",
+                    "ruleRef": "gp-c1-softeners"
+                  }
+                },
+                {
+                  "type": "Translate",
+                  "id": "es-en-c1-e62",
+                  "sourcePhrase": "Me pregunto si el comentario fue demasiado directo.",
+                  "correctTokens": [
+                    "I",
+                    "wonder",
+                    "whether",
+                    "the",
+                    "comment",
+                    "was",
+                    "too",
+                    "direct"
+                  ],
+                  "distractorTokens": [
+                    "that",
+                    "directly"
+                  ],
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "La pregunta indirecta usa 'whether' y el adjetivo 'direct', no el adverbio.",
+                    "ruleRef": "gp-c1-softeners"
+                  }
+                },
+                {
+                  "type": "ListenType",
+                  "id": "es-en-c1-e63",
+                  "transcription": "The criticism may well be valid, but the timing is likely to undermine the message",
+                  "audioText": "The criticism may well be valid, but the timing is likely to undermine the message",
+                  "feedbackOnError": {
+                    "type": "spelling",
+                    "explanation": "Escribe 'criticism' con 'c' inicial y 'undermine' sin guion.",
+                    "ruleRef": "gp-c1-epistemic-modality"
+                  }
+                },
+                {
+                  "type": "SpeakRepeat",
+                  "id": "es-en-c1-e64",
+                  "targetPhrase": "I wonder if the wording could be somewhat clearer.",
+                  "audioText": "I wonder if the wording could be somewhat clearer.",
+                  "feedbackOnError": {
+                    "type": "pronunciation",
+                    "explanation": "Enlaza 'wonder if' y marca el acento en 'clearer'.",
+                    "ruleRef": "gp-c1-softeners"
+                  }
+                },
+                {
+                  "type": "MatchPairs",
+                  "id": "es-en-c1-e65",
+                  "pairs": [
+                    {
+                      "left": "constructive feedback",
+                      "right": "crítica constructiva"
+                    },
+                    {
+                      "left": "a defensive reaction",
+                      "right": "una reacción defensiva"
+                    },
+                    {
+                      "left": "to some extent",
+                      "right": "hasta cierto punto"
+                    },
+                    {
+                      "left": "implicit criticism",
+                      "right": "crítica implícita"
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "El feedback constructivo nombra conductas, no personas.",
+                    "ruleRef": "gp-c1-softeners"
+                  }
+                },
+                {
+                  "type": "FreeSpeakingPrompt",
+                  "id": "es-en-c1-e66",
+                  "prompt": "Da feedback a un compañero sobre un informe flojo: reconoce lo que funciona, señala el problema con precisión y propone una mejora concreta.",
+                  "minTokens": 15,
+                  "conceptClusters": [
+                    [
+                      "I wonder",
+                      "somewhat",
+                      "a bit"
+                    ],
+                    [
+                      "valid",
+                      "improve",
+                      "improvement"
+                    ],
+                    [
+                      "constructive",
+                      "tone",
+                      "specific"
+                    ]
+                  ],
+                  "grammarRuleRefs": [
+                    "gp-c1-softeners",
+                    "gp-c1-epistemic-modality"
+                  ],
+                  "timeLimitSeconds": 30,
+                  "minWpm": 70,
+                  "maxWpm": 160,
+                  "modelAnswer": "The argument may well be valid, but the evidence is somewhat thin in the middle. I wonder if a clearer example would help, and I would suggest raising the issue privately before the next meeting.",
+                  "selfAssessmentCriteria": [
+                    "¿Separé la persona del problema?",
+                    "¿Atenué sin perder precisión?",
+                    "¿Propuse una mejora concreta?"
+                  ],
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "La respuesta modelo combina 'may well', 'somewhat' y 'I wonder if' para criticar sin atacar.",
+                    "ruleRef": "gp-c1-softeners"
+                  }
+                }
+              ]
+            },
+            {
+              "id": "es-en-c1-un-2-ls-3",
+              "title": "Ironía y doble filo",
+              "cefrLevel": "C1",
+              "scenario": "Tras una reunión desastrosa, el equipo comenta el resultado con humor seco y segundas intenciones.",
+              "canDo": "Puedo reconocer la ironía, usar el substatement y formular preguntas retóricas sin perder el registro profesional.",
+              "grammarPoints": [
+                {
+                  "id": "gp-c1-understatement",
+                  "label": "Substatement",
+                  "description": "less than impressive, not exactly ideal, to say the least."
+                },
+                {
+                  "id": "gp-c1-rhetorical-questions",
+                  "label": "Preguntas retóricas",
+                  "description": "Did we really...? Isn't it curious that...?"
+                }
+              ],
+              "vocabFrequencyBand": "8000-12000",
+              "culturalNotes": [
+                {
+                  "idiom": "tongue in cheek",
+                  "note": "Decir algo con ironía sin intención literal; en el trabajo, exige que el interlocutor comparta el contexto.",
+                  "translation": "con ironía"
+                }
+              ],
+              "microLesson": {
+                "title": "Decir lo contrario sin mentir",
+                "goals": [
+                  "Reconocer el substatement como crítica indirecta.",
+                  "Usar preguntas retóricas para señalar una contradicción."
+                ],
+                "sections": [
+                  {
+                    "heading": "La ironía como control del tono",
+                    "body": "Less than impressive suaviza una valoración negativa; not exactly ideal presenta el fallo como desviación mínima. Las preguntas retóricas (Did we really expect...? Isn't it curious that...?) señalan una contradicción sin acusar directamente.",
+                    "examples": [
+                      {
+                        "source": "Los resultados son, como mínimo, decepcionantes.",
+                        "target": "The results are disappointing, to say the least.",
+                        "note": "To say the least intensifica por reducción."
+                      },
+                      {
+                        "source": "¿De verdad esperábamos que el plazo se cumpliera tras tres retrasos?",
+                        "target": "Did we really expect the deadline to hold after three delays?",
+                        "note": "La pregunta retórica responde sola."
+                      }
+                    ]
+                  }
+                ]
+              },
+              "glossary": [
+                {
+                  "term": "irony",
+                  "translations": [
+                    "ironía"
+                  ]
+                },
+                {
+                  "term": "understatement",
+                  "translations": [
+                    "eufemismo",
+                    "atenuación expresiva"
+                  ]
+                },
+                {
+                  "term": "literal",
+                  "translations": [
+                    "literal"
+                  ]
+                },
+                {
+                  "term": "exaggeration",
+                  "translations": [
+                    "exageración"
+                  ]
+                },
+                {
+                  "term": "deadpan",
+                  "translations": [
+                    "impasible",
+                    "sin expresión"
+                  ]
+                },
+                {
+                  "term": "imply",
+                  "translations": [
+                    "dar a entender"
+                  ]
+                },
+                {
+                  "term": "subtlety",
+                  "translations": [
+                    "sutileza"
+                  ]
+                },
+                {
+                  "term": "mock",
+                  "translations": [
+                    "burlarse de",
+                    "simulado"
+                  ]
+                },
+                {
+                  "term": "hint",
+                  "translations": [
+                    "indicio",
+                    "toque"
+                  ]
+                },
+                {
+                  "term": "sarcasm",
+                  "translations": [
+                    "sarcasmo"
+                  ]
+                }
+              ],
+              "exercises": [
+                {
+                  "type": "ClozeDragDrop",
+                  "id": "es-en-c1-e67",
+                  "passage": "The results are {{b1}} less than impressive, wouldn't you {{b2}}?",
+                  "blanks": [
+                    {
+                      "id": "b1",
+                      "answer": "somewhat",
+                      "options": [
+                        "somewhat",
+                        "somehow",
+                        "somewhere"
+                      ]
+                    },
+                    {
+                      "id": "b2",
+                      "answer": "say",
+                      "options": [
+                        "say",
+                        "said",
+                        "saying"
+                      ]
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "'Somewhat less than impressive' es un substatement irónico; 'wouldn't you say?' busca complicidad.",
+                    "ruleRef": "gp-c1-understatement"
+                  }
+                },
+                {
+                  "type": "ClozeDragDrop",
+                  "id": "es-en-c1-e68",
+                  "passage": "{{b1}} we really expect the deadline to hold after three delays? Isn't it {{b2}} that nobody raised the issue?",
+                  "blanks": [
+                    {
+                      "id": "b1",
+                      "answer": "Did",
+                      "options": [
+                        "Did",
+                        "Do",
+                        "Done"
+                      ]
+                    },
+                    {
+                      "id": "b2",
+                      "answer": "curious",
+                      "options": [
+                        "curious",
+                        "curiosity",
+                        "curiously"
+                      ]
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "La pregunta retórica en pasado usa 'Did'; tras 'Isn't it' va el adjetivo 'curious'.",
+                    "ruleRef": "gp-c1-rhetorical-questions"
+                  }
+                },
+                {
+                  "type": "SemanticMatch",
+                  "id": "es-en-c1-e69",
+                  "instructions": "Empareja cada frase con lo que realmente quiere decir.",
+                  "pairs": [
+                    {
+                      "left": "The results are somewhat less than impressive.",
+                      "right": "Los resultados son malos",
+                      "register": "formal",
+                      "nuance": "El substatement evita la palabra negativa."
+                    },
+                    {
+                      "left": "Well, that went smoothly.",
+                      "right": "La reunión fue un desastre",
+                      "register": "informal",
+                      "nuance": "La ironía invierte el significado literal."
+                    },
+                    {
+                      "left": "Isn't it curious that nobody raised the issue?",
+                      "right": "Alguien debería haberlo señalado",
+                      "register": "formal",
+                      "nuance": "La pregunta retórica apunta una omisión."
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "register",
+                    "explanation": "La ironía exige contexto compartido; sin él, el mensaje se malinterpreta.",
+                    "ruleRef": "gp-c1-understatement"
+                  }
+                },
+                {
+                  "type": "ListenChoose",
+                  "id": "es-en-c1-e70",
+                  "audioText": "Well, that went smoothly, if you count three delays as smooth.",
+                  "options": [
+                    "The meeting went well",
+                    "The meeting was a disaster",
+                    "The delays were expected",
+                    "The speaker is confused"
+                  ],
+                  "correctIndex": 1,
+                  "feedbackOnError": {
+                    "type": "comprehension",
+                    "explanation": "La condición final revela la ironía: los retrasos contradicen 'smoothly'.",
+                    "ruleRef": "gp-c1-understatement"
+                  }
+                },
+                {
+                  "type": "AudioOnlyPrompt",
+                  "id": "es-en-c1-e71",
+                  "audioText": "The results are somewhat less than impressive, to say the least. Did we really expect the deadline to hold after three delays?",
+                  "question": "What is the speaker's attitude?",
+                  "options": [
+                    "Satisfaction with the results",
+                    "Irony about poor results and planning",
+                    "Neutral reporting",
+                    "Anger at the client"
+                  ],
+                  "correctIndex": 1,
+                  "allowSlowPlayback": true,
+                  "feedbackOnError": {
+                    "type": "comprehension",
+                    "explanation": "El substatement y la pregunta retórica construyen una crítica irónica.",
+                    "ruleRef": "gp-c1-rhetorical-questions"
+                  }
+                },
+                {
+                  "type": "MultipleChoice",
+                  "id": "es-en-c1-e72",
+                  "question": "Completa: The results are ___ less than impressive.",
+                  "options": [
+                    "somewhat",
+                    "some",
+                    "how"
+                  ],
+                  "correctIndex": 0,
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "'Somewhat' es el atenuador que forma el substatement.",
+                    "ruleRef": "gp-c1-understatement"
+                  }
+                },
+                {
+                  "type": "Translate",
+                  "id": "es-en-c1-e73",
+                  "sourcePhrase": "Los resultados son, como mínimo, decepcionantes.",
+                  "correctTokens": [
+                    "The",
+                    "results",
+                    "are",
+                    "disappointing",
+                    "to",
+                    "say",
+                    "the",
+                    "least"
+                  ],
+                  "distractorTokens": [
+                    "at",
+                    "most"
+                  ],
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "La fórmula fija es 'to say the least'; 'at most' cambia el sentido.",
+                    "ruleRef": "gp-c1-understatement"
+                  }
+                },
+                {
+                  "type": "ListenType",
+                  "id": "es-en-c1-e74",
+                  "transcription": "The results are somewhat less than impressive, to say the least",
+                  "audioText": "The results are somewhat less than impressive, to say the least",
+                  "feedbackOnError": {
+                    "type": "spelling",
+                    "explanation": "Escribe 'impressive' con doble 's' y 'least' con 'ea'.",
+                    "ruleRef": "gp-c1-understatement"
+                  }
+                },
+                {
+                  "type": "SpeakRepeat",
+                  "id": "es-en-c1-e75",
+                  "targetPhrase": "Well, that went smoothly, if you count three delays as smooth.",
+                  "audioText": "Well, that went smoothly, if you count three delays as smooth.",
+                  "feedbackOnError": {
+                    "type": "pronunciation",
+                    "explanation": "Mantén un tono plano en 'smoothly' para que la ironía se note.",
+                    "ruleRef": "gp-c1-understatement"
+                  }
+                },
+                {
+                  "type": "MatchPairs",
+                  "id": "es-en-c1-e76",
+                  "pairs": [
+                    {
+                      "left": "a hint of irony",
+                      "right": "un toque de ironía"
+                    },
+                    {
+                      "left": "a rhetorical question",
+                      "right": "una pregunta retórica"
+                    },
+                    {
+                      "left": "to say the least",
+                      "right": "como mínimo"
+                    },
+                    {
+                      "left": "a deadpan remark",
+                      "right": "un comentario impasible"
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "El léxico de la ironía describe el tono sin explicarlo de más.",
+                    "ruleRef": "gp-c1-rhetorical-questions"
+                  }
+                },
+                {
+                  "type": "FreeSpeakingPrompt",
+                  "id": "es-en-c1-e77",
+                  "prompt": "Comenta un resultado decepcionante con ironía profesional: usa un substatement, una pregunta retórica y evita el sarcasmo hiriente.",
+                  "minTokens": 15,
+                  "conceptClusters": [
+                    [
+                      "less than impressive",
+                      "to say the least",
+                      "not exactly"
+                    ],
+                    [
+                      "did we",
+                      "isn't it",
+                      "wouldn't you"
+                    ],
+                    [
+                      "irony",
+                      "deadpan",
+                      "subtle"
+                    ]
+                  ],
+                  "grammarRuleRefs": [
+                    "gp-c1-understatement",
+                    "gp-c1-rhetorical-questions"
+                  ],
+                  "timeLimitSeconds": 30,
+                  "minWpm": 70,
+                  "maxWpm": 160,
+                  "modelAnswer": "The results are somewhat less than impressive, to say the least. Did we really expect the deadline to hold after three delays? Well, that went smoothly, if you count three delays as smooth.",
+                  "selfAssessmentCriteria": [
+                    "¿Usé un substatement?",
+                    "¿Formulé una pregunta retórica?",
+                    "¿Evité el sarcasmo hiriente?"
+                  ],
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "La respuesta modelo encadena substatement y pregunta retórica con tono seco, sin insulto.",
+                    "ruleRef": "gp-c1-understatement"
+                  }
+                }
+              ]
+            },
+            {
+              "id": "es-en-c1-un-2-ls-4",
+              "title": "La polémica constructiva",
+              "cefrLevel": "C1",
+              "scenario": "Dos áreas defienden posiciones opuestas sobre el lanzamiento y deben cerrar una propuesta común.",
+              "canDo": "Puedo moderar una polémica con marcadores de discurso y construir un contraargumento sin polarizar.",
+              "grammarPoints": [
+                {
+                  "id": "gp-c1-discourse-markers",
+                  "label": "Marcadores de discurso",
+                  "description": "admittedly, mind you, by contrast, on balance."
+                },
+                {
+                  "id": "gp-c1-counterargument",
+                  "label": "Contraargumento",
+                  "description": "While it is true that..., critics may argue..., even so..."
+                }
+              ],
+              "vocabFrequencyBand": "8000-12000",
+              "culturalNotes": [
+                {
+                  "idiom": "agree to disagree",
+                  "note": "Cerrar una polémica aceptando el desacuerdo sin renunciar a la relación; útil cuando el coste de insistir supera el beneficio.",
+                  "translation": "aceptar el desacuerdo"
+                }
+              ],
+              "microLesson": {
+                "title": "Discutir para construir",
+                "goals": [
+                  "Ordenar concesión, contraargumento y síntesis.",
+                  "Cerrar la polémica con una propuesta que integre ambas partes."
+                ],
+                "sections": [
+                  {
+                    "heading": "El mapa del contraargumento",
+                    "body": "Admittedly abre la concesión; mind you añade una reserva coloquial; by contrast separa posiciones y on balance resume el juicio. El contraargumento maduro reconoce la objeción antes de responderla.",
+                    "examples": [
+                      {
+                        "source": "Es cierto que faltan datos; aun así, la tendencia es clara.",
+                        "target": "It is true that we lack data, but the trend is clear.",
+                        "note": "La concesión prepara la respuesta."
+                      },
+                      {
+                        "source": "En conjunto, el riesgo de no actuar es mayor.",
+                        "target": "On balance, the risk of inaction is greater.",
+                        "note": "On balance resume el juicio tras comparar."
+                      }
+                    ]
+                  }
+                ]
+              },
+              "glossary": [
+                {
+                  "term": "controversy",
+                  "translations": [
+                    "polémica",
+                    "controversia"
+                  ]
+                },
+                {
+                  "term": "adversarial",
+                  "translations": [
+                    "confrontacional",
+                    "adversarial"
+                  ]
+                },
+                {
+                  "term": "common ground",
+                  "translations": [
+                    "terreno común",
+                    "puntos en común"
+                  ]
+                },
+                {
+                  "term": "counterargument",
+                  "translations": [
+                    "contraargumento"
+                  ]
+                },
+                {
+                  "term": "rhetoric",
+                  "translations": [
+                    "retórica"
+                  ]
+                },
+                {
+                  "term": "polarization",
+                  "translations": [
+                    "polarización"
+                  ]
+                },
+                {
+                  "term": "respectful",
+                  "translations": [
+                    "respetuoso",
+                    "respetuosa"
+                  ]
+                },
+                {
+                  "term": "outcome",
+                  "translations": [
+                    "resultado",
+                    "desenlace"
+                  ]
+                },
+                {
+                  "term": "evidence",
+                  "translations": [
+                    "evidencia",
+                    "pruebas"
+                  ]
+                },
+                {
+                  "term": "moderate",
+                  "translations": [
+                    "moderar",
+                    "moderado"
+                  ]
+                }
+              ],
+              "exercises": [
+                {
+                  "type": "ClozeDragDrop",
+                  "id": "es-en-c1-e78",
+                  "passage": "{{b1}}, the plan has risks; {{b2}}, the cost of inaction is higher.",
+                  "blanks": [
+                    {
+                      "id": "b1",
+                      "answer": "Admittedly",
+                      "options": [
+                        "Admittedly",
+                        "Admit",
+                        "Admitting"
+                      ]
+                    },
+                    {
+                      "id": "b2",
+                      "answer": "mind you",
+                      "options": [
+                        "mind you",
+                        "mind your",
+                        "never mind"
+                      ]
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "'Admittedly' concede y 'mind you' añade una reserva que reequilibra la balanza.",
+                    "ruleRef": "gp-c1-discourse-markers"
+                  }
+                },
+                {
+                  "type": "ClozeDragDrop",
+                  "id": "es-en-c1-e79",
+                  "passage": "While it is {{b1}} that we lack data, critics {{b2}} argue that the trend is clear.",
+                  "blanks": [
+                    {
+                      "id": "b1",
+                      "answer": "true",
+                      "options": [
+                        "true",
+                        "truth",
+                        "truly"
+                      ]
+                    },
+                    {
+                      "id": "b2",
+                      "answer": "may",
+                      "options": [
+                        "may",
+                        "must",
+                        "can't"
+                      ]
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "'While it is true that' reconoce la objeción y 'may argue' la presenta como posición ajena.",
+                    "ruleRef": "gp-c1-counterargument"
+                  }
+                },
+                {
+                  "type": "SemanticMatch",
+                  "id": "es-en-c1-e80",
+                  "instructions": "Identifica la función de cada movimiento en el debate.",
+                  "pairs": [
+                    {
+                      "left": "Admittedly, the plan has risks.",
+                      "right": "Concesión inicial",
+                      "register": "formal",
+                      "nuance": "Anticipa la objeción del adversario."
+                    },
+                    {
+                      "left": "Mind you, the cost of inaction is higher.",
+                      "right": "Reserva que reequilibra",
+                      "register": "neutral",
+                      "nuance": "Añade un contrapeso tras conceder."
+                    },
+                    {
+                      "left": "On balance, the risk of inaction is greater.",
+                      "right": "Síntesis final",
+                      "register": "formal",
+                      "nuance": "Resume el juicio tras comparar."
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "register",
+                    "explanation": "Un debate constructivo ordena concesión, reserva y síntesis.",
+                    "ruleRef": "gp-c1-discourse-markers"
+                  }
+                },
+                {
+                  "type": "ListenChoose",
+                  "id": "es-en-c1-e81",
+                  "audioText": "Admittedly, the plan has risks; mind you, the cost of inaction is higher.",
+                  "options": [
+                    "The speaker rejects the plan",
+                    "The speaker weighs risks and concludes in favour",
+                    "The speaker ignores the risks",
+                    "The speaker changes topic"
+                  ],
+                  "correctIndex": 1,
+                  "feedbackOnError": {
+                    "type": "comprehension",
+                    "explanation": "La reserva 'mind you' reequilibra la concesión inicial.",
+                    "ruleRef": "gp-c1-discourse-markers"
+                  }
+                },
+                {
+                  "type": "AudioOnlyPrompt",
+                  "id": "es-en-c1-e82",
+                  "audioText": "While it is true that we lack data, critics may argue that the trend is clear. On balance, I would rather test the proposal on a small scale than reject it outright.",
+                  "question": "What does the speaker propose?",
+                  "options": [
+                    "Rejecting the proposal",
+                    "Testing it on a small scale",
+                    "Waiting for perfect data",
+                    "Approving it without conditions"
+                  ],
+                  "correctIndex": 1,
+                  "allowSlowPlayback": true,
+                  "feedbackOnError": {
+                    "type": "comprehension",
+                    "explanation": "La síntesis propone una prueba piloto en lugar de rechazo o aprobación total.",
+                    "ruleRef": "gp-c1-counterargument"
+                  }
+                },
+                {
+                  "type": "MultipleChoice",
+                  "id": "es-en-c1-e83",
+                  "question": "Completa: Admittedly, the plan has risks; ___, the cost of inaction is higher.",
+                  "options": [
+                    "mind you",
+                    "in contrast",
+                    "therefore"
+                  ],
+                  "correctIndex": 0,
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "'Mind you' añade una reserva coloquial que matiza la concesión.",
+                    "ruleRef": "gp-c1-discourse-markers"
+                  }
+                },
+                {
+                  "type": "Translate",
+                  "id": "es-en-c1-e84",
+                  "sourcePhrase": "Es cierto que nos faltan datos, pero la tendencia es clara.",
+                  "correctTokens": [
+                    "It",
+                    "is",
+                    "true",
+                    "that",
+                    "we",
+                    "lack",
+                    "data",
+                    "but",
+                    "the",
+                    "trend",
+                    "is",
+                    "clear"
+                  ],
+                  "distractorTokens": [
+                    "although",
+                    "missing"
+                  ],
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "La concesión se construye con 'It is true that... but...'; 'lack data' es la colocación correcta.",
+                    "ruleRef": "gp-c1-counterargument"
+                  }
+                },
+                {
+                  "type": "ListenType",
+                  "id": "es-en-c1-e85",
+                  "transcription": "While it is true that we lack data, critics may argue that the trend is clear",
+                  "audioText": "While it is true that we lack data, critics may argue that the trend is clear",
+                  "feedbackOnError": {
+                    "type": "spelling",
+                    "explanation": "Escribe 'critics' con 'c' y 'trend' con 'tr' inicial.",
+                    "ruleRef": "gp-c1-counterargument"
+                  }
+                },
+                {
+                  "type": "SpeakRepeat",
+                  "id": "es-en-c1-e86",
+                  "targetPhrase": "On balance, the risk of inaction is greater than the risk of testing.",
+                  "audioText": "On balance, the risk of inaction is greater than the risk of testing.",
+                  "feedbackOnError": {
+                    "type": "pronunciation",
+                    "explanation": "Marca 'On balance' como fórmula de síntesis y enlaza 'risk of inaction'.",
+                    "ruleRef": "gp-c1-discourse-markers"
+                  }
+                },
+                {
+                  "type": "MatchPairs",
+                  "id": "es-en-c1-e87",
+                  "pairs": [
+                    {
+                      "left": "a common ground",
+                      "right": "un terreno común"
+                    },
+                    {
+                      "left": "a counterargument",
+                      "right": "un contraargumento"
+                    },
+                    {
+                      "left": "on balance",
+                      "right": "en conjunto"
+                    },
+                    {
+                      "left": "a respectful debate",
+                      "right": "un debate respetuoso"
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "El vocabulario del debate nombra posiciones, acuerdos y cierres.",
+                    "ruleRef": "gp-c1-discourse-markers"
+                  }
+                },
+                {
+                  "type": "FreeSpeakingPrompt",
+                  "id": "es-en-c1-e88",
+                  "prompt": "Modera una polémica sobre el lanzamiento: concede el riesgo, presenta el contraargumento, cierra con una síntesis y una propuesta común.",
+                  "minTokens": 15,
+                  "conceptClusters": [
+                    [
+                      "admittedly",
+                      "while it is true",
+                      "mind you"
+                    ],
+                    [
+                      "on balance",
+                      "by contrast",
+                      "even so"
+                    ],
+                    [
+                      "common ground",
+                      "outcome",
+                      "proposal"
+                    ]
+                  ],
+                  "grammarRuleRefs": [
+                    "gp-c1-discourse-markers",
+                    "gp-c1-counterargument"
+                  ],
+                  "timeLimitSeconds": 30,
+                  "minWpm": 70,
+                  "maxWpm": 160,
+                  "modelAnswer": "Admittedly, the plan has risks; mind you, the cost of inaction is higher. While it is true that we lack data, critics may argue that the trend is clear. On balance, I would test the proposal on a small scale rather than reject it outright.",
+                  "selfAssessmentCriteria": [
+                    "¿Concedí el riesgo antes de responder?",
+                    "¿Construí un contraargumento?",
+                    "¿Cerré con una propuesta común?"
+                  ],
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "La respuesta modelo ordena concesión, contraargumento y síntesis con marcadores precisos.",
+                    "ruleRef": "gp-c1-discourse-markers"
+                  }
+                }
+              ]
+            }
+          ]
+        }
         ]
       }
   ]
