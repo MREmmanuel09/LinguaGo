@@ -9375,9 +9375,9 @@
                 "vocabFrequencyBand": "8000-12000",
                 "culturalNotes": [
                   {
-                    "idiom": "read between the lines",
-                    "note": "Deducir lo que no se dice de forma explícita; en una reunión, sirve para detectar reservas que nadie verbaliza.",
-                    "translation": "leer entre líneas"
+                    "idiom": "hear it through the grapevine",
+                    "note": "Enterarse de algo por rumores o canales informales; en una reunión, obliga a verificar la fuente antes de repetirlo.",
+                    "translation": "enterarse por los rumores"
                   }
                 ],
                 "microLesson": {
@@ -16935,6 +16935,1516 @@
                     "type": "grammar",
                     "explanation": "La respuesta modelo distingue entrega, aprendizaje y traspaso con aspecto perfecto.",
                     "ruleRef": "gp-c1-perfect-aspect"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "es-en-lv-4-un-6",
+          "title": "Evaluación global C1",
+          "lessons": [
+            {
+              "id": "es-en-c1-un-6-ls-1",
+              "title": "Comprensión densa",
+              "cefrLevel": "C1",
+              "scenario": "Un audio de una conferencia incluye una tesis, una objeción y una conclusión; hay que separar la idea principal del detalle.",
+              "canDo": "Puedo extraer la tesis de un audio denso, distinguirla de los ejemplos y seguir conectores formales.",
+              "grammarPoints": [
+                {
+                  "id": "gp-c1-dense-listening",
+                  "label": "Comprensión densa",
+                  "description": "main claim vs supporting detail, speaker attitude."
+                },
+                {
+                  "id": "gp-c1-connectors",
+                  "label": "Conectores formales",
+                  "description": "whereas, nonetheless, in so doing, by contrast."
+                }
+              ],
+              "vocabFrequencyBand": "8000-12000",
+              "culturalNotes": [
+                {
+                  "idiom": "the bottom line",
+                  "note": "La conclusión que importa por encima de los detalles; en una conferencia, ayuda a retener la tesis.",
+                  "translation": "lo esencial"
+                }
+              ],
+              "microLesson": {
+                "title": "Escuchar la tesis, no solo las palabras",
+                "goals": [
+                  "Separar la afirmación principal de los ejemplos.",
+                  "Seguir el mapa de conectores del discurso."
+                ],
+                "sections": [
+                  {
+                    "heading": "El mapa del audio",
+                    "body": "Whereas contrasta dos posturas; nonetheless concede y reorienta; in so doing explica el medio por el que se logra algo. La tesis suele aparecer tras una pausa y repetirse al final: the bottom line is...",
+                    "examples": [
+                      {
+                        "source": "La propuesta reduce costes; no obstante, ignora el impacto social.",
+                        "target": "The proposal reduces costs; nonetheless, it ignores the social impact.",
+                        "note": "Nonetheless reorienta tras una concesión."
+                      },
+                      {
+                        "source": "En esencia, necesitamos más datos.",
+                        "target": "The bottom line is that we need more data.",
+                        "note": "The bottom line anuncia la conclusión."
+                      }
+                    ]
+                  }
+                ]
+              },
+              "glossary": [
+                {
+                  "term": "excerpt",
+                  "translations": [
+                    "extracto",
+                    "fragmento"
+                  ]
+                },
+                {
+                  "term": "inference",
+                  "translations": [
+                    "inferencia"
+                  ]
+                },
+                {
+                  "term": "attitude",
+                  "translations": [
+                    "actitud"
+                  ]
+                },
+                {
+                  "term": "detail",
+                  "translations": [
+                    "detalle"
+                  ]
+                },
+                {
+                  "term": "claim",
+                  "translations": [
+                    "afirmación"
+                  ]
+                },
+                {
+                  "term": "context",
+                  "translations": [
+                    "contexto"
+                  ]
+                },
+                {
+                  "term": "gist",
+                  "translations": [
+                    "idea central"
+                  ]
+                },
+                {
+                  "term": "nuance",
+                  "translations": [
+                    "matiz"
+                  ]
+                },
+                {
+                  "term": "evidence",
+                  "translations": [
+                    "prueba",
+                    "evidencia"
+                  ]
+                },
+                {
+                  "term": "speaker",
+                  "translations": [
+                    "ponente",
+                    "hablante"
+                  ]
+                }
+              ],
+              "exercises": [
+                {
+                  "type": "ClozeDragDrop",
+                  "id": "es-en-c1-e221",
+                  "passage": "The proposal reduces costs; {{b1}}, it ignores the social impact, and {{b2}} doing so it weakens public trust.",
+                  "blanks": [
+                    {
+                      "id": "b1",
+                      "answer": "nonetheless",
+                      "options": [
+                        "nonetheless",
+                        "therefore",
+                        "namely"
+                      ]
+                    },
+                    {
+                      "id": "b2",
+                      "answer": "in",
+                      "options": [
+                        "in",
+                        "on",
+                        "by"
+                      ]
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "'Nonetheless' reorienta tras la concesión y 'in so doing' explica el medio por el que se produce el efecto.",
+                    "ruleRef": "gp-c1-connectors"
+                  }
+                },
+                {
+                  "type": "ClozeDragDrop",
+                  "id": "es-en-c1-e222",
+                  "passage": "{{b1}} the first study focused on cost, the second measured trust; {{b2}}, the conclusions differ.",
+                  "blanks": [
+                    {
+                      "id": "b1",
+                      "answer": "Whereas",
+                      "options": [
+                        "Whereas",
+                        "Despite",
+                        "However"
+                      ]
+                    },
+                    {
+                      "id": "b2",
+                      "answer": "by contrast",
+                      "options": [
+                        "by contrast",
+                        "in addition",
+                        "for instance"
+                      ]
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "'Whereas' contrasta dos cláusulas completas y 'by contrast' marca el cambio de conclusión.",
+                    "ruleRef": "gp-c1-connectors"
+                  }
+                },
+                {
+                  "type": "SemanticMatch",
+                  "id": "es-en-c1-e223",
+                  "instructions": "Distingue la función de cada fragmento del audio.",
+                  "pairs": [
+                    {
+                      "left": "The proposal reduces costs.",
+                      "right": "Afirmación inicial",
+                      "register": "formal",
+                      "nuance": "Presenta el beneficio principal."
+                    },
+                    {
+                      "left": "Nonetheless, it ignores the social impact.",
+                      "right": "Objeción que reorienta",
+                      "register": "formal",
+                      "nuance": "Concede y cambia el foco."
+                    },
+                    {
+                      "left": "The bottom line is that we need more data.",
+                      "right": "Conclusión",
+                      "register": "formal",
+                      "nuance": "Resume la tesis final."
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "register",
+                    "explanation": "La comprensión densa reconstruye el movimiento del discurso, no solo las palabras.",
+                    "ruleRef": "gp-c1-dense-listening"
+                  }
+                },
+                {
+                  "type": "ListenChoose",
+                  "id": "es-en-c1-e224",
+                  "audioText": "The proposal reduces costs; nonetheless, it ignores the social impact. The bottom line is that we need more data before deciding.",
+                  "options": [
+                    "The speaker fully supports the proposal",
+                    "The speaker sees a benefit, an objection and a need for data",
+                    "The speaker rejects all data",
+                    "The speaker changes the topic"
+                  ],
+                  "correctIndex": 1,
+                  "feedbackOnError": {
+                    "type": "comprehension",
+                    "explanation": "El beneficio, la objeción y la conclusión se encadenan con nonetheless y the bottom line.",
+                    "ruleRef": "gp-c1-dense-listening"
+                  }
+                },
+                {
+                  "type": "AudioOnlyPrompt",
+                  "id": "es-en-c1-e225",
+                  "audioText": "Whereas the first study focused on cost, the second measured trust; by contrast, the conclusions differ. In so doing, the researchers exposed a gap that the bottom line cannot ignore.",
+                  "question": "What is the main conclusion?",
+                  "options": [
+                    "Both studies reached the same conclusion",
+                    "The studies differ and reveal a gap",
+                    "The second study ignored trust",
+                    "Cost is the only measure"
+                  ],
+                  "correctIndex": 1,
+                  "allowSlowPlayback": true,
+                  "feedbackOnError": {
+                    "type": "comprehension",
+                    "explanation": "Whereas y by contrast subrayan la diferencia; la conclusión señala un vacío relevante.",
+                    "ruleRef": "gp-c1-connectors"
+                  }
+                },
+                {
+                  "type": "MultipleChoice",
+                  "id": "es-en-c1-e226",
+                  "question": "Completa: The proposal reduces costs; ___, it ignores the social impact.",
+                  "options": [
+                    "nonetheless",
+                    "therefore",
+                    "namely"
+                  ],
+                  "correctIndex": 0,
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "'Nonetheless' introduce una objeción que contrasta con el beneficio previo.",
+                    "ruleRef": "gp-c1-connectors"
+                  }
+                },
+                {
+                  "type": "Translate",
+                  "id": "es-en-c1-e227",
+                  "sourcePhrase": "En esencia, necesitamos más datos antes de decidir.",
+                  "correctTokens": [
+                    "The",
+                    "bottom",
+                    "line",
+                    "is",
+                    "that",
+                    "we",
+                    "need",
+                    "more",
+                    "data",
+                    "before",
+                    "deciding"
+                  ],
+                  "distractorTokens": [
+                    "essence",
+                    "decide"
+                  ],
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "La fórmula fija es 'the bottom line is that...'.",
+                    "ruleRef": "gp-c1-dense-listening"
+                  }
+                },
+                {
+                  "type": "ListenType",
+                  "id": "es-en-c1-e228",
+                  "transcription": "Nonetheless, the study ignores the social impact of the proposal",
+                  "audioText": "Nonetheless, the study ignores the social impact of the proposal",
+                  "feedbackOnError": {
+                    "type": "spelling",
+                    "explanation": "Escribe 'nonetheless' junto y 'impact' con 'im-'.",
+                    "ruleRef": "gp-c1-connectors"
+                  }
+                },
+                {
+                  "type": "SpeakRepeat",
+                  "id": "es-en-c1-e229",
+                  "targetPhrase": "Whereas the first study focused on cost, the second measured trust.",
+                  "audioText": "Whereas the first study focused on cost, the second measured trust.",
+                  "feedbackOnError": {
+                    "type": "pronunciation",
+                    "explanation": "Haz una pausa tras 'cost' y enlaza 'second measured'.",
+                    "ruleRef": "gp-c1-connectors"
+                  }
+                },
+                {
+                  "type": "MatchPairs",
+                  "id": "es-en-c1-e230",
+                  "pairs": [
+                    {
+                      "left": "the main claim",
+                      "right": "la afirmación principal"
+                    },
+                    {
+                      "left": "supporting evidence",
+                      "right": "pruebas de apoyo"
+                    },
+                    {
+                      "left": "the speaker's attitude",
+                      "right": "la actitud del ponente"
+                    },
+                    {
+                      "left": "a key detail",
+                      "right": "un detalle clave"
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "La comprensión densa separa tesis, pruebas, actitud y detalle.",
+                    "ruleRef": "gp-c1-dense-listening"
+                  }
+                },
+                {
+                  "type": "FreeSpeakingPrompt",
+                  "id": "es-en-c1-e231",
+                  "prompt": "Resume un audio denso: enuncia la tesis, menciona una objeción con un conector formal y cierra con la conclusión esencial.",
+                  "minTokens": 20,
+                  "conceptClusters": [
+                    [
+                      "whereas",
+                      "nonetheless",
+                      "by contrast"
+                    ],
+                    [
+                      "claim",
+                      "evidence",
+                      "attitude"
+                    ],
+                    [
+                      "the bottom line",
+                      "conclusion",
+                      "context"
+                    ]
+                  ],
+                  "grammarRuleRefs": [
+                    "gp-c1-dense-listening",
+                    "gp-c1-connectors"
+                  ],
+                  "timeLimitSeconds": 30,
+                  "minWpm": 70,
+                  "maxWpm": 160,
+                  "modelAnswer": "The speaker claims the proposal reduces costs; nonetheless, it ignores the social impact, whereas the second study measures trust. The bottom line is that we need more data before deciding, and the tone remains cautiously optimistic.",
+                  "selfAssessmentCriteria": [
+                    "¿Enuncié la tesis?",
+                    "¿Usé un conector formal para la objeción?",
+                    "¿Cerré con la conclusión esencial?"
+                  ],
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "La respuesta modelo encadena tesis, objeción y conclusión con nonetheless y whereas.",
+                    "ruleRef": "gp-c1-connectors"
+                  }
+                }
+              ]
+            },
+            {
+              "id": "es-en-c1-un-6-ls-2",
+              "title": "Reescribir con propósito",
+              "cefrLevel": "C1",
+              "scenario": "Un texto interno debe convertirse en una nota pública: mismo contenido, distinto registro y audiencia.",
+              "canDo": "Puedo adaptar un texto a otra audiencia manteniendo la coherencia y eliminando ambigüedades.",
+              "grammarPoints": [
+                {
+                  "id": "gp-c1-register-shift",
+                  "label": "Cambio de registro",
+                  "description": "formal ↔ neutral, verbos y estructuras equivalentes."
+                },
+                {
+                  "id": "gp-c1-cohesion",
+                  "label": "Cohesión",
+                  "description": "the former, the latter, such, this approach."
+                }
+              ],
+              "vocabFrequencyBand": "8000-12000",
+              "culturalNotes": [
+                {
+                  "idiom": "food for thought",
+                  "note": "Una idea que merece reflexión; en una reescritura, señala qué parte del texto debe sobrevivir al cambio de registro.",
+                  "translation": "material para pensar"
+                }
+              ],
+              "microLesson": {
+                "title": "Mismo contenido, otro lector",
+                "goals": [
+                  "Sustituir estructuras formales por equivalentes claros.",
+                  "Mantener la referencia con the former, the latter y such."
+                ],
+                "sections": [
+                  {
+                    "heading": "Reescribir es elegir",
+                    "body": "Un texto público pierde nominalizaciones y gana verbos: 'the implementation of the policy' pasa a 'how the policy works'. The former y the latter mantienen la referencia entre dos elementos; such retoma una idea completa sin repetirla.",
+                    "examples": [
+                      {
+                        "source": "La aplicación de la medida será gradual.",
+                        "target": "The policy will be introduced gradually.",
+                        "note": "Verbo en lugar de nominalización."
+                      },
+                      {
+                        "source": "El primero reduce costes; el segundo, la confianza.",
+                        "target": "The former reduces costs; the latter, trust.",
+                        "note": "The former / the latter ordenan la referencia."
+                      }
+                    ]
+                  }
+                ]
+              },
+              "glossary": [
+                {
+                  "term": "register",
+                  "translations": [
+                    "registro"
+                  ]
+                },
+                {
+                  "term": "cohesion",
+                  "translations": [
+                    "cohesión"
+                  ]
+                },
+                {
+                  "term": "rewrite",
+                  "translations": [
+                    "reescribir"
+                  ]
+                },
+                {
+                  "term": "audience",
+                  "translations": [
+                    "público",
+                    "audiencia"
+                  ]
+                },
+                {
+                  "term": "clarity",
+                  "translations": [
+                    "claridad"
+                  ]
+                },
+                {
+                  "term": "concision",
+                  "translations": [
+                    "concisión"
+                  ]
+                },
+                {
+                  "term": "transition",
+                  "translations": [
+                    "transición"
+                  ]
+                },
+                {
+                  "term": "emphasis",
+                  "translations": [
+                    "énfasis"
+                  ]
+                },
+                {
+                  "term": "ambiguity",
+                  "translations": [
+                    "ambigüedad"
+                  ]
+                },
+                {
+                  "term": "draft",
+                  "translations": [
+                    "borrador"
+                  ]
+                }
+              ],
+              "exercises": [
+                {
+                  "type": "ClozeDragDrop",
+                  "id": "es-en-c1-e232",
+                  "passage": "The policy will be introduced gradually; the {{b1}} reduces costs, while the {{b2}} protects trust.",
+                  "blanks": [
+                    {
+                      "id": "b1",
+                      "answer": "former",
+                      "options": [
+                        "former",
+                        "first",
+                        "before"
+                      ]
+                    },
+                    {
+                      "id": "b2",
+                      "answer": "latter",
+                      "options": [
+                        "latter",
+                        "last",
+                        "later"
+                      ]
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "The former se refiere al primero de dos elementos y the latter al segundo.",
+                    "ruleRef": "gp-c1-cohesion"
+                  }
+                },
+                {
+                  "type": "ClozeDragDrop",
+                  "id": "es-en-c1-e233",
+                  "passage": "{{b1}} approach keeps the draft clear, and {{b2}} a transition makes the argument easier to follow.",
+                  "blanks": [
+                    {
+                      "id": "b1",
+                      "answer": "Such",
+                      "options": [
+                        "Such",
+                        "So",
+                        "Same"
+                      ]
+                    },
+                    {
+                      "id": "b2",
+                      "answer": "adding",
+                      "options": [
+                        "adding",
+                        "add",
+                        "added"
+                      ]
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "'Such an approach' retoma la idea anterior y 'adding a transition' explica la mejora concreta.",
+                    "ruleRef": "gp-c1-cohesion"
+                  }
+                },
+                {
+                  "type": "SemanticMatch",
+                  "id": "es-en-c1-e234",
+                  "instructions": "Empareja cada versión formal con su equivalente claro.",
+                  "pairs": [
+                    {
+                      "left": "The implementation of the policy will be gradual.",
+                      "right": "The policy will be introduced gradually.",
+                      "register": "neutral",
+                      "nuance": "El verbo sustituye a la nominalización."
+                    },
+                    {
+                      "left": "Prior to the commencement of the review...",
+                      "right": "Before the review starts...",
+                      "register": "neutral",
+                      "nuance": "Menos palabras, mismo contenido."
+                    },
+                    {
+                      "left": "The former reduces costs; the latter protects trust.",
+                      "right": "The first reduces costs; the second protects trust.",
+                      "register": "formal",
+                      "nuance": "The former/latter mantiene la referencia."
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "register",
+                    "explanation": "Reescribir conserva el contenido y ajusta la forma al lector.",
+                    "ruleRef": "gp-c1-register-shift"
+                  }
+                },
+                {
+                  "type": "ListenChoose",
+                  "id": "es-en-c1-e235",
+                  "audioText": "The policy will be introduced gradually. The former option reduces costs, while the latter protects trust.",
+                  "options": [
+                    "The policy is cancelled",
+                    "Two options are compared: cost and trust",
+                    "Only trust matters",
+                    "The text is a complaint"
+                  ],
+                  "correctIndex": 1,
+                  "feedbackOnError": {
+                    "type": "comprehension",
+                    "explanation": "The former y the latter comparan las dos opciones del texto reescrito.",
+                    "ruleRef": "gp-c1-cohesion"
+                  }
+                },
+                {
+                  "type": "AudioOnlyPrompt",
+                  "id": "es-en-c1-e236",
+                  "audioText": "Before the review starts, we should rewrite the draft for a public audience. Such an approach keeps the message clear, and adding a transition makes the argument easier to follow.",
+                  "question": "What are the two improvements?",
+                  "options": [
+                    "A shorter draft and more jargon",
+                    "Clarity and a transition",
+                    "A new audience and a new policy",
+                    "A formal register and ambiguity"
+                  ],
+                  "correctIndex": 1,
+                  "allowSlowPlayback": true,
+                  "feedbackOnError": {
+                    "type": "comprehension",
+                    "explanation": "La claridad y la transición son las dos mejoras concretas del borrador.",
+                    "ruleRef": "gp-c1-cohesion"
+                  }
+                },
+                {
+                  "type": "MultipleChoice",
+                  "id": "es-en-c1-e237",
+                  "question": "Completa: The former reduces costs; the ___ protects trust.",
+                  "options": [
+                    "latter",
+                    "later",
+                    "last"
+                  ],
+                  "correctIndex": 0,
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "'The latter' se refiere al segundo de dos elementos; 'later' es temporal.",
+                    "ruleRef": "gp-c1-cohesion"
+                  }
+                },
+                {
+                  "type": "Translate",
+                  "id": "es-en-c1-e238",
+                  "sourcePhrase": "La aplicación de la medida será gradual.",
+                  "correctTokens": [
+                    "The",
+                    "policy",
+                    "will",
+                    "be",
+                    "introduced",
+                    "gradually"
+                  ],
+                  "distractorTokens": [
+                    "implementation",
+                    "gradual"
+                  ],
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "La reescritura clara prefiere 'will be introduced gradually' a la nominalización.",
+                    "ruleRef": "gp-c1-register-shift"
+                  }
+                },
+                {
+                  "type": "ListenType",
+                  "id": "es-en-c1-e239",
+                  "transcription": "Such an approach keeps the draft clear for a public audience",
+                  "audioText": "Such an approach keeps the draft clear for a public audience",
+                  "feedbackOnError": {
+                    "type": "spelling",
+                    "explanation": "Escribe 'approach' con doble 'p' y 'audience' con 'au-'.",
+                    "ruleRef": "gp-c1-cohesion"
+                  }
+                },
+                {
+                  "type": "SpeakRepeat",
+                  "id": "es-en-c1-e240",
+                  "targetPhrase": "The former reduces costs, while the latter protects trust and keeps the message clear.",
+                  "audioText": "The former reduces costs, while the latter protects trust and keeps the message clear.",
+                  "feedbackOnError": {
+                    "type": "pronunciation",
+                    "explanation": "Marca el contraste former/latter y enlaza 'keeps the'.",
+                    "ruleRef": "gp-c1-cohesion"
+                  }
+                },
+                {
+                  "type": "MatchPairs",
+                  "id": "es-en-c1-e241",
+                  "pairs": [
+                    {
+                      "left": "a clear transition",
+                      "right": "una transición clara"
+                    },
+                    {
+                      "left": "a concise draft",
+                      "right": "un borrador conciso"
+                    },
+                    {
+                      "left": "shift the register",
+                      "right": "cambiar el registro"
+                    },
+                    {
+                      "left": "remove the ambiguity",
+                      "right": "eliminar la ambigüedad"
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "La reescritura se evalúa por claridad, concisión y adecuación al público.",
+                    "ruleRef": "gp-c1-register-shift"
+                  }
+                },
+                {
+                  "type": "FreeSpeakingPrompt",
+                  "id": "es-en-c1-e242",
+                  "prompt": "Reescribe una nota interna para el público: di qué cambias de registro, cómo mantienes la referencia y qué eliminas por ambiguo.",
+                  "minTokens": 20,
+                  "conceptClusters": [
+                    [
+                      "the former",
+                      "the latter",
+                      "such"
+                    ],
+                    [
+                      "register",
+                      "audience",
+                      "clarity"
+                    ],
+                    [
+                      "rewrite",
+                      "ambiguity",
+                      "concise"
+                    ]
+                  ],
+                  "grammarRuleRefs": [
+                    "gp-c1-register-shift",
+                    "gp-c1-cohesion"
+                  ],
+                  "timeLimitSeconds": 30,
+                  "minWpm": 70,
+                  "maxWpm": 160,
+                  "modelAnswer": "The policy will be introduced gradually: the former option reduces costs, while the latter protects trust. Such an approach keeps the draft clear for a public audience, and we remove the ambiguity of the original wording.",
+                  "selfAssessmentCriteria": [
+                    "¿Expliqué el cambio de registro?",
+                    "¿Mantuve la referencia?",
+                    "¿Eliminé una ambigüedad?"
+                  ],
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "La respuesta modelo reescribe con verbos, conserva la referencia y cierra con una decisión de claridad.",
+                    "ruleRef": "gp-c1-register-shift"
+                  }
+                }
+              ]
+            },
+            {
+              "id": "es-en-c1-un-6-ls-3",
+              "title": "Monólogo argumentativo",
+              "cefrLevel": "C1",
+              "scenario": "En una prueba oral, hay que defender una tesis durante dos minutos con estructura y ejemplos.",
+              "canDo": "Puedo estructurar un monólogo con apertura, tesis, argumentos, concesión y cierre.",
+              "grammarPoints": [
+                {
+                  "id": "gp-c1-argument-structure",
+                  "label": "Estructura argumentativa",
+                  "description": "firstly, admittedly, on balance, to sum up."
+                },
+                {
+                  "id": "gp-c1-signposting",
+                  "label": "Señalización del discurso",
+                  "description": "let me begin by, moving on, as I said earlier..."
+                }
+              ],
+              "vocabFrequencyBand": "8000-12000",
+              "culturalNotes": [
+                {
+                  "idiom": "at the end of the day",
+                  "note": "Al fin y al cabo; cierra un monólogo volviendo al criterio que importa tras los detalles.",
+                  "translation": "al fin y al cabo"
+                }
+              ],
+              "microLesson": {
+                "title": "Un monólogo se construye",
+                "goals": [
+                  "Abrir, ordenar y cerrar un argumento en dos minutos.",
+                  "Señalar los cambios de sección para el oyente."
+                ],
+                "sections": [
+                  {
+                    "heading": "El esqueleto del monólogo",
+                    "body": "Let me begin by introduce el marco; firstly y secondly ordenan; admittedly reconoce la objeción; on balance y to sum up cierran. Las señalizaciones (moving on, as I said earlier) ayudan a seguir el hilo sin notas.",
+                    "examples": [
+                      {
+                        "source": "Permítanme empezar por el contexto.",
+                        "target": "Let me begin by setting the context.",
+                        "note": "Apertura estable y predecible."
+                      },
+                      {
+                        "source": "En conjunto, la medida es necesaria.",
+                        "target": "On balance, the measure is necessary.",
+                        "note": "On balance resume el juicio."
+                      }
+                    ]
+                  }
+                ]
+              },
+              "glossary": [
+                {
+                  "term": "monologue",
+                  "translations": [
+                    "monólogo"
+                  ]
+                },
+                {
+                  "term": "thesis",
+                  "translations": [
+                    "tesis"
+                  ]
+                },
+                {
+                  "term": "argument",
+                  "translations": [
+                    "argumento"
+                  ]
+                },
+                {
+                  "term": "structure",
+                  "translations": [
+                    "estructura"
+                  ]
+                },
+                {
+                  "term": "conclusion",
+                  "translations": [
+                    "conclusión"
+                  ]
+                },
+                {
+                  "term": "signpost",
+                  "translations": [
+                    "señalizar",
+                    "indicar el hilo"
+                  ]
+                },
+                {
+                  "term": "audience",
+                  "translations": [
+                    "público",
+                    "audiencia"
+                  ]
+                },
+                {
+                  "term": "claim",
+                  "translations": [
+                    "afirmación"
+                  ]
+                },
+                {
+                  "term": "evidence",
+                  "translations": [
+                    "prueba",
+                    "evidencia"
+                  ]
+                },
+                {
+                  "term": "rehearse",
+                  "translations": [
+                    "ensayar"
+                  ]
+                }
+              ],
+              "exercises": [
+                {
+                  "type": "ClozeDragDrop",
+                  "id": "es-en-c1-e243",
+                  "passage": "Let me {{b1}} by setting the context; {{b2}}, I will present the two main arguments.",
+                  "blanks": [
+                    {
+                      "id": "b1",
+                      "answer": "begin",
+                      "options": [
+                        "begin",
+                        "began",
+                        "beginning"
+                      ]
+                    },
+                    {
+                      "id": "b2",
+                      "answer": "firstly",
+                      "options": [
+                        "firstly",
+                        "first",
+                        "at first"
+                      ]
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "'Let me begin by' abre el monólogo y 'firstly' ordena el primer argumento.",
+                    "ruleRef": "gp-c1-signposting"
+                  }
+                },
+                {
+                  "type": "ClozeDragDrop",
+                  "id": "es-en-c1-e244",
+                  "passage": "{{b1}}, the measure has costs; {{b2}} balance, the benefits are greater.",
+                  "blanks": [
+                    {
+                      "id": "b1",
+                      "answer": "Admittedly",
+                      "options": [
+                        "Admittedly",
+                        "Admit",
+                        "Admitting"
+                      ]
+                    },
+                    {
+                      "id": "b2",
+                      "answer": "on",
+                      "options": [
+                        "on",
+                        "in",
+                        "at"
+                      ]
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "'Admittedly' reconoce la objeción y 'on balance' resume el juicio tras comparar.",
+                    "ruleRef": "gp-c1-argument-structure"
+                  }
+                },
+                {
+                  "type": "SemanticMatch",
+                  "id": "es-en-c1-e245",
+                  "instructions": "Ordena la función de cada parte del monólogo.",
+                  "pairs": [
+                    {
+                      "left": "Let me begin by setting the context.",
+                      "right": "Apertura",
+                      "register": "formal",
+                      "nuance": "Prepara al oyente antes de la tesis."
+                    },
+                    {
+                      "left": "Admittedly, the measure has costs.",
+                      "right": "Concesión",
+                      "register": "formal",
+                      "nuance": "Anticipa la objeción del evaluador."
+                    },
+                    {
+                      "left": "To sum up, the benefits outweigh the costs.",
+                      "right": "Cierre",
+                      "register": "formal",
+                      "nuance": "Recapitula y decide."
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "register",
+                    "explanation": "Un monólogo eficaz es predecible en su estructura y preciso en sus transiciones.",
+                    "ruleRef": "gp-c1-argument-structure"
+                  }
+                },
+                {
+                  "type": "ListenChoose",
+                  "id": "es-en-c1-e246",
+                  "audioText": "Let me begin by setting the context. Firstly, the measure has costs; admittedly, those costs are real, but on balance the benefits are greater.",
+                  "options": [
+                    "The speaker rejects the measure",
+                    "The speaker accepts costs but defends the benefits",
+                    "The speaker ignores the costs",
+                    "The speaker changes topic"
+                  ],
+                  "correctIndex": 1,
+                  "feedbackOnError": {
+                    "type": "comprehension",
+                    "explanation": "Admittedly reconoce el coste y on balance decide a favor de los beneficios.",
+                    "ruleRef": "gp-c1-argument-structure"
+                  }
+                },
+                {
+                  "type": "AudioOnlyPrompt",
+                  "id": "es-en-c1-e247",
+                  "audioText": "Let me begin by setting the context. Firstly, the measure has costs; admittedly, those costs are real, but on balance the benefits are greater. To sum up, at the end of the day, the decision protects both trust and efficiency.",
+                  "question": "How does the speaker close the monologue?",
+                  "options": [
+                    "With a new objection",
+                    "With a summary that protects trust and efficiency",
+                    "With an unrelated example",
+                    "With a question for the audience"
+                  ],
+                  "correctIndex": 1,
+                  "allowSlowPlayback": true,
+                  "feedbackOnError": {
+                    "type": "comprehension",
+                    "explanation": "To sum up y at the end of the day cierran volviendo al criterio central.",
+                    "ruleRef": "gp-c1-signposting"
+                  }
+                },
+                {
+                  "type": "MultipleChoice",
+                  "id": "es-en-c1-e248",
+                  "question": "Completa: ___ balance, the benefits are greater.",
+                  "options": [
+                    "On",
+                    "In",
+                    "At"
+                  ],
+                  "correctIndex": 0,
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "La fórmula fija de síntesis es 'on balance'.",
+                    "ruleRef": "gp-c1-argument-structure"
+                  }
+                },
+                {
+                  "type": "Translate",
+                  "id": "es-en-c1-e249",
+                  "sourcePhrase": "En conjunto, la medida es necesaria y los beneficios superan los costes.",
+                  "correctTokens": [
+                    "On",
+                    "balance",
+                    "the",
+                    "measure",
+                    "is",
+                    "necessary",
+                    "and",
+                    "the",
+                    "benefits",
+                    "outweigh",
+                    "the",
+                    "costs"
+                  ],
+                  "distractorTokens": [
+                    "overall",
+                    "exceed"
+                  ],
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "La síntesis usa 'on balance' y el verbo preciso 'outweigh'.",
+                    "ruleRef": "gp-c1-argument-structure"
+                  }
+                },
+                {
+                  "type": "ListenType",
+                  "id": "es-en-c1-e250",
+                  "transcription": "Let me begin by setting the context before I present the main argument",
+                  "audioText": "Let me begin by setting the context before I present the main argument",
+                  "feedbackOnError": {
+                    "type": "spelling",
+                    "explanation": "Escribe 'context' con 'x' y 'argument' sin 'e' final.",
+                    "ruleRef": "gp-c1-signposting"
+                  }
+                },
+                {
+                  "type": "SpeakRepeat",
+                  "id": "es-en-c1-e251",
+                  "targetPhrase": "To sum up, the benefits outweigh the costs, and the decision protects both trust and efficiency.",
+                  "audioText": "To sum up, the benefits outweigh the costs, and the decision protects both trust and efficiency.",
+                  "feedbackOnError": {
+                    "type": "pronunciation",
+                    "explanation": "Marca 'To sum up' como cierre y enlaza 'outweigh the'.",
+                    "ruleRef": "gp-c1-argument-structure"
+                  }
+                },
+                {
+                  "type": "MatchPairs",
+                  "id": "es-en-c1-e252",
+                  "pairs": [
+                    {
+                      "left": "state the thesis",
+                      "right": "enunciar la tesis"
+                    },
+                    {
+                      "left": "support the claim",
+                      "right": "respaldar la afirmación"
+                    },
+                    {
+                      "left": "acknowledge the objection",
+                      "right": "reconocer la objeción"
+                    },
+                    {
+                      "left": "sum up the argument",
+                      "right": "resumir el argumento"
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "El monólogo se evalúa por tesis, apoyo, concesión y cierre.",
+                    "ruleRef": "gp-c1-argument-structure"
+                  }
+                },
+                {
+                  "type": "FreeSpeakingPrompt",
+                  "id": "es-en-c1-e253",
+                  "prompt": "Monólogo de evaluación: abre el contexto, enuncia la tesis, presenta dos argumentos, concede una objeción y cierra con una síntesis.",
+                  "minTokens": 20,
+                  "conceptClusters": [
+                    [
+                      "let me begin",
+                      "firstly",
+                      "secondly"
+                    ],
+                    [
+                      "admittedly",
+                      "on balance",
+                      "to sum up"
+                    ],
+                    [
+                      "thesis",
+                      "benefits",
+                      "costs"
+                    ]
+                  ],
+                  "grammarRuleRefs": [
+                    "gp-c1-argument-structure",
+                    "gp-c1-signposting"
+                  ],
+                  "timeLimitSeconds": 30,
+                  "minWpm": 70,
+                  "maxWpm": 160,
+                  "modelAnswer": "Let me begin by setting the context: the measure protects trust and efficiency. Firstly, the costs are real; admittedly, that is a fair objection, but on balance the benefits outweigh them. To sum up, at the end of the day, the decision is necessary.",
+                  "selfAssessmentCriteria": [
+                    "¿Abrí con contexto y tesis?",
+                    "¿Concedí una objeción?",
+                    "¿Cerré con síntesis?"
+                  ],
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "La respuesta modelo ordena apertura, argumentos, concesión y cierre con señalizaciones claras.",
+                    "ruleRef": "gp-c1-argument-structure"
+                  }
+                }
+              ]
+            },
+            {
+              "id": "es-en-c1-un-6-ls-4",
+              "title": "Debate final",
+              "cefrLevel": "C1",
+              "scenario": "En el debate final, dos posturas deben rebatir con respeto y cerrar con una propuesta común.",
+              "canDo": "Puedo rebatir un argumento, ceder un punto menor y cerrar con una propuesta que integre ambas posturas.",
+              "grammarPoints": [
+                {
+                  "id": "gp-c1-rebuttal",
+                  "label": "Rebatimiento",
+                  "description": "That may be so, but..., I take your point, however..."
+                },
+                {
+                  "id": "gp-c1-closing-arguments",
+                  "label": "Cierre argumentativo",
+                  "description": "the strongest argument remains..., let's agree to..."
+                }
+              ],
+              "vocabFrequencyBand": "8000-12000",
+              "culturalNotes": [
+                {
+                  "idiom": "make or break",
+                  "note": "Determinante para el éxito o el fracaso; en un debate final, ayuda a jerarquizar qué argumento decide la votación.",
+                  "translation": "decisivo"
+                }
+              ],
+              "microLesson": {
+                "title": "Rebatir sin incendiar",
+                "goals": [
+                  "Rebatir con reconocimiento previo del argumento ajeno.",
+                  "Cerrar con una propuesta que integre lo mejor de ambas posturas."
+                ],
+                "sections": [
+                  {
+                    "heading": "El turno de réplica",
+                    "body": "That may be so, but... concede y rebate; I take your point, however... reconoce para corregir; the strongest argument remains... jerarquiza el cierre. El debate maduro no busca ganar la sala, sino mejorar la decisión.",
+                    "examples": [
+                      {
+                        "source": "Puede ser así, pero el coste sigue sin resolverse.",
+                        "target": "That may be so, but the cost remains unresolved.",
+                        "note": "Concesión breve y objeción directa."
+                      },
+                      {
+                        "source": "El argumento más sólido sigue siendo la confianza.",
+                        "target": "The strongest argument remains trust.",
+                        "note": "Cierre que jerarquiza."
+                      }
+                    ]
+                  }
+                ]
+              },
+              "glossary": [
+                {
+                  "term": "rebuttal",
+                  "translations": [
+                    "réplica",
+                    "refutación"
+                  ]
+                },
+                {
+                  "term": "motion",
+                  "translations": [
+                    "moción",
+                    "propuesta"
+                  ]
+                },
+                {
+                  "term": "floor",
+                  "translations": [
+                    "tribuna",
+                    "palabra"
+                  ]
+                },
+                {
+                  "term": "summary",
+                  "translations": [
+                    "resumen"
+                  ]
+                },
+                {
+                  "term": "persuasive",
+                  "translations": [
+                    "persuasivo",
+                    "persuasiva"
+                  ]
+                },
+                {
+                  "term": "opponent",
+                  "translations": [
+                    "oponente"
+                  ]
+                },
+                {
+                  "term": "closing",
+                  "translations": [
+                    "cierre",
+                    "alegato final"
+                  ]
+                },
+                {
+                  "term": "vote",
+                  "translations": [
+                    "votación",
+                    "voto"
+                  ]
+                },
+                {
+                  "term": "compromise",
+                  "translations": [
+                    "acuerdo intermedio",
+                    "compromiso"
+                  ]
+                },
+                {
+                  "term": "decision",
+                  "translations": [
+                    "decisión"
+                  ]
+                }
+              ],
+              "exercises": [
+                {
+                  "type": "ClozeDragDrop",
+                  "id": "es-en-c1-e254",
+                  "passage": "That {{b1}} be so, but the cost remains unresolved; I take your point, {{b2}}, the timeline is still unrealistic.",
+                  "blanks": [
+                    {
+                      "id": "b1",
+                      "answer": "may",
+                      "options": [
+                        "may",
+                        "must",
+                        "can't"
+                      ]
+                    },
+                    {
+                      "id": "b2",
+                      "answer": "however",
+                      "options": [
+                        "however",
+                        "therefore",
+                        "namely"
+                      ]
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "'That may be so, but...' concede y rebate; 'however' introduce la segunda reserva.",
+                    "ruleRef": "gp-c1-rebuttal"
+                  }
+                },
+                {
+                  "type": "ClozeDragDrop",
+                  "id": "es-en-c1-e255",
+                  "passage": "The {{b1}} argument remains trust, so let's {{b2}} on a small pilot before the vote.",
+                  "blanks": [
+                    {
+                      "id": "b1",
+                      "answer": "strongest",
+                      "options": [
+                        "strongest",
+                        "stronger",
+                        "strong"
+                      ]
+                    },
+                    {
+                      "id": "b2",
+                      "answer": "agree",
+                      "options": [
+                        "agree",
+                        "agreed",
+                        "agreeing"
+                      ]
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "El superlativo 'strongest' jerarquiza el cierre y 'let's agree on' propone el acuerdo.",
+                    "ruleRef": "gp-c1-closing-arguments"
+                  }
+                },
+                {
+                  "type": "SemanticMatch",
+                  "id": "es-en-c1-e256",
+                  "instructions": "Identifica la función de cada intervención en el debate.",
+                  "pairs": [
+                    {
+                      "left": "That may be so, but the cost remains unresolved.",
+                      "right": "Réplica con concesión",
+                      "register": "formal",
+                      "nuance": "Acepta el marco y ataca el punto débil."
+                    },
+                    {
+                      "left": "I take your point, however the timeline is unrealistic.",
+                      "right": "Reconocimiento y reserva",
+                      "register": "formal",
+                      "nuance": "Valida al oponente antes de corregir."
+                    },
+                    {
+                      "left": "The strongest argument remains trust.",
+                      "right": "Cierre que jerarquiza",
+                      "register": "formal",
+                      "nuance": "Decide qué argumento pesa más."
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "register",
+                    "explanation": "Rebatir con reconocimiento mantiene la relación y la claridad.",
+                    "ruleRef": "gp-c1-rebuttal"
+                  }
+                },
+                {
+                  "type": "ListenChoose",
+                  "id": "es-en-c1-e257",
+                  "audioText": "That may be so, but the cost remains unresolved. I take your point, however the timeline is still unrealistic.",
+                  "options": [
+                    "The speaker accepts the argument completely",
+                    "The speaker concedes and raises two objections",
+                    "The speaker refuses to listen",
+                    "The speaker changes the motion"
+                  ],
+                  "correctIndex": 1,
+                  "feedbackOnError": {
+                    "type": "comprehension",
+                    "explanation": "Las dos fórmulas reconocen el argumento y añaden objeciones concretas.",
+                    "ruleRef": "gp-c1-rebuttal"
+                  }
+                },
+                {
+                  "type": "AudioOnlyPrompt",
+                  "id": "es-en-c1-e258",
+                  "audioText": "That may be so, but the cost remains unresolved. I take your point, however the timeline is unrealistic. The strongest argument remains trust, so let's agree on a small pilot before the vote.",
+                  "question": "What does the speaker propose?",
+                  "options": [
+                    "Cancelling the vote",
+                    "A small pilot before voting",
+                    "Ignoring the cost",
+                    "Rejecting trust as an argument"
+                  ],
+                  "correctIndex": 1,
+                  "allowSlowPlayback": true,
+                  "feedbackOnError": {
+                    "type": "comprehension",
+                    "explanation": "El cierre propone un piloto pequeño como acuerdo intermedio.",
+                    "ruleRef": "gp-c1-closing-arguments"
+                  }
+                },
+                {
+                  "type": "MultipleChoice",
+                  "id": "es-en-c1-e259",
+                  "question": "Completa: That ___ be so, but the cost remains unresolved.",
+                  "options": [
+                    "may",
+                    "must",
+                    "can't"
+                  ],
+                  "correctIndex": 0,
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "'That may be so' concede la posibilidad antes de rebatir.",
+                    "ruleRef": "gp-c1-rebuttal"
+                  }
+                },
+                {
+                  "type": "Translate",
+                  "id": "es-en-c1-e260",
+                  "sourcePhrase": "El argumento más sólido sigue siendo la confianza.",
+                  "correctTokens": [
+                    "The",
+                    "strongest",
+                    "argument",
+                    "remains",
+                    "trust"
+                  ],
+                  "distractorTokens": [
+                    "stronger",
+                    "remained"
+                  ],
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "El superlativo 'strongest' y el presente 'remains' fijan el cierre.",
+                    "ruleRef": "gp-c1-closing-arguments"
+                  }
+                },
+                {
+                  "type": "ListenType",
+                  "id": "es-en-c1-e261",
+                  "transcription": "I take your point however the timeline is still unrealistic",
+                  "audioText": "I take your point however the timeline is still unrealistic",
+                  "feedbackOnError": {
+                    "type": "spelling",
+                    "explanation": "Escribe 'unrealistic' con 'un-' y '-istic'.",
+                    "ruleRef": "gp-c1-rebuttal"
+                  }
+                },
+                {
+                  "type": "SpeakRepeat",
+                  "id": "es-en-c1-e262",
+                  "targetPhrase": "That may be so, but the cost remains unresolved and the timeline is still unrealistic.",
+                  "audioText": "That may be so, but the cost remains unresolved and the timeline is still unrealistic.",
+                  "feedbackOnError": {
+                    "type": "pronunciation",
+                    "explanation": "Marca la pausa tras 'so' y enlaza 'cost remains'.",
+                    "ruleRef": "gp-c1-rebuttal"
+                  }
+                },
+                {
+                  "type": "MatchPairs",
+                  "id": "es-en-c1-e263",
+                  "pairs": [
+                    {
+                      "left": "open the debate",
+                      "right": "abrir el debate"
+                    },
+                    {
+                      "left": "rebut an argument",
+                      "right": "rebatir un argumento"
+                    },
+                    {
+                      "left": "reach a compromise",
+                      "right": "alcanzar un acuerdo intermedio"
+                    },
+                    {
+                      "left": "close the motion",
+                      "right": "cerrar la moción"
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "El debate final se ordena con apertura, réplica, acuerdo y cierre.",
+                    "ruleRef": "gp-c1-closing-arguments"
+                  }
+                },
+                {
+                  "type": "FreeSpeakingPrompt",
+                  "id": "es-en-c1-e264",
+                  "prompt": "Intervén en el debate final: rebate con una concesión, jerarquiza el argumento decisivo y propón un acuerdo antes de la votación.",
+                  "minTokens": 20,
+                  "conceptClusters": [
+                    [
+                      "that may be so",
+                      "I take your point",
+                      "however"
+                    ],
+                    [
+                      "strongest argument",
+                      "remains",
+                      "decisive"
+                    ],
+                    [
+                      "agree",
+                      "pilot",
+                      "vote"
+                    ]
+                  ],
+                  "grammarRuleRefs": [
+                    "gp-c1-rebuttal",
+                    "gp-c1-closing-arguments"
+                  ],
+                  "timeLimitSeconds": 30,
+                  "minWpm": 70,
+                  "maxWpm": 160,
+                  "modelAnswer": "That may be so, but the cost remains unresolved; I take your point, however the timeline is unrealistic. The strongest argument remains trust, so let's agree on a small pilot before the vote.",
+                  "selfAssessmentCriteria": [
+                    "¿Concedí antes de rebatir?",
+                    "¿Jerarquicé el argumento decisivo?",
+                    "¿Propuse un acuerdo?"
+                  ],
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "La respuesta modelo rebate con concesión, cierra con el argumento más sólido y propone un acuerdo verificable.",
+                    "ruleRef": "gp-c1-rebuttal"
                   }
                 }
               ]
