@@ -15435,6 +15435,1511 @@
               ]
             }
           ]
+        },
+        {
+          "id": "es-en-lv-4-un-5",
+          "title": "Proyecto integrador",
+          "lessons": [
+            {
+              "id": "es-en-c1-un-5-ls-1",
+              "title": "Planificar con alcance",
+              "cefrLevel": "C1",
+              "scenario": "El equipo arranca un proyecto con fecha fija y debe acordar qué entra y qué queda fuera del alcance.",
+              "canDo": "Puedo definir alcance y entregables, marcar dependencias y presentar el plan con formas de futuro precisas.",
+              "grammarPoints": [
+                {
+                  "id": "gp-c1-future-forms",
+                  "label": "Formas de futuro",
+                  "description": "we are due to, we will be launching, we are about to..."
+                },
+                {
+                  "id": "gp-c1-scope-language",
+                  "label": "Lenguaje de alcance",
+                  "description": "in scope, out of scope, deliverables, dependencies."
+                }
+              ],
+              "vocabFrequencyBand": "8000-12000",
+              "culturalNotes": [
+                {
+                  "idiom": "lay the groundwork",
+                  "note": "Preparar las bases antes de actuar; en un proyecto, el alcance y las dependencias son ese trabajo previo invisible.",
+                  "translation": "sentar las bases"
+                }
+              ],
+              "microLesson": {
+                "title": "El alcance antes del calendario",
+                "goals": [
+                  "Distinguir lo que entra y lo que queda fuera.",
+                  "Presentar el plan con formas de futuro y dependencias."
+                ],
+                "sections": [
+                  {
+                    "heading": "Cerrar el alcance para no improvisar",
+                    "body": "In scope y out of scope delimitan el trabajo; deliverables y dependencies concretan qué se entrega y de qué depende. We are due to launch in June sitúa el compromiso; we will be launching en junio describe la acción en curso del lanzamiento.",
+                    "examples": [
+                      {
+                        "source": "Tenemos previsto lanzar en junio.",
+                        "target": "We are due to launch in June.",
+                        "note": "Due to expresa un compromiso de calendario."
+                      },
+                      {
+                        "source": "La integración queda fuera del alcance de esta fase.",
+                        "target": "The integration is out of scope for this phase.",
+                        "note": "Out of scope evita expectativas falsas."
+                      }
+                    ]
+                  }
+                ]
+              },
+              "glossary": [
+                {
+                  "term": "scope",
+                  "translations": [
+                    "alcance"
+                  ]
+                },
+                {
+                  "term": "deliverable",
+                  "translations": [
+                    "entregable"
+                  ]
+                },
+                {
+                  "term": "milestone",
+                  "translations": [
+                    "hito"
+                  ]
+                },
+                {
+                  "term": "roadmap",
+                  "translations": [
+                    "hoja de ruta"
+                  ]
+                },
+                {
+                  "term": "stakeholder",
+                  "translations": [
+                    "parte interesada"
+                  ]
+                },
+                {
+                  "term": "dependency",
+                  "translations": [
+                    "dependencia"
+                  ]
+                },
+                {
+                  "term": "kickoff",
+                  "translations": [
+                    "arranque",
+                    "lanzamiento inicial"
+                  ]
+                },
+                {
+                  "term": "constraint",
+                  "translations": [
+                    "restricción"
+                  ]
+                },
+                {
+                  "term": "priority",
+                  "translations": [
+                    "prioridad"
+                  ]
+                },
+                {
+                  "term": "assumption",
+                  "translations": [
+                    "supuesto"
+                  ]
+                }
+              ],
+              "exercises": [
+                {
+                  "type": "ClozeDragDrop",
+                  "id": "es-en-c1-e177",
+                  "passage": "We are {{b1}} to launch in June, and the mobile pilot is {{b2}} of scope for this phase.",
+                  "blanks": [
+                    {
+                      "id": "b1",
+                      "answer": "due",
+                      "options": [
+                        "due",
+                        "owing",
+                        "because"
+                      ]
+                    },
+                    {
+                      "id": "b2",
+                      "answer": "out",
+                      "options": [
+                        "out",
+                        "off",
+                        "away"
+                      ]
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "'Be due to' expresa el compromiso de calendario y 'out of scope' delimita el trabajo excluido.",
+                    "ruleRef": "gp-c1-future-forms"
+                  }
+                },
+                {
+                  "type": "ClozeDragDrop",
+                  "id": "es-en-c1-e178",
+                  "passage": "The team is {{b1}} to start the pilot, but the integration remains a key {{b2}}.",
+                  "blanks": [
+                    {
+                      "id": "b1",
+                      "answer": "about",
+                      "options": [
+                        "about",
+                        "due",
+                        "going"
+                      ]
+                    },
+                    {
+                      "id": "b2",
+                      "answer": "dependency",
+                      "options": [
+                        "dependency",
+                        "dependence",
+                        "depending"
+                      ]
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "'Is about to' marca inminencia; 'dependency' es el sustantivo que nombra la condición externa.",
+                    "ruleRef": "gp-c1-scope-language"
+                  }
+                },
+                {
+                  "type": "SemanticMatch",
+                  "id": "es-en-c1-e179",
+                  "instructions": "Clasifica cada elemento del plan.",
+                  "pairs": [
+                    {
+                      "left": "The mobile pilot is out of scope for this phase.",
+                      "right": "Fuera de alcance",
+                      "register": "formal",
+                      "nuance": "Evita comprometer recursos no previstos."
+                    },
+                    {
+                      "left": "The reporting dashboard is a core deliverable.",
+                      "right": "Entregable principal",
+                      "register": "formal",
+                      "nuance": "Define qué se entrega al cliente."
+                    },
+                    {
+                      "left": "The API upgrade is a dependency for launch.",
+                      "right": "Dependencia crítica",
+                      "register": "formal",
+                      "nuance": "El lanzamiento no ocurre sin ella."
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "register",
+                    "explanation": "El alcance se negocia con estas tres etiquetas antes de hablar de fechas.",
+                    "ruleRef": "gp-c1-scope-language"
+                  }
+                },
+                {
+                  "type": "ListenChoose",
+                  "id": "es-en-c1-e180",
+                  "audioText": "We are due to launch in June, and the mobile pilot is out of scope for this phase.",
+                  "options": [
+                    "The pilot launches in June",
+                    "The launch is planned for June without the pilot",
+                    "The project is cancelled",
+                    "The pilot is the main deliverable"
+                  ],
+                  "correctIndex": 1,
+                  "feedbackOnError": {
+                    "type": "comprehension",
+                    "explanation": "'Due to launch' fija junio y 'out of scope' excluye el piloto móvil.",
+                    "ruleRef": "gp-c1-future-forms"
+                  }
+                },
+                {
+                  "type": "AudioOnlyPrompt",
+                  "id": "es-en-c1-e181",
+                  "audioText": "We are due to launch in June, but the team is about to start a two-week pilot. The dashboard is a core deliverable, while the mobile app stays out of scope.",
+                  "question": "What is the current state of the plan?",
+                  "options": [
+                    "The launch happened already",
+                    "A pilot starts soon and the app is excluded",
+                    "The dashboard is out of scope",
+                    "The team cancelled the launch"
+                  ],
+                  "correctIndex": 1,
+                  "allowSlowPlayback": true,
+                  "feedbackOnError": {
+                    "type": "comprehension",
+                    "explanation": "Is about to start indica inminencia y out of scope excluye la app móvil.",
+                    "ruleRef": "gp-c1-future-forms"
+                  }
+                },
+                {
+                  "type": "MultipleChoice",
+                  "id": "es-en-c1-e182",
+                  "question": "Completa: The team is ___ to start the pilot next week.",
+                  "options": [
+                    "about",
+                    "due",
+                    "going"
+                  ],
+                  "correctIndex": 0,
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "'Is about to + infinitivo' expresa inminencia; 'due to' fijaría una fecha externa.",
+                    "ruleRef": "gp-c1-future-forms"
+                  }
+                },
+                {
+                  "type": "Translate",
+                  "id": "es-en-c1-e183",
+                  "sourcePhrase": "La integración queda fuera del alcance de esta fase.",
+                  "correctTokens": [
+                    "The",
+                    "integration",
+                    "is",
+                    "out",
+                    "of",
+                    "scope",
+                    "for",
+                    "this",
+                    "phase"
+                  ],
+                  "distractorTokens": [
+                    "outside",
+                    "stage"
+                  ],
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "La colocación fija es 'out of scope for this phase'.",
+                    "ruleRef": "gp-c1-scope-language"
+                  }
+                },
+                {
+                  "type": "ListenType",
+                  "id": "es-en-c1-e184",
+                  "transcription": "The reporting dashboard is a core deliverable",
+                  "audioText": "The reporting dashboard is a core deliverable",
+                  "feedbackOnError": {
+                    "type": "spelling",
+                    "explanation": "Escribe 'deliverable' con '-able' y 'dashboard' en una palabra.",
+                    "ruleRef": "gp-c1-scope-language"
+                  }
+                },
+                {
+                  "type": "SpeakRepeat",
+                  "id": "es-en-c1-e185",
+                  "targetPhrase": "We are due to launch in June, provided that the API upgrade lands on time.",
+                  "audioText": "We are due to launch in June, provided that the API upgrade lands on time.",
+                  "feedbackOnError": {
+                    "type": "pronunciation",
+                    "explanation": "Enlaza 'due to' y pronuncia 'API' letra a letra en inglés.",
+                    "ruleRef": "gp-c1-future-forms"
+                  }
+                },
+                {
+                  "type": "MatchPairs",
+                  "id": "es-en-c1-e186",
+                  "pairs": [
+                    {
+                      "left": "define the scope",
+                      "right": "definir el alcance"
+                    },
+                    {
+                      "left": "a key milestone",
+                      "right": "un hito clave"
+                    },
+                    {
+                      "left": "an external dependency",
+                      "right": "una dependencia externa"
+                    },
+                    {
+                      "left": "a project roadmap",
+                      "right": "una hoja de ruta del proyecto"
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "La planificación nombra alcance, hitos y dependencias.",
+                    "ruleRef": "gp-c1-scope-language"
+                  }
+                },
+                {
+                  "type": "FreeSpeakingPrompt",
+                  "id": "es-en-c1-e187",
+                  "prompt": "Presenta el alcance de un proyecto: di qué entra, qué queda fuera y de qué depende la fecha de lanzamiento.",
+                  "minTokens": 15,
+                  "conceptClusters": [
+                    [
+                      "in scope",
+                      "out of scope",
+                      "deliverable"
+                    ],
+                    [
+                      "due to",
+                      "about to",
+                      "will be"
+                    ],
+                    [
+                      "dependency",
+                      "milestone",
+                      "constraint"
+                    ]
+                  ],
+                  "grammarRuleRefs": [
+                    "gp-c1-future-forms",
+                    "gp-c1-scope-language"
+                  ],
+                  "timeLimitSeconds": 30,
+                  "minWpm": 70,
+                  "maxWpm": 160,
+                  "modelAnswer": "We are due to launch in June, and the dashboard is a core deliverable. The mobile pilot is out of scope for this phase, so the only critical dependency is the API upgrade.",
+                  "selfAssessmentCriteria": [
+                    "¿Delimité qué entra y qué no?",
+                    "¿Nombré la dependencia crítica?",
+                    "¿Usé una forma de futuro precisa?"
+                  ],
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "La respuesta modelo separa alcance, entregable y dependencia con formas de futuro claras.",
+                    "ruleRef": "gp-c1-scope-language"
+                  }
+                }
+              ]
+            },
+            {
+              "id": "es-en-c1-un-5-ls-2",
+              "title": "Presupuestar y justificar",
+              "cefrLevel": "C1",
+              "scenario": "Dirección pide justificar un presupuesto que supera la previsión inicial en un 15 %.",
+              "canDo": "Puedo presentar cifras aproximadas, justificar desviaciones y conectar causa y consecuencia con precisión.",
+              "grammarPoints": [
+                {
+                  "id": "gp-c1-approximation",
+                  "label": "Aproximación",
+                  "description": "roughly, in the region of, up to, approximately."
+                },
+                {
+                  "id": "gp-c1-causal-links",
+                  "label": "Causa y consecuencia",
+                  "description": "owing to, hence, thereby, as a result of."
+                }
+              ],
+              "vocabFrequencyBand": "8000-12000",
+              "culturalNotes": [
+                {
+                  "idiom": "tighten one's belt",
+                  "note": "Reducir gastos ante una situación difícil; en un presupuesto, permite justificar recortes sin dramatizar.",
+                  "translation": "apretarse el cinturón"
+                }
+              ],
+              "microLesson": {
+                "title": "Cifras que se defienden",
+                "goals": [
+                  "Aproximar sin perder credibilidad.",
+                  "Explicar la causa de una desviación con conectores formales."
+                ],
+                "sections": [
+                  {
+                    "heading": "Aproximar y explicar",
+                    "body": "Roughly y in the region of presentan cifras aproximadas; up to marca un techo. Owing to introduce la causa, hence la consecuencia lógica y thereby el medio por el que se produce el efecto.",
+                    "examples": [
+                      {
+                        "source": "El coste ronda los 40.000 euros.",
+                        "target": "The cost is in the region of 40,000 euros.",
+                        "note": "In the region of = aproximadamente."
+                      },
+                      {
+                        "source": "El retraso encareció el proyecto y, por tanto, redujo el margen.",
+                        "target": "The delay raised costs, hence the lower margin.",
+                        "note": "Hence conecta causa y consecuencia."
+                      }
+                    ]
+                  }
+                ]
+              },
+              "glossary": [
+                {
+                  "term": "budget",
+                  "translations": [
+                    "presupuesto"
+                  ]
+                },
+                {
+                  "term": "estimate",
+                  "translations": [
+                    "estimación",
+                    "calcular"
+                  ]
+                },
+                {
+                  "term": "overhead",
+                  "translations": [
+                    "gastos generales"
+                  ]
+                },
+                {
+                  "term": "contingency",
+                  "translations": [
+                    "contingencia",
+                    "reserva"
+                  ]
+                },
+                {
+                  "term": "expenditure",
+                  "translations": [
+                    "gasto",
+                    "desembolso"
+                  ]
+                },
+                {
+                  "term": "justify",
+                  "translations": [
+                    "justificar"
+                  ]
+                },
+                {
+                  "term": "allocation",
+                  "translations": [
+                    "asignación"
+                  ]
+                },
+                {
+                  "term": "cost-effective",
+                  "translations": [
+                    "rentable",
+                    "eficiente en costes"
+                  ]
+                },
+                {
+                  "term": "breakdown",
+                  "translations": [
+                    "desglose"
+                  ]
+                },
+                {
+                  "term": "overspend",
+                  "translations": [
+                    "exceso de gasto"
+                  ]
+                }
+              ],
+              "exercises": [
+                {
+                  "type": "ClozeDragDrop",
+                  "id": "es-en-c1-e188",
+                  "passage": "The cost is in the {{b1}} of 40,000 euros, {{b2}} the original estimate.",
+                  "blanks": [
+                    {
+                      "id": "b1",
+                      "answer": "region",
+                      "options": [
+                        "region",
+                        "area",
+                        "range"
+                      ]
+                    },
+                    {
+                      "id": "b2",
+                      "answer": "above",
+                      "options": [
+                        "above",
+                        "over",
+                        "on"
+                      ]
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "La fórmula fija es 'in the region of' y la comparación 'above the estimate'.",
+                    "ruleRef": "gp-c1-approximation"
+                  }
+                },
+                {
+                  "type": "ClozeDragDrop",
+                  "id": "es-en-c1-e189",
+                  "passage": "{{b1}} to the supplier delay, the project required a larger contingency, {{b2}} reducing the available margin.",
+                  "blanks": [
+                    {
+                      "id": "b1",
+                      "answer": "Owing",
+                      "options": [
+                        "Owing",
+                        "Due",
+                        "Because"
+                      ]
+                    },
+                    {
+                      "id": "b2",
+                      "answer": "thereby",
+                      "options": [
+                        "thereby",
+                        "therefore",
+                        "however"
+                      ]
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "'Owing to' introduce la causa y 'thereby + gerundio' expresa el medio por el que se produce el efecto.",
+                    "ruleRef": "gp-c1-causal-links"
+                  }
+                },
+                {
+                  "type": "SemanticMatch",
+                  "id": "es-en-c1-e190",
+                  "instructions": "Empareja cada cifra con su grado de precisión.",
+                  "pairs": [
+                    {
+                      "left": "The cost is roughly 40,000 euros.",
+                      "right": "Aproximación",
+                      "register": "formal",
+                      "nuance": "Roughly redondea sin comprometerse al euro."
+                    },
+                    {
+                      "left": "We can spend up to 15,000 euros on testing.",
+                      "right": "Techo de gasto",
+                      "register": "formal",
+                      "nuance": "Up to marca el máximo autorizado."
+                    },
+                    {
+                      "left": "The overspend was 15%, owing to the supplier delay.",
+                      "right": "Desviación justificada",
+                      "register": "formal",
+                      "nuance": "La causa se une a la cifra exacta."
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "register",
+                    "explanation": "Aproximar no es improvisar: cada fórmula tiene un grado de compromiso.",
+                    "ruleRef": "gp-c1-approximation"
+                  }
+                },
+                {
+                  "type": "ListenChoose",
+                  "id": "es-en-c1-e191",
+                  "audioText": "The cost is in the region of 40,000 euros, owing to a larger contingency for testing.",
+                  "options": [
+                    "The cost is exactly 40,000 euros",
+                    "The cost is around 40,000 euros because of testing",
+                    "The cost is below 40,000 euros",
+                    "Testing is out of scope"
+                  ],
+                  "correctIndex": 1,
+                  "feedbackOnError": {
+                    "type": "comprehension",
+                    "explanation": "'In the region of' aproxima y 'owing to' explica la causa.",
+                    "ruleRef": "gp-c1-approximation"
+                  }
+                },
+                {
+                  "type": "AudioOnlyPrompt",
+                  "id": "es-en-c1-e192",
+                  "audioText": "The overspend was 15%, owing to the supplier delay. We had to increase the contingency, thereby reducing the available margin for the second phase.",
+                  "question": "What caused the overspend?",
+                  "options": [
+                    "The second phase",
+                    "The supplier delay",
+                    "The margin",
+                    "The estimate"
+                  ],
+                  "correctIndex": 1,
+                  "allowSlowPlayback": true,
+                  "feedbackOnError": {
+                    "type": "comprehension",
+                    "explanation": "Owing to señala la causa directa: el retraso del proveedor.",
+                    "ruleRef": "gp-c1-causal-links"
+                  }
+                },
+                {
+                  "type": "MultipleChoice",
+                  "id": "es-en-c1-e193",
+                  "question": "Completa: The cost is ___ 40,000 euros.",
+                  "options": [
+                    "in the region of",
+                    "in the area of",
+                    "on the range of"
+                  ],
+                  "correctIndex": 0,
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "La colocación correcta para aproximar es 'in the region of'.",
+                    "ruleRef": "gp-c1-approximation"
+                  }
+                },
+                {
+                  "type": "Translate",
+                  "id": "es-en-c1-e194",
+                  "sourcePhrase": "El retraso encareció el proyecto y, por tanto, redujo el margen.",
+                  "correctTokens": [
+                    "The",
+                    "delay",
+                    "raised",
+                    "costs",
+                    "hence",
+                    "the",
+                    "lower",
+                    "margin"
+                  ],
+                  "distractorTokens": [
+                    "therefore",
+                    "reducing"
+                  ],
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "'Hence' conecta la causa con la consecuencia sin repetir el sujeto.",
+                    "ruleRef": "gp-c1-causal-links"
+                  }
+                },
+                {
+                  "type": "ListenType",
+                  "id": "es-en-c1-e195",
+                  "transcription": "The overspend was 15% owing to the supplier delay",
+                  "audioText": "The overspend was 15% owing to the supplier delay",
+                  "feedbackOnError": {
+                    "type": "spelling",
+                    "explanation": "Escribe 'overspend' y 'supplier' con doble 'p'.",
+                    "ruleRef": "gp-c1-causal-links"
+                  }
+                },
+                {
+                  "type": "SpeakRepeat",
+                  "id": "es-en-c1-e196",
+                  "targetPhrase": "We had to increase the contingency, thereby reducing the margin for the second phase.",
+                  "audioText": "We had to increase the contingency, thereby reducing the margin for the second phase.",
+                  "feedbackOnError": {
+                    "type": "pronunciation",
+                    "explanation": "Enlaza 'thereby reducing' y acentúa 'contingency'.",
+                    "ruleRef": "gp-c1-causal-links"
+                  }
+                },
+                {
+                  "type": "MatchPairs",
+                  "id": "es-en-c1-e197",
+                  "pairs": [
+                    {
+                      "left": "a detailed breakdown",
+                      "right": "un desglose detallado"
+                    },
+                    {
+                      "left": "a contingency reserve",
+                      "right": "una reserva de contingencia"
+                    },
+                    {
+                      "left": "justify the overspend",
+                      "right": "justificar el exceso de gasto"
+                    },
+                    {
+                      "left": "allocate the budget",
+                      "right": "asignar el presupuesto"
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "El presupuesto se defiende con desglose, reserva y justificación.",
+                    "ruleRef": "gp-c1-approximation"
+                  }
+                },
+                {
+                  "type": "FreeSpeakingPrompt",
+                  "id": "es-en-c1-e198",
+                  "prompt": "Justifica una desviación presupuestaria: da una cifra aproximada, explica la causa y conecta la consecuencia con el margen.",
+                  "minTokens": 15,
+                  "conceptClusters": [
+                    [
+                      "roughly",
+                      "in the region of",
+                      "up to"
+                    ],
+                    [
+                      "owing to",
+                      "hence",
+                      "thereby"
+                    ],
+                    [
+                      "overspend",
+                      "contingency",
+                      "margin"
+                    ]
+                  ],
+                  "grammarRuleRefs": [
+                    "gp-c1-approximation",
+                    "gp-c1-causal-links"
+                  ],
+                  "timeLimitSeconds": 30,
+                  "minWpm": 70,
+                  "maxWpm": 160,
+                  "modelAnswer": "The cost is in the region of 40,000 euros, roughly 15% above the original estimate. Owing to the supplier delay, we increased the contingency, thereby reducing the margin for the second phase.",
+                  "selfAssessmentCriteria": [
+                    "¿Aproximé con una fórmula precisa?",
+                    "¿Expliqué la causa?",
+                    "¿Conecté la consecuencia?"
+                  ],
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "La respuesta modelo aproxima con 'in the region of' y encadena causa y consecuencia con 'owing to' y 'thereby'.",
+                    "ruleRef": "gp-c1-causal-links"
+                  }
+                }
+              ]
+            },
+            {
+              "id": "es-en-c1-un-5-ls-3",
+              "title": "Informe de avance",
+              "cefrLevel": "C1",
+              "scenario": "A mitad de proyecto, hay que informar del estado real sin ocultar los retrasos.",
+              "canDo": "Puedo describir el avance con pasivas de estado y marcar fechas límite con precisión.",
+              "grammarPoints": [
+                {
+                  "id": "gp-c1-progress-passives",
+                  "label": "Pasivas de estado",
+                  "description": "has been completed, is being reviewed, remains outstanding."
+                },
+                {
+                  "id": "gp-c1-time-markers",
+                  "label": "Marcadores temporales",
+                  "description": "as of, to date, by the end of, so far."
+                }
+              ],
+              "vocabFrequencyBand": "8000-12000",
+              "culturalNotes": [
+                {
+                  "idiom": "ahead of schedule",
+                  "note": "Ir adelantado respecto al plan; en un informe de avance, conviene matizarlo porque el margen puede revertirse.",
+                  "translation": "adelantado respecto al calendario"
+                }
+              ],
+              "microLesson": {
+                "title": "Informar sin maquillar",
+                "goals": [
+                  "Separar lo hecho, lo que está en curso y lo pendiente.",
+                  "Situar cada dato con un marcador temporal inequívoco."
+                ],
+                "sections": [
+                  {
+                    "heading": "Tres estados, tres formas",
+                    "body": "Has been completed cierra una tarea; is being reviewed indica trabajo en curso; remains outstanding señala lo pendiente. As of Friday y to date sitúan el informe; by the end of June fija el próximo límite.",
+                    "examples": [
+                      {
+                        "source": "A fecha de hoy, dos entregables están pendientes.",
+                        "target": "To date, two deliverables remain outstanding.",
+                        "note": "To date = hasta la fecha."
+                      },
+                      {
+                        "source": "El informe se está revisando y estará listo para el viernes.",
+                        "target": "The report is being reviewed and will be ready by Friday.",
+                        "note": "is being + participio = en curso."
+                      }
+                    ]
+                  }
+                ]
+              },
+              "glossary": [
+                {
+                  "term": "progress",
+                  "translations": [
+                    "avance",
+                    "progreso"
+                  ]
+                },
+                {
+                  "term": "bottleneck",
+                  "translations": [
+                    "cuello de botella"
+                  ]
+                },
+                {
+                  "term": "overdue",
+                  "translations": [
+                    "atrasado",
+                    "vencido"
+                  ]
+                },
+                {
+                  "term": "completion",
+                  "translations": [
+                    "finalización",
+                    "conclusión"
+                  ]
+                },
+                {
+                  "term": "review",
+                  "translations": [
+                    "revisión"
+                  ]
+                },
+                {
+                  "term": "update",
+                  "translations": [
+                    "actualización"
+                  ]
+                },
+                {
+                  "term": "status",
+                  "translations": [
+                    "estado",
+                    "situación"
+                  ]
+                },
+                {
+                  "term": "outstanding",
+                  "translations": [
+                    "pendiente"
+                  ]
+                },
+                {
+                  "term": "on schedule",
+                  "translations": [
+                    "según el calendario"
+                  ]
+                },
+                {
+                  "term": "handover",
+                  "translations": [
+                    "traspaso",
+                    "entrega"
+                  ]
+                }
+              ],
+              "exercises": [
+                {
+                  "type": "ClozeDragDrop",
+                  "id": "es-en-c1-e199",
+                  "passage": "The first milestone {{b1}} been completed, while the second is {{b2}} reviewed.",
+                  "blanks": [
+                    {
+                      "id": "b1",
+                      "answer": "has",
+                      "options": [
+                        "has",
+                        "have",
+                        "had"
+                      ]
+                    },
+                    {
+                      "id": "b2",
+                      "answer": "being",
+                      "options": [
+                        "being",
+                        "been",
+                        "be"
+                      ]
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "El presente perfecto pasivo es 'has been completed'; la pasiva continua, 'is being reviewed'.",
+                    "ruleRef": "gp-c1-progress-passives"
+                  }
+                },
+                {
+                  "type": "ClozeDragDrop",
+                  "id": "es-en-c1-e200",
+                  "passage": "{{b1}} of Friday, two deliverables remain outstanding, and we expect to close them {{b2}} the end of June.",
+                  "blanks": [
+                    {
+                      "id": "b1",
+                      "answer": "As",
+                      "options": [
+                        "As",
+                        "To",
+                        "By"
+                      ]
+                    },
+                    {
+                      "id": "b2",
+                      "answer": "by",
+                      "options": [
+                        "by",
+                        "until",
+                        "since"
+                      ]
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "'As of Friday' sitúa el informe y 'by the end of June' fija el límite de cierre.",
+                    "ruleRef": "gp-c1-time-markers"
+                  }
+                },
+                {
+                  "type": "SemanticMatch",
+                  "id": "es-en-c1-e201",
+                  "instructions": "Identifica el estado real de cada elemento.",
+                  "pairs": [
+                    {
+                      "left": "The first milestone has been completed.",
+                      "right": "Completado",
+                      "register": "formal",
+                      "nuance": "La pasiva de estado cierra la tarea."
+                    },
+                    {
+                      "left": "The second milestone is being reviewed.",
+                      "right": "En revisión",
+                      "register": "formal",
+                      "nuance": "La pasiva continua indica trabajo activo."
+                    },
+                    {
+                      "left": "Two deliverables remain outstanding.",
+                      "right": "Pendiente",
+                      "register": "formal",
+                      "nuance": "Outstanding señala lo que aún no se ha cerrado."
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "register",
+                    "explanation": "El informe distingue tres estados sin ambigüedad.",
+                    "ruleRef": "gp-c1-progress-passives"
+                  }
+                },
+                {
+                  "type": "ListenChoose",
+                  "id": "es-en-c1-e202",
+                  "audioText": "As of Friday, the first milestone has been completed, but two deliverables remain outstanding.",
+                  "options": [
+                    "Everything is complete",
+                    "One milestone is done and two deliverables are pending",
+                    "Two milestones are pending",
+                    "The project is cancelled"
+                  ],
+                  "correctIndex": 1,
+                  "feedbackOnError": {
+                    "type": "comprehension",
+                    "explanation": "Has been completed frente a remain outstanding: un avance y dos pendientes.",
+                    "ruleRef": "gp-c1-progress-passives"
+                  }
+                },
+                {
+                  "type": "AudioOnlyPrompt",
+                  "id": "es-en-c1-e203",
+                  "audioText": "To date, the report is being reviewed and the second milestone remains outstanding. We expect to complete both by the end of June, although the supplier remains a bottleneck.",
+                  "question": "What is the bottleneck?",
+                  "options": [
+                    "The report",
+                    "The supplier",
+                    "The deadline",
+                    "The milestone"
+                  ],
+                  "correctIndex": 1,
+                  "allowSlowPlayback": true,
+                  "feedbackOnError": {
+                    "type": "comprehension",
+                    "explanation": "El proveedor sigue siendo el cuello de botella que condiciona el cierre.",
+                    "ruleRef": "gp-c1-time-markers"
+                  }
+                },
+                {
+                  "type": "MultipleChoice",
+                  "id": "es-en-c1-e204",
+                  "question": "Completa: The report ___ being reviewed at the moment.",
+                  "options": [
+                    "is",
+                    "has",
+                    "have"
+                  ],
+                  "correctIndex": 0,
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "La pasiva continua se forma con 'is being + participio'.",
+                    "ruleRef": "gp-c1-progress-passives"
+                  }
+                },
+                {
+                  "type": "Translate",
+                  "id": "es-en-c1-e205",
+                  "sourcePhrase": "A fecha de hoy, dos entregables siguen pendientes.",
+                  "correctTokens": [
+                    "To",
+                    "date",
+                    "two",
+                    "deliverables",
+                    "remain",
+                    "outstanding"
+                  ],
+                  "distractorTokens": [
+                    "until",
+                    "pending"
+                  ],
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "'To date' equivale a hasta la fecha; 'remain outstanding' es la colocación formal.",
+                    "ruleRef": "gp-c1-time-markers"
+                  }
+                },
+                {
+                  "type": "ListenType",
+                  "id": "es-en-c1-e206",
+                  "transcription": "Two deliverables remain outstanding and the report is being reviewed",
+                  "audioText": "Two deliverables remain outstanding and the report is being reviewed",
+                  "feedbackOnError": {
+                    "type": "spelling",
+                    "explanation": "Escribe 'outstanding' junto y 'reviewed' con 'ie'.",
+                    "ruleRef": "gp-c1-progress-passives"
+                  }
+                },
+                {
+                  "type": "SpeakRepeat",
+                  "id": "es-en-c1-e207",
+                  "targetPhrase": "As of Friday, the first milestone has been completed and the second is being reviewed.",
+                  "audioText": "As of Friday, the first milestone has been completed and the second is being reviewed.",
+                  "feedbackOnError": {
+                    "type": "pronunciation",
+                    "explanation": "Enlaza 'has been' y marca el contraste con 'is being'.",
+                    "ruleRef": "gp-c1-progress-passives"
+                  }
+                },
+                {
+                  "type": "MatchPairs",
+                  "id": "es-en-c1-e208",
+                  "pairs": [
+                    {
+                      "left": "an overdue task",
+                      "right": "una tarea atrasada"
+                    },
+                    {
+                      "left": "a project update",
+                      "right": "una actualización del proyecto"
+                    },
+                    {
+                      "left": "on schedule",
+                      "right": "según el calendario"
+                    },
+                    {
+                      "left": "a smooth handover",
+                      "right": "un traspaso fluido"
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "El informe de avance describe atrasos, estado y traspaso.",
+                    "ruleRef": "gp-c1-time-markers"
+                  }
+                },
+                {
+                  "type": "FreeSpeakingPrompt",
+                  "id": "es-en-c1-e209",
+                  "prompt": "Informa del avance de un proyecto: distingue lo completado, lo que está en curso y lo pendiente, con una fecha límite.",
+                  "minTokens": 15,
+                  "conceptClusters": [
+                    [
+                      "has been",
+                      "is being",
+                      "remain"
+                    ],
+                    [
+                      "as of",
+                      "to date",
+                      "by the end"
+                    ],
+                    [
+                      "milestone",
+                      "deliverable",
+                      "bottleneck"
+                    ]
+                  ],
+                  "grammarRuleRefs": [
+                    "gp-c1-progress-passives",
+                    "gp-c1-time-markers"
+                  ],
+                  "timeLimitSeconds": 30,
+                  "minWpm": 70,
+                  "maxWpm": 160,
+                  "modelAnswer": "As of Friday, the first milestone has been completed and the second is being reviewed, but two deliverables remain outstanding. We expect to close both by the end of June, although the supplier remains a bottleneck.",
+                  "selfAssessmentCriteria": [
+                    "¿Distinguí los tres estados?",
+                    "¿Situé el informe en una fecha?",
+                    "¿Fijé el próximo límite?"
+                  ],
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "La respuesta modelo usa pasivas de estado y marcadores temporales para informar sin ambigüedad.",
+                    "ruleRef": "gp-c1-progress-passives"
+                  }
+                }
+              ]
+            },
+            {
+              "id": "es-en-c1-un-5-ls-4",
+              "title": "Cerrar el proyecto",
+              "cefrLevel": "C1",
+              "scenario": "El proyecto termina con un resultado aceptable y el equipo necesita cerrar, archivar y aprender.",
+              "canDo": "Puedo conducir una retrospectiva, distinguir lo logrado de lo aprendido y cerrar con un traspaso claro.",
+              "grammarPoints": [
+                {
+                  "id": "gp-c1-retrospective",
+                  "label": "Retrospectiva",
+                  "description": "what went well, lessons learned, in hindsight..."
+                },
+                {
+                  "id": "gp-c1-perfect-aspect",
+                  "label": "Aspecto perfecto",
+                  "description": "we have delivered, we had assumed, we have been testing..."
+                }
+              ],
+              "vocabFrequencyBand": "8000-12000",
+              "culturalNotes": [
+                {
+                  "idiom": "close the loop",
+                  "note": "Cerrar un proceso comunicativo devolviendo la información a quien la necesita; en un cierre, evita que el proyecto quede abierto en la memoria del equipo.",
+                  "translation": "cerrar el círculo"
+                }
+              ],
+              "microLesson": {
+                "title": "Cerrar para aprender",
+                "goals": [
+                  "Separar resultados de aprendizajes.",
+                  "Cerrar con un traspaso y una decisión archivada."
+                ],
+                "sections": [
+                  {
+                    "heading": "La retrospectiva en tres preguntas",
+                    "body": "What went well? What would we change? What have we learned? ordenan la conversación. El aspecto perfecto (we have delivered, we had assumed) conecta el resultado con las hipótesis previas; in hindsight añade la mirada retrospectiva.",
+                    "examples": [
+                      {
+                        "source": "Hemos entregado a tiempo, aunque habíamos supuesto más recursos.",
+                        "target": "We have delivered on time, although we had assumed more resources.",
+                        "note": "Present perfect + past perfect."
+                      },
+                      {
+                        "source": "En retrospectiva, el alcance inicial era demasiado amplio.",
+                        "target": "In hindsight, the initial scope was too broad.",
+                        "note": "In hindsight abre la lección aprendida."
+                      }
+                    ]
+                  }
+                ]
+              },
+              "glossary": [
+                {
+                  "term": "retrospective",
+                  "translations": [
+                    "retrospectiva"
+                  ]
+                },
+                {
+                  "term": "outcome",
+                  "translations": [
+                    "resultado"
+                  ]
+                },
+                {
+                  "term": "closure",
+                  "translations": [
+                    "cierre",
+                    "clausura"
+                  ]
+                },
+                {
+                  "term": "handover",
+                  "translations": [
+                    "traspaso"
+                  ]
+                },
+                {
+                  "term": "archive",
+                  "translations": [
+                    "archivar"
+                  ]
+                },
+                {
+                  "term": "sign-off",
+                  "translations": [
+                    "aprobación final"
+                  ]
+                },
+                {
+                  "term": "lesson",
+                  "translations": [
+                    "lección",
+                    "aprendizaje"
+                  ]
+                },
+                {
+                  "term": "celebrate",
+                  "translations": [
+                    "celebrar"
+                  ]
+                },
+                {
+                  "term": "stakeholder",
+                  "translations": [
+                    "parte interesada"
+                  ]
+                },
+                {
+                  "term": "follow-up",
+                  "translations": [
+                    "seguimiento"
+                  ]
+                }
+              ],
+              "exercises": [
+                {
+                  "type": "ClozeDragDrop",
+                  "id": "es-en-c1-e210",
+                  "passage": "We {{b1}} delivered on time, although we {{b2}} assumed more resources at the start.",
+                  "blanks": [
+                    {
+                      "id": "b1",
+                      "answer": "have",
+                      "options": [
+                        "have",
+                        "had",
+                        "has"
+                      ]
+                    },
+                    {
+                      "id": "b2",
+                      "answer": "had",
+                      "options": [
+                        "had",
+                        "have",
+                        "has"
+                      ]
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "El resultado presente usa 'have delivered'; la hipótesis anterior al pasado, 'had assumed'.",
+                    "ruleRef": "gp-c1-perfect-aspect"
+                  }
+                },
+                {
+                  "type": "ClozeDragDrop",
+                  "id": "es-en-c1-e211",
+                  "passage": "{{b1}} hindsight, the initial scope was too broad; next time we will define it together {{b2}} the kickoff.",
+                  "blanks": [
+                    {
+                      "id": "b1",
+                      "answer": "In",
+                      "options": [
+                        "In",
+                        "On",
+                        "At"
+                      ]
+                    },
+                    {
+                      "id": "b2",
+                      "answer": "before",
+                      "options": [
+                        "before",
+                        "since",
+                        "until"
+                      ]
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "La fórmula fija es 'in hindsight'; 'before the kickoff' sitúa la mejora futura.",
+                    "ruleRef": "gp-c1-retrospective"
+                  }
+                },
+                {
+                  "type": "SemanticMatch",
+                  "id": "es-en-c1-e212",
+                  "instructions": "Clasifica cada comentario de la retrospectiva.",
+                  "pairs": [
+                    {
+                      "left": "What went well: the weekly demo kept stakeholders aligned.",
+                      "right": "Lo que funcionó",
+                      "register": "formal",
+                      "nuance": "Reconoce la práctica que debe repetirse."
+                    },
+                    {
+                      "left": "What we would change: the scope was too broad at kickoff.",
+                      "right": "Lo que cambiaríamos",
+                      "register": "formal",
+                      "nuance": "Convierte el fallo en una decisión futura."
+                    },
+                    {
+                      "left": "What we have learned: earlier testing reduces rework.",
+                      "right": "Aprendizaje transferible",
+                      "register": "formal",
+                      "nuance": "Extrae una regla para próximos proyectos."
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "register",
+                    "explanation": "La retrospectiva separa éxito, cambio y aprendizaje para no quedarse en el reproche.",
+                    "ruleRef": "gp-c1-retrospective"
+                  }
+                },
+                {
+                  "type": "ListenChoose",
+                  "id": "es-en-c1-e213",
+                  "audioText": "We have delivered on time, although we had assumed more resources. In hindsight, the initial scope was too broad.",
+                  "options": [
+                    "The project failed completely",
+                    "The project was delivered, with a lesson about scope",
+                    "The project had no resources",
+                    "The team missed every deadline"
+                  ],
+                  "correctIndex": 1,
+                  "feedbackOnError": {
+                    "type": "comprehension",
+                    "explanation": "El aspecto perfecto confirma la entrega y la retrospectiva extrae la lección del alcance.",
+                    "ruleRef": "gp-c1-perfect-aspect"
+                  }
+                },
+                {
+                  "type": "AudioOnlyPrompt",
+                  "id": "es-en-c1-e214",
+                  "audioText": "We have delivered on time, although we had assumed more resources. In hindsight, the initial scope was too broad, so we have documented the lessons and closed the loop with stakeholders.",
+                  "question": "What did the team do with the lessons learned?",
+                  "options": [
+                    "They ignored them",
+                    "They documented them and closed the loop",
+                    "They started a new project",
+                    "They blamed the stakeholders"
+                  ],
+                  "correctIndex": 1,
+                  "allowSlowPlayback": true,
+                  "feedbackOnError": {
+                    "type": "comprehension",
+                    "explanation": "Las lecciones se documentan y se comunican a las partes interesadas.",
+                    "ruleRef": "gp-c1-retrospective"
+                  }
+                },
+                {
+                  "type": "MultipleChoice",
+                  "id": "es-en-c1-e215",
+                  "question": "Completa: We ___ delivered on time, although we had assumed more resources.",
+                  "options": [
+                    "have",
+                    "has",
+                    "had"
+                  ],
+                  "correctIndex": 0,
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "Con 'we' el presente perfecto usa 'have + participio'.",
+                    "ruleRef": "gp-c1-perfect-aspect"
+                  }
+                },
+                {
+                  "type": "Translate",
+                  "id": "es-en-c1-e216",
+                  "sourcePhrase": "En retrospectiva, el alcance inicial era demasiado amplio.",
+                  "correctTokens": [
+                    "In",
+                    "hindsight",
+                    "the",
+                    "initial",
+                    "scope",
+                    "was",
+                    "too",
+                    "broad"
+                  ],
+                  "distractorTokens": [
+                    "retrospective",
+                    "widely"
+                  ],
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "La fórmula fija es 'in hindsight' y 'too broad' describe el exceso de alcance.",
+                    "ruleRef": "gp-c1-retrospective"
+                  }
+                },
+                {
+                  "type": "ListenType",
+                  "id": "es-en-c1-e217",
+                  "transcription": "We have delivered on time although we had assumed more resources",
+                  "audioText": "We have delivered on time although we had assumed more resources",
+                  "feedbackOnError": {
+                    "type": "spelling",
+                    "explanation": "Escribe 'delivered' con doble 'l' y 'assumed' con doble 's'.",
+                    "ruleRef": "gp-c1-perfect-aspect"
+                  }
+                },
+                {
+                  "type": "SpeakRepeat",
+                  "id": "es-en-c1-e218",
+                  "targetPhrase": "In hindsight, the initial scope was too broad, so we have documented the lessons learned.",
+                  "audioText": "In hindsight, the initial scope was too broad, so we have documented the lessons learned.",
+                  "feedbackOnError": {
+                    "type": "pronunciation",
+                    "explanation": "Enlaza 'hindsight' y marca 'lessons learned' como bloque.",
+                    "ruleRef": "gp-c1-retrospective"
+                  }
+                },
+                {
+                  "type": "MatchPairs",
+                  "id": "es-en-c1-e219",
+                  "pairs": [
+                    {
+                      "left": "a project closure",
+                      "right": "un cierre de proyecto"
+                    },
+                    {
+                      "left": "lessons learned",
+                      "right": "lecciones aprendidas"
+                    },
+                    {
+                      "left": "a formal sign-off",
+                      "right": "una aprobación final"
+                    },
+                    {
+                      "left": "archive the documents",
+                      "right": "archivar los documentos"
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "El cierre nombra la aprobación, el archivo y el aprendizaje.",
+                    "ruleRef": "gp-c1-retrospective"
+                  }
+                },
+                {
+                  "type": "FreeSpeakingPrompt",
+                  "id": "es-en-c1-e220",
+                  "prompt": "Conduce el cierre de un proyecto: resume el resultado, extrae una lección aprendida y confirma el traspaso a las partes interesadas.",
+                  "minTokens": 15,
+                  "conceptClusters": [
+                    [
+                      "what went well",
+                      "in hindsight",
+                      "lesson"
+                    ],
+                    [
+                      "have delivered",
+                      "had assumed",
+                      "have documented"
+                    ],
+                    [
+                      "handover",
+                      "stakeholder",
+                      "close the loop"
+                    ]
+                  ],
+                  "grammarRuleRefs": [
+                    "gp-c1-retrospective",
+                    "gp-c1-perfect-aspect"
+                  ],
+                  "timeLimitSeconds": 30,
+                  "minWpm": 70,
+                  "maxWpm": 160,
+                  "modelAnswer": "We have delivered on time, although we had assumed more resources. In hindsight, the initial scope was too broad, so we have documented the lessons and closed the loop with stakeholders before the final handover.",
+                  "selfAssessmentCriteria": [
+                    "¿Resumí el resultado?",
+                    "¿Extraje una lección transferible?",
+                    "¿Confirmé el traspaso?"
+                  ],
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "La respuesta modelo distingue entrega, aprendizaje y traspaso con aspecto perfecto.",
+                    "ruleRef": "gp-c1-perfect-aspect"
+                  }
+                }
+              ]
+            }
+          ]
         }
         ]
       }
