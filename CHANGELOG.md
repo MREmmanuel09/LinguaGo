@@ -6,6 +6,24 @@ El formato sigue [Keep a Changelog](https://keepachangelog.com/es-ES/1.1.0/)
 y el versionado sigue [SemVer](https://semver.org/lang/es/).
 Pre-1.0: los cambios incompatibles pueden ocurrir en `0.y.0`.
 
+## [2.0.1] - 2026-11-08
+
+Hotfix de voz (ADR-043): la evaluación oral ya no falla cuando la
+pronunciación es correcta y la captura completa frases truncadas.
+
+### Corregido
+
+- **Captura de voz tolerante (`SpeechCapture`):** el endpoint prematuro de
+  Vosk (pausas de ~0,3 s) ya no corta la grabación a mitad de frase: los
+  enunciados que llegan antes de 1,5 s se concatenan y la captura continúa;
+  tras un enunciado válido hay 1,2 s de gracia que se reinicia si llega otra
+  frase. El tope de captura sube de 6 s a **10 s**.
+- **Evaluación oral sin falsos negativos (`FreeSpeakingHeuristicGrader`):**
+  transcripciones con tildes omitidas por Vosk ya pasan (normalización NFD
+  como la evaluación escrita), la tolerancia difusa aplica desde 4
+  caracteres, la cadencia WPM admite un margen del ±20 % y la autoevaluación
+  baja es informativa (`advisories`) en lugar de bloquear el paso.
+
 ## [2.0.0] - 2026-11-02
 
 Release de contenido y experiencia: B2 completo en los cuatro cursos, cursos
