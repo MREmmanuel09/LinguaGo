@@ -4,7 +4,7 @@
 > (JSON Schema draft-07, ADR-018). El formato v1 se conserva como referencia
 > histórica en [`../CONTENT_FORMAT.md`](../CONTENT_FORMAT.md). Desde ADR-041,
 > `es-pt`, `es-fr` y `es-ja` usan v2 con 60 lecciones (A1–B2 completo) cada uno.
-> `es-en` cubre A1→B2 profundo.
+> `es-en` cubre A1→B2 profundo y, desde 2.1.0 (ADR-042), estrena el piloto C1.
 
 ## Reglas de oro de v2
 
@@ -13,11 +13,11 @@
    schema (v1 o v2) según este campo (F0.3).
 3. **Nada de claves extra.** Todos los objetos usan
    `additionalProperties: false`.
-4. **Regla de No-Aplanamiento Pedagógico.** Una lección `B1` o `B2` debe
-   declarar `scenario`, `canDo`, `grammarPoints[]`, `vocabFrequencyBand`,
-   `culturalNotes[]`, al menos un `FreeSpeakingPrompt` y `feedbackOnError` en
-   **todos** sus ejercicios. El schema lo exige; el validador estructural
-   (F0.3) lo refuerza.
+4. **Regla de No-Aplanamiento Pedagógico.** Una lección `B1`, `B2`, `C1` o
+   `C2` debe declarar `scenario`, `canDo`, `grammarPoints[]`,
+   `vocabFrequencyBand`, `culturalNotes[]`, al menos un `FreeSpeakingPrompt`
+   y `feedbackOnError` en **todos** sus ejercicios. El schema lo exige; el
+   validador estructural (F0.3) lo refuerza.
 5. **Contenido original** bajo CC BY-SA 4.0 (I6).
 
 ## Campos nuevos a nivel de curso
@@ -34,17 +34,17 @@ variante concreta se expresa con `locale`, no cambiando `to`.
 
 | Campo | Tipo | Cuándo es obligatorio | Significado |
 |---|---|---|---|
-| `cefrLevel` | `A1` \| `A2` \| `B1` \| `B2` | Recomendado siempre; obligatorio para invocar la regla B1+ | Nivel CEFR de la lección. Si se omite, se asume `A1` por retrocompatibilidad. |
-| `scenario` | string | `cefrLevel` ∈ {`B1`,`B2`} | Situación comunicativa realista (reunión, negociación, consulta, debate…). |
-| `canDo` | string | `cefrLevel` ∈ {`B1`,`B2`} | Descriptor de lo que el estudiante puede hacer al terminar, redactado como *can-do* CEFR. |
-| `grammarPoints` | array de objetos | `cefrLevel` ∈ {`B1`,`B2`} | Focos gramaticales con `id`, `label` y `description?`. Los `id` se referencian desde `feedbackOnError.ruleRef` y `FreeSpeakingPrompt.grammarRuleRefs`. |
-| `vocabFrequencyBand` | `1000-2000` \| `2000-3000` \| `3000-5000` \| `5000+` | `cefrLevel` ∈ {`B1`,`B2`} | Banda de frecuencia léxica dominante de la lección. |
-| `culturalNotes` | array de objetos | `cefrLevel` ∈ {`B1`,`B2`} (mínimo 1) | Modismos o referencias culturales con `idiom`, `note` y `translation?`. |
+| `cefrLevel` | `A1` \| `A2` \| `B1` \| `B2` \| `C1` \| `C2` | Recomendado siempre; obligatorio para invocar la regla B1+ | Nivel CEFR de la lección. Si se omite, se asume `A1` por retrocompatibilidad. |
+| `scenario` | string | `cefrLevel` ∈ {`B1`,`B2`,`C1`,`C2`} | Situación comunicativa realista (reunión, negociación, consulta, debate…). |
+| `canDo` | string | `cefrLevel` ∈ {`B1`,`B2`,`C1`,`C2`} | Descriptor de lo que el estudiante puede hacer al terminar, redactado como *can-do* CEFR. |
+| `grammarPoints` | array de objetos | `cefrLevel` ∈ {`B1`,`B2`,`C1`,`C2`} | Focos gramaticales con `id`, `label` y `description?`. Los `id` se referencian desde `feedbackOnError.ruleRef` y `FreeSpeakingPrompt.grammarRuleRefs`. |
+| `vocabFrequencyBand` | `1000-2000` \| `2000-3000` \| `3000-5000` \| `5000+` \| `8000-12000` \| `12000+` | `cefrLevel` ∈ {`B1`,`B2`,`C1`,`C2`} | Banda de frecuencia léxica dominante de la lección. |
+| `culturalNotes` | array de objetos | `cefrLevel` ∈ {`B1`,`B2`,`C1`,`C2`} (mínimo 1) | Modismos o referencias culturales con `idiom`, `note` y `translation?`. |
 
 ### `feedbackOnError` (por ejercicio)
 
 Objeto opcional en A1/A2 y **obligatorio en todos los ejercicios de una
-lección B1/B2**:
+lección B1/B2/C1/C2**:
 
 ```json
 "feedbackOnError": {
@@ -176,7 +176,7 @@ Pares con matiz de registro; admite tarjetas multilínea para B2.
 | `blanks[].answer` | Sí | Respuesta correcta. |
 | `blanks[].options` | Sí | ≥ 2 opciones e incluye `answer` (lo verifica el validador estructural). |
 
-### `FreeSpeakingPrompt` — producción oral libre B2 (sin LLM)
+### `FreeSpeakingPrompt` — producción oral libre (B2/C1/C2, sin LLM)
 
 Evaluación 100% offline (ADR-019): heurística determinista sobre la
 transcripción de Vosk (longitud, `conceptClusters`, patrones de
@@ -193,6 +193,53 @@ usar LLMs on-device o cloud.
 | `minWpm` / `maxWpm` | No | Rango de fluidez esperado. |
 | `modelAnswer` | Sí | Respuesta canónica para la autoevaluación. |
 | `selfAssessmentCriteria` | Sí | ≥ 1 criterio de autoevaluación. |
+
+## C1/C2 — expansión avanzada (ADR-042)
+
+Desde 2.1.0 el esquema v2 admite los niveles `C1` y `C2` **aditivamente** (sin
+`schemaVersion: 3`): el mismo contrato con dos valores nuevos de `cefrLevel`,
+dos bandas nuevas de frecuencia (`8000-12000` para C1 y `12000+` para C2) y el
+rango de metadatos B1+ ampliado a B1/B2/C1/C2. La rampa del contenido es
+`A1→A2→B1→B2→C1→C2` y **nunca retrocede**: las lecciones C1/C2 viven en su
+propio nivel del curso, nunca mezcladas con niveles anteriores.
+
+### Escalones de autoría
+
+| Parámetro | C1 | C2 |
+|---|---|---|
+| Ejercicios por lección | 11 | 12 |
+| Tope de longitud de frase | ≤ 38 tokens | ≤ 48 tokens |
+| `grammarPoints[]` | exactamente 2 | exactamente 2 |
+| `vocabFrequencyBand` | `8000-12000` | `12000+` |
+| `culturalNotes[]` | ≥ 1 modismo idiomático | ≥ 1 modismo idiomático |
+| `microLesson` + `glossary` | obligatorios (8–14 términos) | obligatorios (8–14 términos) |
+| `FreeSpeakingPrompt` | 1 por lección | 1 por lección |
+| `feedbackOnError` | todos los ejercicios | todos los ejercicios |
+| `feedbackOnSuccess` | recomendado en 2–3 ejercicios | recomendado en 2–3 ejercicios |
+
+El test de contrato `ContentRampTest` no exige las cifras hasta que una lección
+declara `C1`/`C2`, con lo que la infraestructura y el contenido pueden aterrizar
+en commits separados (los totales del curso se actualizan `junto` con el
+contenido, nunca por adelantado).
+
+### Producción oral en C1/C2 (herencia del hotfix 2.0.1)
+
+La captura se cierra a los 10 s reales (ADR-043: `endpoints` tolerantes, tope de
+captura 10 s), así que las consignas `FreeSpeakingPrompt` de C1/C2 se redactan
+para respuestas de **12–20 tokens** en una sola respiración: `minTokens: 12`,
+`timeLimitSeconds: ≤ 30`, `modelAnswer` de 20–38 tokens (C1) o 20–48 (C2) y
+`conceptClusters` con 2–3 clusters de sinónimos avanzados. El catálogo de
+`grammarRuleRefs` se evalúa sobre la transcripción *raw* (sin normalizar), con
+lo que los patrones pueden copiar la forma exacta de la superficie (contracciones,
+*hedges*, conectores).
+
+### Tipos de ejercicio
+
+C1/C2 admite la unión completa de los tipos existentes (los 14 de v2, incluidos
+`SemanticMatch` con registro y `AudioOnlyPrompt`); **no se crean variantes
+nuevas**. El estándar por lección C1 replica la mezcla probada de B2 (MC +
+`ClozeDragDrop` + `SemanticMatch` + `AudioOnlyPrompt` + orales) más un
+ejercicio conversacional extra.
 
 ## Retrocompatibilidad v1 → v2
 

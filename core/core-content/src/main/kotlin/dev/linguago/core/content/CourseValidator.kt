@@ -124,40 +124,45 @@ public object CourseValidator {
     }
 
     /**
-     * Regla de No-Aplanamiento Pedagógico (ADR-018): una lección B1/B2 debe
-     * declarar su escenario, can-do, gramática, banda léxica y notas
-     * culturales, además de feedback de error en cada ejercicio y al menos
-     * una producción oral libre. El feedback de acierto es opcional, pero si
-     * existe debe ser coherente con las reglas de la lección.
+     * Regla de No-Aplanamiento Pedagógico (ADR-018/ADR-042): una lección
+     * avanzada (B1/B2/C1/C2) debe declarar su escenario, can-do, gramática,
+     * banda léxica y notas culturales, además de feedback de error en cada
+     * ejercicio y al menos una producción oral libre. El feedback de acierto
+     * es opcional, pero si existe debe ser coherente con las reglas de la
+     * lección.
      */
     private fun validateLessonPedagogy(lesson: Lesson): CourseValidation.Invalid? {
         val requiresCefrMetadata =
-            lesson.cefrLevel == CefrLevel.B1 || lesson.cefrLevel == CefrLevel.B2
+            lesson.cefrLevel == CefrLevel.B1 ||
+                lesson.cefrLevel == CefrLevel.B2 ||
+                lesson.cefrLevel == CefrLevel.C1 ||
+                lesson.cefrLevel == CefrLevel.C2
         if (requiresCefrMetadata) {
+            val cefrTag = lesson.cefrLevel.name
             if (lesson.scenario.isNullOrBlank()) {
-                return Invalid("Lección '${lesson.id.value}' B1/B2 requiere scenario")
+                return Invalid("Lección '${lesson.id.value}' $cefrTag requiere scenario")
             }
             if (lesson.canDo.isNullOrBlank()) {
-                return Invalid("Lección '${lesson.id.value}' B1/B2 requiere canDo")
+                return Invalid("Lección '${lesson.id.value}' $cefrTag requiere canDo")
             }
             if (lesson.grammarPoints.isEmpty()) {
-                return Invalid("Lección '${lesson.id.value}' B1/B2 requiere grammarPoints no vacío")
+                return Invalid("Lección '${lesson.id.value}' $cefrTag requiere grammarPoints no vacío")
             }
             if (lesson.vocabFrequencyBand == null) {
-                return Invalid("Lección '${lesson.id.value}' B1/B2 requiere vocabFrequencyBand")
+                return Invalid("Lección '${lesson.id.value}' $cefrTag requiere vocabFrequencyBand")
             }
             if (lesson.culturalNotes.isEmpty()) {
-                return Invalid("Lección '${lesson.id.value}' B1/B2 requiere al menos una culturalNote")
+                return Invalid("Lección '${lesson.id.value}' $cefrTag requiere al menos una culturalNote")
             }
             val exerciseWithoutFeedback = lesson.exercises.firstOrNull { it.feedbackOnError == null }
             if (exerciseWithoutFeedback != null) {
                 return Invalid(
-                    "Lección '${lesson.id.value}' B1/B2 requiere feedbackOnError en todos los ejercicios " +
+                    "Lección '${lesson.id.value}' $cefrTag requiere feedbackOnError en todos los ejercicios " +
                         "(falta en '${exerciseWithoutFeedback.id.value}')",
                 )
             }
             if (lesson.exercises.none { it is Exercise.FreeSpeakingPrompt }) {
-                return Invalid("Lección '${lesson.id.value}' B1/B2 requiere al menos un FreeSpeakingPrompt")
+                return Invalid("Lección '${lesson.id.value}' $cefrTag requiere al menos un FreeSpeakingPrompt")
             }
         }
 

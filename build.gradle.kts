@@ -1,12 +1,14 @@
 // Composition root de plugins: se declaran aquí con `apply false` para fijar
 // versiones en el classpath; los módulos los aplican via convention plugins
 // de `build-logic` (ver ADR-001).
+import com.fasterxml.jackson.databind.JsonNode
 import com.fasterxml.jackson.databind.ObjectMapper
 import com.networknt.schema.JsonSchemaFactory
 import com.networknt.schema.SpecVersion
 import groovy.json.JsonOutput
 import groovy.json.JsonSlurper
 import java.security.MessageDigest
+import kotlin.math.roundToInt
 
 buildscript {
     dependencies {
@@ -167,6 +169,89 @@ tasks.register("validateContent") {
     inputs.files(schemaV1File, schemaV2File)
     inputs.files(contentFiles)
     doLast {
+        // Informe didáctico por curso (ADR-042, paso 7.6): la misma métrica
+        // que protege ContentRampTest, pero visible en el log. Funs locales
+        // (el config cache no serializa referencias del script, ver trampa #1).
+        fun frasesDe(text: String): List<String> =
+            text.replace(Regex("\\{\\{[^}]+\\}\\}"), "x")
+                .split(Regex("[.?!。！？]+"))
+                .filter { frase -> frase.isNotBlank() }
+
+        fun longestTokensDe(exercise: JsonNode): Int {
+            var longest =
+                maxOf(
+                    exercise.path("correctTokens").size(),
+                    exercise.path("answerTokens").size(),
+                )
+            for (field in listOf("transcription", "targetPhrase", "modelAnswer", "audioText")) {
+                val node = exercise.path(field)
+                if (node.isTextual) {
+                    for (frase in frasesDe(node.asText())) {
+                        longest = maxOf(longest, frase.trim().split(Regex("\\s+")).count { palabra -> palabra.isNotBlank() })
+                    }
+                }
+            }
+            val passage = exercise.path("passage")
+            if (passage.isTextual) {
+                longest = maxOf(
+                    longest,
+                    passage.asText().replace(Regex("\\{\\{[^}]+\\}\\}"), "x").trim().split(Regex("\\s+")).count { palabra -> palabra.isNotBlank() },
+                )
+            }
+            return longest
+        }
+
+        fun summarizeCourse(tree: JsonNode): String? {
+            val lessons =
+                tree.path("levels")
+                    .flatMap { level -> level.path("units").toList() }
+                    .flatMap { unit -> unit.path("lessons").toList() }
+            if (lessons.isEmpty()) return null
+
+            val buckets =
+                listOf("A1", "A2", "B1", "B2", "C1", "C2")
+                    .map { cefr ->
+                        cefr to lessons.count { lesson -> lesson.path("cefrLevel").asText("n/d") == cefr }
+                    }
+                    .filter { (_, count) -> count > 0 }
+
+            var exercises = 0
+            var freeSpeaking = 0
+            var withFeedbackOnError = 0
+            var longest = 0
+            for (lesson in lessons) {
+                for (exercise in lesson.path("exercises")) {
+                    exercises++
+                    if (exercise.path("type").asText() == "FreeSpeakingPrompt") freeSpeaking++
+                    if (exercise.path("feedbackOnError").isObject) withFeedbackOnError++
+                    longest = maxOf(longest, longestTokensDe(exercise))
+                }
+            }
+            val coverage = if (exercises == 0) 0 else (withFeedbackOnError * 100.0 / exercises).roundToInt()
+
+            return buildString {
+                append("  · ")
+                append(tree.path("id").asText())
+                append(": ")
+                append(lessons.size)
+                append(" lecciones")
+                if (buckets.isNotEmpty()) {
+                    append(" (")
+                    append(buckets.joinToString(" ") { (cefr, count) -> "$cefr:$count" })
+                    append(")")
+                }
+                append(" · ")
+                append(exercises)
+                append(" ejercicios · FreeSpeaking:")
+                append(freeSpeaking)
+                append(" · feedbackOnError:")
+                append(coverage)
+                append("% · frase más larga: ")
+                append(longest)
+                append(" tokens")
+            }
+        }
+
         val mapper = ObjectMapper()
         val factory = JsonSchemaFactory.getInstance(SpecVersion.VersionFlag.V7)
         val schemas =
@@ -189,6 +274,7 @@ tasks.register("validateContent") {
             val messages = schema.validate(tree)
             if (messages.isEmpty()) {
                 println("VALID (v$version): $relative")
+                summarizeCourse(tree)?.let { summary -> println(summary) }
             } else {
                 println("INVALID (v$version): $relative")
                 messages.forEach { println("  - $it") }

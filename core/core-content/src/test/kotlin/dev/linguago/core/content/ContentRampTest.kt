@@ -10,10 +10,10 @@ import org.junit.Test
 import java.io.File
 
 /**
- * Rampa pedagógica del curso es-en (ADR-018/ADR-040): el camino no retrocede
- * de nivel, los ejercicios y la gramática escalan por CEFR y las frases
- * respetan un tope de longitud por nivel. Protege contra saltos bruscos al
- * añadir contenido (p. ej. una lección B2 colada en el bloque A2).
+ * Rampa pedagógica de los cursos (ADR-018/ADR-040/ADR-042): el camino no
+ * retrocede de nivel, los ejercicios y la gramática escalan por CEFR y las
+ * frases respetan un tope de longitud por nivel. Protege contra saltos
+ * bruscos al añadir contenido (p. ej. una lección B2 colada en el bloque A2).
  */
 class ContentRampTest {
     @Test
@@ -40,7 +40,15 @@ class ContentRampTest {
 
     @Test
     fun `los ejercicios por leccion escalan por nivel`() {
-        val expected = mapOf(CefrLevel.A1 to 7, CefrLevel.A2 to 7, CefrLevel.B1 to 9, CefrLevel.B2 to 10)
+        val expected =
+            mapOf(
+                CefrLevel.A1 to 7,
+                CefrLevel.A2 to 7,
+                CefrLevel.B1 to 9,
+                CefrLevel.B2 to 10,
+                CefrLevel.C1 to 11,
+                CefrLevel.C2 to 12,
+            )
         for (lesson in lessons) {
             val count = expected.getValue(lesson.cefrLevel)
             assertEquals(
@@ -62,7 +70,7 @@ class ContentRampTest {
                         "A2 con más de 2 focos gramaticales (${lesson.id.value})",
                         points <= 2,
                     )
-                CefrLevel.B1, CefrLevel.B2 ->
+                CefrLevel.B1, CefrLevel.B2, CefrLevel.C1, CefrLevel.C2 ->
                     assertEquals(
                         "${lesson.cefrLevel} declara 2 focos (${lesson.id.value})",
                         2,
@@ -74,7 +82,15 @@ class ContentRampTest {
 
     @Test
     fun `las frases respetan el tope de longitud por nivel`() {
-        val caps = mapOf(CefrLevel.A1 to 8, CefrLevel.A2 to 12, CefrLevel.B1 to 24, CefrLevel.B2 to 30)
+        val caps =
+            mapOf(
+                CefrLevel.A1 to 8,
+                CefrLevel.A2 to 12,
+                CefrLevel.B1 to 24,
+                CefrLevel.B2 to 30,
+                CefrLevel.C1 to 38,
+                CefrLevel.C2 to 48,
+            )
         for (lesson in lessons) {
             val cap = caps.getValue(lesson.cefrLevel)
             val longest = lesson.longestSentenceTokens()
@@ -82,6 +98,53 @@ class ContentRampTest {
                 "Lección ${lesson.id.value} (${lesson.cefrLevel}) tiene una frase de $longest tokens (tope $cap)",
                 longest <= cap,
             )
+        }
+    }
+
+    @Test
+    fun `los cursos amplian la rampa C1 y C2`() {
+        // Guard de escalones (ADR-042): se activa en cuanto un curso declara
+        // lecciones C1/C2 y nadie necesita tocarlo antes del contenido.
+        for (courseId in listOf("es-en") + STARTER_COURSES) {
+            for ((cefr, expectedExercises) in listOf(CefrLevel.C1 to 11, CefrLevel.C2 to 12)) {
+                val lessons = lessonsFor(courseId).filter { lesson -> lesson.cefrLevel == cefr }
+                for (lesson in lessons) {
+                    assertEquals(
+                        "Lección ${lesson.id.value} debe tener $expectedExercises ejercicios",
+                        expectedExercises,
+                        lesson.exercises.size,
+                    )
+                    assertEquals(
+                        "${lesson.id.value} debe declarar 2 focos gramaticales",
+                        2,
+                        lesson.grammarPoints.size,
+                    )
+                    assertTrue(
+                        "${lesson.id.value} requiere scenario y canDo",
+                        !lesson.scenario.isNullOrBlank() && !lesson.canDo.isNullOrBlank(),
+                    )
+                    assertTrue(
+                        "${lesson.id.value} requiere vocabFrequencyBand",
+                        lesson.vocabFrequencyBand != null,
+                    )
+                    assertTrue(
+                        "${lesson.id.value} requiere al menos una culturalNote",
+                        lesson.culturalNotes.isNotEmpty(),
+                    )
+                    assertEquals(
+                        "${lesson.id.value} debe tener un FreeSpeakingPrompt",
+                        1,
+                        lesson.exercises.count { exercise -> exercise is Exercise.FreeSpeakingPrompt },
+                    )
+                    assertTrue(
+                        "${lesson.id.value} usa tipos no permitidos en $cefr: " +
+                            lesson.exercises
+                                .filterNot { exercise -> exercise.isAllowedFor(cefr) }
+                                .joinToString { exercise -> exercise.typeName() },
+                        lesson.exercises.all { exercise -> exercise.isAllowedFor(cefr) },
+                    )
+                }
+            }
         }
     }
 
@@ -222,6 +285,8 @@ class ContentRampTest {
             CefrLevel.A2 -> 2
             CefrLevel.B1 -> 3
             CefrLevel.B2 -> 4
+            CefrLevel.C1 -> 5
+            CefrLevel.C2 -> 6
         }
 
     private fun Lesson.longestSentenceTokens(): Int {
@@ -282,6 +347,23 @@ class ContentRampTest {
                     this is Exercise.OrderWords ||
                     this is Exercise.ListenType ||
                     this is Exercise.SpeakRepeat ||
+                    this is Exercise.ClozeDragDrop ||
+                    this is Exercise.SemanticMatch ||
+                    this is Exercise.AudioOnlyPrompt ||
+                    this is Exercise.FreeSpeakingPrompt
+            // En C1/C2 (ADR-042) los tipos no se restringen: la rampa ya
+            // garantiza el escalón por nº de ejercicios, longitud y gramática.
+            CefrLevel.C1, CefrLevel.C2 ->
+                this is Exercise.MultipleChoice ||
+                    this is Exercise.Translate ||
+                    this is Exercise.OrderWords ||
+                    this is Exercise.MatchPairs ||
+                    this is Exercise.ListenChoose ||
+                    this is Exercise.ListenType ||
+                    this is Exercise.SpeakRepeat ||
+                    this is Exercise.KanaChoose ||
+                    this is Exercise.KanjiReading ||
+                    this is Exercise.ParticleFill ||
                     this is Exercise.ClozeDragDrop ||
                     this is Exercise.SemanticMatch ||
                     this is Exercise.AudioOnlyPrompt ||

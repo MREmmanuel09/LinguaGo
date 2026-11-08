@@ -202,6 +202,26 @@ class CourseV2SerializationTest {
         assertEquals(lesson, decoded)
     }
 
+    @Test
+    fun metadatos_c1_c2_y_bandas_extremas_decodifican_aditivamente() {
+        val course = json.decodeFromString(Course.serializer(), V2_C1_COURSE)
+        val lessons =
+            course.levels
+                .first()
+                .units
+                .first()
+                .lessons
+
+        assertEquals(CefrLevel.C1, lessons[0].cefrLevel)
+        assertEquals(VocabFrequencyBand.BAND_8000_12000, lessons[0].vocabFrequencyBand)
+        assertEquals(CefrLevel.C2, lessons[1].cefrLevel)
+        assertEquals(VocabFrequencyBand.BAND_12000_PLUS, lessons[1].vocabFrequencyBand)
+
+        val encoded = json.encodeToString(Course.serializer(), course)
+        val decoded = json.decodeFromString(Course.serializer(), encoded)
+        assertEquals(course, decoded)
+    }
+
     private companion object {
         private const val V1_COURSE =
             """
@@ -427,6 +447,77 @@ class CourseV2SerializationTest {
                 "explanation": "La opción correcta sigue la regla.",
                 "ruleRef": "gp-hedging"
               }
+            }
+            """
+
+        private const val V2_C1_COURSE =
+            """
+            {
+              "id": "es-en",
+              "from": "es",
+              "to": "en",
+              "schemaVersion": 2,
+              "locale": "en-US",
+              "levels": [
+                {
+                  "id": "lv-10",
+                  "name": "C1-C2",
+                  "units": [
+                    {
+                      "id": "un-1",
+                      "title": "Argumentación",
+                      "lessons": [
+                        {
+                          "id": "ls-1",
+                          "title": "Contraargumentar",
+                          "cefrLevel": "C1",
+                          "scenario": "Defender una tesis",
+                          "canDo": "Puedo contraargumentar con matices.",
+                          "grammarPoints": [
+                            {"id": "gp-clefts", "label": "Cleft sentences"}
+                          ],
+                          "vocabFrequencyBand": "8000-12000",
+                          "culturalNotes": [
+                            {"idiom": "on the fence", "note": "Indeciso en un debate."}
+                          ],
+                          "exercises": [
+                            {
+                              "type": "MultipleChoice",
+                              "id": "e1",
+                              "question": "¿...?",
+                              "options": ["Still,", "So,"],
+                              "correctIndex": 0
+                            }
+                          ]
+                        },
+                        {
+                          "id": "ls-2",
+                          "title": "Síntesis",
+                          "cefrLevel": "C2",
+                          "scenario": "Poner el broche",
+                          "canDo": "Puedo sintetizar y matizar con precisión.",
+                          "grammarPoints": [
+                            {"id": "gp-concession", "label": "Concessive structures"}
+                          ],
+                          "vocabFrequencyBand": "12000+",
+                          "culturalNotes": [
+                            {"idiom": "beyond a doubt", "note": "Certitud rotunda."}
+                          ],
+                          "exercises": [
+                            {
+                              "type": "MultipleChoice",
+                              "id": "e2",
+                              "question": "¿...?",
+                              "options": ["Granted,", "Yet,"],
+                              "correctIndex": 0
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
             }
             """
     }

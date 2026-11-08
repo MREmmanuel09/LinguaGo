@@ -115,12 +115,17 @@ class PathItemsTest {
                         level("lv-2", "u-2", lesson("l-2", CefrLevel.A2)),
                         level("lv-3", "u-3", lesson("l-3", CefrLevel.B1)),
                         level("lv-4", "u-4", lesson("l-4", CefrLevel.B2)),
+                        level("lv-5", "u-5", lesson("l-5", CefrLevel.C1)),
+                        level("lv-6", "u-6", lesson("l-6", CefrLevel.C2)),
                     ),
             )
 
         val stages = headers(buildPathItems(multiLevel, emptyList())).map { it.stage }
 
-        assertEquals(listOf(PathStage.A1, PathStage.A2, PathStage.B1, PathStage.B2), stages)
+        assertEquals(
+            listOf(PathStage.A1, PathStage.A2, PathStage.B1, PathStage.B2, PathStage.C1, PathStage.C2),
+            stages,
+        )
     }
 
     @Test

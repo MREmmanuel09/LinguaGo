@@ -22,16 +22,18 @@ public data class Course(
     public val locale: CourseLocale? = null,
 )
 
-/** Nivel CEFR declarado por una lección (ADR-018); A1 si el JSON v1 no lo trae. */
+/** Nivel CEFR declarado por una lección (ADR-018/ADR-042); A1 si el JSON v1 no lo trae. */
 @Serializable
 public enum class CefrLevel {
     A1,
     A2,
     B1,
     B2,
+    C1,
+    C2,
 }
 
-/** Banda de frecuencia léxica dominante de una lección B1/B2 (ADR-018). */
+/** Banda de frecuencia léxica dominante de una lección avanzada (ADR-018/ADR-042). */
 @Serializable
 public enum class VocabFrequencyBand {
     @SerialName("1000-2000")
@@ -45,6 +47,12 @@ public enum class VocabFrequencyBand {
 
     @SerialName("5000+")
     BAND_5000_PLUS,
+
+    @SerialName("8000-12000")
+    BAND_8000_12000,
+
+    @SerialName("12000+")
+    BAND_12000_PLUS,
 }
 
 /** Foco gramatical referenciable desde `feedbackOnError` y `FreeSpeakingPrompt`. */
@@ -55,7 +63,7 @@ public data class GrammarPoint(
     public val description: String? = null,
 )
 
-/** Modismo o referencia cultural con nota de uso (obligatorio en B1/B2). */
+/** Modismo o referencia cultural con nota de uso (obligatorio en B1/B2/C1/C2). */
 @Serializable
 public data class CulturalNote(
     public val idiom: String,
@@ -118,15 +126,15 @@ public data class Lesson(
     val exercises: List<Exercise>,
     /** Nivel CEFR; A1 por defecto para contenido v1 (ADR-018). */
     public val cefrLevel: CefrLevel = CefrLevel.A1,
-    /** Situación comunicativa; obligatoria en B1/B2. */
+    /** Situación comunicativa; obligatoria en B1/B2/C1/C2. */
     public val scenario: String? = null,
-    /** Descriptor can-do CEFR; obligatorio en B1/B2. */
+    /** Descriptor can-do CEFR; obligatorio en B1/B2/C1/C2. */
     public val canDo: String? = null,
-    /** Focos gramaticales; obligatorios en B1/B2. */
+    /** Focos gramaticales; obligatorios en B1/B2/C1/C2. */
     public val grammarPoints: List<GrammarPoint> = emptyList(),
-    /** Banda de frecuencia léxica; obligatoria en B1/B2. */
+    /** Banda de frecuencia léxica; obligatoria en B1/B2/C1/C2. */
     public val vocabFrequencyBand: VocabFrequencyBand? = null,
-    /** Modismos con nota cultural; obligatorios en B1/B2. */
+    /** Modismos con nota cultural; obligatorios en B1/B2/C1/C2. */
     public val culturalNotes: List<CulturalNote> = emptyList(),
     /** Micro-clase opcional de gramática/reglas (ADR-028). */
     public val microLesson: MicroLesson? = null,

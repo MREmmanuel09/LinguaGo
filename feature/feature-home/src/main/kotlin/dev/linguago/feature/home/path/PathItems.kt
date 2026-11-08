@@ -34,13 +34,15 @@ data class XpLevel(
     val progressToNext: Float,
 )
 
-/** Etapa CEFR del camino derivada del contenido de la lección (ADR-040). */
+/** Etapa CEFR del camino derivada del contenido de la lección (ADR-040/ADR-042). */
 private fun stageFor(level: CefrLevel): PathStage =
     when (level) {
         CefrLevel.A1 -> PathStage.A1
         CefrLevel.A2 -> PathStage.A2
         CefrLevel.B1 -> PathStage.B1
         CefrLevel.B2 -> PathStage.B2
+        CefrLevel.C1 -> PathStage.C1
+        CefrLevel.C2 -> PathStage.C2
     }
 
 /** XP necesaria para subir de nivel visual. */
