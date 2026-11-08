@@ -13910,6 +13910,1531 @@
               ]
             }
           ]
+        },
+        {
+          "id": "es-en-lv-4-un-4",
+          "title": "Trabajo y liderazgo",
+          "lessons": [
+            {
+              "id": "es-en-c1-un-4-ls-1",
+              "title": "Dirigir una reunión difícil",
+              "cefrLevel": "C1",
+              "scenario": "Una reunión se desvía hacia reproches personales y hay que recuperar el foco sin humillar a nadie.",
+              "canDo": "Puedo moderar una reunión tensa, interrumpir con cortesía y cerrar con acuerdos y responsables.",
+              "grammarPoints": [
+                {
+                  "id": "gp-c1-meeting-language",
+                  "label": "Lenguaje de reunión",
+                  "description": "let's move on, park that, circle back, wrap up."
+                },
+                {
+                  "id": "gp-c1-polite-interruption",
+                  "label": "Interrupción cortés",
+                  "description": "If I may, sorry to jump in, could I just add..."
+                }
+              ],
+              "vocabFrequencyBand": "8000-12000",
+              "culturalNotes": [
+                {
+                  "idiom": "keep the ball rolling",
+                  "note": "Mantener el ritmo de una conversación o proyecto; en una reunión tensa, ayuda a avanzar sin ignorar el conflicto.",
+                  "translation": "mantener el ritmo"
+                }
+              ],
+              "microLesson": {
+                "title": "Moderar sin apagar",
+                "goals": [
+                  "Reconducir la conversación sin culpabilizar.",
+                  "Interrumpir y cerrar acuerdos con fórmulas estándar."
+                ],
+                "sections": [
+                  {
+                    "heading": "Fórmulas que ordenan la sala",
+                    "body": "Let's park that y circle back permiten aplazar un tema sin descartarlo. If I may jump in abre una interrupción respetuosa. Al cerrar, wrap up con action items y responsables convierte la tensión en tareas.",
+                    "examples": [
+                      {
+                        "source": "Dejemos ese punto aparcado y volvamos a él al final.",
+                        "target": "Let's park that point and circle back to it at the end.",
+                        "note": "Aplazar sin descalificar."
+                      },
+                      {
+                        "source": "Si me permite, quisiera añadir un dato.",
+                        "target": "If I may, I'd like to add one figure.",
+                        "note": "If I may pide la palabra con cortesía."
+                      }
+                    ]
+                  }
+                ]
+              },
+              "glossary": [
+                {
+                  "term": "facilitate",
+                  "translations": [
+                    "facilitar",
+                    "moderar"
+                  ]
+                },
+                {
+                  "term": "digress",
+                  "translations": [
+                    "desviarse del tema"
+                  ]
+                },
+                {
+                  "term": "consensus",
+                  "translations": [
+                    "consenso"
+                  ]
+                },
+                {
+                  "term": "action item",
+                  "translations": [
+                    "tarea acordada",
+                    "acción pendiente"
+                  ]
+                },
+                {
+                  "term": "wrap up",
+                  "translations": [
+                    "cerrar",
+                    "concluir"
+                  ]
+                },
+                {
+                  "term": "agenda",
+                  "translations": [
+                    "orden del día"
+                  ]
+                },
+                {
+                  "term": "chair",
+                  "translations": [
+                    "presidir",
+                    "moderar"
+                  ]
+                },
+                {
+                  "term": "follow-up",
+                  "translations": [
+                    "seguimiento"
+                  ]
+                },
+                {
+                  "term": "ownership",
+                  "translations": [
+                    "responsabilidad",
+                    "apropiación"
+                  ]
+                },
+                {
+                  "term": "tone",
+                  "translations": [
+                    "tono"
+                  ]
+                }
+              ],
+              "exercises": [
+                {
+                  "type": "ClozeDragDrop",
+                  "id": "es-en-c1-e133",
+                  "passage": "Let's {{b1}} that point for now and {{b2}} back to it once we have the figures.",
+                  "blanks": [
+                    {
+                      "id": "b1",
+                      "answer": "park",
+                      "options": [
+                        "park",
+                        "parks",
+                        "parking"
+                      ]
+                    },
+                    {
+                      "id": "b2",
+                      "answer": "circle",
+                      "options": [
+                        "circle",
+                        "circles",
+                        "circling"
+                      ]
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "Ambas expresiones piden infinitivo tras 'Let's': 'park that point' y 'circle back'.",
+                    "ruleRef": "gp-c1-meeting-language"
+                  }
+                },
+                {
+                  "type": "ClozeDragDrop",
+                  "id": "es-en-c1-e134",
+                  "passage": "{{b1}} I may, I'd like to {{b2}} in here because the data tells a different story.",
+                  "blanks": [
+                    {
+                      "id": "b1",
+                      "answer": "If",
+                      "options": [
+                        "If",
+                        "That",
+                        "What"
+                      ]
+                    },
+                    {
+                      "id": "b2",
+                      "answer": "jump",
+                      "options": [
+                        "jump",
+                        "jumped",
+                        "jumping"
+                      ]
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "'If I may' es la fórmula fija para pedir la palabra y 'jump in' completa la interrupción cortés.",
+                    "ruleRef": "gp-c1-polite-interruption"
+                  }
+                },
+                {
+                  "type": "SemanticMatch",
+                  "id": "es-en-c1-e135",
+                  "instructions": "Identifica la función de cada intervención en la reunión.",
+                  "pairs": [
+                    {
+                      "left": "Let's park that and circle back later.",
+                      "right": "Aplazar un tema",
+                      "register": "formal",
+                      "nuance": "Evita discutir sin datos."
+                    },
+                    {
+                      "left": "Sorry to jump in, but the client just called.",
+                      "right": "Interrupción justificada",
+                      "register": "neutral",
+                      "nuance": "La disculpa reconoce el turno ajeno."
+                    },
+                    {
+                      "left": "Let's wrap up with two action items and owners.",
+                      "right": "Cierre con acuerdos",
+                      "register": "formal",
+                      "nuance": "Convierte la conversación en tareas."
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "register",
+                    "explanation": "Moderar es decidir qué se aparca, quién interviene y cómo se cierra.",
+                    "ruleRef": "gp-c1-meeting-language"
+                  }
+                },
+                {
+                  "type": "ListenChoose",
+                  "id": "es-en-c1-e136",
+                  "audioText": "If I may, I'd like to jump in here because the data tells a different story.",
+                  "options": [
+                    "The speaker agrees completely",
+                    "The speaker requests the floor to disagree",
+                    "The speaker ends the meeting",
+                    "The speaker changes the agenda"
+                  ],
+                  "correctIndex": 1,
+                  "feedbackOnError": {
+                    "type": "comprehension",
+                    "explanation": "La petición de palabra introduce una objeción basada en datos.",
+                    "ruleRef": "gp-c1-polite-interruption"
+                  }
+                },
+                {
+                  "type": "AudioOnlyPrompt",
+                  "id": "es-en-c1-e137",
+                  "audioText": "Let's park that point for now and circle back once we have the figures. If I may, I'd like to jump in here, because the tone is getting personal and we need to keep the ball rolling.",
+                  "question": "What is the chair trying to do?",
+                  "options": [
+                    "Escalate the conflict",
+                    "Recover focus and tone",
+                    "Cancel the meeting",
+                    "Blame the client"
+                  ],
+                  "correctIndex": 1,
+                  "allowSlowPlayback": true,
+                  "feedbackOnError": {
+                    "type": "comprehension",
+                    "explanation": "La moderadora aparca el punto y pide la palabra para reconducir el tono.",
+                    "ruleRef": "gp-c1-meeting-language"
+                  }
+                },
+                {
+                  "type": "MultipleChoice",
+                  "id": "es-en-c1-e138",
+                  "question": "Completa: Let's ___ that point and circle back later.",
+                  "options": [
+                    "park",
+                    "parks",
+                    "parked"
+                  ],
+                  "correctIndex": 0,
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "Tras 'Let's' el verbo va en infinitivo sin 'to'.",
+                    "ruleRef": "gp-c1-meeting-language"
+                  }
+                },
+                {
+                  "type": "Translate",
+                  "id": "es-en-c1-e139",
+                  "sourcePhrase": "Dejemos ese punto aparcado y volvamos a él al final.",
+                  "correctTokens": [
+                    "Let's",
+                    "park",
+                    "that",
+                    "point",
+                    "and",
+                    "circle",
+                    "back",
+                    "to",
+                    "it",
+                    "at",
+                    "the",
+                    "end"
+                  ],
+                  "distractorTokens": [
+                    "leave",
+                    "returned"
+                  ],
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "Las colocaciones son 'park a point' y 'circle back to it'.",
+                    "ruleRef": "gp-c1-meeting-language"
+                  }
+                },
+                {
+                  "type": "ListenType",
+                  "id": "es-en-c1-e140",
+                  "transcription": "Let's wrap up with two action items and owners",
+                  "audioText": "Let's wrap up with two action items and owners",
+                  "feedbackOnError": {
+                    "type": "spelling",
+                    "explanation": "Escribe 'action items' en dos palabras y 'owners' con 'ow'.",
+                    "ruleRef": "gp-c1-meeting-language"
+                  }
+                },
+                {
+                  "type": "SpeakRepeat",
+                  "id": "es-en-c1-e141",
+                  "targetPhrase": "Sorry to jump in, but I think we should park that and circle back after lunch.",
+                  "audioText": "Sorry to jump in, but I think we should park that and circle back after lunch.",
+                  "feedbackOnError": {
+                    "type": "pronunciation",
+                    "explanation": "Enlaza 'jump in' y marca la pausa tras 'but'.",
+                    "ruleRef": "gp-c1-polite-interruption"
+                  }
+                },
+                {
+                  "type": "MatchPairs",
+                  "id": "es-en-c1-e142",
+                  "pairs": [
+                    {
+                      "left": "lead a difficult meeting",
+                      "right": "dirigir una reunión difícil"
+                    },
+                    {
+                      "left": "reach a consensus",
+                      "right": "alcanzar un consenso"
+                    },
+                    {
+                      "left": "assign action items",
+                      "right": "asignar tareas"
+                    },
+                    {
+                      "left": "follow up on the decision",
+                      "right": "hacer seguimiento de la decisión"
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "El líder nombra acuerdos y responsables para cerrar la reunión.",
+                    "ruleRef": "gp-c1-meeting-language"
+                  }
+                },
+                {
+                  "type": "FreeSpeakingPrompt",
+                  "id": "es-en-c1-e143",
+                  "prompt": "Modera una reunión tensa: pide la palabra, aparca el reproche personal, recupera el foco y cierra con dos tareas asignadas.",
+                  "minTokens": 15,
+                  "conceptClusters": [
+                    [
+                      "if I may",
+                      "jump in",
+                      "sorry"
+                    ],
+                    [
+                      "park",
+                      "circle back",
+                      "move on"
+                    ],
+                    [
+                      "action item",
+                      "owner",
+                      "wrap up"
+                    ]
+                  ],
+                  "grammarRuleRefs": [
+                    "gp-c1-meeting-language",
+                    "gp-c1-polite-interruption"
+                  ],
+                  "timeLimitSeconds": 30,
+                  "minWpm": 70,
+                  "maxWpm": 160,
+                  "modelAnswer": "If I may jump in, let's park that point for now and circle back once we have the figures. I suggest we wrap up with two action items and clear owners, so we can keep the ball rolling without personal reproaches.",
+                  "selfAssessmentCriteria": [
+                    "¿Pedí la palabra con cortesía?",
+                    "¿Recuperé el foco?",
+                    "¿Cerré con tareas y responsables?"
+                  ],
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "La respuesta modelo combina interrupción cortés, aplazamiento y cierre con responsables.",
+                    "ruleRef": "gp-c1-polite-interruption"
+                  }
+                }
+              ]
+            },
+            {
+              "id": "es-en-c1-un-4-ls-2",
+              "title": "Feedback socrático",
+              "cefrLevel": "C1",
+              "scenario": "Un miembro del equipo repite el mismo error y el líder quiere que lo descubra por sí mismo.",
+              "canDo": "Puedo guiar con preguntas, destacar lo relevante con estructuras enfáticas y devolver la responsabilidad al equipo.",
+              "grammarPoints": [
+                {
+                  "id": "gp-c1-cleft-sentences",
+                  "label": "Estructuras enfáticas",
+                  "description": "What I found interesting was..., It was X that..."
+                },
+                {
+                  "id": "gp-c1-question-framing",
+                  "label": "Preguntas de encuadre",
+                  "description": "How might we...? What would happen if...?"
+                }
+              ],
+              "vocabFrequencyBand": "8000-12000",
+              "culturalNotes": [
+                {
+                  "idiom": "raise the bar",
+                  "note": "Subir el nivel de exigencia; en feedback socrático, se sube el listón con preguntas, no con reproches.",
+                  "translation": "subir el listón"
+                }
+              ],
+              "microLesson": {
+                "title": "Preguntar para que otros piensen",
+                "goals": [
+                  "Sustituir la orden por una pregunta de encuadre.",
+                  "Enfocar lo importante con estructuras enfáticas."
+                ],
+                "sections": [
+                  {
+                    "heading": "De la corrección a la pregunta",
+                    "body": "How might we avoid the same mistake? y What would happen if we tested earlier? devuelven el pensamiento al interlocutor. Las estructuras enfáticas (What I found interesting was..., It was the timing that...) destacan un dato sin acusar.",
+                    "examples": [
+                      {
+                        "source": "Lo que me pareció interesante fue el momento del cambio.",
+                        "target": "What I found interesting was the timing of the change.",
+                        "note": "La cláusula enfática señala sin juzgar."
+                      },
+                      {
+                        "source": "¿Cómo podríamos evitar el mismo error?",
+                        "target": "How might we avoid the same mistake?",
+                        "note": "La pregunta asume agencia compartida."
+                      }
+                    ]
+                  }
+                ]
+              },
+              "glossary": [
+                {
+                  "term": "prompt",
+                  "translations": [
+                    "pregunta guía",
+                    "estímulo"
+                  ]
+                },
+                {
+                  "term": "reflect",
+                  "translations": [
+                    "reflexionar"
+                  ]
+                },
+                {
+                  "term": "insight",
+                  "translations": [
+                    "percepción",
+                    "hallazgo"
+                  ]
+                },
+                {
+                  "term": "ownership",
+                  "translations": [
+                    "responsabilidad",
+                    "apropiación"
+                  ]
+                },
+                {
+                  "term": "articulate",
+                  "translations": [
+                    "articular",
+                    "expresar"
+                  ]
+                },
+                {
+                  "term": "assumption",
+                  "translations": [
+                    "supuesto",
+                    "premisa"
+                  ]
+                },
+                {
+                  "term": "growth",
+                  "translations": [
+                    "crecimiento",
+                    "desarrollo"
+                  ]
+                },
+                {
+                  "term": "autonomy",
+                  "translations": [
+                    "autonomía"
+                  ]
+                },
+                {
+                  "term": "challenge",
+                  "translations": [
+                    "reto",
+                    "desafío"
+                  ]
+                },
+                {
+                  "term": "feedback",
+                  "translations": [
+                    "retroalimentación",
+                    "comentarios"
+                  ]
+                }
+              ],
+              "exercises": [
+                {
+                  "type": "ClozeDragDrop",
+                  "id": "es-en-c1-e144",
+                  "passage": "{{b1}} I found interesting was the {{b2}} of the last change.",
+                  "blanks": [
+                    {
+                      "id": "b1",
+                      "answer": "What",
+                      "options": [
+                        "What",
+                        "That",
+                        "Which"
+                      ]
+                    },
+                    {
+                      "id": "b2",
+                      "answer": "timing",
+                      "options": [
+                        "timing",
+                        "time",
+                        "timed"
+                      ]
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "'What I found interesting was...' es una cláusula enfática: what es sujeto y el verbo concuerda con 'was'.",
+                    "ruleRef": "gp-c1-cleft-sentences"
+                  }
+                },
+                {
+                  "type": "ClozeDragDrop",
+                  "id": "es-en-c1-e145",
+                  "passage": "How {{b1}} we avoid the same mistake, and what {{b2}} happen if we tested earlier?",
+                  "blanks": [
+                    {
+                      "id": "b1",
+                      "answer": "might",
+                      "options": [
+                        "might",
+                        "must",
+                        "can't"
+                      ]
+                    },
+                    {
+                      "id": "b2",
+                      "answer": "would",
+                      "options": [
+                        "would",
+                        "will",
+                        "is"
+                      ]
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "'How might we' abre posibilidades; 'what would happen if' plantea una hipótesis.",
+                    "ruleRef": "gp-c1-question-framing"
+                  }
+                },
+                {
+                  "type": "SemanticMatch",
+                  "id": "es-en-c1-e146",
+                  "instructions": "Empareja cada pregunta con la reflexión que provoca.",
+                  "pairs": [
+                    {
+                      "left": "How might we catch this earlier next time?",
+                      "right": "Búsqueda de proceso",
+                      "register": "formal",
+                      "nuance": "Desplaza la culpa hacia el sistema."
+                    },
+                    {
+                      "left": "What assumption were we making?",
+                      "right": "Revisión de premisas",
+                      "register": "formal",
+                      "nuance": "Invita a examinar el punto de partida."
+                    },
+                    {
+                      "left": "What would happen if you owned this part?",
+                      "right": "Responsabilidad compartida",
+                      "register": "neutral",
+                      "nuance": "Devuelve la agencia sin ordenar."
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "register",
+                    "explanation": "La pregunta socrática convierte el error en un objeto de análisis conjunto.",
+                    "ruleRef": "gp-c1-question-framing"
+                  }
+                },
+                {
+                  "type": "ListenChoose",
+                  "id": "es-en-c1-e147",
+                  "audioText": "What I found interesting was the timing of the last change, so how might we catch this earlier next time?",
+                  "options": [
+                    "The speaker blames the team",
+                    "The speaker highlights timing and asks for a process fix",
+                    "The speaker cancels the project",
+                    "The speaker praises the mistake"
+                  ],
+                  "correctIndex": 1,
+                  "feedbackOnError": {
+                    "type": "comprehension",
+                    "explanation": "La estructura enfática destaca el momento y la pregunta apunta al proceso.",
+                    "ruleRef": "gp-c1-cleft-sentences"
+                  }
+                },
+                {
+                  "type": "AudioOnlyPrompt",
+                  "id": "es-en-c1-e148",
+                  "audioText": "What I found interesting was the assumption behind the last change. What would happen if you owned this part and tested it earlier?",
+                  "question": "What does the leader want the teammate to do?",
+                  "options": [
+                    "Defend the old decision",
+                    "Take ownership and test earlier",
+                    "Leave the project",
+                    "Blame the client"
+                  ],
+                  "correctIndex": 1,
+                  "allowSlowPlayback": true,
+                  "feedbackOnError": {
+                    "type": "comprehension",
+                    "explanation": "La pregunta devuelve la responsabilidad y propone una prueba temprana.",
+                    "ruleRef": "gp-c1-question-framing"
+                  }
+                },
+                {
+                  "type": "MultipleChoice",
+                  "id": "es-en-c1-e149",
+                  "question": "Completa: ___ I found interesting was the timing of the change.",
+                  "options": [
+                    "What",
+                    "That",
+                    "Which"
+                  ],
+                  "correctIndex": 0,
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "La estructura enfática se abre con 'What' como sujeto de la cláusula.",
+                    "ruleRef": "gp-c1-cleft-sentences"
+                  }
+                },
+                {
+                  "type": "Translate",
+                  "id": "es-en-c1-e150",
+                  "sourcePhrase": "¿Cómo podríamos detectar el mismo error antes?",
+                  "correctTokens": [
+                    "How",
+                    "might",
+                    "we",
+                    "catch",
+                    "the",
+                    "same",
+                    "mistake",
+                    "earlier"
+                  ],
+                  "distractorTokens": [
+                    "must",
+                    "detecting"
+                  ],
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "La pregunta de encuadre usa 'How might we' + infinitivo.",
+                    "ruleRef": "gp-c1-question-framing"
+                  }
+                },
+                {
+                  "type": "ListenType",
+                  "id": "es-en-c1-e151",
+                  "transcription": "What I found interesting was the assumption behind the last change",
+                  "audioText": "What I found interesting was the assumption behind the last change",
+                  "feedbackOnError": {
+                    "type": "spelling",
+                    "explanation": "Escribe 'assumption' con doble 's' y 'behind' con 'ei'.",
+                    "ruleRef": "gp-c1-cleft-sentences"
+                  }
+                },
+                {
+                  "type": "SpeakRepeat",
+                  "id": "es-en-c1-e152",
+                  "targetPhrase": "What would happen if you owned this part and tested it earlier?",
+                  "audioText": "What would happen if you owned this part and tested it earlier?",
+                  "feedbackOnError": {
+                    "type": "pronunciation",
+                    "explanation": "Enlaza 'would happen if' y entona la pregunta en 'earlier'.",
+                    "ruleRef": "gp-c1-question-framing"
+                  }
+                },
+                {
+                  "type": "MatchPairs",
+                  "id": "es-en-c1-e153",
+                  "pairs": [
+                    {
+                      "left": "a guiding question",
+                      "right": "una pregunta guía"
+                    },
+                    {
+                      "left": "take ownership",
+                      "right": "asumir la responsabilidad"
+                    },
+                    {
+                      "left": "an insightful reflection",
+                      "right": "una reflexión reveladora"
+                    },
+                    {
+                      "left": "a safe challenge",
+                      "right": "un reto seguro"
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "El feedback socrático nombra preguntas, responsabilidad y reflexión.",
+                    "ruleRef": "gp-c1-question-framing"
+                  }
+                },
+                {
+                  "type": "FreeSpeakingPrompt",
+                  "id": "es-en-c1-e154",
+                  "prompt": "Da feedback socrático a alguien que repitió un error: destaca un dato con una estructura enfática y guía con dos preguntas.",
+                  "minTokens": 15,
+                  "conceptClusters": [
+                    [
+                      "what I found",
+                      "it was",
+                      "what matters"
+                    ],
+                    [
+                      "how might",
+                      "what would happen",
+                      "assumption"
+                    ],
+                    [
+                      "ownership",
+                      "improve",
+                      "process"
+                    ]
+                  ],
+                  "grammarRuleRefs": [
+                    "gp-c1-cleft-sentences",
+                    "gp-c1-question-framing"
+                  ],
+                  "timeLimitSeconds": 30,
+                  "minWpm": 70,
+                  "maxWpm": 160,
+                  "modelAnswer": "What I found interesting was the timing of the last change, and what matters now is how we catch it earlier. How might we test the process sooner, and what would happen if you owned this part?",
+                  "selfAssessmentCriteria": [
+                    "¿Enfoqué un dato sin acusar?",
+                    "¿Guié con preguntas abiertas?",
+                    "¿Devolví la responsabilidad?"
+                  ],
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "La respuesta modelo usa 'what I found' y preguntas de encuadre para guiar sin ordenar.",
+                    "ruleRef": "gp-c1-cleft-sentences"
+                  }
+                }
+              ]
+            },
+            {
+              "id": "es-en-c1-un-4-ls-3",
+              "title": "Presentar el balance anual",
+              "cefrLevel": "C1",
+              "scenario": "En la Junta, hay que explicar resultados anuales con matices y anticipar preguntas incómodas.",
+              "canDo": "Puedo comentar datos con comparaciones matizadas y explicar causas sin prometer más de lo que muestran las cifras.",
+              "grammarPoints": [
+                {
+                  "id": "gp-c1-data-commentary",
+                  "label": "Comentario de datos",
+                  "description": "accounted for, rose sharply, remained flat, fell slightly."
+                },
+                {
+                  "id": "gp-c1-comparatives-nuanced",
+                  "label": "Comparaciones matizadas",
+                  "description": "considerably higher than, twice as likely, slightly lower than."
+                }
+              ],
+              "vocabFrequencyBand": "8000-12000",
+              "culturalNotes": [
+                {
+                  "idiom": "break even",
+                  "note": "Cubrir gastos sin ganar ni perder; en un balance, separa la supervivencia financiera del beneficio real.",
+                  "translation": "cubrir gastos"
+                }
+              ],
+              "microLesson": {
+                "title": "Contar lo que dicen los números",
+                "goals": [
+                  "Describir tendencias con verbos y adverbios precisos.",
+                  "Comparar cifras sin exagerar la conclusión."
+                ],
+                "sections": [
+                  {
+                    "heading": "Verbos que dibujan la curva",
+                    "body": "Rose sharply, fell slightly, remained flat y accounted for describen la forma de la tendencia. Las comparaciones (considerably higher than, twice as likely) gradúan la diferencia y evitan el salto de 'much better' a 'the best'.",
+                    "examples": [
+                      {
+                        "source": "Los ingresos crecieron un 12 % y representaron la mitad del total.",
+                        "target": "Revenue rose by 12% and accounted for half of the total.",
+                        "note": "Rose by + accounted for."
+                      },
+                      {
+                        "source": "El margen fue considerablemente mayor que el año anterior.",
+                        "target": "The margin was considerably higher than last year.",
+                        "note": "Considerably gradúa la comparación."
+                      }
+                    ]
+                  }
+                ]
+              },
+              "glossary": [
+                {
+                  "term": "revenue",
+                  "translations": [
+                    "ingresos"
+                  ]
+                },
+                {
+                  "term": "margin",
+                  "translations": [
+                    "margen"
+                  ]
+                },
+                {
+                  "term": "forecast",
+                  "translations": [
+                    "previsión"
+                  ]
+                },
+                {
+                  "term": "quarter",
+                  "translations": [
+                    "trimestre"
+                  ]
+                },
+                {
+                  "term": "variance",
+                  "translations": [
+                    "variación",
+                    "desviación"
+                  ]
+                },
+                {
+                  "term": "headcount",
+                  "translations": [
+                    "plantilla",
+                    "número de empleados"
+                  ]
+                },
+                {
+                  "term": "flat",
+                  "translations": [
+                    "plano",
+                    "estancado"
+                  ]
+                },
+                {
+                  "term": "surge",
+                  "translations": [
+                    "aumento brusco"
+                  ]
+                },
+                {
+                  "term": "decline",
+                  "translations": [
+                    "descenso",
+                    "declive"
+                  ]
+                },
+                {
+                  "term": "benchmark",
+                  "translations": [
+                    "referencia",
+                    "punto de comparación"
+                  ]
+                }
+              ],
+              "exercises": [
+                {
+                  "type": "ClozeDragDrop",
+                  "id": "es-en-c1-e155",
+                  "passage": "Revenue {{b1}} by 12% in the last quarter and {{b2}} for half of the total.",
+                  "blanks": [
+                    {
+                      "id": "b1",
+                      "answer": "rose",
+                      "options": [
+                        "rose",
+                        "raised",
+                        "risen"
+                      ]
+                    },
+                    {
+                      "id": "b2",
+                      "answer": "accounted",
+                      "options": [
+                        "accounted",
+                        "counted",
+                        "amounted"
+                      ]
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "'Revenue rose' (subir) no lleva objeto; 'accounted for' es la colocación para representar una parte.",
+                    "ruleRef": "gp-c1-data-commentary"
+                  }
+                },
+                {
+                  "type": "ClozeDragDrop",
+                  "id": "es-en-c1-e156",
+                  "passage": "The margin was {{b1}} higher than last year, while headcount remained {{b2}}.",
+                  "blanks": [
+                    {
+                      "id": "b1",
+                      "answer": "considerably",
+                      "options": [
+                        "considerably",
+                        "considerable",
+                        "considering"
+                      ]
+                    },
+                    {
+                      "id": "b2",
+                      "answer": "flat",
+                      "options": [
+                        "flat",
+                        "flatten",
+                        "flatly"
+                      ]
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "'Considerably' gradúa el comparativo y 'remained flat' describe estabilidad sin cambio.",
+                    "ruleRef": "gp-c1-comparatives-nuanced"
+                  }
+                },
+                {
+                  "type": "SemanticMatch",
+                  "id": "es-en-c1-e157",
+                  "instructions": "Empareja cada comentario con la tendencia que describe.",
+                  "pairs": [
+                    {
+                      "left": "Revenue rose sharply in the last quarter.",
+                      "right": "Subida acusada",
+                      "register": "formal",
+                      "nuance": "Sharply indica pendiente alta."
+                    },
+                    {
+                      "left": "Headcount remained flat throughout the year.",
+                      "right": "Estabilidad",
+                      "register": "formal",
+                      "nuance": "Flat descarta crecimiento."
+                    },
+                    {
+                      "left": "The margin fell slightly, but we broke even.",
+                      "right": "Descenso leve con equilibrio",
+                      "register": "formal",
+                      "nuance": "Slightly reduce la alarma."
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "register",
+                    "explanation": "Los adverbios de grado convierten la tendencia en una lectura precisa.",
+                    "ruleRef": "gp-c1-data-commentary"
+                  }
+                },
+                {
+                  "type": "ListenChoose",
+                  "id": "es-en-c1-e158",
+                  "audioText": "Revenue rose by 12% and accounted for half of the total, while headcount remained flat.",
+                  "options": [
+                    "Revenue fell and headcount grew",
+                    "Revenue grew and headcount stayed flat",
+                    "Revenue was flat and headcount fell",
+                    "Both revenue and headcount fell"
+                  ],
+                  "correctIndex": 1,
+                  "feedbackOnError": {
+                    "type": "comprehension",
+                    "explanation": "Rose indica subida y remained flat estabilidad de la plantilla.",
+                    "ruleRef": "gp-c1-data-commentary"
+                  }
+                },
+                {
+                  "type": "AudioOnlyPrompt",
+                  "id": "es-en-c1-e159",
+                  "audioText": "The margin was considerably higher than last year, although headcount remained flat. We broke even in the first quarter and the forecast points to a slight increase.",
+                  "question": "What happened to headcount?",
+                  "options": [
+                    "It rose sharply",
+                    "It remained flat",
+                    "It fell slightly",
+                    "It was not reported"
+                  ],
+                  "correctIndex": 1,
+                  "allowSlowPlayback": true,
+                  "feedbackOnError": {
+                    "type": "comprehension",
+                    "explanation": "Remained flat describe la plantilla estable pese a la mejora del margen.",
+                    "ruleRef": "gp-c1-comparatives-nuanced"
+                  }
+                },
+                {
+                  "type": "MultipleChoice",
+                  "id": "es-en-c1-e160",
+                  "question": "Completa: The margin was ___ higher than last year.",
+                  "options": [
+                    "considerably",
+                    "considerable",
+                    "considering"
+                  ],
+                  "correctIndex": 0,
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "El adverbio 'considerably' modifica el comparativo 'higher'.",
+                    "ruleRef": "gp-c1-comparatives-nuanced"
+                  }
+                },
+                {
+                  "type": "Translate",
+                  "id": "es-en-c1-e161",
+                  "sourcePhrase": "Los ingresos crecieron un 12 % y representaron la mitad del total.",
+                  "correctTokens": [
+                    "Revenue",
+                    "rose",
+                    "by",
+                    "12",
+                    "%",
+                    "and",
+                    "accounted",
+                    "for",
+                    "half",
+                    "of",
+                    "the",
+                    "total"
+                  ],
+                  "distractorTokens": [
+                    "raised",
+                    "amounted"
+                  ],
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "'Rose by' marca el incremento y 'accounted for' la proporción del total.",
+                    "ruleRef": "gp-c1-data-commentary"
+                  }
+                },
+                {
+                  "type": "ListenType",
+                  "id": "es-en-c1-e162",
+                  "transcription": "Headcount remained flat while revenue rose by 12%",
+                  "audioText": "Headcount remained flat while revenue rose by 12%",
+                  "feedbackOnError": {
+                    "type": "spelling",
+                    "explanation": "Escribe 'headcount' en una palabra y 'revenue' con 'e' inicial.",
+                    "ruleRef": "gp-c1-data-commentary"
+                  }
+                },
+                {
+                  "type": "SpeakRepeat",
+                  "id": "es-en-c1-e163",
+                  "targetPhrase": "The margin was considerably higher than last year, although headcount remained flat.",
+                  "audioText": "The margin was considerably higher than last year, although headcount remained flat.",
+                  "feedbackOnError": {
+                    "type": "pronunciation",
+                    "explanation": "Acentúa 'considerably' y haz pausa antes de 'although'.",
+                    "ruleRef": "gp-c1-comparatives-nuanced"
+                  }
+                },
+                {
+                  "type": "MatchPairs",
+                  "id": "es-en-c1-e164",
+                  "pairs": [
+                    {
+                      "left": "quarterly revenue",
+                      "right": "ingresos trimestrales"
+                    },
+                    {
+                      "left": "a slight decline",
+                      "right": "un descenso leve"
+                    },
+                    {
+                      "left": "a sharp increase",
+                      "right": "un aumento acusado"
+                    },
+                    {
+                      "left": "a reliable forecast",
+                      "right": "una previsión fiable"
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "El lenguaje financiero combina tendencia y grado con precisión.",
+                    "ruleRef": "gp-c1-data-commentary"
+                  }
+                },
+                {
+                  "type": "FreeSpeakingPrompt",
+                  "id": "es-en-c1-e165",
+                  "prompt": "Presenta el balance anual en una frase y media: describe dos tendencias, compara con el año anterior y evita prometer más de lo que muestran los datos.",
+                  "minTokens": 15,
+                  "conceptClusters": [
+                    [
+                      "rose",
+                      "fell",
+                      "remained flat"
+                    ],
+                    [
+                      "considerably",
+                      "slightly",
+                      "sharply"
+                    ],
+                    [
+                      "margin",
+                      "revenue",
+                      "forecast"
+                    ]
+                  ],
+                  "grammarRuleRefs": [
+                    "gp-c1-data-commentary",
+                    "gp-c1-comparatives-nuanced"
+                  ],
+                  "timeLimitSeconds": 30,
+                  "minWpm": 70,
+                  "maxWpm": 160,
+                  "modelAnswer": "Revenue rose by 12% and accounted for half of the total, while the margin was considerably higher than last year. Headcount remained flat, but we only broke even in the first quarter, so the forecast stays cautious.",
+                  "selfAssessmentCriteria": [
+                    "¿Describí dos tendencias?",
+                    "¿Comparé con el año anterior?",
+                    "¿Evité prometer de más?"
+                  ],
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "La respuesta modelo gradúa las tendencias y cierra con una previsión prudente.",
+                    "ruleRef": "gp-c1-comparatives-nuanced"
+                  }
+                }
+              ]
+            },
+            {
+              "id": "es-en-c1-un-4-ls-4",
+              "title": "Negociación colectiva",
+              "cefrLevel": "C1",
+              "scenario": "Sindicato y dirección negocian un convenio y ambas partes necesitan condiciones claras para firmar.",
+              "canDo": "Puedo negociar condiciones con condicionales y marcadores de límite, manteniendo la relación y la posición.",
+              "grammarPoints": [
+                {
+                  "id": "gp-c1-conditionals-negotiation",
+                  "label": "Condicionales de negociación",
+                  "description": "provided that, unless, as long as, if we were to..."
+                },
+                {
+                  "id": "gp-c1-emphatic-inversion",
+                  "label": "Inversión de límite",
+                  "description": "Only if..., under no circumstances..., not until..."
+                }
+              ],
+              "vocabFrequencyBand": "8000-12000",
+              "culturalNotes": [
+                {
+                  "idiom": "stand one's ground",
+                  "note": "Mantener la propia posición bajo presión; en una negociación colectiva, exige separar el límite real de la táctica.",
+                  "translation": "mantener la posición"
+                }
+              ],
+              "microLesson": {
+                "title": "Poner condiciones sin romper la mesa",
+                "goals": [
+                  "Formular condiciones con provided that y unless.",
+                  "Marcar límites con inversión enfática."
+                ],
+                "sections": [
+                  {
+                    "heading": "La condición como límite",
+                    "body": "Provided that abre una condición necesaria; unless la formula en negativo; as long as la presenta como garantía. La inversión (Only if..., under no circumstances...) refuerza el límite: Only if the terms are clear will we sign.",
+                    "examples": [
+                      {
+                        "source": "Firmaremos siempre que las condiciones sean claras.",
+                        "target": "We will sign provided that the terms are clear.",
+                        "note": "Provided that = solo si."
+                      },
+                      {
+                        "source": "Solo si hay mediación aceptaremos el calendario.",
+                        "target": "Only if there is mediation will we accept the timetable.",
+                        "note": "Tras 'only if' se invierte el auxiliar."
+                      }
+                    ]
+                  }
+                ]
+              },
+              "glossary": [
+                {
+                  "term": "collective",
+                  "translations": [
+                    "colectivo",
+                    "colectiva"
+                  ]
+                },
+                {
+                  "term": "bargaining",
+                  "translations": [
+                    "negociación"
+                  ]
+                },
+                {
+                  "term": "union",
+                  "translations": [
+                    "sindicato"
+                  ]
+                },
+                {
+                  "term": "mediation",
+                  "translations": [
+                    "mediación"
+                  ]
+                },
+                {
+                  "term": "mandate",
+                  "translations": [
+                    "mandato"
+                  ]
+                },
+                {
+                  "term": "seniority",
+                  "translations": [
+                    "antigüedad"
+                  ]
+                },
+                {
+                  "term": "arbitration",
+                  "translations": [
+                    "arbitraje"
+                  ]
+                },
+                {
+                  "term": "settlement",
+                  "translations": [
+                    "acuerdo",
+                    "arreglo"
+                  ]
+                },
+                {
+                  "term": "workforce",
+                  "translations": [
+                    "plantilla",
+                    "fuerza laboral"
+                  ]
+                },
+                {
+                  "term": "proposal",
+                  "translations": [
+                    "propuesta"
+                  ]
+                }
+              ],
+              "exercises": [
+                {
+                  "type": "ClozeDragDrop",
+                  "id": "es-en-c1-e166",
+                  "passage": "We will sign {{b1}} that the terms are clear, and we will not accept the timetable {{b2}} there is mediation.",
+                  "blanks": [
+                    {
+                      "id": "b1",
+                      "answer": "provided",
+                      "options": [
+                        "provided",
+                        "providing",
+                        "provide"
+                      ]
+                    },
+                    {
+                      "id": "b2",
+                      "answer": "unless",
+                      "options": [
+                        "unless",
+                        "if",
+                        "although"
+                      ]
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "'Provided that' introduce la condición y 'unless' equivale a 'if not'.",
+                    "ruleRef": "gp-c1-conditionals-negotiation"
+                  }
+                },
+                {
+                  "type": "ClozeDragDrop",
+                  "id": "es-en-c1-e167",
+                  "passage": "Only {{b1}} the workforce approves the proposal {{b2}} the union sign the settlement.",
+                  "blanks": [
+                    {
+                      "id": "b1",
+                      "answer": "if",
+                      "options": [
+                        "if",
+                        "when",
+                        "that"
+                      ]
+                    },
+                    {
+                      "id": "b2",
+                      "answer": "will",
+                      "options": [
+                        "will",
+                        "would",
+                        "does"
+                      ]
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "Tras 'Only if' se invierte el auxiliar: 'will the union sign'.",
+                    "ruleRef": "gp-c1-emphatic-inversion"
+                  }
+                },
+                {
+                  "type": "SemanticMatch",
+                  "id": "es-en-c1-e168",
+                  "instructions": "Empareja cada fórmula con su fuerza negociadora.",
+                  "pairs": [
+                    {
+                      "left": "We will sign provided that the terms are clear.",
+                      "right": "Condición necesaria",
+                      "register": "formal",
+                      "nuance": "Abre la puerta solo con una garantía."
+                    },
+                    {
+                      "left": "We will not accept the timetable unless there is mediation.",
+                      "right": "Límite con alternativa",
+                      "register": "formal",
+                      "nuance": "Unless deja una vía abierta: la mediación."
+                    },
+                    {
+                      "left": "Under no circumstances will we accept a pay freeze.",
+                      "right": "Límite absoluto",
+                      "register": "formal",
+                      "nuance": "La inversión refuerza la negativa."
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "register",
+                    "explanation": "Cada fórmula gradúa el límite: condición, alternativa o negativa absoluta.",
+                    "ruleRef": "gp-c1-conditionals-negotiation"
+                  }
+                },
+                {
+                  "type": "ListenChoose",
+                  "id": "es-en-c1-e169",
+                  "audioText": "We will sign provided that the terms are clear, and we will not accept the timetable unless there is mediation.",
+                  "options": [
+                    "The union accepts everything",
+                    "The union sets two conditions",
+                    "The union rejects all negotiation",
+                    "The union ignores the timetable"
+                  ],
+                  "correctIndex": 1,
+                  "feedbackOnError": {
+                    "type": "comprehension",
+                    "explanation": "Provided that y unless fijan dos condiciones para firmar.",
+                    "ruleRef": "gp-c1-conditionals-negotiation"
+                  }
+                },
+                {
+                  "type": "AudioOnlyPrompt",
+                  "id": "es-en-c1-e170",
+                  "audioText": "Only if the workforce approves the proposal will the union sign the settlement. Under no circumstances will we accept a pay freeze without arbitration.",
+                  "question": "What are the two limits?",
+                  "options": [
+                    "Approval and arbitration",
+                    "Acceptance and a pay rise",
+                    "Mediation and seniority",
+                    "A settlement and a strike"
+                  ],
+                  "correctIndex": 0,
+                  "allowSlowPlayback": true,
+                  "feedbackOnError": {
+                    "type": "comprehension",
+                    "explanation": "Las inversiones marcan dos límites: aprobación de la plantilla y arbitraje.",
+                    "ruleRef": "gp-c1-emphatic-inversion"
+                  }
+                },
+                {
+                  "type": "MultipleChoice",
+                  "id": "es-en-c1-e171",
+                  "question": "Completa: Only if the terms are clear ___ we sign.",
+                  "options": [
+                    "will",
+                    "we will",
+                    "do"
+                  ],
+                  "correctIndex": 0,
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "La inversión tras 'Only if' coloca el auxiliar antes del sujeto: 'will we sign'.",
+                    "ruleRef": "gp-c1-emphatic-inversion"
+                  }
+                },
+                {
+                  "type": "Translate",
+                  "id": "es-en-c1-e172",
+                  "sourcePhrase": "Solo si hay mediación aceptaremos el calendario.",
+                  "correctTokens": [
+                    "Only",
+                    "if",
+                    "there",
+                    "is",
+                    "mediation",
+                    "will",
+                    "we",
+                    "accept",
+                    "the",
+                    "timetable"
+                  ],
+                  "distractorTokens": [
+                    "accepting",
+                    "when"
+                  ],
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "La inversión 'Only if... will we accept' es obligatoria en registro formal.",
+                    "ruleRef": "gp-c1-emphatic-inversion"
+                  }
+                },
+                {
+                  "type": "ListenType",
+                  "id": "es-en-c1-e173",
+                  "transcription": "Under no circumstances will we accept a pay freeze without arbitration",
+                  "audioText": "Under no circumstances will we accept a pay freeze without arbitration",
+                  "feedbackOnError": {
+                    "type": "spelling",
+                    "explanation": "Escribe 'circumstances' con 'c' y 'arbitration' con '-tion'.",
+                    "ruleRef": "gp-c1-emphatic-inversion"
+                  }
+                },
+                {
+                  "type": "SpeakRepeat",
+                  "id": "es-en-c1-e174",
+                  "targetPhrase": "We will sign provided that the terms are clear and the settlement is fair.",
+                  "audioText": "We will sign provided that the terms are clear and the settlement is fair.",
+                  "feedbackOnError": {
+                    "type": "pronunciation",
+                    "explanation": "Enlaza 'provided that' y marca 'settlement' con acento en la primera sílaba.",
+                    "ruleRef": "gp-c1-conditionals-negotiation"
+                  }
+                },
+                {
+                  "type": "MatchPairs",
+                  "id": "es-en-c1-e175",
+                  "pairs": [
+                    {
+                      "left": "collective bargaining",
+                      "right": "negociación colectiva"
+                    },
+                    {
+                      "left": "a union mandate",
+                      "right": "un mandato sindical"
+                    },
+                    {
+                      "left": "a fair settlement",
+                      "right": "un acuerdo justo"
+                    },
+                    {
+                      "left": "the seniority rule",
+                      "right": "la regla de antigüedad"
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "El léxico sindical nombra el mandato, el acuerdo y la antigüedad.",
+                    "ruleRef": "gp-c1-conditionals-negotiation"
+                  }
+                },
+                {
+                  "type": "FreeSpeakingPrompt",
+                  "id": "es-en-c1-e176",
+                  "prompt": "Intervén en una negociación colectiva: plantea una condición, marca un límite absoluto y propone una vía de mediación.",
+                  "minTokens": 15,
+                  "conceptClusters": [
+                    [
+                      "provided that",
+                      "unless",
+                      "as long as"
+                    ],
+                    [
+                      "only if",
+                      "under no circumstances",
+                      "not until"
+                    ],
+                    [
+                      "mediation",
+                      "settlement",
+                      "workforce"
+                    ]
+                  ],
+                  "grammarRuleRefs": [
+                    "gp-c1-conditionals-negotiation",
+                    "gp-c1-emphatic-inversion"
+                  ],
+                  "timeLimitSeconds": 30,
+                  "minWpm": 70,
+                  "maxWpm": 160,
+                  "modelAnswer": "We will sign provided that the terms are clear and the workforce approves the proposal. Under no circumstances will we accept a pay freeze without arbitration, so we propose mediation before the next round.",
+                  "selfAssessmentCriteria": [
+                    "¿Formulé una condición clara?",
+                    "¿Marqué un límite absoluto?",
+                    "¿Propuse una salida negociada?"
+                  ],
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "La respuesta modelo combina provided that y una inversión absoluta para cerrar con mediación.",
+                    "ruleRef": "gp-c1-emphatic-inversion"
+                  }
+                }
+              ]
+            }
+          ]
         }
         ]
       }
