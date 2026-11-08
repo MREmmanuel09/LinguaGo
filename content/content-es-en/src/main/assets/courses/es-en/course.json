@@ -9345,6 +9345,1538 @@
           ]
         }
       ]
-    }
+    },
+      {
+        "id": "es-en-lv-4",
+        "name": "C1 · Precisión y registro profesional",
+        "units": [
+          {
+            "id": "es-en-lv-4-un-1",
+            "title": "Consolidación B2 → C1",
+            "lessons": [
+              {
+                "id": "es-en-c1-un-1-ls-1",
+                "title": "Reformular con precisión",
+                "cefrLevel": "C1",
+                "scenario": "En una reunión, una propuesta suena ambigua y dos equipos la interpretan de forma distinta.",
+                "canDo": "Puedo reformular una idea compleja sin perder matices y explicitar los supuestos que la sostienen.",
+                "grammarPoints": [
+                  {
+                    "id": "gp-c1-reformulation",
+                    "label": "Reformulación",
+                    "description": "In other words, what I mean is, to put it another way."
+                  },
+                  {
+                    "id": "gp-c1-nominalization",
+                    "label": "Nominalización",
+                    "description": "Convertir acciones en sustantivos para un registro más formal."
+                  }
+                ],
+                "vocabFrequencyBand": "8000-12000",
+                "culturalNotes": [
+                  {
+                    "idiom": "read between the lines",
+                    "note": "Deducir lo que no se dice de forma explícita; en una reunión, sirve para detectar reservas que nadie verbaliza.",
+                    "translation": "leer entre líneas"
+                  }
+                ],
+                "microLesson": {
+                  "title": "Reformular sin perder el matiz",
+                  "goals": [
+                    "Detectar la idea central de una propuesta ambigua.",
+                    "Reformular con estructuras formales y marcar supuestos."
+                  ],
+                  "sections": [
+                    {
+                      "heading": "Tres fórmulas para reformular",
+                      "body": "In other words introduce una versión más clara; what I mean is corrige una interpretación; to put it another way redefine la misma idea desde otro ángulo. Tras reformular, conviene explicitar el supuesto: the underlying assumption is that...",
+                      "examples": [
+                        {
+                          "source": "No me has entendido: lo que quiero decir es que necesitamos más datos.",
+                          "target": "What I mean is that we need more data.",
+                          "note": "La fórmula reparadora evita repetir el desacuerdo."
+                        },
+                        {
+                          "source": "Dicho de otro modo, la fusión exige un marco común.",
+                          "target": "To put it another way, the merger requires a shared framework.",
+                          "note": "To put it another way reencuadra la idea para el interlocutor."
+                        }
+                      ]
+                    }
+                  ]
+                },
+                "glossary": [
+                  {
+                    "term": "paraphrase",
+                    "translations": [
+                      "parafrasear"
+                    ]
+                  },
+                  {
+                    "term": "gist",
+                    "translations": [
+                      "idea central",
+                      "esencia"
+                    ]
+                  },
+                  {
+                    "term": "nuance",
+                    "translations": [
+                      "matiz"
+                    ]
+                  },
+                  {
+                    "term": "clarify",
+                    "translations": [
+                      "aclarar"
+                    ]
+                  },
+                  {
+                    "term": "underlying",
+                    "translations": [
+                      "subyacente"
+                    ]
+                  },
+                  {
+                    "term": "assumption",
+                    "translations": [
+                      "supuesto",
+                      "premisa"
+                    ]
+                  },
+                  {
+                    "term": "concise",
+                    "translations": [
+                      "conciso",
+                      "concisa"
+                    ]
+                  },
+                  {
+                    "term": "ambiguity",
+                    "translations": [
+                      "ambigüedad"
+                    ]
+                  },
+                  {
+                    "term": "wording",
+                    "translations": [
+                      "redacción",
+                      "formulación"
+                    ]
+                  },
+                  {
+                    "term": "imply",
+                    "translations": [
+                      "implicar",
+                      "dar a entender"
+                    ]
+                  }
+                ],
+                "exercises": [
+                  {
+                    "type": "ClozeDragDrop",
+                    "id": "es-en-c1-e1",
+                    "passage": "In {{b1}} words, the {{b2}} of the proposal is simpler than it looks.",
+                    "blanks": [
+                      {
+                        "id": "b1",
+                        "answer": "other",
+                        "options": [
+                          "other",
+                          "others",
+                          "another"
+                        ]
+                      },
+                      {
+                        "id": "b2",
+                        "answer": "gist",
+                        "options": [
+                          "gist",
+                          "ghost",
+                          "guest"
+                        ]
+                      }
+                    ],
+                    "feedbackOnError": {
+                      "type": "grammar",
+                      "explanation": "'In other words' es una fórmula fija de reformulación; 'gist' es la idea central.",
+                      "ruleRef": "gp-c1-reformulation"
+                    }
+                  },
+                  {
+                    "type": "ClozeDragDrop",
+                    "id": "es-en-c1-e2",
+                    "passage": "To {{b1}} it another way, the {{b2}} of both teams requires a shared framework.",
+                    "blanks": [
+                      {
+                        "id": "b1",
+                        "answer": "put",
+                        "options": [
+                          "put",
+                          "puts",
+                          "putting"
+                        ]
+                      },
+                      {
+                        "id": "b2",
+                        "answer": "merger",
+                        "options": [
+                          "merger",
+                          "merge",
+                          "merged"
+                        ]
+                      }
+                    ],
+                    "feedbackOnError": {
+                      "type": "grammar",
+                      "explanation": "Tras 'to' el verbo va en infinitivo, y la nominalización 'merger' nombra el proceso.",
+                      "ruleRef": "gp-c1-nominalization"
+                    }
+                  },
+                  {
+                    "type": "SemanticMatch",
+                    "id": "es-en-c1-e3",
+                    "instructions": "Empareja cada intervención con la función que cumple.",
+                    "pairs": [
+                      {
+                        "left": "In other words, we need a clearer framework.",
+                        "right": "Reformulación",
+                        "register": "formal",
+                        "nuance": "Traduce la idea a términos más concretos."
+                      },
+                      {
+                        "left": "What I mean is that the timeline is unrealistic.",
+                        "right": "Aclaración correctiva",
+                        "register": "neutral",
+                        "nuance": "Corrige una interpretación equivocada."
+                      },
+                      {
+                        "left": "To put it another way, the merger saves time but costs trust.",
+                        "right": "Reformulación con matiz",
+                        "register": "formal",
+                        "nuance": "Añade una consecuencia que la versión anterior ocultaba."
+                      }
+                    ],
+                    "feedbackOnError": {
+                      "type": "register",
+                      "explanation": "Cada fórmula reformula con una intención distinta: concretar, corregir o reencuadrar.",
+                      "ruleRef": "gp-c1-reformulation"
+                    }
+                  },
+                  {
+                    "type": "ListenChoose",
+                    "id": "es-en-c1-e4",
+                    "audioText": "To put it another way, the merger saves time but costs trust.",
+                    "options": [
+                      "The merger has a hidden cost",
+                      "The merger saves trust",
+                      "The merger is impossible",
+                      "The timeline is the only issue"
+                    ],
+                    "correctIndex": 0,
+                    "feedbackOnError": {
+                      "type": "comprehension",
+                      "explanation": "La reformulación revela un coste implícito: la confianza.",
+                      "ruleRef": "gp-c1-reformulation"
+                    }
+                  },
+                  {
+                    "type": "AudioOnlyPrompt",
+                    "id": "es-en-c1-e5",
+                    "audioText": "What I mean is that the proposal is sound, but the timeline is unrealistic. In other words, we need more evidence before we commit.",
+                    "question": "What is the speaker's main point?",
+                    "options": [
+                      "The proposal is sound and ready to sign",
+                      "The proposal needs more evidence first",
+                      "The timeline is the only problem",
+                      "They reject the proposal completely"
+                    ],
+                    "correctIndex": 1,
+                    "allowSlowPlayback": true,
+                    "feedbackOnError": {
+                      "type": "comprehension",
+                      "explanation": "La hablante acepta el fondo de la propuesta pero condiciona el compromiso a más evidencia.",
+                      "ruleRef": "gp-c1-reformulation"
+                    }
+                  },
+                  {
+                    "type": "MultipleChoice",
+                    "id": "es-en-c1-e6",
+                    "question": "Completa: ___ I mean is that we need a clearer framework.",
+                    "options": [
+                      "What",
+                      "That",
+                      "Which"
+                    ],
+                    "correctIndex": 0,
+                    "feedbackOnError": {
+                      "type": "grammar",
+                      "explanation": "'What I mean is' es una estructura de énfasis: what introduce la cláusula que se aclara.",
+                      "ruleRef": "gp-c1-reformulation"
+                    }
+                  },
+                  {
+                    "type": "Translate",
+                    "id": "es-en-c1-e7",
+                    "sourcePhrase": "En otras palabras, la fusión exige un marco claro.",
+                    "correctTokens": [
+                      "In",
+                      "other",
+                      "words",
+                      "the",
+                      "merger",
+                      "requires",
+                      "a",
+                      "clear",
+                      "framework"
+                    ],
+                    "distractorTokens": [
+                      "another",
+                      "demands"
+                    ],
+                    "feedbackOnError": {
+                      "type": "grammar",
+                      "explanation": "La fórmula fija es 'in other words' (no 'in another words') y 'requires' es el verbo preciso.",
+                      "ruleRef": "gp-c1-reformulation"
+                    }
+                  },
+                  {
+                    "type": "ListenType",
+                    "id": "es-en-c1-e8",
+                    "transcription": "To put it another way, the proposal is sound but the timeline is unrealistic",
+                    "audioText": "To put it another way, the proposal is sound but the timeline is unrealistic",
+                    "feedbackOnError": {
+                      "type": "spelling",
+                      "explanation": "Escribe 'unrealistic' con 'un-' y '-istic'; 'sound' significa sólido en este contexto.",
+                      "ruleRef": "gp-c1-reformulation"
+                    }
+                  },
+                  {
+                    "type": "SpeakRepeat",
+                    "id": "es-en-c1-e9",
+                    "targetPhrase": "In other words, the merger requires a clearer framework.",
+                    "audioText": "In other words, the merger requires a clearer framework.",
+                    "feedbackOnError": {
+                      "type": "pronunciation",
+                      "explanation": "Enlaza 'merger requires' y marca el acento en 'clearer'.",
+                      "ruleRef": "gp-c1-reformulation"
+                    }
+                  },
+                  {
+                    "type": "MatchPairs",
+                    "id": "es-en-c1-e10",
+                    "pairs": [
+                      {
+                        "left": "paraphrase the idea",
+                        "right": "reformular la idea"
+                      },
+                      {
+                        "left": "a shared framework",
+                        "right": "un marco común"
+                      },
+                      {
+                        "left": "the underlying assumption",
+                        "right": "la premisa subyacente"
+                      },
+                      {
+                        "left": "a concise summary",
+                        "right": "un resumen conciso"
+                      }
+                    ],
+                    "feedbackOnError": {
+                      "type": "vocabulary",
+                      "explanation": "Las colocaciones fijan el significado: 'shared' implica acuerdo y 'underlying' lo no dicho.",
+                      "ruleRef": "gp-c1-nominalization"
+                    }
+                  },
+                  {
+                    "type": "FreeSpeakingPrompt",
+                    "id": "es-en-c1-e11",
+                    "prompt": "Reformula una propuesta ambigua para que todos la entiendan: di qué significa en la práctica y qué supuesto hay detrás.",
+                    "minTokens": 15,
+                    "conceptClusters": [
+                      [
+                        "in other words",
+                        "what I mean",
+                        "to put it another way"
+                      ],
+                      [
+                        "gist",
+                        "nuance",
+                        "meaning"
+                      ],
+                      [
+                        "assumption",
+                        "framework",
+                        "evidence"
+                      ]
+                    ],
+                    "grammarRuleRefs": [
+                      "gp-c1-reformulation",
+                      "gp-c1-nominalization"
+                    ],
+                    "timeLimitSeconds": 30,
+                    "minWpm": 70,
+                    "maxWpm": 160,
+                    "modelAnswer": "In other words, the proposal is simpler than it looks: what I mean is that the merger requires a shared framework and a clearer timeline. The underlying assumption is that both teams will accept the same rules.",
+                    "selfAssessmentCriteria": [
+                      "¿Reformulé la idea central?",
+                      "¿Expliqué el supuesto subyacente?",
+                      "¿Mantuve un registro formal?"
+                    ],
+                    "feedbackOnError": {
+                      "type": "grammar",
+                      "explanation": "La respuesta modelo reformula con dos fórmulas y explicita el supuesto con 'the underlying assumption is'.",
+                      "ruleRef": "gp-c1-reformulation"
+                    }
+                  }
+                ]
+              },
+              {
+                "id": "es-en-c1-un-1-ls-2",
+                "title": "Negociar con margen",
+                "cefrLevel": "C1",
+                "scenario": "Un cliente presiona para firmar un contrato antes de revisar una cláusula clave.",
+                "canDo": "Puedo negociar con condicionales mixtos, atenuar propuestas y proteger un margen de maniobra.",
+                "grammarPoints": [
+                  {
+                    "id": "gp-c1-mixed-conditionals",
+                    "label": "Condicionales mixtos",
+                    "description": "Had we reviewed..., we would have...; If we were to..., we could..."
+                  },
+                  {
+                    "id": "gp-c1-hedging-advanced",
+                    "label": "Atenuación avanzada",
+                    "description": "It would be reasonable to..., we might want to consider..., I'd rather not commit until..."
+                  }
+                ],
+                "vocabFrequencyBand": "8000-12000",
+                "culturalNotes": [
+                  {
+                    "idiom": "give someone the benefit of the doubt",
+                    "note": "Conceder una oportunidad antes de juzgar; en una negociación, permite mantener la relación sin renunciar al margen.",
+                    "translation": "conceder el beneficio de la duda"
+                  }
+                ],
+                "microLesson": {
+                  "title": "Negociar sin cerrar en falso",
+                  "goals": [
+                    "Usar condicionales mixtos para evaluar consecuencias pasadas.",
+                    "Atenuar propuestas y marcar límites con cortesía."
+                  ],
+                  "sections": [
+                    {
+                      "heading": "Condicionales que abren y cierran puertas",
+                      "body": "Had we reviewed the clause earlier, we would have had more leverage examina el pasado con consecuencia pasada. If we were to extend the deadline, we could ask for a provisional commitment proyecta una concesión condicional. La atenuación (it would be reasonable, we might want to) protege el margen.",
+                      "examples": [
+                        {
+                          "source": "De haber revisado la cláusula antes, habríamos tenido más margen.",
+                          "target": "Had we reviewed the clause earlier, we would have had more leverage.",
+                          "note": "Inversión con had en registro formal."
+                        },
+                        {
+                          "source": "Preferiría no comprometerme hasta que la salvedad sea mutua.",
+                          "target": "I'd rather not commit until the caveat is mutual.",
+                          "note": "Límite claro sin romper la relación."
+                        }
+                      ]
+                    }
+                  ]
+                },
+                "glossary": [
+                  {
+                    "term": "leverage",
+                    "translations": [
+                      "margen de maniobra",
+                      "poder de negociación"
+                    ]
+                  },
+                  {
+                    "term": "concession",
+                    "translations": [
+                      "concesión"
+                    ]
+                  },
+                  {
+                    "term": "counterpart",
+                    "translations": [
+                      "homólogo",
+                      "contraparte"
+                    ]
+                  },
+                  {
+                    "term": "provisional",
+                    "translations": [
+                      "provisional"
+                    ]
+                  },
+                  {
+                    "term": "commitment",
+                    "translations": [
+                      "compromiso"
+                    ]
+                  },
+                  {
+                    "term": "mutual",
+                    "translations": [
+                      "mutuo",
+                      "mutua"
+                    ]
+                  },
+                  {
+                    "term": "feasible",
+                    "translations": [
+                      "viable",
+                      "factible"
+                    ]
+                  },
+                  {
+                    "term": "caveat",
+                    "translations": [
+                      "salvedad",
+                      "advertencia"
+                    ]
+                  },
+                  {
+                    "term": "timeframe",
+                    "translations": [
+                      "plazo",
+                      "marco temporal"
+                    ]
+                  },
+                  {
+                    "term": "terms",
+                    "translations": [
+                      "condiciones",
+                      "términos"
+                    ]
+                  }
+                ],
+                "exercises": [
+                  {
+                    "type": "ClozeDragDrop",
+                    "id": "es-en-c1-e12",
+                    "passage": "Had we {{b1}} the clause earlier, the client {{b2}} more room to negotiate.",
+                    "blanks": [
+                      {
+                        "id": "b1",
+                        "answer": "reviewed",
+                        "options": [
+                          "reviewed",
+                          "review",
+                          "reviewing"
+                        ]
+                      },
+                      {
+                        "id": "b2",
+                        "answer": "would have given",
+                        "options": [
+                          "would have given",
+                          "will give",
+                          "gave"
+                        ]
+                      }
+                    ],
+                    "feedbackOnError": {
+                      "type": "grammar",
+                      "explanation": "La inversión 'Had we reviewed' sustituye a 'if we had reviewed' y pide 'would have given'.",
+                      "ruleRef": "gp-c1-mixed-conditionals"
+                    }
+                  },
+                  {
+                    "type": "ClozeDragDrop",
+                    "id": "es-en-c1-e13",
+                    "passage": "If we {{b1}} to extend the deadline, we {{b2}} ask for a provisional commitment in return.",
+                    "blanks": [
+                      {
+                        "id": "b1",
+                        "answer": "were",
+                        "options": [
+                          "were",
+                          "are",
+                          "will be"
+                        ]
+                      },
+                      {
+                        "id": "b2",
+                        "answer": "could",
+                        "options": [
+                          "could",
+                          "can",
+                          "will"
+                        ]
+                      }
+                    ],
+                    "feedbackOnError": {
+                      "type": "grammar",
+                      "explanation": "'If we were to' presenta la extensión como hipótesis y 'could' la contrapartida como posibilidad.",
+                      "ruleRef": "gp-c1-mixed-conditionals"
+                    }
+                  },
+                  {
+                    "type": "SemanticMatch",
+                    "id": "es-en-c1-e14",
+                    "instructions": "Empareja cada propuesta con su estrategia de atenuación.",
+                    "pairs": [
+                      {
+                        "left": "It would be reasonable to revisit the clause.",
+                        "right": "Propuesta atenuada",
+                        "register": "formal",
+                        "nuance": "Convierte la crítica en una sugerencia."
+                      },
+                      {
+                        "left": "We might want to consider a shorter timeframe.",
+                        "right": "Sugerencia diplomática",
+                        "register": "formal",
+                        "nuance": "El modal reduce la presión sobre el cliente."
+                      },
+                      {
+                        "left": "I'd rather not commit until we see the figures.",
+                        "right": "Límite prudente",
+                        "register": "neutral",
+                        "nuance": "Marca una condición sin rechazar de plano."
+                      }
+                    ],
+                    "feedbackOnError": {
+                      "type": "register",
+                      "explanation": "La atenuación no elimina el límite: lo formula de forma que la relación siga abierta.",
+                      "ruleRef": "gp-c1-hedging-advanced"
+                    }
+                  },
+                  {
+                    "type": "ListenChoose",
+                    "id": "es-en-c1-e15",
+                    "audioText": "If we were to extend the deadline, we could ask for a provisional commitment in return.",
+                    "options": [
+                      "Extending the deadline for free",
+                      "Trading an extension for a commitment",
+                      "Cancelling the deadline",
+                      "Signing without conditions"
+                    ],
+                    "correctIndex": 1,
+                    "feedbackOnError": {
+                      "type": "comprehension",
+                      "explanation": "La propuesta es un intercambio: más plazo a cambio de un compromiso provisional.",
+                      "ruleRef": "gp-c1-mixed-conditionals"
+                    }
+                  },
+                  {
+                    "type": "AudioOnlyPrompt",
+                    "id": "es-en-c1-e16",
+                    "audioText": "Had we reviewed the clause earlier, we would have had more leverage. I'd rather not sign until the caveat is mutual.",
+                    "question": "What does the speaker regret?",
+                    "options": [
+                      "Not reviewing the clause earlier",
+                      "Signing too late",
+                      "Asking for a caveat",
+                      "Extending the deadline"
+                    ],
+                    "correctIndex": 0,
+                    "allowSlowPlayback": true,
+                    "feedbackOnError": {
+                      "type": "comprehension",
+                      "explanation": "'Had we reviewed...' expresa arrepentimiento por una revisión que no ocurrió.",
+                      "ruleRef": "gp-c1-mixed-conditionals"
+                    }
+                  },
+                  {
+                    "type": "MultipleChoice",
+                    "id": "es-en-c1-e17",
+                    "question": "Completa: Had we reviewed the clause earlier, we ___ more room to negotiate.",
+                    "options": [
+                      "would have had",
+                      "would have",
+                      "had had"
+                    ],
+                    "correctIndex": 0,
+                    "feedbackOnError": {
+                      "type": "grammar",
+                      "explanation": "El resultado pasado exige 'would have' + participio: 'would have had'.",
+                      "ruleRef": "gp-c1-mixed-conditionals"
+                    }
+                  },
+                  {
+                    "type": "Translate",
+                    "id": "es-en-c1-e18",
+                    "sourcePhrase": "Si ampliáramos el plazo, podríamos pedir un compromiso provisional.",
+                    "correctTokens": [
+                      "If",
+                      "we",
+                      "extended",
+                      "the",
+                      "deadline",
+                      "we",
+                      "could",
+                      "ask",
+                      "for",
+                      "a",
+                      "provisional",
+                      "commitment"
+                    ],
+                    "distractorTokens": [
+                      "will",
+                      "extend"
+                    ],
+                    "feedbackOnError": {
+                      "type": "grammar",
+                      "explanation": "La hipótesis pide 'extended' (pasado) y 'could' para la consecuencia posible.",
+                      "ruleRef": "gp-c1-mixed-conditionals"
+                    }
+                  },
+                  {
+                    "type": "ListenType",
+                    "id": "es-en-c1-e19",
+                    "transcription": "I'd rather not commit until the caveat is mutual",
+                    "audioText": "I'd rather not commit until the caveat is mutual",
+                    "feedbackOnError": {
+                      "type": "spelling",
+                      "explanation": "Contrae 'I would' en 'I'd' y escribe 'caveat' con 'c-a-v-e-a-t'.",
+                      "ruleRef": "gp-c1-hedging-advanced"
+                    }
+                  },
+                  {
+                    "type": "SpeakRepeat",
+                    "id": "es-en-c1-e20",
+                    "targetPhrase": "Had we reviewed the clause earlier, we would have had more leverage.",
+                    "audioText": "Had we reviewed the clause earlier, we would have had more leverage.",
+                    "feedbackOnError": {
+                      "type": "pronunciation",
+                      "explanation": "Enlaza 'would have had' y no separes 'Had we' al empezar.",
+                      "ruleRef": "gp-c1-mixed-conditionals"
+                    }
+                  },
+                  {
+                    "type": "MatchPairs",
+                    "id": "es-en-c1-e21",
+                    "pairs": [
+                      {
+                        "left": "a provisional commitment",
+                        "right": "un compromiso provisional"
+                      },
+                      {
+                        "left": "more room to negotiate",
+                        "right": "más margen para negociar"
+                      },
+                      {
+                        "left": "revisit the clause",
+                        "right": "revisar la cláusula"
+                      },
+                      {
+                        "left": "mutual caveat",
+                        "right": "salvedad mutua"
+                      }
+                    ],
+                    "feedbackOnError": {
+                      "type": "vocabulary",
+                      "explanation": "Estas colocaciones aparecen en contratos y negociaciones formales.",
+                      "ruleRef": "gp-c1-hedging-advanced"
+                    }
+                  },
+                  {
+                    "type": "FreeSpeakingPrompt",
+                    "id": "es-en-c1-e22",
+                    "prompt": "Negocia un plazo más realista sin cerrar la puerta: reconoce la restricción del cliente, propone una alternativa condicional y pide una garantía.",
+                    "minTokens": 15,
+                    "conceptClusters": [
+                      [
+                        "if we were to",
+                        "had we",
+                        "we could"
+                      ],
+                      [
+                        "deadline",
+                        "timeframe",
+                        "margin"
+                      ],
+                      [
+                        "commitment",
+                        "caveat",
+                        "mutual"
+                      ]
+                    ],
+                    "grammarRuleRefs": [
+                      "gp-c1-mixed-conditionals",
+                      "gp-c1-hedging-advanced"
+                    ],
+                    "timeLimitSeconds": 30,
+                    "minWpm": 70,
+                    "maxWpm": 160,
+                    "modelAnswer": "If we were to extend the timeframe, we could ask for a provisional commitment in return. I'd rather not sign until the caveat is mutual, but it would be reasonable to revisit the clause together next week.",
+                    "selfAssessmentCriteria": [
+                      "¿Reconocí la restricción del cliente?",
+                      "¿Propuse una alternativa condicional?",
+                      "¿Pedí una garantía con cortesía?"
+                    ],
+                    "feedbackOnError": {
+                      "type": "grammar",
+                      "explanation": "La respuesta modelo combina una condicional de hipótesis con una atenuación y un límite explícito.",
+                      "ruleRef": "gp-c1-mixed-conditionals"
+                    }
+                  }
+                ]
+              },
+              {
+                "id": "es-en-c1-un-1-ls-3",
+                "title": "Informar con perspectiva",
+                "cefrLevel": "C1",
+                "scenario": "Un medio publica una versión incompleta de un informe interno y el equipo debe aclarar los hechos.",
+                "canDo": "Puedo informar de lo que otros dicen, distanciarme de la fuente y aclarar una versión distorsionada.",
+                "grammarPoints": [
+                  {
+                    "id": "gp-c1-passive-reporting",
+                    "label": "Pasiva de reporte",
+                    "description": "The report is said to..., the decision is believed to..."
+                  },
+                  {
+                    "id": "gp-c1-reporting-verbs",
+                    "label": "Verbos de reporte",
+                    "description": "claim, acknowledge, point out, note that, disclose."
+                  }
+                ],
+                "vocabFrequencyBand": "8000-12000",
+                "culturalNotes": [
+                  {
+                    "idiom": "set the record straight",
+                    "note": "Corregir públicamente una versión errónea; en una crisis de comunicación, ordena los hechos antes de opinar.",
+                    "translation": "dejar las cosas claras"
+                  }
+                ],
+                "microLesson": {
+                  "title": "Reportar sin comprometerse",
+                  "goals": [
+                    "Distanciarse de una fuente con pasivas de reporte.",
+                    "Aclarar hechos con verbos de reporte precisos."
+                  ],
+                  "sections": [
+                    {
+                      "heading": "La fuente no desaparece",
+                      "body": "The report is said to be incomplete deja la responsabilidad en una fuente externa. The board is believed to have approved the plan sitúa la creencia fuera del hablante. Al aclarar, conviene nombrar la fuente: the note points out that..., the memo acknowledges that...",
+                      "examples": [
+                        {
+                          "source": "Se dice que el informe está incompleto.",
+                          "target": "The report is said to be incomplete.",
+                          "note": "La pasiva evita atribuir la afirmación al hablante."
+                        },
+                        {
+                          "source": "El memo reconoce que faltaba una firma.",
+                          "target": "The memo acknowledges that a signature was missing.",
+                          "note": "Acknowledge asume el hecho sin dramatizarlo."
+                        }
+                      ]
+                    }
+                  ]
+                },
+                "glossary": [
+                  {
+                    "term": "allegedly",
+                    "translations": [
+                      "presuntamente",
+                      "según se dice"
+                    ]
+                  },
+                  {
+                    "term": "acknowledge",
+                    "translations": [
+                      "reconocer",
+                      "admitir"
+                    ]
+                  },
+                  {
+                    "term": "disclose",
+                    "translations": [
+                      "revelar",
+                      "divulgar"
+                    ]
+                  },
+                  {
+                    "term": "briefing",
+                    "translations": [
+                      "sesión informativa",
+                      "informe breve"
+                    ]
+                  },
+                  {
+                    "term": "statement",
+                    "translations": [
+                      "declaración",
+                      "comunicado"
+                    ]
+                  },
+                  {
+                    "term": "outline",
+                    "translations": [
+                      "resumir",
+                      "esbozar"
+                    ]
+                  },
+                  {
+                    "term": "highlight",
+                    "translations": [
+                      "destacar",
+                      "resaltar"
+                    ]
+                  },
+                  {
+                    "term": "verify",
+                    "translations": [
+                      "verificar",
+                      "comprobar"
+                    ]
+                  },
+                  {
+                    "term": "reliable",
+                    "translations": [
+                      "fiable"
+                    ]
+                  },
+                  {
+                    "term": "source",
+                    "translations": [
+                      "fuente"
+                    ]
+                  }
+                ],
+                "exercises": [
+                  {
+                    "type": "ClozeDragDrop",
+                    "id": "es-en-c1-e23",
+                    "passage": "The report {{b1}} to be incomplete, and the board {{b2}} to have approved it without a signature.",
+                    "blanks": [
+                      {
+                        "id": "b1",
+                        "answer": "is said",
+                        "options": [
+                          "is said",
+                          "says",
+                          "said"
+                        ]
+                      },
+                      {
+                        "id": "b2",
+                        "answer": "is believed",
+                        "options": [
+                          "is believed",
+                          "believes",
+                          "believed"
+                        ]
+                      }
+                    ],
+                    "feedbackOnError": {
+                      "type": "grammar",
+                      "explanation": "Las pasivas de reporte ('is said to be', 'is believed to have') atribuyen la información a una fuente externa.",
+                      "ruleRef": "gp-c1-passive-reporting"
+                    }
+                  },
+                  {
+                    "type": "ClozeDragDrop",
+                    "id": "es-en-c1-e24",
+                    "passage": "The memo {{b1}} that a signature was missing, but it does not {{b2}} who authorized the change.",
+                    "blanks": [
+                      {
+                        "id": "b1",
+                        "answer": "acknowledges",
+                        "options": [
+                          "acknowledges",
+                          "claims",
+                          "denies"
+                        ]
+                      },
+                      {
+                        "id": "b2",
+                        "answer": "disclose",
+                        "options": [
+                          "disclose",
+                          "discloses",
+                          "disclosed"
+                        ]
+                      }
+                    ],
+                    "feedbackOnError": {
+                      "type": "grammar",
+                      "explanation": "'Acknowledges' reconoce un hecho; tras 'does not' el verbo va en infinitivo: 'disclose'.",
+                      "ruleRef": "gp-c1-reporting-verbs"
+                    }
+                  },
+                  {
+                    "type": "SemanticMatch",
+                    "id": "es-en-c1-e25",
+                    "instructions": "Empareja cada titular con su grado de compromiso con la fuente.",
+                    "pairs": [
+                      {
+                        "left": "The report is said to be incomplete.",
+                        "right": "Fuente no identificada",
+                        "register": "formal",
+                        "nuance": "La pasiva difumina quién lo afirma."
+                      },
+                      {
+                        "left": "The memo acknowledges a missing signature.",
+                        "right": "Hecho reconocido",
+                        "register": "formal",
+                        "nuance": "La fuente asume el dato."
+                      },
+                      {
+                        "left": "Officials allegedly ignored the warning.",
+                        "right": "Acusación no probada",
+                        "register": "formal",
+                        "nuance": "'Allegedly' protege legalmente al medio."
+                      }
+                    ],
+                    "feedbackOnError": {
+                      "type": "register",
+                      "explanation": "El grado de compromiso cambia con la estructura: pasiva, verbo de reconocimiento o adverbio de cautela.",
+                      "ruleRef": "gp-c1-passive-reporting"
+                    }
+                  },
+                  {
+                    "type": "ListenChoose",
+                    "id": "es-en-c1-e26",
+                    "audioText": "The report is said to be incomplete, and the board is believed to have approved it without a signature.",
+                    "options": [
+                      "The speaker",
+                      "An unidentified source",
+                      "The board",
+                      "The newspaper"
+                    ],
+                    "correctIndex": 1,
+                    "feedbackOnError": {
+                      "type": "comprehension",
+                      "explanation": "Las pasivas de reporte presentan la información como atribuida a una fuente no identificada.",
+                      "ruleRef": "gp-c1-passive-reporting"
+                    }
+                  },
+                  {
+                    "type": "AudioOnlyPrompt",
+                    "id": "es-en-c1-e27",
+                    "audioText": "The memo acknowledges that a signature was missing. However, it does not disclose who authorized the change, so the record is still incomplete.",
+                    "question": "What is still unknown?",
+                    "options": [
+                      "Whether a signature was missing",
+                      "Who authorized the change",
+                      "Whether the memo exists",
+                      "Who wrote the report"
+                    ],
+                    "correctIndex": 1,
+                    "allowSlowPlayback": true,
+                    "feedbackOnError": {
+                      "type": "comprehension",
+                      "explanation": "El memo reconoce la firma ausente pero no revela quién autorizó el cambio.",
+                      "ruleRef": "gp-c1-reporting-verbs"
+                    }
+                  },
+                  {
+                    "type": "MultipleChoice",
+                    "id": "es-en-c1-e28",
+                    "question": "Completa: The decision ___ to have been taken before the review.",
+                    "options": [
+                      "is believed",
+                      "believes",
+                      "is believing"
+                    ],
+                    "correctIndex": 0,
+                    "feedbackOnError": {
+                      "type": "grammar",
+                      "explanation": "La pasiva de reporte usa 'is believed to have + participio' para un hecho anterior.",
+                      "ruleRef": "gp-c1-passive-reporting"
+                    }
+                  },
+                  {
+                    "type": "Translate",
+                    "id": "es-en-c1-e29",
+                    "sourcePhrase": "El comunicado reconoce que faltaba una firma, pero no revela quién autorizó el cambio.",
+                    "correctTokens": [
+                      "The",
+                      "statement",
+                      "acknowledges",
+                      "that",
+                      "a",
+                      "signature",
+                      "was",
+                      "missing",
+                      "but",
+                      "it",
+                      "does",
+                      "not",
+                      "disclose",
+                      "who",
+                      "authorized",
+                      "the",
+                      "change"
+                    ],
+                    "distractorTokens": [
+                      "denies",
+                      "revealed"
+                    ],
+                    "feedbackOnError": {
+                      "type": "grammar",
+                      "explanation": "Tras 'does not' el verbo va en infinitivo ('disclose'); 'acknowledges' reconoce sin negar.",
+                      "ruleRef": "gp-c1-reporting-verbs"
+                    }
+                  },
+                  {
+                    "type": "ListenType",
+                    "id": "es-en-c1-e30",
+                    "transcription": "The memo acknowledges that a signature was missing",
+                    "audioText": "The memo acknowledges that a signature was missing",
+                    "feedbackOnError": {
+                      "type": "spelling",
+                      "explanation": "'Acknowledges' lleva 'k' muda y 'signature' termina en '-ture'.",
+                      "ruleRef": "gp-c1-reporting-verbs"
+                    }
+                  },
+                  {
+                    "type": "SpeakRepeat",
+                    "id": "es-en-c1-e31",
+                    "targetPhrase": "The report is said to be incomplete, but the memo acknowledges the missing signature.",
+                    "audioText": "The report is said to be incomplete, but the memo acknowledges the missing signature.",
+                    "feedbackOnError": {
+                      "type": "pronunciation",
+                      "explanation": "Pronuncia 'acknowledges' con acento en 'now' y enlaza 'missing signature'.",
+                      "ruleRef": "gp-c1-reporting-verbs"
+                    }
+                  },
+                  {
+                    "type": "MatchPairs",
+                    "id": "es-en-c1-e32",
+                    "pairs": [
+                      {
+                        "left": "an unidentified source",
+                        "right": "una fuente no identificada"
+                      },
+                      {
+                        "left": "set the record straight",
+                        "right": "dejar las cosas claras"
+                      },
+                      {
+                        "left": "a press briefing",
+                        "right": "una rueda de prensa informativa"
+                      },
+                      {
+                        "left": "verify the facts",
+                        "right": "verificar los hechos"
+                      }
+                    ],
+                    "feedbackOnError": {
+                      "type": "vocabulary",
+                      "explanation": "El registro periodístico combina pasivas de reporte con verbos de verificación.",
+                      "ruleRef": "gp-c1-passive-reporting"
+                    }
+                  },
+                  {
+                    "type": "FreeSpeakingPrompt",
+                    "id": "es-en-c1-e33",
+                    "prompt": "Aclara una versión distorsionada de un informe: di qué se dice, qué se sabe con certeza y qué falta por verificar.",
+                    "minTokens": 15,
+                    "conceptClusters": [
+                      [
+                        "is said",
+                        "is believed",
+                        "allegedly"
+                      ],
+                      [
+                        "acknowledge",
+                        "verify",
+                        "disclose"
+                      ],
+                      [
+                        "source",
+                        "record",
+                        "statement"
+                      ]
+                    ],
+                    "grammarRuleRefs": [
+                      "gp-c1-passive-reporting",
+                      "gp-c1-reporting-verbs"
+                    ],
+                    "timeLimitSeconds": 30,
+                    "minWpm": 70,
+                    "maxWpm": 160,
+                    "modelAnswer": "The report is said to be incomplete, and the board is believed to have approved it without a signature. The memo acknowledges the missing signature, but it does not disclose who authorized the change, so we need to verify the facts before setting the record straight.",
+                    "selfAssessmentCriteria": [
+                      "¿Distancié la afirmación de la fuente?",
+                      "¿Aclaré un hecho verificado?",
+                      "¿Señalé lo que falta por comprobar?"
+                    ],
+                    "feedbackOnError": {
+                      "type": "grammar",
+                      "explanation": "La respuesta modelo alterna pasivas de reporte y verbos de reconocimiento para separar hechos de rumores.",
+                      "ruleRef": "gp-c1-passive-reporting"
+                    }
+                  }
+                ]
+              },
+              {
+                "id": "es-en-c1-un-1-ls-4",
+                "title": "Narrar con distancia",
+                "cefrLevel": "C1",
+                "scenario": "En una auditoría interna, hay que reconstruir una secuencia de decisiones sin acusar a nadie.",
+                "canDo": "Puedo narrar una cadena de hechos con cláusulas de participio y marcar la distancia entre lo observado y lo interpretado.",
+                "grammarPoints": [
+                  {
+                    "id": "gp-c1-participle-clauses",
+                    "label": "Cláusulas de participio",
+                    "description": "Having reviewed the data, the board decided...; Faced with..., the team..."
+                  },
+                  {
+                    "id": "gp-c1-distance-markers",
+                    "label": "Marcadores de distancia",
+                    "description": "apparently, reportedly, to all appearances, according to..."
+                  }
+                ],
+                "vocabFrequencyBand": "8000-12000",
+                "culturalNotes": [
+                  {
+                    "idiom": "put a spin on",
+                    "note": "Presentar un hecho con un sesgo favorable; en una auditoría, conviene distinguir el relato de los datos.",
+                    "translation": "darle un giro interesado"
+                  }
+                ],
+                "microLesson": {
+                  "title": "Narrar sin acusar",
+                  "goals": [
+                    "Encadenar acciones con cláusulas de participio.",
+                    "Separar lo observado de lo interpretado con marcadores de distancia."
+                  ],
+                  "sections": [
+                    {
+                      "heading": "El orden de los hechos",
+                      "body": "Having reviewed the data, the board decided to postpone the launch indica una acción anterior a la principal. Faced with a discrepancy, the team asked for a second audit sitúa la reacción. Los marcadores apparently y reportedly añaden distancia sin afirmar la causa.",
+                      "examples": [
+                        {
+                          "source": "Tras revisar los datos, el consejo decidió posponer el lanzamiento.",
+                          "target": "Having reviewed the data, the board decided to postpone the launch.",
+                          "note": "Having + participio marca anterioridad."
+                        },
+                        {
+                          "source": "Según se informa, la discrepancia surgió en marzo.",
+                          "target": "Reportedly, the discrepancy emerged in March.",
+                          "note": "El adverbio evita atribuir la información al hablante."
+                        }
+                      ]
+                    }
+                  ]
+                },
+                "glossary": [
+                  {
+                    "term": "discrepancy",
+                    "translations": [
+                      "discrepancia"
+                    ]
+                  },
+                  {
+                    "term": "sequence",
+                    "translations": [
+                      "secuencia"
+                    ]
+                  },
+                  {
+                    "term": "omission",
+                    "translations": [
+                      "omisión"
+                    ]
+                  },
+                  {
+                    "term": "bias",
+                    "translations": [
+                      "sesgo"
+                    ]
+                  },
+                  {
+                    "term": "coherent",
+                    "translations": [
+                      "coherente"
+                    ]
+                  },
+                  {
+                    "term": "version",
+                    "translations": [
+                      "versión"
+                    ]
+                  },
+                  {
+                    "term": "audit",
+                    "translations": [
+                      "auditoría"
+                    ]
+                  },
+                  {
+                    "term": "trace",
+                    "translations": [
+                      "rastrear",
+                      "seguir la pista"
+                    ]
+                  },
+                  {
+                    "term": "timeline",
+                    "translations": [
+                      "cronología"
+                    ]
+                  },
+                  {
+                    "term": "witness",
+                    "translations": [
+                      "testigo"
+                    ]
+                  }
+                ],
+                "exercises": [
+                  {
+                    "type": "ClozeDragDrop",
+                    "id": "es-en-c1-e34",
+                    "passage": "{{b1}} reviewed the data, the board decided to postpone the launch until the discrepancy was resolved.",
+                    "blanks": [
+                      {
+                        "id": "b1",
+                        "answer": "Having",
+                        "options": [
+                          "Having",
+                          "Have",
+                          "Had"
+                        ]
+                      }
+                    ],
+                    "feedbackOnError": {
+                      "type": "grammar",
+                      "explanation": "'Having reviewed' indica que la revisión ocurrió antes de la decisión principal.",
+                      "ruleRef": "gp-c1-participle-clauses"
+                    }
+                  },
+                  {
+                    "type": "ClozeDragDrop",
+                    "id": "es-en-c1-e35",
+                    "passage": "{{b1}} with an unexpected omission, the team requested a second audit. {{b2}}, the first report had been rushed.",
+                    "blanks": [
+                      {
+                        "id": "b1",
+                        "answer": "Faced",
+                        "options": [
+                          "Faced",
+                          "Face",
+                          "Facing"
+                        ]
+                      },
+                      {
+                        "id": "b2",
+                        "answer": "Apparently",
+                        "options": [
+                          "Apparently",
+                          "Apparent",
+                          "Appeared"
+                        ]
+                      }
+                    ],
+                    "feedbackOnError": {
+                      "type": "grammar",
+                      "explanation": "'Faced with' es una cláusula de participio fija; 'apparently' marca que la causa no está confirmada.",
+                      "ruleRef": "gp-c1-distance-markers"
+                    }
+                  },
+                  {
+                    "type": "SemanticMatch",
+                    "id": "es-en-c1-e36",
+                    "instructions": "Distingue si cada frase presenta un hecho o una interpretación.",
+                    "pairs": [
+                      {
+                        "left": "Having reviewed the data, the board postponed the launch.",
+                        "right": "Secuencia de hechos",
+                        "register": "formal",
+                        "nuance": "La cláusula de participio ordena las acciones."
+                      },
+                      {
+                        "left": "Reportedly, the first report had been rushed.",
+                        "right": "Información atribuida",
+                        "register": "formal",
+                        "nuance": "El adverbio marca distancia sobre la causa."
+                      },
+                      {
+                        "left": "To all appearances, the omission was deliberate.",
+                        "right": "Interpretación no probada",
+                        "register": "formal",
+                        "nuance": "La apariencia no equivale a una prueba."
+                      }
+                    ],
+                    "feedbackOnError": {
+                      "type": "register",
+                      "explanation": "Los marcadores de distancia separan la observación de la conclusión.",
+                      "ruleRef": "gp-c1-distance-markers"
+                    }
+                  },
+                  {
+                    "type": "ListenChoose",
+                    "id": "es-en-c1-e37",
+                    "audioText": "Having reviewed the data, the board decided to postpone the launch. Reportedly, the first report had been rushed.",
+                    "options": [
+                      "Certainty about the cause",
+                      "Distance from the source of the claim",
+                      "A direct accusation",
+                      "A new decision"
+                    ],
+                    "correctIndex": 1,
+                    "feedbackOnError": {
+                      "type": "comprehension",
+                      "explanation": "'Reportedly' atribuye la afirmación sin asumirla.",
+                      "ruleRef": "gp-c1-distance-markers"
+                    }
+                  },
+                  {
+                    "type": "AudioOnlyPrompt",
+                    "id": "es-en-c1-e38",
+                    "audioText": "Faced with an unexpected omission, the team requested a second audit. Apparently, the first report had been prepared in a hurry, but nobody has confirmed who signed it.",
+                    "question": "What is certain?",
+                    "options": [
+                      "Who signed the report",
+                      "That a second audit was requested",
+                      "That the omission was deliberate",
+                      "That the report was never written"
+                    ],
+                    "correctIndex": 1,
+                    "allowSlowPlayback": true,
+                    "feedbackOnError": {
+                      "type": "comprehension",
+                      "explanation": "La petición de auditoría es un hecho; la causa y la firma siguen sin confirmarse.",
+                      "ruleRef": "gp-c1-distance-markers"
+                    }
+                  },
+                  {
+                    "type": "MultipleChoice",
+                    "id": "es-en-c1-e39",
+                    "question": "Completa: ___ reviewed the data, the board postponed the launch.",
+                    "options": [
+                      "Having",
+                      "Have",
+                      "Had"
+                    ],
+                    "correctIndex": 0,
+                    "feedbackOnError": {
+                      "type": "grammar",
+                      "explanation": "La cláusula de participio perfecto se forma con 'Having + participio'.",
+                      "ruleRef": "gp-c1-participle-clauses"
+                    }
+                  },
+                  {
+                    "type": "Translate",
+                    "id": "es-en-c1-e40",
+                    "sourcePhrase": "Tras revisar la cronología, el equipo detectó una omisión y pidió una segunda auditoría.",
+                    "correctTokens": [
+                      "Having",
+                      "reviewed",
+                      "the",
+                      "timeline",
+                      "the",
+                      "team",
+                      "detected",
+                      "an",
+                      "omission",
+                      "and",
+                      "requested",
+                      "a",
+                      "second",
+                      "audit"
+                    ],
+                    "distractorTokens": [
+                      "review",
+                      "claimed"
+                    ],
+                    "feedbackOnError": {
+                      "type": "grammar",
+                      "explanation": "La acción anterior se marca con 'Having reviewed'; 'detected' y 'requested' mantienen la secuencia.",
+                      "ruleRef": "gp-c1-participle-clauses"
+                    }
+                  },
+                  {
+                    "type": "ListenType",
+                    "id": "es-en-c1-e41",
+                    "transcription": "Reportedly, the first report had been prepared in a hurry",
+                    "audioText": "Reportedly, the first report had been prepared in a hurry",
+                    "feedbackOnError": {
+                      "type": "spelling",
+                      "explanation": "'Reportedly' lleva '-edly' y 'hurried' duplica la 'r'.",
+                      "ruleRef": "gp-c1-distance-markers"
+                    }
+                  },
+                  {
+                    "type": "SpeakRepeat",
+                    "id": "es-en-c1-e42",
+                    "targetPhrase": "Having reviewed the data, the board decided to postpone the launch.",
+                    "audioText": "Having reviewed the data, the board decided to postpone the launch.",
+                    "feedbackOnError": {
+                      "type": "pronunciation",
+                      "explanation": "Haz una pausa breve tras 'data' y pronuncia 'postpone' con acento en 'pone'.",
+                      "ruleRef": "gp-c1-participle-clauses"
+                    }
+                  },
+                  {
+                    "type": "MatchPairs",
+                    "id": "es-en-c1-e43",
+                    "pairs": [
+                      {
+                        "left": "a coherent sequence",
+                        "right": "una secuencia coherente"
+                      },
+                      {
+                        "left": "trace the decision",
+                        "right": "rastrear la decisión"
+                      },
+                      {
+                        "left": "an unexpected omission",
+                        "right": "una omisión inesperada"
+                      },
+                      {
+                        "left": "a biased version",
+                        "right": "una versión sesgada"
+                      }
+                    ],
+                    "feedbackOnError": {
+                      "type": "vocabulary",
+                      "explanation": "El léxico de la auditoría nombra evidencias y sesgos con precisión.",
+                      "ruleRef": "gp-c1-distance-markers"
+                    }
+                  },
+                  {
+                    "type": "FreeSpeakingPrompt",
+                    "id": "es-en-c1-e44",
+                    "prompt": "Reconstruye una secuencia de decisiones para una auditoría: ordena los hechos, distingue lo confirmado de lo atribuido y evita acusar.",
+                    "minTokens": 15,
+                    "conceptClusters": [
+                      [
+                        "having reviewed",
+                        "faced with",
+                        "after"
+                      ],
+                      [
+                        "apparently",
+                        "reportedly",
+                        "according to"
+                      ],
+                      [
+                        "omission",
+                        "discrepancy",
+                        "audit"
+                      ]
+                    ],
+                    "grammarRuleRefs": [
+                      "gp-c1-participle-clauses",
+                      "gp-c1-distance-markers"
+                    ],
+                    "timeLimitSeconds": 30,
+                    "minWpm": 70,
+                    "maxWpm": 160,
+                    "modelAnswer": "Having reviewed the timeline, the team detected an omission and requested a second audit. Apparently, the first report had been prepared in a hurry, but nobody has confirmed who signed it, so we should separate the facts from the interpretations.",
+                    "selfAssessmentCriteria": [
+                      "¿Ordené los hechos con claridad?",
+                      "¿Distancié lo atribuido de lo confirmado?",
+                      "¿Evité acusar sin pruebas?"
+                    ],
+                    "feedbackOnError": {
+                      "type": "grammar",
+                      "explanation": "La respuesta modelo usa una cláusula de participio para la secuencia y adverbios de distancia para lo no confirmado.",
+                      "ruleRef": "gp-c1-participle-clauses"
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
   ]
 }
