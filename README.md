@@ -10,7 +10,7 @@ Código abierto · Sin anuncios · Sin backend · 100% offline · Vidas con
 recuperación rápida
 
 [![CI](https://github.com/MREmmanuel09/LinguaGo/actions/workflows/ci.yml/badge.svg)](https://github.com/MREmmanuel09/LinguaGo/actions/workflows/ci.yml)
-![version](https://img.shields.io/badge/version-2.2.0-blue)
+![version](https://img.shields.io/badge/version-2.3.0-blue)
 ![Kotlin](https://img.shields.io/badge/Kotlin-2.4-7F52FF?logo=kotlin&logoColor=white)
 ![Android](https://img.shields.io/badge/Android-26%2B-3DDC84?logo=android&logoColor=white)
 ![License](https://img.shields.io/badge/license-MIT-green)
@@ -40,7 +40,7 @@ flowchart LR
 
 ## Descargar APK
 
-**[LinguaGo 2.2.0 — APK global](https://github.com/MREmmanuel09/LinguaGo/releases/tag/v2.2.0)**
+**[LinguaGo 2.3.0 — APK global](https://github.com/MREmmanuel09/LinguaGo/releases/tag/v2.3.0)**
 (firma de desarrollo; instalación manual con "origen desconocido").
 
 - Android 8.0+ · APK global universal (~509 MB) o variante **arm64** (~392 MB), con los 4 cursos y sus modelos de voz.

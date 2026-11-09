@@ -206,7 +206,8 @@ el piloto (gate verde + humo manual en emulador API 37).
   de GitHub con APK universal y arm64.
 - **2.2.0 — publicado** (tag `v2.2.0`, versionCode 10): C1 completo en `es-fr`,
   `es-pt` y `es-ja` (72 lecciones/792 ejercicios nuevos; 84/790 por curso).
-- **2.3.0 — pendiente:** C2 completo en `es-en`.
+- **2.3.0 — publicado** (tag `v2.3.0`, versionCode 11): C2 completo en `es-en`
+  (18 lecciones/216 ejercicios; curso 111/1.069).
 - **2.4.0 — pendiente:** C2 completo en `es-fr`, `es-pt` y `es-ja`.
 
 **Total acumulado al final (versión 2.4.x):**

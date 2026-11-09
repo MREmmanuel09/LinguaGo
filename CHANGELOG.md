@@ -6,6 +6,30 @@ El formato sigue [Keep a Changelog](https://keepachangelog.com/es-ES/1.1.0/)
 y el versionado sigue [SemVer](https://semver.org/lang/es/).
 Pre-1.0: los cambios incompatibles pueden ocurrir en `0.y.0`.
 
+## [2.3.0] - 2026-11-08
+
+C2 completo en `es-en` (ADR-042): 18 lecciones y 216 ejercicios nuevos en el
+nivel de maestría, con doce ejercicios por lección y frases de hasta 48 tokens.
+
+### Añadido
+
+- **C2 en `es-en`:** nivel `es-en-lv-5` con cuatro unidades — registros y
+  matices (ironía seca, eufemismo, doble sentido, alusiones literarias),
+  dominios especializados (derecho, ciencia, humanidades, economía), lengua
+  culta (retórica, contraargumento, sintaxis, escritura evaluada) y síntesis y
+  evaluación (registro literario, metáforas culturales, especialización,
+  monólogo de examen y debate final).
+- **Cada lección** incluye micro-clase, glosario, nota cultural original, dos
+  focos gramaticales y un `FreeSpeakingPrompt` dimensionado para ≤10 s de voz.
+- **Contrato C2** fijado en los tests: 18 lecciones, 216 ejercicios, banda
+  `12000+`, 12 ejercicios por lección, `feedbackOnError` en todos los
+  ejercicios y un oral libre por lección.
+
+### Cambiado
+
+- `es-en` pasa de 93 a **111 lecciones** y de 853 a **1.069 ejercicios**; el
+  repositorio acumula **363 lecciones y 3.439 ejercicios**.
+
 ## [2.2.0] - 2026-11-08
 
 C1 completo en los tres cursos de arranque (ADR-042): francés, portugués y
