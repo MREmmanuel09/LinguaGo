@@ -17080,6 +17080,2960 @@
           ]
         }
       ]
-    }
+    },
+      {
+        "id": "es-pt-lv-c1",
+        "name": "C1 · Precisão e registro profissional",
+        "units": [
+          {
+            "id": "es-pt-lv-c1-un-1",
+            "title": "Consolidação B2 → C1",
+            "lessons": [
+              {
+                "id": "es-pt-c1-un-1-ls-1",
+                "title": "Reformular com precisão",
+                "cefrLevel": "C1",
+                "scenario": "Numa reunião, uma proposta soa vaga e duas equipes a interpretam de formas diferentes.",
+                "canDo": "Puedo reformular una idea compleja sin perder matices y explicitar las hipótesis que la sostienen.",
+                "grammarPoints": [
+                  {
+                    "id": "gp-pt-reformulacao",
+                    "label": "Reformulação",
+                    "description": "Em outras palavras, ou seja, dito de outro modo."
+                  },
+                  {
+                    "id": "gp-pt-nominalizacao",
+                    "label": "Nominalização",
+                    "description": "A redução, a implementação: ações convertidas em substantivos."
+                  }
+                ],
+                "vocabFrequencyBand": "8000-12000",
+                "culturalNotes": [
+                  {
+                    "idiom": "traduzir em miúdos",
+                    "note": "Explicar algo complicado em termos simples; numa reunião, ajuda a desfazer uma formulação ambígua sem rodeios.",
+                    "translation": "explicar en términos sencillos"
+                  }
+                ],
+                "microLesson": {
+                  "title": "Reformular sem perder o fio",
+                  "goals": [
+                    "Identificar a ideia central de uma proposta vaga.",
+                    "Reformular com estruturas formais e nomear a hipótese."
+                  ],
+                  "sections": [
+                    {
+                      "heading": "Três fórmulas para reformular",
+                      "body": "Em outras palavras esclarece a versão anterior; ou seja a retoma de forma mais simples; a nominalização (a redução, a implementação) endurece o registro. Depois da reformulação, explicite a hipótese: a hipótese subjacente é que...",
+                      "examples": [
+                        {
+                          "source": "Lo que quiero decir es que necesitamos más datos.",
+                          "target": "O que quero dizer é que precisamos de mais dados.",
+                          "note": "A fórmula reparadora evita repetir o desacordo."
+                        },
+                        {
+                          "source": "Dicho de otro modo, la reducción exige un marco común.",
+                          "target": "Dito de outro modo, a redução exige um marco comum.",
+                          "note": "Dito de outro modo reformula sem mudar o fundo."
+                        }
+                      ]
+                    }
+                  ]
+                },
+                "glossary": [
+                  {
+                    "term": "reformular",
+                    "translations": [
+                      "reformular"
+                    ]
+                  },
+                  {
+                    "term": "cerne",
+                    "translations": [
+                      "núcleo",
+                      "punto central"
+                    ]
+                  },
+                  {
+                    "term": "subjacente",
+                    "translations": [
+                      "subyacente"
+                    ]
+                  },
+                  {
+                    "term": "mal-entendido",
+                    "translations": [
+                      "malentendido"
+                    ]
+                  },
+                  {
+                    "term": "clareza",
+                    "translations": [
+                      "claridad"
+                    ]
+                  },
+                  {
+                    "term": "implícito",
+                    "translations": [
+                      "implícito"
+                    ]
+                  },
+                  {
+                    "term": "formulação",
+                    "translations": [
+                      "formulación"
+                    ]
+                  },
+                  {
+                    "term": "síntese",
+                    "translations": [
+                      "síntesis"
+                    ]
+                  },
+                  {
+                    "term": "ambiguidade",
+                    "translations": [
+                      "ambigüedad"
+                    ]
+                  },
+                  {
+                    "term": "preciso",
+                    "translations": [
+                      "preciso"
+                    ]
+                  }
+                ],
+                "exercises": [
+                  {
+                    "type": "ClozeDragDrop",
+                    "id": "es-pt-c1-e1",
+                    "passage": "Em {{b1}} palavras, o {{b2}} do projeto é mais simples do que parece.",
+                    "blanks": [
+                      {
+                        "id": "b1",
+                        "answer": "outras",
+                        "options": [
+                          "outras",
+                          "outra",
+                          "outros"
+                        ]
+                      },
+                      {
+                        "id": "b2",
+                        "answer": "cerne",
+                        "options": [
+                          "cerne",
+                          "censo",
+                          "centro"
+                        ]
+                      }
+                    ],
+                    "feedbackOnError": {
+                      "type": "grammar",
+                      "explanation": "A fórmula fixa é « em outras palavras »; « cerne » designa o ponto central.",
+                      "ruleRef": "gp-pt-reformulacao"
+                    }
+                  },
+                  {
+                    "type": "ClozeDragDrop",
+                    "id": "es-pt-c1-e2",
+                    "passage": "A {{b1}} do orçamento exige uma {{b2}} clara das prioridades.",
+                    "blanks": [
+                      {
+                        "id": "b1",
+                        "answer": "redução",
+                        "options": [
+                          "redução",
+                          "reduzir",
+                          "reduzido"
+                        ]
+                      },
+                      {
+                        "id": "b2",
+                        "answer": "formulação",
+                        "options": [
+                          "formulação",
+                          "formular",
+                          "formulada"
+                        ]
+                      }
+                    ],
+                    "feedbackOnError": {
+                      "type": "grammar",
+                      "explanation": "A nominalização (« a redução », « uma formulação ») dá registro formal e condensado.",
+                      "ruleRef": "gp-pt-nominalizacao"
+                    }
+                  },
+                  {
+                    "type": "SemanticMatch",
+                    "id": "es-pt-c1-e3",
+                    "instructions": "Associe cada intervenção à sua função.",
+                    "pairs": [
+                      {
+                        "left": "Em outras palavras, precisamos de um marco mais claro.",
+                        "right": "Reformulação",
+                        "register": "formal",
+                        "nuance": "Traduz a ideia em termos concretos."
+                      },
+                      {
+                        "left": "O que quero dizer é que o prazo é irrealista.",
+                        "right": "Esclarecimento corretivo",
+                        "register": "neutral",
+                        "nuance": "Corrige uma interpretação errada."
+                      },
+                      {
+                        "left": "Dito de outro modo, o projeto é mais rápido do que caro.",
+                        "right": "Reformulação com matiz",
+                        "register": "formal",
+                        "nuance": "Acrescenta uma consequência implícita."
+                      }
+                    ],
+                    "feedbackOnError": {
+                      "type": "register",
+                      "explanation": "Cada fórmula reformula com uma intenção precisa: concretizar, corrigir ou reenquadrar.",
+                      "ruleRef": "gp-pt-reformulacao"
+                    }
+                  },
+                  {
+                    "type": "ListenChoose",
+                    "id": "es-pt-c1-e4",
+                    "audioText": "Ou seja, a redução do orçamento exige uma formulação mais clara.",
+                    "options": [
+                      "O orçamento aumenta",
+                      "A redução precisa ser melhor formulada",
+                      "O orçamento foi aprovado",
+                      "A reunião foi cancelada"
+                    ],
+                    "correctIndex": 1,
+                    "feedbackOnError": {
+                      "type": "comprehension",
+                      "explanation": "« Ou seja » introduz uma reformulação da mesma exigência.",
+                      "ruleRef": "gp-pt-reformulacao"
+                    }
+                  },
+                  {
+                    "type": "AudioOnlyPrompt",
+                    "id": "es-pt-c1-e5",
+                    "audioText": "O que quero dizer é que a proposta é sólida, mas o calendário é irrealista. Em outras palavras, precisamos de mais dados antes de nos comprometermos.",
+                    "question": "Qual é o ponto principal?",
+                    "options": [
+                      "A proposta é sólida e está pronta para assinar",
+                      "Precisamos de mais dados antes de nos comprometermos",
+                      "O calendário é o único problema",
+                      "A proposta foi rejeitada"
+                    ],
+                    "correctIndex": 1,
+                    "allowSlowPlayback": true,
+                    "feedbackOnError": {
+                      "type": "comprehension",
+                      "explanation": "A falante aceita o fundo mas condiciona o compromisso a mais dados.",
+                      "ruleRef": "gp-pt-reformulacao"
+                    }
+                  },
+                  {
+                    "type": "MultipleChoice",
+                    "id": "es-pt-c1-e6",
+                    "question": "Completa: Em outras ___, o cerne é mais simples.",
+                    "options": [
+                      "palavras",
+                      "vias",
+                      "formas"
+                    ],
+                    "correctIndex": 0,
+                    "feedbackOnError": {
+                      "type": "grammar",
+                      "explanation": "A locução fixa é « em outras palavras ».",
+                      "ruleRef": "gp-pt-reformulacao"
+                    }
+                  },
+                  {
+                    "type": "Translate",
+                    "id": "es-pt-c1-e7",
+                    "sourcePhrase": "En otras palabras, la reducción del presupuesto exige una formulación clara.",
+                    "correctTokens": [
+                      "Em",
+                      "outras",
+                      "palavras",
+                      "a",
+                      "redução",
+                      "do",
+                      "orçamento",
+                      "exige",
+                      "uma",
+                      "formulação",
+                      "clara"
+                    ],
+                    "distractorTokens": [
+                      "outra",
+                      "demanda"
+                    ],
+                    "feedbackOnError": {
+                      "type": "grammar",
+                      "explanation": "« Em outras palavras » e « a redução » fixam o registro formal.",
+                      "ruleRef": "gp-pt-nominalizacao"
+                    }
+                  },
+                  {
+                    "type": "ListenType",
+                    "id": "es-pt-c1-e8",
+                    "transcription": "A redução do orçamento exige uma formulação mais clara",
+                    "audioText": "A redução do orçamento exige uma formulação mais clara",
+                    "feedbackOnError": {
+                      "type": "spelling",
+                      "explanation": "Escreve « redução » com « ç » e « orçamento » com « ç ».",
+                      "ruleRef": "gp-pt-nominalizacao"
+                    }
+                  },
+                  {
+                    "type": "SpeakRepeat",
+                    "id": "es-pt-c1-e9",
+                    "targetPhrase": "Em outras palavras, o cerne do projeto é mais simples do que parece.",
+                    "audioText": "Em outras palavras, o cerne do projeto é mais simples do que parece.",
+                    "feedbackOnError": {
+                      "type": "pronunciation",
+                      "explanation": "Liga « outras palavras » e acentua « cerne ».",
+                      "ruleRef": "gp-pt-reformulacao"
+                    }
+                  },
+                  {
+                    "type": "MatchPairs",
+                    "id": "es-pt-c1-e10",
+                    "pairs": [
+                      {
+                        "left": "reformular a ideia",
+                        "right": "reformular la idea"
+                      },
+                      {
+                        "left": "o cerne da questão",
+                        "right": "el núcleo del asunto"
+                      },
+                      {
+                        "left": "a hipótese subjacente",
+                        "right": "la hipótesis subyacente"
+                      },
+                      {
+                        "left": "uma síntese concisa",
+                        "right": "una síntesis concisa"
+                      }
+                    ],
+                    "feedbackOnError": {
+                      "type": "vocabulary",
+                      "explanation": "As colocações fixam o sentido: « subjacente » designa o que não se diz.",
+                      "ruleRef": "gp-pt-nominalizacao"
+                    }
+                  },
+                  {
+                    "type": "FreeSpeakingPrompt",
+                    "id": "es-pt-c1-e11",
+                    "prompt": "Reformula una propuesta ambigua para que todos la entiendan: di qué significa en la práctica y qué hipótesis hay detrás.",
+                    "minTokens": 15,
+                    "conceptClusters": [
+                      [
+                        "em outras palavras",
+                        "ou seja",
+                        "o que quero dizer"
+                      ],
+                      [
+                        "cerne",
+                        "formulação",
+                        "clareza"
+                      ],
+                      [
+                        "hipótese",
+                        "marco",
+                        "dados"
+                      ]
+                    ],
+                    "grammarRuleRefs": [
+                      "gp-pt-reformulacao",
+                      "gp-pt-nominalizacao"
+                    ],
+                    "timeLimitSeconds": 30,
+                    "minWpm": 70,
+                    "maxWpm": 160,
+                    "modelAnswer": "Em outras palavras, a redução do orçamento exige uma formulação mais clara: o cerne do projeto é mais simples do que parece. A hipótese subjacente é que as duas equipes aceitarão o mesmo marco.",
+                    "selfAssessmentCriteria": [
+                      "¿Reformulé la idea central?",
+                      "¿Expliqué la hipótesis subyacente?",
+                      "¿Mantuve un registro formal?"
+                    ],
+                    "feedbackOnError": {
+                      "type": "grammar",
+                      "explanation": "A resposta modelo reformula com duas fórmulas e explicita a hipótese.",
+                      "ruleRef": "gp-pt-reformulacao"
+                    }
+                  }
+                ]
+              },
+              {
+                "id": "es-pt-c1-un-1-ls-2",
+                "title": "Negociar com margem",
+                "cefrLevel": "C1",
+                "scenario": "Um cliente pressiona para assinar antes de reler uma cláusula decisiva.",
+                "canDo": "Puedo negociar con condicionales mixtos, atenuar propuestas y proteger un margen de maniobra.",
+                "grammarPoints": [
+                  {
+                    "id": "gp-pt-condicional-misto",
+                    "label": "Condicional misto",
+                    "description": "Se + imperfeito do subjuntivo, condicional; se tivéssemos..., teríamos..."
+                  },
+                  {
+                    "id": "gp-pt-atenuacao-c1",
+                    "label": "Atenuação avançada",
+                    "description": "Seria razoável..., preferiria não..., talvez pudéssemos..."
+                  }
+                ],
+                "vocabFrequencyBand": "8000-12000",
+                "culturalNotes": [
+                  {
+                    "idiom": "deixar margem para",
+                    "note": "Reservar espaço para negociar sem se comprometer; num contrato, protege a relação e a posição.",
+                    "translation": "dejar margen para"
+                  }
+                ],
+                "microLesson": {
+                  "title": "Negociar sem fechar a porta",
+                  "goals": [
+                    "Avaliar uma consequência passada com o condicional misto.",
+                    "Atenuar uma proposta e fixar um limite."
+                  ],
+                  "sections": [
+                    {
+                      "heading": "Condicionais que abrem e fecham",
+                      "body": "Se tivéssemos relido a cláusula antes, teríamos tido mais margem analisa o passado com consequência passada. Se estendêssemos o prazo, poderíamos pedir uma contrapartida projeta uma concessão. A atenuação (seria razoável, preferiria não) protege a margem.",
+                      "examples": [
+                        {
+                          "source": "De haber revisado la cláusula antes, habríamos tenido más margen.",
+                          "target": "Se tivéssemos relido a cláusula antes, teríamos tido mais margem.",
+                          "note": "Se + imperfeito do subjuntivo, condicional composto."
+                        },
+                        {
+                          "source": "Preferiría no comprometerme hasta que la salvedad sea mutua.",
+                          "target": "Preferiria não me comprometer até que a ressalva seja mútua.",
+                          "note": "Limite cortês com subjuntivo após « até que »."
+                        }
+                      ]
+                    }
+                  ]
+                },
+                "glossary": [
+                  {
+                    "term": "margem",
+                    "translations": [
+                      "margen"
+                    ]
+                  },
+                  {
+                    "term": "concessão",
+                    "translations": [
+                      "concesión"
+                    ]
+                  },
+                  {
+                    "term": "contrapartida",
+                    "translations": [
+                      "contrapartida"
+                    ]
+                  },
+                  {
+                    "term": "provisório",
+                    "translations": [
+                      "provisional"
+                    ]
+                  },
+                  {
+                    "term": "compromisso",
+                    "translations": [
+                      "compromiso"
+                    ]
+                  },
+                  {
+                    "term": "mútuo",
+                    "translations": [
+                      "mutuo"
+                    ]
+                  },
+                  {
+                    "term": "viável",
+                    "translations": [
+                      "viable"
+                    ]
+                  },
+                  {
+                    "term": "ressalva",
+                    "translations": [
+                      "salvedad"
+                    ]
+                  },
+                  {
+                    "term": "prazo",
+                    "translations": [
+                      "plazo"
+                    ]
+                  },
+                  {
+                    "term": "condições",
+                    "translations": [
+                      "condiciones"
+                    ]
+                  }
+                ],
+                "exercises": [
+                  {
+                    "type": "ClozeDragDrop",
+                    "id": "es-pt-c1-e12",
+                    "passage": "Se tivéssemos {{b1}} a cláusula antes, o cliente {{b2}} tido mais margem.",
+                    "blanks": [
+                      {
+                        "id": "b1",
+                        "answer": "relido",
+                        "options": [
+                          "relido",
+                          "reler",
+                          "relendo"
+                        ]
+                      },
+                      {
+                        "id": "b2",
+                        "answer": "teria",
+                        "options": [
+                          "teria",
+                          "terá",
+                          "tinha"
+                        ]
+                      }
+                    ],
+                    "feedbackOnError": {
+                      "type": "grammar",
+                      "explanation": "O condicional misto associa « se + imperfeito do subjuntivo » a « teria + particípio ».",
+                      "ruleRef": "gp-pt-condicional-misto"
+                    }
+                  },
+                  {
+                    "type": "ClozeDragDrop",
+                    "id": "es-pt-c1-e13",
+                    "passage": "Seria {{b1}} retomar o prazo, e preferiria não {{b2}} antes que a ressalva seja mútua.",
+                    "blanks": [
+                      {
+                        "id": "b1",
+                        "answer": "razoável",
+                        "options": [
+                          "razoável",
+                          "razão",
+                          "razoavelmente"
+                        ]
+                      },
+                      {
+                        "id": "b2",
+                        "answer": "assinar",
+                        "options": [
+                          "assinar",
+                          "assino",
+                          "assinei"
+                        ]
+                      }
+                    ],
+                    "feedbackOnError": {
+                      "type": "grammar",
+                      "explanation": "« Seria razoável » e « preferiria não + infinitivo » atenuam a demanda sem retirar o limite.",
+                      "ruleRef": "gp-pt-atenuacao-c1"
+                    }
+                  },
+                  {
+                    "type": "SemanticMatch",
+                    "id": "es-pt-c1-e14",
+                    "instructions": "Associe cada proposta à sua estratégia de atenuação.",
+                    "pairs": [
+                      {
+                        "left": "Seria razoável rever a cláusula.",
+                        "right": "Proposta atenuada",
+                        "register": "formal",
+                        "nuance": "Transforma a crítica em sugestão."
+                      },
+                      {
+                        "left": "Poderíamos considerar um prazo mais curto.",
+                        "right": "Sugestão diplomática",
+                        "register": "formal",
+                        "nuance": "O condicional reduz a pressão."
+                      },
+                      {
+                        "left": "Preferiria não me comprometer antes de ver os números.",
+                        "right": "Limite prudente",
+                        "register": "neutral",
+                        "nuance": "Fixa uma condição sem recusar."
+                      }
+                    ],
+                    "feedbackOnError": {
+                      "type": "register",
+                      "explanation": "A atenuação não elimina o limite: torna-o aceitável.",
+                      "ruleRef": "gp-pt-atenuacao-c1"
+                    }
+                  },
+                  {
+                    "type": "ListenChoose",
+                    "id": "es-pt-c1-e15",
+                    "audioText": "Se estendêssemos o prazo, poderíamos pedir um compromisso provisório em troca.",
+                    "options": [
+                      "Estender o prazo de graça",
+                      "Trocar prazo por compromisso",
+                      "Cancelar o prazo",
+                      "Assinar sem condições"
+                    ],
+                    "correctIndex": 1,
+                    "feedbackOnError": {
+                      "type": "comprehension",
+                      "explanation": "A proposta é uma troca: mais prazo por um compromisso provisório.",
+                      "ruleRef": "gp-pt-condicional-misto"
+                    }
+                  },
+                  {
+                    "type": "AudioOnlyPrompt",
+                    "id": "es-pt-c1-e16",
+                    "audioText": "Se tivéssemos relido a cláusula antes, teríamos tido mais margem. Preferiria não assinar até que a ressalva seja mútua.",
+                    "question": "Do que se arrepende a falante?",
+                    "options": [
+                      "De não ter relido a cláusula antes",
+                      "De ter assinado tarde demais",
+                      "De ter pedido uma ressalva",
+                      "De ter estendido o prazo"
+                    ],
+                    "correctIndex": 0,
+                    "allowSlowPlayback": true,
+                    "feedbackOnError": {
+                      "type": "comprehension",
+                      "explanation": "« Se tivéssemos relido... » expressa arrependimento por uma ação que não ocorreu.",
+                      "ruleRef": "gp-pt-condicional-misto"
+                    }
+                  },
+                  {
+                    "type": "MultipleChoice",
+                    "id": "es-pt-c1-e17",
+                    "question": "Completa: Se tivéssemos relido a cláusula, nós ___ tido mais margem.",
+                    "options": [
+                      "teríamos",
+                      "temos",
+                      "teremos"
+                    ],
+                    "correctIndex": 0,
+                    "feedbackOnError": {
+                      "type": "grammar",
+                      "explanation": "A consequência passada exige « teríamos + particípio ».",
+                      "ruleRef": "gp-pt-condicional-misto"
+                    }
+                  },
+                  {
+                    "type": "Translate",
+                    "id": "es-pt-c1-e18",
+                    "sourcePhrase": "Si ampliáramos el plazo, podríamos pedir un compromiso provisional.",
+                    "correctTokens": [
+                      "Se",
+                      "estendêssemos",
+                      "o",
+                      "prazo",
+                      "poderíamos",
+                      "pedir",
+                      "um",
+                      "compromisso",
+                      "provisório"
+                    ],
+                    "distractorTokens": [
+                      "estenderemos",
+                      "exigir"
+                    ],
+                    "feedbackOnError": {
+                      "type": "grammar",
+                      "explanation": "A hipótese pede o imperfeito do subjuntivo (« estendêssemos ») e o condicional (« poderíamos »).",
+                      "ruleRef": "gp-pt-condicional-misto"
+                    }
+                  },
+                  {
+                    "type": "ListenType",
+                    "id": "es-pt-c1-e19",
+                    "transcription": "Preferiria não assinar até que a ressalva seja mútua",
+                    "audioText": "Preferiria não assinar até que a ressalva seja mútua",
+                    "feedbackOnError": {
+                      "type": "spelling",
+                      "explanation": "Escreve « ressalva » com « ss » e « mútua » com acento.",
+                      "ruleRef": "gp-pt-atenuacao-c1"
+                    }
+                  },
+                  {
+                    "type": "SpeakRepeat",
+                    "id": "es-pt-c1-e20",
+                    "targetPhrase": "Se tivéssemos relido a cláusula antes, teríamos tido mais margem.",
+                    "audioText": "Se tivéssemos relido a cláusula antes, teríamos tido mais margem.",
+                    "feedbackOnError": {
+                      "type": "pronunciation",
+                      "explanation": "Liga « tivéssemos relido » e acentua « margem ».",
+                      "ruleRef": "gp-pt-condicional-misto"
+                    }
+                  },
+                  {
+                    "type": "MatchPairs",
+                    "id": "es-pt-c1-e21",
+                    "pairs": [
+                      {
+                        "left": "uma contrapartida mútua",
+                        "right": "una contrapartida mutua"
+                      },
+                      {
+                        "left": "mais margem de manobra",
+                        "right": "más margen de maniobra"
+                      },
+                      {
+                        "left": "rever a cláusula",
+                        "right": "revisar la cláusula"
+                      },
+                      {
+                        "left": "um compromisso provisório",
+                        "right": "un compromiso provisional"
+                      }
+                    ],
+                    "feedbackOnError": {
+                      "type": "vocabulary",
+                      "explanation": "Estas colocações pertencem ao registro da negociação formal.",
+                      "ruleRef": "gp-pt-atenuacao-c1"
+                    }
+                  },
+                  {
+                    "type": "FreeSpeakingPrompt",
+                    "id": "es-pt-c1-e22",
+                    "prompt": "Negocia un plazo más realista sin cerrar la puerta: reconoce la restricción del cliente, propone una alternativa condicional y pide una garantía.",
+                    "minTokens": 15,
+                    "conceptClusters": [
+                      [
+                        "se estendêssemos",
+                        "poderíamos",
+                        "seria"
+                      ],
+                      [
+                        "prazo",
+                        "margem",
+                        "condições"
+                      ],
+                      [
+                        "compromisso",
+                        "ressalva",
+                        "mútuo"
+                      ]
+                    ],
+                    "grammarRuleRefs": [
+                      "gp-pt-condicional-misto",
+                      "gp-pt-atenuacao-c1"
+                    ],
+                    "timeLimitSeconds": 30,
+                    "minWpm": 70,
+                    "maxWpm": 160,
+                    "modelAnswer": "Se estendêssemos o prazo, poderíamos pedir um compromisso provisório em troca. Preferiria não assinar até que a ressalva seja mútua, mas seria razoável rever a cláusula juntos.",
+                    "selfAssessmentCriteria": [
+                      "¿Reconocí la restricción del cliente?",
+                      "¿Propuse una alternativa condicional?",
+                      "¿Pedí una garantía con cortesía?"
+                    ],
+                    "feedbackOnError": {
+                      "type": "grammar",
+                      "explanation": "A resposta modelo combina condicional misto, atenuação e limite explícito.",
+                      "ruleRef": "gp-pt-condicional-misto"
+                    }
+                  }
+                ]
+              },
+              {
+                "id": "es-pt-c1-un-1-ls-3",
+                "title": "Informar com distanciamento",
+                "cefrLevel": "C1",
+                "scenario": "Um jornal publica uma versão incompleta de um relatório interno e a equipe precisa esclarecer os fatos.",
+                "canDo": "Puedo informar de lo que otros dicen, distanciarme de la fuente y aclarar una versión distorsionada.",
+                "grammarPoints": [
+                  {
+                    "id": "gp-pt-discurso-indireto",
+                    "label": "Discurso indireto",
+                    "description": "O relatório seria..., o conselho teria validado..."
+                  },
+                  {
+                    "id": "gp-pt-verbos-relato",
+                    "label": "Verbos de relato",
+                    "description": "afirmar, reconhecer, esclarecer, destacar."
+                  }
+                ],
+                "vocabFrequencyBand": "8000-12000",
+                "culturalNotes": [
+                  {
+                    "idiom": "botar as cartas na mesa",
+                    "note": "Mostrar abertamente os fatos e as intenções; numa crise de comunicação, evita que a versão distorcida prevaleça.",
+                    "translation": "poner las cartas sobre la mesa"
+                  }
+                ],
+                "microLesson": {
+                  "title": "Relatar sem se comprometer",
+                  "goals": [
+                    "Distanciar-se de uma fonte com o condicional de boato.",
+                    "Esclarecer os fatos com verbos de relato precisos."
+                  ],
+                  "sections": [
+                    {
+                      "heading": "A fonte não desaparece",
+                      "body": "O relatório seria incompleto atribui a informação a uma fonte externa. O conselho teria validado a decisão situa a crença fora do falante. Para esclarecer, nomeie a fonte: a nota reconhece que..., o comunicado esclarece que...",
+                      "examples": [
+                        {
+                          "source": "Se dice que el informe está incompleto.",
+                          "target": "O relatório seria incompleto.",
+                          "note": "O condicional de boato evita assumir a afirmação."
+                        },
+                        {
+                          "source": "La nota reconoce que faltaba una firma.",
+                          "target": "A nota reconhece que faltava uma assinatura.",
+                          "note": "Reconhecer assume o fato sem dramatizar."
+                        }
+                      ]
+                    }
+                  ]
+                },
+                "glossary": [
+                  {
+                    "term": "fonte",
+                    "translations": [
+                      "fuente"
+                    ]
+                  },
+                  {
+                    "term": "declaração",
+                    "translations": [
+                      "declaración"
+                    ]
+                  },
+                  {
+                    "term": "entrevista",
+                    "translations": [
+                      "entrevista"
+                    ]
+                  },
+                  {
+                    "term": "revelar",
+                    "translations": [
+                      "revelar"
+                    ]
+                  },
+                  {
+                    "term": "reconhecer",
+                    "translations": [
+                      "reconocer"
+                    ]
+                  },
+                  {
+                    "term": "verificar",
+                    "translations": [
+                      "verificar"
+                    ]
+                  },
+                  {
+                    "term": "confiável",
+                    "translations": [
+                      "fiable"
+                    ]
+                  },
+                  {
+                    "term": "destacar",
+                    "translations": [
+                      "destacar"
+                    ]
+                  },
+                  {
+                    "term": "boato",
+                    "translations": [
+                      "rumor"
+                    ]
+                  },
+                  {
+                    "term": "distorção",
+                    "translations": [
+                      "distorsión"
+                    ]
+                  }
+                ],
+                "exercises": [
+                  {
+                    "type": "ClozeDragDrop",
+                    "id": "es-pt-c1-e23",
+                    "passage": "O relatório {{b1}} incompleto, e o conselho {{b2}} validado a decisão sem assinatura.",
+                    "blanks": [
+                      {
+                        "id": "b1",
+                        "answer": "seria",
+                        "options": [
+                          "seria",
+                          "será",
+                          "seja"
+                        ]
+                      },
+                      {
+                        "id": "b2",
+                        "answer": "teria",
+                        "options": [
+                          "teria",
+                          "terá",
+                          "tinha"
+                        ]
+                      }
+                    ],
+                    "feedbackOnError": {
+                      "type": "grammar",
+                      "explanation": "O condicional de boato (« seria », « teria validado ») atribui a informação a uma fonte não confirmada.",
+                      "ruleRef": "gp-pt-discurso-indireto"
+                    }
+                  },
+                  {
+                    "type": "ClozeDragDrop",
+                    "id": "es-pt-c1-e24",
+                    "passage": "A nota {{b1}} que faltava uma assinatura, mas não {{b2}} quem autorizou a mudança.",
+                    "blanks": [
+                      {
+                        "id": "b1",
+                        "answer": "reconhece",
+                        "options": [
+                          "reconhece",
+                          "afirma",
+                          "nega"
+                        ]
+                      },
+                      {
+                        "id": "b2",
+                        "answer": "esclarece",
+                        "options": [
+                          "esclarece",
+                          "esclarecer",
+                          "esclareceu"
+                        ]
+                      }
+                    ],
+                    "feedbackOnError": {
+                      "type": "grammar",
+                      "explanation": "« Reconhece » assume o fato; depois de « não » o verbo fica no presente: « não esclarece ».",
+                      "ruleRef": "gp-pt-verbos-relato"
+                    }
+                  },
+                  {
+                    "type": "SemanticMatch",
+                    "id": "es-pt-c1-e25",
+                    "instructions": "Associe cada manchete ao seu grau de compromisso com a fonte.",
+                    "pairs": [
+                      {
+                        "left": "O relatório seria incompleto.",
+                        "right": "Fonte não identificada",
+                        "register": "formal",
+                        "nuance": "O condicional dilui a responsabilidade."
+                      },
+                      {
+                        "left": "A nota reconhece uma assinatura ausente.",
+                        "right": "Fato reconhecido",
+                        "register": "formal",
+                        "nuance": "A fonte assume a informação."
+                      },
+                      {
+                        "left": "Autoridades teriam ignorado o aviso.",
+                        "right": "Acusação não provada",
+                        "register": "formal",
+                        "nuance": "O condicional protege juridicamente o jornal."
+                      }
+                    ],
+                    "feedbackOnError": {
+                      "type": "register",
+                      "explanation": "O grau de compromisso muda com a estrutura e o verbo de relato.",
+                      "ruleRef": "gp-pt-discurso-indireto"
+                    }
+                  },
+                  {
+                    "type": "ListenChoose",
+                    "id": "es-pt-c1-e26",
+                    "audioText": "O relatório seria incompleto, e o conselho teria validado a decisão sem assinatura.",
+                    "options": [
+                      "O falante assume a informação",
+                      "Uma fonte não identificada está na origem da informação",
+                      "O conselho desmente",
+                      "O jornal assinou"
+                    ],
+                    "correctIndex": 1,
+                    "feedbackOnError": {
+                      "type": "comprehension",
+                      "explanation": "O condicional de boato apresenta a informação como atribuída a uma fonte externa.",
+                      "ruleRef": "gp-pt-discurso-indireto"
+                    }
+                  },
+                  {
+                    "type": "AudioOnlyPrompt",
+                    "id": "es-pt-c1-e27",
+                    "audioText": "A nota reconhece que faltava uma assinatura. No entanto, não esclarece quem autorizou a mudança, portanto o processo continua incompleto.",
+                    "question": "O que continua desconhecido?",
+                    "options": [
+                      "A assinatura ausente",
+                      "Quem autorizou a mudança",
+                      "A existência da nota",
+                      "O autor do relatório"
+                    ],
+                    "correctIndex": 1,
+                    "allowSlowPlayback": true,
+                    "feedbackOnError": {
+                      "type": "comprehension",
+                      "explanation": "A nota reconhece a assinatura ausente mas não revela quem autorizou a mudança.",
+                      "ruleRef": "gp-pt-verbos-relato"
+                    }
+                  },
+                  {
+                    "type": "MultipleChoice",
+                    "id": "es-pt-c1-e28",
+                    "question": "Completa: A decisão ___ ter sido tomada antes da auditoria.",
+                    "options": [
+                      "seria",
+                      "é",
+                      "seja"
+                    ],
+                    "correctIndex": 0,
+                    "feedbackOnError": {
+                      "type": "grammar",
+                      "explanation": "O condicional de boato seguido de infinitivo composto expressa informação não confirmada.",
+                      "ruleRef": "gp-pt-discurso-indireto"
+                    }
+                  },
+                  {
+                    "type": "Translate",
+                    "id": "es-pt-c1-e29",
+                    "sourcePhrase": "El comunicado reconoce que faltaba una firma, pero no revela quién autorizó el cambio.",
+                    "correctTokens": [
+                      "O",
+                      "comunicado",
+                      "reconhece",
+                      "que",
+                      "faltava",
+                      "uma",
+                      "assinatura",
+                      "mas",
+                      "não",
+                      "revela",
+                      "quem",
+                      "autorizou",
+                      "a",
+                      "mudança"
+                    ],
+                    "distractorTokens": [
+                      "nega",
+                      "mudou"
+                    ],
+                    "feedbackOnError": {
+                      "type": "grammar",
+                      "explanation": "« Reconhece » assume o fato e « não revela » mantém o presente.",
+                      "ruleRef": "gp-pt-verbos-relato"
+                    }
+                  },
+                  {
+                    "type": "ListenType",
+                    "id": "es-pt-c1-e30",
+                    "transcription": "O comunicado reconhece que faltava uma assinatura",
+                    "audioText": "O comunicado reconhece que faltava uma assinatura",
+                    "feedbackOnError": {
+                      "type": "spelling",
+                      "explanation": "Escreve « comunicado » sem acento e « assinatura » com « ss ».",
+                      "ruleRef": "gp-pt-verbos-relato"
+                    }
+                  },
+                  {
+                    "type": "SpeakRepeat",
+                    "id": "es-pt-c1-e31",
+                    "targetPhrase": "O relatório seria incompleto, mas a nota reconhece a assinatura ausente.",
+                    "audioText": "O relatório seria incompleto, mas a nota reconhece a assinatura ausente.",
+                    "feedbackOnError": {
+                      "type": "pronunciation",
+                      "explanation": "Liga « nota reconhece » e acentua « ausente ».",
+                      "ruleRef": "gp-pt-verbos-relato"
+                    }
+                  },
+                  {
+                    "type": "MatchPairs",
+                    "id": "es-pt-c1-e32",
+                    "pairs": [
+                      {
+                        "left": "uma fonte anônima",
+                        "right": "una fuente anónima"
+                      },
+                      {
+                        "left": "uma declaração oficial",
+                        "right": "una declaración oficial"
+                      },
+                      {
+                        "left": "verificar os fatos",
+                        "right": "verificar los hechos"
+                      },
+                      {
+                        "left": "um boato persistente",
+                        "right": "un rumor persistente"
+                      }
+                    ],
+                    "feedbackOnError": {
+                      "type": "vocabulary",
+                      "explanation": "O registro jornalístico distingue fonte, declaração e verificação.",
+                      "ruleRef": "gp-pt-discurso-indireto"
+                    }
+                  },
+                  {
+                    "type": "FreeSpeakingPrompt",
+                    "id": "es-pt-c1-e33",
+                    "prompt": "Aclara una versión distorsionada de un informe: di qué se dice, qué se sabe con certeza y qué falta por verificar.",
+                    "minTokens": 15,
+                    "conceptClusters": [
+                      [
+                        "seria",
+                        "teria",
+                        "segundo"
+                      ],
+                      [
+                        "reconhecer",
+                        "verificar",
+                        "revelar"
+                      ],
+                      [
+                        "fonte",
+                        "fatos",
+                        "comunicado"
+                      ]
+                    ],
+                    "grammarRuleRefs": [
+                      "gp-pt-discurso-indireto",
+                      "gp-pt-verbos-relato"
+                    ],
+                    "timeLimitSeconds": 30,
+                    "minWpm": 70,
+                    "maxWpm": 160,
+                    "modelAnswer": "O relatório seria incompleto, e o conselho teria validado a decisão sem assinatura. A nota reconhece a assinatura ausente, mas não esclarece quem autorizou a mudança, portanto precisamos verificar os fatos.",
+                    "selfAssessmentCriteria": [
+                      "¿Distancié la afirmación de la fuente?",
+                      "¿Aclaré un hecho verificado?",
+                      "¿Señalé lo que falta por comprobar?"
+                    ],
+                    "feedbackOnError": {
+                      "type": "grammar",
+                      "explanation": "A resposta modelo alterna condicional de boato e verbos de relato para separar fatos e boatos.",
+                      "ruleRef": "gp-pt-discurso-indireto"
+                    }
+                  }
+                ]
+              },
+              {
+                "id": "es-pt-c1-un-1-ls-4",
+                "title": "Narrar com distância",
+                "cefrLevel": "C1",
+                "scenario": "Numa auditoria interna, é preciso reconstruir uma sequência de decisões sem acusar ninguém.",
+                "canDo": "Puedo narrar una cadena de hechos con concordancia de tiempos y marcar la distancia entre lo observado y lo interpretado.",
+                "grammarPoints": [
+                  {
+                    "id": "gp-pt-concordancia-tempos",
+                    "label": "Concordância de tempos",
+                    "description": "Ela explicou que o serviço estava atrasado desde março."
+                  },
+                  {
+                    "id": "gp-pt-marcadores-distancia",
+                    "label": "Marcadores de distância",
+                    "description": "aparentemente, segundo, ao que parece."
+                  }
+                ],
+                "vocabFrequencyBand": "8000-12000",
+                "culturalNotes": [
+                  {
+                    "idiom": "seguir o fio da meada",
+                    "note": "Reconstruir uma história a partir de indícios; numa auditoria, permite separar os fatos das interpretações.",
+                    "translation": "seguir el hilo"
+                  }
+                ],
+                "microLesson": {
+                  "title": "Narrar sem acusar",
+                  "goals": [
+                    "Encadear ações com a concordância de tempos.",
+                    "Separar o observado do interpretado com marcadores de distância."
+                  ],
+                  "sections": [
+                    {
+                      "heading": "A ordem dos fatos",
+                      "body": "Depois de rever a cronologia, a equipe detectou uma omissão situa uma ação anterior. Ela explicou que o serviço estava atrasado desde março impõe a concordância. Os marcadores aparentemente e segundo acrescentam distância sem afirmar a causa.",
+                      "examples": [
+                        {
+                          "source": "Tras revisar la cronología, el equipo detectó una omisión.",
+                          "target": "Depois de rever a cronologia, a equipe detectou uma omissão.",
+                          "note": "Depois de + infinitivo marca a anterioridade."
+                        },
+                        {
+                          "source": "Según se informa, la discrepancia surgió en marzo.",
+                          "target": "Segundo as informações, a discrepância surgiu em março.",
+                          "note": "Segundo as informações evita assumir a fonte."
+                        }
+                      ]
+                    }
+                  ]
+                },
+                "glossary": [
+                  {
+                    "term": "cronologia",
+                    "translations": [
+                      "cronología"
+                    ]
+                  },
+                  {
+                    "term": "omissão",
+                    "translations": [
+                      "omisión"
+                    ]
+                  },
+                  {
+                    "term": "discrepância",
+                    "translations": [
+                      "discrepancia"
+                    ]
+                  },
+                  {
+                    "term": "viés",
+                    "translations": [
+                      "sesgo"
+                    ]
+                  },
+                  {
+                    "term": "coerente",
+                    "translations": [
+                      "coherente"
+                    ]
+                  },
+                  {
+                    "term": "versão",
+                    "translations": [
+                      "versión"
+                    ]
+                  },
+                  {
+                    "term": "auditoria",
+                    "translations": [
+                      "auditoría"
+                    ]
+                  },
+                  {
+                    "term": "rastrear",
+                    "translations": [
+                      "rastrear"
+                    ]
+                  },
+                  {
+                    "term": "testemunha",
+                    "translations": [
+                      "testigo"
+                    ]
+                  },
+                  {
+                    "term": "síntese",
+                    "translations": [
+                      "síntesis"
+                    ]
+                  }
+                ],
+                "exercises": [
+                  {
+                    "type": "ClozeDragDrop",
+                    "id": "es-pt-c1-e34",
+                    "passage": "Depois de {{b1}} a cronologia, a equipe {{b2}} uma omissão e pediu uma segunda auditoria.",
+                    "blanks": [
+                      {
+                        "id": "b1",
+                        "answer": "rever",
+                        "options": [
+                          "rever",
+                          "revisto",
+                          "revendo"
+                        ]
+                      },
+                      {
+                        "id": "b2",
+                        "answer": "detectou",
+                        "options": [
+                          "detectou",
+                          "detecta",
+                          "detectava"
+                        ]
+                      }
+                    ],
+                    "feedbackOnError": {
+                      "type": "grammar",
+                      "explanation": "« Depois de » pede o infinitivo (« rever ») e o pretérito perfeito expressa a ação principal.",
+                      "ruleRef": "gp-pt-concordancia-tempos"
+                    }
+                  },
+                  {
+                    "type": "ClozeDragDrop",
+                    "id": "es-pt-c1-e35",
+                    "passage": "{{b1}}, o primeiro relatório tinha sido redigido com pressa; {{b2}}, ninguém confirmou a assinatura.",
+                    "blanks": [
+                      {
+                        "id": "b1",
+                        "answer": "Aparentemente",
+                        "options": [
+                          "Aparentemente",
+                          "Aparente",
+                          "Aparência"
+                        ]
+                      },
+                      {
+                        "id": "b2",
+                        "answer": "no entanto",
+                        "options": [
+                          "no entanto",
+                          "portanto",
+                          "assim"
+                        ]
+                      }
+                    ],
+                    "feedbackOnError": {
+                      "type": "grammar",
+                      "explanation": "« Aparentemente » marca informação não confirmada; « no entanto » introduz a reserva.",
+                      "ruleRef": "gp-pt-marcadores-distancia"
+                    }
+                  },
+                  {
+                    "type": "SemanticMatch",
+                    "id": "es-pt-c1-e36",
+                    "instructions": "Distinga se cada frase apresenta um fato ou uma interpretação.",
+                    "pairs": [
+                      {
+                        "left": "Depois de rever a cronologia, a equipe detectou uma omissão.",
+                        "right": "Sequência de fatos",
+                        "register": "formal",
+                        "nuance": "A concordância ordena as ações."
+                      },
+                      {
+                        "left": "Segundo as informações, o primeiro relatório tinha sido redigido com pressa.",
+                        "right": "Informação atribuída",
+                        "register": "formal",
+                        "nuance": "O marcador de fonte mantém a distância."
+                      },
+                      {
+                        "left": "Aparentemente, a omissão foi deliberada.",
+                        "right": "Interpretação não provada",
+                        "register": "formal",
+                        "nuance": "A aparência não equivale a prova."
+                      }
+                    ],
+                    "feedbackOnError": {
+                      "type": "register",
+                      "explanation": "Os marcadores de distância separam a observação da conclusão.",
+                      "ruleRef": "gp-pt-marcadores-distancia"
+                    }
+                  },
+                  {
+                    "type": "ListenChoose",
+                    "id": "es-pt-c1-e37",
+                    "audioText": "Depois de rever a cronologia, a equipe detectou uma omissão. Aparentemente, o primeiro relatório tinha sido redigido com pressa.",
+                    "options": [
+                      "Certeza sobre a causa",
+                      "Distância em relação à fonte",
+                      "Acusação direta",
+                      "Nova decisão"
+                    ],
+                    "correctIndex": 1,
+                    "feedbackOnError": {
+                      "type": "comprehension",
+                      "explanation": "« Aparentemente » atribui a informação sem assumi-la.",
+                      "ruleRef": "gp-pt-marcadores-distancia"
+                    }
+                  },
+                  {
+                    "type": "AudioOnlyPrompt",
+                    "id": "es-pt-c1-e38",
+                    "audioText": "Depois de rever a cronologia, a equipe detectou uma omissão. Aparentemente, o primeiro relatório tinha sido redigido com pressa, mas ninguém confirmou a assinatura.",
+                    "question": "O que é certo?",
+                    "options": [
+                      "Quem assinou o relatório",
+                      "Que a equipe detectou uma omissão",
+                      "Que a omissão foi deliberada",
+                      "Que o relatório nunca foi escrito"
+                    ],
+                    "correctIndex": 1,
+                    "allowSlowPlayback": true,
+                    "feedbackOnError": {
+                      "type": "comprehension",
+                      "explanation": "A detecção da omissão é um fato; a causa e a assinatura continuam não confirmadas.",
+                      "ruleRef": "gp-pt-concordancia-tempos"
+                    }
+                  },
+                  {
+                    "type": "MultipleChoice",
+                    "id": "es-pt-c1-e39",
+                    "question": "Completa: Ela explicou que o serviço ___ atrasado desde março.",
+                    "options": [
+                      "estava",
+                      "está",
+                      "estará"
+                    ],
+                    "correctIndex": 0,
+                    "feedbackOnError": {
+                      "type": "grammar",
+                      "explanation": "A concordância de tempos pede o imperfeito após um verbo introdutor no passado.",
+                      "ruleRef": "gp-pt-concordancia-tempos"
+                    }
+                  },
+                  {
+                    "type": "Translate",
+                    "id": "es-pt-c1-e40",
+                    "sourcePhrase": "Tras revisar la cronología, el equipo detectó una omisión.",
+                    "correctTokens": [
+                      "Depois",
+                      "de",
+                      "rever",
+                      "a",
+                      "cronologia",
+                      "a",
+                      "equipe",
+                      "detectou",
+                      "uma",
+                      "omissão"
+                    ],
+                    "distractorTokens": [
+                      "revendo",
+                      "detectava"
+                    ],
+                    "feedbackOnError": {
+                      "type": "grammar",
+                      "explanation": "« Depois de rever » marca a anterioridade; o pretérito perfeito expressa o fato principal.",
+                      "ruleRef": "gp-pt-concordancia-tempos"
+                    }
+                  },
+                  {
+                    "type": "ListenType",
+                    "id": "es-pt-c1-e41",
+                    "transcription": "Segundo as informações, o primeiro relatório tinha sido redigido com pressa",
+                    "audioText": "Segundo as informações, o primeiro relatório tinha sido redigido com pressa",
+                    "feedbackOnError": {
+                      "type": "spelling",
+                      "explanation": "Escreve « informações » com « ç » e « pressa » com « ss ».",
+                      "ruleRef": "gp-pt-marcadores-distancia"
+                    }
+                  },
+                  {
+                    "type": "SpeakRepeat",
+                    "id": "es-pt-c1-e42",
+                    "targetPhrase": "Depois de rever a cronologia, a equipe detectou uma omissão.",
+                    "audioText": "Depois de rever a cronologia, a equipe detectou uma omissão.",
+                    "feedbackOnError": {
+                      "type": "pronunciation",
+                      "explanation": "Liga « depois de rever » e acentua « omissão ».",
+                      "ruleRef": "gp-pt-concordancia-tempos"
+                    }
+                  },
+                  {
+                    "type": "MatchPairs",
+                    "id": "es-pt-c1-e43",
+                    "pairs": [
+                      {
+                        "left": "rastrear a decisão",
+                        "right": "rastrear la decisión"
+                      },
+                      {
+                        "left": "uma omissão inesperada",
+                        "right": "una omisión inesperada"
+                      },
+                      {
+                        "left": "uma versão enviesada",
+                        "right": "una versión sesgada"
+                      },
+                      {
+                        "left": "uma discrepância inexplicada",
+                        "right": "una discrepancia sin explicar"
+                      }
+                    ],
+                    "feedbackOnError": {
+                      "type": "vocabulary",
+                      "explanation": "O léxico da auditoria distingue fatos, versões e discrepâncias.",
+                      "ruleRef": "gp-pt-marcadores-distancia"
+                    }
+                  },
+                  {
+                    "type": "FreeSpeakingPrompt",
+                    "id": "es-pt-c1-e44",
+                    "prompt": "Reconstruye una secuencia de decisiones para una auditoría: ordena los hechos, distingue lo confirmado de lo atribuido y evita acusar.",
+                    "minTokens": 15,
+                    "conceptClusters": [
+                      [
+                        "depois de rever",
+                        "tinha sido",
+                        "detectou"
+                      ],
+                      [
+                        "aparentemente",
+                        "segundo",
+                        "ao que parece"
+                      ],
+                      [
+                        "omissão",
+                        "discrepância",
+                        "auditoria"
+                      ]
+                    ],
+                    "grammarRuleRefs": [
+                      "gp-pt-concordancia-tempos",
+                      "gp-pt-marcadores-distancia"
+                    ],
+                    "timeLimitSeconds": 30,
+                    "minWpm": 70,
+                    "maxWpm": 160,
+                    "modelAnswer": "Depois de rever a cronologia, a equipe detectou uma omissão e pediu uma segunda auditoria. Aparentemente, o primeiro relatório tinha sido redigido com pressa, mas ninguém confirmou a assinatura.",
+                    "selfAssessmentCriteria": [
+                      "¿Ordené los hechos con claridad?",
+                      "¿Distancié lo atribuido de lo confirmado?",
+                      "¿Evité acusar sin pruebas?"
+                    ],
+                    "feedbackOnError": {
+                      "type": "grammar",
+                      "explanation": "A resposta modelo usa concordância de tempos e marcadores de distância para separar fatos e interpretações.",
+                      "ruleRef": "gp-pt-concordancia-tempos"
+                    }
+                  }
+                ]
+              }
+            ]
+          },
+        {
+          "id": "es-pt-lv-c1-un-2",
+          "title": "Argumentação e nuance",
+          "lessons": [
+            {
+              "id": "es-pt-c1-un-2-ls-1",
+              "title": "Conceder sem ceder",
+              "cefrLevel": "C1",
+              "scenario": "Num comitê, é preciso reconhecer os pontos válidos da proposta contrária sem abandonar a própria tese.",
+              "canDo": "Puedo conceder un punto con estructuras concesivas y reforzar mi tesis con inversión enfática.",
+              "grammarPoints": [
+                {
+                  "id": "gp-pt-concessao",
+                  "label": "Concessão",
+                  "description": "Embora + subjuntivo, ainda que, enquanto."
+                },
+                {
+                  "id": "gp-pt-inversao",
+                  "label": "Inversão enfática",
+                  "description": "Não só... mas também..., raramente..."
+                }
+              ],
+              "vocabFrequencyBand": "8000-12000",
+              "culturalNotes": [
+                {
+                  "idiom": "separar o joio do trigo",
+                  "note": "Distinguir o essencial do acessório; num debate, permite conceder um detalhe sem perder a tese.",
+                  "translation": "separar lo importante"
+                }
+              ],
+              "microLesson": {
+                "title": "Conceder para reforçar",
+                "goals": [
+                  "Reconhecer um ponto válido sem ceder o conjunto.",
+                  "Reforçar a tese com a inversão enfática."
+                ],
+                "sections": [
+                  {
+                    "heading": "A concessão como estratégia",
+                    "body": "Embora introduz o subjuntivo e concede uma ideia; enquanto compara duas realidades; ainda que acrescenta uma reserva. Depois, a inversão « não só... mas também » apresenta duas vantagens em ordem de força crescente.",
+                    "examples": [
+                      {
+                        "source": "Aunque la propuesta tiene mérito, no aborda el coste real.",
+                        "target": "Embora a proposta tenha mérito, ela não aborda o custo real.",
+                        "note": "Embora + subjuntivo."
+                      },
+                      {
+                        "source": "El plan no solo reduce costes, sino que también genera confianza.",
+                        "target": "O plano não só reduz custos, mas também gera confiança.",
+                        "note": "A inversão reforça a segunda vantagem."
+                      }
+                    ]
+                  }
+                ]
+              },
+              "glossary": [
+                {
+                  "term": "concessão",
+                  "translations": [
+                    "concesión"
+                  ]
+                },
+                {
+                  "term": "mérito",
+                  "translations": [
+                    "mérito"
+                  ]
+                },
+                {
+                  "term": "objeção",
+                  "translations": [
+                    "objeción"
+                  ]
+                },
+                {
+                  "term": "válido",
+                  "translations": [
+                    "válido"
+                  ]
+                },
+                {
+                  "term": "premissa",
+                  "translations": [
+                    "premisa"
+                  ]
+                },
+                {
+                  "term": "posição",
+                  "translations": [
+                    "postura"
+                  ]
+                },
+                {
+                  "term": "falha",
+                  "translations": [
+                    "fallo"
+                  ]
+                },
+                {
+                  "term": "embora",
+                  "translations": [
+                    "aunque"
+                  ]
+                }
+              ],
+              "exercises": [
+                {
+                  "type": "ClozeDragDrop",
+                  "id": "es-pt-c1-e45",
+                  "passage": "{{b1}} a proposta {{b2}} mérito, ela ignora o custo real.",
+                  "blanks": [
+                    {
+                      "id": "b1",
+                      "answer": "Embora",
+                      "options": [
+                        "Embora",
+                        "Apesar de",
+                        "Porém"
+                      ]
+                    },
+                    {
+                      "id": "b2",
+                      "answer": "tenha",
+                      "options": [
+                        "tenha",
+                        "tem",
+                        "terá"
+                      ]
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "« Embora » exige subjuntivo (« tenha »); « apesar de » pediria um substantivo.",
+                    "ruleRef": "gp-pt-concessao"
+                  }
+                },
+                {
+                  "type": "ClozeDragDrop",
+                  "id": "es-pt-c1-e46",
+                  "passage": "Não {{b1}} o plano reduz custos, mas também {{b2}} confiança.",
+                  "blanks": [
+                    {
+                      "id": "b1",
+                      "answer": "só",
+                      "options": [
+                        "só",
+                        "somente",
+                        "apenas"
+                      ]
+                    },
+                    {
+                      "id": "b2",
+                      "answer": "gera",
+                      "options": [
+                        "gera",
+                        "geram",
+                        "gerando"
+                      ]
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "A estrutura é « não só X, mas também Y »; o verbo concorda com « o plano »: « gera ».",
+                    "ruleRef": "gp-pt-inversao"
+                  }
+                },
+                {
+                  "type": "SemanticMatch",
+                  "id": "es-pt-c1-e47",
+                  "instructions": "Identifique o movimento argumentativo de cada frase.",
+                  "pairs": [
+                    {
+                      "left": "Embora a proposta tenha mérito, ela ignora o custo.",
+                      "right": "Concessão seguida de objeção",
+                      "register": "formal",
+                      "nuance": "Reconhece um ponto e depois o limita."
+                    },
+                    {
+                      "left": "O plano é mais barato, enquanto o antigo sistema era mais seguro.",
+                      "right": "Contraste de duas realidades",
+                      "register": "formal",
+                      "nuance": "Enquanto compara duas proposições completas."
+                    },
+                    {
+                      "left": "Não só reduz custos, mas também gera confiança.",
+                      "right": "Ênfase acumulativa",
+                      "register": "formal",
+                      "nuance": "A inversão reforça a segunda vantagem."
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "register",
+                    "explanation": "Conceder não é ceder: a concessão prepara uma objeção mais precisa.",
+                    "ruleRef": "gp-pt-concessao"
+                  }
+                },
+                {
+                  "type": "ListenChoose",
+                  "id": "es-pt-c1-e48",
+                  "audioText": "Embora a proposta tenha mérito, ela não aborda o custo real.",
+                  "options": [
+                    "A proposta é perfeita",
+                    "A proposta tem valor mas uma falha séria",
+                    "A proposta não tem mérito",
+                    "O custo é irrelevante"
+                  ],
+                  "correctIndex": 1,
+                  "feedbackOnError": {
+                    "type": "comprehension",
+                    "explanation": "A concessão reconhece o mérito e a objeção aponta o custo.",
+                    "ruleRef": "gp-pt-concessao"
+                  }
+                },
+                {
+                  "type": "AudioOnlyPrompt",
+                  "id": "es-pt-c1-e49",
+                  "audioText": "Embora a proposta tenha mérito, ela não aborda o custo real. Não só subestima o prazo, mas também ignora a falta de equipe.",
+                  "question": "Quais são as duas objeções?",
+                  "options": [
+                    "Custo e prazo apenas",
+                    "Prazo e equipe",
+                    "Equipe e custo",
+                    "Custo e equipe"
+                  ],
+                  "correctIndex": 1,
+                  "allowSlowPlayback": true,
+                  "feedbackOnError": {
+                    "type": "comprehension",
+                    "explanation": "A inversão « não só... mas também » acrescenta duas objeções: prazo e equipe.",
+                    "ruleRef": "gp-pt-inversao"
+                  }
+                },
+                {
+                  "type": "MultipleChoice",
+                  "id": "es-pt-c1-e50",
+                  "question": "Completa: Embora a proposta ___ mérito, ela ignora o custo.",
+                  "options": [
+                    "tenha",
+                    "tem",
+                    "terá"
+                  ],
+                  "correctIndex": 0,
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "« Embora » declencha o subjuntivo presente: « tenha ».",
+                    "ruleRef": "gp-pt-concessao"
+                  }
+                },
+                {
+                  "type": "Translate",
+                  "id": "es-pt-c1-e51",
+                  "sourcePhrase": "Aunque la propuesta tiene mérito, no aborda el coste real.",
+                  "correctTokens": [
+                    "Embora",
+                    "a",
+                    "proposta",
+                    "tenha",
+                    "mérito",
+                    "ela",
+                    "não",
+                    "aborda",
+                    "o",
+                    "custo",
+                    "real"
+                  ],
+                  "distractorTokens": [
+                    "Apesar",
+                    "abordar"
+                  ],
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "« Embora » + subjuntivo; « apesar de » não pode introduzir uma oração.",
+                    "ruleRef": "gp-pt-concessao"
+                  }
+                },
+                {
+                  "type": "ListenType",
+                  "id": "es-pt-c1-e52",
+                  "transcription": "Não só o plano reduz custos, mas também gera confiança",
+                  "audioText": "Não só o plano reduz custos, mas também gera confiança",
+                  "feedbackOnError": {
+                    "type": "spelling",
+                    "explanation": "Escreve « confiança » com « ç » e « também » com acento.",
+                    "ruleRef": "gp-pt-inversao"
+                  }
+                },
+                {
+                  "type": "SpeakRepeat",
+                  "id": "es-pt-c1-e53",
+                  "targetPhrase": "Embora a proposta tenha mérito, ela não aborda o custo real.",
+                  "audioText": "Embora a proposta tenha mérito, ela não aborda o custo real.",
+                  "feedbackOnError": {
+                    "type": "pronunciation",
+                    "explanation": "Liga « tenha mérito » e acentua « real ».",
+                    "ruleRef": "gp-pt-concessao"
+                  }
+                },
+                {
+                  "type": "MatchPairs",
+                  "id": "es-pt-c1-e54",
+                  "pairs": [
+                    {
+                      "left": "conceder um ponto",
+                      "right": "conceder un punto"
+                    },
+                    {
+                      "left": "uma objeção válida",
+                      "right": "una objeción válida"
+                    },
+                    {
+                      "left": "a premissa central",
+                      "right": "la premisa central"
+                    },
+                    {
+                      "left": "abordar o custo",
+                      "right": "abordar el coste"
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "O léxico do debate distingue premissas, objeções e concessões.",
+                    "ruleRef": "gp-pt-concessao"
+                  }
+                },
+                {
+                  "type": "FreeSpeakingPrompt",
+                  "id": "es-pt-c1-e55",
+                  "prompt": "Concede un punto al adversario sin renunciar a tu tesis: reconoce lo válido, marca el límite y reformula tu postura.",
+                  "minTokens": 15,
+                  "conceptClusters": [
+                    [
+                      "embora",
+                      "ainda que",
+                      "enquanto"
+                    ],
+                    [
+                      "mérito",
+                      "válido",
+                      "ponto"
+                    ],
+                    [
+                      "não só",
+                      "mas também",
+                      "limite"
+                    ]
+                  ],
+                  "grammarRuleRefs": [
+                    "gp-pt-concessao",
+                    "gp-pt-inversao"
+                  ],
+                  "timeLimitSeconds": 30,
+                  "minWpm": 70,
+                  "maxWpm": 160,
+                  "modelAnswer": "Embora a proposta tenha mérito, ela não aborda o custo real: não só subestima o prazo, mas também ignora a falta de equipe. Concedo o ponto sobre a flexibilidade, mas o orçamento continua sendo o limite.",
+                  "selfAssessmentCriteria": [
+                    "¿Reconocí un punto válido?",
+                    "¿Marqué el límite con claridad?",
+                    "¿Reforcé mi tesis sin agresividad?"
+                  ],
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "A resposta modelo concede com « embora », reforça com inversão e fecha com um limite explícito.",
+                    "ruleRef": "gp-pt-inversao"
+                  }
+                }
+              ]
+            },
+            {
+              "id": "es-pt-c1-un-2-ls-2",
+              "title": "Atenuar a crítica",
+              "cefrLevel": "C1",
+              "scenario": "Um colega apresenta um trabalho frágil e é preciso corrigi-lo sem desmotivar.",
+              "canDo": "Puedo expresar crítica con subjuntivo y atenuadores, separando la persona del problema.",
+              "grammarPoints": [
+                {
+                  "id": "gp-pt-subjuntivo-regime",
+                  "label": "Subjuntivo em regime complexo",
+                  "description": "É possível que..., duvido que..., faz sentido que..."
+                },
+                {
+                  "id": "gp-pt-atenuadores",
+                  "label": "Atenuadores",
+                  "description": "um tanto, de certa forma, até certo ponto."
+                }
+              ],
+              "vocabFrequencyBand": "8000-12000",
+              "culturalNotes": [
+                {
+                  "idiom": "dizer com jeitinho",
+                  "note": "Formular uma crítica com tato; no feedback, preserva a relação sem perder a precisão.",
+                  "translation": "decir con tacto"
+                }
+              ],
+              "microLesson": {
+                "title": "Criticar sem ferir",
+                "goals": [
+                  "Separar o julgamento do trabalho do julgamento da pessoa.",
+                  "Combinar subjuntivo e atenuadores para baixar a intensidade."
+                ],
+                "sections": [
+                  {
+                    "heading": "Baixar a intensidade sem perder a precisão",
+                    "body": "É possível que + subjuntivo abre uma hipótese; duvido que + subjuntivo expressa dúvida polida. Os atenuadores (um tanto, de certa forma, até certo ponto) reduzem o alcance sem apagar o problema.",
+                    "examples": [
+                      {
+                        "source": "Me pregunto si el tono fue demasiado directo.",
+                        "target": "Pergunto-me se o tom não foi um tanto direto demais.",
+                        "note": "A pergunta indireta atenua a correção."
+                      },
+                      {
+                        "source": "Es posible que el informe sea repetitivo en el medio.",
+                        "target": "É possível que o relatório seja um tanto repetitivo no meio.",
+                        "note": "Subjuntivo + atenuador."
+                      }
+                    ]
+                  }
+                ]
+              },
+              "glossary": [
+                {
+                  "term": "atenuar",
+                  "translations": [
+                    "atenuar"
+                  ]
+                },
+                {
+                  "term": "crítica",
+                  "translations": [
+                    "crítica"
+                  ]
+                },
+                {
+                  "term": "defensivo",
+                  "translations": [
+                    "defensivo"
+                  ]
+                },
+                {
+                  "term": "construtivo",
+                  "translations": [
+                    "constructivo"
+                  ]
+                },
+                {
+                  "term": "implícito",
+                  "translations": [
+                    "implícito"
+                  ]
+                },
+                {
+                  "term": "tom",
+                  "translations": [
+                    "tono"
+                  ]
+                },
+                {
+                  "term": "reconhecer",
+                  "translations": [
+                    "reconocer"
+                  ]
+                },
+                {
+                  "term": "melhoria",
+                  "translations": [
+                    "mejora"
+                  ]
+                }
+              ],
+              "exercises": [
+                {
+                  "type": "ClozeDragDrop",
+                  "id": "es-pt-c1-e56",
+                  "passage": "Pergunto-me se o tom atual não está {{b1}} defensivo demais.",
+                  "blanks": [
+                    {
+                      "id": "b1",
+                      "answer": "um tanto",
+                      "options": [
+                        "um tanto",
+                        "um tantos",
+                        "uma tanto"
+                      ]
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "« Um tanto » é o atenuador fixo que reduz a intensidade do adjetivo.",
+                    "ruleRef": "gp-pt-atenuadores"
+                  }
+                },
+                {
+                  "type": "ClozeDragDrop",
+                  "id": "es-pt-c1-e57",
+                  "passage": "É possível que a crítica {{b1}} válida, mas duvido que o momento {{b2}} o melhor.",
+                  "blanks": [
+                    {
+                      "id": "b1",
+                      "answer": "seja",
+                      "options": [
+                        "seja",
+                        "é",
+                        "será"
+                      ]
+                    },
+                    {
+                      "id": "b2",
+                      "answer": "seja",
+                      "options": [
+                        "seja",
+                        "é",
+                        "será"
+                      ]
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "« É possível que » e « duvido que » exigem o subjuntivo.",
+                    "ruleRef": "gp-pt-subjuntivo-regime"
+                  }
+                },
+                {
+                  "type": "SemanticMatch",
+                  "id": "es-pt-c1-e58",
+                  "instructions": "Associe cada crítica ao seu grau de atenuação.",
+                  "pairs": [
+                    {
+                      "left": "Pergunto-me se a formulação poderia ser mais clara.",
+                      "right": "Crítica muito atenuada",
+                      "register": "formal",
+                      "nuance": "Transforma o defeito em pergunta."
+                    },
+                    {
+                      "left": "O relatório está um tanto repetitivo no meio.",
+                      "right": "Crítica parcial",
+                      "register": "neutral",
+                      "nuance": "« Um tanto » limita a crítica."
+                    },
+                    {
+                      "left": "É possível que o argumento seja justo, mas falta prova.",
+                      "right": "Crítica concessiva",
+                      "register": "formal",
+                      "nuance": "Aceita a tese e ataca a prova."
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "register",
+                    "explanation": "A atenuação não esconde o problema: situa-o com precisão.",
+                    "ruleRef": "gp-pt-atenuadores"
+                  }
+                },
+                {
+                  "type": "ListenChoose",
+                  "id": "es-pt-c1-e59",
+                  "audioText": "Pergunto-me se o tom não foi um tanto direto demais na última reunião.",
+                  "options": [
+                    "A falante elogia o tom",
+                    "A falante sugere que o tom foi direto demais",
+                    "A falante exige desculpas",
+                    "A falante ignora o problema"
+                  ],
+                  "correctIndex": 1,
+                  "feedbackOnError": {
+                    "type": "comprehension",
+                    "explanation": "« Pergunto-me se » e « um tanto » apresentam a crítica como observação.",
+                    "ruleRef": "gp-pt-atenuadores"
+                  }
+                },
+                {
+                  "type": "AudioOnlyPrompt",
+                  "id": "es-pt-c1-e60",
+                  "audioText": "É possível que a crítica seja válida, mas duvido que o momento seja o melhor. Pergunto-me se poderíamos falar em particular primeiro.",
+                  "question": "O que sugere a falante?",
+                  "options": [
+                    "Ignorar a crítica",
+                    "Falar primeiro em particular",
+                    "Repetir a crítica em público",
+                    "Mudar a mensagem por completo"
+                  ],
+                  "correctIndex": 1,
+                  "allowSlowPlayback": true,
+                  "feedbackOnError": {
+                    "type": "comprehension",
+                    "explanation": "A proposta final suaviza o canal: primeiro em particular.",
+                    "ruleRef": "gp-pt-subjuntivo-regime"
+                  }
+                },
+                {
+                  "type": "MultipleChoice",
+                  "id": "es-pt-c1-e61",
+                  "question": "Completa: Duvido que o momento ___ o melhor.",
+                  "options": [
+                    "seja",
+                    "é",
+                    "será"
+                  ],
+                  "correctIndex": 0,
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "« Duvidar que » impõe o subjuntivo: « seja ».",
+                    "ruleRef": "gp-pt-subjuntivo-regime"
+                  }
+                },
+                {
+                  "type": "Translate",
+                  "id": "es-pt-c1-e62",
+                  "sourcePhrase": "Me pregunto si el comentario fue demasiado directo.",
+                  "correctTokens": [
+                    "Pergunto-me",
+                    "se",
+                    "o",
+                    "comentário",
+                    "foi",
+                    "um",
+                    "tanto",
+                    "direto",
+                    "demais"
+                  ],
+                  "distractorTokens": [
+                    "perguntava",
+                    "diretamente"
+                  ],
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "« Pergunto-me se » introduz pergunta indireta; « um tanto » atenua o adjetivo.",
+                    "ruleRef": "gp-pt-atenuadores"
+                  }
+                },
+                {
+                  "type": "ListenType",
+                  "id": "es-pt-c1-e63",
+                  "transcription": "É possível que a crítica seja válida, mas o momento parece pouco adequado",
+                  "audioText": "É possível que a crítica seja válida, mas o momento parece pouco adequado",
+                  "feedbackOnError": {
+                    "type": "spelling",
+                    "explanation": "Escreve « válida » com acento e « adequado » com « qu ».",
+                    "ruleRef": "gp-pt-subjuntivo-regime"
+                  }
+                },
+                {
+                  "type": "SpeakRepeat",
+                  "id": "es-pt-c1-e64",
+                  "targetPhrase": "Pergunto-me se a formulação poderia ser um tanto mais clara.",
+                  "audioText": "Pergunto-me se a formulação poderia ser um tanto mais clara.",
+                  "feedbackOnError": {
+                    "type": "pronunciation",
+                    "explanation": "Liga « poderia ser » e acentua « clara ».",
+                    "ruleRef": "gp-pt-atenuadores"
+                  }
+                },
+                {
+                  "type": "MatchPairs",
+                  "id": "es-pt-c1-e65",
+                  "pairs": [
+                    {
+                      "left": "um retorno construtivo",
+                      "right": "una crítica constructiva"
+                    },
+                    {
+                      "left": "uma reação defensiva",
+                      "right": "una reacción defensiva"
+                    },
+                    {
+                      "left": "até certo ponto",
+                      "right": "hasta cierto punto"
+                    },
+                    {
+                      "left": "uma crítica implícita",
+                      "right": "una crítica implícita"
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "O retorno construtivo nomeia comportamentos, não pessoas.",
+                    "ruleRef": "gp-pt-atenuadores"
+                  }
+                },
+                {
+                  "type": "FreeSpeakingPrompt",
+                  "id": "es-pt-c1-e66",
+                  "prompt": "Da feedback a un compañero sobre un informe flojo: reconoce lo que funciona, señala el problema con precisión y propone una mejora concreta.",
+                  "minTokens": 15,
+                  "conceptClusters": [
+                    [
+                      "pergunto-me",
+                      "um tanto",
+                      "possível"
+                    ],
+                    [
+                      "válido",
+                      "melhorar",
+                      "preciso"
+                    ],
+                    [
+                      "construtivo",
+                      "tom",
+                      "concreto"
+                    ]
+                  ],
+                  "grammarRuleRefs": [
+                    "gp-pt-subjuntivo-regime",
+                    "gp-pt-atenuadores"
+                  ],
+                  "timeLimitSeconds": 30,
+                  "minWpm": 70,
+                  "maxWpm": 160,
+                  "modelAnswer": "É possível que o argumento seja válido, mas a prova está um tanto frágil no meio. Pergunto-me se um exemplo mais claro ajudaria, e sugeriria falar em particular antes da reunião.",
+                  "selfAssessmentCriteria": [
+                    "¿Separé la persona del problema?",
+                    "¿Atenué sin perder precisión?",
+                    "¿Propuse una mejora concreta?"
+                  ],
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "A resposta modelo combina subjuntivo e atenuadores para criticar sem atacar.",
+                    "ruleRef": "gp-pt-atenuadores"
+                  }
+                }
+              ]
+            },
+            {
+              "id": "es-pt-c1-un-2-ls-3",
+              "title": "Ironia e duplo fio",
+              "cefrLevel": "C1",
+              "scenario": "Depois de uma reunião desastrosa, a equipe comenta o resultado com humor seco e segundas intenções.",
+              "canDo": "Puedo reconocer la ironía, usar la litote y formular preguntas retóricas sin perder el registro profesional.",
+              "grammarPoints": [
+                {
+                  "id": "gp-pt-litotes",
+                  "label": "Litote",
+                  "description": "Não é lá essas coisas, não deixa de ser interessante."
+                },
+                {
+                  "id": "gp-pt-perguntas-retoricas",
+                  "label": "Perguntas retóricas",
+                  "description": "Será que realmente...? Não é curioso que...?"
+                }
+              ],
+              "vocabFrequencyBand": "8000-12000",
+              "culturalNotes": [
+                {
+                  "idiom": "sorriso amarelo",
+                  "note": "Sorriso forçado que acompanha uma ironia; no trabalho, sinaliza um desagrado que não se diz.",
+                  "translation": "sonrisa forzada"
+                }
+              ],
+              "microLesson": {
+                "title": "Dizer o contrário sem mentir",
+                "goals": [
+                  "Reconhecer a litote como crítica indireta.",
+                  "Usar a pergunta retórica para apontar uma contradição."
+                ],
+                "sections": [
+                  {
+                    "heading": "A ironia como controle do tom",
+                    "body": "A litote (não é lá essas coisas, não deixa de ser interessante) atenua uma avaliação negativa; a pergunta retórica (será que realmente...? não é curioso que...?) aponta uma contradição sem acusar.",
+                    "examples": [
+                      {
+                        "source": "Los resultados son, como mínimo, decepcionantes.",
+                        "target": "Os resultados são, no mínimo, decepcionantes.",
+                        "note": "A litote reforça por redução."
+                      },
+                      {
+                        "source": "¿De verdad esperábamos que el plazo se cumpliera tras tres retrasos?",
+                        "target": "Será que realmente esperávamos que o prazo fosse cumprido após três atrasos?",
+                        "note": "A pergunta retórica responde sozinha."
+                      }
+                    ]
+                  }
+                ]
+              },
+              "glossary": [
+                {
+                  "term": "ironia",
+                  "translations": [
+                    "ironía"
+                  ]
+                },
+                {
+                  "term": "litote",
+                  "translations": [
+                    "litote (atenuación irónica)"
+                  ]
+                },
+                {
+                  "term": "implícito",
+                  "translations": [
+                    "implícito"
+                  ]
+                },
+                {
+                  "term": "exagero",
+                  "translations": [
+                    "exageración"
+                  ]
+                },
+                {
+                  "term": "segunda intenção",
+                  "translations": [
+                    "segunda intención"
+                  ]
+                },
+                {
+                  "term": "sutileza",
+                  "translations": [
+                    "sutileza"
+                  ]
+                },
+                {
+                  "term": "zombaria",
+                  "translations": [
+                    "burla"
+                  ]
+                },
+                {
+                  "term": "sarcasmo",
+                  "translations": [
+                    "sarcasmo"
+                  ]
+                }
+              ],
+              "exercises": [
+                {
+                  "type": "ClozeDragDrop",
+                  "id": "es-pt-c1-e67",
+                  "passage": "Os resultados não são {{b1}} essas coisas, é o mínimo que se pode {{b2}}.",
+                  "blanks": [
+                    {
+                      "id": "b1",
+                      "answer": "lá",
+                      "options": [
+                        "lá",
+                        "aqui",
+                        "já"
+                      ]
+                    },
+                    {
+                      "id": "b2",
+                      "answer": "dizer",
+                      "options": [
+                        "dizer",
+                        "dizendo",
+                        "dito"
+                      ]
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "A litote fixa é « não é lá essas coisas »; depois de « pode » vai o infinitivo.",
+                    "ruleRef": "gp-pt-litotes"
+                  }
+                },
+                {
+                  "type": "ClozeDragDrop",
+                  "id": "es-pt-c1-e68",
+                  "passage": "{{b1}} que realmente esperávamos que o prazo fosse cumprido após três atrasos? Não é {{b2}} que ninguém tenha avisado o problema?",
+                  "blanks": [
+                    {
+                      "id": "b1",
+                      "answer": "Será",
+                      "options": [
+                        "Será",
+                        "Seria",
+                        "Foi"
+                      ]
+                    },
+                    {
+                      "id": "b2",
+                      "answer": "curioso",
+                      "options": [
+                        "curioso",
+                        "curiosidade",
+                        "curiosamente"
+                      ]
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "« Será que » abre a pergunta retórica; após « não é » usa-se o adjetivo.",
+                    "ruleRef": "gp-pt-perguntas-retoricas"
+                  }
+                },
+                {
+                  "type": "SemanticMatch",
+                  "id": "es-pt-c1-e69",
+                  "instructions": "Associe cada frase ao que ela quer dizer de fato.",
+                  "pairs": [
+                    {
+                      "left": "Os resultados não são lá essas coisas.",
+                      "right": "Os resultados são ruins",
+                      "register": "formal",
+                      "nuance": "A litote evita a palavra negativa."
+                    },
+                    {
+                      "left": "Bom, tudo correu bem.",
+                      "right": "A reunião foi um desastre",
+                      "register": "informal",
+                      "nuance": "A ironia inverte o sentido literal."
+                    },
+                    {
+                      "left": "Não é curioso que ninguém tenha avisado o problema?",
+                      "right": "Alguém deveria ter avisado",
+                      "register": "formal",
+                      "nuance": "A pergunta retórica aponta uma omissão."
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "register",
+                    "explanation": "A ironia exige contexto compartilhado; sem ele, a mensagem se perde.",
+                    "ruleRef": "gp-pt-litotes"
+                  }
+                },
+                {
+                  "type": "ListenChoose",
+                  "id": "es-pt-c1-e70",
+                  "audioText": "Bom, tudo correu bem, se contarmos três atrasos como um sucesso.",
+                  "options": [
+                    "A reunião correu bem",
+                    "A reunião foi um desastre",
+                    "Os atrasos eram esperados",
+                    "A falante está confusa"
+                  ],
+                  "correctIndex": 1,
+                  "feedbackOnError": {
+                    "type": "comprehension",
+                    "explanation": "A condição final revela a ironia: os atrasos contradizem « correu bem ».",
+                    "ruleRef": "gp-pt-litotes"
+                  }
+                },
+                {
+                  "type": "AudioOnlyPrompt",
+                  "id": "es-pt-c1-e71",
+                  "audioText": "Os resultados não são lá essas coisas, é o mínimo que se pode dizer. Será que realmente esperávamos que o prazo fosse cumprido após três atrasos?",
+                  "question": "Qual é a atitude da falante?",
+                  "options": [
+                    "Satisfação com os resultados",
+                    "Ironia diante de resultados ruins",
+                    "Relato neutro",
+                    "Raiva do cliente"
+                  ],
+                  "correctIndex": 1,
+                  "allowSlowPlayback": true,
+                  "feedbackOnError": {
+                    "type": "comprehension",
+                    "explanation": "A litote e a pergunta retórica constroem uma crítica irônica.",
+                    "ruleRef": "gp-pt-perguntas-retoricas"
+                  }
+                },
+                {
+                  "type": "MultipleChoice",
+                  "id": "es-pt-c1-e72",
+                  "question": "Completa: Os resultados não são ___ essas coisas.",
+                  "options": [
+                    "lá",
+                    "aqui",
+                    "já"
+                  ],
+                  "correctIndex": 0,
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "A expressão fixa é « não é lá essas coisas ».",
+                    "ruleRef": "gp-pt-litotes"
+                  }
+                },
+                {
+                  "type": "Translate",
+                  "id": "es-pt-c1-e73",
+                  "sourcePhrase": "Los resultados son, como mínimo, decepcionantes.",
+                  "correctTokens": [
+                    "Os",
+                    "resultados",
+                    "são",
+                    "no",
+                    "mínimo",
+                    "decepcionantes"
+                  ],
+                  "distractorTokens": [
+                    "menos",
+                    "piores"
+                  ],
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "A fórmula fixa é « no mínimo »; o adjetivo concorda com « resultados ».",
+                    "ruleRef": "gp-pt-litotes"
+                  }
+                },
+                {
+                  "type": "ListenType",
+                  "id": "es-pt-c1-e74",
+                  "transcription": "Os resultados não são lá essas coisas, é o mínimo que se pode dizer",
+                  "audioText": "Os resultados não são lá essas coisas, é o mínimo que se pode dizer",
+                  "feedbackOnError": {
+                    "type": "spelling",
+                    "explanation": "Escreve « coisas » com « s » e « mínimo » com acento.",
+                    "ruleRef": "gp-pt-litotes"
+                  }
+                },
+                {
+                  "type": "SpeakRepeat",
+                  "id": "es-pt-c1-e75",
+                  "targetPhrase": "Bom, tudo correu bem, se contarmos três atrasos como um sucesso.",
+                  "audioText": "Bom, tudo correu bem, se contarmos três atrasos como um sucesso.",
+                  "feedbackOnError": {
+                    "type": "pronunciation",
+                    "explanation": "Mantém um tom plano em « correu bem » para a ironia passar.",
+                    "ruleRef": "gp-pt-litotes"
+                  }
+                },
+                {
+                  "type": "MatchPairs",
+                  "id": "es-pt-c1-e76",
+                  "pairs": [
+                    {
+                      "left": "um sorriso amarelo",
+                      "right": "una sonrisa forzada"
+                    },
+                    {
+                      "left": "uma pergunta retórica",
+                      "right": "una pregunta retórica"
+                    },
+                    {
+                      "left": "com segundas intenções",
+                      "right": "con segundas intenciones"
+                    },
+                    {
+                      "left": "um tom impasível",
+                      "right": "un tono impasible"
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "O léxico da ironia descreve o tom sem explicá-lo demais.",
+                    "ruleRef": "gp-pt-perguntas-retoricas"
+                  }
+                },
+                {
+                  "type": "FreeSpeakingPrompt",
+                  "id": "es-pt-c1-e77",
+                  "prompt": "Comenta un resultado decepcionante con ironía profesional: usa una litote, una pregunta retórica y evita el sarcasmo hiriente.",
+                  "minTokens": 15,
+                  "conceptClusters": [
+                    [
+                      "não são lá essas coisas",
+                      "no mínimo",
+                      "não deixa"
+                    ],
+                    [
+                      "será que",
+                      "não é curioso",
+                      "realmente"
+                    ],
+                    [
+                      "ironia",
+                      "sorriso amarelo",
+                      "sutil"
+                    ]
+                  ],
+                  "grammarRuleRefs": [
+                    "gp-pt-litotes",
+                    "gp-pt-perguntas-retoricas"
+                  ],
+                  "timeLimitSeconds": 30,
+                  "minWpm": 70,
+                  "maxWpm": 160,
+                  "modelAnswer": "Os resultados não são lá essas coisas, é o mínimo que se pode dizer. Será que realmente esperávamos que o prazo fosse cumprido após três atrasos? Bom, tudo correu bem, se contarmos três atrasos como um sucesso.",
+                  "selfAssessmentCriteria": [
+                    "¿Usé una litote?",
+                    "¿Formulé una pregunta retórica?",
+                    "¿Evité el sarcasmo hiriente?"
+                  ],
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "A resposta modelo encadeia litote e pergunta retórica em tom seco, sem insulto.",
+                    "ruleRef": "gp-pt-litotes"
+                  }
+                }
+              ]
+            },
+            {
+              "id": "es-pt-c1-un-2-ls-4",
+              "title": "Polêmica construtiva",
+              "cefrLevel": "C1",
+              "scenario": "Duas áreas defendem posições opostas sobre o lançamento e precisam chegar a uma proposta comum.",
+              "canDo": "Puedo moderar una polémica con marcadores de discurso y construir un contraargumento sin polarizar.",
+              "grammarPoints": [
+                {
+                  "id": "gp-pt-conectores-discurso",
+                  "label": "Conectores de discurso",
+                  "description": "certamente, todavia, por outro lado, no fim."
+                },
+                {
+                  "id": "gp-pt-contra-argumento",
+                  "label": "Contra-argumento",
+                  "description": "É verdade que..., alguns dirão que..., mesmo assim..."
+                }
+              ],
+              "vocabFrequencyBand": "8000-12000",
+              "culturalNotes": [
+                {
+                  "idiom": "fazer vistas grossas",
+                  "note": "Deixar passar algo de propósito para preservar a relação; num debate, pode ajudar a fechar um acordo sem humilhar ninguém.",
+                  "translation": "hacer la vista gorda"
+                }
+              ],
+              "microLesson": {
+                "title": "Discutir para construir",
+                "goals": [
+                  "Ordenar concessão, contra-argumento e síntese.",
+                  "Fechar a polêmica com uma proposta que integre as duas partes."
+                ],
+                "sections": [
+                  {
+                    "heading": "O mapa do contra-argumento",
+                    "body": "Certamente abre a concessão; todavia acrescenta a reserva; por outro lado separa posições; no fim resume o julgamento. O contra-argumento maduro reconhece a objeção antes de respondê-la.",
+                    "examples": [
+                      {
+                        "source": "Es cierto que faltan datos; aun así, la tendencia es clara.",
+                        "target": "É verdade que faltam dados; mesmo assim, a tendência é clara.",
+                        "note": "A concessão prepara a resposta."
+                      },
+                      {
+                        "source": "En conjunto, el riesgo de no actuar es mayor.",
+                        "target": "No fim, o risco de não agir é maior.",
+                        "note": "No fim resume o julgamento após comparar."
+                      }
+                    ]
+                  }
+                ]
+              },
+              "glossary": [
+                {
+                  "term": "polêmica",
+                  "translations": [
+                    "polémica"
+                  ]
+                },
+                {
+                  "term": "adversarial",
+                  "translations": [
+                    "confrontacional"
+                  ]
+                },
+                {
+                  "term": "terreno comum",
+                  "translations": [
+                    "terreno común"
+                  ]
+                },
+                {
+                  "term": "contra-argumento",
+                  "translations": [
+                    "contraargumento"
+                  ]
+                },
+                {
+                  "term": "retórica",
+                  "translations": [
+                    "retórica"
+                  ]
+                },
+                {
+                  "term": "polarização",
+                  "translations": [
+                    "polarización"
+                  ]
+                },
+                {
+                  "term": "respeitoso",
+                  "translations": [
+                    "respetuoso"
+                  ]
+                },
+                {
+                  "term": "desfecho",
+                  "translations": [
+                    "desenlace"
+                  ]
+                }
+              ],
+              "exercises": [
+                {
+                  "type": "ClozeDragDrop",
+                  "id": "es-pt-c1-e78",
+                  "passage": "{{b1}}, o plano tem riscos; {{b2}}, o custo da inação é maior.",
+                  "blanks": [
+                    {
+                      "id": "b1",
+                      "answer": "Certamente",
+                      "options": [
+                        "Certamente",
+                        "Certinho",
+                        "Certo"
+                      ]
+                    },
+                    {
+                      "id": "b2",
+                      "answer": "todavia",
+                      "options": [
+                        "todavia",
+                        "portanto",
+                        "assim"
+                      ]
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "« Certamente » concede e « todavia » acrescenta a reserva que reequilibra a balança.",
+                    "ruleRef": "gp-pt-conectores-discurso"
+                  }
+                },
+                {
+                  "type": "ClozeDragDrop",
+                  "id": "es-pt-c1-e79",
+                  "passage": "{{b1}} verdade que faltam dados, e alguns {{b2}} que a tendência basta.",
+                  "blanks": [
+                    {
+                      "id": "b1",
+                      "answer": "É",
+                      "options": [
+                        "É",
+                        "Era",
+                        "Seja"
+                      ]
+                    },
+                    {
+                      "id": "b2",
+                      "answer": "dirão",
+                      "options": [
+                        "dirão",
+                        "dizem",
+                        "dizer"
+                      ]
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "« É verdade que » reconhece a objeção e « alguns dirão que » a apresenta como posição alheia.",
+                    "ruleRef": "gp-pt-contra-argumento"
+                  }
+                },
+                {
+                  "type": "SemanticMatch",
+                  "id": "es-pt-c1-e80",
+                  "instructions": "Identifique a função de cada movimento do debate.",
+                  "pairs": [
+                    {
+                      "left": "Certamente, o plano tem riscos.",
+                      "right": "Concessão inicial",
+                      "register": "formal",
+                      "nuance": "Antecipa a objeção do adversário."
+                    },
+                    {
+                      "left": "Todavia, o custo da inação é maior.",
+                      "right": "Reserva que reequilibra",
+                      "register": "formal",
+                      "nuance": "Acrescenta um contrapeso após a concessão."
+                    },
+                    {
+                      "left": "No fim, o risco da inação é maior.",
+                      "right": "Síntese final",
+                      "register": "formal",
+                      "nuance": "Resume o julgamento após comparar."
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "register",
+                    "explanation": "Um debate construtivo ordena concessão, reserva e síntese.",
+                    "ruleRef": "gp-pt-conectores-discurso"
+                  }
+                },
+                {
+                  "type": "ListenChoose",
+                  "id": "es-pt-c1-e81",
+                  "audioText": "Certamente, o plano tem riscos; todavia, o custo da inação é maior.",
+                  "options": [
+                    "A falante rejeita o plano",
+                    "A falante pesa os riscos e conclui a favor",
+                    "A falante ignora os riscos",
+                    "A falante muda de assunto"
+                  ],
+                  "correctIndex": 1,
+                  "feedbackOnError": {
+                    "type": "comprehension",
+                    "explanation": "A reserva « todavia » reequilibra a concessão inicial.",
+                    "ruleRef": "gp-pt-conectores-discurso"
+                  }
+                },
+                {
+                  "type": "AudioOnlyPrompt",
+                  "id": "es-pt-c1-e82",
+                  "audioText": "É verdade que faltam dados, e alguns dirão que a tendência basta. No fim, preferiria testar a proposta em pequena escala a rejeitá-la.",
+                  "question": "O que propõe a falante?",
+                  "options": [
+                    "Rejeitar a proposta",
+                    "Testá-la em pequena escala",
+                    "Esperar dados perfeitos",
+                    "Aprovarla sem condições"
+                  ],
+                  "correctIndex": 1,
+                  "allowSlowPlayback": true,
+                  "feedbackOnError": {
+                    "type": "comprehension",
+                    "explanation": "A síntese propõe um teste piloto em vez de rejeição ou aprovação total.",
+                    "ruleRef": "gp-pt-contra-argumento"
+                  }
+                },
+                {
+                  "type": "MultipleChoice",
+                  "id": "es-pt-c1-e83",
+                  "question": "Completa: Certamente, o plano tem riscos; ___, o custo da inação é maior.",
+                  "options": [
+                    "todavia",
+                    "portanto",
+                    "assim"
+                  ],
+                  "correctIndex": 0,
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "« Todavia » acrescenta uma reserva após a concessão inicial.",
+                    "ruleRef": "gp-pt-conectores-discurso"
+                  }
+                },
+                {
+                  "type": "Translate",
+                  "id": "es-pt-c1-e84",
+                  "sourcePhrase": "Es cierto que nos faltan datos, pero la tendencia es clara.",
+                  "correctTokens": [
+                    "É",
+                    "verdade",
+                    "que",
+                    "faltam",
+                    "dados",
+                    "mas",
+                    "a",
+                    "tendência",
+                    "é",
+                    "clara"
+                  ],
+                  "distractorTokens": [
+                    "apesar",
+                    "faltando"
+                  ],
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "A concessão se constrói com « é verdade que... mas... ».",
+                    "ruleRef": "gp-pt-contra-argumento"
+                  }
+                },
+                {
+                  "type": "ListenType",
+                  "id": "es-pt-c1-e85",
+                  "transcription": "É verdade que faltam dados, mas alguns dirão que a tendência basta",
+                  "audioText": "É verdade que faltam dados, mas alguns dirão que a tendência basta",
+                  "feedbackOnError": {
+                    "type": "spelling",
+                    "explanation": "Escreve « tendência » com acento e « basta » sem acento.",
+                    "ruleRef": "gp-pt-contra-argumento"
+                  }
+                },
+                {
+                  "type": "SpeakRepeat",
+                  "id": "es-pt-c1-e86",
+                  "targetPhrase": "No fim, o risco da inação é maior do que o risco de testar.",
+                  "audioText": "No fim, o risco da inação é maior do que o risco de testar.",
+                  "feedbackOnError": {
+                    "type": "pronunciation",
+                    "explanation": "Marca « no fim » como fórmula de síntese e liga « risco da inação ».",
+                    "ruleRef": "gp-pt-conectores-discurso"
+                  }
+                },
+                {
+                  "type": "MatchPairs",
+                  "id": "es-pt-c1-e87",
+                  "pairs": [
+                    {
+                      "left": "um terreno comum",
+                      "right": "un terreno común"
+                    },
+                    {
+                      "left": "um contra-argumento",
+                      "right": "un contraargumento"
+                    },
+                    {
+                      "left": "no fim",
+                      "right": "en conjunto"
+                    },
+                    {
+                      "left": "um debate respeitoso",
+                      "right": "un debate respetuoso"
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "O vocabulário do debate nomeia posições, acordos e fechamentos.",
+                    "ruleRef": "gp-pt-conectores-discurso"
+                  }
+                },
+                {
+                  "type": "FreeSpeakingPrompt",
+                  "id": "es-pt-c1-e88",
+                  "prompt": "Modera una polémica sobre el lanzamiento: concede el riesgo, presenta el contraargumento, cierra con una síntesis y una propuesta común.",
+                  "minTokens": 15,
+                  "conceptClusters": [
+                    [
+                      "certamente",
+                      "é verdade",
+                      "todavia"
+                    ],
+                    [
+                      "no fim",
+                      "por outro lado",
+                      "mesmo assim"
+                    ],
+                    [
+                      "terreno comum",
+                      "desfecho",
+                      "proposta"
+                    ]
+                  ],
+                  "grammarRuleRefs": [
+                    "gp-pt-conectores-discurso",
+                    "gp-pt-contra-argumento"
+                  ],
+                  "timeLimitSeconds": 30,
+                  "minWpm": 70,
+                  "maxWpm": 160,
+                  "modelAnswer": "Certamente, o plano tem riscos; todavia, o custo da inação é maior. É verdade que faltam dados, mas alguns dirão que a tendência basta. No fim, eu testaria o projeto em pequena escala.",
+                  "selfAssessmentCriteria": [
+                    "¿Concedí el riesgo antes de responder?",
+                    "¿Construí un contraargumento?",
+                    "¿Cerré con una propuesta común?"
+                  ],
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "A resposta modelo ordena concessão, contra-argumento e síntese com conectores precisos.",
+                    "ruleRef": "gp-pt-conectores-discurso"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+        ]
+      }
   ]
 }
