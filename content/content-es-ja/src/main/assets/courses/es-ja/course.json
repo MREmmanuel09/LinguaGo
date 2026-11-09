@@ -16808,6 +16808,2961 @@
           ]
         }
       ]
-    }
+    },
+      {
+        "id": "es-ja-lv-c1",
+        "name": "C1 · 正確さと職場の敬語",
+        "units": [
+          {
+            "id": "es-ja-lv-c1-un-1",
+            "title": "B2→C1の総復習",
+            "lessons": [
+              {
+                "id": "es-ja-c1-un-1-ls-1",
+                "title": "正確に言い換える",
+                "cefrLevel": "C1",
+                "scenario": "会議で提案が曖昧に聞こえ、二つのチームが違う意味に受け取っています。",
+                "canDo": "Puedo reformular una idea compleja sin perder matices y explicitar las hipótesis que la sostienen.",
+                "grammarPoints": [
+                  {
+                    "id": "gp-ja-paraphrase",
+                    "label": "言い換え",
+                    "description": "つまり、要するに、言い換えれば。"
+                  },
+                  {
+                    "id": "gp-ja-nominalization",
+                    "label": "名詞化",
+                    "description": "こと・ので動作を名詞にし、簡潔で正式な表現にする。"
+                  }
+                ],
+                "vocabFrequencyBand": "8000-12000",
+                "culturalNotes": [
+                  {
+                    "idiom": "噛み砕いて言う",
+                    "note": "難しい内容をやさしい言葉にすること。会議では、曖昧な表現を遠回しにせず整理するのに役立つ。",
+                    "translation": "explicar de forma sencilla"
+                  }
+                ],
+                "microLesson": {
+                  "title": "核心を失わずに言い換える",
+                  "goals": [
+                    "曖昧な提案から中心的な考えを取り出す。",
+                    "正式な構造で言い換え、前提を明示する。"
+                  ],
+                  "sections": [
+                    {
+                      "heading": "言い換えの三つの表現",
+                      "body": "つまり は前の内容を整理し、要するに は中心だけを残し、言い換えれば は別の角度から同じ考えを示す。言い換えた後は、前提を明示する：暗黙の前提は〜ということです。",
+                      "examples": [
+                        {
+                          "source": "Lo que quiero decir es que necesitamos más datos.",
+                          "target": "つまり、もっとデータが必要だということです。",
+                          "note": "つまり で誤解を修復する。"
+                        },
+                        {
+                          "source": "Dicho de otro modo, la reducción exige un marco común.",
+                          "target": "言い換えれば、削減には共通の枠組みが必要です。",
+                          "note": "言い換えれば で再提示する。"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                "glossary": [
+                  {
+                    "term": "要約",
+                    "translations": [
+                      "resumen"
+                    ]
+                  },
+                  {
+                    "term": "核心",
+                    "translations": [
+                      "núcleo",
+                      "punto central"
+                    ]
+                  },
+                  {
+                    "term": "前提",
+                    "translations": [
+                      "premisa",
+                      "supuesto"
+                    ]
+                  },
+                  {
+                    "term": "誤解",
+                    "translations": [
+                      "malentendido"
+                    ]
+                  },
+                  {
+                    "term": "明確",
+                    "translations": [
+                      "claro",
+                      "preciso"
+                    ]
+                  },
+                  {
+                    "term": "表現",
+                    "translations": [
+                      "formulación",
+                      "expresión"
+                    ]
+                  },
+                  {
+                    "term": "曖昧",
+                    "translations": [
+                      "ambiguo"
+                    ]
+                  },
+                  {
+                    "term": "簡潔",
+                    "translations": [
+                      "conciso"
+                    ]
+                  }
+                ],
+                "exercises": [
+                  {
+                    "type": "ClozeDragDrop",
+                    "id": "es-ja-c1-e1",
+                    "passage": "{{b1}}、提案の{{b2}}は見た目より単純です。",
+                    "blanks": [
+                      {
+                        "id": "b1",
+                        "answer": "つまり",
+                        "options": [
+                          "つまり",
+                          "しかし",
+                          "だから"
+                        ]
+                      },
+                      {
+                        "id": "b2",
+                        "answer": "核心",
+                        "options": [
+                          "核心",
+                          "欠点",
+                          "予算"
+                        ]
+                      }
+                    ],
+                    "feedbackOnError": {
+                      "type": "grammar",
+                      "explanation": "つまり は言い換えを導き、核心 は中心的な考えを指す。",
+                      "ruleRef": "gp-ja-paraphrase"
+                    }
+                  },
+                  {
+                    "type": "ClozeDragDrop",
+                    "id": "es-ja-c1-e2",
+                    "passage": "予算の{{b1}}には、優先順位の{{b2}}な整理が必要です。",
+                    "blanks": [
+                      {
+                        "id": "b1",
+                        "answer": "削減",
+                        "options": [
+                          "削減",
+                          "増加",
+                          "延期"
+                        ]
+                      },
+                      {
+                        "id": "b2",
+                        "answer": "明確",
+                        "options": [
+                          "明確",
+                          "曖昧",
+                          "簡潔"
+                        ]
+                      }
+                    ],
+                    "feedbackOnError": {
+                      "type": "grammar",
+                      "explanation": "「予算の削減」は名詞化された動作で、明確な が名詞を修飾する。",
+                      "ruleRef": "gp-ja-nominalization"
+                    }
+                  },
+                  {
+                    "type": "SemanticMatch",
+                    "id": "es-ja-c1-e3",
+                    "instructions": "それぞれの介入の働きを選んでください。",
+                    "pairs": [
+                      {
+                        "left": "つまり、もっと明確な枠組みが必要です。",
+                        "right": "言い換え",
+                        "register": "formal",
+                        "nuance": "考えを具体的な言葉に置き換える。"
+                      },
+                      {
+                        "left": "要するに、期限は非現実的だということです。",
+                        "right": "要点の整理",
+                        "register": "formal",
+                        "nuance": "中心だけを残して簡潔にする。"
+                      },
+                      {
+                        "left": "言い換えれば、統合は時間を節約しますが信頼を失います。",
+                        "right": "含みのある言い換え",
+                        "register": "formal",
+                        "nuance": "前の表現が隠していた結果を加える。"
+                      }
+                    ],
+                    "feedbackOnError": {
+                      "type": "register",
+                      "explanation": "言い換えは、具体化・要約・再提示という異なる意図を持つ。",
+                      "ruleRef": "gp-ja-paraphrase"
+                    }
+                  },
+                  {
+                    "type": "ListenChoose",
+                    "id": "es-ja-c1-e4",
+                    "audioText": "つまり、予算の削減には、より明確な表現が必要です。",
+                    "options": [
+                      "予算が増える",
+                      "削減をより明確に表現する必要がある",
+                      "予算は承認された",
+                      "会議は中止された"
+                    ],
+                    "correctIndex": 1,
+                    "feedbackOnError": {
+                      "type": "comprehension",
+                      "explanation": "つまり の後に、同じ要求がより明確に言い換えられている。",
+                      "ruleRef": "gp-ja-paraphrase"
+                    }
+                  },
+                  {
+                    "type": "AudioOnlyPrompt",
+                    "id": "es-ja-c1-e5",
+                    "audioText": "提案はしっかりしていますが、スケジュールは非現実的です。つまり、コミットする前にもっとデータが必要だということです。",
+                    "question": "話し手の主な主張は何ですか。",
+                    "options": [
+                      "提案は完璧で、すぐに署名できる",
+                      "コミットする前にもっとデータが必要だ",
+                      "スケジュールだけが問題だ",
+                      "提案は完全に否定された"
+                    ],
+                    "correctIndex": 1,
+                    "allowSlowPlayback": true,
+                    "feedbackOnError": {
+                      "type": "comprehension",
+                      "explanation": "話し手は内容を認めつつ、コミットの条件としてデータを求めている。",
+                      "ruleRef": "gp-ja-paraphrase"
+                    }
+                  },
+                  {
+                    "type": "MultipleChoice",
+                    "id": "es-ja-c1-e6",
+                    "question": "Completa: ___、提案の核心はもっと単純です。",
+                    "options": [
+                      "つまり",
+                      "しかし",
+                      "だから"
+                    ],
+                    "correctIndex": 0,
+                    "feedbackOnError": {
+                      "type": "grammar",
+                      "explanation": "つまり は言い換えの接続表現。",
+                      "ruleRef": "gp-ja-paraphrase"
+                    }
+                  },
+                  {
+                    "type": "Translate",
+                    "id": "es-ja-c1-e7",
+                    "sourcePhrase": "En otras palabras, la reducción del presupuesto exige una formulación clara.",
+                    "correctTokens": [
+                      "つまり",
+                      "予算",
+                      "の",
+                      "削減",
+                      "に",
+                      "は",
+                      "明確",
+                      "な",
+                      "表現",
+                      "が",
+                      "必要",
+                      "です"
+                    ],
+                    "distractorTokens": [
+                      "しかし",
+                      "増加"
+                    ],
+                    "feedbackOnError": {
+                      "type": "grammar",
+                      "explanation": "つまり で言い換えを導き、「予算の削減には〜が必要です」で要求を述べる。",
+                      "ruleRef": "gp-ja-nominalization"
+                    }
+                  },
+                  {
+                    "type": "ListenType",
+                    "id": "es-ja-c1-e8",
+                    "transcription": "予算の削減には、より明確な表現が必要です",
+                    "audioText": "予算の削減には、より明確な表現が必要です",
+                    "feedbackOnError": {
+                      "type": "spelling",
+                      "explanation": "「削減」「明確」「表現」の漢字を正確に書く。",
+                      "ruleRef": "gp-ja-nominalization"
+                    }
+                  },
+                  {
+                    "type": "SpeakRepeat",
+                    "id": "es-ja-c1-e9",
+                    "targetPhrase": "つまり、提案の核心は見た目より単純です。",
+                    "audioText": "つまり、提案の核心は見た目より単純です。",
+                    "feedbackOnError": {
+                      "type": "pronunciation",
+                      "explanation": "つまり の後に短く間を取り、核心 を強調する。",
+                      "ruleRef": "gp-ja-paraphrase"
+                    }
+                  },
+                  {
+                    "type": "MatchPairs",
+                    "id": "es-ja-c1-e10",
+                    "pairs": [
+                      {
+                        "left": "言い換える",
+                        "right": "reformular"
+                      },
+                      {
+                        "left": "核心的な論点",
+                        "right": "punto central"
+                      },
+                      {
+                        "left": "暗黙の前提",
+                        "right": "premisa implícita"
+                      },
+                      {
+                        "left": "簡潔な要約",
+                        "right": "resumen conciso"
+                      }
+                    ],
+                    "feedbackOnError": {
+                      "type": "vocabulary",
+                      "explanation": "言い換えの語彙は、中心・前提・要約を区別する。",
+                      "ruleRef": "gp-ja-nominalization"
+                    }
+                  },
+                  {
+                    "type": "FreeSpeakingPrompt",
+                    "id": "es-ja-c1-e11",
+                    "prompt": "Reformula una propuesta ambigua para que todos la entiendan: di qué significa en la práctica y qué hipótesis hay detrás.",
+                    "minTokens": 12,
+                    "conceptClusters": [
+                      [
+                        "つまり",
+                        "要するに",
+                        "言い換えれば"
+                      ],
+                      [
+                        "核心",
+                        "表現",
+                        "明確"
+                      ],
+                      [
+                        "前提",
+                        "予算",
+                        "削減"
+                      ]
+                    ],
+                    "grammarRuleRefs": [
+                      "gp-ja-paraphrase",
+                      "gp-ja-nominalization"
+                    ],
+                    "timeLimitSeconds": 30,
+                    "minWpm": 60,
+                    "maxWpm": 150,
+                    "modelAnswer": "つまり 、 提案 の 核心 は 見た目 より 単純 です 。 予算 の 削減 に は 明確 な 表現 が 必要 で 、 暗黙 の 前提 は 両 チーム が 同じ 枠組み を 受け入れる こと です 。",
+                    "selfAssessmentCriteria": [
+                      "¿Reformulé la idea central?",
+                      "¿Expliqué la hipótesis subyacente?",
+                      "¿Mantuve un registro formal?"
+                    ],
+                    "feedbackOnError": {
+                      "type": "grammar",
+                      "explanation": "解答例は二つの言い換え表現を使い、前提を「〜ことです」で名詞化して示す。",
+                      "ruleRef": "gp-ja-paraphrase"
+                    }
+                  }
+                ]
+              },
+              {
+                "id": "es-ja-c1-un-1-ls-2",
+                "title": "余裕を持って交渉する",
+                "cefrLevel": "C1",
+                "scenario": "顧客が重要な条項を読み直す前に署名を急がせています。",
+                "canDo": "Puedo negociar con condicionales, atenuar propuestas y proteger un margen de maniobra.",
+                "grammarPoints": [
+                  {
+                    "id": "gp-ja-conditional-c1",
+                    "label": "条件表現",
+                    "description": "〜としたら、〜ば、〜なら。"
+                  },
+                  {
+                    "id": "gp-ja-hedging-c1",
+                    "label": "緩和表現",
+                    "description": "〜かねます、〜かと思います、〜かもしれません。"
+                  }
+                ],
+                "vocabFrequencyBand": "8000-12000",
+                "culturalNotes": [
+                  {
+                    "idiom": "一歩引いて考える",
+                    "note": "すぐに決めず距離を置いて判断すること。交渉では、譲歩の余地を残しながら立場を守る。",
+                    "translation": "dar un paso atrás"
+                  }
+                ],
+                "microLesson": {
+                  "title": "ドアを閉めずに交渉する",
+                  "goals": [
+                    "条件表現で過去の結果や仮定を評価する。",
+                    "緩和表現で提案を和らげ、限界を示す。"
+                  ],
+                  "sections": [
+                    {
+                      "heading": "開く条件と閉じる条件",
+                      "body": "もし条項を早く確認していたら、もっと余裕があったでしょう は過去の結果を評価する。期限を延ばすとしたら、その代わりに暫定的な約束を求められます は譲歩を条件づける。〜かねます は丁寧に限界を示す。",
+                      "examples": [
+                        {
+                          "source": "De haber revisado la cláusula antes, habríamos tenido más margen.",
+                          "target": "条項をもっと早く確認していたら、もっと余裕があったでしょう。",
+                          "note": "〜ていたら、〜たでしょう で過去の仮定。"
+                        },
+                        {
+                          "source": "Preferiría no comprometerme hasta que la salvedad sea mutua.",
+                          "target": "留保が相互になるまで、コミットしかねます。",
+                          "note": "〜かねます で丁寧に断る。"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                "glossary": [
+                  {
+                    "term": "余裕",
+                    "translations": [
+                      "margen",
+                      "holgura"
+                    ]
+                  },
+                  {
+                    "term": "譲歩",
+                    "translations": [
+                      "concesión"
+                    ]
+                  },
+                  {
+                    "term": "見返り",
+                    "translations": [
+                      "contrapartida"
+                    ]
+                  },
+                  {
+                    "term": "暫定的",
+                    "translations": [
+                      "provisional"
+                    ]
+                  },
+                  {
+                    "term": "約束",
+                    "translations": [
+                      "compromiso",
+                      "promesa"
+                    ]
+                  },
+                  {
+                    "term": "相互",
+                    "translations": [
+                      "mutuo"
+                    ]
+                  },
+                  {
+                    "term": "留保",
+                    "translations": [
+                      "salvedad",
+                      "reserva"
+                    ]
+                  },
+                  {
+                    "term": "期限",
+                    "translations": [
+                      "plazo"
+                    ]
+                  }
+                ],
+                "exercises": [
+                  {
+                    "type": "ClozeDragDrop",
+                    "id": "es-ja-c1-e12",
+                    "passage": "もし条項を早く確認して{{b1}}、顧客にはもっと余裕が{{b2}}。",
+                    "blanks": [
+                      {
+                        "id": "b1",
+                        "answer": "いたら",
+                        "options": [
+                          "いたら",
+                          "いれば",
+                          "いるなら"
+                        ]
+                      },
+                      {
+                        "id": "b2",
+                        "answer": "あったでしょう",
+                        "options": [
+                          "あったでしょう",
+                          "あります",
+                          "ありました"
+                        ]
+                      }
+                    ],
+                    "feedbackOnError": {
+                      "type": "grammar",
+                      "explanation": "過去の仮定は「〜ていたら、〜たでしょう」で表す。",
+                      "ruleRef": "gp-ja-conditional-c1"
+                    }
+                  },
+                  {
+                    "type": "ClozeDragDrop",
+                    "id": "es-ja-c1-e13",
+                    "passage": "期限を延ばす{{b1}}、その代わりに暫定的な約束を求められます。留保が相互になるまで署名は{{b2}}。",
+                    "blanks": [
+                      {
+                        "id": "b1",
+                        "answer": "としたら",
+                        "options": [
+                          "としたら",
+                          "としても",
+                          "とあれば"
+                        ]
+                      },
+                      {
+                        "id": "b2",
+                        "answer": "いたしかねます",
+                        "options": [
+                          "いたしかねます",
+                          "いたします",
+                          "いただけます"
+                        ]
+                      }
+                    ],
+                    "feedbackOnError": {
+                      "type": "grammar",
+                      "explanation": "「〜としたら」は仮定を条件づけ、「〜かねます」は丁寧に不可能を伝える。",
+                      "ruleRef": "gp-ja-hedging-c1"
+                    }
+                  },
+                  {
+                    "type": "SemanticMatch",
+                    "id": "es-ja-c1-e14",
+                    "instructions": "各提案を緩和の戦略と結びつけてください。",
+                    "pairs": [
+                      {
+                        "left": "条項を見直すのが妥当かと思います。",
+                        "right": "和らげた提案",
+                        "register": "formal",
+                        "nuance": "批判を提案に変える。"
+                      },
+                      {
+                        "left": "もう少し短い期限も検討できるかもしれません。",
+                        "right": "外交的な示唆",
+                        "register": "formal",
+                        "nuance": "可能性を示して圧力を下げる。"
+                      },
+                      {
+                        "left": "数字を見るまでコミットしかねます。",
+                        "right": "慎重な限界",
+                        "register": "formal",
+                        "nuance": "拒否せず条件を示す。"
+                      }
+                    ],
+                    "feedbackOnError": {
+                      "type": "register",
+                      "explanation": "緩和表現は限界を消さず、受け入れやすくする。",
+                      "ruleRef": "gp-ja-hedging-c1"
+                    }
+                  },
+                  {
+                    "type": "ListenChoose",
+                    "id": "es-ja-c1-e15",
+                    "audioText": "期限を延ばすとしたら、その代わりに暫定的な約束を求められます。",
+                    "options": [
+                      "期限を無料で延ばす",
+                      "期限の延長と引き換えに約束を求める",
+                      "期限を中止する",
+                      "条件なしで署名する"
+                    ],
+                    "correctIndex": 1,
+                    "feedbackOnError": {
+                      "type": "comprehension",
+                      "explanation": "提案は交換条件である：より長い期限と引き換えに暫定的な約束。",
+                      "ruleRef": "gp-ja-conditional-c1"
+                    }
+                  },
+                  {
+                    "type": "AudioOnlyPrompt",
+                    "id": "es-ja-c1-e16",
+                    "audioText": "条項をもっと早く確認していたら、もっと余裕があったでしょう。留保が相互になるまで署名しかねます。",
+                    "question": "話し手は何を後悔していますか。",
+                    "options": [
+                      "条項を早く確認しなかったこと",
+                      "遅く署名したこと",
+                      "留保を求めたこと",
+                      "期限を延ばしたこと"
+                    ],
+                    "correctIndex": 0,
+                    "allowSlowPlayback": true,
+                    "feedbackOnError": {
+                      "type": "comprehension",
+                      "explanation": "「確認していたら…あったでしょう」は、しなかった行為への後悔を表す。",
+                      "ruleRef": "gp-ja-conditional-c1"
+                    }
+                  },
+                  {
+                    "type": "MultipleChoice",
+                    "id": "es-ja-c1-e17",
+                    "question": "Completa: 条項を確認していたら、もっと余裕が___。",
+                    "options": [
+                      "あったでしょう",
+                      "あります",
+                      "ありました"
+                    ],
+                    "correctIndex": 0,
+                    "feedbackOnError": {
+                      "type": "grammar",
+                      "explanation": "過去の仮定の帰結は「〜たでしょう」で表す。",
+                      "ruleRef": "gp-ja-conditional-c1"
+                    }
+                  },
+                  {
+                    "type": "Translate",
+                    "id": "es-ja-c1-e18",
+                    "sourcePhrase": "Si ampliáramos el plazo, podríamos pedir un compromiso provisional.",
+                    "correctTokens": [
+                      "期限",
+                      "を",
+                      "延ばす",
+                      "と",
+                      "したら",
+                      "暫定的",
+                      "な",
+                      "約束",
+                      "を",
+                      "求め",
+                      "られ",
+                      "ます"
+                    ],
+                    "distractorTokens": [
+                      "延ばせば",
+                      "要求"
+                    ],
+                    "feedbackOnError": {
+                      "type": "grammar",
+                      "explanation": "「〜としたら」で仮定し、「〜られます」で可能を表す。",
+                      "ruleRef": "gp-ja-conditional-c1"
+                    }
+                  },
+                  {
+                    "type": "ListenType",
+                    "id": "es-ja-c1-e19",
+                    "transcription": "留保が相互になるまで署名しかねます",
+                    "audioText": "留保が相互になるまで署名しかねます",
+                    "feedbackOnError": {
+                      "type": "spelling",
+                      "explanation": "「留保」「相互」「署名」の漢字を正確に書く。",
+                      "ruleRef": "gp-ja-hedging-c1"
+                    }
+                  },
+                  {
+                    "type": "SpeakRepeat",
+                    "id": "es-ja-c1-e20",
+                    "targetPhrase": "条項をもっと早く確認していたら、もっと余裕があったでしょう。",
+                    "audioText": "条項をもっと早く確認していたら、もっと余裕があったでしょう。",
+                    "feedbackOnError": {
+                      "type": "pronunciation",
+                      "explanation": "「確認していたら」を一息でつなげ、余裕 を強調する。",
+                      "ruleRef": "gp-ja-conditional-c1"
+                    }
+                  },
+                  {
+                    "type": "MatchPairs",
+                    "id": "es-ja-c1-e21",
+                    "pairs": [
+                      {
+                        "left": "相互の見返り",
+                        "right": "contrapartida mutua"
+                      },
+                      {
+                        "left": "交渉の余裕",
+                        "right": "margen de negociación"
+                      },
+                      {
+                        "left": "条項を見直す",
+                        "right": "revisar la cláusula"
+                      },
+                      {
+                        "left": "暫定的な約束",
+                        "right": "compromiso provisional"
+                      }
+                    ],
+                    "feedbackOnError": {
+                      "type": "vocabulary",
+                      "explanation": "交渉の語彙は、見返り・余裕・留保を区別する。",
+                      "ruleRef": "gp-ja-hedging-c1"
+                    }
+                  },
+                  {
+                    "type": "FreeSpeakingPrompt",
+                    "id": "es-ja-c1-e22",
+                    "prompt": "Negocia un plazo más realista sin cerrar la puerta: reconoce la restricción del cliente, propone una alternativa condicional y pide una garantía.",
+                    "minTokens": 12,
+                    "conceptClusters": [
+                      [
+                        "としたら",
+                        "なら",
+                        "ば"
+                      ],
+                      [
+                        "期限",
+                        "余裕",
+                        "条件"
+                      ],
+                      [
+                        "約束",
+                        "留保",
+                        "相互"
+                      ]
+                    ],
+                    "grammarRuleRefs": [
+                      "gp-ja-conditional-c1",
+                      "gp-ja-hedging-c1"
+                    ],
+                    "timeLimitSeconds": 30,
+                    "minWpm": 60,
+                    "maxWpm": 150,
+                    "modelAnswer": "期限 を 延ばす と したら 、 その 代わり に 暫定的 な 約束 を 求め られ ます 。 留保 が 相互 に なる まで 署名 しかねます が 、 条項 を 一緒 に 見直す の は 妥当 か と 思い ます 。",
+                    "selfAssessmentCriteria": [
+                      "¿Reconocí la restricción del cliente?",
+                      "¿Propuse una alternativa condicional?",
+                      "¿Pedí una garantía con cortesía?"
+                    ],
+                    "feedbackOnError": {
+                      "type": "grammar",
+                      "explanation": "解答例は条件表現と緩和表現を組み合わせ、限界を明示する。",
+                      "ruleRef": "gp-ja-conditional-c1"
+                    }
+                  }
+                ]
+              },
+              {
+                "id": "es-ja-c1-un-1-ls-3",
+                "title": "距離を置いて伝える",
+                "cefrLevel": "C1",
+                "scenario": "新聞が社内報告書の不完全な版を掲載し、チームは事実を明確にする必要があります。",
+                "canDo": "Puedo informar de lo que otros dicen, distanciarme de la fuente y aclarar una versión distorsionada.",
+                "grammarPoints": [
+                  {
+                    "id": "gp-ja-reported-speech",
+                    "label": "伝聞の表現",
+                    "description": "〜と言っていた、〜とのことだ、〜だそうだ。"
+                  },
+                  {
+                    "id": "gp-ja-hearsay",
+                    "label": "推測と伝聞",
+                    "description": "らしい、ようです、とのことです。"
+                  }
+                ],
+                "vocabFrequencyBand": "8000-12000",
+                "culturalNotes": [
+                  {
+                    "idiom": "耳を疑う",
+                    "note": "聞いたことを信じられないこと。危機対応では、驚きを表明しつつ事実確認を優先する。",
+                    "translation": "dudar de lo que se oye"
+                  }
+                ],
+                "microLesson": {
+                  "title": "情報源から距離を取る",
+                  "goals": [
+                    "伝聞表現で情報を第三者に帰属させる。",
+                    "確認済みの事実と伝聞を区別する。"
+                  ],
+                  "sections": [
+                    {
+                      "heading": "情報源は消えない",
+                      "body": "報告書は不完全だとのことです は情報を外部の源に帰属させる。取締役会は承認したそうです は伝聞を示す。明確にするときは源を名指しする：メモは〜と認めています。",
+                      "examples": [
+                        {
+                          "source": "Se dice que el informe está incompleto.",
+                          "target": "報告書は不完全だとのことです。",
+                          "note": "とのことです で伝聞を明示する。"
+                        },
+                        {
+                          "source": "La nota reconoce que faltaba una firma.",
+                          "target": "メモは署名が欠けていたと認めています。",
+                          "note": "認める は事実を引き受ける。"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                "glossary": [
+                  {
+                    "term": "情報源",
+                    "translations": [
+                      "fuente"
+                    ]
+                  },
+                  {
+                    "term": "声明",
+                    "translations": [
+                      "declaración"
+                    ]
+                  },
+                  {
+                    "term": "取材",
+                    "translations": [
+                      "entrevista",
+                      "cobertura"
+                    ]
+                  },
+                  {
+                    "term": "明らかにする",
+                    "translations": [
+                      "revelar",
+                      "aclarar"
+                    ]
+                  },
+                  {
+                    "term": "認める",
+                    "translations": [
+                      "reconocer",
+                      "admitir"
+                    ]
+                  },
+                  {
+                    "term": "確認する",
+                    "translations": [
+                      "verificar"
+                    ]
+                  },
+                  {
+                    "term": "信頼できる",
+                    "translations": [
+                      "fiable"
+                    ]
+                  },
+                  {
+                    "term": "噂",
+                    "translations": [
+                      "rumor"
+                    ]
+                  }
+                ],
+                "exercises": [
+                  {
+                    "type": "ClozeDragDrop",
+                    "id": "es-ja-c1-e23",
+                    "passage": "報告書は不完全だ{{b1}}、取締役会は署名なしで承認した{{b2}}。",
+                    "blanks": [
+                      {
+                        "id": "b1",
+                        "answer": "とのことです",
+                        "options": [
+                          "とのことです",
+                          "のです",
+                          "でしょう"
+                        ]
+                      },
+                      {
+                        "id": "b2",
+                        "answer": "そうです",
+                        "options": [
+                          "そうです",
+                          "ようです",
+                          "らしいです"
+                        ]
+                      }
+                    ],
+                    "feedbackOnError": {
+                      "type": "grammar",
+                      "explanation": "「〜とのことです」は伝聞を明確に示し、「〜そうです」も伝聞を表す。",
+                      "ruleRef": "gp-ja-reported-speech"
+                    }
+                  },
+                  {
+                    "type": "ClozeDragDrop",
+                    "id": "es-ja-c1-e24",
+                    "passage": "メモは署名が欠けていたと{{b1}}いますが、誰が変更を承認したかは{{b2}}いません。",
+                    "blanks": [
+                      {
+                        "id": "b1",
+                        "answer": "認めて",
+                        "options": [
+                          "認めて",
+                          "認め",
+                          "認めた"
+                        ]
+                      },
+                      {
+                        "id": "b2",
+                        "answer": "明らかにして",
+                        "options": [
+                          "明らかにして",
+                          "明らかにし",
+                          "明らかにする"
+                        ]
+                      }
+                    ],
+                    "feedbackOnError": {
+                      "type": "grammar",
+                      "explanation": "「認めています」は事実を引き受け、「明らかにしていません」は未公表を示す。",
+                      "ruleRef": "gp-ja-hearsay"
+                    }
+                  },
+                  {
+                    "type": "SemanticMatch",
+                    "id": "es-ja-c1-e25",
+                    "instructions": "各見出しを情報源への関与の度合いと結びつけてください。",
+                    "pairs": [
+                      {
+                        "left": "報告書は不完全だとのことです。",
+                        "right": "情報源は不明",
+                        "register": "formal",
+                        "nuance": "伝聞で責任をぼかす。"
+                      },
+                      {
+                        "left": "メモは署名の欠落を認めています。",
+                        "right": "事実を認めた",
+                        "register": "formal",
+                        "nuance": "情報源が内容を引き受ける。"
+                      },
+                      {
+                        "left": "当局は警告を無視したらしいです。",
+                        "right": "未確認の非難",
+                        "register": "formal",
+                        "nuance": "伝聞が法的な責任を和らげる。"
+                      }
+                    ],
+                    "feedbackOnError": {
+                      "type": "register",
+                      "explanation": "伝聞表現は、情報源への関与の度合いを変える。",
+                      "ruleRef": "gp-ja-reported-speech"
+                    }
+                  },
+                  {
+                    "type": "ListenChoose",
+                    "id": "es-ja-c1-e26",
+                    "audioText": "報告書は不完全だとのことです。取締役会は署名なしで承認したそうです。",
+                    "options": [
+                      "話し手が情報を引き受ける",
+                      "不明な情報源から伝わった情報だ",
+                      "取締役会が否定した",
+                      "新聞が署名した"
+                    ],
+                    "correctIndex": 1,
+                    "feedbackOnError": {
+                      "type": "comprehension",
+                      "explanation": "とのことです と そうです は情報を外部の源に帰属させる。",
+                      "ruleRef": "gp-ja-reported-speech"
+                    }
+                  },
+                  {
+                    "type": "AudioOnlyPrompt",
+                    "id": "es-ja-c1-e27",
+                    "audioText": "メモは署名が欠けていたと認めています。しかし、誰が変更を承認したかは明らかにしていません。ですから、まだ確認が必要です。",
+                    "question": "何がまだ分かっていませんか。",
+                    "options": [
+                      "署名が欠けていたこと",
+                      "誰が変更を承認したか",
+                      "メモの存在",
+                      "報告書の作者"
+                    ],
+                    "correctIndex": 1,
+                    "allowSlowPlayback": true,
+                    "feedbackOnError": {
+                      "type": "comprehension",
+                      "explanation": "メモは署名の欠落を認めるが、承認者を明らかにしていない。",
+                      "ruleRef": "gp-ja-hearsay"
+                    }
+                  },
+                  {
+                    "type": "MultipleChoice",
+                    "id": "es-ja-c1-e28",
+                    "question": "Completa: その決定は監査の前に承認された___。",
+                    "options": [
+                      "とのことです",
+                      "のです",
+                      "でしょう"
+                    ],
+                    "correctIndex": 0,
+                    "feedbackOnError": {
+                      "type": "grammar",
+                      "explanation": "未確認の情報には「〜とのことです」を使う。",
+                      "ruleRef": "gp-ja-reported-speech"
+                    }
+                  },
+                  {
+                    "type": "Translate",
+                    "id": "es-ja-c1-e29",
+                    "sourcePhrase": "El comunicado reconoce que faltaba una firma, pero no revela quién autorizó el cambio.",
+                    "correctTokens": [
+                      "声明",
+                      "は",
+                      "署名",
+                      "が",
+                      "欠け",
+                      "て",
+                      "いた",
+                      "と",
+                      "認め",
+                      "て",
+                      "います",
+                      "が",
+                      "誰",
+                      "が",
+                      "承認",
+                      "した",
+                      "か",
+                      "は",
+                      "明らか",
+                      "に",
+                      "してい",
+                      "ません"
+                    ],
+                    "distractorTokens": [
+                      "否定",
+                      "変更"
+                    ],
+                    "feedbackOnError": {
+                      "type": "grammar",
+                      "explanation": "「〜と認めていますが、〜かは明らかにしていません」で事実と未公表を分ける。",
+                      "ruleRef": "gp-ja-hearsay"
+                    }
+                  },
+                  {
+                    "type": "ListenType",
+                    "id": "es-ja-c1-e30",
+                    "transcription": "メモは署名が欠けていたと認めています",
+                    "audioText": "メモは署名が欠けていたと認めています",
+                    "feedbackOnError": {
+                      "type": "spelling",
+                      "explanation": "「署名」「欠けて」「認めて」の漢字と送り仮名を正確に書く。",
+                      "ruleRef": "gp-ja-hearsay"
+                    }
+                  },
+                  {
+                    "type": "SpeakRepeat",
+                    "id": "es-ja-c1-e31",
+                    "targetPhrase": "報告書は不完全だとのことですが、メモは署名の欠落を認めています。",
+                    "audioText": "報告書は不完全だとのことですが、メモは署名の欠落を認めています。",
+                    "feedbackOnError": {
+                      "type": "pronunciation",
+                      "explanation": "「とのことですが」をなめらかにつなげ、欠落 を強調する。",
+                      "ruleRef": "gp-ja-reported-speech"
+                    }
+                  },
+                  {
+                    "type": "MatchPairs",
+                    "id": "es-ja-c1-e32",
+                    "pairs": [
+                      {
+                        "left": "匿名の情報源",
+                        "right": "fuente anónima"
+                      },
+                      {
+                        "left": "公式声明",
+                        "right": "declaración oficial"
+                      },
+                      {
+                        "left": "事実を確認する",
+                        "right": "verificar los hechos"
+                      },
+                      {
+                        "left": "根強い噂",
+                        "right": "rumor persistente"
+                      }
+                    ],
+                    "feedbackOnError": {
+                      "type": "vocabulary",
+                      "explanation": "報道の語彙は、情報源・声明・確認を区別する。",
+                      "ruleRef": "gp-ja-reported-speech"
+                    }
+                  },
+                  {
+                    "type": "FreeSpeakingPrompt",
+                    "id": "es-ja-c1-e33",
+                    "prompt": "Aclara una versión distorsionada de un informe: di qué se dice, qué se sabe con certeza y qué falta por verificar.",
+                    "minTokens": 12,
+                    "conceptClusters": [
+                      [
+                        "とのことです",
+                        "そうです",
+                        "らしい"
+                      ],
+                      [
+                        "認める",
+                        "確認する",
+                        "明らかにする"
+                      ],
+                      [
+                        "情報源",
+                        "事実",
+                        "声明"
+                      ]
+                    ],
+                    "grammarRuleRefs": [
+                      "gp-ja-reported-speech",
+                      "gp-ja-hearsay"
+                    ],
+                    "timeLimitSeconds": 30,
+                    "minWpm": 60,
+                    "maxWpm": 150,
+                    "modelAnswer": "報告書 は 不完全 だ とのこと で 、 取締役会 は 署名 なし で 承認 した そう です 。 メモ は 署名 の 欠落 を 認め て います が 、 誰 が 承認 した か は 明らか に して い ません 。",
+                    "selfAssessmentCriteria": [
+                      "¿Distancié la afirmación de la fuente?",
+                      "¿Aclaré un hecho verificado?",
+                      "¿Señalé lo que falta por comprobar?"
+                    ],
+                    "feedbackOnError": {
+                      "type": "grammar",
+                      "explanation": "解答例は伝聞と確認済みの事実を交互に示し、未確認事項を残す。",
+                      "ruleRef": "gp-ja-reported-speech"
+                    }
+                  }
+                ]
+              },
+              {
+                "id": "es-ja-c1-un-1-ls-4",
+                "title": "距離を保って語る",
+                "cefrLevel": "C1",
+                "scenario": "社内監査で、誰も責めずに一連の決定を再構成する必要があります。",
+                "canDo": "Puedo narrar una cadena de hechos con aspecto verbal y marcar la distancia entre lo observado y lo interpretado.",
+                "grammarPoints": [
+                  {
+                    "id": "gp-ja-aspect",
+                    "label": "アスペクト",
+                    "description": "〜てきた、〜ていく、〜ていた。"
+                  },
+                  {
+                    "id": "gp-ja-distance",
+                    "label": "距離の表現",
+                    "description": "どうやら、見たところ、〜とのことだ。"
+                  }
+                ],
+                "vocabFrequencyBand": "8000-12000",
+                "culturalNotes": [
+                  {
+                    "idiom": "点と点をつなぐ",
+                    "note": "ばらばらの手がかりを結びつけて全体像を作ること。監査では、事実と解釈を分ける助けになる。",
+                    "translation": "conectar los puntos"
+                  }
+                ],
+                "microLesson": {
+                  "title": "責めずに語る",
+                  "goals": [
+                    "アスペクトで一連の行動を順序づける。",
+                    "距離の表現で観察と解釈を分ける。"
+                  ],
+                  "sections": [
+                    {
+                      "heading": "事実の順序",
+                      "body": "時系列を見直した後、チームは抜け漏れを発見しました は先行する行動を示す。どうやら最初の報告書は急いで書かれたようです は確認されていない解釈を示す。〜てきた は今に至る変化を表す。",
+                      "examples": [
+                        {
+                          "source": "Tras revisar la cronología, el equipo detectó una omisión.",
+                          "target": "時系列を見直した後、チームは抜け漏れを発見しました。",
+                          "note": "「〜した後」で順序を示す。"
+                        },
+                        {
+                          "source": "Según se informa, la discrepancia surgió en marzo.",
+                          "target": "伝えられるところでは、食い違いは三月に生じました。",
+                          "note": "伝聞で源から距離を取る。"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                "glossary": [
+                  {
+                    "term": "時系列",
+                    "translations": [
+                      "cronología"
+                    ]
+                  },
+                  {
+                    "term": "抜け漏れ",
+                    "translations": [
+                      "omisión"
+                    ]
+                  },
+                  {
+                    "term": "食い違い",
+                    "translations": [
+                      "discrepancia"
+                    ]
+                  },
+                  {
+                    "term": "偏り",
+                    "translations": [
+                      "sesgo"
+                    ]
+                  },
+                  {
+                    "term": "一貫した",
+                    "translations": [
+                      "coherente"
+                    ]
+                  },
+                  {
+                    "term": "監査",
+                    "translations": [
+                      "auditoría"
+                    ]
+                  },
+                  {
+                    "term": "追跡する",
+                    "translations": [
+                      "rastrear"
+                    ]
+                  },
+                  {
+                    "term": "証言",
+                    "translations": [
+                      "testimonio"
+                    ]
+                  }
+                ],
+                "exercises": [
+                  {
+                    "type": "ClozeDragDrop",
+                    "id": "es-ja-c1-e34",
+                    "passage": "時系列を{{b1}}後、チームは抜け漏れを{{b2}}しました。",
+                    "blanks": [
+                      {
+                        "id": "b1",
+                        "answer": "見直した",
+                        "options": [
+                          "見直した",
+                          "見直す",
+                          "見直し"
+                        ]
+                      },
+                      {
+                        "id": "b2",
+                        "answer": "発見",
+                        "options": [
+                          "発見",
+                          "発言",
+                          "発生"
+                        ]
+                      }
+                    ],
+                    "feedbackOnError": {
+                      "type": "grammar",
+                      "explanation": "「〜した後」で先行する行動を示し、「発見しました」で結果を述べる。",
+                      "ruleRef": "gp-ja-aspect"
+                    }
+                  },
+                  {
+                    "type": "ClozeDragDrop",
+                    "id": "es-ja-c1-e35",
+                    "passage": "{{b1}}、最初の報告書は急いで書かれた{{b2}}。しかし、署名は誰も確認していません。",
+                    "blanks": [
+                      {
+                        "id": "b1",
+                        "answer": "どうやら",
+                        "options": [
+                          "どうやら",
+                          "ぜひ",
+                          "きっと"
+                        ]
+                      },
+                      {
+                        "id": "b2",
+                        "answer": "ようです",
+                        "options": [
+                          "ようです",
+                          "そうです",
+                          "らしいです"
+                        ]
+                      }
+                    ],
+                    "feedbackOnError": {
+                      "type": "grammar",
+                      "explanation": "「どうやら〜ようです」は推測に距離を置く。",
+                      "ruleRef": "gp-ja-distance"
+                    }
+                  },
+                  {
+                    "type": "SemanticMatch",
+                    "id": "es-ja-c1-e36",
+                    "instructions": "各文が事実か解釈かを区別してください。",
+                    "pairs": [
+                      {
+                        "left": "時系列を見直した後、チームは抜け漏れを発見しました。",
+                        "right": "事実の流れ",
+                        "register": "formal",
+                        "nuance": "アスペクトが行動を順序づける。"
+                      },
+                      {
+                        "left": "伝えられるところでは、最初の報告書は急いで書かれました。",
+                        "right": "帰属された情報",
+                        "register": "formal",
+                        "nuance": "伝聞が情報源への距離を保つ。"
+                      },
+                      {
+                        "left": "どうやら、抜け漏れは意図的だったようです。",
+                        "right": "未確認の解釈",
+                        "register": "formal",
+                        "nuance": "外見は証拠ではない。"
+                      }
+                    ],
+                    "feedbackOnError": {
+                      "type": "register",
+                      "explanation": "距離の表現は観察と結論を分ける。",
+                      "ruleRef": "gp-ja-distance"
+                    }
+                  },
+                  {
+                    "type": "ListenChoose",
+                    "id": "es-ja-c1-e37",
+                    "audioText": "時系列を見直した後、チームは抜け漏れを発見しました。どうやら、最初の報告書は急いで書かれたようです。",
+                    "options": [
+                      "原因について確信がある",
+                      "情報源から距離を取っている",
+                      "直接非難している",
+                      "新しい決定をした"
+                    ],
+                    "correctIndex": 1,
+                    "feedbackOnError": {
+                      "type": "comprehension",
+                      "explanation": "「どうやら〜ようです」は情報を引き受けずに推測を示す。",
+                      "ruleRef": "gp-ja-distance"
+                    }
+                  },
+                  {
+                    "type": "AudioOnlyPrompt",
+                    "id": "es-ja-c1-e38",
+                    "audioText": "時系列を見直した後、チームは抜け漏れを発見しました。どうやら、最初の報告書は急いで書かれたようですが、署名は誰も確認していません。",
+                    "question": "確かなことは何ですか。",
+                    "options": [
+                      "誰が署名したか",
+                      "チームが抜け漏れを発見したこと",
+                      "抜け漏れが意図的だったこと",
+                      "報告書が存在しないこと"
+                    ],
+                    "correctIndex": 1,
+                    "allowSlowPlayback": true,
+                    "feedbackOnError": {
+                      "type": "comprehension",
+                      "explanation": "抜け漏れの発見は事実で、原因と署名は未確認のまま。",
+                      "ruleRef": "gp-ja-aspect"
+                    }
+                  },
+                  {
+                    "type": "MultipleChoice",
+                    "id": "es-ja-c1-e39",
+                    "question": "Completa: 彼女は、サービスが三月から遅れていた___説明しました。",
+                    "options": [
+                      "と",
+                      "を",
+                      "が"
+                    ],
+                    "correctIndex": 0,
+                    "feedbackOnError": {
+                      "type": "grammar",
+                      "explanation": "引用の「と」で発言内容を示す。",
+                      "ruleRef": "gp-ja-aspect"
+                    }
+                  },
+                  {
+                    "type": "Translate",
+                    "id": "es-ja-c1-e40",
+                    "sourcePhrase": "Tras revisar la cronología, el equipo detectó una omisión.",
+                    "correctTokens": [
+                      "時系列",
+                      "を",
+                      "見直した",
+                      "後",
+                      "チーム",
+                      "は",
+                      "抜け漏れ",
+                      "を",
+                      "発見",
+                      "しました"
+                    ],
+                    "distractorTokens": [
+                      "見直す",
+                      "発生"
+                    ],
+                    "feedbackOnError": {
+                      "type": "grammar",
+                      "explanation": "「〜した後」で先行行動、「発見しました」で結果を示す。",
+                      "ruleRef": "gp-ja-aspect"
+                    }
+                  },
+                  {
+                    "type": "ListenType",
+                    "id": "es-ja-c1-e41",
+                    "transcription": "伝えられるところでは、最初の報告書は急いで書かれました",
+                    "audioText": "伝えられるところでは、最初の報告書は急いで書かれました",
+                    "feedbackOnError": {
+                      "type": "spelling",
+                      "explanation": "「伝えられるところでは」「急いで」を正確に書く。",
+                      "ruleRef": "gp-ja-distance"
+                    }
+                  },
+                  {
+                    "type": "SpeakRepeat",
+                    "id": "es-ja-c1-e42",
+                    "targetPhrase": "時系列を見直した後、チームは抜け漏れを発見しました。",
+                    "audioText": "時系列を見直した後、チームは抜け漏れを発見しました。",
+                    "feedbackOnError": {
+                      "type": "pronunciation",
+                      "explanation": "「見直した後」を一息でつなげ、抜け漏れ を強調する。",
+                      "ruleRef": "gp-ja-aspect"
+                    }
+                  },
+                  {
+                    "type": "MatchPairs",
+                    "id": "es-ja-c1-e43",
+                    "pairs": [
+                      {
+                        "left": "決定を追跡する",
+                        "right": "rastrear la decisión"
+                      },
+                      {
+                        "left": "予期しない抜け漏れ",
+                        "right": "una omisión inesperada"
+                      },
+                      {
+                        "left": "偏った見方",
+                        "right": "una versión sesgada"
+                      },
+                      {
+                        "left": "説明のつかない食い違い",
+                        "right": "una discrepancia sin explicar"
+                      }
+                    ],
+                    "feedbackOnError": {
+                      "type": "vocabulary",
+                      "explanation": "監査の語彙は事実・見方・食い違いを区別する。",
+                      "ruleRef": "gp-ja-distance"
+                    }
+                  },
+                  {
+                    "type": "FreeSpeakingPrompt",
+                    "id": "es-ja-c1-e44",
+                    "prompt": "Reconstruye una secuencia de decisiones para una auditoría: ordena los hechos, distingue lo confirmado de lo atribuido y evita acusar.",
+                    "minTokens": 12,
+                    "conceptClusters": [
+                      [
+                        "見直した後",
+                        "ていた",
+                        "発見しました"
+                      ],
+                      [
+                        "どうやら",
+                        "伝えられるところでは",
+                        "ようです"
+                      ],
+                      [
+                        "抜け漏れ",
+                        "食い違い",
+                        "監査"
+                      ]
+                    ],
+                    "grammarRuleRefs": [
+                      "gp-ja-aspect",
+                      "gp-ja-distance"
+                    ],
+                    "timeLimitSeconds": 30,
+                    "minWpm": 60,
+                    "maxWpm": 150,
+                    "modelAnswer": "時系列 を 見直した 後 、 チーム は 抜け漏れ を 発見 しました 。 どうやら 、 最初 の 報告書 は 急いで 書か れた よう です が 、 署名 は 誰 も 確認 して い ません 。",
+                    "selfAssessmentCriteria": [
+                      "¿Ordené los hechos con claridad?",
+                      "¿Distancié lo atribuido de lo confirmado?",
+                      "¿Evité acusar sin pruebas?"
+                    ],
+                    "feedbackOnError": {
+                      "type": "grammar",
+                      "explanation": "解答例はアスペクトで順序を示し、推測表現で未確認情報を分ける。",
+                      "ruleRef": "gp-ja-aspect"
+                    }
+                  }
+                ]
+              }
+            ]
+          },
+        {
+          "id": "es-ja-lv-c1-un-2",
+          "title": "議論とニュアンス",
+          "lessons": [
+            {
+              "id": "es-ja-c1-un-2-ls-1",
+              "title": "譲歩しても譲らない",
+              "cefrLevel": "C1",
+              "scenario": "委員会で、反対提案の妥当な点を認めつつ、自分の主張を手放さない必要があります。",
+              "canDo": "Puedo conceder un punto con estructuras concesivas y reforzar mi tesis con énfasis.",
+              "grammarPoints": [
+                {
+                  "id": "gp-ja-concession",
+                  "label": "譲歩",
+                  "description": "〜ものの、〜にもかかわらず、〜とはいえ。"
+                },
+                {
+                  "id": "gp-ja-emphasis",
+                  "label": "強調",
+                  "description": "〜こそ、〜どころか、むしろ。"
+                }
+              ],
+              "vocabFrequencyBand": "8000-12000",
+              "culturalNotes": [
+                {
+                  "idiom": "一線を画す",
+                  "note": "他のものと明確に区別すること。議論では、譲れる点と譲れない線を分けるのに役立つ。",
+                  "translation": "marcar una línea"
+                }
+              ],
+              "microLesson": {
+                "title": "譲歩して強くなる",
+                "goals": [
+                  "妥当な点を認めつつ全体は譲らない。",
+                  "強調表現で決定的な論点を示す。"
+                ],
+                "sections": [
+                  {
+                    "heading": "譲歩は戦略",
+                    "body": "〜ものの は譲歩を含む逆接を作り、〜にもかかわらず はより硬い逆接を示す。〜こそ は焦点を強調し、むしろ は優先順位を逆転させる。",
+                    "examples": [
+                      {
+                        "source": "Aunque la propuesta tiene mérito, no aborda el coste real.",
+                        "target": "提案には利点があるものの、実際のコストを無視しています。",
+                        "note": "〜ものの で譲歩する。"
+                      },
+                      {
+                        "source": "Lo que cuenta es el calendario, no el presupuesto.",
+                        "target": "問題なのはむしろ納期こそで、予算ではありません。",
+                        "note": "むしろ と こそ で焦点を移す。"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "glossary": [
+                {
+                  "term": "譲歩",
+                  "translations": [
+                    "concesión"
+                  ]
+                },
+                {
+                  "term": "利点",
+                  "translations": [
+                    "mérito",
+                    "ventaja"
+                  ]
+                },
+                {
+                  "term": "反論",
+                  "translations": [
+                    "objeción"
+                  ]
+                },
+                {
+                  "term": "妥当",
+                  "translations": [
+                    "válido",
+                    "razonable"
+                  ]
+                },
+                {
+                  "term": "前提",
+                  "translations": [
+                    "premisa"
+                  ]
+                },
+                {
+                  "term": "立場",
+                  "translations": [
+                    "postura"
+                  ]
+                },
+                {
+                  "term": "弱点",
+                  "translations": [
+                    "punto débil"
+                  ]
+                },
+                {
+                  "term": "焦点",
+                  "translations": [
+                    "enfoque",
+                    "punto central"
+                  ]
+                }
+              ],
+              "exercises": [
+                {
+                  "type": "ClozeDragDrop",
+                  "id": "es-ja-c1-e45",
+                  "passage": "{{b1}}、提案には利点がある{{b2}}、実際のコストを無視しています。",
+                  "blanks": [
+                    {
+                      "id": "b1",
+                      "answer": "確かに",
+                      "options": [
+                        "確かに",
+                        "さらに",
+                        "つまり"
+                      ]
+                    },
+                    {
+                      "id": "b2",
+                      "answer": "ものの",
+                      "options": [
+                        "ものの",
+                        "ので",
+                        "ために"
+                      ]
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "「確かに」で認め、「〜ものの」で逆接の譲歩を示す。",
+                    "ruleRef": "gp-ja-concession"
+                  }
+                },
+                {
+                  "type": "ClozeDragDrop",
+                  "id": "es-ja-c1-e46",
+                  "passage": "{{b1}}コストだけが問題なのではなく、{{b2}}納期こそが問題です。",
+                  "blanks": [
+                    {
+                      "id": "b1",
+                      "answer": "単に",
+                      "options": [
+                        "単に",
+                        "必ず",
+                        "決して"
+                      ]
+                    },
+                    {
+                      "id": "b2",
+                      "answer": "むしろ",
+                      "options": [
+                        "むしろ",
+                        "たとえば",
+                        "おそらく"
+                      ]
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "「単に〜ではなく、むしろ〜こそ」で焦点を移す。",
+                    "ruleRef": "gp-ja-emphasis"
+                  }
+                },
+                {
+                  "type": "SemanticMatch",
+                  "id": "es-ja-c1-e47",
+                  "instructions": "各文の議論上の働きを選んでください。",
+                  "pairs": [
+                    {
+                      "left": "提案には利点があるものの、コストを無視しています。",
+                      "right": "譲歩の後の反論",
+                      "register": "formal",
+                      "nuance": "認めてから限定する。"
+                    },
+                    {
+                      "left": "計画は安い一方で、旧システムは安全でした。",
+                      "right": "二つの現実の対比",
+                      "register": "formal",
+                      "nuance": "一方で が二つの命題を比べる。"
+                    },
+                    {
+                      "left": "問題なのはむしろ納期こそです。",
+                      "right": "焦点の強調",
+                      "register": "formal",
+                      "nuance": "焦点を決定的な論点へ移す。"
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "register",
+                    "explanation": "譲歩は屈服ではない。譲歩がより正確な反論を準備する。",
+                    "ruleRef": "gp-ja-concession"
+                  }
+                },
+                {
+                  "type": "ListenChoose",
+                  "id": "es-ja-c1-e48",
+                  "audioText": "提案には利点があるものの、実際のコストを無視しています。",
+                  "options": [
+                    "提案は完璧だ",
+                    "提案には価値があるが弱点もある",
+                    "提案に価値はない",
+                    "コストは無関係だ"
+                  ],
+                  "correctIndex": 1,
+                  "feedbackOnError": {
+                    "type": "comprehension",
+                    "explanation": "譲歩が利点を認め、反論がコストを示す。",
+                    "ruleRef": "gp-ja-concession"
+                  }
+                },
+                {
+                  "type": "AudioOnlyPrompt",
+                  "id": "es-ja-c1-e49",
+                  "audioText": "提案には利点があるものの、実際のコストを無視しています。単に納期を過小評価しているだけでなく、人員の不足も見落としています。",
+                  "question": "二つの反論は何ですか。",
+                  "options": [
+                    "コストと納期だけ",
+                    "納期と人員",
+                    "人員とコスト",
+                    "コストと人員"
+                  ],
+                  "correctIndex": 1,
+                  "allowSlowPlayback": true,
+                  "feedbackOnError": {
+                    "type": "comprehension",
+                    "explanation": "「単に〜だけでなく〜も」で二つの反論を加える。",
+                    "ruleRef": "gp-ja-emphasis"
+                  }
+                },
+                {
+                  "type": "MultipleChoice",
+                  "id": "es-ja-c1-e50",
+                  "question": "Completa: 提案には利点がある___、コストを無視しています。",
+                  "options": [
+                    "ものの",
+                    "ので",
+                    "ために"
+                  ],
+                  "correctIndex": 0,
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "「〜ものの」は譲歩の逆接を作る。",
+                    "ruleRef": "gp-ja-concession"
+                  }
+                },
+                {
+                  "type": "Translate",
+                  "id": "es-ja-c1-e51",
+                  "sourcePhrase": "Aunque la propuesta tiene mérito, no aborda el coste real.",
+                  "correctTokens": [
+                    "提案",
+                    "に",
+                    "は",
+                    "利点",
+                    "が",
+                    "ある",
+                    "ものの",
+                    "実際",
+                    "の",
+                    "コスト",
+                    "を",
+                    "無視",
+                    "して",
+                    "います"
+                  ],
+                  "distractorTokens": [
+                    "ので",
+                    "解決"
+                  ],
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "「〜ものの」で譲歩し、「無視しています」で反論を示す。",
+                    "ruleRef": "gp-ja-concession"
+                  }
+                },
+                {
+                  "type": "ListenType",
+                  "id": "es-ja-c1-e52",
+                  "transcription": "問題なのはむしろ納期こそです",
+                  "audioText": "問題なのはむしろ納期こそです",
+                  "feedbackOnError": {
+                    "type": "spelling",
+                    "explanation": "「納期」と「むしろ」を正確に書く。",
+                    "ruleRef": "gp-ja-emphasis"
+                  }
+                },
+                {
+                  "type": "SpeakRepeat",
+                  "id": "es-ja-c1-e53",
+                  "targetPhrase": "提案には利点があるものの、実際のコストを無視しています。",
+                  "audioText": "提案には利点があるものの、実際のコストを無視しています。",
+                  "feedbackOnError": {
+                    "type": "pronunciation",
+                    "explanation": "「あるものの」をなめらかにつなげ、実際 を強調する。",
+                    "ruleRef": "gp-ja-concession"
+                  }
+                },
+                {
+                  "type": "MatchPairs",
+                  "id": "es-ja-c1-e54",
+                  "pairs": [
+                    {
+                      "left": "一つの点を認める",
+                      "right": "conceder un punto"
+                    },
+                    {
+                      "left": "妥当な反論",
+                      "right": "una objeción válida"
+                    },
+                    {
+                      "left": "中心的な前提",
+                      "right": "la premisa central"
+                    },
+                    {
+                      "left": "コストに取り組む",
+                      "right": "abordar el coste"
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "議論の語彙は前提・反論・譲歩を区別する。",
+                    "ruleRef": "gp-ja-concession"
+                  }
+                },
+                {
+                  "type": "FreeSpeakingPrompt",
+                  "id": "es-ja-c1-e55",
+                  "prompt": "Concede un punto al adversario sin renunciar a tu tesis: reconoce lo válido, marca el límite y reformula tu postura.",
+                  "minTokens": 12,
+                  "conceptClusters": [
+                    [
+                      "ものの",
+                      "にもかかわらず",
+                      "一方で"
+                    ],
+                    [
+                      "利点",
+                      "妥当",
+                      "点"
+                    ],
+                    [
+                      "むしろ",
+                      "こそ",
+                      "限界"
+                    ]
+                  ],
+                  "grammarRuleRefs": [
+                    "gp-ja-concession",
+                    "gp-ja-emphasis"
+                  ],
+                  "timeLimitSeconds": 30,
+                  "minWpm": 60,
+                  "maxWpm": 150,
+                  "modelAnswer": "提案 に は 利点 が ある ものの 、 実際 の コスト を 無視 して います 。 単に 納期 を 過小 評価 して いる だけ で なく 、 むしろ 人員 の 不足 こそ が 問題 です 。",
+                  "selfAssessmentCriteria": [
+                    "¿Reconocí un punto válido?",
+                    "¿Marqué el límite con claridad?",
+                    "¿Reforcé mi tesis sin agresividad?"
+                  ],
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "解答例は譲歩し、むしろ と こそ で焦点を決定的な論点に移す。",
+                    "ruleRef": "gp-ja-emphasis"
+                  }
+                }
+              ]
+            },
+            {
+              "id": "es-ja-c1-un-2-ls-2",
+              "title": "批判を和らげる",
+              "cefrLevel": "C1",
+              "scenario": "同僚の発表には弱い部分があり、やる気を損なわずに修正する必要があります。",
+              "canDo": "Puedo expresar crítica con atenuadores y keigo, separando la persona del problema.",
+              "grammarPoints": [
+                {
+                  "id": "gp-ja-softening",
+                  "label": "緩和",
+                  "description": "〜かもしれません、〜気味、やや。"
+                },
+                {
+                  "id": "gp-ja-keigo-critique",
+                  "label": "敬語の批判",
+                  "description": "〜いただけますか、〜かと思います。"
+                }
+              ],
+              "vocabFrequencyBand": "8000-12000",
+              "culturalNotes": [
+                {
+                  "idiom": "やんわり伝える",
+                  "note": "角を立てずに伝えること。フィードバックでは、関係を保ちながら正確さを失わない。",
+                  "translation": "decir con suavidad"
+                }
+              ],
+              "microLesson": {
+                "title": "傷つけずに批判する",
+                "goals": [
+                  "仕事への評価と人への評価を分ける。",
+                  "緩和表現と敬語で強度を下げる。"
+                ],
+                "sections": [
+                  {
+                    "heading": "強度を下げても正確に",
+                    "body": "〜かもしれません は可能性として示し、やや は程度を弱め、〜気味 は傾向を控えめに述べる。批判の依頼には「〜いただけますか」を使うと、相手の裁量を残せる。",
+                    "examples": [
+                      {
+                        "source": "Me pregunto si el tono fue demasiado directo.",
+                        "target": "口調が少し直接的すぎたのではないかと思います。",
+                        "note": "「〜のではないかと思います」で和らげる。"
+                      },
+                      {
+                        "source": "Es posible que el informe sea repetitivo en el medio.",
+                        "target": "報告書は中ほどがやや繰り返し気味かもしれません。",
+                        "note": "やや と 気味 で程度を下げる。"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "glossary": [
+                {
+                  "term": "緩和",
+                  "translations": [
+                    "atenuación"
+                  ]
+                },
+                {
+                  "term": "批判",
+                  "translations": [
+                    "crítica"
+                  ]
+                },
+                {
+                  "term": "防御的",
+                  "translations": [
+                    "defensivo"
+                  ]
+                },
+                {
+                  "term": "建設的",
+                  "translations": [
+                    "constructivo"
+                  ]
+                },
+                {
+                  "term": "暗黙",
+                  "translations": [
+                    "implícito"
+                  ]
+                },
+                {
+                  "term": "口調",
+                  "translations": [
+                    "tono"
+                  ]
+                },
+                {
+                  "term": "改善",
+                  "translations": [
+                    "mejora"
+                  ]
+                },
+                {
+                  "term": "具体的",
+                  "translations": [
+                    "concreto",
+                    "específico"
+                  ]
+                }
+              ],
+              "exercises": [
+                {
+                  "type": "ClozeDragDrop",
+                  "id": "es-ja-c1-e56",
+                  "passage": "今の口調は{{b1}}防御的に見える{{b2}}。",
+                  "blanks": [
+                    {
+                      "id": "b1",
+                      "answer": "やや",
+                      "options": [
+                        "やや",
+                        "とても",
+                        "まったく"
+                      ]
+                    },
+                    {
+                      "id": "b2",
+                      "answer": "かもしれません",
+                      "options": [
+                        "かもしれません",
+                        "に違いありません",
+                        "はずです"
+                      ]
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "やや は程度を弱め、かもしれません は断定を避ける。",
+                    "ruleRef": "gp-ja-softening"
+                  }
+                },
+                {
+                  "type": "ClozeDragDrop",
+                  "id": "es-ja-c1-e57",
+                  "passage": "批判は妥当だと{{b1}}が、タイミングは{{b2}}ではないかと思います。",
+                  "blanks": [
+                    {
+                      "id": "b1",
+                      "answer": "思います",
+                      "options": [
+                        "思います",
+                        "思って",
+                        "思い"
+                      ]
+                    },
+                    {
+                      "id": "b2",
+                      "answer": "適切",
+                      "options": [
+                        "適切",
+                        "適切な",
+                        "適切に"
+                      ]
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "「〜と思いますが」で認め、「〜ではないかと思います」で控えめに反対する。",
+                    "ruleRef": "gp-ja-keigo-critique"
+                  }
+                },
+                {
+                  "type": "SemanticMatch",
+                  "id": "es-ja-c1-e58",
+                  "instructions": "各批判をその和らげ方と結びつけてください。",
+                  "pairs": [
+                    {
+                      "left": "表現をもう少し明確にしていただけますか。",
+                      "right": "非常に和らげた批判",
+                      "register": "formal",
+                      "nuance": "欠点を依頼に変える。"
+                    },
+                    {
+                      "left": "報告書は中ほどがやや繰り返し気味です。",
+                      "right": "部分的な批判",
+                      "register": "neutral",
+                      "nuance": "やや が範囲を限定する。"
+                    },
+                    {
+                      "left": "論点は妥当かもしれませんが、根拠が薄いです。",
+                      "right": "譲歩を含む批判",
+                      "register": "formal",
+                      "nuance": "主張を認めて根拠を攻める。"
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "register",
+                    "explanation": "緩和は問題を隠さず、正確に位置づける。",
+                    "ruleRef": "gp-ja-softening"
+                  }
+                },
+                {
+                  "type": "ListenChoose",
+                  "id": "es-ja-c1-e59",
+                  "audioText": "前回の会議では、口調が少し直接的すぎたのではないかと思います。",
+                  "options": [
+                    "話し手は口調をほめている",
+                    "話し手は口調が直接的すぎたと示唆している",
+                    "話し手は謝罪を要求している",
+                    "話し手は問題を無視している"
+                  ],
+                  "correctIndex": 1,
+                  "feedbackOnError": {
+                    "type": "comprehension",
+                    "explanation": "「〜のではないかと思います」が批判を観察として提示する。",
+                    "ruleRef": "gp-ja-softening"
+                  }
+                },
+                {
+                  "type": "AudioOnlyPrompt",
+                  "id": "es-ja-c1-e60",
+                  "audioText": "批判は妥当かもしれませんが、タイミングは適切ではないかと思います。まずは個別に話していただけますか。",
+                  "question": "話し手は何を提案していますか。",
+                  "options": [
+                    "批判を無視する",
+                    "まず個別に話す",
+                    "批判を公の場で繰り返す",
+                    "メッセージを完全に変える"
+                  ],
+                  "correctIndex": 1,
+                  "allowSlowPlayback": true,
+                  "feedbackOnError": {
+                    "type": "comprehension",
+                    "explanation": "最後の依頼が伝え方を和らげる：まず個別に。",
+                    "ruleRef": "gp-ja-keigo-critique"
+                  }
+                },
+                {
+                  "type": "MultipleChoice",
+                  "id": "es-ja-c1-e61",
+                  "question": "Completa: タイミングは___ではないかと思います。",
+                  "options": [
+                    "適切",
+                    "適切な",
+                    "適切に"
+                  ],
+                  "correctIndex": 0,
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "「〜ではないか」の前はナ形容詞の語幹「適切」を使う。",
+                    "ruleRef": "gp-ja-keigo-critique"
+                  }
+                },
+                {
+                  "type": "Translate",
+                  "id": "es-ja-c1-e62",
+                  "sourcePhrase": "Me pregunto si el comentario fue demasiado directo.",
+                  "correctTokens": [
+                    "コメント",
+                    "は",
+                    "少し",
+                    "直接的",
+                    "すぎた",
+                    "の",
+                    "では",
+                    "ない",
+                    "か",
+                    "と",
+                    "思い",
+                    "ます"
+                  ],
+                  "distractorTokens": [
+                    "直接的すぎる",
+                    "確実に"
+                  ],
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "「〜すぎたのではないかと思います」で控えめな疑問を示す。",
+                    "ruleRef": "gp-ja-softening"
+                  }
+                },
+                {
+                  "type": "ListenType",
+                  "id": "es-ja-c1-e63",
+                  "transcription": "批判は妥当かもしれませんが、タイミングは適切ではないかと思います",
+                  "audioText": "批判は妥当かもしれませんが、タイミングは適切ではないかと思います",
+                  "feedbackOnError": {
+                    "type": "spelling",
+                    "explanation": "「妥当」「適切」の漢字を正確に書く。",
+                    "ruleRef": "gp-ja-keigo-critique"
+                  }
+                },
+                {
+                  "type": "SpeakRepeat",
+                  "id": "es-ja-c1-e64",
+                  "targetPhrase": "表現をもう少し明確にしていただけますか。",
+                  "audioText": "表現をもう少し明確にしていただけますか。",
+                  "feedbackOnError": {
+                    "type": "pronunciation",
+                    "explanation": "「していただけますか」をなめらかに、語尾を上げる。",
+                    "ruleRef": "gp-ja-keigo-critique"
+                  }
+                },
+                {
+                  "type": "MatchPairs",
+                  "id": "es-ja-c1-e65",
+                  "pairs": [
+                    {
+                      "left": "建設的なフィードバック",
+                      "right": "crítica constructiva"
+                    },
+                    {
+                      "left": "防御的な反応",
+                      "right": "una reacción defensiva"
+                    },
+                    {
+                      "left": "ある程度まで",
+                      "right": "hasta cierto punto"
+                    },
+                    {
+                      "left": "暗黙の批判",
+                      "right": "una crítica implícita"
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "建設的なフィードバックは人ではなく行動を名指しする。",
+                    "ruleRef": "gp-ja-softening"
+                  }
+                },
+                {
+                  "type": "FreeSpeakingPrompt",
+                  "id": "es-ja-c1-e66",
+                  "prompt": "Da feedback a un compañero sobre un informe flojo: reconoce lo que funciona, señala el problema con precisión y propone una mejora concreta.",
+                  "minTokens": 12,
+                  "conceptClusters": [
+                    [
+                      "かもしれません",
+                      "やや",
+                      "気味"
+                    ],
+                    [
+                      "妥当",
+                      "改善",
+                      "具体的"
+                    ],
+                    [
+                      "建設的",
+                      "口調",
+                      "個別"
+                    ]
+                  ],
+                  "grammarRuleRefs": [
+                    "gp-ja-softening",
+                    "gp-ja-keigo-critique"
+                  ],
+                  "timeLimitSeconds": 30,
+                  "minWpm": 60,
+                  "maxWpm": 150,
+                  "modelAnswer": "論点 は 妥当 か も しれ ません が 、 根拠 が やや 薄い 気味 です 。 具体 的 な 例 を 一つ 加えて いただけます か 。 まず は 個別 に 話し たい と 思い ます 。",
+                  "selfAssessmentCriteria": [
+                    "¿Separé la persona del problema?",
+                    "¿Atenué sin perder precisión?",
+                    "¿Propuse una mejora concreta?"
+                  ],
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "解答例は緩和表現と敬語の依頼を組み合わせ、批判を具体的な改善につなげる。",
+                    "ruleRef": "gp-ja-softening"
+                  }
+                }
+              ]
+            },
+            {
+              "id": "es-ja-c1-un-2-ls-3",
+              "title": "皮肉と両刃",
+              "cefrLevel": "C1",
+              "scenario": "散々な会議の後、チームが乾いたユーモアと含みで結果を振り返っています。",
+              "canDo": "Puedo reconocer la ironía, usar la atenuación irónica y formular preguntas retóricas sin perder el registro profesional.",
+              "grammarPoints": [
+                {
+                  "id": "gp-ja-irony",
+                  "label": "皮肉・控えめな表現",
+                  "description": "〜とは言えません、お世辞にも〜ない。"
+                },
+                {
+                  "id": "gp-ja-rhetorical-questions",
+                  "label": "修辞疑問",
+                  "description": "まさか〜のでしょうか。不思議でなりません。"
+                }
+              ],
+              "vocabFrequencyBand": "8000-12000",
+              "culturalNotes": [
+                {
+                  "idiom": "含みのある言い方",
+                  "note": "文字面以上のことを含ませる言い方。仕事では、相手が文脈を共有している場合にだけ通じる。",
+                  "translation": "forma de hablar con segundas intenciones"
+                }
+              ],
+              "microLesson": {
+                "title": "嘘をつかずに逆を言う",
+                "goals": [
+                  "控えめな表現を間接的な批判として理解する。",
+                  "修辞疑問で矛盾を指摘する。"
+                ],
+                "sections": [
+                  {
+                    "heading": "皮肉でトーンを制御する",
+                    "body": "「お世辞にも良いとは言えません」は否定を和らげつつ評価を伝える。「まさか三度の遅延の後で納期が守られると思っていたのでしょうか」は相手を責めずに矛盾を示す。",
+                    "examples": [
+                      {
+                        "source": "Los resultados son, como mínimo, decepcionantes.",
+                        "target": "結果は控えめに言っても期待外れです。",
+                        "note": "控えめな表現で強調する。"
+                      },
+                      {
+                        "source": "¿De verdad esperábamos que el plazo se cumpliera tras tres retrasos?",
+                        "target": "まさか、三度の遅延の後で納期が守られると思っていたのでしょうか。",
+                        "note": "修辞疑問は答えを必要としない。"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "glossary": [
+                {
+                  "term": "皮肉",
+                  "translations": [
+                    "ironía"
+                  ]
+                },
+                {
+                  "term": "控えめ",
+                  "translations": [
+                    "discreto",
+                    "atenuado"
+                  ]
+                },
+                {
+                  "term": "暗示",
+                  "translations": [
+                    "sugerencia",
+                    "insinuación"
+                  ]
+                },
+                {
+                  "term": "誇張",
+                  "translations": [
+                    "exageración"
+                  ]
+                },
+                {
+                  "term": "無表情",
+                  "translations": [
+                    "impasible"
+                  ]
+                },
+                {
+                  "term": "含み",
+                  "translations": [
+                    "segunda intención"
+                  ]
+                },
+                {
+                  "term": "皮肉屋",
+                  "translations": [
+                    "persona sarcástica"
+                  ]
+                },
+                {
+                  "term": "矛盾",
+                  "translations": [
+                    "contradicción"
+                  ]
+                }
+              ],
+              "exercises": [
+                {
+                  "type": "ClozeDragDrop",
+                  "id": "es-ja-c1-e67",
+                  "passage": "結果はお世辞にも良い{{b1}}言えません。三度の遅延を「順調」と{{b2}}のは無理があります。",
+                  "blanks": [
+                    {
+                      "id": "b1",
+                      "answer": "とは",
+                      "options": [
+                        "とは",
+                        "のが",
+                        "には"
+                      ]
+                    },
+                    {
+                      "id": "b2",
+                      "answer": "呼ぶ",
+                      "options": [
+                        "呼ぶ",
+                        "呼んで",
+                        "呼べば"
+                      ]
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "「良いとは言えません」は控えめな否定、「〜と呼ぶのは無理があります」は皮肉な評価。",
+                    "ruleRef": "gp-ja-irony"
+                  }
+                },
+                {
+                  "type": "ClozeDragDrop",
+                  "id": "es-ja-c1-e68",
+                  "passage": "{{b1}}、三度の遅延の後で納期が守られると思っていたのでしょうか。誰も問題を報告しなかったのは不思議{{b2}}ありません。",
+                  "blanks": [
+                    {
+                      "id": "b1",
+                      "answer": "まさか",
+                      "options": [
+                        "まさか",
+                        "もちろん",
+                        "ぜひ"
+                      ]
+                    },
+                    {
+                      "id": "b2",
+                      "answer": "で",
+                      "options": [
+                        "で",
+                        "に",
+                        "を"
+                      ]
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "「まさか〜のでしょうか」は修辞疑問、「不思議でなりません」は強い疑問を表す。",
+                    "ruleRef": "gp-ja-rhetorical-questions"
+                  }
+                },
+                {
+                  "type": "SemanticMatch",
+                  "id": "es-ja-c1-e69",
+                  "instructions": "各文が実際に何を意味するか選んでください。",
+                  "pairs": [
+                    {
+                      "left": "結果は控えめに言っても期待外れです。",
+                      "right": "結果は悪い",
+                      "register": "formal",
+                      "nuance": "否定的な語を避けて伝える。"
+                    },
+                    {
+                      "left": "なるほど、すべて順調でしたね。",
+                      "right": "会議は大失敗だった",
+                      "register": "informal",
+                      "nuance": "皮肉が文字面を反転させる。"
+                    },
+                    {
+                      "left": "誰も問題を報告しなかったのは不思議ではありませんか。",
+                      "right": "誰かが報告すべきだった",
+                      "register": "formal",
+                      "nuance": "修辞疑問が抜け漏れを指す。"
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "register",
+                    "explanation": "皮肉は共有された文脈を必要とする。なければ伝わらない。",
+                    "ruleRef": "gp-ja-irony"
+                  }
+                },
+                {
+                  "type": "ListenChoose",
+                  "id": "es-ja-c1-e70",
+                  "audioText": "なるほど、すべて順調でしたね。三度の遅延を数えなければ。",
+                  "options": [
+                    "会議はうまくいった",
+                    "会議は大失敗だった",
+                    "遅延は予定通りだった",
+                    "話し手は混乱している"
+                  ],
+                  "correctIndex": 1,
+                  "feedbackOnError": {
+                    "type": "comprehension",
+                    "explanation": "最後の条件が皮肉を明かす：遅延は「順調」と矛盾する。",
+                    "ruleRef": "gp-ja-irony"
+                  }
+                },
+                {
+                  "type": "AudioOnlyPrompt",
+                  "id": "es-ja-c1-e71",
+                  "audioText": "結果は控えめに言っても期待外れです。まさか、三度の遅延の後で納期が守られると思っていたのでしょうか。",
+                  "question": "話し手の態度は何ですか。",
+                  "options": [
+                    "結果に満足している",
+                    "悪い結果に皮肉を込めている",
+                    "中立的に報告している",
+                    "顧客に怒っている"
+                  ],
+                  "correctIndex": 1,
+                  "allowSlowPlayback": true,
+                  "feedbackOnError": {
+                    "type": "comprehension",
+                    "explanation": "控えめな表現と修辞疑問が皮肉な批判を作る。",
+                    "ruleRef": "gp-ja-rhetorical-questions"
+                  }
+                },
+                {
+                  "type": "MultipleChoice",
+                  "id": "es-ja-c1-e72",
+                  "question": "Completa: 結果はお世辞にも良い___言えません。",
+                  "options": [
+                    "とは",
+                    "のが",
+                    "には"
+                  ],
+                  "correctIndex": 0,
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "「良いとは言えません」が定型の控えめな否定。",
+                    "ruleRef": "gp-ja-irony"
+                  }
+                },
+                {
+                  "type": "Translate",
+                  "id": "es-ja-c1-e73",
+                  "sourcePhrase": "Los resultados son, como mínimo, decepcionantes.",
+                  "correctTokens": [
+                    "結果",
+                    "は",
+                    "控えめ",
+                    "に",
+                    "言っても",
+                    "期待外れ",
+                    "です"
+                  ],
+                  "distractorTokens": [
+                    "最高",
+                    "素晴らしい"
+                  ],
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "「控えめに言っても期待外れです」が定型の評価表現。",
+                    "ruleRef": "gp-ja-irony"
+                  }
+                },
+                {
+                  "type": "ListenType",
+                  "id": "es-ja-c1-e74",
+                  "transcription": "結果は控えめに言っても期待外れです",
+                  "audioText": "結果は控えめに言っても期待外れです",
+                  "feedbackOnError": {
+                    "type": "spelling",
+                    "explanation": "「控えめ」「期待外れ」を正確に書く。",
+                    "ruleRef": "gp-ja-irony"
+                  }
+                },
+                {
+                  "type": "SpeakRepeat",
+                  "id": "es-ja-c1-e75",
+                  "targetPhrase": "なるほど、すべて順調でしたね。三度の遅延を数えなければ。",
+                  "audioText": "なるほど、すべて順調でしたね。三度の遅延を数えなければ。",
+                  "feedbackOnError": {
+                    "type": "pronunciation",
+                    "explanation": "「順調でしたね」を平板に言い、皮肉をにじませる。",
+                    "ruleRef": "gp-ja-irony"
+                  }
+                },
+                {
+                  "type": "MatchPairs",
+                  "id": "es-ja-c1-e76",
+                  "pairs": [
+                    {
+                      "left": "含みのある言い方",
+                      "right": "forma de hablar con segundas intenciones"
+                    },
+                    {
+                      "left": "修辞疑問",
+                      "right": "pregunta retórica"
+                    },
+                    {
+                      "left": "控えめに言う",
+                      "right": "decirlo con atenuación"
+                    },
+                    {
+                      "left": "無表情な冗談",
+                      "right": "un chiste impasible"
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "皮肉の語彙はトーンを説明しすぎずに示す。",
+                    "ruleRef": "gp-ja-rhetorical-questions"
+                  }
+                },
+                {
+                  "type": "FreeSpeakingPrompt",
+                  "id": "es-ja-c1-e77",
+                  "prompt": "Comenta un resultado decepcionante con ironía profesional: usa una atenuación, una pregunta retórica y evita el sarcasmo hiriente.",
+                  "minTokens": 12,
+                  "conceptClusters": [
+                    [
+                      "とは言えません",
+                      "控えめに言っても",
+                      "期待外れ"
+                    ],
+                    [
+                      "まさか",
+                      "不思議",
+                      "のでしょうか"
+                    ],
+                    [
+                      "皮肉",
+                      "含み",
+                      "無表情"
+                    ]
+                  ],
+                  "grammarRuleRefs": [
+                    "gp-ja-irony",
+                    "gp-ja-rhetorical-questions"
+                  ],
+                  "timeLimitSeconds": 30,
+                  "minWpm": 60,
+                  "maxWpm": 150,
+                  "modelAnswer": "結果 は 控えめ に 言っても 期待外れ です 。 まさか 、 三度 の 遅延 の 後 で 納期 が 守 られる と 思って いた の でしょ う か 。 なるほど 、 すべて 順調 でし た ね 。",
+                  "selfAssessmentCriteria": [
+                    "¿Usé una atenuación irónica?",
+                    "¿Formulé una pregunta retórica?",
+                    "¿Evité el sarcasmo hiriente?"
+                  ],
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "解答例は控えめな表現と修辞疑問を組み合わせ、乾いたトーンで批判する。",
+                    "ruleRef": "gp-ja-irony"
+                  }
+                }
+              ]
+            },
+            {
+              "id": "es-ja-c1-un-2-ls-4",
+              "title": "建設的な論争",
+              "cefrLevel": "C1",
+              "scenario": "二つの部門が発売について反対の立場を守り、共通の提案にまとめる必要があります。",
+              "canDo": "Puedo moderar una polémica con marcadores de discurso y construir un contraargumento sin polarizar.",
+              "grammarPoints": [
+                {
+                  "id": "gp-ja-discourse",
+                  "label": "談話標識",
+                  "description": "確かに、しかし、一方で、結局。"
+                },
+                {
+                  "id": "gp-ja-counterargument",
+                  "label": "反論の構築",
+                  "description": "〜という指摘もありますが、それでも。"
+                }
+              ],
+              "vocabFrequencyBand": "8000-12000",
+              "culturalNotes": [
+                {
+                  "idiom": "歩み寄る",
+                  "note": "互いに譲って合意点に近づくこと。論争では、相手を負かすより決定を改善する。",
+                  "translation": "acercar posturas"
+                }
+              ],
+              "microLesson": {
+                "title": "議論して作る",
+                "goals": [
+                  "譲歩・反論・総括を順序づける。",
+                  "両者の良い点を統合した提案で論争を閉じる。"
+                ],
+                "sections": [
+                  {
+                    "heading": "反論の地図",
+                    "body": "確かに で譲歩を開き、しかし で留保を加え、一方で で立場を分け、結局 で判断をまとめる。成熟した反論は、反対意見を認めてから応答する。",
+                    "examples": [
+                      {
+                        "source": "Es cierto que faltan datos; aun así, la tendencia es clara.",
+                        "target": "確かにデータは不足していますが、それでも傾向は明らかです。",
+                        "note": "譲歩が応答を準備する。"
+                      },
+                      {
+                        "source": "En conjunto, el riesgo de no actuar es mayor.",
+                        "target": "結局、行動しないリスクの方が大きいです。",
+                        "note": "結局 が比較後の判断をまとめる。"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "glossary": [
+                {
+                  "term": "論争",
+                  "translations": [
+                    "polémica",
+                    "controversia"
+                  ]
+                },
+                {
+                  "term": "対立的",
+                  "translations": [
+                    "confrontacional"
+                  ]
+                },
+                {
+                  "term": "共通点",
+                  "translations": [
+                    "terreno común"
+                  ]
+                },
+                {
+                  "term": "反論",
+                  "translations": [
+                    "contraargumento"
+                  ]
+                },
+                {
+                  "term": "修辞",
+                  "translations": [
+                    "retórica"
+                  ]
+                },
+                {
+                  "term": "二極化",
+                  "translations": [
+                    "polarización"
+                  ]
+                },
+                {
+                  "term": "敬意",
+                  "translations": [
+                    "respeto"
+                  ]
+                },
+                {
+                  "term": "結論",
+                  "translations": [
+                    "desenlace",
+                    "conclusión"
+                  ]
+                }
+              ],
+              "exercises": [
+                {
+                  "type": "ClozeDragDrop",
+                  "id": "es-ja-c1-e78",
+                  "passage": "{{b1}}、計画にはリスクがあります。{{b2}}、行動しないコストの方が高いのです。",
+                  "blanks": [
+                    {
+                      "id": "b1",
+                      "answer": "確かに",
+                      "options": [
+                        "確かに",
+                        "ぜひ",
+                        "必ず"
+                      ]
+                    },
+                    {
+                      "id": "b2",
+                      "answer": "しかし",
+                      "options": [
+                        "しかし",
+                        "したがって",
+                        "つまり"
+                      ]
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "確かに で譲歩し、しかし で留保を加える。",
+                    "ruleRef": "gp-ja-discourse"
+                  }
+                },
+                {
+                  "type": "ClozeDragDrop",
+                  "id": "es-ja-c1-e79",
+                  "passage": "データが不足しているのは{{b1}}ですが、傾向は明らかだ{{b2}}指摘もあります。",
+                  "blanks": [
+                    {
+                      "id": "b1",
+                      "answer": "事実",
+                      "options": [
+                        "事実",
+                        "事実に",
+                        "事実な"
+                      ]
+                    },
+                    {
+                      "id": "b2",
+                      "answer": "という",
+                      "options": [
+                        "という",
+                        "といった",
+                        "として"
+                      ]
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "「〜のは事実ですが」で認め、「〜という指摘もあります」で他者の立場を示す。",
+                    "ruleRef": "gp-ja-counterargument"
+                  }
+                },
+                {
+                  "type": "SemanticMatch",
+                  "id": "es-ja-c1-e80",
+                  "instructions": "討論の各動きの働きを選んでください。",
+                  "pairs": [
+                    {
+                      "left": "確かに、計画にはリスクがあります。",
+                      "right": "最初の譲歩",
+                      "register": "formal",
+                      "nuance": "相手の反論を先取りする。"
+                    },
+                    {
+                      "left": "しかし、行動しないコストの方が高いのです。",
+                      "right": "均衡を戻す留保",
+                      "register": "formal",
+                      "nuance": "譲歩の後に重しを加える。"
+                    },
+                    {
+                      "left": "結局、行動しないリスクの方が大きいです。",
+                      "right": "最終的な総括",
+                      "register": "formal",
+                      "nuance": "比較後に判断をまとめる。"
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "register",
+                    "explanation": "建設的な討論は譲歩・留保・総括を順序づける。",
+                    "ruleRef": "gp-ja-discourse"
+                  }
+                },
+                {
+                  "type": "ListenChoose",
+                  "id": "es-ja-c1-e81",
+                  "audioText": "確かに、計画にはリスクがあります。しかし、行動しないコストの方が高いのです。",
+                  "options": [
+                    "話し手は計画を拒否する",
+                    "話し手はリスクを比べて計画を支持する",
+                    "話し手はリスクを無視する",
+                    "話し手は話題を変える"
+                  ],
+                  "correctIndex": 1,
+                  "feedbackOnError": {
+                    "type": "comprehension",
+                    "explanation": "しかし の後の留保が譲歩の均衡を戻す。",
+                    "ruleRef": "gp-ja-discourse"
+                  }
+                },
+                {
+                  "type": "AudioOnlyPrompt",
+                  "id": "es-ja-c1-e82",
+                  "audioText": "データが不足しているのは事実ですが、傾向は明らかだという指摘もあります。結局、提案を小規模で試す方が、拒否するより妥当だと思います。",
+                  "question": "話し手は何を提案していますか。",
+                  "options": [
+                    "提案を拒否する",
+                    "小規模で試す",
+                    "完璧なデータを待つ",
+                    "条件なしで承認する"
+                  ],
+                  "correctIndex": 1,
+                  "allowSlowPlayback": true,
+                  "feedbackOnError": {
+                    "type": "comprehension",
+                    "explanation": "総括が拒否でも全面承認でもなく、試験導入を提案する。",
+                    "ruleRef": "gp-ja-counterargument"
+                  }
+                },
+                {
+                  "type": "MultipleChoice",
+                  "id": "es-ja-c1-e83",
+                  "question": "Completa: 確かにリスクはあります。___、行動しないコストの方が高いのです。",
+                  "options": [
+                    "しかし",
+                    "したがって",
+                    "つまり"
+                  ],
+                  "correctIndex": 0,
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "譲歩の後の留保は「しかし」で導く。",
+                    "ruleRef": "gp-ja-discourse"
+                  }
+                },
+                {
+                  "type": "Translate",
+                  "id": "es-ja-c1-e84",
+                  "sourcePhrase": "Es cierto que nos faltan datos, pero la tendencia es clara.",
+                  "correctTokens": [
+                    "データ",
+                    "が",
+                    "不足",
+                    "して",
+                    "いる",
+                    "の",
+                    "は",
+                    "事実",
+                    "です",
+                    "が",
+                    "傾向",
+                    "は",
+                    "明らか",
+                    "です"
+                  ],
+                  "distractorTokens": [
+                    "にもかかわらず",
+                    "不明"
+                  ],
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "「〜のは事実ですが」で譲歩し、「傾向は明らかです」で応答する。",
+                    "ruleRef": "gp-ja-counterargument"
+                  }
+                },
+                {
+                  "type": "ListenType",
+                  "id": "es-ja-c1-e85",
+                  "transcription": "データが不足しているのは事実ですが、傾向は明らかです",
+                  "audioText": "データが不足しているのは事実ですが、傾向は明らかです",
+                  "feedbackOnError": {
+                    "type": "spelling",
+                    "explanation": "「不足」「事実」「傾向」の漢字を正確に書く。",
+                    "ruleRef": "gp-ja-counterargument"
+                  }
+                },
+                {
+                  "type": "SpeakRepeat",
+                  "id": "es-ja-c1-e86",
+                  "targetPhrase": "結局、行動しないリスクの方が大きいです。",
+                  "audioText": "結局、行動しないリスクの方が大きいです。",
+                  "feedbackOnError": {
+                    "type": "pronunciation",
+                    "explanation": "結局 を文頭で区切り、リスク を強調する。",
+                    "ruleRef": "gp-ja-discourse"
+                  }
+                },
+                {
+                  "type": "MatchPairs",
+                  "id": "es-ja-c1-e87",
+                  "pairs": [
+                    {
+                      "left": "共通点",
+                      "right": "terreno común"
+                    },
+                    {
+                      "left": "反論",
+                      "right": "contraargumento"
+                    },
+                    {
+                      "left": "結局",
+                      "right": "en conjunto"
+                    },
+                    {
+                      "left": "敬意ある討論",
+                      "right": "un debate respetuoso"
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "討論の語彙は立場・合意・閉じ方を名指しする。",
+                    "ruleRef": "gp-ja-discourse"
+                  }
+                },
+                {
+                  "type": "FreeSpeakingPrompt",
+                  "id": "es-ja-c1-e88",
+                  "prompt": "Modera una polémica sobre el lanzamiento: concede el riesgo, presenta el contraargumento, cierra con una síntesis y una propuesta común.",
+                  "minTokens": 12,
+                  "conceptClusters": [
+                    [
+                      "確かに",
+                      "事実",
+                      "しかし"
+                    ],
+                    [
+                      "結局",
+                      "一方で",
+                      "それでも"
+                    ],
+                    [
+                      "共通点",
+                      "結論",
+                      "提案"
+                    ]
+                  ],
+                  "grammarRuleRefs": [
+                    "gp-ja-discourse",
+                    "gp-ja-counterargument"
+                  ],
+                  "timeLimitSeconds": 30,
+                  "minWpm": 60,
+                  "maxWpm": 150,
+                  "modelAnswer": "確かに 、 計画 に は リスク が あり ます 。 しかし 、 行動 しない コスト の 方 が 高い の です 。 データ が 不足 して いる の は 事実 です が 、 結局 、 小規模 で 試す の が 妥当 です 。",
+                  "selfAssessmentCriteria": [
+                    "¿Concedí el riesgo antes de responder?",
+                    "¿Construí un contraargumento?",
+                    "¿Cerré con una propuesta común?"
+                  ],
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "解答例は譲歩・反論・総括を明確な談話標識で順序づける。",
+                    "ruleRef": "gp-ja-discourse"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+        ]
+      }
   ]
 }
