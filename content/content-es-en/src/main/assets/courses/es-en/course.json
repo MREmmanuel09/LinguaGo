@@ -21626,6 +21626,1560 @@
               ]
             }
           ]
+        },
+        {
+          "id": "es-en-lv-5-un-3",
+          "title": "Lengua culta",
+          "lessons": [
+            {
+              "id": "es-en-c2-un-3-ls-1",
+              "title": "Retórica clásica",
+              "cefrLevel": "C2",
+              "scenario": "Un discurso de cierre debe sonar memorable sin caer en el efectismo vacío.",
+              "canDo": "Puedo identificar y usar figuras retóricas clásicas con intención argumentativa.",
+              "grammarPoints": [
+                {
+                  "id": "gp-c2-rhetorical-devices",
+                  "label": "Figuras retóricas",
+                  "description": "Tricolon, anáfora, quiasmo, pregunta retórica."
+                },
+                {
+                  "id": "gp-c2-emphatic-structures",
+                  "label": "Estructuras enfáticas",
+                  "description": "It is not X but Y; what matters is..."
+                }
+              ],
+              "vocabFrequencyBand": "12000+",
+              "culturalNotes": [
+                {
+                  "idiom": "speak truth to power",
+                  "note": "Decir la verdad a quien tiene poder; en retórica, exige credibilidad y no solo sonoridad.",
+                  "translation": "decir la verdad al poder"
+                }
+              ],
+              "microLesson": {
+                "title": "La forma que argumenta",
+                "goals": [
+                  "Reconocer figuras y su función argumentativa.",
+                  "Evitar que la figura sustituya al argumento."
+                ],
+                "sections": [
+                  {
+                    "heading": "Tres golpes y un silencio",
+                    "body": "El tricolon acumula tres miembros de fuerza creciente; la anáfora repite la apertura; el quiasmo invierte el orden; la pregunta retórica busca asentimiento. La figura sirve si el contenido la sostiene.",
+                    "examples": [
+                      {
+                        "source": "Vinimos, vimos y entregamos.",
+                        "target": "We came, we saw, we delivered.",
+                        "note": "Tricolon de fuerza creciente."
+                      },
+                      {
+                        "source": "Lo que importa no es el coste, sino el compromiso.",
+                        "target": "What matters is not the cost but the commitment.",
+                        "note": "Estructura enfática con contraste."
+                      }
+                    ]
+                  }
+                ]
+              },
+              "glossary": [
+                {
+                  "term": "tricolon",
+                  "translations": [
+                    "tricolon"
+                  ]
+                },
+                {
+                  "term": "anaphora",
+                  "translations": [
+                    "anáfora"
+                  ]
+                },
+                {
+                  "term": "chiasmus",
+                  "translations": [
+                    "quiasmo"
+                  ]
+                },
+                {
+                  "term": "cadence",
+                  "translations": [
+                    "cadencia"
+                  ]
+                },
+                {
+                  "term": "rhetoric",
+                  "translations": [
+                    "retórica"
+                  ]
+                },
+                {
+                  "term": "emphatic",
+                  "translations": [
+                    "enfático"
+                  ]
+                },
+                {
+                  "term": "memorable",
+                  "translations": [
+                    "memorable"
+                  ]
+                },
+                {
+                  "term": "hollow",
+                  "translations": [
+                    "hueco",
+                    "vacío"
+                  ]
+                }
+              ],
+              "exercises": [
+                {
+                  "type": "ClozeDragDrop",
+                  "id": "es-en-c2-e97",
+                  "passage": "The speech used a {{b1}}: 'we came, we saw, we delivered' — three clauses of increasing {{b2}}.",
+                  "blanks": [
+                    {
+                      "id": "b1",
+                      "answer": "tricolon",
+                      "options": [
+                        "tricolon",
+                        "trilogy",
+                        "triangle"
+                      ]
+                    },
+                    {
+                      "id": "b2",
+                      "answer": "force",
+                      "options": [
+                        "force",
+                        "length",
+                        "silence"
+                      ]
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "El tricolon acumula tres miembros; la fuerza creciente es su efecto retórico.",
+                    "ruleRef": "gp-c2-rhetorical-devices"
+                  }
+                },
+                {
+                  "type": "ClozeDragDrop",
+                  "id": "es-en-c2-e98",
+                  "passage": "{{b1}} was not mere repetition: each clause began with 'we', a deliberate {{b2}}.",
+                  "blanks": [
+                    {
+                      "id": "b1",
+                      "answer": "Anaphora",
+                      "options": [
+                        "Anaphora",
+                        "Metaphor",
+                        "Hyperbole"
+                      ]
+                    },
+                    {
+                      "id": "b2",
+                      "answer": "cadence",
+                      "options": [
+                        "cadence",
+                        "accident",
+                        "silence"
+                      ]
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "La anáfora repite la apertura para crear cadencia y cohesión.",
+                    "ruleRef": "gp-c2-rhetorical-devices"
+                  }
+                },
+                {
+                  "type": "SemanticMatch",
+                  "id": "es-en-c2-e99",
+                  "instructions": "Empareja cada figura con su efecto.",
+                  "pairs": [
+                    {
+                      "left": "We came, we saw, we delivered.",
+                      "right": "Acumulación creciente",
+                      "register": "formal",
+                      "nuance": "El tricolon cierra con el miembro más fuerte."
+                    },
+                    {
+                      "left": "Ask not what your company can do for you; ask what you can do for your company.",
+                      "right": "Quiasmo",
+                      "register": "formal",
+                      "nuance": "La inversión obliga a releer el orden."
+                    },
+                    {
+                      "left": "Is this really the legacy we want?",
+                      "right": "Pregunta retórica",
+                      "register": "formal",
+                      "nuance": "Busca asentimiento, no información."
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "register",
+                    "explanation": "Cada figura ordena la atención del oyente de una manera distinta.",
+                    "ruleRef": "gp-c2-rhetorical-devices"
+                  }
+                },
+                {
+                  "type": "ListenChoose",
+                  "id": "es-en-c2-e100",
+                  "audioText": "We came, we saw, we delivered. What matters is not the cost but the commitment.",
+                  "options": [
+                    "The speaker lists unrelated facts",
+                    "The speaker uses tricolon and emphatic contrast",
+                    "The speaker asks a question",
+                    "The speaker apologizes"
+                  ],
+                  "correctIndex": 1,
+                  "feedbackOnError": {
+                    "type": "comprehension",
+                    "explanation": "El tricolon y la estructura «not X but Y» sostienen el cierre.",
+                    "ruleRef": "gp-c2-rhetorical-devices"
+                  }
+                },
+                {
+                  "type": "AudioOnlyPrompt",
+                  "id": "es-en-c2-e101",
+                  "audioText": "We came, we saw, we delivered. What matters is not the cost but the commitment. And if we can speak truth to power, we can also listen when truth speaks back.",
+                  "question": "What is the rhetorical effect of the final line?",
+                  "options": [
+                    "It closes with a chiasmus about truth and power",
+                    "It changes the topic",
+                    "It apologizes for the speech",
+                    "It lists three costs"
+                  ],
+                  "correctIndex": 0,
+                  "allowSlowPlayback": true,
+                  "feedbackOnError": {
+                    "type": "comprehension",
+                    "explanation": "La última línea invierte los términos: truth to power / truth speaks back.",
+                    "ruleRef": "gp-c2-rhetorical-devices"
+                  }
+                },
+                {
+                  "type": "MultipleChoice",
+                  "id": "es-en-c2-e102",
+                  "question": "Completa: The line uses ___ to repeat the opening of each clause.",
+                  "options": [
+                    "anaphora",
+                    "anecdote",
+                    "analogy"
+                  ],
+                  "correctIndex": 0,
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "La anáfora es la repetición de la apertura.",
+                    "ruleRef": "gp-c2-rhetorical-devices"
+                  }
+                },
+                {
+                  "type": "Translate",
+                  "id": "es-en-c2-e103",
+                  "sourcePhrase": "La repetición inicial crea ritmo y énfasis.",
+                  "correctTokens": [
+                    "The",
+                    "opening",
+                    "repetition",
+                    "creates",
+                    "rhythm",
+                    "and",
+                    "emphasis"
+                  ],
+                  "distractorTokens": [
+                    "repeat",
+                    "emphatic"
+                  ],
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "«Repetition» y «emphasis» son los sustantivos que describen el efecto retórico.",
+                    "ruleRef": "gp-c2-emphatic-structures"
+                  }
+                },
+                {
+                  "type": "ListenType",
+                  "id": "es-en-c2-e104",
+                  "transcription": "What matters is not the cost but the commitment",
+                  "audioText": "What matters is not the cost but the commitment",
+                  "feedbackOnError": {
+                    "type": "spelling",
+                    "explanation": "Escribe «commitment» con doble «t» y «matters» con «tt».",
+                    "ruleRef": "gp-c2-emphatic-structures"
+                  }
+                },
+                {
+                  "type": "SpeakRepeat",
+                  "id": "es-en-c2-e105",
+                  "targetPhrase": "We came, we saw, we delivered, and what matters now is the commitment.",
+                  "audioText": "We came, we saw, we delivered, and what matters now is the commitment.",
+                  "feedbackOnError": {
+                    "type": "pronunciation",
+                    "explanation": "Marca los tres miembros del tricolon y baja el tono en «commitment».",
+                    "ruleRef": "gp-c2-rhetorical-devices"
+                  }
+                },
+                {
+                  "type": "MatchPairs",
+                  "id": "es-en-c2-e106",
+                  "pairs": [
+                    {
+                      "left": "a rhetorical question",
+                      "right": "una pregunta retórica"
+                    },
+                    {
+                      "left": "a tricolon",
+                      "right": "un tricolon"
+                    },
+                    {
+                      "left": "anaphora",
+                      "right": "anáfora"
+                    },
+                    {
+                      "left": "a call to action",
+                      "right": "una llamada a la acción"
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "La retórica clásica tiene nombres técnicos estables.",
+                    "ruleRef": "gp-c2-rhetorical-devices"
+                  }
+                },
+                {
+                  "type": "ClozeDragDrop",
+                  "id": "es-en-c2-e107",
+                  "passage": "Speak truth to {{b1}} without {{b2}} the room.",
+                  "blanks": [
+                    {
+                      "id": "b1",
+                      "answer": "power",
+                      "options": [
+                        "power",
+                        "powerful",
+                        "powers"
+                      ]
+                    },
+                    {
+                      "id": "b2",
+                      "answer": "losing",
+                      "options": [
+                        "losing",
+                        "lose",
+                        "lost"
+                      ]
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "La expresión fija es «speak truth to power»; tras «without» va gerundio.",
+                    "ruleRef": "gp-c2-rhetorical-devices"
+                  }
+                },
+                {
+                  "type": "FreeSpeakingPrompt",
+                  "id": "es-en-c2-e108",
+                  "prompt": "Escribe el cierre de un discurso: usa un tricolon, una estructura enfática y una llamada a la acción sin caer en el efectismo.",
+                  "minTokens": 20,
+                  "conceptClusters": [
+                    [
+                      "tricolon",
+                      "anaphora",
+                      "cadence"
+                    ],
+                    [
+                      "what matters",
+                      "not",
+                      "but"
+                    ],
+                    [
+                      "commitment",
+                      "action",
+                      "truth"
+                    ]
+                  ],
+                  "grammarRuleRefs": [
+                    "gp-c2-rhetorical-devices",
+                    "gp-c2-emphatic-structures"
+                  ],
+                  "timeLimitSeconds": 30,
+                  "minWpm": 70,
+                  "maxWpm": 160,
+                  "modelAnswer": "We came, we saw, we delivered. What matters now is not the applause but the commitment: speak truth to power, keep the room together, and finish what we started.",
+                  "selfAssessmentCriteria": [
+                    "¿Usé un tricolon?",
+                    "¿Usé una estructura enfática?",
+                    "¿Cerré con una acción concreta?"
+                  ],
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "La respuesta modelo encadena tricolon, contraste enfático y llamada a la acción.",
+                    "ruleRef": "gp-c2-rhetorical-devices"
+                  }
+                }
+              ]
+            },
+            {
+              "id": "es-en-c2-un-3-ls-2",
+              "title": "Argumentación y contraargumento",
+              "cefrLevel": "C2",
+              "scenario": "En un debate público, la intervención debe anticipar la objeción más fuerte y responderla sin evasivas.",
+              "canDo": "Puedo construir una concesión robusta y refutar sin caricaturizar la posición contraria.",
+              "grammarPoints": [
+                {
+                  "id": "gp-c2-concession-c2",
+                  "label": "Concesión avanzada",
+                  "description": "Admittedly, granted, to be fair."
+                },
+                {
+                  "id": "gp-c2-refutation-c2",
+                  "label": "Refutación",
+                  "description": "That objection assumes..., the evidence does not support..."
+                }
+              ],
+              "vocabFrequencyBand": "12000+",
+              "culturalNotes": [
+                {
+                  "idiom": "practice what you preach",
+                  "note": "Aplicarse lo que se exige a los demás; en un debate, la coherencia entre propuesta y conducta pesa más que la elocuencia.",
+                  "translation": "predicar con el ejemplo"
+                }
+              ],
+              "microLesson": {
+                "title": "Conceder para refutar mejor",
+                "goals": [
+                  "Formular la objeción contraria en su versión más fuerte.",
+                  "Refutar sin cambiar de tema ni caricaturizar."
+                ],
+                "sections": [
+                  {
+                    "heading": "La objeción en su mejor versión",
+                    "body": "Admittedly y granted reconocen el punto contrario; to be fair añade equidad. Una refutación sólida identifica el supuesto oculto: that objection assumes... y muestra qué evidencia falta.",
+                    "examples": [
+                      {
+                        "source": "Es cierto que el plan tiene méritos; sin embargo, sus costes son inaceptables.",
+                        "target": "Granted, the plan has merits; nevertheless, its costs are unacceptable.",
+                        "note": "Granted reconoce; nevertheless refuta."
+                      },
+                      {
+                        "source": "Esa objeción presupone que el mercado es estable.",
+                        "target": "That objection assumes the market is stable.",
+                        "note": "Nombrar el supuesto debilita la objeción."
+                      }
+                    ]
+                  }
+                ]
+              },
+              "glossary": [
+                {
+                  "term": "concession",
+                  "translations": [
+                    "concesión"
+                  ]
+                },
+                {
+                  "term": "refutation",
+                  "translations": [
+                    "refutación"
+                  ]
+                },
+                {
+                  "term": "objection",
+                  "translations": [
+                    "objeción"
+                  ]
+                },
+                {
+                  "term": "assumption",
+                  "translations": [
+                    "supuesto"
+                  ]
+                },
+                {
+                  "term": "straw man",
+                  "translations": [
+                    "hombre de paja"
+                  ]
+                },
+                {
+                  "term": "counterexample",
+                  "translations": [
+                    "contraejemplo"
+                  ]
+                },
+                {
+                  "term": "coherent",
+                  "translations": [
+                    "coherente"
+                  ]
+                },
+                {
+                  "term": "credibility",
+                  "translations": [
+                    "credibilidad"
+                  ]
+                }
+              ],
+              "exercises": [
+                {
+                  "type": "ClozeDragDrop",
+                  "id": "es-en-c2-e109",
+                  "passage": "{{b1}}, the plan has merits; {{b2}}, its costs are unacceptable.",
+                  "blanks": [
+                    {
+                      "id": "b1",
+                      "answer": "Granted",
+                      "options": [
+                        "Granted",
+                        "Regarding",
+                        "Given"
+                      ]
+                    },
+                    {
+                      "id": "b2",
+                      "answer": "nevertheless",
+                      "options": [
+                        "nevertheless",
+                        "therefore",
+                        "namely"
+                      ]
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "«Granted» concede y «nevertheless» introduce la refutación.",
+                    "ruleRef": "gp-c2-concession-c2"
+                  }
+                },
+                {
+                  "type": "ClozeDragDrop",
+                  "id": "es-en-c2-e110",
+                  "passage": "The rebuttal {{b1}} the objection before {{b2}} it.",
+                  "blanks": [
+                    {
+                      "id": "b1",
+                      "answer": "acknowledges",
+                      "options": [
+                        "acknowledges",
+                        "ignores",
+                        "invents"
+                      ]
+                    },
+                    {
+                      "id": "b2",
+                      "answer": "dismantling",
+                      "options": [
+                        "dismantling",
+                        "dismantle",
+                        "dismantled"
+                      ]
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "«Acknowledge before dismantling» describe la refutación que primero reconoce y luego desmonta.",
+                    "ruleRef": "gp-c2-refutation-c2"
+                  }
+                },
+                {
+                  "type": "SemanticMatch",
+                  "id": "es-en-c2-e111",
+                  "instructions": "Empareja cada movimiento con su función.",
+                  "pairs": [
+                    {
+                      "left": "Granted, the plan has merits.",
+                      "right": "Concesión inicial",
+                      "register": "formal",
+                      "nuance": "Reconoce la fuerza del contrario."
+                    },
+                    {
+                      "left": "That objection assumes the market is stable.",
+                      "right": "Detección del supuesto",
+                      "register": "formal",
+                      "nuance": "Aísla la premisa que falla."
+                    },
+                    {
+                      "left": "The evidence does not support that conclusion.",
+                      "right": "Refutación con evidencia",
+                      "register": "formal",
+                      "nuance": "No ataca a la persona, ataca la inferencia."
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "register",
+                    "explanation": "La refutación madura discute premisas, no caricaturas.",
+                    "ruleRef": "gp-c2-refutation-c2"
+                  }
+                },
+                {
+                  "type": "ListenChoose",
+                  "id": "es-en-c2-e112",
+                  "audioText": "Granted, the plan has merits. Nevertheless, that objection assumes the market is stable, and the evidence does not support that assumption.",
+                  "options": [
+                    "The speaker rejects the plan without reasons",
+                    "The speaker concedes, identifies an assumption and refutes it",
+                    "The speaker changes the subject",
+                    "The speaker attacks the opponent"
+                  ],
+                  "correctIndex": 1,
+                  "feedbackOnError": {
+                    "type": "comprehension",
+                    "explanation": "La secuencia concede, aísla el supuesto y lo refuta con evidencia.",
+                    "ruleRef": "gp-c2-refutation-c2"
+                  }
+                },
+                {
+                  "type": "AudioOnlyPrompt",
+                  "id": "es-en-c2-e113",
+                  "audioText": "To be fair, the objection has a point: costs matter. But it assumes that the market will remain stable, and that assumption is precisely what the crisis has undermined.",
+                  "question": "What is the weak point of the objection?",
+                  "options": [
+                    "It ignores costs",
+                    "It assumes market stability",
+                    "It is too polite",
+                    "It has no evidence"
+                  ],
+                  "correctIndex": 1,
+                  "allowSlowPlayback": true,
+                  "feedbackOnError": {
+                    "type": "comprehension",
+                    "explanation": "La refutación identifica el supuesto de estabilidad como el punto débil.",
+                    "ruleRef": "gp-c2-refutation-c2"
+                  }
+                },
+                {
+                  "type": "MultipleChoice",
+                  "id": "es-en-c2-e114",
+                  "question": "Completa: ___ the objection has a point, but it rests on a false assumption.",
+                  "options": [
+                    "To be fair",
+                    "To be honest",
+                    "To be sure"
+                  ],
+                  "correctIndex": 0,
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "«To be fair» introduce la concesión equitativa antes de refutar.",
+                    "ruleRef": "gp-c2-concession-c2"
+                  }
+                },
+                {
+                  "type": "Translate",
+                  "id": "es-en-c2-e115",
+                  "sourcePhrase": "Reconoce la objeción antes de rebatirla.",
+                  "correctTokens": [
+                    "Acknowledge",
+                    "the",
+                    "objection",
+                    "before",
+                    "rebutting",
+                    "it"
+                  ],
+                  "distractorTokens": [
+                    "refute",
+                    "recognize"
+                  ],
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "«Acknowledge before rebutting» exige gerundio tras la preposición.",
+                    "ruleRef": "gp-c2-refutation-c2"
+                  }
+                },
+                {
+                  "type": "ListenType",
+                  "id": "es-en-c2-e116",
+                  "transcription": "That objection assumes the market is stable",
+                  "audioText": "That objection assumes the market is stable",
+                  "feedbackOnError": {
+                    "type": "spelling",
+                    "explanation": "Escribe «objection» con «j» y «assumes» con doble «s».",
+                    "ruleRef": "gp-c2-refutation-c2"
+                  }
+                },
+                {
+                  "type": "SpeakRepeat",
+                  "id": "es-en-c2-e117",
+                  "targetPhrase": "Granted, the plan has merits; nevertheless, its costs are unacceptable.",
+                  "audioText": "Granted, the plan has merits; nevertheless, its costs are unacceptable.",
+                  "feedbackOnError": {
+                    "type": "pronunciation",
+                    "explanation": "Pausa tras «Granted» y acentúa «unacceptable».",
+                    "ruleRef": "gp-c2-concession-c2"
+                  }
+                },
+                {
+                  "type": "MatchPairs",
+                  "id": "es-en-c2-e118",
+                  "pairs": [
+                    {
+                      "left": "a straw man",
+                      "right": "un hombre de paja"
+                    },
+                    {
+                      "left": "a counterexample",
+                      "right": "un contraejemplo"
+                    },
+                    {
+                      "left": "a hidden assumption",
+                      "right": "un supuesto oculto"
+                    },
+                    {
+                      "left": "a credible rebuttal",
+                      "right": "una refutación creíble"
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "La argumentación madura distingue supuesto, contraejemplo y caricatura.",
+                    "ruleRef": "gp-c2-refutation-c2"
+                  }
+                },
+                {
+                  "type": "ClozeDragDrop",
+                  "id": "es-en-c2-e119",
+                  "passage": "Practice what you {{b1}}: a proposal that ignores its own {{b2}} will not persuade.",
+                  "blanks": [
+                    {
+                      "id": "b1",
+                      "answer": "preach",
+                      "options": [
+                        "preach",
+                        "teach",
+                        "reach"
+                      ]
+                    },
+                    {
+                      "id": "b2",
+                      "answer": "principles",
+                      "options": [
+                        "principles",
+                        "principals",
+                        "prints"
+                      ]
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "«Practice what you preach» exige coherencia entre propuesta y conducta.",
+                    "ruleRef": "gp-c2-concession-c2"
+                  }
+                },
+                {
+                  "type": "FreeSpeakingPrompt",
+                  "id": "es-en-c2-e120",
+                  "prompt": "Defiende una tesis en un debate: concede el mejor argumento contrario, identifica su supuesto y refútalo con evidencia.",
+                  "minTokens": 20,
+                  "conceptClusters": [
+                    [
+                      "granted",
+                      "to be fair",
+                      "admittedly"
+                    ],
+                    [
+                      "assumes",
+                      "evidence",
+                      "assumption"
+                    ],
+                    [
+                      "nevertheless",
+                      "rebut",
+                      "coherent"
+                    ]
+                  ],
+                  "grammarRuleRefs": [
+                    "gp-c2-concession-c2",
+                    "gp-c2-refutation-c2"
+                  ],
+                  "timeLimitSeconds": 30,
+                  "minWpm": 70,
+                  "maxWpm": 160,
+                  "modelAnswer": "Granted, the objection has a point: costs matter. Nevertheless, it assumes the market will remain stable, and the evidence does not support that assumption, so the proposal remains the more coherent option.",
+                  "selfAssessmentCriteria": [
+                    "¿Concedí el mejor argumento contrario?",
+                    "¿Identifiqué el supuesto?",
+                    "¿Refuté con evidencia?"
+                  ],
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "La respuesta modelo concede, detecta el supuesto y refuta sin caricaturizar.",
+                    "ruleRef": "gp-c2-refutation-c2"
+                  }
+                }
+              ]
+            },
+            {
+              "id": "es-en-c2-un-3-ls-3",
+              "title": "Sintaxis culta en uso real",
+              "cefrLevel": "C2",
+              "scenario": "Un informe jurídico debe sonar preciso y elegante sin volverse ilegible.",
+              "canDo": "Puedo usar inversión y anteposición con criterio, midiendo el efecto sobre la claridad.",
+              "grammarPoints": [
+                {
+                  "id": "gp-c2-inversion-c2",
+                  "label": "Inversión",
+                  "description": "Little did we..., not until..., rarely have we..."
+                },
+                {
+                  "id": "gp-c2-fronting",
+                  "label": "Anteposición",
+                  "description": "Fronted participles and adverbials for emphasis."
+                }
+              ],
+              "vocabFrequencyBand": "12000+",
+              "culturalNotes": [
+                {
+                  "idiom": "leave no stone unturned",
+                  "note": "Agotar todas las posibilidades; en una investigación, exige documentar cada paso y no solo afirmar que se hizo.",
+                  "translation": "no dejar piedra sin mover"
+                }
+              ],
+              "microLesson": {
+                "title": "La sintaxis como énfasis",
+                "goals": [
+                  "Usar la inversión para marcar sorpresa o límite.",
+                  "Anteponer participios sin perder claridad."
+                ],
+                "sections": [
+                  {
+                    "heading": "Mover la frase para marcar",
+                    "body": "Little did we realize marca sorpresa; not until March did we understand marca el límite temporal; having reviewed the file, the board... antepone una acción anterior. El efecto exige que la frase siga siendo legible.",
+                    "examples": [
+                      {
+                        "source": "No fue hasta marzo cuando entendimos el alcance.",
+                        "target": "Not until March did we understand the scale.",
+                        "note": "La inversión marca el límite temporal."
+                      },
+                      {
+                        "source": "Tras revisar el expediente, el consejo encontró pruebas.",
+                        "target": "Having reviewed the file, the board found evidence.",
+                        "note": "El participio antepuesto ordena la secuencia."
+                      }
+                    ]
+                  }
+                ]
+              },
+              "glossary": [
+                {
+                  "term": "inversion",
+                  "translations": [
+                    "inversión"
+                  ]
+                },
+                {
+                  "term": "fronting",
+                  "translations": [
+                    "anteposición"
+                  ]
+                },
+                {
+                  "term": "clause",
+                  "translations": [
+                    "cláusula"
+                  ]
+                },
+                {
+                  "term": "emphasis",
+                  "translations": [
+                    "énfasis"
+                  ]
+                },
+                {
+                  "term": "legible",
+                  "translations": [
+                    "legible"
+                  ]
+                },
+                {
+                  "term": "cumbersome",
+                  "translations": [
+                    "pesado",
+                    "engorroso"
+                  ]
+                },
+                {
+                  "term": "deliberate",
+                  "translations": [
+                    "deliberado"
+                  ]
+                },
+                {
+                  "term": "register",
+                  "translations": [
+                    "registro"
+                  ]
+                }
+              ],
+              "exercises": [
+                {
+                  "type": "ClozeDragDrop",
+                  "id": "es-en-c2-e121",
+                  "passage": "{{b1}} did we realize the scale of the problem.",
+                  "blanks": [
+                    {
+                      "id": "b1",
+                      "answer": "Little",
+                      "options": [
+                        "Little",
+                        "Few",
+                        "Small"
+                      ]
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "«Little did we realize» es la inversión que marca sorpresa.",
+                    "ruleRef": "gp-c2-inversion-c2"
+                  }
+                },
+                {
+                  "type": "ClozeDragDrop",
+                  "id": "es-en-c2-e122",
+                  "passage": "{{b1}} the report, the board found {{b2}} evidence of fraud.",
+                  "blanks": [
+                    {
+                      "id": "b1",
+                      "answer": "Having read",
+                      "options": [
+                        "Having read",
+                        "Have read",
+                        "Had read"
+                      ]
+                    },
+                    {
+                      "id": "b2",
+                      "answer": "compelling",
+                      "options": [
+                        "compelling",
+                        "compelled",
+                        "compulsory"
+                      ]
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "El participio perfecto antepuesto marca la acción anterior; «compelling evidence» es la colocación.",
+                    "ruleRef": "gp-c2-fronting"
+                  }
+                },
+                {
+                  "type": "SemanticMatch",
+                  "id": "es-en-c2-e123",
+                  "instructions": "Empareja cada estructura con su efecto.",
+                  "pairs": [
+                    {
+                      "left": "Little did we realize the risk.",
+                      "right": "Sorpresa",
+                      "register": "formal",
+                      "nuance": "La inversión subraya lo inesperado."
+                    },
+                    {
+                      "left": "Not until March did we understand.",
+                      "right": "Límite temporal",
+                      "register": "formal",
+                      "nuance": "La negación inicial marca el hito."
+                    },
+                    {
+                      "left": "Having reviewed the file, the board found evidence.",
+                      "right": "Secuencia",
+                      "register": "formal",
+                      "nuance": "El participio ordena las acciones."
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "register",
+                    "explanation": "La sintaxis culta desplaza el foco sin cambiar el contenido.",
+                    "ruleRef": "gp-c2-inversion-c2"
+                  }
+                },
+                {
+                  "type": "ListenChoose",
+                  "id": "es-en-c2-e124",
+                  "audioText": "Not until March did we understand the scale of the problem.",
+                  "options": [
+                    "We understood immediately",
+                    "We understood only in March",
+                    "We never understood",
+                    "March was irrelevant"
+                  ],
+                  "correctIndex": 1,
+                  "feedbackOnError": {
+                    "type": "comprehension",
+                    "explanation": "«Not until March did we understand» fija marzo como límite.",
+                    "ruleRef": "gp-c2-inversion-c2"
+                  }
+                },
+                {
+                  "type": "AudioOnlyPrompt",
+                  "id": "es-en-c2-e125",
+                  "audioText": "Having reviewed the file, the board found compelling evidence. Rarely have we seen such a deliberate omission, and not until March did anyone raise the alarm.",
+                  "question": "When did anyone raise the alarm?",
+                  "options": [
+                    "Immediately",
+                    "In March",
+                    "Never",
+                    "After the trial"
+                  ],
+                  "correctIndex": 1,
+                  "allowSlowPlayback": true,
+                  "feedbackOnError": {
+                    "type": "comprehension",
+                    "explanation": "La inversión «not until March» sitúa el aviso en marzo.",
+                    "ruleRef": "gp-c2-inversion-c2"
+                  }
+                },
+                {
+                  "type": "MultipleChoice",
+                  "id": "es-en-c2-e126",
+                  "question": "Completa: ___ did we understand the risk.",
+                  "options": [
+                    "Little",
+                    "Few",
+                    "Small"
+                  ],
+                  "correctIndex": 0,
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "La inversión con «Little did we» expresa sorpresa.",
+                    "ruleRef": "gp-c2-inversion-c2"
+                  }
+                },
+                {
+                  "type": "Translate",
+                  "id": "es-en-c2-e127",
+                  "sourcePhrase": "No fue hasta marzo cuando entendimos el alcance.",
+                  "correctTokens": [
+                    "Not",
+                    "until",
+                    "March",
+                    "did",
+                    "we",
+                    "understand",
+                    "the",
+                    "scale"
+                  ],
+                  "distractorTokens": [
+                    "When",
+                    "size"
+                  ],
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "«Not until March did we understand» reproduce la inversión culta.",
+                    "ruleRef": "gp-c2-inversion-c2"
+                  }
+                },
+                {
+                  "type": "ListenType",
+                  "id": "es-en-c2-e128",
+                  "transcription": "Having reviewed the report, the board found compelling evidence",
+                  "audioText": "Having reviewed the report, the board found compelling evidence",
+                  "feedbackOnError": {
+                    "type": "spelling",
+                    "explanation": "Escribe «compelling» con doble «l» y «evidence» con «c».",
+                    "ruleRef": "gp-c2-fronting"
+                  }
+                },
+                {
+                  "type": "SpeakRepeat",
+                  "id": "es-en-c2-e129",
+                  "targetPhrase": "Not until March did we understand the scale of the problem.",
+                  "audioText": "Not until March did we understand the scale of the problem.",
+                  "feedbackOnError": {
+                    "type": "pronunciation",
+                    "explanation": "Enlaza «did we» y baja el tono en «problem».",
+                    "ruleRef": "gp-c2-inversion-c2"
+                  }
+                },
+                {
+                  "type": "MatchPairs",
+                  "id": "es-en-c2-e130",
+                  "pairs": [
+                    {
+                      "left": "a fronted participle",
+                      "right": "un participio antepuesto"
+                    },
+                    {
+                      "left": "an inverted clause",
+                      "right": "una cláusula invertida"
+                    },
+                    {
+                      "left": "a deliberate omission",
+                      "right": "una omisión deliberada"
+                    },
+                    {
+                      "left": "a cumbersome sentence",
+                      "right": "una frase pesada"
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "La sintaxis culta se evalúa por efecto y legibilidad.",
+                    "ruleRef": "gp-c2-fronting"
+                  }
+                },
+                {
+                  "type": "ClozeDragDrop",
+                  "id": "es-en-c2-e131",
+                  "passage": "{{b1}} no stone unturned, the auditors {{b2}} every invoice.",
+                  "blanks": [
+                    {
+                      "id": "b1",
+                      "answer": "Leaving",
+                      "options": [
+                        "Leaving",
+                        "Leave",
+                        "Left"
+                      ]
+                    },
+                    {
+                      "id": "b2",
+                      "answer": "examined",
+                      "options": [
+                        "examined",
+                        "examine",
+                        "examining"
+                      ]
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "«Leaving no stone unturned» antepone el participio y mantiene la locución fija.",
+                    "ruleRef": "gp-c2-fronting"
+                  }
+                },
+                {
+                  "type": "FreeSpeakingPrompt",
+                  "id": "es-en-c2-e132",
+                  "prompt": "Redacta dos frases de informe con inversión y anteposición: marca el límite temporal y la secuencia sin perder claridad.",
+                  "minTokens": 20,
+                  "conceptClusters": [
+                    [
+                      "little did",
+                      "not until",
+                      "rarely"
+                    ],
+                    [
+                      "having reviewed",
+                      "fronting",
+                      "clause"
+                    ],
+                    [
+                      "evidence",
+                      "legible",
+                      "register"
+                    ]
+                  ],
+                  "grammarRuleRefs": [
+                    "gp-c2-inversion-c2",
+                    "gp-c2-fronting"
+                  ],
+                  "timeLimitSeconds": 30,
+                  "minWpm": 70,
+                  "maxWpm": 160,
+                  "modelAnswer": "Not until March did we understand the scale of the problem, and having reviewed the file, the board found compelling evidence. Rarely have we seen such a deliberate omission.",
+                  "selfAssessmentCriteria": [
+                    "¿Usé inversión?",
+                    "¿Antepuse un participio?",
+                    "¿Mantuve la legibilidad?"
+                  ],
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "La respuesta modelo combina inversión y participio antepuesto con claridad.",
+                    "ruleRef": "gp-c2-inversion-c2"
+                  }
+                }
+              ]
+            },
+            {
+              "id": "es-en-c2-un-3-ls-4",
+              "title": "Producción escrita evaluada",
+              "cefrLevel": "C2",
+              "scenario": "En un examen, hay que reescribir un párrafo opaco para un lector no especialista sin traicionar la tesis.",
+              "canDo": "Puedo controlar el registro, la cohesión y la claridad en una reescritura evaluable.",
+              "grammarPoints": [
+                {
+                  "id": "gp-c2-cohesion-advanced",
+                  "label": "Cohesión avanzada",
+                  "description": "Reference chains, echoing, paragraph links."
+                },
+                {
+                  "id": "gp-c2-register-control",
+                  "label": "Control de registro",
+                  "description": "Recasting the same idea for a different audience."
+                }
+              ],
+              "vocabFrequencyBand": "12000+",
+              "culturalNotes": [
+                {
+                  "idiom": "a wolf in sheep's clothing",
+                  "note": "Algo peligroso disfrazado de inofensivo; en escritura, una prosa elegante que oculta un argumento débil.",
+                  "translation": "un lobo con piel de cordero"
+                }
+              ],
+              "microLesson": {
+                "title": "Reescribir para un lector",
+                "goals": [
+                  "Sostener cadenas de referencia sin repetir.",
+                  "Adaptar el registro sin cambiar la tesis."
+                ],
+                "sections": [
+                  {
+                    "heading": "La misma idea, otro lector",
+                    "body": "La cohesión depende de referencias claras: cada párrafo debe retomar el anterior y preparar el siguiente. El control de registro consiste en recasting la misma idea con otro vocabulario y otra sintaxis, sin perder precisión.",
+                    "examples": [
+                      {
+                        "source": "La cohesión depende de referencias claras.",
+                        "target": "Cohesion depends on clear references.",
+                        "note": "Sujeto y predicado directos."
+                      },
+                      {
+                        "source": "El ensayo es un lobo con piel de cordero.",
+                        "target": "The essay is a wolf in sheep's clothing.",
+                        "note": "La metáfora evalúa la forma y el fondo."
+                      }
+                    ]
+                  }
+                ]
+              },
+              "glossary": [
+                {
+                  "term": "cohesion",
+                  "translations": [
+                    "cohesión"
+                  ]
+                },
+                {
+                  "term": "reference chain",
+                  "translations": [
+                    "cadena de referencias"
+                  ]
+                },
+                {
+                  "term": "register",
+                  "translations": [
+                    "registro"
+                  ]
+                },
+                {
+                  "term": "audience",
+                  "translations": [
+                    "público",
+                    "lector"
+                  ]
+                },
+                {
+                  "term": "recast",
+                  "translations": [
+                    "reformular"
+                  ]
+                },
+                {
+                  "term": "clarity",
+                  "translations": [
+                    "claridad"
+                  ]
+                },
+                {
+                  "term": "density",
+                  "translations": [
+                    "densidad"
+                  ]
+                },
+                {
+                  "term": "evaluable",
+                  "translations": [
+                    "evaluable"
+                  ]
+                }
+              ],
+              "exercises": [
+                {
+                  "type": "ClozeDragDrop",
+                  "id": "es-en-c2-e133",
+                  "passage": "The essay is a {{b1}} in sheep's clothing: elegant prose wrapped around a {{b2}} claim.",
+                  "blanks": [
+                    {
+                      "id": "b1",
+                      "answer": "wolf",
+                      "options": [
+                        "wolf",
+                        "sheep",
+                        "fox"
+                      ]
+                    },
+                    {
+                      "id": "b2",
+                      "answer": "dubious",
+                      "options": [
+                        "dubious",
+                        "solid",
+                        "modest"
+                      ]
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "«A wolf in sheep's clothing» describe la forma que oculta un fondo débil.",
+                    "ruleRef": "gp-c2-register-control"
+                  }
+                },
+                {
+                  "type": "ClozeDragDrop",
+                  "id": "es-en-c2-e134",
+                  "passage": "Cohesion depends on {{b1}}: each paragraph must {{b2}} the previous one.",
+                  "blanks": [
+                    {
+                      "id": "b1",
+                      "answer": "reference",
+                      "options": [
+                        "reference",
+                        "referee",
+                        "preference"
+                      ]
+                    },
+                    {
+                      "id": "b2",
+                      "answer": "echo",
+                      "options": [
+                        "echo",
+                        "ignore",
+                        "erase"
+                      ]
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "La cadena de referencias hace que cada párrafo retome el anterior.",
+                    "ruleRef": "gp-c2-cohesion-advanced"
+                  }
+                },
+                {
+                  "type": "SemanticMatch",
+                  "id": "es-en-c2-e135",
+                  "instructions": "Empareja cada problema de escritura con su solución.",
+                  "pairs": [
+                    {
+                      "left": "Repetition without reference",
+                      "right": "Sustituir por cadena de referencias",
+                      "register": "formal",
+                      "nuance": "Evita repetir sin avanzar."
+                    },
+                    {
+                      "left": "Density without clarity",
+                      "right": "Desglosar la nominalización",
+                      "register": "formal",
+                      "nuance": "Convierte sustantivos en verbos."
+                    },
+                    {
+                      "left": "Register mismatch",
+                      "right": "Reformular para el lector",
+                      "register": "formal",
+                      "nuance": "Mantiene la tesis y cambia la forma."
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "register",
+                    "explanation": "La escritura evaluable mide claridad, cohesión y adecuación al lector.",
+                    "ruleRef": "gp-c2-cohesion-advanced"
+                  }
+                },
+                {
+                  "type": "ListenChoose",
+                  "id": "es-en-c2-e136",
+                  "audioText": "Cohesion depends on clear references: each paragraph must echo the previous one and prepare the next.",
+                  "options": [
+                    "Paragraphs should ignore each other",
+                    "Paragraphs should link through references",
+                    "The essay should repeat one sentence",
+                    "The audience is irrelevant"
+                  ],
+                  "correctIndex": 1,
+                  "feedbackOnError": {
+                    "type": "comprehension",
+                    "explanation": "El eco entre párrafos es la cadena de referencias.",
+                    "ruleRef": "gp-c2-cohesion-advanced"
+                  }
+                },
+                {
+                  "type": "AudioOnlyPrompt",
+                  "id": "es-en-c2-e137",
+                  "audioText": "Register control means recasting the same idea for a different audience. A wolf in sheep's clothing may sound elegant, but the evaluator will notice the dubious claim underneath.",
+                  "question": "What does register control involve?",
+                  "options": [
+                    "Changing the thesis",
+                    "Recasting the idea for another audience",
+                    "Using more jargon",
+                    "Hiding the claim"
+                  ],
+                  "correctIndex": 1,
+                  "allowSlowPlayback": true,
+                  "feedbackOnError": {
+                    "type": "comprehension",
+                    "explanation": "Recasting mantiene la tesis y adapta la forma al lector.",
+                    "ruleRef": "gp-c2-register-control"
+                  }
+                },
+                {
+                  "type": "MultipleChoice",
+                  "id": "es-en-c2-e138",
+                  "question": "Completa: Each paragraph should ___ the previous one.",
+                  "options": [
+                    "echo",
+                    "eco",
+                    "echoes"
+                  ],
+                  "correctIndex": 0,
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "Tras «should» va el infinitivo «echo».",
+                    "ruleRef": "gp-c2-cohesion-advanced"
+                  }
+                },
+                {
+                  "type": "Translate",
+                  "id": "es-en-c2-e139",
+                  "sourcePhrase": "La cohesión depende de referencias claras.",
+                  "correctTokens": [
+                    "Cohesion",
+                    "depends",
+                    "on",
+                    "clear",
+                    "references"
+                  ],
+                  "distractorTokens": [
+                    "coherent",
+                    "refers"
+                  ],
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "«Depends on clear references» usa el sustantivo «references».",
+                    "ruleRef": "gp-c2-cohesion-advanced"
+                  }
+                },
+                {
+                  "type": "ListenType",
+                  "id": "es-en-c2-e140",
+                  "transcription": "Register control means recasting the same idea for a different audience",
+                  "audioText": "Register control means recasting the same idea for a different audience",
+                  "feedbackOnError": {
+                    "type": "spelling",
+                    "explanation": "Escribe «recasting» con «c» y «audience» con «au».",
+                    "ruleRef": "gp-c2-register-control"
+                  }
+                },
+                {
+                  "type": "SpeakRepeat",
+                  "id": "es-en-c2-e141",
+                  "targetPhrase": "Cohesion depends on clear references: each paragraph echoes the previous one.",
+                  "audioText": "Cohesion depends on clear references: each paragraph echoes the previous one.",
+                  "feedbackOnError": {
+                    "type": "pronunciation",
+                    "explanation": "Enlaza «depends on» y acentúa «references».",
+                    "ruleRef": "gp-c2-cohesion-advanced"
+                  }
+                },
+                {
+                  "type": "MatchPairs",
+                  "id": "es-en-c2-e142",
+                  "pairs": [
+                    {
+                      "left": "a reference chain",
+                      "right": "una cadena de referencias"
+                    },
+                    {
+                      "left": "register control",
+                      "right": "control del registro"
+                    },
+                    {
+                      "left": "a vague claim",
+                      "right": "una afirmación vaga"
+                    },
+                    {
+                      "left": "a coherent paragraph",
+                      "right": "un párrafo coherente"
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "La escritura evaluable nombra cohesión, registro y precisión.",
+                    "ruleRef": "gp-c2-register-control"
+                  }
+                },
+                {
+                  "type": "ClozeDragDrop",
+                  "id": "es-en-c2-e143",
+                  "passage": "Register control means {{b1}} the same idea for a different {{b2}}.",
+                  "blanks": [
+                    {
+                      "id": "b1",
+                      "answer": "recasting",
+                      "options": [
+                        "recasting",
+                        "recite",
+                        "recast"
+                      ]
+                    },
+                    {
+                      "id": "b2",
+                      "answer": "audience",
+                      "options": [
+                        "audience",
+                        "audition",
+                        "audacity"
+                      ]
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "«Recasting» mantiene la tesis y cambia la forma para el «audience».",
+                    "ruleRef": "gp-c2-register-control"
+                  }
+                },
+                {
+                  "type": "FreeSpeakingPrompt",
+                  "id": "es-en-c2-e144",
+                  "prompt": "Reescribe un párrafo opaco para un lector no especialista: mantén la tesis, mejora la cohesión y elimina la jerga innecesaria.",
+                  "minTokens": 20,
+                  "conceptClusters": [
+                    [
+                      "recast",
+                      "register",
+                      "audience"
+                    ],
+                    [
+                      "cohesion",
+                      "reference",
+                      "echo"
+                    ],
+                    [
+                      "clarity",
+                      "jargon",
+                      "thesis"
+                    ]
+                  ],
+                  "grammarRuleRefs": [
+                    "gp-c2-cohesion-advanced",
+                    "gp-c2-register-control"
+                  ],
+                  "timeLimitSeconds": 30,
+                  "minWpm": 70,
+                  "maxWpm": 160,
+                  "modelAnswer": "The policy will be applied gradually: the first option reduces costs, while the second protects trust. Such an approach keeps the draft clear, removes unnecessary jargon and echoes the thesis without repeating it.",
+                  "selfAssessmentCriteria": [
+                    "¿Mantuve la tesis?",
+                    "¿Mejoré la cohesión?",
+                    "¿Eliminé la jerga innecesaria?"
+                  ],
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "La respuesta modelo conserva la tesis, encadena referencias y elimina densidad innecesaria.",
+                    "ruleRef": "gp-c2-register-control"
+                  }
+                }
+              ]
+            }
+          ]
         }
         ]
       }
