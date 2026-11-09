@@ -351,6 +351,46 @@ class PackagedContentTest {
         }
     }
 
+    @Test
+    fun los_cursos_de_arranque_estrenan_c1() {
+        for (courseId in listOf("es-fr", "es-pt", "es-ja")) {
+            val course = CourseJson.parseCourse(readAsset(courseId, COURSE_FILE))
+            assertTrue("$courseId debe decodificar en v2", course != null)
+            val lessons = course!!.levels.flatMap { level -> level.units.flatMap { unit -> unit.lessons } }
+            val c1Lessons = lessons.filter { lesson -> lesson.cefrLevel == CefrLevel.C1 }
+            assertEquals("$courseId debe tener 24 lecciones C1", 24, c1Lessons.size)
+            assertEquals(
+                (1..6).flatMap { unit -> (1..4).map { lesson -> "$courseId-c1-un-$unit-ls-$lesson" } },
+                c1Lessons.map { lesson -> lesson.id.value },
+            )
+            assertEquals(
+                (1..264).map { index -> "$courseId-c1-e$index" },
+                c1Lessons.flatMap { lesson -> lesson.exercises }.map { exercise -> exercise.id.value },
+            )
+            assertTrue(
+                "Cada lección C1 de $courseId debe tener 11 ejercicios",
+                c1Lessons.all { lesson -> lesson.exercises.size == 11 },
+            )
+            assertTrue(
+                "Cada lección C1 de $courseId debe usar la banda 8000-12000",
+                c1Lessons.all { lesson -> lesson.vocabFrequencyBand == VocabFrequencyBand.BAND_8000_12000 },
+            )
+            assertTrue(
+                "Cada lección C1 de $courseId debe tener microLesson y glosario",
+                c1Lessons.all { lesson -> lesson.microLesson != null && lesson.glossary.isNotEmpty() },
+            )
+            assertTrue(
+                "Todos los ejercicios C1 de $courseId deben tener feedbackOnError",
+                c1Lessons.flatMap { lesson -> lesson.exercises }.all { exercise -> exercise.feedbackOnError != null },
+            )
+            assertEquals(
+                "Cada lección C1 de $courseId debe tener un FreeSpeakingPrompt",
+                24,
+                c1Lessons.sumOf { lesson -> lesson.exercises.count { exercise -> exercise is Exercise.FreeSpeakingPrompt } },
+            )
+        }
+    }
+
     private fun expandedStarterExpectation(
         courseId: String,
         locale: CourseLocale,

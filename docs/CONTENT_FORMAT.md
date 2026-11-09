@@ -3,8 +3,9 @@
 > Guía de autoría del contrato [`docs/schemas/course-v2.json`](schemas/course-v2.json)
 > (JSON Schema draft-07, ADR-018). El formato v1 se conserva como referencia
 > histórica en [`../CONTENT_FORMAT.md`](../CONTENT_FORMAT.md). Desde ADR-041,
-> `es-pt`, `es-fr` y `es-ja` usan v2 con 60 lecciones (A1–B2 completo) cada uno.
-> `es-en` cubre A1→B2 profundo y, desde 2.1.0 (ADR-042), estrena el piloto C1.
+> `es-pt`, `es-fr` y `es-ja` usan v2 con 60 lecciones (A1–B2 completo) cada uno;
+> desde 2.1.0 (ADR-042), `es-en` estrena C1 y, desde 2.2.0, los tres cursos de
+> arranque completan también C1 (84 lecciones cada uno).
 
 ## Reglas de oro de v2
 
