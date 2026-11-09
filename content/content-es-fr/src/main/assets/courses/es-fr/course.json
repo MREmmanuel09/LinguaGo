@@ -26153,6 +26153,3162 @@
           ]
         }
         ]
+      },
+      {
+        "id": "es-fr-lv-c2",
+        "name": "C2 · Maîtrise et style",
+        "units": [
+          {
+            "id": "es-fr-lv-c2-un-1",
+            "title": "Registres et nuances",
+            "lessons": [
+              {
+                "id": "es-fr-c2-un-1-ls-1",
+                "title": "L'ironie fine",
+                "cefrLevel": "C2",
+                "scenario": "Un critique doit juger une création médiocre sans insulter et sans laisser croire que l'éloge est sincère.",
+                "canDo": "Puedo sostener una ironía seca y un elogio tibio con registro literario sin perder la claridad del juicio.",
+                "grammarPoints": [
+                  {
+                    "id": "gp-fr-ironie-fine",
+                    "label": "Ironie sèche",
+                    "description": "Litote, sous-entendu et complicité implicite."
+                  },
+                  {
+                    "id": "gp-fr-eloge-timide",
+                    "label": "Éloge timide",
+                    "description": "Un éloge du bout des lèvres, pour ainsi dire, assez modeste."
+                  }
+                ],
+                "vocabFrequencyBand": "12000+",
+                "culturalNotes": [
+                  {
+                    "idiom": "un éloge du bout des lèvres",
+                    "note": "Louer sans conviction ; en critique, l'éloge minimal devient une condamnation élégante.",
+                    "translation": "un elogio tibio"
+                  }
+                ],
+                "microLesson": {
+                  "title": "Le fil de l'éloge minimal",
+                  "goals": [
+                    "Reconnaître la condamnation cachée dans un éloge minimal.",
+                    "Utiliser l'atténuation expressive sans perdre le jugement."
+                  ],
+                  "sections": [
+                    {
+                      "heading": "L'éloge qui condamne",
+                      "body": "Un éloge du bout des lèvres loue si peu que la louange devient reproche. La litote (pas exactement mauvais, assez modeste) réduit l'intensité apparente et exige la complicité du lecteur.",
+                      "examples": [
+                        {
+                          "source": "No diría que fue un desastre; más bien, una catástrofe.",
+                          "target": "Je ne dirais pas que ce fut un désastre ; plutôt une catastrophe.",
+                          "note": "La correction apparente aggrave le jugement."
+                        },
+                        {
+                          "source": "El discurso fue, por decirlo así, poco inspirador.",
+                          "target": "Le discours était, pour ainsi dire, peu inspirant.",
+                          "note": "Pour ainsi dire signale la formule."
+                        }
+                      ]
+                    }
+                  ]
+                },
+                "glossary": [
+                  {
+                    "term": "pince-sans-rire",
+                    "translations": [
+                      "de humor seco",
+                      "impasible"
+                    ]
+                  },
+                  {
+                    "term": "trait d'esprit",
+                    "translations": [
+                      "ocurrencia",
+                      "agudeza"
+                    ]
+                  },
+                  {
+                    "term": "mordant",
+                    "translations": [
+                      "mordaz",
+                      "incisivo"
+                    ]
+                  },
+                  {
+                    "term": "sous-entendu",
+                    "translations": [
+                      "sobreentendido"
+                    ]
+                  },
+                  {
+                    "term": "litote",
+                    "translations": [
+                      "litote",
+                      "atenuación irónica"
+                    ]
+                  },
+                  {
+                    "term": "ironique",
+                    "translations": [
+                      "irónico"
+                    ]
+                  },
+                  {
+                    "term": "cinglant",
+                    "translations": [
+                      "punzante",
+                      "mordaz"
+                    ]
+                  },
+                  {
+                    "term": "elliptique",
+                    "translations": [
+                      "elíptico",
+                      "indirecto"
+                    ]
+                  }
+                ],
+                "exercises": [
+                  {
+                    "type": "ClozeDragDrop",
+                    "id": "es-fr-c2-e1",
+                    "passage": "Sa critique a {{b1}} le film d'un éloge timide : un chef-d'œuvre, écrivait-il, {{b2}} pour un dimanche pluvieux.",
+                    "blanks": [
+                      {
+                        "id": "b1",
+                        "answer": "saluté",
+                        "options": [
+                          "saluté",
+                          "saluer",
+                          "saluant"
+                        ]
+                      },
+                      {
+                        "id": "b2",
+                        "answer": "idéal",
+                        "options": [
+                          "idéal",
+                          "ennuyeux",
+                          "oubliable"
+                        ]
+                      }
+                    ],
+                    "feedbackOnError": {
+                      "type": "grammar",
+                      "explanation": "L'éloge minimal exige une louange faible ; « idéal » complète l'ironie.",
+                      "ruleRef": "gp-fr-eloge-timide"
+                    }
+                  },
+                  {
+                    "type": "ClozeDragDrop",
+                    "id": "es-fr-c2-e2",
+                    "passage": "C'est, {{b1}} ainsi dire, une réussite {{b2}} modeste.",
+                    "blanks": [
+                      {
+                        "id": "b1",
+                        "answer": "pour",
+                        "options": [
+                          "pour",
+                          "par",
+                          "en"
+                        ]
+                      },
+                      {
+                        "id": "b2",
+                        "answer": "assez",
+                        "options": [
+                          "assez",
+                          "très",
+                          "extraordinairement"
+                        ]
+                      }
+                    ],
+                    "feedbackOnError": {
+                      "type": "grammar",
+                      "explanation": "« Pour ainsi dire » marque la formule ironique ; « assez modeste » rabaisse le succès.",
+                      "ruleRef": "gp-fr-eloge-timide"
+                    }
+                  },
+                  {
+                    "type": "SemanticMatch",
+                    "id": "es-fr-c2-e3",
+                    "instructions": "Associe chaque commentaire à sa stratégie ironique.",
+                    "pairs": [
+                      {
+                        "left": "Un chef-d'œuvre, idéal pour un dimanche pluvieux.",
+                        "right": "Éloge timide",
+                        "register": "formal",
+                        "nuance": "La louange minimale condamne l'ensemble."
+                      },
+                      {
+                        "left": "Je ne dirais pas que ce fut un désastre ; plutôt une catastrophe.",
+                        "right": "Correction qui aggrave",
+                        "register": "formal",
+                        "nuance": "Nie une critique mineure pour l'aggraver."
+                      },
+                      {
+                        "left": "Le discours était, pour ainsi dire, peu inspirant.",
+                        "right": "Atténuation expressive",
+                        "register": "formal",
+                        "nuance": "La formule signale la délibération."
+                      }
+                    ],
+                    "feedbackOnError": {
+                      "type": "register",
+                      "explanation": "L'ironie sèche n'explique pas la blague : elle laisse le lecteur conclure.",
+                      "ruleRef": "gp-fr-ironie-fine"
+                    }
+                  },
+                  {
+                    "type": "ListenChoose",
+                    "id": "es-fr-c2-e4",
+                    "audioText": "Je ne dirais pas que le lancement fut un désastre. Une catastrophe, peut-être.",
+                    "options": [
+                      "Le lancement s'est bien passé",
+                      "Le locuteur aggrave le diagnostic",
+                      "Le locuteur félicite l'équipe",
+                      "Le lancement a été annulé"
+                    ],
+                    "correctIndex": 1,
+                    "feedbackOnError": {
+                      "type": "comprehension",
+                      "explanation": "La correction apparente passe de désastre à catastrophe.",
+                      "ruleRef": "gp-fr-ironie-fine"
+                    }
+                  },
+                  {
+                    "type": "AudioOnlyPrompt",
+                    "id": "es-fr-c2-e5",
+                    "audioText": "Le rapport n'est pas exactement mauvais. Il est, franchement, remarquablement peu ambitieux. On pourrait même parler d'un triomphe des attentes faibles.",
+                    "question": "Quel est le jugement du locuteur ?",
+                    "options": [
+                      "Le rapport est excellent",
+                      "Le rapport est médiocre et l'éloge est ironique",
+                      "Le rapport est trop ambitieux",
+                      "Le rapport n'existe pas"
+                    ],
+                    "correctIndex": 1,
+                    "allowSlowPlayback": true,
+                    "feedbackOnError": {
+                      "type": "comprehension",
+                      "explanation": "Les négations apparentes et « triomphe des attentes faibles » construisent une condamnation ironique.",
+                      "ruleRef": "gp-fr-ironie-fine"
+                    }
+                  },
+                  {
+                    "type": "MultipleChoice",
+                    "id": "es-fr-c2-e6",
+                    "question": "Complète : Le discours était, pour ainsi ___, peu inspirant.",
+                    "options": [
+                      "dire",
+                      "parler",
+                      "voir"
+                    ],
+                    "correctIndex": 0,
+                    "feedbackOnError": {
+                      "type": "grammar",
+                      "explanation": "La formule figée est « pour ainsi dire ».",
+                      "ruleRef": "gp-fr-eloge-timide"
+                    }
+                  },
+                  {
+                    "type": "Translate",
+                    "id": "es-fr-c2-e7",
+                    "sourcePhrase": "No diría que fue un desastre; más bien, una catástrofe.",
+                    "correctTokens": [
+                      "Je",
+                      "ne",
+                      "dirais",
+                      "pas",
+                      "que",
+                      "ce",
+                      "fut",
+                      "un",
+                      "désastre",
+                      "plutôt",
+                      "une",
+                      "catastrophe"
+                    ],
+                    "distractorTokens": [
+                      "sera",
+                      "échec"
+                    ],
+                    "feedbackOnError": {
+                      "type": "grammar",
+                      "explanation": "« Je ne dirais pas que... plutôt... » reproduit la correction ironique.",
+                      "ruleRef": "gp-fr-ironie-fine"
+                    }
+                  },
+                  {
+                    "type": "ListenType",
+                    "id": "es-fr-c2-e8",
+                    "transcription": "Son éloge était si timide qu'il passait inaperçu",
+                    "audioText": "Son éloge était si timide qu'il passait inaperçu",
+                    "feedbackOnError": {
+                      "type": "spelling",
+                      "explanation": "Écris « timide » sans accent et « inaperçu » avec « ç ».",
+                      "ruleRef": "gp-fr-eloge-timide"
+                    }
+                  },
+                  {
+                    "type": "SpeakRepeat",
+                    "id": "es-fr-c2-e9",
+                    "targetPhrase": "C'est, pour ainsi dire, une réussite assez modeste.",
+                    "audioText": "C'est, pour ainsi dire, une réussite assez modeste.",
+                    "feedbackOnError": {
+                      "type": "pronunciation",
+                      "explanation": "Pause ironique après « dire » et n'accentue pas « modeste ».",
+                      "ruleRef": "gp-fr-eloge-timide"
+                    }
+                  },
+                  {
+                    "type": "MatchPairs",
+                    "id": "es-fr-c2-e10",
+                    "pairs": [
+                      {
+                        "left": "un pince-sans-rire",
+                        "right": "una persona de humor seco"
+                      },
+                      {
+                        "left": "un trait d'esprit",
+                        "right": "una ocurrencia"
+                      },
+                      {
+                        "left": "un éloge timide",
+                        "right": "un elogio tibio"
+                      },
+                      {
+                        "left": "une critique mordante",
+                        "right": "una crítica mordaz"
+                      }
+                    ],
+                    "feedbackOnError": {
+                      "type": "vocabulary",
+                      "explanation": "Le lexique de la critique distingue le ton (pince-sans-rire) du jugement (mordant).",
+                      "ruleRef": "gp-fr-ironie-fine"
+                    }
+                  },
+                  {
+                    "type": "ClozeDragDrop",
+                    "id": "es-fr-c2-e11",
+                    "passage": "Le rapport n'est pas exactement {{b1}} ; il est, franchement, remarquablement {{b2}}.",
+                    "blanks": [
+                      {
+                        "id": "b1",
+                        "answer": "mauvais",
+                        "options": [
+                          "mauvais",
+                          "bon",
+                          "excellent"
+                        ]
+                      },
+                      {
+                        "id": "b2",
+                        "answer": "peu ambitieux",
+                        "options": [
+                          "peu ambitieux",
+                          "brillant",
+                          "audacieux"
+                        ]
+                      }
+                    ],
+                    "feedbackOnError": {
+                      "type": "grammar",
+                      "explanation": "La négation apparente et « peu ambitieux » construisent l'éloge ironique.",
+                      "ruleRef": "gp-fr-eloge-timide"
+                    }
+                  },
+                  {
+                    "type": "FreeSpeakingPrompt",
+                    "id": "es-fr-c2-e12",
+                    "prompt": "Defiende una valoración irónica de un resultado mediocre: usa elogio tibio y atenuación, sin insultar.",
+                    "minTokens": 15,
+                    "conceptClusters": [
+                      [
+                        "éloge timide",
+                        "pour ainsi dire",
+                        "peu"
+                      ],
+                      [
+                        "modeste",
+                        "peu ambitieux",
+                        "triomphe"
+                      ],
+                      [
+                        "ironie",
+                        "jugement",
+                        "médiocre"
+                      ]
+                    ],
+                    "grammarRuleRefs": [
+                      "gp-fr-ironie-fine",
+                      "gp-fr-eloge-timide"
+                    ],
+                    "timeLimitSeconds": 30,
+                    "minWpm": 70,
+                    "maxWpm": 160,
+                    "modelAnswer": "Je ne dirais pas que les résultats sont décevants ; ils sont plutôt un modeste triomphe de faibles attentes. La présentation était, pour ainsi dire, peu électrisante, mais elle a respecté l'horaire.",
+                    "selfAssessmentCriteria": [
+                      "¿Usé elogio tibio?",
+                      "¿Atenué sin perder el juicio?",
+                      "¿Evité el insulto directo?"
+                    ],
+                    "feedbackOnError": {
+                      "type": "grammar",
+                      "explanation": "La réponse modèle combine éloge minimal, correction ironique et atténuation.",
+                      "ruleRef": "gp-fr-ironie-fine"
+                    }
+                  }
+                ]
+              },
+              {
+                "id": "es-fr-c2-un-1-ls-2",
+                "title": "L'art de l'euphémisme",
+                "cefrLevel": "C2",
+                "scenario": "Une entreprise annonce des suppressions de postes et la communication cherche des mots qui adoucissent sans mentir.",
+                "canDo": "Puedo identificar eufemismos, traducirlos a lenguaje llano y medir su carga ética.",
+                "grammarPoints": [
+                  {
+                    "id": "gp-fr-euphemisme-c2",
+                    "label": "Euphémisme",
+                    "description": "Plan social, croissance négative, entre deux emplois."
+                  },
+                  {
+                    "id": "gp-fr-litote-c2",
+                    "label": "Litote culta",
+                    "description": "Pas exactement mauvais, guère une réussite, sans conséquences."
+                  }
+                ],
+                "vocabFrequencyBand": "12000+",
+                "culturalNotes": [
+                  {
+                    "idiom": "une bénédiction déguisée",
+                    "note": "Un mal qui finit par un bien ; en communication d'entreprise, cela peut sembler cynique appliqué à des licenciements.",
+                    "translation": "no hay mal que por bien no venga"
+                  }
+                ],
+                "microLesson": {
+                  "title": "Adoucir sans mentir",
+                  "goals": [
+                    "Reconnaître un euphémisme et son équivalent clair.",
+                    "Mesurer la litote quand elle cache une décision dure."
+                  ],
+                  "sections": [
+                    {
+                      "heading": "Les mots qui couvrent",
+                      "body": "Plan social remplace licenciements ; croissance négative, récession ; entre deux emplois, chômage. La litote (pas exactement mauvais, guère une réussite) atténue le jugement et peut diluer la responsabilité.",
+                      "examples": [
+                        {
+                          "source": "La empresa llamó reestructuración a los despidos.",
+                          "target": "L'entreprise a appelé les licenciements une restructuration.",
+                          "note": "L'euphémisme nomme le fait autrement."
+                        },
+                        {
+                          "source": "La decisión no fue imprudente; fue inevitable.",
+                          "target": "La décision n'était pas imprudente ; elle était inévitable.",
+                          "note": "La litote transforme la critique en nécessité."
+                        }
+                      ]
+                    }
+                  ]
+                },
+                "glossary": [
+                  {
+                    "term": "euphémisme",
+                    "translations": [
+                      "eufemismo"
+                    ]
+                  },
+                  {
+                    "term": "licenciement",
+                    "translations": [
+                      "despido"
+                    ]
+                  },
+                  {
+                    "term": "récession",
+                    "translations": [
+                      "recesión"
+                    ]
+                  },
+                  {
+                    "term": "plan social",
+                    "translations": [
+                      "despido colectivo"
+                    ]
+                  },
+                  {
+                    "term": "atténuer",
+                    "translations": [
+                      "atenuar",
+                      "suavizar"
+                    ]
+                  },
+                  {
+                    "term": "flou",
+                    "translations": [
+                      "vago",
+                      "impreciso"
+                    ]
+                  },
+                  {
+                    "term": "nomenclature",
+                    "translations": [
+                      "nomenclatura"
+                    ]
+                  },
+                  {
+                    "term": "chômage",
+                    "translations": [
+                      "desempleo"
+                    ]
+                  }
+                ],
+                "exercises": [
+                  {
+                    "type": "ClozeDragDrop",
+                    "id": "es-fr-c2-e13",
+                    "passage": "La direction a annoncé un {{b1}} ; la note évitait soigneusement le mot {{b2}}.",
+                    "blanks": [
+                      {
+                        "id": "b1",
+                        "answer": "plan social",
+                        "options": [
+                          "plan social",
+                          "plan de fête",
+                          "plan marketing"
+                        ]
+                      },
+                      {
+                        "id": "b2",
+                        "answer": "licenciements",
+                        "options": [
+                          "licenciements",
+                          "primes",
+                          "entretiens"
+                        ]
+                      }
+                    ],
+                    "feedbackOnError": {
+                      "type": "grammar",
+                      "explanation": "« Plan social » est l'euphémisme ; « licenciements » est le mot clair évité.",
+                      "ruleRef": "gp-fr-euphemisme-c2"
+                    }
+                  },
+                  {
+                    "type": "ClozeDragDrop",
+                    "id": "es-fr-c2-e14",
+                    "passage": "« Entre deux emplois » est un {{b1}} pour chômeur, tout comme « croissance négative » est une façon {{b2}} de dire récession.",
+                    "blanks": [
+                      {
+                        "id": "b1",
+                        "answer": "euphémisme",
+                        "options": [
+                          "euphémisme",
+                          "synonyme",
+                          "métaphore"
+                        ]
+                      },
+                      {
+                        "id": "b2",
+                        "answer": "délicate",
+                        "options": [
+                          "délicate",
+                          "brutale",
+                          "littérale"
+                        ]
+                      }
+                    ],
+                    "feedbackOnError": {
+                      "type": "grammar",
+                      "explanation": "Les deux formules remplacent un mot dur par un mot délicat.",
+                      "ruleRef": "gp-fr-euphemisme-c2"
+                    }
+                  },
+                  {
+                    "type": "SemanticMatch",
+                    "id": "es-fr-c2-e15",
+                    "instructions": "Associe chaque euphémisme à son équivalent clair.",
+                    "pairs": [
+                      {
+                        "left": "Entre deux emplois",
+                        "right": "Chômeur",
+                        "register": "formal",
+                        "nuance": "Adoucit la situation professionnelle."
+                      },
+                      {
+                        "left": "Croissance négative",
+                        "right": "Récession",
+                        "register": "formal",
+                        "nuance": "Cache la contraction économique."
+                      },
+                      {
+                        "left": "Laisser partir quelqu'un",
+                        "right": "Licencier",
+                        "register": "formal",
+                        "nuance": "Présente le départ comme neutre."
+                      }
+                    ],
+                    "feedbackOnError": {
+                      "type": "register",
+                      "explanation": "L'euphémisme ne change pas le fait : il change sa charge émotionnelle.",
+                      "ruleRef": "gp-fr-euphemisme-c2"
+                    }
+                  },
+                  {
+                    "type": "ListenChoose",
+                    "id": "es-fr-c2-e16",
+                    "audioText": "L'entreprise laisse partir certains salariés dans le cadre d'un redéploiement stratégique.",
+                    "options": [
+                      "L'entreprise recrute",
+                      "L'entreprise licencie",
+                      "L'entreprise déménage",
+                      "L'entreprise augmente les salaires"
+                    ],
+                    "correctIndex": 1,
+                    "feedbackOnError": {
+                      "type": "comprehension",
+                      "explanation": "« Laisser partir » est l'euphémisme de licencier.",
+                      "ruleRef": "gp-fr-euphemisme-c2"
+                    }
+                  },
+                  {
+                    "type": "AudioOnlyPrompt",
+                    "id": "es-fr-c2-e17",
+                    "audioText": "La note parle d'un redéploiement stratégique et d'une réduction de postes. En clair, l'entreprise licencie, et la récession est plus grave que prévu.",
+                    "question": "Que cache la note ?",
+                    "options": [
+                      "Un plan de promotion",
+                      "Des licenciements et une récession aggravée",
+                      "Un nouveau produit",
+                      "Un déménagement"
+                    ],
+                    "correctIndex": 1,
+                    "allowSlowPlayback": true,
+                    "feedbackOnError": {
+                      "type": "comprehension",
+                      "explanation": "La seconde phrase traduit l'euphémisme en langage clair.",
+                      "ruleRef": "gp-fr-euphemisme-c2"
+                    }
+                  },
+                  {
+                    "type": "MultipleChoice",
+                    "id": "es-fr-c2-e18",
+                    "question": "Complète : La décision n'était pas imprudente ; elle était, ___, inévitable.",
+                    "options": [
+                      "plutôt",
+                      "très",
+                      "trop"
+                    ],
+                    "correctIndex": 0,
+                    "feedbackOnError": {
+                      "type": "grammar",
+                      "explanation": "« Plutôt » corrige le jugement après la litote.",
+                      "ruleRef": "gp-fr-litote-c2"
+                    }
+                  },
+                  {
+                    "type": "Translate",
+                    "id": "es-fr-c2-e19",
+                    "sourcePhrase": "La empresa llamó reestructuración a los despidos.",
+                    "correctTokens": [
+                      "L'entreprise",
+                      "a",
+                      "appelé",
+                      "les",
+                      "licenciements",
+                      "une",
+                      "restructuration"
+                    ],
+                    "distractorTokens": [
+                      "renvoyé",
+                      "réforme"
+                    ],
+                    "feedbackOnError": {
+                      "type": "grammar",
+                      "explanation": "« Appeler les licenciements une restructuration » montre l'euphémisme sans l'adopter.",
+                      "ruleRef": "gp-fr-euphemisme-c2"
+                    }
+                  },
+                  {
+                    "type": "ListenType",
+                    "id": "es-fr-c2-e20",
+                    "transcription": "La croissance négative est une façon délicate de dire récession",
+                    "audioText": "La croissance négative est une façon délicate de dire récession",
+                    "feedbackOnError": {
+                      "type": "spelling",
+                      "explanation": "Écris « croissance » avec « sc » et « récession » avec double « s ».",
+                      "ruleRef": "gp-fr-euphemisme-c2"
+                    }
+                  },
+                  {
+                    "type": "SpeakRepeat",
+                    "id": "es-fr-c2-e21",
+                    "targetPhrase": "La décision n'était pas imprudente ; elle était, plutôt, inévitable.",
+                    "audioText": "La décision n'était pas imprudente ; elle était, plutôt, inévitable.",
+                    "feedbackOnError": {
+                      "type": "pronunciation",
+                      "explanation": "Pause après « plutôt » pour que la litote se remarque.",
+                      "ruleRef": "gp-fr-litote-c2"
+                    }
+                  },
+                  {
+                    "type": "MatchPairs",
+                    "id": "es-fr-c2-e22",
+                    "pairs": [
+                      {
+                        "left": "une bénédiction déguisée",
+                        "right": "no hay mal que por bien no venga"
+                      },
+                      {
+                        "left": "la croissance négative",
+                        "right": "el crecimiento negativo"
+                      },
+                      {
+                        "left": "entre deux emplois",
+                        "right": "en paro"
+                      },
+                      {
+                        "left": "laisser partir quelqu'un",
+                        "right": "despedir a alguien"
+                      }
+                    ],
+                    "feedbackOnError": {
+                      "type": "vocabulary",
+                      "explanation": "Les euphémismes forment un vocabulaire parallèle à reconnaître.",
+                      "ruleRef": "gp-fr-euphemisme-c2"
+                    }
+                  },
+                  {
+                    "type": "ClozeDragDrop",
+                    "id": "es-fr-c2-e23",
+                    "passage": "L'annonce n'était guère une {{b1}}, et elle n'était pas sans {{b2}}.",
+                    "blanks": [
+                      {
+                        "id": "b1",
+                        "answer": "réussite",
+                        "options": [
+                          "réussite",
+                          "échec",
+                          "surprise"
+                        ]
+                      },
+                      {
+                        "id": "b2",
+                        "answer": "conséquences",
+                        "options": [
+                          "conséquences",
+                          "fêtes",
+                          "profits"
+                        ]
+                      }
+                    ],
+                    "feedbackOnError": {
+                      "type": "grammar",
+                      "explanation": "« Guère une réussite » et « pas sans conséquences » sont des litotes.",
+                      "ruleRef": "gp-fr-litote-c2"
+                    }
+                  },
+                  {
+                    "type": "FreeSpeakingPrompt",
+                    "id": "es-fr-c2-e24",
+                    "prompt": "Traduce a lenguaje llano un comunicado lleno de eufemismos y explica qué se pierde y qué se gana con ese registro.",
+                    "minTokens": 15,
+                    "conceptClusters": [
+                      [
+                        "euphémisme",
+                        "entre deux emplois",
+                        "croissance négative"
+                      ],
+                      [
+                        "licenciements",
+                        "récession",
+                        "laisser partir"
+                      ],
+                      [
+                        "langage clair",
+                        "responsabilité",
+                        "clarté"
+                      ]
+                    ],
+                    "grammarRuleRefs": [
+                      "gp-fr-euphemisme-c2",
+                      "gp-fr-litote-c2"
+                    ],
+                    "timeLimitSeconds": 30,
+                    "minWpm": 70,
+                    "maxWpm": 160,
+                    "modelAnswer": "La note parle de redéploiement stratégique, mais en clair l'entreprise licencie à cause de la récession. L'euphémisme adoucit le choc, mais il brouille aussi la responsabilité de la décision.",
+                    "selfAssessmentCriteria": [
+                      "¿Identifiqué los eufemismos?",
+                      "¿Los traduje a lenguaje llano?",
+                      "¿Expliqué su efecto ético?"
+                    ],
+                    "feedbackOnError": {
+                      "type": "grammar",
+                      "explanation": "La réponse modèle traduit l'euphémisme et évalue son coût de clarté.",
+                      "ruleRef": "gp-fr-euphemisme-c2"
+                    }
+                  }
+                ]
+              },
+              {
+                "id": "es-fr-c2-un-1-ls-3",
+                "title": "Humour et double sens",
+                "cefrLevel": "C2",
+                "scenario": "Autour d'un café, un commentaire anodin déclenche un rire par son second sens.",
+                "canDo": "Puedo reconocer y producir juegos de palabras, explicar el doble sentido y calibrar cuándo el humor es apropiado.",
+                "grammarPoints": [
+                  {
+                    "id": "gp-fr-double-sens",
+                    "label": "Double sens",
+                    "description": "Mots qui activent deux cadres à la fois."
+                  },
+                  {
+                    "id": "gp-fr-calembour",
+                    "label": "Calembour",
+                    "description": "Homophones et jeux de mots."
+                  }
+                ],
+                "vocabFrequencyBand": "12000+",
+                "culturalNotes": [
+                  {
+                    "idiom": "la pointe de l'iceberg",
+                    "note": "La partie visible d'un problème bien plus vaste ; en humour, indique que la blague cache davantage qu'elle ne montre.",
+                    "translation": "la punta del iceberg"
+                  }
+                ],
+                "microLesson": {
+                  "title": "Rire avec deux cadres",
+                  "goals": [
+                    "Détecter les deux sens activés par un calembour.",
+                    "Expliquer la blague sans la détruire."
+                  ],
+                  "sections": [
+                    {
+                      "heading": "Le double cadre de la blague",
+                      "body": "Un calembour fonctionne quand un mot active deux cadres incompatibles et que l'auditeur saute de l'un à l'autre. « Perdre son intérêt » peut être perdre sa curiosité ou son rendement ; la blague vit dans le saut.",
+                      "examples": [
+                        {
+                          "source": "El chiste tiene doble sentido.",
+                          "target": "La blague a un double sens.",
+                          "note": "Double sens est la formule neutre."
+                        },
+                        {
+                          "source": "Solo es la punta del iceberg.",
+                          "target": "Ce n'est que la pointe de l'iceberg.",
+                          "note": "L'expression indique qu'il y a beaucoup plus."
+                        }
+                      ]
+                    }
+                  ]
+                },
+                "glossary": [
+                  {
+                    "term": "calembour",
+                    "translations": [
+                      "juego de palabras",
+                      "calambur"
+                    ]
+                  },
+                  {
+                    "term": "double sens",
+                    "translations": [
+                      "doble sentido"
+                    ]
+                  },
+                  {
+                    "term": "jeu de mots",
+                    "translations": [
+                      "juego verbal"
+                    ]
+                  },
+                  {
+                    "term": "sous-entendu",
+                    "translations": [
+                      "insinuación"
+                    ]
+                  },
+                  {
+                    "term": "trait",
+                    "translations": [
+                      "ocurrencia",
+                      "dardo"
+                    ]
+                  },
+                  {
+                    "term": "complicité",
+                    "translations": [
+                      "complicidad"
+                    ]
+                  },
+                  {
+                    "term": "ironie",
+                    "translations": [
+                      "ironía"
+                    ]
+                  },
+                  {
+                    "term": "pince-sans-rire",
+                    "translations": [
+                      "impasible",
+                      "de humor seco"
+                    ]
+                  }
+                ],
+                "exercises": [
+                  {
+                    "type": "ClozeDragDrop",
+                    "id": "es-fr-c2-e25",
+                    "passage": "J'ai voulu être banquier, mais j'ai perdu {{b1}}, alors j'ai {{b2}} mon poste.",
+                    "blanks": [
+                      {
+                        "id": "b1",
+                        "answer": "intérêt",
+                        "options": [
+                          "intérêt",
+                          "argent",
+                          "patience"
+                        ]
+                      },
+                      {
+                        "id": "b2",
+                        "answer": "quitté",
+                        "options": [
+                          "quitté",
+                          "gardé",
+                          "aimé"
+                        ]
+                      }
+                    ],
+                    "feedbackOnError": {
+                      "type": "grammar",
+                      "explanation": "« Intérêt » active le cadre financier et le cadre émotionnel ; le calembour naît du double sens.",
+                      "ruleRef": "gp-fr-calembour"
+                    }
+                  },
+                  {
+                    "type": "ClozeDragDrop",
+                    "id": "es-fr-c2-e26",
+                    "passage": "Le calembour fonctionne parce que « intérêt » porte un sens financier et un sens {{b1}} ; le {{b2}} dépend des deux.",
+                    "blanks": [
+                      {
+                        "id": "b1",
+                        "answer": "affectif",
+                        "options": [
+                          "affectif",
+                          "sonore",
+                          "graphique"
+                        ]
+                      },
+                      {
+                        "id": "b2",
+                        "answer": "jeu",
+                        "options": [
+                          "jeu",
+                          "prix",
+                          "contrat"
+                        ]
+                      }
+                    ],
+                    "feedbackOnError": {
+                      "type": "grammar",
+                      "explanation": "Le double sens repose sur deux significations simultanées, pas sur la prononciation.",
+                      "ruleRef": "gp-fr-double-sens"
+                    }
+                  },
+                  {
+                    "type": "SemanticMatch",
+                    "id": "es-fr-c2-e27",
+                    "instructions": "Distingue le sens littéral du sens réel de la blague.",
+                    "pairs": [
+                      {
+                        "left": "J'ai perdu intérêt, alors j'ai quitté mon poste.",
+                        "right": "Perdió el interés y también el rendimiento",
+                        "register": "informal",
+                        "nuance": "Le calembour unit deux cadres."
+                      },
+                      {
+                        "left": "Ce n'est que la pointe de l'iceberg.",
+                        "right": "Hay mucho más de lo que se ve",
+                        "register": "neutral",
+                        "nuance": "La métaphore signale un problème plus vaste."
+                      },
+                      {
+                        "left": "Son compliment avait une pointe cachée.",
+                        "right": "El elogio escondía una crítica",
+                        "register": "formal",
+                        "nuance": "Le second sens apparaît à la fin."
+                      }
+                    ],
+                    "feedbackOnError": {
+                      "type": "register",
+                      "explanation": "Le double sens exige que l'auditeur partage le cadre et saisisse le saut.",
+                      "ruleRef": "gp-fr-double-sens"
+                    }
+                  },
+                  {
+                    "type": "ListenChoose",
+                    "id": "es-fr-c2-e28",
+                    "audioText": "La nouvelle batterie a zéro émission et zéro autonomie — une vraie percée dans les deux sens.",
+                    "options": [
+                      "La batterie est excellente",
+                      "La blague joue sur deux sens de « percée »",
+                      "La batterie n'a aucun problème",
+                      "Le locuteur est confus"
+                    ],
+                    "correctIndex": 1,
+                    "feedbackOnError": {
+                      "type": "comprehension",
+                      "explanation": "« Percée » peut être une avancée technique ou une rupture ; la blague joue sur les deux.",
+                      "ruleRef": "gp-fr-calembour"
+                    }
+                  },
+                  {
+                    "type": "AudioOnlyPrompt",
+                    "id": "es-fr-c2-e29",
+                    "audioText": "J'ai demandé une pause à mon patron, et il m'a donné un café. Je crois qu'il a manqué le sens, ou qu'il en a créé un autre.",
+                    "question": "Pourquoi la remarque est-elle drôle ?",
+                    "options": [
+                      "Parce que le patron est généreux",
+                      "Parce que « pause » signifie repos et interruption",
+                      "Parce que le locuteur a démissionné",
+                      "Parce que le patron est en colère"
+                    ],
+                    "correctIndex": 1,
+                    "allowSlowPlayback": true,
+                    "feedbackOnError": {
+                      "type": "comprehension",
+                      "explanation": "Le double sens de « pause » soutient la blague.",
+                      "ruleRef": "gp-fr-calembour"
+                    }
+                  },
+                  {
+                    "type": "MultipleChoice",
+                    "id": "es-fr-c2-e30",
+                    "question": "Complète : La blague a un double ___.",
+                    "options": [
+                      "sens",
+                      "jeu",
+                      "mot"
+                    ],
+                    "correctIndex": 0,
+                    "feedbackOnError": {
+                      "type": "grammar",
+                      "explanation": "La collocation est « un double sens ».",
+                      "ruleRef": "gp-fr-double-sens"
+                    }
+                  },
+                  {
+                    "type": "Translate",
+                    "id": "es-fr-c2-e31",
+                    "sourcePhrase": "El chiste tiene doble sentido.",
+                    "correctTokens": [
+                      "La",
+                      "blague",
+                      "a",
+                      "un",
+                      "double",
+                      "sens"
+                    ],
+                    "distractorTokens": [
+                      "calembour",
+                      "signification"
+                    ],
+                    "feedbackOnError": {
+                      "type": "grammar",
+                      "explanation": "« Avoir un double sens » est la collocation neutre.",
+                      "ruleRef": "gp-fr-double-sens"
+                    }
+                  },
+                  {
+                    "type": "ListenType",
+                    "id": "es-fr-c2-e32",
+                    "transcription": "Le calembour fonctionne parce que le mot porte deux sens à la fois",
+                    "audioText": "Le calembour fonctionne parce que le mot porte deux sens à la fois",
+                    "feedbackOnError": {
+                      "type": "spelling",
+                      "explanation": "Écris « calembour » avec « em » et « fonctionne » avec double « n ».",
+                      "ruleRef": "gp-fr-calembour"
+                    }
+                  },
+                  {
+                    "type": "SpeakRepeat",
+                    "id": "es-fr-c2-e33",
+                    "targetPhrase": "J'ai voulu être banquier, mais j'ai perdu intérêt, alors j'ai quitté mon poste.",
+                    "audioText": "J'ai voulu être banquier, mais j'ai perdu intérêt, alors j'ai quitté mon poste.",
+                    "feedbackOnError": {
+                      "type": "pronunciation",
+                      "explanation": "Garde un ton neutre sur « intérêt » pour laisser le double sens apparaître.",
+                      "ruleRef": "gp-fr-calembour"
+                    }
+                  },
+                  {
+                    "type": "MatchPairs",
+                    "id": "es-fr-c2-e34",
+                    "pairs": [
+                      {
+                        "left": "un calembour",
+                        "right": "un juego de palabras"
+                      },
+                      {
+                        "left": "un double sens",
+                        "right": "un doble sentido"
+                      },
+                      {
+                        "left": "une blague interne",
+                        "right": "una broma interna"
+                      },
+                      {
+                        "left": "un humour pince-sans-rire",
+                        "right": "un humor seco"
+                      }
+                    ],
+                    "feedbackOnError": {
+                      "type": "vocabulary",
+                      "explanation": "Le lexique de l'humour distingue le mécanisme (calembour) de l'effet (blague interne).",
+                      "ruleRef": "gp-fr-double-sens"
+                    }
+                  },
+                  {
+                    "type": "ClozeDragDrop",
+                    "id": "es-fr-c2-e35",
+                    "passage": "Le compliment était {{b1}}, mais il y avait une {{b2}} cachée.",
+                    "blanks": [
+                      {
+                        "id": "b1",
+                        "answer": "chaleureux",
+                        "options": [
+                          "chaleureux",
+                          "froid",
+                          "tardif"
+                        ]
+                      },
+                      {
+                        "id": "b2",
+                        "answer": "pointe",
+                        "options": [
+                          "pointe",
+                          "fleur",
+                          "prime"
+                        ]
+                      }
+                    ],
+                    "feedbackOnError": {
+                      "type": "grammar",
+                      "explanation": "« Une pointe cachée » est la critique dissimulée dans un compliment.",
+                      "ruleRef": "gp-fr-double-sens"
+                    }
+                  },
+                  {
+                    "type": "FreeSpeakingPrompt",
+                    "id": "es-fr-c2-e36",
+                    "prompt": "Cuenta un juego de palabras que hayas oído en el trabajo, explica su doble sentido y valora si era apropiado.",
+                    "minTokens": 15,
+                    "conceptClusters": [
+                      [
+                        "calembour",
+                        "double sens",
+                        "jeu de mots"
+                      ],
+                      [
+                        "banquier",
+                        "intérêt",
+                        "pause"
+                      ],
+                      [
+                        "approprié",
+                        "complicité",
+                        "contexte"
+                      ]
+                    ],
+                    "grammarRuleRefs": [
+                      "gp-fr-double-sens",
+                      "gp-fr-calembour"
+                    ],
+                    "timeLimitSeconds": 30,
+                    "minWpm": 70,
+                    "maxWpm": 160,
+                    "modelAnswer": "Un collègue disait qu'il avait voulu être banquier, mais qu'il avait perdu intérêt. Le calembour joue sur le sens financier et affectif, et il était approprié comme plaisanterie entre collègues.",
+                    "selfAssessmentCriteria": [
+                      "¿Expliqué el doble sentido?",
+                      "¿Identifiqué el mecanismo?",
+                      "¿Valoré el contexto de uso?"
+                    ],
+                    "feedbackOnError": {
+                      "type": "grammar",
+                      "explanation": "La réponse modèle explique les deux cadres et évalue l'humour en contexte.",
+                      "ruleRef": "gp-fr-calembour"
+                    }
+                  }
+                ]
+              },
+              {
+                "id": "es-fr-c2-un-1-ls-4",
+                "title": "Allusions littéraires",
+                "cefrLevel": "C2",
+                "scenario": "Dans un essai sur technologie et pouvoir, il faut convoquer des références cultes sans devenir pédant.",
+                "canDo": "Puedo reconocer y emplear alusiones literarias con registro culto y precisión conceptual.",
+                "grammarPoints": [
+                  {
+                    "id": "gp-fr-allusion",
+                    "label": "Allusion",
+                    "description": "Orwellien, kafkaïen, faustien, sisyphéen."
+                  },
+                  {
+                    "id": "gp-fr-registre-litteraire",
+                    "label": "Registre littéraire",
+                    "description": "Métaphore soutenue, adjectivation culte."
+                  }
+                ],
+                "vocabFrequencyBand": "12000+",
+                "culturalNotes": [
+                  {
+                    "idiom": "les signes avant-coureurs",
+                    "note": "Les signaux qui annoncent un échec ; dans un essai, ils préparent le dénouement sans le dire entièrement.",
+                    "translation": "las señales inequívocas"
+                  }
+                ],
+                "microLesson": {
+                  "title": "Alluder sans expliquer trop",
+                  "goals": [
+                    "Reconnaître les allusions cultes et leur charge conceptuelle.",
+                    "Les employer avec un registre littéraire sans pédanterie."
+                  ],
+                  "sections": [
+                    {
+                      "heading": "Une référence, un monde",
+                      "body": "Orwellien évoque la surveillance et la langue manipulée ; kafkaïen, une bureaucratie absurde ; faustien, un pacte à coût moral ; sisyphéen, un effort sans fin. L'allusion fonctionne si le lecteur partage la référence.",
+                      "examples": [
+                        {
+                          "source": "El sistema de vigilancia parecía orwelliano.",
+                          "target": "Le système de surveillance semblait orwellien.",
+                          "note": "L'allusion condense un monde conceptuel."
+                        },
+                        {
+                          "source": "La tarea era sísifa.",
+                          "target": "La tâche était sisyphéenne.",
+                          "note": "L'adjectif cultive évite l'explication."
+                        }
+                      ]
+                    }
+                  ]
+                },
+                "glossary": [
+                  {
+                    "term": "allusion",
+                    "translations": [
+                      "alusión"
+                    ]
+                  },
+                  {
+                    "term": "orwellien",
+                    "translations": [
+                      "orwelliano"
+                    ]
+                  },
+                  {
+                    "term": "kafkaïen",
+                    "translations": [
+                      "kafkiano"
+                    ]
+                  },
+                  {
+                    "term": "faustien",
+                    "translations": [
+                      "faustiano"
+                    ]
+                  },
+                  {
+                    "term": "sisyphéen",
+                    "translations": [
+                      "sísifo",
+                      "inútil y repetido"
+                    ]
+                  },
+                  {
+                    "term": "dystopique",
+                    "translations": [
+                      "distópico"
+                    ]
+                  },
+                  {
+                    "term": "métaphore",
+                    "translations": [
+                      "metáfora"
+                    ]
+                  },
+                  {
+                    "term": "allégorie",
+                    "translations": [
+                      "alegoría"
+                    ]
+                  }
+                ],
+                "exercises": [
+                  {
+                    "type": "ClozeDragDrop",
+                    "id": "es-fr-c2-e37",
+                    "passage": "Le système de surveillance semblait {{b1}} : des caméras partout et une bureaucratie {{b2}} qui ne répondait jamais.",
+                    "blanks": [
+                      {
+                        "id": "b1",
+                        "answer": "orwellien",
+                        "options": [
+                          "orwellien",
+                          "pastoral",
+                          "joyeux"
+                        ]
+                      },
+                      {
+                        "id": "b2",
+                        "answer": "kafkaïenne",
+                        "options": [
+                          "kafkaïenne",
+                          "transparente",
+                          "efficace"
+                        ]
+                      }
+                    ],
+                    "feedbackOnError": {
+                      "type": "grammar",
+                      "explanation": "Orwellien évoque la surveillance ; kafkaïen, la bureaucratie absurde.",
+                      "ruleRef": "gp-fr-allusion"
+                    }
+                  },
+                  {
+                    "type": "ClozeDragDrop",
+                    "id": "es-fr-c2-e38",
+                    "passage": "Leur pacte {{b1}} échangeait la vie privée contre la commodité, un troc {{b2}} s'il en fut.",
+                    "blanks": [
+                      {
+                        "id": "b1",
+                        "answer": "faustien",
+                        "options": [
+                          "faustien",
+                          "généreux",
+                          "trivial"
+                        ]
+                      },
+                      {
+                        "id": "b2",
+                        "answer": "douteux",
+                        "options": [
+                          "douteux",
+                          "splendide",
+                          "rentable"
+                        ]
+                      }
+                    ],
+                    "feedbackOnError": {
+                      "type": "grammar",
+                      "explanation": "Un pacte faustien implique un coût moral ; « douteux » qualifie l'échange.",
+                      "ruleRef": "gp-fr-allusion"
+                    }
+                  },
+                  {
+                    "type": "SemanticMatch",
+                    "id": "es-fr-c2-e39",
+                    "instructions": "Associe chaque allusion à l'idée qu'elle condense.",
+                    "pairs": [
+                      {
+                        "left": "un régime orwellien",
+                        "right": "Vigilancia y manipulación del lenguaje",
+                        "register": "formal",
+                        "nuance": "Condensa un mundo conceptual."
+                      },
+                      {
+                        "left": "un processus kafkaïen",
+                        "right": "Burocracia absurda e incomprensible",
+                        "register": "formal",
+                        "nuance": "La référence évite de décrire le labyrinthe."
+                      },
+                      {
+                        "left": "un pacte faustien",
+                        "right": "Pacto con un coste moral oculto",
+                        "register": "formal",
+                        "nuance": "L'allusion introduit la conséquence éthique."
+                      }
+                    ],
+                    "feedbackOnError": {
+                      "type": "register",
+                      "explanation": "L'allusion culte fonctionne comme une métaphore comprimée.",
+                      "ruleRef": "gp-fr-allusion"
+                    }
+                  },
+                  {
+                    "type": "ListenChoose",
+                    "id": "es-fr-c2-e40",
+                    "audioText": "Le projet était sisyphéen : chaque semaine nous vidions la pile, et chaque lundi elle revenait.",
+                    "options": [
+                      "Le projet était facile",
+                      "L'effort se répétait sans progrès",
+                      "Le projet a réussi",
+                      "L'équipe a arrêté"
+                    ],
+                    "correctIndex": 1,
+                    "feedbackOnError": {
+                      "type": "comprehension",
+                      "explanation": "Sisyphéen décrit un effort répété sans avancer.",
+                      "ruleRef": "gp-fr-allusion"
+                    }
+                  },
+                  {
+                    "type": "AudioOnlyPrompt",
+                    "id": "es-fr-c2-e41",
+                    "audioText": "Les signes avant-coureurs étaient là : la plateforme grandissait, mais la surveillance aussi. On aurait dit un pacte orwellien, et personne ne voulait lire l'allégorie.",
+                    "question": "Que signale le locuteur ?",
+                    "options": [
+                      "La croissance économique seule",
+                      "Une surveillance cachée derrière la croissance",
+                      "Un concours littéraire",
+                      "Une panne technique"
+                    ],
+                    "correctIndex": 1,
+                    "allowSlowPlayback": true,
+                    "feedbackOnError": {
+                      "type": "comprehension",
+                      "explanation": "Les signes et le pacte orwellien avertissent du coût de la croissance.",
+                      "ruleRef": "gp-fr-allusion"
+                    }
+                  },
+                  {
+                    "type": "MultipleChoice",
+                    "id": "es-fr-c2-e42",
+                    "question": "Complète : La tâche était ___: nous la répétions chaque jour sans progrès.",
+                    "options": [
+                      "sisyphéenne",
+                      "pastorale",
+                      "lucrative"
+                    ],
+                    "correctIndex": 0,
+                    "feedbackOnError": {
+                      "type": "grammar",
+                      "explanation": "Sisyphéen décrit l'effort répété sans avance.",
+                      "ruleRef": "gp-fr-allusion"
+                    }
+                  },
+                  {
+                    "type": "Translate",
+                    "id": "es-fr-c2-e43",
+                    "sourcePhrase": "El proyecto tenía un aire kafkiano.",
+                    "correctTokens": [
+                      "Le",
+                      "projet",
+                      "avait",
+                      "un",
+                      "air",
+                      "kafkaïen"
+                    ],
+                    "distractorTokens": [
+                      "Kafka",
+                      "regard"
+                    ],
+                    "feedbackOnError": {
+                      "type": "grammar",
+                      "explanation": "« Un air kafkaïen » emploie l'adjectif cultive.",
+                      "ruleRef": "gp-fr-allusion"
+                    }
+                  },
+                  {
+                    "type": "ListenType",
+                    "id": "es-fr-c2-e44",
+                    "transcription": "Le système de surveillance semblait orwellien et le processus était kafkaïen",
+                    "audioText": "Le système de surveillance semblait orwellien et le processus était kafkaïen",
+                    "feedbackOnError": {
+                      "type": "spelling",
+                      "explanation": "Écris « orwellien » et « kafkaïen » avec la majuscule d'origine.",
+                      "ruleRef": "gp-fr-allusion"
+                    }
+                  },
+                  {
+                    "type": "SpeakRepeat",
+                    "id": "es-fr-c2-e45",
+                    "targetPhrase": "Leur pacte faustien échangeait la vie privée contre la commodité, un troc douteux.",
+                    "audioText": "Leur pacte faustien échangeait la vie privée contre la commodité, un troc douteux.",
+                    "feedbackOnError": {
+                      "type": "pronunciation",
+                      "explanation": "Prononce « faustien » avec « au » et marque « douteux ».",
+                      "ruleRef": "gp-fr-allusion"
+                    }
+                  },
+                  {
+                    "type": "MatchPairs",
+                    "id": "es-fr-c2-e46",
+                    "pairs": [
+                      {
+                        "left": "un pacte faustien",
+                        "right": "un pacto faustiano"
+                      },
+                      {
+                        "left": "une tâche sisyphéenne",
+                        "right": "una tarea sísifa"
+                      },
+                      {
+                        "left": "un régime orwellien",
+                        "right": "un régimen orwelliano"
+                      },
+                      {
+                        "left": "un roman dystopique",
+                        "right": "una novela distópica"
+                      }
+                    ],
+                    "feedbackOnError": {
+                      "type": "vocabulary",
+                      "explanation": "Les allusions cultes se reconnaissent à leur adjectif et à leur charge.",
+                      "ruleRef": "gp-fr-allusion"
+                    }
+                  },
+                  {
+                    "type": "ClozeDragDrop",
+                    "id": "es-fr-c2-e47",
+                    "passage": "Le roman n'est pas une {{b1}} de la technologie mais une {{b2}} des peurs qu'elle amplifie.",
+                    "blanks": [
+                      {
+                        "id": "b1",
+                        "answer": "célébration",
+                        "options": [
+                          "célébration",
+                          "critique",
+                          "notice"
+                        ]
+                      },
+                      {
+                        "id": "b2",
+                        "answer": "allégorie",
+                        "options": [
+                          "allégorie",
+                          "index",
+                          "facture"
+                        ]
+                      }
+                    ],
+                    "feedbackOnError": {
+                      "type": "grammar",
+                      "explanation": "« Allégorie » nomme le récit à second sens ; le contraste avec « célébration » précise la thèse.",
+                      "ruleRef": "gp-fr-registre-litteraire"
+                    }
+                  },
+                  {
+                    "type": "FreeSpeakingPrompt",
+                    "id": "es-fr-c2-e48",
+                    "prompt": "Escribe un breve juicio crítico sobre una tecnología usando dos alusiones literarias: di qué evocan y qué límite tiene la comparación.",
+                    "minTokens": 15,
+                    "conceptClusters": [
+                      [
+                        "orwellien",
+                        "kafkaïen",
+                        "faustien"
+                      ],
+                      [
+                        "surveillance",
+                        "bureaucratie",
+                        "vie privée"
+                      ],
+                      [
+                        "métaphore",
+                        "allégorie",
+                        "limite"
+                      ]
+                    ],
+                    "grammarRuleRefs": [
+                      "gp-fr-allusion",
+                      "gp-fr-registre-litteraire"
+                    ],
+                    "timeLimitSeconds": 30,
+                    "minWpm": 70,
+                    "maxWpm": 160,
+                    "modelAnswer": "La plateforme semble orwellienne par son appétit de surveillance, et son processus d'appel kafkaïen transforme les usagers en suppliants. Pourtant l'allégorie a ses limites : l'entreprise n'est pas un État.",
+                    "selfAssessmentCriteria": [
+                      "¿Usé dos alusiones pertinentes?",
+                      "¿Expliqué qué evocan?",
+                      "¿Reconocí el límite de la comparación?"
+                    ],
+                    "feedbackOnError": {
+                      "type": "grammar",
+                      "explanation": "La réponse modèle emploie deux allusions et clôt sur la limite de la métaphore.",
+                      "ruleRef": "gp-fr-allusion"
+                    }
+                  }
+                ]
+              }
+            ]
+          },
+        {
+          "id": "es-fr-lv-c2-un-2",
+          "title": "Domaines spécialisés",
+          "lessons": [
+            {
+              "id": "es-fr-c2-un-2-ls-1",
+              "title": "Droit et espace public",
+              "cefrLevel": "C2",
+              "scenario": "Un tribunal doit trancher une affaire limite entre sécurité et droits fondamentaux.",
+              "canDo": "Puedo leer y producir registro jurídico, distinguir obligación de discrecionalidad y citar precedentes.",
+              "grammarPoints": [
+                {
+                  "id": "gp-fr-registre-juridique-c2",
+                  "label": "Registre juridique",
+                  "description": "Attendu que, conformément à, sera tenu de."
+                },
+                {
+                  "id": "gp-fr-colocations-juridiques",
+                  "label": "Colocaciones jurídicas",
+                  "description": "Charge de la preuve, procédure régulière, intérêt public."
+                }
+              ],
+              "vocabFrequencyBand": "12000+",
+              "culturalNotes": [
+                {
+                  "idiom": "une zone grise",
+                  "note": "Domaine où la norme n'est pas claire ; en droit, il faut argumenter par analogie et reconnaître la marge d'interprétation.",
+                  "translation": "una zona gris"
+                }
+              ],
+              "microLesson": {
+                "title": "La précision du droit",
+                "goals": [
+                  "Distinguer obligation, droit et discrétion.",
+                  "Employer les collocations juridiques sans ambiguïté."
+                ],
+                "sections": [
+                  {
+                    "heading": "Les mots qui obligent",
+                    "body": "Sera tenu de impose ; peut autorise ; conformément à renvoie à la norme ; attendu que ouvre les considérants. Les collocations (charge de la preuve, procédure régulière, intérêt public) n'admettent pas de synonymes improvisés.",
+                    "examples": [
+                      {
+                        "source": "La sentencia crea un precedente y protege el interés público.",
+                        "target": "L'arrêt crée un précédent et protège l'intérêt public.",
+                        "note": "Créer un précédent est la collocation exacte."
+                      },
+                      {
+                        "source": "La cláusula es una zona gris.",
+                        "target": "La clause est une zone grise.",
+                        "note": "Zone grise nomme l'absence de clarté."
+                      }
+                    ]
+                  }
+                ]
+              },
+              "glossary": [
+                {
+                  "term": "précédent",
+                  "translations": [
+                    "precedente"
+                  ]
+                },
+                {
+                  "term": "loi",
+                  "translations": [
+                    "ley"
+                  ]
+                },
+                {
+                  "term": "demandeur",
+                  "translations": [
+                    "demandante"
+                  ]
+                },
+                {
+                  "term": "défendeur",
+                  "translations": [
+                    "demandado"
+                  ]
+                },
+                {
+                  "term": "arrêt",
+                  "translations": [
+                    "fallo",
+                    "sentencia"
+                  ]
+                },
+                {
+                  "term": "discrétion",
+                  "translations": [
+                    "discrecionalidad"
+                  ]
+                },
+                {
+                  "term": "responsabilité",
+                  "translations": [
+                    "responsabilidad legal"
+                  ]
+                },
+                {
+                  "term": "preuve",
+                  "translations": [
+                    "prueba"
+                  ]
+                }
+              ],
+              "exercises": [
+                {
+                  "type": "ClozeDragDrop",
+                  "id": "es-fr-c2-e49",
+                  "passage": "L'arrêt crée un {{b1}} que les tribunaux inférieurs doivent suivre, tandis que l'opinion dissidente parle d'une {{b2}} grise.",
+                  "blanks": [
+                    {
+                      "id": "b1",
+                      "answer": "précédent",
+                      "options": [
+                        "précédent",
+                        "principal",
+                        "président"
+                      ]
+                    },
+                    {
+                      "id": "b2",
+                      "answer": "zone",
+                      "options": [
+                        "zone",
+                        "zône",
+                        "zonne"
+                      ]
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "« Créer un précédent » et « zone grise » sont les collocations juridiques.",
+                    "ruleRef": "gp-fr-colocations-juridiques"
+                  }
+                },
+                {
+                  "type": "ClozeDragDrop",
+                  "id": "es-fr-c2-e50",
+                  "passage": "La loi {{b1}} la charge de la preuve sur le demandeur, ce qui {{b2}} la position du défendeur.",
+                  "blanks": [
+                    {
+                      "id": "b1",
+                      "answer": "place",
+                      "options": [
+                        "place",
+                        "prend",
+                        "lève"
+                      ]
+                    },
+                    {
+                      "id": "b2",
+                      "answer": "renforce",
+                      "options": [
+                        "renforce",
+                        "affaiblit",
+                        "ignore"
+                      ]
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "« Placer la charge de la preuve sur » est la collocation ; la charge sur le demandeur renforce le défendeur.",
+                    "ruleRef": "gp-fr-colocations-juridiques"
+                  }
+                },
+                {
+                  "type": "SemanticMatch",
+                  "id": "es-fr-c2-e51",
+                  "instructions": "Associe chaque formule à son effet juridique.",
+                  "pairs": [
+                    {
+                      "left": "Le locataire sera tenu de notifier par écrit.",
+                      "right": "Obligación",
+                      "register": "formal",
+                      "nuance": "Sera tenu de impone el deber."
+                    },
+                    {
+                      "left": "L'autorité peut demander des preuves supplémentaires.",
+                      "right": "Facultad discrecional",
+                      "register": "formal",
+                      "nuance": "Peut autoriza sin obligar."
+                    },
+                    {
+                      "left": "Conformément à l'article 4, la demande est recevable.",
+                      "right": "Remisión normativa",
+                      "register": "formal",
+                      "nuance": "Conformément à conecta con la norma."
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "register",
+                    "explanation": "Le registre juridique distingue obligation, faculté et renvoi.",
+                    "ruleRef": "gp-fr-registre-juridique-c2"
+                  }
+                },
+                {
+                  "type": "ListenChoose",
+                  "id": "es-fr-c2-e52",
+                  "audioText": "L'arrêt crée un précédent : la procédure régulière a été respectée, mais l'intérêt public reste une zone grise.",
+                  "options": [
+                    "L'arrêt est sans effet",
+                    "L'arrêt établit un précédent avec une zone floue",
+                    "Le tribunal a ignoré la procédure",
+                    "L'intérêt public est pleinement défini"
+                  ],
+                  "correctIndex": 1,
+                  "feedbackOnError": {
+                    "type": "comprehension",
+                    "explanation": "« Crée un précédent » et « zone grise » résument la portée et la limite de l'arrêt.",
+                    "ruleRef": "gp-fr-registre-juridique-c2"
+                  }
+                },
+                {
+                  "type": "AudioOnlyPrompt",
+                  "id": "es-fr-c2-e53",
+                  "audioText": "La loi place la charge de la preuve sur le demandeur. Conformément à l'arrêt, la procédure régulière doit être respectée, mais l'intérêt public reste une zone grise.",
+                  "question": "Qu'est-ce qui reste flou ?",
+                  "options": [
+                    "Qui porte la charge de la preuve",
+                    "Comment s'applique l'intérêt public",
+                    "Si la procédure existe",
+                    "Si la loi existe"
+                  ],
+                  "correctIndex": 1,
+                  "allowSlowPlayback": true,
+                  "feedbackOnError": {
+                    "type": "comprehension",
+                    "explanation": "La charge de la preuve est claire ; l'intérêt public reste la zone grise.",
+                    "ruleRef": "gp-fr-colocations-juridiques"
+                  }
+                },
+                {
+                  "type": "MultipleChoice",
+                  "id": "es-fr-c2-e54",
+                  "question": "Complète : L'arrêt crée un ___.",
+                  "options": [
+                    "précédent",
+                    "principal",
+                    "président"
+                  ],
+                  "correctIndex": 0,
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "« Créer un précédent » est la collocation correcte.",
+                    "ruleRef": "gp-fr-colocations-juridiques"
+                  }
+                },
+                {
+                  "type": "Translate",
+                  "id": "es-fr-c2-e55",
+                  "sourcePhrase": "La sentencia crea un precedente y protege el interés público.",
+                  "correctTokens": [
+                    "L'arrêt",
+                    "crée",
+                    "un",
+                    "précédent",
+                    "et",
+                    "protège",
+                    "l'intérêt",
+                    "public"
+                  ],
+                  "distractorTokens": [
+                    "phrase",
+                    "privé"
+                  ],
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "Arrêt est le fallo ; « créer un précédent » et « intérêt public » sont figés.",
+                    "ruleRef": "gp-fr-colocations-juridiques"
+                  }
+                },
+                {
+                  "type": "ListenType",
+                  "id": "es-fr-c2-e56",
+                  "transcription": "La loi place la charge de la preuve sur le demandeur",
+                  "audioText": "La loi place la charge de la preuve sur le demandeur",
+                  "feedbackOnError": {
+                    "type": "spelling",
+                    "explanation": "Écris « demandeur » avec « eur » et « preuve » avec « eu ».",
+                    "ruleRef": "gp-fr-registre-juridique-c2"
+                  }
+                },
+                {
+                  "type": "SpeakRepeat",
+                  "id": "es-fr-c2-e57",
+                  "targetPhrase": "Conformément à l'arrêt, la procédure régulière doit être respectée.",
+                  "audioText": "Conformément à l'arrêt, la procédure régulière doit être respectée.",
+                  "feedbackOnError": {
+                    "type": "pronunciation",
+                    "explanation": "Prononce « conformément » avec accent sur « ment » et lie « à l'arrêt ».",
+                    "ruleRef": "gp-fr-registre-juridique-c2"
+                  }
+                },
+                {
+                  "type": "MatchPairs",
+                  "id": "es-fr-c2-e58",
+                  "pairs": [
+                    {
+                      "left": "la charge de la preuve",
+                      "right": "la carga de la prueba"
+                    },
+                    {
+                      "left": "l'intérêt public",
+                      "right": "el interés público"
+                    },
+                    {
+                      "left": "un précédent judiciaire",
+                      "right": "un precedente judicial"
+                    },
+                    {
+                      "left": "la procédure régulière",
+                      "right": "el debido proceso"
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "Les collocations juridiques ont des équivalents techniques stables.",
+                    "ruleRef": "gp-fr-colocations-juridiques"
+                  }
+                },
+                {
+                  "type": "ClozeDragDrop",
+                  "id": "es-fr-c2-e59",
+                  "passage": "La clause est une {{b1}} grise : ni explicitement permise ni clairement {{b2}}.",
+                  "blanks": [
+                    {
+                      "id": "b1",
+                      "answer": "zone",
+                      "options": [
+                        "zone",
+                        "zône",
+                        "zonne"
+                      ]
+                    },
+                    {
+                      "id": "b2",
+                      "answer": "interdite",
+                      "options": [
+                        "interdite",
+                        "autorisée",
+                        "ignorée"
+                      ]
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "Zone grise implique l'ambiguïté ; « clairement interdite » complète le contraste.",
+                    "ruleRef": "gp-fr-colocations-juridiques"
+                  }
+                },
+                {
+                  "type": "FreeSpeakingPrompt",
+                  "id": "es-fr-c2-e60",
+                  "prompt": "Comenta un fallo judicial: resume el precedente que crea, distingue obligación de discrecionalidad y señala qué queda en zona gris.",
+                  "minTokens": 15,
+                  "conceptClusters": [
+                    [
+                      "précédent",
+                      "arrêt",
+                      "loi"
+                    ],
+                    [
+                      "charge de la preuve",
+                      "procédure",
+                      "discrétion"
+                    ],
+                    [
+                      "zone grise",
+                      "intérêt public",
+                      "interprétation"
+                    ]
+                  ],
+                  "grammarRuleRefs": [
+                    "gp-fr-registre-juridique-c2",
+                    "gp-fr-colocations-juridiques"
+                  ],
+                  "timeLimitSeconds": 30,
+                  "minWpm": 70,
+                  "maxWpm": 160,
+                  "modelAnswer": "L'arrêt crée un précédent : la loi place la charge de la preuve sur le demandeur et la procédure régulière doit être respectée. Pourtant l'intérêt public reste une zone grise, donc les tribunaux gardent une marge de discrétion.",
+                  "selfAssessmentCriteria": [
+                    "¿Identifiqué el precedente?",
+                    "¿Distinguí obligación y discrecionalidad?",
+                    "¿Señalé la zona gris?"
+                  ],
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "La réponse modèle emploie les collocations et sépare obligation et discrétion.",
+                    "ruleRef": "gp-fr-colocations-juridiques"
+                  }
+                }
+              ]
+            },
+            {
+              "id": "es-fr-c2-un-2-ls-2",
+              "title": "Science et technique",
+              "cefrLevel": "C2",
+              "scenario": "Une équipe présente un résultat préliminaire et doit éviter que la presse le transforme en certitude.",
+              "canDo": "Puedo describir resultados con pasiva técnica, calibrar la incertidumbre y distinguir correlación de causalidad.",
+              "grammarPoints": [
+                {
+                  "id": "gp-fr-passif-technique",
+                  "label": "Passif technique",
+                  "description": "L'échantillon a été analysé, les résultats ont été répliqués."
+                },
+                {
+                  "id": "gp-fr-hedging-scientifique",
+                  "label": "Cautela científica",
+                  "description": "Suggérer, justifier, sous certaines conditions."
+                }
+              ],
+              "vocabFrequencyBand": "12000+",
+              "culturalNotes": [
+                {
+                  "idiom": "ne pas y aller par quatre chemins",
+                  "note": "Aller droit au fait ; en science, dire clairement ce que les données permettent et ce qu'elles ne permettent pas.",
+                  "translation": "ir directo al grano"
+                }
+              ],
+              "microLesson": {
+                "title": "Mesurer l'incertitude",
+                "goals": [
+                  "Décrire la méthode au passif.",
+                  "Calibrer la conclusion avec des verbes de prudence."
+                ],
+                "sections": [
+                  {
+                    "heading": "La grammaire de la preuve",
+                    "body": "L'échantillon a été analysé dans des conditions contrôlées décrit la méthode sans agent. Les résultats suggèrent une corrélation, pas un lien causal gradue la conclusion : suggérer est plus faible que démontrer.",
+                    "examples": [
+                      {
+                        "source": "Los resultados sugieren una correlación, no una relación causal.",
+                        "target": "Les résultats suggèrent une corrélation, pas un lien causal.",
+                        "note": "Suggérer évite d'affirmer la causalité."
+                      },
+                      {
+                        "source": "La muestra se analizó en condiciones controladas.",
+                        "target": "L'échantillon a été analysé dans des conditions contrôlées.",
+                        "note": "Le passif technique omet l'agent."
+                      }
+                    ]
+                  }
+                ]
+              },
+              "glossary": [
+                {
+                  "term": "échantillon",
+                  "translations": [
+                    "muestra"
+                  ]
+                },
+                {
+                  "term": "résultats",
+                  "translations": [
+                    "hallazgos",
+                    "resultados"
+                  ]
+                },
+                {
+                  "term": "corrélation",
+                  "translations": [
+                    "correlación"
+                  ]
+                },
+                {
+                  "term": "causal",
+                  "translations": [
+                    "causal"
+                  ]
+                },
+                {
+                  "term": "répliquer",
+                  "translations": [
+                    "replicar"
+                  ]
+                },
+                {
+                  "term": "préliminaire",
+                  "translations": [
+                    "preliminar"
+                  ]
+                },
+                {
+                  "term": "robuste",
+                  "translations": [
+                    "sólido",
+                    "robusto"
+                  ]
+                },
+                {
+                  "term": "incertitude",
+                  "translations": [
+                    "incertidumbre"
+                  ]
+                }
+              ],
+              "exercises": [
+                {
+                  "type": "ClozeDragDrop",
+                  "id": "es-fr-c2-e61",
+                  "passage": "L'échantillon a été {{b1}} dans des conditions contrôlées, et les résultats {{b2}} une interprétation prudente.",
+                  "blanks": [
+                    {
+                      "id": "b1",
+                      "answer": "analysé",
+                      "options": [
+                        "analysé",
+                        "analyse",
+                        "analysant"
+                      ]
+                    },
+                    {
+                      "id": "b2",
+                      "answer": "justifient",
+                      "options": [
+                        "justifient",
+                        "garantissent",
+                        "interdisent"
+                      ]
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "Le passif technique emploie « a été analysé » ; « justifient » indique ce que les données permettent.",
+                    "ruleRef": "gp-fr-passif-technique"
+                  }
+                },
+                {
+                  "type": "ClozeDragDrop",
+                  "id": "es-fr-c2-e62",
+                  "passage": "Les résultats {{b1}} une corrélation, pas un lien {{b2}}.",
+                  "blanks": [
+                    {
+                      "id": "b1",
+                      "answer": "suggèrent",
+                      "options": [
+                        "suggèrent",
+                        "prouvent",
+                        "exigent"
+                      ]
+                    },
+                    {
+                      "id": "b2",
+                      "answer": "causal",
+                      "options": [
+                        "causal",
+                        "casuel",
+                        "usual"
+                      ]
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "« Suggérer » gradue la conclusion ; « causal » s'oppose à « casuel ».",
+                    "ruleRef": "gp-fr-hedging-scientifique"
+                  }
+                },
+                {
+                  "type": "SemanticMatch",
+                  "id": "es-fr-c2-e63",
+                  "instructions": "Associe chaque verbe à la force de la conclusion.",
+                  "pairs": [
+                    {
+                      "left": "Les données suggèrent une corrélation.",
+                      "right": "Conclusión moderada",
+                      "register": "formal",
+                      "nuance": "Suggère sans affirmer la causalité."
+                    },
+                    {
+                      "left": "Les résultats démontrent l'effet.",
+                      "right": "Conclusión fuerte",
+                      "register": "formal",
+                      "nuance": "Affirme avec des preuves solides."
+                    },
+                    {
+                      "left": "Les résultats justifient une étude plus poussée.",
+                      "right": "Conclusión condicionada",
+                      "register": "formal",
+                      "nuance": "Les données justifient de poursuivre."
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "register",
+                    "explanation": "Le choix du verbe mesure la force de la preuve.",
+                    "ruleRef": "gp-fr-hedging-scientifique"
+                  }
+                },
+                {
+                  "type": "ListenChoose",
+                  "id": "es-fr-c2-e64",
+                  "audioText": "L'échantillon a été analysé dans des conditions contrôlées. Les résultats suggèrent une corrélation, pas un lien causal.",
+                  "options": [
+                    "L'étude prouve la causalité",
+                    "L'étude suggère seulement une corrélation",
+                    "L'étude n'était pas contrôlée",
+                    "Les résultats sont inutiles"
+                  ],
+                  "correctIndex": 1,
+                  "feedbackOnError": {
+                    "type": "comprehension",
+                    "explanation": "Suggérer face à prouver distingue corrélation et causalité.",
+                    "ruleRef": "gp-fr-hedging-scientifique"
+                  }
+                },
+                {
+                  "type": "AudioOnlyPrompt",
+                  "id": "es-fr-c2-e65",
+                  "audioText": "Les résultats préliminaires suggèrent une corrélation, mais ils ne justifient pas une affirmation causale. N'y allons pas par quatre chemins : rien ne sera publié avant vérification.",
+                  "question": "Qu'exige le locuteur ?",
+                  "options": [
+                    "Publier immédiatement",
+                    "Vérifier avant de publier",
+                    "Ignorer les résultats",
+                    "Affirmer la causalité"
+                  ],
+                  "correctIndex": 1,
+                  "allowSlowPlayback": true,
+                  "feedbackOnError": {
+                    "type": "comprehension",
+                    "explanation": "« Ne pas y aller par quatre chemins » exige de vérifier avant publication.",
+                    "ruleRef": "gp-fr-hedging-scientifique"
+                  }
+                },
+                {
+                  "type": "MultipleChoice",
+                  "id": "es-fr-c2-e66",
+                  "question": "Complète : Les données ___ une corrélation plutôt qu'une cause.",
+                  "options": [
+                    "suggèrent",
+                    "exigent",
+                    "insistent"
+                  ],
+                  "correctIndex": 0,
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "« Suggérer » est le verbe de prudence scientifique.",
+                    "ruleRef": "gp-fr-hedging-scientifique"
+                  }
+                },
+                {
+                  "type": "Translate",
+                  "id": "es-fr-c2-e67",
+                  "sourcePhrase": "Los resultados sugieren una correlación, no una relación causal.",
+                  "correctTokens": [
+                    "Les",
+                    "résultats",
+                    "suggèrent",
+                    "une",
+                    "corrélation",
+                    "pas",
+                    "un",
+                    "lien",
+                    "causal"
+                  ],
+                  "distractorTokens": [
+                    "prouvent",
+                    "casuel"
+                  ],
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "« Suggérer » maintient la prudence ; « causal » est l'adjectif technique.",
+                    "ruleRef": "gp-fr-hedging-scientifique"
+                  }
+                },
+                {
+                  "type": "ListenType",
+                  "id": "es-fr-c2-e68",
+                  "transcription": "L'échantillon a été analysé dans des conditions contrôlées",
+                  "audioText": "L'échantillon a été analysé dans des conditions contrôlées",
+                  "feedbackOnError": {
+                    "type": "spelling",
+                    "explanation": "Écris « échantillon » avec « é » et « contrôlées » avec accent circonflexe.",
+                    "ruleRef": "gp-fr-passif-technique"
+                  }
+                },
+                {
+                  "type": "SpeakRepeat",
+                  "id": "es-fr-c2-e69",
+                  "targetPhrase": "Les résultats suggèrent une corrélation, pas un lien causal.",
+                  "audioText": "Les résultats suggèrent une corrélation, pas un lien causal.",
+                  "feedbackOnError": {
+                    "type": "pronunciation",
+                    "explanation": "Lie « pas un lien » et accentue « causal ».",
+                    "ruleRef": "gp-fr-hedging-scientifique"
+                  }
+                },
+                {
+                  "type": "MatchPairs",
+                  "id": "es-fr-c2-e70",
+                  "pairs": [
+                    {
+                      "left": "une revue par les pairs",
+                      "right": "una revisión por pares"
+                    },
+                    {
+                      "left": "la taille de l'échantillon",
+                      "right": "el tamaño de la muestra"
+                    },
+                    {
+                      "left": "un lien causal",
+                      "right": "un vínculo causal"
+                    },
+                    {
+                      "left": "la signification statistique",
+                      "right": "la significación estadística"
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "Le lexique méthodologique nomme chaque contrôle de la preuve.",
+                    "ruleRef": "gp-fr-passif-technique"
+                  }
+                },
+                {
+                  "type": "ClozeDragDrop",
+                  "id": "es-fr-c2-e71",
+                  "passage": "Nous devons vérifier chaque détail avant de {{b1}} les résultats ; n'y allons pas par quatre {{b2}}.",
+                  "blanks": [
+                    {
+                      "id": "b1",
+                      "answer": "publier",
+                      "options": [
+                        "publier",
+                        "publie",
+                        "publié"
+                      ]
+                    },
+                    {
+                      "id": "b2",
+                      "answer": "chemins",
+                      "options": [
+                        "chemins",
+                        "routes",
+                        "portes"
+                      ]
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "« Avant de publier » et la locution « par quatre chemins » complètent la phrase.",
+                    "ruleRef": "gp-fr-hedging-scientifique"
+                  }
+                },
+                {
+                  "type": "FreeSpeakingPrompt",
+                  "id": "es-fr-c2-e72",
+                  "prompt": "Presenta un hallazgo preliminar: describe el método en pasiva, calibra la conclusión y explica qué falta por verificar.",
+                  "minTokens": 15,
+                  "conceptClusters": [
+                    [
+                      "a été analysé",
+                      "conditions contrôlées",
+                      "répliqué"
+                    ],
+                    [
+                      "suggérer",
+                      "corrélation",
+                      "causal"
+                    ],
+                    [
+                      "préliminaire",
+                      "vérifier",
+                      "publier"
+                    ]
+                  ],
+                  "grammarRuleRefs": [
+                    "gp-fr-passif-technique",
+                    "gp-fr-hedging-scientifique"
+                  ],
+                  "timeLimitSeconds": 30,
+                  "minWpm": 70,
+                  "maxWpm": 160,
+                  "modelAnswer": "L'échantillon a été analysé dans des conditions contrôlées, et les résultats préliminaires suggèrent une corrélation, pas un lien causal. N'y allons pas par quatre chemins : rien ne sera publié avant vérification.",
+                  "selfAssessmentCriteria": [
+                    "¿Describí el método en pasiva?",
+                    "¿Calibré la conclusión?",
+                    "¿Señalé lo que falta verificar?"
+                  ],
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "La réponse modèle emploie le passif technique et les verbes de prudence.",
+                    "ruleRef": "gp-fr-passif-technique"
+                  }
+                }
+              ]
+            },
+            {
+              "id": "es-fr-c2-un-2-ls-3",
+              "title": "Humanités et critique",
+              "cefrLevel": "C2",
+              "scenario": "Une revue culturelle publie la recension d'un essai ambitieux qui promet plus qu'il ne démontre.",
+              "canDo": "Puedo valorar un argumento con adjetivación evaluativa precisa y reconocer cuándo la forma oculta un vacío.",
+              "grammarPoints": [
+                {
+                  "id": "gp-fr-critique-litteraire-c2",
+                  "label": "Crítica literaria",
+                  "description": "Lecture attentive, posture critique, argument soutenu."
+                },
+                {
+                  "id": "gp-fr-adjectifs-evaluatifs",
+                  "label": "Adjetivación evaluativa",
+                  "description": "Ornementé, creux, convaincant, fragile."
+                }
+              ],
+              "vocabFrequencyBand": "12000+",
+              "culturalNotes": [
+                {
+                  "idiom": "un château de cartes",
+                  "note": "Une construction qui ne tient que tant que personne ne retire une pièce ; en critique, un argument fragile sous une forme brillante.",
+                  "translation": "un castillo de naipes"
+                }
+              ],
+              "microLesson": {
+                "title": "Louer et démonter",
+                "goals": [
+                  "Séparer le jugement sur la forme du jugement sur le fond.",
+                  "Employer les adjectifs évaluatifs avec précision."
+                ],
+                "sections": [
+                  {
+                    "heading": "La forme ne sauve pas le fond",
+                    "body": "Ornementé décrit une prose chargée ; creux, un argument sans substance ; convaincant, un argument qui emporte ; fragile, celui qui se brise au premier contre-exemple. La critique mûre nomme le mécanisme.",
+                    "examples": [
+                      {
+                        "source": "La tesis es brillante pero frágil.",
+                        "target": "La thèse est brillante mais fragile.",
+                        "note": "Deux adjectifs évaluent forme et fond."
+                      },
+                      {
+                        "source": "El argumento es un castillo de naipes.",
+                        "target": "L'argument est un château de cartes.",
+                        "note": "La métaphore décrit la fragilité structurelle."
+                      }
+                    ]
+                  }
+                ]
+              },
+              "glossary": [
+                {
+                  "term": "lecture attentive",
+                  "translations": [
+                    "lectura atenta"
+                  ]
+                },
+                {
+                  "term": "posture",
+                  "translations": [
+                    "postura"
+                  ]
+                },
+                {
+                  "term": "soutenu",
+                  "translations": [
+                    "sostenido"
+                  ]
+                },
+                {
+                  "term": "ornementé",
+                  "translations": [
+                    "recargado"
+                  ]
+                },
+                {
+                  "term": "creux",
+                  "translations": [
+                    "hueco",
+                    "vacío"
+                  ]
+                },
+                {
+                  "term": "convaincant",
+                  "translations": [
+                    "convincente"
+                  ]
+                },
+                {
+                  "term": "fragile",
+                  "translations": [
+                    "frágil"
+                  ]
+                },
+                {
+                  "term": "polémique",
+                  "translations": [
+                    "polémica"
+                  ]
+                }
+              ],
+              "exercises": [
+                {
+                  "type": "ClozeDragDrop",
+                  "id": "es-fr-c2-e73",
+                  "passage": "L'argument est un {{b1}} de cartes : retirez une hypothèse et tout l'{{b2}} s'effondre.",
+                  "blanks": [
+                    {
+                      "id": "b1",
+                      "answer": "château",
+                      "options": [
+                        "château",
+                        "champ",
+                        "chapitre"
+                      ]
+                    },
+                    {
+                      "id": "b2",
+                      "answer": "édifice",
+                      "options": [
+                        "édifice",
+                        "édition",
+                        "évidence"
+                      ]
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "« Un château de cartes » décrit un argument fragile ; « édifice » nomme la construction.",
+                    "ruleRef": "gp-fr-critique-litteraire-c2"
+                  }
+                },
+                {
+                  "type": "ClozeDragDrop",
+                  "id": "es-fr-c2-e74",
+                  "passage": "La prose du critique est {{b1}} mais {{b2}} : chaque phrase brille et aucune ne convainc.",
+                  "blanks": [
+                    {
+                      "id": "b1",
+                      "answer": "élégante",
+                      "options": [
+                        "élégante",
+                        "élégance",
+                        "élégamment"
+                      ]
+                    },
+                    {
+                      "id": "b2",
+                      "answer": "creuse",
+                      "options": [
+                        "creuse",
+                        "creux",
+                        "creuser"
+                      ]
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "Deux adjectifs coordonnés évaluent forme et fond : « élégante mais creuse ».",
+                    "ruleRef": "gp-fr-adjectifs-evaluatifs"
+                  }
+                },
+                {
+                  "type": "SemanticMatch",
+                  "id": "es-fr-c2-e75",
+                  "instructions": "Associe chaque adjectif au jugement qu'il exprime.",
+                  "pairs": [
+                    {
+                      "left": "un style ornementé",
+                      "right": "Prosa recargada",
+                      "register": "formal",
+                      "nuance": "La forme pèse plus que l'idée."
+                    },
+                    {
+                      "left": "un argument creux",
+                      "right": "Argumento sin sustancia",
+                      "register": "formal",
+                      "nuance": "Brille mais ne soutient pas le poids."
+                    },
+                    {
+                      "left": "un dossier convaincant",
+                      "right": "Exposición que arrastra",
+                      "register": "formal",
+                      "nuance": "La preuve et la forme se renforcent."
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "register",
+                    "explanation": "La critique précise nomme le mécanisme du jugement.",
+                    "ruleRef": "gp-fr-adjectifs-evaluatifs"
+                  }
+                },
+                {
+                  "type": "ListenChoose",
+                  "id": "es-fr-c2-e76",
+                  "audioText": "L'essai est élégant mais creux : chaque phrase brille et aucune ne convainc.",
+                  "options": [
+                    "L'essai est excellent",
+                    "L'essai est élégant mais peu convaincant",
+                    "L'essai est mal écrit",
+                    "L'essai n'a jamais été publié"
+                  ],
+                  "correctIndex": 1,
+                  "feedbackOnError": {
+                    "type": "comprehension",
+                    "explanation": "Élégant évalue la forme ; creux, le fond.",
+                    "ruleRef": "gp-fr-adjectifs-evaluatifs"
+                  }
+                },
+                {
+                  "type": "AudioOnlyPrompt",
+                  "id": "es-fr-c2-e77",
+                  "audioText": "La thèse est brillante mais fragile. Elle repose sur une seule analogie, et un château de cartes s'effondre dès qu'on retire une hypothèse.",
+                  "question": "Quelle est l'objection du critique ?",
+                  "options": [
+                    "La thèse est ennuyeuse",
+                    "La thèse est brillante mais structurellement fragile",
+                    "La thèse manque de style",
+                    "La thèse est trop longue"
+                  ],
+                  "correctIndex": 1,
+                  "allowSlowPlayback": true,
+                  "feedbackOnError": {
+                    "type": "comprehension",
+                    "explanation": "La métaphore du château de cartes explique la fragilité.",
+                    "ruleRef": "gp-fr-critique-litteraire-c2"
+                  }
+                },
+                {
+                  "type": "MultipleChoice",
+                  "id": "es-fr-c2-e78",
+                  "question": "Complète : L'essai est ___ mais peu convaincant.",
+                  "options": [
+                    "élégant",
+                    "élégance",
+                    "élégamment"
+                  ],
+                  "correctIndex": 0,
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "L'adjectif « élégant » qualifie « essai ».",
+                    "ruleRef": "gp-fr-adjectifs-evaluatifs"
+                  }
+                },
+                {
+                  "type": "Translate",
+                  "id": "es-fr-c2-e79",
+                  "sourcePhrase": "La tesis es brillante pero frágil.",
+                  "correctTokens": [
+                    "La",
+                    "thèse",
+                    "est",
+                    "brillante",
+                    "mais",
+                    "fragile"
+                  ],
+                  "distractorTokens": [
+                    "fragilité",
+                    "brillance"
+                  ],
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "Deux adjectifs coordonnés évaluent forme et fond.",
+                    "ruleRef": "gp-fr-adjectifs-evaluatifs"
+                  }
+                },
+                {
+                  "type": "ListenType",
+                  "id": "es-fr-c2-e80",
+                  "transcription": "L'argument est un château de cartes qui s'effondre à l'examen",
+                  "audioText": "L'argument est un château de cartes qui s'effondre à l'examen",
+                  "feedbackOnError": {
+                    "type": "spelling",
+                    "explanation": "Écris « château » avec accent circonflexe et « effondre » avec double « f ».",
+                    "ruleRef": "gp-fr-critique-litteraire-c2"
+                  }
+                },
+                {
+                  "type": "SpeakRepeat",
+                  "id": "es-fr-c2-e81",
+                  "targetPhrase": "L'essai est élégant mais creux : chaque phrase brille et aucune ne convainc.",
+                  "audioText": "L'essai est élégant mais creux : chaque phrase brille et aucune ne convainc.",
+                  "feedbackOnError": {
+                    "type": "pronunciation",
+                    "explanation": "Marque le contraste « élégant mais creux » et accentue « convainc ».",
+                    "ruleRef": "gp-fr-adjectifs-evaluatifs"
+                  }
+                },
+                {
+                  "type": "MatchPairs",
+                  "id": "es-fr-c2-e82",
+                  "pairs": [
+                    {
+                      "left": "un château de cartes",
+                      "right": "un castillo de naipes"
+                    },
+                    {
+                      "left": "une lecture attentive",
+                      "right": "una lectura atenta"
+                    },
+                    {
+                      "left": "un argument creux",
+                      "right": "un argumento hueco"
+                    },
+                    {
+                      "left": "une posture critique",
+                      "right": "una postura crítica"
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "La critique combine métaphore structurelle et vocabulaire technique.",
+                    "ruleRef": "gp-fr-critique-litteraire-c2"
+                  }
+                },
+                {
+                  "type": "ClozeDragDrop",
+                  "id": "es-fr-c2-e83",
+                  "passage": "Son vocabulaire {{b1}} impressionne, mais la {{b2}} est mince.",
+                  "blanks": [
+                    {
+                      "id": "b1",
+                      "answer": "ornementé",
+                      "options": [
+                        "ornementé",
+                        "ornement",
+                        "ornementer"
+                      ]
+                    },
+                    {
+                      "id": "b2",
+                      "answer": "substance",
+                      "options": [
+                        "substance",
+                        "surface",
+                        "silhouette"
+                      ]
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "« Ornementé » décrit le vocabulaire ; « substance » nomme ce qui manque.",
+                    "ruleRef": "gp-fr-adjectifs-evaluatifs"
+                  }
+                },
+                {
+                  "type": "FreeSpeakingPrompt",
+                  "id": "es-fr-c2-e84",
+                  "prompt": "Reseña un ensayo ambicioso: elogia un acierto de forma, desmonta un punto del fondo y explica qué sostiene el argumento.",
+                  "minTokens": 15,
+                  "conceptClusters": [
+                    [
+                      "élégant",
+                      "ornementé",
+                      "creux"
+                    ],
+                    [
+                      "thèse",
+                      "hypothèse",
+                      "preuve"
+                    ],
+                    [
+                      "château de cartes",
+                      "lecture attentive",
+                      "convaincant"
+                    ]
+                  ],
+                  "grammarRuleRefs": [
+                    "gp-fr-critique-litteraire-c2",
+                    "gp-fr-adjectifs-evaluatifs"
+                  ],
+                  "timeLimitSeconds": 30,
+                  "minWpm": 70,
+                  "maxWpm": 160,
+                  "modelAnswer": "L'essai est élégant mais creux : chaque phrase brille et aucune ne convainc. Sa thèse repose sur une seule analogie, et l'argument est un château de cartes qui s'effondre à la lecture attentive.",
+                  "selfAssessmentCriteria": [
+                    "¿Elogié un acierto concreto?",
+                    "¿Desmonté un punto del fondo?",
+                    "¿Nombré qué sostiene el argumento?"
+                  ],
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "La réponse modèle sépare forme et fond avec adjectifs et métaphore.",
+                    "ruleRef": "gp-fr-adjectifs-evaluatifs"
+                  }
+                }
+              ]
+            },
+            {
+              "id": "es-fr-c2-un-2-ls-4",
+              "title": "Économie et jargon",
+              "cefrLevel": "C2",
+              "scenario": "Un analyste explique au conseil pourquoi l'entreprise a révisé ses prévisions après un trimestre difficile.",
+              "canDo": "Puedo interpretar jerga económica, traducirla a lenguaje llano y explicar causas sin ocultar riesgos.",
+              "grammarPoints": [
+                {
+                  "id": "gp-fr-jargon-economique",
+                  "label": "Jerga económica",
+                  "description": "Vents contraires, guidance, compression des marges."
+                },
+                {
+                  "id": "gp-fr-densite-nominale-c2",
+                  "label": "Densidad nominal",
+                  "description": "Croissance du chiffre d'affaires, base de coûts."
+                }
+              ],
+              "vocabFrequencyBand": "12000+",
+              "culturalNotes": [
+                {
+                  "idiom": "la part du lion",
+                  "note": "La plus grande partie de quelque chose ; dans une analyse, révèle la dépendance excessive à une seule source.",
+                  "translation": "la mayor parte"
+                }
+              ],
+              "microLesson": {
+                "title": "Traduire le jargon",
+                "goals": [
+                  "Reconnaître la jerga y su equivalente llano.",
+                  "Explicar causas sin esconder el riesgo."
+                ],
+                "sections": [
+                  {
+                    "heading": "Les mots du marché",
+                    "body": "Vents contraires désigne les difficultés du marché ; guidance, la prévision officielle ; compression des marges, la baisse du margen ; chiffre d'affaires, les revenus. La densité nominale comprime l'information et exige un détail.",
+                    "examples": [
+                      {
+                        "source": "La mayor parte de los ingresos provino de un solo producto.",
+                        "target": "La part du lion du chiffre d'affaires venait d'un seul produit.",
+                        "note": "La part du lion = la mayor parte."
+                      },
+                      {
+                        "source": "La empresa revisó su previsión tras el bache.",
+                        "target": "L'entreprise a révisé sa guidance après le trou d'air.",
+                        "note": "Guidance = prévision de l'entreprise."
+                      }
+                    ]
+                  }
+                ]
+              },
+              "glossary": [
+                {
+                  "term": "vents contraires",
+                  "translations": [
+                    "vientos en contra"
+                  ]
+                },
+                {
+                  "term": "guidance",
+                  "translations": [
+                    "previsión de la empresa"
+                  ]
+                },
+                {
+                  "term": "chiffre d'affaires",
+                  "translations": [
+                    "ingresos",
+                    "facturación"
+                  ]
+                },
+                {
+                  "term": "marge",
+                  "translations": [
+                    "margen"
+                  ]
+                },
+                {
+                  "term": "récession",
+                  "translations": [
+                    "recesión"
+                  ]
+                },
+                {
+                  "term": "prévision",
+                  "translations": [
+                    "previsión"
+                  ]
+                },
+                {
+                  "term": "base de coûts",
+                  "translations": [
+                    "base de costes"
+                  ]
+                },
+                {
+                  "term": "résultats",
+                  "translations": [
+                    "resultados"
+                  ]
+                }
+              ],
+              "exercises": [
+                {
+                  "type": "ClozeDragDrop",
+                  "id": "es-fr-c2-e85",
+                  "passage": "La part du {{b1}} du chiffre d'affaires venait d'un seul produit, laissant le reste de l'entreprise {{b2}} de lui.",
+                  "blanks": [
+                    {
+                      "id": "b1",
+                      "answer": "lion",
+                      "options": [
+                        "lion",
+                        "lieu",
+                        "lien"
+                      ]
+                    },
+                    {
+                      "id": "b2",
+                      "answer": "dépendant",
+                      "options": [
+                        "dépendant",
+                        "indépendant",
+                        "dépendance"
+                      ]
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "« La part du lion » est l'expression figée ; « dépendant de » décrit la dépendance.",
+                    "ruleRef": "gp-fr-jargon-economique"
+                  }
+                },
+                {
+                  "type": "ClozeDragDrop",
+                  "id": "es-fr-c2-e86",
+                  "passage": "Les vents contraires ont {{b1}} les marges, et la guidance a été discrètement {{b2}}.",
+                  "blanks": [
+                    {
+                      "id": "b1",
+                      "answer": "comprimé",
+                      "options": [
+                        "comprimé",
+                        "élargi",
+                        "célébré"
+                      ]
+                    },
+                    {
+                      "id": "b2",
+                      "answer": "révisée",
+                      "options": [
+                        "révisée",
+                        "renversée",
+                        "ravivée"
+                      ]
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "« Comprimer les marges » et « réviser la guidance » sont des collocations financières.",
+                    "ruleRef": "gp-fr-densite-nominale-c2"
+                  }
+                },
+                {
+                  "type": "SemanticMatch",
+                  "id": "es-fr-c2-e87",
+                  "instructions": "Associe chaque terme à sa signification claire.",
+                  "pairs": [
+                    {
+                      "left": "vents contraires",
+                      "right": "Dificultades del mercado",
+                      "register": "formal",
+                      "nuance": "Métaphore nautique pour un contexte adverse."
+                    },
+                    {
+                      "left": "guidance",
+                      "right": "Previsión oficial de resultados",
+                      "register": "formal",
+                      "nuance": "La empresa orienta al mercado."
+                    },
+                    {
+                      "left": "compression des marges",
+                      "right": "Caída del margen",
+                      "register": "formal",
+                      "nuance": "Los costes suben más que los ingresos."
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "register",
+                    "explanation": "La jerga económica comprime información que debe detallarse al explicar.",
+                    "ruleRef": "gp-fr-jargon-economique"
+                  }
+                },
+                {
+                  "type": "ListenChoose",
+                  "id": "es-fr-c2-e88",
+                  "audioText": "Les vents contraires ont comprimé les marges, donc l'entreprise a révisé sa guidance à la baisse.",
+                  "options": [
+                    "Les marges ont augmenté et la guidance aussi",
+                    "Les marges ont baissé et la guidance a été revue à la baisse",
+                    "L'entreprise a ignoré le marché",
+                    "Le chiffre d'affaires a doublé"
+                  ],
+                  "correctIndex": 1,
+                  "feedbackOnError": {
+                    "type": "comprehension",
+                    "explanation": "Vents contraires et compression expliquent la révision à la baisse.",
+                    "ruleRef": "gp-fr-jargon-economique"
+                  }
+                },
+                {
+                  "type": "AudioOnlyPrompt",
+                  "id": "es-fr-c2-e89",
+                  "audioText": "La part du lion du chiffre d'affaires venait d'un seul produit. Quand les vents contraires ont comprimé les marges, l'entreprise a révisé sa guidance et l'action a chuté.",
+                  "question": "Pourquoi l'action a-t-elle chuté ?",
+                  "options": [
+                    "Parce que le chiffre d'affaires a doublé",
+                    "Parce que les marges ont baissé et la guidance a été révisée",
+                    "Parce que le produit était nouveau",
+                    "Parce que le marché a ignoré l'entreprise"
+                  ],
+                  "correctIndex": 1,
+                  "allowSlowPlayback": true,
+                  "feedbackOnError": {
+                    "type": "comprehension",
+                    "explanation": "La baisse des marges et la révision de la guidance expliquent la réaction.",
+                    "ruleRef": "gp-fr-densite-nominale-c2"
+                  }
+                },
+                {
+                  "type": "MultipleChoice",
+                  "id": "es-fr-c2-e90",
+                  "question": "Complète : L'entreprise a révisé sa ___ après le trou d'air.",
+                  "options": [
+                    "guidance",
+                    "guide",
+                    "guidage"
+                  ],
+                  "correctIndex": 0,
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "« Guidance » est le nom de la prévision officielle.",
+                    "ruleRef": "gp-fr-jargon-economique"
+                  }
+                },
+                {
+                  "type": "Translate",
+                  "id": "es-fr-c2-e91",
+                  "sourcePhrase": "La mayor parte de los ingresos provino de un solo producto.",
+                  "correctTokens": [
+                    "La",
+                    "part",
+                    "du",
+                    "lion",
+                    "du",
+                    "chiffre",
+                    "d'affaires",
+                    "venait",
+                    "d'un",
+                    "seul",
+                    "produit"
+                  ],
+                  "distractorTokens": [
+                    "plupart",
+                    "bénéfice"
+                  ],
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "« La part du lion du chiffre d'affaires » est l'expression exacte.",
+                    "ruleRef": "gp-fr-jargon-economique"
+                  }
+                },
+                {
+                  "type": "ListenType",
+                  "id": "es-fr-c2-e92",
+                  "transcription": "Les vents contraires ont comprimé les marges et la guidance a été révisée",
+                  "audioText": "Les vents contraires ont comprimé les marges et la guidance a été révisée",
+                  "feedbackOnError": {
+                    "type": "spelling",
+                    "explanation": "Écris « contraires » sans accent et « guidance » avec « ui ».",
+                    "ruleRef": "gp-fr-densite-nominale-c2"
+                  }
+                },
+                {
+                  "type": "SpeakRepeat",
+                  "id": "es-fr-c2-e93",
+                  "targetPhrase": "La part du lion du chiffre d'affaires venait d'un seul produit, ce qui augmentait le risque.",
+                  "audioText": "La part du lion du chiffre d'affaires venait d'un seul produit, ce qui augmentait le risque.",
+                  "feedbackOnError": {
+                    "type": "pronunciation",
+                    "explanation": "Lie « part du lion » et accentue « risque ».",
+                    "ruleRef": "gp-fr-jargon-economique"
+                  }
+                },
+                {
+                  "type": "MatchPairs",
+                  "id": "es-fr-c2-e94",
+                  "pairs": [
+                    {
+                      "left": "la part du lion",
+                      "right": "la mayor parte"
+                    },
+                    {
+                      "left": "vents contraires",
+                      "right": "vientos en contra"
+                    },
+                    {
+                      "left": "prévision de résultats",
+                      "right": "previsión de resultados"
+                    },
+                    {
+                      "left": "compression des marges",
+                      "right": "compresión de márgenes"
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "La jerga financiera tiene equivalentes estables en español.",
+                    "ruleRef": "gp-fr-jargon-economique"
+                  }
+                },
+                {
+                  "type": "ClozeDragDrop",
+                  "id": "es-fr-c2-e95",
+                  "passage": "La {{b1}} a été révisée à la baisse, et l'action a {{b2}} fortement.",
+                  "blanks": [
+                    {
+                      "id": "b1",
+                      "answer": "guidance",
+                      "options": [
+                        "guidance",
+                        "guide",
+                        "guidage"
+                      ]
+                    },
+                    {
+                      "id": "b2",
+                      "answer": "chuté",
+                      "options": [
+                        "chuté",
+                        "chanté",
+                        "cherché"
+                      ]
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "Guidance et « action a chuté » décrivent la séquence prévision-réaction.",
+                    "ruleRef": "gp-fr-jargon-economique"
+                  }
+                },
+                {
+                  "type": "FreeSpeakingPrompt",
+                  "id": "es-fr-c2-e96",
+                  "prompt": "Explica a la junta un trimestre difícil: traduce la jerga, señala la causa de la caída y reconoce el riesgo pendiente.",
+                  "minTokens": 15,
+                  "conceptClusters": [
+                    [
+                      "vents contraires",
+                      "guidance",
+                      "compression"
+                    ],
+                    [
+                      "chiffre d'affaires",
+                      "base de coûts",
+                      "prévision"
+                    ],
+                    [
+                      "risque",
+                      "dépendant",
+                      "produit"
+                    ]
+                  ],
+                  "grammarRuleRefs": [
+                    "gp-fr-jargon-economique",
+                    "gp-fr-densite-nominale-c2"
+                  ],
+                  "timeLimitSeconds": 30,
+                  "minWpm": 70,
+                  "maxWpm": 160,
+                  "modelAnswer": "Les vents contraires ont comprimé les marges, donc nous avons révisé notre guidance à la baisse. La part du lion du chiffre d'affaires vient encore d'un seul produit, ce qui laisse la prévision dangereusement dépendante.",
+                  "selfAssessmentCriteria": [
+                    "¿Traduje la jerga?",
+                    "¿Expliqué la causa?",
+                    "¿Reconocí el riesgo pendiente?"
+                  ],
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "La réponse modèle convertit la jerga en explicación causal y nombra la dependencia.",
+                    "ruleRef": "gp-fr-densite-nominale-c2"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+        ]
       }
   ]
 }
