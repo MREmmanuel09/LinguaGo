@@ -29307,6 +29307,3928 @@
               ]
             }
           ]
+        },
+        {
+          "id": "es-fr-lv-c2-un-3",
+          "title": "Langue cultivée",
+          "lessons": [
+            {
+              "id": "es-fr-c2-un-3-ls-1",
+              "title": "Rhétorique classique",
+              "cefrLevel": "C2",
+              "scenario": "Un discours de clôture doit rester mémorable sans tomber dans l'effet vide.",
+              "canDo": "Puedo identificar y usar figuras retóricas clásicas con intención argumentativa.",
+              "grammarPoints": [
+                {
+                  "id": "gp-fr-figures-rhetoriques",
+                  "label": "Figuras retóricas",
+                  "description": "Tricolon, anaphore, chiasme, question rhétorique."
+                },
+                {
+                  "id": "gp-fr-structures-emphatiques-c2",
+                  "label": "Estructuras enfáticas",
+                  "description": "Ce n'est pas X mais Y ; ce qui compte, c'est..."
+                }
+              ],
+              "vocabFrequencyBand": "12000+",
+              "culturalNotes": [
+                {
+                  "idiom": "dire ses quatre vérités",
+                  "note": "Dire franchement ce que l'on pense ; en rhétorique, exige crédibilité et pas seulement sonorité.",
+                  "translation": "decir las verdades del barquero"
+                }
+              ],
+              "microLesson": {
+                "title": "La forme qui argumente",
+                "goals": [
+                  "Reconnaître les figures et leur fonction.",
+                  "Éviter que la figure remplace l'argument."
+                ],
+                "sections": [
+                  {
+                    "heading": "Trois coups et un silence",
+                    "body": "Le tricolon accumule trois membres de force croissante ; l'anaphore répète l'ouverture ; le chiasme inverse l'ordre ; la question rhétorique cherche l'assentiment. La figure sert si le contenu la soutient.",
+                    "examples": [
+                      {
+                        "source": "Vinimos, vimos y entregamos.",
+                        "target": "Nous sommes venus, nous avons vu, nous avons livré.",
+                        "note": "Tricolon de force croissante."
+                      },
+                      {
+                        "source": "Lo que importa no es el coste, sino el compromiso.",
+                        "target": "Ce qui compte n'est pas le coût mais l'engagement.",
+                        "note": "Contraste emphatique."
+                      }
+                    ]
+                  }
+                ]
+              },
+              "glossary": [
+                {
+                  "term": "tricolon",
+                  "translations": [
+                    "tricolon"
+                  ]
+                },
+                {
+                  "term": "anaphore",
+                  "translations": [
+                    "anáfora"
+                  ]
+                },
+                {
+                  "term": "chiasme",
+                  "translations": [
+                    "quiasmo"
+                  ]
+                },
+                {
+                  "term": "cadence",
+                  "translations": [
+                    "cadencia"
+                  ]
+                },
+                {
+                  "term": "rhétorique",
+                  "translations": [
+                    "retórica"
+                  ]
+                },
+                {
+                  "term": "emphatique",
+                  "translations": [
+                    "enfático"
+                  ]
+                },
+                {
+                  "term": "mémorable",
+                  "translations": [
+                    "memorable"
+                  ]
+                },
+                {
+                  "term": "creux",
+                  "translations": [
+                    "hueco",
+                    "vacío"
+                  ]
+                }
+              ],
+              "exercises": [
+                {
+                  "type": "ClozeDragDrop",
+                  "id": "es-fr-c2-e97",
+                  "passage": "Le discours a utilisé un {{b1}} : « nous sommes venus, nous avons vu, nous avons livré » — trois membres d'une {{b2}} croissante.",
+                  "blanks": [
+                    {
+                      "id": "b1",
+                      "answer": "tricolon",
+                      "options": [
+                        "tricolon",
+                        "trilogie",
+                        "triangle"
+                      ]
+                    },
+                    {
+                      "id": "b2",
+                      "answer": "force",
+                      "options": [
+                        "force",
+                        "longueur",
+                        "silence"
+                      ]
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "Le tricolon accumule trois membres ; la force croissante est son effet.",
+                    "ruleRef": "gp-fr-figures-rhetoriques"
+                  }
+                },
+                {
+                  "type": "ClozeDragDrop",
+                  "id": "es-fr-c2-e98",
+                  "passage": "L'{{b1}} n'était pas une simple répétition : chaque proposition commençait par « nous », une {{b2}} délibérée.",
+                  "blanks": [
+                    {
+                      "id": "b1",
+                      "answer": "anaphore",
+                      "options": [
+                        "anaphore",
+                        "métaphore",
+                        "hyperbole"
+                      ]
+                    },
+                    {
+                      "id": "b2",
+                      "answer": "cadence",
+                      "options": [
+                        "cadence",
+                        "accident",
+                        "silence"
+                      ]
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "L'anaphore répète l'ouverture pour créer cadence et cohésion.",
+                    "ruleRef": "gp-fr-figures-rhetoriques"
+                  }
+                },
+                {
+                  "type": "SemanticMatch",
+                  "id": "es-fr-c2-e99",
+                  "instructions": "Associe chaque figure à son effet.",
+                  "pairs": [
+                    {
+                      "left": "Nous sommes venus, nous avons vu, nous avons livré.",
+                      "right": "Acumulación creciente",
+                      "register": "formal",
+                      "nuance": "Le tricolon finit par le membre le plus fort."
+                    },
+                    {
+                      "left": "Ne demandez pas ce que l'entreprise peut faire pour vous ; demandez ce que vous pouvez faire pour elle.",
+                      "right": "Quiasmo",
+                      "register": "formal",
+                      "nuance": "L'inversion oblige à relire l'ordre."
+                    },
+                    {
+                      "left": "Est-ce vraiment l'héritage que nous voulons ?",
+                      "right": "Pregunta retórica",
+                      "register": "formal",
+                      "nuance": "Cherche l'assentiment, pas l'information."
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "register",
+                    "explanation": "Chaque figure guide l'attention de l'auditeur.",
+                    "ruleRef": "gp-fr-figures-rhetoriques"
+                  }
+                },
+                {
+                  "type": "ListenChoose",
+                  "id": "es-fr-c2-e100",
+                  "audioText": "Nous sommes venus, nous avons vu, nous avons livré. Ce qui compte n'est pas le coût mais l'engagement.",
+                  "options": [
+                    "Le locuteur liste des faits sans rapport",
+                    "Le locuteur utilise un tricolon et un contraste emphatique",
+                    "Le locuteur pose une question",
+                    "Le locuteur s'excuse"
+                  ],
+                  "correctIndex": 1,
+                  "feedbackOnError": {
+                    "type": "comprehension",
+                    "explanation": "Le tricolon et la structure « ce n'est pas X mais Y » soutiennent la clôture.",
+                    "ruleRef": "gp-fr-figures-rhetoriques"
+                  }
+                },
+                {
+                  "type": "AudioOnlyPrompt",
+                  "id": "es-fr-c2-e101",
+                  "audioText": "Nous sommes venus, nous avons vu, nous avons livré. Ce qui compte n'est pas le coût mais l'engagement. Et si nous pouvons dire leurs quatre vérités au pouvoir, nous pouvons aussi écouter la vérité.",
+                  "question": "Quel est l'effet de la dernière phrase ?",
+                  "options": [
+                    "Elle ferme par un chiasme sur la vérité et le pouvoir",
+                    "Elle change de sujet",
+                    "Elle s'excuse",
+                    "Elle liste trois coûts"
+                  ],
+                  "correctIndex": 0,
+                  "allowSlowPlayback": true,
+                  "feedbackOnError": {
+                    "type": "comprehension",
+                    "explanation": "La dernière phrase inverse les termes : vérité au pouvoir / écouter la vérité.",
+                    "ruleRef": "gp-fr-figures-rhetoriques"
+                  }
+                },
+                {
+                  "type": "MultipleChoice",
+                  "id": "es-fr-c2-e102",
+                  "question": "Complète : La ligne utilise ___ pour répéter l'ouverture de chaque proposition.",
+                  "options": [
+                    "une anaphore",
+                    "une anecdote",
+                    "une analogie"
+                  ],
+                  "correctIndex": 0,
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "L'anaphore est la répétition de l'ouverture.",
+                    "ruleRef": "gp-fr-figures-rhetoriques"
+                  }
+                },
+                {
+                  "type": "Translate",
+                  "id": "es-fr-c2-e103",
+                  "sourcePhrase": "La repetición inicial crea ritmo y énfasis.",
+                  "correctTokens": [
+                    "La",
+                    "répétition",
+                    "initiale",
+                    "crée",
+                    "rythme",
+                    "et",
+                    "emphase"
+                  ],
+                  "distractorTokens": [
+                    "répéter",
+                    "emphatique"
+                  ],
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "« Répétition » et « emphase » sont les noms qui décrivent l'effet.",
+                    "ruleRef": "gp-fr-structures-emphatiques-c2"
+                  }
+                },
+                {
+                  "type": "ListenType",
+                  "id": "es-fr-c2-e104",
+                  "transcription": "Ce qui compte n'est pas le coût mais l'engagement",
+                  "audioText": "Ce qui compte n'est pas le coût mais l'engagement",
+                  "feedbackOnError": {
+                    "type": "spelling",
+                    "explanation": "Écris « engagement » avec « ge » et « coût » avec accent circonflexe.",
+                    "ruleRef": "gp-fr-structures-emphatiques-c2"
+                  }
+                },
+                {
+                  "type": "SpeakRepeat",
+                  "id": "es-fr-c2-e105",
+                  "targetPhrase": "Nous sommes venus, nous avons vu, nous avons livré, et ce qui compte maintenant, c'est l'engagement.",
+                  "audioText": "Nous sommes venus, nous avons vu, nous avons livré, et ce qui compte maintenant, c'est l'engagement.",
+                  "feedbackOnError": {
+                    "type": "pronunciation",
+                    "explanation": "Marque les trois membres du tricolon et baisse le ton sur « engagement ».",
+                    "ruleRef": "gp-fr-figures-rhetoriques"
+                  }
+                },
+                {
+                  "type": "MatchPairs",
+                  "id": "es-fr-c2-e106",
+                  "pairs": [
+                    {
+                      "left": "une question rhétorique",
+                      "right": "una pregunta retórica"
+                    },
+                    {
+                      "left": "un tricolon",
+                      "right": "un tricolon"
+                    },
+                    {
+                      "left": "une anaphore",
+                      "right": "una anáfora"
+                    },
+                    {
+                      "left": "un appel à l'action",
+                      "right": "una llamada a la acción"
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "La rhétorique classique a des noms techniques stables.",
+                    "ruleRef": "gp-fr-figures-rhetoriques"
+                  }
+                },
+                {
+                  "type": "ClozeDragDrop",
+                  "id": "es-fr-c2-e107",
+                  "passage": "Dire ses quatre {{b1}} au pouvoir sans {{b2}} la salle.",
+                  "blanks": [
+                    {
+                      "id": "b1",
+                      "answer": "vérités",
+                      "options": [
+                        "vérités",
+                        "vérité",
+                        "vraies"
+                      ]
+                    },
+                    {
+                      "id": "b2",
+                      "answer": "perdre",
+                      "options": [
+                        "perdre",
+                        "perd",
+                        "perdu"
+                      ]
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "La locution est « dire ses quatre vérités » ; après « sans » vient l'infinitif.",
+                    "ruleRef": "gp-fr-figures-rhetoriques"
+                  }
+                },
+                {
+                  "type": "FreeSpeakingPrompt",
+                  "id": "es-fr-c2-e108",
+                  "prompt": "Escribe el cierre de un discurso: usa un tricolon, una estructura enfática y una llamada a la acción sin caer en el efectismo.",
+                  "minTokens": 15,
+                  "conceptClusters": [
+                    [
+                      "tricolon",
+                      "anaphore",
+                      "cadence"
+                    ],
+                    [
+                      "ce qui compte",
+                      "pas",
+                      "mais"
+                    ],
+                    [
+                      "engagement",
+                      "action",
+                      "vérité"
+                    ]
+                  ],
+                  "grammarRuleRefs": [
+                    "gp-fr-figures-rhetoriques",
+                    "gp-fr-structures-emphatiques-c2"
+                  ],
+                  "timeLimitSeconds": 30,
+                  "minWpm": 70,
+                  "maxWpm": 160,
+                  "modelAnswer": "Nous sommes venus, nous avons vu, nous avons livré. Ce qui compte maintenant n'est pas l'applaudissement mais l'engagement : dire leurs quatre vérités au pouvoir, garder la salle unie et finir ce que nous avons commencé.",
+                  "selfAssessmentCriteria": [
+                    "¿Usé un tricolon?",
+                    "¿Usé una estructura enfática?",
+                    "¿Cerré con una acción concreta?"
+                  ],
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "La réponse modèle enchaîne tricolon, contraste et appel à l'action.",
+                    "ruleRef": "gp-fr-figures-rhetoriques"
+                  }
+                }
+              ]
+            },
+            {
+              "id": "es-fr-c2-un-3-ls-2",
+              "title": "Argumentation et contre-argument",
+              "cefrLevel": "C2",
+              "scenario": "Dans un débat public, l'intervention doit anticiper l'objection la plus forte et y répondre sans esquive.",
+              "canDo": "Puedo construir una concesión robusta y refutar sin caricaturizar la posición contraria.",
+              "grammarPoints": [
+                {
+                  "id": "gp-fr-concession-c2",
+                  "label": "Concesión avanzada",
+                  "description": "Certes, il est vrai que, pour être juste."
+                },
+                {
+                  "id": "gp-fr-refutation-c2",
+                  "label": "Refutación",
+                  "description": "Cette objection suppose..., les preuves ne soutiennent pas..."
+                }
+              ],
+              "vocabFrequencyBand": "12000+",
+              "culturalNotes": [
+                {
+                  "idiom": "prêcher par l'exemple",
+                  "note": "Appliquer à soi ce qu'on exige des autres ; dans un débat, la cohérence pèse plus que l'éloquence.",
+                  "translation": "predicar con el ejemplo"
+                }
+              ],
+              "microLesson": {
+                "title": "Concéder pour mieux réfuter",
+                "goals": [
+                  "Formuler l'objection contraire dans sa version la plus forte.",
+                  "Réfuter sans changer de sujet ni caricaturer."
+                ],
+                "sections": [
+                  {
+                    "heading": "L'objection dans sa meilleure version",
+                    "body": "Certes et il est vrai que reconnaissent le point adverse ; pour être juste ajoute l'équité. Une réfutation solide identifie le présupposé : cette objection suppose que... et montre quelle preuve manque.",
+                    "examples": [
+                      {
+                        "source": "Es cierto que el plan tiene méritos; sin embargo, sus costes son inaceptables.",
+                        "target": "Certes, le plan a des mérites ; néanmoins, ses coûts sont inacceptables.",
+                        "note": "Certes reconnaît ; néanmoins réfute."
+                      },
+                      {
+                        "source": "Esa objeción presupone que el mercado es estable.",
+                        "target": "Cette objection suppose que le marché est stable.",
+                        "note": "Nommer le présupposé affaiblit l'objection."
+                      }
+                    ]
+                  }
+                ]
+              },
+              "glossary": [
+                {
+                  "term": "concession",
+                  "translations": [
+                    "concesión"
+                  ]
+                },
+                {
+                  "term": "réfutation",
+                  "translations": [
+                    "refutación"
+                  ]
+                },
+                {
+                  "term": "objection",
+                  "translations": [
+                    "objeción"
+                  ]
+                },
+                {
+                  "term": "présupposé",
+                  "translations": [
+                    "supuesto"
+                  ]
+                },
+                {
+                  "term": "homme de paille",
+                  "translations": [
+                    "hombre de paja"
+                  ]
+                },
+                {
+                  "term": "contre-exemple",
+                  "translations": [
+                    "contraejemplo"
+                  ]
+                },
+                {
+                  "term": "cohérent",
+                  "translations": [
+                    "coherente"
+                  ]
+                },
+                {
+                  "term": "crédibilité",
+                  "translations": [
+                    "credibilidad"
+                  ]
+                }
+              ],
+              "exercises": [
+                {
+                  "type": "ClozeDragDrop",
+                  "id": "es-fr-c2-e109",
+                  "passage": "{{b1}}, le plan a des mérites ; {{b2}}, ses coûts sont inacceptables.",
+                  "blanks": [
+                    {
+                      "id": "b1",
+                      "answer": "Certes",
+                      "options": [
+                        "Certes",
+                        "Sert",
+                        "Certes pas"
+                      ]
+                    },
+                    {
+                      "id": "b2",
+                      "answer": "néanmoins",
+                      "options": [
+                        "néanmoins",
+                        "donc",
+                        "ainsi"
+                      ]
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "« Certes » concède et « néanmoins » introduit la réfutation.",
+                    "ruleRef": "gp-fr-concession-c2"
+                  }
+                },
+                {
+                  "type": "ClozeDragDrop",
+                  "id": "es-fr-c2-e110",
+                  "passage": "La réfutation {{b1}} l'objection avant de la {{b2}}.",
+                  "blanks": [
+                    {
+                      "id": "b1",
+                      "answer": "reconnaît",
+                      "options": [
+                        "reconnaît",
+                        "ignore",
+                        "invente"
+                      ]
+                    },
+                    {
+                      "id": "b2",
+                      "answer": "démonter",
+                      "options": [
+                        "démonter",
+                        "démonte",
+                        "démonté"
+                      ]
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "« Reconnaître avant de démonter » décrit la réfutation qui reconnaît puis démonte.",
+                    "ruleRef": "gp-fr-refutation-c2"
+                  }
+                },
+                {
+                  "type": "SemanticMatch",
+                  "id": "es-fr-c2-e111",
+                  "instructions": "Associe chaque mouvement à sa fonction.",
+                  "pairs": [
+                    {
+                      "left": "Certes, le plan a des mérites.",
+                      "right": "Concesión inicial",
+                      "register": "formal",
+                      "nuance": "Reconnaît la force du contraire."
+                    },
+                    {
+                      "left": "Cette objection suppose que le marché est stable.",
+                      "right": "Detección del supuesto",
+                      "register": "formal",
+                      "nuance": "Isole la prémisse qui échoue."
+                    },
+                    {
+                      "left": "Les preuves ne soutiennent pas cette conclusion.",
+                      "right": "Refutación con evidencia",
+                      "register": "formal",
+                      "nuance": "Attaque l'inférence, pas la personne."
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "register",
+                    "explanation": "La réfutation mûre discute des prémisses, pas des caricatures.",
+                    "ruleRef": "gp-fr-refutation-c2"
+                  }
+                },
+                {
+                  "type": "ListenChoose",
+                  "id": "es-fr-c2-e112",
+                  "audioText": "Certes, le plan a des mérites. Néanmoins, cette objection suppose que le marché est stable, et les preuves ne soutiennent pas ce présupposé.",
+                  "options": [
+                    "Le locuteur rejette le plan sans raisons",
+                    "Le locuteur concède, identifie un présupposé et le réfute",
+                    "Le locuteur change de sujet",
+                    "Le locuteur attaque l'adversaire"
+                  ],
+                  "correctIndex": 1,
+                  "feedbackOnError": {
+                    "type": "comprehension",
+                    "explanation": "La séquence concède, isole le présupposé et le réfute.",
+                    "ruleRef": "gp-fr-refutation-c2"
+                  }
+                },
+                {
+                  "type": "AudioOnlyPrompt",
+                  "id": "es-fr-c2-e113",
+                  "audioText": "Pour être juste, l'objection a un point : les coûts comptent. Mais elle suppose que le marché restera stable, et cette hypothèse est précisément ce que la crise a miné.",
+                  "question": "Quel est le point faible de l'objection ?",
+                  "options": [
+                    "Elle ignore les coûts",
+                    "Elle suppose la stabilité du marché",
+                    "Elle est trop polie",
+                    "Elle n'a aucune preuve"
+                  ],
+                  "correctIndex": 1,
+                  "allowSlowPlayback": true,
+                  "feedbackOnError": {
+                    "type": "comprehension",
+                    "explanation": "La réfutation identifie le présupposé de stabilité comme point faible.",
+                    "ruleRef": "gp-fr-refutation-c2"
+                  }
+                },
+                {
+                  "type": "MultipleChoice",
+                  "id": "es-fr-c2-e114",
+                  "question": "Complète : ___ l'objection a un point, mais elle repose sur un faux présupposé.",
+                  "options": [
+                    "Pour être juste",
+                    "Pour être honnête",
+                    "Pour être sûr"
+                  ],
+                  "correctIndex": 0,
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "« Pour être juste » introduit la concession équitable avant de réfuter.",
+                    "ruleRef": "gp-fr-concession-c2"
+                  }
+                },
+                {
+                  "type": "Translate",
+                  "id": "es-fr-c2-e115",
+                  "sourcePhrase": "Reconoce la objeción antes de rebatirla.",
+                  "correctTokens": [
+                    "Reconnais",
+                    "l'objection",
+                    "avant",
+                    "de",
+                    "la",
+                    "réfuter"
+                  ],
+                  "distractorTokens": [
+                    "réfute",
+                    "reconnaître"
+                  ],
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "« Avant de réfuter » exige l'infinitif.",
+                    "ruleRef": "gp-fr-refutation-c2"
+                  }
+                },
+                {
+                  "type": "ListenType",
+                  "id": "es-fr-c2-e116",
+                  "transcription": "Cette objection suppose que le marché est stable",
+                  "audioText": "Cette objection suppose que le marché est stable",
+                  "feedbackOnError": {
+                    "type": "spelling",
+                    "explanation": "Écris « objection » avec « j » et « suppose » avec double « s ».",
+                    "ruleRef": "gp-fr-refutation-c2"
+                  }
+                },
+                {
+                  "type": "SpeakRepeat",
+                  "id": "es-fr-c2-e117",
+                  "targetPhrase": "Certes, le plan a des mérites ; néanmoins, ses coûts sont inacceptables.",
+                  "audioText": "Certes, le plan a des mérites ; néanmoins, ses coûts sont inacceptables.",
+                  "feedbackOnError": {
+                    "type": "pronunciation",
+                    "explanation": "Pause après « Certes » et accentue « inacceptables ».",
+                    "ruleRef": "gp-fr-concession-c2"
+                  }
+                },
+                {
+                  "type": "MatchPairs",
+                  "id": "es-fr-c2-e118",
+                  "pairs": [
+                    {
+                      "left": "un homme de paille",
+                      "right": "un hombre de paja"
+                    },
+                    {
+                      "left": "un contre-exemple",
+                      "right": "un contraejemplo"
+                    },
+                    {
+                      "left": "un présupposé caché",
+                      "right": "un supuesto oculto"
+                    },
+                    {
+                      "left": "une réfutation crédible",
+                      "right": "una refutación creíble"
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "L'argumentation mûre distingue présupposé, contre-exemple et caricature.",
+                    "ruleRef": "gp-fr-refutation-c2"
+                  }
+                },
+                {
+                  "type": "ClozeDragDrop",
+                  "id": "es-fr-c2-e119",
+                  "passage": "Prêche par l'{{b1}} : une proposition qui ignore ses propres {{b2}} ne persuadera pas.",
+                  "blanks": [
+                    {
+                      "id": "b1",
+                      "answer": "exemple",
+                      "options": [
+                        "exemple",
+                        "exemplaire",
+                        "exemple à suivre"
+                      ]
+                    },
+                    {
+                      "id": "b2",
+                      "answer": "principes",
+                      "options": [
+                        "principes",
+                        "principaux",
+                        "princes"
+                      ]
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "« Prêcher par l'exemple » exige la cohérence entre proposition et conduite.",
+                    "ruleRef": "gp-fr-concession-c2"
+                  }
+                },
+                {
+                  "type": "FreeSpeakingPrompt",
+                  "id": "es-fr-c2-e120",
+                  "prompt": "Defiende una tesis en un debate: concede el mejor argumento contrario, identifica su supuesto y refútalo con evidencia.",
+                  "minTokens": 15,
+                  "conceptClusters": [
+                    [
+                      "certes",
+                      "pour être juste",
+                      "il est vrai"
+                    ],
+                    [
+                      "suppose",
+                      "preuve",
+                      "présupposé"
+                    ],
+                    [
+                      "néanmoins",
+                      "réfuter",
+                      "cohérent"
+                    ]
+                  ],
+                  "grammarRuleRefs": [
+                    "gp-fr-concession-c2",
+                    "gp-fr-refutation-c2"
+                  ],
+                  "timeLimitSeconds": 30,
+                  "minWpm": 70,
+                  "maxWpm": 160,
+                  "modelAnswer": "Certes, l'objection a un point : les coûts comptent. Néanmoins, elle suppose que le marché restera stable, et les preuves ne soutiennent pas ce présupposé, donc la proposition reste l'option la plus cohérente.",
+                  "selfAssessmentCriteria": [
+                    "¿Concedí el mejor argumento contrario?",
+                    "¿Identifiqué el supuesto?",
+                    "¿Refuté con evidencia?"
+                  ],
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "La réponse modèle concède, détecte le présupposé et réfute sans caricaturer.",
+                    "ruleRef": "gp-fr-refutation-c2"
+                  }
+                }
+              ]
+            },
+            {
+              "id": "es-fr-c2-un-3-ls-3",
+              "title": "Syntaxe cultivée",
+              "cefrLevel": "C2",
+              "scenario": "Un rapport juridique doit sonner précis et élégant sans devenir illisible.",
+              "canDo": "Puedo usar inversión y anteposición con criterio, midiendo el efecto sobre la claridad.",
+              "grammarPoints": [
+                {
+                  "id": "gp-fr-inversion-c2",
+                  "label": "Inversión",
+                  "description": "Rarement avons-nous..., ce n'est qu'en mars que..."
+                },
+                {
+                  "id": "gp-fr-anteposition",
+                  "label": "Anteposición",
+                  "description": "Participe antéposé et compléments en tête de phrase."
+                }
+              ],
+              "vocabFrequencyBand": "12000+",
+              "culturalNotes": [
+                {
+                  "idiom": "retourner ciel et terre",
+                  "note": "Tout tenter pour trouver quelque chose ; dans une enquête, exige documenter chaque piste.",
+                  "translation": "mover cielo y tierra"
+                }
+              ],
+              "microLesson": {
+                "title": "La syntaxe comme emphase",
+                "goals": [
+                  "Utiliser l'inversion pour marquer la surprise ou la limite.",
+                  "Antéposer un participe sans perdre la clarté."
+                ],
+                "sections": [
+                  {
+                    "heading": "Déplacer la phrase pour marquer",
+                    "body": "Rarement avons-nous mesuré marque la surprise ; ce n'est qu'en mars que nous avons compris marque la limite temporelle ; après avoir lu le dossier, le conseil... antépose une action antérieure.",
+                    "examples": [
+                      {
+                        "source": "No fue hasta marzo cuando entendimos el alcance.",
+                        "target": "Ce n'est qu'en mars que nous avons compris l'ampleur.",
+                        "note": "La structure marque la limite."
+                      },
+                      {
+                        "source": "Tras revisar el expediente, el consejo encontró pruebas.",
+                        "target": "Après avoir lu le dossier, le conseil a trouvé des preuves.",
+                        "note": "L'infinitif antéposé ordonne la séquence."
+                      }
+                    ]
+                  }
+                ]
+              },
+              "glossary": [
+                {
+                  "term": "inversion",
+                  "translations": [
+                    "inversión"
+                  ]
+                },
+                {
+                  "term": "antéposition",
+                  "translations": [
+                    "anteposición"
+                  ]
+                },
+                {
+                  "term": "proposition",
+                  "translations": [
+                    "cláusula"
+                  ]
+                },
+                {
+                  "term": "emphase",
+                  "translations": [
+                    "énfasis"
+                  ]
+                },
+                {
+                  "term": "lisible",
+                  "translations": [
+                    "legible"
+                  ]
+                },
+                {
+                  "term": "alambiqué",
+                  "translations": [
+                    "enrevesado",
+                    "pesado"
+                  ]
+                },
+                {
+                  "term": "délibéré",
+                  "translations": [
+                    "deliberado"
+                  ]
+                },
+                {
+                  "term": "registre",
+                  "translations": [
+                    "registro"
+                  ]
+                }
+              ],
+              "exercises": [
+                {
+                  "type": "ClozeDragDrop",
+                  "id": "es-fr-c2-e121",
+                  "passage": "{{b1}} avons-nous mesuré l'ampleur du problème.",
+                  "blanks": [
+                    {
+                      "id": "b1",
+                      "answer": "Rarement",
+                      "options": [
+                        "Rarement",
+                        "Peu",
+                        "Petit"
+                      ]
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "« Rarement avons-nous » est l'inversion qui marque la surprise.",
+                    "ruleRef": "gp-fr-inversion-c2"
+                  }
+                },
+                {
+                  "type": "ClozeDragDrop",
+                  "id": "es-fr-c2-e122",
+                  "passage": "{{b1}} le rapport, le conseil a trouvé des preuves {{b2}}.",
+                  "blanks": [
+                    {
+                      "id": "b1",
+                      "answer": "Après avoir lu",
+                      "options": [
+                        "Après avoir lu",
+                        "Après lire",
+                        "Après lu"
+                      ]
+                    },
+                    {
+                      "id": "b2",
+                      "answer": "convaincantes",
+                      "options": [
+                        "convaincantes",
+                        "convaincus",
+                        "convaincant"
+                      ]
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "« Après avoir lu » antépose l'action antérieure ; l'adjectif s'accorde avec « preuves ».",
+                    "ruleRef": "gp-fr-anteposition"
+                  }
+                },
+                {
+                  "type": "SemanticMatch",
+                  "id": "es-fr-c2-e123",
+                  "instructions": "Associe chaque structure à son effet.",
+                  "pairs": [
+                    {
+                      "left": "Rarement avons-nous mesuré le risque.",
+                      "right": "Sorpresa",
+                      "register": "formal",
+                      "nuance": "L'inversion souligne l'inattendu."
+                    },
+                    {
+                      "left": "Ce n'est qu'en mars que nous avons compris.",
+                      "right": "Límite temporal",
+                      "register": "formal",
+                      "nuance": "La structure marque le jalon."
+                    },
+                    {
+                      "left": "Après avoir lu le dossier, le conseil a trouvé des preuves.",
+                      "right": "Secuencia",
+                      "register": "formal",
+                      "nuance": "L'infinitif ordonne les actions."
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "register",
+                    "explanation": "La syntaxe cultivée déplace le foco sans changer le contenu.",
+                    "ruleRef": "gp-fr-inversion-c2"
+                  }
+                },
+                {
+                  "type": "ListenChoose",
+                  "id": "es-fr-c2-e124",
+                  "audioText": "Ce n'est qu'en mars que nous avons compris l'ampleur du problème.",
+                  "options": [
+                    "Nous avons compris immédiatement",
+                    "Nous n'avons compris qu'en mars",
+                    "Nous n'avons jamais compris",
+                    "Mars est sans importance"
+                  ],
+                  "correctIndex": 1,
+                  "feedbackOnError": {
+                    "type": "comprehension",
+                    "explanation": "« Ce n'est qu'en mars que » fixe mars comme limite.",
+                    "ruleRef": "gp-fr-inversion-c2"
+                  }
+                },
+                {
+                  "type": "AudioOnlyPrompt",
+                  "id": "es-fr-c2-e125",
+                  "audioText": "Après avoir lu le dossier, le conseil a trouvé des preuves convaincantes. Rarement avons-nous vu une omission aussi délibérée, et ce n'est qu'en mars que quelqu'un a donné l'alerte.",
+                  "question": "Quand l'alerte a-t-elle été donnée ?",
+                  "options": [
+                    "Immédiatement",
+                    "En mars",
+                    "Jamais",
+                    "Après le procès"
+                  ],
+                  "correctIndex": 1,
+                  "allowSlowPlayback": true,
+                  "feedbackOnError": {
+                    "type": "comprehension",
+                    "explanation": "« Ce n'est qu'en mars que » situe l'alerte en mars.",
+                    "ruleRef": "gp-fr-inversion-c2"
+                  }
+                },
+                {
+                  "type": "MultipleChoice",
+                  "id": "es-fr-c2-e126",
+                  "question": "Complète : ___ avons-nous mesuré le risque.",
+                  "options": [
+                    "Rarement",
+                    "Peu",
+                    "Petit"
+                  ],
+                  "correctIndex": 0,
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "L'inversion « rarement avons-nous » exprime la surprise.",
+                    "ruleRef": "gp-fr-inversion-c2"
+                  }
+                },
+                {
+                  "type": "Translate",
+                  "id": "es-fr-c2-e127",
+                  "sourcePhrase": "No fue hasta marzo cuando entendimos el alcance.",
+                  "correctTokens": [
+                    "Ce",
+                    "n'est",
+                    "qu'en",
+                    "mars",
+                    "que",
+                    "nous",
+                    "avons",
+                    "compris",
+                    "l'ampleur"
+                  ],
+                  "distractorTokens": [
+                    "Quand",
+                    "taille"
+                  ],
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "« Ce n'est qu'en mars que » reproduit la structure de limite.",
+                    "ruleRef": "gp-fr-inversion-c2"
+                  }
+                },
+                {
+                  "type": "ListenType",
+                  "id": "es-fr-c2-e128",
+                  "transcription": "Après avoir lu le rapport, le conseil a trouvé des preuves convaincantes",
+                  "audioText": "Après avoir lu le rapport, le conseil a trouvé des preuves convaincantes",
+                  "feedbackOnError": {
+                    "type": "spelling",
+                    "explanation": "Écris « preuves » avec « eu » et « convaincantes » avec « qu ».",
+                    "ruleRef": "gp-fr-anteposition"
+                  }
+                },
+                {
+                  "type": "SpeakRepeat",
+                  "id": "es-fr-c2-e129",
+                  "targetPhrase": "Ce n'est qu'en mars que nous avons compris l'ampleur du problème.",
+                  "audioText": "Ce n'est qu'en mars que nous avons compris l'ampleur du problème.",
+                  "feedbackOnError": {
+                    "type": "pronunciation",
+                    "explanation": "Lie « qu'en mars » et baisse le ton sur « problème ».",
+                    "ruleRef": "gp-fr-inversion-c2"
+                  }
+                },
+                {
+                  "type": "MatchPairs",
+                  "id": "es-fr-c2-e130",
+                  "pairs": [
+                    {
+                      "left": "un participe antéposé",
+                      "right": "un participio antepuesto"
+                    },
+                    {
+                      "left": "une proposition inversée",
+                      "right": "una cláusula invertida"
+                    },
+                    {
+                      "left": "une omission délibérée",
+                      "right": "una omisión deliberada"
+                    },
+                    {
+                      "left": "une phrase alambiquée",
+                      "right": "una frase enrevesada"
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "La syntaxe cultivée s'évalue par effet et lisibilité.",
+                    "ruleRef": "gp-fr-anteposition"
+                  }
+                },
+                {
+                  "type": "ClozeDragDrop",
+                  "id": "es-fr-c2-e131",
+                  "passage": "{{b1}} ciel et terre, les auditeurs ont {{b2}} chaque facture.",
+                  "blanks": [
+                    {
+                      "id": "b1",
+                      "answer": "Remuant",
+                      "options": [
+                        "Remuant",
+                        "Remuer",
+                        "Remué"
+                      ]
+                    },
+                    {
+                      "id": "b2",
+                      "answer": "examiné",
+                      "options": [
+                        "examiné",
+                        "examiner",
+                        "examinant"
+                      ]
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "« Remuant ciel et terre » antépose le participe et garde la locution.",
+                    "ruleRef": "gp-fr-anteposition"
+                  }
+                },
+                {
+                  "type": "FreeSpeakingPrompt",
+                  "id": "es-fr-c2-e132",
+                  "prompt": "Redacta dos frases de informe con inversión y anteposición: marca el límite temporal y la secuencia sin perder claridad.",
+                  "minTokens": 15,
+                  "conceptClusters": [
+                    [
+                      "rarement",
+                      "ce n'est qu'en",
+                      "inversion"
+                    ],
+                    [
+                      "après avoir lu",
+                      "antéposition",
+                      "proposition"
+                    ],
+                    [
+                      "preuves",
+                      "lisible",
+                      "registre"
+                    ]
+                  ],
+                  "grammarRuleRefs": [
+                    "gp-fr-inversion-c2",
+                    "gp-fr-anteposition"
+                  ],
+                  "timeLimitSeconds": 30,
+                  "minWpm": 70,
+                  "maxWpm": 160,
+                  "modelAnswer": "Ce n'est qu'en mars que nous avons compris l'ampleur du problème, et après avoir lu le dossier, le conseil a trouvé des preuves convaincantes. Rarement avons-nous vu une omission aussi délibérée.",
+                  "selfAssessmentCriteria": [
+                    "¿Usé inversión?",
+                    "¿Antepuse un participio?",
+                    "¿Mantuve la legibilidad?"
+                  ],
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "La réponse modèle combine inversion et participe antéposé avec clarté.",
+                    "ruleRef": "gp-fr-inversion-c2"
+                  }
+                }
+              ]
+            },
+            {
+              "id": "es-fr-c2-un-3-ls-4",
+              "title": "Écriture évaluée",
+              "cefrLevel": "C2",
+              "scenario": "À l'examen, il faut réécrire un paragraphe opaque pour un lecteur non spécialiste sans trahir la thèse.",
+              "canDo": "Puedo controlar el registro, la cohesión y la claridad en una reescritura evaluable.",
+              "grammarPoints": [
+                {
+                  "id": "gp-fr-cohesion-c2",
+                  "label": "Cohesión avanzada",
+                  "description": "Chaînes de référence, écho entre paragraphes."
+                },
+                {
+                  "id": "gp-fr-controle-registre",
+                  "label": "Control de registro",
+                  "description": "Reformuler la même idée pour un autre public."
+                }
+              ],
+              "vocabFrequencyBand": "12000+",
+              "culturalNotes": [
+                {
+                  "idiom": "l'habit ne fait pas le moine",
+                  "note": "Les apparences trompent ; en écriture, une prose élégante peut cacher un argument faible.",
+                  "translation": "el hábito no hace al monje"
+                }
+              ],
+              "microLesson": {
+                "title": "Réécrire pour un lecteur",
+                "goals": [
+                  "Soutenir des chaînes de référence sans répéter.",
+                  "Adapter le registre sans changer la thèse."
+                ],
+                "sections": [
+                  {
+                    "heading": "La même idée, un autre lecteur",
+                    "body": "La cohésion dépend de références claires : chaque paragraphe reprend le précédent et prépare le suivant. Contrôler le registre, c'est reformuler la même idée avec un autre vocabulaire sans perdre la précision.",
+                    "examples": [
+                      {
+                        "source": "La cohesión depende de referencias claras.",
+                        "target": "La cohésion dépend de références claires.",
+                        "note": "Sujet et prédicat directs."
+                      },
+                      {
+                        "source": "El ensayo es un lobo con piel de cordero.",
+                        "target": "L'essai est un loup dans un habit de moine.",
+                        "note": "La métaphore évalue forme et fond."
+                      }
+                    ]
+                  }
+                ]
+              },
+              "glossary": [
+                {
+                  "term": "cohésion",
+                  "translations": [
+                    "cohesión"
+                  ]
+                },
+                {
+                  "term": "chaîne de référence",
+                  "translations": [
+                    "cadena de referencias"
+                  ]
+                },
+                {
+                  "term": "registre",
+                  "translations": [
+                    "registro"
+                  ]
+                },
+                {
+                  "term": "public",
+                  "translations": [
+                    "público",
+                    "lector"
+                  ]
+                },
+                {
+                  "term": "reformuler",
+                  "translations": [
+                    "reformular"
+                  ]
+                },
+                {
+                  "term": "clarté",
+                  "translations": [
+                    "claridad"
+                  ]
+                },
+                {
+                  "term": "densité",
+                  "translations": [
+                    "densidad"
+                  ]
+                },
+                {
+                  "term": "évaluable",
+                  "translations": [
+                    "evaluable"
+                  ]
+                }
+              ],
+              "exercises": [
+                {
+                  "type": "ClozeDragDrop",
+                  "id": "es-fr-c2-e133",
+                  "passage": "L'essai est un {{b1}} dans un habit de moine : une prose élégante autour d'une thèse {{b2}}.",
+                  "blanks": [
+                    {
+                      "id": "b1",
+                      "answer": "loup",
+                      "options": [
+                        "loup",
+                        "agneau",
+                        "renard"
+                      ]
+                    },
+                    {
+                      "id": "b2",
+                      "answer": "douteuse",
+                      "options": [
+                        "douteuse",
+                        "solide",
+                        "modeste"
+                      ]
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "La locution « l'habit ne fait pas le moine » décrit la forme qui cache un fond faible.",
+                    "ruleRef": "gp-fr-controle-registre"
+                  }
+                },
+                {
+                  "type": "ClozeDragDrop",
+                  "id": "es-fr-c2-e134",
+                  "passage": "La cohésion dépend de {{b1}} claires : chaque paragraphe doit {{b2}} le précédent.",
+                  "blanks": [
+                    {
+                      "id": "b1",
+                      "answer": "références",
+                      "options": [
+                        "références",
+                        "référants",
+                        "préférences"
+                      ]
+                    },
+                    {
+                      "id": "b2",
+                      "answer": "faire écho à",
+                      "options": [
+                        "faire écho à",
+                        "ignorer",
+                        "effacer"
+                      ]
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "La chaîne de références fait que chaque paragraphe reprend le précédent.",
+                    "ruleRef": "gp-fr-cohesion-c2"
+                  }
+                },
+                {
+                  "type": "SemanticMatch",
+                  "id": "es-fr-c2-e135",
+                  "instructions": "Associe chaque problème d'écriture à sa solution.",
+                  "pairs": [
+                    {
+                      "left": "Répétition sans référence",
+                      "right": "Sustituir por cadena de referencias",
+                      "register": "formal",
+                      "nuance": "Évite de répéter sans avancer."
+                    },
+                    {
+                      "left": "Densité sans clarté",
+                      "right": "Desglosar la nominalización",
+                      "register": "formal",
+                      "nuance": "Transforme les noms en verbes."
+                    },
+                    {
+                      "left": "Registre inadapté",
+                      "right": "Reformular para el lector",
+                      "register": "formal",
+                      "nuance": "Maintient la thèse et change la forme."
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "register",
+                    "explanation": "L'écriture évaluable mesure clarté, cohésion et adaptation au lecteur.",
+                    "ruleRef": "gp-fr-cohesion-c2"
+                  }
+                },
+                {
+                  "type": "ListenChoose",
+                  "id": "es-fr-c2-e136",
+                  "audioText": "La cohésion dépend de références claires : chaque paragraphe doit faire écho au précédent et préparer le suivant.",
+                  "options": [
+                    "Les paragraphes doivent s'ignorer",
+                    "Les paragraphes doivent se lier par des références",
+                    "L'essai doit répéter une phrase",
+                    "Le public est irrelevant"
+                  ],
+                  "correctIndex": 1,
+                  "feedbackOnError": {
+                    "type": "comprehension",
+                    "explanation": "L'écho entre paragraphes est la chaîne de références.",
+                    "ruleRef": "gp-fr-cohesion-c2"
+                  }
+                },
+                {
+                  "type": "AudioOnlyPrompt",
+                  "id": "es-fr-c2-e137",
+                  "audioText": "Contrôler le registre signifie reformuler la même idée pour un autre public. L'habit ne fait pas le moine : une prose élégante peut cacher une thèse douteuse.",
+                  "question": "Que implique le contrôle du registre ?",
+                  "options": [
+                    "Changer la thèse",
+                    "Reformuler l'idée pour un autre public",
+                    "Employer plus de jargon",
+                    "Cacher la thèse"
+                  ],
+                  "correctIndex": 1,
+                  "allowSlowPlayback": true,
+                  "feedbackOnError": {
+                    "type": "comprehension",
+                    "explanation": "Reformuler maintient la thèse et adapte la forme au lecteur.",
+                    "ruleRef": "gp-fr-controle-registre"
+                  }
+                },
+                {
+                  "type": "MultipleChoice",
+                  "id": "es-fr-c2-e138",
+                  "question": "Complète : Chaque paragraphe doit ___ le précédent.",
+                  "options": [
+                    "faire écho à",
+                    "faire écho",
+                    "faire échos à"
+                  ],
+                  "correctIndex": 0,
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "La locution est « faire écho à ».",
+                    "ruleRef": "gp-fr-cohesion-c2"
+                  }
+                },
+                {
+                  "type": "Translate",
+                  "id": "es-fr-c2-e139",
+                  "sourcePhrase": "La cohesión depende de referencias claras.",
+                  "correctTokens": [
+                    "La",
+                    "cohésion",
+                    "dépend",
+                    "de",
+                    "références",
+                    "claires"
+                  ],
+                  "distractorTokens": [
+                    "cohérent",
+                    "réfère"
+                  ],
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "« Dépend de références claires » emploie le nom « références ».",
+                    "ruleRef": "gp-fr-cohesion-c2"
+                  }
+                },
+                {
+                  "type": "ListenType",
+                  "id": "es-fr-c2-e140",
+                  "transcription": "Le contrôle du registre signifie reformuler la même idée pour un autre public",
+                  "audioText": "Le contrôle du registre signifie reformuler la même idée pour un autre public",
+                  "feedbackOnError": {
+                    "type": "spelling",
+                    "explanation": "Écris « registre » avec « g » et « public » sans accent.",
+                    "ruleRef": "gp-fr-controle-registre"
+                  }
+                },
+                {
+                  "type": "SpeakRepeat",
+                  "id": "es-fr-c2-e141",
+                  "targetPhrase": "La cohésion dépend de références claires : chaque paragraphe fait écho au précédent.",
+                  "audioText": "La cohésion dépend de références claires : chaque paragraphe fait écho au précédent.",
+                  "feedbackOnError": {
+                    "type": "pronunciation",
+                    "explanation": "Lie « dépend de » et accentue « références ».",
+                    "ruleRef": "gp-fr-cohesion-c2"
+                  }
+                },
+                {
+                  "type": "MatchPairs",
+                  "id": "es-fr-c2-e142",
+                  "pairs": [
+                    {
+                      "left": "une chaîne de référence",
+                      "right": "una cadena de referencias"
+                    },
+                    {
+                      "left": "le contrôle du registre",
+                      "right": "el control del registro"
+                    },
+                    {
+                      "left": "une affirmation vague",
+                      "right": "una afirmación vaga"
+                    },
+                    {
+                      "left": "un paragraphe cohérent",
+                      "right": "un párrafo coherente"
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "L'écriture évaluable nomme cohésion, registre et précision.",
+                    "ruleRef": "gp-fr-controle-registre"
+                  }
+                },
+                {
+                  "type": "ClozeDragDrop",
+                  "id": "es-fr-c2-e143",
+                  "passage": "Contrôler le registre, c'est {{b1}} la même idée pour un autre {{b2}}.",
+                  "blanks": [
+                    {
+                      "id": "b1",
+                      "answer": "reformuler",
+                      "options": [
+                        "reformuler",
+                        "reformule",
+                        "reformulé"
+                      ]
+                    },
+                    {
+                      "id": "b2",
+                      "answer": "public",
+                      "options": [
+                        "public",
+                        "publique",
+                        "publicité"
+                      ]
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "« Reformuler » maintient la thèse et change la forme pour le « public ».",
+                    "ruleRef": "gp-fr-controle-registre"
+                  }
+                },
+                {
+                  "type": "FreeSpeakingPrompt",
+                  "id": "es-fr-c2-e144",
+                  "prompt": "Reescribe un párrafo opaco para un lector no especialista: mantén la tesis, mejora la cohesión y elimina la jerga innecesaria.",
+                  "minTokens": 15,
+                  "conceptClusters": [
+                    [
+                      "reformuler",
+                      "registre",
+                      "public"
+                    ],
+                    [
+                      "cohésion",
+                      "référence",
+                      "écho"
+                    ],
+                    [
+                      "clarté",
+                      "jargon",
+                      "thèse"
+                    ]
+                  ],
+                  "grammarRuleRefs": [
+                    "gp-fr-cohesion-c2",
+                    "gp-fr-controle-registre"
+                  ],
+                  "timeLimitSeconds": 30,
+                  "minWpm": 70,
+                  "maxWpm": 160,
+                  "modelAnswer": "La mesure sera appliquée progressivement : la première option réduit les coûts, la seconde protège la confiance. Une telle approche garde le texte clair, élimine le jargon inutile et fait écho à la thèse sans la répéter.",
+                  "selfAssessmentCriteria": [
+                    "¿Mantuve la tesis?",
+                    "¿Mejoré la cohesión?",
+                    "¿Eliminé la jerga innecesaria?"
+                  ],
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "La réponse modèle conserve la thèse, enchaîne références et élimine la densité inutile.",
+                    "ruleRef": "gp-fr-controle-registre"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "es-fr-lv-c2-un-4",
+          "title": "Synthèse et évaluation C2",
+          "lessons": [
+            {
+              "id": "es-fr-c2-un-4-ls-1",
+              "title": "Récit littéraire",
+              "cefrLevel": "C2",
+              "scenario": "Un récit d'entreprise doit raconter une décision difficile avec précision littéraire, sans mélodrame.",
+              "canDo": "Puedo narrar con registro literario, controlar el aspecto verbal y sostener la tensión sin exagerar.",
+              "grammarPoints": [
+                {
+                  "id": "gp-fr-recit-litteraire",
+                  "label": "Récit littéraire",
+                  "description": "Plus-que-parfait, style indirect libre, détail sensoriel."
+                },
+                {
+                  "id": "gp-fr-aspect-c2",
+                  "label": "Matiz aspectual",
+                  "description": "Avait plié, était en train de rompre, admettrait plus tard."
+                }
+              ],
+              "vocabFrequencyBand": "12000+",
+              "culturalNotes": [
+                {
+                  "idiom": "jeter de l'huile sur le feu",
+                  "note": "Aggraver une situation par une action censée l'améliorer ; dans un récit, précipite le conflit.",
+                  "translation": "echar leña al fuego"
+                }
+              ],
+              "microLesson": {
+                "title": "Narrer avec précision",
+                "goals": [
+                  "Ordonner les actions avec plus-que-parfait et imparfait.",
+                  "Soutenir la tension par des détails concrets."
+                ],
+                "sections": [
+                  {
+                    "heading": "Le temps de la décision",
+                    "body": "La pluie battait contre la fenêtre tandis que le conseil pesait la décision combine imparfait et passé simple. Le plus-que-parfait (avait plié les règles) situe l'antérieur ; « admettrait plus tard » anticipe la conséquence avec distance.",
+                    "examples": [
+                      {
+                        "source": "La lluvia golpeaba la ventana mientras el consejo sopesaba la decisión.",
+                        "target": "La pluie battait contre la fenêtre tandis que le conseil pesait la décision.",
+                        "note": "Imparfait + passé simple en parallèle."
+                      },
+                      {
+                        "source": "Años después admitiría que habían forzado las reglas.",
+                        "target": "Des années plus tard, il admettrait qu'ils avaient plié les règles.",
+                        "note": "Conditionnel + plus-que-parfait."
+                      }
+                    ]
+                  }
+                ]
+              },
+              "glossary": [
+                {
+                  "term": "battre",
+                  "translations": [
+                    "golpear",
+                    "azotar"
+                  ]
+                },
+                {
+                  "term": "peser",
+                  "translations": [
+                    "sopesar"
+                  ]
+                },
+                {
+                  "term": "plier",
+                  "translations": [
+                    "doblar",
+                    "forzar"
+                  ]
+                },
+                {
+                  "term": "admettre",
+                  "translations": [
+                    "admitir"
+                  ]
+                },
+                {
+                  "term": "sensoriel",
+                  "translations": [
+                    "sensorial"
+                  ]
+                },
+                {
+                  "term": "retenue",
+                  "translations": [
+                    "contención"
+                  ]
+                },
+                {
+                  "term": "tension",
+                  "translations": [
+                    "tensión"
+                  ]
+                },
+                {
+                  "term": "mélodrame",
+                  "translations": [
+                    "melodrama"
+                  ]
+                }
+              ],
+              "exercises": [
+                {
+                  "type": "ClozeDragDrop",
+                  "id": "es-fr-c2-e145",
+                  "passage": "La pluie {{b1}} contre la fenêtre tandis que le conseil {{b2}} la décision.",
+                  "blanks": [
+                    {
+                      "id": "b1",
+                      "answer": "battait",
+                      "options": [
+                        "battait",
+                        "bat",
+                        "battre"
+                      ]
+                    },
+                    {
+                      "id": "b2",
+                      "answer": "pesait",
+                      "options": [
+                        "pesait",
+                        "pèse",
+                        "peser"
+                      ]
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "L'imparfait et le passé simple se combinent pour créer le fond et l'action.",
+                    "ruleRef": "gp-fr-recit-litteraire"
+                  }
+                },
+                {
+                  "type": "ClozeDragDrop",
+                  "id": "es-fr-c2-e146",
+                  "passage": "Pendant des années, l'entreprise avait {{b1}} ses propres règles ; en 2020, elle les {{b2}} ouvertement.",
+                  "blanks": [
+                    {
+                      "id": "b1",
+                      "answer": "plié",
+                      "options": [
+                        "plié",
+                        "plier",
+                        "pliait"
+                      ]
+                    },
+                    {
+                      "id": "b2",
+                      "answer": "enfreignait",
+                      "options": [
+                        "enfreignait",
+                        "enfreint",
+                        "enfreindre"
+                      ]
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "Le plus-que-parfait situe l'antérieur ; l'imparfait montre l'action en cours.",
+                    "ruleRef": "gp-fr-aspect-c2"
+                  }
+                },
+                {
+                  "type": "SemanticMatch",
+                  "id": "es-fr-c2-e147",
+                  "instructions": "Associe chaque ressource à son effet narratif.",
+                  "pairs": [
+                    {
+                      "left": "La pluie battait contre la fenêtre.",
+                      "right": "Detalle sensorial",
+                      "register": "neutral",
+                      "nuance": "Crée l'atmosphère sans adjectifs."
+                    },
+                    {
+                      "left": "Ils avaient plié les règles pendant des années.",
+                      "right": "Antecedente",
+                      "register": "formal",
+                      "nuance": "Le plus-que-parfait explique le présent."
+                    },
+                    {
+                      "left": "Il l'admettrait plus tard.",
+                      "right": "Anticipación con distancia",
+                      "register": "formal",
+                      "nuance": "Le narrateur connaît le dénouement."
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "register",
+                    "explanation": "Le registre littéraire choisit des détails et des temps, pas des ornements.",
+                    "ruleRef": "gp-fr-recit-litteraire"
+                  }
+                },
+                {
+                  "type": "ListenChoose",
+                  "id": "es-fr-c2-e148",
+                  "audioText": "La pluie battait contre la fenêtre tandis que le conseil pesait la décision, et il admettrait plus tard qu'ils avaient plié les règles.",
+                  "options": [
+                    "Le conseil a décidé rapidement",
+                    "La scène combine action continue, décision et aveu ultérieur",
+                    "La pluie a arrêté la réunion",
+                    "Personne ne se souvient"
+                  ],
+                  "correctIndex": 1,
+                  "feedbackOnError": {
+                    "type": "comprehension",
+                    "explanation": "Les trois temps ordonnent fond, décision et aveu.",
+                    "ruleRef": "gp-fr-aspect-c2"
+                  }
+                },
+                {
+                  "type": "AudioOnlyPrompt",
+                  "id": "es-fr-c2-e149",
+                  "audioText": "La note devait calmer le conseil, mais elle a jeté de l'huile sur le feu : elle nommait le risque que l'entreprise cachait depuis des années.",
+                  "question": "Qu'a fait la note ?",
+                  "options": [
+                    "Elle a calmé le conseil",
+                    "Elle a aggravé la crise en nommant le risque caché",
+                    "Elle n'a jamais été lue",
+                    "Elle a nié le risque"
+                  ],
+                  "correctIndex": 1,
+                  "allowSlowPlayback": true,
+                  "feedbackOnError": {
+                    "type": "comprehension",
+                    "explanation": "« Jeter de l'huile sur le feu » décrit l'effet contraire au but.",
+                    "ruleRef": "gp-fr-recit-litteraire"
+                  }
+                },
+                {
+                  "type": "MultipleChoice",
+                  "id": "es-fr-c2-e150",
+                  "question": "Complète : Ils avaient ___ les règles pendant des années avant l'audit.",
+                  "options": [
+                    "plié",
+                    "plier",
+                    "pliant"
+                  ],
+                  "correctIndex": 0,
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "Après « avaient » vient le participe « plié ».",
+                    "ruleRef": "gp-fr-aspect-c2"
+                  }
+                },
+                {
+                  "type": "Translate",
+                  "id": "es-fr-c2-e151",
+                  "sourcePhrase": "La lluvia golpeaba la ventana mientras el consejo sopesaba la decisión.",
+                  "correctTokens": [
+                    "La",
+                    "pluie",
+                    "battait",
+                    "contre",
+                    "la",
+                    "fenêtre",
+                    "tandis",
+                    "que",
+                    "le",
+                    "conseil",
+                    "pesait",
+                    "la",
+                    "décision"
+                  ],
+                  "distractorTokens": [
+                    "bat",
+                    "pesante"
+                  ],
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "« Battait » et « pesait » maintiennent le parallélisme narratif.",
+                    "ruleRef": "gp-fr-recit-litteraire"
+                  }
+                },
+                {
+                  "type": "ListenType",
+                  "id": "es-fr-c2-e152",
+                  "transcription": "Il admettrait plus tard qu'ils avaient plié les règles",
+                  "audioText": "Il admettrait plus tard qu'ils avaient plié les règles",
+                  "feedbackOnError": {
+                    "type": "spelling",
+                    "explanation": "Écris « admettrait » avec double « t » et « plié » avec accent aigu.",
+                    "ruleRef": "gp-fr-aspect-c2"
+                  }
+                },
+                {
+                  "type": "SpeakRepeat",
+                  "id": "es-fr-c2-e153",
+                  "targetPhrase": "La pluie battait contre la fenêtre tandis que le conseil pesait la décision.",
+                  "audioText": "La pluie battait contre la fenêtre tandis que le conseil pesait la décision.",
+                  "feedbackOnError": {
+                    "type": "pronunciation",
+                    "explanation": "Lie « battait contre » et baisse le ton sur « décision ».",
+                    "ruleRef": "gp-fr-recit-litteraire"
+                  }
+                },
+                {
+                  "type": "MatchPairs",
+                  "id": "es-fr-c2-e154",
+                  "pairs": [
+                    {
+                      "left": "un détail sensoriel",
+                      "right": "un detalle sensorial"
+                    },
+                    {
+                      "left": "le style indirect libre",
+                      "right": "el estilo indirecto libre"
+                    },
+                    {
+                      "left": "la distance narrative",
+                      "right": "la distancia narrativa"
+                    },
+                    {
+                      "left": "un ton retenu",
+                      "right": "un tono contenido"
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "La narrativa littéraire s'évalue par la précision, pas l'ornement.",
+                    "ruleRef": "gp-fr-recit-litteraire"
+                  }
+                },
+                {
+                  "type": "ClozeDragDrop",
+                  "id": "es-fr-c2-e155",
+                  "passage": "Pour jeter de l'{{b1}} sur le feu, la note a {{b2}} le risque même qu'elle prétendait traiter.",
+                  "blanks": [
+                    {
+                      "id": "b1",
+                      "answer": "huile",
+                      "options": [
+                        "huile",
+                        "eau",
+                        "cendre"
+                      ]
+                    },
+                    {
+                      "id": "b2",
+                      "answer": "amplifié",
+                      "options": [
+                        "amplifié",
+                        "calmé",
+                        "ignoré"
+                      ]
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "« Jeter de l'huile sur le feu » est la locution ; « amplifié » décrit l'aggravation.",
+                    "ruleRef": "gp-fr-recit-litteraire"
+                  }
+                },
+                {
+                  "type": "FreeSpeakingPrompt",
+                  "id": "es-fr-c2-e156",
+                  "prompt": "Narra en registro literario una decisión difícil: usa un detalle sensorial, un pluscuamperfecto y una anticipación sin melodrama.",
+                  "minTokens": 15,
+                  "conceptClusters": [
+                    [
+                      "battait",
+                      "pesait",
+                      "admettrait"
+                    ],
+                    [
+                      "avait plié",
+                      "décision",
+                      "règles"
+                    ],
+                    [
+                      "retenue",
+                      "tension",
+                      "sensoriel"
+                    ]
+                  ],
+                  "grammarRuleRefs": [
+                    "gp-fr-recit-litteraire",
+                    "gp-fr-aspect-c2"
+                  ],
+                  "timeLimitSeconds": 30,
+                  "minWpm": 70,
+                  "maxWpm": 160,
+                  "modelAnswer": "La pluie battait contre la fenêtre tandis que le conseil pesait la décision. Ils avaient plié les règles pendant des années, et la note a jeté de l'huile sur le feu ; des années plus tard, il l'admettrait.",
+                  "selfAssessmentCriteria": [
+                    "¿Usé un detalle sensorial?",
+                    "¿Ordené los tiempos?",
+                    "¿Evité el melodrama?"
+                  ],
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "La réponse modèle combine détail, plus-que-parfait et anticipation retenue.",
+                    "ruleRef": "gp-fr-aspect-c2"
+                  }
+                }
+              ]
+            },
+            {
+              "id": "es-fr-c2-un-4-ls-2",
+              "title": "Métaphores culturelles",
+              "cefrLevel": "C2",
+              "scenario": "Un chroniqueur explique un scandale financier avec des métaphores que le public reconnaît aussitôt.",
+              "canDo": "Puedo interpretar metáforas culturales, medir su carga ideológica y usarlas con precisión.",
+              "grammarPoints": [
+                {
+                  "id": "gp-fr-metaphores-culturelles",
+                  "label": "Metáfora cultural",
+                  "description": "Tempête dans un verre d'eau, château de cartes, éléphant dans la pièce."
+                },
+                {
+                  "id": "gp-fr-densite-idiomatique",
+                  "label": "Densidad idiomática",
+                  "description": "Dos o más modismos en una misma frase."
+                }
+              ],
+              "vocabFrequencyBand": "12000+",
+              "culturalNotes": [
+                {
+                  "idiom": "une tempête dans un verre d'eau",
+                  "note": "Un scandale grand en apparence et petit en conséquences ; la métaphore mesure la disproportion entre bruit et dégâts.",
+                  "translation": "una tormenta en un vaso de agua"
+                }
+              ],
+              "microLesson": {
+                "title": "La métaphore qui ordonne le monde",
+                "goals": [
+                  "Reconnaître la charge valorative d'une métaphore.",
+                  "Employer plusieurs modismes sans perdre la clarté."
+                ],
+                "sections": [
+                  {
+                    "heading": "Plus qu'une image",
+                    "body": "Une tempête dans un verre d'eau minimise ; un château de cartes avertit de la fragilité ; l'éléphant dans la pièce signale ce que personne ne veut nommer. La métaphore ne décrit pas seulement : elle décide ce qui importe.",
+                    "examples": [
+                      {
+                        "source": "Fue una tormenta en un vaso de agua.",
+                        "target": "Ce fut une tempête dans un verre d'eau.",
+                        "note": "La métaphore mesure la disproportion."
+                      },
+                      {
+                        "source": "El elefante en la habitación era la deuda.",
+                        "target": "L'éléphant dans la pièce, c'était la dette.",
+                        "note": "Elle signale ce que tous évitent."
+                      }
+                    ]
+                  }
+                ]
+              },
+              "glossary": [
+                {
+                  "term": "métaphore",
+                  "translations": [
+                    "metáfora"
+                  ]
+                },
+                {
+                  "term": "cadre",
+                  "translations": [
+                    "marco interpretativo"
+                  ]
+                },
+                {
+                  "term": "proportion",
+                  "translations": [
+                    "proporción"
+                  ]
+                },
+                {
+                  "term": "idéologique",
+                  "translations": [
+                    "ideológico"
+                  ]
+                },
+                {
+                  "term": "cliché",
+                  "translations": [
+                    "cliché",
+                    "lugar común"
+                  ]
+                },
+                {
+                  "term": "évocateur",
+                  "translations": [
+                    "evocador"
+                  ]
+                },
+                {
+                  "term": "exagéré",
+                  "translations": [
+                    "exagerado"
+                  ]
+                },
+                {
+                  "term": "atténué",
+                  "translations": [
+                    "atenuado"
+                  ]
+                }
+              ],
+              "exercises": [
+                {
+                  "type": "ClozeDragDrop",
+                  "id": "es-fr-c2-e157",
+                  "passage": "Le scandale fut une tempête dans un {{b1}} : bruyant dans la presse, {{b2}} dans les comptes.",
+                  "blanks": [
+                    {
+                      "id": "b1",
+                      "answer": "verre d'eau",
+                      "options": [
+                        "verre d'eau",
+                        "verre à vin",
+                        "verre cassé"
+                      ]
+                    },
+                    {
+                      "id": "b2",
+                      "answer": "invisible",
+                      "options": [
+                        "invisible",
+                        "évident",
+                        "coûteux"
+                      ]
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "« Une tempête dans un verre d'eau » minimise le scandale ; « invisible » complète la disproportion.",
+                    "ruleRef": "gp-fr-metaphores-culturelles"
+                  }
+                },
+                {
+                  "type": "ClozeDragDrop",
+                  "id": "es-fr-c2-e158",
+                  "passage": "Les métaphores culturelles {{b1}} ce qu'une société {{b2}} de remarquer.",
+                  "blanks": [
+                    {
+                      "id": "b1",
+                      "answer": "révèlent",
+                      "options": [
+                        "révèlent",
+                        "cachent",
+                        "ignorent"
+                      ]
+                    },
+                    {
+                      "id": "b2",
+                      "answer": "choisit",
+                      "options": [
+                        "choisit",
+                        "choisit pas",
+                        "choisir"
+                      ]
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "La métaphore révèle le cadre avec lequel une société décide quoi regarder.",
+                    "ruleRef": "gp-fr-metaphores-culturelles"
+                  }
+                },
+                {
+                  "type": "SemanticMatch",
+                  "id": "es-fr-c2-e159",
+                  "instructions": "Associe chaque métaphore à sa charge valorative.",
+                  "pairs": [
+                    {
+                      "left": "Ce fut une tempête dans un verre d'eau.",
+                      "right": "Minimiza el problema",
+                      "register": "formal",
+                      "nuance": "Mucho ruido y pocas consecuencias."
+                    },
+                    {
+                      "left": "L'argument est un château de cartes.",
+                      "right": "Advierte fragilidad",
+                      "register": "formal",
+                      "nuance": "Se derrumba al retirar una pieza."
+                    },
+                    {
+                      "left": "La dette était l'éléphant dans la pièce.",
+                      "right": "Señala lo que se evita",
+                      "register": "formal",
+                      "nuance": "Todos lo ven y nadie lo nombra."
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "register",
+                    "explanation": "Chaque métaphore décide ce qui doit inquiéter le lecteur.",
+                    "ruleRef": "gp-fr-metaphores-culturelles"
+                  }
+                },
+                {
+                  "type": "ListenChoose",
+                  "id": "es-fr-c2-e160",
+                  "audioText": "Le scandale fut une tempête dans un verre d'eau : bruyant dans la presse, invisible dans les comptes.",
+                  "options": [
+                    "Le scandale fut énorme",
+                    "Le scandale sembla grand mais eut peu d'impact financier",
+                    "La presse ignora le scandale",
+                    "Les comptes furent audités"
+                  ],
+                  "correctIndex": 1,
+                  "feedbackOnError": {
+                    "type": "comprehension",
+                    "explanation": "La métaphore et le contraste presse/comptes mesurent la disproportion.",
+                    "ruleRef": "gp-fr-metaphores-culturelles"
+                  }
+                },
+                {
+                  "type": "AudioOnlyPrompt",
+                  "id": "es-fr-c2-e161",
+                  "audioText": "La dette était l'éléphant dans la pièce. Tout le monde parlait du temps, de la fusion, même du café, mais personne ne mentionnait la dette qui coulait lentement l'entreprise.",
+                  "question": "Quel est l'éléphant dans la pièce ?",
+                  "options": [
+                    "Le temps",
+                    "La fusion",
+                    "La dette",
+                    "Le café"
+                  ],
+                  "correctIndex": 2,
+                  "allowSlowPlayback": true,
+                  "feedbackOnError": {
+                    "type": "comprehension",
+                    "explanation": "La dette est ce que tous évitent de nommer.",
+                    "ruleRef": "gp-fr-metaphores-culturelles"
+                  }
+                },
+                {
+                  "type": "MultipleChoice",
+                  "id": "es-fr-c2-e162",
+                  "question": "Complète : Le scandale fut une tempête dans un ___.",
+                  "options": [
+                    "verre d'eau",
+                    "verre à vin",
+                    "verre cassé"
+                  ],
+                  "correctIndex": 0,
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "La locution est « une tempête dans un verre d'eau ».",
+                    "ruleRef": "gp-fr-metaphores-culturelles"
+                  }
+                },
+                {
+                  "type": "Translate",
+                  "id": "es-fr-c2-e163",
+                  "sourcePhrase": "Fue una tormenta en un vaso de agua.",
+                  "correctTokens": [
+                    "Ce",
+                    "fut",
+                    "une",
+                    "tempête",
+                    "dans",
+                    "un",
+                    "verre",
+                    "d'eau"
+                  ],
+                  "distractorTokens": [
+                    "verre à vin",
+                    "orage"
+                  ],
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "La métaphore française équivalente est « une tempête dans un verre d'eau ».",
+                    "ruleRef": "gp-fr-metaphores-culturelles"
+                  }
+                },
+                {
+                  "type": "ListenType",
+                  "id": "es-fr-c2-e164",
+                  "transcription": "L'éléphant dans la pièce était la dette que personne ne mentionnait",
+                  "audioText": "L'éléphant dans la pièce était la dette que personne ne mentionnait",
+                  "feedbackOnError": {
+                    "type": "spelling",
+                    "explanation": "Écris « éléphant » avec « ph » et « mentionnait » avec double « n ».",
+                    "ruleRef": "gp-fr-metaphores-culturelles"
+                  }
+                },
+                {
+                  "type": "SpeakRepeat",
+                  "id": "es-fr-c2-e165",
+                  "targetPhrase": "Le scandale fut une tempête dans un verre d'eau : bruyant dans la presse, invisible dans les comptes.",
+                  "audioText": "Le scandale fut une tempête dans un verre d'eau : bruyant dans la presse, invisible dans les comptes.",
+                  "feedbackOnError": {
+                    "type": "pronunciation",
+                    "explanation": "Lie « tempête dans un » et marque le contraste presse/comptes.",
+                    "ruleRef": "gp-fr-metaphores-culturelles"
+                  }
+                },
+                {
+                  "type": "MatchPairs",
+                  "id": "es-fr-c2-e166",
+                  "pairs": [
+                    {
+                      "left": "une tempête dans un verre d'eau",
+                      "right": "una tormenta en un vaso de agua"
+                    },
+                    {
+                      "left": "l'éléphant dans la pièce",
+                      "right": "lo que todos evitan nombrar"
+                    },
+                    {
+                      "left": "un château de cartes",
+                      "right": "un castillo de naipes"
+                    },
+                    {
+                      "left": "une pente glissante",
+                      "right": "una pendiente resbaladiza"
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "Les métaphores culturelles compriment des jugements entiers.",
+                    "ruleRef": "gp-fr-metaphores-culturelles"
+                  }
+                },
+                {
+                  "type": "ClozeDragDrop",
+                  "id": "es-fr-c2-e167",
+                  "passage": "La métaphore a {{b1}} le débat : elle a fait passer la dette pour un problème {{b2}} plutôt que structurel.",
+                  "blanks": [
+                    {
+                      "id": "b1",
+                      "answer": "cadré",
+                      "options": [
+                        "cadré",
+                        "cadre",
+                        "cadrant"
+                      ]
+                    },
+                    {
+                      "id": "b2",
+                      "answer": "mineur",
+                      "options": [
+                        "mineur",
+                        "majeur",
+                        "mondial"
+                      ]
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "« Cadrer le débat » décrit comment la métaphore oriente l'interprétation.",
+                    "ruleRef": "gp-fr-metaphores-culturelles"
+                  }
+                },
+                {
+                  "type": "FreeSpeakingPrompt",
+                  "id": "es-fr-c2-e168",
+                  "prompt": "Explica un escándalo con dos metáforas culturales: di qué minimizan o advierten y qué marco imponen al lector.",
+                  "minTokens": 15,
+                  "conceptClusters": [
+                    [
+                      "tempête dans un verre d'eau",
+                      "château de cartes",
+                      "éléphant"
+                    ],
+                    [
+                      "cadre",
+                      "proportion",
+                      "idéologique"
+                    ],
+                    [
+                      "presse",
+                      "comptes",
+                      "dette"
+                    ]
+                  ],
+                  "grammarRuleRefs": [
+                    "gp-fr-metaphores-culturelles",
+                    "gp-fr-densite-idiomatique"
+                  ],
+                  "timeLimitSeconds": 30,
+                  "minWpm": 70,
+                  "maxWpm": 160,
+                  "modelAnswer": "Le scandale fut une tempête dans un verre d'eau, bruyant dans la presse et invisible dans les comptes. Pourtant la dette était l'éléphant dans la pièce, et la métaphore a cadré un problème structurel comme un détail.",
+                  "selfAssessmentCriteria": [
+                    "¿Usé dos metáforas pertinentes?",
+                    "¿Expliqué su carga valorativa?",
+                    "¿Nombré el marco que imponen?"
+                  ],
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "La réponse modèle combine deux métaphores et explique le cadre construit.",
+                    "ruleRef": "gp-fr-metaphores-culturelles"
+                  }
+                }
+              ]
+            },
+            {
+              "id": "es-fr-c2-un-4-ls-3",
+              "title": "Droit et éthique",
+              "cefrLevel": "C2",
+              "scenario": "Un comité d'éthique examine une pratique légale mais douteuse et doit argumenter au-delà de la conformité.",
+              "canDo": "Puedo distinguir legalidad de legitimidad, modular la obligación y argumentar éticamente con precisión.",
+              "grammarPoints": [
+                {
+                  "id": "gp-fr-ethique-juridique",
+                  "label": "Droit et éthique",
+                  "description": "Légal mais immoral, la lettre et l'esprit."
+                },
+                {
+                  "id": "gp-fr-modaux-nuances",
+                  "label": "Modales matizados",
+                  "description": "Devrait, on pourrait s'attendre à, ne saurait se justifier."
+                }
+              ],
+              "vocabFrequencyBand": "12000+",
+              "culturalNotes": [
+                {
+                  "idiom": "déplacer les poteaux",
+                  "note": "Changer les règles en cours de route pour que le résultat convienne ; en éthique, détruit la confiance dans la procédure.",
+                  "translation": "cambiar las reglas a mitad"
+                }
+              ],
+              "microLesson": {
+                "title": "Légal n'est pas toujours légitime",
+                "goals": [
+                  "Séparer conformité formelle et légitimité éthique.",
+                  "Moduler l'obligation avec devrait et ne saurait se justifier."
+                ],
+                "sections": [
+                  {
+                    "heading": "La lettre et l'esprit",
+                    "body": "Légal mais immoral nomme l'écart entre norme et légitimité. Devrait exprime le devoir moral ; on pourrait s'attendre à, l'attente sociale ; ne saurait se justifier, la limite absolue.",
+                    "examples": [
+                      {
+                        "source": "La empresa cambió las reglas a mitad del proceso.",
+                        "target": "L'entreprise a déplacé les poteaux en cours de route.",
+                        "note": "La métaphore dénonce la procédure."
+                      },
+                      {
+                        "source": "Puede ser legal, pero no puede justificarse.",
+                        "target": "C'est peut-être légal, mais cela ne saurait se justifier.",
+                        "note": "Légalité et légitimité se séparent."
+                      }
+                    ]
+                  }
+                ]
+              },
+              "glossary": [
+                {
+                  "term": "légal",
+                  "translations": [
+                    "legal"
+                  ]
+                },
+                {
+                  "term": "légitimité",
+                  "translations": [
+                    "legitimidad"
+                  ]
+                },
+                {
+                  "term": "conformité",
+                  "translations": [
+                    "cumplimiento normativo"
+                  ]
+                },
+                {
+                  "term": "éthique",
+                  "translations": [
+                    "ética"
+                  ]
+                },
+                {
+                  "term": "responsabilité",
+                  "translations": [
+                    "rendición de cuentas"
+                  ]
+                },
+                {
+                  "term": "transparence",
+                  "translations": [
+                    "transparencia"
+                  ]
+                },
+                {
+                  "term": "intégrité",
+                  "translations": [
+                    "integridad"
+                  ]
+                },
+                {
+                  "term": "précédent",
+                  "translations": [
+                    "precedente"
+                  ]
+                }
+              ],
+              "exercises": [
+                {
+                  "type": "ClozeDragDrop",
+                  "id": "es-fr-c2-e169",
+                  "passage": "Le régulateur a accusé l'entreprise d'avoir déplacé les {{b1}} après le début de l'{{b2}}.",
+                  "blanks": [
+                    {
+                      "id": "b1",
+                      "answer": "poteaux",
+                      "options": [
+                        "poteaux",
+                        "poteaux de but",
+                        "poteaux de corner"
+                      ]
+                    },
+                    {
+                      "id": "b2",
+                      "answer": "audit",
+                      "options": [
+                        "audit",
+                        "audition",
+                        "audace"
+                      ]
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "« Déplacer les poteaux » est la locution ; « après le début de l'audit » situe le changement.",
+                    "ruleRef": "gp-fr-ethique-juridique"
+                  }
+                },
+                {
+                  "type": "ClozeDragDrop",
+                  "id": "es-fr-c2-e170",
+                  "passage": "L'éthique exige plus que la conformité : elle exige du {{b1}} quand aucune règle ne {{b2}}.",
+                  "blanks": [
+                    {
+                      "id": "b1",
+                      "answer": "jugement",
+                      "options": [
+                        "jugement",
+                        "juge",
+                        "juger"
+                      ]
+                    },
+                    {
+                      "id": "b2",
+                      "answer": "s'applique",
+                      "options": [
+                        "s'applique",
+                        "appliquer",
+                        "appliqué"
+                      ]
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "« Jugement » est le nom ; « ne s'applique » s'accorde avec « aucune règle ».",
+                    "ruleRef": "gp-fr-ethique-juridique"
+                  }
+                },
+                {
+                  "type": "SemanticMatch",
+                  "id": "es-fr-c2-e171",
+                  "instructions": "Distingue légalité et légitimité.",
+                  "pairs": [
+                    {
+                      "left": "La pratique est légale.",
+                      "right": "Cumple la norma",
+                      "register": "formal",
+                      "nuance": "No dice nada sobre su legitimidad."
+                    },
+                    {
+                      "left": "Cela ne saurait se justifier.",
+                      "right": "No supera el juicio ético",
+                      "register": "formal",
+                      "nuance": "La razón moral es el límite."
+                    },
+                    {
+                      "left": "Ils ont déplacé les poteaux.",
+                      "right": "Cambiaron las reglas a mitad",
+                      "register": "formal",
+                      "nuance": "El procedimiento pierde credibilidad."
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "register",
+                    "explanation": "L'éthique argumente sur des raisons et des procédures, pas seulement sur la conformité.",
+                    "ruleRef": "gp-fr-ethique-juridique"
+                  }
+                },
+                {
+                  "type": "ListenChoose",
+                  "id": "es-fr-c2-e172",
+                  "audioText": "La pratique est peut-être légale, mais elle ne saurait se justifier : l'entreprise a déplacé les poteaux après le début de l'audit.",
+                  "options": [
+                    "La pratique est légale et éthique",
+                    "La pratique est légale mais éthiquement injustifiable",
+                    "La pratique est illégale",
+                    "L'audit a été annulé"
+                  ],
+                  "correctIndex": 1,
+                  "feedbackOnError": {
+                    "type": "comprehension",
+                    "explanation": "« Légal » n'équivaut pas à « justifié » : la phrase sépare les deux dimensions.",
+                    "ruleRef": "gp-fr-ethique-juridique"
+                  }
+                },
+                {
+                  "type": "AudioOnlyPrompt",
+                  "id": "es-fr-c2-e173",
+                  "audioText": "La conformité n'est pas l'éthique. On pourrait s'attendre à ce qu'une entreprise respecte la lettre de la loi, mais elle devrait aussi respecter son esprit, surtout quand elle déplace les poteaux.",
+                  "question": "Quel est le point principal ?",
+                  "options": [
+                    "La conformité suffit",
+                    "L'éthique exige de respecter l'esprit, pas seulement la lettre",
+                    "Les entreprises doivent ignorer la loi",
+                    "Les audits sont inutiles"
+                  ],
+                  "correctIndex": 1,
+                  "allowSlowPlayback": true,
+                  "feedbackOnError": {
+                    "type": "comprehension",
+                    "explanation": "La distinction lettre/esprit et le modal devrait définent le devoir éthique.",
+                    "ruleRef": "gp-fr-modaux-nuances"
+                  }
+                },
+                {
+                  "type": "MultipleChoice",
+                  "id": "es-fr-c2-e174",
+                  "question": "Complète : C'est peut-être légal, mais cela ne saurait se ___.",
+                  "options": [
+                    "justifier",
+                    "justifie",
+                    "justifiant"
+                  ],
+                  "correctIndex": 0,
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "Après « ne saurait se » vient l'infinitif « justifier ».",
+                    "ruleRef": "gp-fr-modaux-nuances"
+                  }
+                },
+                {
+                  "type": "Translate",
+                  "id": "es-fr-c2-e175",
+                  "sourcePhrase": "La empresa cambió las reglas a mitad del proceso.",
+                  "correctTokens": [
+                    "L'entreprise",
+                    "a",
+                    "déplacé",
+                    "les",
+                    "poteaux",
+                    "en",
+                    "cours",
+                    "de",
+                    "route"
+                  ],
+                  "distractorTokens": [
+                    "changé",
+                    "buts"
+                  ],
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "« Déplacer les poteaux en cours de route » capture le changement de règles.",
+                    "ruleRef": "gp-fr-ethique-juridique"
+                  }
+                },
+                {
+                  "type": "ListenType",
+                  "id": "es-fr-c2-e176",
+                  "transcription": "La conformité n'est pas l'éthique et la lettre n'est pas l'esprit",
+                  "audioText": "La conformité n'est pas l'éthique et la lettre n'est pas l'esprit",
+                  "feedbackOnError": {
+                    "type": "spelling",
+                    "explanation": "Écris « conformité » avec accent et « esprit » avec « sp ».",
+                    "ruleRef": "gp-fr-ethique-juridique"
+                  }
+                },
+                {
+                  "type": "SpeakRepeat",
+                  "id": "es-fr-c2-e177",
+                  "targetPhrase": "La pratique est peut-être légale, mais elle ne saurait se justifier.",
+                  "audioText": "La pratique est peut-être légale, mais elle ne saurait se justifier.",
+                  "feedbackOnError": {
+                    "type": "pronunciation",
+                    "explanation": "Marque le contraste « légal »/« justifier » et pausa après « mais ».",
+                    "ruleRef": "gp-fr-modaux-nuances"
+                  }
+                },
+                {
+                  "type": "MatchPairs",
+                  "id": "es-fr-c2-e178",
+                  "pairs": [
+                    {
+                      "left": "légal mais immoral",
+                      "right": "legal pero poco ético"
+                    },
+                    {
+                      "left": "la lettre de la loi",
+                      "right": "la letra de la ley"
+                    },
+                    {
+                      "left": "l'esprit de la loi",
+                      "right": "el espíritu de la ley"
+                    },
+                    {
+                      "left": "la responsabilité",
+                      "right": "la rendición de cuentas"
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "L'éthique juridique distingue lettre, esprit et responsabilité.",
+                    "ruleRef": "gp-fr-ethique-juridique"
+                  }
+                },
+                {
+                  "type": "ClozeDragDrop",
+                  "id": "es-fr-c2-e179",
+                  "passage": "On pourrait {{b1}} à ce qu'une entreprise respecte la lettre de la loi, mais elle {{b2}} aussi respecter son esprit.",
+                  "blanks": [
+                    {
+                      "id": "b1",
+                      "answer": "s'attendre",
+                      "options": [
+                        "s'attendre",
+                        "attendre",
+                        "s'attendant"
+                      ]
+                    },
+                    {
+                      "id": "b2",
+                      "answer": "devrait",
+                      "options": [
+                        "devrait",
+                        "doit",
+                        "devra"
+                      ]
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "« On pourrait s'attendre à » exprime l'attente ; « devrait » exprime le devoir moral.",
+                    "ruleRef": "gp-fr-modaux-nuances"
+                  }
+                },
+                {
+                  "type": "FreeSpeakingPrompt",
+                  "id": "es-fr-c2-e180",
+                  "prompt": "Argumenta ante un comité de ética: distingue legalidad de legitimidad, modula el deber y condena el cambio de reglas.",
+                  "minTokens": 15,
+                  "conceptClusters": [
+                    [
+                      "légal",
+                      "justifié",
+                      "conformité"
+                    ],
+                    [
+                      "lettre",
+                      "esprit",
+                      "devrait"
+                    ],
+                    [
+                      "poteaux",
+                      "responsabilité",
+                      "confiance"
+                    ]
+                  ],
+                  "grammarRuleRefs": [
+                    "gp-fr-ethique-juridique",
+                    "gp-fr-modaux-nuances"
+                  ],
+                  "timeLimitSeconds": 30,
+                  "minWpm": 70,
+                  "maxWpm": 160,
+                  "modelAnswer": "La pratique est peut-être légale, mais elle ne saurait se justifier : l'entreprise a déplacé les poteaux après le début de l'audit. La conformité n'est pas l'éthique, et une entreprise devrait respecter l'esprit de la loi, pas seulement sa lettre.",
+                  "selfAssessmentCriteria": [
+                    "¿Distinguí legalidad y legitimidad?",
+                    "¿Modulé el deber?",
+                    "¿Condené el procedimiento?"
+                  ],
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "La réponse modèle sépare loi et éthique, emploie devrait et dénonce le changement de règles.",
+                    "ruleRef": "gp-fr-ethique-juridique"
+                  }
+                }
+              ]
+            },
+            {
+              "id": "es-fr-c2-un-4-ls-4",
+              "title": "Science et société",
+              "cefrLevel": "C2",
+              "scenario": "Un vulgarisateur doit expliquer une avancée scientifique sans promettre de miracles ni nourrir la peur.",
+              "canDo": "Puedo comunicar ciencia con densidad nominal controlada, medir riesgos y situar el consenso.",
+              "grammarPoints": [
+                {
+                  "id": "gp-fr-science-societe",
+                  "label": "Ciencia y sociedad",
+                  "description": "Consensus, incertitude, perception du risque."
+                },
+                {
+                  "id": "gp-fr-style-nominal",
+                  "label": "Estilo nominal",
+                  "description": "Nominalisations à décomposer pour le public."
+                }
+              ],
+              "vocabFrequencyBand": "12000+",
+              "culturalNotes": [
+                {
+                  "idiom": "franchir le pas",
+                  "note": "Prendre la décision décisive après avoir pesé le risque ; en science appliquée, exige d'expliciter l'incertitude acceptée.",
+                  "translation": "dar el paso decisivo"
+                }
+              ],
+              "microLesson": {
+                "title": "Expliquer sans promettre de miracles",
+                "goals": [
+                  "Décomposer les nominalisations pour le public.",
+                  "Situer le consensus et l'incertitude avec précision."
+                ],
+                "sections": [
+                  {
+                    "heading": "La densité à ouvrir",
+                    "body": "« Perception du risque » et « adoption de la technologie » compriment des processus ; pour le public, il faut les ouvrir : comment les gens perçoivent le risque, comment une société adopte une technologie. Le consensus ne supprime pas l'incertitude : il la situe.",
+                    "examples": [
+                      {
+                        "source": "La sociedad debe decidir si da el paso.",
+                        "target": "La société doit décider si elle franchit le pas.",
+                        "note": "Franchir le pas = dar el paso decisivo."
+                      },
+                      {
+                        "source": "El consenso científico no elimina la incertidumbre.",
+                        "target": "Le consensus scientifique n'élimine pas l'incertitude.",
+                        "note": "Consensus et incertitude coexistent."
+                      }
+                    ]
+                  }
+                ]
+              },
+              "glossary": [
+                {
+                  "term": "consensus",
+                  "translations": [
+                    "consenso"
+                  ]
+                },
+                {
+                  "term": "incertitude",
+                  "translations": [
+                    "incertidumbre"
+                  ]
+                },
+                {
+                  "term": "perception du risque",
+                  "translations": [
+                    "percepción del riesgo"
+                  ]
+                },
+                {
+                  "term": "adoption",
+                  "translations": [
+                    "adopción"
+                  ]
+                },
+                {
+                  "term": "compromis",
+                  "translations": [
+                    "compensación",
+                    "disyuntiva"
+                  ]
+                },
+                {
+                  "term": "confiance publique",
+                  "translations": [
+                    "confianza pública"
+                  ]
+                },
+                {
+                  "term": "fondé sur les preuves",
+                  "translations": [
+                    "basado en la evidencia"
+                  ]
+                },
+                {
+                  "term": "précaution",
+                  "translations": [
+                    "precaución"
+                  ]
+                }
+              ],
+              "exercises": [
+                {
+                  "type": "ClozeDragDrop",
+                  "id": "es-fr-c2-e181",
+                  "passage": "La technologie est prometteuse, mais la société doit décider si elle {{b1}} le pas avant que les preuves soient {{b2}}.",
+                  "blanks": [
+                    {
+                      "id": "b1",
+                      "answer": "franchit",
+                      "options": [
+                        "franchit",
+                        "franchir",
+                        "franchissant"
+                      ]
+                    },
+                    {
+                      "id": "b2",
+                      "answer": "complètes",
+                      "options": [
+                        "complètes",
+                        "complet",
+                        "compléter"
+                      ]
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "« Franchir le pas » est la locution ; « complètes » s'accorde avec « preuves ».",
+                    "ruleRef": "gp-fr-science-societe"
+                  }
+                },
+                {
+                  "type": "ClozeDragDrop",
+                  "id": "es-fr-c2-e182",
+                  "passage": "Le progrès scientifique et la confiance publique sont {{b1}} : l'un ne peut avancer sans l'{{b2}}.",
+                  "blanks": [
+                    {
+                      "id": "b1",
+                      "answer": "liés",
+                      "options": [
+                        "liés",
+                        "lier",
+                        "liant"
+                      ]
+                    },
+                    {
+                      "id": "b2",
+                      "answer": "autre",
+                      "options": [
+                        "autre",
+                        "autres",
+                        "autrui"
+                      ]
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "« Liés » décrit la dépendance mutuelle ; « sans l'autre » ferme la réciprocité.",
+                    "ruleRef": "gp-fr-science-societe"
+                  }
+                },
+                {
+                  "type": "SemanticMatch",
+                  "id": "es-fr-c2-e183",
+                  "instructions": "Associe chaque terme à sa signification pour le public.",
+                  "pairs": [
+                    {
+                      "left": "la perception du risque",
+                      "right": "Cómo la gente valora un riesgo",
+                      "register": "formal",
+                      "nuance": "No coincide necesariamente con el riesgo técnico."
+                    },
+                    {
+                      "left": "le consensus scientifique",
+                      "right": "Acuerdo mayoritario de la comunidad",
+                      "register": "formal",
+                      "nuance": "No elimina la incertidumbre restante."
+                    },
+                    {
+                      "left": "un compromis",
+                      "right": "Renunciar a algo para obtener otra cosa",
+                      "register": "formal",
+                      "nuance": "Toda adopción tecnológica implica costes."
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "register",
+                    "explanation": "La vulgarisation ouvre les nominalisations et nomme les coûts.",
+                    "ruleRef": "gp-fr-style-nominal"
+                  }
+                },
+                {
+                  "type": "ListenChoose",
+                  "id": "es-fr-c2-e184",
+                  "audioText": "Le consensus scientifique n'élimine pas l'incertitude ; il nous dit où elle reste et quelle est son ampleur.",
+                  "options": [
+                    "Le consensus supprime tout doute",
+                    "Le consensus situe l'incertitude restante",
+                    "La science est inutile",
+                    "L'incertitude est ignorée"
+                  ],
+                  "correctIndex": 1,
+                  "feedbackOnError": {
+                    "type": "comprehension",
+                    "explanation": "Le consensus situe l'incertitude ; il ne l'efface pas.",
+                    "ruleRef": "gp-fr-science-societe"
+                  }
+                },
+                {
+                  "type": "AudioOnlyPrompt",
+                  "id": "es-fr-c2-e185",
+                  "audioText": "Les preuves sont prometteuses mais incomplètes. La société doit décider si elle franchit le pas, et cette décision exige de nommer l'incertitude plutôt que de la cacher derrière un langage technique.",
+                  "question": "Que demande le locuteur ?",
+                  "options": [
+                    "Cacher l'incertitude",
+                    "Nommer l'incertitude avant de décider",
+                    "Ignorer les preuves",
+                    "Attendre indéfiniment"
+                  ],
+                  "correctIndex": 1,
+                  "allowSlowPlayback": true,
+                  "feedbackOnError": {
+                    "type": "comprehension",
+                    "explanation": "La décision exige de nommer l'incertitude, pas de la cacher.",
+                    "ruleRef": "gp-fr-science-societe"
+                  }
+                },
+                {
+                  "type": "MultipleChoice",
+                  "id": "es-fr-c2-e186",
+                  "question": "Complète : La société doit décider si elle ___ le pas.",
+                  "options": [
+                    "franchit",
+                    "franchir",
+                    "franchissant"
+                  ],
+                  "correctIndex": 0,
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "« Décider si elle franchit » demande le présent de l'indicatif.",
+                    "ruleRef": "gp-fr-science-societe"
+                  }
+                },
+                {
+                  "type": "Translate",
+                  "id": "es-fr-c2-e187",
+                  "sourcePhrase": "La sociedad debe decidir si da el paso.",
+                  "correctTokens": [
+                    "La",
+                    "société",
+                    "doit",
+                    "décider",
+                    "si",
+                    "elle",
+                    "franchit",
+                    "le",
+                    "pas"
+                  ],
+                  "distractorTokens": [
+                    "paso",
+                    "franchir"
+                  ],
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "« Franchir le pas » traduit l'expression « dar el paso ».",
+                    "ruleRef": "gp-fr-science-societe"
+                  }
+                },
+                {
+                  "type": "ListenType",
+                  "id": "es-fr-c2-e188",
+                  "transcription": "Le consensus scientifique n'élimine pas l'incertitude",
+                  "audioText": "Le consensus scientifique n'élimine pas l'incertitude",
+                  "feedbackOnError": {
+                    "type": "spelling",
+                    "explanation": "Écris « consensus » avec « us » et « incertitude » avec « c ».",
+                    "ruleRef": "gp-fr-science-societe"
+                  }
+                },
+                {
+                  "type": "SpeakRepeat",
+                  "id": "es-fr-c2-e189",
+                  "targetPhrase": "La société doit décider si elle franchit le pas avant que les preuves soient complètes.",
+                  "audioText": "La société doit décider si elle franchit le pas avant que les preuves soient complètes.",
+                  "feedbackOnError": {
+                    "type": "pronunciation",
+                    "explanation": "Lie « franchit le pas » et accentue « complètes ».",
+                    "ruleRef": "gp-fr-science-societe"
+                  }
+                },
+                {
+                  "type": "MatchPairs",
+                  "id": "es-fr-c2-e190",
+                  "pairs": [
+                    {
+                      "left": "la confiance publique",
+                      "right": "la confianza pública"
+                    },
+                    {
+                      "left": "une politique fondée sur les preuves",
+                      "right": "una política basada en la evidencia"
+                    },
+                    {
+                      "left": "la perception du risque",
+                      "right": "la percepción del riesgo"
+                    },
+                    {
+                      "left": "une approche de précaution",
+                      "right": "un enfoque precautorio"
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "La vulgarisation traduit chaque terme technique en décision publique.",
+                    "ruleRef": "gp-fr-style-nominal"
+                  }
+                },
+                {
+                  "type": "ClozeDragDrop",
+                  "id": "es-fr-c2-e191",
+                  "passage": "L'{{b1}} de la technologie dépend de la {{b2}} publique, pas seulement de sa performance.",
+                  "blanks": [
+                    {
+                      "id": "b1",
+                      "answer": "adoption",
+                      "options": [
+                        "confiance",
+                        "connaissance",
+                        "confiance en soi"
+                      ]
+                    },
+                    {
+                      "id": "b2",
+                      "answer": "confiance",
+                      "options": [
+                        "confiance",
+                        "connaissance",
+                        "confiance en soi"
+                      ]
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "« Adoption » et « confiance publique » sont les nominalisations clés.",
+                    "ruleRef": "gp-fr-style-nominal"
+                  }
+                },
+                {
+                  "type": "FreeSpeakingPrompt",
+                  "id": "es-fr-c2-e192",
+                  "prompt": "Explica un avance científico a un público general: sitúa el consenso, nombra la incertidumbre y explica el coste de dar el paso.",
+                  "minTokens": 15,
+                  "conceptClusters": [
+                    [
+                      "consensus",
+                      "incertitude",
+                      "preuves"
+                    ],
+                    [
+                      "franchir le pas",
+                      "adoption",
+                      "compromis"
+                    ],
+                    [
+                      "confiance publique",
+                      "risque",
+                      "responsabilité"
+                    ]
+                  ],
+                  "grammarRuleRefs": [
+                    "gp-fr-science-societe",
+                    "gp-fr-style-nominal"
+                  ],
+                  "timeLimitSeconds": 30,
+                  "minWpm": 70,
+                  "maxWpm": 160,
+                  "modelAnswer": "Le consensus scientifique n'élimine pas l'incertitude : il nous dit où elle reste. La société doit décider si elle franchit le pas, et ce compromis exige la confiance publique, pas du jargon technique.",
+                  "selfAssessmentCriteria": [
+                    "¿Situé el consenso?",
+                    "¿Nombré la incertidumbre?",
+                    "¿Expliqué el coste del paso?"
+                  ],
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "La réponse modèle ouvre les nominalisations et situe consensus, incertitude et coût.",
+                    "ruleRef": "gp-fr-science-societe"
+                  }
+                }
+              ]
+            },
+            {
+              "id": "es-fr-c2-un-4-ls-5",
+              "title": "Monologue d'examen",
+              "cefrLevel": "C2",
+              "scenario": "À l'oral, il faut défendre une thèse pendant deux minutes sans notes et avec une structure reconnaissable.",
+              "canDo": "Puedo sostener un monólogo de dos minutos con tesis, evidencia, concesión y cierre memorable.",
+              "grammarPoints": [
+                {
+                  "id": "gp-fr-monologue-c2",
+                  "label": "Monólogo C2",
+                  "description": "Thèse, balises, preuve, concession, conclusion."
+                },
+                {
+                  "id": "gp-fr-flux-rhetorique",
+                  "label": "Flujo retórico",
+                  "description": "Transitions et cadence sans tics."
+                }
+              ],
+              "vocabFrequencyBand": "12000+",
+              "culturalNotes": [
+                {
+                  "idiom": "un acte de foi",
+                  "note": "Accepter sans garanties complètes ; dans un monologue, il faut reconnaître quand la conclusion exige un saut et non une preuve.",
+                  "translation": "un acto de fe"
+                }
+              ],
+              "microLesson": {
+                "title": "Deux minutes avec structure",
+                "goals": [
+                  "Ouvrir, ordonner et clore sans notes.",
+                  "Reconnaître le point où la conclusion exige un saut."
+                ],
+                "sections": [
+                  {
+                    "heading": "Le squelette audible",
+                    "body": "Permettez-moi de commencer par... ouvre ; premièrement et deuxièmement ordonnent ; certes concède ; en somme et pour conclure ferment. Un bon monologue distingue ce qui est prouvé de ce qui exige un acte de foi.",
+                    "examples": [
+                      {
+                        "source": "Permítanme empezar por el contexto.",
+                        "target": "Permettez-moi de commencer par le contexte.",
+                        "note": "Ouverture prévisible."
+                      },
+                      {
+                        "source": "En conjunto, la medida es necesaria.",
+                        "target": "En somme, la mesure est nécessaire.",
+                        "note": "En somme résume le jugement."
+                      }
+                    ]
+                  }
+                ]
+              },
+              "glossary": [
+                {
+                  "term": "monologue",
+                  "translations": [
+                    "monólogo"
+                  ]
+                },
+                {
+                  "term": "thèse",
+                  "translations": [
+                    "tesis"
+                  ]
+                },
+                {
+                  "term": "balise",
+                  "translations": [
+                    "señalización del discurso"
+                  ]
+                },
+                {
+                  "term": "concession",
+                  "translations": [
+                    "concesión"
+                  ]
+                },
+                {
+                  "term": "acte de foi",
+                  "translations": [
+                    "acto de fe"
+                  ]
+                },
+                {
+                  "term": "cadence",
+                  "translations": [
+                    "cadencia"
+                  ]
+                },
+                {
+                  "term": "concis",
+                  "translations": [
+                    "conciso"
+                  ]
+                },
+                {
+                  "term": "mémorable",
+                  "translations": [
+                    "memorable"
+                  ]
+                }
+              ],
+              "exercises": [
+                {
+                  "type": "ClozeDragDrop",
+                  "id": "es-fr-c2-e193",
+                  "passage": "Permettez-moi de {{b1}} par le contexte ; puis j'{{b2}} l'objection la plus forte.",
+                  "blanks": [
+                    {
+                      "id": "b1",
+                      "answer": "commencer",
+                      "options": [
+                        "commencer",
+                        "commence",
+                        "commencé"
+                      ]
+                    },
+                    {
+                      "id": "b2",
+                      "answer": "aborderai",
+                      "options": [
+                        "aborderai",
+                        "aborder",
+                        "abordé"
+                      ]
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "« Permettez-moi de commencer » ouvre ; « j'aborderai » annonce la suite.",
+                    "ruleRef": "gp-fr-monologue-c2"
+                  }
+                },
+                {
+                  "type": "ClozeDragDrop",
+                  "id": "es-fr-c2-e194",
+                  "passage": "Un argument {{b1}} a besoin d'une thèse claire, de preuves et d'une {{b2}}.",
+                  "blanks": [
+                    {
+                      "id": "b1",
+                      "answer": "persuasif",
+                      "options": [
+                        "persuasif",
+                        "persuasion",
+                        "persuadé"
+                      ]
+                    },
+                    {
+                      "id": "b2",
+                      "answer": "concession",
+                      "options": [
+                        "concession",
+                        "concéder",
+                        "concédant"
+                      ]
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "L'adjectif « persuasif » et le nom « concession » nomment les composants.",
+                    "ruleRef": "gp-fr-monologue-c2"
+                  }
+                },
+                {
+                  "type": "SemanticMatch",
+                  "id": "es-fr-c2-e195",
+                  "instructions": "Ordonne la fonction de chaque partie du monologue.",
+                  "pairs": [
+                    {
+                      "left": "Permettez-moi de commencer par le contexte.",
+                      "right": "Apertura",
+                      "register": "formal",
+                      "nuance": "Prépare l'auditeur avant la thèse."
+                    },
+                    {
+                      "left": "Certes, la mesure a un coût.",
+                      "right": "Concesión",
+                      "register": "formal",
+                      "nuance": "Anticipe l'objection de l'évaluateur."
+                    },
+                    {
+                      "left": "En somme, les bénéfices dépassent les coûts.",
+                      "right": "Cierre",
+                      "register": "formal",
+                      "nuance": "Récapitule et décide."
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "register",
+                    "explanation": "La structure audible permet de suivre le monologue sans notes.",
+                    "ruleRef": "gp-fr-monologue-c2"
+                  }
+                },
+                {
+                  "type": "ListenChoose",
+                  "id": "es-fr-c2-e196",
+                  "audioText": "Permettez-moi de commencer par le contexte. Premièrement, la mesure a un coût ; certes, ce coût est réel, mais en somme les bénéfices sont supérieurs.",
+                  "options": [
+                    "Le locuteur rejette la mesure",
+                    "Le locuteur concède le coût et défend les bénéfices",
+                    "Le locuteur ignore le coût",
+                    "Le locuteur change de sujet"
+                  ],
+                  "correctIndex": 1,
+                  "feedbackOnError": {
+                    "type": "comprehension",
+                    "explanation": "Certes reconnaît le coût et en somme tranche en faveur des bénéfices.",
+                    "ruleRef": "gp-fr-monologue-c2"
+                  }
+                },
+                {
+                  "type": "AudioOnlyPrompt",
+                  "id": "es-fr-c2-e197",
+                  "audioText": "Permettez-moi de commencer par le contexte. Premièrement, la mesure a un coût ; certes, ce coût est réel, mais en somme les bénéfices sont supérieurs. Pour conclure, la décision exige un acte de foi, mais un acte calculé.",
+                  "question": "Comment le locuteur clôt-il ?",
+                  "options": [
+                    "En niant tout risque",
+                    "En admettant un acte de foi calculé",
+                    "En demandant au public de partir",
+                    "En répétant seulement les coûts"
+                  ],
+                  "correctIndex": 1,
+                  "allowSlowPlayback": true,
+                  "feedbackOnError": {
+                    "type": "comprehension",
+                    "explanation": "La clôture reconnaît le saut et le qualifie de calculé.",
+                    "ruleRef": "gp-fr-flux-rhetorique"
+                  }
+                },
+                {
+                  "type": "MultipleChoice",
+                  "id": "es-fr-c2-e198",
+                  "question": "Complète : ___ somme, les bénéfices sont supérieurs.",
+                  "options": [
+                    "En",
+                    "Au",
+                    "À"
+                  ],
+                  "correctIndex": 0,
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "La formule de synthèse est « en somme ».",
+                    "ruleRef": "gp-fr-monologue-c2"
+                  }
+                },
+                {
+                  "type": "Translate",
+                  "id": "es-fr-c2-e199",
+                  "sourcePhrase": "En conjunto, la medida es necesaria y los beneficios superan los costes.",
+                  "correctTokens": [
+                    "En",
+                    "somme",
+                    "la",
+                    "mesure",
+                    "est",
+                    "nécessaire",
+                    "et",
+                    "les",
+                    "bénéfices",
+                    "dépassent",
+                    "les",
+                    "coûts"
+                  ],
+                  "distractorTokens": [
+                    "ensemble",
+                    "surpassent"
+                  ],
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "« En somme » et « dépassent » sont les formules précises du cierre.",
+                    "ruleRef": "gp-fr-monologue-c2"
+                  }
+                },
+                {
+                  "type": "ListenType",
+                  "id": "es-fr-c2-e200",
+                  "transcription": "Permettez-moi de commencer par le contexte avant de présenter l'argument principal",
+                  "audioText": "Permettez-moi de commencer par le contexte avant de présenter l'argument principal",
+                  "feedbackOnError": {
+                    "type": "spelling",
+                    "explanation": "Écris « contexte » avec « x » et « argument » sans « e » final.",
+                    "ruleRef": "gp-fr-monologue-c2"
+                  }
+                },
+                {
+                  "type": "SpeakRepeat",
+                  "id": "es-fr-c2-e201",
+                  "targetPhrase": "Pour conclure, les bénéfices dépassent les coûts et la décision exige un acte de foi calculé.",
+                  "audioText": "Pour conclure, les bénéfices dépassent les coûts et la décision exige un acte de foi calculé.",
+                  "feedbackOnError": {
+                    "type": "pronunciation",
+                    "explanation": "Marque « pour conclure » comme clôture et lie « acte de foi ».",
+                    "ruleRef": "gp-fr-flux-rhetorique"
+                  }
+                },
+                {
+                  "type": "MatchPairs",
+                  "id": "es-fr-c2-e202",
+                  "pairs": [
+                    {
+                      "left": "énoncer la thèse",
+                      "right": "enunciar la tesis"
+                    },
+                    {
+                      "left": "baliser l'argument",
+                      "right": "señalizar el argumento"
+                    },
+                    {
+                      "left": "concéder une objection",
+                      "right": "conceder una objeción"
+                    },
+                    {
+                      "left": "clore par une synthèse",
+                      "right": "cerrar con una síntesis"
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "Le monologue C2 s'évalue par structure, preuve et clôture.",
+                    "ruleRef": "gp-fr-monologue-c2"
+                  }
+                },
+                {
+                  "type": "ClozeDragDrop",
+                  "id": "es-fr-c2-e203",
+                  "passage": "La conclusion exige un {{b1}} de foi, mais c'est un acte {{b2}}.",
+                  "blanks": [
+                    {
+                      "id": "b1",
+                      "answer": "acte",
+                      "options": [
+                        "acte",
+                        "action",
+                        "axe"
+                      ]
+                    },
+                    {
+                      "id": "b2",
+                      "answer": "calculé",
+                      "options": [
+                        "calculé",
+                        "calculant",
+                        "calcul"
+                      ]
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "« Un acte de foi » est la locution ; « calculé » le nuance comme décision pesée.",
+                    "ruleRef": "gp-fr-flux-rhetorique"
+                  }
+                },
+                {
+                  "type": "FreeSpeakingPrompt",
+                  "id": "es-fr-c2-e204",
+                  "prompt": "Monólogo de examen (2 minutos): abre el contexto, defiende una tesis con dos argumentos, concede una objeción y cierra con una síntesis memorable.",
+                  "minTokens": 15,
+                  "conceptClusters": [
+                    [
+                      "permettez-moi",
+                      "premièrement",
+                      "deuxièmement"
+                    ],
+                    [
+                      "certes",
+                      "en somme",
+                      "pour conclure"
+                    ],
+                    [
+                      "acte de foi",
+                      "preuve",
+                      "thèse"
+                    ]
+                  ],
+                  "grammarRuleRefs": [
+                    "gp-fr-monologue-c2",
+                    "gp-fr-flux-rhetorique"
+                  ],
+                  "timeLimitSeconds": 30,
+                  "minWpm": 70,
+                  "maxWpm": 160,
+                  "modelAnswer": "Permettez-moi de commencer par le contexte : la mesure protège la confiance et l'efficacité. Premièrement, le coût est réel ; certes, c'est une objection juste, mais en somme les bénéfices le dépassent. Pour conclure, la décision exige un acte de foi calculé.",
+                  "selfAssessmentCriteria": [
+                    "¿Abrí con contexto y tesis?",
+                    "¿Concedí una objeción?",
+                    "¿Cerré con una síntesis memorable?"
+                  ],
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "La réponse modèle ordonne ouverture, arguments, concession et clôture.",
+                    "ruleRef": "gp-fr-monologue-c2"
+                  }
+                }
+              ]
+            },
+            {
+              "id": "es-fr-c2-un-4-ls-6",
+              "title": "Écoute longue et débat final",
+              "cefrLevel": "C2",
+              "scenario": "Après une conférence de plusieurs minutes, il faut débattre avec celui qui défend la position opposée.",
+              "canDo": "Puedo seguir un audio largo, resumir su tesis y debatir sin abandonar la posición propia.",
+              "grammarPoints": [
+                {
+                  "id": "gp-fr-ecoute-longue",
+                  "label": "Comprensión larga",
+                  "description": "Fil principal, digressions, posture du locuteur."
+                },
+                {
+                  "id": "gp-fr-debat-c2",
+                  "label": "Débat C2",
+                  "description": "Concéder, réfuter, clore sur le point le plus fort."
+                }
+              ],
+              "vocabFrequencyBand": "12000+",
+              "culturalNotes": [
+                {
+                  "idiom": "jeter l'éponge",
+                  "note": "Renoncer ; dans un débat, reconnaître sa limite sans abandonner la thèse est le contraire de jeter l'éponge.",
+                  "translation": "tirar la toalla"
+                }
+              ],
+              "microLesson": {
+                "title": "Tenir le fil et la position",
+                "goals": [
+                  "Suivre la thèse d'un audio long malgré les digressions.",
+                  "Débattre en concédant sans renoncer."
+                ],
+                "sections": [
+                  {
+                    "heading": "Le fil entre les détours",
+                    "body": "Dans un audio long, la thèse se répète après les digressions. Dans le débat, concéder un point n'est pas jeter l'éponge : c'est reconnaître la limite pour renforcer l'argument décisif.",
+                    "examples": [
+                      {
+                        "source": "La conferencia se desvió sin perder el hilo.",
+                        "target": "La conférence a dévié sans perdre le fil.",
+                        "note": "Tenir le fil est la clé."
+                      },
+                      {
+                        "source": "No tiramos la toalla: defendimos la posición con nueva evidencia.",
+                        "target": "Nous n'avons pas jeté l'éponge : nous avons défendu notre position avec de nouvelles preuves.",
+                        "note": "Tenir sa position n'est pas renoncer."
+                      }
+                    ]
+                  }
+                ]
+              },
+              "glossary": [
+                {
+                  "term": "fil",
+                  "translations": [
+                    "hilo del discurso"
+                  ]
+                },
+                {
+                  "term": "digression",
+                  "translations": [
+                    "digresión"
+                  ]
+                },
+                {
+                  "term": "posture",
+                  "translations": [
+                    "postura"
+                  ]
+                },
+                {
+                  "term": "réplique",
+                  "translations": [
+                    "réplica"
+                  ]
+                },
+                {
+                  "term": "clôture",
+                  "translations": [
+                    "cierre",
+                    "alegato final"
+                  ]
+                },
+                {
+                  "term": "concéder",
+                  "translations": [
+                    "conceder"
+                  ]
+                },
+                {
+                  "term": "persuasif",
+                  "translations": [
+                    "persuasivo"
+                  ]
+                },
+                {
+                  "term": "vote",
+                  "translations": [
+                    "votación"
+                  ]
+                }
+              ],
+              "exercises": [
+                {
+                  "type": "ClozeDragDrop",
+                  "id": "es-fr-c2-e205",
+                  "passage": "La conférence était dense : le conférencier {{b1}} de l'économie à l'éthique sans {{b2}} le fil.",
+                  "blanks": [
+                    {
+                      "id": "b1",
+                      "answer": "dérivait",
+                      "options": [
+                        "dérivait",
+                        "dériver",
+                        "dérivé"
+                      ]
+                    },
+                    {
+                      "id": "b2",
+                      "answer": "perdre",
+                      "options": [
+                        "perdre",
+                        "perd",
+                        "perdu"
+                      ]
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "« Dérivait » décrit la digression ; « sans perdre » maintient le fil.",
+                    "ruleRef": "gp-fr-ecoute-longue"
+                  }
+                },
+                {
+                  "type": "ClozeDragDrop",
+                  "id": "es-fr-c2-e206",
+                  "passage": "Dans le débat, elle a refusé de jeter l'{{b1}} et a {{b2}} sa position avec de nouvelles preuves.",
+                  "blanks": [
+                    {
+                      "id": "b1",
+                      "answer": "éponge",
+                      "options": [
+                        "éponge",
+                        "éponte",
+                        "éponge de mer"
+                      ]
+                    },
+                    {
+                      "id": "b2",
+                      "answer": "défendu",
+                      "options": [
+                        "défendu",
+                        "défendre",
+                        "défendant"
+                      ]
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "« Jeter l'éponge » signifie renoncer ; « a défendu » montre la position tenue.",
+                    "ruleRef": "gp-fr-debat-c2"
+                  }
+                },
+                {
+                  "type": "SemanticMatch",
+                  "id": "es-fr-c2-e207",
+                  "instructions": "Associe chaque mouvement à sa fonction dans le débat.",
+                  "pairs": [
+                    {
+                      "left": "Cela peut être vrai, mais le coût reste non résolu.",
+                      "right": "Réplica con concesión",
+                      "register": "formal",
+                      "nuance": "Acepta el marco y ataca el punto débil."
+                    },
+                    {
+                      "left": "Je prends votre point ; toutefois, le calendrier est irréaliste.",
+                      "right": "Reconocimiento y reserva",
+                      "register": "formal",
+                      "nuance": "Valida al adversario antes de corregir."
+                    },
+                    {
+                      "left": "L'argument le plus solide reste la confiance.",
+                      "right": "Cierre que jerarquiza",
+                      "register": "formal",
+                      "nuance": "Decide qué argumento pesa más."
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "register",
+                    "explanation": "Le débat C2 concède sans renoncer et clôt en hiérarchisant.",
+                    "ruleRef": "gp-fr-debat-c2"
+                  }
+                },
+                {
+                  "type": "ListenChoose",
+                  "id": "es-fr-c2-e208",
+                  "audioText": "La conférence a dévié de l'économie à l'éthique sans perdre le fil : la thèse était que la confiance, et non l'efficacité, détermine l'adoption.",
+                  "options": [
+                    "La conférence a perdu sa thèse",
+                    "La conférence a digressé mais gardé sa thèse sur la confiance",
+                    "La conférence ne parlait que d'économie",
+                    "La conférence a rejeté l'éthique"
+                  ],
+                  "correctIndex": 1,
+                  "feedbackOnError": {
+                    "type": "comprehension",
+                    "explanation": "La digression n'élimine pas la thèse : la confiance détermine l'adoption.",
+                    "ruleRef": "gp-fr-ecoute-longue"
+                  }
+                },
+                {
+                  "type": "AudioOnlyPrompt",
+                  "id": "es-fr-c2-e209",
+                  "audioText": "Le conférencier a passé dix minutes sur l'éthique, mais la thèse restait économique : l'adoption dépend de la confiance. Dans le débat, elle a refusé de jeter l'éponge et a défendu cette position avec de nouvelles preuves.",
+                  "question": "Quelle était la thèse principale ?",
+                  "options": [
+                    "L'éthique est inutile",
+                    "L'adoption dépend de la confiance",
+                    "L'économie explique tout",
+                    "Le débat a été annulé"
+                  ],
+                  "correctIndex": 1,
+                  "allowSlowPlayback": true,
+                  "feedbackOnError": {
+                    "type": "comprehension",
+                    "explanation": "Malgré la digression éthique, la thèse est que l'adoption dépend de la confiance.",
+                    "ruleRef": "gp-fr-ecoute-longue"
+                  }
+                },
+                {
+                  "type": "MultipleChoice",
+                  "id": "es-fr-c2-e210",
+                  "question": "Complète : Elle a refusé de jeter l'___.",
+                  "options": [
+                    "éponge",
+                    "éponte",
+                    "épée"
+                  ],
+                  "correctIndex": 0,
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "La locution est « jeter l'éponge ».",
+                    "ruleRef": "gp-fr-debat-c2"
+                  }
+                },
+                {
+                  "type": "Translate",
+                  "id": "es-fr-c2-e211",
+                  "sourcePhrase": "Reconozco tu punto, pero el argumento más sólido sigue siendo la confianza.",
+                  "correctTokens": [
+                    "Je",
+                    "prends",
+                    "ton",
+                    "point",
+                    "mais",
+                    "l'argument",
+                    "le",
+                    "plus",
+                    "solide",
+                    "reste",
+                    "la",
+                    "confiance"
+                  ],
+                  "distractorTokens": [
+                    "fort",
+                    "restait"
+                  ],
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "« Je prends ton point » reconnaît et « l'argument le plus solide reste » hiérarchise.",
+                    "ruleRef": "gp-fr-debat-c2"
+                  }
+                },
+                {
+                  "type": "ListenType",
+                  "id": "es-fr-c2-e212",
+                  "transcription": "Le conférencier a dévié de l'économie à l'éthique sans perdre le fil",
+                  "audioText": "Le conférencier a dévié de l'économie à l'éthique sans perdre le fil",
+                  "feedbackOnError": {
+                    "type": "spelling",
+                    "explanation": "Écris « dévié » avec accent aigu et « fil » sans accent.",
+                    "ruleRef": "gp-fr-ecoute-longue"
+                  }
+                },
+                {
+                  "type": "SpeakRepeat",
+                  "id": "es-fr-c2-e213",
+                  "targetPhrase": "Cela peut être vrai, mais le coût reste non résolu et le calendrier est irréaliste.",
+                  "audioText": "Cela peut être vrai, mais le coût reste non résolu et le calendrier est irréaliste.",
+                  "feedbackOnError": {
+                    "type": "pronunciation",
+                    "explanation": "Pause après « vrai » et lie « coût reste ».",
+                    "ruleRef": "gp-fr-debat-c2"
+                  }
+                },
+                {
+                  "type": "MatchPairs",
+                  "id": "es-fr-c2-e214",
+                  "pairs": [
+                    {
+                      "left": "perdre le fil",
+                      "right": "perder el hilo"
+                    },
+                    {
+                      "left": "jeter l'éponge",
+                      "right": "tirar la toalla"
+                    },
+                    {
+                      "left": "l'argument le plus solide",
+                      "right": "el argumento más sólido"
+                    },
+                    {
+                      "left": "concéder un point",
+                      "right": "conceder un punto"
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "Le débat final repose sur le fil, la concession et la clôture.",
+                    "ruleRef": "gp-fr-debat-c2"
+                  }
+                },
+                {
+                  "type": "ClozeDragDrop",
+                  "id": "es-fr-c2-e215",
+                  "passage": "L'argument le plus solide {{b1}} la confiance, donc convenons d'un pilote avant le {{b2}}.",
+                  "blanks": [
+                    {
+                      "id": "b1",
+                      "answer": "reste",
+                      "options": [
+                        "reste",
+                        "restent",
+                        "restait"
+                      ]
+                    },
+                    {
+                      "id": "b2",
+                      "answer": "vote",
+                      "options": [
+                        "vote",
+                        "voter",
+                        "votation"
+                      ]
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "« Reste » s'accorde avec le sujet singulier ; « avant le vote » fixe la clôture.",
+                    "ruleRef": "gp-fr-debat-c2"
+                  }
+                },
+                {
+                  "type": "FreeSpeakingPrompt",
+                  "id": "es-fr-c2-e216",
+                  "prompt": "Debate final tras un audio largo: resume la tesis, concede un punto al adversario, rebate con evidencia y cierra con el argumento decisivo.",
+                  "minTokens": 15,
+                  "conceptClusters": [
+                    [
+                      "thèse",
+                      "fil",
+                      "digression"
+                    ],
+                    [
+                      "cela peut être vrai",
+                      "je prends votre point",
+                      "toutefois"
+                    ],
+                    [
+                      "argument le plus solide",
+                      "confiance",
+                      "vote"
+                    ]
+                  ],
+                  "grammarRuleRefs": [
+                    "gp-fr-ecoute-longue",
+                    "gp-fr-debat-c2"
+                  ],
+                  "timeLimitSeconds": 30,
+                  "minWpm": 70,
+                  "maxWpm": 160,
+                  "modelAnswer": "La conférence a dévié de l'économie à l'éthique sans perdre sa thèse : l'adoption dépend de la confiance. Cela peut être vrai, mais le coût reste non résolu ; toutefois, l'argument le plus solide reste la confiance, donc convenons d'un pilote avant le vote.",
+                  "selfAssessmentCriteria": [
+                    "¿Resumí la tesis del audio?",
+                    "¿Concedí y rebatí?",
+                    "¿Cerré con el argumento decisivo?"
+                  ],
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "La réponse modèle garde le fil, concède, réfute et clôt en hiérarchisant.",
+                    "ruleRef": "gp-fr-debat-c2"
+                  }
+                }
+              ]
+            }
+          ]
         }
         ]
       }
