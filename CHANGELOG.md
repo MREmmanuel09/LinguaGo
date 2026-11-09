@@ -6,6 +6,32 @@ El formato sigue [Keep a Changelog](https://keepachangelog.com/es-ES/1.1.0/)
 y el versionado sigue [SemVer](https://semver.org/lang/es/).
 Pre-1.0: los cambios incompatibles pueden ocurrir en `0.y.0`.
 
+## [2.2.0] - 2026-11-08
+
+C1 completo en los tres cursos de arranque (ADR-042): francés, portugués y
+japonés reciben 24 lecciones y 264 ejercicios cada uno.
+
+### Añadido
+
+- **C1 completo en `es-fr`, `es-pt` y `es-ja`:** nivel `es-*-lv-c1` con seis
+  unidades de cuatro lecciones (consolidación, argumentación, trámites,
+  liderazgo, proyecto integrador y evaluación global). Cada lección incluye
+  micro-clase, glosario curado, nota cultural y un `FreeSpeakingPrompt`.
+- **Enfoques gramaticales propios de cada idioma:** en francés, concordancia
+  de tiempos, subjuntivo en régimen complejo, condicionales mixtos y registro
+  soutenu; en portugués, futuro composto, condicional misto, discurso indireto
+  y colocaciones administrativas; en japonés, keigo, 〜ものの/〜にもかかわらず,
+  〜とのことです, 〜場合に限り y registro です・ます/である.
+- **Contrato de calidad C1** para los tres cursos: 24 lecciones, 264
+  ejercicios, banda `8000-12000`, 11 ejercicios por lección, 2 focos
+  gramaticales, `feedbackOnError` en todos los ejercicios y un oral libre por
+  lección.
+
+### Cambiado
+
+- Cada curso de arranque pasa de 60 a **84 lecciones** y de 526 a **790
+  ejercicios**; el repositorio acumula **345 lecciones y 3.223 ejercicios**.
+
 ## [2.1.0] - 2026-11-08
 
 Expansión a C1 (ADR-042): infraestructura de niveles avanzados y piloto C1
