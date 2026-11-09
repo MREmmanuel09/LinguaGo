@@ -6,6 +6,29 @@ El formato sigue [Keep a Changelog](https://keepachangelog.com/es-ES/1.1.0/)
 y el versionado sigue [SemVer](https://semver.org/lang/es/).
 Pre-1.0: los cambios incompatibles pueden ocurrir en `0.y.0`.
 
+## [2.4.0] - 2026-11-08
+
+C2 completo en `es-fr`, `es-pt` y `es-ja` (ADR-042): los tres cursos de
+arranque cierran la rampa con 18 lecciones y 216 ejercicios cada uno.
+
+### Añadido
+
+- **C2 en `es-fr`, `es-pt` y `es-ja`:** nivel `es-*-lv-c2` con cuatro unidades —
+  registros y matices, dominios especializados, lengua culta y síntesis y
+  evaluación C2 (con monólogo de examen y debate final).
+- **Gramática propia de cada idioma:** ironía seca y litote, registro jurídico
+  y estilo nominal en francés; eufemismo, discurso indireto y jerga económica
+  en portugués; keigo, 敬語の一貫した使用, 〜ものの y である調 en japonés.
+- **Contrato C2** para los tres cursos: 18 lecciones, 216 ejercicios, banda
+  `12000+`, 12 ejercicios por lección, 2 focos gramaticales, `feedbackOnError`
+  en todos los ejercicios y un oral libre por lección.
+
+### Cambiado
+
+- Cada curso de arranque pasa de 84 a **102 lecciones** y de 790 a **1.006
+  ejercicios**. El repositorio cierra el plan con **417 lecciones y 4.087
+  ejercicios**.
+
 ## [2.3.0] - 2026-11-08
 
 C2 completo en `es-en` (ADR-042): 18 lecciones y 216 ejercicios nuevos en el

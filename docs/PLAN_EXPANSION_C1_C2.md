@@ -208,7 +208,9 @@ el piloto (gate verde + humo manual en emulador API 37).
   `es-pt` y `es-ja` (72 lecciones/792 ejercicios nuevos; 84/790 por curso).
 - **2.3.0 — publicado** (tag `v2.3.0`, versionCode 11): C2 completo en `es-en`
   (18 lecciones/216 ejercicios; curso 111/1.069).
-- **2.4.0 — pendiente:** C2 completo en `es-fr`, `es-pt` y `es-ja`.
+- **2.4.0 — publicado** (tag `v2.4.0`, versionCode 12): C2 completo en `es-fr`,
+  `es-pt` y `es-ja` (54 lecciones/648 ejercicios nuevos; 102/1.006 por curso).
+  El plan queda cerrado con 417 lecciones y 4.087 ejercicios.
 
 **Total acumulado al final (versión 2.4.x):**
 
