@@ -96,7 +96,7 @@ class PackagedContentTest {
         assertTrue("Cada lección A2 debe tener 7 ejercicios", a2Lessons.all { lesson -> lesson.exercises.size == 7 })
 
         val allExercises = lessons.flatMap { lesson -> lesson.exercises }
-        assertEquals(853, allExercises.size)
+        assertEquals(1069, allExercises.size)
         assertEquals(allExercises.size, allExercises.map { exercise -> exercise.id.value }.distinct().size)
 
         val c1Lessons = lessons.filter { lesson -> lesson.cefrLevel == CefrLevel.C1 }
@@ -118,6 +118,27 @@ class PackagedContentTest {
             "Cada lección C1 debe tener un FreeSpeakingPrompt",
             24,
             c1Lessons.sumOf { lesson -> lesson.exercises.count { exercise -> exercise is Exercise.FreeSpeakingPrompt } },
+        )
+
+        val c2Lessons = lessons.filter { lesson -> lesson.cefrLevel == CefrLevel.C2 }
+        assertEquals("es-en debe tener 18 lecciones C2", 18, c2Lessons.size)
+        assertEquals(
+            (1..216).map { index -> "es-en-c2-e$index" },
+            c2Lessons.flatMap { lesson -> lesson.exercises }.map { exercise -> exercise.id.value },
+        )
+        assertTrue("Cada lección C2 debe tener 12 ejercicios", c2Lessons.all { lesson -> lesson.exercises.size == 12 })
+        assertTrue(
+            "Cada lección C2 debe usar la banda 12000+",
+            c2Lessons.all { lesson -> lesson.vocabFrequencyBand == VocabFrequencyBand.BAND_12000_PLUS },
+        )
+        assertTrue(
+            "Todos los ejercicios C2 deben tener feedbackOnError",
+            c2Lessons.flatMap { lesson -> lesson.exercises }.all { exercise -> exercise.feedbackOnError != null },
+        )
+        assertEquals(
+            "Cada lección C2 debe tener un FreeSpeakingPrompt",
+            18,
+            c2Lessons.sumOf { lesson -> lesson.exercises.count { exercise -> exercise is Exercise.FreeSpeakingPrompt } },
         )
 
         for (lesson in b2Lessons) {

@@ -21926,8 +21926,8 @@
                   "id": "es-en-c2-e106",
                   "pairs": [
                     {
-                      "left": "a rhetorical question",
-                      "right": "una pregunta retórica"
+                      "left": "a rhetorical device",
+                      "right": "un recurso retórico"
                     },
                     {
                       "left": "a tricolon",
@@ -23175,6 +23175,2363 @@
                     "type": "grammar",
                     "explanation": "La respuesta modelo conserva la tesis, encadena referencias y elimina densidad innecesaria.",
                     "ruleRef": "gp-c2-register-control"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "es-en-lv-5-un-4",
+          "title": "Síntesis y evaluación C2",
+          "lessons": [
+            {
+              "id": "es-en-c2-un-4-ls-1",
+              "title": "Registro literario en acción",
+              "cefrLevel": "C2",
+              "scenario": "Un relato corporativo debe narrar una decisión difícil con precisión literaria y sin melodrama.",
+              "canDo": "Puedo narrar con registro literario, controlar el aspecto verbal y sostener la tensión sin exagerar.",
+              "grammarPoints": [
+                {
+                  "id": "gp-c2-literary-narrative",
+                  "label": "Narrativa literaria",
+                  "description": "Past perfect, free indirect style, sensory detail."
+                },
+                {
+                  "id": "gp-c2-aspect-c2",
+                  "label": "Matiz aspectual",
+                  "description": "Had been bending, was breaking, would later admit."
+                }
+              ],
+              "vocabFrequencyBand": "12000+",
+              "culturalNotes": [
+                {
+                  "idiom": "add fuel to the fire",
+                  "note": "Empeorar una situación con una acción que pretendía mejorarla; en un relato, precipita el conflicto.",
+                  "translation": "echar leña al fuego"
+                }
+              ],
+              "microLesson": {
+                "title": "Narrar con precisión y sin exceso",
+                "goals": [
+                  "Ordenar acciones con pasado perfecto y pasado continuo.",
+                  "Sostener la tensión con detalles concretos, no adjetivos."
+                ],
+                "sections": [
+                  {
+                    "heading": "El tiempo de la decisión",
+                    "body": "The rain drummed against the window as the board weighed the decision combina pasado continuo y pasado simple. El pasado perfecto (had bent the rules) sitúa lo anterior; «would later admit» anticipa la consecuencia con distancia.",
+                    "examples": [
+                      {
+                        "source": "La lluvia golpeaba la ventana mientras el consejo sopesaba la decisión.",
+                        "target": "The rain drummed against the window as the board weighed the decision.",
+                        "note": "Continuo + simple en paralelo."
+                      },
+                      {
+                        "source": "Años después admitiría que habían forzado las reglas.",
+                        "target": "Years later he would admit that they had bent the rules.",
+                        "note": "Would + perfecto para la distancia narrativa."
+                      }
+                    ]
+                  }
+                ]
+              },
+              "glossary": [
+                {
+                  "term": "drummed",
+                  "translations": [
+                    "golpeaba rítmicamente"
+                  ]
+                },
+                {
+                  "term": "weighed",
+                  "translations": [
+                    "sopesaba"
+                  ]
+                },
+                {
+                  "term": "bent",
+                  "translations": [
+                    "forzó",
+                    "dobló"
+                  ]
+                },
+                {
+                  "term": "would later admit",
+                  "translations": [
+                    "admitiría después"
+                  ]
+                },
+                {
+                  "term": "sensory",
+                  "translations": [
+                    "sensorial"
+                  ]
+                },
+                {
+                  "term": "restraint",
+                  "translations": [
+                    "contención"
+                  ]
+                },
+                {
+                  "term": "tension",
+                  "translations": [
+                    "tensión"
+                  ]
+                },
+                {
+                  "term": "melodrama",
+                  "translations": [
+                    "melodrama"
+                  ]
+                }
+              ],
+              "exercises": [
+                {
+                  "type": "ClozeDragDrop",
+                  "id": "es-en-c2-e145",
+                  "passage": "The rain {{b1}} against the window as the board {{b2}} the decision.",
+                  "blanks": [
+                    {
+                      "id": "b1",
+                      "answer": "drummed",
+                      "options": [
+                        "drummed",
+                        "drum",
+                        "drumming"
+                      ]
+                    },
+                    {
+                      "id": "b2",
+                      "answer": "weighed",
+                      "options": [
+                        "weighed",
+                        "weighs",
+                        "weighing"
+                      ]
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "El pasado continuo y el pasado simple se combinan para crear el fondo y la acción.",
+                    "ruleRef": "gp-c2-literary-narrative"
+                  }
+                },
+                {
+                  "type": "ClozeDragDrop",
+                  "id": "es-en-c2-e146",
+                  "passage": "For years the company had {{b1}} its own rules; by 2020 it was {{b2}} them openly.",
+                  "blanks": [
+                    {
+                      "id": "b1",
+                      "answer": "bent",
+                      "options": [
+                        "bent",
+                        "bend",
+                        "bending"
+                      ]
+                    },
+                    {
+                      "id": "b2",
+                      "answer": "breaking",
+                      "options": [
+                        "breaking",
+                        "break",
+                        "broken"
+                      ]
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "El pasado perfecto sitúa lo anterior; el continuo muestra la acción en curso.",
+                    "ruleRef": "gp-c2-aspect-c2"
+                  }
+                },
+                {
+                  "type": "SemanticMatch",
+                  "id": "es-en-c2-e147",
+                  "instructions": "Empareja cada recurso con su efecto narrativo.",
+                  "pairs": [
+                    {
+                      "left": "The rain drummed against the window.",
+                      "right": "Detalle sensorial",
+                      "register": "neutral",
+                      "nuance": "Crea atmósfera sin adjetivos."
+                    },
+                    {
+                      "left": "They had bent the rules for years.",
+                      "right": "Antecedente",
+                      "register": "formal",
+                      "nuance": "El pasado perfecto explica el presente."
+                    },
+                    {
+                      "left": "He would later admit it.",
+                      "right": "Anticipación con distancia",
+                      "register": "formal",
+                      "nuance": "El narrador conoce el desenlace."
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "register",
+                    "explanation": "El registro literario selecciona detalles y tiempos, no acumula adornos.",
+                    "ruleRef": "gp-c2-literary-narrative"
+                  }
+                },
+                {
+                  "type": "ListenChoose",
+                  "id": "es-en-c2-e148",
+                  "audioText": "The rain drummed against the window as the board weighed the decision, and he would later admit that they had bent the rules.",
+                  "options": [
+                    "The board decided quickly",
+                    "The scene combines continuous action, a decision and a later admission",
+                    "The rain stopped the meeting",
+                    "Nobody remembers the decision"
+                  ],
+                  "correctIndex": 1,
+                  "feedbackOnError": {
+                    "type": "comprehension",
+                    "explanation": "Los tres tiempos ordenan fondo, decisión y admisión posterior.",
+                    "ruleRef": "gp-c2-aspect-c2"
+                  }
+                },
+                {
+                  "type": "AudioOnlyPrompt",
+                  "id": "es-en-c2-e149",
+                  "audioText": "The memo was meant to calm the board, but it added fuel to the fire: it named the very risk the company had been hiding for years.",
+                  "question": "What did the memo do?",
+                  "options": [
+                    "It calmed the board",
+                    "It worsened the crisis by naming the hidden risk",
+                    "It was never read",
+                    "It denied the risk"
+                  ],
+                  "correctIndex": 1,
+                  "allowSlowPlayback": true,
+                  "feedbackOnError": {
+                    "type": "comprehension",
+                    "explanation": "«Add fuel to the fire» describe el efecto contrario al pretendido.",
+                    "ruleRef": "gp-c2-literary-narrative"
+                  }
+                },
+                {
+                  "type": "MultipleChoice",
+                  "id": "es-en-c2-e150",
+                  "question": "Completa: They had ___ the rules for years before the audit.",
+                  "options": [
+                    "bent",
+                    "bend",
+                    "bending"
+                  ],
+                  "correctIndex": 0,
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "Tras «had» va el participio «bent».",
+                    "ruleRef": "gp-c2-aspect-c2"
+                  }
+                },
+                {
+                  "type": "Translate",
+                  "id": "es-en-c2-e151",
+                  "sourcePhrase": "La lluvia golpeaba la ventana mientras el consejo sopesaba la decisión.",
+                  "correctTokens": [
+                    "The",
+                    "rain",
+                    "drummed",
+                    "against",
+                    "the",
+                    "window",
+                    "as",
+                    "the",
+                    "board",
+                    "weighed",
+                    "the",
+                    "decision"
+                  ],
+                  "distractorTokens": [
+                    "drum",
+                    "weighted"
+                  ],
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "«Drummed» y «weighed» mantienen el paralelismo narrativo.",
+                    "ruleRef": "gp-c2-literary-narrative"
+                  }
+                },
+                {
+                  "type": "ListenType",
+                  "id": "es-en-c2-e152",
+                  "transcription": "He would later admit that they had bent the rules",
+                  "audioText": "He would later admit that they had bent the rules",
+                  "feedbackOnError": {
+                    "type": "spelling",
+                    "explanation": "Escribe «admit» con «d» y «bent» sin «d» final.",
+                    "ruleRef": "gp-c2-aspect-c2"
+                  }
+                },
+                {
+                  "type": "SpeakRepeat",
+                  "id": "es-en-c2-e153",
+                  "targetPhrase": "The rain drummed against the window as the board weighed the decision.",
+                  "audioText": "The rain drummed against the window as the board weighed the decision.",
+                  "feedbackOnError": {
+                    "type": "pronunciation",
+                    "explanation": "Enlaza «drummed against» y baja el tono en «decision».",
+                    "ruleRef": "gp-c2-literary-narrative"
+                  }
+                },
+                {
+                  "type": "MatchPairs",
+                  "id": "es-en-c2-e154",
+                  "pairs": [
+                    {
+                      "left": "a sensory detail",
+                      "right": "un detalle sensorial"
+                    },
+                    {
+                      "left": "free indirect style",
+                      "right": "estilo indirecto libre"
+                    },
+                    {
+                      "left": "narrative distance",
+                      "right": "distancia narrativa"
+                    },
+                    {
+                      "left": "a measured tone",
+                      "right": "un tono contenido"
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "La narrativa literaria se evalúa por precisión, no por ornamentación.",
+                    "ruleRef": "gp-c2-literary-narrative"
+                  }
+                },
+                {
+                  "type": "ClozeDragDrop",
+                  "id": "es-en-c2-e155",
+                  "passage": "To add {{b1}} to the fire, the memo {{b2}} the very risk it claimed to address.",
+                  "blanks": [
+                    {
+                      "id": "b1",
+                      "answer": "fuel",
+                      "options": [
+                        "fuel",
+                        "wood",
+                        "fire"
+                      ]
+                    },
+                    {
+                      "id": "b2",
+                      "answer": "amplified",
+                      "options": [
+                        "amplified",
+                        "calmed",
+                        "ignored"
+                      ]
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "«Add fuel to the fire» es la locución fija; «amplified» describe el empeoramiento.",
+                    "ruleRef": "gp-c2-literary-narrative"
+                  }
+                },
+                {
+                  "type": "FreeSpeakingPrompt",
+                  "id": "es-en-c2-e156",
+                  "prompt": "Narra en registro literario una decisión difícil: usa un detalle sensorial, un pasado perfecto y una anticipación sin melodrama.",
+                  "minTokens": 20,
+                  "conceptClusters": [
+                    [
+                      "drummed",
+                      "weighed",
+                      "would later"
+                    ],
+                    [
+                      "had bent",
+                      "was breaking",
+                      "decision"
+                    ],
+                    [
+                      "restraint",
+                      "tension",
+                      "sensory"
+                    ]
+                  ],
+                  "grammarRuleRefs": [
+                    "gp-c2-literary-narrative",
+                    "gp-c2-aspect-c2"
+                  ],
+                  "timeLimitSeconds": 30,
+                  "minWpm": 70,
+                  "maxWpm": 160,
+                  "modelAnswer": "The rain drummed against the window as the board weighed the decision. They had bent the rules for years, and the memo only added fuel to the fire; years later, he would admit it.",
+                  "selfAssessmentCriteria": [
+                    "¿Usé un detalle sensorial?",
+                    "¿Ordené los tiempos?",
+                    "¿Evité el melodrama?"
+                  ],
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "La respuesta modelo combina detalle, pasado perfecto y anticipación contenida.",
+                    "ruleRef": "gp-c2-aspect-c2"
+                  }
+                }
+              ]
+            },
+            {
+              "id": "es-en-c2-un-4-ls-2",
+              "title": "Metáforas culturales",
+              "cefrLevel": "C2",
+              "scenario": "Un columnista explica un escándalo financiero con metáforas que el público reconoce al instante.",
+              "canDo": "Puedo interpretar metáforas culturales, medir su carga ideológica y usarlas con precisión.",
+              "grammarPoints": [
+                {
+                  "id": "gp-c2-cultural-metaphor",
+                  "label": "Metáfora cultural",
+                  "description": "Storm in a teacup, house of cards, elephant in the room."
+                },
+                {
+                  "id": "gp-c2-idiomatic-density",
+                  "label": "Densidad idiomática",
+                  "description": "Dos o más modismos en una misma frase."
+                }
+              ],
+              "vocabFrequencyBand": "12000+",
+              "culturalNotes": [
+                {
+                  "idiom": "a storm in a teacup",
+                  "note": "Un escándalo grande en apariencia y pequeño en consecuencias; la metáfora mide la desproporción entre ruido y daño.",
+                  "translation": "una tormenta en un vaso de agua"
+                }
+              ],
+              "microLesson": {
+                "title": "La metáfora que ordena el mundo",
+                "goals": [
+                  "Reconocer la carga valorativa de una metáfora.",
+                  "Usar varios modismos sin que la frase pierda claridad."
+                ],
+                "sections": [
+                  {
+                    "heading": "Más que una imagen",
+                    "body": "Una tormenta en un vaso de agua minimiza; un castillo de naipes advierte fragilidad; el elefante en la habitación señala lo que nadie quiere nombrar. La metáfora no solo describe: decide qué importa.",
+                    "examples": [
+                      {
+                        "source": "Fue una tormenta en un vaso de agua.",
+                        "target": "It was a storm in a teacup.",
+                        "note": "La metáfora mide la desproporción."
+                      },
+                      {
+                        "source": "El elefante en la habitación era la deuda.",
+                        "target": "The elephant in the room was the debt.",
+                        "note": "Señala lo que todos evitan."
+                      }
+                    ]
+                  }
+                ]
+              },
+              "glossary": [
+                {
+                  "term": "metaphor",
+                  "translations": [
+                    "metáfora"
+                  ]
+                },
+                {
+                  "term": "frame",
+                  "translations": [
+                    "marco interpretativo"
+                  ]
+                },
+                {
+                  "term": "proportion",
+                  "translations": [
+                    "proporción"
+                  ]
+                },
+                {
+                  "term": "ideological",
+                  "translations": [
+                    "ideológico"
+                  ]
+                },
+                {
+                  "term": "cliché",
+                  "translations": [
+                    "cliché",
+                    "lugar común"
+                  ]
+                },
+                {
+                  "term": "evocative",
+                  "translations": [
+                    "evocador"
+                  ]
+                },
+                {
+                  "term": "overstated",
+                  "translations": [
+                    "exagerado"
+                  ]
+                },
+                {
+                  "term": "understated",
+                  "translations": [
+                    "atenuado"
+                  ]
+                }
+              ],
+              "exercises": [
+                {
+                  "type": "ClozeDragDrop",
+                  "id": "es-en-c2-e157",
+                  "passage": "The scandal was a storm in a {{b1}}: loud in the press, {{b2}} in the accounts.",
+                  "blanks": [
+                    {
+                      "id": "b1",
+                      "answer": "teacup",
+                      "options": [
+                        "teacup",
+                        "teapot",
+                        "cupboard"
+                      ]
+                    },
+                    {
+                      "id": "b2",
+                      "answer": "invisible",
+                      "options": [
+                        "invisible",
+                        "obvious",
+                        "expensive"
+                      ]
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "«A storm in a teacup» minimiza el escándalo; «invisible» completa la desproporción.",
+                    "ruleRef": "gp-c2-cultural-metaphor"
+                  }
+                },
+                {
+                  "type": "ClozeDragDrop",
+                  "id": "es-en-c2-e158",
+                  "passage": "Cultural metaphors {{b1}} what a society {{b2}} to notice.",
+                  "blanks": [
+                    {
+                      "id": "b1",
+                      "answer": "reveal",
+                      "options": [
+                        "reveal",
+                        "hide",
+                        "ignore"
+                      ]
+                    },
+                    {
+                      "id": "b2",
+                      "answer": "chooses",
+                      "options": [
+                        "chooses",
+                        "chose",
+                        "choosing"
+                      ]
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "La metáfora revela el marco con el que una sociedad decide qué mirar.",
+                    "ruleRef": "gp-c2-cultural-metaphor"
+                  }
+                },
+                {
+                  "type": "SemanticMatch",
+                  "id": "es-en-c2-e159",
+                  "instructions": "Empareja cada metáfora con su carga valorativa.",
+                  "pairs": [
+                    {
+                      "left": "It was a storm in a teacup.",
+                      "right": "Minimiza el problema",
+                      "register": "formal",
+                      "nuance": "Mucho ruido y pocas consecuencias."
+                    },
+                    {
+                      "left": "The argument is a house of cards.",
+                      "right": "Advierte fragilidad",
+                      "register": "formal",
+                      "nuance": "Se derrumba al retirar una pieza."
+                    },
+                    {
+                      "left": "The debt was the elephant in the room.",
+                      "right": "Señala lo que se evita",
+                      "register": "formal",
+                      "nuance": "Todos lo ven y nadie lo nombra."
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "register",
+                    "explanation": "Cada metáfora decide qué debe preocupar al lector.",
+                    "ruleRef": "gp-c2-cultural-metaphor"
+                  }
+                },
+                {
+                  "type": "ListenChoose",
+                  "id": "es-en-c2-e160",
+                  "audioText": "The scandal was a storm in a teacup: loud in the press, invisible in the accounts.",
+                  "options": [
+                    "The scandal was enormous",
+                    "The scandal looked big but had little financial impact",
+                    "The press ignored the scandal",
+                    "The accounts were audited"
+                  ],
+                  "correctIndex": 1,
+                  "feedbackOnError": {
+                    "type": "comprehension",
+                    "explanation": "La metáfora y el contraste press/accounts miden la desproporción.",
+                    "ruleRef": "gp-c2-cultural-metaphor"
+                  }
+                },
+                {
+                  "type": "AudioOnlyPrompt",
+                  "id": "es-en-c2-e161",
+                  "audioText": "The debt was the elephant in the room. Everyone mentioned the weather, the merger, even the coffee, but nobody mentioned the debt that was quietly sinking the company.",
+                  "question": "What is the elephant in the room?",
+                  "options": [
+                    "The weather",
+                    "The merger",
+                    "The debt",
+                    "The coffee"
+                  ],
+                  "correctIndex": 2,
+                  "allowSlowPlayback": true,
+                  "feedbackOnError": {
+                    "type": "comprehension",
+                    "explanation": "La deuda es lo que todos evitan nombrar.",
+                    "ruleRef": "gp-c2-cultural-metaphor"
+                  }
+                },
+                {
+                  "type": "MultipleChoice",
+                  "id": "es-en-c2-e162",
+                  "question": "Completa: The scandal was a storm in a ___.",
+                  "options": [
+                    "teacup",
+                    "teapot",
+                    "cupboard"
+                  ],
+                  "correctIndex": 0,
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "La locución es «a storm in a teacup».",
+                    "ruleRef": "gp-c2-cultural-metaphor"
+                  }
+                },
+                {
+                  "type": "Translate",
+                  "id": "es-en-c2-e163",
+                  "sourcePhrase": "Fue una tormenta en un vaso de agua.",
+                  "correctTokens": [
+                    "It",
+                    "was",
+                    "a",
+                    "storm",
+                    "in",
+                    "a",
+                    "teacup"
+                  ],
+                  "distractorTokens": [
+                    "teapot",
+                    "glass"
+                  ],
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "La metáfora inglesa equivalente es «a storm in a teacup».",
+                    "ruleRef": "gp-c2-cultural-metaphor"
+                  }
+                },
+                {
+                  "type": "ListenType",
+                  "id": "es-en-c2-e164",
+                  "transcription": "The elephant in the room was the debt nobody mentioned",
+                  "audioText": "The elephant in the room was the debt nobody mentioned",
+                  "feedbackOnError": {
+                    "type": "spelling",
+                    "explanation": "Escribe «elephant» con «ph» y «mentioned» con «tion».",
+                    "ruleRef": "gp-c2-cultural-metaphor"
+                  }
+                },
+                {
+                  "type": "SpeakRepeat",
+                  "id": "es-en-c2-e165",
+                  "targetPhrase": "The scandal was a storm in a teacup: loud in the press, invisible in the accounts.",
+                  "audioText": "The scandal was a storm in a teacup: loud in the press, invisible in the accounts.",
+                  "feedbackOnError": {
+                    "type": "pronunciation",
+                    "explanation": "Enlaza «storm in a» y marca el contraste press/accounts.",
+                    "ruleRef": "gp-c2-cultural-metaphor"
+                  }
+                },
+                {
+                  "type": "MatchPairs",
+                  "id": "es-en-c2-e166",
+                  "pairs": [
+                    {
+                      "left": "a storm in a teacup",
+                      "right": "una tormenta en un vaso de agua"
+                    },
+                    {
+                      "left": "the unspoken issue",
+                      "right": "lo que todos evitan nombrar"
+                    },
+                    {
+                      "left": "a fragile edifice",
+                      "right": "una construcción frágil"
+                    },
+                    {
+                      "left": "a slippery slope",
+                      "right": "una pendiente resbaladiza"
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "Las metáforas culturales comprimen juicios completos.",
+                    "ruleRef": "gp-c2-cultural-metaphor"
+                  }
+                },
+                {
+                  "type": "ClozeDragDrop",
+                  "id": "es-en-c2-e167",
+                  "passage": "The metaphor {{b1}} the debate: it made the debt sound like a {{b2}} problem rather than a structural one.",
+                  "blanks": [
+                    {
+                      "id": "b1",
+                      "answer": "framed",
+                      "options": [
+                        "framed",
+                        "framing"
+                      ]
+                    },
+                    {
+                      "id": "b2",
+                      "answer": "minor",
+                      "options": [
+                        "minor",
+                        "major",
+                        "global"
+                      ]
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "«Frame the debate» describe cómo la metáfora orienta la interpretación.",
+                    "ruleRef": "gp-c2-cultural-metaphor"
+                  }
+                },
+                {
+                  "type": "FreeSpeakingPrompt",
+                  "id": "es-en-c2-e168",
+                  "prompt": "Explica un escándalo con dos metáforas culturales: di qué minimizan o advierten y qué marco imponen al lector.",
+                  "minTokens": 20,
+                  "conceptClusters": [
+                    [
+                      "storm in a teacup",
+                      "house of cards",
+                      "elephant"
+                    ],
+                    [
+                      "frame",
+                      "proportion",
+                      "ideological"
+                    ],
+                    [
+                      "press",
+                      "accounts",
+                      "debt"
+                    ]
+                  ],
+                  "grammarRuleRefs": [
+                    "gp-c2-cultural-metaphor",
+                    "gp-c2-idiomatic-density"
+                  ],
+                  "timeLimitSeconds": 30,
+                  "minWpm": 70,
+                  "maxWpm": 160,
+                  "modelAnswer": "The scandal was a storm in a teacup, loud in the press and invisible in the accounts. Yet the debt was the elephant in the room, and the metaphor framed a structural problem as a minor one.",
+                  "selfAssessmentCriteria": [
+                    "¿Usé dos metáforas pertinentes?",
+                    "¿Expliqué su carga valorativa?",
+                    "¿Nombré el marco que imponen?"
+                  ],
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "La respuesta modelo combina dos metáforas y explica el marco que construyen.",
+                    "ruleRef": "gp-c2-cultural-metaphor"
+                  }
+                }
+              ]
+            },
+            {
+              "id": "es-en-c2-un-4-ls-3",
+              "title": "Especialización I: derecho y ética",
+              "cefrLevel": "C2",
+              "scenario": "Un comité de ética revisa una práctica legal pero dudosa, y debe argumentar más allá del cumplimiento formal.",
+              "canDo": "Puedo distinguir legalidad de legitimidad, modular la obligación y argumentar éticamente con precisión.",
+              "grammarPoints": [
+                {
+                  "id": "gp-c2-legal-ethics",
+                  "label": "Derecho y ética",
+                  "description": "Lawful but unethical, letter versus spirit."
+                },
+                {
+                  "id": "gp-c2-nuance-modals",
+                  "label": "Modales matizados",
+                  "description": "Ought to, might be expected to, cannot be justified."
+                }
+              ],
+              "vocabFrequencyBand": "12000+",
+              "culturalNotes": [
+                {
+                  "idiom": "move the goalposts",
+                  "note": "Cambiar las reglas a mitad del proceso para que el resultado encaje; en ética, destruye la confianza en el procedimiento.",
+                  "translation": "cambiar las reglas a mitad"
+                }
+              ],
+              "microLesson": {
+                "title": "Legal no siempre es legítimo",
+                "goals": [
+                  "Separar cumplimiento formal de legitimidad ética.",
+                  "Modular la obligación con ought to y cannot be justified."
+                ],
+                "sections": [
+                  {
+                    "heading": "La letra y el espíritu",
+                    "body": "Lawful but unethical nombra la brecha entre norma y legitimidad. Ought to expresa deber moral; might be expected to, expectativa social; cannot be justified, límite absoluto. La ética argumenta con razones, no solo con reglas.",
+                    "examples": [
+                      {
+                        "source": "La empresa cambió las reglas a mitad del proceso.",
+                        "target": "The company moved the goalposts mid-process.",
+                        "note": "La metáfora denuncia el procedimiento."
+                      },
+                      {
+                        "source": "Puede ser legal, pero no puede justificarse.",
+                        "target": "It may be lawful, but it cannot be justified.",
+                        "note": "Legalidad y legitimidad se separan."
+                      }
+                    ]
+                  }
+                ]
+              },
+              "glossary": [
+                {
+                  "term": "lawful",
+                  "translations": [
+                    "legal",
+                    "conforme a la ley"
+                  ]
+                },
+                {
+                  "term": "legitimacy",
+                  "translations": [
+                    "legitimidad"
+                  ]
+                },
+                {
+                  "term": "compliance",
+                  "translations": [
+                    "cumplimiento normativo"
+                  ]
+                },
+                {
+                  "term": "ethics",
+                  "translations": [
+                    "ética"
+                  ]
+                },
+                {
+                  "term": "accountability",
+                  "translations": [
+                    "rendición de cuentas"
+                  ]
+                },
+                {
+                  "term": "transparency",
+                  "translations": [
+                    "transparencia"
+                  ]
+                },
+                {
+                  "term": "integrity",
+                  "translations": [
+                    "integridad"
+                  ]
+                },
+                {
+                  "term": "precedent",
+                  "translations": [
+                    "precedente"
+                  ]
+                }
+              ],
+              "exercises": [
+                {
+                  "type": "ClozeDragDrop",
+                  "id": "es-en-c2-e169",
+                  "passage": "The regulator accused the firm of moving the {{b1}} after the audit had {{b2}}.",
+                  "blanks": [
+                    {
+                      "id": "b1",
+                      "answer": "goalposts",
+                      "options": [
+                        "goalposts",
+                        "goals",
+                        "posts"
+                      ]
+                    },
+                    {
+                      "id": "b2",
+                      "answer": "begun",
+                      "options": [
+                        "begun",
+                        "begin",
+                        "beginning"
+                      ]
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "«Move the goalposts» es la locución; «had begun» sitúa el cambio después del inicio.",
+                    "ruleRef": "gp-c2-legal-ethics"
+                  }
+                },
+                {
+                  "type": "ClozeDragDrop",
+                  "id": "es-en-c2-e170",
+                  "passage": "Ethics requires more than compliance: it requires {{b1}} when no rule {{b2}}.",
+                  "blanks": [
+                    {
+                      "id": "b1",
+                      "answer": "judgment",
+                      "options": [
+                        "judgment",
+                        "judge",
+                        "judging"
+                      ]
+                    },
+                    {
+                      "id": "b2",
+                      "answer": "applies",
+                      "options": [
+                        "applies",
+                        "apply",
+                        "applied"
+                      ]
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "«Judgment» es el sustantivo; «applies» concuerda con «no rule».",
+                    "ruleRef": "gp-c2-legal-ethics"
+                  }
+                },
+                {
+                  "type": "SemanticMatch",
+                  "id": "es-en-c2-e171",
+                  "instructions": "Distingue legalidad de legitimidad.",
+                  "pairs": [
+                    {
+                      "left": "The practice is lawful.",
+                      "right": "Cumple la norma",
+                      "register": "formal",
+                      "nuance": "No dice nada sobre su legitimidad."
+                    },
+                    {
+                      "left": "It cannot be justified.",
+                      "right": "No supera el juicio ético",
+                      "register": "formal",
+                      "nuance": "La razón moral es el límite."
+                    },
+                    {
+                      "left": "They moved the goalposts.",
+                      "right": "Cambiaron las reglas a mitad",
+                      "register": "formal",
+                      "nuance": "El procedimiento pierde credibilidad."
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "register",
+                    "explanation": "La ética argumenta sobre razones y procedimientos, no solo sobre cumplimiento.",
+                    "ruleRef": "gp-c2-legal-ethics"
+                  }
+                },
+                {
+                  "type": "ListenChoose",
+                  "id": "es-en-c2-e172",
+                  "audioText": "The practice may be lawful, but it cannot be justified: the company moved the goalposts after the audit had begun.",
+                  "options": [
+                    "The practice is both lawful and ethical",
+                    "The practice is legal but ethically unjustifiable",
+                    "The practice is illegal",
+                    "The audit was cancelled"
+                  ],
+                  "correctIndex": 1,
+                  "feedbackOnError": {
+                    "type": "comprehension",
+                    "explanation": "«Lawful» no equivale a «justified»: la frase separa ambas dimensiones.",
+                    "ruleRef": "gp-c2-legal-ethics"
+                  }
+                },
+                {
+                  "type": "AudioOnlyPrompt",
+                  "id": "es-en-c2-e173",
+                  "audioText": "Compliance is not ethics. A firm might be expected to follow the letter of the law, but it ought to respect its spirit too, especially when it moves the goalposts.",
+                  "question": "What is the speaker's main point?",
+                  "options": [
+                    "Compliance is sufficient",
+                    "Ethics requires respecting the spirit, not just the letter",
+                    "Firms should ignore the law",
+                    "Audits are unnecessary"
+                  ],
+                  "correctIndex": 1,
+                  "allowSlowPlayback": true,
+                  "feedbackOnError": {
+                    "type": "comprehension",
+                    "explanation": "La distinción letter/spirit y el modal ought to definen el deber ético.",
+                    "ruleRef": "gp-c2-nuance-modals"
+                  }
+                },
+                {
+                  "type": "MultipleChoice",
+                  "id": "es-en-c2-e174",
+                  "question": "Completa: It may be lawful, but it cannot be ___.",
+                  "options": [
+                    "justified",
+                    "legal",
+                    "lawful"
+                  ],
+                  "correctIndex": 0,
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "«Cannot be justified» expresa el límite ético.",
+                    "ruleRef": "gp-c2-nuance-modals"
+                  }
+                },
+                {
+                  "type": "Translate",
+                  "id": "es-en-c2-e175",
+                  "sourcePhrase": "La empresa cambió las reglas a mitad del proceso.",
+                  "correctTokens": [
+                    "The",
+                    "company",
+                    "moved",
+                    "the",
+                    "goalposts",
+                    "mid-process"
+                  ],
+                  "distractorTokens": [
+                    "changed",
+                    "goals"
+                  ],
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "«Move the goalposts» captura el cambio de reglas a mitad de proceso.",
+                    "ruleRef": "gp-c2-legal-ethics"
+                  }
+                },
+                {
+                  "type": "ListenType",
+                  "id": "es-en-c2-e176",
+                  "transcription": "Compliance is not ethics and the letter is not the spirit",
+                  "audioText": "Compliance is not ethics and the letter is not the spirit",
+                  "feedbackOnError": {
+                    "type": "spelling",
+                    "explanation": "Escribe «compliance» con «c» y «spirit» con «sp».",
+                    "ruleRef": "gp-c2-legal-ethics"
+                  }
+                },
+                {
+                  "type": "SpeakRepeat",
+                  "id": "es-en-c2-e177",
+                  "targetPhrase": "The practice may be lawful, but it cannot be justified.",
+                  "audioText": "The practice may be lawful, but it cannot be justified.",
+                  "feedbackOnError": {
+                    "type": "pronunciation",
+                    "explanation": "Marca el contraste «lawful»/«justified» y pausa tras «but».",
+                    "ruleRef": "gp-c2-nuance-modals"
+                  }
+                },
+                {
+                  "type": "MatchPairs",
+                  "id": "es-en-c2-e178",
+                  "pairs": [
+                    {
+                      "left": "lawful but unethical",
+                      "right": "legal pero poco ético"
+                    },
+                    {
+                      "left": "the letter of the law",
+                      "right": "la letra de la ley"
+                    },
+                    {
+                      "left": "the spirit of the law",
+                      "right": "el espíritu de la ley"
+                    },
+                    {
+                      "left": "accountability",
+                      "right": "rendición de cuentas"
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "La ética jurídica distingue letra, espíritu y responsabilidad.",
+                    "ruleRef": "gp-c2-legal-ethics"
+                  }
+                },
+                {
+                  "type": "ClozeDragDrop",
+                  "id": "es-en-c2-e179",
+                  "passage": "A firm might be {{b1}} to follow the letter of the law, but it {{b2}} to respect its spirit.",
+                  "blanks": [
+                    {
+                      "id": "b1",
+                      "answer": "expected",
+                      "options": [
+                        "expected",
+                        "expect",
+                        "expecting"
+                      ]
+                    },
+                    {
+                      "id": "b2",
+                      "answer": "ought",
+                      "options": [
+                        "ought",
+                        "own",
+                        "owed"
+                      ]
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "«Might be expected to» expresa expectativa; «ought to» expresa deber moral.",
+                    "ruleRef": "gp-c2-nuance-modals"
+                  }
+                },
+                {
+                  "type": "FreeSpeakingPrompt",
+                  "id": "es-en-c2-e180",
+                  "prompt": "Argumenta ante un comité de ética: distingue legalidad de legitimidad, modula el deber y condena el cambio de reglas.",
+                  "minTokens": 20,
+                  "conceptClusters": [
+                    [
+                      "lawful",
+                      "justified",
+                      "compliance"
+                    ],
+                    [
+                      "letter",
+                      "spirit",
+                      "ought to"
+                    ],
+                    [
+                      "goalposts",
+                      "accountability",
+                      "trust"
+                    ]
+                  ],
+                  "grammarRuleRefs": [
+                    "gp-c2-legal-ethics",
+                    "gp-c2-nuance-modals"
+                  ],
+                  "timeLimitSeconds": 30,
+                  "minWpm": 70,
+                  "maxWpm": 160,
+                  "modelAnswer": "The practice may be lawful, but it cannot be justified: the company moved the goalposts after the audit had begun. Compliance is not ethics, and a firm ought to respect the spirit of the law, not only its letter.",
+                  "selfAssessmentCriteria": [
+                    "¿Distinguí legalidad y legitimidad?",
+                    "¿Modulé el deber?",
+                    "¿Condené el procedimiento?"
+                  ],
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "La respuesta modelo separa ley y ética, usa ought to y denuncia el cambio de reglas.",
+                    "ruleRef": "gp-c2-legal-ethics"
+                  }
+                }
+              ]
+            },
+            {
+              "id": "es-en-c2-un-4-ls-4",
+              "title": "Especialización II: ciencia y sociedad",
+              "cefrLevel": "C2",
+              "scenario": "Un divulgador debe explicar un avance científico sin prometer milagros ni alimentar el miedo.",
+              "canDo": "Puedo comunicar ciencia con densidad nominal controlada, medir riesgos y situar el consenso.",
+              "grammarPoints": [
+                {
+                  "id": "gp-c2-science-society",
+                  "label": "Ciencia y sociedad",
+                  "description": "Consensus, uncertainty, risk perception."
+                },
+                {
+                  "id": "gp-c2-nominal-style",
+                  "label": "Estilo nominal",
+                  "description": "Nominalizaciones que hay que desglosar para el público."
+                }
+              ],
+              "vocabFrequencyBand": "12000+",
+              "culturalNotes": [
+                {
+                  "idiom": "take the plunge",
+                  "note": "Dar el paso decisivo tras sopesar el riesgo; en ciencia aplicada, exige explicitar qué incertidumbre se acepta.",
+                  "translation": "dar el paso decisivo"
+                }
+              ],
+              "microLesson": {
+                "title": "Explicar sin prometer milagros",
+                "goals": [
+                  "Desglosar nominalizaciones para el público.",
+                  "Situar el consenso y la incertidumbre con precisión."
+                ],
+                "sections": [
+                  {
+                    "heading": "La densidad que hay que abrir",
+                    "body": "«Risk perception» y «technology adoption» comprimen procesos; para el público conviene abrirlos: how people perceive risk, how a society adopts a technology. El consenso no elimina la incertidumbre: la sitúa.",
+                    "examples": [
+                      {
+                        "source": "La sociedad debe decidir si da el paso.",
+                        "target": "Society must decide whether to take the plunge.",
+                        "note": "Take the plunge = dar el paso decisivo."
+                      },
+                      {
+                        "source": "El consenso científico no elimina la incertidumbre.",
+                        "target": "Scientific consensus does not eliminate uncertainty.",
+                        "note": "Consenso e incertidumbre coexisten."
+                      }
+                    ]
+                  }
+                ]
+              },
+              "glossary": [
+                {
+                  "term": "consensus",
+                  "translations": [
+                    "consenso"
+                  ]
+                },
+                {
+                  "term": "uncertainty",
+                  "translations": [
+                    "incertidumbre"
+                  ]
+                },
+                {
+                  "term": "risk perception",
+                  "translations": [
+                    "percepción del riesgo"
+                  ]
+                },
+                {
+                  "term": "adoption",
+                  "translations": [
+                    "adopción"
+                  ]
+                },
+                {
+                  "term": "trade-off",
+                  "translations": [
+                    "compensación",
+                    "disyuntiva"
+                  ]
+                },
+                {
+                  "term": "public trust",
+                  "translations": [
+                    "confianza pública"
+                  ]
+                },
+                {
+                  "term": "evidence-based",
+                  "translations": [
+                    "basado en la evidencia"
+                  ]
+                },
+                {
+                  "term": "precaution",
+                  "translations": [
+                    "precaución"
+                  ]
+                }
+              ],
+              "exercises": [
+                {
+                  "type": "ClozeDragDrop",
+                  "id": "es-en-c2-e181",
+                  "passage": "The technology is promising, but society must decide whether to take the {{b1}} before the evidence is {{b2}}.",
+                  "blanks": [
+                    {
+                      "id": "b1",
+                      "answer": "plunge",
+                      "options": [
+                        "plunge",
+                        "plunger",
+                        "plunging"
+                      ]
+                    },
+                    {
+                      "id": "b2",
+                      "answer": "complete",
+                      "options": [
+                        "complete",
+                        "completed",
+                        "completing"
+                      ]
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "«Take the plunge» es la locución; «complete» completa la condición de la evidencia.",
+                    "ruleRef": "gp-c2-science-society"
+                  }
+                },
+                {
+                  "type": "ClozeDragDrop",
+                  "id": "es-en-c2-e182",
+                  "passage": "Scientific progress and public trust are {{b1}}: one cannot advance without the {{b2}}.",
+                  "blanks": [
+                    {
+                      "id": "b1",
+                      "answer": "intertwined",
+                      "options": [
+                        "intertwined",
+                        "intertwine",
+                        "intertwining"
+                      ]
+                    },
+                    {
+                      "id": "b2",
+                      "answer": "other",
+                      "options": [
+                        "other",
+                        "another",
+                        "others"
+                      ]
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "«Intertwined» describe la dependencia mutua; «without the other» cierra la reciprocidad.",
+                    "ruleRef": "gp-c2-science-society"
+                  }
+                },
+                {
+                  "type": "SemanticMatch",
+                  "id": "es-en-c2-e183",
+                  "instructions": "Empareja cada término con su significado para el público.",
+                  "pairs": [
+                    {
+                      "left": "risk perception",
+                      "right": "Cómo la gente valora un riesgo",
+                      "register": "formal",
+                      "nuance": "No coincide necesariamente con el riesgo técnico."
+                    },
+                    {
+                      "left": "scientific consensus",
+                      "right": "Acuerdo mayoritario de la comunidad",
+                      "register": "formal",
+                      "nuance": "No elimina la incertidumbre restante."
+                    },
+                    {
+                      "left": "a trade-off",
+                      "right": "Renunciar a algo para obtener otra cosa",
+                      "register": "formal",
+                      "nuance": "Toda adopción tecnológica implica costes."
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "register",
+                    "explanation": "La divulgación abre las nominalizaciones y nombra los costes.",
+                    "ruleRef": "gp-c2-nominal-style"
+                  }
+                },
+                {
+                  "type": "ListenChoose",
+                  "id": "es-en-c2-e184",
+                  "audioText": "Scientific consensus does not eliminate uncertainty; it tells us where the uncertainty remains and how large it is.",
+                  "options": [
+                    "Consensus removes all doubt",
+                    "Consensus locates the remaining uncertainty",
+                    "Science is useless",
+                    "Uncertainty is ignored"
+                  ],
+                  "correctIndex": 1,
+                  "feedbackOnError": {
+                    "type": "comprehension",
+                    "explanation": "El consenso sitúa la incertidumbre; no la borra.",
+                    "ruleRef": "gp-c2-science-society"
+                  }
+                },
+                {
+                  "type": "AudioOnlyPrompt",
+                  "id": "es-en-c2-e185",
+                  "audioText": "The evidence is promising but incomplete. Society must decide whether to take the plunge, and that decision requires naming the uncertainty rather than hiding it behind technical language.",
+                  "question": "What does the speaker demand?",
+                  "options": [
+                    "Hiding the uncertainty",
+                    "Naming the uncertainty before deciding",
+                    "Ignoring the evidence",
+                    "Waiting forever"
+                  ],
+                  "correctIndex": 1,
+                  "allowSlowPlayback": true,
+                  "feedbackOnError": {
+                    "type": "comprehension",
+                    "explanation": "La decisión exige nombrar la incertidumbre, no esconderla.",
+                    "ruleRef": "gp-c2-science-society"
+                  }
+                },
+                {
+                  "type": "MultipleChoice",
+                  "id": "es-en-c2-e186",
+                  "question": "Completa: Society must decide whether to take the ___.",
+                  "options": [
+                    "plunge",
+                    "plunger",
+                    "plunging"
+                  ],
+                  "correctIndex": 0,
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "La locución es «take the plunge».",
+                    "ruleRef": "gp-c2-science-society"
+                  }
+                },
+                {
+                  "type": "Translate",
+                  "id": "es-en-c2-e187",
+                  "sourcePhrase": "La sociedad debe decidir si da el paso.",
+                  "correctTokens": [
+                    "Society",
+                    "must",
+                    "decide",
+                    "whether",
+                    "to",
+                    "take",
+                    "the",
+                    "plunge"
+                  ],
+                  "distractorTokens": [
+                    "step",
+                    "plunged"
+                  ],
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "«Whether to take the plunge» traduce la decisión de dar el paso.",
+                    "ruleRef": "gp-c2-science-society"
+                  }
+                },
+                {
+                  "type": "ListenType",
+                  "id": "es-en-c2-e188",
+                  "transcription": "Scientific consensus does not eliminate uncertainty",
+                  "audioText": "Scientific consensus does not eliminate uncertainty",
+                  "feedbackOnError": {
+                    "type": "spelling",
+                    "explanation": "Escribe «consensus» con «us» y «uncertainty» con «c».",
+                    "ruleRef": "gp-c2-science-society"
+                  }
+                },
+                {
+                  "type": "SpeakRepeat",
+                  "id": "es-en-c2-e189",
+                  "targetPhrase": "Society must decide whether to take the plunge before the evidence is complete.",
+                  "audioText": "Society must decide whether to take the plunge before the evidence is complete.",
+                  "feedbackOnError": {
+                    "type": "pronunciation",
+                    "explanation": "Enlaza «take the plunge» y acentúa «complete».",
+                    "ruleRef": "gp-c2-science-society"
+                  }
+                },
+                {
+                  "type": "MatchPairs",
+                  "id": "es-en-c2-e190",
+                  "pairs": [
+                    {
+                      "left": "public trust",
+                      "right": "confianza pública"
+                    },
+                    {
+                      "left": "evidence-based policy",
+                      "right": "política basada en la evidencia"
+                    },
+                    {
+                      "left": "risk perception",
+                      "right": "percepción del riesgo"
+                    },
+                    {
+                      "left": "a precautionary approach",
+                      "right": "un enfoque precautorio"
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "La divulgación científica traduce cada término técnico a una decisión pública.",
+                    "ruleRef": "gp-c2-nominal-style"
+                  }
+                },
+                {
+                  "type": "ClozeDragDrop",
+                  "id": "es-en-c2-e191",
+                  "passage": "The {{b1}} of the technology depends on public {{b2}}, not only on its performance.",
+                  "blanks": [
+                    {
+                      "id": "b1",
+                      "answer": "adoption",
+                      "options": [
+                        "adoption",
+                        "adopt",
+                        "adopted"
+                      ]
+                    },
+                    {
+                      "id": "b2",
+                      "answer": "trust",
+                      "options": [
+                        "trust",
+                        "truth",
+                        "trial"
+                      ]
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "«Adoption» y «public trust» son las nominalizaciones clave de la ciencia aplicada.",
+                    "ruleRef": "gp-c2-nominal-style"
+                  }
+                },
+                {
+                  "type": "FreeSpeakingPrompt",
+                  "id": "es-en-c2-e192",
+                  "prompt": "Explica un avance científico a un público general: sitúa el consenso, nombra la incertidumbre y explica el coste de dar el paso.",
+                  "minTokens": 20,
+                  "conceptClusters": [
+                    [
+                      "consensus",
+                      "uncertainty",
+                      "evidence"
+                    ],
+                    [
+                      "take the plunge",
+                      "adoption",
+                      "trade-off"
+                    ],
+                    [
+                      "public trust",
+                      "risk",
+                      "responsibility"
+                    ]
+                  ],
+                  "grammarRuleRefs": [
+                    "gp-c2-science-society",
+                    "gp-c2-nominal-style"
+                  ],
+                  "timeLimitSeconds": 30,
+                  "minWpm": 70,
+                  "maxWpm": 160,
+                  "modelAnswer": "Scientific consensus does not eliminate uncertainty: it tells us where the uncertainty remains. Society must decide whether to take the plunge, and that trade-off requires public trust, not technical jargon.",
+                  "selfAssessmentCriteria": [
+                    "¿Situé el consenso?",
+                    "¿Nombré la incertidumbre?",
+                    "¿Expliqué el coste del paso?"
+                  ],
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "La respuesta modelo abre las nominalizaciones y sitúa consenso, incertidumbre y coste.",
+                    "ruleRef": "gp-c2-science-society"
+                  }
+                }
+              ]
+            },
+            {
+              "id": "es-en-c2-un-4-ls-5",
+              "title": "Examen oral: monólogo de 2 min",
+              "cefrLevel": "C2",
+              "scenario": "En el examen oral, hay que defender una tesis durante dos minutos sin notas y con estructura reconocible.",
+              "canDo": "Puedo sostener un monólogo de dos minutos con tesis, evidencia, concesión y cierre memorable.",
+              "grammarPoints": [
+                {
+                  "id": "gp-c2-monologue-c2",
+                  "label": "Monólogo C2",
+                  "description": "Thesis, signposting, evidence, concession, conclusion."
+                },
+                {
+                  "id": "gp-c2-rhetorical-flow",
+                  "label": "Flujo retórico",
+                  "description": "Transiciones y cadencia sin muletillas."
+                }
+              ],
+              "vocabFrequencyBand": "12000+",
+              "culturalNotes": [
+                {
+                  "idiom": "a leap of faith",
+                  "note": "Aceptar algo sin garantías completas; en un monólogo, conviene reconocer cuándo la conclusión exige un salto y no una prueba.",
+                  "translation": "un acto de fe"
+                }
+              ],
+              "microLesson": {
+                "title": "Dos minutos con estructura",
+                "goals": [
+                  "Abrir, ordenar y cerrar sin notas.",
+                  "Reconocer el punto donde la conclusión exige un salto."
+                ],
+                "sections": [
+                  {
+                    "heading": "El esqueleto audible",
+                    "body": "Let me begin by... abre; firstly y secondly ordenan; admittedly concede; on balance y to sum up cierran. Un buen monólogo deja claro qué está probado y qué exige un leap of faith.",
+                    "examples": [
+                      {
+                        "source": "Permítanme empezar por el contexto.",
+                        "target": "Let me begin by setting the context.",
+                        "note": "Apertura predecible."
+                      },
+                      {
+                        "source": "En conjunto, la medida es necesaria.",
+                        "target": "On balance, the measure is necessary.",
+                        "note": "On balance resume el juicio."
+                      }
+                    ]
+                  }
+                ]
+              },
+              "glossary": [
+                {
+                  "term": "monologue",
+                  "translations": [
+                    "monólogo"
+                  ]
+                },
+                {
+                  "term": "thesis",
+                  "translations": [
+                    "tesis"
+                  ]
+                },
+                {
+                  "term": "signposting",
+                  "translations": [
+                    "señalización del discurso"
+                  ]
+                },
+                {
+                  "term": "concession",
+                  "translations": [
+                    "concesión"
+                  ]
+                },
+                {
+                  "term": "leap of faith",
+                  "translations": [
+                    "acto de fe"
+                  ]
+                },
+                {
+                  "term": "cadence",
+                  "translations": [
+                    "cadencia"
+                  ]
+                },
+                {
+                  "term": "concise",
+                  "translations": [
+                    "conciso"
+                  ]
+                },
+                {
+                  "term": "memorable",
+                  "translations": [
+                    "memorable"
+                  ]
+                }
+              ],
+              "exercises": [
+                {
+                  "type": "ClozeDragDrop",
+                  "id": "es-en-c2-e193",
+                  "passage": "Let me {{b1}} by framing the question; then I will {{b2}} the strongest objection.",
+                  "blanks": [
+                    {
+                      "id": "b1",
+                      "answer": "begin",
+                      "options": [
+                        "begin",
+                        "began",
+                        "beginning"
+                      ]
+                    },
+                    {
+                      "id": "b2",
+                      "answer": "address",
+                      "options": [
+                        "address",
+                        "addresses",
+                        "addressing"
+                      ]
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "«Let me begin by» abre el monólogo; tras «will» va el infinitivo «address».",
+                    "ruleRef": "gp-c2-monologue-c2"
+                  }
+                },
+                {
+                  "type": "ClozeDragDrop",
+                  "id": "es-en-c2-e194",
+                  "passage": "A {{b1}} argument needs a clear thesis, evidence and a {{b2}}.",
+                  "blanks": [
+                    {
+                      "id": "b1",
+                      "answer": "persuasive",
+                      "options": [
+                        "persuasive",
+                        "persuasion",
+                        "persuaded"
+                      ]
+                    },
+                    {
+                      "id": "b2",
+                      "answer": "concession",
+                      "options": [
+                        "concession",
+                        "concede",
+                        "conceding"
+                      ]
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "El adjetivo «persuasive» y el sustantivo «concession» nombran los componentes del monólogo.",
+                    "ruleRef": "gp-c2-monologue-c2"
+                  }
+                },
+                {
+                  "type": "SemanticMatch",
+                  "id": "es-en-c2-e195",
+                  "instructions": "Ordena la función de cada parte del monólogo.",
+                  "pairs": [
+                    {
+                      "left": "Let me begin by setting the context.",
+                      "right": "Apertura",
+                      "register": "formal",
+                      "nuance": "Prepara al oyente antes de la tesis."
+                    },
+                    {
+                      "left": "Admittedly, the measure has costs.",
+                      "right": "Concesión",
+                      "register": "formal",
+                      "nuance": "Anticipa la objeción del evaluador."
+                    },
+                    {
+                      "left": "To sum up, the benefits outweigh the costs.",
+                      "right": "Cierre",
+                      "register": "formal",
+                      "nuance": "Recapitula y decide."
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "register",
+                    "explanation": "La estructura audible permite seguir el monólogo sin notas.",
+                    "ruleRef": "gp-c2-monologue-c2"
+                  }
+                },
+                {
+                  "type": "ListenChoose",
+                  "id": "es-en-c2-e196",
+                  "audioText": "Let me begin by setting the context. Firstly, the measure has costs; admittedly, those costs are real, but on balance the benefits are greater.",
+                  "options": [
+                    "The speaker rejects the measure",
+                    "The speaker concedes costs but defends the benefits",
+                    "The speaker ignores the costs",
+                    "The speaker changes topic"
+                  ],
+                  "correctIndex": 1,
+                  "feedbackOnError": {
+                    "type": "comprehension",
+                    "explanation": "Admittedly reconoce el coste y on balance decide a favor de los beneficios.",
+                    "ruleRef": "gp-c2-monologue-c2"
+                  }
+                },
+                {
+                  "type": "AudioOnlyPrompt",
+                  "id": "es-en-c2-e197",
+                  "audioText": "Let me begin by setting the context. Firstly, the measure has costs; admittedly, those costs are real, but on balance the benefits are greater. To sum up, the decision requires a leap of faith, but it is a calculated one.",
+                  "question": "How does the speaker close?",
+                  "options": [
+                    "By denying any risk",
+                    "By admitting a calculated leap of faith",
+                    "By asking the audience to leave",
+                    "By repeating the costs only"
+                  ],
+                  "correctIndex": 1,
+                  "allowSlowPlayback": true,
+                  "feedbackOnError": {
+                    "type": "comprehension",
+                    "explanation": "El cierre reconoce el salto y lo califica de calculado.",
+                    "ruleRef": "gp-c2-rhetorical-flow"
+                  }
+                },
+                {
+                  "type": "MultipleChoice",
+                  "id": "es-en-c2-e198",
+                  "question": "Completa: ___ balance, the benefits are greater.",
+                  "options": [
+                    "On",
+                    "In",
+                    "At"
+                  ],
+                  "correctIndex": 0,
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "La fórmula fija de síntesis es «on balance».",
+                    "ruleRef": "gp-c2-monologue-c2"
+                  }
+                },
+                {
+                  "type": "Translate",
+                  "id": "es-en-c2-e199",
+                  "sourcePhrase": "En conjunto, la medida es necesaria y los beneficios superan los costes.",
+                  "correctTokens": [
+                    "On",
+                    "balance",
+                    "the",
+                    "measure",
+                    "is",
+                    "necessary",
+                    "and",
+                    "the",
+                    "benefits",
+                    "outweigh",
+                    "the",
+                    "costs"
+                  ],
+                  "distractorTokens": [
+                    "overall",
+                    "exceed"
+                  ],
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "«On balance» y «outweigh» son las fórmulas precisas del cierre.",
+                    "ruleRef": "gp-c2-monologue-c2"
+                  }
+                },
+                {
+                  "type": "ListenType",
+                  "id": "es-en-c2-e200",
+                  "transcription": "Let me begin by setting the context before presenting the main argument",
+                  "audioText": "Let me begin by setting the context before presenting the main argument",
+                  "feedbackOnError": {
+                    "type": "spelling",
+                    "explanation": "Escribe «context» con «x» y «argument» sin «e» final.",
+                    "ruleRef": "gp-c2-monologue-c2"
+                  }
+                },
+                {
+                  "type": "SpeakRepeat",
+                  "id": "es-en-c2-e201",
+                  "targetPhrase": "To sum up, the benefits outweigh the costs, and the decision requires a calculated leap of faith.",
+                  "audioText": "To sum up, the benefits outweigh the costs, and the decision requires a calculated leap of faith.",
+                  "feedbackOnError": {
+                    "type": "pronunciation",
+                    "explanation": "Marca «To sum up» como cierre y enlaza «leap of faith».",
+                    "ruleRef": "gp-c2-rhetorical-flow"
+                  }
+                },
+                {
+                  "type": "MatchPairs",
+                  "id": "es-en-c2-e202",
+                  "pairs": [
+                    {
+                      "left": "frame the thesis",
+                      "right": "enmarcar la tesis"
+                    },
+                    {
+                      "left": "signpost the argument",
+                      "right": "señalizar el argumento"
+                    },
+                    {
+                      "left": "concede an objection",
+                      "right": "conceder una objeción"
+                    },
+                    {
+                      "left": "close with a synthesis",
+                      "right": "cerrar con una síntesis"
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "El monólogo C2 se evalúa por estructura, evidencia y cierre.",
+                    "ruleRef": "gp-c2-monologue-c2"
+                  }
+                },
+                {
+                  "type": "ClozeDragDrop",
+                  "id": "es-en-c2-e203",
+                  "passage": "The conclusion requires a {{b1}} of faith, but it is a {{b2}} one.",
+                  "blanks": [
+                    {
+                      "id": "b1",
+                      "answer": "leap",
+                      "options": [
+                        "leap",
+                        "leaping",
+                        "leapt"
+                      ]
+                    },
+                    {
+                      "id": "b2",
+                      "answer": "calculated",
+                      "options": [
+                        "calculated",
+                        "calculating",
+                        "calculation"
+                      ]
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "«A leap of faith» es la locución; «calculated» la matiza como decisión ponderada.",
+                    "ruleRef": "gp-c2-rhetorical-flow"
+                  }
+                },
+                {
+                  "type": "FreeSpeakingPrompt",
+                  "id": "es-en-c2-e204",
+                  "prompt": "Monólogo de examen (2 minutos): abre el contexto, defiende una tesis con dos argumentos, concede una objeción y cierra con una síntesis memorable.",
+                  "minTokens": 20,
+                  "conceptClusters": [
+                    [
+                      "let me begin",
+                      "firstly",
+                      "secondly"
+                    ],
+                    [
+                      "admittedly",
+                      "on balance",
+                      "to sum up"
+                    ],
+                    [
+                      "leap of faith",
+                      "evidence",
+                      "thesis"
+                    ]
+                  ],
+                  "grammarRuleRefs": [
+                    "gp-c2-monologue-c2",
+                    "gp-c2-rhetorical-flow"
+                  ],
+                  "timeLimitSeconds": 30,
+                  "minWpm": 70,
+                  "maxWpm": 160,
+                  "modelAnswer": "Let me begin by setting the context: the measure protects trust and efficiency. Firstly, the costs are real; admittedly, that is a fair objection, but on balance the benefits outweigh them. To sum up, the decision requires a calculated leap of faith.",
+                  "selfAssessmentCriteria": [
+                    "¿Abrí con contexto y tesis?",
+                    "¿Concedí una objeción?",
+                    "¿Cerré con una síntesis memorable?"
+                  ],
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "La respuesta modelo ordena apertura, argumentos, concesión y cierre con señalizaciones claras.",
+                    "ruleRef": "gp-c2-monologue-c2"
+                  }
+                }
+              ]
+            },
+            {
+              "id": "es-en-c2-un-4-ls-6",
+              "title": "Comprensión de audio largo y debate final",
+              "cefrLevel": "C2",
+              "scenario": "Tras escuchar una conferencia de varios minutos, hay que debatir con quien defiende la posición contraria.",
+              "canDo": "Puedo seguir un audio largo, resumir su tesis y debatir sin abandonar la posición propia.",
+              "grammarPoints": [
+                {
+                  "id": "gp-c2-long-listening",
+                  "label": "Comprensión larga",
+                  "description": "Main thread, digressions, speaker stance."
+                },
+                {
+                  "id": "gp-c2-debate-c2",
+                  "label": "Debate C2",
+                  "description": "Concede, rebut, close with the strongest point."
+                }
+              ],
+              "vocabFrequencyBand": "12000+",
+              "culturalNotes": [
+                {
+                  "idiom": "throw in the towel",
+                  "note": "Rendirse; en un debate, reconocer el límite propio sin abandonar la tesis es lo contrario de tirar la toalla.",
+                  "translation": "tirar la toalla"
+                }
+              ],
+              "microLesson": {
+                "title": "Sostener el hilo y la posición",
+                "goals": [
+                  "Seguir la tesis de un audio largo entre digresiones.",
+                  "Debatir concediendo sin rendirse."
+                ],
+                "sections": [
+                  {
+                    "heading": "El hilo entre los desvíos",
+                    "body": "En un audio largo, la tesis se repite tras las digresiones. En el debate, conceder un punto no es throw in the towel: es reconocer el límite para reforzar el argumento decisivo.",
+                    "examples": [
+                      {
+                        "source": "La conferencia se desvió sin perder el hilo.",
+                        "target": "The lecture drifted without losing the thread.",
+                        "note": "Mantener el hilo es la clave."
+                      },
+                      {
+                        "source": "No tiramos la toalla: defendimos la posición con nueva evidencia.",
+                        "target": "We did not throw in the towel: we defended our position with new evidence.",
+                        "note": "Sostener la posición no es rendirse."
+                      }
+                    ]
+                  }
+                ]
+              },
+              "glossary": [
+                {
+                  "term": "thread",
+                  "translations": [
+                    "hilo del discurso"
+                  ]
+                },
+                {
+                  "term": "digression",
+                  "translations": [
+                    "digresión"
+                  ]
+                },
+                {
+                  "term": "stance",
+                  "translations": [
+                    "postura"
+                  ]
+                },
+                {
+                  "term": "rebuttal",
+                  "translations": [
+                    "réplica"
+                  ]
+                },
+                {
+                  "term": "closing",
+                  "translations": [
+                    "cierre",
+                    "alegato final"
+                  ]
+                },
+                {
+                  "term": "concede",
+                  "translations": [
+                    "conceder"
+                  ]
+                },
+                {
+                  "term": "persuasive",
+                  "translations": [
+                    "persuasivo"
+                  ]
+                },
+                {
+                  "term": "vote",
+                  "translations": [
+                    "votación"
+                  ]
+                }
+              ],
+              "exercises": [
+                {
+                  "type": "ClozeDragDrop",
+                  "id": "es-en-c2-e205",
+                  "passage": "The lecture was dense: the speaker {{b1}} from economics to ethics without {{b2}} the thread.",
+                  "blanks": [
+                    {
+                      "id": "b1",
+                      "answer": "drifted",
+                      "options": [
+                        "drifted",
+                        "drift",
+                        "drifting"
+                      ]
+                    },
+                    {
+                      "id": "b2",
+                      "answer": "losing",
+                      "options": [
+                        "losing",
+                        "lose",
+                        "lost"
+                      ]
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "«Drifted» describe la digresión; «without losing» mantiene el hilo.",
+                    "ruleRef": "gp-c2-long-listening"
+                  }
+                },
+                {
+                  "type": "ClozeDragDrop",
+                  "id": "es-en-c2-e206",
+                  "passage": "In the debate, she refused to throw in the {{b1}} and {{b2}} her position with new evidence.",
+                  "blanks": [
+                    {
+                      "id": "b1",
+                      "answer": "towel",
+                      "options": [
+                        "towel",
+                        "tower",
+                        "tourism"
+                      ]
+                    },
+                    {
+                      "id": "b2",
+                      "answer": "defended",
+                      "options": [
+                        "defended",
+                        "defend",
+                        "defending"
+                      ]
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "«Throw in the towel» es rendirse; «defended» muestra la posición sostenida.",
+                    "ruleRef": "gp-c2-debate-c2"
+                  }
+                },
+                {
+                  "type": "SemanticMatch",
+                  "id": "es-en-c2-e207",
+                  "instructions": "Empareja cada movimiento con su función en el debate.",
+                  "pairs": [
+                    {
+                      "left": "That may be so, but the cost remains unresolved.",
+                      "right": "Réplica con concesión",
+                      "register": "formal",
+                      "nuance": "Acepta el marco y ataca el punto débil."
+                    },
+                    {
+                      "left": "I take your point; however, the timeline is unrealistic.",
+                      "right": "Reconocimiento y reserva",
+                      "register": "formal",
+                      "nuance": "Valida al adversario antes de corregir."
+                    },
+                    {
+                      "left": "The strongest argument remains trust.",
+                      "right": "Cierre que jerarquiza",
+                      "register": "formal",
+                      "nuance": "Decide qué argumento pesa más."
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "register",
+                    "explanation": "El debate C2 concede sin rendirse y cierra jerarquizando.",
+                    "ruleRef": "gp-c2-debate-c2"
+                  }
+                },
+                {
+                  "type": "ListenChoose",
+                  "id": "es-en-c2-e208",
+                  "audioText": "The lecture drifted from economics to ethics without losing the thread: the thesis was that trust, not efficiency, determines adoption.",
+                  "options": [
+                    "The lecture lost its thesis",
+                    "The lecture digressed but kept its thesis about trust",
+                    "The lecture was only about economics",
+                    "The lecture rejected ethics"
+                  ],
+                  "correctIndex": 1,
+                  "feedbackOnError": {
+                    "type": "comprehension",
+                    "explanation": "La digresión no elimina la tesis: la confianza determina la adopción.",
+                    "ruleRef": "gp-c2-long-listening"
+                  }
+                },
+                {
+                  "type": "AudioOnlyPrompt",
+                  "id": "es-en-c2-e209",
+                  "audioText": "The speaker spent ten minutes on ethics, but the thesis remained economic: adoption depends on trust. In the debate, she refused to throw in the towel and defended that position with new evidence.",
+                  "question": "What was the lecture's main thesis?",
+                  "options": [
+                    "Ethics is irrelevant",
+                    "Adoption depends on trust",
+                    "Economics explains everything",
+                    "The debate was cancelled"
+                  ],
+                  "correctIndex": 1,
+                  "allowSlowPlayback": true,
+                  "feedbackOnError": {
+                    "type": "comprehension",
+                    "explanation": "Pese a la digresión ética, la tesis es que la adopción depende de la confianza.",
+                    "ruleRef": "gp-c2-long-listening"
+                  }
+                },
+                {
+                  "type": "MultipleChoice",
+                  "id": "es-en-c2-e210",
+                  "question": "Completa: She refused to throw in the ___.",
+                  "options": [
+                    "towel",
+                    "tower",
+                    "tourism"
+                  ],
+                  "correctIndex": 0,
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "La locución es «throw in the towel».",
+                    "ruleRef": "gp-c2-debate-c2"
+                  }
+                },
+                {
+                  "type": "Translate",
+                  "id": "es-en-c2-e211",
+                  "sourcePhrase": "Reconozco tu punto, pero el argumento más sólido sigue siendo la confianza.",
+                  "correctTokens": [
+                    "I",
+                    "take",
+                    "your",
+                    "point",
+                    "but",
+                    "the",
+                    "strongest",
+                    "argument",
+                    "remains",
+                    "trust"
+                  ],
+                  "distractorTokens": [
+                    "strong",
+                    "remained"
+                  ],
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "«I take your point» reconoce y «the strongest argument remains» jerarquiza el cierre.",
+                    "ruleRef": "gp-c2-debate-c2"
+                  }
+                },
+                {
+                  "type": "ListenType",
+                  "id": "es-en-c2-e212",
+                  "transcription": "The speaker drifted from economics to ethics without losing the thread",
+                  "audioText": "The speaker drifted from economics to ethics without losing the thread",
+                  "feedbackOnError": {
+                    "type": "spelling",
+                    "explanation": "Escribe «drifted» con «ft» y «thread» con «th».",
+                    "ruleRef": "gp-c2-long-listening"
+                  }
+                },
+                {
+                  "type": "SpeakRepeat",
+                  "id": "es-en-c2-e213",
+                  "targetPhrase": "That may be so, but the cost remains unresolved and the timeline is unrealistic.",
+                  "audioText": "That may be so, but the cost remains unresolved and the timeline is unrealistic.",
+                  "feedbackOnError": {
+                    "type": "pronunciation",
+                    "explanation": "Pausa tras «so» y enlaza «cost remains».",
+                    "ruleRef": "gp-c2-debate-c2"
+                  }
+                },
+                {
+                  "type": "MatchPairs",
+                  "id": "es-en-c2-e214",
+                  "pairs": [
+                    {
+                      "left": "to lose the thread",
+                      "right": "perder el hilo"
+                    },
+                    {
+                      "left": "to throw in the towel",
+                      "right": "tirar la toalla"
+                    },
+                    {
+                      "left": "the strongest argument",
+                      "right": "el argumento más sólido"
+                    },
+                    {
+                      "left": "to concede a point",
+                      "right": "conceder un punto"
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "El debate final se sostiene sobre hilo, concesión y cierre.",
+                    "ruleRef": "gp-c2-debate-c2"
+                  }
+                },
+                {
+                  "type": "ClozeDragDrop",
+                  "id": "es-en-c2-e215",
+                  "passage": "The strongest argument {{b1}} trust, so let us agree on a small pilot before the {{b2}}.",
+                  "blanks": [
+                    {
+                      "id": "b1",
+                      "answer": "remains",
+                      "options": [
+                        "remains",
+                        "remain",
+                        "remained"
+                      ]
+                    },
+                    {
+                      "id": "b2",
+                      "answer": "vote",
+                      "options": [
+                        "vote",
+                        "voter",
+                        "voting"
+                      ]
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "«Remains» concuerda con el sujeto singular; «before the vote» fija el cierre.",
+                    "ruleRef": "gp-c2-debate-c2"
+                  }
+                },
+                {
+                  "type": "FreeSpeakingPrompt",
+                  "id": "es-en-c2-e216",
+                  "prompt": "Debate final tras un audio largo: resume la tesis, concede un punto al adversario, rebate con evidencia y cierra con el argumento decisivo.",
+                  "minTokens": 20,
+                  "conceptClusters": [
+                    [
+                      "thesis",
+                      "thread",
+                      "drifted"
+                    ],
+                    [
+                      "that may be so",
+                      "I take your point",
+                      "however"
+                    ],
+                    [
+                      "strongest argument",
+                      "trust",
+                      "vote"
+                    ]
+                  ],
+                  "grammarRuleRefs": [
+                    "gp-c2-long-listening",
+                    "gp-c2-debate-c2"
+                  ],
+                  "timeLimitSeconds": 30,
+                  "minWpm": 70,
+                  "maxWpm": 160,
+                  "modelAnswer": "The lecture drifted from economics to ethics without losing its thesis: adoption depends on trust. That may be so, but the cost remains unresolved; however, the strongest argument remains trust, so let us agree on a pilot before the vote.",
+                  "selfAssessmentCriteria": [
+                    "¿Resumí la tesis del audio?",
+                    "¿Concedí y rebatí?",
+                    "¿Cerré con el argumento decisivo?"
+                  ],
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "La respuesta modelo conserva el hilo, concede, rebate y cierra jerarquizando.",
+                    "ruleRef": "gp-c2-debate-c2"
                   }
                 }
               ]
