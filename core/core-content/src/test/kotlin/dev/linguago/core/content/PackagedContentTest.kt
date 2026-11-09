@@ -412,6 +412,47 @@ class PackagedContentTest {
         }
     }
 
+    @Test
+    fun los_cursos_de_arranque_estrenan_c2() {
+        for (courseId in listOf("es-fr", "es-pt", "es-ja")) {
+            val course = CourseJson.parseCourse(readAsset(courseId, COURSE_FILE))
+            assertTrue("$courseId debe decodificar en v2", course != null)
+            val lessons = course!!.levels.flatMap { level -> level.units.flatMap { unit -> unit.lessons } }
+            val c2Lessons = lessons.filter { lesson -> lesson.cefrLevel == CefrLevel.C2 }
+            assertEquals("$courseId debe tener 18 lecciones C2", 18, c2Lessons.size)
+            assertEquals(
+                (1..3).flatMap { unit -> (1..4).map { lesson -> "$courseId-c2-un-$unit-ls-$lesson" } } +
+                    (1..6).map { lesson -> "$courseId-c2-un-4-ls-$lesson" },
+                c2Lessons.map { lesson -> lesson.id.value },
+            )
+            assertEquals(
+                (1..216).map { index -> "$courseId-c2-e$index" },
+                c2Lessons.flatMap { lesson -> lesson.exercises }.map { exercise -> exercise.id.value },
+            )
+            assertTrue(
+                "Cada lección C2 de $courseId debe tener 12 ejercicios",
+                c2Lessons.all { lesson -> lesson.exercises.size == 12 },
+            )
+            assertTrue(
+                "Cada lección C2 de $courseId debe usar la banda 12000+",
+                c2Lessons.all { lesson -> lesson.vocabFrequencyBand == VocabFrequencyBand.BAND_12000_PLUS },
+            )
+            assertTrue(
+                "Cada lección C2 de $courseId debe tener microLesson y glosario",
+                c2Lessons.all { lesson -> lesson.microLesson != null && lesson.glossary.isNotEmpty() },
+            )
+            assertTrue(
+                "Todos los ejercicios C2 de $courseId deben tener feedbackOnError",
+                c2Lessons.flatMap { lesson -> lesson.exercises }.all { exercise -> exercise.feedbackOnError != null },
+            )
+            assertEquals(
+                "Cada lección C2 de $courseId debe tener un FreeSpeakingPrompt",
+                18,
+                c2Lessons.sumOf { lesson -> lesson.exercises.count { exercise -> exercise is Exercise.FreeSpeakingPrompt } },
+            )
+        }
+    }
+
     private fun expandedStarterExpectation(
         courseId: String,
         locale: CourseLocale,
