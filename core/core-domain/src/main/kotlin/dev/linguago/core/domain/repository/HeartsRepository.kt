@@ -21,4 +21,7 @@ public interface HeartsRepository {
 
     /** Rellena el tanque (seed de migración o recompensa explícita). */
     public suspend fun refill(): Result<HeartsState>
+
+    /** Recupera 1 vida por práctica activa en el repaso (ADR-048). */
+    public suspend fun recoverOne(): Result<HeartsState>
 }

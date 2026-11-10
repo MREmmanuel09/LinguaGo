@@ -69,4 +69,25 @@ public class HeartsRulesTest {
         assertEquals(HEARTS_MAX, state.hearts)
         assertEquals(2_000L, state.lastRegenEpochSecond)
     }
+
+    @Test
+    public fun `recoverOne suma una vida sin llenar el tanque`() {
+        val state = HeartsState(hearts = 7, lastRegenEpochSecond = 1_000L)
+        val recovered = HeartsRules.recoverOne(state, 1_010L)
+        assertEquals(8, recovered.hearts)
+        assertEquals(1_000L, recovered.lastRegenEpochSecond)
+    }
+
+    @Test
+    public fun `recoverOne no pasa del maximo`() {
+        val state = HeartsState(hearts = HEARTS_MAX, lastRegenEpochSecond = 1_000L)
+        assertEquals(HEARTS_MAX, HeartsRules.recoverOne(state, 1_010L).hearts)
+    }
+
+    @Test
+    public fun `recoverOne aplica primero la regeneracion por tiempo`() {
+        val state = HeartsState(hearts = 5, lastRegenEpochSecond = 1_000L)
+        val recovered = HeartsRules.recoverOne(state, 1_120L)
+        assertEquals(8, recovered.hearts)
+    }
 }

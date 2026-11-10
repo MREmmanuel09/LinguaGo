@@ -48,11 +48,32 @@ object LinguaTokens {
     const val ACCENT_INK_HEX = 0xFF00695A
     const val DESTRUCTIVE_INK_HEX = 0xFFA33B22
 
+    // ADR-045: tintas AA para avisos e información sobre sus tintes claros.
+    const val WARNING_INK_HEX = 0xFF6B4E00
+    const val INFO_INK_HEX = 0xFF1B4F8A
+
     // Modo oscuro: tintas claras sobre tintes oscuros. El acento base ya
     // cumple AA en oscuro, así que la tinta mantiene su valor canónico.
     const val DARK_PRIMARY_INK_HEX = 0xFFB8AEF5
     const val DARK_ACCENT_INK_HEX = 0xFF00B894
     const val DARK_DESTRUCTIVE_INK_HEX = 0xFFFF9B82
+    const val DARK_WARNING_INK_HEX = 0xFFFFD166
+    const val DARK_INFO_INK_HEX = 0xFFA8D4FF
+
+    // Contenedores de marca (ADR-045): evitan los pasteles por defecto de
+    // Material 3 en audio, voz y estados informativos.
+    const val SECONDARY_CONTAINER_HEX = 0xFFE6F7F2
+    const val ON_SECONDARY_CONTAINER_HEX = 0xFF00695A
+    const val TERTIARY_CONTAINER_HEX = 0xFFE7F1FF
+    const val ON_TERTIARY_CONTAINER_HEX = 0xFF1B4F8A
+    const val ERROR_CONTAINER_HEX = 0xFFFDEBE7
+    const val ON_ERROR_CONTAINER_HEX = 0xFFA33B22
+    const val DARK_SECONDARY_CONTAINER_HEX = 0xFF1D3A34
+    const val DARK_ON_SECONDARY_CONTAINER_HEX = 0xFF8DE8D2
+    const val DARK_TERTIARY_CONTAINER_HEX = 0xFF1C2E42
+    const val DARK_ON_TERTIARY_CONTAINER_HEX = 0xFFA8D4FF
+    const val DARK_ERROR_CONTAINER_HEX = 0xFF4A231C
+    const val DARK_ON_ERROR_CONTAINER_HEX = 0xFFFFB4A2
 
     val Primary = Color(PRIMARY_HEX)
     val PrimaryEdge = Color(PRIMARY_EDGE_HEX)
@@ -73,9 +94,13 @@ object LinguaTokens {
     val PrimaryInk = Color(PRIMARY_INK_HEX)
     val AccentInk = Color(ACCENT_INK_HEX)
     val DestructiveInk = Color(DESTRUCTIVE_INK_HEX)
+    val WarningInk = Color(WARNING_INK_HEX)
+    val InfoInk = Color(INFO_INK_HEX)
     val DarkPrimaryInk = Color(DARK_PRIMARY_INK_HEX)
     val DarkAccentInk = Color(DARK_ACCENT_INK_HEX)
     val DarkDestructiveInk = Color(DARK_DESTRUCTIVE_INK_HEX)
+    val DarkWarningInk = Color(DARK_WARNING_INK_HEX)
+    val DarkInfoInk = Color(DARK_INFO_INK_HEX)
 
     // Radio canónicos (§7.2) en dp
     const val RADIUS_BUTTON_DP = 16
@@ -90,4 +115,7 @@ object LinguaTokens {
     // Física flat-3D (ADR-031): hundimiento del cuerpo y bisel de luz.
     const val PRESS_DEPTH_DP = 4
     const val HIGHLIGHT_ALPHA = 0.18f
+
+    /** ADR-045: el bisel de luz se atenúa en superficies oscuras. */
+    const val DARK_HIGHLIGHT_ALPHA = 0.06f
 }

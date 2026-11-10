@@ -54,6 +54,7 @@ public interface CompleteLessonUseCase {
     public suspend operator fun invoke(
         lessonId: LessonId,
         xp: Int,
+        scorePercent: Int = 0,
     ): Result<Unit>
 }
 

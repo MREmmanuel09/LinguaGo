@@ -9,6 +9,7 @@ import androidx.room.RoomDatabase
  * v2: agrega `word_progress` para el repaso espaciado FSRS (ADR-016).
  * v3: agrega métricas de producción oral y errores frecuentes (ADR-021).
  * v4: agrega `hearts_progress` para las vidas con regeneración (ADR-025).
+ * v5: agrega actividad diaria, notas culturales y precisión (ADR-050).
  */
 @Database(
     entities = [
@@ -16,8 +17,9 @@ import androidx.room.RoomDatabase
         LessonProgressEntity::class,
         WordProgressEntity::class,
         HeartsProgressEntity::class,
+        DailyActivityEntity::class,
     ],
-    version = 4,
+    version = 5,
     exportSchema = true,
 )
 public abstract class LinguagoDatabase : RoomDatabase() {
@@ -28,4 +30,6 @@ public abstract class LinguagoDatabase : RoomDatabase() {
     public abstract fun wordProgressDao(): WordProgressDao
 
     public abstract fun heartsProgressDao(): HeartsProgressDao
+
+    public abstract fun dailyActivityDao(): DailyActivityDao
 }

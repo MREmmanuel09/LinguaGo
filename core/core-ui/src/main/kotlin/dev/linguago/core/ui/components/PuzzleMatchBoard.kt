@@ -50,6 +50,7 @@ import androidx.compose.ui.semantics.role
 import androidx.compose.ui.semantics.selected
 import androidx.compose.ui.semantics.semantics
 import androidx.compose.ui.semantics.stateDescription
+import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.Density
 import androidx.compose.ui.unit.LayoutDirection
 import androidx.compose.ui.unit.dp
@@ -199,7 +200,7 @@ public fun PuzzleMatchBoard(
                     Box(
                         modifier =
                             Modifier
-                                .widthIn(min = 160.dp)
+                                .widthIn(min = 96.dp, max = 240.dp)
                                 .zIndex(if (dragging) 1f else 0f)
                                 .graphicsLayer {
                                     if (dragging) {
@@ -278,11 +279,15 @@ private class PuzzlePieceShape(
     ): Outline {
         val tab = with(density) { PUZZLE_TAB_DP.toPx() }
         val radius = tab * 0.8f
+        // Esquinas exteriores redondeadas (V-06): la pieza encaja en la
+        // estética Feather 12dp sin perder el encaje tipo rompecabezas.
+        val corner = with(density) { 12.dp.toPx() }.coerceAtMost(size.height / 2f)
         val path = Path()
         when (edge) {
             PuzzleEdge.SOCKET -> {
-                path.moveTo(0f, 0f)
-                path.lineTo(size.width, 0f)
+                path.moveTo(corner, 0f)
+                path.lineTo(size.width - corner, 0f)
+                path.quadraticTo(size.width, 0f, size.width, corner)
                 path.lineTo(size.width, size.height / 2f - radius)
                 path.cubicTo(
                     size.width - tab,
@@ -292,15 +297,22 @@ private class PuzzlePieceShape(
                     size.width,
                     size.height / 2f + radius,
                 )
-                path.lineTo(size.width, size.height)
-                path.lineTo(0f, size.height)
+                path.lineTo(size.width, size.height - corner)
+                path.quadraticTo(size.width, size.height, size.width - corner, size.height)
+                path.lineTo(corner, size.height)
+                path.quadraticTo(0f, size.height, 0f, size.height - corner)
+                path.lineTo(0f, corner)
+                path.quadraticTo(0f, 0f, corner, 0f)
                 path.close()
             }
             PuzzleEdge.TAB -> {
-                path.moveTo(tab, 0f)
-                path.lineTo(size.width, 0f)
-                path.lineTo(size.width, size.height)
-                path.lineTo(tab, size.height)
+                path.moveTo(tab + corner, 0f)
+                path.lineTo(size.width - corner, 0f)
+                path.quadraticTo(size.width, 0f, size.width, corner)
+                path.lineTo(size.width, size.height - corner)
+                path.quadraticTo(size.width, size.height, size.width - corner, size.height)
+                path.lineTo(tab + corner, size.height)
+                path.quadraticTo(tab, size.height, tab, size.height - corner)
                 path.lineTo(tab, size.height / 2f + radius)
                 path.cubicTo(
                     0f,
@@ -310,6 +322,8 @@ private class PuzzlePieceShape(
                     tab,
                     size.height / 2f - radius,
                 )
+                path.lineTo(tab, corner)
+                path.quadraticTo(tab, 0f, tab + corner, 0f)
                 path.close()
             }
         }
@@ -384,6 +398,7 @@ private fun PuzzlePiece(
                     bottom = 10.dp,
                 ),
         verticalArrangement = Arrangement.spacedBy(3.dp),
+        horizontalAlignment = Alignment.CenterHorizontally,
     ) {
         Row(
             modifier = Modifier.fillMaxWidth(),
@@ -394,6 +409,7 @@ private fun PuzzlePiece(
                 text = label,
                 style = MaterialTheme.typography.bodyMedium,
                 color = contentColor,
+                textAlign = TextAlign.Center,
                 modifier = Modifier.weight(1f),
             )
             if (status != OptionStatus.NEUTRAL) {
@@ -413,6 +429,7 @@ private fun PuzzlePiece(
                 text = text,
                 style = MaterialTheme.typography.labelSmall,
                 color = extended.primaryInk,
+                textAlign = TextAlign.Center,
             )
         }
         detail?.let { text ->
@@ -420,6 +437,7 @@ private fun PuzzlePiece(
                 text = text,
                 style = MaterialTheme.typography.bodySmall,
                 color = colors.onSurfaceVariant,
+                textAlign = TextAlign.Center,
             )
         }
     }

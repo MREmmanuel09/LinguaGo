@@ -57,6 +57,7 @@ public fun FeedbackBanner(
     successExplanation: String? = null,
     correctAnswer: String? = null,
     glossary: Map<String, List<String>> = emptyMap(),
+    leading: (@Composable () -> Unit)? = null,
 ) {
     val statusColor = if (isCorrect) LinguaTokens.Accent else LinguaTokens.Destructive
     val extended = linguaExtendedColors()
@@ -98,6 +99,7 @@ public fun FeedbackBanner(
             verticalAlignment = Alignment.CenterVertically,
             horizontalArrangement = Arrangement.spacedBy(10.dp),
         ) {
+            leading?.invoke()
             Image(
                 painter = painterResource(iconRes),
                 contentDescription = null,
@@ -116,7 +118,10 @@ public fun FeedbackBanner(
                 style = MaterialTheme.typography.bodyMedium,
             )
         }
-        if (successExplanation != null || correctAnswer != null) {
+        // La respuesta canónica solo se muestra al fallar (V-07): al acertar
+        // sería redundante con el mensaje de éxito.
+        val revealedAnswer = correctAnswer?.takeIf { !isCorrect }
+        if (successExplanation != null || revealedAnswer != null) {
             Column(
                 modifier =
                     Modifier.semantics(mergeDescendants = true) {
@@ -131,7 +136,7 @@ public fun FeedbackBanner(
                         style = MaterialTheme.typography.bodySmall,
                     )
                 }
-                correctAnswer?.let { answer ->
+                revealedAnswer?.let { answer ->
                     WordGlossaryText(
                         text = "Respuesta correcta: $answer",
                         glossary = glossary,

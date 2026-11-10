@@ -30,6 +30,7 @@ public class SnapshotMergeTest {
         exportedAtMillis: Long = 0,
         hearts: Int = HEARTS_MAX,
         heartsLastRegen: Long = 0L,
+        words: List<SyncSnapshot.WordEntry> = emptyList(),
     ): SyncSnapshot =
         SyncSnapshot(
             exportedAtMillis = exportedAtMillis,
@@ -40,6 +41,28 @@ public class SnapshotMergeTest {
             lessons = lessons,
             heartsCurrent = hearts,
             heartsLastRegenEpochSecond = heartsLastRegen,
+            words = words,
+        )
+
+    private fun word(
+        word: String,
+        courseId: String = "es-en",
+        translation: String = "translation",
+        reviewCount: Int = 0,
+        lastReview: Long = 0L,
+        stability: Float = 1f,
+        culturalNote: String? = null,
+    ): SyncSnapshot.WordEntry =
+        SyncSnapshot.WordEntry(
+            word = word,
+            courseId = courseId,
+            translation = translation,
+            reviewCount = reviewCount,
+            lastReviewEpochMillis = lastReview,
+            nextReviewEpochMillis = lastReview + 1_000,
+            stability = stability,
+            difficulty = 5f,
+            culturalNote = culturalNote,
         )
 
     @Test
@@ -126,5 +149,97 @@ public class SnapshotMergeTest {
 
         assertEquals(3, merged.heartsCurrent)
         assertEquals(500L, merged.heartsLastRegenEpochSecond)
+    }
+
+    @Test
+    public fun `las tarjetas FSRS se unen por palabra y curso`() {
+        val local =
+            snapshot(
+                words =
+                    listOf(
+                        word("hola", reviewCount = 3, lastReview = 300),
+                        word("perro", reviewCount = 1),
+                    ),
+            )
+        val remote =
+            snapshot(
+                words =
+                    listOf(
+                        word("hola", reviewCount = 2, lastReview = 900),
+                        word("gato", courseId = "es-fr", reviewCount = 5),
+                    ),
+            )
+
+        val merged = local.mergedWith(remote)
+
+        assertEquals(3, merged.words.size)
+        val hola = merged.words.first { it.word == "hola" }
+        assertEquals(3, hola.reviewCount)
+        assertEquals(300L, hola.lastReviewEpochMillis)
+        assertTrue(merged.words.any { it.word == "gato" && it.courseId == "es-fr" })
+    }
+
+    @Test
+    public fun `una tarjeta aprendida no retrocede ni pierde su nota cultural`() {
+        val local = snapshot(words = listOf(word("hola", reviewCount = 7, lastReview = 700, culturalNote = "Saludo")))
+        val remote = snapshot(words = listOf(word("hola", reviewCount = 1, lastReview = 100)))
+
+        val merged = local.mergedWith(remote)
+
+        val hola = merged.words.single()
+        assertEquals(7, hola.reviewCount)
+        assertEquals(700L, hola.lastReviewEpochMillis)
+        assertEquals("Saludo", hola.culturalNote)
+    }
+
+    @Test
+    public fun `el merge de tarjetas es conmutativo`() {
+        val local = snapshot(words = listOf(word("hola", reviewCount = 3, lastReview = 300)))
+        val remote = snapshot(words = listOf(word("hola", reviewCount = 5, lastReview = 500)))
+
+        assertEquals(local.mergedWith(remote), remote.mergedWith(local))
+    }
+
+    @Test
+    public fun `las metricas de voz se conservan con el maximo`() {
+        val local =
+            snapshot(
+                lessons =
+                    listOf(
+                        SyncSnapshot.LessonEntry(
+                            lessonId = "l1",
+                            completed = true,
+                            xp = 10,
+                            attempts = 1,
+                            speakingAttempts = 2,
+                            speakingPassedAttempts = 1,
+                            speakingBestWpm = 80f,
+                            bestScorePercent = 70,
+                        ),
+                    ),
+            )
+        val remote =
+            snapshot(
+                lessons =
+                    listOf(
+                        SyncSnapshot.LessonEntry(
+                            lessonId = "l1",
+                            completed = true,
+                            xp = 10,
+                            attempts = 1,
+                            speakingAttempts = 4,
+                            speakingPassedAttempts = 3,
+                            speakingBestWpm = 95f,
+                            bestScorePercent = 85,
+                        ),
+                    ),
+            )
+
+        val merged = local.mergedWith(remote).lessons.single()
+
+        assertEquals(4, merged.speakingAttempts)
+        assertEquals(3, merged.speakingPassedAttempts)
+        assertEquals(95f, merged.speakingBestWpm, 0.001f)
+        assertEquals(85, merged.bestScorePercent)
     }
 }

@@ -20,7 +20,7 @@ flowchart TB
     end
     subgraph INFRA["Infraestructura de datos y plataforma"]
         direction LR
-        DATA["core-data\nRoom v2 · DataStore · repos impl"]
+        DATA["core-data\nRoom v5 · DataStore · repos impl"]
         CONTENT["core-content\nparser + validador JSON"]
         AUDIO["core-audio\nTTS/STT Strategy (sherpa-onnx · Vosk)"]
         AUTH["core-auth\nOAuth PKCE · Drive REST · Keystore"]
@@ -46,7 +46,7 @@ core/
   core-common/             → Result, LinguaError, DispatcherProvider, CryptoService (contrato)
   core-domain/             → Entidades, reglas puras, contratos de repositorio y use cases (Kotlin puro)
   core-ui/                 → Design system: tokens, tema, componentes atómicos (+ tests instrumentados)
-  core-data/               → Room v2, DataStore, repositorios concretos y use cases impl
+  core-data/               → Room v5, DataStore, repositorios concretos y use cases impl
   core-content/            → Loader y validador del contenido JSON empaquetado
   core-audio/              → Contratos TtsEngine/SttEngine + System/Piper/Vosk + integridad SHA-256
   core-auth/               → OAuth 2.0 PKCE, TokenStore cifrado, Google Drive REST, Keystore
@@ -122,15 +122,17 @@ build-logic/               → Convention plugins (included build)
 | JUnit4 / androidx.test / Espresso | 4.13.2 / 1.2.1+1.6.2 / 3.7.0 | Tests unitarios e instrumentados |
 | ktlint / detekt | 14.2.0 / 1.23.8 | Calidad (en CI) |
 
-## 5. Capa de datos (Room v2 · ADR-005/014/016)
+## 5. Capa de datos (Room v5 · ADR-005/014/016/021/050)
 
-`linguago.db` (versión 2, migración 1→2 sin pérdida):
+`linguago.db` (versión 5, migraciones explícitas 1→5 sin pérdida):
 
 | Tabla | Clave | Contenido |
 |---|---|---|
 | `streak_progress` | singleton `id=1` | racha actual/máxima, último día, XP total |
-| `lesson_progress` | `lessonId` | completado, XP de la lección, intentos |
-| `word_progress` | (`word`, `courseId`) | estado FSRS: reviewCount, stability, difficulty, lastReview, nextReview, traducción |
+| `lesson_progress` | `lessonId` | completado, XP, intentos, voz (WPM/aprobados), precisión |
+| `word_progress` | (`word`, `courseId`) | estado FSRS, errores y nota cultural |
+| `hearts_progress` | singleton `id=1` | vidas y ancla de regeneración |
+| `daily_activity` | `epochDay` | XP, lecciones y repasos del día local |
 
 DataStore (privado de la app):
 
@@ -150,18 +152,20 @@ DataStore (privado de la app):
 
 - Contratos `TtsEngine` / `SttEngine` en `core-audio`; implementaciones intercambiables y selección por idioma:
   - **TTS**: `SystemTtsEngine` (base universal) → `PiperTtsEngine` (sherpa-onnx) cuando hay voz verificada. Voces: `en_US-amy-medium`, `pt_BR-faber-medium`, `fr_FR-siwis-medium`; `ja` queda en TTS del sistema.
+  - `espeak-ng-data` se empaqueta **una sola vez** en `assets/tts/espeak-ng-data` y se extrae a `filesDir/tts/espeak-ng-data`; las voces comparten ese árbol (ADR-051). Las cachés antiguas con copia local siguen funcionando.
   - **STT**: `VoskSttEngine` (modelos small por idioma) para SpeakRepeat; usa **JNA**.
+- **Gestor de almacenamiento** (`VoiceStorageManager`): Ajustes muestra el espacio de `filesDir/tts` y `filesDir/stt`; «Liberar voces» cierra los motores nativos y borra las copias extraídas. La próxima reproducción las reextrae de los assets sin red (I1/I3).
 - Los modelos **no se commitean**: se descargan con `./gradlew fetchVoiceModels` (fuera de CI) y se verifican por **SHA-256** contra `models/manifest.json` antes de cargar (`ModelIntegrity`). Hash inválido ⇒ modelo desactivado.
 - Sin modelos/permiso, los ejercicios degradan sin bloquear (I3): audio deshabilitado y "No puedo hablar ahora".
 - Ciclo de vida nativo (ADR-022): `NativeSerialLane` serializa el uso y cierre de `Model`/`OfflineTts` por idioma; `close()` espera la operación activa y `release()` resetea el warmup. `SpeechCapture` crea y libera fuente/recognizer de forma tolerante a fallos.
 - R8: `app/proguard-rules.pro` mantiene serializers, sherpa-onnx, Vosk y **JNA** (sin keeps, el STT revienta con `UnsatisfiedLinkError`).
 
-## 8. Autenticación y sincronización (ADR-011/013/014/016)
+## 8. Autenticación y sincronización (ADR-011/013/014/016/050)
 
 ```mermaid
 sequenceDiagram
     participant U as Usuario
-    participant A as AuthScreen
+    participant A as SyncScreen
     participant E as OAuthEngine (PKCE)
     participant B as Navegador
     participant T as TokenStore (Keystore)
@@ -181,10 +185,10 @@ sequenceDiagram
 ```
 
 - **OAuth 2.0 + PKCE** (RFC 7636, sin secretos ni Play Services); redirect custom configurable por properties (`googleClientId`, `oauthRedirectScheme`, `oauthRedirectUri`).
-- **Snapshot v1** (`SyncSnapshot`): JSON (`schemaVersion=1`, racha, XP, lecciones) **cifrado AES-GCM-256 con clave en Android Keystore** antes de subir (ADR-014). Versión desconocida ⇒ `InvalidContent`.
-- **Merge monótono**: `max` por campo; lecciones por id (`completed` = OR). Nunca elimina progreso (I4). Sin timestamps que reconciliar.
+- **Snapshot v3** (`SyncSnapshot`): JSON (`schemaVersion=3`, racha, XP, lecciones, vidas y mazo FSRS) **cifrado AES-GCM-256 con clave en Android Keystore** antes de subir (ADR-014/050). El mismo JSON puede exportarse sin cifrar por SAF para respaldo local. Versión desconocida ⇒ `InvalidContent`; v1/v2 siguen decodificando.
+- **Merge monótono**: `max` por campo; lecciones por id (`completed` = OR); tarjetas FSRS por `(word, courseId)` conservando la de más repasos. Nunca elimina progreso (I4). Sin timestamps que reconciliar.
 - **Proveedores** (Strategy): `google_drive` (real), `dev_local` (laboratorio, **solo debug**), `NoopCloudProvider` (fallback). `DelegatingCloudProvider` re-evalúa el mapa en cada operación.
-- El estado FSRS (`word_progress`) **no se sincroniza** en v1 (ADR-016): el merge monótono no aplica a estabilidad/dificultad.
+- `SyncScreen` unifica cuenta, respaldo en la nube y exportación/importación local `.json` (ADR-050).
 - OneDrive (`appfolder` vía MSAL) está **diferido** en ADR-015.
 
 ## 9. Navegación

@@ -28,12 +28,30 @@ public data class LessonProgressEntity(
     /** Intentos de producción oral libre registrados en la lección. */
     @ColumnInfo(defaultValue = "0")
     public val speakingAttempts: Int = 0,
+    /** Intentos orales que superaron el grader heurístico. */
+    @ColumnInfo(defaultValue = "0")
+    public val speakingPassedAttempts: Int = 0,
     /** Mejor fluidez observada en la lección (palabras por minuto). */
     @ColumnInfo(defaultValue = "0")
     public val speakingBestWpm: Float = 0f,
     /** Última puntuación heurística de producción oral (0..1). */
     @ColumnInfo(defaultValue = "0")
     public val speakingLastScore: Float = 0f,
+    /** Mejor precisión de primer intento en la lección (0..100). */
+    @ColumnInfo(defaultValue = "0")
+    public val bestScorePercent: Int = 0,
+    /** Precisión de primer intento de la última finalización (0..100). */
+    @ColumnInfo(defaultValue = "0")
+    public val lastScorePercent: Int = 0,
+)
+
+/** Actividad agregada por día local (Room v5, ADR-050). */
+@Entity(tableName = "daily_activity")
+public data class DailyActivityEntity(
+    @PrimaryKey public val epochDay: Long,
+    public val xpEarned: Int,
+    public val lessonsCompleted: Int,
+    public val reviewsCompleted: Int,
 )
 
 /**
@@ -72,4 +90,6 @@ public data class WordProgressEntity(
     public val errorCount: Int = 0,
     /** Última categoría de error registrada (grammar, pronunciation...). */
     public val lastErrorType: String? = null,
+    /** Nota cultural del modismo para el reverso de la tarjeta (ADR-050). */
+    public val culturalNote: String? = null,
 )

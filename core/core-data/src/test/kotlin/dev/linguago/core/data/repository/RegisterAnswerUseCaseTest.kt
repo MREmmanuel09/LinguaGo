@@ -159,4 +159,9 @@ private class FakeHeartsRepository(
         state = HeartsRules.refill(state, TEST_NOW)
         return Result.success(state)
     }
+
+    override suspend fun recoverOne(): Result<HeartsState> {
+        state = HeartsRules.recoverOne(state, TEST_NOW)
+        return Result.success(state)
+    }
 }

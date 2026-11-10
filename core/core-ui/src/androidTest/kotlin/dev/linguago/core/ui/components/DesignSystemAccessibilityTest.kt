@@ -29,7 +29,6 @@ import androidx.test.ext.junit.runners.AndroidJUnit4
 import dev.linguago.core.domain.logic.ClozePassageParser
 import dev.linguago.core.domain.logic.FreeSpeakingFeedback
 import dev.linguago.core.domain.logic.FreeSpeakingVerdict
-import dev.linguago.core.domain.model.Exercise
 import dev.linguago.core.ui.theme.LinguaTheme
 import org.junit.Assert.assertEquals
 import org.junit.Assert.assertTrue
@@ -257,8 +256,8 @@ public class DesignSystemAccessibilityTest {
         compose.setContent {
             LinguaTheme {
                 FeedbackBanner(
-                    isCorrect = true,
-                    message = "¡Correcto!",
+                    isCorrect = false,
+                    message = "Revisa la respuesta y sigue",
                     correctAnswer = "tea",
                     glossary = mapOf("tea" to listOf("té")),
                 )
@@ -361,71 +360,6 @@ public class DesignSystemAccessibilityTest {
         }
 
         compose.onNodeWithText("Continuar").assertIsDisplayed()
-    }
-
-    @Test
-    public fun semanticMatchBoard_rendersMultilineNuanceAndRegister() {
-        compose.setContent {
-            LinguaTheme {
-                SemanticMatchBoard(
-                    pairs = semanticPairs,
-                    shuffledRights = listOf(0, 1),
-                    selectedLeft = null,
-                    matched = emptyMap(),
-                    onSelectLeft = {},
-                    onSelectRight = {},
-                )
-            }
-        }
-
-        compose.onNodeWithText("I'm knackered").assertIsDisplayed()
-        compose.onNodeWithText("Coloquial").assertIsDisplayed()
-        compose
-            .onNodeWithText("Cansancio extremo, registro británico informal.")
-            .assertIsDisplayed()
-    }
-
-    @Test
-    public fun semanticMatchBoard_announcesMatchedAssociation() {
-        compose.setContent {
-            LinguaTheme {
-                SemanticMatchBoard(
-                    pairs = semanticPairs,
-                    shuffledRights = listOf(1, 0),
-                    selectedLeft = null,
-                    matched = mapOf(0 to 0),
-                    onSelectLeft = {},
-                    onSelectRight = {},
-                )
-            }
-        }
-
-        compose
-            .onNodeWithContentDescription("I'm knackered. Emparejado con Estoy agotado")
-            .assertIsDisplayed()
-    }
-
-    @Test
-    public fun semanticMatchBoard_survivesLargeFontScale() {
-        compose.setContent {
-            val density = LocalDensity.current
-            CompositionLocalProvider(
-                LocalDensity provides Density(density = density.density, fontScale = 2f),
-            ) {
-                LinguaTheme {
-                    SemanticMatchBoard(
-                        pairs = semanticPairs,
-                        shuffledRights = listOf(0, 1),
-                        selectedLeft = null,
-                        matched = emptyMap(),
-                        onSelectLeft = {},
-                        onSelectRight = {},
-                    )
-                }
-            }
-        }
-
-        compose.onNodeWithText("I'm knackered").assertIsDisplayed().assertHeightIsAtLeast(48.dp)
     }
 
     @Test
@@ -709,21 +643,5 @@ public class DesignSystemAccessibilityTest {
             detectedGrammarRefs = emptyList(),
             wpm = 108.0,
             verdict = FreeSpeakingVerdict.Pass,
-        )
-
-    private val semanticPairs =
-        listOf(
-            Exercise.SemanticPair(
-                left = "I'm knackered",
-                right = "Estoy agotado",
-                register = Exercise.SemanticRegister.COLLOQUIAL,
-                nuance = "Cansancio extremo, registro británico informal.",
-            ),
-            Exercise.SemanticPair(
-                left = "I am exhausted",
-                right = "Estoy exhausto",
-                register = Exercise.SemanticRegister.FORMAL,
-                nuance = "Registro neutro y formal; válido por escrito.",
-            ),
         )
 }

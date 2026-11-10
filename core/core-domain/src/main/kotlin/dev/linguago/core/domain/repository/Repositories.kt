@@ -3,6 +3,7 @@ package dev.linguago.core.domain.repository
 import dev.linguago.core.common.Result
 import dev.linguago.core.domain.model.Course
 import dev.linguago.core.domain.model.CourseId
+import dev.linguago.core.domain.model.DailyActivity
 import dev.linguago.core.domain.model.LessonId
 import dev.linguago.core.domain.model.LessonProgress
 import dev.linguago.core.domain.model.StreakState
@@ -30,16 +31,36 @@ public interface ProgressRepository {
     /** Añade XP al total del usuario. */
     public suspend fun addXp(amount: Int): Result<StreakState>
 
-    /** Persiste la finalización de una lección con la XP conseguida. */
+    /** Persiste la finalización de una lección con la XP y la nota conseguidas. */
     public suspend fun markLessonCompleted(
         lessonId: LessonId,
         xp: Int,
+        scorePercent: Int = 0,
     ): Result<Unit>
 
     /** Observa el progreso de las lecciones completadas hasta hoy. */
     public fun observeLessonProgress(): Flow<List<LessonProgress>>
 
-    /** Construye el snapshot v1 del progreso actual (respaldo, ADR-013). */
+    /** Observa la actividad diaria de los últimos [days] días (Room v5). */
+    public fun observeDailyActivity(days: Int = 28): Flow<List<DailyActivity>>
+
+    /** Suma actividad local del día sin tocar la racha ni el XP total. */
+    public suspend fun recordDailyActivity(
+        today: LocalDate,
+        xpEarned: Int = 0,
+        lessonsCompleted: Int = 0,
+        reviewsCompleted: Int = 0,
+    ): Result<Unit>
+
+    /** Registra una respuesta oral libre en la lección (ADR-050). */
+    public suspend fun recordSpeakingMetrics(
+        lessonId: LessonId,
+        wpm: Float,
+        score: Float,
+        passed: Boolean,
+    ): Result<Unit>
+
+    /** Construye el snapshot v3 del progreso actual (respaldo, ADR-013/050). */
     public suspend fun snapshot(): Result<SyncSnapshot>
 
     /**

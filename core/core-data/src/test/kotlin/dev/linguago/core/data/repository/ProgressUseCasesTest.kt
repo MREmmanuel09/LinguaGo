@@ -2,6 +2,7 @@ package dev.linguago.core.data.repository
 
 import dev.linguago.core.common.LinguaError
 import dev.linguago.core.common.Result
+import dev.linguago.core.domain.model.DailyActivity
 import dev.linguago.core.domain.model.Exercise
 import dev.linguago.core.domain.model.ExerciseId
 import dev.linguago.core.domain.model.LessonId
@@ -45,10 +46,12 @@ class ProgressUseCasesTest {
     @Test
     fun `completing the lesson persists the session xp exactly once`() =
         runTest {
-            complete(LessonId("ls-1"), 80)
+            complete(LessonId("ls-1"), 80, 75)
             assertEquals(listOf(80), repository.addXpCalls)
             assertEquals(listOf(LessonId("ls-1") to 80), repository.completedLessons)
+            assertEquals(75, repository.lastScorePercent)
             assertEquals(1, repository.dailyActivityCalls)
+            assertEquals(1, repository.dailyRecords.size)
             assertEquals(80, repository.streak.totalXp)
         }
 
@@ -73,7 +76,9 @@ class ProgressUseCasesTest {
 private class RecordingProgressRepository : ProgressRepository {
     val addXpCalls = mutableListOf<Int>()
     val completedLessons = mutableListOf<Pair<LessonId, Int>>()
+    val dailyRecords = mutableListOf<Int>()
     var dailyActivityCalls = 0
+    var lastScorePercent = 0
     var streak = StreakState.zero()
 
     override fun observeStreak(): Flow<StreakState> = MutableStateFlow(streak)
@@ -92,12 +97,33 @@ private class RecordingProgressRepository : ProgressRepository {
     override suspend fun markLessonCompleted(
         lessonId: LessonId,
         xp: Int,
+        scorePercent: Int,
     ): Result<Unit> {
         completedLessons += lessonId to xp
+        lastScorePercent = scorePercent
         return Result.success(Unit)
     }
 
     override fun observeLessonProgress(): Flow<List<LessonProgress>> = flowOf(emptyList())
+
+    override fun observeDailyActivity(days: Int): Flow<List<DailyActivity>> = flowOf(emptyList())
+
+    override suspend fun recordDailyActivity(
+        today: LocalDate,
+        xpEarned: Int,
+        lessonsCompleted: Int,
+        reviewsCompleted: Int,
+    ): Result<Unit> {
+        dailyRecords += lessonsCompleted
+        return Result.success(Unit)
+    }
+
+    override suspend fun recordSpeakingMetrics(
+        lessonId: LessonId,
+        wpm: Float,
+        score: Float,
+        passed: Boolean,
+    ): Result<Unit> = Result.success(Unit)
 
     override suspend fun snapshot(): Result<SyncSnapshot> = Result.error(LinguaError.Unknown)
 

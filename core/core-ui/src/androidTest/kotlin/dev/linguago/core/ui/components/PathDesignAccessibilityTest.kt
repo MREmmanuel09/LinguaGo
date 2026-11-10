@@ -20,7 +20,6 @@ import androidx.compose.ui.test.performClick
 import androidx.compose.ui.unit.Density
 import androidx.compose.ui.unit.dp
 import androidx.test.ext.junit.runners.AndroidJUnit4
-import dev.linguago.core.ui.components.path.ChestNode
 import dev.linguago.core.ui.components.path.PathNode
 import dev.linguago.core.ui.components.path.PathNodeState
 import dev.linguago.core.ui.components.path.PathNodeUi
@@ -80,18 +79,6 @@ public class PathDesignAccessibilityTest {
             .performClick()
 
         compose.runOnIdle { assertEquals(0, clicks) }
-    }
-
-    @Test
-    public fun chestNode_isIndependentAndAnnounced() {
-        compose.setContent {
-            LinguaTheme {
-                ChestNode(id = "u1", label = "Primeros pasos", onClick = {})
-            }
-        }
-
-        compose.onNodeWithContentDescription("Cofre: Primeros pasos").assertIsDisplayed()
-        compose.onNodeWithText("Cofre").assertIsDisplayed()
     }
 
     @Test

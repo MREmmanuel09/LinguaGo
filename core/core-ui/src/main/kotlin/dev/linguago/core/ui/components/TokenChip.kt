@@ -5,6 +5,7 @@ import androidx.compose.animation.core.animateFloatAsState
 import androidx.compose.animation.core.snap
 import androidx.compose.animation.core.tween
 import androidx.compose.foundation.background
+import androidx.compose.foundation.border
 import androidx.compose.foundation.gestures.detectTapGestures
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.offset
@@ -93,6 +94,16 @@ public fun TokenChip(
         animationSpec = if (animations) tween(durationMillis = 160) else snap(),
         label = "tokenContent",
     )
+    val borderColor by animateColorAsState(
+        targetValue =
+            when (status) {
+                OptionStatus.CORRECT -> LinguaTokens.Accent
+                OptionStatus.INCORRECT -> LinguaTokens.Destructive
+                OptionStatus.NEUTRAL -> if (selected) colors.primary else colors.outline
+            },
+        animationSpec = if (animations) tween(durationMillis = 160) else snap(),
+        label = "tokenBorder",
+    )
     var pressed by remember { mutableStateOf(false) }
     var showTranslation by remember { mutableStateOf(false) }
     LaunchedEffect(token, translations) {
@@ -126,6 +137,9 @@ public fun TokenChip(
                     .clip(shape)
                     .background(background)
                     .topHighlight()
+                    // Contorno visible en claro y oscuro (V-05): define la
+                    // ficha incluso cuando el fondo coincide con la pantalla.
+                    .border(1.5.dp, borderColor, shape)
                     .pointerInput(enabled, token, translations) {
                         detectTapGestures(
                             onPress = {

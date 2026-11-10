@@ -78,6 +78,20 @@ public class HeartsRepositoryImpl
                     Result.error(LinguaError.Unknown)
                 }
             }
+
+        override suspend fun recoverOne(): Result<HeartsState> =
+            withContext(dispatchers.io) {
+                try {
+                    val now = nowEpochSecond()
+                    val stored = database.heartsProgressDao().load()
+                    val before = HeartsRules.regenerated(stored?.toDomain() ?: HeartsRules.initial(now), now)
+                    val after = HeartsRules.recoverOne(before, now)
+                    database.heartsProgressDao().upsert(after.toEntity())
+                    Result.success(after)
+                } catch (e: Exception) {
+                    Result.error(LinguaError.Unknown)
+                }
+            }
     }
 
 private fun HeartsProgressEntity.toDomain(): HeartsState =

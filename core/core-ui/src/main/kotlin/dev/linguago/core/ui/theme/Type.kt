@@ -48,6 +48,27 @@ val Nunito =
  */
 val LinguaTypography =
     Typography(
+        displayLarge =
+            TextStyle(
+                fontFamily = Nunito,
+                fontWeight = FontWeight.ExtraBold,
+                fontSize = 44.sp,
+                lineHeight = 52.sp,
+            ),
+        displayMedium =
+            TextStyle(
+                fontFamily = Nunito,
+                fontWeight = FontWeight.ExtraBold,
+                fontSize = 40.sp,
+                lineHeight = 48.sp,
+            ),
+        displaySmall =
+            TextStyle(
+                fontFamily = Nunito,
+                fontWeight = FontWeight.ExtraBold,
+                fontSize = 36.sp,
+                lineHeight = 44.sp,
+            ),
         headlineLarge =
             TextStyle(
                 fontFamily = Nunito,
@@ -62,6 +83,13 @@ val LinguaTypography =
                 fontSize = 26.sp,
                 lineHeight = 34.sp,
             ),
+        headlineSmall =
+            TextStyle(
+                fontFamily = Nunito,
+                fontWeight = FontWeight.Bold,
+                fontSize = 22.sp,
+                lineHeight = 30.sp,
+            ),
         titleLarge =
             TextStyle(
                 fontFamily = Nunito,
@@ -75,6 +103,20 @@ val LinguaTypography =
                 fontWeight = FontWeight.Bold,
                 fontSize = 17.sp,
                 lineHeight = 24.sp,
+            ),
+        titleSmall =
+            TextStyle(
+                fontFamily = Nunito,
+                fontWeight = FontWeight.SemiBold,
+                fontSize = 15.sp,
+                lineHeight = 22.sp,
+            ),
+        bodyLarge =
+            TextStyle(
+                fontFamily = Nunito,
+                fontWeight = FontWeight.Medium,
+                fontSize = 18.sp,
+                lineHeight = 26.sp,
             ),
         bodyMedium =
             TextStyle(
@@ -96,5 +138,19 @@ val LinguaTypography =
                 fontWeight = FontWeight.Bold,
                 fontSize = 14.sp,
                 lineHeight = 20.sp,
+            ),
+        labelMedium =
+            TextStyle(
+                fontFamily = Nunito,
+                fontWeight = FontWeight.Bold,
+                fontSize = 12.sp,
+                lineHeight = 16.sp,
+            ),
+        labelSmall =
+            TextStyle(
+                fontFamily = Nunito,
+                fontWeight = FontWeight.Bold,
+                fontSize = 11.sp,
+                lineHeight = 16.sp,
             ),
     )

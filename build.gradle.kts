@@ -82,6 +82,7 @@ tasks.register("fetchVoiceModels") {
         fun hasRecognizer(dir: File): Boolean =
             dir.walkTopDown().any { file -> file.name.equals("final.mdl", ignoreCase = true) }
 
+        val ttsDirs = mutableListOf<File>()
         for (entry in manifest["tts"] as List<*>) {
             val tts = entry as MutableMap<Any?, Any?>
             val id = tts["id"] as String
@@ -102,10 +103,30 @@ tasks.register("fetchVoiceModels") {
             require(File(dir, "$id.onnx").isFile && File(dir, "tokens.txt").isFile) {
                 "paquete $id incompleto"
             }
+            ttsDirs += dir
             val hash = sha256Hex(File(dir, "$id.onnx"))
             println("SHA-256: tts/$id = $hash")
             tts["sha256"] = hash
         }
+
+        // Los paquetes Piper repiten el mismo árbol espeak-ng-data (~17 MB)
+        // en cada voz. Se conserva una sola copia bajo models/tts/espeak-ng-data
+        // y el empaquetado la inyecta una vez (ADR-051).
+        val sharedEspeak = File(modelsDir, "tts/espeak-ng-data")
+        if (ttsDirs.any { dir -> File(dir, "espeak-ng-data").isDirectory }) {
+            val source = ttsDirs.first { dir -> File(dir, "espeak-ng-data").isDirectory }
+            if (!sharedEspeak.isDirectory) {
+                println("Dedupe: ${source.name}/espeak-ng-data -> tts/espeak-ng-data")
+                File(source, "espeak-ng-data").copyRecursively(sharedEspeak)
+            }
+            ttsDirs.forEach { dir -> File(dir, "espeak-ng-data").deleteRecursively() }
+        }
+        // Solo hablan las voces EN/PT/FR; los diccionarios de espeak del
+        // resto de idiomas no se cargan y añaden peso (ADR-051).
+        val requiredDictionaries = setOf("en_dict", "pt_dict", "fr_dict", "es_dict")
+        sharedEspeak.listFiles()
+            ?.filter { file -> file.isFile && file.name.endsWith("_dict") && file.name !in requiredDictionaries }
+            ?.forEach { file -> file.delete() }
 
         for (entry in manifest["stt"] as List<*>) {
             val stt = entry as MutableMap<Any?, Any?>

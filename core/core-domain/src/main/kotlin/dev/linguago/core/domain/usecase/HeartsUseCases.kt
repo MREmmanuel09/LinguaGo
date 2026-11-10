@@ -17,6 +17,11 @@ public interface ConsumeHeartUseCase {
     public suspend operator fun invoke(): Result<HeartsState>
 }
 
+/** Recupera una vida por cada 5 tarjetas superadas en el repaso (ADR-048). */
+public interface RecoverHeartUseCase {
+    public suspend operator fun invoke(): Result<HeartsState>
+}
+
 /** Resultado de registrar una respuesta (ADR-025): calificación + vidas. */
 public data class AnswerOutcome(
     public val grading: GradingResult,

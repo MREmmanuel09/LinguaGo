@@ -27,7 +27,9 @@ import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableFloatStateOf
 import androidx.compose.runtime.remember
+import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
@@ -41,7 +43,6 @@ import androidx.compose.ui.semantics.role
 import androidx.compose.ui.semantics.semantics
 import androidx.compose.ui.semantics.stateDescription
 import androidx.compose.ui.text.font.FontWeight
-import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import dev.linguago.core.ui.components.LinguaIcons
@@ -146,18 +147,6 @@ fun PathNode(
         }
     val isChest = node.state == PathNodeState.CHEST || node.state == PathNodeState.CHEST_LOCKED
 
-    val transition = rememberInfiniteTransition(label = "pathNodePulse")
-    val pulse by transition.animateFloat(
-        initialValue = 1f,
-        targetValue = if (node.state == PathNodeState.AVAILABLE && animations) 1.08f else 1f,
-        animationSpec =
-            infiniteRepeatable(
-                animation = tween(durationMillis = 900),
-                repeatMode = RepeatMode.Reverse,
-            ),
-        label = "pathNodeScale",
-    )
-
     val interaction = remember { MutableInteractionSource() }
     val pressed by interaction.collectIsPressedAsState()
     val press by animateFloatAsState(
@@ -165,6 +154,22 @@ fun PathNode(
         animationSpec = LinguaMotion.SpringSnappy,
         label = "pathNodePress",
     )
+    val activePulse = node.state == PathNodeState.AVAILABLE && animations
+    var pulse by remember { mutableFloatStateOf(1f) }
+    if (activePulse) {
+        val transition = rememberInfiniteTransition(label = "pathNodePulse")
+        val animatedPulse by transition.animateFloat(
+            initialValue = 1f,
+            targetValue = 1.08f,
+            animationSpec =
+                infiniteRepeatable(
+                    animation = tween(durationMillis = 900),
+                    repeatMode = RepeatMode.Reverse,
+                ),
+            label = "pathNodeScale",
+        )
+        pulse = animatedPulse
+    }
 
     Box(
         modifier =
@@ -224,29 +229,6 @@ fun PathNode(
                 modifier = Modifier.size(28.dp),
             )
         }
-    }
-}
-
-/** Cofre de fin de unidad: nodo independiente que nunca reemplaza la lección. */
-@Composable
-fun ChestNode(
-    id: String,
-    label: String,
-    onClick: (String) -> Unit,
-    modifier: Modifier = Modifier,
-) {
-    Column(
-        modifier = modifier,
-        horizontalAlignment = Alignment.CenterHorizontally,
-        verticalArrangement = Arrangement.spacedBy(4.dp),
-    ) {
-        PathNode(node = PathNodeUi(id = id, label = label, state = PathNodeState.CHEST), onClick = onClick)
-        Text(
-            text = "Cofre",
-            style = MaterialTheme.typography.labelLarge,
-            color = MaterialTheme.colorScheme.onBackground,
-            textAlign = TextAlign.Center,
-        )
     }
 }
 

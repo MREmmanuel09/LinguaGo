@@ -18,13 +18,16 @@ import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.offset
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.widthIn
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.lazy.rememberLazyListState
 import androidx.compose.material3.MaterialTheme
+import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableFloatStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
@@ -33,6 +36,8 @@ import androidx.compose.ui.graphics.Path
 import androidx.compose.ui.graphics.PathMeasure
 import androidx.compose.ui.graphics.StrokeCap
 import androidx.compose.ui.graphics.drawscope.Stroke
+import androidx.compose.ui.text.style.TextAlign
+import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import dev.linguago.core.ui.components.LumiMascot
 import dev.linguago.core.ui.components.LumiMood
@@ -54,7 +59,7 @@ fun LearningPath(
     items: List<PathItem>,
     onLessonClick: (String) -> Unit,
     modifier: Modifier = Modifier,
-    onChestClick: (String) -> Unit = {},
+    onChestClick: (String, String) -> Unit = { _, _ -> },
 ) {
     val rows = remember(items) { buildPathRows(items) }
     val listState = rememberLazyListState()
@@ -69,7 +74,7 @@ fun LearningPath(
     LazyColumn(
         state = listState,
         modifier = modifier.fillMaxSize(),
-        contentPadding = PaddingValues(vertical = 8.dp),
+        contentPadding = PaddingValues(top = 8.dp, bottom = 88.dp),
         verticalArrangement = Arrangement.spacedBy(2.dp),
     ) {
         items(
@@ -97,7 +102,11 @@ fun LearningPath(
                                     node = item.node,
                                     onClick = { id ->
                                         val lessonId = item.lessonId
-                                        if (lessonId != null) onLessonClick(lessonId) else onChestClick(item.node.label)
+                                        if (lessonId != null) {
+                                            onLessonClick(lessonId)
+                                        } else {
+                                            onChestClick(item.node.id.removePrefix("chest:"), item.node.label)
+                                        }
                                     },
                                 )
                                 if (item.node.state == PathNodeState.AVAILABLE ||
@@ -114,12 +123,30 @@ fun LearningPath(
                                         modifier =
                                             Modifier
                                                 .align(Alignment.TopEnd)
-                                                .offset(x = 6.dp, y = (-14).dp),
+                                                .offset(x = 8.dp, y = (-18).dp),
                                     )
                                 }
                             }
                             Spacer(Modifier.weight((0.5f - row.bias).coerceAtLeast(0.06f)))
                         }
+                        Text(
+                            text = if (item.lessonId == null) "Cofre" else item.node.label,
+                            style = MaterialTheme.typography.labelSmall,
+                            color =
+                                when (item.node.state) {
+                                    PathNodeState.LOCKED,
+                                    PathNodeState.CHEST_LOCKED,
+                                    -> MaterialTheme.colorScheme.onSurfaceVariant.copy(alpha = 0.7f)
+                                    else -> MaterialTheme.colorScheme.onSurface
+                                },
+                            textAlign = TextAlign.Center,
+                            maxLines = 2,
+                            overflow = TextOverflow.Ellipsis,
+                            modifier =
+                                Modifier
+                                    .widthIn(max = 168.dp)
+                                    .padding(top = 2.dp, start = 8.dp, end = 8.dp),
+                        )
                         val nextBias = row.nextBias
                         if (nextBias != null) {
                             PathConnector(
@@ -152,17 +179,22 @@ private fun PathConnector(
     animated: Boolean,
 ) {
     val animations = rememberAnimationsEnabled()
-    val transition = rememberInfiniteTransition(label = "pathConnector")
-    val progress by transition.animateFloat(
-        initialValue = 0f,
-        targetValue = 1f,
-        animationSpec =
-            infiniteRepeatable(
-                animation = tween(durationMillis = 1_600, easing = LinearEasing),
-                repeatMode = RepeatMode.Restart,
-            ),
-        label = "pathConnectorProgress",
-    )
+    val active = animated && animations
+    val transition = if (active) rememberInfiniteTransition(label = "pathConnector") else null
+    val progress by if (transition != null) {
+        transition.animateFloat(
+            initialValue = 0f,
+            targetValue = 1f,
+            animationSpec =
+                infiniteRepeatable(
+                    animation = tween(durationMillis = 1_600, easing = LinearEasing),
+                    repeatMode = RepeatMode.Restart,
+                ),
+            label = "pathConnectorProgress",
+        )
+    } else {
+        remember { mutableFloatStateOf(0f) }
+    }
 
     Canvas(
         modifier =

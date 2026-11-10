@@ -30,13 +30,40 @@ public data class LessonProgress(
     val completed: Boolean,
     val xp: Int,
     val attempts: Int,
+    /** Intentos de producción oral libre registrados en la lección. */
+    val speakingAttempts: Int = 0,
+    /** Intentos orales que superaron el grader heurístico. */
+    val speakingPassedAttempts: Int = 0,
+    /** Mejor fluidez observada (palabras por minuto). */
+    val speakingBestWpm: Float = 0f,
+    /** Última puntuación heurística de producción oral (0..1). */
+    val speakingLastScore: Float = 0f,
+    /** Mejor precisión de primer intento en la lección (0..100). */
+    val bestScorePercent: Int = 0,
+    /** Precisión de primer intento de la última finalización (0..100). */
+    val lastScorePercent: Int = 0,
 )
+
+/** Actividad agregada de un día local (Room v5, ADR-050). */
+public data class DailyActivity(
+    val epochDay: Long,
+    val xpEarned: Int,
+    val lessonsCompleted: Int,
+    val reviewsCompleted: Int,
+) {
+    /** `true` si hubo cualquier práctica ese día. */
+    public val isActive: Boolean
+        get() = xpEarned > 0 || lessonsCompleted > 0 || reviewsCompleted > 0
+}
 
 /**
  * XP por respuesta correcta acumulada en la sesión. Se persiste una sola vez
  * al completar la lección (ADR-025); nunca se escribe por respuesta.
  */
 public const val XP_PER_CORRECT_ANSWER: Int = 10
+
+/** Bono único al abrir el cofre de una unidad completada (ADR-048). */
+public const val XP_PER_CHEST: Int = 20
 
 /**
  * Estado FSRS de una tarjeta de vocabulario (ADR-016, Fase 5).
@@ -52,4 +79,6 @@ public data class WordProgress(
     val nextReview: Instant,
     val stability: Float,
     val difficulty: Float,
+    /** Nota cultural del modismo, persistida para el reverso (ADR-050). */
+    val culturalNote: String? = null,
 )

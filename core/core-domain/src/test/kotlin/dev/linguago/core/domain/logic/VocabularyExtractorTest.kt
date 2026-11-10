@@ -3,6 +3,7 @@ package dev.linguago.core.domain.logic
 import dev.linguago.core.domain.model.CulturalNote
 import dev.linguago.core.domain.model.Exercise
 import dev.linguago.core.domain.model.ExerciseId
+import dev.linguago.core.domain.model.Language
 import dev.linguago.core.domain.model.Lesson
 import dev.linguago.core.domain.model.LessonId
 import org.junit.Assert.assertEquals
@@ -47,6 +48,36 @@ public class VocabularyExtractorTest {
         assertEquals(VocabularyPair("hermano", "brother"), pairs[0])
         assertEquals(VocabularyPair("あ", "a"), pairs[2])
         assertEquals(VocabularyPair("山", "やま"), pairs[3])
+    }
+
+    @Test
+    public fun `normaliza match pairs japoneses invertidos con el espanol al frente`() {
+        val lesson =
+            Lesson(
+                id = LessonId("ls-ja"),
+                title = "Hiragana",
+                exercises =
+                    listOf(
+                        Exercise.MatchPairs(
+                            id = ExerciseId("e1"),
+                            pairs =
+                                listOf(
+                                    Exercise.MatchPair("あ", "a"),
+                                    Exercise.MatchPair("hermano", "兄弟"),
+                                ),
+                        ),
+                    ),
+            )
+
+        val pairs = VocabularyExtractor.fromLesson(lesson, Language.JAPANESE)
+
+        assertEquals(
+            listOf(
+                VocabularyPair("a", "あ"),
+                VocabularyPair("hermano", "兄弟"),
+            ),
+            pairs,
+        )
     }
 
     @Test
@@ -103,8 +134,8 @@ public class VocabularyExtractorTest {
         assertEquals(1, pairs.size)
         assertEquals(
             VocabularyPair(
-                source = "play it by ear",
-                target = "improvisar según las circunstancias",
+                source = "improvisar según las circunstancias",
+                target = "play it by ear",
                 culturalNote = "Decidir sobre la marcha sin comprometerse.",
             ),
             pairs.single(),
@@ -130,7 +161,10 @@ public class VocabularyExtractorTest {
 
         val pairs = VocabularyExtractor.fromLesson(lesson)
 
-        assertEquals(VocabularyPair("play it by ear", "Decidir sobre la marcha sin comprometerse."), pairs.single())
+        assertEquals(
+            VocabularyPair("Decidir sobre la marcha sin comprometerse.", "play it by ear"),
+            pairs.single(),
+        )
     }
 
     @Test
@@ -143,7 +177,13 @@ public class VocabularyExtractorTest {
                     listOf(
                         Exercise.MatchPairs(
                             id = ExerciseId("mp"),
-                            pairs = listOf(Exercise.MatchPair("play it by ear", "improvisar")),
+                            pairs =
+                                listOf(
+                                    Exercise.MatchPair(
+                                        "play it by ear",
+                                        "improvisar según las circunstancias",
+                                    ),
+                                ),
                         ),
                     ),
                 culturalNotes =
@@ -161,8 +201,8 @@ public class VocabularyExtractorTest {
         assertEquals(1, pairs.size)
         assertEquals(
             VocabularyPair(
-                source = "play it by ear",
-                target = "improvisar según las circunstancias",
+                source = "improvisar según las circunstancias",
+                target = "play it by ear",
                 culturalNote = "Nota cultural británica.",
             ),
             pairs.single(),
@@ -222,7 +262,7 @@ public class VocabularyExtractorTest {
             )
 
         assertEquals(
-            VocabularyPair("break the ice", "romper el hielo", "Romper la tensión."),
+            VocabularyPair("romper el hielo", "break the ice", "Romper la tensión."),
             VocabularyExtractor.fromLesson(lesson).single(),
         )
     }
@@ -249,7 +289,7 @@ public class VocabularyExtractorTest {
         val pairs = VocabularyExtractor.fromLesson(lesson)
 
         assertEquals(2, pairs.size)
-        assertEquals("play it by ear", pairs[0].source)
+        assertEquals("play it by ear", pairs[0].target)
         assertEquals("deadline", pairs[1].source)
     }
 }

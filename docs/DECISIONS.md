@@ -53,6 +53,14 @@
 | 041 | Migración de los cursos de arranque pt/fr/ja a schema v2 | Aprobado |
 | 042 | Expansión progresiva a C1/C2 con rampa verificada y protocolo de lotes | Aprobado |
 | 043 | Captura de voz tolerante y evaluación oral sin falsos negativos | Aprobado |
+| 044 | Tipografía 100 % Nunito y tokens de contenedor (V-04, V-08) | Aprobado |
+| 045 | Paleta extendida, bisel oscuro y `PathStage.onAccent` (V-03, V-09) | Aprobado |
+| 046 | Grader multilingüe y dirección de tarjetas FSRS (D-01, D-04) | Aprobado |
+| 047 | Avance neutro al omitir un ejercicio de voz (B-02, I3) | Aprobado |
+| 048 | Navegación de 4 destinos, cambio rápido de curso, cofres y recuperación activa de vidas | Aprobado |
+| 049 | Persistencia de sesión en `SavedStateHandle` (B-08) | Aprobado |
+| 050 | Room v5, `SyncSnapshot` v3 y respaldo local por SAF | Aprobado |
+| 051 | `espeak-ng-data` compartido, gestor de voces y desglose CEFR | Aprobado |
 
 ---
 ## ADR-000: Convención del registro de decisiones
@@ -538,7 +546,7 @@ olvida y el progreso por gamificación no se sostiene.
 
 ## ADR-017: Particionamiento por Product Flavors de idioma
 
-**Estado:** Propuesto
+**Estado:** Aprobado
 **Fecha:** 2026-10-17
 
 **Contexto:** el APK release monolítico de v0.2.0 pesa 508.36 MB (debug
@@ -571,7 +579,7 @@ distribución sin Play Feature Delivery).
 
 ## ADR-018: Schema JSON v2 dual y Regla de No-Aplanamiento Pedagógico
 
-**Estado:** Propuesto
+**Estado:** Aprobado
 **Fecha:** 2026-10-17
 
 **Contexto:** el contrato v1 (`docs/schemas/course-v1.json`) solo describe
@@ -613,7 +621,7 @@ preservados), I9 (validación estática en CI).
 
 ## ADR-019: Evaluación de producción oral libre B2 sin LLMs (heurística + autoevaluación)
 
-**Estado:** Propuesto
+**Estado:** Aprobado
 **Fecha:** 2026-10-17
 
 **Contexto:** `FreeSpeakingPrompt` requiere evaluar producción oral libre en
@@ -649,7 +657,7 @@ fricción), I7 (testabilidad).
 
 ## ADR-020: Inicialización asíncrona no bloqueante de motores nativos (Vosk/Piper)
 
-**Estado:** Propuesto
+**Estado:** Aprobado
 **Fecha:** 2026-10-17
 
 **Contexto:** `LessonViewModel.startLesson()` llama hoy a
@@ -684,7 +692,7 @@ responsivas).
 
 ## ADR-021: Migración Room v2→v3 con test instrumentado de regresión de estado
 
-**Estado:** Propuesto
+**Estado:** Aprobado
 **Fecha:** 2026-10-17
 
 **Contexto:** v2.0 necesita persistir métricas locales de producción oral y
@@ -713,7 +721,7 @@ persiste íntegro.
 
 ## ADR-022: Cierre determinista de recursos nativos JNA/JNI bajo cancelación
 
-**Estado:** Propuesto
+**Estado:** Aprobado
 **Fecha:** 2026-10-18
 
 **Contexto:** `VoskSttEngine` mantiene `org.vosk.Model` (JNA) y
@@ -778,7 +786,7 @@ cero `REASON_CRASH_NATIVE`.
 
 ## ADR-023: Baseline Profiles y Macrobenchmark del flujo crítico
 
-**Estado:** Propuesto
+**Estado:** Aprobado
 **Fecha:** 2026-10-18
 
 **Contexto:** el arranque en frío y la navegación hasta la primera lección y
@@ -834,7 +842,7 @@ para el smoke local; no se acepta como evidencia de rendimiento.
 
 ## ADR-024: RELEASE GATE F4 — módulo QA de sesión instrumentada contra `enRelease`
 
-**Fecha:** 2026-10-19 · **Estado:** Propuesto
+**Fecha:** 2026-10-19 · **Estado:** Aprobado
 
 **Contexto:** F4.3 ya valida los 4 flavors release con granularidad de
 smoke manual; ROADMAP_V2.md (Fase 4) exige además un RELEASE GATE: una
@@ -1947,3 +1955,218 @@ tests de endpoint dejan la gracia en 0 para reproducir el corte antiguo de
 | Tema | Se decide en | ADR previsto |
 |---|---|---|
 | Proveedor OneDrive (appfolder vía MSAL) | registrado en ADR-015 como diferido | - |
+
+## ADR-044: Tipografía 100 % Nunito y tokens de contenedor (V-04, V-08)
+
+**Estado:** Aprobado
+**Fecha:** 2026-11-09
+**Se aplica en:** release 2.5.0 (versionCode 13)
+
+**Contexto:** `LinguaTypography` definía solo 7 de los 15 slots de Material 3;
+los 8 restantes caían a Roboto. `OptionCard` pintaba el tinte de estado sobre
+la superficie, dejando el texto con ratio 1,15:1 al seleccionar.
+
+**Decisión:** completar los 15 slots con Nunito (pesos 400–800) y añadir
+`SECONDARY/TERTIARY/ERROR_CONTAINER` en `LinguaTokens`/`LinguaColors`. En
+`OptionCard`, pintar primero `colors.surface` opaco y el tinte después.
+
+**Consecuencias:** tipografía de identidad homogénea (I5) y contraste AA en
+opciones seleccionadas (I8). Test `LinguaTypographyNunitoTest`.
+
+---
+
+## ADR-045: Paleta extendida, bisel oscuro y `PathStage.onAccent` (V-03, V-09)
+
+**Estado:** Aprobado
+**Fecha:** 2026-11-09
+**Se aplica en:** release 2.5.0 (versionCode 13)
+
+**Contexto:** en modo oscuro el bisel superior dejaba una neblina gris y el
+texto activo de `LinguaBottomBar` era verde mientras el icono era púrpura.
+`PathStage.onAccent` declaraba tinta oscura solo para B2/C2.
+
+**Decisión:** `topHighlight()` se vuelve `@Composable` y atenúa el alpha en
+superficies oscuras (`DARK_HIGHLIGHT_ALPHA`). `PathStage.onAccent` usa tinta
+oscura para A1/A2/B2/C2 y blanca para B1/C1. `LinguaBottomBar` unifica
+icono y etiqueta en `primaryInk`. Se añaden `WARNING_INK`/`INFO_INK`.
+
+**Consecuencias:** contraste AA verificado por `LinguaContrastTest`.
+
+---
+
+## ADR-046: Grader multilingüe y dirección de tarjetas FSRS (D-01, D-04)
+
+**Estado:** Aprobado
+**Fecha:** 2026-11-09
+**Se aplica en:** release 2.5.0 (versionCode 13)
+
+**Contexto:** `FreeSpeakingHeuristicGrader.patternFor` solo reconocía
+etiquetas en inglés, por lo que FR/PT/JA marcaban `MISSING_GRAMMAR` siempre.
+`VocabularyExtractor` dejaba la dirección invertida en `culturalNotes` y en
+`MatchPairs` japoneses.
+
+**Decisión:** `evaluate` recibe `language` y el catálogo se resuelve por
+familia gramatical × idioma meta (EN/FR/PT/JA). `VocabularyExtractor.fromLesson`
+normaliza a frente ES → reverso meta. `ReviewViewModel` pronuncia el término
+en escritura japonesa cuando el curso es japonés.
+
+**Consecuencias:** `FreeSpeakingHeuristicGrader` y el contrato de contenido
+verifican familias gramaticales en EN/FR/PT/JA y que `modelAnswer` no
+marque `MISSING_GRAMMAR` ni `LOW_COVERAGE`. Los prompts con gramática no
+ejemplificada se resuelven con revisiones nativas de contenido separadas.
+
+---
+
+## ADR-047: Avance neutro al omitir un ejercicio de voz (B-02, I3)
+
+**Estado:** Aprobado
+**Fecha:** 2026-11-09
+**Se aplica en:** release 2.5.0 (versionCode 13)
+
+**Contexto:** `skipSpeech`/`skipFreeSpeaking` calificaban la respuesta vacía
+como incorrecta: rompían el combo, sumaban un error y añadían el ejercicio a
+`mistakes`.
+
+**Decisión:** `submitAnswer` acepta `skipped`. Cuando es `true`, el combo se
+conserva, los contadores no se mueven, el ejercicio no entra en `mistakes` y
+el feedback es un `InfoBanner` informativo. La lógica pura vive en
+`LessonAnswerRules`.
+
+**Consecuencias:** saltar voz avanza sin castigo. Test `LessonAnswerRulesTest`.
+
+---
+
+## ADR-048: Navegación de 4 destinos, cambio rápido de curso, cofres y recuperación activa de vidas
+
+**Estado:** Aprobado
+**Fecha:** 2026-11-09
+**Se aplica en:** release 3.0.0 (versionCode 14)
+
+**Contexto:** el rediseño Feather 3.0 necesita acceso en un toque al repaso,
+cambio de idioma sin volver al onboarding y recompensas de práctica que no
+dependan solo del temporizador de vidas.
+
+**Decisión:**
+1. `LinguaBottomBar` pasa a 4 destinos (`Inicio · Repaso · Progreso · Ajustes`).
+   El badge de Repaso observa las tarjetas vencidas del curso activo mediante
+   `AppShellViewModel`. El destino inicial se guarda con `rememberSaveable`
+   para no reconstruir el grafo al cambiar de curso.
+2. `CourseSwitcherSheet` (core-ui) se abre desde Home y Ajustes; escribe
+   `selectedCourseId` sin borrar el curso anterior ni pasar por onboarding.
+3. El camino muestra el título bajo cada nodo, un FAB «Ir a mi lección» y
+   conserva el auto-scroll al nodo activo.
+4. El cofre de una unidad completada otorga `XP_PER_CHEST` (+20 XP) una sola
+   vez. Los ids reclamados se guardan en DataStore junto a las preferencias;
+   Room v5 los migrará a datos de progreso en F3.
+5. En Repaso, cada 5 tarjetas superadas se recupera 1 vida
+   (`HeartsRules.recoverOne`). «Otra vez» sigue consumiendo una vida. La regla
+   pura vive en `ReviewHeartRules`.
+6. El reverso de la tarjeta muestra la `culturalNote` derivada del contenido y
+   ofrece audio a 1x/0.75x. La calificación usa cuadrícula 2×2 con
+   `fontScale >= 1.5`.
+
+**Consecuencias:** navegación de 4 pestañas, cambio de curso en 2 toques,
+recompensa de cofre no duplicable y recuperación de vidas por práctica. Los
+tests cubren la regla de recuperación y las reglas de vidas; la validación
+visual se documenta en `docs/qa/fase2-3.0.0-resultados.md`.
+
+---
+
+## ADR-049: Persistencia de sesión en `SavedStateHandle` (B-08)
+
+**Estado:** Aprobado
+**Fecha:** 2026-11-09
+**Se aplica en:** release 2.5.0 (versionCode 13)
+
+**Contexto:** la rotación o la muerte del proceso expulsaban al usuario del
+ejercicio actual.
+
+**Decisión:** `LessonViewModel` guarda `index`, `xpEarned`, `correctCount`,
+`incorrectCount` y los ids de `mistakes` en `SavedStateHandle`, restaurándolos
+en `startLesson`. `MainActivity` espera la primera lectura de
+`SettingsRepository` antes de montar el `NavHost` y sincroniza las barras del
+sistema con el tema.
+
+**Consecuencias:** rotación y *process death* retoman el ejercicio exacto.
+
+---
+
+## ADR-050: Room v5, `SyncSnapshot` v3 y respaldo local por SAF
+
+**Estado:** Aprobado
+**Fecha:** 2026-11-09
+**Se aplica en:** release 3.0.0 (versionCode 14)
+
+**Contexto:** el respaldo v2 no incluía el mazo FSRS (D-07), las columnas de
+voz de Room v3 nunca se escribían, `daily_activity` no existía y los usuarios
+sin Google Drive no tenían forma de exportar su progreso. Además, cuenta y
+respaldo vivían en dos pantallas separadas.
+
+**Decisión:**
+
+1. `LinguagoDatabase` sube a **v5** con `MIGRATION_4_5` explícita y schema
+   exportado. Añade `culturalNote` a `word_progress`,
+   `speakingPassedAttempts`/`bestScorePercent`/`lastScorePercent` a
+   `lesson_progress` y la tabla `daily_activity`. Ninguna fila existente se
+   borra ni se trunca; la actividad histórica se siembra con el último día de
+   racha. `Migration4To5Test` lo verifica sobre una base v4 poblada.
+2. Cada lección completada actualiza `lastScorePercent`/`bestScorePercent`;
+   cada respuesta oral libre registra intentos, aprobados, mejor WPM y última
+   puntuación. Las revisiones FSRS y las lecciones incrementan
+   `daily_activity` sin tocar la racha ni el XP total más de una vez.
+3. `SyncSnapshot` sube a **v3** con `words: List<WordEntry>`. El merge conserva,
+   por clave `(word, courseId)`, la entrada con más repasos y, en empate, la de
+   `lastReviewEpochMillis` más reciente; los errores y la nota cultural se
+   conservan con máximo/relleno. `SnapshotCodec` sigue aceptando v1, v2 y v3.
+4. `SyncScreen` unifica cuenta y respaldo: estado legible del proveedor,
+   vincular/desvincular Google Drive o laboratorio, copia cifrada en la nube y
+   exportación/importación `.json` vía SAF sin cuenta. La importación local usa
+   el mismo merge monótono que la nube (I4). La ruta `auth` deja de exponerse
+   en la app; el módulo `feature-auth` permanece como API reutilizable.
+5. El perfil muestra métricas reales del curso activo: mejor fluidez oral,
+   precisión media, tasa de superación oral y calendario local de 28 días.
+
+**Consecuencias:** restaurar un respaldo recupera racha, XP, vidas, lecciones y
+tarjetas FSRS; el respaldo local funciona 100% sin Google; las métricas de voz
+y actividad dejan de ser columnas muertas. La nube sigue siendo opcional (I1,
+I3) y el merge nunca retrocede progreso (I4).
+
+---
+
+## ADR-051: `espeak-ng-data` compartido, gestor de voces y desglose CEFR
+
+**Estado:** Aprobado
+**Fecha:** 2026-11-09
+**Se aplica en:** release 3.0.0 (versionCode 14)
+
+**Contexto:** cada paquete Piper incluía una copia idéntica de
+`espeak-ng-data` (~17,2 MB), triplicando ese árbol en `models/tts` y en el APK
+`full`. Además, `filesDir` acumulaba voces y modelos extraídos sin forma de
+consultarlos o liberarlos, y el perfil solo mostraba un conteo global de
+lecciones.
+
+**Decisión:**
+
+1. `models/tts/espeak-ng-data` es el único árbol compartido. La tarea
+   `fetchVoiceModels` lo extrae de la primera voz y elimina las copias
+   locales; el empaquetado Gradle excluye `espeak-ng-data/**` de cada voz y
+   lo inyecta una sola vez en `tts/espeak-ng-data`.
+2. `PiperTtsEngine` usa la copia local de una caché antigua si existe; en
+   instalaciones nuevas extrae el árbol compartido una sola vez con
+   `AtomicInstall` y lo reutiliza entre voces. Las cachés previas siguen
+   funcionando sin migración destructiva.
+3. `VoiceStorageManager` (core-audio) consulta el espacio de
+   `filesDir/tts` y `filesDir/stt`, cierra los motores nativos y borra las
+   copias extraídas. Ajustes muestra el tamaño y pide confirmación antes de
+   liberar; la próxima reproducción vuelve a extraer los assets sin red (I1).
+4. `ProfileStats` calcula el avance real por etapa CEFR A1–C2 del curso
+   activo y el perfil lo renderiza en seis píldoras, incluidas las etapas sin
+   contenido o sin empezar.
+
+**Consecuencias:** el árbol de modelos y el APK dejan de llevar dos copias
+redundantes (~34 MB antes de compresión); el usuario puede recuperar espacio
+sin perder progreso ni contenido; el perfil refleja la rampa CEFR real del
+curso activo. La revisión editorial humana de B1–C2 permanece desacoplada en
+commits `content:` para `v3.1`.
+
+---

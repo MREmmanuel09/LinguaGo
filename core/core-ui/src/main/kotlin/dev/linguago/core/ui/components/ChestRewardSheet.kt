@@ -4,6 +4,7 @@ import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
@@ -36,6 +37,8 @@ fun ChestRewardSheet(
     unitTitle: String,
     onDismiss: () -> Unit,
     modifier: Modifier = Modifier,
+    xpEarned: Int = 20,
+    alreadyOpened: Boolean = false,
 ) {
     val extended = linguaExtendedColors()
     val feedback = LocalInteractionFeedback.current
@@ -49,41 +52,70 @@ fun ChestRewardSheet(
         contentAlignment = Alignment.Center,
     ) {
         ConfettiBurst(playKey = 1, modifier = Modifier.fillMaxSize())
-        Column(
-            modifier = Modifier.padding(24.dp),
-            horizontalAlignment = Alignment.CenterHorizontally,
-            verticalArrangement = Arrangement.spacedBy(12.dp),
+        LinguaCard3D(
+            modifier = Modifier.fillMaxWidth().padding(24.dp),
+            contentPadding = PaddingValues(horizontal = 20.dp, vertical = 24.dp),
         ) {
-            Icon(
-                painter = painterResource(LinguaIcons.ChestRes),
-                contentDescription = null,
-                tint = extended.chestGold,
-                modifier = Modifier.size(72.dp),
-            )
-            Text(
-                text = "¡Unidad completada!",
-                style = MaterialTheme.typography.headlineMedium,
-                color = MaterialTheme.colorScheme.onBackground,
-                textAlign = TextAlign.Center,
-            )
-            Text(
-                text = unitTitle,
-                style = MaterialTheme.typography.titleMedium,
-                color = MaterialTheme.colorScheme.onBackground,
-                textAlign = TextAlign.Center,
-            )
-            Text(
-                text = "Has desbloqueado el cofre de la unidad.",
-                style = MaterialTheme.typography.bodyMedium,
-                color = MaterialTheme.colorScheme.onSurfaceVariant,
-                textAlign = TextAlign.Center,
-            )
-            Spacer(Modifier.height(8.dp))
-            PrimaryButton3D(
-                text = "Seguir",
-                onClick = onDismiss,
-                modifier = Modifier.fillMaxWidth(),
-            )
+            Column(
+                horizontalAlignment = Alignment.CenterHorizontally,
+                verticalArrangement = Arrangement.spacedBy(12.dp),
+            ) {
+                LumiMascot(
+                    size = 56.dp,
+                    mood = LumiMood.HAPPY,
+                )
+                Icon(
+                    painter = painterResource(LinguaIcons.ChestRes),
+                    contentDescription = null,
+                    tint = extended.chestGold,
+                    modifier = Modifier.size(72.dp),
+                )
+                Text(
+                    text = "¡Unidad completada!",
+                    style = MaterialTheme.typography.headlineSmall,
+                    color = MaterialTheme.colorScheme.onSurface,
+                    textAlign = TextAlign.Center,
+                )
+                Text(
+                    text = unitTitle,
+                    style = MaterialTheme.typography.titleMedium,
+                    color = MaterialTheme.colorScheme.onSurface,
+                    textAlign = TextAlign.Center,
+                )
+                Text(
+                    text = if (alreadyOpened) "Cofre ya reclamado" else "+$xpEarned XP",
+                    style =
+                        if (alreadyOpened) {
+                            MaterialTheme.typography.titleMedium
+                        } else {
+                            MaterialTheme.typography.headlineLarge
+                        },
+                    color =
+                        if (alreadyOpened) {
+                            MaterialTheme.colorScheme.onSurfaceVariant
+                        } else {
+                            MaterialTheme.colorScheme.primary
+                        },
+                    textAlign = TextAlign.Center,
+                )
+                Text(
+                    text =
+                        if (alreadyOpened) {
+                            "La recompensa de esta unidad ya está en tu progreso."
+                        } else {
+                            "Has desbloqueado el cofre de la unidad."
+                        },
+                    style = MaterialTheme.typography.bodyMedium,
+                    color = MaterialTheme.colorScheme.onSurfaceVariant,
+                    textAlign = TextAlign.Center,
+                )
+                Spacer(Modifier.height(8.dp))
+                PrimaryButton3D(
+                    text = "Seguir",
+                    onClick = onDismiss,
+                    modifier = Modifier.fillMaxWidth(),
+                )
+            }
         }
     }
 }

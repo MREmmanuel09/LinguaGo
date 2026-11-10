@@ -8,10 +8,18 @@
 
 - **Nada se commitea**: los modelos viven fuera del repo; la caché de
   descargas es `models/.voice-downloads/` (ignorada por git).
-- Verificación **SHA-256** obligatoria antes de cargar cualquier modelo
-  (`core-audio.ModelIntegrity`); un hash inválido desactiva el modelo.
+- **`espeak-ng-data` compartido**: `models/tts/espeak-ng-data` contiene una
+  sola copia (solo diccionarios `en/pt/fr/es`); las voces no llevan su propia
+  copia. El APK lo empaqueta una vez en `assets/tts/espeak-ng-data` (ADR-051).
+- **Verificación SHA-256** obligatoria antes de cargar cualquier modelo
+  (`.onnx` y archivos Vosk) contra `models/manifest.json`; un hash inválido
+  desactiva el modelo. El árbol espeak compartido se valida como paquete
+  extraído no vacío.
 - **Degradación**: sin modelos, la app usa el TTS del sistema
   (`SystemTtsEngine`) y los ejercicios nunca se bloquean (I3).
+- **Gestión de espacio**: Ajustes → Voz offline muestra `filesDir/tts` +
+  `filesDir/stt` y permite liberar la caché extraída; se reinstala desde los
+  assets la próxima vez que se use audio.
 
 ## Voz TTS por idioma destino (ADR-010)
 
@@ -57,8 +65,10 @@ La tarea (no conectada al build ni al CI) para cada voz/modelo:
    para Vosk) con caché en `models/.voice-downloads/`.
 2. Extrae en `models/tts/<voz>/` o `models/stt/<modelo>/` (una vez: si
    existe, se salta).
-3. Calcula el **SHA-256** y lo graba en `models/manifest.json` (fuente de
+3. Deduplica `espeak-ng-data` en `models/tts/espeak-ng-data` y elimina los
+   diccionarios de idiomas sin voz Piper (`en/pt/fr/es` se conservan).
+4. Calcula el **SHA-256** y lo graba en `models/manifest.json` (fuente de
    verdad de hashes, ADR-006); en Vosk, por cada archivo del modelo.
-4. `models/` es assets de la app: al instalar, los motores copian el paquete
+5. `models/` es assets de la app: al instalar, los motores copian el paquete
    a `filesDir`, verifican los hashes y cargan; sin voces (repo limpio/CI)
    degradar al sistema o a "no disponible" sin bloquear (I3).

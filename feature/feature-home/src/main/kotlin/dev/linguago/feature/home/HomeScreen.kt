@@ -1,7 +1,9 @@
 package dev.linguago.feature.home
 
+import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
+import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
@@ -9,11 +11,12 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
-import androidx.compose.foundation.rememberScrollState
+import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.shape.RoundedCornerShape
-import androidx.compose.foundation.verticalScroll
+import androidx.compose.material3.ExtendedFloatingActionButton
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
+import androidx.compose.material3.TextButton
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
@@ -22,15 +25,16 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
+import androidx.compose.ui.graphics.ColorFilter
+import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import androidx.compose.ui.window.Dialog
-import androidx.compose.ui.window.DialogProperties
 import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import dev.linguago.core.ui.components.ChestRewardSheet
+import dev.linguago.core.ui.components.CourseSwitcherSheet
 import dev.linguago.core.ui.components.HeartsCounter
-import dev.linguago.core.ui.components.LinguaProgressBar
+import dev.linguago.core.ui.components.LinguaIcons
 import dev.linguago.core.ui.components.LiquidXpBar
 import dev.linguago.core.ui.components.StreakIndicator
 import dev.linguago.core.ui.components.path.PathNodeState
@@ -44,65 +48,26 @@ import dev.linguago.feature.home.path.LearningPath
 import dev.linguago.feature.home.path.PathItem
 
 /**
- * Ruta de aprendizaje del curso activo (RFC §2.3). Con [pathEnabled] se
- * muestra el camino lineal en zigzag (ADR-026); sin él, las tarjetas de
- * unidad originales se mantienen intactas como fallback.
+ * Ruta de aprendizaje del curso activo (RFC §2.3): camino lineal en zigzag
+ * (ADR-026), con cabecera fija y auto-scroll al nodo activo.
  */
 @Composable
 fun HomeScreen(
     onLessonClick: (courseId: String, lessonId: String) -> Unit,
     onStartReview: (courseId: String) -> Unit = {},
-    pathEnabled: Boolean = false,
     modifier: Modifier = Modifier,
     viewModel: HomeViewModel = hiltViewModel(),
 ) {
     val uiState by viewModel.uiState.collectAsStateWithLifecycle()
-    if (pathEnabled && uiState.pathItems.isNotEmpty()) {
-        PathHomeContent(
-            uiState = uiState,
-            onLessonSelected = onLessonClick,
-            onStartReview = onStartReview,
-            modifier = modifier,
-        )
-    } else {
-        HomeContent(
-            uiState = uiState,
-            onLessonSelected = onLessonClick,
-            onStartReview = onStartReview,
-            modifier = modifier,
-        )
-    }
-}
-
-@Composable
-private fun HomeContent(
-    uiState: HomeUiState,
-    onLessonSelected: (String, String) -> Unit,
-    onStartReview: (String) -> Unit,
-    modifier: Modifier = Modifier,
-) {
-    val colors = MaterialTheme.colorScheme
-
-    Column(
-        modifier =
-            modifier
-                .fillMaxSize()
-                .background(colors.background)
-                .verticalScroll(rememberScrollState())
-                .padding(horizontal = 24.dp, vertical = 24.dp),
-        verticalArrangement = Arrangement.spacedBy(16.dp),
-    ) {
-        HomeHeader(uiState = uiState, onStartReview = onStartReview)
-
-        uiState.units.forEach { unit ->
-            val lessonId = unit.nextLessonId
-            val courseId = uiState.courseId
-            UnitCard(
-                tile = unit,
-                onClick = { if (lessonId != null && courseId != null) onLessonSelected(courseId, lessonId) },
-            )
-        }
-    }
+    PathHomeContent(
+        uiState = uiState,
+        onLessonSelected = onLessonClick,
+        onStartReview = onStartReview,
+        onSwitchCourse = viewModel::switchCourse,
+        onClaimChest = viewModel::claimChest,
+        onDismissChest = viewModel::dismissChest,
+        modifier = modifier,
+    )
 }
 
 /** Camino lineal: cabecera fija + zigzag desplazable con auto-scroll al nodo activo. */
@@ -111,10 +76,21 @@ private fun PathHomeContent(
     uiState: HomeUiState,
     onLessonSelected: (String, String) -> Unit,
     onStartReview: (String) -> Unit,
+    onSwitchCourse: (String) -> Unit,
+    onClaimChest: (String, String) -> Unit,
+    onDismissChest: () -> Unit,
     modifier: Modifier = Modifier,
 ) {
     val colors = MaterialTheme.colorScheme
-    var chestUnit by remember { mutableStateOf<String?>(null) }
+    var showCourseSwitcher by remember { mutableStateOf(false) }
+    val courseId = uiState.courseId
+    val nextLesson =
+        uiState.pathItems
+            .filterIsInstance<PathItem.Node>()
+            .firstOrNull { item ->
+                item.lessonId != null &&
+                    (item.node.state == PathNodeState.AVAILABLE || item.node.state == PathNodeState.IN_PROGRESS)
+            }
 
     Column(
         modifier =
@@ -124,31 +100,67 @@ private fun PathHomeContent(
                 .padding(horizontal = 24.dp, vertical = 24.dp),
         verticalArrangement = Arrangement.spacedBy(12.dp),
     ) {
-        HomeHeader(uiState = uiState, onStartReview = onStartReview, showHud = true)
-        val courseId = uiState.courseId
-        LearningPath(
-            items = uiState.pathItems,
-            onLessonClick = { lessonId -> courseId?.let { onLessonSelected(it, lessonId) } },
-            onChestClick = { unitTitle -> chestUnit = unitTitle },
-            modifier = Modifier.weight(1f),
+        HomeHeader(
+            uiState = uiState,
+            onStartReview = onStartReview,
+            onSwitchCourse = { showCourseSwitcher = true },
+            showHud = true,
+        )
+        Box(modifier = Modifier.weight(1f)) {
+            LearningPath(
+                items = uiState.pathItems,
+                onLessonClick = { lessonId -> courseId?.let { onLessonSelected(it, lessonId) } },
+                onChestClick = { unitId, unitTitle -> onClaimChest(unitId, unitTitle) },
+                modifier = Modifier.fillMaxSize(),
+            )
+            if (courseId != null && nextLesson?.lessonId != null) {
+                ExtendedFloatingActionButton(
+                    text = { Text(text = "Ir a mi lección") },
+                    icon = {
+                        Image(
+                            painter = painterResource(LinguaIcons.PlayRes),
+                            contentDescription = null,
+                            modifier = Modifier.size(18.dp),
+                            colorFilter = ColorFilter.tint(colors.onPrimary),
+                        )
+                    },
+                    onClick = { onLessonSelected(courseId, nextLesson.lessonId) },
+                    containerColor = colors.primary,
+                    contentColor = colors.onPrimary,
+                    modifier = Modifier.align(Alignment.BottomEnd),
+                )
+            }
+        }
+    }
+
+    if (showCourseSwitcher) {
+        CourseSwitcherSheet(
+            courses = uiState.courses,
+            selectedId = uiState.courseId,
+            onSelect = { selected ->
+                showCourseSwitcher = false
+                onSwitchCourse(selected)
+            },
+            onDismiss = { showCourseSwitcher = false },
         )
     }
 
-    chestUnit?.let { unitTitle ->
-        Dialog(
-            onDismissRequest = { chestUnit = null },
-            properties = DialogProperties(usePlatformDefaultWidth = false),
-        ) {
-            ChestRewardSheet(unitTitle = unitTitle, onDismiss = { chestUnit = null })
-        }
+    uiState.chestReward?.let { reward ->
+        ChestRewardSheet(
+            unitTitle = reward.unitTitle,
+            xpEarned = reward.xpEarned,
+            alreadyOpened = reward.alreadyOpened,
+            onDismiss = onDismissChest,
+        )
     }
 }
 
-/** Cabecera común a ambos modos: racha, curso y repaso pendiente. */
+/** Cabecera común: racha, curso, cambio rápido y repaso pendiente. */
 @Composable
 private fun HomeHeader(
     uiState: HomeUiState,
     onStartReview: (String) -> Unit,
+    onSwitchCourse: () -> Unit = {},
     showHud: Boolean = false,
     modifier: Modifier = Modifier,
 ) {
@@ -169,16 +181,28 @@ private fun HomeHeader(
             }
         }
 
-        Text(
-            text =
-                when {
-                    uiState.courseTitle != null -> uiState.courseTitle
-                    uiState.loading -> "Preparando tu ruta…"
-                    else -> "Selecciona un curso en ajustes"
-                },
-            style = MaterialTheme.typography.headlineMedium,
-            color = colors.onBackground,
-        )
+        Row(
+            modifier = Modifier.fillMaxWidth(),
+            verticalAlignment = Alignment.CenterVertically,
+            horizontalArrangement = Arrangement.spacedBy(8.dp),
+        ) {
+            Text(
+                text =
+                    when {
+                        uiState.courseTitle != null -> uiState.courseTitle
+                        uiState.loading -> "Preparando tu ruta…"
+                        else -> "Selecciona un curso en ajustes"
+                    },
+                style = MaterialTheme.typography.headlineMedium,
+                color = colors.onBackground,
+                modifier = Modifier.weight(1f),
+            )
+            if (uiState.courseTitle != null && uiState.courses.isNotEmpty()) {
+                TextButton(onClick = onSwitchCourse) {
+                    Text(text = "Cambiar")
+                }
+            }
+        }
 
         if (showHud) {
             Column(verticalArrangement = Arrangement.spacedBy(4.dp)) {
@@ -240,69 +264,7 @@ private fun ReviewCard(
     }
 }
 
-@Composable
-private fun UnitCard(
-    tile: UnitTile,
-    onClick: () -> Unit,
-    modifier: Modifier = Modifier,
-) {
-    val colors = MaterialTheme.colorScheme
-    val progress = if (tile.total == 0) 0f else tile.completed / tile.total.toFloat()
-
-    Column(
-        modifier =
-            modifier
-                .fillMaxWidth()
-                .clip(RoundedCornerShape(LinguaTokens.RADIUS_CARD_DP.dp))
-                .background(colors.surfaceVariant)
-                .feedbackClickable(
-                    cue = FeedbackCue.TAP,
-                    enabled = tile.nextLessonId != null,
-                    onClick = onClick,
-                ).padding(16.dp),
-    ) {
-        Text(
-            text = tile.title,
-            style = MaterialTheme.typography.titleMedium,
-            color = colors.onSurface,
-        )
-        Spacer(Modifier.height(8.dp))
-        LinguaProgressBar(progress = progress)
-        Spacer(Modifier.height(10.dp))
-        Text(
-            text = "${tile.completed} de ${tile.total} lecciones",
-            style = MaterialTheme.typography.bodySmall,
-            color = colors.onSurfaceVariant,
-        )
-    }
-}
-
 @Preview(showBackground = true)
-@Composable
-private fun HomeScreenPreview() {
-    LinguaTheme {
-        HomeContent(
-            uiState =
-                HomeUiState(
-                    loading = false,
-                    hasCourse = true,
-                    courseId = "es-en",
-                    streakDays = 3,
-                    totalXp = 220,
-                    courseTitle = "Español → Inglés",
-                    units =
-                        listOf(
-                            UnitTile("un-1", "Primeros pasos", completed = 1, total = 3, nextLessonId = "ls-2"),
-                            UnitTile("un-2", "Vida diaria", completed = 0, total = 3, nextLessonId = "ls-4"),
-                        ),
-                ),
-            onLessonSelected = { _, _ -> },
-            onStartReview = {},
-        )
-    }
-}
-
-@Preview(showBackground = true, name = "Camino lineal")
 @Composable
 private fun HomePathPreview() {
     LinguaTheme {
@@ -334,6 +296,9 @@ private fun HomePathPreview() {
                 ),
             onLessonSelected = { _, _ -> },
             onStartReview = {},
+            onSwitchCourse = {},
+            onClaimChest = { _, _ -> },
+            onDismissChest = {},
         )
     }
 }

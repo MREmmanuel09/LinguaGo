@@ -3,15 +3,18 @@ package dev.linguago.core.data.repository
 import dev.linguago.core.common.DispatcherProvider
 import dev.linguago.core.common.LinguaError
 import dev.linguago.core.common.Result
+import dev.linguago.core.data.database.DailyActivityEntity
 import dev.linguago.core.data.database.HeartsProgressEntity
 import dev.linguago.core.data.database.LessonProgressDao
 import dev.linguago.core.data.database.LessonProgressEntity
 import dev.linguago.core.data.database.LinguagoDatabase
 import dev.linguago.core.data.database.StreakProgressDao
 import dev.linguago.core.data.database.StreakProgressEntity
+import dev.linguago.core.data.database.WordProgressEntity
 import dev.linguago.core.domain.hearts.HEARTS_MAX
 import dev.linguago.core.domain.hearts.HeartsRules
 import dev.linguago.core.domain.hearts.HeartsState
+import dev.linguago.core.domain.model.DailyActivity
 import dev.linguago.core.domain.model.LessonId
 import dev.linguago.core.domain.model.LessonProgress
 import dev.linguago.core.domain.model.StreakState
@@ -45,6 +48,15 @@ public class ProgressRepositoryImpl
         override fun observeLessonProgress(): Flow<List<LessonProgress>> =
             database.lessonProgressDao().observeAll().map { entities -> entities.map { it.toDomain() } }
 
+        override fun observeDailyActivity(days: Int): Flow<List<DailyActivity>> {
+            val window = days.coerceAtLeast(1).toLong()
+            val since = LocalDate.now().minusDays(window - 1).toEpochDay()
+            return database
+                .dailyActivityDao()
+                .observeSince(since)
+                .map { entities -> entities.map { it.toDomain() } }
+        }
+
         override suspend fun applyDailyActivity(today: LocalDate): Result<StreakState> =
             withContext(dispatchers.io) {
                 try {
@@ -74,6 +86,7 @@ public class ProgressRepositoryImpl
         override suspend fun markLessonCompleted(
             lessonId: LessonId,
             xp: Int,
+            scorePercent: Int,
         ): Result<Unit> =
             withContext(dispatchers.io) {
                 try {
@@ -85,8 +98,70 @@ public class ProgressRepositoryImpl
                             completed = true,
                             xp = (previous?.xp ?: 0) + xp,
                             attempts = (previous?.attempts ?: 0) + 1,
+                            speakingAttempts = previous?.speakingAttempts ?: 0,
+                            speakingPassedAttempts = previous?.speakingPassedAttempts ?: 0,
+                            speakingBestWpm = previous?.speakingBestWpm ?: 0f,
+                            speakingLastScore = previous?.speakingLastScore ?: 0f,
+                            bestScorePercent = maxOf(previous?.bestScorePercent ?: 0, scorePercent),
+                            lastScorePercent = scorePercent,
                         )
                     dao.upsert(entity)
+                    Result.success(Unit)
+                } catch (e: Exception) {
+                    Result.error(LinguaError.Unknown)
+                }
+            }
+
+        override suspend fun recordDailyActivity(
+            today: LocalDate,
+            xpEarned: Int,
+            lessonsCompleted: Int,
+            reviewsCompleted: Int,
+        ): Result<Unit> =
+            withContext(dispatchers.io) {
+                try {
+                    val dao = database.dailyActivityDao()
+                    val epochDay = today.toEpochDay()
+                    val previous = dao.load(epochDay)
+                    dao.upsert(
+                        DailyActivityEntity(
+                            epochDay = epochDay,
+                            xpEarned = (previous?.xpEarned ?: 0) + xpEarned,
+                            lessonsCompleted = (previous?.lessonsCompleted ?: 0) + lessonsCompleted,
+                            reviewsCompleted = (previous?.reviewsCompleted ?: 0) + reviewsCompleted,
+                        ),
+                    )
+                    Result.success(Unit)
+                } catch (e: Exception) {
+                    Result.error(LinguaError.Unknown)
+                }
+            }
+
+        override suspend fun recordSpeakingMetrics(
+            lessonId: LessonId,
+            wpm: Float,
+            score: Float,
+            passed: Boolean,
+        ): Result<Unit> =
+            withContext(dispatchers.io) {
+                try {
+                    val dao = database.lessonProgressDao()
+                    val previous = dao.load(lessonId.value)
+                    dao.upsert(
+                        LessonProgressEntity(
+                            lessonId = lessonId.value,
+                            completed = previous?.completed ?: false,
+                            xp = previous?.xp ?: 0,
+                            attempts = previous?.attempts ?: 0,
+                            speakingAttempts = (previous?.speakingAttempts ?: 0) + 1,
+                            speakingPassedAttempts =
+                                (previous?.speakingPassedAttempts ?: 0) + if (passed) 1 else 0,
+                            speakingBestWpm = maxOf(previous?.speakingBestWpm ?: 0f, wpm),
+                            speakingLastScore = score,
+                            bestScorePercent = previous?.bestScorePercent ?: 0,
+                            lastScorePercent = previous?.lastScorePercent ?: 0,
+                        ),
+                    )
                     Result.success(Unit)
                 } catch (e: Exception) {
                     Result.error(LinguaError.Unknown)
@@ -96,29 +171,7 @@ public class ProgressRepositoryImpl
         override suspend fun snapshot(): Result<SyncSnapshot> =
             withContext(dispatchers.io) {
                 try {
-                    val streak = database.streakProgressDao().load()?.toDomain() ?: StreakState.zero()
-                    val lessons = database.lessonProgressDao().snapshotAll()
-                    val hearts = effectiveHearts()
-                    Result.success(
-                        SyncSnapshot(
-                            exportedAtMillis = System.currentTimeMillis(),
-                            streakCurrent = streak.current,
-                            streakLongest = streak.longest,
-                            streakLastDateEpochDay = streak.lastDate.toEpochDay(),
-                            totalXp = streak.totalXp,
-                            lessons =
-                                lessons.map { entity ->
-                                    SyncSnapshot.LessonEntry(
-                                        lessonId = entity.lessonId,
-                                        completed = entity.completed,
-                                        xp = entity.xp,
-                                        attempts = entity.attempts,
-                                    )
-                                },
-                            heartsCurrent = hearts.hearts,
-                            heartsLastRegenEpochSecond = hearts.lastRegenEpochSecond,
-                        ),
-                    )
+                    Result.success(buildSnapshot(System.currentTimeMillis()))
                 } catch (e: Exception) {
                     Result.error(LinguaError.Unknown)
                 }
@@ -127,7 +180,7 @@ public class ProgressRepositoryImpl
         override suspend fun restore(snapshot: SyncSnapshot): Result<StreakState> =
             withContext(dispatchers.io) {
                 try {
-                    val local = currentLocalSnapshot()
+                    val local = buildSnapshot(exportedAtMillis = 0L)
                     val merged = local.mergedWith(snapshot)
                     database.streakProgressDao().upsert(
                         StreakProgressEntity(
@@ -145,8 +198,17 @@ public class ProgressRepositoryImpl
                                 completed = entry.completed,
                                 xp = entry.xp,
                                 attempts = entry.attempts,
+                                speakingAttempts = entry.speakingAttempts,
+                                speakingPassedAttempts = entry.speakingPassedAttempts,
+                                speakingBestWpm = entry.speakingBestWpm,
+                                speakingLastScore = entry.speakingLastScore,
+                                bestScorePercent = entry.bestScorePercent,
+                                lastScorePercent = entry.lastScorePercent,
                             ),
                         )
+                    }
+                    if (merged.words.isNotEmpty()) {
+                        database.wordProgressDao().upsertAll(merged.words.map { it.toEntity() })
                     }
                     // Vidas (ADR-025): mínimo de vidas y máximo del ancla de
                     // regeneración; una penalización no resucita al sincronizar.
@@ -170,28 +232,21 @@ public class ProgressRepositoryImpl
                 }
             }
 
-        /** Snapshot del estado local, usado como base del merge (I4). */
-        private suspend fun currentLocalSnapshot(): SyncSnapshot {
+        /** Construye el estado local completo que alimenta snapshot y merge. */
+        private suspend fun buildSnapshot(exportedAtMillis: Long): SyncSnapshot {
             val streak = database.streakProgressDao().load()?.toDomain() ?: StreakState.zero()
             val lessons = database.lessonProgressDao().snapshotAll()
             val hearts = effectiveHearts()
             return SyncSnapshot(
-                exportedAtMillis = 0L,
+                exportedAtMillis = exportedAtMillis,
                 streakCurrent = streak.current,
                 streakLongest = streak.longest,
                 streakLastDateEpochDay = streak.lastDate.toEpochDay(),
                 totalXp = streak.totalXp,
-                lessons =
-                    lessons.map { entity ->
-                        SyncSnapshot.LessonEntry(
-                            lessonId = entity.lessonId,
-                            completed = entity.completed,
-                            xp = entity.xp,
-                            attempts = entity.attempts,
-                        )
-                    },
+                lessons = lessons.map { entity -> entity.toSnapshotEntry() },
                 heartsCurrent = hearts.hearts,
                 heartsLastRegenEpochSecond = hearts.lastRegenEpochSecond,
+                words = database.wordProgressDao().snapshotAll().map { entity -> entity.toSnapshotEntry() },
             )
         }
 
@@ -227,6 +282,64 @@ private fun LessonProgressEntity.toDomain(): LessonProgress =
         completed = completed,
         xp = xp,
         attempts = attempts,
+        speakingAttempts = speakingAttempts,
+        speakingPassedAttempts = speakingPassedAttempts,
+        speakingBestWpm = speakingBestWpm,
+        speakingLastScore = speakingLastScore,
+        bestScorePercent = bestScorePercent,
+        lastScorePercent = lastScorePercent,
+    )
+
+private fun LessonProgressEntity.toSnapshotEntry(): SyncSnapshot.LessonEntry =
+    SyncSnapshot.LessonEntry(
+        lessonId = lessonId,
+        completed = completed,
+        xp = xp,
+        attempts = attempts,
+        speakingAttempts = speakingAttempts,
+        speakingPassedAttempts = speakingPassedAttempts,
+        speakingBestWpm = speakingBestWpm,
+        speakingLastScore = speakingLastScore,
+        bestScorePercent = bestScorePercent,
+        lastScorePercent = lastScorePercent,
+    )
+
+private fun WordProgressEntity.toSnapshotEntry(): SyncSnapshot.WordEntry =
+    SyncSnapshot.WordEntry(
+        word = word,
+        courseId = courseId,
+        translation = translation,
+        reviewCount = reviewCount,
+        lastReviewEpochMillis = lastReviewEpochMillis,
+        nextReviewEpochMillis = nextReviewEpochMillis,
+        stability = stability,
+        difficulty = difficulty,
+        errorCount = errorCount,
+        lastErrorType = lastErrorType,
+        culturalNote = culturalNote,
+    )
+
+private fun SyncSnapshot.WordEntry.toEntity(): WordProgressEntity =
+    WordProgressEntity(
+        word = word,
+        courseId = courseId,
+        translation = translation,
+        reviewCount = reviewCount,
+        lastReviewEpochMillis = lastReviewEpochMillis,
+        nextReviewEpochMillis = nextReviewEpochMillis,
+        stability = stability,
+        difficulty = difficulty,
+        errorCount = errorCount,
+        lastErrorType = lastErrorType,
+        culturalNote = culturalNote,
+    )
+
+private fun DailyActivityEntity.toDomain(): DailyActivity =
+    DailyActivity(
+        epochDay = epochDay,
+        xpEarned = xpEarned,
+        lessonsCompleted = lessonsCompleted,
+        reviewsCompleted = reviewsCompleted,
     )
 
 private fun HeartsProgressEntity.toDomain(): HeartsState =

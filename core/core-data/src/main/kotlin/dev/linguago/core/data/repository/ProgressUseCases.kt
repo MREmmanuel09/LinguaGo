@@ -51,12 +51,22 @@ public class CompleteLessonUseCaseImpl
         override suspend operator fun invoke(
             lessonId: LessonId,
             xp: Int,
-        ): Result<Unit> =
-            progressRepository
-                .markLessonCompleted(lessonId, xp)
+            scorePercent: Int,
+        ): Result<Unit> {
+            val today = LocalDate.now()
+            return progressRepository
+                .markLessonCompleted(lessonId, xp, scorePercent)
                 .flatMap { progressRepository.addXp(xp) }
-                .flatMap { progressRepository.applyDailyActivity(LocalDate.now()) }
-                .map { Unit }
+                .flatMap { progressRepository.applyDailyActivity(today) }
+                .flatMap {
+                    progressRepository
+                        .recordDailyActivity(
+                            today = today,
+                            xpEarned = xp,
+                            lessonsCompleted = 1,
+                        ).map { Unit }
+                }
+        }
     }
 
 @Singleton

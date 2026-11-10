@@ -21,6 +21,9 @@ public interface SettingsRepository {
     /** `true` si el usuario quiere feedback háptico (ADR-027). */
     public val hapticsEnabled: Flow<Boolean>
 
+    /** Unidades cuyo cofre ya se abrió y bonificó (ADR-048). */
+    public val openedChestIds: Flow<Set<String>>
+
     /** Guarda el curso activo (null deselecciona, regresando al onboarding). */
     public suspend fun updateSelectedCourse(courseId: String?)
 
@@ -32,4 +35,7 @@ public interface SettingsRepository {
 
     /** Activa o desactiva el feedback háptico. */
     public suspend fun updateHapticsEnabled(enabled: Boolean)
+
+    /** Marca un cofre como reclamado para no volver a bonificarlo (ADR-048). */
+    public suspend fun markChestOpened(unitId: String)
 }

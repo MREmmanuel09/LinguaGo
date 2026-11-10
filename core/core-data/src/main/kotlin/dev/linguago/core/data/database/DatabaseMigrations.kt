@@ -4,7 +4,7 @@ import androidx.room.migration.Migration
 import androidx.sqlite.db.SupportSQLiteDatabase
 
 /**
- * Migraciones explícitas de `linguago.db` (ADR-005/ADR-016/ADR-021). Se
+ * Migraciones explícitas de `linguago.db` (ADR-005/ADR-016/ADR-021/ADR-050). Se
  * exponen para que el test instrumentado de preservación de progreso pueda
  * ejecutarlas con `MigrationTestHelper`; la app las registra en `DataModule`.
  */
@@ -69,6 +69,46 @@ public object DatabaseMigrations {
                         "`hearts` INTEGER NOT NULL, " +
                         "`lastRegenEpochSecond` INTEGER NOT NULL, " +
                         "PRIMARY KEY(`id`))",
+                )
+            }
+        }
+
+    /**
+     * v4→v5 (ADR-050): añade métricas de voz/precisión, la nota cultural de
+     * cada tarjeta y `daily_activity`. Las columnas nuevas tienen defaults y
+     * ninguna fila existente se borra ni se trunca (I4). La actividad se
+     * siembra con el día de la última racha para no perder el histórico.
+     */
+    public val MIGRATION_4_5: Migration =
+        object : Migration(4, 5) {
+            override fun migrate(db: SupportSQLiteDatabase) {
+                db.execSQL(
+                    "ALTER TABLE `lesson_progress` ADD COLUMN `speakingPassedAttempts` INTEGER NOT NULL DEFAULT 0",
+                )
+                db.execSQL(
+                    "ALTER TABLE `lesson_progress` ADD COLUMN `bestScorePercent` INTEGER NOT NULL DEFAULT 0",
+                )
+                db.execSQL(
+                    "ALTER TABLE `lesson_progress` ADD COLUMN `lastScorePercent` INTEGER NOT NULL DEFAULT 0",
+                )
+                db.execSQL(
+                    "ALTER TABLE `word_progress` ADD COLUMN `culturalNote` TEXT",
+                )
+                db.execSQL(
+                    "CREATE TABLE IF NOT EXISTS `daily_activity` (" +
+                        "`epochDay` INTEGER NOT NULL, " +
+                        "`xpEarned` INTEGER NOT NULL, " +
+                        "`lessonsCompleted` INTEGER NOT NULL, " +
+                        "`reviewsCompleted` INTEGER NOT NULL, " +
+                        "PRIMARY KEY(`epochDay`))",
+                )
+                db.execSQL(
+                    "INSERT OR IGNORE INTO `daily_activity` " +
+                        "(`epochDay`, `xpEarned`, `lessonsCompleted`, `reviewsCompleted`) " +
+                        "SELECT lastDateEpochDay, totalXp, " +
+                        "(SELECT COUNT(*) FROM lesson_progress WHERE completed = 1), " +
+                        "(SELECT COALESCE(SUM(reviewCount), 0) FROM word_progress) " +
+                        "FROM streak_progress WHERE id = 1 AND current > 0",
                 )
             }
         }

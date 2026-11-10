@@ -13,11 +13,13 @@ import dev.linguago.core.domain.model.Course
 import dev.linguago.core.domain.model.CourseId
 import dev.linguago.core.domain.model.Lesson
 import dev.linguago.core.domain.model.WordProgress
+import dev.linguago.core.domain.repository.ProgressRepository
 import dev.linguago.core.domain.repository.ReviewRepository
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.map
 import kotlinx.coroutines.withContext
 import java.time.Instant
+import java.time.LocalDate
 import javax.inject.Inject
 import javax.inject.Singleton
 
@@ -31,6 +33,7 @@ public class ReviewRepositoryImpl
     @Inject
     constructor(
         private val database: LinguagoDatabase,
+        private val progressRepository: ProgressRepository,
         private val dispatchers: DispatcherProvider,
     ) : ReviewRepository {
         override suspend fun collectFromLesson(
@@ -41,11 +44,12 @@ public class ReviewRepositoryImpl
             withContext(dispatchers.io) {
                 try {
                     val dao: WordProgressDao = database.wordProgressDao()
-                    val existing = dao.loadAll(course.id.value).map { it.word }.toSet()
+                    val existingEntities = dao.loadAll(course.id.value)
+                    val existingByKey = existingEntities.associateBy { entity -> pairKey(entity.word, entity.translation) }
+                    val pairs = VocabularyExtractor.fromLesson(lesson, course.toLanguage)
                     val newCards =
-                        VocabularyExtractor
-                            .fromLesson(lesson)
-                            .filterNot { pair -> pair.source in existing }
+                        pairs
+                            .filterNot { pair -> pairKey(pair.source, pair.target) in existingByKey }
                             .map { pair ->
                                 FsrsScheduler
                                     .initialState(
@@ -53,10 +57,22 @@ public class ReviewRepositoryImpl
                                         translation = pair.target,
                                         courseId = course.id.value,
                                         now = now,
-                                    ).toEntity()
+                                    ).copy(culturalNote = pair.culturalNote)
+                                    .toEntity()
                             }
+                    // Backfill de notas culturales en tarjetas anteriores a v5
+                    // (ADR-050): la tarjeta conserva su estado FSRS intacto.
+                    val enriched =
+                        pairs.mapNotNull { pair ->
+                            val note = pair.culturalNote ?: return@mapNotNull null
+                            val existing = existingByKey[pairKey(pair.source, pair.target)] ?: return@mapNotNull null
+                            existing.takeIf { it.culturalNote == null }?.copy(culturalNote = note)
+                        }
                     if (newCards.isNotEmpty()) {
                         dao.insertAll(newCards)
+                    }
+                    if (enriched.isNotEmpty()) {
+                        dao.upsertAll(enriched)
                     }
                     Result.success(newCards.size)
                 } catch (error: Exception) {
@@ -110,6 +126,12 @@ public class ReviewRepositoryImpl
                             ?: return@withContext Result.error(LinguaError.NotFound)
                     val updated = FsrsScheduler.grade(current, rating, now).progress
                     dao.upsert(updated.toEntity())
+                    // Actividad diaria local (ADR-050): un fallo de esta
+                    // escritura no debe revertir el repaso ya guardado.
+                    progressRepository.recordDailyActivity(
+                        today = LocalDate.now(),
+                        reviewsCompleted = 1,
+                    )
                     Result.success(updated)
                 } catch (error: Exception) {
                     Result.error(LinguaError.Unknown)
@@ -128,6 +150,7 @@ public class ReviewRepositoryImpl
                 nextReview = Instant.ofEpochMilli(nextReviewEpochMillis),
                 stability = stability,
                 difficulty = difficulty,
+                culturalNote = culturalNote,
             )
 
         private fun WordProgress.toEntity(): WordProgressEntity =
@@ -140,5 +163,11 @@ public class ReviewRepositoryImpl
                 nextReviewEpochMillis = nextReview.toEpochMilli(),
                 stability = stability,
                 difficulty = difficulty,
+                culturalNote = culturalNote,
             )
     }
+
+private fun pairKey(
+    source: String,
+    target: String,
+): String = listOf(source.lowercase(), target.lowercase()).sorted().joinToString("|")

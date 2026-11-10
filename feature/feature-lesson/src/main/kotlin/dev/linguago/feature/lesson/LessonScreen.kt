@@ -2,6 +2,7 @@ package dev.linguago.feature.lesson
 
 import android.Manifest
 import android.content.pm.PackageManager
+import androidx.activity.compose.BackHandler
 import androidx.activity.compose.rememberLauncherForActivityResult
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.compose.animation.AnimatedContent
@@ -39,6 +40,7 @@ import androidx.compose.foundation.lazy.rememberLazyListState
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.verticalScroll
+import androidx.compose.material3.AlertDialog
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.Text
@@ -47,7 +49,9 @@ import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableIntStateOf
+import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
+import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
@@ -55,7 +59,9 @@ import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.ColorFilter
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.semantics.Role
 import androidx.compose.ui.semantics.contentDescription
+import androidx.compose.ui.semantics.role
 import androidx.compose.ui.semantics.semantics
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextOverflow
@@ -112,16 +118,35 @@ fun LessonScreen(
     viewModel: LessonViewModel = hiltViewModel(),
 ) {
     val uiState by viewModel.uiState.collectAsStateWithLifecycle()
+    var exitConfirm by rememberSaveable { mutableStateOf(false) }
+    val requestExit: () -> Unit = { exitConfirm = true }
+
+    // H1/B-09: Back nunca abandona la lección en curso sin confirmar; en la
+    // micro-clase cierra la guía y en pantallas terminales sale directamente.
+    BackHandler {
+        when {
+            uiState.briefVisible -> viewModel.beginLesson()
+            uiState.finished || uiState.invalid || uiState.lessonCancelled -> onExit()
+            else -> requestExit()
+        }
+    }
 
     /** SpeakRepeat: pide el permiso de micrófono antes de escuchar (I3). */
     val context = LocalContext.current
     val micPermission = Manifest.permission.RECORD_AUDIO
+    var micPermissionDenied by remember { mutableStateOf(false) }
     val micLauncher =
         rememberLauncherForActivityResult(ActivityResultContracts.RequestPermission()) { granted ->
-            if (granted) viewModel.transcribeSpoken()
+            if (granted) {
+                micPermissionDenied = false
+                viewModel.transcribeSpoken()
+            } else {
+                micPermissionDenied = true
+            }
         }
     val onSpeakRequest: () -> Unit = {
         if (ContextCompat.checkSelfPermission(context, micPermission) == PackageManager.PERMISSION_GRANTED) {
+            micPermissionDenied = false
             viewModel.transcribeSpoken()
         } else {
             micLauncher.launch(micPermission)
@@ -131,10 +156,16 @@ fun LessonScreen(
     /** FreeSpeaking (F2.5): mismo permiso; al concederlo arranca la captura. */
     val freeSpeakLauncher =
         rememberLauncherForActivityResult(ActivityResultContracts.RequestPermission()) { granted ->
-            if (granted) viewModel.startFreeSpeaking()
+            if (granted) {
+                micPermissionDenied = false
+                viewModel.startFreeSpeaking()
+            } else {
+                micPermissionDenied = true
+            }
         }
     val onFreeSpeakStart: () -> Unit = {
         if (ContextCompat.checkSelfPermission(context, micPermission) == PackageManager.PERMISSION_GRANTED) {
+            micPermissionDenied = false
             viewModel.startFreeSpeaking()
         } else {
             freeSpeakLauncher.launch(micPermission)
@@ -158,6 +189,8 @@ fun LessonScreen(
         onSubmitTyped = viewModel::submitTypedText,
         onSpeakRequest = onSpeakRequest,
         onSkipSpeech = viewModel::skipSpeech,
+        onStopSpeech = viewModel::stopSpoken,
+        micPermissionDenied = micPermissionDenied,
         onFreeSpeakStart = onFreeSpeakStart,
         onFreeSpeakStop = viewModel::stopFreeSpeaking,
         onFreeSpeakRate = viewModel::rateFreeSpeaking,
@@ -174,7 +207,39 @@ fun LessonScreen(
         onBeginLesson = viewModel::beginLesson,
         onOpenBrief = viewModel::openBrief,
         onExit = onExit,
+        onExitRequest = requestExit,
         modifier = modifier,
+    )
+    if (exitConfirm) {
+        ExitLessonConfirmDialog(
+            onConfirm = {
+                exitConfirm = false
+                onExit()
+            },
+            onDismiss = { exitConfirm = false },
+        )
+    }
+}
+
+@Composable
+private fun ExitLessonConfirmDialog(
+    onConfirm: () -> Unit,
+    onDismiss: () -> Unit,
+) {
+    AlertDialog(
+        onDismissRequest = onDismiss,
+        title = { Text(text = "¿Salir de la lección?") },
+        text = {
+            Text(
+                text = "Perderás el avance de esta sesión: la lección solo se guarda al terminarla.",
+            )
+        },
+        confirmButton = {
+            TextButton(onClick = onConfirm) { Text(text = "Salir") }
+        },
+        dismissButton = {
+            TextButton(onClick = onDismiss) { Text(text = "Seguir practicando") }
+        },
     )
 }
 
@@ -183,7 +248,7 @@ private fun LessonContent(
     uiState: LessonUiState,
     onPickOption: (Int) -> Unit,
     onSubmitSelection: () -> Unit,
-    onToggleToken: (String) -> Unit,
+    onToggleToken: (Int) -> Unit,
     onSubmitTokens: () -> Unit,
     onMatchLeft: (Int) -> Unit,
     onMatchRight: (Int) -> Unit,
@@ -196,6 +261,8 @@ private fun LessonContent(
     onSubmitTyped: () -> Unit,
     onSpeakRequest: () -> Unit,
     onSkipSpeech: () -> Unit,
+    onStopSpeech: () -> Unit = {},
+    micPermissionDenied: Boolean = false,
     onFreeSpeakStart: () -> Unit,
     onFreeSpeakStop: () -> Unit,
     onFreeSpeakRate: (Int, Int) -> Unit,
@@ -212,6 +279,7 @@ private fun LessonContent(
     onBeginLesson: () -> Unit,
     onOpenBrief: () -> Unit,
     onExit: () -> Unit,
+    onExitRequest: () -> Unit,
     modifier: Modifier = Modifier,
 ) {
     val feedback = LocalInteractionFeedback.current
@@ -270,6 +338,8 @@ private fun LessonContent(
                 onSubmitTyped = onSubmitTyped,
                 onSpeakRequest = onSpeakRequest,
                 onSkipSpeech = onSkipSpeech,
+                onStopSpeech = onStopSpeech,
+                micPermissionDenied = micPermissionDenied,
                 onFreeSpeakStart = onFreeSpeakStart,
                 onFreeSpeakStop = onFreeSpeakStop,
                 onFreeSpeakRate = onFreeSpeakRate,
@@ -283,6 +353,7 @@ private fun LessonContent(
                 onPlaySlow = onPlaySlow,
                 onOpenBrief = onOpenBrief,
                 onExit = onExit,
+                onExitRequest = onExitRequest,
                 modifier = modifier,
             )
     }
@@ -293,7 +364,7 @@ private fun ExerciseStage(
     uiState: LessonUiState,
     onPickOption: (Int) -> Unit,
     onSubmitSelection: () -> Unit,
-    onToggleToken: (String) -> Unit,
+    onToggleToken: (Int) -> Unit,
     onSubmitTokens: () -> Unit,
     onMatchLeft: (Int) -> Unit,
     onMatchRight: (Int) -> Unit,
@@ -306,6 +377,8 @@ private fun ExerciseStage(
     onSubmitTyped: () -> Unit,
     onSpeakRequest: () -> Unit,
     onSkipSpeech: () -> Unit,
+    onStopSpeech: () -> Unit = {},
+    micPermissionDenied: Boolean = false,
     onFreeSpeakStart: () -> Unit,
     onFreeSpeakStop: () -> Unit,
     onFreeSpeakRate: (Int, Int) -> Unit,
@@ -319,6 +392,7 @@ private fun ExerciseStage(
     onPlaySlow: () -> Unit,
     onOpenBrief: () -> Unit,
     onExit: () -> Unit,
+    onExitRequest: () -> Unit = onExit,
     modifier: Modifier = Modifier,
 ) {
     val colors = MaterialTheme.colorScheme
@@ -347,6 +421,7 @@ private fun ExerciseStage(
         val current = uiState.feedback ?: return@LaunchedEffect
         feedback.play(
             when {
+                current.skipped -> return@LaunchedEffect
                 !current.isCorrect -> FeedbackCue.INCORRECT
                 uiState.combo >= 2 -> FeedbackCue.STREAK_COMBO
                 else -> FeedbackCue.CORRECT
@@ -399,7 +474,7 @@ private fun ExerciseStage(
             TextButton(
                 onClick = {
                     feedback.play(FeedbackCue.TAP)
-                    onExit()
+                    onExitRequest()
                 },
             ) { Text(text = "Salir", color = linguaExtendedColors().primaryInk) }
         }
@@ -465,6 +540,9 @@ private fun ExerciseStage(
                     onTypedTextChange = onTypedTextChange,
                     onSubmitTyped = onSubmitTyped,
                     onSpeakRequest = onSpeakRequest,
+                    onSkipSpeech = onSkipSpeech,
+                    onStopSpeech = onStopSpeech,
+                    micPermissionDenied = micPermissionDenied,
                     onPlayAudio = onPlayAudio,
                     onPlaySlow = onPlaySlow,
                     onFreeSpeakStart = onFreeSpeakStart,
@@ -555,7 +633,7 @@ private fun Renderer(
     exercise: Exercise,
     uiState: LessonUiState,
     onPickOption: (Int) -> Unit,
-    onToggleToken: (String) -> Unit,
+    onToggleToken: (Int) -> Unit,
     onMatchLeft: (Int) -> Unit,
     onMatchRight: (Int) -> Unit,
     onUnpair: (Int) -> Unit,
@@ -564,6 +642,9 @@ private fun Renderer(
     onTypedTextChange: (String) -> Unit,
     onSubmitTyped: () -> Unit,
     onSpeakRequest: () -> Unit,
+    onSkipSpeech: () -> Unit,
+    onStopSpeech: () -> Unit = {},
+    micPermissionDenied: Boolean = false,
     onPlayAudio: () -> Unit,
     onPlaySlow: () -> Unit,
     onFreeSpeakStart: () -> Unit,
@@ -683,25 +764,29 @@ private fun Renderer(
                 listening = uiState.listening,
                 recognized = uiState.recognized,
                 audioAvailable = uiState.audioAvailable,
+                speechAvailable = uiState.speechAvailable,
                 answerLocked = uiState.answerLocked,
                 onPlay = onPlayAudio,
                 onPlaySlow = onPlaySlow,
                 onRecord = onSpeakRequest,
+                onStop = onStopSpeech,
+                onSkip = onSkipSpeech,
                 speaking = uiState.speaking,
+                micPermissionDenied = micPermissionDenied,
             )
         is Exercise.Translate ->
             TokenBoard(
                 header = exercise.sourcePhrase,
                 uiState = uiState,
                 answerLocked = uiState.answerLocked,
-                result = uiState.feedback?.isCorrect,
+                result = uiState.feedback?.takeIf { !it.skipped }?.isCorrect,
                 onToggleToken = onToggleToken,
             )
         is Exercise.OrderWords ->
             OrderWordsBoard(
                 uiState = uiState,
                 answerLocked = uiState.answerLocked,
-                result = uiState.feedback?.isCorrect,
+                result = uiState.feedback?.takeIf { !it.skipped }?.isCorrect,
                 sourcePhrase = exercise.sourcePhrase,
                 audioText = exercise.audioText,
                 audioAvailable = uiState.audioAvailable,
@@ -722,7 +807,7 @@ private fun Renderer(
                 onUnpair = onUnpair,
                 instructions = "Empareja las columnas",
                 enabled = !uiState.answerLocked,
-                result = uiState.feedback?.isCorrect,
+                result = uiState.feedback?.takeIf { !it.skipped }?.isCorrect,
             )
         is Exercise.SemanticMatch ->
             PuzzleMatchBoard(
@@ -744,7 +829,7 @@ private fun Renderer(
                 onUnpair = onUnpair,
                 instructions = exercise.instructions ?: "Empareja cada expresión con su equivalente",
                 enabled = !uiState.answerLocked,
-                result = uiState.feedback?.isCorrect,
+                result = uiState.feedback?.takeIf { !it.skipped }?.isCorrect,
             )
         is Exercise.ClozeDragDrop ->
             ClozeDragDropBoard(
@@ -878,15 +963,13 @@ private fun FeedbackPanel(
         modifier = Modifier.fillMaxWidth(),
         contentPadding = PaddingValues(12.dp),
     ) {
-        Row(horizontalArrangement = Arrangement.spacedBy(10.dp)) {
-            LumiMascot(
-                size = 30.dp,
-                mood = if (feedback.isCorrect) LumiMood.HAPPY else LumiMood.ENCOURAGING,
-            )
-            Column(
-                modifier = Modifier.weight(1f),
-                verticalArrangement = Arrangement.spacedBy(8.dp),
-            ) {
+        Column(verticalArrangement = Arrangement.spacedBy(8.dp)) {
+            if (feedback.skipped) {
+                // B-02: omitir voz es informativo, nunca un error rojo.
+                InfoBanner(
+                    message = "Ejercicio omitido. Puedes continuar sin penalización.",
+                )
+            } else {
                 FeedbackBanner(
                     isCorrect = feedback.isCorrect,
                     message = if (feedback.isCorrect) "¡Correcto!" else "Revisa la respuesta y sigue",
@@ -896,40 +979,46 @@ private fun FeedbackPanel(
                     successExplanation = feedback.successExplanation,
                     correctAnswer = feedback.correctAnswer?.displayText(),
                     glossary = glossary,
+                    leading = {
+                        LumiMascot(
+                            size = 30.dp,
+                            mood = if (feedback.isCorrect) LumiMood.HAPPY else LumiMood.ENCOURAGING,
+                        )
+                    },
                 )
-                if (feedback.retryAvailable) {
-                    Row(
-                        modifier = Modifier.fillMaxWidth(),
-                        horizontalArrangement = Arrangement.spacedBy(8.dp),
+            }
+            if (!feedback.skipped && feedback.retryAvailable) {
+                Row(
+                    modifier = Modifier.fillMaxWidth(),
+                    horizontalArrangement = Arrangement.spacedBy(8.dp),
+                ) {
+                    TextButton(
+                        onClick = {
+                            feedbackPlayer.play(FeedbackCue.TAP)
+                            onRetry()
+                        },
+                        modifier = Modifier.weight(1f),
                     ) {
+                        Text(text = "Reintentar")
+                    }
+                    if (feedback.correctAnswer == null) {
                         TextButton(
                             onClick = {
                                 feedbackPlayer.play(FeedbackCue.TAP)
-                                onRetry()
+                                onReveal()
                             },
                             modifier = Modifier.weight(1f),
                         ) {
-                            Text(text = "Reintentar")
-                        }
-                        if (feedback.correctAnswer == null) {
-                            TextButton(
-                                onClick = {
-                                    feedbackPlayer.play(FeedbackCue.TAP)
-                                    onReveal()
-                                },
-                                modifier = Modifier.weight(1f),
-                            ) {
-                                Text(text = "Ver respuesta")
-                            }
+                            Text(text = "Ver respuesta")
                         }
                     }
                 }
-                PrimaryButton3D(
-                    text = "Continuar",
-                    onClick = onAdvance,
-                    modifier = Modifier.fillMaxWidth(),
-                )
             }
+            PrimaryButton3D(
+                text = "Continuar",
+                onClick = onAdvance,
+                modifier = Modifier.fillMaxWidth(),
+            )
         }
     }
 }
@@ -1017,8 +1106,8 @@ private fun ActionButtons(
 
 /**
  * Repetición hablada (SpeakRepeat, Fase 2.3): escucha el modelo con TTS y
- * repite con el micrófono; muestra lo que el STT reconoció. Sin STT o sin
- * permiso la UI queda inactiva y "No puedo hablar ahora" deja avanzar (I3).
+ * repite con el micrófono; muestra lo que el STT reconoció. Sin STT/permiso se
+ * puede omitir sin penalización (B-02, I3).
  */
 @Composable
 private fun SpeechPanel(
@@ -1026,12 +1115,16 @@ private fun SpeechPanel(
     listening: Boolean,
     recognized: String?,
     audioAvailable: Boolean,
+    speechAvailable: Boolean,
     answerLocked: Boolean,
     onPlay: () -> Unit,
     onPlaySlow: () -> Unit,
     onRecord: () -> Unit,
+    onStop: () -> Unit,
+    onSkip: () -> Unit,
     modifier: Modifier = Modifier,
     speaking: Boolean = false,
+    micPermissionDenied: Boolean = false,
 ) {
     val colors = MaterialTheme.colorScheme
     Column(modifier = modifier, verticalArrangement = Arrangement.spacedBy(12.dp)) {
@@ -1047,15 +1140,33 @@ private fun SpeechPanel(
             enabled = audioAvailable,
             speaking = speaking,
         )
+        if (!speechAvailable) {
+            InfoBanner(
+                message = "Reconocimiento de voz no disponible en este dispositivo.",
+            )
+        }
+        if (micPermissionDenied) {
+            InfoBanner(
+                message = "Permiso de micrófono denegado. Puedes omitir el ejercicio.",
+            )
+        }
+        if (listening) {
+            PrimaryButton3D(
+                text = "Detener grabación",
+                onClick = onStop,
+                modifier = Modifier.fillMaxWidth(),
+            )
+        }
         Column(
             modifier =
                 Modifier
                     .fillMaxWidth()
+                    .semantics { role = Role.Button }
                     .clip(RoundedCornerShape(LinguaTokens.RADIUS_CARD_DP.dp))
                     .background(if (listening) colors.tertiaryContainer else colors.secondaryContainer)
                     .feedbackClickable(
                         cue = FeedbackCue.TAP,
-                        enabled = !listening && !answerLocked,
+                        enabled = speechAvailable && !listening && !answerLocked,
                         onClick = onRecord,
                     ).padding(24.dp),
             horizontalAlignment = Alignment.CenterHorizontally,
@@ -1064,6 +1175,7 @@ private fun SpeechPanel(
                 text =
                     when {
                         listening -> "Escuchando…"
+                        !speechAvailable -> "Voz no disponible"
                         answerLocked -> "Respuesta enviada"
                         else -> "Toca para grabar y repite la frase"
                     },
@@ -1081,6 +1193,14 @@ private fun SpeechPanel(
                 active = listening,
                 modifier = Modifier.fillMaxWidth().padding(top = 8.dp),
             )
+            if (!speechAvailable || micPermissionDenied) {
+                TextButton(
+                    onClick = onSkip,
+                    enabled = !answerLocked,
+                ) {
+                    Text(text = "Omitir ejercicio")
+                }
+            }
         }
     }
 }
@@ -1201,7 +1321,7 @@ private fun TokenBoard(
     uiState: LessonUiState,
     answerLocked: Boolean,
     result: Boolean?,
-    onToggleToken: (String) -> Unit,
+    onToggleToken: (Int) -> Unit,
     modifier: Modifier = Modifier,
 ) {
     val gradedStatus =
@@ -1255,15 +1375,15 @@ private fun TokenBoard(
                 ) {
                     itemsIndexed(
                         items = uiState.chosenTokens,
-                        key = { index, _ -> "chosen-$index" },
+                        key = { _, token -> "chosen-${token.id}" },
                     ) { _, token ->
                         TokenChip(
-                            token = token,
+                            token = token.text,
                             selected = true,
                             enabled = !answerLocked,
-                            onToggle = onToggleToken,
+                            onToggle = { onToggleToken(token.id) },
                             modifier = Modifier.animateItem(),
-                            translations = uiState.translationsFor(token),
+                            translations = uiState.translationsFor(token.text),
                             status = gradedStatus,
                         )
                     }
@@ -1282,11 +1402,11 @@ private fun TokenBoard(
         ) {
             uiState.availableTokens.forEach { token ->
                 TokenChip(
-                    token = token,
+                    token = token.text,
                     selected = false,
                     enabled = !answerLocked,
-                    onToggle = onToggleToken,
-                    translations = uiState.translationsFor(token),
+                    onToggle = { onToggleToken(token.id) },
+                    translations = uiState.translationsFor(token.text),
                 )
             }
         }
@@ -1307,7 +1427,7 @@ private fun OrderWordsBoard(
     speaking: Boolean,
     onPlay: () -> Unit,
     onPlaySlow: () -> Unit,
-    onToggleToken: (String) -> Unit,
+    onToggleToken: (Int) -> Unit,
     modifier: Modifier = Modifier,
 ) {
     val gradedStatus =
@@ -1377,15 +1497,15 @@ private fun OrderWordsBoard(
                 ) {
                     itemsIndexed(
                         items = uiState.chosenTokens,
-                        key = { index, _ -> "chosen-$index" },
+                        key = { _, token -> "chosen-${token.id}" },
                     ) { _, token ->
                         TokenChip(
-                            token = token,
+                            token = token.text,
                             selected = true,
                             enabled = !answerLocked,
-                            onToggle = onToggleToken,
+                            onToggle = { onToggleToken(token.id) },
                             modifier = Modifier.animateItem(),
-                            translations = uiState.translationsFor(token),
+                            translations = uiState.translationsFor(token.text),
                             status = gradedStatus,
                         )
                     }
@@ -1404,11 +1524,11 @@ private fun OrderWordsBoard(
         ) {
             uiState.availableTokens.forEach { token ->
                 TokenChip(
-                    token = token,
+                    token = token.text,
                     selected = false,
                     enabled = !answerLocked,
-                    onToggle = onToggleToken,
-                    translations = uiState.translationsFor(token),
+                    onToggle = { onToggleToken(token.id) },
+                    translations = uiState.translationsFor(token.text),
                 )
             }
         }
@@ -1462,7 +1582,11 @@ private fun LessonScreenPreview() {
                             correctIndex = 0,
                         ),
                     ),
-                availableTokens = listOf("hola", "mundo"),
+                availableTokens =
+                    listOf(
+                        IndexedToken(0, "hola"),
+                        IndexedToken(1, "mundo"),
+                    ),
             )
         ExerciseStage(
             uiState = previewState,

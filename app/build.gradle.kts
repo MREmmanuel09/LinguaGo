@@ -11,30 +11,43 @@ plugins {
 // flavor: se monitoriza el peso (holgura bajo 2 GB en GitHub Releases) sin
 // bloquear el release por diferencias de ±5 MB.
 val modelsRoot = rootProject.file("models")
+val sharedEspeakAsset = "tts/espeak-ng-data"
 val voiceAssetsByFlavor: Map<String, List<String>> =
     linkedMapOf(
         "en" to
             listOf(
                 "tts/en_US-amy-medium",
+                sharedEspeakAsset,
                 "stt/vosk-model-small-en-us-0.15",
             ),
         "pt" to
             listOf(
                 "tts/pt_BR-faber-medium",
+                sharedEspeakAsset,
                 "stt/vosk-model-small-pt-0.3",
             ),
         "fr" to
             listOf(
                 "tts/fr_FR-siwis-medium",
+                sharedEspeakAsset,
                 "stt/vosk-model-small-fr-0.22",
             ),
         "ja" to listOf("stt/vosk-model-small-ja-0.22"),
-        "full" to listOf("tts", "stt"),
+        "full" to
+            listOf(
+                "tts/en_US-amy-medium",
+                "tts/pt_BR-faber-medium",
+                "tts/fr_FR-siwis-medium",
+                sharedEspeakAsset,
+                "stt",
+            ),
     )
 
 // Una tarea Sync por flavor (registrada una sola vez): copia SOLO los
 // modelos del idioma a build/generated/voiceAssets/<flavor> con las rutas
-// de assets que esperan los motores (tts/<voz>, stt/<modelo>).
+// de assets que esperan los motores (tts/<voz>, stt/<modelo>). Las voces
+// excluyen su copia local de espeak-ng-data; el árbol compartido se copia
+// una sola vez desde models/tts/espeak-ng-data (ADR-051).
 val syncVoiceAssetsByFlavor: Map<String, TaskProvider<Sync>> =
     voiceAssetsByFlavor.mapValues { (flavor, paths) ->
         val camel = flavor.replaceFirstChar { it.uppercase() }
@@ -45,7 +58,17 @@ val syncVoiceAssetsByFlavor: Map<String, TaskProvider<Sync>> =
                 .asFile
         tasks.register<Sync>("sync${camel}VoiceAssets") {
             into(dest)
-            paths.forEach { rel -> into(rel) { from(File(modelsRoot, rel)) } }
+            paths.forEach { rel ->
+                if (rel.startsWith("tts/") && rel != sharedEspeakAsset) {
+                    into(rel) {
+                        from(File(modelsRoot, rel)) {
+                            exclude("espeak-ng-data/**")
+                        }
+                    }
+                } else {
+                    into(rel) { from(File(modelsRoot, rel)) }
+                }
+            }
             from(File(modelsRoot, "manifest.json"))
         }
     }
@@ -62,8 +85,8 @@ android {
     namespace = "dev.linguago.app"
     defaultConfig {
         applicationId = "dev.linguago.app"
-        versionCode = 12
-        versionName = "2.4.0"
+        versionCode = 14
+        versionName = "3.0.0"
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
 
         buildConfigField("String", "GOOGLE_CLIENT_ID", "\"$googleClientId\"")
@@ -108,6 +131,22 @@ android {
     }
     buildFeatures {
         buildConfig = true
+    }
+    // Las .so se guardan comprimidas dentro del APK: se descomprimen una vez
+    // al instalar y reducen el tamaño de descarga (ADR-051). El runtime
+    // nativo no cambia; solo cambia el empaquetado.
+    packaging {
+        jniLibs {
+            useLegacyPackaging = true
+            // El binding JNI de sherpa-onnx es autónomo; c-api/cxx-api son
+            // artefactos auxiliares que la app no carga (ADR-051). Excluirlos
+            // reduce el APK sin tocar el motor Piper.
+            excludes +=
+                setOf(
+                    "**/libsherpa-onnx-c-api.so",
+                    "**/libsherpa-onnx-cxx-api.so",
+                )
+        }
     }
     flavorDimensions += "language"
     productFlavors {
@@ -167,7 +206,6 @@ dependencies {
     implementation(project(":core:core-auth"))
 
     implementation(project(":feature:feature-onboarding"))
-    implementation(project(":feature:feature-auth"))
     implementation(project(":feature:feature-home"))
     implementation(project(":feature:feature-lesson"))
     implementation(project(":feature:feature-profile"))
@@ -181,6 +219,7 @@ dependencies {
     implementation(project(":content:content-es-ja"))
 
     implementation(libs.androidx.core.ktx)
+    implementation(libs.androidx.hilt.navigation.compose)
     implementation(libs.androidx.activity.compose)
     implementation(libs.androidx.navigation.compose)
     implementation(libs.kotlinx.coroutines.android)

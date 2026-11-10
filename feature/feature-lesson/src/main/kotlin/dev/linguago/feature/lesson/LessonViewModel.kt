@@ -25,6 +25,7 @@ import dev.linguago.core.domain.model.Language
 import dev.linguago.core.domain.model.LessonId
 import dev.linguago.core.domain.model.LessonSession
 import dev.linguago.core.domain.model.XP_PER_CORRECT_ANSWER
+import dev.linguago.core.domain.repository.ProgressRepository
 import dev.linguago.core.domain.repository.ReviewRepository
 import dev.linguago.core.domain.usecase.CompleteLessonUseCase
 import dev.linguago.core.domain.usecase.ExerciseAnswer
@@ -55,6 +56,11 @@ data class ExerciseFeedback(
     val correctAnswer: AnswerKey? = null,
     /** `true` si el ejercicio admite un reintento pedagógico (ADR-030). */
     val retryAvailable: Boolean = false,
+    /**
+     * `true` cuando el usuario omitió un ejercicio de voz (B-02): el avance es
+     * neutro, sin penalización visual, de combo ni de nota.
+     */
+    val skipped: Boolean = false,
 )
 
 /**
@@ -72,6 +78,16 @@ data class FreeSpeakingState(
     val breakdown: FreeSpeakingFeedback? = null,
     val grammarLabels: List<String> = emptyList(),
     val selfAssessment: Map<Int, Int> = emptyMap(),
+)
+
+/**
+ * Ficha del tablero de tokens con identidad estable aunque su texto se repita
+ * en la frase (B-06, D-03). El índice es único durante el ejercicio y evita
+ * que tocar una ocurrencia seleccione o deseleccione todas las iguales.
+ */
+data class IndexedToken(
+    val id: Int,
+    val text: String,
 )
 
 /**
@@ -118,8 +134,8 @@ data class LessonUiState(
     /** `true` cuando el jugador se quedó sin vidas y la lección no se guarda. */
     val lessonCancelled: Boolean = false,
     // Tablero de tokens (Translate / OrderWords)
-    val availableTokens: List<String> = emptyList(),
-    val chosenTokens: List<String> = emptyList(),
+    val availableTokens: List<IndexedToken> = emptyList(),
+    val chosenTokens: List<IndexedToken> = emptyList(),
     // Parejas (MatchPairs): orden de dibujo de las derechas + estado de asocio
     val shuffledRights: List<Int> = emptyList(),
     val selectedLeft: Int? = null,
@@ -131,6 +147,8 @@ data class LessonUiState(
     val totalExercises: Int = 0,
     val correctCount: Int = 0,
     val incorrectCount: Int = 0,
+    /** Ejercicios de voz omitidos: no cuentan para la nota (B-02). */
+    val skippedCount: Int = 0,
     val score: LessonScore = LessonScore(),
     val mistakes: List<Exercise> = emptyList(),
     val showMistakeReview: Boolean = false,
@@ -159,7 +177,7 @@ data class LessonUiState(
 class LessonViewModel
     @Inject
     constructor(
-        savedStateHandle: SavedStateHandle,
+        private val savedStateHandle: SavedStateHandle,
         private val startLessonUseCase: StartLessonUseCase,
         private val registerAnswerUseCase: RegisterAnswerUseCase,
         private val completeLessonUseCase: CompleteLessonUseCase,
@@ -167,6 +185,7 @@ class LessonViewModel
         private val ttsEngine: TtsEngine,
         private val sttEngine: SttEngine,
         private val reviewRepository: ReviewRepository,
+        private val progressRepository: ProgressRepository,
     ) : ViewModel() {
         private val courseId: String =
             checkNotNull(savedStateHandle[LESSON_COURSE_KEY])
@@ -179,6 +198,7 @@ class LessonViewModel
         private var targetLanguage: Language? = null
         private var session: LessonSession? = null
         private var freeSpeakingJob: Job? = null
+        private var speechJob: Job? = null
         private var freeSpeakingStartedAt = 0L
         private val gradedExercises = mutableSetOf<String>()
         private var finishing = false
@@ -350,7 +370,7 @@ class LessonViewModel
             )
         }
 
-        /** Sin micrófono o sin permiso: registra el intento y deja avanzar (I3). */
+        /** Sin micrófono o sin permiso: avanza sin penalización (B-02, I3). */
         fun skipFreeSpeaking() {
             if (_uiState.value.feedback != null || _uiState.value.answerLocked) return
             if (currentExercise() !is Exercise.FreeSpeakingPrompt) return
@@ -359,6 +379,7 @@ class LessonViewModel
                 session?.lesson?.grammarPoints.orEmpty(),
                 consumeHeart = false,
                 allowRetry = false,
+                skipped = true,
             )
         }
 
@@ -418,6 +439,7 @@ class LessonViewModel
                 exercise = exercise,
                 grammarPoints = session?.lesson?.grammarPoints.orEmpty(),
                 response = response,
+                language = session?.course?.toLanguage ?: Language.ENGLISH,
             )
 
         private fun grammarLabels(feedback: FreeSpeakingFeedback): List<String> {
@@ -438,22 +460,35 @@ class LessonViewModel
             val busy = state.listening || state.feedback != null
             if (busy || !state.speechAvailable || state.answerLocked) return
             _uiState.update { it.copy(listening = true, recognized = null) }
-            viewModelScope.launch {
-                val result = sttEngine.transcribe(language)
-                _uiState.update { it.copy(listening = false, recognized = result.text.ifBlank { null }) }
-                submitAnswer(ExerciseAnswer.SpokenText(result.text))
-            }
+            speechJob =
+                viewModelScope.launch {
+                    val result = sttEngine.transcribe(language)
+                    _uiState.update { it.copy(listening = false, recognized = result.text.ifBlank { null }) }
+                    submitAnswer(ExerciseAnswer.SpokenText(result.text))
+                }
         }
 
-        /** Sin STT/permiso: indica que no puede hablar y avanza (incorrecto, I3). */
+        /** Detiene la escucha de SpeakRepeat y permite grabar de nuevo. */
+        fun stopSpoken() {
+            speechJob?.cancel()
+            speechJob = null
+            _uiState.update { it.copy(listening = false) }
+        }
+
+        /** Sin STT/permiso: avanza sin penalización (B-02, I3). */
         fun skipSpeech() {
             if (_uiState.value.listening || _uiState.value.feedback != null || _uiState.value.answerLocked) return
-            submitAnswer(ExerciseAnswer.SpokenText(""), consumeHeart = false, allowRetry = false)
+            submitAnswer(
+                ExerciseAnswer.SpokenText(""),
+                consumeHeart = false,
+                allowRetry = false,
+                skipped = true,
+            )
         }
 
         /** El usuario verifica el tablero de tokens (Translate / OrderWords). */
         fun submitTokens() {
-            val tokens = _uiState.value.chosenTokens
+            val tokens = _uiState.value.chosenTokens.map { token -> token.text }
             if (tokens.isNotEmpty()) submitAnswer(ExerciseAnswer.TokenSequence(tokens))
         }
 
@@ -560,21 +595,19 @@ class LessonViewModel
             }
         }
 
-        /** Toca un token del tablero: alterna entre elegidos y disponibles. */
-        fun toggleToken(token: String) {
+        /** Toca una ficha concreta del tablero y la alterna (B-06). */
+        fun toggleToken(id: Int) {
             if (_uiState.value.answerLocked) return
             _uiState.update { state ->
-                if (token in state.chosenTokens) {
-                    state.copy(
-                        chosenTokens = state.chosenTokens - token,
-                        availableTokens = state.availableTokens + token,
+                val board =
+                    TokenBoardRules.toggle(
+                        id = id,
+                        board = TokenBoard(available = state.availableTokens, chosen = state.chosenTokens),
                     )
-                } else {
-                    state.copy(
-                        chosenTokens = state.chosenTokens + token,
-                        availableTokens = state.availableTokens - token,
-                    )
-                }
+                state.copy(
+                    chosenTokens = board.chosen,
+                    availableTokens = board.available,
+                )
             }
         }
 
@@ -586,9 +619,11 @@ class LessonViewModel
             val nextIndex = state.index + 1
             if (nextIndex < state.exercises.size) {
                 _uiState.update { it.copy(index = nextIndex, feedback = null) }
+                persistSession(_uiState.value)
                 prepareExercise(nextIndex)
             } else if (!state.correctingMistakes && state.mistakes.isNotEmpty()) {
                 _uiState.update { it.copy(showMistakeReview = true, feedback = null) }
+                persistSession(_uiState.value)
             } else {
                 finishLesson()
             }
@@ -627,6 +662,7 @@ class LessonViewModel
                     freeSpeaking = FreeSpeakingState(),
                 )
             }
+            persistSession(_uiState.value)
             prepareExercise(0)
         }
 
@@ -700,30 +736,63 @@ class LessonViewModel
             val language = session.course.toLanguage
             targetLanguage = language
             val brief = LessonBriefBuilder.build(session.lesson)
+            val allExercises = session.lesson.exercises
+            val restoredMistakeIds = savedStateHandle.get<ArrayList<String>>(LESSON_MISTAKES_KEY).orEmpty()
+            val restoredMistakes =
+                restoredMistakeIds.mapNotNull { id ->
+                    allExercises.firstOrNull { exercise -> exercise.id.value == id }
+                }
+            val restoredCorrecting = savedStateHandle.get<Boolean>(LESSON_CORRECTING_KEY) ?: false
+            val exercises =
+                if (restoredCorrecting && restoredMistakes.isNotEmpty()) {
+                    restoredMistakes
+                } else {
+                    allExercises
+                }
+            val restoredIndex =
+                (savedStateHandle.get<Int>(LESSON_INDEX_KEY) ?: 0)
+                    .coerceIn(0, (exercises.size - 1).coerceAtLeast(0))
+            val restoredCorrect = savedStateHandle.get<Int>(LESSON_CORRECT_KEY) ?: 0
+            val restoredIncorrect = savedStateHandle.get<Int>(LESSON_INCORRECT_KEY) ?: 0
+            val restoredSkipped = savedStateHandle.get<Int>(LESSON_SKIPPED_KEY) ?: 0
+            val restoredXp = savedStateHandle.get<Int>(LESSON_XP_KEY) ?: 0
+            val restoredGradedIds = savedStateHandle.get<ArrayList<String>>(LESSON_GRADED_IDS_KEY).orEmpty()
+            val resumed =
+                savedStateHandle.contains(LESSON_INDEX_KEY) ||
+                    savedStateHandle.contains(LESSON_XP_KEY)
             gradedExercises.clear()
+            gradedExercises += restoredGradedIds
+            gradedExercises += restoredMistakes.map { exercise -> exercise.id.value }
             finishing = false
             _uiState.update {
                 it.copy(
                     loading = false,
                     lessonTitle = session.lesson.title,
                     brief = brief,
-                    briefVisible = true,
-                    briefSeen = false,
-                    exercises = session.lesson.exercises,
-                    index = 0,
+                    briefVisible = !resumed,
+                    briefSeen = resumed,
+                    exercises = exercises,
+                    index = restoredIndex,
+                    xpEarned = restoredXp,
                     glossary = LessonGlossary.fromLesson(session.lesson),
-                    totalExercises = session.lesson.exercises.size,
-                    correctCount = 0,
-                    incorrectCount = 0,
-                    score = LessonScore(total = session.lesson.exercises.size),
-                    mistakes = emptyList(),
+                    totalExercises = allExercises.size,
+                    correctCount = restoredCorrect,
+                    incorrectCount = restoredIncorrect,
+                    skippedCount = restoredSkipped,
+                    score =
+                        LessonAnswerRules.score(
+                            totalExercises = allExercises.size,
+                            skipped = restoredSkipped,
+                            correct = restoredCorrect,
+                        ),
+                    mistakes = restoredMistakes,
                     showMistakeReview = false,
-                    correctingMistakes = false,
+                    correctingMistakes = restoredCorrecting && restoredMistakes.isNotEmpty(),
                     audioAvailable = ttsEngine.isReadyFor(language),
                     speechAvailable = sttEngine.isReadyFor(language),
                 )
             }
-            prepareExercise(0)
+            prepareExercise(restoredIndex)
             viewModelScope.launch { ttsEngine.warmUp(language) }
             viewModelScope.launch { sttEngine.warmUp(language) }
             viewModelScope.launch {
@@ -739,6 +808,36 @@ class LessonViewModel
                     }
                 }
             }
+        }
+
+        /** Guarda el avance mínimo para sobrevivir a la muerte del proceso.
+         *
+         * Además del cursor, se guardan los ejercicios ya calificados y la
+         * fase de corrección: al restaurar, un ejercicio que ya se había
+         * calificado no vuelve a producir XP ni a mover los contadores, y la
+         * revisión de errores sigue en el mismo punto (B-08).
+         */
+        private fun persistSession(state: LessonUiState) {
+            savedStateHandle[LESSON_INDEX_KEY] = state.index
+            savedStateHandle[LESSON_XP_KEY] = state.xpEarned
+            savedStateHandle[LESSON_CORRECT_KEY] = state.correctCount
+            savedStateHandle[LESSON_INCORRECT_KEY] = state.incorrectCount
+            savedStateHandle[LESSON_SKIPPED_KEY] = state.skippedCount
+            savedStateHandle[LESSON_MISTAKES_KEY] =
+                ArrayList(state.mistakes.map { exercise -> exercise.id.value })
+            savedStateHandle[LESSON_GRADED_IDS_KEY] = ArrayList(gradedExercises)
+            savedStateHandle[LESSON_CORRECTING_KEY] = state.correctingMistakes
+        }
+
+        private fun clearPersistedSession() {
+            savedStateHandle.remove<Int>(LESSON_INDEX_KEY)
+            savedStateHandle.remove<Int>(LESSON_XP_KEY)
+            savedStateHandle.remove<Int>(LESSON_CORRECT_KEY)
+            savedStateHandle.remove<Int>(LESSON_INCORRECT_KEY)
+            savedStateHandle.remove<Int>(LESSON_SKIPPED_KEY)
+            savedStateHandle.remove<ArrayList<String>>(LESSON_MISTAKES_KEY)
+            savedStateHandle.remove<ArrayList<String>>(LESSON_GRADED_IDS_KEY)
+            savedStateHandle.remove<Boolean>(LESSON_CORRECTING_KEY)
         }
 
         /** Prepara los paneles de respuesta del ejercicio `index`. */
@@ -763,7 +862,10 @@ class LessonViewModel
                 is Exercise.Translate ->
                     _uiState.update {
                         it.copy(
-                            availableTokens = (exercise.correctTokens + exercise.distractorTokens).shuffled(),
+                            availableTokens =
+                                (exercise.correctTokens + exercise.distractorTokens)
+                                    .shuffled()
+                                    .mapIndexed { index, text -> IndexedToken(index, text) },
                             chosenTokens = emptyList(),
                             shuffledRights = emptyList(),
                             matched = emptyMap(),
@@ -776,7 +878,10 @@ class LessonViewModel
                 is Exercise.OrderWords ->
                     _uiState.update {
                         it.copy(
-                            availableTokens = exercise.tokens.shuffled(),
+                            availableTokens =
+                                exercise.tokens
+                                    .shuffled()
+                                    .mapIndexed { index, text -> IndexedToken(index, text) },
                             chosenTokens = emptyList(),
                             shuffledRights = emptyList(),
                             matched = emptyMap(),
@@ -840,6 +945,7 @@ class LessonViewModel
             grammarPoints: List<GrammarPoint> = emptyList(),
             consumeHeart: Boolean = true,
             allowRetry: Boolean = true,
+            skipped: Boolean = false,
         ) {
             val state = _uiState.value
             if (state.feedback != null || state.answerLocked || state.submitting) return
@@ -858,30 +964,36 @@ class LessonViewModel
                         val cultural = session?.let { CulturalNoteMatcher.noteFor(it.lesson, exercise) }
                         _uiState.update { current ->
                             val awardXp =
-                                !correction &&
+                                !skipped &&
+                                    !correction &&
                                     RetryPolicy.shouldAwardXp(grading.isCorrect, current.xpAwardedForExercise)
                             val consumed = shouldConsumeHeart && !grading.isCorrect
                             val canRetry =
-                                RetryPolicy.canRetry(
-                                    exercise = exercise,
+                                !skipped &&
+                                    RetryPolicy.canRetry(
+                                        exercise = exercise,
+                                        isCorrect = grading.isCorrect,
+                                        retryCount = current.retryCount,
+                                        allowRetry = allowRetry,
+                                    )
+                            val effects =
+                                LessonAnswerRules.effects(
+                                    skipped = skipped,
                                     isCorrect = grading.isCorrect,
-                                    retryCount = current.retryCount,
-                                    allowRetry = allowRetry,
+                                    firstGrading = firstGrading,
+                                    combo = current.combo,
                                 )
-                            val nextCombo = ComboRules.next(current.combo, grading.isCorrect)
-                            val correctDelta = if (firstGrading && grading.isCorrect) 1 else 0
-                            val incorrectDelta = if (firstGrading && !grading.isCorrect) 1 else 0
-                            val nextCorrect = current.correctCount + correctDelta
-                            val nextIncorrect = current.incorrectCount + incorrectDelta
+                            val skippedDelta = if (skipped) 1 else 0
+                            val nextSkipped = current.skippedCount + skippedDelta
                             current.copy(
                                 feedback =
                                     ExerciseFeedback(
                                         isCorrect = grading.isCorrect,
-                                        diagnostic = grading.diagnosticFeedback,
+                                        diagnostic = if (skipped) null else grading.diagnosticFeedback,
                                         idiom = cultural?.idiom,
                                         culturalNote = cultural?.note,
                                         successExplanation =
-                                            if (grading.isCorrect) {
+                                            if (grading.isCorrect && !skipped) {
                                                 successExplanation(exercise, grading)
                                             } else {
                                                 null
@@ -889,12 +1001,13 @@ class LessonViewModel
                                         // En tipos reintentables no revelamos la respuesta
                                         // para que el reintento siga siendo pedagógico.
                                         correctAnswer =
-                                            if (canRetry) {
+                                            if (canRetry || skipped) {
                                                 null
                                             } else {
                                                 exercise.answerKey()
                                             },
                                         retryAvailable = canRetry,
+                                        skipped = skipped,
                                     ),
                                 xpEarned =
                                     if (awardXp) {
@@ -902,14 +1015,21 @@ class LessonViewModel
                                     } else {
                                         current.xpEarned
                                     },
-                                xpAwardedForExercise = current.xpAwardedForExercise || grading.isCorrect,
+                                xpAwardedForExercise =
+                                    current.xpAwardedForExercise || (grading.isCorrect && !skipped),
                                 hearts = outcome.hearts?.hearts ?: current.hearts,
-                                combo = nextCombo,
-                                correctCount = nextCorrect,
-                                incorrectCount = nextIncorrect,
-                                score = LessonScoring.score(current.totalExercises, nextCorrect),
+                                combo = effects.nextCombo,
+                                correctCount = current.correctCount + effects.correctDelta,
+                                incorrectCount = current.incorrectCount + effects.incorrectDelta,
+                                skippedCount = nextSkipped,
+                                score =
+                                    LessonAnswerRules.score(
+                                        totalExercises = current.totalExercises,
+                                        skipped = nextSkipped,
+                                        correct = current.correctCount + effects.correctDelta,
+                                    ),
                                 mistakes =
-                                    if (firstGrading && !grading.isCorrect) {
+                                    if (effects.addMistake) {
                                         current.mistakes + exercise
                                     } else {
                                         current.mistakes
@@ -919,6 +1039,10 @@ class LessonViewModel
                                 submitting = false,
                                 heartConsumedForExercise = current.heartConsumedForExercise || consumed,
                             )
+                        }
+                        persistSession(_uiState.value)
+                        if (!correction && !skipped && exercise is Exercise.FreeSpeakingPrompt) {
+                            recordSpeakingMetrics(answer)
                         }
                     }
                     is Result.Error ->
@@ -932,6 +1056,29 @@ class LessonViewModel
                         }
                 }
             }
+        }
+
+        /**
+         * Persiste la métrica oral del intento (ADR-050). La escritura es
+         * best-effort: un fallo de Room no invalida la respuesta ya calificada.
+         */
+        private suspend fun recordSpeakingMetrics(answer: ExerciseAnswer) {
+            val feedback = _uiState.value.freeSpeaking.breakdown ?: return
+            if (feedback.wpm <= 0.0) return
+            val spoken = answer as? ExerciseAnswer.FreeSpoken
+            val score =
+                spoken?.selfAssessmentScore?.toFloat()
+                    ?: if (feedback.totalClusters > 0) {
+                        feedback.coveredClusters.toFloat() / feedback.totalClusters
+                    } else {
+                        0f
+                    }
+            progressRepository.recordSpeakingMetrics(
+                lessonId = LessonId(lessonId),
+                wpm = feedback.wpm.toFloat(),
+                score = score,
+                passed = feedback.passes,
+            )
         }
 
         private fun successExplanation(
@@ -989,8 +1136,9 @@ class LessonViewModel
             if (finishing || state.lessonCancelled || state.finished) return
             finishing = true
             val earned = state.xpEarned
+            val scorePercent = state.score.percentage
             viewModelScope.launch {
-                completeLessonUseCase(LessonId(lessonId), earned)
+                completeLessonUseCase(LessonId(lessonId), earned, scorePercent)
                 session?.let { current ->
                     reviewRepository.collectFromLesson(current.course, current.lesson)
                 }
@@ -999,9 +1147,15 @@ class LessonViewModel
                         finished = true,
                         feedback = null,
                         showMistakeReview = false,
-                        score = LessonScoring.score(it.totalExercises, it.correctCount),
+                        score =
+                            LessonAnswerRules.score(
+                                totalExercises = it.totalExercises,
+                                skipped = it.skippedCount,
+                                correct = it.correctCount,
+                            ),
                     )
                 }
+                clearPersistedSession()
                 finishing = false
             }
         }
@@ -1009,6 +1163,14 @@ class LessonViewModel
         companion object {
             const val LESSON_COURSE_KEY = "courseId"
             const val LESSON_ID_KEY = "lessonId"
+            private const val LESSON_INDEX_KEY = "lessonIndex"
+            private const val LESSON_XP_KEY = "lessonXp"
+            private const val LESSON_CORRECT_KEY = "lessonCorrect"
+            private const val LESSON_INCORRECT_KEY = "lessonIncorrect"
+            private const val LESSON_SKIPPED_KEY = "lessonSkipped"
+            private const val LESSON_MISTAKES_KEY = "lessonMistakes"
+            private const val LESSON_GRADED_IDS_KEY = "lessonGradedIds"
+            private const val LESSON_CORRECTING_KEY = "lessonCorrectingMistakes"
             private const val NORMAL_PLAYBACK_SPEED = 1.0f
             private const val SLOW_PLAYBACK_SPEED = 0.75f
             private const val SILENCE_DB = -60f

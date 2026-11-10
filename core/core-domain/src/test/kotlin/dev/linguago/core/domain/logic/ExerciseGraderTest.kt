@@ -4,6 +4,7 @@ import dev.linguago.core.domain.model.Exercise
 import dev.linguago.core.domain.model.ExerciseId
 import dev.linguago.core.domain.model.GrammarPoint
 import dev.linguago.core.domain.model.GrammarPointId
+import dev.linguago.core.domain.model.Language
 import dev.linguago.core.domain.usecase.ExerciseAnswer
 import org.junit.Assert.assertEquals
 import org.junit.Assert.assertFalse
@@ -592,6 +593,94 @@ class ExerciseGraderTest {
         assertTrue(FreeSpeakingHeuristicGrader.coveredClusterTerms(exercise, "nothing here").isEmpty())
     }
 
+    // ---- Contrato multilingüe del catálogo de gramática (ADR-045) ----
+
+    @Test
+    fun free_speaking_frances_condicional_no_marca_missing_grammar() {
+        val ref = GrammarPointId("gp-fr-cond")
+        val feedback =
+            evaluate(
+                "si j'avais le temps, je pourrais venir demain",
+                minTokens = 1,
+                conceptClusters = listOf(listOf("temps")),
+                grammarRuleRefs = listOf(ref),
+                grammarPoints = listOf(GrammarPoint(ref, "Conditionnel")),
+                language = Language.FRENCH,
+            )
+        assertEquals(listOf(ref), feedback.detectedGrammarRefs)
+        assertTrue(feedback.passes)
+    }
+
+    @Test
+    fun free_speaking_portugues_condicional_no_marca_missing_grammar() {
+        val ref = GrammarPointId("gp-pt-cond")
+        val feedback =
+            evaluate(
+                "se eu tivesse tempo, eu poderia ir amanha",
+                minTokens = 1,
+                conceptClusters = listOf(listOf("tempo")),
+                grammarRuleRefs = listOf(ref),
+                grammarPoints = listOf(GrammarPoint(ref, "Condicional")),
+                language = Language.PORTUGUESE,
+            )
+        assertEquals(listOf(ref), feedback.detectedGrammarRefs)
+        assertTrue(feedback.passes)
+    }
+
+    @Test
+    fun free_speaking_japones_condicional_no_marca_missing_grammar() {
+        val ref = GrammarPointId("gp-ja-cond")
+        val feedback =
+            evaluate(
+                "もし 時間 が あれば 行きます",
+                minTokens = 1,
+                conceptClusters = listOf(listOf("行")),
+                grammarRuleRefs = listOf(ref),
+                grammarPoints = listOf(GrammarPoint(ref, "条件形")),
+                language = Language.JAPANESE,
+            )
+        assertEquals(listOf(ref), feedback.detectedGrammarRefs)
+        assertTrue(feedback.passes)
+    }
+
+    @Test
+    fun free_speaking_japones_pasiva_no_marca_missing_grammar() {
+        val ref = GrammarPointId("gp-ja-passive")
+        val feedback =
+            evaluate(
+                "報告書 は 昨日 送られました",
+                minTokens = 1,
+                conceptClusters = listOf(listOf("報告")),
+                grammarRuleRefs = listOf(ref),
+                grammarPoints = listOf(GrammarPoint(ref, "受身")),
+                language = Language.JAPANESE,
+            )
+        assertEquals(listOf(ref), feedback.detectedGrammarRefs)
+        assertTrue(feedback.passes)
+    }
+
+    @Test
+    fun free_speaking_etiqueta_espanola_resuelve_patron_del_idioma_meta() {
+        val ref = GrammarPointId("gp-cond-es")
+        val feedback =
+            evaluate(
+                "si j'avais le temps, je pourrais venir demain",
+                minTokens = 1,
+                conceptClusters = listOf(listOf("temps")),
+                grammarRuleRefs = listOf(ref),
+                grammarPoints = listOf(GrammarPoint(ref, "Condicionales")),
+                language = Language.FRENCH,
+            )
+        assertEquals(listOf(ref), feedback.detectedGrammarRefs)
+        assertTrue(feedback.passes)
+    }
+
+    private val grammarModelAnswer =
+        "If perhaps it is said that the file was sent more than before, it is what we need and important; " +
+            "never forget, was moving and had seen. Si j'avais le temps, je pourrais venir et peut-etre " +
+            "il a ete analyse. Se eu tivesse tempo, eu poderia ir e talvez o arquivo foi enviado. " +
+            "もし あれば 送られました"
+
     private fun freeSpeakingExercise(
         conceptClusters: List<List<String>> = listOf(listOf("deadline"), listOf("split")),
         grammarRuleRefs: List<GrammarPointId> = emptyList(),
@@ -601,7 +690,7 @@ class ExerciseGraderTest {
             prompt = "Responde oralmente",
             minTokens = 2,
             conceptClusters = conceptClusters,
-            modelAnswer = "Modelo",
+            modelAnswer = grammarModelAnswer,
             selfAssessmentCriteria = listOf("¿Bien?"),
             grammarRuleRefs = grammarRuleRefs,
         )
@@ -616,6 +705,7 @@ class ExerciseGraderTest {
         minWpm: Double? = null,
         maxWpm: Double? = null,
         selfAssessmentScore: Double? = null,
+        language: Language = Language.ENGLISH,
     ): FreeSpeakingFeedback =
         FreeSpeakingHeuristicGrader.evaluate(
             exercise =
@@ -624,7 +714,7 @@ class ExerciseGraderTest {
                     prompt = "Responde oralmente",
                     minTokens = minTokens,
                     conceptClusters = conceptClusters,
-                    modelAnswer = "Modelo",
+                    modelAnswer = grammarModelAnswer,
                     selfAssessmentCriteria = listOf("¿Bien?"),
                     grammarRuleRefs = grammarRuleRefs,
                     minWpm = minWpm,
@@ -637,5 +727,6 @@ class ExerciseGraderTest {
                     durationMillis = millis,
                     selfAssessmentScore = selfAssessmentScore,
                 ),
+            language = language,
         )
 }

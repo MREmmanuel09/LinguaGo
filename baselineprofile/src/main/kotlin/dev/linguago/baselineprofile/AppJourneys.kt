@@ -15,7 +15,9 @@ internal const val REVIEW_SCREEN_TITLE: String = "Repaso"
 internal const val SHOW_TRANSLATION_LABEL: String = "Mostrar traducción"
 internal const val GOOD_RATING_LABEL: String = "Bien"
 internal const val CONTINUE_LABEL: String = "Continuar"
+internal const val NEXT_LABEL: String = "Siguiente"
 internal const val EXIT_LESSON_LABEL: String = "Salir"
+internal const val EXIT_CONFIRM_LABEL: String = "Seguir practicando"
 internal const val BRIEF_START_LABEL: String = "Empezar lección"
 internal const val BRIEF_RESUME_LABEL: String = "Volver a la lección"
 
@@ -112,6 +114,10 @@ internal fun interactWithFirstExercise(uiDevice: UiDevice) {
         uiDevice.hasObject(By.text(BRIEF_RESUME_LABEL)) -> tapText(uiDevice, BRIEF_RESUME_LABEL)
     }
     tapText(uiDevice, FIRST_OPTION_LABEL)
+    check(uiDevice.wait(Until.hasObject(By.text(NEXT_LABEL)), DEFAULT_TIMEOUT_MILLIS)) {
+        "No apareció el botón Siguiente del primer ejercicio"
+    }
+    tapText(uiDevice, NEXT_LABEL)
     check(uiDevice.wait(Until.hasObject(By.text(CONTINUE_LABEL)), DEFAULT_TIMEOUT_MILLIS)) {
         "No apareció el feedback del primer ejercicio"
     }
@@ -119,6 +125,10 @@ internal fun interactWithFirstExercise(uiDevice: UiDevice) {
 }
 
 internal fun exitLesson(uiDevice: UiDevice) {
+    tapText(uiDevice, EXIT_LESSON_LABEL)
+    check(uiDevice.wait(Until.hasObject(By.text(EXIT_CONFIRM_LABEL)), DEFAULT_TIMEOUT_MILLIS)) {
+        "No apareció el diálogo de confirmación al salir de la lección"
+    }
     tapText(uiDevice, EXIT_LESSON_LABEL)
     check(uiDevice.wait(Until.hasObject(By.text(HOME_TAB_LABEL)), DEFAULT_TIMEOUT_MILLIS)) {
         "No se volvió a Home tras salir de la lección"

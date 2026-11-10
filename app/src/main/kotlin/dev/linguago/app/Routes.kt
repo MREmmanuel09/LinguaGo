@@ -7,9 +7,11 @@ object Routes {
     const val LESSON = "lesson/{courseId}/{lessonId}"
     const val PROFILE = "profile"
     const val SETTINGS = "settings"
-    const val AUTH = "auth"
     const val SYNC = "sync"
-    const val REVIEW = "review/{courseId}"
+    const val REVIEW = "review?courseId={courseId}"
+
+    /** Ruta base de la pestaña Repaso (sin argumento: usa el curso activo). */
+    const val REVIEW_TAB = "review"
 
     /** Construye la ruta parametrizada de lección. */
     fun lesson(
@@ -18,5 +20,5 @@ object Routes {
     ): String = "lesson/$courseId/$lessonId"
 
     /** Construye la ruta del repaso espaciado para el curso dado. */
-    fun review(courseId: String): String = "review/$courseId"
+    fun review(courseId: String): String = "review?courseId=$courseId"
 }

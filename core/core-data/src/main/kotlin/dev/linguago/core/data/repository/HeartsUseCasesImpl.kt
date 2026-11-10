@@ -10,6 +10,7 @@ import dev.linguago.core.domain.usecase.AnswerOutcome
 import dev.linguago.core.domain.usecase.ConsumeHeartUseCase
 import dev.linguago.core.domain.usecase.ExerciseAnswer
 import dev.linguago.core.domain.usecase.ObserveHeartsUseCase
+import dev.linguago.core.domain.usecase.RecoverHeartUseCase
 import dev.linguago.core.domain.usecase.RegisterAnswerUseCase
 import dev.linguago.core.domain.usecase.SubmitAnswerUseCase
 import kotlinx.coroutines.flow.Flow
@@ -34,6 +35,16 @@ public class ConsumeHeartUseCaseImpl
         private val repository: HeartsRepository,
     ) : ConsumeHeartUseCase {
         override suspend fun invoke(): Result<HeartsState> = repository.consume()
+    }
+
+/** Implementación de la recuperación activa de vidas (ADR-048). */
+@Singleton
+public class RecoverHeartUseCaseImpl
+    @Inject
+    constructor(
+        private val repository: HeartsRepository,
+    ) : RecoverHeartUseCase {
+        override suspend fun invoke(): Result<HeartsState> = repository.recoverOne()
     }
 
 /**

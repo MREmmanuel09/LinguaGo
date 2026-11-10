@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--
+      Fondo de ventana oscuro (V-03): evita el flash blanco antes de que
+      Compose pinte el tema elegido. Coincide con LinguaTokens.DARK_BG_HEX.
+    -->
+    <style name="Theme.LinguaGo" parent="android:Theme.Material.NoActionBar">
+        <item name="android:windowBackground">#FF17161F</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="android:navigationBarColor">@android:color/transparent</item>
+        <item name="android:windowLightStatusBar">false</item>
+        <item name="android:windowLightNavigationBar">false</item>
+    </style>
+</resources>

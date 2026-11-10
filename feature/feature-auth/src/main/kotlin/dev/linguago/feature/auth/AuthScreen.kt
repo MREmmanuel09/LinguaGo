@@ -27,6 +27,7 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
+import dev.linguago.core.ui.components.LinguaTopBar
 import dev.linguago.core.ui.components.PrimaryButton3D
 import dev.linguago.core.ui.theme.LinguaTheme
 import dev.linguago.core.ui.theme.LinguaTokens
@@ -36,7 +37,10 @@ import dev.linguago.core.ui.theme.LinguaTokens
  * Invariante I3: nunca es obligatoria; la app completa funciona sin login.
  */
 @Composable
-public fun AuthScreen(modifier: Modifier = Modifier) {
+public fun AuthScreen(
+    modifier: Modifier = Modifier,
+    onBack: (() -> Unit)? = null,
+) {
     val viewModel = hiltViewModel<AuthViewModel>()
     val state by viewModel.uiState.collectAsStateWithLifecycle()
     val context = LocalContext.current
@@ -60,6 +64,7 @@ public fun AuthScreen(modifier: Modifier = Modifier) {
         onUnlinkGoogle = viewModel::unlinkGoogle,
         onLinkDevLocal = viewModel::linkDevLocal,
         onUnlinkDevLocal = viewModel::unlinkDevLocal,
+        onBack = onBack,
         modifier = modifier,
     )
 }
@@ -72,6 +77,7 @@ private fun AuthContent(
     onLinkDevLocal: () -> Unit,
     onUnlinkDevLocal: () -> Unit,
     modifier: Modifier = Modifier,
+    onBack: (() -> Unit)? = null,
 ) {
     val colors = MaterialTheme.colorScheme
 
@@ -84,11 +90,19 @@ private fun AuthContent(
                 .padding(24.dp),
         verticalArrangement = Arrangement.spacedBy(16.dp),
     ) {
-        Text(
-            text = "Cuenta (opcional)",
-            style = MaterialTheme.typography.headlineMedium,
-            color = colors.onBackground,
-        )
+        if (onBack != null) {
+            LinguaTopBar(
+                title = "Cuenta (opcional)",
+                onBack = onBack,
+                subtitle = "Vinculación opcional para respaldo",
+            )
+        } else {
+            Text(
+                text = "Cuenta (opcional)",
+                style = MaterialTheme.typography.headlineMedium,
+                color = colors.onBackground,
+            )
+        }
         Text(
             text =
                 "Tu progreso vive en el dispositivo. La cuenta solo agrega" +

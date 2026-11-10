@@ -48,6 +48,10 @@ public interface WordProgressDao {
     @Query("SELECT * FROM word_progress WHERE courseId = :courseId ORDER BY nextReviewEpochMillis ASC")
     public suspend fun loadAll(courseId: String): List<WordProgressEntity>
 
+    /** Lectura puntual de todo el mazo para snapshots (ADR-050). */
+    @Query("SELECT * FROM word_progress ORDER BY courseId ASC, word ASC")
+    public suspend fun snapshotAll(): List<WordProgressEntity>
+
     @Query("SELECT * FROM word_progress WHERE courseId = :courseId AND word = :word")
     public suspend fun load(
         courseId: String,
@@ -57,8 +61,24 @@ public interface WordProgressDao {
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     public suspend fun upsert(entity: WordProgressEntity)
 
+    @Insert(onConflict = OnConflictStrategy.REPLACE)
+    public suspend fun upsertAll(entities: List<WordProgressEntity>)
+
     @Insert(onConflict = OnConflictStrategy.IGNORE)
     public suspend fun insertAll(entities: List<WordProgressEntity>)
+}
+
+/** DAO de actividad diaria local (Room v5, ADR-050). */
+@Dao
+public interface DailyActivityDao {
+    @Query("SELECT * FROM daily_activity WHERE epochDay >= :sinceEpochDay ORDER BY epochDay ASC")
+    public fun observeSince(sinceEpochDay: Long): Flow<List<DailyActivityEntity>>
+
+    @Query("SELECT * FROM daily_activity WHERE epochDay = :epochDay")
+    public suspend fun load(epochDay: Long): DailyActivityEntity?
+
+    @Insert(onConflict = OnConflictStrategy.REPLACE)
+    public suspend fun upsert(entity: DailyActivityEntity)
 }
 
 /**

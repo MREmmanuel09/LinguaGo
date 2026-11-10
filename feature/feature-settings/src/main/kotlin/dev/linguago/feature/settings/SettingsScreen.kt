@@ -13,11 +13,17 @@ import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.selection.toggleable
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.verticalScroll
+import androidx.compose.material3.AlertDialog
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Switch
 import androidx.compose.material3.Text
+import androidx.compose.material3.TextButton
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.remember
+import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
@@ -27,11 +33,16 @@ import androidx.compose.ui.unit.dp
 import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import dev.linguago.core.domain.model.ThemeMode
+import dev.linguago.core.ui.components.ActionRowCard3D
+import dev.linguago.core.ui.components.CourseSwitcherSheet
+import dev.linguago.core.ui.components.LicensesSheet
 import dev.linguago.core.ui.components.OptionCard
 import dev.linguago.core.ui.feedback.FeedbackCue
 import dev.linguago.core.ui.feedback.LocalInteractionFeedback
 import dev.linguago.core.ui.theme.LinguaTheme
 import dev.linguago.core.ui.theme.LinguaTokens
+import dev.linguago.core.ui.theme.linguaExtendedColors
+import java.util.Locale
 
 /**
  * Ajustes generales (RFC §2.2): tema claro/oscuro, feedback sensorial
@@ -39,18 +50,19 @@ import dev.linguago.core.ui.theme.LinguaTokens
  */
 @Composable
 fun SettingsScreen(
-    onOpenOnboarding: () -> Unit,
     onOpenSync: () -> Unit,
     modifier: Modifier = Modifier,
     viewModel: SettingsViewModel = hiltViewModel(),
 ) {
     val uiState by viewModel.uiState.collectAsStateWithLifecycle()
+    LaunchedEffect(Unit) { viewModel.refreshVoiceCache() }
     SettingsContent(
         uiState = uiState,
         onSetTheme = viewModel::setTheme,
         onSoundEffectsChanged = viewModel::setSoundEffectsEnabled,
         onHapticsChanged = viewModel::setHapticsEnabled,
-        onResetCourse = { viewModel.resetCourse(onOpenOnboarding) },
+        onSelectCourse = viewModel::selectCourse,
+        onClearVoiceCache = viewModel::clearVoiceCache,
         onOpenSync = onOpenSync,
         modifier = modifier,
     )
@@ -62,11 +74,16 @@ private fun SettingsContent(
     onSetTheme: (ThemeMode) -> Unit,
     onSoundEffectsChanged: (Boolean) -> Unit,
     onHapticsChanged: (Boolean) -> Unit,
-    onResetCourse: () -> Unit,
+    onSelectCourse: (String) -> Unit,
+    onClearVoiceCache: () -> Unit,
     onOpenSync: () -> Unit,
     modifier: Modifier = Modifier,
 ) {
     val colors = MaterialTheme.colorScheme
+
+    var showLicenses by remember { mutableStateOf(false) }
+    var showCourseSwitcher by remember { mutableStateOf(false) }
+    var showClearVoiceDialog by remember { mutableStateOf(false) }
 
     Column(
         modifier =
@@ -128,31 +145,125 @@ private fun SettingsContent(
 
         Spacer(Modifier.height(8.dp))
         Text(
+            text = "Voz offline",
+            style = MaterialTheme.typography.titleMedium,
+            color = colors.onBackground,
+        )
+        ActionRowCard3D(
+            title = if (uiState.clearingVoiceCache) "Liberando voces…" else "Almacenamiento de voces",
+            subtitle =
+                when {
+                    uiState.clearingVoiceCache -> "Cerrando motores y borrando caché extraída"
+                    uiState.voiceCacheBytes <= 0L -> "Sin voces extraídas · Toca para liberar"
+                    else -> "${formatVoiceBytes(uiState.voiceCacheBytes)} extraídos · Toca para liberar"
+                },
+            enabled = !uiState.clearingVoiceCache,
+            onClick = { showClearVoiceDialog = true },
+            modifier = Modifier.fillMaxWidth(),
+        )
+        uiState.voiceMessage?.let { message ->
+            Text(
+                text = message,
+                style = MaterialTheme.typography.bodySmall,
+                color = linguaExtendedColors().primaryInk,
+            )
+        }
+
+        Spacer(Modifier.height(8.dp))
+        Text(
             text = "Curso",
             style = MaterialTheme.typography.titleMedium,
             color = colors.onBackground,
         )
-        OptionCard(
-            text =
+        ActionRowCard3D(
+            title =
                 if (uiState.selectedCourseId != null) {
                     "Cambiar de curso"
                 } else {
                     "Elegir un curso"
                 },
-            selected = false,
-            onClick = onResetCourse,
+            subtitle = uiState.selectedCourseId?.let(::courseTitleFor),
+            onClick = { showCourseSwitcher = true },
             modifier = Modifier.fillMaxWidth(),
         )
 
         Spacer(Modifier.height(8.dp))
-        OptionCard(
-            text = "Sincronización y cuenta",
-            selected = false,
+        ActionRowCard3D(
+            title = "Respaldo y datos",
+            subtitle = "Google Drive opcional o archivo local",
             onClick = onOpenSync,
             modifier = Modifier.fillMaxWidth(),
         )
+
+        Spacer(Modifier.height(8.dp))
+        ActionRowCard3D(
+            title = "Licencias y créditos",
+            subtitle = "Atribuciones del código y del contenido",
+            onClick = { showLicenses = true },
+            modifier = Modifier.fillMaxWidth(),
+        )
+    }
+    if (showLicenses) {
+        LicensesSheet(onDismiss = { showLicenses = false })
+    }
+    if (showCourseSwitcher) {
+        CourseSwitcherSheet(
+            courses = uiState.courses,
+            selectedId = uiState.selectedCourseId,
+            onSelect = { courseId ->
+                showCourseSwitcher = false
+                onSelectCourse(courseId)
+            },
+            onDismiss = { showCourseSwitcher = false },
+        )
+    }
+    if (showClearVoiceDialog) {
+        AlertDialog(
+            onDismissRequest = { showClearVoiceDialog = false },
+            title = { Text("Liberar voces offline") },
+            text = {
+                Text(
+                    "Se borrarán las copias extraídas de las voces y modelos. " +
+                        "Se reinstalarán desde la app la próxima vez que uses audio, sin conexión.",
+                )
+            },
+            confirmButton = {
+                TextButton(
+                    onClick = {
+                        showClearVoiceDialog = false
+                        onClearVoiceCache()
+                    },
+                ) {
+                    Text("Liberar")
+                }
+            },
+            dismissButton = {
+                TextButton(onClick = { showClearVoiceDialog = false }) {
+                    Text("Cancelar")
+                }
+            },
+        )
     }
 }
+
+private fun formatVoiceBytes(bytes: Long): String =
+    when {
+        bytes < KILOBYTE -> "0 KB"
+        bytes < MEGABYTE -> "${bytes / KILOBYTE} KB"
+        else -> String.format(Locale.getDefault(), "%.1f MB", bytes / MEGABYTE.toDouble())
+    }
+
+private const val KILOBYTE = 1024L
+private const val MEGABYTE = 1024L * 1024L
+
+private fun courseTitleFor(courseId: String): String =
+    when (courseId) {
+        "es-en" -> "Inglés"
+        "es-pt" -> "Portugués"
+        "es-fr" -> "Francés"
+        "es-ja" -> "Japonés"
+        else -> "Curso seleccionado"
+    }
 
 @Composable
 private fun SettingsToggleRow(
@@ -212,11 +323,13 @@ private fun SettingsScreenPreview() {
                     selectedCourseId = "es-en",
                     soundEffectsEnabled = true,
                     hapticsEnabled = true,
+                    voiceCacheBytes = 42L * 1024L * 1024L,
                 ),
             onSetTheme = {},
             onSoundEffectsChanged = {},
             onHapticsChanged = {},
-            onResetCourse = {},
+            onSelectCourse = {},
+            onClearVoiceCache = {},
             onOpenSync = {},
         )
     }

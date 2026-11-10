@@ -70,6 +70,28 @@ public object HeartsRules {
         nowEpochSecond: Long,
     ): HeartsState = state.copy(hearts = state.max, lastRegenEpochSecond = nowEpochSecond)
 
+    /**
+     * Recupera una sola vida por práctica activa (ADR-048): completar 5
+     * tarjetas FSRS. No altera el reloj de regeneración si aún queda hueco.
+     */
+    public fun recoverOne(
+        state: HeartsState,
+        nowEpochSecond: Long,
+    ): HeartsState {
+        val current = regenerated(state, nowEpochSecond)
+        if (current.hearts >= current.max) return current
+        val recovered = current.hearts + 1
+        return current.copy(
+            hearts = recovered,
+            lastRegenEpochSecond =
+                if (recovered >= current.max) {
+                    nowEpochSecond
+                } else {
+                    current.lastRegenEpochSecond
+                },
+        )
+    }
+
     /** Segundos restantes para la próxima vida; 0 si el tanque está lleno. */
     public fun secondsUntilNextHeart(
         state: HeartsState,

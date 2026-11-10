@@ -21,6 +21,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.platform.LocalDensity
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
@@ -32,6 +33,7 @@ import dev.linguago.core.domain.model.WordProgress
 import dev.linguago.core.ui.components.AudioPlayerCard
 import dev.linguago.core.ui.components.FlipCard3D
 import dev.linguago.core.ui.components.HeartsCounter
+import dev.linguago.core.ui.components.LinguaTopBar
 import dev.linguago.core.ui.components.PrimaryButton3D
 import dev.linguago.core.ui.feedback.FeedbackCue
 import dev.linguago.core.ui.feedback.LocalInteractionFeedback
@@ -51,10 +53,12 @@ public fun ReviewScreen(
     viewModel: ReviewViewModel = hiltViewModel(),
 ) {
     val state by viewModel.uiState.collectAsStateWithLifecycle()
+    LaunchedEffect(Unit) { viewModel.refresh() }
     ReviewContent(
         state = state,
         onReveal = viewModel::reveal,
-        onSpeak = viewModel::speakTranslation,
+        onSpeak = { viewModel.speakTranslation(slow = false) },
+        onSpeakSlow = { viewModel.speakTranslation(slow = true) },
         onRate = viewModel::rate,
         onExit = onExit,
         modifier = modifier,
@@ -66,6 +70,7 @@ private fun ReviewContent(
     state: ReviewUiState,
     onReveal: () -> Unit,
     onSpeak: () -> Unit,
+    onSpeakSlow: () -> Unit,
     onRate: (ReviewRating) -> Unit,
     onExit: () -> Unit,
     modifier: Modifier = Modifier,
@@ -85,18 +90,11 @@ private fun ReviewContent(
                 .padding(24.dp),
         verticalArrangement = Arrangement.spacedBy(16.dp),
     ) {
-        Row(
-            modifier = Modifier.fillMaxWidth(),
-            verticalAlignment = Alignment.CenterVertically,
-        ) {
-            Text(
-                text = "Repaso",
-                style = MaterialTheme.typography.headlineMedium,
-                color = colors.onBackground,
-                modifier = Modifier.weight(1f),
-            )
-            HeartsCounter(hearts = state.hearts)
-        }
+        LinguaTopBar(
+            title = "Repaso",
+            onBack = onExit,
+            actions = { HeartsCounter(hearts = state.hearts) },
+        )
 
         when {
             state.loading ->
@@ -131,6 +129,13 @@ private fun ReviewContent(
                     style = MaterialTheme.typography.bodySmall,
                     color = colors.onSurfaceVariant,
                 )
+                if (state.heartProgress > 0) {
+                    Text(
+                        text = "${state.heartProgress}/5 tarjetas para recuperar 1 ❤",
+                        style = MaterialTheme.typography.labelMedium,
+                        color = colors.primary,
+                    )
+                }
 
                 state.current?.let { card ->
                     FlipCard3D(
@@ -184,8 +189,27 @@ private fun ReviewContent(
                                     feedback.play(FeedbackCue.TAP)
                                     onSpeak()
                                 },
+                                onPlaySlow = {
+                                    feedback.play(FeedbackCue.TAP)
+                                    onSpeakSlow()
+                                },
                                 modifier = Modifier.fillMaxWidth(),
                             )
+                            state.culturalNote?.let { note ->
+                                Spacer(Modifier.height(8.dp))
+                                Text(
+                                    text = "Nota cultural: $note",
+                                    style = MaterialTheme.typography.bodySmall,
+                                    color = colors.onSurfaceVariant,
+                                    textAlign = TextAlign.Center,
+                                    modifier =
+                                        Modifier
+                                            .fillMaxWidth()
+                                            .clip(RoundedCornerShape(LinguaTokens.RADIUS_CARD_DP.dp))
+                                            .background(colors.surfaceVariant)
+                                            .padding(12.dp),
+                                )
+                            }
                         },
                     )
                 }
@@ -217,51 +241,47 @@ private fun ReviewContent(
     }
 }
 
-/** Fila de calificación FSRS con color semántico por intención (ADR-034). */
+/** Fila (o cuadrícula 2×2 en fuente grande) de calificación FSRS (ADR-034/048). */
 @Composable
 private fun RatingRow(onRate: (ReviewRating) -> Unit) {
-    Row(
-        modifier = Modifier.fillMaxWidth(),
-        horizontalArrangement = Arrangement.spacedBy(6.dp),
-    ) {
-        RatingButton(
-            label = "Otra vez",
-            rating = ReviewRating.AGAIN,
-            bodyColor = LinguaTokens.Destructive,
-            edgeColor = LinguaTokens.Destructive.copy(alpha = 0.72f),
-            contentColor = Color.White,
-            onRate = onRate,
-            modifier = Modifier.weight(1f),
+    val largeFont = LocalDensity.current.fontScale >= 1.5f
+    val specs =
+        listOf(
+            RatingSpec("Otra vez", ReviewRating.AGAIN, LinguaTokens.Destructive, LinguaTokens.Destructive.copy(alpha = 0.72f), Color.White),
+            RatingSpec("Difícil", ReviewRating.HARD, LinguaTokens.Warning, Color(LinguaTokens.CHEST_EDGE_HEX), LinguaTokens.Fg),
+            RatingSpec("Bien", ReviewRating.GOOD, LinguaTokens.Accent, LinguaTokens.Accent.copy(alpha = 0.72f), Color.White),
+            RatingSpec("Fácil", ReviewRating.EASY, LinguaTokens.Primary, LinguaTokens.PrimaryEdge, Color.White),
         )
-        RatingButton(
-            label = "Difícil",
-            rating = ReviewRating.HARD,
-            bodyColor = LinguaTokens.Warning,
-            edgeColor = Color(LinguaTokens.CHEST_EDGE_HEX),
-            contentColor = LinguaTokens.Fg,
-            onRate = onRate,
-            modifier = Modifier.weight(1f),
-        )
-        RatingButton(
-            label = "Bien",
-            rating = ReviewRating.GOOD,
-            bodyColor = LinguaTokens.Accent,
-            edgeColor = LinguaTokens.Accent.copy(alpha = 0.72f),
-            contentColor = Color.White,
-            onRate = onRate,
-            modifier = Modifier.weight(1f),
-        )
-        RatingButton(
-            label = "Fácil",
-            rating = ReviewRating.EASY,
-            bodyColor = LinguaTokens.Primary,
-            edgeColor = LinguaTokens.PrimaryEdge,
-            contentColor = Color.White,
-            onRate = onRate,
-            modifier = Modifier.weight(1f),
-        )
+    val rows = if (largeFont) specs.chunked(2) else listOf(specs)
+    Column(verticalArrangement = Arrangement.spacedBy(6.dp)) {
+        rows.forEach { row ->
+            Row(
+                modifier = Modifier.fillMaxWidth(),
+                horizontalArrangement = Arrangement.spacedBy(6.dp),
+            ) {
+                row.forEach { spec ->
+                    RatingButton(
+                        label = spec.label,
+                        rating = spec.rating,
+                        bodyColor = spec.bodyColor,
+                        edgeColor = spec.edgeColor,
+                        contentColor = spec.contentColor,
+                        onRate = onRate,
+                        modifier = Modifier.weight(1f),
+                    )
+                }
+            }
+        }
     }
 }
+
+private data class RatingSpec(
+    val label: String,
+    val rating: ReviewRating,
+    val bodyColor: Color,
+    val edgeColor: Color,
+    val contentColor: Color,
+)
 
 @Composable
 private fun RatingButton(
@@ -348,6 +368,7 @@ private fun ReviewScreenPreview() {
                 ),
             onReveal = {},
             onSpeak = {},
+            onSpeakSlow = {},
             onRate = {},
             onExit = {},
         )

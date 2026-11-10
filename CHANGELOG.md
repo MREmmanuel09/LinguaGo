@@ -6,6 +6,58 @@ El formato sigue [Keep a Changelog](https://keepachangelog.com/es-ES/1.1.0/)
 y el versionado sigue [SemVer](https://semver.org/lang/es/).
 Pre-1.0: los cambios incompatibles pueden ocurrir en `0.y.0`.
 
+## [3.0.0] - 2026-11-09
+
+Rediseño de experiencia (ADR-048/050) en cuatro fases. Fases 1–4 completadas.
+
+### Añadido
+
+- Barra inferior de 4 destinos (`Inicio · Repaso · Progreso · Ajustes`) con
+  badge de tarjetas vencidas.
+- `CourseSwitcherSheet` en Home y Ajustes para cambiar de curso en 2 toques.
+- Títulos bajo los nodos del camino y botón flotante «Ir a mi lección».
+- Cofres de unidad con `+20 XP` único y estado «Cofre ya reclamado».
+- Recuperación de `+1 ❤` cada 5 tarjetas superadas en Repaso.
+- Nota cultural en el reverso de la tarjeta y audio a `0.75x`.
+- Cuadrícula `2×2` de calificación cuando `fontScale >= 1.5`.
+- Room v5: `daily_activity`, nota cultural persistida y métricas reales de
+  voz/precisión con migración `4→5` y test instrumentado.
+- `SyncSnapshot v3` con el mazo FSRS y merge monótono por tarjeta.
+- Pantalla unificada «Respaldo y datos» con Google Drive opcional y
+  exportación/importación local `.json` vía SAF.
+- Perfil con mejor fluidez oral, precisión media, tasa de superación oral y
+  calendario de actividad de 28 días.
+- Desglose CEFR A1–C2 por curso activo en el perfil.
+- `espeak-ng-data` compartido entre las tres voces Piper y librerías nativas
+  comprimidas; gestor de voces en Ajustes para liberar la caché extraída.
+
+### Pendiente
+
+- Revisión editorial humana/nativa de B1–C2, planificada para `v3.1` en
+  commits `content:` separados.
+
+## [2.5.0] - 2026-11-09
+
+Pulido profesional y paridad multilingüe (ADR-044…ADR-049): grader oral
+localizado para EN/FR/PT/JA, avance neutro al omitir ejercicios de voz,
+tolerancia a palabras repetidas en tableros de tokens, resistencia de la
+sesión a rotación/proceso muerto, tipografía 100% Nunito y contraste AA.
+
+### Añadido
+
+- Contrato de contenido para que ningún `modelAnswer` marque fallo gramatical o
+  de cobertura en los cuatro cursos.
+- `LicensesSheet` en Ajustes (ADR-008) y confirmación al salir de una lección.
+- `ActionRowCard3D` con semántica de botón y `LinguaTopBar` en pantallas
+  secundarias.
+
+### Corregido
+
+- `VocabularyExtractor` normaliza frente ES → reverso meta en todos los cursos,
+  incluidos `MatchPairs` japoneses invertidos.
+- `MainActivity` espera la primera lectura de settings y sincroniza las barras
+  del sistema con el tema; perfil filtra el dominio por el curso activo.
+
 ## [2.4.0] - 2026-11-08
 
 C2 completo en `es-fr`, `es-pt` y `es-ja` (ADR-042): los tres cursos de

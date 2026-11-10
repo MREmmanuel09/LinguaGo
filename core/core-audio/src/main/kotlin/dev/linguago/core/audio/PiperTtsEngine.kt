@@ -145,28 +145,64 @@ public class PiperTtsEngine
         /** Voz instalada en filesDir con onnx verificado por SHA-256. */
         private fun verifiedVoice(entry: VoiceEntry): PiperVoice? {
             val dir = File(context.filesDir, entry.path)
-            return if (voiceFilesValid(dir, entry)) PiperVoice(dir = dir, id = entry.id) else null
+            val dataDir = voiceDataDir(dir) ?: return null
+            return if (voiceFilesValid(dir, entry, dataDir)) {
+                PiperVoice(dir = dir, id = entry.id, dataDir = dataDir)
+            } else {
+                null
+            }
         }
 
         private fun voiceFilesValid(
             dir: File,
             entry: VoiceEntry,
+            dataDir: File,
         ): Boolean =
-            hasVoiceFiles(dir, entry.id) &&
+            hasVoiceFiles(dir, entry.id, dataDir) &&
                 ModelIntegrity
                     .sha256Hex(File(dir, "${entry.id}.onnx"))
                     .equals(entry.sha256, ignoreCase = true)
 
-        /** Extrae `tts/<id>` a staging y lo publica con rename atómico. */
+        /**
+         * Datos espeak de la voz: primero la copia local de cachés antiguas y,
+         * si no existe, el árbol compartido extraído una sola vez (ADR-051).
+         */
+        private fun voiceDataDir(voiceDir: File): File? {
+            val local = File(voiceDir, ESPEAK_DIR)
+            if (isEspeakData(local)) return local
+            val shared = File(context.filesDir, SHARED_ESPEAK_PATH)
+            return shared.takeIf(::isEspeakData)
+        }
+
+        private fun isEspeakData(dir: File): Boolean = dir.isDirectory && dir.list()?.isNotEmpty() == true
+
+        /** Extrae `tts/<id>` y asegura el árbol espeak compartido. */
         private fun extractVoice(entry: VoiceEntry): PiperVoice? {
+            if (!ensureSharedEspeakData()) return null
             val installed =
                 AtomicInstall.install(
                     stagingDir = File(context.filesDir, "${entry.path}.staging"),
                     targetDir = File(context.filesDir, entry.path),
                     copy = { dir -> copyAssetTree(entry.path, dir) },
-                    verify = { dir -> voiceFilesValid(dir, entry) },
+                    verify = { dir ->
+                        val dataDir = voiceDataDir(dir)
+                        dataDir != null && voiceFilesValid(dir, entry, dataDir)
+                    },
                 ) ?: return null
-            return PiperVoice(dir = installed, id = entry.id)
+            val dataDir = voiceDataDir(installed) ?: return null
+            return PiperVoice(dir = installed, id = entry.id, dataDir = dataDir)
+        }
+
+        /** Instala `tts/espeak-ng-data` en filesDir una sola vez y la verifica. */
+        private fun ensureSharedEspeakData(): Boolean {
+            val target = File(context.filesDir, SHARED_ESPEAK_PATH)
+            if (isEspeakData(target)) return true
+            return AtomicInstall.install(
+                stagingDir = File(context.filesDir, "$SHARED_ESPEAK_PATH.staging"),
+                targetDir = target,
+                copy = { dir -> copyAssetTree(SHARED_ESPEAK_PATH, dir) },
+                verify = { dir -> isEspeakData(dir) },
+            ) != null
         }
 
         /** Instanciación nativa (JNI, pesada): solo desde el warmup en IO. */
@@ -268,10 +304,11 @@ public class PiperTtsEngine
         private fun hasVoiceFiles(
             dir: File,
             id: String,
+            dataDir: File,
         ): Boolean =
             File(dir, "$id.onnx").isFile &&
                 File(dir, TOKENS_FILE).isFile &&
-                File(dir, ESPEAK_DIR).isDirectory
+                dataDir.isDirectory
 
         /** Lee `manifest.json` de assets; vacío si falta o es inválido. */
         private fun readManifest(): List<VoiceEntry> =
@@ -296,6 +333,7 @@ public class PiperTtsEngine
             const val PIPER = "piper"
             const val TOKENS_FILE = "tokens.txt"
             const val ESPEAK_DIR = "espeak-ng-data"
+            const val SHARED_ESPEAK_PATH = "tts/espeak-ng-data"
             const val VOICE_MANIFEST_ASSET = "manifest.json"
             const val NUM_THREADS = 2
             const val MIN_BUFFER_BYTES = 8192
@@ -310,10 +348,10 @@ public class PiperTtsEngine
 private data class PiperVoice(
     val dir: File,
     val id: String,
+    val dataDir: File,
 ) {
     val onnxFile: File = File(dir, "$id.onnx")
     val tokensFile: File = File(dir, "tokens.txt")
-    val dataDir: File = File(dir, "espeak-ng-data")
 }
 
 /** Entrada del manifest de voces (models/manifest.json). */

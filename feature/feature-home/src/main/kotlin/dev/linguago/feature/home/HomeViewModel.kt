@@ -9,11 +9,15 @@ import dev.linguago.core.domain.model.Course
 import dev.linguago.core.domain.model.CourseId
 import dev.linguago.core.domain.model.Language
 import dev.linguago.core.domain.model.LessonProgress
+import dev.linguago.core.domain.model.XP_PER_CHEST
 import dev.linguago.core.domain.repository.HeartsRepository
 import dev.linguago.core.domain.repository.ProgressRepository
 import dev.linguago.core.domain.repository.ReviewRepository
 import dev.linguago.core.domain.repository.SettingsRepository
+import dev.linguago.core.domain.usecase.GetAvailableCoursesUseCase
 import dev.linguago.core.domain.usecase.LoadCourseUseCase
+import dev.linguago.core.ui.components.CourseSwitchOption
+import dev.linguago.core.ui.components.path.PathNodeState
 import dev.linguago.feature.home.path.PathItem
 import dev.linguago.feature.home.path.buildPathItems
 import dev.linguago.feature.home.path.xpLevelFor
@@ -49,6 +53,16 @@ data class HomeUiState(
     val hearts: Int = HEARTS_MAX,
     val level: Int = 1,
     val xpIntoLevel: Float = 0f,
+    val courses: List<CourseSwitchOption> = emptyList(),
+    val chestReward: ChestRewardUi? = null,
+)
+
+/** Resultado de abrir un cofre de unidad (ADR-048). */
+data class ChestRewardUi(
+    val unitId: String,
+    val unitTitle: String,
+    val xpEarned: Int,
+    val alreadyOpened: Boolean,
 )
 
 /**
@@ -61,6 +75,7 @@ class HomeViewModel
     @Inject
     constructor(
         private val loadCourseUseCase: LoadCourseUseCase,
+        private val getAvailableCoursesUseCase: GetAvailableCoursesUseCase,
         private val progressRepository: ProgressRepository,
         private val heartsRepository: HeartsRepository,
         private val settingsRepository: SettingsRepository,
@@ -69,9 +84,13 @@ class HomeViewModel
         private val course = MutableStateFlow<Course?>(null)
         private val loading = MutableStateFlow(true)
         private val dueCount = MutableStateFlow(0)
+        private val courses = MutableStateFlow<List<CourseSwitchOption>>(emptyList())
+        private val openedChests = MutableStateFlow<Set<String>>(emptySet())
+        private val claimedChests = mutableSetOf<String>()
+        private val chestReward = MutableStateFlow<ChestRewardUi?>(null)
         private var dueJob: Job? = null
 
-        val uiState: StateFlow<HomeUiState> =
+        private val courseState =
             combine(
                 combine(progressRepository.observeStreak(), heartsRepository.observe()) { streak, hearts ->
                     streak to hearts
@@ -79,8 +98,7 @@ class HomeViewModel
                 progressRepository.observeLessonProgress(),
                 loading,
                 course,
-                dueCount,
-            ) { (streak, hearts), lessonProgress, isLoading, courseValue, dueReviews ->
+            ) { (streak, hearts), lessonProgress, isLoading, courseValue ->
                 val xp = xpLevelFor(streak.totalXp)
                 HomeUiState(
                     loading = isLoading,
@@ -88,13 +106,21 @@ class HomeViewModel
                     courseId = courseValue?.id?.value,
                     streakDays = streak.current,
                     totalXp = streak.totalXp,
-                    dueReviews = dueReviews,
                     courseTitle = courseValue?.let { title(it) },
                     units = courseValue?.let { value -> buildTiles(value, lessonProgress) } ?: emptyList(),
                     pathItems = courseValue?.let { value -> buildPathItems(value, lessonProgress) } ?: emptyList(),
                     hearts = hearts.hearts,
                     level = xp.level,
                     xpIntoLevel = xp.progressToNext,
+                )
+            }
+
+        val uiState: StateFlow<HomeUiState> =
+            combine(courseState, dueCount, courses, chestReward) { base, dueReviews, available, reward ->
+                base.copy(
+                    dueReviews = dueReviews,
+                    courses = available,
+                    chestReward = reward,
                 )
             }.stateIn(viewModelScope, SharingStarted.WhileSubscribed(5000), HomeUiState())
 
@@ -112,6 +138,73 @@ class HomeViewModel
             viewModelScope.launch {
                 settingsRepository.selectedCourseId.collect { courseId -> observeReviews(courseId) }
             }
+            viewModelScope.launch {
+                settingsRepository.openedChestIds.collect { ids -> openedChests.value = ids }
+            }
+            viewModelScope.launch {
+                when (val result = getAvailableCoursesUseCase()) {
+                    is Result.Success ->
+                        courses.value =
+                            result.value.map { summary ->
+                                CourseSwitchOption(
+                                    id = summary.id.value,
+                                    title = summary.title,
+                                    subtitle =
+                                        "${languageName(summary.fromLanguage)} → " +
+                                            languageName(summary.toLanguage),
+                                )
+                            }
+                    is Result.Error -> Unit
+                }
+            }
+        }
+
+        /** Cambia el curso activo sin pasar por onboarding (ADR-048). */
+        fun switchCourse(courseId: String) {
+            viewModelScope.launch {
+                chestReward.value = null
+                settingsRepository.updateSelectedCourse(courseId)
+            }
+        }
+
+        /**
+         * Abre el cofre de una unidad completada y otorga [XP_PER_CHEST] una
+         * sola vez; si ya estaba reclamado, informa sin volver a sumar.
+         */
+        fun claimChest(
+            unitId: String,
+            unitTitle: String,
+        ) {
+            val chest =
+                uiState.value.pathItems
+                    .filterIsInstance<PathItem.Node>()
+                    .firstOrNull { item -> item.node.id == "chest:$unitId" }
+            if (chest?.node?.state != PathNodeState.CHEST) return
+            val alreadyOpened = unitId in openedChests.value
+            val claimedNow = unitId in claimedChests
+            if (!ChestClaimRules.shouldAward(chest.node.state, alreadyOpened, claimedNow)) {
+                if (alreadyOpened || claimedNow) {
+                    chestReward.value = ChestRewardUi(unitId, unitTitle, xpEarned = 0, alreadyOpened = true)
+                }
+                return
+            }
+            claimedChests += unitId
+            viewModelScope.launch {
+                when (progressRepository.addXp(XP_PER_CHEST)) {
+                    is Result.Success -> {
+                        settingsRepository.markChestOpened(unitId)
+                        chestReward.value = ChestRewardUi(unitId, unitTitle, XP_PER_CHEST, false)
+                    }
+                    is Result.Error -> {
+                        claimedChests -= unitId
+                    }
+                }
+            }
+        }
+
+        /** Cierra la hoja de recompensa del cofre. */
+        fun dismissChest() {
+            chestReward.value = null
         }
 
         private fun observeReviews(courseId: String?) {

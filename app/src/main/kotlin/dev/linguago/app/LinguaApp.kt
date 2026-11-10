@@ -11,6 +11,8 @@ import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
+import androidx.compose.material3.Badge
+import androidx.compose.material3.BadgedBox
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.NavigationBar
 import androidx.compose.material3.NavigationBarItem
@@ -22,20 +24,27 @@ import androidx.compose.runtime.CompositionLocalProvider
 import androidx.compose.runtime.getValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.ColorFilter
+import androidx.compose.ui.platform.LocalDensity
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
+import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
+import androidx.lifecycle.compose.collectAsStateWithLifecycle
+import androidx.navigation.NavGraph.Companion.findStartDestination
 import androidx.navigation.NavHostController
+import androidx.navigation.NavType
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.currentBackStackEntryAsState
 import androidx.navigation.compose.rememberNavController
+import androidx.navigation.navArgument
 import dev.linguago.core.ui.components.LinguaIcons
 import dev.linguago.core.ui.feedback.FeedbackCue
 import dev.linguago.core.ui.feedback.LocalInteractionFeedback
 import dev.linguago.core.ui.feedback.rememberInteractionFeedback
+import dev.linguago.core.ui.theme.LinguaTokens
+import dev.linguago.core.ui.theme.linguaExtendedColors
 import dev.linguago.core.ui.util.rememberAnimationsEnabled
-import dev.linguago.feature.auth.AuthScreen
 import dev.linguago.feature.home.HomeScreen
 import dev.linguago.feature.lesson.LessonScreen
 import dev.linguago.feature.onboarding.OnboardingScreen
@@ -53,24 +62,28 @@ private data class BottomDestination(
 private val BOTTOM_DESTINATIONS =
     listOf(
         BottomDestination(Routes.HOME, R.string.tab_home, LinguaIcons.HomeRes),
+        BottomDestination(Routes.REVIEW_TAB, R.string.tab_review, LinguaIcons.CardsRes),
         BottomDestination(Routes.PROFILE, R.string.tab_profile, LinguaIcons.ProfileRes),
         BottomDestination(Routes.SETTINGS, R.string.tab_settings, LinguaIcons.SettingsRes),
     )
 
 /**
- * Shell de la aplicación: NavHost + barra inferior. El destino inicial lo
- * decide la preferencia de curso (onboarding u home, Fase 1). Provee el
- * feedback sensorial global (ADR-027).
+ * Shell de la aplicación: NavHost + barra inferior de 4 destinos (ADR-048).
+ * El destino inicial lo decide la preferencia de curso (onboarding u home).
+ * El badge de Repaso refleja las tarjetas vencidas del curso activo.
  */
 @Composable
 fun LinguaApp(
     startDestination: String = Routes.ONBOARDING,
     navController: NavHostController = rememberNavController(),
     modifier: Modifier = Modifier,
+    shellViewModel: AppShellViewModel = hiltViewModel(),
 ) {
     val backStackEntry by navController.currentBackStackEntryAsState()
     val currentRoute = backStackEntry?.destination?.route
-    val showBottomBar = currentRoute in BOTTOM_DESTINATIONS.map { it.route }
+    val currentBase = currentRoute?.substringBefore('?')
+    val showBottomBar = BOTTOM_DESTINATIONS.any { destination -> destination.route.substringBefore('?') == currentBase }
+    val dueReviews by shellViewModel.dueReviews.collectAsStateWithLifecycle()
     val feedback = rememberInteractionFeedback()
     val animations = rememberAnimationsEnabled()
 
@@ -81,10 +94,14 @@ fun LinguaApp(
                 if (showBottomBar) {
                     LinguaBottomBar(
                         currentRoute = currentRoute,
+                        dueReviews = dueReviews,
                         onRouteSelected = { route ->
                             navController.navigate(route) {
-                                popUpTo(Routes.HOME) { inclusive = route == Routes.HOME }
+                                popUpTo(navController.graph.findStartDestination().id) {
+                                    saveState = true
+                                }
                                 launchSingleTop = true
+                                restoreState = true
                             }
                         },
                     )
@@ -105,6 +122,8 @@ fun LinguaApp(
                         onCourseSelected = { _ ->
                             navController.navigate(Routes.HOME) {
                                 popUpTo(Routes.ONBOARDING) { inclusive = true }
+                                launchSingleTop = true
+                                restoreState = true
                             }
                         },
                         modifier = Modifier.padding(innerPadding),
@@ -118,7 +137,6 @@ fun LinguaApp(
                         onStartReview = { courseId ->
                             navController.navigate(Routes.review(courseId))
                         },
-                        pathEnabled = BuildConfig.LEARNING_PATH_V2,
                         modifier = Modifier.padding(innerPadding),
                     )
                 }
@@ -141,24 +159,26 @@ fun LinguaApp(
                 }
                 composable(Routes.SETTINGS) {
                     SettingsScreen(
-                        onOpenOnboarding = { navController.navigate(Routes.ONBOARDING) },
                         onOpenSync = { navController.navigate(Routes.SYNC) },
-                        modifier = Modifier.padding(innerPadding),
-                    )
-                }
-                composable(Routes.AUTH) {
-                    AuthScreen(
                         modifier = Modifier.padding(innerPadding),
                     )
                 }
                 composable(Routes.SYNC) {
                     SyncScreen(
-                        onOpenAccount = { navController.navigate(Routes.AUTH) },
+                        onBack = { navController.popBackStack() },
                         modifier = Modifier.padding(innerPadding),
                     )
                 }
                 composable(
                     route = Routes.REVIEW,
+                    arguments =
+                        listOf(
+                            navArgument("courseId") {
+                                type = NavType.StringType
+                                nullable = true
+                                defaultValue = null
+                            },
+                        ),
                     enterTransition = { pushEnter(animations) },
                     exitTransition = { pushExit(animations) },
                     popEnterTransition = { popEnter(animations) },
@@ -208,17 +228,21 @@ private fun popExit(animations: Boolean): ExitTransition =
 @Composable
 private fun LinguaBottomBar(
     currentRoute: String?,
+    dueReviews: Int,
     onRouteSelected: (String) -> Unit,
 ) {
     val colors = MaterialTheme.colorScheme
+    val extended = linguaExtendedColors()
     val feedback = LocalInteractionFeedback.current
+    val largeFont = LocalDensity.current.fontScale >= 1.5f
 
     NavigationBar(
         containerColor = colors.surfaceVariant,
         tonalElevation = 0.dp,
     ) {
         BOTTOM_DESTINATIONS.forEach { destination ->
-            val selected = currentRoute == destination.route
+            val selected = currentRoute?.substringBefore('?') == destination.route.substringBefore('?')
+            val isReview = destination.route == Routes.REVIEW_TAB
             NavigationBarItem(
                 selected = selected,
                 onClick = {
@@ -226,18 +250,44 @@ private fun LinguaBottomBar(
                     onRouteSelected(destination.route)
                 },
                 icon = {
-                    Image(
-                        painter = painterResource(destination.iconRes),
-                        contentDescription = stringResource(destination.labelRes),
-                        modifier = Modifier.size(24.dp),
-                        colorFilter =
-                            ColorFilter.tint(
-                                if (selected) colors.primary else colors.onSurfaceVariant,
-                            ),
-                    )
+                    BadgedBox(
+                        badge = {
+                            if (isReview && dueReviews > 0) {
+                                Badge(containerColor = LinguaTokens.Destructive) {
+                                    Text(
+                                        text = dueReviews.toString(),
+                                        style = MaterialTheme.typography.labelSmall,
+                                        color = colors.onError,
+                                    )
+                                }
+                            }
+                        },
+                    ) {
+                        Image(
+                            painter = painterResource(destination.iconRes),
+                            contentDescription = stringResource(destination.labelRes),
+                            modifier = Modifier.size(24.dp),
+                            colorFilter =
+                                ColorFilter.tint(
+                                    if (selected) extended.primaryInk else colors.onSurfaceVariant,
+                                ),
+                        )
+                    }
                 },
-                label = { Text(stringResource(destination.labelRes)) },
-                alwaysShowLabel = true,
+                label =
+                    if (largeFont) {
+                        null
+                    } else {
+                        {
+                            Text(
+                                stringResource(destination.labelRes),
+                                style = MaterialTheme.typography.labelSmall,
+                                color = if (selected) extended.primaryInk else colors.onSurfaceVariant,
+                                maxLines = 1,
+                            )
+                        }
+                    },
+                alwaysShowLabel = !largeFont,
                 colors =
                     NavigationBarItemDefaults.colors(
                         indicatorColor = colors.primary.copy(alpha = 0.12f),

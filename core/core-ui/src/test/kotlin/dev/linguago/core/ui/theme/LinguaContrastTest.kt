@@ -1,5 +1,6 @@
 package dev.linguago.core.ui.theme
 
+import dev.linguago.core.ui.components.path.PathStage
 import org.junit.Assert.assertTrue
 import org.junit.Test
 import kotlin.math.pow
@@ -39,7 +40,37 @@ class LinguaContrastTest {
                 tint(LinguaTokens.DESTRUCTIVE_HEX, 0.18f, LinguaTokens.BG_HEX),
             ) >= AA,
         )
+        assertTrue(
+            "warningInk sobre warning 18%",
+            ratio(
+                LinguaTokens.WARNING_INK_HEX,
+                tint(LinguaTokens.WARNING_HEX, 0.18f, LinguaTokens.BG_HEX),
+            ) >= AA,
+        )
+        assertTrue(
+            "infoInk sobre info 18%",
+            ratio(
+                LinguaTokens.INFO_INK_HEX,
+                tint(LinguaTokens.INFO_HEX, 0.18f, LinguaTokens.BG_HEX),
+            ) >= AA,
+        )
     }
+
+    @Test
+    fun path_stage_on_accent_cumple_aa() {
+        PathStage.entries.forEach { stage ->
+            assertTrue(
+                "onAccent de ${stage.label} sobre ${stage.label}",
+                ratio(toHex(stage.onAccent), toHex(stage.accent)) >= AA,
+            )
+        }
+    }
+
+    private fun toHex(color: androidx.compose.ui.graphics.Color): Long =
+        (0xFFL shl 24) or
+            ((color.red * 255f).toLong() shl 16) or
+            ((color.green * 255f).toLong() shl 8) or
+            (color.blue * 255f).toLong()
 
     @Test
     fun tintas_oscuras_cumplen_aa_en_modo_oscuro() {
@@ -78,6 +109,20 @@ class LinguaContrastTest {
             ratio(
                 LinguaTokens.DARK_DESTRUCTIVE_INK_HEX,
                 tint(LinguaTokens.DESTRUCTIVE_HEX, 0.18f, LinguaTokens.DARK_BG_SECONDARY_HEX),
+            ) >= AA,
+        )
+        assertTrue(
+            "warningInk sobre warning 18%",
+            ratio(
+                LinguaTokens.DARK_WARNING_INK_HEX,
+                tint(LinguaTokens.WARNING_HEX, 0.18f, LinguaTokens.DARK_BG_SECONDARY_HEX),
+            ) >= AA,
+        )
+        assertTrue(
+            "infoInk sobre info 18%",
+            ratio(
+                LinguaTokens.DARK_INFO_INK_HEX,
+                tint(LinguaTokens.INFO_HEX, 0.18f, LinguaTokens.DARK_BG_SECONDARY_HEX),
             ) >= AA,
         )
     }

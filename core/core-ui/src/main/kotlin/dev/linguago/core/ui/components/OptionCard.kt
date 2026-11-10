@@ -149,6 +149,9 @@ fun OptionCard(
                     .fillMaxWidth()
                     .offset(y = (press * LinguaTokens.PRESS_DEPTH_DP).dp)
                     .clip(shape)
+                    // Superficie opaca antes del tinte de estado (V-01): evita
+                    // que el borde 3D se transparente a través del cuerpo.
+                    .background(colors.surface)
                     .background(background)
                     .topHighlight()
                     .border(2.dp, borderColor, shape)

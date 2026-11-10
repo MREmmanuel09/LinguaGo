@@ -32,7 +32,15 @@ public enum class PathStage(
                 C2 -> Color(LinguaTokens.CHEST_GOLD_HEX)
             }
 
-    /** Color de contenido sobre [accent] con contraste suficiente (I8). */
+    /**
+     * Color de contenido sobre [accent] con contraste AA (I8). A1, A2, B2 y
+     * C2 usan tintes claros y necesitan tinta oscura; B1 y C1 son violetas
+     * profundos y mantienen blanco (ADR-045).
+     */
     public val onAccent: Color
-        get() = if (this == B2 || this == C2) LinguaTokens.Fg else Color.White
+        get() =
+            when (this) {
+                PathStage.A1, PathStage.A2, PathStage.B2, PathStage.C2 -> LinguaTokens.Fg
+                else -> Color.White
+            }
 }

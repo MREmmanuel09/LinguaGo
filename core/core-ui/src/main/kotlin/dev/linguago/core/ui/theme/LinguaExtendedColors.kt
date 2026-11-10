@@ -27,6 +27,10 @@ public data class LinguaExtendedColors(
     val accentInk: Color,
     /** Tinta de estado incorrecto que cumple AA sobre su tinte (ADR-037). */
     val destructiveInk: Color,
+    /** Tinta de aviso que cumple AA sobre el tinte de advertencia (ADR-045). */
+    val warningInk: Color,
+    /** Tinta informativa que cumple AA sobre el tinte informativo (ADR-045). */
+    val infoInk: Color,
 )
 
 /** Paleta extendida del tema activo (ADR-026/ADR-037). */
@@ -42,6 +46,8 @@ public fun linguaExtendedColors(): LinguaExtendedColors {
             primaryInk = Color(LinguaTokens.DARK_PRIMARY_INK_HEX),
             accentInk = Color(LinguaTokens.DARK_ACCENT_INK_HEX),
             destructiveInk = Color(LinguaTokens.DARK_DESTRUCTIVE_INK_HEX),
+            warningInk = Color(LinguaTokens.DARK_WARNING_INK_HEX),
+            infoInk = Color(LinguaTokens.DARK_INFO_INK_HEX),
         )
     } else {
         LinguaExtendedColors(
@@ -52,6 +58,8 @@ public fun linguaExtendedColors(): LinguaExtendedColors {
             primaryInk = Color(LinguaTokens.PRIMARY_INK_HEX),
             accentInk = Color(LinguaTokens.ACCENT_INK_HEX),
             destructiveInk = Color(LinguaTokens.DESTRUCTIVE_INK_HEX),
+            warningInk = Color(LinguaTokens.WARNING_INK_HEX),
+            infoInk = Color(LinguaTokens.INFO_INK_HEX),
         )
     }
 }

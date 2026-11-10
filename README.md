@@ -4,13 +4,13 @@
 
 **Aprende idiomas offline, sin fricción, con todo el contenido desde la instalación.**
 
-ES → EN — A1 a B2 · ES → PT, ES → FR y ES → JA — A1 a B2
+ES → EN — A1 a C2 · ES → PT, ES → FR y ES → JA — A1 a C2
 
 Código abierto · Sin anuncios · Sin backend · 100% offline · Vidas con
 recuperación rápida
 
 [![CI](https://github.com/MREmmanuel09/LinguaGo/actions/workflows/ci.yml/badge.svg)](https://github.com/MREmmanuel09/LinguaGo/actions/workflows/ci.yml)
-![version](https://img.shields.io/badge/version-2.4.0-blue)
+![version](https://img.shields.io/badge/version-3.0.0-blue)
 ![Kotlin](https://img.shields.io/badge/Kotlin-2.4-7F52FF?logo=kotlin&logoColor=white)
 ![Android](https://img.shields.io/badge/Android-26%2B-3DDC84?logo=android&logoColor=white)
 ![License](https://img.shields.io/badge/license-MIT-green)
@@ -25,11 +25,11 @@ Clean Architecture, con módulos Gradle por feature, motor de lecciones basado e
 máquina de estados, racha diaria progresiva, **repaso espaciado FSRS** y modelos
 de voz ligeros integrados localmente (TTS Piper + STT Vosk).
 
-El curso insignia **ES→EN** cubre A1–B2 (69 lecciones y 589 ejercicios).
-**ES→PT**, **ES→FR** y **ES→JA** tienen 60 lecciones y 526 ejercicios cada
-uno: A1 10, A2 8, B1 20 y B2 completo 22. Todos usan schema v2, glosario y
-feedback. La revisión lingüística nativa de B1–B2 sigue pendiente. En total,
-el proyecto empaqueta **249 lecciones y 2.167 ejercicios**.
+El curso insignia **ES→EN** cubre A1–C2 (111 lecciones y 1.069 ejercicios).
+**ES→PT**, **ES→FR** y **ES→JA** tienen 102 lecciones y 1.006 ejercicios cada
+uno: A1 10, A2 8, B1 20, B2 completo 22, C1 24 y C2 18. Todos usan schema v2, glosario y
+feedback. La revisión lingüística nativa de B1–C2 sigue pendiente. En total,
+el proyecto empaqueta **417 lecciones y 4.087 ejercicios**.
 
 ```mermaid
 flowchart LR
@@ -40,7 +40,7 @@ flowchart LR
 
 ## Descargar APK
 
-**[LinguaGo 2.4.0 — APK global](https://github.com/MREmmanuel09/LinguaGo/releases/tag/v2.4.0)**
+**[LinguaGo 3.0.0 — APK global](https://github.com/MREmmanuel09/LinguaGo/releases/tag/v3.0.0)**
 (firma de desarrollo; instalación manual con "origen desconocido").
 
 - Android 8.0+ · APK global universal (~509 MB) o variante **arm64** (~392 MB), con los 4 cursos y sus modelos de voz.
@@ -68,7 +68,9 @@ flowchart LR
 ## Principios (invariantes)
 
 1. **Offline-first estricto** — ninguna ruta crítica de aprendizaje necesita red.
-2. **Sin backend propio** — la nube es opcional y solo como respaldo (Google Drive).
+2. **Sin backend propio** — la nube es opcional y solo como respaldo (Google
+   Drive), con copia local `.json` vía SAF para quien no quiera cuenta y
+   gestor de voces offline en Ajustes.
 3. **Sin fricción** — no hay login obligatorio, ni anuncios, ni esperas
    permanentes. Las vidas (ADR-025) penalizan el error pero se recuperan en
    ≤10 min y nunca bloquean el acceso.

@@ -4,6 +4,7 @@ import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
@@ -40,49 +41,58 @@ fun CancelledLessonSheet(
         modifier =
             modifier
                 .fillMaxSize()
-                .background(MaterialTheme.colorScheme.background),
+                .background(MaterialTheme.colorScheme.background)
+                .padding(24.dp),
         contentAlignment = Alignment.Center,
     ) {
-        Column(
-            modifier = Modifier.padding(24.dp),
-            horizontalAlignment = Alignment.CenterHorizontally,
-            verticalArrangement = Arrangement.spacedBy(12.dp),
+        LinguaCard3D(
+            modifier = Modifier.fillMaxWidth(),
+            contentPadding = PaddingValues(horizontal = 20.dp, vertical = 24.dp),
         ) {
-            Icon(
-                painter = painterResource(LinguaIcons.HeartRes),
-                contentDescription = null,
-                tint = extended.heartEmpty,
-                modifier = Modifier.size(64.dp),
-            )
-            Text(
-                text = "Te quedaste sin vidas",
-                style = MaterialTheme.typography.headlineMedium,
-                color = MaterialTheme.colorScheme.onBackground,
-                textAlign = TextAlign.Center,
-            )
-            Text(
-                text =
-                    if (xpLost > 0) {
-                        "La lección se canceló y no se guardaron los $xpLost XP."
-                    } else {
-                        "La lección se canceló y no se guardó el progreso."
-                    },
-                style = MaterialTheme.typography.bodyMedium,
-                color = MaterialTheme.colorScheme.onSurfaceVariant,
-                textAlign = TextAlign.Center,
-            )
-            Text(
-                text = "Recuperas 1 vida cada minuto; puedes intentarlo de nuevo cuando quieras.",
-                style = MaterialTheme.typography.bodySmall,
-                color = MaterialTheme.colorScheme.onSurfaceVariant,
-                textAlign = TextAlign.Center,
-            )
-            Spacer(Modifier.height(8.dp))
-            PrimaryButton3D(
-                text = "Volver al camino",
-                onClick = onExit,
-                modifier = Modifier.fillMaxWidth(),
-            )
+            Column(
+                horizontalAlignment = Alignment.CenterHorizontally,
+                verticalArrangement = Arrangement.spacedBy(12.dp),
+            ) {
+                LumiMascot(
+                    size = 56.dp,
+                    mood = LumiMood.ENCOURAGING,
+                )
+                Icon(
+                    painter = painterResource(LinguaIcons.HeartRes),
+                    contentDescription = null,
+                    tint = extended.heartEmpty,
+                    modifier = Modifier.size(48.dp),
+                )
+                Text(
+                    text = "Te quedaste sin vidas",
+                    style = MaterialTheme.typography.headlineSmall,
+                    color = MaterialTheme.colorScheme.onSurface,
+                    textAlign = TextAlign.Center,
+                )
+                Text(
+                    text =
+                        if (xpLost > 0) {
+                            "La lección se canceló y no se guardaron los $xpLost XP."
+                        } else {
+                            "La lección se canceló y no se guardó el progreso."
+                        },
+                    style = MaterialTheme.typography.bodyMedium,
+                    color = MaterialTheme.colorScheme.onSurfaceVariant,
+                    textAlign = TextAlign.Center,
+                )
+                Text(
+                    text = "Recuperas 1 vida cada minuto; puedes intentarlo de nuevo cuando quieras.",
+                    style = MaterialTheme.typography.bodySmall,
+                    color = MaterialTheme.colorScheme.onSurfaceVariant,
+                    textAlign = TextAlign.Center,
+                )
+                Spacer(Modifier.height(8.dp))
+                PrimaryButton3D(
+                    text = "Volver al camino",
+                    onClick = onExit,
+                    modifier = Modifier.fillMaxWidth(),
+                )
+            }
         }
     }
 }

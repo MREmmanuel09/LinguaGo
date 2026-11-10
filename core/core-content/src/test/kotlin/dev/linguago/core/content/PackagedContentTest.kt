@@ -1,9 +1,14 @@
 package dev.linguago.core.content
 
+import dev.linguago.core.domain.logic.FreeSpeakingHeuristicGrader
+import dev.linguago.core.domain.logic.FreeSpeakingReason
+import dev.linguago.core.domain.logic.FreeSpeakingVerdict
+import dev.linguago.core.domain.logic.SpokenFreeResponse
 import dev.linguago.core.domain.logic.VocabularyExtractor
 import dev.linguago.core.domain.model.CefrLevel
 import dev.linguago.core.domain.model.CourseLocale
 import dev.linguago.core.domain.model.Exercise
+import dev.linguago.core.domain.model.Language
 import dev.linguago.core.domain.model.VocabFrequencyBand
 import org.junit.Assert.assertEquals
 import org.junit.Assert.assertTrue
@@ -199,6 +204,70 @@ class PackagedContentTest {
                 b2Lessons.sumOf { lesson -> lesson.exercises.count { exercise -> exercise is Exercise.FreeSpeakingPrompt } },
             )
         }
+    }
+
+    @Test
+    fun todos_los_free_speaking_model_answers_no_marcan_fallo_gramatical_o_cobertura() {
+        val failures = mutableListOf<String>()
+        for (courseId in listOf("es-en", "es-pt", "es-fr", "es-ja")) {
+            val course = CourseJson.parseCourse(readAsset(courseId, COURSE_FILE))
+            assertTrue("El curso $courseId no decodifica", course != null)
+            val parsed = course!!
+            val lessons =
+                parsed.levels.flatMap { level ->
+                    level.units.flatMap { unit -> unit.lessons }
+                }
+            for (lesson in lessons) {
+                for (exercise in lesson.exercises) {
+                    if (exercise !is Exercise.FreeSpeakingPrompt) continue
+                    val approximateTokens = approximateTokens(exercise.modelAnswer, parsed.toLanguage)
+                    val feedback =
+                        FreeSpeakingHeuristicGrader.evaluate(
+                            exercise = exercise,
+                            grammarPoints = lesson.grammarPoints,
+                            response =
+                                SpokenFreeResponse(
+                                    transcript = exercise.modelAnswer,
+                                    durationMillis =
+                                        (approximateTokens * 60_000L / 100L).coerceIn(
+                                            MODEL_ANSWER_MIN_DURATION_MILLIS,
+                                            MODEL_ANSWER_MAX_DURATION_MILLIS,
+                                        ),
+                                ),
+                            language = parsed.toLanguage,
+                        )
+                    val reasons =
+                        (feedback.verdict as? FreeSpeakingVerdict.NeedsWork)
+                            ?.reasons
+                            ?.map { reason -> reason.toString() }
+                            .orEmpty()
+                    val contentReasons =
+                        reasons.filter {
+                            it == FreeSpeakingReason.MISSING_GRAMMAR.toString() ||
+                                it == FreeSpeakingReason.LOW_COVERAGE.toString()
+                        }
+                    if (contentReasons.isNotEmpty()) {
+                        val refs =
+                            exercise.grammarRuleRefs
+                                .map { ref ->
+                                    lesson.grammarPoints.firstOrNull { point -> point.id == ref }?.label ?: ref.value
+                                }.joinToString(", ")
+                        failures +=
+                            "${exercise.id.value} ($courseId/${lesson.id.value}) " +
+                            "tokens=${feedback.tokenCount}, clusters=${feedback.coveredClusters}/${feedback.totalClusters}, " +
+                            "grammar=${feedback.detectedGrammarRefs.map {
+                                it.value
+                            }}, refs=[$refs], reasons=${contentReasons.joinToString(
+                                ",",
+                            )}"
+                    }
+                }
+            }
+        }
+        assertTrue(
+            "Model answers con fallo gramatical o de cobertura:\n${failures.joinToString("\n")}",
+            failures.isEmpty(),
+        )
     }
 
     @Test
@@ -482,6 +551,23 @@ class PackagedContentTest {
     )
 
     /** Layout del repo relativo al directorio de trabajo del módulo. */
+    private fun approximateTokens(
+        text: String,
+        language: Language,
+    ): Long {
+        val tokens =
+            if (language == Language.JAPANESE) {
+                text.filter { char -> char.isLetterOrDigit() }.length
+            } else {
+                text
+                    .trim()
+                    .split(Regex("\\s+"))
+                    .filter { token -> token.isNotBlank() }
+                    .size
+            }
+        return tokens.toLong().coerceAtLeast(1L)
+    }
+
     private fun readAsset(
         courseId: String,
         fileName: String,
@@ -508,6 +594,8 @@ class PackagedContentTest {
     private companion object {
         private const val MANIFEST_FILE = "manifest.json"
         private const val COURSE_FILE = "course.json"
+        private const val MODEL_ANSWER_MIN_DURATION_MILLIS = 10_000L
+        private const val MODEL_ANSWER_MAX_DURATION_MILLIS = 90_000L
         private const val SEARCH_DEPTH_UP = 4
         private const val HISTORIC_LESSON_PREFIX = "es-en-lv-1-"
 
