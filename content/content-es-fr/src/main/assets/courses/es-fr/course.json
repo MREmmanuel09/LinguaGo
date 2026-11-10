@@ -8179,44 +8179,30 @@
                 }
               ]
             },
-            {
+                        {
               "id": "es-fr-a2-p0-u1-l09",
-              "title": "Ayer y la semana pasada · repaso",
+              "title": "Au marché",
               "cefrLevel": "A2",
               "vocabFrequencyBand": "1000-2000",
-              "canDo": "Puedo contar acciones pasadas con el passé composé.",
+              "canDo": "Puedo comprar en un mercado y preguntar el precio.",
               "microLesson": {
-                "title": "Passé composé avec avoir",
+                "title": "Au marché",
                 "goals": [
-                  "Formar el passé composé con avoir.",
-                  "Usar participios regulares."
+                  "Reconocer vocabulario de le marché.",
+                  "Usar frases sencillas sobre le marché en francés."
                 ],
                 "sections": [
                   {
-                    "heading": "Avoir + participe",
-                    "body": "Para acciones pasadas: avoir + participio. J'ai travaillé, tu as mangé, il a fini.",
+                    "heading": "Palabras y frases",
+                    "body": "Vocabulario básico de le marché. Fíjate en el orden de la frase y en las preposiciones.",
                     "examples": [
                       {
-                        "source": "Ayer trabajé",
-                        "target": "Hier, j'ai travaillé"
+                        "source": "Compro fruta en el mercado",
+                        "target": "J'achète des fruits au marché"
                       },
                       {
-                        "source": "Comí una manzana",
-                        "target": "J'ai mangé une pomme"
-                      }
-                    ]
-                  },
-                  {
-                    "heading": "Participios regulares",
-                    "body": "-er -> -é; -ir -> -i; -re -> -u. J'ai fini, j'ai vendu.",
-                    "examples": [
-                      {
-                        "source": "Terminé",
-                        "target": "J'ai fini"
-                      },
-                      {
-                        "source": "Vendí",
-                        "target": "J'ai vendu"
+                        "source": "El mercado abre a las ocho",
+                        "target": "Le marché ouvre à huit heures"
                       }
                     ]
                   }
@@ -8224,63 +8210,21 @@
               },
               "glossary": [
                 {
-                  "term": "hier",
+                  "term": "marché",
                   "translations": [
-                    "ayer"
+                    "mercado"
                   ]
                 },
                 {
-                  "term": "aujourd'hui",
+                  "term": "fruits",
                   "translations": [
-                    "hoy"
+                    "fruta"
                   ]
                 },
                 {
-                  "term": "travailler",
+                  "term": "prix",
                   "translations": [
-                    "trabajar"
-                  ]
-                },
-                {
-                  "term": "manger",
-                  "translations": [
-                    "comer"
-                  ]
-                },
-                {
-                  "term": "finir",
-                  "translations": [
-                    "terminar"
-                  ]
-                },
-                {
-                  "term": "vendre",
-                  "translations": [
-                    "vender"
-                  ]
-                },
-                {
-                  "term": "semaine",
-                  "translations": [
-                    "semana"
-                  ]
-                },
-                {
-                  "term": "passé",
-                  "translations": [
-                    "pasado"
-                  ]
-                },
-                {
-                  "term": "déjà",
-                  "translations": [
-                    "ya"
-                  ]
-                },
-                {
-                  "term": "action",
-                  "translations": [
-                    "acción"
+                    "precio"
                   ]
                 }
               ],
@@ -8288,64 +8232,70 @@
                 {
                   "type": "MultipleChoice",
                   "id": "es-fr-a2-p0-u1-l09-e01",
-                  "question": "Completa: J'___ travaillé hier.",
+                  "question": "¿Cómo se dice «mercado» en francés?",
                   "options": [
-                    "ai",
-                    "as",
-                    "a"
+                    "marché",
+                    "fruits",
+                    "prix"
                   ],
                   "correctIndex": 0,
                   "feedbackOnError": {
-                    "type": "grammar",
-                    "explanation": "Con je se usa «j'ai»; «as» es para tu y «a» para il/elle."
+                    "type": "vocabulary",
+                    "explanation": "«mercado» se dice «marché»."
                   },
                   "feedbackOnSuccess": {
-                    "explanation": "El passé composé con avoir usa ai con je."
+                    "explanation": "Has elegido la traducción correcta."
                   }
                 },
                 {
                   "type": "Translate",
                   "id": "es-fr-a2-p0-u1-l09-e02",
-                  "sourcePhrase": "Ayer trabajé",
+                  "sourcePhrase": "Compro fruta en el mercado",
                   "correctTokens": [
-                    "Hier",
-                    "j'ai",
-                    "travaillé"
+                    "J'achète",
+                    "des",
+                    "fruits",
+                    "au",
+                    "marché"
                   ],
                   "distractorTokens": [
-                    "travaille",
-                    "demain"
+                    "légumes",
+                    "magasin"
                   ],
                   "feedbackOnError": {
-                    "type": "grammar",
-                    "explanation": "«Hier, j'ai travaillé» usa el passé composé; «demain» es mañana."
+                    "type": "word_order",
+                    "explanation": "El orden correcto es «J'achète des fruits au marché»."
                   },
                   "feedbackOnSuccess": {
-                    "explanation": "Hier marca el pasado y j'ai travaillé la acción terminada."
+                    "explanation": "La frase conserva el orden y el significado."
                   }
                 },
                 {
                   "type": "OrderWords",
                   "id": "es-fr-a2-p0-u1-l09-e03",
                   "tokens": [
-                    "J'ai",
-                    "mangé",
-                    "une",
-                    "pomme"
+                    "marché",
+                    "ouvre",
+                    "à",
+                    "huit",
+                    "heures",
+                    "Le"
                   ],
                   "answerTokens": [
-                    "J'ai",
-                    "mangé",
-                    "une",
-                    "pomme"
+                    "Le",
+                    "marché",
+                    "ouvre",
+                    "à",
+                    "huit",
+                    "heures"
                   ],
-                  "sourcePhrase": "Comí una manzana",
+                  "sourcePhrase": "El mercado abre a las ocho",
                   "feedbackOnError": {
                     "type": "word_order",
-                    "explanation": "El orden es «J'ai mangé une pomme»: auxiliar + participio + objeto."
+                    "explanation": "La frase correcta es «Le marché ouvre à huit heures»."
                   },
                   "feedbackOnSuccess": {
-                    "explanation": "El participio mangé va después del auxiliar."
+                    "explanation": "El orden produce una frase natural."
                   }
                 },
                 {
@@ -8353,101 +8303,96 @@
                   "id": "es-fr-a2-p0-u1-l09-e04",
                   "pairs": [
                     {
-                      "left": "ayer",
-                      "right": "hier"
+                      "left": "mercado",
+                      "right": "marché"
                     },
                     {
-                      "left": "trabajar",
-                      "right": "travailler"
+                      "left": "fruta",
+                      "right": "fruits"
                     },
                     {
-                      "left": "terminar",
-                      "right": "finir"
+                      "left": "precio",
+                      "right": "prix"
                     }
                   ],
                   "feedbackOnError": {
                     "type": "vocabulary",
-                    "explanation": "«Hier» es ayer, «travailler» trabajar y «finir» terminar."
+                    "explanation": "Cada palabra tiene una traducción distinta."
                   },
                   "feedbackOnSuccess": {
-                    "explanation": "Son verbos y marcadores del pasado."
+                    "explanation": "Has asociado cada palabra con su traducción."
                   }
                 },
                 {
                   "type": "ListenChoose",
                   "id": "es-fr-a2-p0-u1-l09-e05",
-                  "audioText": "J'ai fini le travail",
+                  "audioText": "J'achète des fruits au marché",
                   "options": [
-                    "J'ai fini le travail",
-                    "J'ai mangé une pomme",
-                    "Je vais travailler"
+                    "J'achète des fruits au marché",
+                    "J'achète des légumes au marché",
+                    "Le marché ouvre à huit heures"
                   ],
                   "correctIndex": 0,
                   "feedbackOnError": {
                     "type": "comprehension",
-                    "explanation": "El audio dice «J'ai fini le travail»; las otras opciones cambian el participio o el tiempo."
+                    "explanation": "El audio dice «J'achète des fruits au marché»."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has reconocido la frase del audio."
                   }
                 },
                 {
                   "type": "ListenType",
                   "id": "es-fr-a2-p0-u1-l09-e06",
-                  "transcription": "J'ai mangé une pomme",
-                  "audioText": "J'ai mangé une pomme",
+                  "audioText": "Le marché ouvre à huit heures",
+                  "transcription": "Le marché ouvre à huit heures",
                   "feedbackOnError": {
                     "type": "spelling",
-                    "explanation": "Escribe «J'ai mangé une pomme» con mangé y pomme."
+                    "explanation": "Escribe exactamente «Le marché ouvre à huit heures»."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La transcripción coincide con el audio."
                   }
                 },
                 {
                   "type": "SpeakRepeat",
                   "id": "es-fr-a2-p0-u1-l09-e07",
-                  "targetPhrase": "Hier, j'ai travaillé",
-                  "audioText": "Hier, j'ai travaillé",
+                  "targetPhrase": "J'achète des fruits au marché",
+                  "audioText": "J'achète des fruits au marché",
                   "feedbackOnError": {
                     "type": "pronunciation",
-                    "explanation": "Enlaza «j'ai travaillé» y pronuncia el participio con acento final."
+                    "explanation": "Repite «J'achète des fruits au marché» con claridad."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La frase se entiende y mantiene el ritmo."
                   }
                 }
               ]
             },
-            {
+                        {
               "id": "es-fr-a2-p0-u1-l10",
-              "title": "El fin de semana pasado · repaso",
+              "title": "À la gare",
               "cefrLevel": "A2",
               "vocabFrequencyBand": "1000-2000",
-              "canDo": "Puedo narrar un fin de semana y hacer preguntas en pasado.",
+              "canDo": "Puedo comprar un billete y preguntar por el andén.",
               "microLesson": {
-                "title": "Passé composé avec être",
+                "title": "À la gare",
                 "goals": [
-                  "Usar être con verbos de movimiento.",
-                  "Preguntar y negar en pasado."
+                  "Reconocer vocabulario de la gare.",
+                  "Usar frases sencillas sobre la gare en francés."
                 ],
                 "sections": [
                   {
-                    "heading": "Être + participe",
-                    "body": "Algunos verbos usan être: je suis allé(e), il est parti. El participio concuerda.",
+                    "heading": "Palabras y frases",
+                    "body": "Vocabulario básico de la gare. Fíjate en el orden de la frase y en las preposiciones.",
                     "examples": [
                       {
-                        "source": "Fui al cine",
-                        "target": "Je suis allé au cinéma"
+                        "source": "Quiero un billete para París",
+                        "target": "Je veux un billet pour Paris"
                       },
                       {
-                        "source": "Ella llegó",
-                        "target": "Elle est arrivée"
-                      }
-                    ]
-                  },
-                  {
-                    "heading": "Preguntas y negaciones",
-                    "body": "Tu as aimé ? / Je n'ai pas aimé. Con être: je ne suis pas allé.",
-                    "examples": [
-                      {
-                        "source": "¿Te gustó?",
-                        "target": "Tu as aimé ?"
-                      },
-                      {
-                        "source": "No fui",
-                        "target": "Je ne suis pas allé"
+                        "source": "El tren sale del andén número tres",
+                        "target": "Le train part du quai numéro trois"
                       }
                     ]
                   }
@@ -8455,63 +8400,21 @@
               },
               "glossary": [
                 {
-                  "term": "week-end",
+                  "term": "gare",
                   "translations": [
-                    "fin de semana"
+                    "estación"
                   ]
                 },
                 {
-                  "term": "cinéma",
+                  "term": "billet",
                   "translations": [
-                    "cine"
+                    "billete"
                   ]
                 },
                 {
-                  "term": "aller",
+                  "term": "quai",
                   "translations": [
-                    "ir"
-                  ]
-                },
-                {
-                  "term": "partir",
-                  "translations": [
-                    "irse"
-                  ]
-                },
-                {
-                  "term": "arriver",
-                  "translations": [
-                    "llegar"
-                  ]
-                },
-                {
-                  "term": "aimer",
-                  "translations": [
-                    "gustar"
-                  ]
-                },
-                {
-                  "term": "samedi",
-                  "translations": [
-                    "sábado"
-                  ]
-                },
-                {
-                  "term": "dimanche",
-                  "translations": [
-                    "domingo"
-                  ]
-                },
-                {
-                  "term": "ensemble",
-                  "translations": [
-                    "juntos"
-                  ]
-                },
-                {
-                  "term": "rentrer",
-                  "translations": [
-                    "volver a casa"
+                    "andén"
                   ]
                 }
               ],
@@ -8519,68 +8422,73 @@
                 {
                   "type": "MultipleChoice",
                   "id": "es-fr-a2-p0-u1-l10-e01",
-                  "question": "Completa: Je ___ allé au cinéma.",
+                  "question": "¿Cómo se dice «estación» en francés?",
                   "options": [
-                    "suis",
-                    "ai",
-                    "es"
+                    "gare",
+                    "billet",
+                    "quai"
                   ],
                   "correctIndex": 0,
                   "feedbackOnError": {
-                    "type": "grammar",
-                    "explanation": "El verbo aller usa être: «je suis allé»; «ai» es avoir y «es» es para tu."
+                    "type": "vocabulary",
+                    "explanation": "«estación» se dice «gare»."
                   },
                   "feedbackOnSuccess": {
-                    "explanation": "Aller forma el passé composé con être."
+                    "explanation": "Has elegido la traducción correcta."
                   }
                 },
                 {
                   "type": "Translate",
                   "id": "es-fr-a2-p0-u1-l10-e02",
-                  "sourcePhrase": "Fui al cine",
+                  "sourcePhrase": "Quiero un billete para París",
                   "correctTokens": [
                     "Je",
-                    "suis",
-                    "allé",
-                    "au",
-                    "cinéma"
+                    "veux",
+                    "un",
+                    "billet",
+                    "pour",
+                    "Paris"
                   ],
                   "distractorTokens": [
-                    "ai",
-                    "parti"
+                    "gare",
+                    "quai"
                   ],
                   "feedbackOnError": {
-                    "type": "grammar",
-                    "explanation": "«Je suis allé au cinéma» usa être y au; «parti» es otro verbo."
+                    "type": "word_order",
+                    "explanation": "El orden correcto es «Je veux un billet pour Paris»."
                   },
                   "feedbackOnSuccess": {
-                    "explanation": "El participio allé concuerda con el sujeto."
+                    "explanation": "La frase conserva el orden y el significado."
                   }
                 },
                 {
                   "type": "OrderWords",
                   "id": "es-fr-a2-p0-u1-l10-e03",
                   "tokens": [
-                    "Tu",
-                    "as",
-                    "aimé",
-                    "le",
-                    "film"
+                    "train",
+                    "part",
+                    "du",
+                    "quai",
+                    "numéro",
+                    "trois",
+                    "Le"
                   ],
                   "answerTokens": [
-                    "Tu",
-                    "as",
-                    "aimé",
-                    "le",
-                    "film"
+                    "Le",
+                    "train",
+                    "part",
+                    "du",
+                    "quai",
+                    "numéro",
+                    "trois"
                   ],
-                  "sourcePhrase": "¿Te gustó la película?",
+                  "sourcePhrase": "El tren sale del andén número tres",
                   "feedbackOnError": {
                     "type": "word_order",
-                    "explanation": "El orden es «Tu as aimé le film»: sujeto + auxiliar + participio + objeto."
+                    "explanation": "La frase correcta es «Le train part du quai numéro trois»."
                   },
                   "feedbackOnSuccess": {
-                    "explanation": "La pregunta en passé composé mantiene el orden sujeto-auxiliar."
+                    "explanation": "El orden produce una frase natural."
                   }
                 },
                 {
@@ -8588,59 +8496,68 @@
                   "id": "es-fr-a2-p0-u1-l10-e04",
                   "pairs": [
                     {
-                      "left": "sábado",
-                      "right": "samedi"
+                      "left": "estación",
+                      "right": "gare"
                     },
                     {
-                      "left": "domingo",
-                      "right": "dimanche"
+                      "left": "billete",
+                      "right": "billet"
                     },
                     {
-                      "left": "juntos",
-                      "right": "ensemble"
+                      "left": "andén",
+                      "right": "quai"
                     }
                   ],
                   "feedbackOnError": {
                     "type": "vocabulary",
-                    "explanation": "«Samedi» es sábado, «dimanche» domingo y «ensemble» juntos."
+                    "explanation": "Cada palabra tiene una traducción distinta."
                   },
                   "feedbackOnSuccess": {
-                    "explanation": "Son palabras para contar el fin de semana."
+                    "explanation": "Has asociado cada palabra con su traducción."
                   }
                 },
                 {
                   "type": "ListenChoose",
                   "id": "es-fr-a2-p0-u1-l10-e05",
-                  "audioText": "Je suis allé au cinéma samedi",
+                  "audioText": "Je veux un billet pour Paris",
                   "options": [
-                    "Je suis allé au cinéma samedi",
-                    "Je suis allé au cinéma dimanche",
-                    "Je vais au cinéma"
+                    "Je veux un billet pour Paris",
+                    "Le train part du quai numéro trois",
+                    "Je cherche la gare"
                   ],
                   "correctIndex": 0,
                   "feedbackOnError": {
                     "type": "comprehension",
-                    "explanation": "El audio dice «samedi»; «dimanche» cambia el día y la última opción cambia el tiempo."
+                    "explanation": "El audio dice «Je veux un billet pour Paris»."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has reconocido la frase del audio."
                   }
                 },
                 {
                   "type": "ListenType",
                   "id": "es-fr-a2-p0-u1-l10-e06",
-                  "transcription": "Elle est arrivée hier",
-                  "audioText": "Elle est arrivée hier",
+                  "audioText": "Le train part du quai numéro trois",
+                  "transcription": "Le train part du quai numéro trois",
                   "feedbackOnError": {
                     "type": "spelling",
-                    "explanation": "Escribe «Elle est arrivée hier» con est y arrivée."
+                    "explanation": "Escribe exactamente «Le train part du quai numéro trois»."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La transcripción coincide con el audio."
                   }
                 },
                 {
                   "type": "SpeakRepeat",
                   "id": "es-fr-a2-p0-u1-l10-e07",
-                  "targetPhrase": "Je ne suis pas allé",
-                  "audioText": "Je ne suis pas allé",
+                  "targetPhrase": "Je veux un billet pour Paris",
+                  "audioText": "Je veux un billet pour Paris",
                   "feedbackOnError": {
                     "type": "pronunciation",
-                    "explanation": "Pronuncia la negación «ne... pas» sin separar demasiado sus partes."
+                    "explanation": "Repite «Je veux un billet pour Paris» con claridad."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La frase se entiende y mantiene el ritmo."
                   }
                 }
               ]
@@ -9803,7 +9720,7 @@
               "culturalNotes": [
                 {
                   "idiom": "coûter les yeux de la tête",
-                  "note": "Costar muchísimo dinero.",
+                  "note": "Nuancer une critique, c'est aussi reconnaître ce qui «coûte les yeux de la tête» et ce qui en vaut la peine.",
                   "translation": "costar un ojo de la cara"
                 }
               ],
@@ -24184,7 +24101,7 @@
               "culturalNotes": [
                 {
                   "idiom": "tirer les ficelles",
-                  "note": "Manejar los hilos de una situación.",
+                  "note": "Dans une négociation de délai, «tirer les ficelles» consiste à identifier qui décide vraiment.",
                   "translation": "manejar los hilos"
                 }
               ],
@@ -24501,7 +24418,7 @@
               "culturalNotes": [
                 {
                   "idiom": "mettre la main à la pâte",
-                  "note": "Ponerse a trabajar directamente.",
+                  "note": "Quand les rôles sont flous, «mettre la main à la pâte» aide à clarifier qui fait quoi.",
                   "translation": "ponerse manos a la obra"
                 }
               ],
@@ -25136,7 +25053,7 @@
               "culturalNotes": [
                 {
                   "idiom": "poser un lapin",
-                  "note": "Dejar plantado a alguien sin avisar.",
+                  "note": "Réfuter avec des preuves, c'est ne pas «poser un lapin» au débat : il faut être présent et argumenter.",
                   "translation": "dejar plantado"
                 }
               ],
@@ -25456,7 +25373,7 @@
               "culturalNotes": [
                 {
                   "idiom": "tirer son épingle du jeu",
-                  "note": "Salir bien parado de una situación.",
+                  "note": "Dans une décision difficile, «tirer son épingle du jeu» consiste à préserver l'essentiel.",
                   "translation": "salir bien parado"
                 }
               ],
@@ -25774,7 +25691,7 @@
               "culturalNotes": [
                 {
                   "idiom": "avoir le bras long",
-                  "note": "Tener contactos influyentes.",
+                  "note": "Lire entre les lignes permet de deviner qui «a le bras long» dans une négociation.",
                   "translation": "tener enchufe"
                 }
               ],
@@ -26094,7 +26011,7 @@
               "culturalNotes": [
                 {
                   "idiom": "faire la sourde oreille",
-                  "note": "Hacerse el sordo ante una petición.",
+                  "note": "«Faire la sourde oreille», c'est ignorer l'éléphant dans la pièce au lieu de nommer le problème.",
                   "translation": "hacerse el sordo"
                 }
               ],
@@ -26414,7 +26331,7 @@
               "culturalNotes": [
                 {
                   "idiom": "casser les pieds",
-                  "note": "Dar la lata o molestar.",
+                  "note": "Une proposition pour l'avenir ne doit pas «casser les pieds» : elle doit être claire et utile.",
                   "translation": "dar la lata"
                 }
               ],
@@ -26730,7 +26647,7 @@
               "culturalNotes": [
                 {
                   "idiom": "mettre les points sur les i",
-                  "note": "Decir las cosas con claridad.",
+                  "note": "Négocier avec la mairie exige de «mettre les points sur les i» pour éviter les malentendus.",
                   "translation": "decir las cosas claras"
                 }
               ],
@@ -27046,7 +26963,7 @@
               "culturalNotes": [
                 {
                   "idiom": "jeter l'éponge",
-                  "note": "Tirar la toalla.",
+                  "note": "Dans un débat sur l'avenir, «jeter l'éponge» trop tôt, c'est renoncer avant d'avoir exploré les alternatives.",
                   "translation": "tirar la toalla"
                 }
               ],

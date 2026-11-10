@@ -8123,44 +8123,30 @@
                 }
               ]
             },
-            {
+                        {
               "id": "es-ja-a2-p0-u1-l09",
-              "title": "Pasado: ました · repaso",
+              "title": "レストランで",
               "cefrLevel": "A2",
               "vocabFrequencyBand": "1000-2000",
-              "canDo": "Puedo contar acciones pasadas con la forma cortés ました.",
+              "canDo": "Puedo pedir el menú, agua y la cuenta en un restaurante.",
               "microLesson": {
-                "title": "Pasado cortés: ました",
+                "title": "レストランで",
                 "goals": [
-                  "Formar el pasado de verbos corteses.",
-                  "Usar la negación pasada ませんでした."
+                  "Reconocer vocabulario de el restaurante.",
+                  "Usar frases sencillas sobre el restaurante en japonés."
                 ],
                 "sections": [
                   {
-                    "heading": "ました",
-                    "body": "たべます -> たべました; いきます -> いきました; のみます -> のみました.",
+                    "heading": "Palabras y frases",
+                    "body": "Vocabulario básico de el restaurante. Fíjate en el orden de la frase y en las preposiciones.",
                     "examples": [
                       {
-                        "source": "Comí",
-                        "target": "たべました"
+                        "source": "Quiero el menú, por favor",
+                        "target": "メニュー を お願い します"
                       },
                       {
-                        "source": "Fui",
-                        "target": "いきました"
-                      }
-                    ]
-                  },
-                  {
-                    "heading": "ませんでした",
-                    "body": "Para negar en pasado: たべませんでした, いきませんでした.",
-                    "examples": [
-                      {
-                        "source": "No comí",
-                        "target": "たべませんでした"
-                      },
-                      {
-                        "source": "No fui",
-                        "target": "いきませんでした"
+                        "source": "El agua es gratis",
+                        "target": "水 は 無料 です"
                       }
                     ]
                   }
@@ -8168,63 +8154,21 @@
               },
               "glossary": [
                 {
-                  "term": "きのう",
+                  "term": "メニュー",
                   "translations": [
-                    "ayer"
+                    "menú"
                   ]
                 },
                 {
-                  "term": "きょう",
+                  "term": "水",
                   "translations": [
-                    "hoy"
+                    "agua"
                   ]
                 },
                 {
-                  "term": "たべます",
+                  "term": "お会計",
                   "translations": [
-                    "comer"
-                  ]
-                },
-                {
-                  "term": "いきます",
-                  "translations": [
-                    "ir"
-                  ]
-                },
-                {
-                  "term": "のみます",
-                  "translations": [
-                    "beber"
-                  ]
-                },
-                {
-                  "term": "みます",
-                  "translations": [
-                    "ver"
-                  ]
-                },
-                {
-                  "term": "ました",
-                  "translations": [
-                    "pasado cortés"
-                  ]
-                },
-                {
-                  "term": "ませんでした",
-                  "translations": [
-                    "pasado negativo"
-                  ]
-                },
-                {
-                  "term": "あした",
-                  "translations": [
-                    "mañana"
-                  ]
-                },
-                {
-                  "term": "せんしゅう",
-                  "translations": [
-                    "la semana pasada"
+                    "cuenta"
                   ]
                 }
               ],
@@ -8232,157 +8176,162 @@
                 {
                   "type": "MultipleChoice",
                   "id": "es-ja-a2-p0-u1-l09-e01",
-                  "question": "Completa: きのう、すしを ___。",
+                  "question": "¿Cómo se dice «menú» en japonés?",
                   "options": [
-                    "たべました",
-                    "たべます",
-                    "たべません"
+                    "メニュー",
+                    "水",
+                    "お会計"
                   ],
                   "correctIndex": 0,
                   "feedbackOnError": {
-                    "type": "grammar",
-                    "explanation": "«きのう» pide pasado: たべました; たべます es presente y たべません negación presente."
+                    "type": "vocabulary",
+                    "explanation": "«menú» se dice «メニュー»."
                   },
                   "feedbackOnSuccess": {
-                    "explanation": "El pasado de たべます es たべました."
+                    "explanation": "Has elegido la traducción correcta."
                   }
                 },
                 {
-                  "type": "KanjiReading",
+                  "type": "Translate",
                   "id": "es-ja-a2-p0-u1-l09-e02",
-                  "kanji": "昨日",
-                  "readingOptions": [
-                    "きのう",
-                    "きょう",
-                    "あした"
+                  "sourcePhrase": "Quiero el menú, por favor",
+                  "correctTokens": [
+                    "メニュー",
+                    "を",
+                    "お願い",
+                    "します"
                   ],
-                  "correctReading": "きのう",
+                  "distractorTokens": [
+                    "水",
+                    "会計"
+                  ],
                   "feedbackOnError": {
-                    "type": "vocabulary",
-                    "explanation": "昨日 se lee きのう (ayer); きょう es hoy y あした es mañana."
+                    "type": "word_order",
+                    "explanation": "El orden correcto es «メニュー を お願い します»."
                   },
                   "feedbackOnSuccess": {
-                    "explanation": "昨日 significa ayer."
+                    "explanation": "La frase conserva el orden y el significado."
+                  }
+                },
+                {
+                  "type": "OrderWords",
+                  "id": "es-ja-a2-p0-u1-l09-e03",
+                  "tokens": [
+                    "は",
+                    "無料",
+                    "です",
+                    "水"
+                  ],
+                  "answerTokens": [
+                    "水",
+                    "は",
+                    "無料",
+                    "です"
+                  ],
+                  "sourcePhrase": "El agua es gratis",
+                  "feedbackOnError": {
+                    "type": "word_order",
+                    "explanation": "La frase correcta es «水 は 無料 です»."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "El orden produce una frase natural."
                   }
                 },
                 {
                   "type": "MatchPairs",
-                  "id": "es-ja-a2-p0-u1-l09-e03",
+                  "id": "es-ja-a2-p0-u1-l09-e04",
                   "pairs": [
                     {
-                      "left": "きのう",
-                      "right": "ayer"
+                      "left": "menú",
+                      "right": "メニュー"
                     },
                     {
-                      "left": "きょう",
-                      "right": "hoy"
+                      "left": "agua",
+                      "right": "水"
                     },
                     {
-                      "left": "あした",
-                      "right": "mañana"
+                      "left": "cuenta",
+                      "right": "お会計"
                     }
                   ],
                   "feedbackOnError": {
                     "type": "vocabulary",
-                    "explanation": "«きのう» es ayer, «きょう» hoy y «あした» mañana."
+                    "explanation": "Cada palabra tiene una traducción distinta."
                   },
                   "feedbackOnSuccess": {
-                    "explanation": "Son marcadores temporales básicos."
-                  }
-                },
-                {
-                  "type": "ParticleFill",
-                  "id": "es-ja-a2-p0-u1-l09-e04",
-                  "sentenceTemplate": "すし _ たべました",
-                  "particles": [
-                    "を",
-                    "は",
-                    "に"
-                  ],
-                  "correctParticle": "を",
-                  "feedbackOnError": {
-                    "type": "grammar",
-                    "explanation": "を marca el objeto directo すし; は cambiaría el tema y に indicaría dirección o tiempo."
-                  },
-                  "feedbackOnSuccess": {
-                    "explanation": "を marca lo que se come."
+                    "explanation": "Has asociado cada palabra con su traducción."
                   }
                 },
                 {
                   "type": "ListenChoose",
                   "id": "es-ja-a2-p0-u1-l09-e05",
-                  "audioText": "きのう、えいがをみました",
+                  "audioText": "メニュー を お願い します",
                   "options": [
-                    "きのう、えいがをみました",
-                    "きょう、えいがをみます",
-                    "きのう、すしをたべました"
+                    "メニュー を お願い します",
+                    "水 を お願い します",
+                    "お会計 を お願い します"
                   ],
                   "correctIndex": 0,
                   "feedbackOnError": {
                     "type": "comprehension",
-                    "explanation": "El audio dice «きのう、えいがをみました»; las otras opciones cambian el tiempo o el objeto."
+                    "explanation": "El audio dice «メニュー を お願い します»."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has reconocido la frase del audio."
                   }
                 },
                 {
                   "type": "ListenType",
                   "id": "es-ja-a2-p0-u1-l09-e06",
-                  "transcription": "たべました",
-                  "audioText": "たべました",
+                  "audioText": "お会計 は どこ です か",
+                  "transcription": "お会計 は どこ です か",
                   "feedbackOnError": {
                     "type": "spelling",
-                    "explanation": "Escribe たべました: た (ta) + べ (be) + ま (ma) + し (shi) + た (ta)."
+                    "explanation": "Escribe exactamente «お会計 は どこ です か»."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La transcripción coincide con el audio."
                   }
                 },
                 {
                   "type": "SpeakRepeat",
                   "id": "es-ja-a2-p0-u1-l09-e07",
-                  "targetPhrase": "きのう、すしをたべました",
-                  "audioText": "きのう、すしをたべました",
+                  "targetPhrase": "メニュー を お願い します",
+                  "audioText": "メニュー を お願い します",
                   "feedbackOnError": {
                     "type": "pronunciation",
-                    "explanation": "Pronuncia きのう、すしをたべました con pausa breve tras la coma y を como «o»."
+                    "explanation": "Repite «メニュー を お願い します» con claridad."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La frase se entiende y mantiene el ritmo."
                   }
                 }
               ]
             },
-            {
+                        {
               "id": "es-ja-a2-p0-u1-l10",
-              "title": "El fin de semana pasado · repaso",
+              "title": "天気と季節",
               "cefrLevel": "A2",
               "vocabFrequencyBand": "1000-2000",
-              "canDo": "Puedo narrar el fin de semana y preguntar en pasado.",
+              "canDo": "Puedo hablar del tiempo y de las estaciones.",
               "microLesson": {
-                "title": "Pasado: preguntas y adjetivos",
+                "title": "天気と季節",
                 "goals": [
-                  "Preguntar con どこにいきましたか.",
-                  "Usar たのしかったです."
+                  "Reconocer vocabulario de el tiempo y las estaciones.",
+                  "Usar frases sencillas sobre el tiempo y las estaciones en japonés."
                 ],
                 "sections": [
                   {
-                    "heading": "Preguntas en pasado",
-                    "body": "どこにいきましたか (¿adónde fuiste?); なにをしましたか (¿qué hiciste?).",
+                    "heading": "Palabras y frases",
+                    "body": "Vocabulario básico de el tiempo y las estaciones. Fíjate en el orden de la frase y en las preposiciones.",
                     "examples": [
                       {
-                        "source": "¿Adónde fuiste?",
-                        "target": "どこにいきましたか"
+                        "source": "En primavera hace calor",
+                        "target": "春 は 暖かい です"
                       },
                       {
-                        "source": "¿Qué hiciste?",
-                        "target": "なにをしましたか"
-                      }
-                    ]
-                  },
-                  {
-                    "heading": "Adjetivos en pasado",
-                    "body": "たのしい -> たのしかったです; おいしい -> おいしかったです.",
-                    "examples": [
-                      {
-                        "source": "Fue divertido",
-                        "target": "たのしかったです"
-                      },
-                      {
-                        "source": "Estaba delicioso",
-                        "target": "おいしかったです"
+                        "source": "En verano llueve mucho",
+                        "target": "夏 は 雨 が 多い です"
                       }
                     ]
                   }
@@ -8390,63 +8339,21 @@
               },
               "glossary": [
                 {
-                  "term": "せんしゅう",
+                  "term": "春",
                   "translations": [
-                    "la semana pasada"
+                    "primavera"
                   ]
                 },
                 {
-                  "term": "どようび",
+                  "term": "夏",
                   "translations": [
-                    "sábado"
+                    "verano"
                   ]
                 },
                 {
-                  "term": "にちようび",
+                  "term": "雨",
                   "translations": [
-                    "domingo"
-                  ]
-                },
-                {
-                  "term": "いきました",
-                  "translations": [
-                    "fui"
-                  ]
-                },
-                {
-                  "term": "いきませんでした",
-                  "translations": [
-                    "no fui"
-                  ]
-                },
-                {
-                  "term": "たのしい",
-                  "translations": [
-                    "divertido"
-                  ]
-                },
-                {
-                  "term": "たのしかった",
-                  "translations": [
-                    "fue divertido"
-                  ]
-                },
-                {
-                  "term": "えいが",
-                  "translations": [
-                    "película"
-                  ]
-                },
-                {
-                  "term": "ともだち",
-                  "translations": [
-                    "amigo"
-                  ]
-                },
-                {
-                  "term": "うち",
-                  "translations": [
-                    "casa"
+                    "lluvia"
                   ]
                 }
               ],
@@ -8454,115 +8361,138 @@
                 {
                   "type": "MultipleChoice",
                   "id": "es-ja-a2-p0-u1-l10-e01",
-                  "question": "Completa: せんしゅう、えいがを ___。",
+                  "question": "¿Cómo se dice «primavera» en japonés?",
                   "options": [
-                    "みました",
-                    "みます",
-                    "みません"
+                    "春",
+                    "夏",
+                    "雨"
                   ],
                   "correctIndex": 0,
                   "feedbackOnError": {
-                    "type": "grammar",
-                    "explanation": "«せんしゅう» pide pasado: みました; みます es presente y みません negación presente."
+                    "type": "vocabulary",
+                    "explanation": "«primavera» se dice «春»."
                   },
                   "feedbackOnSuccess": {
-                    "explanation": "El pasado de みます es みました."
+                    "explanation": "Has elegido la traducción correcta."
                   }
                 },
                 {
-                  "type": "KanjiReading",
+                  "type": "Translate",
                   "id": "es-ja-a2-p0-u1-l10-e02",
-                  "kanji": "先週",
-                  "readingOptions": [
-                    "せんしゅう",
-                    "らいしゅう",
-                    "きょう"
+                  "sourcePhrase": "En primavera hace calor",
+                  "correctTokens": [
+                    "春",
+                    "は",
+                    "暖かい",
+                    "です"
                   ],
-                  "correctReading": "せんしゅう",
+                  "distractorTokens": [
+                    "夏",
+                    "雨"
+                  ],
                   "feedbackOnError": {
-                    "type": "vocabulary",
-                    "explanation": "先週 se lee せんしゅう (la semana pasada); らいしゅう es la próxima semana."
+                    "type": "word_order",
+                    "explanation": "El orden correcto es «春 は 暖かい です»."
                   },
                   "feedbackOnSuccess": {
-                    "explanation": "先週 significa la semana pasada."
+                    "explanation": "La frase conserva el orden y el significado."
+                  }
+                },
+                {
+                  "type": "OrderWords",
+                  "id": "es-ja-a2-p0-u1-l10-e03",
+                  "tokens": [
+                    "は",
+                    "雨",
+                    "が",
+                    "多い",
+                    "です",
+                    "夏"
+                  ],
+                  "answerTokens": [
+                    "夏",
+                    "は",
+                    "雨",
+                    "が",
+                    "多い",
+                    "です"
+                  ],
+                  "sourcePhrase": "En verano llueve mucho",
+                  "feedbackOnError": {
+                    "type": "word_order",
+                    "explanation": "La frase correcta es «夏 は 雨 が 多い です»."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "El orden produce una frase natural."
                   }
                 },
                 {
                   "type": "MatchPairs",
-                  "id": "es-ja-a2-p0-u1-l10-e03",
+                  "id": "es-ja-a2-p0-u1-l10-e04",
                   "pairs": [
                     {
-                      "left": "すいようび",
-                      "right": "miércoles"
+                      "left": "primavera",
+                      "right": "春"
                     },
                     {
-                      "left": "どようび",
-                      "right": "sábado"
+                      "left": "verano",
+                      "right": "夏"
                     },
                     {
-                      "left": "ともだち",
-                      "right": "amigo"
+                      "left": "lluvia",
+                      "right": "雨"
                     }
                   ],
                   "feedbackOnError": {
                     "type": "vocabulary",
-                    "explanation": "«すいようび» es miércoles, «どようび» sábado y «ともだち» amigo."
+                    "explanation": "Cada palabra tiene una traducción distinta."
                   },
                   "feedbackOnSuccess": {
-                    "explanation": "Son palabras para contar el fin de semana."
-                  }
-                },
-                {
-                  "type": "ParticleFill",
-                  "id": "es-ja-a2-p0-u1-l10-e04",
-                  "sentenceTemplate": "どこ _ いきましたか",
-                  "particles": [
-                    "に",
-                    "を",
-                    "で"
-                  ],
-                  "correctParticle": "に",
-                  "feedbackOnError": {
-                    "type": "grammar",
-                    "explanation": "に marca el destino de いきました; を marcaría un objeto y で un lugar de acción."
-                  },
-                  "feedbackOnSuccess": {
-                    "explanation": "に indica adónde fuiste."
+                    "explanation": "Has asociado cada palabra con su traducción."
                   }
                 },
                 {
                   "type": "ListenChoose",
                   "id": "es-ja-a2-p0-u1-l10-e05",
-                  "audioText": "せんしゅう、ともだちとあいました",
+                  "audioText": "春 は 暖かい です",
                   "options": [
-                    "せんしゅう、ともだちとあいました",
-                    "きょう、ともだちとあいます",
-                    "せんしゅう、えいがをみました"
+                    "春 は 暖かい です",
+                    "夏 は 雨 が 多い です",
+                    "冬 は 寒い です"
                   ],
                   "correctIndex": 0,
                   "feedbackOnError": {
                     "type": "comprehension",
-                    "explanation": "El audio dice «せんしゅう、ともだちとあいました»; las otras opciones cambian el tiempo o la acción."
+                    "explanation": "El audio dice «春 は 暖かい です»."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has reconocido la frase del audio."
                   }
                 },
                 {
                   "type": "ListenType",
                   "id": "es-ja-a2-p0-u1-l10-e06",
-                  "transcription": "たのしかったです",
-                  "audioText": "たのしかったです",
+                  "audioText": "夏 は 雨 が 多い です",
+                  "transcription": "夏 は 雨 が 多い です",
                   "feedbackOnError": {
                     "type": "spelling",
-                    "explanation": "Escribe たのしかったです con たのしかった y です."
+                    "explanation": "Escribe exactamente «夏 は 雨 が 多い です»."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La transcripción coincide con el audio."
                   }
                 },
                 {
                   "type": "SpeakRepeat",
                   "id": "es-ja-a2-p0-u1-l10-e07",
-                  "targetPhrase": "せんしゅう、えいがをみました",
-                  "audioText": "せんしゅう、えいがをみました",
+                  "targetPhrase": "春 は 暖かい です",
+                  "audioText": "春 は 暖かい です",
                   "feedbackOnError": {
                     "type": "pronunciation",
-                    "explanation": "Enlaza えいがを y pronuncia みました con la i breve."
+                    "explanation": "Repite «春 は 暖かい です» con claridad."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La frase se entiende y mantiene el ritmo."
                   }
                 }
               ]
@@ -24130,7 +24060,7 @@
               "culturalNotes": [
                 {
                   "idiom": "猫の手も借りたい",
-                  "note": "Estar tan ocupado que se necesitaría ayuda hasta de un gato.",
+                  "note": "Al negociar un plazo, si estás tan ocupado que «猫の手も借りたい», cuesta ordenar las condiciones.",
                   "translation": "estar muy ocupado"
                 }
               ],
@@ -24447,7 +24377,7 @@
               "culturalNotes": [
                 {
                   "idiom": "顔が広い",
-                  "note": "Tener muchos contactos.",
+                  "note": "Para descubrir quién decide, preguntar a alguien con «顔が広い» contactos es el atajo.",
                   "translation": "tener contactos"
                 }
               ],
@@ -24771,7 +24701,7 @@
               "culturalNotes": [
                 {
                   "idiom": "耳が痛い",
-                  "note": "Escuchar una crítica que duele.",
+                  "note": "Aunque suavices una crítica, las observaciones «耳が痛い» no se pueden evitar; por eso importa cómo las transmites.",
                   "translation": "ser una crítica dura"
                 }
               ],
@@ -25092,7 +25022,7 @@
               "culturalNotes": [
                 {
                   "idiom": "口が堅い",
-                  "note": "Saber guardar un secreto.",
+                  "note": "Para rebatir con pruebas, la clave es saber cuánta información puede soltar alguien «口が堅い».",
                   "translation": "ser discreto"
                 }
               ],
@@ -25410,7 +25340,7 @@
               "culturalNotes": [
                 {
                   "idiom": "目を通す",
-                  "note": "Revisar un documento por encima.",
+                  "note": "Antes de una decisión difícil, «目を通す» los documentos relevantes ordena la base del juicio.",
                   "translation": "revisar"
                 }
               ],
@@ -25732,7 +25662,7 @@
               "culturalNotes": [
                 {
                   "idiom": "手を貸す",
-                  "note": "Echar una mano.",
+                  "note": "Al leer entre líneas, hay que distinguir si la otra persona quiere que «手を貸す» o solo que la escuches.",
                   "translation": "echar una mano"
                 }
               ],
@@ -26056,7 +25986,7 @@
               "culturalNotes": [
                 {
                   "idiom": "足を運ぶ",
-                  "note": "Ir personalmente a un lugar.",
+                  "note": "Para hablar del elefante en la habitación, primero hay que «足を運ぶ» al lugar.",
                   "translation": "ir en persona"
                 }
               ],
@@ -26376,7 +26306,7 @@
               "culturalNotes": [
                 {
                   "idiom": "胸を張る",
-                  "note": "Sentirse orgulloso.",
+                  "note": "Una propuesta de futuro debe tener fundamentos para poder defenderla «胸を張る».",
                   "translation": "sentirse orgulloso"
                 }
               ],
@@ -26694,7 +26624,7 @@
               "culturalNotes": [
                 {
                   "idiom": "水に流す",
-                  "note": "Olvidar una disputa pasada.",
+                  "note": "Al negociar con el ayuntamiento, «水に流す» los malentendidos pasados acelera el acuerdo.",
                   "translation": "olvidar el pasado"
                 }
               ],
@@ -27012,7 +26942,7 @@
               "culturalNotes": [
                 {
                   "idiom": "油を売る",
-                  "note": "Perder el tiempo en el trabajo.",
+                  "note": "En una reunión para hablar del futuro no se puede «油を売る»; hacen falta acciones concretas.",
                   "translation": "perder el tiempo"
                 }
               ],
