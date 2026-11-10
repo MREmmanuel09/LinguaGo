@@ -276,15 +276,19 @@ class PackagedContentTest {
             assertTrue("$courseId debe decodificar en v2", course != null)
             val lessons = course!!.levels.flatMap { level -> level.units.flatMap { unit -> unit.lessons } }
             val b2Lessons = lessons.filter { lesson -> lesson.cefrLevel == CefrLevel.B2 }
-            assertEquals("$courseId debe tener 22 lecciones B2", 22, b2Lessons.size)
+            val historicB2Lessons = b2Lessons.filter { lesson -> !lesson.id.value.contains("-p0-") }
+            val pilotB2Lessons = b2Lessons.filter { lesson -> lesson.id.value.contains("-p0-") }
+            assertEquals("$courseId debe tener 22 lecciones B2 históricas", 22, historicB2Lessons.size)
+            assertEquals("El piloto B2 de $courseId debe tener 10 lecciones", 10, pilotB2Lessons.size)
+            assertEquals("$courseId debe tener 32 lecciones B2 con el piloto", 32, b2Lessons.size)
             assertEquals(
                 (1..3).flatMap { unit -> (1..4).map { lesson -> "$courseId-b2-un-$unit-ls-$lesson" } } +
                     (4..5).flatMap { unit -> (1..5).map { lesson -> "$courseId-b2-un-$unit-ls-$lesson" } },
-                b2Lessons.map { lesson -> lesson.id.value },
+                historicB2Lessons.map { lesson -> lesson.id.value },
             )
             assertEquals(
                 (1..220).map { index -> "$courseId-b2-e$index" },
-                b2Lessons.flatMap { lesson -> lesson.exercises }.map { exercise -> exercise.id.value },
+                historicB2Lessons.flatMap { lesson -> lesson.exercises }.map { exercise -> exercise.id.value },
             )
             assertTrue(
                 "Cada lección B2 de $courseId debe tener 10 ejercicios",
@@ -312,8 +316,17 @@ class PackagedContentTest {
             )
             assertEquals(
                 "Cada lección B2 de $courseId debe tener un FreeSpeakingPrompt",
-                22,
+                32,
                 b2Lessons.sumOf { lesson -> lesson.exercises.count { exercise -> exercise is Exercise.FreeSpeakingPrompt } },
+            )
+            assertEquals(
+                "El piloto B2 de $courseId debe usar 10 modismos distintos",
+                10,
+                pilotB2Lessons
+                    .flatMap { lesson -> lesson.culturalNotes }
+                    .map { note -> note.idiom }
+                    .distinct()
+                    .size,
             )
         }
     }
@@ -389,14 +402,18 @@ class PackagedContentTest {
             assertTrue("El curso $courseId no decodifica", course != null)
             val lessons = course!!.levels.flatMap { level -> level.units.flatMap { unit -> unit.lessons } }
             val b1Lessons = lessons.filter { lesson -> lesson.cefrLevel == CefrLevel.B1 }
-            assertEquals("$courseId debe tener 20 lecciones B1", 20, b1Lessons.size)
+            val historicB1Lessons = b1Lessons.filter { lesson -> !lesson.id.value.contains("-p0-") }
+            val pilotB1Lessons = b1Lessons.filter { lesson -> lesson.id.value.contains("-p0-") }
+            assertEquals("$courseId debe tener 20 lecciones B1 históricas", 20, historicB1Lessons.size)
+            assertEquals("El piloto B1 de $courseId debe tener 10 lecciones", 10, pilotB1Lessons.size)
+            assertEquals("$courseId debe tener 30 lecciones B1 con el piloto", 30, b1Lessons.size)
             assertEquals(
                 (1..5).flatMap { unit -> (1..4).map { lesson -> "$courseId-b1-un-$unit-ls-$lesson" } },
-                b1Lessons.map { lesson -> lesson.id.value },
+                historicB1Lessons.map { lesson -> lesson.id.value },
             )
             assertEquals(
                 (1..180).map { index -> "$courseId-b1-e$index" },
-                b1Lessons.flatMap { lesson -> lesson.exercises }.map { exercise -> exercise.id.value },
+                historicB1Lessons.flatMap { lesson -> lesson.exercises }.map { exercise -> exercise.id.value },
             )
             assertTrue(
                 "Cada lección B1 de $courseId debe tener 9 ejercicios",
@@ -424,7 +441,7 @@ class PackagedContentTest {
             )
             assertEquals(
                 "Cada lección B1 de $courseId debe tener un FreeSpeakingPrompt",
-                20,
+                30,
                 b1Lessons.sumOf { lesson -> lesson.exercises.count { exercise -> exercise is Exercise.FreeSpeakingPrompt } },
             )
         }
@@ -659,14 +676,18 @@ class PackagedContentTest {
             assertTrue("$courseId debe decodificar en v2", course != null)
             val lessons = course!!.levels.flatMap { level -> level.units.flatMap { unit -> unit.lessons } }
             val c1Lessons = lessons.filter { lesson -> lesson.cefrLevel == CefrLevel.C1 }
-            assertEquals("$courseId debe tener 24 lecciones C1", 24, c1Lessons.size)
+            val historicC1Lessons = c1Lessons.filter { lesson -> !lesson.id.value.contains("-p0-") }
+            val pilotC1Lessons = c1Lessons.filter { lesson -> lesson.id.value.contains("-p0-") }
+            assertEquals("$courseId debe tener 24 lecciones C1 históricas", 24, historicC1Lessons.size)
+            assertEquals("El piloto C1 de $courseId debe tener 10 lecciones", 10, pilotC1Lessons.size)
+            assertEquals("$courseId debe tener 34 lecciones C1 con el piloto", 34, c1Lessons.size)
             assertEquals(
                 (1..6).flatMap { unit -> (1..4).map { lesson -> "$courseId-c1-un-$unit-ls-$lesson" } },
-                c1Lessons.map { lesson -> lesson.id.value },
+                historicC1Lessons.map { lesson -> lesson.id.value },
             )
             assertEquals(
                 (1..264).map { index -> "$courseId-c1-e$index" },
-                c1Lessons.flatMap { lesson -> lesson.exercises }.map { exercise -> exercise.id.value },
+                historicC1Lessons.flatMap { lesson -> lesson.exercises }.map { exercise -> exercise.id.value },
             )
             assertTrue(
                 "Cada lección C1 de $courseId debe tener 11 ejercicios",
@@ -686,7 +707,7 @@ class PackagedContentTest {
             )
             assertEquals(
                 "Cada lección C1 de $courseId debe tener un FreeSpeakingPrompt",
-                24,
+                34,
                 c1Lessons.sumOf { lesson -> lesson.exercises.count { exercise -> exercise is Exercise.FreeSpeakingPrompt } },
             )
         }
@@ -699,15 +720,19 @@ class PackagedContentTest {
             assertTrue("$courseId debe decodificar en v2", course != null)
             val lessons = course!!.levels.flatMap { level -> level.units.flatMap { unit -> unit.lessons } }
             val c2Lessons = lessons.filter { lesson -> lesson.cefrLevel == CefrLevel.C2 }
-            assertEquals("$courseId debe tener 18 lecciones C2", 18, c2Lessons.size)
+            val historicC2Lessons = c2Lessons.filter { lesson -> !lesson.id.value.contains("-p0-") }
+            val pilotC2Lessons = c2Lessons.filter { lesson -> lesson.id.value.contains("-p0-") }
+            assertEquals("$courseId debe tener 18 lecciones C2 históricas", 18, historicC2Lessons.size)
+            assertEquals("El piloto C2 de $courseId debe tener 10 lecciones", 10, pilotC2Lessons.size)
+            assertEquals("$courseId debe tener 28 lecciones C2 con el piloto", 28, c2Lessons.size)
             assertEquals(
                 (1..3).flatMap { unit -> (1..4).map { lesson -> "$courseId-c2-un-$unit-ls-$lesson" } } +
                     (1..6).map { lesson -> "$courseId-c2-un-4-ls-$lesson" },
-                c2Lessons.map { lesson -> lesson.id.value },
+                historicC2Lessons.map { lesson -> lesson.id.value },
             )
             assertEquals(
                 (1..216).map { index -> "$courseId-c2-e$index" },
-                c2Lessons.flatMap { lesson -> lesson.exercises }.map { exercise -> exercise.id.value },
+                historicC2Lessons.flatMap { lesson -> lesson.exercises }.map { exercise -> exercise.id.value },
             )
             assertTrue(
                 "Cada lección C2 de $courseId debe tener 12 ejercicios",
@@ -727,7 +752,7 @@ class PackagedContentTest {
             )
             assertEquals(
                 "Cada lección C2 de $courseId debe tener un FreeSpeakingPrompt",
-                18,
+                28,
                 c2Lessons.sumOf { lesson -> lesson.exercises.count { exercise -> exercise is Exercise.FreeSpeakingPrompt } },
             )
         }
