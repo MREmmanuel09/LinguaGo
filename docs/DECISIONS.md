@@ -61,6 +61,7 @@
 | 049 | Persistencia de sesión en `SavedStateHandle` (B-08) | Aprobado |
 | 050 | Room v5, `SyncSnapshot` v3 y respaldo local por SAF | Aprobado |
 | 051 | `espeak-ng-data` compartido, gestor de voces y desglose CEFR | Aprobado |
+| 052 | Expansión controlada a 1.020 lecciones por idioma con paridad CEFR | Aprobado |
 
 ---
 ## ADR-000: Convención del registro de decisiones
@@ -2168,5 +2169,42 @@ redundantes (~34 MB antes de compresión); el usuario puede recuperar espacio
 sin perder progreso ni contenido; el perfil refleja la rampa CEFR real del
 curso activo. La revisión editorial humana de B1–C2 permanece desacoplada en
 commits `content:` para `v3.1`.
+
+---
+
+## ADR-052: expansión controlada a 1.020 lecciones por idioma con paridad CEFR
+
+**Estado:** Aprobado
+**Fecha:** 2026-11-09
+**Se aplica en:** `v3.1.0` → `v4.0.0`
+
+**Contexto:** LinguaGo tiene 417 lecciones y 4.087 ejercicios. La app usa seis
+niveles CEFR (`A1`–`C2`), no cuatro. Escalar a 1.000 lecciones por idioma con
+calidad exige una fábrica de contenido, cupos verificables y una revisión
+nativa que no dependa de la memoria del equipo.
+
+**Decisión:**
+
+1. **Cupo:** 170 lecciones por nivel × 6 niveles = **1.020 lecciones por
+   idioma**; 4.080 en los cuatro cursos. Es el mínimo que mantiene bloques
+   uniformes de 10 lecciones (102 bloques por idioma, 408 totales).
+2. **Fases:** 7 fases (`F0`–`F6`). Cada fase cierra un nivel en los cuatro
+   cursos; cada una se divide en dos olas: ES→EN primero y PT/FR/JA después.
+3. **Contrato:** se mantiene `schemaVersion: 2`, la rampa de ejercicios
+   `7/7/9/10/11/12`, los ids históricos y todas las reglas de
+   `CourseValidator`/`ContentRampTest`. Room, FSRS y el motor de lecciones no
+   cambian.
+4. **Fábrica:** matriz curricular de 17 bloques por nivel, plantilla de 10
+   lecciones, guía de estilo por idioma y lotes `content:` de 10 lecciones.
+5. **Calidad:** tres puertas por fase (lote, ola y release). Revisión nativa
+   obligatoria del 100 % de micro-clases, producción oral y audio, y 20 %
+   estratificado del resto. Auditoría de mitad de plan al cerrar B2 y
+   auditoría final antes de 4.0.0. Si falla calidad, no se abre la ola B ni
+   la fase siguiente.
+
+**Consecuencias:** el proyecto crece de 417 a 4.080 lecciones y de 4.087 a
+38.080 ejercicios con la rampa actual. El coste principal es autoría y
+revisión nativa, no el tamaño del APK. El progreso existente y los ids
+históricos quedan intactos.
 
 ---

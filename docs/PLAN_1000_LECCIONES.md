@@ -1,6 +1,7 @@
 # Plan de expansión a 1.020 lecciones por idioma
 
-> **Estado:** propuesta para aprobación (ADR-052).
+> **Estado:** aprobado por ADR-052. **F0 en curso:** 10/240 lecciones del
+> piloto completadas (A1 ES→EN).
 > **Objetivo:** mínimo 1.000 lecciones por cada curso de destino, con la misma
 > cantidad en cada nivel CEFR.
 > **Fecha:** 2026-11-09.
@@ -256,10 +257,13 @@ no la generación de JSON.
 | Traducciones literales entre idiomas | Revisión nativa por idioma; plantilla semántica, no copia literal. |
 | Fatiga del equipo | Lotes pequeños, releases por nivel y criterios de salida claros. |
 
-## 10. ADR-052 propuesto
+## 10. ADR-052 aprobado
 
 **Título:** expansión controlada a 1.020 lecciones por idioma con paridad
 CEFR.
+
+**Estado:** aprobado (2026-11-09). El texto definitivo vive en
+`docs/DECISIONS.md`; este documento queda como plan operativo.
 
 **Decisión:** objetivo de 170 lecciones por nivel en los 4 cursos; lotes de
 10 lecciones; ids nuevos sin reciclar; schema v2 sin cambios; gates
@@ -268,3 +272,21 @@ automáticos y revisión nativa muestreada; releases por nivel hasta 4.0.0.
 **Consecuencias:** 4.080 lecciones y 38.080 ejercicios; mayor coste de autoría,
 revisión y QA; el contenido sigue 100 % offline y el progreso histórico queda
 intacto.
+
+## 11. Estado de ejecución de F0
+
+| Entregable | Estado |
+|---|---|
+| ADR-052 aprobado | ✅ |
+| `contentScaleReport` (cupos 170/nivel) | ✅ |
+| Contrato de fábrica (`docs/CONTENT_FACTORY.md`) | ✅ |
+| Bloque piloto A1 ES→EN (10 lecciones / 70 ejercicios) | ✅ |
+| Bloques piloto A2–C2 ES→EN | Pendiente |
+| Réplica PT/FR/JA | Pendiente |
+| Auditoría de calidad F0 | Pendiente |
+
+Estado actual medido con `./gradlew contentScaleReport`:
+
+- ES→EN: **121/1.020** lecciones (A1 20/170).
+- ES→PT / FR / JA: **102/1.020** cada uno.
+- Total: **427/4.080** lecciones.

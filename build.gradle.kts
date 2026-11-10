@@ -310,4 +310,58 @@ tasks.register("validateContent") {
     }
 }
 
+// Informe de avance de la expansión a 1.020 lecciones por idioma (ADR-052).
+// No falla el build durante F0: sirve de semáforo para planificar lotes y
+// detectar niveles que se quedan atrás. A partir de F1 se puede convertir en
+// gate estricto sin cambiar el contrato de contenido.
+tasks.register("contentScaleReport") {
+    group = "verification"
+    description = "Muestra lecciones actuales y hueco restante por curso y nivel CEFR."
+    val targetPerLevel = 170
+    val contentFiles: List<File> =
+        fileTree(rootDir)
+            .matching {
+                include("content/*/src/main/assets/courses/*/course.json")
+            }.files
+            .toList()
+            .sortedBy { file -> file.path }
+    inputs.files(contentFiles)
+    doLast {
+        val levels = listOf("A1", "A2", "B1", "B2", "C1", "C2")
+        val mapper = ObjectMapper()
+        var grandTotal = 0
+        for (file in contentFiles) {
+            val tree = mapper.readTree(file)
+            val courseId = tree.path("id").asText(file.parentFile.name)
+            val counts = levels.associateWith { 0 }.toMutableMap()
+            var exercises = 0
+            tree.path("levels").forEach { level ->
+                level.path("units").forEach { unit ->
+                    unit.path("lessons").forEach { lesson ->
+                        val cefr = lesson.path("cefrLevel").asText("A1")
+                        counts[cefr] = (counts[cefr] ?: 0) + 1
+                        exercises += lesson.path("exercises").size()
+                    }
+                }
+            }
+            val total = counts.values.sum()
+            grandTotal += total
+            println("Curso $courseId: $total lecciones / $exercises ejercicios")
+            for (level in levels) {
+                val current = counts[level] ?: 0
+                val missing = (targetPerLevel - current).coerceAtLeast(0)
+                println(
+                    "  $level: $current/$targetPerLevel" +
+                        if (missing > 0) "  faltan $missing" else "  completo",
+                )
+            }
+            println("  Total: $total/${targetPerLevel * levels.size}")
+        }
+        println(
+            "TOTAL PROGRAMA: $grandTotal/${targetPerLevel * levels.size * contentFiles.size} lecciones " +
+                "(${contentFiles.size} cursos)",
+        )
+    }
+}
+
 
