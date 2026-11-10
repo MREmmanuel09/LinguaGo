@@ -202,6 +202,11 @@ estas unidades y la auditoría de calidad de F0 siguen pendientes.
 
 ## Pendiente
 
-- Revisión nativa de las réplicas PT/FR/JA.
-- Auditoría de calidad de F0 antes de abrir F1/A1 masivo.
+- Revisión nativa humana de las réplicas PT/FR/JA.
+- Cierre formal de F0 tras esa revisión.
 - Expansión F1–F6 hasta 170 lecciones por nivel y 1.020 por idioma.
+
+La auditoría asistida está en `docs/qa/fase0-auditoria-replicas.md`. Concluye
+que no hay defectos estructurales bloqueantes, pero que las 150 lecciones
+replican ejercicios históricos y deben sustituirse por contenido nuevo en
+F1–F6. La revisión nativa humana sigue pendiente.

@@ -292,7 +292,7 @@ intacto.
 | Réplica B1–C2 ES→PT (40 lecciones / 420 ejercicios) | ✅ |
 | Réplica A2–C2 ES→FR (50 lecciones / 490 ejercicios) | ✅ |
 | Réplica ES→JA A1–C2 (60 lecciones / 560 ejercicios) | ✅ |
-| Auditoría de calidad F0 | Pendiente |
+| Auditoría asistida de F0 | ✅ (revisión nativa humana pendiente) |
 
 Las réplicas PT/FR/JA cierran F0 con unidades de repaso construidas sobre
 lecciones ya validadas del mismo nivel. La revisión nativa y la auditoría de
