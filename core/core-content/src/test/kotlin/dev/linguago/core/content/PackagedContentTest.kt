@@ -73,12 +73,31 @@ class PackagedContentTest {
         assertTrue("es-en debe decodificar en v2", course != null)
 
         val lessons = course!!.levels.flatMap { level -> level.units.flatMap { unit -> unit.lessons } }
-        val b1Lessons = lessons.filter { lesson -> lesson.cefrLevel == CefrLevel.B1 }
+        val b1Lessons =
+            lessons.filter { lesson ->
+                lesson.cefrLevel == CefrLevel.B1 && !lesson.id.value.contains("-p0-")
+            }
         val b2Lessons = lessons.filter { lesson -> lesson.cefrLevel == CefrLevel.B2 }
         assertEquals(20, b1Lessons.size)
         assertEquals(22, b2Lessons.size)
         assertEquals((1..180).map { index -> "es-en-b1-e$index" }, b1Lessons.flatMap { lesson -> lesson.exercises }.map { it.id.value })
         assertEquals((1..220).map { index -> "es-en-b2-e$index" }, b2Lessons.flatMap { lesson -> lesson.exercises }.map { it.id.value })
+
+        val pilotB1Lessons = lessons.filter { lesson -> lesson.id.value.startsWith("es-en-b1-p0-") }
+        assertEquals("El piloto B1 de F0 debe tener 10 lecciones", 10, pilotB1Lessons.size)
+        assertTrue(pilotB1Lessons.all { lesson -> lesson.exercises.size == 9 })
+        assertTrue(pilotB1Lessons.all { lesson -> lesson.grammarPoints.size == 2 })
+        assertTrue(pilotB1Lessons.all { lesson -> lesson.culturalNotes.isNotEmpty() })
+        assertTrue(
+            "Cada lección B1 del piloto debe tener un FreeSpeakingPrompt",
+            pilotB1Lessons.all { lesson ->
+                lesson.exercises.count { exercise -> exercise is Exercise.FreeSpeakingPrompt } == 1
+            },
+        )
+        assertTrue(
+            "Todos los ejercicios del piloto B1 deben tener feedbackOnError",
+            pilotB1Lessons.flatMap { lesson -> lesson.exercises }.all { exercise -> exercise.feedbackOnError != null },
+        )
 
         val a2Lessons =
             lessons.filter { lesson ->
