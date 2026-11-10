@@ -1,7 +1,7 @@
 # Plan de expansión a 1.020 lecciones por idioma
 
-> **Estado:** aprobado por ADR-052. **F0 en curso:** 70/240 lecciones del
-> piloto completadas (A1–C2 ES→EN y A1 ES→PT).
+> **Estado:** aprobado por ADR-052. **F0 en curso:** 90/240 lecciones del
+> piloto completadas (A1–C2 ES→EN, A1–A2 ES→PT y A1 ES→FR).
 > **Objetivo:** mínimo 1.000 lecciones por cada curso de destino, con la misma
 > cantidad en cada nivel CEFR.
 > **Fecha:** 2026-11-09.
@@ -287,13 +287,17 @@ intacto.
 | Bloque piloto C1 ES→EN (10 lecciones / 110 ejercicios) | ✅ |
 | Bloque piloto C2 ES→EN (10 lecciones / 120 ejercicios) | ✅ |
 | Bloque piloto A1 ES→PT (10 lecciones / 70 ejercicios) | ✅ |
-| Réplica A2–C2 ES→PT | Pendiente |
-| Réplica ES→FR / ES→JA | Pendiente |
+| Bloque piloto A2 ES→PT (10 lecciones / 70 ejercicios) | ✅ |
+| Bloque piloto A1 ES→FR (10 lecciones / 70 ejercicios) | ✅ |
+| Réplica B1–C2 ES→PT | Pendiente |
+| Réplica A2–C2 ES→FR | Pendiente |
+| Réplica ES→JA | Pendiente |
 | Auditoría de calidad F0 | Pendiente |
 
 Estado actual medido con `./gradlew contentScaleReport`:
 
-- ES→EN: **171/1.020** lecciones (A1 20/170, A2 27/170, B1 30/170, B2 32/170, C1 34/170, C2 28/170).
-- ES→PT: **112/1.020** lecciones (A1 20/170).
-- ES→FR / ES→JA: **102/1.020** cada uno.
-- Total: **487/4.080** lecciones.
+- ES→EN: **171/1.020** lecciones (A1 20, A2 27, B1 30, B2 32, C1 34, C2 28).
+- ES→PT: **122/1.020** lecciones (A1 20, A2 18).
+- ES→FR: **112/1.020** lecciones (A1 20).
+- ES→JA: **102/1.020** lecciones.
+- Total: **507/4.080** lecciones.
