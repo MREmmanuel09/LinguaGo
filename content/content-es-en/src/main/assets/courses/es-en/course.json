@@ -1971,6 +1971,1865 @@
               ]
             }
           ]
+        },
+        {
+          "id": "es-en-a1-p0-un-1",
+          "title": "Piloto A1 · Vida diaria",
+          "lessons": [
+            {
+              "id": "es-en-a1-p0-u1-l01",
+              "title": "Mi mascota",
+              "cefrLevel": "A1",
+              "vocabFrequencyBand": "1000-2000",
+              "canDo": "Puedo hablar de mi mascota con frases sencillas.",
+              "microLesson": {
+                "title": "Mi mascota",
+                "goals": [
+                  "Reconocer vocabulario de las mascotas.",
+                  "Usar frases sencillas sobre las mascotas."
+                ],
+                "sections": [
+                  {
+                    "heading": "Palabras y frases",
+                    "body": "Vocabulario básico de las mascotas. Fíjate en el orden de la frase: sujeto + verbo + complemento.",
+                    "examples": [
+                      {
+                        "source": "Mi perro es pequeño",
+                        "target": "My dog is small"
+                      },
+                      {
+                        "source": "El gato duerme en casa",
+                        "target": "The cat sleeps at home"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "glossary": [
+                {
+                  "term": "dog",
+                  "translations": [
+                    "perro"
+                  ]
+                },
+                {
+                  "term": "cat",
+                  "translations": [
+                    "gato"
+                  ]
+                },
+                {
+                  "term": "bird",
+                  "translations": [
+                    "pájaro"
+                  ]
+                }
+              ],
+              "exercises": [
+                {
+                  "type": "MultipleChoice",
+                  "id": "es-en-a1-p0-u1-l01-e01",
+                  "question": "¿Cómo se dice «perro»?",
+                  "options": [
+                    "dog",
+                    "cat",
+                    "bird"
+                  ],
+                  "correctIndex": 0,
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "«perro» se dice «dog»."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has elegido la traducción correcta."
+                  }
+                },
+                {
+                  "type": "Translate",
+                  "id": "es-en-a1-p0-u1-l01-e02",
+                  "sourcePhrase": "Mi perro es pequeño",
+                  "correctTokens": [
+                    "My",
+                    "dog",
+                    "is",
+                    "small"
+                  ],
+                  "distractorTokens": [
+                    "cat",
+                    "big"
+                  ],
+                  "feedbackOnError": {
+                    "type": "word_order",
+                    "explanation": "El orden correcto es «My dog is small»."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La frase conserva el orden y el significado."
+                  }
+                },
+                {
+                  "type": "OrderWords",
+                  "id": "es-en-a1-p0-u1-l01-e03",
+                  "tokens": [
+                    "The",
+                    "cat",
+                    "sleeps",
+                    "at",
+                    "home"
+                  ],
+                  "answerTokens": [
+                    "The",
+                    "cat",
+                    "sleeps",
+                    "at",
+                    "home"
+                  ],
+                  "sourcePhrase": "El gato duerme en casa",
+                  "feedbackOnError": {
+                    "type": "word_order",
+                    "explanation": "La frase correcta es «The cat sleeps at home»."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "El orden produce una frase natural."
+                  }
+                },
+                {
+                  "type": "MatchPairs",
+                  "id": "es-en-a1-p0-u1-l01-e04",
+                  "pairs": [
+                    {
+                      "left": "perro",
+                      "right": "dog"
+                    },
+                    {
+                      "left": "gato",
+                      "right": "cat"
+                    },
+                    {
+                      "left": "pájaro",
+                      "right": "bird"
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "Cada palabra tiene una traducción distinta."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has asociado cada palabra con su traducción."
+                  }
+                },
+                {
+                  "type": "ListenChoose",
+                  "id": "es-en-a1-p0-u1-l01-e05",
+                  "audioText": "I have a cat",
+                  "options": [
+                    "I have a cat",
+                    "I have a dog",
+                    "I have a bird"
+                  ],
+                  "correctIndex": 0,
+                  "feedbackOnError": {
+                    "type": "comprehension",
+                    "explanation": "El audio dice «I have a cat»."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has reconocido la frase del audio."
+                  }
+                },
+                {
+                  "type": "ListenType",
+                  "id": "es-en-a1-p0-u1-l01-e06",
+                  "audioText": "My dog is friendly",
+                  "transcription": "My dog is friendly",
+                  "feedbackOnError": {
+                    "type": "spelling",
+                    "explanation": "Escribe exactamente «My dog is friendly»."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La transcripción coincide con el audio."
+                  }
+                },
+                {
+                  "type": "SpeakRepeat",
+                  "id": "es-en-a1-p0-u1-l01-e07",
+                  "targetPhrase": "I have a pet",
+                  "audioText": "I have a pet",
+                  "feedbackOnError": {
+                    "type": "pronunciation",
+                    "explanation": "Repite «I have a pet» con claridad."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La frase se entiende y mantiene el ritmo."
+                  }
+                }
+              ]
+            },
+            {
+              "id": "es-en-a1-p0-u1-l02",
+              "title": "La ropa",
+              "cefrLevel": "A1",
+              "vocabFrequencyBand": "1000-2000",
+              "canDo": "Puedo nombrar ropa y describir sus colores.",
+              "microLesson": {
+                "title": "La ropa",
+                "goals": [
+                  "Reconocer vocabulario de la ropa.",
+                  "Usar frases sencillas sobre la ropa."
+                ],
+                "sections": [
+                  {
+                    "heading": "Palabras y frases",
+                    "body": "Vocabulario básico de la ropa. Fíjate en el orden de la frase: sujeto + verbo + complemento.",
+                    "examples": [
+                      {
+                        "source": "Mi camisa es azul",
+                        "target": "My shirt is blue"
+                      },
+                      {
+                        "source": "El abrigo es nuevo",
+                        "target": "The coat is new"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "glossary": [
+                {
+                  "term": "shirt",
+                  "translations": [
+                    "camisa"
+                  ]
+                },
+                {
+                  "term": "shoes",
+                  "translations": [
+                    "zapatos"
+                  ]
+                },
+                {
+                  "term": "coat",
+                  "translations": [
+                    "abrigo"
+                  ]
+                }
+              ],
+              "exercises": [
+                {
+                  "type": "MultipleChoice",
+                  "id": "es-en-a1-p0-u1-l02-e01",
+                  "question": "¿Cómo se dice «camisa»?",
+                  "options": [
+                    "shirt",
+                    "shoes",
+                    "coat"
+                  ],
+                  "correctIndex": 0,
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "«camisa» se dice «shirt»."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has elegido la traducción correcta."
+                  }
+                },
+                {
+                  "type": "Translate",
+                  "id": "es-en-a1-p0-u1-l02-e02",
+                  "sourcePhrase": "Mi camisa es azul",
+                  "correctTokens": [
+                    "My",
+                    "shirt",
+                    "is",
+                    "blue"
+                  ],
+                  "distractorTokens": [
+                    "red",
+                    "coat"
+                  ],
+                  "feedbackOnError": {
+                    "type": "word_order",
+                    "explanation": "El orden correcto es «My shirt is blue»."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La frase conserva el orden y el significado."
+                  }
+                },
+                {
+                  "type": "OrderWords",
+                  "id": "es-en-a1-p0-u1-l02-e03",
+                  "tokens": [
+                    "The",
+                    "coat",
+                    "is",
+                    "new"
+                  ],
+                  "answerTokens": [
+                    "The",
+                    "coat",
+                    "is",
+                    "new"
+                  ],
+                  "sourcePhrase": "El abrigo es nuevo",
+                  "feedbackOnError": {
+                    "type": "word_order",
+                    "explanation": "La frase correcta es «The coat is new»."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "El orden produce una frase natural."
+                  }
+                },
+                {
+                  "type": "MatchPairs",
+                  "id": "es-en-a1-p0-u1-l02-e04",
+                  "pairs": [
+                    {
+                      "left": "camisa",
+                      "right": "shirt"
+                    },
+                    {
+                      "left": "zapatos",
+                      "right": "shoes"
+                    },
+                    {
+                      "left": "abrigo",
+                      "right": "coat"
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "Cada palabra tiene una traducción distinta."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has asociado cada palabra con su traducción."
+                  }
+                },
+                {
+                  "type": "ListenChoose",
+                  "id": "es-en-a1-p0-u1-l02-e05",
+                  "audioText": "I wear a coat",
+                  "options": [
+                    "I wear a coat",
+                    "I wear a shirt",
+                    "I wear shoes"
+                  ],
+                  "correctIndex": 0,
+                  "feedbackOnError": {
+                    "type": "comprehension",
+                    "explanation": "El audio dice «I wear a coat»."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has reconocido la frase del audio."
+                  }
+                },
+                {
+                  "type": "ListenType",
+                  "id": "es-en-a1-p0-u1-l02-e06",
+                  "audioText": "My shoes are black",
+                  "transcription": "My shoes are black",
+                  "feedbackOnError": {
+                    "type": "spelling",
+                    "explanation": "Escribe exactamente «My shoes are black»."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La transcripción coincide con el audio."
+                  }
+                },
+                {
+                  "type": "SpeakRepeat",
+                  "id": "es-en-a1-p0-u1-l02-e07",
+                  "targetPhrase": "I wear a blue shirt",
+                  "audioText": "I wear a blue shirt",
+                  "feedbackOnError": {
+                    "type": "pronunciation",
+                    "explanation": "Repite «I wear a blue shirt» con claridad."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La frase se entiende y mantiene el ritmo."
+                  }
+                }
+              ]
+            },
+            {
+              "id": "es-en-a1-p0-u1-l03",
+              "title": "Mi rutina",
+              "cefrLevel": "A1",
+              "vocabFrequencyBand": "1000-2000",
+              "canDo": "Puedo describir mi rutina diaria con horas sencillas.",
+              "microLesson": {
+                "title": "Mi rutina",
+                "goals": [
+                  "Reconocer vocabulario de la rutina diaria.",
+                  "Usar frases sencillas sobre la rutina diaria."
+                ],
+                "sections": [
+                  {
+                    "heading": "Palabras y frases",
+                    "body": "Vocabulario básico de la rutina diaria. Fíjate en el orden de la frase: sujeto + verbo + complemento.",
+                    "examples": [
+                      {
+                        "source": "Me levanto a las siete",
+                        "target": "I wake up at seven"
+                      },
+                      {
+                        "source": "Desayuno a las ocho",
+                        "target": "I have breakfast at eight"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "glossary": [
+                {
+                  "term": "wake up",
+                  "translations": [
+                    "despertarse"
+                  ]
+                },
+                {
+                  "term": "get dressed",
+                  "translations": [
+                    "vestirse"
+                  ]
+                },
+                {
+                  "term": "go to bed",
+                  "translations": [
+                    "acostarse"
+                  ]
+                }
+              ],
+              "exercises": [
+                {
+                  "type": "MultipleChoice",
+                  "id": "es-en-a1-p0-u1-l03-e01",
+                  "question": "¿Cómo se dice «despertarse»?",
+                  "options": [
+                    "wake up",
+                    "get dressed",
+                    "go to bed"
+                  ],
+                  "correctIndex": 0,
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "«despertarse» se dice «wake up»."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has elegido la traducción correcta."
+                  }
+                },
+                {
+                  "type": "Translate",
+                  "id": "es-en-a1-p0-u1-l03-e02",
+                  "sourcePhrase": "Me levanto a las siete",
+                  "correctTokens": [
+                    "I",
+                    "wake",
+                    "up",
+                    "at",
+                    "seven"
+                  ],
+                  "distractorTokens": [
+                    "eight",
+                    "sleep"
+                  ],
+                  "feedbackOnError": {
+                    "type": "word_order",
+                    "explanation": "El orden correcto es «I wake up at seven»."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La frase conserva el orden y el significado."
+                  }
+                },
+                {
+                  "type": "OrderWords",
+                  "id": "es-en-a1-p0-u1-l03-e03",
+                  "tokens": [
+                    "I",
+                    "have",
+                    "breakfast",
+                    "at",
+                    "eight"
+                  ],
+                  "answerTokens": [
+                    "I",
+                    "have",
+                    "breakfast",
+                    "at",
+                    "eight"
+                  ],
+                  "sourcePhrase": "Desayuno a las ocho",
+                  "feedbackOnError": {
+                    "type": "word_order",
+                    "explanation": "La frase correcta es «I have breakfast at eight»."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "El orden produce una frase natural."
+                  }
+                },
+                {
+                  "type": "MatchPairs",
+                  "id": "es-en-a1-p0-u1-l03-e04",
+                  "pairs": [
+                    {
+                      "left": "despertarse",
+                      "right": "wake up"
+                    },
+                    {
+                      "left": "vestirse",
+                      "right": "get dressed"
+                    },
+                    {
+                      "left": "acostarse",
+                      "right": "go to bed"
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "Cada palabra tiene una traducción distinta."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has asociado cada palabra con su traducción."
+                  }
+                },
+                {
+                  "type": "ListenChoose",
+                  "id": "es-en-a1-p0-u1-l03-e05",
+                  "audioText": "I go to bed at ten",
+                  "options": [
+                    "I go to bed at ten",
+                    "I wake up at seven",
+                    "I have breakfast at eight"
+                  ],
+                  "correctIndex": 0,
+                  "feedbackOnError": {
+                    "type": "comprehension",
+                    "explanation": "El audio dice «I go to bed at ten»."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has reconocido la frase del audio."
+                  }
+                },
+                {
+                  "type": "ListenType",
+                  "id": "es-en-a1-p0-u1-l03-e06",
+                  "audioText": "I get dressed in the morning",
+                  "transcription": "I get dressed in the morning",
+                  "feedbackOnError": {
+                    "type": "spelling",
+                    "explanation": "Escribe exactamente «I get dressed in the morning»."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La transcripción coincide con el audio."
+                  }
+                },
+                {
+                  "type": "SpeakRepeat",
+                  "id": "es-en-a1-p0-u1-l03-e07",
+                  "targetPhrase": "I wake up at seven",
+                  "audioText": "I wake up at seven",
+                  "feedbackOnError": {
+                    "type": "pronunciation",
+                    "explanation": "Repite «I wake up at seven» con claridad."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La frase se entiende y mantiene el ritmo."
+                  }
+                }
+              ]
+            },
+            {
+              "id": "es-en-a1-p0-u1-l04",
+              "title": "El transporte",
+              "cefrLevel": "A1",
+              "vocabFrequencyBand": "1000-2000",
+              "canDo": "Puedo decir cómo me desplazo por la ciudad.",
+              "microLesson": {
+                "title": "El transporte",
+                "goals": [
+                  "Reconocer vocabulario de el transporte.",
+                  "Usar frases sencillas sobre el transporte."
+                ],
+                "sections": [
+                  {
+                    "heading": "Palabras y frases",
+                    "body": "Vocabulario básico de el transporte. Fíjate en el orden de la frase: sujeto + verbo + complemento.",
+                    "examples": [
+                      {
+                        "source": "Voy en autobús",
+                        "target": "I go by bus"
+                      },
+                      {
+                        "source": "La bicicleta es rápida",
+                        "target": "The bicycle is fast"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "glossary": [
+                {
+                  "term": "bus",
+                  "translations": [
+                    "autobús"
+                  ]
+                },
+                {
+                  "term": "train",
+                  "translations": [
+                    "tren"
+                  ]
+                },
+                {
+                  "term": "bicycle",
+                  "translations": [
+                    "bicicleta"
+                  ]
+                }
+              ],
+              "exercises": [
+                {
+                  "type": "MultipleChoice",
+                  "id": "es-en-a1-p0-u1-l04-e01",
+                  "question": "¿Cómo se dice «autobús»?",
+                  "options": [
+                    "bus",
+                    "train",
+                    "bicycle"
+                  ],
+                  "correctIndex": 0,
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "«autobús» se dice «bus»."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has elegido la traducción correcta."
+                  }
+                },
+                {
+                  "type": "Translate",
+                  "id": "es-en-a1-p0-u1-l04-e02",
+                  "sourcePhrase": "Voy en autobús",
+                  "correctTokens": [
+                    "I",
+                    "go",
+                    "by",
+                    "bus"
+                  ],
+                  "distractorTokens": [
+                    "train",
+                    "bicycle"
+                  ],
+                  "feedbackOnError": {
+                    "type": "word_order",
+                    "explanation": "El orden correcto es «I go by bus»."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La frase conserva el orden y el significado."
+                  }
+                },
+                {
+                  "type": "OrderWords",
+                  "id": "es-en-a1-p0-u1-l04-e03",
+                  "tokens": [
+                    "The",
+                    "bicycle",
+                    "is",
+                    "fast"
+                  ],
+                  "answerTokens": [
+                    "The",
+                    "bicycle",
+                    "is",
+                    "fast"
+                  ],
+                  "sourcePhrase": "La bicicleta es rápida",
+                  "feedbackOnError": {
+                    "type": "word_order",
+                    "explanation": "La frase correcta es «The bicycle is fast»."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "El orden produce una frase natural."
+                  }
+                },
+                {
+                  "type": "MatchPairs",
+                  "id": "es-en-a1-p0-u1-l04-e04",
+                  "pairs": [
+                    {
+                      "left": "autobús",
+                      "right": "bus"
+                    },
+                    {
+                      "left": "tren",
+                      "right": "train"
+                    },
+                    {
+                      "left": "bicicleta",
+                      "right": "bicycle"
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "Cada palabra tiene una traducción distinta."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has asociado cada palabra con su traducción."
+                  }
+                },
+                {
+                  "type": "ListenChoose",
+                  "id": "es-en-a1-p0-u1-l04-e05",
+                  "audioText": "I take the train",
+                  "options": [
+                    "I take the train",
+                    "I take the bus",
+                    "I ride a bicycle"
+                  ],
+                  "correctIndex": 0,
+                  "feedbackOnError": {
+                    "type": "comprehension",
+                    "explanation": "El audio dice «I take the train»."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has reconocido la frase del audio."
+                  }
+                },
+                {
+                  "type": "ListenType",
+                  "id": "es-en-a1-p0-u1-l04-e06",
+                  "audioText": "The bus is late",
+                  "transcription": "The bus is late",
+                  "feedbackOnError": {
+                    "type": "spelling",
+                    "explanation": "Escribe exactamente «The bus is late»."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La transcripción coincide con el audio."
+                  }
+                },
+                {
+                  "type": "SpeakRepeat",
+                  "id": "es-en-a1-p0-u1-l04-e07",
+                  "targetPhrase": "I go by bus",
+                  "audioText": "I go by bus",
+                  "feedbackOnError": {
+                    "type": "pronunciation",
+                    "explanation": "Repite «I go by bus» con claridad."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La frase se entiende y mantiene el ritmo."
+                  }
+                }
+              ]
+            },
+            {
+              "id": "es-en-a1-p0-u1-l05",
+              "title": "Direcciones",
+              "cefrLevel": "A1",
+              "vocabFrequencyBand": "1000-2000",
+              "canDo": "Puedo pedir y dar direcciones básicas.",
+              "microLesson": {
+                "title": "Direcciones",
+                "goals": [
+                  "Reconocer vocabulario de las direcciones.",
+                  "Usar frases sencillas sobre las direcciones."
+                ],
+                "sections": [
+                  {
+                    "heading": "Palabras y frases",
+                    "body": "Vocabulario básico de las direcciones. Fíjate en el orden de la frase: sujeto + verbo + complemento.",
+                    "examples": [
+                      {
+                        "source": "La calle está a la derecha",
+                        "target": "The street is on the right"
+                      },
+                      {
+                        "source": "Gira a la izquierda",
+                        "target": "Turn left"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "glossary": [
+                {
+                  "term": "left",
+                  "translations": [
+                    "izquierda"
+                  ]
+                },
+                {
+                  "term": "right",
+                  "translations": [
+                    "derecha"
+                  ]
+                },
+                {
+                  "term": "street",
+                  "translations": [
+                    "calle"
+                  ]
+                }
+              ],
+              "exercises": [
+                {
+                  "type": "MultipleChoice",
+                  "id": "es-en-a1-p0-u1-l05-e01",
+                  "question": "¿Cómo se dice «izquierda»?",
+                  "options": [
+                    "left",
+                    "right",
+                    "street"
+                  ],
+                  "correctIndex": 0,
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "«izquierda» se dice «left»."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has elegido la traducción correcta."
+                  }
+                },
+                {
+                  "type": "Translate",
+                  "id": "es-en-a1-p0-u1-l05-e02",
+                  "sourcePhrase": "La calle está a la derecha",
+                  "correctTokens": [
+                    "The",
+                    "street",
+                    "is",
+                    "on",
+                    "the",
+                    "right"
+                  ],
+                  "distractorTokens": [
+                    "left",
+                    "park"
+                  ],
+                  "feedbackOnError": {
+                    "type": "word_order",
+                    "explanation": "El orden correcto es «The street is on the right»."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La frase conserva el orden y el significado."
+                  }
+                },
+                {
+                  "type": "OrderWords",
+                  "id": "es-en-a1-p0-u1-l05-e03",
+                  "tokens": [
+                    "Turn",
+                    "left"
+                  ],
+                  "answerTokens": [
+                    "Turn",
+                    "left"
+                  ],
+                  "sourcePhrase": "Gira a la izquierda",
+                  "feedbackOnError": {
+                    "type": "word_order",
+                    "explanation": "La frase correcta es «Turn left»."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "El orden produce una frase natural."
+                  }
+                },
+                {
+                  "type": "MatchPairs",
+                  "id": "es-en-a1-p0-u1-l05-e04",
+                  "pairs": [
+                    {
+                      "left": "izquierda",
+                      "right": "left"
+                    },
+                    {
+                      "left": "derecha",
+                      "right": "right"
+                    },
+                    {
+                      "left": "calle",
+                      "right": "street"
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "Cada palabra tiene una traducción distinta."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has asociado cada palabra con su traducción."
+                  }
+                },
+                {
+                  "type": "ListenChoose",
+                  "id": "es-en-a1-p0-u1-l05-e05",
+                  "audioText": "The bank is on the left",
+                  "options": [
+                    "The bank is on the left",
+                    "The bank is on the right",
+                    "The bank is near the park"
+                  ],
+                  "correctIndex": 0,
+                  "feedbackOnError": {
+                    "type": "comprehension",
+                    "explanation": "El audio dice «The bank is on the left»."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has reconocido la frase del audio."
+                  }
+                },
+                {
+                  "type": "ListenType",
+                  "id": "es-en-a1-p0-u1-l05-e06",
+                  "audioText": "Go straight",
+                  "transcription": "Go straight",
+                  "feedbackOnError": {
+                    "type": "spelling",
+                    "explanation": "Escribe exactamente «Go straight»."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La transcripción coincide con el audio."
+                  }
+                },
+                {
+                  "type": "SpeakRepeat",
+                  "id": "es-en-a1-p0-u1-l05-e07",
+                  "targetPhrase": "Turn right",
+                  "audioText": "Turn right",
+                  "feedbackOnError": {
+                    "type": "pronunciation",
+                    "explanation": "Repite «Turn right» con claridad."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La frase se entiende y mantiene el ritmo."
+                  }
+                }
+              ]
+            },
+            {
+              "id": "es-en-a1-p0-u1-l06",
+              "title": "El colegio",
+              "cefrLevel": "A1",
+              "vocabFrequencyBand": "1000-2000",
+              "canDo": "Puedo hablar de objetos y personas del colegio.",
+              "microLesson": {
+                "title": "El colegio",
+                "goals": [
+                  "Reconocer vocabulario de el colegio.",
+                  "Usar frases sencillas sobre el colegio."
+                ],
+                "sections": [
+                  {
+                    "heading": "Palabras y frases",
+                    "body": "Vocabulario básico de el colegio. Fíjate en el orden de la frase: sujeto + verbo + complemento.",
+                    "examples": [
+                      {
+                        "source": "Mi libro es nuevo",
+                        "target": "My book is new"
+                      },
+                      {
+                        "source": "El profesor es amable",
+                        "target": "The teacher is kind"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "glossary": [
+                {
+                  "term": "school",
+                  "translations": [
+                    "escuela"
+                  ]
+                },
+                {
+                  "term": "book",
+                  "translations": [
+                    "libro"
+                  ]
+                },
+                {
+                  "term": "teacher",
+                  "translations": [
+                    "profesor"
+                  ]
+                }
+              ],
+              "exercises": [
+                {
+                  "type": "MultipleChoice",
+                  "id": "es-en-a1-p0-u1-l06-e01",
+                  "question": "¿Cómo se dice «escuela»?",
+                  "options": [
+                    "school",
+                    "book",
+                    "teacher"
+                  ],
+                  "correctIndex": 0,
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "«escuela» se dice «school»."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has elegido la traducción correcta."
+                  }
+                },
+                {
+                  "type": "Translate",
+                  "id": "es-en-a1-p0-u1-l06-e02",
+                  "sourcePhrase": "Mi libro es nuevo",
+                  "correctTokens": [
+                    "My",
+                    "book",
+                    "is",
+                    "new"
+                  ],
+                  "distractorTokens": [
+                    "old",
+                    "school"
+                  ],
+                  "feedbackOnError": {
+                    "type": "word_order",
+                    "explanation": "El orden correcto es «My book is new»."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La frase conserva el orden y el significado."
+                  }
+                },
+                {
+                  "type": "OrderWords",
+                  "id": "es-en-a1-p0-u1-l06-e03",
+                  "tokens": [
+                    "The",
+                    "teacher",
+                    "is",
+                    "kind"
+                  ],
+                  "answerTokens": [
+                    "The",
+                    "teacher",
+                    "is",
+                    "kind"
+                  ],
+                  "sourcePhrase": "El profesor es amable",
+                  "feedbackOnError": {
+                    "type": "word_order",
+                    "explanation": "La frase correcta es «The teacher is kind»."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "El orden produce una frase natural."
+                  }
+                },
+                {
+                  "type": "MatchPairs",
+                  "id": "es-en-a1-p0-u1-l06-e04",
+                  "pairs": [
+                    {
+                      "left": "escuela",
+                      "right": "school"
+                    },
+                    {
+                      "left": "libro",
+                      "right": "book"
+                    },
+                    {
+                      "left": "profesor",
+                      "right": "teacher"
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "Cada palabra tiene una traducción distinta."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has asociado cada palabra con su traducción."
+                  }
+                },
+                {
+                  "type": "ListenChoose",
+                  "id": "es-en-a1-p0-u1-l06-e05",
+                  "audioText": "I go to school",
+                  "options": [
+                    "I go to school",
+                    "I read a book",
+                    "The teacher is kind"
+                  ],
+                  "correctIndex": 0,
+                  "feedbackOnError": {
+                    "type": "comprehension",
+                    "explanation": "El audio dice «I go to school»."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has reconocido la frase del audio."
+                  }
+                },
+                {
+                  "type": "ListenType",
+                  "id": "es-en-a1-p0-u1-l06-e06",
+                  "audioText": "My school is big",
+                  "transcription": "My school is big",
+                  "feedbackOnError": {
+                    "type": "spelling",
+                    "explanation": "Escribe exactamente «My school is big»."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La transcripción coincide con el audio."
+                  }
+                },
+                {
+                  "type": "SpeakRepeat",
+                  "id": "es-en-a1-p0-u1-l06-e07",
+                  "targetPhrase": "I have a book",
+                  "audioText": "I have a book",
+                  "feedbackOnError": {
+                    "type": "pronunciation",
+                    "explanation": "Repite «I have a book» con claridad."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La frase se entiende y mantiene el ritmo."
+                  }
+                }
+              ]
+            },
+            {
+              "id": "es-en-a1-p0-u1-l07",
+              "title": "El trabajo",
+              "cefrLevel": "A1",
+              "vocabFrequencyBand": "1000-2000",
+              "canDo": "Puedo presentar mi trabajo y hablar de una reunión.",
+              "microLesson": {
+                "title": "El trabajo",
+                "goals": [
+                  "Reconocer vocabulario de el trabajo.",
+                  "Usar frases sencillas sobre el trabajo."
+                ],
+                "sections": [
+                  {
+                    "heading": "Palabras y frases",
+                    "body": "Vocabulario básico de el trabajo. Fíjate en el orden de la frase: sujeto + verbo + complemento.",
+                    "examples": [
+                      {
+                        "source": "Mi jefe está en la oficina",
+                        "target": "My boss is in the office"
+                      },
+                      {
+                        "source": "La reunión es a las diez",
+                        "target": "The meeting is at ten"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "glossary": [
+                {
+                  "term": "office",
+                  "translations": [
+                    "oficina"
+                  ]
+                },
+                {
+                  "term": "boss",
+                  "translations": [
+                    "jefe"
+                  ]
+                },
+                {
+                  "term": "meeting",
+                  "translations": [
+                    "reunión"
+                  ]
+                }
+              ],
+              "exercises": [
+                {
+                  "type": "MultipleChoice",
+                  "id": "es-en-a1-p0-u1-l07-e01",
+                  "question": "¿Cómo se dice «oficina»?",
+                  "options": [
+                    "office",
+                    "boss",
+                    "meeting"
+                  ],
+                  "correctIndex": 0,
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "«oficina» se dice «office»."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has elegido la traducción correcta."
+                  }
+                },
+                {
+                  "type": "Translate",
+                  "id": "es-en-a1-p0-u1-l07-e02",
+                  "sourcePhrase": "Mi jefe está en la oficina",
+                  "correctTokens": [
+                    "My",
+                    "boss",
+                    "is",
+                    "in",
+                    "the",
+                    "office"
+                  ],
+                  "distractorTokens": [
+                    "meeting",
+                    "home"
+                  ],
+                  "feedbackOnError": {
+                    "type": "word_order",
+                    "explanation": "El orden correcto es «My boss is in the office»."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La frase conserva el orden y el significado."
+                  }
+                },
+                {
+                  "type": "OrderWords",
+                  "id": "es-en-a1-p0-u1-l07-e03",
+                  "tokens": [
+                    "The",
+                    "meeting",
+                    "is",
+                    "at",
+                    "ten"
+                  ],
+                  "answerTokens": [
+                    "The",
+                    "meeting",
+                    "is",
+                    "at",
+                    "ten"
+                  ],
+                  "sourcePhrase": "La reunión es a las diez",
+                  "feedbackOnError": {
+                    "type": "word_order",
+                    "explanation": "La frase correcta es «The meeting is at ten»."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "El orden produce una frase natural."
+                  }
+                },
+                {
+                  "type": "MatchPairs",
+                  "id": "es-en-a1-p0-u1-l07-e04",
+                  "pairs": [
+                    {
+                      "left": "oficina",
+                      "right": "office"
+                    },
+                    {
+                      "left": "jefe",
+                      "right": "boss"
+                    },
+                    {
+                      "left": "reunión",
+                      "right": "meeting"
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "Cada palabra tiene una traducción distinta."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has asociado cada palabra con su traducción."
+                  }
+                },
+                {
+                  "type": "ListenChoose",
+                  "id": "es-en-a1-p0-u1-l07-e05",
+                  "audioText": "I work in an office",
+                  "options": [
+                    "I work in an office",
+                    "The meeting is at ten",
+                    "My boss is busy"
+                  ],
+                  "correctIndex": 0,
+                  "feedbackOnError": {
+                    "type": "comprehension",
+                    "explanation": "El audio dice «I work in an office»."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has reconocido la frase del audio."
+                  }
+                },
+                {
+                  "type": "ListenType",
+                  "id": "es-en-a1-p0-u1-l07-e06",
+                  "audioText": "My boss is busy",
+                  "transcription": "My boss is busy",
+                  "feedbackOnError": {
+                    "type": "spelling",
+                    "explanation": "Escribe exactamente «My boss is busy»."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La transcripción coincide con el audio."
+                  }
+                },
+                {
+                  "type": "SpeakRepeat",
+                  "id": "es-en-a1-p0-u1-l07-e07",
+                  "targetPhrase": "I work in an office",
+                  "audioText": "I work in an office",
+                  "feedbackOnError": {
+                    "type": "pronunciation",
+                    "explanation": "Repite «I work in an office» con claridad."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La frase se entiende y mantiene el ritmo."
+                  }
+                }
+              ]
+            },
+            {
+              "id": "es-en-a1-p0-u1-l08",
+              "title": "La salud",
+              "cefrLevel": "A1",
+              "vocabFrequencyBand": "1000-2000",
+              "canDo": "Puedo explicar un problema de salud sencillo.",
+              "microLesson": {
+                "title": "La salud",
+                "goals": [
+                  "Reconocer vocabulario de la salud.",
+                  "Usar frases sencillas sobre la salud."
+                ],
+                "sections": [
+                  {
+                    "heading": "Palabras y frases",
+                    "body": "Vocabulario básico de la salud. Fíjate en el orden de la frase: sujeto + verbo + complemento.",
+                    "examples": [
+                      {
+                        "source": "Me duele la cabeza",
+                        "target": "My head hurts"
+                      },
+                      {
+                        "source": "Necesito un médico",
+                        "target": "I need a doctor"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "glossary": [
+                {
+                  "term": "doctor",
+                  "translations": [
+                    "médico"
+                  ]
+                },
+                {
+                  "term": "pharmacy",
+                  "translations": [
+                    "farmacia"
+                  ]
+                },
+                {
+                  "term": "pain",
+                  "translations": [
+                    "dolor"
+                  ]
+                }
+              ],
+              "exercises": [
+                {
+                  "type": "MultipleChoice",
+                  "id": "es-en-a1-p0-u1-l08-e01",
+                  "question": "¿Cómo se dice «médico»?",
+                  "options": [
+                    "doctor",
+                    "pharmacy",
+                    "pain"
+                  ],
+                  "correctIndex": 0,
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "«médico» se dice «doctor»."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has elegido la traducción correcta."
+                  }
+                },
+                {
+                  "type": "Translate",
+                  "id": "es-en-a1-p0-u1-l08-e02",
+                  "sourcePhrase": "Me duele la cabeza",
+                  "correctTokens": [
+                    "My",
+                    "head",
+                    "hurts"
+                  ],
+                  "distractorTokens": [
+                    "stomach",
+                    "doctor"
+                  ],
+                  "feedbackOnError": {
+                    "type": "word_order",
+                    "explanation": "El orden correcto es «My head hurts»."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La frase conserva el orden y el significado."
+                  }
+                },
+                {
+                  "type": "OrderWords",
+                  "id": "es-en-a1-p0-u1-l08-e03",
+                  "tokens": [
+                    "I",
+                    "need",
+                    "a",
+                    "doctor"
+                  ],
+                  "answerTokens": [
+                    "I",
+                    "need",
+                    "a",
+                    "doctor"
+                  ],
+                  "sourcePhrase": "Necesito un médico",
+                  "feedbackOnError": {
+                    "type": "word_order",
+                    "explanation": "La frase correcta es «I need a doctor»."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "El orden produce una frase natural."
+                  }
+                },
+                {
+                  "type": "MatchPairs",
+                  "id": "es-en-a1-p0-u1-l08-e04",
+                  "pairs": [
+                    {
+                      "left": "médico",
+                      "right": "doctor"
+                    },
+                    {
+                      "left": "farmacia",
+                      "right": "pharmacy"
+                    },
+                    {
+                      "left": "dolor",
+                      "right": "pain"
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "Cada palabra tiene una traducción distinta."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has asociado cada palabra con su traducción."
+                  }
+                },
+                {
+                  "type": "ListenChoose",
+                  "id": "es-en-a1-p0-u1-l08-e05",
+                  "audioText": "I have a headache",
+                  "options": [
+                    "I have a headache",
+                    "I need a doctor",
+                    "The pharmacy is open"
+                  ],
+                  "correctIndex": 0,
+                  "feedbackOnError": {
+                    "type": "comprehension",
+                    "explanation": "El audio dice «I have a headache»."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has reconocido la frase del audio."
+                  }
+                },
+                {
+                  "type": "ListenType",
+                  "id": "es-en-a1-p0-u1-l08-e06",
+                  "audioText": "The pharmacy is open",
+                  "transcription": "The pharmacy is open",
+                  "feedbackOnError": {
+                    "type": "spelling",
+                    "explanation": "Escribe exactamente «The pharmacy is open»."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La transcripción coincide con el audio."
+                  }
+                },
+                {
+                  "type": "SpeakRepeat",
+                  "id": "es-en-a1-p0-u1-l08-e07",
+                  "targetPhrase": "I need a doctor",
+                  "audioText": "I need a doctor",
+                  "feedbackOnError": {
+                    "type": "pronunciation",
+                    "explanation": "Repite «I need a doctor» con claridad."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La frase se entiende y mantiene el ritmo."
+                  }
+                }
+              ]
+            },
+            {
+              "id": "es-en-a1-p0-u1-l09",
+              "title": "Pasatiempos",
+              "cefrLevel": "A1",
+              "vocabFrequencyBand": "1000-2000",
+              "canDo": "Puedo hablar de lo que me gusta hacer en mi tiempo libre.",
+              "microLesson": {
+                "title": "Pasatiempos",
+                "goals": [
+                  "Reconocer vocabulario de los pasatiempos.",
+                  "Usar frases sencillas sobre los pasatiempos."
+                ],
+                "sections": [
+                  {
+                    "heading": "Palabras y frases",
+                    "body": "Vocabulario básico de los pasatiempos. Fíjate en el orden de la frase: sujeto + verbo + complemento.",
+                    "examples": [
+                      {
+                        "source": "Me gusta la música",
+                        "target": "I like music"
+                      },
+                      {
+                        "source": "El deporte es divertido",
+                        "target": "Sport is fun"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "glossary": [
+                {
+                  "term": "music",
+                  "translations": [
+                    "música"
+                  ]
+                },
+                {
+                  "term": "sport",
+                  "translations": [
+                    "deporte"
+                  ]
+                },
+                {
+                  "term": "movie",
+                  "translations": [
+                    "película"
+                  ]
+                }
+              ],
+              "exercises": [
+                {
+                  "type": "MultipleChoice",
+                  "id": "es-en-a1-p0-u1-l09-e01",
+                  "question": "¿Cómo se dice «música»?",
+                  "options": [
+                    "music",
+                    "sport",
+                    "movie"
+                  ],
+                  "correctIndex": 0,
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "«música» se dice «music»."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has elegido la traducción correcta."
+                  }
+                },
+                {
+                  "type": "Translate",
+                  "id": "es-en-a1-p0-u1-l09-e02",
+                  "sourcePhrase": "Me gusta la música",
+                  "correctTokens": [
+                    "I",
+                    "like",
+                    "music"
+                  ],
+                  "distractorTokens": [
+                    "sport",
+                    "movie"
+                  ],
+                  "feedbackOnError": {
+                    "type": "word_order",
+                    "explanation": "El orden correcto es «I like music»."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La frase conserva el orden y el significado."
+                  }
+                },
+                {
+                  "type": "OrderWords",
+                  "id": "es-en-a1-p0-u1-l09-e03",
+                  "tokens": [
+                    "Sport",
+                    "is",
+                    "fun"
+                  ],
+                  "answerTokens": [
+                    "Sport",
+                    "is",
+                    "fun"
+                  ],
+                  "sourcePhrase": "El deporte es divertido",
+                  "feedbackOnError": {
+                    "type": "word_order",
+                    "explanation": "La frase correcta es «Sport is fun»."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "El orden produce una frase natural."
+                  }
+                },
+                {
+                  "type": "MatchPairs",
+                  "id": "es-en-a1-p0-u1-l09-e04",
+                  "pairs": [
+                    {
+                      "left": "música",
+                      "right": "music"
+                    },
+                    {
+                      "left": "deporte",
+                      "right": "sport"
+                    },
+                    {
+                      "left": "película",
+                      "right": "movie"
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "Cada palabra tiene una traducción distinta."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has asociado cada palabra con su traducción."
+                  }
+                },
+                {
+                  "type": "ListenChoose",
+                  "id": "es-en-a1-p0-u1-l09-e05",
+                  "audioText": "I watch a movie",
+                  "options": [
+                    "I watch a movie",
+                    "I listen to music",
+                    "I play a sport"
+                  ],
+                  "correctIndex": 0,
+                  "feedbackOnError": {
+                    "type": "comprehension",
+                    "explanation": "El audio dice «I watch a movie»."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has reconocido la frase del audio."
+                  }
+                },
+                {
+                  "type": "ListenType",
+                  "id": "es-en-a1-p0-u1-l09-e06",
+                  "audioText": "I listen to music",
+                  "transcription": "I listen to music",
+                  "feedbackOnError": {
+                    "type": "spelling",
+                    "explanation": "Escribe exactamente «I listen to music»."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La transcripción coincide con el audio."
+                  }
+                },
+                {
+                  "type": "SpeakRepeat",
+                  "id": "es-en-a1-p0-u1-l09-e07",
+                  "targetPhrase": "I like music",
+                  "audioText": "I like music",
+                  "feedbackOnError": {
+                    "type": "pronunciation",
+                    "explanation": "Repite «I like music» con claridad."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La frase se entiende y mantiene el ritmo."
+                  }
+                }
+              ]
+            },
+            {
+              "id": "es-en-a1-p0-u1-l10",
+              "title": "La ciudad",
+              "cefrLevel": "A1",
+              "vocabFrequencyBand": "1000-2000",
+              "canDo": "Puedo hablar de lugares de mi ciudad.",
+              "microLesson": {
+                "title": "La ciudad",
+                "goals": [
+                  "Reconocer vocabulario de la ciudad.",
+                  "Usar frases sencillas sobre la ciudad."
+                ],
+                "sections": [
+                  {
+                    "heading": "Palabras y frases",
+                    "body": "Vocabulario básico de la ciudad. Fíjate en el orden de la frase: sujeto + verbo + complemento.",
+                    "examples": [
+                      {
+                        "source": "El parque es grande",
+                        "target": "The park is big"
+                      },
+                      {
+                        "source": "El restaurante está cerca",
+                        "target": "The restaurant is near"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "glossary": [
+                {
+                  "term": "park",
+                  "translations": [
+                    "parque"
+                  ]
+                },
+                {
+                  "term": "museum",
+                  "translations": [
+                    "museo"
+                  ]
+                },
+                {
+                  "term": "restaurant",
+                  "translations": [
+                    "restaurante"
+                  ]
+                }
+              ],
+              "exercises": [
+                {
+                  "type": "MultipleChoice",
+                  "id": "es-en-a1-p0-u1-l10-e01",
+                  "question": "¿Cómo se dice «parque»?",
+                  "options": [
+                    "park",
+                    "museum",
+                    "restaurant"
+                  ],
+                  "correctIndex": 0,
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "«parque» se dice «park»."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has elegido la traducción correcta."
+                  }
+                },
+                {
+                  "type": "Translate",
+                  "id": "es-en-a1-p0-u1-l10-e02",
+                  "sourcePhrase": "El parque es grande",
+                  "correctTokens": [
+                    "The",
+                    "park",
+                    "is",
+                    "big"
+                  ],
+                  "distractorTokens": [
+                    "small",
+                    "museum"
+                  ],
+                  "feedbackOnError": {
+                    "type": "word_order",
+                    "explanation": "El orden correcto es «The park is big»."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La frase conserva el orden y el significado."
+                  }
+                },
+                {
+                  "type": "OrderWords",
+                  "id": "es-en-a1-p0-u1-l10-e03",
+                  "tokens": [
+                    "The",
+                    "restaurant",
+                    "is",
+                    "near"
+                  ],
+                  "answerTokens": [
+                    "The",
+                    "restaurant",
+                    "is",
+                    "near"
+                  ],
+                  "sourcePhrase": "El restaurante está cerca",
+                  "feedbackOnError": {
+                    "type": "word_order",
+                    "explanation": "La frase correcta es «The restaurant is near»."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "El orden produce una frase natural."
+                  }
+                },
+                {
+                  "type": "MatchPairs",
+                  "id": "es-en-a1-p0-u1-l10-e04",
+                  "pairs": [
+                    {
+                      "left": "parque",
+                      "right": "park"
+                    },
+                    {
+                      "left": "museo",
+                      "right": "museum"
+                    },
+                    {
+                      "left": "restaurante",
+                      "right": "restaurant"
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "Cada palabra tiene una traducción distinta."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has asociado cada palabra con su traducción."
+                  }
+                },
+                {
+                  "type": "ListenChoose",
+                  "id": "es-en-a1-p0-u1-l10-e05",
+                  "audioText": "The museum is open",
+                  "options": [
+                    "The museum is open",
+                    "The park is beautiful",
+                    "The restaurant is near"
+                  ],
+                  "correctIndex": 0,
+                  "feedbackOnError": {
+                    "type": "comprehension",
+                    "explanation": "El audio dice «The museum is open»."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has reconocido la frase del audio."
+                  }
+                },
+                {
+                  "type": "ListenType",
+                  "id": "es-en-a1-p0-u1-l10-e06",
+                  "audioText": "The park is beautiful",
+                  "transcription": "The park is beautiful",
+                  "feedbackOnError": {
+                    "type": "spelling",
+                    "explanation": "Escribe exactamente «The park is beautiful»."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La transcripción coincide con el audio."
+                  }
+                },
+                {
+                  "type": "SpeakRepeat",
+                  "id": "es-en-a1-p0-u1-l10-e07",
+                  "targetPhrase": "I go to the park",
+                  "audioText": "I go to the park",
+                  "feedbackOnError": {
+                    "type": "pronunciation",
+                    "explanation": "Repite «I go to the park» con claridad."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La frase se entiende y mantiene el ritmo."
+                  }
+                }
+              ]
+            }
+          ]
         }
       ]
     },
