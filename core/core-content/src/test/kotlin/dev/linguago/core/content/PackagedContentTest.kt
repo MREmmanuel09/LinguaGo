@@ -461,7 +461,7 @@ class PackagedContentTest {
 
         val newA1Lessons =
             lessons.filter { lesson ->
-                lesson.id.value.startsWith("es-en-a1-") && !lesson.id.value.contains("-p0-")
+                lesson.id.value.startsWith("es-en-a1-un-") && !lesson.id.value.contains("-p0-")
             }
         assertEquals(5, newA1Lessons.size)
         assertEquals(
@@ -484,6 +484,40 @@ class PackagedContentTest {
             "Todos los ejercicios del piloto A1 deben tener feedbackOnError",
             pilotLessons.flatMap { lesson -> lesson.exercises }.all { exercise -> exercise.feedbackOnError != null },
         )
+    }
+
+    @Test
+    fun es_en_a1_completa_f1() {
+        val course = CourseJson.parseCourse(readAsset("es-en", COURSE_FILE))
+        assertTrue("es-en debe decodificar en v2", course != null)
+        val units =
+            course!!.levels.flatMap { level -> level.units }.filter { unit ->
+                unit.id.value.matches(Regex("es-en-a1-u\\d{2}"))
+            }
+        assertEquals("F1 debe añadir 15 bloques A1", 15, units.size)
+        assertTrue("Cada bloque F1 debe tener 10 lecciones", units.all { unit -> unit.lessons.size == 10 })
+        val lessons = units.flatMap { unit -> unit.lessons }
+        assertEquals("F1 debe añadir 150 lecciones A1", 150, lessons.size)
+        assertTrue(lessons.all { lesson -> lesson.cefrLevel == CefrLevel.A1 })
+        assertTrue(lessons.all { lesson -> lesson.exercises.size == 7 })
+        assertTrue(lessons.all { lesson -> lesson.grammarPoints.isEmpty() })
+        assertTrue(lessons.all { lesson -> lesson.vocabFrequencyBand == VocabFrequencyBand.BAND_1000_2000 })
+        assertTrue(lessons.all { lesson -> lesson.microLesson != null && lesson.glossary.isNotEmpty() })
+        assertTrue(lessons.all { lesson -> !lesson.canDo.isNullOrBlank() })
+        assertTrue(lessons.all { lesson -> lesson.title.isNotBlank() })
+        assertEquals("Los títulos de F1 deben ser únicos", 150, lessons.map { lesson -> lesson.title }.distinct().size)
+        assertTrue(
+            "Todos los ejercicios de F1 deben tener feedbackOnError",
+            lessons.flatMap { lesson -> lesson.exercises }.all { exercise -> exercise.feedbackOnError != null },
+        )
+        val exercises = lessons.flatMap { lesson -> lesson.exercises }
+        assertEquals(150, exercises.count { exercise -> exercise is Exercise.MultipleChoice })
+        assertEquals(150, exercises.count { exercise -> exercise is Exercise.Translate })
+        assertEquals(150, exercises.count { exercise -> exercise is Exercise.OrderWords })
+        assertEquals(150, exercises.count { exercise -> exercise is Exercise.MatchPairs })
+        assertEquals(150, exercises.count { exercise -> exercise is Exercise.ListenChoose })
+        assertEquals(150, exercises.count { exercise -> exercise is Exercise.ListenType })
+        assertEquals(150, exercises.count { exercise -> exercise is Exercise.SpeakRepeat })
     }
 
     @Test
