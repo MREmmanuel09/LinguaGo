@@ -2483,6 +2483,1871 @@
               ]
             }
           ]
+        },
+        {
+          "id": "es-pt-a1-p0-un-1",
+          "title": "Piloto A1 · Vida cotidiana",
+          "lessons": [
+            {
+              "id": "es-pt-a1-p0-u1-l01",
+              "title": "Meu animal de estimação",
+              "cefrLevel": "A1",
+              "vocabFrequencyBand": "1000-2000",
+              "canDo": "Puedo hablar de mi mascota con frases sencillas en portugués.",
+              "microLesson": {
+                "title": "Meu animal de estimação",
+                "goals": [
+                  "Reconocer vocabulario de os animais de estimação.",
+                  "Usar frases sencillas sobre os animais de estimação en portugués."
+                ],
+                "sections": [
+                  {
+                    "heading": "Palavras e frases",
+                    "body": "Vocabulario básico de os animais de estimação. Fíjate en el orden de la frase: sujeto + verbo + complemento.",
+                    "examples": [
+                      {
+                        "source": "Mi perro es pequeño",
+                        "target": "Meu cachorro é pequeno"
+                      },
+                      {
+                        "source": "El gato duerme en casa",
+                        "target": "O gato dorme em casa"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "glossary": [
+                {
+                  "term": "cachorro",
+                  "translations": [
+                    "perro"
+                  ]
+                },
+                {
+                  "term": "gato",
+                  "translations": [
+                    "gato"
+                  ]
+                },
+                {
+                  "term": "pássaro",
+                  "translations": [
+                    "pájaro"
+                  ]
+                }
+              ],
+              "exercises": [
+                {
+                  "type": "MultipleChoice",
+                  "id": "es-pt-a1-p0-u1-l01-e01",
+                  "question": "¿Cómo se dice «perro» en portugués?",
+                  "options": [
+                    "cachorro",
+                    "gato",
+                    "pássaro"
+                  ],
+                  "correctIndex": 0,
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "«perro» se dice «cachorro»."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has elegido la traducción correcta."
+                  }
+                },
+                {
+                  "type": "Translate",
+                  "id": "es-pt-a1-p0-u1-l01-e02",
+                  "sourcePhrase": "Mi perro es pequeño",
+                  "correctTokens": [
+                    "Meu",
+                    "cachorro",
+                    "é",
+                    "pequeno"
+                  ],
+                  "distractorTokens": [
+                    "gato",
+                    "grande"
+                  ],
+                  "feedbackOnError": {
+                    "type": "word_order",
+                    "explanation": "El orden correcto es «Meu cachorro é pequeno»."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La frase conserva el orden y el significado."
+                  }
+                },
+                {
+                  "type": "OrderWords",
+                  "id": "es-pt-a1-p0-u1-l01-e03",
+                  "tokens": [
+                    "gato",
+                    "dorme",
+                    "em",
+                    "casa",
+                    "O"
+                  ],
+                  "answerTokens": [
+                    "O",
+                    "gato",
+                    "dorme",
+                    "em",
+                    "casa"
+                  ],
+                  "sourcePhrase": "El gato duerme en casa",
+                  "feedbackOnError": {
+                    "type": "word_order",
+                    "explanation": "La frase correcta es «O gato dorme em casa»."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "El orden produce una frase natural."
+                  }
+                },
+                {
+                  "type": "MatchPairs",
+                  "id": "es-pt-a1-p0-u1-l01-e04",
+                  "pairs": [
+                    {
+                      "left": "perro",
+                      "right": "cachorro"
+                    },
+                    {
+                      "left": "gato",
+                      "right": "gato"
+                    },
+                    {
+                      "left": "pájaro",
+                      "right": "pássaro"
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "Cada palabra tiene una traducción distinta."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has asociado cada palabra con su traducción."
+                  }
+                },
+                {
+                  "type": "ListenChoose",
+                  "id": "es-pt-a1-p0-u1-l01-e05",
+                  "audioText": "Eu tenho um gato",
+                  "options": [
+                    "Eu tenho um gato",
+                    "Eu tenho um cachorro",
+                    "Eu tenho um pássaro"
+                  ],
+                  "correctIndex": 0,
+                  "feedbackOnError": {
+                    "type": "comprehension",
+                    "explanation": "El audio dice «Eu tenho um gato»."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has reconocido la frase del audio."
+                  }
+                },
+                {
+                  "type": "ListenType",
+                  "id": "es-pt-a1-p0-u1-l01-e06",
+                  "audioText": "Meu cachorro é simpático",
+                  "transcription": "Meu cachorro é simpático",
+                  "feedbackOnError": {
+                    "type": "spelling",
+                    "explanation": "Escribe exactamente «Meu cachorro é simpático»."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La transcripción coincide con el audio."
+                  }
+                },
+                {
+                  "type": "SpeakRepeat",
+                  "id": "es-pt-a1-p0-u1-l01-e07",
+                  "targetPhrase": "Eu tenho um animal de estimação",
+                  "audioText": "Eu tenho um animal de estimação",
+                  "feedbackOnError": {
+                    "type": "pronunciation",
+                    "explanation": "Repite «Eu tenho um animal de estimação» con claridad."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La frase se entiende y mantiene el ritmo."
+                  }
+                }
+              ]
+            },
+            {
+              "id": "es-pt-a1-p0-u1-l02",
+              "title": "A roupa",
+              "cefrLevel": "A1",
+              "vocabFrequencyBand": "1000-2000",
+              "canDo": "Puedo nombrar ropa y describir sus colores en portugués.",
+              "microLesson": {
+                "title": "A roupa",
+                "goals": [
+                  "Reconocer vocabulario de a roupa.",
+                  "Usar frases sencillas sobre a roupa en portugués."
+                ],
+                "sections": [
+                  {
+                    "heading": "Palavras e frases",
+                    "body": "Vocabulario básico de a roupa. Fíjate en el orden de la frase: sujeto + verbo + complemento.",
+                    "examples": [
+                      {
+                        "source": "Mi camisa es azul",
+                        "target": "Minha camisa é azul"
+                      },
+                      {
+                        "source": "El abrigo es nuevo",
+                        "target": "O casaco é novo"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "glossary": [
+                {
+                  "term": "camisa",
+                  "translations": [
+                    "camisa"
+                  ]
+                },
+                {
+                  "term": "sapatos",
+                  "translations": [
+                    "zapatos"
+                  ]
+                },
+                {
+                  "term": "casaco",
+                  "translations": [
+                    "abrigo"
+                  ]
+                }
+              ],
+              "exercises": [
+                {
+                  "type": "MultipleChoice",
+                  "id": "es-pt-a1-p0-u1-l02-e01",
+                  "question": "¿Cómo se dice «camisa» en portugués?",
+                  "options": [
+                    "camisa",
+                    "sapatos",
+                    "casaco"
+                  ],
+                  "correctIndex": 0,
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "«camisa» se dice «camisa»."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has elegido la traducción correcta."
+                  }
+                },
+                {
+                  "type": "Translate",
+                  "id": "es-pt-a1-p0-u1-l02-e02",
+                  "sourcePhrase": "Mi camisa es azul",
+                  "correctTokens": [
+                    "Minha",
+                    "camisa",
+                    "é",
+                    "azul"
+                  ],
+                  "distractorTokens": [
+                    "vermelha",
+                    "casaco"
+                  ],
+                  "feedbackOnError": {
+                    "type": "word_order",
+                    "explanation": "El orden correcto es «Minha camisa é azul»."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La frase conserva el orden y el significado."
+                  }
+                },
+                {
+                  "type": "OrderWords",
+                  "id": "es-pt-a1-p0-u1-l02-e03",
+                  "tokens": [
+                    "casaco",
+                    "é",
+                    "novo",
+                    "O"
+                  ],
+                  "answerTokens": [
+                    "O",
+                    "casaco",
+                    "é",
+                    "novo"
+                  ],
+                  "sourcePhrase": "El abrigo es nuevo",
+                  "feedbackOnError": {
+                    "type": "word_order",
+                    "explanation": "La frase correcta es «O casaco é novo»."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "El orden produce una frase natural."
+                  }
+                },
+                {
+                  "type": "MatchPairs",
+                  "id": "es-pt-a1-p0-u1-l02-e04",
+                  "pairs": [
+                    {
+                      "left": "camisa",
+                      "right": "camisa"
+                    },
+                    {
+                      "left": "zapatos",
+                      "right": "sapatos"
+                    },
+                    {
+                      "left": "abrigo",
+                      "right": "casaco"
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "Cada palabra tiene una traducción distinta."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has asociado cada palabra con su traducción."
+                  }
+                },
+                {
+                  "type": "ListenChoose",
+                  "id": "es-pt-a1-p0-u1-l02-e05",
+                  "audioText": "Eu uso um casaco",
+                  "options": [
+                    "Eu uso um casaco",
+                    "Eu uso uma camisa",
+                    "Eu uso sapatos"
+                  ],
+                  "correctIndex": 0,
+                  "feedbackOnError": {
+                    "type": "comprehension",
+                    "explanation": "El audio dice «Eu uso um casaco»."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has reconocido la frase del audio."
+                  }
+                },
+                {
+                  "type": "ListenType",
+                  "id": "es-pt-a1-p0-u1-l02-e06",
+                  "audioText": "Meus sapatos são pretos",
+                  "transcription": "Meus sapatos são pretos",
+                  "feedbackOnError": {
+                    "type": "spelling",
+                    "explanation": "Escribe exactamente «Meus sapatos são pretos»."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La transcripción coincide con el audio."
+                  }
+                },
+                {
+                  "type": "SpeakRepeat",
+                  "id": "es-pt-a1-p0-u1-l02-e07",
+                  "targetPhrase": "Eu uso uma camisa azul",
+                  "audioText": "Eu uso uma camisa azul",
+                  "feedbackOnError": {
+                    "type": "pronunciation",
+                    "explanation": "Repite «Eu uso uma camisa azul» con claridad."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La frase se entiende y mantiene el ritmo."
+                  }
+                }
+              ]
+            },
+            {
+              "id": "es-pt-a1-p0-u1-l03",
+              "title": "Minha rotina",
+              "cefrLevel": "A1",
+              "vocabFrequencyBand": "1000-2000",
+              "canDo": "Puedo describir mi rutina diaria con horas sencillas en portugués.",
+              "microLesson": {
+                "title": "Minha rotina",
+                "goals": [
+                  "Reconocer vocabulario de a rotina diária.",
+                  "Usar frases sencillas sobre a rotina diária en portugués."
+                ],
+                "sections": [
+                  {
+                    "heading": "Palavras e frases",
+                    "body": "Vocabulario básico de a rotina diária. Fíjate en el orden de la frase: sujeto + verbo + complemento.",
+                    "examples": [
+                      {
+                        "source": "Me levanto a las siete",
+                        "target": "Eu acordo às sete"
+                      },
+                      {
+                        "source": "Desayuno a las ocho",
+                        "target": "Eu tomo café às oito"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "glossary": [
+                {
+                  "term": "acordar",
+                  "translations": [
+                    "despertarse"
+                  ]
+                },
+                {
+                  "term": "vestir-se",
+                  "translations": [
+                    "vestirse"
+                  ]
+                },
+                {
+                  "term": "deitar-se",
+                  "translations": [
+                    "acostarse"
+                  ]
+                }
+              ],
+              "exercises": [
+                {
+                  "type": "MultipleChoice",
+                  "id": "es-pt-a1-p0-u1-l03-e01",
+                  "question": "¿Cómo se dice «despertarse» en portugués?",
+                  "options": [
+                    "acordar",
+                    "vestir-se",
+                    "deitar-se"
+                  ],
+                  "correctIndex": 0,
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "«despertarse» se dice «acordar»."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has elegido la traducción correcta."
+                  }
+                },
+                {
+                  "type": "Translate",
+                  "id": "es-pt-a1-p0-u1-l03-e02",
+                  "sourcePhrase": "Me levanto a las siete",
+                  "correctTokens": [
+                    "Eu",
+                    "acordo",
+                    "às",
+                    "sete"
+                  ],
+                  "distractorTokens": [
+                    "oito",
+                    "durmo"
+                  ],
+                  "feedbackOnError": {
+                    "type": "word_order",
+                    "explanation": "El orden correcto es «Eu acordo às sete»."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La frase conserva el orden y el significado."
+                  }
+                },
+                {
+                  "type": "OrderWords",
+                  "id": "es-pt-a1-p0-u1-l03-e03",
+                  "tokens": [
+                    "tomo",
+                    "café",
+                    "às",
+                    "oito",
+                    "Eu"
+                  ],
+                  "answerTokens": [
+                    "Eu",
+                    "tomo",
+                    "café",
+                    "às",
+                    "oito"
+                  ],
+                  "sourcePhrase": "Desayuno a las ocho",
+                  "feedbackOnError": {
+                    "type": "word_order",
+                    "explanation": "La frase correcta es «Eu tomo café às oito»."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "El orden produce una frase natural."
+                  }
+                },
+                {
+                  "type": "MatchPairs",
+                  "id": "es-pt-a1-p0-u1-l03-e04",
+                  "pairs": [
+                    {
+                      "left": "despertarse",
+                      "right": "acordar"
+                    },
+                    {
+                      "left": "vestirse",
+                      "right": "vestir-se"
+                    },
+                    {
+                      "left": "acostarse",
+                      "right": "deitar-se"
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "Cada palabra tiene una traducción distinta."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has asociado cada palabra con su traducción."
+                  }
+                },
+                {
+                  "type": "ListenChoose",
+                  "id": "es-pt-a1-p0-u1-l03-e05",
+                  "audioText": "Eu me deito às dez",
+                  "options": [
+                    "Eu me deito às dez",
+                    "Eu acordo às sete",
+                    "Eu tomo café às oito"
+                  ],
+                  "correctIndex": 0,
+                  "feedbackOnError": {
+                    "type": "comprehension",
+                    "explanation": "El audio dice «Eu me deito às dez»."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has reconocido la frase del audio."
+                  }
+                },
+                {
+                  "type": "ListenType",
+                  "id": "es-pt-a1-p0-u1-l03-e06",
+                  "audioText": "Eu me visto pela manhã",
+                  "transcription": "Eu me visto pela manhã",
+                  "feedbackOnError": {
+                    "type": "spelling",
+                    "explanation": "Escribe exactamente «Eu me visto pela manhã»."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La transcripción coincide con el audio."
+                  }
+                },
+                {
+                  "type": "SpeakRepeat",
+                  "id": "es-pt-a1-p0-u1-l03-e07",
+                  "targetPhrase": "Eu acordo às sete",
+                  "audioText": "Eu acordo às sete",
+                  "feedbackOnError": {
+                    "type": "pronunciation",
+                    "explanation": "Repite «Eu acordo às sete» con claridad."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La frase se entiende y mantiene el ritmo."
+                  }
+                }
+              ]
+            },
+            {
+              "id": "es-pt-a1-p0-u1-l04",
+              "title": "O transporte",
+              "cefrLevel": "A1",
+              "vocabFrequencyBand": "1000-2000",
+              "canDo": "Puedo decir cómo me desplazo por la ciudad en portugués.",
+              "microLesson": {
+                "title": "O transporte",
+                "goals": [
+                  "Reconocer vocabulario de o transporte.",
+                  "Usar frases sencillas sobre o transporte en portugués."
+                ],
+                "sections": [
+                  {
+                    "heading": "Palavras e frases",
+                    "body": "Vocabulario básico de o transporte. Fíjate en el orden de la frase: sujeto + verbo + complemento.",
+                    "examples": [
+                      {
+                        "source": "Voy en autobús",
+                        "target": "Eu vou de ônibus"
+                      },
+                      {
+                        "source": "La bicicleta es rápida",
+                        "target": "A bicicleta é rápida"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "glossary": [
+                {
+                  "term": "ônibus",
+                  "translations": [
+                    "autobús"
+                  ]
+                },
+                {
+                  "term": "trem",
+                  "translations": [
+                    "tren"
+                  ]
+                },
+                {
+                  "term": "bicicleta",
+                  "translations": [
+                    "bicicleta"
+                  ]
+                }
+              ],
+              "exercises": [
+                {
+                  "type": "MultipleChoice",
+                  "id": "es-pt-a1-p0-u1-l04-e01",
+                  "question": "¿Cómo se dice «autobús» en portugués?",
+                  "options": [
+                    "ônibus",
+                    "trem",
+                    "bicicleta"
+                  ],
+                  "correctIndex": 0,
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "«autobús» se dice «ônibus»."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has elegido la traducción correcta."
+                  }
+                },
+                {
+                  "type": "Translate",
+                  "id": "es-pt-a1-p0-u1-l04-e02",
+                  "sourcePhrase": "Voy en autobús",
+                  "correctTokens": [
+                    "Eu",
+                    "vou",
+                    "de",
+                    "ônibus"
+                  ],
+                  "distractorTokens": [
+                    "trem",
+                    "bicicleta"
+                  ],
+                  "feedbackOnError": {
+                    "type": "word_order",
+                    "explanation": "El orden correcto es «Eu vou de ônibus»."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La frase conserva el orden y el significado."
+                  }
+                },
+                {
+                  "type": "OrderWords",
+                  "id": "es-pt-a1-p0-u1-l04-e03",
+                  "tokens": [
+                    "bicicleta",
+                    "é",
+                    "rápida",
+                    "A"
+                  ],
+                  "answerTokens": [
+                    "A",
+                    "bicicleta",
+                    "é",
+                    "rápida"
+                  ],
+                  "sourcePhrase": "La bicicleta es rápida",
+                  "feedbackOnError": {
+                    "type": "word_order",
+                    "explanation": "La frase correcta es «A bicicleta é rápida»."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "El orden produce una frase natural."
+                  }
+                },
+                {
+                  "type": "MatchPairs",
+                  "id": "es-pt-a1-p0-u1-l04-e04",
+                  "pairs": [
+                    {
+                      "left": "autobús",
+                      "right": "ônibus"
+                    },
+                    {
+                      "left": "tren",
+                      "right": "trem"
+                    },
+                    {
+                      "left": "bicicleta",
+                      "right": "bicicleta"
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "Cada palabra tiene una traducción distinta."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has asociado cada palabra con su traducción."
+                  }
+                },
+                {
+                  "type": "ListenChoose",
+                  "id": "es-pt-a1-p0-u1-l04-e05",
+                  "audioText": "Eu pego o trem",
+                  "options": [
+                    "Eu pego o trem",
+                    "Eu pego o ônibus",
+                    "Eu ando de bicicleta"
+                  ],
+                  "correctIndex": 0,
+                  "feedbackOnError": {
+                    "type": "comprehension",
+                    "explanation": "El audio dice «Eu pego o trem»."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has reconocido la frase del audio."
+                  }
+                },
+                {
+                  "type": "ListenType",
+                  "id": "es-pt-a1-p0-u1-l04-e06",
+                  "audioText": "O ônibus está atrasado",
+                  "transcription": "O ônibus está atrasado",
+                  "feedbackOnError": {
+                    "type": "spelling",
+                    "explanation": "Escribe exactamente «O ônibus está atrasado»."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La transcripción coincide con el audio."
+                  }
+                },
+                {
+                  "type": "SpeakRepeat",
+                  "id": "es-pt-a1-p0-u1-l04-e07",
+                  "targetPhrase": "Eu vou de ônibus",
+                  "audioText": "Eu vou de ônibus",
+                  "feedbackOnError": {
+                    "type": "pronunciation",
+                    "explanation": "Repite «Eu vou de ônibus» con claridad."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La frase se entiende y mantiene el ritmo."
+                  }
+                }
+              ]
+            },
+            {
+              "id": "es-pt-a1-p0-u1-l05",
+              "title": "Direções",
+              "cefrLevel": "A1",
+              "vocabFrequencyBand": "1000-2000",
+              "canDo": "Puedo pedir y dar direcciones básicas en portugués.",
+              "microLesson": {
+                "title": "Direções",
+                "goals": [
+                  "Reconocer vocabulario de as direções.",
+                  "Usar frases sencillas sobre as direções en portugués."
+                ],
+                "sections": [
+                  {
+                    "heading": "Palavras e frases",
+                    "body": "Vocabulario básico de as direções. Fíjate en el orden de la frase: sujeto + verbo + complemento.",
+                    "examples": [
+                      {
+                        "source": "La calle está a la derecha",
+                        "target": "A rua fica à direita"
+                      },
+                      {
+                        "source": "Gira a la izquierda",
+                        "target": "Vire à esquerda"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "glossary": [
+                {
+                  "term": "esquerda",
+                  "translations": [
+                    "izquierda"
+                  ]
+                },
+                {
+                  "term": "direita",
+                  "translations": [
+                    "derecha"
+                  ]
+                },
+                {
+                  "term": "rua",
+                  "translations": [
+                    "calle"
+                  ]
+                }
+              ],
+              "exercises": [
+                {
+                  "type": "MultipleChoice",
+                  "id": "es-pt-a1-p0-u1-l05-e01",
+                  "question": "¿Cómo se dice «izquierda» en portugués?",
+                  "options": [
+                    "esquerda",
+                    "direita",
+                    "rua"
+                  ],
+                  "correctIndex": 0,
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "«izquierda» se dice «esquerda»."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has elegido la traducción correcta."
+                  }
+                },
+                {
+                  "type": "Translate",
+                  "id": "es-pt-a1-p0-u1-l05-e02",
+                  "sourcePhrase": "La calle está a la derecha",
+                  "correctTokens": [
+                    "A",
+                    "rua",
+                    "fica",
+                    "à",
+                    "direita"
+                  ],
+                  "distractorTokens": [
+                    "esquerda",
+                    "praça"
+                  ],
+                  "feedbackOnError": {
+                    "type": "word_order",
+                    "explanation": "El orden correcto es «A rua fica à direita»."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La frase conserva el orden y el significado."
+                  }
+                },
+                {
+                  "type": "OrderWords",
+                  "id": "es-pt-a1-p0-u1-l05-e03",
+                  "tokens": [
+                    "à",
+                    "esquerda",
+                    "Vire"
+                  ],
+                  "answerTokens": [
+                    "Vire",
+                    "à",
+                    "esquerda"
+                  ],
+                  "sourcePhrase": "Gira a la izquierda",
+                  "feedbackOnError": {
+                    "type": "word_order",
+                    "explanation": "La frase correcta es «Vire à esquerda»."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "El orden produce una frase natural."
+                  }
+                },
+                {
+                  "type": "MatchPairs",
+                  "id": "es-pt-a1-p0-u1-l05-e04",
+                  "pairs": [
+                    {
+                      "left": "izquierda",
+                      "right": "esquerda"
+                    },
+                    {
+                      "left": "derecha",
+                      "right": "direita"
+                    },
+                    {
+                      "left": "calle",
+                      "right": "rua"
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "Cada palabra tiene una traducción distinta."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has asociado cada palabra con su traducción."
+                  }
+                },
+                {
+                  "type": "ListenChoose",
+                  "id": "es-pt-a1-p0-u1-l05-e05",
+                  "audioText": "O banco fica à esquerda",
+                  "options": [
+                    "O banco fica à esquerda",
+                    "O banco fica à direita",
+                    "O banco fica perto do parque"
+                  ],
+                  "correctIndex": 0,
+                  "feedbackOnError": {
+                    "type": "comprehension",
+                    "explanation": "El audio dice «O banco fica à esquerda»."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has reconocido la frase del audio."
+                  }
+                },
+                {
+                  "type": "ListenType",
+                  "id": "es-pt-a1-p0-u1-l05-e06",
+                  "audioText": "Siga em frente",
+                  "transcription": "Siga em frente",
+                  "feedbackOnError": {
+                    "type": "spelling",
+                    "explanation": "Escribe exactamente «Siga em frente»."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La transcripción coincide con el audio."
+                  }
+                },
+                {
+                  "type": "SpeakRepeat",
+                  "id": "es-pt-a1-p0-u1-l05-e07",
+                  "targetPhrase": "Vire à direita",
+                  "audioText": "Vire à direita",
+                  "feedbackOnError": {
+                    "type": "pronunciation",
+                    "explanation": "Repite «Vire à direita» con claridad."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La frase se entiende y mantiene el ritmo."
+                  }
+                }
+              ]
+            },
+            {
+              "id": "es-pt-a1-p0-u1-l06",
+              "title": "A escola",
+              "cefrLevel": "A1",
+              "vocabFrequencyBand": "1000-2000",
+              "canDo": "Puedo hablar de objetos y personas de la escuela en portugués.",
+              "microLesson": {
+                "title": "A escola",
+                "goals": [
+                  "Reconocer vocabulario de a escola.",
+                  "Usar frases sencillas sobre a escola en portugués."
+                ],
+                "sections": [
+                  {
+                    "heading": "Palavras e frases",
+                    "body": "Vocabulario básico de a escola. Fíjate en el orden de la frase: sujeto + verbo + complemento.",
+                    "examples": [
+                      {
+                        "source": "Mi libro es nuevo",
+                        "target": "Meu livro é novo"
+                      },
+                      {
+                        "source": "El profesor es amable",
+                        "target": "O professor é simpático"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "glossary": [
+                {
+                  "term": "escola",
+                  "translations": [
+                    "escuela"
+                  ]
+                },
+                {
+                  "term": "livro",
+                  "translations": [
+                    "libro"
+                  ]
+                },
+                {
+                  "term": "professor",
+                  "translations": [
+                    "profesor"
+                  ]
+                }
+              ],
+              "exercises": [
+                {
+                  "type": "MultipleChoice",
+                  "id": "es-pt-a1-p0-u1-l06-e01",
+                  "question": "¿Cómo se dice «escuela» en portugués?",
+                  "options": [
+                    "escola",
+                    "livro",
+                    "professor"
+                  ],
+                  "correctIndex": 0,
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "«escuela» se dice «escola»."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has elegido la traducción correcta."
+                  }
+                },
+                {
+                  "type": "Translate",
+                  "id": "es-pt-a1-p0-u1-l06-e02",
+                  "sourcePhrase": "Mi libro es nuevo",
+                  "correctTokens": [
+                    "Meu",
+                    "livro",
+                    "é",
+                    "novo"
+                  ],
+                  "distractorTokens": [
+                    "velho",
+                    "escola"
+                  ],
+                  "feedbackOnError": {
+                    "type": "word_order",
+                    "explanation": "El orden correcto es «Meu livro é novo»."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La frase conserva el orden y el significado."
+                  }
+                },
+                {
+                  "type": "OrderWords",
+                  "id": "es-pt-a1-p0-u1-l06-e03",
+                  "tokens": [
+                    "professor",
+                    "é",
+                    "simpático",
+                    "O"
+                  ],
+                  "answerTokens": [
+                    "O",
+                    "professor",
+                    "é",
+                    "simpático"
+                  ],
+                  "sourcePhrase": "El profesor es amable",
+                  "feedbackOnError": {
+                    "type": "word_order",
+                    "explanation": "La frase correcta es «O professor é simpático»."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "El orden produce una frase natural."
+                  }
+                },
+                {
+                  "type": "MatchPairs",
+                  "id": "es-pt-a1-p0-u1-l06-e04",
+                  "pairs": [
+                    {
+                      "left": "escuela",
+                      "right": "escola"
+                    },
+                    {
+                      "left": "libro",
+                      "right": "livro"
+                    },
+                    {
+                      "left": "profesor",
+                      "right": "professor"
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "Cada palabra tiene una traducción distinta."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has asociado cada palabra con su traducción."
+                  }
+                },
+                {
+                  "type": "ListenChoose",
+                  "id": "es-pt-a1-p0-u1-l06-e05",
+                  "audioText": "Eu vou à escola",
+                  "options": [
+                    "Eu vou à escola",
+                    "Eu leio um livro",
+                    "O professor é simpático"
+                  ],
+                  "correctIndex": 0,
+                  "feedbackOnError": {
+                    "type": "comprehension",
+                    "explanation": "El audio dice «Eu vou à escola»."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has reconocido la frase del audio."
+                  }
+                },
+                {
+                  "type": "ListenType",
+                  "id": "es-pt-a1-p0-u1-l06-e06",
+                  "audioText": "Minha escola é grande",
+                  "transcription": "Minha escola é grande",
+                  "feedbackOnError": {
+                    "type": "spelling",
+                    "explanation": "Escribe exactamente «Minha escola é grande»."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La transcripción coincide con el audio."
+                  }
+                },
+                {
+                  "type": "SpeakRepeat",
+                  "id": "es-pt-a1-p0-u1-l06-e07",
+                  "targetPhrase": "Eu tenho um livro",
+                  "audioText": "Eu tenho um livro",
+                  "feedbackOnError": {
+                    "type": "pronunciation",
+                    "explanation": "Repite «Eu tenho um livro» con claridad."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La frase se entiende y mantiene el ritmo."
+                  }
+                }
+              ]
+            },
+            {
+              "id": "es-pt-a1-p0-u1-l07",
+              "title": "O trabalho",
+              "cefrLevel": "A1",
+              "vocabFrequencyBand": "1000-2000",
+              "canDo": "Puedo presentar mi trabajo y hablar de una reunión en portugués.",
+              "microLesson": {
+                "title": "O trabalho",
+                "goals": [
+                  "Reconocer vocabulario de o trabalho.",
+                  "Usar frases sencillas sobre o trabalho en portugués."
+                ],
+                "sections": [
+                  {
+                    "heading": "Palavras e frases",
+                    "body": "Vocabulario básico de o trabalho. Fíjate en el orden de la frase: sujeto + verbo + complemento.",
+                    "examples": [
+                      {
+                        "source": "Mi jefe está en la oficina",
+                        "target": "Meu chefe está no escritório"
+                      },
+                      {
+                        "source": "La reunión es a las diez",
+                        "target": "A reunião é às dez"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "glossary": [
+                {
+                  "term": "escritório",
+                  "translations": [
+                    "oficina"
+                  ]
+                },
+                {
+                  "term": "chefe",
+                  "translations": [
+                    "jefe"
+                  ]
+                },
+                {
+                  "term": "reunião",
+                  "translations": [
+                    "reunión"
+                  ]
+                }
+              ],
+              "exercises": [
+                {
+                  "type": "MultipleChoice",
+                  "id": "es-pt-a1-p0-u1-l07-e01",
+                  "question": "¿Cómo se dice «oficina» en portugués?",
+                  "options": [
+                    "escritório",
+                    "chefe",
+                    "reunião"
+                  ],
+                  "correctIndex": 0,
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "«oficina» se dice «escritório»."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has elegido la traducción correcta."
+                  }
+                },
+                {
+                  "type": "Translate",
+                  "id": "es-pt-a1-p0-u1-l07-e02",
+                  "sourcePhrase": "Mi jefe está en la oficina",
+                  "correctTokens": [
+                    "Meu",
+                    "chefe",
+                    "está",
+                    "no",
+                    "escritório"
+                  ],
+                  "distractorTokens": [
+                    "reunião",
+                    "casa"
+                  ],
+                  "feedbackOnError": {
+                    "type": "word_order",
+                    "explanation": "El orden correcto es «Meu chefe está no escritório»."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La frase conserva el orden y el significado."
+                  }
+                },
+                {
+                  "type": "OrderWords",
+                  "id": "es-pt-a1-p0-u1-l07-e03",
+                  "tokens": [
+                    "reunião",
+                    "é",
+                    "às",
+                    "dez",
+                    "A"
+                  ],
+                  "answerTokens": [
+                    "A",
+                    "reunião",
+                    "é",
+                    "às",
+                    "dez"
+                  ],
+                  "sourcePhrase": "La reunión es a las diez",
+                  "feedbackOnError": {
+                    "type": "word_order",
+                    "explanation": "La frase correcta es «A reunião é às dez»."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "El orden produce una frase natural."
+                  }
+                },
+                {
+                  "type": "MatchPairs",
+                  "id": "es-pt-a1-p0-u1-l07-e04",
+                  "pairs": [
+                    {
+                      "left": "oficina",
+                      "right": "escritório"
+                    },
+                    {
+                      "left": "jefe",
+                      "right": "chefe"
+                    },
+                    {
+                      "left": "reunión",
+                      "right": "reunião"
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "Cada palabra tiene una traducción distinta."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has asociado cada palabra con su traducción."
+                  }
+                },
+                {
+                  "type": "ListenChoose",
+                  "id": "es-pt-a1-p0-u1-l07-e05",
+                  "audioText": "Eu trabalho em um escritório",
+                  "options": [
+                    "Eu trabalho em um escritório",
+                    "A reunião é às dez",
+                    "Meu chefe está ocupado"
+                  ],
+                  "correctIndex": 0,
+                  "feedbackOnError": {
+                    "type": "comprehension",
+                    "explanation": "El audio dice «Eu trabalho em um escritório»."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has reconocido la frase del audio."
+                  }
+                },
+                {
+                  "type": "ListenType",
+                  "id": "es-pt-a1-p0-u1-l07-e06",
+                  "audioText": "Meu chefe está ocupado",
+                  "transcription": "Meu chefe está ocupado",
+                  "feedbackOnError": {
+                    "type": "spelling",
+                    "explanation": "Escribe exactamente «Meu chefe está ocupado»."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La transcripción coincide con el audio."
+                  }
+                },
+                {
+                  "type": "SpeakRepeat",
+                  "id": "es-pt-a1-p0-u1-l07-e07",
+                  "targetPhrase": "Eu trabalho em um escritório",
+                  "audioText": "Eu trabalho em um escritório",
+                  "feedbackOnError": {
+                    "type": "pronunciation",
+                    "explanation": "Repite «Eu trabalho em um escritório» con claridad."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La frase se entiende y mantiene el ritmo."
+                  }
+                }
+              ]
+            },
+            {
+              "id": "es-pt-a1-p0-u1-l08",
+              "title": "A saúde",
+              "cefrLevel": "A1",
+              "vocabFrequencyBand": "1000-2000",
+              "canDo": "Puedo explicar un problema de salud sencillo en portugués.",
+              "microLesson": {
+                "title": "A saúde",
+                "goals": [
+                  "Reconocer vocabulario de a saúde.",
+                  "Usar frases sencillas sobre a saúde en portugués."
+                ],
+                "sections": [
+                  {
+                    "heading": "Palavras e frases",
+                    "body": "Vocabulario básico de a saúde. Fíjate en el orden de la frase: sujeto + verbo + complemento.",
+                    "examples": [
+                      {
+                        "source": "Me duele la cabeza",
+                        "target": "Estou com dor de cabeça"
+                      },
+                      {
+                        "source": "Necesito un médico",
+                        "target": "Eu preciso de um médico"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "glossary": [
+                {
+                  "term": "médico",
+                  "translations": [
+                    "médico"
+                  ]
+                },
+                {
+                  "term": "farmácia",
+                  "translations": [
+                    "farmacia"
+                  ]
+                },
+                {
+                  "term": "dor",
+                  "translations": [
+                    "dolor"
+                  ]
+                }
+              ],
+              "exercises": [
+                {
+                  "type": "MultipleChoice",
+                  "id": "es-pt-a1-p0-u1-l08-e01",
+                  "question": "¿Cómo se dice «médico» en portugués?",
+                  "options": [
+                    "médico",
+                    "farmácia",
+                    "dor"
+                  ],
+                  "correctIndex": 0,
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "«médico» se dice «médico»."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has elegido la traducción correcta."
+                  }
+                },
+                {
+                  "type": "Translate",
+                  "id": "es-pt-a1-p0-u1-l08-e02",
+                  "sourcePhrase": "Me duele la cabeza",
+                  "correctTokens": [
+                    "Estou",
+                    "com",
+                    "dor",
+                    "de",
+                    "cabeça"
+                  ],
+                  "distractorTokens": [
+                    "estômago",
+                    "médico"
+                  ],
+                  "feedbackOnError": {
+                    "type": "word_order",
+                    "explanation": "El orden correcto es «Estou com dor de cabeça»."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La frase conserva el orden y el significado."
+                  }
+                },
+                {
+                  "type": "OrderWords",
+                  "id": "es-pt-a1-p0-u1-l08-e03",
+                  "tokens": [
+                    "preciso",
+                    "de",
+                    "um",
+                    "médico",
+                    "Eu"
+                  ],
+                  "answerTokens": [
+                    "Eu",
+                    "preciso",
+                    "de",
+                    "um",
+                    "médico"
+                  ],
+                  "sourcePhrase": "Necesito un médico",
+                  "feedbackOnError": {
+                    "type": "word_order",
+                    "explanation": "La frase correcta es «Eu preciso de um médico»."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "El orden produce una frase natural."
+                  }
+                },
+                {
+                  "type": "MatchPairs",
+                  "id": "es-pt-a1-p0-u1-l08-e04",
+                  "pairs": [
+                    {
+                      "left": "médico",
+                      "right": "médico"
+                    },
+                    {
+                      "left": "farmacia",
+                      "right": "farmácia"
+                    },
+                    {
+                      "left": "dolor",
+                      "right": "dor"
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "Cada palabra tiene una traducción distinta."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has asociado cada palabra con su traducción."
+                  }
+                },
+                {
+                  "type": "ListenChoose",
+                  "id": "es-pt-a1-p0-u1-l08-e05",
+                  "audioText": "Estou com dor de cabeça",
+                  "options": [
+                    "Estou com dor de cabeça",
+                    "Eu preciso de um médico",
+                    "A farmácia está aberta"
+                  ],
+                  "correctIndex": 0,
+                  "feedbackOnError": {
+                    "type": "comprehension",
+                    "explanation": "El audio dice «Estou com dor de cabeça»."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has reconocido la frase del audio."
+                  }
+                },
+                {
+                  "type": "ListenType",
+                  "id": "es-pt-a1-p0-u1-l08-e06",
+                  "audioText": "A farmácia está aberta",
+                  "transcription": "A farmácia está aberta",
+                  "feedbackOnError": {
+                    "type": "spelling",
+                    "explanation": "Escribe exactamente «A farmácia está aberta»."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La transcripción coincide con el audio."
+                  }
+                },
+                {
+                  "type": "SpeakRepeat",
+                  "id": "es-pt-a1-p0-u1-l08-e07",
+                  "targetPhrase": "Eu preciso de um médico",
+                  "audioText": "Eu preciso de um médico",
+                  "feedbackOnError": {
+                    "type": "pronunciation",
+                    "explanation": "Repite «Eu preciso de um médico» con claridad."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La frase se entiende y mantiene el ritmo."
+                  }
+                }
+              ]
+            },
+            {
+              "id": "es-pt-a1-p0-u1-l09",
+              "title": "Passatempos",
+              "cefrLevel": "A1",
+              "vocabFrequencyBand": "1000-2000",
+              "canDo": "Puedo hablar de lo que me gusta hacer en mi tiempo libre en portugués.",
+              "microLesson": {
+                "title": "Passatempos",
+                "goals": [
+                  "Reconocer vocabulario de os passatempos.",
+                  "Usar frases sencillas sobre os passatempos en portugués."
+                ],
+                "sections": [
+                  {
+                    "heading": "Palavras e frases",
+                    "body": "Vocabulario básico de os passatempos. Fíjate en el orden de la frase: sujeto + verbo + complemento.",
+                    "examples": [
+                      {
+                        "source": "Me gusta la música",
+                        "target": "Eu gosto de música"
+                      },
+                      {
+                        "source": "El deporte es divertido",
+                        "target": "O esporte é divertido"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "glossary": [
+                {
+                  "term": "música",
+                  "translations": [
+                    "música"
+                  ]
+                },
+                {
+                  "term": "esporte",
+                  "translations": [
+                    "deporte"
+                  ]
+                },
+                {
+                  "term": "filme",
+                  "translations": [
+                    "película"
+                  ]
+                }
+              ],
+              "exercises": [
+                {
+                  "type": "MultipleChoice",
+                  "id": "es-pt-a1-p0-u1-l09-e01",
+                  "question": "¿Cómo se dice «música» en portugués?",
+                  "options": [
+                    "música",
+                    "esporte",
+                    "filme"
+                  ],
+                  "correctIndex": 0,
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "«música» se dice «música»."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has elegido la traducción correcta."
+                  }
+                },
+                {
+                  "type": "Translate",
+                  "id": "es-pt-a1-p0-u1-l09-e02",
+                  "sourcePhrase": "Me gusta la música",
+                  "correctTokens": [
+                    "Eu",
+                    "gosto",
+                    "de",
+                    "música"
+                  ],
+                  "distractorTokens": [
+                    "esporte",
+                    "filme"
+                  ],
+                  "feedbackOnError": {
+                    "type": "word_order",
+                    "explanation": "El orden correcto es «Eu gosto de música»."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La frase conserva el orden y el significado."
+                  }
+                },
+                {
+                  "type": "OrderWords",
+                  "id": "es-pt-a1-p0-u1-l09-e03",
+                  "tokens": [
+                    "esporte",
+                    "é",
+                    "divertido",
+                    "O"
+                  ],
+                  "answerTokens": [
+                    "O",
+                    "esporte",
+                    "é",
+                    "divertido"
+                  ],
+                  "sourcePhrase": "El deporte es divertido",
+                  "feedbackOnError": {
+                    "type": "word_order",
+                    "explanation": "La frase correcta es «O esporte é divertido»."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "El orden produce una frase natural."
+                  }
+                },
+                {
+                  "type": "MatchPairs",
+                  "id": "es-pt-a1-p0-u1-l09-e04",
+                  "pairs": [
+                    {
+                      "left": "música",
+                      "right": "música"
+                    },
+                    {
+                      "left": "deporte",
+                      "right": "esporte"
+                    },
+                    {
+                      "left": "película",
+                      "right": "filme"
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "Cada palabra tiene una traducción distinta."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has asociado cada palabra con su traducción."
+                  }
+                },
+                {
+                  "type": "ListenChoose",
+                  "id": "es-pt-a1-p0-u1-l09-e05",
+                  "audioText": "Eu vejo um filme",
+                  "options": [
+                    "Eu vejo um filme",
+                    "Eu ouço música",
+                    "Eu pratico um esporte"
+                  ],
+                  "correctIndex": 0,
+                  "feedbackOnError": {
+                    "type": "comprehension",
+                    "explanation": "El audio dice «Eu vejo um filme»."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has reconocido la frase del audio."
+                  }
+                },
+                {
+                  "type": "ListenType",
+                  "id": "es-pt-a1-p0-u1-l09-e06",
+                  "audioText": "Eu ouço música",
+                  "transcription": "Eu ouço música",
+                  "feedbackOnError": {
+                    "type": "spelling",
+                    "explanation": "Escribe exactamente «Eu ouço música»."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La transcripción coincide con el audio."
+                  }
+                },
+                {
+                  "type": "SpeakRepeat",
+                  "id": "es-pt-a1-p0-u1-l09-e07",
+                  "targetPhrase": "Eu gosto de música",
+                  "audioText": "Eu gosto de música",
+                  "feedbackOnError": {
+                    "type": "pronunciation",
+                    "explanation": "Repite «Eu gosto de música» con claridad."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La frase se entiende y mantiene el ritmo."
+                  }
+                }
+              ]
+            },
+            {
+              "id": "es-pt-a1-p0-u1-l10",
+              "title": "A cidade",
+              "cefrLevel": "A1",
+              "vocabFrequencyBand": "1000-2000",
+              "canDo": "Puedo hablar de lugares de mi ciudad en portugués.",
+              "microLesson": {
+                "title": "A cidade",
+                "goals": [
+                  "Reconocer vocabulario de a cidade.",
+                  "Usar frases sencillas sobre a cidade en portugués."
+                ],
+                "sections": [
+                  {
+                    "heading": "Palavras e frases",
+                    "body": "Vocabulario básico de a cidade. Fíjate en el orden de la frase: sujeto + verbo + complemento.",
+                    "examples": [
+                      {
+                        "source": "El parque es grande",
+                        "target": "O parque é grande"
+                      },
+                      {
+                        "source": "El restaurante está cerca",
+                        "target": "O restaurante fica perto"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "glossary": [
+                {
+                  "term": "parque",
+                  "translations": [
+                    "parque"
+                  ]
+                },
+                {
+                  "term": "museu",
+                  "translations": [
+                    "museo"
+                  ]
+                },
+                {
+                  "term": "restaurante",
+                  "translations": [
+                    "restaurante"
+                  ]
+                }
+              ],
+              "exercises": [
+                {
+                  "type": "MultipleChoice",
+                  "id": "es-pt-a1-p0-u1-l10-e01",
+                  "question": "¿Cómo se dice «parque» en portugués?",
+                  "options": [
+                    "parque",
+                    "museu",
+                    "restaurante"
+                  ],
+                  "correctIndex": 0,
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "«parque» se dice «parque»."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has elegido la traducción correcta."
+                  }
+                },
+                {
+                  "type": "Translate",
+                  "id": "es-pt-a1-p0-u1-l10-e02",
+                  "sourcePhrase": "El parque es grande",
+                  "correctTokens": [
+                    "O",
+                    "parque",
+                    "é",
+                    "grande"
+                  ],
+                  "distractorTokens": [
+                    "pequeno",
+                    "museu"
+                  ],
+                  "feedbackOnError": {
+                    "type": "word_order",
+                    "explanation": "El orden correcto es «O parque é grande»."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La frase conserva el orden y el significado."
+                  }
+                },
+                {
+                  "type": "OrderWords",
+                  "id": "es-pt-a1-p0-u1-l10-e03",
+                  "tokens": [
+                    "restaurante",
+                    "fica",
+                    "perto",
+                    "O"
+                  ],
+                  "answerTokens": [
+                    "O",
+                    "restaurante",
+                    "fica",
+                    "perto"
+                  ],
+                  "sourcePhrase": "El restaurante está cerca",
+                  "feedbackOnError": {
+                    "type": "word_order",
+                    "explanation": "La frase correcta es «O restaurante fica perto»."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "El orden produce una frase natural."
+                  }
+                },
+                {
+                  "type": "MatchPairs",
+                  "id": "es-pt-a1-p0-u1-l10-e04",
+                  "pairs": [
+                    {
+                      "left": "parque",
+                      "right": "parque"
+                    },
+                    {
+                      "left": "museo",
+                      "right": "museu"
+                    },
+                    {
+                      "left": "restaurante",
+                      "right": "restaurante"
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "Cada palabra tiene una traducción distinta."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has asociado cada palabra con su traducción."
+                  }
+                },
+                {
+                  "type": "ListenChoose",
+                  "id": "es-pt-a1-p0-u1-l10-e05",
+                  "audioText": "O museu está aberto",
+                  "options": [
+                    "O museu está aberto",
+                    "O parque é bonito",
+                    "O restaurante fica perto"
+                  ],
+                  "correctIndex": 0,
+                  "feedbackOnError": {
+                    "type": "comprehension",
+                    "explanation": "El audio dice «O museu está aberto»."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has reconocido la frase del audio."
+                  }
+                },
+                {
+                  "type": "ListenType",
+                  "id": "es-pt-a1-p0-u1-l10-e06",
+                  "audioText": "O parque é bonito",
+                  "transcription": "O parque é bonito",
+                  "feedbackOnError": {
+                    "type": "spelling",
+                    "explanation": "Escribe exactamente «O parque é bonito»."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La transcripción coincide con el audio."
+                  }
+                },
+                {
+                  "type": "SpeakRepeat",
+                  "id": "es-pt-a1-p0-u1-l10-e07",
+                  "targetPhrase": "Eu vou ao parque",
+                  "audioText": "Eu vou ao parque",
+                  "feedbackOnError": {
+                    "type": "pronunciation",
+                    "explanation": "Repite «Eu vou ao parque» con claridad."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La frase se entiende y mantiene el ritmo."
+                  }
+                }
+              ]
+            }
+          ]
         }
       ]
     },
