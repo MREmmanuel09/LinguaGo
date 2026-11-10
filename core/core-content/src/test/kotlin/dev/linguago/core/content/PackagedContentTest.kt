@@ -163,7 +163,10 @@ class PackagedContentTest {
         )
         assertEquals(allExercises.size, allExercises.map { exercise -> exercise.id.value }.distinct().size)
 
-        val c1Lessons = lessons.filter { lesson -> lesson.cefrLevel == CefrLevel.C1 }
+        val c1Lessons =
+            lessons.filter { lesson ->
+                lesson.cefrLevel == CefrLevel.C1 && !lesson.id.value.contains("-p0-")
+            }
         assertEquals("es-en debe tener 24 lecciones C1", 24, c1Lessons.size)
         assertEquals(
             (1..264).map { index -> "es-en-c1-e$index" },
@@ -183,6 +186,30 @@ class PackagedContentTest {
             24,
             c1Lessons.sumOf { lesson -> lesson.exercises.count { exercise -> exercise is Exercise.FreeSpeakingPrompt } },
         )
+
+        val pilotC1Lessons = lessons.filter { lesson -> lesson.id.value.startsWith("es-en-c1-p0-") }
+        assertEquals("El piloto C1 de F0 debe tener 10 lecciones", 10, pilotC1Lessons.size)
+        assertTrue(pilotC1Lessons.all { lesson -> lesson.exercises.size == 11 })
+        assertTrue(pilotC1Lessons.all { lesson -> lesson.grammarPoints.size == 2 })
+        assertTrue(pilotC1Lessons.all { lesson -> lesson.vocabFrequencyBand == VocabFrequencyBand.BAND_8000_12000 })
+        assertTrue(pilotC1Lessons.all { lesson -> lesson.culturalNotes.isNotEmpty() })
+        assertTrue(pilotC1Lessons.all { lesson -> lesson.microLesson != null && lesson.glossary.isNotEmpty() })
+        assertTrue(
+            "Todos los ejercicios del piloto C1 deben tener feedbackOnError",
+            pilotC1Lessons.flatMap { lesson -> lesson.exercises }.all { exercise -> exercise.feedbackOnError != null },
+        )
+        val pilotC1Exercises = pilotC1Lessons.flatMap { lesson -> lesson.exercises }
+        assertEquals(10, pilotC1Exercises.count { exercise -> exercise is Exercise.MultipleChoice })
+        assertEquals(10, pilotC1Exercises.count { exercise -> exercise is Exercise.OrderWords })
+        assertEquals(10, pilotC1Exercises.count { exercise -> exercise is Exercise.Translate })
+        assertEquals(10, pilotC1Exercises.count { exercise -> exercise is Exercise.ClozeDragDrop })
+        assertEquals(10, pilotC1Exercises.count { exercise -> exercise is Exercise.SemanticMatch })
+        assertEquals(10, pilotC1Exercises.count { exercise -> exercise is Exercise.ListenChoose })
+        assertEquals(10, pilotC1Exercises.count { exercise -> exercise is Exercise.AudioOnlyPrompt })
+        assertEquals(10, pilotC1Exercises.count { exercise -> exercise is Exercise.ListenType })
+        assertEquals(10, pilotC1Exercises.count { exercise -> exercise is Exercise.SpeakRepeat })
+        assertEquals(10, pilotC1Exercises.count { exercise -> exercise is Exercise.MatchPairs })
+        assertEquals(10, pilotC1Exercises.count { exercise -> exercise is Exercise.FreeSpeakingPrompt })
 
         val c2Lessons = lessons.filter { lesson -> lesson.cefrLevel == CefrLevel.C2 }
         assertEquals("es-en debe tener 18 lecciones C2", 18, c2Lessons.size)
