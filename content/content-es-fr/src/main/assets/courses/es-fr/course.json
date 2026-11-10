@@ -2468,6 +2468,1878 @@
               ]
             }
           ]
+        },
+        {
+          "id": "es-fr-a1-p0-un-1",
+          "title": "Piloto A1 · Vie quotidienne",
+          "lessons": [
+            {
+              "id": "es-fr-a1-p0-u1-l01",
+              "title": "Mon animal de compagnie",
+              "cefrLevel": "A1",
+              "vocabFrequencyBand": "1000-2000",
+              "canDo": "Puedo hablar de mi mascota con frases sencillas en francés.",
+              "microLesson": {
+                "title": "Mon animal de compagnie",
+                "goals": [
+                  "Reconocer vocabulario de les animaux de compagnie.",
+                  "Usar frases sencillas sobre les animaux de compagnie en francés."
+                ],
+                "sections": [
+                  {
+                    "heading": "Mots et phrases",
+                    "body": "Vocabulario básico de les animaux de compagnie. Fíjate en el orden de la frase y en los artículos franceses.",
+                    "examples": [
+                      {
+                        "source": "Mi perro es pequeño",
+                        "target": "Mon chien est petit"
+                      },
+                      {
+                        "source": "El gato duerme en casa",
+                        "target": "Le chat dort à la maison"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "glossary": [
+                {
+                  "term": "chien",
+                  "translations": [
+                    "perro"
+                  ]
+                },
+                {
+                  "term": "chat",
+                  "translations": [
+                    "gato"
+                  ]
+                },
+                {
+                  "term": "oiseau",
+                  "translations": [
+                    "pájaro"
+                  ]
+                }
+              ],
+              "exercises": [
+                {
+                  "type": "MultipleChoice",
+                  "id": "es-fr-a1-p0-u1-l01-e01",
+                  "question": "¿Cómo se dice «perro» en francés?",
+                  "options": [
+                    "chien",
+                    "chat",
+                    "oiseau"
+                  ],
+                  "correctIndex": 0,
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "«perro» se dice «chien»."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has elegido la traducción correcta."
+                  }
+                },
+                {
+                  "type": "Translate",
+                  "id": "es-fr-a1-p0-u1-l01-e02",
+                  "sourcePhrase": "Mi perro es pequeño",
+                  "correctTokens": [
+                    "Mon",
+                    "chien",
+                    "est",
+                    "petit"
+                  ],
+                  "distractorTokens": [
+                    "chat",
+                    "grand"
+                  ],
+                  "feedbackOnError": {
+                    "type": "word_order",
+                    "explanation": "El orden correcto es «Mon chien est petit»."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La frase conserva el orden y el significado."
+                  }
+                },
+                {
+                  "type": "OrderWords",
+                  "id": "es-fr-a1-p0-u1-l01-e03",
+                  "tokens": [
+                    "chat",
+                    "dort",
+                    "à",
+                    "la",
+                    "maison",
+                    "Le"
+                  ],
+                  "answerTokens": [
+                    "Le",
+                    "chat",
+                    "dort",
+                    "à",
+                    "la",
+                    "maison"
+                  ],
+                  "sourcePhrase": "El gato duerme en casa",
+                  "feedbackOnError": {
+                    "type": "word_order",
+                    "explanation": "La frase correcta es «Le chat dort à la maison»."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "El orden produce una frase natural."
+                  }
+                },
+                {
+                  "type": "MatchPairs",
+                  "id": "es-fr-a1-p0-u1-l01-e04",
+                  "pairs": [
+                    {
+                      "left": "perro",
+                      "right": "chien"
+                    },
+                    {
+                      "left": "gato",
+                      "right": "chat"
+                    },
+                    {
+                      "left": "pájaro",
+                      "right": "oiseau"
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "Cada palabra tiene una traducción distinta."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has asociado cada palabra con su traducción."
+                  }
+                },
+                {
+                  "type": "ListenChoose",
+                  "id": "es-fr-a1-p0-u1-l01-e05",
+                  "audioText": "J'ai un chat",
+                  "options": [
+                    "J'ai un chat",
+                    "J'ai un chien",
+                    "J'ai un oiseau"
+                  ],
+                  "correctIndex": 0,
+                  "feedbackOnError": {
+                    "type": "comprehension",
+                    "explanation": "El audio dice «J'ai un chat»."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has reconocido la frase del audio."
+                  }
+                },
+                {
+                  "type": "ListenType",
+                  "id": "es-fr-a1-p0-u1-l01-e06",
+                  "audioText": "Mon chien est gentil",
+                  "transcription": "Mon chien est gentil",
+                  "feedbackOnError": {
+                    "type": "spelling",
+                    "explanation": "Escribe exactamente «Mon chien est gentil»."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La transcripción coincide con el audio."
+                  }
+                },
+                {
+                  "type": "SpeakRepeat",
+                  "id": "es-fr-a1-p0-u1-l01-e07",
+                  "targetPhrase": "J'ai un animal de compagnie",
+                  "audioText": "J'ai un animal de compagnie",
+                  "feedbackOnError": {
+                    "type": "pronunciation",
+                    "explanation": "Repite «J'ai un animal de compagnie» con claridad."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La frase se entiende y mantiene el ritmo."
+                  }
+                }
+              ]
+            },
+            {
+              "id": "es-fr-a1-p0-u1-l02",
+              "title": "Les vêtements",
+              "cefrLevel": "A1",
+              "vocabFrequencyBand": "1000-2000",
+              "canDo": "Puedo nombrar ropa y describir sus colores en francés.",
+              "microLesson": {
+                "title": "Les vêtements",
+                "goals": [
+                  "Reconocer vocabulario de les vêtements.",
+                  "Usar frases sencillas sobre les vêtements en francés."
+                ],
+                "sections": [
+                  {
+                    "heading": "Mots et phrases",
+                    "body": "Vocabulario básico de les vêtements. Fíjate en el orden de la frase y en los artículos franceses.",
+                    "examples": [
+                      {
+                        "source": "Mi camisa es azul",
+                        "target": "Ma chemise est bleue"
+                      },
+                      {
+                        "source": "El abrigo es nuevo",
+                        "target": "Le manteau est nouveau"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "glossary": [
+                {
+                  "term": "chemise",
+                  "translations": [
+                    "camisa"
+                  ]
+                },
+                {
+                  "term": "chaussures",
+                  "translations": [
+                    "zapatos"
+                  ]
+                },
+                {
+                  "term": "manteau",
+                  "translations": [
+                    "abrigo"
+                  ]
+                }
+              ],
+              "exercises": [
+                {
+                  "type": "MultipleChoice",
+                  "id": "es-fr-a1-p0-u1-l02-e01",
+                  "question": "¿Cómo se dice «camisa» en francés?",
+                  "options": [
+                    "chemise",
+                    "chaussures",
+                    "manteau"
+                  ],
+                  "correctIndex": 0,
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "«camisa» se dice «chemise»."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has elegido la traducción correcta."
+                  }
+                },
+                {
+                  "type": "Translate",
+                  "id": "es-fr-a1-p0-u1-l02-e02",
+                  "sourcePhrase": "Mi camisa es azul",
+                  "correctTokens": [
+                    "Ma",
+                    "chemise",
+                    "est",
+                    "bleue"
+                  ],
+                  "distractorTokens": [
+                    "rouge",
+                    "manteau"
+                  ],
+                  "feedbackOnError": {
+                    "type": "word_order",
+                    "explanation": "El orden correcto es «Ma chemise est bleue»."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La frase conserva el orden y el significado."
+                  }
+                },
+                {
+                  "type": "OrderWords",
+                  "id": "es-fr-a1-p0-u1-l02-e03",
+                  "tokens": [
+                    "manteau",
+                    "est",
+                    "nouveau",
+                    "Le"
+                  ],
+                  "answerTokens": [
+                    "Le",
+                    "manteau",
+                    "est",
+                    "nouveau"
+                  ],
+                  "sourcePhrase": "El abrigo es nuevo",
+                  "feedbackOnError": {
+                    "type": "word_order",
+                    "explanation": "La frase correcta es «Le manteau est nouveau»."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "El orden produce una frase natural."
+                  }
+                },
+                {
+                  "type": "MatchPairs",
+                  "id": "es-fr-a1-p0-u1-l02-e04",
+                  "pairs": [
+                    {
+                      "left": "camisa",
+                      "right": "chemise"
+                    },
+                    {
+                      "left": "zapatos",
+                      "right": "chaussures"
+                    },
+                    {
+                      "left": "abrigo",
+                      "right": "manteau"
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "Cada palabra tiene una traducción distinta."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has asociado cada palabra con su traducción."
+                  }
+                },
+                {
+                  "type": "ListenChoose",
+                  "id": "es-fr-a1-p0-u1-l02-e05",
+                  "audioText": "Je porte un manteau",
+                  "options": [
+                    "Je porte un manteau",
+                    "Je porte une chemise",
+                    "Je porte des chaussures"
+                  ],
+                  "correctIndex": 0,
+                  "feedbackOnError": {
+                    "type": "comprehension",
+                    "explanation": "El audio dice «Je porte un manteau»."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has reconocido la frase del audio."
+                  }
+                },
+                {
+                  "type": "ListenType",
+                  "id": "es-fr-a1-p0-u1-l02-e06",
+                  "audioText": "Mes chaussures sont noires",
+                  "transcription": "Mes chaussures sont noires",
+                  "feedbackOnError": {
+                    "type": "spelling",
+                    "explanation": "Escribe exactamente «Mes chaussures sont noires»."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La transcripción coincide con el audio."
+                  }
+                },
+                {
+                  "type": "SpeakRepeat",
+                  "id": "es-fr-a1-p0-u1-l02-e07",
+                  "targetPhrase": "Je porte une chemise bleue",
+                  "audioText": "Je porte une chemise bleue",
+                  "feedbackOnError": {
+                    "type": "pronunciation",
+                    "explanation": "Repite «Je porte une chemise bleue» con claridad."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La frase se entiende y mantiene el ritmo."
+                  }
+                }
+              ]
+            },
+            {
+              "id": "es-fr-a1-p0-u1-l03",
+              "title": "Ma routine",
+              "cefrLevel": "A1",
+              "vocabFrequencyBand": "1000-2000",
+              "canDo": "Puedo describir mi rutina diaria con horas sencillas en francés.",
+              "microLesson": {
+                "title": "Ma routine",
+                "goals": [
+                  "Reconocer vocabulario de la routine quotidienne.",
+                  "Usar frases sencillas sobre la routine quotidienne en francés."
+                ],
+                "sections": [
+                  {
+                    "heading": "Mots et phrases",
+                    "body": "Vocabulario básico de la routine quotidienne. Fíjate en el orden de la frase y en los artículos franceses.",
+                    "examples": [
+                      {
+                        "source": "Me levanto a las siete",
+                        "target": "Je me réveille à sept heures"
+                      },
+                      {
+                        "source": "Desayuno a las ocho",
+                        "target": "Je prends le petit-déjeuner à huit heures"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "glossary": [
+                {
+                  "term": "se réveiller",
+                  "translations": [
+                    "despertarse"
+                  ]
+                },
+                {
+                  "term": "s'habiller",
+                  "translations": [
+                    "vestirse"
+                  ]
+                },
+                {
+                  "term": "se coucher",
+                  "translations": [
+                    "acostarse"
+                  ]
+                }
+              ],
+              "exercises": [
+                {
+                  "type": "MultipleChoice",
+                  "id": "es-fr-a1-p0-u1-l03-e01",
+                  "question": "¿Cómo se dice «despertarse» en francés?",
+                  "options": [
+                    "se réveiller",
+                    "s'habiller",
+                    "se coucher"
+                  ],
+                  "correctIndex": 0,
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "«despertarse» se dice «se réveiller»."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has elegido la traducción correcta."
+                  }
+                },
+                {
+                  "type": "Translate",
+                  "id": "es-fr-a1-p0-u1-l03-e02",
+                  "sourcePhrase": "Me levanto a las siete",
+                  "correctTokens": [
+                    "Je",
+                    "me",
+                    "réveille",
+                    "à",
+                    "sept",
+                    "heures"
+                  ],
+                  "distractorTokens": [
+                    "huit",
+                    "couche"
+                  ],
+                  "feedbackOnError": {
+                    "type": "word_order",
+                    "explanation": "El orden correcto es «Je me réveille à sept heures»."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La frase conserva el orden y el significado."
+                  }
+                },
+                {
+                  "type": "OrderWords",
+                  "id": "es-fr-a1-p0-u1-l03-e03",
+                  "tokens": [
+                    "prends",
+                    "le",
+                    "petit-déjeuner",
+                    "à",
+                    "huit",
+                    "heures",
+                    "Je"
+                  ],
+                  "answerTokens": [
+                    "Je",
+                    "prends",
+                    "le",
+                    "petit-déjeuner",
+                    "à",
+                    "huit",
+                    "heures"
+                  ],
+                  "sourcePhrase": "Desayuno a las ocho",
+                  "feedbackOnError": {
+                    "type": "word_order",
+                    "explanation": "La frase correcta es «Je prends le petit-déjeuner à huit heures»."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "El orden produce una frase natural."
+                  }
+                },
+                {
+                  "type": "MatchPairs",
+                  "id": "es-fr-a1-p0-u1-l03-e04",
+                  "pairs": [
+                    {
+                      "left": "despertarse",
+                      "right": "se réveiller"
+                    },
+                    {
+                      "left": "vestirse",
+                      "right": "s'habiller"
+                    },
+                    {
+                      "left": "acostarse",
+                      "right": "se coucher"
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "Cada palabra tiene una traducción distinta."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has asociado cada palabra con su traducción."
+                  }
+                },
+                {
+                  "type": "ListenChoose",
+                  "id": "es-fr-a1-p0-u1-l03-e05",
+                  "audioText": "Je me couche à dix heures",
+                  "options": [
+                    "Je me couche à dix heures",
+                    "Je me réveille à sept heures",
+                    "Je prends le petit-déjeuner à huit heures"
+                  ],
+                  "correctIndex": 0,
+                  "feedbackOnError": {
+                    "type": "comprehension",
+                    "explanation": "El audio dice «Je me couche à dix heures»."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has reconocido la frase del audio."
+                  }
+                },
+                {
+                  "type": "ListenType",
+                  "id": "es-fr-a1-p0-u1-l03-e06",
+                  "audioText": "Je m'habille le matin",
+                  "transcription": "Je m'habille le matin",
+                  "feedbackOnError": {
+                    "type": "spelling",
+                    "explanation": "Escribe exactamente «Je m'habille le matin»."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La transcripción coincide con el audio."
+                  }
+                },
+                {
+                  "type": "SpeakRepeat",
+                  "id": "es-fr-a1-p0-u1-l03-e07",
+                  "targetPhrase": "Je me réveille à sept heures",
+                  "audioText": "Je me réveille à sept heures",
+                  "feedbackOnError": {
+                    "type": "pronunciation",
+                    "explanation": "Repite «Je me réveille à sept heures» con claridad."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La frase se entiende y mantiene el ritmo."
+                  }
+                }
+              ]
+            },
+            {
+              "id": "es-fr-a1-p0-u1-l04",
+              "title": "Le transport",
+              "cefrLevel": "A1",
+              "vocabFrequencyBand": "1000-2000",
+              "canDo": "Puedo decir cómo me desplazo por la ciudad en francés.",
+              "microLesson": {
+                "title": "Le transport",
+                "goals": [
+                  "Reconocer vocabulario de le transport.",
+                  "Usar frases sencillas sobre le transport en francés."
+                ],
+                "sections": [
+                  {
+                    "heading": "Mots et phrases",
+                    "body": "Vocabulario básico de le transport. Fíjate en el orden de la frase y en los artículos franceses.",
+                    "examples": [
+                      {
+                        "source": "Voy en autobús",
+                        "target": "Je vais en bus"
+                      },
+                      {
+                        "source": "La bicicleta es rápida",
+                        "target": "Le vélo est rapide"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "glossary": [
+                {
+                  "term": "bus",
+                  "translations": [
+                    "autobús"
+                  ]
+                },
+                {
+                  "term": "train",
+                  "translations": [
+                    "tren"
+                  ]
+                },
+                {
+                  "term": "vélo",
+                  "translations": [
+                    "bicicleta"
+                  ]
+                }
+              ],
+              "exercises": [
+                {
+                  "type": "MultipleChoice",
+                  "id": "es-fr-a1-p0-u1-l04-e01",
+                  "question": "¿Cómo se dice «autobús» en francés?",
+                  "options": [
+                    "bus",
+                    "train",
+                    "vélo"
+                  ],
+                  "correctIndex": 0,
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "«autobús» se dice «bus»."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has elegido la traducción correcta."
+                  }
+                },
+                {
+                  "type": "Translate",
+                  "id": "es-fr-a1-p0-u1-l04-e02",
+                  "sourcePhrase": "Voy en autobús",
+                  "correctTokens": [
+                    "Je",
+                    "vais",
+                    "en",
+                    "bus"
+                  ],
+                  "distractorTokens": [
+                    "train",
+                    "vélo"
+                  ],
+                  "feedbackOnError": {
+                    "type": "word_order",
+                    "explanation": "El orden correcto es «Je vais en bus»."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La frase conserva el orden y el significado."
+                  }
+                },
+                {
+                  "type": "OrderWords",
+                  "id": "es-fr-a1-p0-u1-l04-e03",
+                  "tokens": [
+                    "vélo",
+                    "est",
+                    "rapide",
+                    "Le"
+                  ],
+                  "answerTokens": [
+                    "Le",
+                    "vélo",
+                    "est",
+                    "rapide"
+                  ],
+                  "sourcePhrase": "La bicicleta es rápida",
+                  "feedbackOnError": {
+                    "type": "word_order",
+                    "explanation": "La frase correcta es «Le vélo est rapide»."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "El orden produce una frase natural."
+                  }
+                },
+                {
+                  "type": "MatchPairs",
+                  "id": "es-fr-a1-p0-u1-l04-e04",
+                  "pairs": [
+                    {
+                      "left": "autobús",
+                      "right": "bus"
+                    },
+                    {
+                      "left": "tren",
+                      "right": "train"
+                    },
+                    {
+                      "left": "bicicleta",
+                      "right": "vélo"
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "Cada palabra tiene una traducción distinta."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has asociado cada palabra con su traducción."
+                  }
+                },
+                {
+                  "type": "ListenChoose",
+                  "id": "es-fr-a1-p0-u1-l04-e05",
+                  "audioText": "Je prends le train",
+                  "options": [
+                    "Je prends le train",
+                    "Je prends le bus",
+                    "Je vais à vélo"
+                  ],
+                  "correctIndex": 0,
+                  "feedbackOnError": {
+                    "type": "comprehension",
+                    "explanation": "El audio dice «Je prends le train»."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has reconocido la frase del audio."
+                  }
+                },
+                {
+                  "type": "ListenType",
+                  "id": "es-fr-a1-p0-u1-l04-e06",
+                  "audioText": "Le bus est en retard",
+                  "transcription": "Le bus est en retard",
+                  "feedbackOnError": {
+                    "type": "spelling",
+                    "explanation": "Escribe exactamente «Le bus est en retard»."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La transcripción coincide con el audio."
+                  }
+                },
+                {
+                  "type": "SpeakRepeat",
+                  "id": "es-fr-a1-p0-u1-l04-e07",
+                  "targetPhrase": "Je vais en bus",
+                  "audioText": "Je vais en bus",
+                  "feedbackOnError": {
+                    "type": "pronunciation",
+                    "explanation": "Repite «Je vais en bus» con claridad."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La frase se entiende y mantiene el ritmo."
+                  }
+                }
+              ]
+            },
+            {
+              "id": "es-fr-a1-p0-u1-l05",
+              "title": "Les directions",
+              "cefrLevel": "A1",
+              "vocabFrequencyBand": "1000-2000",
+              "canDo": "Puedo pedir y dar direcciones básicas en francés.",
+              "microLesson": {
+                "title": "Les directions",
+                "goals": [
+                  "Reconocer vocabulario de les directions.",
+                  "Usar frases sencillas sobre les directions en francés."
+                ],
+                "sections": [
+                  {
+                    "heading": "Mots et phrases",
+                    "body": "Vocabulario básico de les directions. Fíjate en el orden de la frase y en los artículos franceses.",
+                    "examples": [
+                      {
+                        "source": "La calle está a la derecha",
+                        "target": "La rue est à droite"
+                      },
+                      {
+                        "source": "Gira a la izquierda",
+                        "target": "Tournez à gauche"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "glossary": [
+                {
+                  "term": "gauche",
+                  "translations": [
+                    "izquierda"
+                  ]
+                },
+                {
+                  "term": "droite",
+                  "translations": [
+                    "derecha"
+                  ]
+                },
+                {
+                  "term": "rue",
+                  "translations": [
+                    "calle"
+                  ]
+                }
+              ],
+              "exercises": [
+                {
+                  "type": "MultipleChoice",
+                  "id": "es-fr-a1-p0-u1-l05-e01",
+                  "question": "¿Cómo se dice «izquierda» en francés?",
+                  "options": [
+                    "gauche",
+                    "droite",
+                    "rue"
+                  ],
+                  "correctIndex": 0,
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "«izquierda» se dice «gauche»."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has elegido la traducción correcta."
+                  }
+                },
+                {
+                  "type": "Translate",
+                  "id": "es-fr-a1-p0-u1-l05-e02",
+                  "sourcePhrase": "La calle está a la derecha",
+                  "correctTokens": [
+                    "La",
+                    "rue",
+                    "est",
+                    "à",
+                    "droite"
+                  ],
+                  "distractorTokens": [
+                    "gauche",
+                    "place"
+                  ],
+                  "feedbackOnError": {
+                    "type": "word_order",
+                    "explanation": "El orden correcto es «La rue est à droite»."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La frase conserva el orden y el significado."
+                  }
+                },
+                {
+                  "type": "OrderWords",
+                  "id": "es-fr-a1-p0-u1-l05-e03",
+                  "tokens": [
+                    "à",
+                    "gauche",
+                    "Tournez"
+                  ],
+                  "answerTokens": [
+                    "Tournez",
+                    "à",
+                    "gauche"
+                  ],
+                  "sourcePhrase": "Gira a la izquierda",
+                  "feedbackOnError": {
+                    "type": "word_order",
+                    "explanation": "La frase correcta es «Tournez à gauche»."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "El orden produce una frase natural."
+                  }
+                },
+                {
+                  "type": "MatchPairs",
+                  "id": "es-fr-a1-p0-u1-l05-e04",
+                  "pairs": [
+                    {
+                      "left": "izquierda",
+                      "right": "gauche"
+                    },
+                    {
+                      "left": "derecha",
+                      "right": "droite"
+                    },
+                    {
+                      "left": "calle",
+                      "right": "rue"
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "Cada palabra tiene una traducción distinta."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has asociado cada palabra con su traducción."
+                  }
+                },
+                {
+                  "type": "ListenChoose",
+                  "id": "es-fr-a1-p0-u1-l05-e05",
+                  "audioText": "La banque est à gauche",
+                  "options": [
+                    "La banque est à gauche",
+                    "La banque est à droite",
+                    "La banque est près du parc"
+                  ],
+                  "correctIndex": 0,
+                  "feedbackOnError": {
+                    "type": "comprehension",
+                    "explanation": "El audio dice «La banque est à gauche»."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has reconocido la frase del audio."
+                  }
+                },
+                {
+                  "type": "ListenType",
+                  "id": "es-fr-a1-p0-u1-l05-e06",
+                  "audioText": "Allez tout droit",
+                  "transcription": "Allez tout droit",
+                  "feedbackOnError": {
+                    "type": "spelling",
+                    "explanation": "Escribe exactamente «Allez tout droit»."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La transcripción coincide con el audio."
+                  }
+                },
+                {
+                  "type": "SpeakRepeat",
+                  "id": "es-fr-a1-p0-u1-l05-e07",
+                  "targetPhrase": "Tournez à droite",
+                  "audioText": "Tournez à droite",
+                  "feedbackOnError": {
+                    "type": "pronunciation",
+                    "explanation": "Repite «Tournez à droite» con claridad."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La frase se entiende y mantiene el ritmo."
+                  }
+                }
+              ]
+            },
+            {
+              "id": "es-fr-a1-p0-u1-l06",
+              "title": "L'école",
+              "cefrLevel": "A1",
+              "vocabFrequencyBand": "1000-2000",
+              "canDo": "Puedo hablar de objetos y personas de la escuela en francés.",
+              "microLesson": {
+                "title": "L'école",
+                "goals": [
+                  "Reconocer vocabulario de l'école.",
+                  "Usar frases sencillas sobre l'école en francés."
+                ],
+                "sections": [
+                  {
+                    "heading": "Mots et phrases",
+                    "body": "Vocabulario básico de l'école. Fíjate en el orden de la frase y en los artículos franceses.",
+                    "examples": [
+                      {
+                        "source": "Mi libro es nuevo",
+                        "target": "Mon livre est neuf"
+                      },
+                      {
+                        "source": "El profesor es amable",
+                        "target": "Le professeur est gentil"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "glossary": [
+                {
+                  "term": "école",
+                  "translations": [
+                    "escuela"
+                  ]
+                },
+                {
+                  "term": "livre",
+                  "translations": [
+                    "libro"
+                  ]
+                },
+                {
+                  "term": "professeur",
+                  "translations": [
+                    "profesor"
+                  ]
+                }
+              ],
+              "exercises": [
+                {
+                  "type": "MultipleChoice",
+                  "id": "es-fr-a1-p0-u1-l06-e01",
+                  "question": "¿Cómo se dice «escuela» en francés?",
+                  "options": [
+                    "école",
+                    "livre",
+                    "professeur"
+                  ],
+                  "correctIndex": 0,
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "«escuela» se dice «école»."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has elegido la traducción correcta."
+                  }
+                },
+                {
+                  "type": "Translate",
+                  "id": "es-fr-a1-p0-u1-l06-e02",
+                  "sourcePhrase": "Mi libro es nuevo",
+                  "correctTokens": [
+                    "Mon",
+                    "livre",
+                    "est",
+                    "neuf"
+                  ],
+                  "distractorTokens": [
+                    "vieux",
+                    "école"
+                  ],
+                  "feedbackOnError": {
+                    "type": "word_order",
+                    "explanation": "El orden correcto es «Mon livre est neuf»."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La frase conserva el orden y el significado."
+                  }
+                },
+                {
+                  "type": "OrderWords",
+                  "id": "es-fr-a1-p0-u1-l06-e03",
+                  "tokens": [
+                    "professeur",
+                    "est",
+                    "gentil",
+                    "Le"
+                  ],
+                  "answerTokens": [
+                    "Le",
+                    "professeur",
+                    "est",
+                    "gentil"
+                  ],
+                  "sourcePhrase": "El profesor es amable",
+                  "feedbackOnError": {
+                    "type": "word_order",
+                    "explanation": "La frase correcta es «Le professeur est gentil»."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "El orden produce una frase natural."
+                  }
+                },
+                {
+                  "type": "MatchPairs",
+                  "id": "es-fr-a1-p0-u1-l06-e04",
+                  "pairs": [
+                    {
+                      "left": "escuela",
+                      "right": "école"
+                    },
+                    {
+                      "left": "libro",
+                      "right": "livre"
+                    },
+                    {
+                      "left": "profesor",
+                      "right": "professeur"
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "Cada palabra tiene una traducción distinta."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has asociado cada palabra con su traducción."
+                  }
+                },
+                {
+                  "type": "ListenChoose",
+                  "id": "es-fr-a1-p0-u1-l06-e05",
+                  "audioText": "Je vais à l'école",
+                  "options": [
+                    "Je vais à l'école",
+                    "Je lis un livre",
+                    "Le professeur est gentil"
+                  ],
+                  "correctIndex": 0,
+                  "feedbackOnError": {
+                    "type": "comprehension",
+                    "explanation": "El audio dice «Je vais à l'école»."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has reconocido la frase del audio."
+                  }
+                },
+                {
+                  "type": "ListenType",
+                  "id": "es-fr-a1-p0-u1-l06-e06",
+                  "audioText": "Mon école est grande",
+                  "transcription": "Mon école est grande",
+                  "feedbackOnError": {
+                    "type": "spelling",
+                    "explanation": "Escribe exactamente «Mon école est grande»."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La transcripción coincide con el audio."
+                  }
+                },
+                {
+                  "type": "SpeakRepeat",
+                  "id": "es-fr-a1-p0-u1-l06-e07",
+                  "targetPhrase": "J'ai un livre",
+                  "audioText": "J'ai un livre",
+                  "feedbackOnError": {
+                    "type": "pronunciation",
+                    "explanation": "Repite «J'ai un livre» con claridad."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La frase se entiende y mantiene el ritmo."
+                  }
+                }
+              ]
+            },
+            {
+              "id": "es-fr-a1-p0-u1-l07",
+              "title": "Le travail",
+              "cefrLevel": "A1",
+              "vocabFrequencyBand": "1000-2000",
+              "canDo": "Puedo presentar mi trabajo y hablar de una reunión en francés.",
+              "microLesson": {
+                "title": "Le travail",
+                "goals": [
+                  "Reconocer vocabulario de le travail.",
+                  "Usar frases sencillas sobre le travail en francés."
+                ],
+                "sections": [
+                  {
+                    "heading": "Mots et phrases",
+                    "body": "Vocabulario básico de le travail. Fíjate en el orden de la frase y en los artículos franceses.",
+                    "examples": [
+                      {
+                        "source": "Mi jefe está en la oficina",
+                        "target": "Mon chef est au bureau"
+                      },
+                      {
+                        "source": "La reunión es a las diez",
+                        "target": "La réunion est à dix heures"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "glossary": [
+                {
+                  "term": "bureau",
+                  "translations": [
+                    "oficina"
+                  ]
+                },
+                {
+                  "term": "chef",
+                  "translations": [
+                    "jefe"
+                  ]
+                },
+                {
+                  "term": "réunion",
+                  "translations": [
+                    "reunión"
+                  ]
+                }
+              ],
+              "exercises": [
+                {
+                  "type": "MultipleChoice",
+                  "id": "es-fr-a1-p0-u1-l07-e01",
+                  "question": "¿Cómo se dice «oficina» en francés?",
+                  "options": [
+                    "bureau",
+                    "chef",
+                    "réunion"
+                  ],
+                  "correctIndex": 0,
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "«oficina» se dice «bureau»."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has elegido la traducción correcta."
+                  }
+                },
+                {
+                  "type": "Translate",
+                  "id": "es-fr-a1-p0-u1-l07-e02",
+                  "sourcePhrase": "Mi jefe está en la oficina",
+                  "correctTokens": [
+                    "Mon",
+                    "chef",
+                    "est",
+                    "au",
+                    "bureau"
+                  ],
+                  "distractorTokens": [
+                    "réunion",
+                    "maison"
+                  ],
+                  "feedbackOnError": {
+                    "type": "word_order",
+                    "explanation": "El orden correcto es «Mon chef est au bureau»."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La frase conserva el orden y el significado."
+                  }
+                },
+                {
+                  "type": "OrderWords",
+                  "id": "es-fr-a1-p0-u1-l07-e03",
+                  "tokens": [
+                    "réunion",
+                    "est",
+                    "à",
+                    "dix",
+                    "heures",
+                    "La"
+                  ],
+                  "answerTokens": [
+                    "La",
+                    "réunion",
+                    "est",
+                    "à",
+                    "dix",
+                    "heures"
+                  ],
+                  "sourcePhrase": "La reunión es a las diez",
+                  "feedbackOnError": {
+                    "type": "word_order",
+                    "explanation": "La frase correcta es «La réunion est à dix heures»."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "El orden produce una frase natural."
+                  }
+                },
+                {
+                  "type": "MatchPairs",
+                  "id": "es-fr-a1-p0-u1-l07-e04",
+                  "pairs": [
+                    {
+                      "left": "oficina",
+                      "right": "bureau"
+                    },
+                    {
+                      "left": "jefe",
+                      "right": "chef"
+                    },
+                    {
+                      "left": "reunión",
+                      "right": "réunion"
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "Cada palabra tiene una traducción distinta."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has asociado cada palabra con su traducción."
+                  }
+                },
+                {
+                  "type": "ListenChoose",
+                  "id": "es-fr-a1-p0-u1-l07-e05",
+                  "audioText": "Je travaille dans un bureau",
+                  "options": [
+                    "Je travaille dans un bureau",
+                    "La réunion est à dix heures",
+                    "Mon chef est occupé"
+                  ],
+                  "correctIndex": 0,
+                  "feedbackOnError": {
+                    "type": "comprehension",
+                    "explanation": "El audio dice «Je travaille dans un bureau»."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has reconocido la frase del audio."
+                  }
+                },
+                {
+                  "type": "ListenType",
+                  "id": "es-fr-a1-p0-u1-l07-e06",
+                  "audioText": "Mon chef est occupé",
+                  "transcription": "Mon chef est occupé",
+                  "feedbackOnError": {
+                    "type": "spelling",
+                    "explanation": "Escribe exactamente «Mon chef est occupé»."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La transcripción coincide con el audio."
+                  }
+                },
+                {
+                  "type": "SpeakRepeat",
+                  "id": "es-fr-a1-p0-u1-l07-e07",
+                  "targetPhrase": "Je travaille dans un bureau",
+                  "audioText": "Je travaille dans un bureau",
+                  "feedbackOnError": {
+                    "type": "pronunciation",
+                    "explanation": "Repite «Je travaille dans un bureau» con claridad."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La frase se entiende y mantiene el ritmo."
+                  }
+                }
+              ]
+            },
+            {
+              "id": "es-fr-a1-p0-u1-l08",
+              "title": "La santé",
+              "cefrLevel": "A1",
+              "vocabFrequencyBand": "1000-2000",
+              "canDo": "Puedo explicar un problema de salud sencillo en francés.",
+              "microLesson": {
+                "title": "La santé",
+                "goals": [
+                  "Reconocer vocabulario de la santé.",
+                  "Usar frases sencillas sobre la santé en francés."
+                ],
+                "sections": [
+                  {
+                    "heading": "Mots et phrases",
+                    "body": "Vocabulario básico de la santé. Fíjate en el orden de la frase y en los artículos franceses.",
+                    "examples": [
+                      {
+                        "source": "Me duele la cabeza",
+                        "target": "J'ai mal à la tête"
+                      },
+                      {
+                        "source": "Necesito un médico",
+                        "target": "J'ai besoin d'un médecin"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "glossary": [
+                {
+                  "term": "médecin",
+                  "translations": [
+                    "médico"
+                  ]
+                },
+                {
+                  "term": "pharmacie",
+                  "translations": [
+                    "farmacia"
+                  ]
+                },
+                {
+                  "term": "douleur",
+                  "translations": [
+                    "dolor"
+                  ]
+                }
+              ],
+              "exercises": [
+                {
+                  "type": "MultipleChoice",
+                  "id": "es-fr-a1-p0-u1-l08-e01",
+                  "question": "¿Cómo se dice «médico» en francés?",
+                  "options": [
+                    "médecin",
+                    "pharmacie",
+                    "douleur"
+                  ],
+                  "correctIndex": 0,
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "«médico» se dice «médecin»."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has elegido la traducción correcta."
+                  }
+                },
+                {
+                  "type": "Translate",
+                  "id": "es-fr-a1-p0-u1-l08-e02",
+                  "sourcePhrase": "Me duele la cabeza",
+                  "correctTokens": [
+                    "J'ai",
+                    "mal",
+                    "à",
+                    "la",
+                    "tête"
+                  ],
+                  "distractorTokens": [
+                    "estomac",
+                    "médecin"
+                  ],
+                  "feedbackOnError": {
+                    "type": "word_order",
+                    "explanation": "El orden correcto es «J'ai mal à la tête»."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La frase conserva el orden y el significado."
+                  }
+                },
+                {
+                  "type": "OrderWords",
+                  "id": "es-fr-a1-p0-u1-l08-e03",
+                  "tokens": [
+                    "besoin",
+                    "d'un",
+                    "médecin",
+                    "J'ai"
+                  ],
+                  "answerTokens": [
+                    "J'ai",
+                    "besoin",
+                    "d'un",
+                    "médecin"
+                  ],
+                  "sourcePhrase": "Necesito un médico",
+                  "feedbackOnError": {
+                    "type": "word_order",
+                    "explanation": "La frase correcta es «J'ai besoin d'un médecin»."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "El orden produce una frase natural."
+                  }
+                },
+                {
+                  "type": "MatchPairs",
+                  "id": "es-fr-a1-p0-u1-l08-e04",
+                  "pairs": [
+                    {
+                      "left": "médico",
+                      "right": "médecin"
+                    },
+                    {
+                      "left": "farmacia",
+                      "right": "pharmacie"
+                    },
+                    {
+                      "left": "dolor",
+                      "right": "douleur"
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "Cada palabra tiene una traducción distinta."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has asociado cada palabra con su traducción."
+                  }
+                },
+                {
+                  "type": "ListenChoose",
+                  "id": "es-fr-a1-p0-u1-l08-e05",
+                  "audioText": "J'ai mal à la tête",
+                  "options": [
+                    "J'ai mal à la tête",
+                    "J'ai besoin d'un médecin",
+                    "La pharmacie est ouverte"
+                  ],
+                  "correctIndex": 0,
+                  "feedbackOnError": {
+                    "type": "comprehension",
+                    "explanation": "El audio dice «J'ai mal à la tête»."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has reconocido la frase del audio."
+                  }
+                },
+                {
+                  "type": "ListenType",
+                  "id": "es-fr-a1-p0-u1-l08-e06",
+                  "audioText": "La pharmacie est ouverte",
+                  "transcription": "La pharmacie est ouverte",
+                  "feedbackOnError": {
+                    "type": "spelling",
+                    "explanation": "Escribe exactamente «La pharmacie est ouverte»."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La transcripción coincide con el audio."
+                  }
+                },
+                {
+                  "type": "SpeakRepeat",
+                  "id": "es-fr-a1-p0-u1-l08-e07",
+                  "targetPhrase": "J'ai besoin d'un médecin",
+                  "audioText": "J'ai besoin d'un médecin",
+                  "feedbackOnError": {
+                    "type": "pronunciation",
+                    "explanation": "Repite «J'ai besoin d'un médecin» con claridad."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La frase se entiende y mantiene el ritmo."
+                  }
+                }
+              ]
+            },
+            {
+              "id": "es-fr-a1-p0-u1-l09",
+              "title": "Les loisirs",
+              "cefrLevel": "A1",
+              "vocabFrequencyBand": "1000-2000",
+              "canDo": "Puedo hablar de lo que me gusta hacer en mi tiempo libre en francés.",
+              "microLesson": {
+                "title": "Les loisirs",
+                "goals": [
+                  "Reconocer vocabulario de les loisirs.",
+                  "Usar frases sencillas sobre les loisirs en francés."
+                ],
+                "sections": [
+                  {
+                    "heading": "Mots et phrases",
+                    "body": "Vocabulario básico de les loisirs. Fíjate en el orden de la frase y en los artículos franceses.",
+                    "examples": [
+                      {
+                        "source": "Me gusta la música",
+                        "target": "J'aime la musique"
+                      },
+                      {
+                        "source": "El deporte es divertido",
+                        "target": "Le sport est amusant"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "glossary": [
+                {
+                  "term": "musique",
+                  "translations": [
+                    "música"
+                  ]
+                },
+                {
+                  "term": "sport",
+                  "translations": [
+                    "deporte"
+                  ]
+                },
+                {
+                  "term": "film",
+                  "translations": [
+                    "película"
+                  ]
+                }
+              ],
+              "exercises": [
+                {
+                  "type": "MultipleChoice",
+                  "id": "es-fr-a1-p0-u1-l09-e01",
+                  "question": "¿Cómo se dice «música» en francés?",
+                  "options": [
+                    "musique",
+                    "sport",
+                    "film"
+                  ],
+                  "correctIndex": 0,
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "«música» se dice «musique»."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has elegido la traducción correcta."
+                  }
+                },
+                {
+                  "type": "Translate",
+                  "id": "es-fr-a1-p0-u1-l09-e02",
+                  "sourcePhrase": "Me gusta la música",
+                  "correctTokens": [
+                    "J'aime",
+                    "la",
+                    "musique"
+                  ],
+                  "distractorTokens": [
+                    "sport",
+                    "film"
+                  ],
+                  "feedbackOnError": {
+                    "type": "word_order",
+                    "explanation": "El orden correcto es «J'aime la musique»."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La frase conserva el orden y el significado."
+                  }
+                },
+                {
+                  "type": "OrderWords",
+                  "id": "es-fr-a1-p0-u1-l09-e03",
+                  "tokens": [
+                    "sport",
+                    "est",
+                    "amusant",
+                    "Le"
+                  ],
+                  "answerTokens": [
+                    "Le",
+                    "sport",
+                    "est",
+                    "amusant"
+                  ],
+                  "sourcePhrase": "El deporte es divertido",
+                  "feedbackOnError": {
+                    "type": "word_order",
+                    "explanation": "La frase correcta es «Le sport est amusant»."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "El orden produce una frase natural."
+                  }
+                },
+                {
+                  "type": "MatchPairs",
+                  "id": "es-fr-a1-p0-u1-l09-e04",
+                  "pairs": [
+                    {
+                      "left": "música",
+                      "right": "musique"
+                    },
+                    {
+                      "left": "deporte",
+                      "right": "sport"
+                    },
+                    {
+                      "left": "película",
+                      "right": "film"
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "Cada palabra tiene una traducción distinta."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has asociado cada palabra con su traducción."
+                  }
+                },
+                {
+                  "type": "ListenChoose",
+                  "id": "es-fr-a1-p0-u1-l09-e05",
+                  "audioText": "Je regarde un film",
+                  "options": [
+                    "Je regarde un film",
+                    "J'écoute de la musique",
+                    "Je fais du sport"
+                  ],
+                  "correctIndex": 0,
+                  "feedbackOnError": {
+                    "type": "comprehension",
+                    "explanation": "El audio dice «Je regarde un film»."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has reconocido la frase del audio."
+                  }
+                },
+                {
+                  "type": "ListenType",
+                  "id": "es-fr-a1-p0-u1-l09-e06",
+                  "audioText": "J'écoute de la musique",
+                  "transcription": "J'écoute de la musique",
+                  "feedbackOnError": {
+                    "type": "spelling",
+                    "explanation": "Escribe exactamente «J'écoute de la musique»."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La transcripción coincide con el audio."
+                  }
+                },
+                {
+                  "type": "SpeakRepeat",
+                  "id": "es-fr-a1-p0-u1-l09-e07",
+                  "targetPhrase": "J'aime la musique",
+                  "audioText": "J'aime la musique",
+                  "feedbackOnError": {
+                    "type": "pronunciation",
+                    "explanation": "Repite «J'aime la musique» con claridad."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La frase se entiende y mantiene el ritmo."
+                  }
+                }
+              ]
+            },
+            {
+              "id": "es-fr-a1-p0-u1-l10",
+              "title": "La ville",
+              "cefrLevel": "A1",
+              "vocabFrequencyBand": "1000-2000",
+              "canDo": "Puedo hablar de lugares de mi ciudad en francés.",
+              "microLesson": {
+                "title": "La ville",
+                "goals": [
+                  "Reconocer vocabulario de la ville.",
+                  "Usar frases sencillas sobre la ville en francés."
+                ],
+                "sections": [
+                  {
+                    "heading": "Mots et phrases",
+                    "body": "Vocabulario básico de la ville. Fíjate en el orden de la frase y en los artículos franceses.",
+                    "examples": [
+                      {
+                        "source": "El parque es grande",
+                        "target": "Le parc est grand"
+                      },
+                      {
+                        "source": "El restaurante está cerca",
+                        "target": "Le restaurant est près"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "glossary": [
+                {
+                  "term": "parc",
+                  "translations": [
+                    "parque"
+                  ]
+                },
+                {
+                  "term": "musée",
+                  "translations": [
+                    "museo"
+                  ]
+                },
+                {
+                  "term": "restaurant",
+                  "translations": [
+                    "restaurante"
+                  ]
+                }
+              ],
+              "exercises": [
+                {
+                  "type": "MultipleChoice",
+                  "id": "es-fr-a1-p0-u1-l10-e01",
+                  "question": "¿Cómo se dice «parque» en francés?",
+                  "options": [
+                    "parc",
+                    "musée",
+                    "restaurant"
+                  ],
+                  "correctIndex": 0,
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "«parque» se dice «parc»."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has elegido la traducción correcta."
+                  }
+                },
+                {
+                  "type": "Translate",
+                  "id": "es-fr-a1-p0-u1-l10-e02",
+                  "sourcePhrase": "El parque es grande",
+                  "correctTokens": [
+                    "Le",
+                    "parc",
+                    "est",
+                    "grand"
+                  ],
+                  "distractorTokens": [
+                    "petit",
+                    "musée"
+                  ],
+                  "feedbackOnError": {
+                    "type": "word_order",
+                    "explanation": "El orden correcto es «Le parc est grand»."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La frase conserva el orden y el significado."
+                  }
+                },
+                {
+                  "type": "OrderWords",
+                  "id": "es-fr-a1-p0-u1-l10-e03",
+                  "tokens": [
+                    "restaurant",
+                    "est",
+                    "près",
+                    "Le"
+                  ],
+                  "answerTokens": [
+                    "Le",
+                    "restaurant",
+                    "est",
+                    "près"
+                  ],
+                  "sourcePhrase": "El restaurante está cerca",
+                  "feedbackOnError": {
+                    "type": "word_order",
+                    "explanation": "La frase correcta es «Le restaurant est près»."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "El orden produce una frase natural."
+                  }
+                },
+                {
+                  "type": "MatchPairs",
+                  "id": "es-fr-a1-p0-u1-l10-e04",
+                  "pairs": [
+                    {
+                      "left": "parque",
+                      "right": "parc"
+                    },
+                    {
+                      "left": "museo",
+                      "right": "musée"
+                    },
+                    {
+                      "left": "restaurante",
+                      "right": "restaurant"
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "Cada palabra tiene una traducción distinta."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has asociado cada palabra con su traducción."
+                  }
+                },
+                {
+                  "type": "ListenChoose",
+                  "id": "es-fr-a1-p0-u1-l10-e05",
+                  "audioText": "Le musée est ouvert",
+                  "options": [
+                    "Le musée est ouvert",
+                    "Le parc est beau",
+                    "Le restaurant est près"
+                  ],
+                  "correctIndex": 0,
+                  "feedbackOnError": {
+                    "type": "comprehension",
+                    "explanation": "El audio dice «Le musée est ouvert»."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has reconocido la frase del audio."
+                  }
+                },
+                {
+                  "type": "ListenType",
+                  "id": "es-fr-a1-p0-u1-l10-e06",
+                  "audioText": "Le parc est beau",
+                  "transcription": "Le parc est beau",
+                  "feedbackOnError": {
+                    "type": "spelling",
+                    "explanation": "Escribe exactamente «Le parc est beau»."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La transcripción coincide con el audio."
+                  }
+                },
+                {
+                  "type": "SpeakRepeat",
+                  "id": "es-fr-a1-p0-u1-l10-e07",
+                  "targetPhrase": "Je vais au parc",
+                  "audioText": "Je vais au parc",
+                  "feedbackOnError": {
+                    "type": "pronunciation",
+                    "explanation": "Repite «Je vais au parc» con claridad."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La frase se entiende y mantiene el ritmo."
+                  }
+                }
+              ]
+            }
+          ]
         }
       ]
     },

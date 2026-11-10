@@ -561,12 +561,69 @@ class PackagedContentTest {
     }
 
     @Test
+    fun es_pt_a2_estrena_piloto_f0() {
+        val course = CourseJson.parseCourse(readAsset("es-pt", COURSE_FILE))
+        assertTrue("es-pt debe decodificar en v2", course != null)
+        val lessons = course!!.levels.flatMap { level -> level.units.flatMap { unit -> unit.lessons } }
+        val pilotLessons = lessons.filter { lesson -> lesson.id.value.startsWith("es-pt-a2-p0-") }
+        assertEquals("El piloto A2 de es-pt debe tener 10 lecciones", 10, pilotLessons.size)
+        assertTrue(pilotLessons.all { lesson -> lesson.cefrLevel == CefrLevel.A2 })
+        assertTrue(pilotLessons.all { lesson -> lesson.exercises.size == 7 })
+        assertTrue(pilotLessons.all { lesson -> lesson.grammarPoints.isEmpty() })
+        assertTrue(pilotLessons.all { lesson -> lesson.vocabFrequencyBand == VocabFrequencyBand.BAND_1000_2000 })
+        assertTrue(pilotLessons.all { lesson -> lesson.microLesson != null && lesson.glossary.isNotEmpty() })
+        assertTrue(pilotLessons.all { lesson -> !lesson.canDo.isNullOrBlank() })
+        assertTrue(
+            "Todos los ejercicios del piloto A2 de es-pt deben tener feedbackOnError",
+            pilotLessons.flatMap { lesson -> lesson.exercises }.all { exercise -> exercise.feedbackOnError != null },
+        )
+        val pilotExercises = pilotLessons.flatMap { lesson -> lesson.exercises }
+        assertEquals(10, pilotExercises.count { exercise -> exercise is Exercise.MultipleChoice })
+        assertEquals(10, pilotExercises.count { exercise -> exercise is Exercise.Translate })
+        assertEquals(10, pilotExercises.count { exercise -> exercise is Exercise.OrderWords })
+        assertEquals(10, pilotExercises.count { exercise -> exercise is Exercise.MatchPairs })
+        assertEquals(10, pilotExercises.count { exercise -> exercise is Exercise.ListenChoose })
+        assertEquals(10, pilotExercises.count { exercise -> exercise is Exercise.ListenType })
+        assertEquals(10, pilotExercises.count { exercise -> exercise is Exercise.SpeakRepeat })
+    }
+
+    @Test
+    fun es_fr_a1_estrena_piloto_f0() {
+        val course = CourseJson.parseCourse(readAsset("es-fr", COURSE_FILE))
+        assertTrue("es-fr debe decodificar en v2", course != null)
+        val lessons = course!!.levels.flatMap { level -> level.units.flatMap { unit -> unit.lessons } }
+        val pilotLessons = lessons.filter { lesson -> lesson.id.value.startsWith("es-fr-a1-p0-") }
+        assertEquals("El piloto A1 de es-fr debe tener 10 lecciones", 10, pilotLessons.size)
+        assertTrue(pilotLessons.all { lesson -> lesson.cefrLevel == CefrLevel.A1 })
+        assertTrue(pilotLessons.all { lesson -> lesson.exercises.size == 7 })
+        assertTrue(pilotLessons.all { lesson -> lesson.grammarPoints.isEmpty() })
+        assertTrue(pilotLessons.all { lesson -> lesson.vocabFrequencyBand == VocabFrequencyBand.BAND_1000_2000 })
+        assertTrue(pilotLessons.all { lesson -> lesson.microLesson != null && lesson.glossary.isNotEmpty() })
+        assertTrue(pilotLessons.all { lesson -> !lesson.canDo.isNullOrBlank() })
+        assertTrue(
+            "Todos los ejercicios del piloto A1 de es-fr deben tener feedbackOnError",
+            pilotLessons.flatMap { lesson -> lesson.exercises }.all { exercise -> exercise.feedbackOnError != null },
+        )
+        val pilotExercises = pilotLessons.flatMap { lesson -> lesson.exercises }
+        assertEquals(10, pilotExercises.count { exercise -> exercise is Exercise.MultipleChoice })
+        assertEquals(10, pilotExercises.count { exercise -> exercise is Exercise.Translate })
+        assertEquals(10, pilotExercises.count { exercise -> exercise is Exercise.OrderWords })
+        assertEquals(10, pilotExercises.count { exercise -> exercise is Exercise.MatchPairs })
+        assertEquals(10, pilotExercises.count { exercise -> exercise is Exercise.ListenChoose })
+        assertEquals(10, pilotExercises.count { exercise -> exercise is Exercise.ListenType })
+        assertEquals(10, pilotExercises.count { exercise -> exercise is Exercise.SpeakRepeat })
+    }
+
+    @Test
     fun cursos_de_arranque_amplian_a2() {
         for (courseId in listOf("es-fr", "es-pt", "es-ja")) {
             val course = CourseJson.parseCourse(readAsset(courseId, COURSE_FILE))
             assertTrue("El curso $courseId no decodifica", course != null)
             val lessons = course!!.levels.flatMap { level -> level.units.flatMap { unit -> unit.lessons } }
-            val a2Lessons = lessons.filter { lesson -> lesson.cefrLevel == CefrLevel.A2 }
+            val a2Lessons =
+                lessons.filter { lesson ->
+                    lesson.cefrLevel == CefrLevel.A2 && !lesson.id.value.contains("-p0-")
+                }
             assertEquals("$courseId debe tener 8 lecciones A2", 8, a2Lessons.size)
             assertEquals(
                 (1..2).flatMap { unit -> (1..4).map { lesson -> "$courseId-a2-un-$unit-ls-$lesson" } },

@@ -6245,6 +6245,1901 @@
               ]
             }
           ]
+        },
+        {
+          "id": "es-pt-a2-p0-un-1",
+          "title": "Piloto A2 · Autonomia",
+          "lessons": [
+            {
+              "id": "es-pt-a2-p0-u1-l01",
+              "title": "No supermercado",
+              "cefrLevel": "A2",
+              "vocabFrequencyBand": "1000-2000",
+              "canDo": "Puedo hacer una compra sencilla en un supermercado portugués.",
+              "microLesson": {
+                "title": "No supermercado",
+                "goals": [
+                  "Reconocer vocabulario de o supermercado.",
+                  "Usar frases sencillas sobre o supermercado en portugués."
+                ],
+                "sections": [
+                  {
+                    "heading": "Palavras e frases",
+                    "body": "Vocabulario básico de o supermercado. Fíjate en el orden de la frase y en las preposiciones de lugar.",
+                    "examples": [
+                      {
+                        "source": "Necesito comprar fruta",
+                        "target": "Eu preciso comprar fruta"
+                      },
+                      {
+                        "source": "O supermercado fica perto de casa",
+                        "target": "O supermercado fica perto de casa"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "glossary": [
+                {
+                  "term": "carrinho",
+                  "translations": [
+                    "carrito"
+                  ]
+                },
+                {
+                  "term": "caixa",
+                  "translations": [
+                    "caja"
+                  ]
+                },
+                {
+                  "term": "fruta",
+                  "translations": [
+                    "fruta"
+                  ]
+                }
+              ],
+              "exercises": [
+                {
+                  "type": "MultipleChoice",
+                  "id": "es-pt-a2-p0-u1-l01-e01",
+                  "question": "¿Cómo se dice «carrito» en portugués?",
+                  "options": [
+                    "carrinho",
+                    "caixa",
+                    "fruta"
+                  ],
+                  "correctIndex": 0,
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "«carrito» se dice «carrinho»."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has elegido la traducción correcta."
+                  }
+                },
+                {
+                  "type": "Translate",
+                  "id": "es-pt-a2-p0-u1-l01-e02",
+                  "sourcePhrase": "Necesito comprar fruta",
+                  "correctTokens": [
+                    "Eu",
+                    "preciso",
+                    "comprar",
+                    "fruta"
+                  ],
+                  "distractorTokens": [
+                    "verdura",
+                    "padaria"
+                  ],
+                  "feedbackOnError": {
+                    "type": "word_order",
+                    "explanation": "El orden correcto es «Eu preciso comprar fruta»."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La frase conserva el orden y el significado."
+                  }
+                },
+                {
+                  "type": "OrderWords",
+                  "id": "es-pt-a2-p0-u1-l01-e03",
+                  "tokens": [
+                    "supermercado",
+                    "fica",
+                    "perto",
+                    "de",
+                    "casa",
+                    "O"
+                  ],
+                  "answerTokens": [
+                    "O",
+                    "supermercado",
+                    "fica",
+                    "perto",
+                    "de",
+                    "casa"
+                  ],
+                  "sourcePhrase": "O supermercado fica perto de casa",
+                  "feedbackOnError": {
+                    "type": "word_order",
+                    "explanation": "La frase correcta es «O supermercado fica perto de casa»."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "El orden produce una frase natural."
+                  }
+                },
+                {
+                  "type": "MatchPairs",
+                  "id": "es-pt-a2-p0-u1-l01-e04",
+                  "pairs": [
+                    {
+                      "left": "carrito",
+                      "right": "carrinho"
+                    },
+                    {
+                      "left": "caja",
+                      "right": "caixa"
+                    },
+                    {
+                      "left": "fruta",
+                      "right": "fruta"
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "Cada palabra tiene una traducción distinta."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has asociado cada palabra con su traducción."
+                  }
+                },
+                {
+                  "type": "ListenChoose",
+                  "id": "es-pt-a2-p0-u1-l01-e05",
+                  "audioText": "Eu preciso de um carrinho",
+                  "options": [
+                    "Eu preciso de um carrinho",
+                    "Eu preciso de uma caixa",
+                    "Eu preciso de fruta"
+                  ],
+                  "correctIndex": 0,
+                  "feedbackOnError": {
+                    "type": "comprehension",
+                    "explanation": "El audio dice «Eu preciso de um carrinho»."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has reconocido la frase del audio."
+                  }
+                },
+                {
+                  "type": "ListenType",
+                  "id": "es-pt-a2-p0-u1-l01-e06",
+                  "audioText": "O supermercado está aberto",
+                  "transcription": "O supermercado está aberto",
+                  "feedbackOnError": {
+                    "type": "spelling",
+                    "explanation": "Escribe exactamente «O supermercado está aberto»."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La transcripción coincide con el audio."
+                  }
+                },
+                {
+                  "type": "SpeakRepeat",
+                  "id": "es-pt-a2-p0-u1-l01-e07",
+                  "targetPhrase": "Eu preciso comprar fruta",
+                  "audioText": "Eu preciso comprar fruta",
+                  "feedbackOnError": {
+                    "type": "pronunciation",
+                    "explanation": "Repite «Eu preciso comprar fruta» con claridad."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La frase se entiende y mantiene el ritmo."
+                  }
+                }
+              ]
+            },
+            {
+              "id": "es-pt-a2-p0-u1-l02",
+              "title": "No banco",
+              "cefrLevel": "A2",
+              "vocabFrequencyBand": "1000-2000",
+              "canDo": "Puedo pedir información básica en un banco portugués.",
+              "microLesson": {
+                "title": "No banco",
+                "goals": [
+                  "Reconocer vocabulario de o banco.",
+                  "Usar frases sencillas sobre o banco en portugués."
+                ],
+                "sections": [
+                  {
+                    "heading": "Palavras e frases",
+                    "body": "Vocabulario básico de o banco. Fíjate en el orden de la frase y en las preposiciones de lugar.",
+                    "examples": [
+                      {
+                        "source": "Quiero abrir una cuenta",
+                        "target": "Eu quero abrir uma conta"
+                      },
+                      {
+                        "source": "O banco abre às nove horas",
+                        "target": "O banco abre às nove horas"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "glossary": [
+                {
+                  "term": "conta",
+                  "translations": [
+                    "cuenta"
+                  ]
+                },
+                {
+                  "term": "cartão",
+                  "translations": [
+                    "tarjeta"
+                  ]
+                },
+                {
+                  "term": "dinheiro",
+                  "translations": [
+                    "dinero"
+                  ]
+                }
+              ],
+              "exercises": [
+                {
+                  "type": "MultipleChoice",
+                  "id": "es-pt-a2-p0-u1-l02-e01",
+                  "question": "¿Cómo se dice «cuenta» en portugués?",
+                  "options": [
+                    "conta",
+                    "cartão",
+                    "dinheiro"
+                  ],
+                  "correctIndex": 0,
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "«cuenta» se dice «conta»."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has elegido la traducción correcta."
+                  }
+                },
+                {
+                  "type": "Translate",
+                  "id": "es-pt-a2-p0-u1-l02-e02",
+                  "sourcePhrase": "Quiero abrir una cuenta",
+                  "correctTokens": [
+                    "Eu",
+                    "quero",
+                    "abrir",
+                    "uma",
+                    "conta"
+                  ],
+                  "distractorTokens": [
+                    "fechar",
+                    "cartão"
+                  ],
+                  "feedbackOnError": {
+                    "type": "word_order",
+                    "explanation": "El orden correcto es «Eu quero abrir uma conta»."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La frase conserva el orden y el significado."
+                  }
+                },
+                {
+                  "type": "OrderWords",
+                  "id": "es-pt-a2-p0-u1-l02-e03",
+                  "tokens": [
+                    "banco",
+                    "abre",
+                    "às",
+                    "nove",
+                    "horas",
+                    "O"
+                  ],
+                  "answerTokens": [
+                    "O",
+                    "banco",
+                    "abre",
+                    "às",
+                    "nove",
+                    "horas"
+                  ],
+                  "sourcePhrase": "O banco abre às nove horas",
+                  "feedbackOnError": {
+                    "type": "word_order",
+                    "explanation": "La frase correcta es «O banco abre às nove horas»."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "El orden produce una frase natural."
+                  }
+                },
+                {
+                  "type": "MatchPairs",
+                  "id": "es-pt-a2-p0-u1-l02-e04",
+                  "pairs": [
+                    {
+                      "left": "cuenta",
+                      "right": "conta"
+                    },
+                    {
+                      "left": "tarjeta",
+                      "right": "cartão"
+                    },
+                    {
+                      "left": "dinero",
+                      "right": "dinheiro"
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "Cada palabra tiene una traducción distinta."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has asociado cada palabra con su traducción."
+                  }
+                },
+                {
+                  "type": "ListenChoose",
+                  "id": "es-pt-a2-p0-u1-l02-e05",
+                  "audioText": "Eu quero abrir uma conta",
+                  "options": [
+                    "Eu quero abrir uma conta",
+                    "Eu quero fechar a conta",
+                    "Eu preciso de um cartão"
+                  ],
+                  "correctIndex": 0,
+                  "feedbackOnError": {
+                    "type": "comprehension",
+                    "explanation": "El audio dice «Eu quero abrir uma conta»."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has reconocido la frase del audio."
+                  }
+                },
+                {
+                  "type": "ListenType",
+                  "id": "es-pt-a2-p0-u1-l02-e06",
+                  "audioText": "O banco abre às nove horas",
+                  "transcription": "O banco abre às nove horas",
+                  "feedbackOnError": {
+                    "type": "spelling",
+                    "explanation": "Escribe exactamente «O banco abre às nove horas»."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La transcripción coincide con el audio."
+                  }
+                },
+                {
+                  "type": "SpeakRepeat",
+                  "id": "es-pt-a2-p0-u1-l02-e07",
+                  "targetPhrase": "Eu quero abrir uma conta",
+                  "audioText": "Eu quero abrir uma conta",
+                  "feedbackOnError": {
+                    "type": "pronunciation",
+                    "explanation": "Repite «Eu quero abrir uma conta» con claridad."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La frase se entiende y mantiene el ritmo."
+                  }
+                }
+              ]
+            },
+            {
+              "id": "es-pt-a2-p0-u1-l03",
+              "title": "Uma mudança",
+              "cefrLevel": "A2",
+              "vocabFrequencyBand": "1000-2000",
+              "canDo": "Puedo hablar de una mudanza y de objetos de la casa.",
+              "microLesson": {
+                "title": "Uma mudança",
+                "goals": [
+                  "Reconocer vocabulario de a mudança de casa.",
+                  "Usar frases sencillas sobre a mudança de casa en portugués."
+                ],
+                "sections": [
+                  {
+                    "heading": "Palavras e frases",
+                    "body": "Vocabulario básico de a mudança de casa. Fíjate en el orden de la frase y en las preposiciones de lugar.",
+                    "examples": [
+                      {
+                        "source": "La mudanza es el viernes",
+                        "target": "A mudança é na sexta-feira"
+                      },
+                      {
+                        "source": "As caixas estão na sala",
+                        "target": "As caixas estão na sala"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "glossary": [
+                {
+                  "term": "mudança",
+                  "translations": [
+                    "mudanza"
+                  ]
+                },
+                {
+                  "term": "caixa",
+                  "translations": [
+                    "caja"
+                  ]
+                },
+                {
+                  "term": "chave",
+                  "translations": [
+                    "llave"
+                  ]
+                }
+              ],
+              "exercises": [
+                {
+                  "type": "MultipleChoice",
+                  "id": "es-pt-a2-p0-u1-l03-e01",
+                  "question": "¿Cómo se dice «mudanza» en portugués?",
+                  "options": [
+                    "mudança",
+                    "caixa",
+                    "chave"
+                  ],
+                  "correctIndex": 0,
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "«mudanza» se dice «mudança»."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has elegido la traducción correcta."
+                  }
+                },
+                {
+                  "type": "Translate",
+                  "id": "es-pt-a2-p0-u1-l03-e02",
+                  "sourcePhrase": "La mudanza es el viernes",
+                  "correctTokens": [
+                    "A",
+                    "mudança",
+                    "é",
+                    "na",
+                    "sexta-feira"
+                  ],
+                  "distractorTokens": [
+                    "segunda",
+                    "casa"
+                  ],
+                  "feedbackOnError": {
+                    "type": "word_order",
+                    "explanation": "El orden correcto es «A mudança é na sexta-feira»."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La frase conserva el orden y el significado."
+                  }
+                },
+                {
+                  "type": "OrderWords",
+                  "id": "es-pt-a2-p0-u1-l03-e03",
+                  "tokens": [
+                    "caixas",
+                    "estão",
+                    "na",
+                    "sala",
+                    "As"
+                  ],
+                  "answerTokens": [
+                    "As",
+                    "caixas",
+                    "estão",
+                    "na",
+                    "sala"
+                  ],
+                  "sourcePhrase": "As caixas estão na sala",
+                  "feedbackOnError": {
+                    "type": "word_order",
+                    "explanation": "La frase correcta es «As caixas estão na sala»."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "El orden produce una frase natural."
+                  }
+                },
+                {
+                  "type": "MatchPairs",
+                  "id": "es-pt-a2-p0-u1-l03-e04",
+                  "pairs": [
+                    {
+                      "left": "mudanza",
+                      "right": "mudança"
+                    },
+                    {
+                      "left": "caja",
+                      "right": "caixa"
+                    },
+                    {
+                      "left": "llave",
+                      "right": "chave"
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "Cada palabra tiene una traducción distinta."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has asociado cada palabra con su traducción."
+                  }
+                },
+                {
+                  "type": "ListenChoose",
+                  "id": "es-pt-a2-p0-u1-l03-e05",
+                  "audioText": "A mudança é na sexta-feira",
+                  "options": [
+                    "A mudança é na sexta-feira",
+                    "A mudança é na segunda-feira",
+                    "As caixas estão na sala"
+                  ],
+                  "correctIndex": 0,
+                  "feedbackOnError": {
+                    "type": "comprehension",
+                    "explanation": "El audio dice «A mudança é na sexta-feira»."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has reconocido la frase del audio."
+                  }
+                },
+                {
+                  "type": "ListenType",
+                  "id": "es-pt-a2-p0-u1-l03-e06",
+                  "audioText": "As chaves estão na mesa",
+                  "transcription": "As chaves estão na mesa",
+                  "feedbackOnError": {
+                    "type": "spelling",
+                    "explanation": "Escribe exactamente «As chaves estão na mesa»."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La transcripción coincide con el audio."
+                  }
+                },
+                {
+                  "type": "SpeakRepeat",
+                  "id": "es-pt-a2-p0-u1-l03-e07",
+                  "targetPhrase": "A mudança é na sexta-feira",
+                  "audioText": "A mudança é na sexta-feira",
+                  "feedbackOnError": {
+                    "type": "pronunciation",
+                    "explanation": "Repite «A mudança é na sexta-feira» con claridad."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La frase se entiende y mantiene el ritmo."
+                  }
+                }
+              ]
+            },
+            {
+              "id": "es-pt-a2-p0-u1-l04",
+              "title": "A academia",
+              "cefrLevel": "A2",
+              "vocabFrequencyBand": "1000-2000",
+              "canDo": "Puedo hablar de mi rutina de ejercicio en portugués.",
+              "microLesson": {
+                "title": "A academia",
+                "goals": [
+                  "Reconocer vocabulario de a academia.",
+                  "Usar frases sencillas sobre a academia en portugués."
+                ],
+                "sections": [
+                  {
+                    "heading": "Palavras e frases",
+                    "body": "Vocabulario básico de a academia. Fíjate en el orden de la frase y en las preposiciones de lugar.",
+                    "examples": [
+                      {
+                        "source": "Entreno tres veces por semana",
+                        "target": "Eu treino três vezes por semana"
+                      },
+                      {
+                        "source": "A academia abre às seis",
+                        "target": "A academia abre às seis"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "glossary": [
+                {
+                  "term": "treino",
+                  "translations": [
+                    "entrenamiento"
+                  ]
+                },
+                {
+                  "term": "peso",
+                  "translations": [
+                    "peso"
+                  ]
+                },
+                {
+                  "term": "rotina",
+                  "translations": [
+                    "rutina"
+                  ]
+                }
+              ],
+              "exercises": [
+                {
+                  "type": "MultipleChoice",
+                  "id": "es-pt-a2-p0-u1-l04-e01",
+                  "question": "¿Cómo se dice «entrenamiento» en portugués?",
+                  "options": [
+                    "treino",
+                    "peso",
+                    "rotina"
+                  ],
+                  "correctIndex": 0,
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "«entrenamiento» se dice «treino»."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has elegido la traducción correcta."
+                  }
+                },
+                {
+                  "type": "Translate",
+                  "id": "es-pt-a2-p0-u1-l04-e02",
+                  "sourcePhrase": "Entreno tres veces por semana",
+                  "correctTokens": [
+                    "Eu",
+                    "treino",
+                    "três",
+                    "vezes",
+                    "por",
+                    "semana"
+                  ],
+                  "distractorTokens": [
+                    "todos",
+                    "dia"
+                  ],
+                  "feedbackOnError": {
+                    "type": "word_order",
+                    "explanation": "El orden correcto es «Eu treino três vezes por semana»."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La frase conserva el orden y el significado."
+                  }
+                },
+                {
+                  "type": "OrderWords",
+                  "id": "es-pt-a2-p0-u1-l04-e03",
+                  "tokens": [
+                    "academia",
+                    "abre",
+                    "às",
+                    "seis",
+                    "A"
+                  ],
+                  "answerTokens": [
+                    "A",
+                    "academia",
+                    "abre",
+                    "às",
+                    "seis"
+                  ],
+                  "sourcePhrase": "A academia abre às seis",
+                  "feedbackOnError": {
+                    "type": "word_order",
+                    "explanation": "La frase correcta es «A academia abre às seis»."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "El orden produce una frase natural."
+                  }
+                },
+                {
+                  "type": "MatchPairs",
+                  "id": "es-pt-a2-p0-u1-l04-e04",
+                  "pairs": [
+                    {
+                      "left": "entrenamiento",
+                      "right": "treino"
+                    },
+                    {
+                      "left": "peso",
+                      "right": "peso"
+                    },
+                    {
+                      "left": "rutina",
+                      "right": "rotina"
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "Cada palabra tiene una traducción distinta."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has asociado cada palabra con su traducción."
+                  }
+                },
+                {
+                  "type": "ListenChoose",
+                  "id": "es-pt-a2-p0-u1-l04-e05",
+                  "audioText": "Eu treino três vezes por semana",
+                  "options": [
+                    "Eu treino três vezes por semana",
+                    "Eu treino todos os dias",
+                    "A academia abre às seis"
+                  ],
+                  "correctIndex": 0,
+                  "feedbackOnError": {
+                    "type": "comprehension",
+                    "explanation": "El audio dice «Eu treino três vezes por semana»."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has reconocido la frase del audio."
+                  }
+                },
+                {
+                  "type": "ListenType",
+                  "id": "es-pt-a2-p0-u1-l04-e06",
+                  "audioText": "Eu levanto peso na academia",
+                  "transcription": "Eu levanto peso na academia",
+                  "feedbackOnError": {
+                    "type": "spelling",
+                    "explanation": "Escribe exactamente «Eu levanto peso na academia»."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La transcripción coincide con el audio."
+                  }
+                },
+                {
+                  "type": "SpeakRepeat",
+                  "id": "es-pt-a2-p0-u1-l04-e07",
+                  "targetPhrase": "Eu treino três vezes por semana",
+                  "audioText": "Eu treino três vezes por semana",
+                  "feedbackOnError": {
+                    "type": "pronunciation",
+                    "explanation": "Repite «Eu treino três vezes por semana» con claridad."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La frase se entiende y mantiene el ritmo."
+                  }
+                }
+              ]
+            },
+            {
+              "id": "es-pt-a2-p0-u1-l05",
+              "title": "Uma visita turística",
+              "cefrLevel": "A2",
+              "vocabFrequencyBand": "1000-2000",
+              "canDo": "Puedo comprar una entrada y pedir información turística.",
+              "microLesson": {
+                "title": "Uma visita turística",
+                "goals": [
+                  "Reconocer vocabulario de o turismo.",
+                  "Usar frases sencillas sobre o turismo en portugués."
+                ],
+                "sections": [
+                  {
+                    "heading": "Palavras e frases",
+                    "body": "Vocabulario básico de o turismo. Fíjate en el orden de la frase y en las preposiciones de lugar.",
+                    "examples": [
+                      {
+                        "source": "Quiero comprar una entrada",
+                        "target": "Eu quero comprar um ingresso"
+                      },
+                      {
+                        "source": "O museu abre às dez horas",
+                        "target": "O museu abre às dez horas"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "glossary": [
+                {
+                  "term": "museu",
+                  "translations": [
+                    "museo"
+                  ]
+                },
+                {
+                  "term": "ingresso",
+                  "translations": [
+                    "entrada"
+                  ]
+                },
+                {
+                  "term": "guia",
+                  "translations": [
+                    "guía"
+                  ]
+                }
+              ],
+              "exercises": [
+                {
+                  "type": "MultipleChoice",
+                  "id": "es-pt-a2-p0-u1-l05-e01",
+                  "question": "¿Cómo se dice «museo» en portugués?",
+                  "options": [
+                    "museu",
+                    "ingresso",
+                    "guia"
+                  ],
+                  "correctIndex": 0,
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "«museo» se dice «museu»."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has elegido la traducción correcta."
+                  }
+                },
+                {
+                  "type": "Translate",
+                  "id": "es-pt-a2-p0-u1-l05-e02",
+                  "sourcePhrase": "Quiero comprar una entrada",
+                  "correctTokens": [
+                    "Eu",
+                    "quero",
+                    "comprar",
+                    "um",
+                    "ingresso"
+                  ],
+                  "distractorTokens": [
+                    "museu",
+                    "guia"
+                  ],
+                  "feedbackOnError": {
+                    "type": "word_order",
+                    "explanation": "El orden correcto es «Eu quero comprar um ingresso»."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La frase conserva el orden y el significado."
+                  }
+                },
+                {
+                  "type": "OrderWords",
+                  "id": "es-pt-a2-p0-u1-l05-e03",
+                  "tokens": [
+                    "museu",
+                    "abre",
+                    "às",
+                    "dez",
+                    "horas",
+                    "O"
+                  ],
+                  "answerTokens": [
+                    "O",
+                    "museu",
+                    "abre",
+                    "às",
+                    "dez",
+                    "horas"
+                  ],
+                  "sourcePhrase": "O museu abre às dez horas",
+                  "feedbackOnError": {
+                    "type": "word_order",
+                    "explanation": "La frase correcta es «O museu abre às dez horas»."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "El orden produce una frase natural."
+                  }
+                },
+                {
+                  "type": "MatchPairs",
+                  "id": "es-pt-a2-p0-u1-l05-e04",
+                  "pairs": [
+                    {
+                      "left": "museo",
+                      "right": "museu"
+                    },
+                    {
+                      "left": "entrada",
+                      "right": "ingresso"
+                    },
+                    {
+                      "left": "guía",
+                      "right": "guia"
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "Cada palabra tiene una traducción distinta."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has asociado cada palabra con su traducción."
+                  }
+                },
+                {
+                  "type": "ListenChoose",
+                  "id": "es-pt-a2-p0-u1-l05-e05",
+                  "audioText": "O ingresso custa vinte reais",
+                  "options": [
+                    "O ingresso custa vinte reais",
+                    "O museu abre às dez horas",
+                    "O guia está esperando"
+                  ],
+                  "correctIndex": 0,
+                  "feedbackOnError": {
+                    "type": "comprehension",
+                    "explanation": "El audio dice «O ingresso custa vinte reais»."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has reconocido la frase del audio."
+                  }
+                },
+                {
+                  "type": "ListenType",
+                  "id": "es-pt-a2-p0-u1-l05-e06",
+                  "audioText": "O guia está esperando",
+                  "transcription": "O guia está esperando",
+                  "feedbackOnError": {
+                    "type": "spelling",
+                    "explanation": "Escribe exactamente «O guia está esperando»."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La transcripción coincide con el audio."
+                  }
+                },
+                {
+                  "type": "SpeakRepeat",
+                  "id": "es-pt-a2-p0-u1-l05-e07",
+                  "targetPhrase": "Eu quero comprar um ingresso",
+                  "audioText": "Eu quero comprar um ingresso",
+                  "feedbackOnError": {
+                    "type": "pronunciation",
+                    "explanation": "Repite «Eu quero comprar um ingresso» con claridad."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La frase se entiende y mantiene el ritmo."
+                  }
+                }
+              ]
+            },
+            {
+              "id": "es-pt-a2-p0-u1-l06",
+              "title": "Um aniversário",
+              "cefrLevel": "A2",
+              "vocabFrequencyBand": "1000-2000",
+              "canDo": "Puedo hablar de un cumpleaños y de lo que voy a llevar.",
+              "microLesson": {
+                "title": "Um aniversário",
+                "goals": [
+                  "Reconocer vocabulario de os aniversários.",
+                  "Usar frases sencillas sobre os aniversários en portugués."
+                ],
+                "sections": [
+                  {
+                    "heading": "Palavras e frases",
+                    "body": "Vocabulario básico de os aniversários. Fíjate en el orden de la frase y en las preposiciones de lugar.",
+                    "examples": [
+                      {
+                        "source": "El cumpleaños es mañana",
+                        "target": "O aniversário é amanhã"
+                      },
+                      {
+                        "source": "Eu vou levar um bolo",
+                        "target": "Eu vou levar um bolo"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "glossary": [
+                {
+                  "term": "aniversário",
+                  "translations": [
+                    "cumpleaños"
+                  ]
+                },
+                {
+                  "term": "bolo",
+                  "translations": [
+                    "pastel"
+                  ]
+                },
+                {
+                  "term": "presente",
+                  "translations": [
+                    "regalo"
+                  ]
+                }
+              ],
+              "exercises": [
+                {
+                  "type": "MultipleChoice",
+                  "id": "es-pt-a2-p0-u1-l06-e01",
+                  "question": "¿Cómo se dice «cumpleaños» en portugués?",
+                  "options": [
+                    "aniversário",
+                    "bolo",
+                    "presente"
+                  ],
+                  "correctIndex": 0,
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "«cumpleaños» se dice «aniversário»."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has elegido la traducción correcta."
+                  }
+                },
+                {
+                  "type": "Translate",
+                  "id": "es-pt-a2-p0-u1-l06-e02",
+                  "sourcePhrase": "El cumpleaños es mañana",
+                  "correctTokens": [
+                    "O",
+                    "aniversário",
+                    "é",
+                    "amanhã"
+                  ],
+                  "distractorTokens": [
+                    "ontem",
+                    "bolo"
+                  ],
+                  "feedbackOnError": {
+                    "type": "word_order",
+                    "explanation": "El orden correcto es «O aniversário é amanhã»."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La frase conserva el orden y el significado."
+                  }
+                },
+                {
+                  "type": "OrderWords",
+                  "id": "es-pt-a2-p0-u1-l06-e03",
+                  "tokens": [
+                    "vou",
+                    "levar",
+                    "um",
+                    "bolo",
+                    "Eu"
+                  ],
+                  "answerTokens": [
+                    "Eu",
+                    "vou",
+                    "levar",
+                    "um",
+                    "bolo"
+                  ],
+                  "sourcePhrase": "Eu vou levar um bolo",
+                  "feedbackOnError": {
+                    "type": "word_order",
+                    "explanation": "La frase correcta es «Eu vou levar um bolo»."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "El orden produce una frase natural."
+                  }
+                },
+                {
+                  "type": "MatchPairs",
+                  "id": "es-pt-a2-p0-u1-l06-e04",
+                  "pairs": [
+                    {
+                      "left": "cumpleaños",
+                      "right": "aniversário"
+                    },
+                    {
+                      "left": "pastel",
+                      "right": "bolo"
+                    },
+                    {
+                      "left": "regalo",
+                      "right": "presente"
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "Cada palabra tiene una traducción distinta."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has asociado cada palabra con su traducción."
+                  }
+                },
+                {
+                  "type": "ListenChoose",
+                  "id": "es-pt-a2-p0-u1-l06-e05",
+                  "audioText": "O aniversário é amanhã",
+                  "options": [
+                    "O aniversário é amanhã",
+                    "O aniversário foi ontem",
+                    "Eu vou levar um presente"
+                  ],
+                  "correctIndex": 0,
+                  "feedbackOnError": {
+                    "type": "comprehension",
+                    "explanation": "El audio dice «O aniversário é amanhã»."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has reconocido la frase del audio."
+                  }
+                },
+                {
+                  "type": "ListenType",
+                  "id": "es-pt-a2-p0-u1-l06-e06",
+                  "audioText": "Eu vou levar um presente",
+                  "transcription": "Eu vou levar um presente",
+                  "feedbackOnError": {
+                    "type": "spelling",
+                    "explanation": "Escribe exactamente «Eu vou levar um presente»."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La transcripción coincide con el audio."
+                  }
+                },
+                {
+                  "type": "SpeakRepeat",
+                  "id": "es-pt-a2-p0-u1-l06-e07",
+                  "targetPhrase": "O aniversário é amanhã",
+                  "audioText": "O aniversário é amanhã",
+                  "feedbackOnError": {
+                    "type": "pronunciation",
+                    "explanation": "Repite «O aniversário é amanhã» con claridad."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La frase se entiende y mantiene el ritmo."
+                  }
+                }
+              ]
+            },
+            {
+              "id": "es-pt-a2-p0-u1-l07",
+              "title": "O carro",
+              "cefrLevel": "A2",
+              "vocabFrequencyBand": "1000-2000",
+              "canDo": "Puedo hablar de mi coche y de una reparación.",
+              "microLesson": {
+                "title": "O carro",
+                "goals": [
+                  "Reconocer vocabulario de o carro.",
+                  "Usar frases sencillas sobre o carro en portugués."
+                ],
+                "sections": [
+                  {
+                    "heading": "Palavras e frases",
+                    "body": "Vocabulario básico de o carro. Fíjate en el orden de la frase y en las preposiciones de lugar.",
+                    "examples": [
+                      {
+                        "source": "El coche necesita gasolina",
+                        "target": "O carro precisa de gasolina"
+                      },
+                      {
+                        "source": "O carro está na oficina",
+                        "target": "O carro está na oficina"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "glossary": [
+                {
+                  "term": "gasolina",
+                  "translations": [
+                    "gasolina"
+                  ]
+                },
+                {
+                  "term": "oficina",
+                  "translations": [
+                    "taller"
+                  ]
+                },
+                {
+                  "term": "roda",
+                  "translations": [
+                    "rueda"
+                  ]
+                }
+              ],
+              "exercises": [
+                {
+                  "type": "MultipleChoice",
+                  "id": "es-pt-a2-p0-u1-l07-e01",
+                  "question": "¿Cómo se dice «gasolina» en portugués?",
+                  "options": [
+                    "gasolina",
+                    "oficina",
+                    "roda"
+                  ],
+                  "correctIndex": 0,
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "«gasolina» se dice «gasolina»."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has elegido la traducción correcta."
+                  }
+                },
+                {
+                  "type": "Translate",
+                  "id": "es-pt-a2-p0-u1-l07-e02",
+                  "sourcePhrase": "El coche necesita gasolina",
+                  "correctTokens": [
+                    "O",
+                    "carro",
+                    "precisa",
+                    "de",
+                    "gasolina"
+                  ],
+                  "distractorTokens": [
+                    "oficina",
+                    "roda"
+                  ],
+                  "feedbackOnError": {
+                    "type": "word_order",
+                    "explanation": "El orden correcto es «O carro precisa de gasolina»."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La frase conserva el orden y el significado."
+                  }
+                },
+                {
+                  "type": "OrderWords",
+                  "id": "es-pt-a2-p0-u1-l07-e03",
+                  "tokens": [
+                    "carro",
+                    "está",
+                    "na",
+                    "oficina",
+                    "O"
+                  ],
+                  "answerTokens": [
+                    "O",
+                    "carro",
+                    "está",
+                    "na",
+                    "oficina"
+                  ],
+                  "sourcePhrase": "O carro está na oficina",
+                  "feedbackOnError": {
+                    "type": "word_order",
+                    "explanation": "La frase correcta es «O carro está na oficina»."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "El orden produce una frase natural."
+                  }
+                },
+                {
+                  "type": "MatchPairs",
+                  "id": "es-pt-a2-p0-u1-l07-e04",
+                  "pairs": [
+                    {
+                      "left": "gasolina",
+                      "right": "gasolina"
+                    },
+                    {
+                      "left": "taller",
+                      "right": "oficina"
+                    },
+                    {
+                      "left": "rueda",
+                      "right": "roda"
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "Cada palabra tiene una traducción distinta."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has asociado cada palabra con su traducción."
+                  }
+                },
+                {
+                  "type": "ListenChoose",
+                  "id": "es-pt-a2-p0-u1-l07-e05",
+                  "audioText": "O carro precisa de gasolina",
+                  "options": [
+                    "O carro precisa de gasolina",
+                    "O carro está na oficina",
+                    "O carro é novo"
+                  ],
+                  "correctIndex": 0,
+                  "feedbackOnError": {
+                    "type": "comprehension",
+                    "explanation": "El audio dice «O carro precisa de gasolina»."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has reconocido la frase del audio."
+                  }
+                },
+                {
+                  "type": "ListenType",
+                  "id": "es-pt-a2-p0-u1-l07-e06",
+                  "audioText": "O carro está na oficina",
+                  "transcription": "O carro está na oficina",
+                  "feedbackOnError": {
+                    "type": "spelling",
+                    "explanation": "Escribe exactamente «O carro está na oficina»."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La transcripción coincide con el audio."
+                  }
+                },
+                {
+                  "type": "SpeakRepeat",
+                  "id": "es-pt-a2-p0-u1-l07-e07",
+                  "targetPhrase": "O carro precisa de gasolina",
+                  "audioText": "O carro precisa de gasolina",
+                  "feedbackOnError": {
+                    "type": "pronunciation",
+                    "explanation": "Repite «O carro precisa de gasolina» con claridad."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La frase se entiende y mantiene el ritmo."
+                  }
+                }
+              ]
+            },
+            {
+              "id": "es-pt-a2-p0-u1-l08",
+              "title": "O escritório",
+              "cefrLevel": "A2",
+              "vocabFrequencyBand": "1000-2000",
+              "canDo": "Puedo hablar de reuniones y plazos en la oficina.",
+              "microLesson": {
+                "title": "O escritório",
+                "goals": [
+                  "Reconocer vocabulario de o escritório.",
+                  "Usar frases sencillas sobre o escritório en portugués."
+                ],
+                "sections": [
+                  {
+                    "heading": "Palavras e frases",
+                    "body": "Vocabulario básico de o escritório. Fíjate en el orden de la frase y en las preposiciones de lugar.",
+                    "examples": [
+                      {
+                        "source": "La reunión es a las diez",
+                        "target": "A reunião é às dez horas"
+                      },
+                      {
+                        "source": "O prazo é na sexta-feira",
+                        "target": "O prazo é na sexta-feira"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "glossary": [
+                {
+                  "term": "escritório",
+                  "translations": [
+                    "oficina"
+                  ]
+                },
+                {
+                  "term": "reunião",
+                  "translations": [
+                    "reunión"
+                  ]
+                },
+                {
+                  "term": "prazo",
+                  "translations": [
+                    "plazo"
+                  ]
+                }
+              ],
+              "exercises": [
+                {
+                  "type": "MultipleChoice",
+                  "id": "es-pt-a2-p0-u1-l08-e01",
+                  "question": "¿Cómo se dice «oficina» en portugués?",
+                  "options": [
+                    "escritório",
+                    "reunião",
+                    "prazo"
+                  ],
+                  "correctIndex": 0,
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "«oficina» se dice «escritório»."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has elegido la traducción correcta."
+                  }
+                },
+                {
+                  "type": "Translate",
+                  "id": "es-pt-a2-p0-u1-l08-e02",
+                  "sourcePhrase": "La reunión es a las diez",
+                  "correctTokens": [
+                    "A",
+                    "reunião",
+                    "é",
+                    "às",
+                    "dez",
+                    "horas"
+                  ],
+                  "distractorTokens": [
+                    "amanhã",
+                    "prazo"
+                  ],
+                  "feedbackOnError": {
+                    "type": "word_order",
+                    "explanation": "El orden correcto es «A reunião é às dez horas»."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La frase conserva el orden y el significado."
+                  }
+                },
+                {
+                  "type": "OrderWords",
+                  "id": "es-pt-a2-p0-u1-l08-e03",
+                  "tokens": [
+                    "prazo",
+                    "é",
+                    "na",
+                    "sexta-feira",
+                    "O"
+                  ],
+                  "answerTokens": [
+                    "O",
+                    "prazo",
+                    "é",
+                    "na",
+                    "sexta-feira"
+                  ],
+                  "sourcePhrase": "O prazo é na sexta-feira",
+                  "feedbackOnError": {
+                    "type": "word_order",
+                    "explanation": "La frase correcta es «O prazo é na sexta-feira»."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "El orden produce una frase natural."
+                  }
+                },
+                {
+                  "type": "MatchPairs",
+                  "id": "es-pt-a2-p0-u1-l08-e04",
+                  "pairs": [
+                    {
+                      "left": "oficina",
+                      "right": "escritório"
+                    },
+                    {
+                      "left": "reunión",
+                      "right": "reunião"
+                    },
+                    {
+                      "left": "plazo",
+                      "right": "prazo"
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "Cada palabra tiene una traducción distinta."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has asociado cada palabra con su traducción."
+                  }
+                },
+                {
+                  "type": "ListenChoose",
+                  "id": "es-pt-a2-p0-u1-l08-e05",
+                  "audioText": "A reunião é às dez horas",
+                  "options": [
+                    "A reunião é às dez horas",
+                    "A reunião é amanhã",
+                    "O prazo é na sexta-feira"
+                  ],
+                  "correctIndex": 0,
+                  "feedbackOnError": {
+                    "type": "comprehension",
+                    "explanation": "El audio dice «A reunião é às dez horas»."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has reconocido la frase del audio."
+                  }
+                },
+                {
+                  "type": "ListenType",
+                  "id": "es-pt-a2-p0-u1-l08-e06",
+                  "audioText": "O prazo é na sexta-feira",
+                  "transcription": "O prazo é na sexta-feira",
+                  "feedbackOnError": {
+                    "type": "spelling",
+                    "explanation": "Escribe exactamente «O prazo é na sexta-feira»."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La transcripción coincide con el audio."
+                  }
+                },
+                {
+                  "type": "SpeakRepeat",
+                  "id": "es-pt-a2-p0-u1-l08-e07",
+                  "targetPhrase": "A reunião é às dez horas",
+                  "audioText": "A reunião é às dez horas",
+                  "feedbackOnError": {
+                    "type": "pronunciation",
+                    "explanation": "Repite «A reunião é às dez horas» con claridad."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La frase se entiende y mantiene el ritmo."
+                  }
+                }
+              ]
+            },
+            {
+              "id": "es-pt-a2-p0-u1-l09",
+              "title": "Tempo livre",
+              "cefrLevel": "A2",
+              "vocabFrequencyBand": "1000-2000",
+              "canDo": "Puedo hablar de mis planes de tiempo libre en portugués.",
+              "microLesson": {
+                "title": "Tempo livre",
+                "goals": [
+                  "Reconocer vocabulario de o tempo livre.",
+                  "Usar frases sencillas sobre o tempo livre en portugués."
+                ],
+                "sections": [
+                  {
+                    "heading": "Palavras e frases",
+                    "body": "Vocabulario básico de o tempo livre. Fíjate en el orden de la frase y en las preposiciones de lugar.",
+                    "examples": [
+                      {
+                        "source": "Me gusta pasear por el parque",
+                        "target": "Eu gosto de caminhar no parque"
+                      },
+                      {
+                        "source": "Nós vamos ao cinema hoje",
+                        "target": "Nós vamos ao cinema hoje"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "glossary": [
+                {
+                  "term": "cinema",
+                  "translations": [
+                    "cine"
+                  ]
+                },
+                {
+                  "term": "série",
+                  "translations": [
+                    "serie"
+                  ]
+                },
+                {
+                  "term": "caminhada",
+                  "translations": [
+                    "paseo"
+                  ]
+                }
+              ],
+              "exercises": [
+                {
+                  "type": "MultipleChoice",
+                  "id": "es-pt-a2-p0-u1-l09-e01",
+                  "question": "¿Cómo se dice «cine» en portugués?",
+                  "options": [
+                    "cinema",
+                    "série",
+                    "caminhada"
+                  ],
+                  "correctIndex": 0,
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "«cine» se dice «cinema»."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has elegido la traducción correcta."
+                  }
+                },
+                {
+                  "type": "Translate",
+                  "id": "es-pt-a2-p0-u1-l09-e02",
+                  "sourcePhrase": "Me gusta pasear por el parque",
+                  "correctTokens": [
+                    "Eu",
+                    "gosto",
+                    "de",
+                    "caminhar",
+                    "no",
+                    "parque"
+                  ],
+                  "distractorTokens": [
+                    "cinema",
+                    "série"
+                  ],
+                  "feedbackOnError": {
+                    "type": "word_order",
+                    "explanation": "El orden correcto es «Eu gosto de caminhar no parque»."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La frase conserva el orden y el significado."
+                  }
+                },
+                {
+                  "type": "OrderWords",
+                  "id": "es-pt-a2-p0-u1-l09-e03",
+                  "tokens": [
+                    "vamos",
+                    "ao",
+                    "cinema",
+                    "hoje",
+                    "Nós"
+                  ],
+                  "answerTokens": [
+                    "Nós",
+                    "vamos",
+                    "ao",
+                    "cinema",
+                    "hoje"
+                  ],
+                  "sourcePhrase": "Nós vamos ao cinema hoje",
+                  "feedbackOnError": {
+                    "type": "word_order",
+                    "explanation": "La frase correcta es «Nós vamos ao cinema hoje»."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "El orden produce una frase natural."
+                  }
+                },
+                {
+                  "type": "MatchPairs",
+                  "id": "es-pt-a2-p0-u1-l09-e04",
+                  "pairs": [
+                    {
+                      "left": "cine",
+                      "right": "cinema"
+                    },
+                    {
+                      "left": "serie",
+                      "right": "série"
+                    },
+                    {
+                      "left": "paseo",
+                      "right": "caminhada"
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "Cada palabra tiene una traducción distinta."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has asociado cada palabra con su traducción."
+                  }
+                },
+                {
+                  "type": "ListenChoose",
+                  "id": "es-pt-a2-p0-u1-l09-e05",
+                  "audioText": "Eu gosto de caminhar no parque",
+                  "options": [
+                    "Eu gosto de caminhar no parque",
+                    "Nós vamos ao cinema hoje",
+                    "Eu assisto a uma série"
+                  ],
+                  "correctIndex": 0,
+                  "feedbackOnError": {
+                    "type": "comprehension",
+                    "explanation": "El audio dice «Eu gosto de caminhar no parque»."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has reconocido la frase del audio."
+                  }
+                },
+                {
+                  "type": "ListenType",
+                  "id": "es-pt-a2-p0-u1-l09-e06",
+                  "audioText": "Nós vamos ao cinema hoje",
+                  "transcription": "Nós vamos ao cinema hoje",
+                  "feedbackOnError": {
+                    "type": "spelling",
+                    "explanation": "Escribe exactamente «Nós vamos ao cinema hoje»."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La transcripción coincide con el audio."
+                  }
+                },
+                {
+                  "type": "SpeakRepeat",
+                  "id": "es-pt-a2-p0-u1-l09-e07",
+                  "targetPhrase": "Eu gosto de caminhar no parque",
+                  "audioText": "Eu gosto de caminhar no parque",
+                  "feedbackOnError": {
+                    "type": "pronunciation",
+                    "explanation": "Repite «Eu gosto de caminhar no parque» con claridad."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La frase se entiende y mantiene el ritmo."
+                  }
+                }
+              ]
+            },
+            {
+              "id": "es-pt-a2-p0-u1-l10",
+              "title": "Um trâmite",
+              "cefrLevel": "A2",
+              "vocabFrequencyBand": "1000-2000",
+              "canDo": "Puedo resolver un trámite sencillo con documentos en portugués.",
+              "microLesson": {
+                "title": "Um trâmite",
+                "goals": [
+                  "Reconocer vocabulario de os trâmites.",
+                  "Usar frases sencillas sobre os trâmites en portugués."
+                ],
+                "sections": [
+                  {
+                    "heading": "Palavras e frases",
+                    "body": "Vocabulario básico de os trâmites. Fíjate en el orden de la frase y en las preposiciones de lugar.",
+                    "examples": [
+                      {
+                        "source": "Necesito un documento",
+                        "target": "Eu preciso de um documento"
+                      },
+                      {
+                        "source": "O formulário precisa de uma assinatura",
+                        "target": "O formulário precisa de uma assinatura"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "glossary": [
+                {
+                  "term": "documento",
+                  "translations": [
+                    "documento"
+                  ]
+                },
+                {
+                  "term": "formulário",
+                  "translations": [
+                    "formulario"
+                  ]
+                },
+                {
+                  "term": "assinatura",
+                  "translations": [
+                    "firma"
+                  ]
+                }
+              ],
+              "exercises": [
+                {
+                  "type": "MultipleChoice",
+                  "id": "es-pt-a2-p0-u1-l10-e01",
+                  "question": "¿Cómo se dice «documento» en portugués?",
+                  "options": [
+                    "documento",
+                    "formulário",
+                    "assinatura"
+                  ],
+                  "correctIndex": 0,
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "«documento» se dice «documento»."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has elegido la traducción correcta."
+                  }
+                },
+                {
+                  "type": "Translate",
+                  "id": "es-pt-a2-p0-u1-l10-e02",
+                  "sourcePhrase": "Necesito un documento",
+                  "correctTokens": [
+                    "Eu",
+                    "preciso",
+                    "de",
+                    "um",
+                    "documento"
+                  ],
+                  "distractorTokens": [
+                    "formulário",
+                    "assinatura"
+                  ],
+                  "feedbackOnError": {
+                    "type": "word_order",
+                    "explanation": "El orden correcto es «Eu preciso de um documento»."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La frase conserva el orden y el significado."
+                  }
+                },
+                {
+                  "type": "OrderWords",
+                  "id": "es-pt-a2-p0-u1-l10-e03",
+                  "tokens": [
+                    "formulário",
+                    "precisa",
+                    "de",
+                    "uma",
+                    "assinatura",
+                    "O"
+                  ],
+                  "answerTokens": [
+                    "O",
+                    "formulário",
+                    "precisa",
+                    "de",
+                    "uma",
+                    "assinatura"
+                  ],
+                  "sourcePhrase": "O formulário precisa de uma assinatura",
+                  "feedbackOnError": {
+                    "type": "word_order",
+                    "explanation": "La frase correcta es «O formulário precisa de uma assinatura»."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "El orden produce una frase natural."
+                  }
+                },
+                {
+                  "type": "MatchPairs",
+                  "id": "es-pt-a2-p0-u1-l10-e04",
+                  "pairs": [
+                    {
+                      "left": "documento",
+                      "right": "documento"
+                    },
+                    {
+                      "left": "formulario",
+                      "right": "formulário"
+                    },
+                    {
+                      "left": "firma",
+                      "right": "assinatura"
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "Cada palabra tiene una traducción distinta."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has asociado cada palabra con su traducción."
+                  }
+                },
+                {
+                  "type": "ListenChoose",
+                  "id": "es-pt-a2-p0-u1-l10-e05",
+                  "audioText": "O formulário precisa de uma assinatura",
+                  "options": [
+                    "O formulário precisa de uma assinatura",
+                    "Eu preciso de um documento",
+                    "O documento está pronto"
+                  ],
+                  "correctIndex": 0,
+                  "feedbackOnError": {
+                    "type": "comprehension",
+                    "explanation": "El audio dice «O formulário precisa de uma assinatura»."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has reconocido la frase del audio."
+                  }
+                },
+                {
+                  "type": "ListenType",
+                  "id": "es-pt-a2-p0-u1-l10-e06",
+                  "audioText": "Eu preciso de um documento",
+                  "transcription": "Eu preciso de um documento",
+                  "feedbackOnError": {
+                    "type": "spelling",
+                    "explanation": "Escribe exactamente «Eu preciso de um documento»."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La transcripción coincide con el audio."
+                  }
+                },
+                {
+                  "type": "SpeakRepeat",
+                  "id": "es-pt-a2-p0-u1-l10-e07",
+                  "targetPhrase": "O formulário precisa de uma assinatura",
+                  "audioText": "O formulário precisa de uma assinatura",
+                  "feedbackOnError": {
+                    "type": "pronunciation",
+                    "explanation": "Repite «O formulário precisa de uma assinatura» con claridad."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La frase se entiende y mantiene el ritmo."
+                  }
+                }
+              ]
+            }
+          ]
         }
       ]
     },

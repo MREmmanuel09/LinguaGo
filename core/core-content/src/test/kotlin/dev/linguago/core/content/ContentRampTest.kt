@@ -176,7 +176,10 @@ class ContentRampTest {
     fun `los cursos de arranque amplian la rampa A2`() {
         for (courseId in STARTER_COURSES) {
             val a2Lessons = lessonsFor(courseId).filter { lesson -> lesson.cefrLevel == CefrLevel.A2 }
-            assertEquals("$courseId debe tener 8 lecciones A2", 8, a2Lessons.size)
+            val historicA2Lessons = a2Lessons.filter { lesson -> !lesson.id.value.contains("-p0-") }
+            assertEquals("$courseId debe tener 8 lecciones A2 históricas", 8, historicA2Lessons.size)
+            val expectedA2Lessons = if (courseId == "es-pt") 18 else 8
+            assertEquals("$courseId tiene un número inesperado de lecciones A2", expectedA2Lessons, a2Lessons.size)
             for (lesson in a2Lessons) {
                 assertEquals("${lesson.id.value} debe tener 7 ejercicios", 7, lesson.exercises.size)
                 assertEquals("${lesson.id.value} no declara gramática", 0, lesson.grammarPoints.size)
