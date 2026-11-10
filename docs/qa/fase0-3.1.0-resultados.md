@@ -1,14 +1,14 @@
-# F0.1 — Fábrica de contenido y piloto A1/A2/B1 ES→EN
+# F0.1 — Fábrica de contenido y piloto A1/A2/B1/B2 ES→EN
 
 **Fecha:** 2026-11-09
-**Estado:** F0 en curso (30/240 lecciones del piloto)
+**Estado:** F0 en curso (40/240 lecciones del piloto)
 
 ## Entregado
 
 - ADR-052 aprobado: 170 lecciones por nivel, 1.020 por idioma, 7 fases.
 - `contentScaleReport` para medir el hueco por curso y nivel.
 - Contrato operativo en `docs/CONTENT_FACTORY.md`.
-- Bloques piloto A1, A2 y B1 ES→EN: **30 lecciones / 230 ejercicios**.
+- Bloques piloto A1, A2, B1 y B2 ES→EN: **40 lecciones / 330 ejercicios**.
 
 ## Contenido del bloque A1
 
@@ -62,19 +62,38 @@ Cada lección tiene 9 ejercicios, 2 focos gramaticales, nota cultural,
 micro-clase, glosario, `ClozeDragDrop`, `FreeSpeakingPrompt`, audio y feedback
 de error/acierto.
 
+## Contenido del bloque B2
+
+Unidad `es-en-b2-p0-un-1` — «Piloto B2 · Argumentación y matices»:
+
+1. Negociar un plazo
+2. Reclamación formal
+3. Medios y desinformación
+4. Sostenibilidad urbana
+5. Trabajo remoto
+6. Cine y cultura
+7. Tecnología y privacidad
+8. Viajes y reclamaciones
+9. Salud y estrés
+10. Educación y debate
+
+Cada lección tiene 10 ejercicios, 2 focos gramaticales, nota cultural,
+micro-clase, glosario, `ClozeDragDrop`, `SemanticMatch`, `AudioOnlyPrompt`,
+`OrderWords`, `ListenType`, `SpeakRepeat` y `FreeSpeakingPrompt`.
+
 ## Verificación
 
-- `validateContent`: ES→EN **141 lecciones / 1.299 ejercicios**; schema v2 válido.
-- `ContentRampTest`: A1/A2 con 7 ejercicios; B1 con 9, 2 focos y frases dentro de tope.
-- `PackagedContentTest`: se conservan ids históricos; el piloto añade 30 lecciones y 230 ejercicios.
-- `FreeSpeakingPrompt`: los 10 modelos B1 pasan el grader sin fallos de gramática ni cobertura.
-- `contentScaleReport`: ES→EN 141/1.020; total 447/4.080.
-- Smoke visual: el camino muestra «Piloto A1 · Vida diaria» y «Piloto A2 · Autonomía» con 0/10.
+- `validateContent`: ES→EN **151 lecciones / 1.399 ejercicios**; schema v2 válido.
+- `ContentRampTest`: A1/A2 con 7 ejercicios; B1 con 9; B2 con 10, 2 focos y frases dentro de tope.
+- `PackagedContentTest`: se conservan ids históricos; el piloto añade 40 lecciones y 330 ejercicios.
+- `FreeSpeakingPrompt`: los modelos B1 y B2 pasan el grader sin fallos de gramática ni cobertura.
+- `contentScaleReport`: ES→EN 151/1.020; total 457/4.080.
+- Smoke visual: el camino muestra «Piloto A1 · Vida diaria», «Piloto A2 · Autonomía» y «Piloto B2 · Argumentación y matices» con 0/10.
 - Gate `ktlintCheck detekt validateContent test` en verde.
 
 ## Pendiente de F0
 
-- Bloques piloto B2, C1 y C2 de ES→EN (30 lecciones).
+- Bloques piloto C1 y C2 de ES→EN (20 lecciones).
 - Réplica de los seis bloques en PT, FR y JA (180 lecciones).
 - Revisión nativa del bloque piloto.
 - Auditoría de cierre de F0 antes de abrir F1/A1 masivo.
