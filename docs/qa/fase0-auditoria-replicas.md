@@ -8,16 +8,16 @@
 
 La auditoría **no encuentra defectos estructurales bloqueantes**: todas las unidades están al final de su nivel, los IDs son válidos y únicos, los recuentos de ejercicios y focos gramaticales coinciden con el nivel, no falta `feedbackOnError` y los topes de frase se respetan con el tokenizador actual.
 
-La reserva principal es pedagógica: **las 150 lecciones replican ejercicios de lecciones históricas** (por diseño de esta tanda). Son unidades de repaso válidas, pero no contenido nuevo. Deben sustituirse por contenido original en F1–F6.
+La reserva principal es pedagógica: **146 de las 150 lecciones replican ejercicios de lecciones históricas**. Las 4 restantes son lecciones A2 nuevas que sustituyen a las duplicadas. Las réplicas son unidades de repaso válidas, pero no contenido nuevo; deben sustituirse por contenido original en F1–F6.
 
 ## Cobertura auditada
 
 | Curso | Unidades | Lecciones | Ejercicios | Lecciones con ejercicios duplicados |
 |---|---:|---:|---:|---:|
 | ES→PT | B1, B2, C1, C2 | 40 | 420 | 40/40 |
-| ES→FR | A2, B1, B2, C1, C2 | 50 | 490 | 50/50 |
-| ES→JA | A1, A2, B1, B2, C1, C2 | 60 | 560 | 60/60 |
-| **Total** | **15** | **150** | **1.470** | **150/150** |
+| ES→FR | A2, B1, B2, C1, C2 | 50 | 490 | 48/50 |
+| ES→JA | A1, A2, B1, B2, C1, C2 | 60 | 560 | 58/60 |
+| **Total** | **15** | **150** | **1.470** | **146/150** |
 
 ## Comprobaciones estructurales
 
@@ -47,35 +47,37 @@ Se revisaron los 30 modismos introducidos en las réplicas B2:
 
 - FR B2: «Matiser une critique» → **«Nuancer une critique»**.
 - FR B2: «Rebattre avec des preuves» → **«Réfuter avec des preuves»**.
+- **4 lecciones A2 nuevas:** «Au marché» y «À la gare» en FR; «レストランで» y «天気と季節» en JA. Sustituyen a las 4 lecciones duplicadas.
+- **30 notas B2 contextualizadas:** cada modismo se presenta ahora dentro del tema de su lección.
 
-Las correcciones se aplicaron tanto a la lección histórica como a la réplica.
+Las correcciones de títulos se aplicaron tanto a la lección histórica como a la réplica.
 
 ### Observaciones lingüísticas
 
-- **Alineación temática de modismos (media):** los 30 modismos B2 son correctos, pero no siempre encajan con el tema de la lección replicada. Ejemplo: «quebrar o galho» en una lección sobre suavizar críticas. Conviene que una revisión nativa los reasigne o añada una nota de contexto.
-- **Títulos duplicados en A2 (baja):** FR A2 y JA A2 tienen 8 lecciones históricas; las 2 restantes se completaron duplicando lecciones con el sufijo «· repaso». Es coherente con los títulos en español del A2, pero conviene sustituirlas por contenido nuevo.
+- **Modismos B2 contextualizados (resuelto):** los 30 modismos son correctos y sus notas ya conectan con el tema de la lección.
+- **Lecciones A2 nuevas (resuelto):** FR A2 y JA A2 ya no contienen lecciones duplicadas dentro de la unidad.
 - **Tokenización JA (media):** el A2 japonés no separa palabras con espacios; el tope de tokens mide 1 y el test de longitud queda neutralizado. Es una limitación preexistente del método, no de esta tanda. Recomendación: añadir una métrica por caracteres/morfermas para JA.
 
 ## Hallazgos
 
 | Severidad | Hallazgo | Impacto | Recomendación |
 |---|---|---|---|
-| Alta | 150/150 lecciones replican ejercicios históricos | No aportan contenido nuevo; sirven para cerrar el piloto y validar la pipeline | Sustituir por contenido original en F1–F6 |
-| Media | Modismos B2 sin alineación temática con la lección | Nota cultural correcta pero poco integrada | Reasignar o contextualizar en la revisión nativa |
+| Alta | 146/150 lecciones replican ejercicios históricos | No aportan contenido nuevo; sirven para cerrar el piloto y validar la pipeline | Sustituir por contenido original en F1–F6 |
 | Media | Tokenización JA sin espacios | El tope de longitud no protege el nivel | Métrica por caracteres/morfermas |
-| Baja | 2 lecciones duplicadas en FR A2 y 2 en JA A2 | Repetición dentro de la unidad | Sustituir por lecciones nuevas |
-| Corregido | 2 títulos franceses incorrectos | Calidad lingüística | Ya corregidos en histórico y réplica |
+| Resuelto | 4 lecciones A2 duplicadas | Repetición dentro de la unidad | Sustituidas por contenido nuevo |
+| Resuelto | 30 modismos B2 sin contexto temático | Nota cultural poco integrada | Notas contextualizadas |
+| Resuelto | 2 títulos franceses incorrectos | Calidad lingüística | Corregidos en histórico y réplica |
 
 ## Limitaciones de la revisión
 
 - Es una **revisión asistida por IA**, no una revisión nativa humana. No cubre juicios finos de naturalidad, registro o variedad dialectal.
 - El contenido replicado hereda la calidad del material histórico; no se ha reeditado frase a frase.
-- Los modismos B2 se revisaron uno a uno, pero su integración pedagógica requiere criterio humano.
+- Los 30 modismos B2 se revisaron y contextualizaron, pero su validación final requiere criterio humano.
 
 ## Recomendaciones
 
 1. Mantener las réplicas como **bloques de repaso** de F0, no como contenido definitivo.
-2. Hacer una **revisión nativa humana** de los 30 modismos B2 y de los títulos A2 duplicados.
+2. Hacer una **revisión nativa humana** de los 30 modismos B2 y de las 4 lecciones A2 nuevas.
 3. Incorporar una métrica de longitud por caracteres/morfermas para japonés.
 4. Sustituir las réplicas por lecciones nuevas durante F1–F6.
 5. Repetir esta auditoría al cerrar cada fase.

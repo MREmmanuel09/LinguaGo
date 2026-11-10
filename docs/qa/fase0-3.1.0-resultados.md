@@ -187,8 +187,14 @@ IDs nuevos y sin tocar los ids históricos:
 - **ES→JA:** `es-ja-a1-p0-un-1`, `es-ja-a2-p0-un-1`, `es-ja-b1-p0-un-1`, `es-ja-b2-p0-un-1`, `es-ja-c1-p0-un-1` y `es-ja-c2-p0-un-1`.
 
 Las réplicas B2 sustituyen los modismos por 10 expresiones nuevas por curso
-para no duplicar el vocabulario cultural del nivel. La revisión nativa de
-estas unidades y la auditoría de calidad de F0 siguen pendientes.
+para no duplicar el vocabulario cultural del nivel. Tras la auditoría se
+sustituyeron las 4 lecciones A2 duplicadas por contenido nuevo («Au marché»,
+«À la gare», «レストランで», «天気と季節») y se contextualizaron las 30 notas
+B2. La revisión nativa humana sigue pendiente y es la puerta de entrada a F1.
+
+- Auditoría completa: `docs/qa/fase0-auditoria-replicas.md`.
+- Acta de cierre técnico: `docs/qa/fase0-cierre.md`.
+- Decisión: ADR-053.
 
 ## Verificación
 

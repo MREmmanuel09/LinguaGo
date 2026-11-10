@@ -1,7 +1,8 @@
 # Plan de expansión a 1.020 lecciones por idioma
 
-> **Estado:** aprobado por ADR-052. **F0 completada:** 240/240 lecciones del
-> piloto (60 por curso: A1–C2 ES→EN y réplicas PT/FR/JA).
+> **Estado:** aprobado por ADR-052 y ADR-053. **F0 cerrada técnicamente:**
+> 240/240 lecciones del piloto. Acta: `docs/qa/fase0-cierre.md`. La revisión
+> nativa humana es la puerta de entrada a F1.
 > **Objetivo:** mínimo 1.000 lecciones por cada curso de destino, con la misma
 > cantidad en cada nivel CEFR.
 > **Fecha:** 2026-11-09.
@@ -293,6 +294,8 @@ intacto.
 | Réplica A2–C2 ES→FR (50 lecciones / 490 ejercicios) | ✅ |
 | Réplica ES→JA A1–C2 (60 lecciones / 560 ejercicios) | ✅ |
 | Auditoría asistida de F0 | ✅ (revisión nativa humana pendiente) |
+| Acta de cierre técnico (`docs/qa/fase0-cierre.md`) | ✅ |
+| Revisión nativa humana de F0 | Pendiente (puerta de F1) |
 
 Las réplicas PT/FR/JA cierran F0 con unidades de repaso construidas sobre
 lecciones ya validadas del mismo nivel. La revisión nativa y la auditoría de

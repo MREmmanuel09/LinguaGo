@@ -2208,3 +2208,39 @@ revisión nativa, no el tamaño del APK. El progreso existente y los ids
 históricos quedan intactos.
 
 ---
+
+## ADR-053: cierre técnico de F0 con réplicas estructurales y revisión nativa diferida
+
+**Estado:** Aprobado
+**Fecha:** 2026-11-10
+**Se aplica en:** cierre de F0, antes de F1
+
+**Contexto:** F0 necesitaba 240 lecciones piloto (10 por nivel y curso). Se
+completaron las 60 de ES→EN y las 180 restantes de PT/FR/JA se construyeron
+como réplicas estructurales de lecciones ya validadas del mismo nivel, con IDs
+nuevos y modismos B2 propios. La auditoría asistida no encontró defectos
+bloqueantes, pero **146 de las 150 réplicas reutilizan ejercicios históricos**.
+ADR-052 exige revisión nativa obligatoria; una revisión asistida por IA no la
+sustituye.
+
+**Decisión:**
+
+1. Se cierra F0 **técnicamente** con 240/240 lecciones. Las réplicas son
+   contenido provisional de repaso, no contenido definitivo ni cómputo de la
+   meta de 1.020 lecciones.
+2. Se sustituyeron las 4 lecciones A2 duplicadas por contenido nuevo («Au
+   marché», «À la gare», «レストランで», «天気と季節») y se contextualizaron
+   las 30 notas culturales B2. Quedan 146/150 réplicas.
+3. La **revisión nativa humana** de las réplicas (100 % de micro-clases,
+   producción oral y audio; 20 % estratificado del resto, según ADR-052) es
+   puerta de entrada de F1. No se abre F1 hasta completarla y registrar el
+   acta de cierre.
+4. Las réplicas se sustituirán por contenido original durante F1–F6; no se
+   reutilizarán como atajo para alcanzar la meta.
+5. La auditoría de F1 añadirá una métrica de longitud por caracteres/morfermas
+   para japonés, porque el tokenizador por espacios no protege esa rampa.
+
+**Consecuencias:** F0 queda cerrada y la pipeline validada; el riesgo de
+calidad se concentra en las réplicas y se mitiga con la puerta nativa de F1.
+La meta de 1.020 no cambia. El contenido histórico y los ids permanecen
+intactos.
