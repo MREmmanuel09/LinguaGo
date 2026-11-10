@@ -178,21 +178,48 @@ Con 38.080 ejercicios, revisar el 100 % de todo es inviable; el muestreo
 anterior es el mínimo defendible. Si el presupuesto permite más, se sube el
 muestreo antes de ampliar el cupo.
 
-## 7. Calendario y releases
+## 7. Calendario, fases y releases
 
 La unidad de avance es el **lote de 10 lecciones**. Cada release completa un
 nivel en los 4 cursos y no avanza si el gate o la revisión nativa no están
 verdes.
 
-| Release | Contenido | Lecciones nuevas |
-|---|---|---:|
-| **3.1.0** | Fábrica + piloto: 1 bloque por nivel y curso | 240 |
-| **3.2.0** | A1 completo en los 4 cursos | ~600 |
-| **3.3.0** | A2 completo | ~599 |
-| **3.4.0** | B1 completo | ~560 |
-| **3.5.0** | B2 completo | ~552 |
-| **3.6.0** | C1 completo | ~544 |
-| **4.0.0** | C2 completo y meta 1.020/idioma | ~568 |
+La ejecución se organiza en **7 fases** (F0–F6) y **14 olas internas**:
+
+- **Ola A:** se escribe y valida el nivel en **ES→EN** (curso insignia).
+- **Ola B:** se adapta a **PT, FR y JA** con la plantilla semántica, no con
+  traducción literal.
+- La ola B de un nivel no empieza hasta que la ola A pase el gate completo.
+- Ninguna fase acumula deudas: si falla calidad, se corrige antes de abrir la
+  siguiente.
+
+| Fase | Release | Contenido | Lecciones nuevas | Olas |
+|---|---|---|---:|---|
+| **F0** | **3.1.0** | Fábrica + piloto: 1 bloque por nivel y curso | 240 | A: EN · B: PT/FR/JA |
+| **F1** | **3.2.0** | A1 completo en los 4 cursos | ~600 | A: EN · B: PT/FR/JA |
+| **F2** | **3.3.0** | A2 completo | ~599 | A: EN · B: PT/FR/JA |
+| **F3** | **3.4.0** | B1 completo | ~560 | A: EN · B: PT/FR/JA |
+| **F4** | **3.5.0** | B2 completo | ~552 | A: EN · B: PT/FR/JA |
+| **F5** | **3.6.0** | C1 completo | ~544 | A: EN · B: PT/FR/JA |
+| **F6** | **4.0.0** | C2 completo y meta 1.020/idioma | ~568 | A: EN · B: PT/FR/JA |
+
+### Tres puertas de calidad por fase
+
+1. **Puerta de lote (cada 10 lecciones):** schema, rampa, ids únicos,
+   `modelAnswer`, tokens, glosario y `feedbackOnError`.
+2. **Puerta de ola (al cerrar A o B):** revisión nativa de la sección 6,
+   audio/TTS, duplicados semánticos y smoke en emulador.
+3. **Puerta de release:** gate Gradle completo, contenido comprimido, peso del
+   APK, scroll del camino con 1.020 nodos y firma de calidad.
+
+### Auditorías transversales
+
+- **Auditoría de mitad de plan:** al cerrar **F4 (B2)**. Se revisan los cuatro
+  cursos completos y, si la tasa de incidencias supera el umbral acordado, se
+  pausa la expansión y se corrige antes de C1.
+- **Auditoría final:** antes de **F6/4.0.0**. Revisión independiente de una
+  muestra nueva, todas las incidencias abiertas y verificación de que las
+  1.020 lecciones por idioma conservan la rampa y la calidad nativa.
 
 ### Estimación de esfuerzo
 
