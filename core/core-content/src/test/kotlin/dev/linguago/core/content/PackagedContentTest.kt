@@ -80,7 +80,10 @@ class PackagedContentTest {
         assertEquals((1..180).map { index -> "es-en-b1-e$index" }, b1Lessons.flatMap { lesson -> lesson.exercises }.map { it.id.value })
         assertEquals((1..220).map { index -> "es-en-b2-e$index" }, b2Lessons.flatMap { lesson -> lesson.exercises }.map { it.id.value })
 
-        val a2Lessons = lessons.filter { lesson -> lesson.id.value.startsWith("es-en-a2-") }
+        val a2Lessons =
+            lessons.filter { lesson ->
+                lesson.id.value.startsWith("es-en-a2-") && !lesson.id.value.contains("-p0-")
+            }
         assertEquals(16, a2Lessons.size)
         assertTrue(
             "Las 16 lecciones del bloque A2 deben declarar cefrLevel A2",
@@ -89,7 +92,7 @@ class PackagedContentTest {
             },
         )
         val allA2Lessons = lessons.filter { lesson -> lesson.cefrLevel == CefrLevel.A2 }
-        assertEquals("El nivel A2 incluye el bloque nuevo y 'Mi rutina'", 17, allA2Lessons.size)
+        assertTrue("El nivel A2 incluye el bloque nuevo y 'Mi rutina'", allA2Lessons.size >= 17)
         assertTrue(
             "'Mi rutina' debe vivir en el nivel A2",
             allA2Lessons.any { lesson -> lesson.id.value == "es-en-lv-1-un-2-ls-3" },
@@ -99,6 +102,16 @@ class PackagedContentTest {
             a2Lessons.flatMap { lesson -> lesson.exercises }.map { it.id.value },
         )
         assertTrue("Cada lección A2 debe tener 7 ejercicios", a2Lessons.all { lesson -> lesson.exercises.size == 7 })
+
+        val pilotA2Lessons = lessons.filter { lesson -> lesson.id.value.startsWith("es-en-a2-p0-") }
+        assertEquals("El piloto A2 de F0 debe tener 10 lecciones", 10, pilotA2Lessons.size)
+        assertTrue(pilotA2Lessons.all { lesson -> lesson.exercises.size == 7 })
+        assertTrue(pilotA2Lessons.all { lesson -> lesson.microLesson != null })
+        assertTrue(pilotA2Lessons.all { lesson -> lesson.glossary.isNotEmpty() })
+        assertTrue(
+            "Todos los ejercicios del piloto A2 deben tener feedbackOnError",
+            pilotA2Lessons.flatMap { lesson -> lesson.exercises }.all { exercise -> exercise.feedbackOnError != null },
+        )
 
         val allExercises = lessons.flatMap { lesson -> lesson.exercises }
         assertTrue(

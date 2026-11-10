@@ -5818,6 +5818,1884 @@
               ]
             }
           ]
+        },
+        {
+          "id": "es-en-a2-p0-un-1",
+          "title": "Piloto A2 · Autonomía",
+          "lessons": [
+            {
+              "id": "es-en-a2-p0-u1-l01",
+              "title": "En el supermercado",
+              "cefrLevel": "A2",
+              "vocabFrequencyBand": "2000-3000",
+              "canDo": "Puedo resolver una compra sencilla en el supermercado.",
+              "microLesson": {
+                "title": "En el supermercado",
+                "goals": [
+                  "Usar vocabulario de la compra diaria.",
+                  "Resolver una situación sencilla sobre la compra diaria."
+                ],
+                "sections": [
+                  {
+                    "heading": "Palabras y frases",
+                    "body": "Vocabulario y frases para la compra diaria. Fíjate en el verbo y en el orden de la información.",
+                    "examples": [
+                      {
+                        "source": "Necesito un carrito",
+                        "target": "I need a shopping cart"
+                      },
+                      {
+                        "source": "La caja está al final",
+                        "target": "The checkout is at the end"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "glossary": [
+                {
+                  "term": "shopping cart",
+                  "translations": [
+                    "carrito"
+                  ]
+                },
+                {
+                  "term": "checkout",
+                  "translations": [
+                    "caja"
+                  ]
+                },
+                {
+                  "term": "offer",
+                  "translations": [
+                    "oferta"
+                  ]
+                }
+              ],
+              "exercises": [
+                {
+                  "type": "MultipleChoice",
+                  "id": "es-en-a2-p0-u1-l01-e01",
+                  "question": "¿Cómo se dice «carrito»?",
+                  "options": [
+                    "shopping cart",
+                    "checkout",
+                    "offer"
+                  ],
+                  "correctIndex": 0,
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "«carrito» se dice «shopping cart»."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has elegido la traducción correcta."
+                  }
+                },
+                {
+                  "type": "Translate",
+                  "id": "es-en-a2-p0-u1-l01-e02",
+                  "sourcePhrase": "Necesito un carrito",
+                  "correctTokens": [
+                    "I",
+                    "need",
+                    "a",
+                    "shopping",
+                    "cart"
+                  ],
+                  "distractorTokens": [
+                    "checkout",
+                    "offer"
+                  ],
+                  "feedbackOnError": {
+                    "type": "word_order",
+                    "explanation": "El orden correcto es «I need a shopping cart»."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La frase conserva el orden y el significado."
+                  }
+                },
+                {
+                  "type": "OrderWords",
+                  "id": "es-en-a2-p0-u1-l01-e03",
+                  "tokens": [
+                    "The",
+                    "checkout",
+                    "is",
+                    "at",
+                    "the",
+                    "end"
+                  ],
+                  "answerTokens": [
+                    "The",
+                    "checkout",
+                    "is",
+                    "at",
+                    "the",
+                    "end"
+                  ],
+                  "sourcePhrase": "La caja está al final",
+                  "feedbackOnError": {
+                    "type": "word_order",
+                    "explanation": "La frase correcta es «The checkout is at the end»."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "El orden produce una frase natural."
+                  }
+                },
+                {
+                  "type": "MatchPairs",
+                  "id": "es-en-a2-p0-u1-l01-e04",
+                  "pairs": [
+                    {
+                      "left": "carrito",
+                      "right": "shopping cart"
+                    },
+                    {
+                      "left": "caja",
+                      "right": "checkout"
+                    },
+                    {
+                      "left": "oferta",
+                      "right": "offer"
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "Cada palabra tiene una traducción distinta."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has asociado cada palabra con su traducción."
+                  }
+                },
+                {
+                  "type": "ListenChoose",
+                  "id": "es-en-a2-p0-u1-l01-e05",
+                  "audioText": "The milk is on offer",
+                  "options": [
+                    "The milk is on offer",
+                    "I need a shopping cart",
+                    "The checkout is at the end"
+                  ],
+                  "correctIndex": 0,
+                  "feedbackOnError": {
+                    "type": "comprehension",
+                    "explanation": "El audio dice «The milk is on offer»."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has reconocido la frase del audio."
+                  }
+                },
+                {
+                  "type": "ListenType",
+                  "id": "es-en-a2-p0-u1-l01-e06",
+                  "audioText": "The milk is on offer",
+                  "transcription": "The milk is on offer",
+                  "feedbackOnError": {
+                    "type": "spelling",
+                    "explanation": "Escribe exactamente «The milk is on offer»."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La transcripción coincide con el audio."
+                  }
+                },
+                {
+                  "type": "SpeakRepeat",
+                  "id": "es-en-a2-p0-u1-l01-e07",
+                  "targetPhrase": "I need a shopping cart",
+                  "audioText": "I need a shopping cart",
+                  "feedbackOnError": {
+                    "type": "pronunciation",
+                    "explanation": "Repite «I need a shopping cart» con claridad."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La frase se entiende y mantiene el ritmo."
+                  }
+                }
+              ]
+            },
+            {
+              "id": "es-en-a2-p0-u1-l02",
+              "title": "En el banco",
+              "cefrLevel": "A2",
+              "vocabFrequencyBand": "2000-3000",
+              "canDo": "Puedo pedir información básica en un banco.",
+              "microLesson": {
+                "title": "En el banco",
+                "goals": [
+                  "Usar vocabulario de los trámites bancarios.",
+                  "Resolver una situación sencilla sobre los trámites bancarios."
+                ],
+                "sections": [
+                  {
+                    "heading": "Palabras y frases",
+                    "body": "Vocabulario y frases para los trámites bancarios. Fíjate en el verbo y en el orden de la información.",
+                    "examples": [
+                      {
+                        "source": "Quiero abrir una cuenta",
+                        "target": "I want to open an account"
+                      },
+                      {
+                        "source": "Pago con tarjeta",
+                        "target": "I pay by card"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "glossary": [
+                {
+                  "term": "account",
+                  "translations": [
+                    "cuenta"
+                  ]
+                },
+                {
+                  "term": "card",
+                  "translations": [
+                    "tarjeta"
+                  ]
+                },
+                {
+                  "term": "cash",
+                  "translations": [
+                    "efectivo"
+                  ]
+                }
+              ],
+              "exercises": [
+                {
+                  "type": "MultipleChoice",
+                  "id": "es-en-a2-p0-u1-l02-e01",
+                  "question": "¿Cómo se dice «cuenta»?",
+                  "options": [
+                    "account",
+                    "card",
+                    "cash"
+                  ],
+                  "correctIndex": 0,
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "«cuenta» se dice «account»."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has elegido la traducción correcta."
+                  }
+                },
+                {
+                  "type": "Translate",
+                  "id": "es-en-a2-p0-u1-l02-e02",
+                  "sourcePhrase": "Quiero abrir una cuenta",
+                  "correctTokens": [
+                    "I",
+                    "want",
+                    "to",
+                    "open",
+                    "an",
+                    "account"
+                  ],
+                  "distractorTokens": [
+                    "card",
+                    "cash"
+                  ],
+                  "feedbackOnError": {
+                    "type": "word_order",
+                    "explanation": "El orden correcto es «I want to open an account»."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La frase conserva el orden y el significado."
+                  }
+                },
+                {
+                  "type": "OrderWords",
+                  "id": "es-en-a2-p0-u1-l02-e03",
+                  "tokens": [
+                    "I",
+                    "pay",
+                    "by",
+                    "card"
+                  ],
+                  "answerTokens": [
+                    "I",
+                    "pay",
+                    "by",
+                    "card"
+                  ],
+                  "sourcePhrase": "Pago con tarjeta",
+                  "feedbackOnError": {
+                    "type": "word_order",
+                    "explanation": "La frase correcta es «I pay by card»."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "El orden produce una frase natural."
+                  }
+                },
+                {
+                  "type": "MatchPairs",
+                  "id": "es-en-a2-p0-u1-l02-e04",
+                  "pairs": [
+                    {
+                      "left": "cuenta",
+                      "right": "account"
+                    },
+                    {
+                      "left": "tarjeta",
+                      "right": "card"
+                    },
+                    {
+                      "left": "efectivo",
+                      "right": "cash"
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "Cada palabra tiene una traducción distinta."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has asociado cada palabra con su traducción."
+                  }
+                },
+                {
+                  "type": "ListenChoose",
+                  "id": "es-en-a2-p0-u1-l02-e05",
+                  "audioText": "I need some cash",
+                  "options": [
+                    "I need some cash",
+                    "I pay by card",
+                    "I want to open an account"
+                  ],
+                  "correctIndex": 0,
+                  "feedbackOnError": {
+                    "type": "comprehension",
+                    "explanation": "El audio dice «I need some cash»."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has reconocido la frase del audio."
+                  }
+                },
+                {
+                  "type": "ListenType",
+                  "id": "es-en-a2-p0-u1-l02-e06",
+                  "audioText": "I need some cash",
+                  "transcription": "I need some cash",
+                  "feedbackOnError": {
+                    "type": "spelling",
+                    "explanation": "Escribe exactamente «I need some cash»."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La transcripción coincide con el audio."
+                  }
+                },
+                {
+                  "type": "SpeakRepeat",
+                  "id": "es-en-a2-p0-u1-l02-e07",
+                  "targetPhrase": "I want to open an account",
+                  "audioText": "I want to open an account",
+                  "feedbackOnError": {
+                    "type": "pronunciation",
+                    "explanation": "Repite «I want to open an account» con claridad."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La frase se entiende y mantiene el ritmo."
+                  }
+                }
+              ]
+            },
+            {
+              "id": "es-en-a2-p0-u1-l03",
+              "title": "Una mudanza",
+              "cefrLevel": "A2",
+              "vocabFrequencyBand": "2000-3000",
+              "canDo": "Puedo hablar de una mudanza y de mis cajas.",
+              "microLesson": {
+                "title": "Una mudanza",
+                "goals": [
+                  "Usar vocabulario de una mudanza.",
+                  "Resolver una situación sencilla sobre una mudanza."
+                ],
+                "sections": [
+                  {
+                    "heading": "Palabras y frases",
+                    "body": "Vocabulario y frases para una mudanza. Fíjate en el verbo y en el orden de la información.",
+                    "examples": [
+                      {
+                        "source": "La mudanza es el sábado",
+                        "target": "The move is on Saturday"
+                      },
+                      {
+                        "source": "Las cajas están en el piso",
+                        "target": "The boxes are in the flat"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "glossary": [
+                {
+                  "term": "flat",
+                  "translations": [
+                    "piso"
+                  ]
+                },
+                {
+                  "term": "box",
+                  "translations": [
+                    "caja"
+                  ]
+                },
+                {
+                  "term": "move",
+                  "translations": [
+                    "mudanza"
+                  ]
+                }
+              ],
+              "exercises": [
+                {
+                  "type": "MultipleChoice",
+                  "id": "es-en-a2-p0-u1-l03-e01",
+                  "question": "¿Cómo se dice «piso»?",
+                  "options": [
+                    "flat",
+                    "box",
+                    "move"
+                  ],
+                  "correctIndex": 0,
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "«piso» se dice «flat»."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has elegido la traducción correcta."
+                  }
+                },
+                {
+                  "type": "Translate",
+                  "id": "es-en-a2-p0-u1-l03-e02",
+                  "sourcePhrase": "La mudanza es el sábado",
+                  "correctTokens": [
+                    "The",
+                    "move",
+                    "is",
+                    "on",
+                    "Saturday"
+                  ],
+                  "distractorTokens": [
+                    "flat",
+                    "box"
+                  ],
+                  "feedbackOnError": {
+                    "type": "word_order",
+                    "explanation": "El orden correcto es «The move is on Saturday»."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La frase conserva el orden y el significado."
+                  }
+                },
+                {
+                  "type": "OrderWords",
+                  "id": "es-en-a2-p0-u1-l03-e03",
+                  "tokens": [
+                    "The",
+                    "boxes",
+                    "are",
+                    "in",
+                    "the",
+                    "flat"
+                  ],
+                  "answerTokens": [
+                    "The",
+                    "boxes",
+                    "are",
+                    "in",
+                    "the",
+                    "flat"
+                  ],
+                  "sourcePhrase": "Las cajas están en el piso",
+                  "feedbackOnError": {
+                    "type": "word_order",
+                    "explanation": "La frase correcta es «The boxes are in the flat»."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "El orden produce una frase natural."
+                  }
+                },
+                {
+                  "type": "MatchPairs",
+                  "id": "es-en-a2-p0-u1-l03-e04",
+                  "pairs": [
+                    {
+                      "left": "piso",
+                      "right": "flat"
+                    },
+                    {
+                      "left": "caja",
+                      "right": "box"
+                    },
+                    {
+                      "left": "mudanza",
+                      "right": "move"
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "Cada palabra tiene una traducción distinta."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has asociado cada palabra con su traducción."
+                  }
+                },
+                {
+                  "type": "ListenChoose",
+                  "id": "es-en-a2-p0-u1-l03-e05",
+                  "audioText": "I have many boxes",
+                  "options": [
+                    "I have many boxes",
+                    "The move is on Saturday",
+                    "The boxes are in the flat"
+                  ],
+                  "correctIndex": 0,
+                  "feedbackOnError": {
+                    "type": "comprehension",
+                    "explanation": "El audio dice «I have many boxes»."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has reconocido la frase del audio."
+                  }
+                },
+                {
+                  "type": "ListenType",
+                  "id": "es-en-a2-p0-u1-l03-e06",
+                  "audioText": "I have many boxes",
+                  "transcription": "I have many boxes",
+                  "feedbackOnError": {
+                    "type": "spelling",
+                    "explanation": "Escribe exactamente «I have many boxes»."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La transcripción coincide con el audio."
+                  }
+                },
+                {
+                  "type": "SpeakRepeat",
+                  "id": "es-en-a2-p0-u1-l03-e07",
+                  "targetPhrase": "The move is on Saturday",
+                  "audioText": "The move is on Saturday",
+                  "feedbackOnError": {
+                    "type": "pronunciation",
+                    "explanation": "Repite «The move is on Saturday» con claridad."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La frase se entiende y mantiene el ritmo."
+                  }
+                }
+              ]
+            },
+            {
+              "id": "es-en-a2-p0-u1-l04",
+              "title": "El gimnasio",
+              "cefrLevel": "A2",
+              "vocabFrequencyBand": "2000-3000",
+              "canDo": "Puedo hablar de mi gimnasio y de cómo me siento.",
+              "microLesson": {
+                "title": "El gimnasio",
+                "goals": [
+                  "Usar vocabulario de el ejercicio.",
+                  "Resolver una situación sencilla sobre el ejercicio."
+                ],
+                "sections": [
+                  {
+                    "heading": "Palabras y frases",
+                    "body": "Vocabulario y frases para el ejercicio. Fíjate en el verbo y en el orden de la información.",
+                    "examples": [
+                      {
+                        "source": "Estoy cansado después de entrenar",
+                        "target": "I am tired after training"
+                      },
+                      {
+                        "source": "El gimnasio abre temprano",
+                        "target": "The gym opens early"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "glossary": [
+                {
+                  "term": "gym",
+                  "translations": [
+                    "gimnasio"
+                  ]
+                },
+                {
+                  "term": "trainer",
+                  "translations": [
+                    "entrenador"
+                  ]
+                },
+                {
+                  "term": "tired",
+                  "translations": [
+                    "cansado"
+                  ]
+                }
+              ],
+              "exercises": [
+                {
+                  "type": "MultipleChoice",
+                  "id": "es-en-a2-p0-u1-l04-e01",
+                  "question": "¿Cómo se dice «gimnasio»?",
+                  "options": [
+                    "gym",
+                    "trainer",
+                    "tired"
+                  ],
+                  "correctIndex": 0,
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "«gimnasio» se dice «gym»."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has elegido la traducción correcta."
+                  }
+                },
+                {
+                  "type": "Translate",
+                  "id": "es-en-a2-p0-u1-l04-e02",
+                  "sourcePhrase": "Estoy cansado después de entrenar",
+                  "correctTokens": [
+                    "I",
+                    "am",
+                    "tired",
+                    "after",
+                    "training"
+                  ],
+                  "distractorTokens": [
+                    "gym",
+                    "trainer"
+                  ],
+                  "feedbackOnError": {
+                    "type": "word_order",
+                    "explanation": "El orden correcto es «I am tired after training»."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La frase conserva el orden y el significado."
+                  }
+                },
+                {
+                  "type": "OrderWords",
+                  "id": "es-en-a2-p0-u1-l04-e03",
+                  "tokens": [
+                    "The",
+                    "gym",
+                    "opens",
+                    "early"
+                  ],
+                  "answerTokens": [
+                    "The",
+                    "gym",
+                    "opens",
+                    "early"
+                  ],
+                  "sourcePhrase": "El gimnasio abre temprano",
+                  "feedbackOnError": {
+                    "type": "word_order",
+                    "explanation": "La frase correcta es «The gym opens early»."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "El orden produce una frase natural."
+                  }
+                },
+                {
+                  "type": "MatchPairs",
+                  "id": "es-en-a2-p0-u1-l04-e04",
+                  "pairs": [
+                    {
+                      "left": "gimnasio",
+                      "right": "gym"
+                    },
+                    {
+                      "left": "entrenador",
+                      "right": "trainer"
+                    },
+                    {
+                      "left": "cansado",
+                      "right": "tired"
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "Cada palabra tiene una traducción distinta."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has asociado cada palabra con su traducción."
+                  }
+                },
+                {
+                  "type": "ListenChoose",
+                  "id": "es-en-a2-p0-u1-l04-e05",
+                  "audioText": "I go to the gym",
+                  "options": [
+                    "I go to the gym",
+                    "I am tired after training",
+                    "The gym opens early"
+                  ],
+                  "correctIndex": 0,
+                  "feedbackOnError": {
+                    "type": "comprehension",
+                    "explanation": "El audio dice «I go to the gym»."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has reconocido la frase del audio."
+                  }
+                },
+                {
+                  "type": "ListenType",
+                  "id": "es-en-a2-p0-u1-l04-e06",
+                  "audioText": "I go to the gym",
+                  "transcription": "I go to the gym",
+                  "feedbackOnError": {
+                    "type": "spelling",
+                    "explanation": "Escribe exactamente «I go to the gym»."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La transcripción coincide con el audio."
+                  }
+                },
+                {
+                  "type": "SpeakRepeat",
+                  "id": "es-en-a2-p0-u1-l04-e07",
+                  "targetPhrase": "I am tired after training",
+                  "audioText": "I am tired after training",
+                  "feedbackOnError": {
+                    "type": "pronunciation",
+                    "explanation": "Repite «I am tired after training» con claridad."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La frase se entiende y mantiene el ritmo."
+                  }
+                }
+              ]
+            },
+            {
+              "id": "es-en-a2-p0-u1-l05",
+              "title": "Una visita turística",
+              "cefrLevel": "A2",
+              "vocabFrequencyBand": "2000-3000",
+              "canDo": "Puedo orientarme en una visita turística sencilla.",
+              "microLesson": {
+                "title": "Una visita turística",
+                "goals": [
+                  "Usar vocabulario de el turismo.",
+                  "Resolver una situación sencilla sobre el turismo."
+                ],
+                "sections": [
+                  {
+                    "heading": "Palabras y frases",
+                    "body": "Vocabulario y frases para el turismo. Fíjate en el verbo y en el orden de la información.",
+                    "examples": [
+                      {
+                        "source": "El monumento está cerca",
+                        "target": "The monument is near"
+                      },
+                      {
+                        "source": "Necesito un mapa",
+                        "target": "I need a map"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "glossary": [
+                {
+                  "term": "map",
+                  "translations": [
+                    "mapa"
+                  ]
+                },
+                {
+                  "term": "monument",
+                  "translations": [
+                    "monumento"
+                  ]
+                },
+                {
+                  "term": "tourist",
+                  "translations": [
+                    "turista"
+                  ]
+                }
+              ],
+              "exercises": [
+                {
+                  "type": "MultipleChoice",
+                  "id": "es-en-a2-p0-u1-l05-e01",
+                  "question": "¿Cómo se dice «mapa»?",
+                  "options": [
+                    "map",
+                    "monument",
+                    "tourist"
+                  ],
+                  "correctIndex": 0,
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "«mapa» se dice «map»."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has elegido la traducción correcta."
+                  }
+                },
+                {
+                  "type": "Translate",
+                  "id": "es-en-a2-p0-u1-l05-e02",
+                  "sourcePhrase": "El monumento está cerca",
+                  "correctTokens": [
+                    "The",
+                    "monument",
+                    "is",
+                    "near"
+                  ],
+                  "distractorTokens": [
+                    "map",
+                    "tourist"
+                  ],
+                  "feedbackOnError": {
+                    "type": "word_order",
+                    "explanation": "El orden correcto es «The monument is near»."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La frase conserva el orden y el significado."
+                  }
+                },
+                {
+                  "type": "OrderWords",
+                  "id": "es-en-a2-p0-u1-l05-e03",
+                  "tokens": [
+                    "I",
+                    "need",
+                    "a",
+                    "map"
+                  ],
+                  "answerTokens": [
+                    "I",
+                    "need",
+                    "a",
+                    "map"
+                  ],
+                  "sourcePhrase": "Necesito un mapa",
+                  "feedbackOnError": {
+                    "type": "word_order",
+                    "explanation": "La frase correcta es «I need a map»."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "El orden produce una frase natural."
+                  }
+                },
+                {
+                  "type": "MatchPairs",
+                  "id": "es-en-a2-p0-u1-l05-e04",
+                  "pairs": [
+                    {
+                      "left": "mapa",
+                      "right": "map"
+                    },
+                    {
+                      "left": "monumento",
+                      "right": "monument"
+                    },
+                    {
+                      "left": "turista",
+                      "right": "tourist"
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "Cada palabra tiene una traducción distinta."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has asociado cada palabra con su traducción."
+                  }
+                },
+                {
+                  "type": "ListenChoose",
+                  "id": "es-en-a2-p0-u1-l05-e05",
+                  "audioText": "The tourist has a map",
+                  "options": [
+                    "The tourist has a map",
+                    "The monument is near",
+                    "I need a map"
+                  ],
+                  "correctIndex": 0,
+                  "feedbackOnError": {
+                    "type": "comprehension",
+                    "explanation": "El audio dice «The tourist has a map»."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has reconocido la frase del audio."
+                  }
+                },
+                {
+                  "type": "ListenType",
+                  "id": "es-en-a2-p0-u1-l05-e06",
+                  "audioText": "The tourist has a map",
+                  "transcription": "The tourist has a map",
+                  "feedbackOnError": {
+                    "type": "spelling",
+                    "explanation": "Escribe exactamente «The tourist has a map»."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La transcripción coincide con el audio."
+                  }
+                },
+                {
+                  "type": "SpeakRepeat",
+                  "id": "es-en-a2-p0-u1-l05-e07",
+                  "targetPhrase": "I need a map",
+                  "audioText": "I need a map",
+                  "feedbackOnError": {
+                    "type": "pronunciation",
+                    "explanation": "Repite «I need a map» con claridad."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La frase se entiende y mantiene el ritmo."
+                  }
+                }
+              ]
+            },
+            {
+              "id": "es-en-a2-p0-u1-l06",
+              "title": "Un cumpleaños",
+              "cefrLevel": "A2",
+              "vocabFrequencyBand": "2000-3000",
+              "canDo": "Puedo invitar y hablar de una celebración.",
+              "microLesson": {
+                "title": "Un cumpleaños",
+                "goals": [
+                  "Usar vocabulario de una celebración.",
+                  "Resolver una situación sencilla sobre una celebración."
+                ],
+                "sections": [
+                  {
+                    "heading": "Palabras y frases",
+                    "body": "Vocabulario y frases para una celebración. Fíjate en el verbo y en el orden de la información.",
+                    "examples": [
+                      {
+                        "source": "Mi cumpleaños es mañana",
+                        "target": "My birthday is tomorrow"
+                      },
+                      {
+                        "source": "Tengo un regalo para ti",
+                        "target": "I have a gift for you"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "glossary": [
+                {
+                  "term": "birthday",
+                  "translations": [
+                    "cumpleaños"
+                  ]
+                },
+                {
+                  "term": "gift",
+                  "translations": [
+                    "regalo"
+                  ]
+                },
+                {
+                  "term": "guest",
+                  "translations": [
+                    "invitado"
+                  ]
+                }
+              ],
+              "exercises": [
+                {
+                  "type": "MultipleChoice",
+                  "id": "es-en-a2-p0-u1-l06-e01",
+                  "question": "¿Cómo se dice «cumpleaños»?",
+                  "options": [
+                    "birthday",
+                    "gift",
+                    "guest"
+                  ],
+                  "correctIndex": 0,
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "«cumpleaños» se dice «birthday»."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has elegido la traducción correcta."
+                  }
+                },
+                {
+                  "type": "Translate",
+                  "id": "es-en-a2-p0-u1-l06-e02",
+                  "sourcePhrase": "Mi cumpleaños es mañana",
+                  "correctTokens": [
+                    "My",
+                    "birthday",
+                    "is",
+                    "tomorrow"
+                  ],
+                  "distractorTokens": [
+                    "gift",
+                    "guest"
+                  ],
+                  "feedbackOnError": {
+                    "type": "word_order",
+                    "explanation": "El orden correcto es «My birthday is tomorrow»."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La frase conserva el orden y el significado."
+                  }
+                },
+                {
+                  "type": "OrderWords",
+                  "id": "es-en-a2-p0-u1-l06-e03",
+                  "tokens": [
+                    "I",
+                    "have",
+                    "a",
+                    "gift",
+                    "for",
+                    "you"
+                  ],
+                  "answerTokens": [
+                    "I",
+                    "have",
+                    "a",
+                    "gift",
+                    "for",
+                    "you"
+                  ],
+                  "sourcePhrase": "Tengo un regalo para ti",
+                  "feedbackOnError": {
+                    "type": "word_order",
+                    "explanation": "La frase correcta es «I have a gift for you»."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "El orden produce una frase natural."
+                  }
+                },
+                {
+                  "type": "MatchPairs",
+                  "id": "es-en-a2-p0-u1-l06-e04",
+                  "pairs": [
+                    {
+                      "left": "cumpleaños",
+                      "right": "birthday"
+                    },
+                    {
+                      "left": "regalo",
+                      "right": "gift"
+                    },
+                    {
+                      "left": "invitado",
+                      "right": "guest"
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "Cada palabra tiene una traducción distinta."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has asociado cada palabra con su traducción."
+                  }
+                },
+                {
+                  "type": "ListenChoose",
+                  "id": "es-en-a2-p0-u1-l06-e05",
+                  "audioText": "The guests arrive at eight",
+                  "options": [
+                    "The guests arrive at eight",
+                    "My birthday is tomorrow",
+                    "I have a gift for you"
+                  ],
+                  "correctIndex": 0,
+                  "feedbackOnError": {
+                    "type": "comprehension",
+                    "explanation": "El audio dice «The guests arrive at eight»."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has reconocido la frase del audio."
+                  }
+                },
+                {
+                  "type": "ListenType",
+                  "id": "es-en-a2-p0-u1-l06-e06",
+                  "audioText": "The guests arrive at eight",
+                  "transcription": "The guests arrive at eight",
+                  "feedbackOnError": {
+                    "type": "spelling",
+                    "explanation": "Escribe exactamente «The guests arrive at eight»."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La transcripción coincide con el audio."
+                  }
+                },
+                {
+                  "type": "SpeakRepeat",
+                  "id": "es-en-a2-p0-u1-l06-e07",
+                  "targetPhrase": "My birthday is tomorrow",
+                  "audioText": "My birthday is tomorrow",
+                  "feedbackOnError": {
+                    "type": "pronunciation",
+                    "explanation": "Repite «My birthday is tomorrow» con claridad."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La frase se entiende y mantiene el ritmo."
+                  }
+                }
+              ]
+            },
+            {
+              "id": "es-en-a2-p0-u1-l07",
+              "title": "El coche",
+              "cefrLevel": "A2",
+              "vocabFrequencyBand": "2000-3000",
+              "canDo": "Puedo hablar de mi coche y de dónde aparcar.",
+              "microLesson": {
+                "title": "El coche",
+                "goals": [
+                  "Usar vocabulario de el coche y la gasolina.",
+                  "Resolver una situación sencilla sobre el coche y la gasolina."
+                ],
+                "sections": [
+                  {
+                    "heading": "Palabras y frases",
+                    "body": "Vocabulario y frases para el coche y la gasolina. Fíjate en el verbo y en el orden de la información.",
+                    "examples": [
+                      {
+                        "source": "Necesito gasolina",
+                        "target": "I need petrol"
+                      },
+                      {
+                        "source": "Puedo aparcar aquí",
+                        "target": "I can park here"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "glossary": [
+                {
+                  "term": "car",
+                  "translations": [
+                    "coche"
+                  ]
+                },
+                {
+                  "term": "petrol",
+                  "translations": [
+                    "gasolina"
+                  ]
+                },
+                {
+                  "term": "park",
+                  "translations": [
+                    "aparcar"
+                  ]
+                }
+              ],
+              "exercises": [
+                {
+                  "type": "MultipleChoice",
+                  "id": "es-en-a2-p0-u1-l07-e01",
+                  "question": "¿Cómo se dice «coche»?",
+                  "options": [
+                    "car",
+                    "petrol",
+                    "park"
+                  ],
+                  "correctIndex": 0,
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "«coche» se dice «car»."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has elegido la traducción correcta."
+                  }
+                },
+                {
+                  "type": "Translate",
+                  "id": "es-en-a2-p0-u1-l07-e02",
+                  "sourcePhrase": "Necesito gasolina",
+                  "correctTokens": [
+                    "I",
+                    "need",
+                    "petrol"
+                  ],
+                  "distractorTokens": [
+                    "car",
+                    "park"
+                  ],
+                  "feedbackOnError": {
+                    "type": "word_order",
+                    "explanation": "El orden correcto es «I need petrol»."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La frase conserva el orden y el significado."
+                  }
+                },
+                {
+                  "type": "OrderWords",
+                  "id": "es-en-a2-p0-u1-l07-e03",
+                  "tokens": [
+                    "I",
+                    "can",
+                    "park",
+                    "here"
+                  ],
+                  "answerTokens": [
+                    "I",
+                    "can",
+                    "park",
+                    "here"
+                  ],
+                  "sourcePhrase": "Puedo aparcar aquí",
+                  "feedbackOnError": {
+                    "type": "word_order",
+                    "explanation": "La frase correcta es «I can park here»."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "El orden produce una frase natural."
+                  }
+                },
+                {
+                  "type": "MatchPairs",
+                  "id": "es-en-a2-p0-u1-l07-e04",
+                  "pairs": [
+                    {
+                      "left": "coche",
+                      "right": "car"
+                    },
+                    {
+                      "left": "gasolina",
+                      "right": "petrol"
+                    },
+                    {
+                      "left": "aparcar",
+                      "right": "park"
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "Cada palabra tiene una traducción distinta."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has asociado cada palabra con su traducción."
+                  }
+                },
+                {
+                  "type": "ListenChoose",
+                  "id": "es-en-a2-p0-u1-l07-e05",
+                  "audioText": "The car is in the garage",
+                  "options": [
+                    "The car is in the garage",
+                    "I need petrol",
+                    "I can park here"
+                  ],
+                  "correctIndex": 0,
+                  "feedbackOnError": {
+                    "type": "comprehension",
+                    "explanation": "El audio dice «The car is in the garage»."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has reconocido la frase del audio."
+                  }
+                },
+                {
+                  "type": "ListenType",
+                  "id": "es-en-a2-p0-u1-l07-e06",
+                  "audioText": "The car is in the garage",
+                  "transcription": "The car is in the garage",
+                  "feedbackOnError": {
+                    "type": "spelling",
+                    "explanation": "Escribe exactamente «The car is in the garage»."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La transcripción coincide con el audio."
+                  }
+                },
+                {
+                  "type": "SpeakRepeat",
+                  "id": "es-en-a2-p0-u1-l07-e07",
+                  "targetPhrase": "I need petrol",
+                  "audioText": "I need petrol",
+                  "feedbackOnError": {
+                    "type": "pronunciation",
+                    "explanation": "Repite «I need petrol» con claridad."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La frase se entiende y mantiene el ritmo."
+                  }
+                }
+              ]
+            },
+            {
+              "id": "es-en-a2-p0-u1-l08",
+              "title": "La oficina",
+              "cefrLevel": "A2",
+              "vocabFrequencyBand": "2000-3000",
+              "canDo": "Puedo hablar de tareas y plazos de oficina.",
+              "microLesson": {
+                "title": "La oficina",
+                "goals": [
+                  "Usar vocabulario de el trabajo de oficina.",
+                  "Resolver una situación sencilla sobre el trabajo de oficina."
+                ],
+                "sections": [
+                  {
+                    "heading": "Palabras y frases",
+                    "body": "Vocabulario y frases para el trabajo de oficina. Fíjate en el verbo y en el orden de la información.",
+                    "examples": [
+                      {
+                        "source": "El proyecto termina el viernes",
+                        "target": "The project ends on Friday"
+                      },
+                      {
+                        "source": "Envío el correo hoy",
+                        "target": "I send the email today"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "glossary": [
+                {
+                  "term": "email",
+                  "translations": [
+                    "correo"
+                  ]
+                },
+                {
+                  "term": "project",
+                  "translations": [
+                    "proyecto"
+                  ]
+                },
+                {
+                  "term": "deadline",
+                  "translations": [
+                    "plazo"
+                  ]
+                }
+              ],
+              "exercises": [
+                {
+                  "type": "MultipleChoice",
+                  "id": "es-en-a2-p0-u1-l08-e01",
+                  "question": "¿Cómo se dice «correo»?",
+                  "options": [
+                    "email",
+                    "project",
+                    "deadline"
+                  ],
+                  "correctIndex": 0,
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "«correo» se dice «email»."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has elegido la traducción correcta."
+                  }
+                },
+                {
+                  "type": "Translate",
+                  "id": "es-en-a2-p0-u1-l08-e02",
+                  "sourcePhrase": "El proyecto termina el viernes",
+                  "correctTokens": [
+                    "The",
+                    "project",
+                    "ends",
+                    "on",
+                    "Friday"
+                  ],
+                  "distractorTokens": [
+                    "email",
+                    "deadline"
+                  ],
+                  "feedbackOnError": {
+                    "type": "word_order",
+                    "explanation": "El orden correcto es «The project ends on Friday»."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La frase conserva el orden y el significado."
+                  }
+                },
+                {
+                  "type": "OrderWords",
+                  "id": "es-en-a2-p0-u1-l08-e03",
+                  "tokens": [
+                    "I",
+                    "send",
+                    "the",
+                    "email",
+                    "today"
+                  ],
+                  "answerTokens": [
+                    "I",
+                    "send",
+                    "the",
+                    "email",
+                    "today"
+                  ],
+                  "sourcePhrase": "Envío el correo hoy",
+                  "feedbackOnError": {
+                    "type": "word_order",
+                    "explanation": "La frase correcta es «I send the email today»."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "El orden produce una frase natural."
+                  }
+                },
+                {
+                  "type": "MatchPairs",
+                  "id": "es-en-a2-p0-u1-l08-e04",
+                  "pairs": [
+                    {
+                      "left": "correo",
+                      "right": "email"
+                    },
+                    {
+                      "left": "proyecto",
+                      "right": "project"
+                    },
+                    {
+                      "left": "plazo",
+                      "right": "deadline"
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "Cada palabra tiene una traducción distinta."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has asociado cada palabra con su traducción."
+                  }
+                },
+                {
+                  "type": "ListenChoose",
+                  "id": "es-en-a2-p0-u1-l08-e05",
+                  "audioText": "The deadline is on Friday",
+                  "options": [
+                    "The deadline is on Friday",
+                    "I send the email today",
+                    "The project ends on Friday"
+                  ],
+                  "correctIndex": 0,
+                  "feedbackOnError": {
+                    "type": "comprehension",
+                    "explanation": "El audio dice «The deadline is on Friday»."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has reconocido la frase del audio."
+                  }
+                },
+                {
+                  "type": "ListenType",
+                  "id": "es-en-a2-p0-u1-l08-e06",
+                  "audioText": "The deadline is on Friday",
+                  "transcription": "The deadline is on Friday",
+                  "feedbackOnError": {
+                    "type": "spelling",
+                    "explanation": "Escribe exactamente «The deadline is on Friday»."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La transcripción coincide con el audio."
+                  }
+                },
+                {
+                  "type": "SpeakRepeat",
+                  "id": "es-en-a2-p0-u1-l08-e07",
+                  "targetPhrase": "I send the email today",
+                  "audioText": "I send the email today",
+                  "feedbackOnError": {
+                    "type": "pronunciation",
+                    "explanation": "Repite «I send the email today» con claridad."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La frase se entiende y mantiene el ritmo."
+                  }
+                }
+              ]
+            },
+            {
+              "id": "es-en-a2-p0-u1-l09",
+              "title": "Tiempo libre",
+              "cefrLevel": "A2",
+              "vocabFrequencyBand": "2000-3000",
+              "canDo": "Puedo proponer un plan de ocio y comprar entradas.",
+              "microLesson": {
+                "title": "Tiempo libre",
+                "goals": [
+                  "Usar vocabulario de los planes de ocio.",
+                  "Resolver una situación sencilla sobre los planes de ocio."
+                ],
+                "sections": [
+                  {
+                    "heading": "Palabras y frases",
+                    "body": "Vocabulario y frases para los planes de ocio. Fíjate en el verbo y en el orden de la información.",
+                    "examples": [
+                      {
+                        "source": "¿Quedamos el sábado?",
+                        "target": "Shall we meet on Saturday"
+                      },
+                      {
+                        "source": "Compro dos entradas",
+                        "target": "I buy two tickets"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "glossary": [
+                {
+                  "term": "meet up",
+                  "translations": [
+                    "quedar"
+                  ]
+                },
+                {
+                  "term": "cinema",
+                  "translations": [
+                    "cine"
+                  ]
+                },
+                {
+                  "term": "ticket",
+                  "translations": [
+                    "entrada"
+                  ]
+                }
+              ],
+              "exercises": [
+                {
+                  "type": "MultipleChoice",
+                  "id": "es-en-a2-p0-u1-l09-e01",
+                  "question": "¿Cómo se dice «quedar»?",
+                  "options": [
+                    "meet up",
+                    "cinema",
+                    "ticket"
+                  ],
+                  "correctIndex": 0,
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "«quedar» se dice «meet up»."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has elegido la traducción correcta."
+                  }
+                },
+                {
+                  "type": "Translate",
+                  "id": "es-en-a2-p0-u1-l09-e02",
+                  "sourcePhrase": "¿Quedamos el sábado?",
+                  "correctTokens": [
+                    "Shall",
+                    "we",
+                    "meet",
+                    "on",
+                    "Saturday"
+                  ],
+                  "distractorTokens": [
+                    "cinema",
+                    "ticket"
+                  ],
+                  "feedbackOnError": {
+                    "type": "word_order",
+                    "explanation": "El orden correcto es «Shall we meet on Saturday»."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La frase conserva el orden y el significado."
+                  }
+                },
+                {
+                  "type": "OrderWords",
+                  "id": "es-en-a2-p0-u1-l09-e03",
+                  "tokens": [
+                    "I",
+                    "buy",
+                    "two",
+                    "tickets"
+                  ],
+                  "answerTokens": [
+                    "I",
+                    "buy",
+                    "two",
+                    "tickets"
+                  ],
+                  "sourcePhrase": "Compro dos entradas",
+                  "feedbackOnError": {
+                    "type": "word_order",
+                    "explanation": "La frase correcta es «I buy two tickets»."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "El orden produce una frase natural."
+                  }
+                },
+                {
+                  "type": "MatchPairs",
+                  "id": "es-en-a2-p0-u1-l09-e04",
+                  "pairs": [
+                    {
+                      "left": "quedar",
+                      "right": "meet up"
+                    },
+                    {
+                      "left": "cine",
+                      "right": "cinema"
+                    },
+                    {
+                      "left": "entrada",
+                      "right": "ticket"
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "Cada palabra tiene una traducción distinta."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has asociado cada palabra con su traducción."
+                  }
+                },
+                {
+                  "type": "ListenChoose",
+                  "id": "es-en-a2-p0-u1-l09-e05",
+                  "audioText": "We meet at the cinema",
+                  "options": [
+                    "We meet at the cinema",
+                    "Shall we meet on Saturday",
+                    "I buy two tickets"
+                  ],
+                  "correctIndex": 0,
+                  "feedbackOnError": {
+                    "type": "comprehension",
+                    "explanation": "El audio dice «We meet at the cinema»."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has reconocido la frase del audio."
+                  }
+                },
+                {
+                  "type": "ListenType",
+                  "id": "es-en-a2-p0-u1-l09-e06",
+                  "audioText": "We meet at the cinema",
+                  "transcription": "We meet at the cinema",
+                  "feedbackOnError": {
+                    "type": "spelling",
+                    "explanation": "Escribe exactamente «We meet at the cinema»."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La transcripción coincide con el audio."
+                  }
+                },
+                {
+                  "type": "SpeakRepeat",
+                  "id": "es-en-a2-p0-u1-l09-e07",
+                  "targetPhrase": "Shall we meet on Saturday?",
+                  "audioText": "Shall we meet on Saturday?",
+                  "feedbackOnError": {
+                    "type": "pronunciation",
+                    "explanation": "Repite «Shall we meet on Saturday?» con claridad."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La frase se entiende y mantiene el ritmo."
+                  }
+                }
+              ]
+            },
+            {
+              "id": "es-en-a2-p0-u1-l10",
+              "title": "Un trámite",
+              "cefrLevel": "A2",
+              "vocabFrequencyBand": "2000-3000",
+              "canDo": "Puedo pedir una cita y hablar de un trámite.",
+              "microLesson": {
+                "title": "Un trámite",
+                "goals": [
+                  "Usar vocabulario de los trámites y las citas.",
+                  "Resolver una situación sencilla sobre los trámites y las citas."
+                ],
+                "sections": [
+                  {
+                    "heading": "Palabras y frases",
+                    "body": "Vocabulario y frases para los trámites y las citas. Fíjate en el verbo y en el orden de la información.",
+                    "examples": [
+                      {
+                        "source": "Necesito una cita",
+                        "target": "I need an appointment"
+                      },
+                      {
+                        "source": "Firmo el documento hoy",
+                        "target": "I sign the document today"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "glossary": [
+                {
+                  "term": "procedure",
+                  "translations": [
+                    "trámite"
+                  ]
+                },
+                {
+                  "term": "signature",
+                  "translations": [
+                    "firma"
+                  ]
+                },
+                {
+                  "term": "appointment",
+                  "translations": [
+                    "cita"
+                  ]
+                }
+              ],
+              "exercises": [
+                {
+                  "type": "MultipleChoice",
+                  "id": "es-en-a2-p0-u1-l10-e01",
+                  "question": "¿Cómo se dice «trámite»?",
+                  "options": [
+                    "procedure",
+                    "signature",
+                    "appointment"
+                  ],
+                  "correctIndex": 0,
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "«trámite» se dice «procedure»."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has elegido la traducción correcta."
+                  }
+                },
+                {
+                  "type": "Translate",
+                  "id": "es-en-a2-p0-u1-l10-e02",
+                  "sourcePhrase": "Necesito una cita",
+                  "correctTokens": [
+                    "I",
+                    "need",
+                    "an",
+                    "appointment"
+                  ],
+                  "distractorTokens": [
+                    "procedure",
+                    "signature"
+                  ],
+                  "feedbackOnError": {
+                    "type": "word_order",
+                    "explanation": "El orden correcto es «I need an appointment»."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La frase conserva el orden y el significado."
+                  }
+                },
+                {
+                  "type": "OrderWords",
+                  "id": "es-en-a2-p0-u1-l10-e03",
+                  "tokens": [
+                    "I",
+                    "sign",
+                    "the",
+                    "document",
+                    "today"
+                  ],
+                  "answerTokens": [
+                    "I",
+                    "sign",
+                    "the",
+                    "document",
+                    "today"
+                  ],
+                  "sourcePhrase": "Firmo el documento hoy",
+                  "feedbackOnError": {
+                    "type": "word_order",
+                    "explanation": "La frase correcta es «I sign the document today»."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "El orden produce una frase natural."
+                  }
+                },
+                {
+                  "type": "MatchPairs",
+                  "id": "es-en-a2-p0-u1-l10-e04",
+                  "pairs": [
+                    {
+                      "left": "trámite",
+                      "right": "procedure"
+                    },
+                    {
+                      "left": "firma",
+                      "right": "signature"
+                    },
+                    {
+                      "left": "cita",
+                      "right": "appointment"
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "Cada palabra tiene una traducción distinta."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has asociado cada palabra con su traducción."
+                  }
+                },
+                {
+                  "type": "ListenChoose",
+                  "id": "es-en-a2-p0-u1-l10-e05",
+                  "audioText": "The appointment is at nine",
+                  "options": [
+                    "The appointment is at nine",
+                    "I need an appointment",
+                    "I sign the document today"
+                  ],
+                  "correctIndex": 0,
+                  "feedbackOnError": {
+                    "type": "comprehension",
+                    "explanation": "El audio dice «The appointment is at nine»."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has reconocido la frase del audio."
+                  }
+                },
+                {
+                  "type": "ListenType",
+                  "id": "es-en-a2-p0-u1-l10-e06",
+                  "audioText": "The appointment is at nine",
+                  "transcription": "The appointment is at nine",
+                  "feedbackOnError": {
+                    "type": "spelling",
+                    "explanation": "Escribe exactamente «The appointment is at nine»."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La transcripción coincide con el audio."
+                  }
+                },
+                {
+                  "type": "SpeakRepeat",
+                  "id": "es-en-a2-p0-u1-l10-e07",
+                  "targetPhrase": "I need an appointment",
+                  "audioText": "I need an appointment",
+                  "feedbackOnError": {
+                    "type": "pronunciation",
+                    "explanation": "Repite «I need an appointment» con claridad."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La frase se entiende y mantiene el ritmo."
+                  }
+                }
+              ]
+            }
+          ]
         }
       ]
     },
