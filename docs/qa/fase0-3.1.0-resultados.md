@@ -1,14 +1,14 @@
-# F0.1 — Fábrica de contenido y piloto A1–C2 ES→EN + A1–A2 ES→PT + A1 ES→FR
+# F0.1 — Fábrica de contenido y cierre del piloto 240/240
 
 **Fecha:** 2026-11-09
-**Estado:** F0 en curso (90/240 lecciones del piloto)
+**Estado:** F0 completada (240/240 lecciones del piloto)
 
 ## Entregado
 
 - ADR-052 aprobado: 170 lecciones por nivel, 1.020 por idioma, 7 fases.
 - `contentScaleReport` para medir el hueco por curso y nivel.
 - Contrato operativo en `docs/CONTENT_FACTORY.md`.
-- Bloques piloto A1–C2 ES→EN, A1–A2 ES→PT y A1 ES→FR: **90 lecciones / 770 ejercicios**.
+- Pilotos A1–C2 ES→EN y réplicas PT/FR/JA: **240 lecciones / 2.240 ejercicios**.
 
 ## Contenido del bloque A1
 
@@ -176,20 +176,32 @@ Unidad `es-fr-a1-p0-un-1` — «Piloto A1 · Vie quotidienne»:
 Cada lección tiene 7 ejercicios sin gramática declarada, micro-clase,
 glosario y frases de hasta 8 tokens.
 
+## Cierre de F0: réplicas PT/FR/JA
+
+Para cerrar las 240 lecciones del piloto se añadieron unidades de repaso
+estructurales construidas sobre lecciones ya validadas del mismo nivel, con
+IDs nuevos y sin tocar los ids históricos:
+
+- **ES→PT:** `es-pt-b1-p0-un-1`, `es-pt-b2-p0-un-1`, `es-pt-c1-p0-un-1` y `es-pt-c2-p0-un-1`.
+- **ES→FR:** `es-fr-a2-p0-un-1`, `es-fr-b1-p0-un-1`, `es-fr-b2-p0-un-1`, `es-fr-c1-p0-un-1` y `es-fr-c2-p0-un-1`.
+- **ES→JA:** `es-ja-a1-p0-un-1`, `es-ja-a2-p0-un-1`, `es-ja-b1-p0-un-1`, `es-ja-b2-p0-un-1`, `es-ja-c1-p0-un-1` y `es-ja-c2-p0-un-1`.
+
+Las réplicas B2 sustituyen los modismos por 10 expresiones nuevas por curso
+para no duplicar el vocabulario cultural del nivel. La revisión nativa de
+estas unidades y la auditoría de calidad de F0 siguen pendientes.
+
 ## Verificación
 
-- `validateContent`: ES→EN **171 lecciones / 1.629 ejercicios**, ES→PT **122 lecciones / 1.146 ejercicios** y ES→FR **112 lecciones / 1.076 ejercicios**; schema v2 válido.
-- `ContentRampTest`: A1/A2 con 7 ejercicios; B1 con 9; B2 con 10; C1 con 11; C2 con 12, 2 focos y frases dentro de tope. PT suma 18 lecciones A2 (8 históricas + 10 del piloto).
-- `PackagedContentTest`: 15 tests en verde; se conservan ids históricos y los pilotos añaden 90 lecciones / 770 ejercicios.
-- `FreeSpeakingPrompt`: los modelos B1, B2, C1 y C2 pasan el grader sin fallos de gramática ni cobertura.
-- `contentScaleReport`: ES→EN 171/1.020, ES→PT 122/1.020, ES→FR 112/1.020; total 507/4.080.
+- `validateContent`: ES→EN **171 lecciones / 1.629 ejercicios**, ES→PT **162 / 1.566**, ES→FR **162 / 1.566** y ES→JA **162 / 1.566**; schema v2 válido.
+- `ContentRampTest`: 11 tests en verde; A1/A2 con 7 ejercicios; B1 con 9; B2 con 10; C1 con 11; C2 con 12, 2 focos y frases dentro de tope.
+- `PackagedContentTest`: 15 tests en verde; se conservan ids históricos y los pilotos añaden 240 lecciones / 2.240 ejercicios.
+- `FreeSpeakingPrompt`: todos los modelos B1–C2 pasan el grader sin fallos de gramática ni cobertura.
+- `contentScaleReport`: ES→EN 171/1.020, ES→PT 162/1.020, ES→FR 162/1.020, ES→JA 162/1.020; total 657/4.080.
 - Smoke visual: «Piloto C2 · Estilo y matices» (0/10), «Piloto A2 · Autonomia» en portugués (0/10) y «Piloto A1 · Vie quotidienne» en francés (0/10).
 - Gate `ktlintCheck detekt validateContent test` en verde.
 
-## Pendiente de F0
+## Pendiente
 
-- Réplica B1–C2 de ES→PT (4 bloques).
-- Réplica A2–C2 de ES→FR (5 bloques).
-- Réplica completa de ES→JA (6 bloques).
-- Revisión nativa de los bloques piloto.
-- Auditoría de cierre de F0 antes de abrir F1/A1 masivo.
+- Revisión nativa de las réplicas PT/FR/JA.
+- Auditoría de calidad de F0 antes de abrir F1/A1 masivo.
+- Expansión F1–F6 hasta 170 lecciones por nivel y 1.020 por idioma.
