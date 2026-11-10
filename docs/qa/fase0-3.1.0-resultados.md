@@ -1,14 +1,14 @@
-# F0.1 — Fábrica de contenido y piloto A1/A2/B1/B2/C1 ES→EN
+# F0.1 — Fábrica de contenido y piloto A1–C2 ES→EN + A1 ES→PT
 
 **Fecha:** 2026-11-09
-**Estado:** F0 en curso (50/240 lecciones del piloto)
+**Estado:** F0 en curso (70/240 lecciones del piloto)
 
 ## Entregado
 
 - ADR-052 aprobado: 170 lecciones por nivel, 1.020 por idioma, 7 fases.
 - `contentScaleReport` para medir el hueco por curso y nivel.
 - Contrato operativo en `docs/CONTENT_FACTORY.md`.
-- Bloques piloto A1, A2, B1, B2 y C1 ES→EN: **50 lecciones / 440 ejercicios**.
+- Bloques piloto A1–C2 ES→EN y A1 ES→PT: **70 lecciones / 630 ejercicios**.
 
 ## Contenido del bloque A1
 
@@ -101,19 +101,58 @@ micro-clase, glosario, `Translate`, `OrderWords`, `ClozeDragDrop`,
 `SemanticMatch`, `ListenChoose`, `AudioOnlyPrompt`, `ListenType`,
 `SpeakRepeat`, `MatchPairs` y `FreeSpeakingPrompt`.
 
+## Contenido del bloque C2
+
+Unidad `es-en-c2-p0-un-1` — «Piloto C2 · Estilo y matices»:
+
+1. Ironía y crítica
+2. Eufemismos
+3. Retórica persuasiva
+4. Humor y doble sentido
+5. Estilo literario
+6. Matices de significado
+7. Argumentación filosófica
+8. Narrativa y punto de vista
+9. Discurso público
+10. Crítica cultural
+
+Cada lección tiene 12 ejercicios, 2 focos estilísticos, nota cultural,
+micro-clase, glosario, tres `ClozeDragDrop`, `Translate`, `SemanticMatch`,
+`ListenChoose`, `AudioOnlyPrompt`, `ListenType`, `SpeakRepeat`, `MatchPairs`
+y `FreeSpeakingPrompt`.
+
+## Contenido del bloque A1 ES→PT
+
+Unidad `es-pt-a1-p0-un-1` — «Piloto A1 · Vida cotidiana»:
+
+1. Meu animal de estimação
+2. A roupa
+3. Minha rotina
+4. O transporte
+5. Direções
+6. A escola
+7. O trabalho
+8. A saúde
+9. Passatempos
+10. A cidade
+
+Cada lección tiene 7 ejercicios sin gramática declarada, micro-clase,
+glosario, `MultipleChoice`, `Translate`, `OrderWords`, `MatchPairs`,
+`ListenChoose`, `ListenType` y `SpeakRepeat`, con frases de hasta 8 tokens.
+
 ## Verificación
 
-- `validateContent`: ES→EN **161 lecciones / 1.509 ejercicios**; schema v2 válido.
-- `ContentRampTest`: A1/A2 con 7 ejercicios; B1 con 9; B2 con 10; C1 con 11, 2 focos y frases dentro de tope.
-- `PackagedContentTest`: se conservan ids históricos; el piloto añade 50 lecciones y 440 ejercicios.
-- `FreeSpeakingPrompt`: los modelos B1, B2 y C1 pasan el grader sin fallos de gramática ni cobertura.
-- `contentScaleReport`: ES→EN 161/1.020; total 467/4.080.
-- Smoke visual: el camino incluye las unidades «Piloto A1 · Vida diaria», «Piloto A2 · Autonomía», «Piloto B2 · Argumentación y matices» y «Piloto C1 · Precisión y argumentación».
+- `validateContent`: ES→EN **171 lecciones / 1.629 ejercicios** y ES→PT **112 lecciones / 1.076 ejercicios**; schema v2 válido.
+- `ContentRampTest`: A1/A2 con 7 ejercicios; B1 con 9; B2 con 10; C1 con 11; C2 con 12, 2 focos y frases dentro de tope.
+- `PackagedContentTest`: se conservan ids históricos; los pilotos añaden 70 lecciones y 630 ejercicios.
+- `FreeSpeakingPrompt`: los modelos B1, B2, C1 y C2 pasan el grader sin fallos de gramática ni cobertura.
+- `contentScaleReport`: ES→EN 171/1.020, ES→PT 112/1.020; total 487/4.080.
+- Smoke visual: el camino incluye «Piloto A1 · Vida diaria», «Piloto A2 · Autonomía», «Piloto B2 · Argumentación y matices», «Piloto C1 · Precisión y argumentación», «Piloto C2 · Estilo y matices» y la unidad A1 de portugués.
 - Gate `ktlintCheck detekt validateContent test` en verde.
 
 ## Pendiente de F0
 
-- Bloque piloto C2 de ES→EN (10 lecciones).
-- Réplica de los seis bloques en PT, FR y JA (180 lecciones).
-- Revisión nativa del bloque piloto.
+- Réplica A2–C2 de ES→PT (5 bloques).
+- Réplica completa de ES→FR y ES→JA (6 bloques por curso).
+- Revisión nativa de los bloques piloto.
 - Auditoría de cierre de F0 antes de abrir F1/A1 masivo.
