@@ -77,7 +77,10 @@ class PackagedContentTest {
             lessons.filter { lesson ->
                 lesson.cefrLevel == CefrLevel.B1 && !lesson.id.value.contains("-p0-")
             }
-        val b2Lessons = lessons.filter { lesson -> lesson.cefrLevel == CefrLevel.B2 }
+        val b2Lessons =
+            lessons.filter { lesson ->
+                lesson.cefrLevel == CefrLevel.B2 && !lesson.id.value.contains("-p0-")
+            }
         assertEquals(20, b1Lessons.size)
         assertEquals(22, b2Lessons.size)
         assertEquals((1..180).map { index -> "es-en-b1-e$index" }, b1Lessons.flatMap { lesson -> lesson.exercises }.map { it.id.value })
@@ -98,6 +101,27 @@ class PackagedContentTest {
             "Todos los ejercicios del piloto B1 deben tener feedbackOnError",
             pilotB1Lessons.flatMap { lesson -> lesson.exercises }.all { exercise -> exercise.feedbackOnError != null },
         )
+
+        val pilotB2Lessons = lessons.filter { lesson -> lesson.id.value.startsWith("es-en-b2-p0-") }
+        assertEquals("El piloto B2 de F0 debe tener 10 lecciones", 10, pilotB2Lessons.size)
+        assertTrue(pilotB2Lessons.all { lesson -> lesson.exercises.size == 10 })
+        assertTrue(pilotB2Lessons.all { lesson -> lesson.grammarPoints.size == 2 })
+        assertTrue(pilotB2Lessons.all { lesson -> lesson.vocabFrequencyBand == VocabFrequencyBand.BAND_3000_5000 })
+        assertTrue(pilotB2Lessons.all { lesson -> lesson.culturalNotes.isNotEmpty() })
+        assertTrue(pilotB2Lessons.all { lesson -> lesson.microLesson != null && lesson.glossary.isNotEmpty() })
+        assertTrue(
+            "Todos los ejercicios del piloto B2 deben tener feedbackOnError",
+            pilotB2Lessons.flatMap { lesson -> lesson.exercises }.all { exercise -> exercise.feedbackOnError != null },
+        )
+        val pilotB2Exercises = pilotB2Lessons.flatMap { lesson -> lesson.exercises }
+        assertEquals(10, pilotB2Exercises.count { exercise -> exercise is Exercise.MultipleChoice })
+        assertEquals(10, pilotB2Exercises.count { exercise -> exercise is Exercise.OrderWords })
+        assertEquals(10, pilotB2Exercises.count { exercise -> exercise is Exercise.ClozeDragDrop })
+        assertEquals(20, pilotB2Exercises.count { exercise -> exercise is Exercise.SemanticMatch })
+        assertEquals(20, pilotB2Exercises.count { exercise -> exercise is Exercise.AudioOnlyPrompt })
+        assertEquals(10, pilotB2Exercises.count { exercise -> exercise is Exercise.ListenType })
+        assertEquals(10, pilotB2Exercises.count { exercise -> exercise is Exercise.SpeakRepeat })
+        assertEquals(10, pilotB2Exercises.count { exercise -> exercise is Exercise.FreeSpeakingPrompt })
 
         val a2Lessons =
             lessons.filter { lesson ->

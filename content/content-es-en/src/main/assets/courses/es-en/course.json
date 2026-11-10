@@ -15844,6 +15844,3452 @@
               ]
             }
           ]
+        },
+        {
+          "id": "es-en-b2-p0-un-1",
+          "title": "Piloto B2 · Argumentación y matices",
+          "lessons": [
+            {
+              "id": "es-en-b2-p0-u1-l01",
+              "title": "Negociar un plazo",
+              "cefrLevel": "B2",
+              "scenario": "Un proyecto se ha retrasado y el equipo debe renegociar la fecha de entrega con el cliente.",
+              "canDo": "Puedo pedir una prórroga con cautela, ofrecer una alternativa y fijar una fecha concreta.",
+              "grammarPoints": [
+                {
+                  "id": "gp-b2p-plazo-hedging",
+                  "label": "Hedging",
+                  "description": "Matizar peticiones con I'm afraid, might e it seems."
+                },
+                {
+                  "id": "gp-b2p-plazo-future-perfect",
+                  "label": "Future perfect",
+                  "description": "Situar un resultado antes de una fecha con will have + participio."
+                }
+              ],
+              "vocabFrequencyBand": "3000-5000",
+              "culturalNotes": [
+                {
+                  "idiom": "get the ball rolling",
+                  "note": "Get the ball rolling significa poner en marcha un proyecto o una conversación.",
+                  "translation": "poner en marcha algo"
+                }
+              ],
+              "microLesson": {
+                "title": "Negociar un plazo",
+                "goals": [
+                  "Usar vocabulario de la gestión de proyectos.",
+                  "Resolver una tarea comunicativa sobre la gestión de proyectos."
+                ],
+                "sections": [
+                  {
+                    "heading": "Foco 1: Hedging",
+                    "body": "Matizar peticiones con I'm afraid, might e it seems.",
+                    "examples": [
+                      {
+                        "source": "Habremos terminado el informe para el viernes",
+                        "target": "We will have finished the report by Friday"
+                      }
+                    ]
+                  },
+                  {
+                    "heading": "Foco 2: Future perfect",
+                    "body": "Situar un resultado antes de una fecha con will have + participio.",
+                    "examples": [
+                      {
+                        "source": "Me temo que podríamos necesitar más tiempo para terminar el informe.",
+                        "target": "I'm afraid we might need more time to finish the report."
+                      }
+                    ]
+                  }
+                ]
+              },
+              "glossary": [
+                {
+                  "term": "deadline",
+                  "translations": [
+                    "plazo"
+                  ]
+                },
+                {
+                  "term": "deliverable",
+                  "translations": [
+                    "entregable"
+                  ]
+                },
+                {
+                  "term": "extension",
+                  "translations": [
+                    "prórroga"
+                  ]
+                }
+              ],
+              "exercises": [
+                {
+                  "type": "MultipleChoice",
+                  "id": "es-en-b2-p0-u1-l01-e01",
+                  "question": "Completa: By Friday, we ___ the first draft.",
+                  "options": [
+                    "will have finished",
+                    "finish",
+                    "finished"
+                  ],
+                  "correctIndex": 0,
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "La forma correcta aparece en la micro-clase: «We will have finished the report by Friday».",
+                    "ruleRef": "gp-b2p-plazo-hedging"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has elegido la forma gramatical adecuada."
+                  }
+                },
+                {
+                  "type": "OrderWords",
+                  "id": "es-en-b2-p0-u1-l01-e02",
+                  "tokens": [
+                    "have",
+                    "finished",
+                    "the",
+                    "report",
+                    "by",
+                    "Friday",
+                    "We",
+                    "will"
+                  ],
+                  "answerTokens": [
+                    "We",
+                    "will",
+                    "have",
+                    "finished",
+                    "the",
+                    "report",
+                    "by",
+                    "Friday"
+                  ],
+                  "sourcePhrase": "Habremos terminado el informe para el viernes",
+                  "feedbackOnError": {
+                    "type": "word_order",
+                    "explanation": "El orden natural es «We will have finished the report by Friday».",
+                    "ruleRef": "gp-b2p-plazo-future-perfect"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "El orden produce una frase natural."
+                  }
+                },
+                {
+                  "type": "ClozeDragDrop",
+                  "id": "es-en-b2-p0-u1-l01-e03",
+                  "passage": "If we {{b1}} the scope now, we {{b2}} the deadline.",
+                  "blanks": [
+                    {
+                      "id": "b1",
+                      "answer": "reduce",
+                      "options": [
+                        "reduce",
+                        "reduced",
+                        "reducing"
+                      ]
+                    },
+                    {
+                      "id": "b2",
+                      "answer": "will meet",
+                      "options": [
+                        "will meet",
+                        "met",
+                        "meeting"
+                      ]
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "Cada hueco debe encajar con el tiempo verbal y el contexto.",
+                    "ruleRef": "gp-b2p-plazo-hedging"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Los huecos completan la frase con coherencia."
+                  }
+                },
+                {
+                  "type": "SemanticMatch",
+                  "id": "es-en-b2-p0-u1-l01-e04",
+                  "instructions": "Clasifica la función de cada intervención.",
+                  "pairs": [
+                    {
+                      "left": "It seems to me that the deadline may be too tight.",
+                      "right": "Objeción atenuada",
+                      "register": "formal",
+                      "nuance": "Presenta el problema como posibilidad."
+                    },
+                    {
+                      "left": "We might need an extra week.",
+                      "right": "Petición de prórroga",
+                      "register": "neutral",
+                      "nuance": "Pide más tiempo sin exigir."
+                    },
+                    {
+                      "left": "That said, quality remains the priority.",
+                      "right": "Concesión",
+                      "register": "formal",
+                      "nuance": "Acepta una parte y añade una reserva."
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "Cada intervención cumple una función comunicativa distinta.",
+                    "ruleRef": "gp-b2p-plazo-hedging"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has identificado la función de cada intervención."
+                  }
+                },
+                {
+                  "type": "SemanticMatch",
+                  "id": "es-en-b2-p0-u1-l01-e05",
+                  "instructions": "Distingue el registro de cada forma de comunicar el retraso.",
+                  "pairs": [
+                    {
+                      "left": "I'm afraid we won't meet the original deadline.",
+                      "right": "Formal y atenuado",
+                      "register": "formal",
+                      "nuance": "Suaviza la mala noticia."
+                    },
+                    {
+                      "left": "We're going to be a bit late.",
+                      "right": "Neutral",
+                      "register": "neutral",
+                      "nuance": "Informa sin dramatizar."
+                    },
+                    {
+                      "left": "No way we'll make it on time.",
+                      "right": "Informal",
+                      "register": "informal",
+                      "nuance": "Expresión coloquial y directa."
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "register",
+                    "explanation": "El registro cambia según el contexto y la relación con el interlocutor.",
+                    "ruleRef": "gp-b2p-plazo-future-perfect"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has distinguido el registro de cada expresión."
+                  }
+                },
+                {
+                  "type": "AudioOnlyPrompt",
+                  "id": "es-en-b2-p0-u1-l01-e06",
+                  "audioText": "I'm afraid we might need an extra week; that said, we can deliver the core features by Friday.",
+                  "question": "What is the speaker's position?",
+                  "options": [
+                    "An extension may be needed, but the core features can arrive on Friday",
+                    "The project is cancelled",
+                    "The core features are already finished",
+                    "The deadline is not important"
+                  ],
+                  "correctIndex": 0,
+                  "allowSlowPlayback": true,
+                  "feedbackOnError": {
+                    "type": "comprehension",
+                    "explanation": "El audio matiza la información principal y añade una reserva.",
+                    "ruleRef": "gp-b2p-plazo-hedging"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has comprendido la postura del hablante."
+                  }
+                },
+                {
+                  "type": "AudioOnlyPrompt",
+                  "id": "es-en-b2-p0-u1-l01-e07",
+                  "audioText": "If we reduce the scope, we will meet the deadline; in other words, we need to prioritise.",
+                  "question": "What does the speaker recommend?",
+                  "options": [
+                    "Prioritising the work",
+                    "Extending the deadline",
+                    "Cancelling the project",
+                    "Hiring more people"
+                  ],
+                  "correctIndex": 0,
+                  "allowSlowPlayback": false,
+                  "feedbackOnError": {
+                    "type": "comprehension",
+                    "explanation": "La segunda parte del audio reformula la idea principal.",
+                    "ruleRef": "gp-b2p-plazo-future-perfect"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has identificado la recomendación del audio."
+                  }
+                },
+                {
+                  "type": "ListenType",
+                  "id": "es-en-b2-p0-u1-l01-e08",
+                  "transcription": "We will have finished the report by Friday",
+                  "audioText": "We will have finished the report by Friday",
+                  "feedbackOnError": {
+                    "type": "spelling",
+                    "explanation": "Escribe exactamente «We will have finished the report by Friday».",
+                    "ruleRef": "gp-b2p-plazo-hedging"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La transcripción coincide con el audio."
+                  }
+                },
+                {
+                  "type": "SpeakRepeat",
+                  "id": "es-en-b2-p0-u1-l01-e09",
+                  "targetPhrase": "I'm afraid we might need more time to finish the report.",
+                  "audioText": "I'm afraid we might need more time to finish the report.",
+                  "feedbackOnError": {
+                    "type": "pronunciation",
+                    "explanation": "Repite «I'm afraid we might need more time to finish the report.» manteniendo el ritmo y las pausas.",
+                    "ruleRef": "gp-b2p-plazo-future-perfect"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La frase se entiende y conserva la entonación."
+                  }
+                },
+                {
+                  "type": "FreeSpeakingPrompt",
+                  "id": "es-en-b2-p0-u1-l01-e10",
+                  "prompt": "Negocia una prórroga: reconoce el problema, pide más tiempo y ofrece una alternativa.",
+                  "minTokens": 40,
+                  "conceptClusters": [
+                    [
+                      "deadline",
+                      "extension",
+                      "time"
+                    ],
+                    [
+                      "I'm afraid",
+                      "might",
+                      "seems"
+                    ],
+                    [
+                      "that said",
+                      "in other words",
+                      "alternative"
+                    ]
+                  ],
+                  "grammarRuleRefs": [
+                    "gp-b2p-plazo-hedging",
+                    "gp-b2p-plazo-future-perfect"
+                  ],
+                  "timeLimitSeconds": 90,
+                  "minWpm": 70,
+                  "maxWpm": 160,
+                  "modelAnswer": "I'm afraid we might need a short extension, because the review is taking longer than expected. That said, we can deliver the core features by Friday. In other words, the extension would only affect the final polish, and we can offer a clear alternative plan.",
+                  "selfAssessmentCriteria": [
+                    "¿Reconociste el problema?",
+                    "¿Pediste más tiempo con cautela?",
+                    "¿Ofreciste una alternativa concreta?"
+                  ],
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "La respuesta modelo cubre la tarea, usa el vocabulario clave y demuestra los dos focos gramaticales.",
+                    "ruleRef": "gp-b2p-plazo-hedging"
+                  }
+                }
+              ]
+            },
+            {
+              "id": "es-en-b2-p0-u1-l02",
+              "title": "Reclamación formal",
+              "cefrLevel": "B2",
+              "scenario": "La habitación del hotel no estaba limpia al llegar y recepción no responde con claridad.",
+              "canDo": "Puedo describir un problema con la reserva, pedir una solución y aclarar plazos.",
+              "grammarPoints": [
+                {
+                  "id": "gp-b2p-reclamacion-passive",
+                  "label": "Passive voice",
+                  "description": "Describir acciones con be + participio y centrar el foco en el hecho."
+                },
+                {
+                  "id": "gp-b2p-reclamacion-indirect",
+                  "label": "Indirect questions",
+                  "description": "Formular preguntas corteses con could you tell me."
+                }
+              ],
+              "vocabFrequencyBand": "3000-5000",
+              "culturalNotes": [
+                {
+                  "idiom": "on the same page",
+                  "note": "Estar en la misma página significa compartir el mismo entendimiento sobre un tema.",
+                  "translation": "estar alineados"
+                }
+              ],
+              "microLesson": {
+                "title": "Reclamación formal",
+                "goals": [
+                  "Usar vocabulario de las reclamaciones.",
+                  "Resolver una tarea comunicativa sobre las reclamaciones."
+                ],
+                "sections": [
+                  {
+                    "heading": "Foco 1: Passive voice",
+                    "body": "Describir acciones con be + participio y centrar el foco en el hecho.",
+                    "examples": [
+                      {
+                        "source": "¿Podrías decirme cuándo se procesará el reembolso?",
+                        "target": "Could you tell me when the refund will be processed"
+                      }
+                    ]
+                  },
+                  {
+                    "heading": "Foco 2: Indirect questions",
+                    "body": "Formular preguntas corteses con could you tell me.",
+                    "examples": [
+                      {
+                        "source": "Me gustaría presentar una reclamación formal sobre el servicio.",
+                        "target": "I would like to make a formal complaint about the service."
+                      }
+                    ]
+                  }
+                ]
+              },
+              "glossary": [
+                {
+                  "term": "complaint",
+                  "translations": [
+                    "reclamación"
+                  ]
+                },
+                {
+                  "term": "refund",
+                  "translations": [
+                    "reembolso"
+                  ]
+                },
+                {
+                  "term": "receipt",
+                  "translations": [
+                    "comprobante"
+                  ]
+                }
+              ],
+              "exercises": [
+                {
+                  "type": "MultipleChoice",
+                  "id": "es-en-b2-p0-u1-l02-e01",
+                  "question": "Completa: The room ___ before we arrived.",
+                  "options": [
+                    "had been cleaned",
+                    "has been cleaned",
+                    "was cleaning"
+                  ],
+                  "correctIndex": 0,
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "La forma correcta aparece en la micro-clase: «Could you tell me when the refund will be processed».",
+                    "ruleRef": "gp-b2p-reclamacion-passive"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has elegido la forma gramatical adecuada."
+                  }
+                },
+                {
+                  "type": "OrderWords",
+                  "id": "es-en-b2-p0-u1-l02-e02",
+                  "tokens": [
+                    "tell",
+                    "me",
+                    "when",
+                    "the",
+                    "refund",
+                    "will",
+                    "be",
+                    "processed",
+                    "Could",
+                    "you"
+                  ],
+                  "answerTokens": [
+                    "Could",
+                    "you",
+                    "tell",
+                    "me",
+                    "when",
+                    "the",
+                    "refund",
+                    "will",
+                    "be",
+                    "processed"
+                  ],
+                  "sourcePhrase": "¿Podrías decirme cuándo se procesará el reembolso?",
+                  "feedbackOnError": {
+                    "type": "word_order",
+                    "explanation": "El orden natural es «Could you tell me when the refund will be processed».",
+                    "ruleRef": "gp-b2p-reclamacion-indirect"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "El orden produce una frase natural."
+                  }
+                },
+                {
+                  "type": "ClozeDragDrop",
+                  "id": "es-en-b2-p0-u1-l02-e03",
+                  "passage": "The booking {{b1}} confirmed, but the room {{b2}} ready when we arrived.",
+                  "blanks": [
+                    {
+                      "id": "b1",
+                      "answer": "had been",
+                      "options": [
+                        "had been",
+                        "has been",
+                        "was"
+                      ]
+                    },
+                    {
+                      "id": "b2",
+                      "answer": "was not",
+                      "options": [
+                        "was not",
+                        "is not",
+                        "had not"
+                      ]
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "Cada hueco debe encajar con el tiempo verbal y el contexto.",
+                    "ruleRef": "gp-b2p-reclamacion-passive"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Los huecos completan la frase con coherencia."
+                  }
+                },
+                {
+                  "type": "SemanticMatch",
+                  "id": "es-en-b2-p0-u1-l02-e04",
+                  "instructions": "Empareja cada intervención con su función en la reclamación.",
+                  "pairs": [
+                    {
+                      "left": "I'm afraid the room was not ready.",
+                      "right": "Queja atenuada",
+                      "register": "formal",
+                      "nuance": "Presenta el problema sin atacar a la persona."
+                    },
+                    {
+                      "left": "Could you tell me when the refund will arrive?",
+                      "right": "Pregunta indirecta",
+                      "register": "formal",
+                      "nuance": "Pide información con cortesía."
+                    },
+                    {
+                      "left": "I would like to make a formal complaint.",
+                      "right": "Reclamación formal",
+                      "register": "formal",
+                      "nuance": "Anuncia el propósito de forma explícita."
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "Cada intervención cumple una función comunicativa distinta.",
+                    "ruleRef": "gp-b2p-reclamacion-passive"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has identificado la función de cada intervención."
+                  }
+                },
+                {
+                  "type": "SemanticMatch",
+                  "id": "es-en-b2-p0-u1-l02-e05",
+                  "instructions": "Distingue el registro de cada forma de expresar descontento.",
+                  "pairs": [
+                    {
+                      "left": "I am writing to express my dissatisfaction.",
+                      "right": "Formal",
+                      "register": "formal",
+                      "nuance": "Fórmula propia de una reclamación escrita."
+                    },
+                    {
+                      "left": "We were not happy with the service.",
+                      "right": "Neutral",
+                      "register": "neutral",
+                      "nuance": "Informa del descontento sin dramatizar."
+                    },
+                    {
+                      "left": "The service was a complete disaster.",
+                      "right": "Informal",
+                      "register": "informal",
+                      "nuance": "Valoración coloquial y contundente."
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "register",
+                    "explanation": "El registro cambia según el contexto y la relación con el interlocutor.",
+                    "ruleRef": "gp-b2p-reclamacion-indirect"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has distinguido el registro de cada expresión."
+                  }
+                },
+                {
+                  "type": "AudioOnlyPrompt",
+                  "id": "es-en-b2-p0-u1-l02-e06",
+                  "audioText": "I'm afraid the room had not been cleaned when we arrived, so we would like a refund.",
+                  "question": "What does the guest want?",
+                  "options": [
+                    "A refund because the room was not cleaned",
+                    "A late check-out",
+                    "A different hotel",
+                    "An apology only"
+                  ],
+                  "correctIndex": 0,
+                  "allowSlowPlayback": true,
+                  "feedbackOnError": {
+                    "type": "comprehension",
+                    "explanation": "El audio matiza la información principal y añade una reserva.",
+                    "ruleRef": "gp-b2p-reclamacion-passive"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has comprendido la postura del hablante."
+                  }
+                },
+                {
+                  "type": "AudioOnlyPrompt",
+                  "id": "es-en-b2-p0-u1-l02-e07",
+                  "audioText": "Could you tell me when the refund will be processed? I was told it would take five days.",
+                  "question": "What does the guest ask about?",
+                  "options": [
+                    "When the refund will be processed",
+                    "Where the hotel is",
+                    "How to cancel the booking",
+                    "Who cleaned the room"
+                  ],
+                  "correctIndex": 0,
+                  "allowSlowPlayback": false,
+                  "feedbackOnError": {
+                    "type": "comprehension",
+                    "explanation": "La segunda parte del audio reformula la idea principal.",
+                    "ruleRef": "gp-b2p-reclamacion-indirect"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has identificado la recomendación del audio."
+                  }
+                },
+                {
+                  "type": "ListenType",
+                  "id": "es-en-b2-p0-u1-l02-e08",
+                  "transcription": "The room had not been cleaned when we arrived",
+                  "audioText": "The room had not been cleaned when we arrived",
+                  "feedbackOnError": {
+                    "type": "spelling",
+                    "explanation": "Escribe exactamente «The room had not been cleaned when we arrived».",
+                    "ruleRef": "gp-b2p-reclamacion-passive"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La transcripción coincide con el audio."
+                  }
+                },
+                {
+                  "type": "SpeakRepeat",
+                  "id": "es-en-b2-p0-u1-l02-e09",
+                  "targetPhrase": "I would like to make a formal complaint about the service.",
+                  "audioText": "I would like to make a formal complaint about the service.",
+                  "feedbackOnError": {
+                    "type": "pronunciation",
+                    "explanation": "Repite «I would like to make a formal complaint about the service.» manteniendo el ritmo y las pausas.",
+                    "ruleRef": "gp-b2p-reclamacion-indirect"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La frase se entiende y conserva la entonación."
+                  }
+                },
+                {
+                  "type": "FreeSpeakingPrompt",
+                  "id": "es-en-b2-p0-u1-l02-e10",
+                  "prompt": "Explica una queja formal: describe el problema, pide una solución y aclara el plazo.",
+                  "minTokens": 40,
+                  "conceptClusters": [
+                    [
+                      "complaint",
+                      "refund",
+                      "service"
+                    ],
+                    [
+                      "had been",
+                      "was not",
+                      "I'm afraid"
+                    ],
+                    [
+                      "could you tell me",
+                      "in other words",
+                      "five days"
+                    ]
+                  ],
+                  "grammarRuleRefs": [
+                    "gp-b2p-reclamacion-passive",
+                    "gp-b2p-reclamacion-indirect"
+                  ],
+                  "timeLimitSeconds": 90,
+                  "minWpm": 70,
+                  "maxWpm": 160,
+                  "modelAnswer": "I'm afraid the room had not been cleaned when we arrived, and the service was far below the standard we expected. Could you tell me when the refund will be processed? In other words, we would like the refund within five days, and we would appreciate a written confirmation.",
+                  "selfAssessmentCriteria": [
+                    "¿Describiste el problema con claridad?",
+                    "¿Pediste una solución concreta?",
+                    "¿Aclaraste el plazo?"
+                  ],
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "La respuesta modelo cubre la tarea, usa el vocabulario clave y demuestra los dos focos gramaticales.",
+                    "ruleRef": "gp-b2p-reclamacion-passive"
+                  }
+                }
+              ]
+            },
+            {
+              "id": "es-en-b2-p0-u1-l03",
+              "title": "Medios y desinformación",
+              "cefrLevel": "B2",
+              "scenario": "Un titular viral cita una fuente anónima y el equipo debe decidir si lo publica.",
+              "canDo": "Puedo atribuir información, matizar una afirmación y recomendar una verificación.",
+              "grammarPoints": [
+                {
+                  "id": "gp-b2p-medios-reported",
+                  "label": "Reported speech",
+                  "description": "Reformular lo que dijo otra persona con said that y backshift."
+                },
+                {
+                  "id": "gp-b2p-medios-hedging",
+                  "label": "Hedging",
+                  "description": "Atribuir información sin afirmarla como cierta."
+                }
+              ],
+              "vocabFrequencyBand": "3000-5000",
+              "culturalNotes": [
+                {
+                  "idiom": "blow something out of proportion",
+                  "note": "Exagerar la importancia de algo; útil al analizar titulares alarmistas.",
+                  "translation": "exagerar algo"
+                }
+              ],
+              "microLesson": {
+                "title": "Medios y desinformación",
+                "goals": [
+                  "Usar vocabulario de los medios de comunicación.",
+                  "Resolver una tarea comunicativa sobre los medios de comunicación."
+                ],
+                "sections": [
+                  {
+                    "heading": "Foco 1: Reported speech",
+                    "body": "Reformular lo que dijo otra persona con said that y backshift.",
+                    "examples": [
+                      {
+                        "source": "Ella dijo que el informe no había sido verificado",
+                        "target": "She said that the report had not been verified"
+                      }
+                    ]
+                  },
+                  {
+                    "heading": "Foco 2: Hedging",
+                    "body": "Atribuir información sin afirmarla como cierta.",
+                    "examples": [
+                      {
+                        "source": "Según el artículo, puede que la fuente no sea fiable.",
+                        "target": "According to the article, the source may not be reliable."
+                      }
+                    ]
+                  }
+                ]
+              },
+              "glossary": [
+                {
+                  "term": "headline",
+                  "translations": [
+                    "titular"
+                  ]
+                },
+                {
+                  "term": "source",
+                  "translations": [
+                    "fuente"
+                  ]
+                },
+                {
+                  "term": "hoax",
+                  "translations": [
+                    "bulo"
+                  ]
+                }
+              ],
+              "exercises": [
+                {
+                  "type": "MultipleChoice",
+                  "id": "es-en-b2-p0-u1-l03-e01",
+                  "question": "Completa: The article said the story ___ been verified.",
+                  "options": [
+                    "had",
+                    "has",
+                    "was"
+                  ],
+                  "correctIndex": 0,
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "La forma correcta aparece en la micro-clase: «She said that the report had not been verified».",
+                    "ruleRef": "gp-b2p-medios-reported"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has elegido la forma gramatical adecuada."
+                  }
+                },
+                {
+                  "type": "OrderWords",
+                  "id": "es-en-b2-p0-u1-l03-e02",
+                  "tokens": [
+                    "that",
+                    "the",
+                    "report",
+                    "had",
+                    "not",
+                    "been",
+                    "verified",
+                    "She",
+                    "said"
+                  ],
+                  "answerTokens": [
+                    "She",
+                    "said",
+                    "that",
+                    "the",
+                    "report",
+                    "had",
+                    "not",
+                    "been",
+                    "verified"
+                  ],
+                  "sourcePhrase": "Ella dijo que el informe no había sido verificado",
+                  "feedbackOnError": {
+                    "type": "word_order",
+                    "explanation": "El orden natural es «She said that the report had not been verified».",
+                    "ruleRef": "gp-b2p-medios-hedging"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "El orden produce una frase natural."
+                  }
+                },
+                {
+                  "type": "ClozeDragDrop",
+                  "id": "es-en-b2-p0-u1-l03-e03",
+                  "passage": "The journalist {{b1}} that the source {{b2}} reliable.",
+                  "blanks": [
+                    {
+                      "id": "b1",
+                      "answer": "admitted",
+                      "options": [
+                        "admitted",
+                        "admits",
+                        "admitting"
+                      ]
+                    },
+                    {
+                      "id": "b2",
+                      "answer": "might not be",
+                      "options": [
+                        "might not be",
+                        "must not be",
+                        "is not"
+                      ]
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "Cada hueco debe encajar con el tiempo verbal y el contexto.",
+                    "ruleRef": "gp-b2p-medios-reported"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Los huecos completan la frase con coherencia."
+                  }
+                },
+                {
+                  "type": "SemanticMatch",
+                  "id": "es-en-b2-p0-u1-l03-e04",
+                  "instructions": "Clasifica la función de cada frase en el análisis de la noticia.",
+                  "pairs": [
+                    {
+                      "left": "According to the article, the source is anonymous.",
+                      "right": "Atribución",
+                      "register": "formal",
+                      "nuance": "La información se atribuye a otra fuente."
+                    },
+                    {
+                      "left": "It seems that the claim has not been verified.",
+                      "right": "Cautela",
+                      "register": "formal",
+                      "nuance": "Evita presentar la afirmación como un hecho."
+                    },
+                    {
+                      "left": "In other words, we should wait.",
+                      "right": "Reformulación",
+                      "register": "neutral",
+                      "nuance": "Explica la misma idea con palabras más claras."
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "Cada intervención cumple una función comunicativa distinta.",
+                    "ruleRef": "gp-b2p-medios-reported"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has identificado la función de cada intervención."
+                  }
+                },
+                {
+                  "type": "SemanticMatch",
+                  "id": "es-en-b2-p0-u1-l03-e05",
+                  "instructions": "Distingue el registro de cada valoración.",
+                  "pairs": [
+                    {
+                      "left": "The claim is unsubstantiated.",
+                      "right": "Formal",
+                      "register": "formal",
+                      "nuance": "Vocabulario técnico propio de un análisis."
+                    },
+                    {
+                      "left": "There is no proof for that.",
+                      "right": "Neutral",
+                      "register": "neutral",
+                      "nuance": "Constata la falta de pruebas sin exagerar."
+                    },
+                    {
+                      "left": "That is total nonsense.",
+                      "right": "Informal",
+                      "register": "informal",
+                      "nuance": "Rechazo coloquial y directo."
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "register",
+                    "explanation": "El registro cambia según el contexto y la relación con el interlocutor.",
+                    "ruleRef": "gp-b2p-medios-hedging"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has distinguido el registro de cada expresión."
+                  }
+                },
+                {
+                  "type": "AudioOnlyPrompt",
+                  "id": "es-en-b2-p0-u1-l03-e06",
+                  "audioText": "She said the report had not been verified; in other words, we should not share it yet.",
+                  "question": "What does the speaker recommend?",
+                  "options": [
+                    "Waiting before sharing the report",
+                    "Publishing the report now",
+                    "Deleting the report",
+                    "Interviewing the journalist"
+                  ],
+                  "correctIndex": 0,
+                  "allowSlowPlayback": true,
+                  "feedbackOnError": {
+                    "type": "comprehension",
+                    "explanation": "El audio matiza la información principal y añade una reserva.",
+                    "ruleRef": "gp-b2p-medios-reported"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has comprendido la postura del hablante."
+                  }
+                },
+                {
+                  "type": "AudioOnlyPrompt",
+                  "id": "es-en-b2-p0-u1-l03-e07",
+                  "audioText": "According to the article, the source may not be reliable, so read the headline with caution.",
+                  "question": "Why should we be cautious?",
+                  "options": [
+                    "The source may not be reliable",
+                    "The article is too short",
+                    "The headline is missing",
+                    "The journalist is on holiday"
+                  ],
+                  "correctIndex": 0,
+                  "allowSlowPlayback": false,
+                  "feedbackOnError": {
+                    "type": "comprehension",
+                    "explanation": "La segunda parte del audio reformula la idea principal.",
+                    "ruleRef": "gp-b2p-medios-hedging"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has identificado la recomendación del audio."
+                  }
+                },
+                {
+                  "type": "ListenType",
+                  "id": "es-en-b2-p0-u1-l03-e08",
+                  "transcription": "She said the report had not been verified",
+                  "audioText": "She said the report had not been verified",
+                  "feedbackOnError": {
+                    "type": "spelling",
+                    "explanation": "Escribe exactamente «She said the report had not been verified».",
+                    "ruleRef": "gp-b2p-medios-reported"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La transcripción coincide con el audio."
+                  }
+                },
+                {
+                  "type": "SpeakRepeat",
+                  "id": "es-en-b2-p0-u1-l03-e09",
+                  "targetPhrase": "According to the article, the source may not be reliable.",
+                  "audioText": "According to the article, the source may not be reliable.",
+                  "feedbackOnError": {
+                    "type": "pronunciation",
+                    "explanation": "Repite «According to the article, the source may not be reliable.» manteniendo el ritmo y las pausas.",
+                    "ruleRef": "gp-b2p-medios-hedging"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La frase se entiende y conserva la entonación."
+                  }
+                },
+                {
+                  "type": "FreeSpeakingPrompt",
+                  "id": "es-en-b2-p0-u1-l03-e10",
+                  "prompt": "Analiza un titular dudoso: cita la fuente, matiza la afirmación y recomienda una acción.",
+                  "minTokens": 40,
+                  "conceptClusters": [
+                    [
+                      "article",
+                      "source",
+                      "headline"
+                    ],
+                    [
+                      "said",
+                      "might",
+                      "seems"
+                    ],
+                    [
+                      "in other words",
+                      "verify",
+                      "wait"
+                    ]
+                  ],
+                  "grammarRuleRefs": [
+                    "gp-b2p-medios-reported",
+                    "gp-b2p-medios-hedging"
+                  ],
+                  "timeLimitSeconds": 90,
+                  "minWpm": 70,
+                  "maxWpm": 160,
+                  "modelAnswer": "According to the article, the headline is based on an anonymous source, and it seems the claim has not been verified. She said the report might be accurate, but we should not share it yet. In other words, we need to verify the facts and wait for a second source before we publish anything.",
+                  "selfAssessmentCriteria": [
+                    "¿Citaste la fuente?",
+                    "¿Matizaste la afirmación?",
+                    "¿Recomendaste una acción concreta?"
+                  ],
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "La respuesta modelo cubre la tarea, usa el vocabulario clave y demuestra los dos focos gramaticales.",
+                    "ruleRef": "gp-b2p-medios-reported"
+                  }
+                }
+              ]
+            },
+            {
+              "id": "es-en-b2-p0-u1-l04",
+              "title": "Sostenibilidad urbana",
+              "cefrLevel": "B2",
+              "scenario": "El ayuntamiento debate invertir en transporte público o ampliar los carriles bici.",
+              "canDo": "Puedo valorar una medida urbana, imaginar otro pasado y anticipar su impacto.",
+              "grammarPoints": [
+                {
+                  "id": "gp-b2p-ciudad-third-conditional",
+                  "label": "Third conditional",
+                  "description": "Condicional irreal del pasado con had + participio y would have."
+                },
+                {
+                  "id": "gp-b2p-ciudad-obligation",
+                  "label": "Modals of obligation",
+                  "description": "Obligación y recomendación con should, ought to y must."
+                }
+              ],
+              "vocabFrequencyBand": "3000-5000",
+              "culturalNotes": [
+                {
+                  "idiom": "a blessing in disguise",
+                  "note": "Algo que parece malo pero acaba teniendo un efecto positivo.",
+                  "translation": "una bendición disfrazada"
+                }
+              ],
+              "microLesson": {
+                "title": "Sostenibilidad urbana",
+                "goals": [
+                  "Usar vocabulario de la sostenibilidad urbana.",
+                  "Resolver una tarea comunicativa sobre la sostenibilidad urbana."
+                ],
+                "sections": [
+                  {
+                    "heading": "Foco 1: Third conditional",
+                    "body": "Condicional irreal del pasado con had + participio y would have.",
+                    "examples": [
+                      {
+                        "source": "Deberíamos haber invertido más en transporte público",
+                        "target": "We should have invested more in public transport"
+                      }
+                    ]
+                  },
+                  {
+                    "heading": "Foco 2: Modals of obligation",
+                    "body": "Obligación y recomendación con should, ought to y must.",
+                    "examples": [
+                      {
+                        "source": "Deberíamos haber invertido más en transporte público.",
+                        "target": "We should have invested more in public transport."
+                      }
+                    ]
+                  }
+                ]
+              },
+              "glossary": [
+                {
+                  "term": "waste",
+                  "translations": [
+                    "residuos"
+                  ]
+                },
+                {
+                  "term": "public transport",
+                  "translations": [
+                    "transporte público"
+                  ]
+                },
+                {
+                  "term": "footprint",
+                  "translations": [
+                    "huella"
+                  ]
+                }
+              ],
+              "exercises": [
+                {
+                  "type": "MultipleChoice",
+                  "id": "es-en-b2-p0-u1-l04-e01",
+                  "question": "Completa: If the city ___ more trees, the air would be cleaner.",
+                  "options": [
+                    "planted",
+                    "plants",
+                    "will plant"
+                  ],
+                  "correctIndex": 0,
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "La forma correcta aparece en la micro-clase: «We should have invested more in public transport».",
+                    "ruleRef": "gp-b2p-ciudad-third-conditional"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has elegido la forma gramatical adecuada."
+                  }
+                },
+                {
+                  "type": "OrderWords",
+                  "id": "es-en-b2-p0-u1-l04-e02",
+                  "tokens": [
+                    "have",
+                    "invested",
+                    "more",
+                    "in",
+                    "public",
+                    "transport",
+                    "We",
+                    "should"
+                  ],
+                  "answerTokens": [
+                    "We",
+                    "should",
+                    "have",
+                    "invested",
+                    "more",
+                    "in",
+                    "public",
+                    "transport"
+                  ],
+                  "sourcePhrase": "Deberíamos haber invertido más en transporte público",
+                  "feedbackOnError": {
+                    "type": "word_order",
+                    "explanation": "El orden natural es «We should have invested more in public transport».",
+                    "ruleRef": "gp-b2p-ciudad-obligation"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "El orden produce una frase natural."
+                  }
+                },
+                {
+                  "type": "ClozeDragDrop",
+                  "id": "es-en-b2-p0-u1-l04-e03",
+                  "passage": "If the council {{b1}} earlier, the problem {{b2}} so serious.",
+                  "blanks": [
+                    {
+                      "id": "b1",
+                      "answer": "had acted",
+                      "options": [
+                        "had acted",
+                        "acted",
+                        "has acted"
+                      ]
+                    },
+                    {
+                      "id": "b2",
+                      "answer": "would not have become",
+                      "options": [
+                        "would not have become",
+                        "will not become",
+                        "did not become"
+                      ]
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "Cada hueco debe encajar con el tiempo verbal y el contexto.",
+                    "ruleRef": "gp-b2p-ciudad-third-conditional"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Los huecos completan la frase con coherencia."
+                  }
+                },
+                {
+                  "type": "SemanticMatch",
+                  "id": "es-en-b2-p0-u1-l04-e04",
+                  "instructions": "Clasifica la función de cada intervención en el debate.",
+                  "pairs": [
+                    {
+                      "left": "We ought to reduce waste at home.",
+                      "right": "Obligación moral",
+                      "register": "formal",
+                      "nuance": "Señala una responsabilidad compartida."
+                    },
+                    {
+                      "left": "If the council had acted earlier, traffic would be lower.",
+                      "right": "Condicional irreal",
+                      "register": "formal",
+                      "nuance": "Imagina un pasado distinto."
+                    },
+                    {
+                      "left": "That said, the budget is limited.",
+                      "right": "Concesión",
+                      "register": "neutral",
+                      "nuance": "Acepta una parte y añade una reserva."
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "Cada intervención cumple una función comunicativa distinta.",
+                    "ruleRef": "gp-b2p-ciudad-third-conditional"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has identificado la función de cada intervención."
+                  }
+                },
+                {
+                  "type": "SemanticMatch",
+                  "id": "es-en-b2-p0-u1-l04-e05",
+                  "instructions": "Distingue el registro de cada valoración de la medida.",
+                  "pairs": [
+                    {
+                      "left": "The initiative is environmentally sustainable.",
+                      "right": "Formal",
+                      "register": "formal",
+                      "nuance": "Lenguaje técnico de políticas públicas."
+                    },
+                    {
+                      "left": "It is a greener option.",
+                      "right": "Neutral",
+                      "register": "neutral",
+                      "nuance": "Valoración sencilla y comprensible."
+                    },
+                    {
+                      "left": "It is much greener, honestly.",
+                      "right": "Informal",
+                      "register": "informal",
+                      "nuance": "Opinión personal con marca coloquial."
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "register",
+                    "explanation": "El registro cambia según el contexto y la relación con el interlocutor.",
+                    "ruleRef": "gp-b2p-ciudad-obligation"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has distinguido el registro de cada expresión."
+                  }
+                },
+                {
+                  "type": "AudioOnlyPrompt",
+                  "id": "es-en-b2-p0-u1-l04-e06",
+                  "audioText": "If the council had invested in public transport, traffic would be lower; that said, the new bike lanes are a blessing in disguise.",
+                  "question": "What does the speaker suggest about the bike lanes?",
+                  "options": [
+                    "They bring an unexpected benefit",
+                    "They caused the traffic",
+                    "They were cancelled",
+                    "They cost too much"
+                  ],
+                  "correctIndex": 0,
+                  "allowSlowPlayback": true,
+                  "feedbackOnError": {
+                    "type": "comprehension",
+                    "explanation": "El audio matiza la información principal y añade una reserva.",
+                    "ruleRef": "gp-b2p-ciudad-third-conditional"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has comprendido la postura del hablante."
+                  }
+                },
+                {
+                  "type": "AudioOnlyPrompt",
+                  "id": "es-en-b2-p0-u1-l04-e07",
+                  "audioText": "We ought to reduce waste at home; in other words, small habits matter.",
+                  "question": "What is the main message?",
+                  "options": [
+                    "Small habits make a difference",
+                    "Waste is unavoidable",
+                    "Home habits are irrelevant",
+                    "The council should act alone"
+                  ],
+                  "correctIndex": 0,
+                  "allowSlowPlayback": false,
+                  "feedbackOnError": {
+                    "type": "comprehension",
+                    "explanation": "La segunda parte del audio reformula la idea principal.",
+                    "ruleRef": "gp-b2p-ciudad-obligation"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has identificado la recomendación del audio."
+                  }
+                },
+                {
+                  "type": "ListenType",
+                  "id": "es-en-b2-p0-u1-l04-e08",
+                  "transcription": "If the city planted more trees, the air would be cleaner",
+                  "audioText": "If the city planted more trees, the air would be cleaner",
+                  "feedbackOnError": {
+                    "type": "spelling",
+                    "explanation": "Escribe exactamente «If the city planted more trees, the air would be cleaner».",
+                    "ruleRef": "gp-b2p-ciudad-third-conditional"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La transcripción coincide con el audio."
+                  }
+                },
+                {
+                  "type": "SpeakRepeat",
+                  "id": "es-en-b2-p0-u1-l04-e09",
+                  "targetPhrase": "We should have invested more in public transport.",
+                  "audioText": "We should have invested more in public transport.",
+                  "feedbackOnError": {
+                    "type": "pronunciation",
+                    "explanation": "Repite «We should have invested more in public transport.» manteniendo el ritmo y las pausas.",
+                    "ruleRef": "gp-b2p-ciudad-obligation"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La frase se entiende y conserva la entonación."
+                  }
+                },
+                {
+                  "type": "FreeSpeakingPrompt",
+                  "id": "es-en-b2-p0-u1-l04-e10",
+                  "prompt": "Propón una medida urbana sostenible: describe el problema, plantea la medida y anticipa su impacto.",
+                  "minTokens": 40,
+                  "conceptClusters": [
+                    [
+                      "waste",
+                      "transport",
+                      "city"
+                    ],
+                    [
+                      "if",
+                      "would",
+                      "should"
+                    ],
+                    [
+                      "that said",
+                      "in other words",
+                      "impact"
+                    ]
+                  ],
+                  "grammarRuleRefs": [
+                    "gp-b2p-ciudad-third-conditional",
+                    "gp-b2p-ciudad-obligation"
+                  ],
+                  "timeLimitSeconds": 90,
+                  "minWpm": 70,
+                  "maxWpm": 160,
+                  "modelAnswer": "The city should invest more in public transport, because traffic and waste are growing every year. If we had planned better, we would not have this problem today. That said, a new bus lane is a realistic first step; in other words, it would reduce cars and improve air quality.",
+                  "selfAssessmentCriteria": [
+                    "¿Describiste el problema?",
+                    "¿Planteaste una medida concreta?",
+                    "¿Anticipaste su impacto?"
+                  ],
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "La respuesta modelo cubre la tarea, usa el vocabulario clave y demuestra los dos focos gramaticales.",
+                    "ruleRef": "gp-b2p-ciudad-third-conditional"
+                  }
+                }
+              ]
+            },
+            {
+              "id": "es-en-b2-p0-u1-l05",
+              "title": "Trabajo remoto",
+              "cefrLevel": "B2",
+              "scenario": "El equipo debate si mantener tres días de teletrabajo o volver a la oficina a tiempo completo.",
+              "canDo": "Puedo comparar ventajas y dificultades del teletrabajo y proponer un modelo híbrido.",
+              "grammarPoints": [
+                {
+                  "id": "gp-b2p-remoto-gerund",
+                  "label": "Gerunds and infinitives",
+                  "description": "Verbos que rigen -ing o to + infinitivo."
+                },
+                {
+                  "id": "gp-b2p-remoto-modals",
+                  "label": "Modals of possibility",
+                  "description": "Valorar opciones con might, may y could."
+                }
+              ],
+              "vocabFrequencyBand": "3000-5000",
+              "culturalNotes": [
+                {
+                  "idiom": "think outside the box",
+                  "note": "Buscar soluciones creativas fuera de lo habitual.",
+                  "translation": "pensar de forma creativa"
+                }
+              ],
+              "microLesson": {
+                "title": "Trabajo remoto",
+                "goals": [
+                  "Usar vocabulario de el trabajo remoto.",
+                  "Resolver una tarea comunicativa sobre el trabajo remoto."
+                ],
+                "sections": [
+                  {
+                    "heading": "Foco 1: Gerunds and infinitives",
+                    "body": "Verbos que rigen -ing o to + infinitivo.",
+                    "examples": [
+                      {
+                        "source": "Podríamos necesitar replantear la reunión semanal",
+                        "target": "We might need to rethink the weekly meeting"
+                      }
+                    ]
+                  },
+                  {
+                    "heading": "Foco 2: Modals of possibility",
+                    "body": "Valorar opciones con might, may y could.",
+                    "examples": [
+                      {
+                        "source": "Estoy acostumbrado a trabajar desde casa.",
+                        "target": "I'm used to working from home."
+                      }
+                    ]
+                  }
+                ]
+              },
+              "glossary": [
+                {
+                  "term": "remote work",
+                  "translations": [
+                    "teletrabajo"
+                  ]
+                },
+                {
+                  "term": "workday",
+                  "translations": [
+                    "jornada"
+                  ]
+                },
+                {
+                  "term": "disconnection",
+                  "translations": [
+                    "desconexión"
+                  ]
+                }
+              ],
+              "exercises": [
+                {
+                  "type": "MultipleChoice",
+                  "id": "es-en-b2-p0-u1-l05-e01",
+                  "question": "Completa: I'm used to ___ from home.",
+                  "options": [
+                    "working",
+                    "work",
+                    "worked"
+                  ],
+                  "correctIndex": 0,
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "La forma correcta aparece en la micro-clase: «We might need to rethink the weekly meeting».",
+                    "ruleRef": "gp-b2p-remoto-gerund"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has elegido la forma gramatical adecuada."
+                  }
+                },
+                {
+                  "type": "OrderWords",
+                  "id": "es-en-b2-p0-u1-l05-e02",
+                  "tokens": [
+                    "need",
+                    "to",
+                    "rethink",
+                    "the",
+                    "weekly",
+                    "meeting",
+                    "We",
+                    "might"
+                  ],
+                  "answerTokens": [
+                    "We",
+                    "might",
+                    "need",
+                    "to",
+                    "rethink",
+                    "the",
+                    "weekly",
+                    "meeting"
+                  ],
+                  "sourcePhrase": "Podríamos necesitar replantear la reunión semanal",
+                  "feedbackOnError": {
+                    "type": "word_order",
+                    "explanation": "El orden natural es «We might need to rethink the weekly meeting».",
+                    "ruleRef": "gp-b2p-remoto-modals"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "El orden produce una frase natural."
+                  }
+                },
+                {
+                  "type": "ClozeDragDrop",
+                  "id": "es-en-b2-p0-u1-l05-e03",
+                  "passage": "She suggested {{b1}} the meeting online, but we decided {{b2}} it in person.",
+                  "blanks": [
+                    {
+                      "id": "b1",
+                      "answer": "holding",
+                      "options": [
+                        "holding",
+                        "to hold",
+                        "hold"
+                      ]
+                    },
+                    {
+                      "id": "b2",
+                      "answer": "to hold",
+                      "options": [
+                        "to hold",
+                        "holding",
+                        "hold"
+                      ]
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "Cada hueco debe encajar con el tiempo verbal y el contexto.",
+                    "ruleRef": "gp-b2p-remoto-gerund"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Los huecos completan la frase con coherencia."
+                  }
+                },
+                {
+                  "type": "SemanticMatch",
+                  "id": "es-en-b2-p0-u1-l05-e04",
+                  "instructions": "Clasifica la función de cada intervención en la reunión.",
+                  "pairs": [
+                    {
+                      "left": "It might be better to meet online.",
+                      "right": "Sugerencia atenuada",
+                      "register": "formal",
+                      "nuance": "Propone sin imponer."
+                    },
+                    {
+                      "left": "I'm used to working remotely.",
+                      "right": "Hábito",
+                      "register": "neutral",
+                      "nuance": "Describe una rutina consolidada."
+                    },
+                    {
+                      "left": "That said, we miss the office.",
+                      "right": "Concesión",
+                      "register": "informal",
+                      "nuance": "Reconoce la otra cara del teletrabajo."
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "Cada intervención cumple una función comunicativa distinta.",
+                    "ruleRef": "gp-b2p-remoto-gerund"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has identificado la función de cada intervención."
+                  }
+                },
+                {
+                  "type": "SemanticMatch",
+                  "id": "es-en-b2-p0-u1-l05-e05",
+                  "instructions": "Distingue el registro de cada valoración del teletrabajo.",
+                  "pairs": [
+                    {
+                      "left": "Remote work enhances flexibility.",
+                      "right": "Formal",
+                      "register": "formal",
+                      "nuance": "Vocabulario propio de un informe."
+                    },
+                    {
+                      "left": "Working from home is convenient.",
+                      "right": "Neutral",
+                      "register": "neutral",
+                      "nuance": "Opinión sencilla y equilibrada."
+                    },
+                    {
+                      "left": "Home office rocks.",
+                      "right": "Informal",
+                      "register": "informal",
+                      "nuance": "Entusiasmo coloquial."
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "register",
+                    "explanation": "El registro cambia según el contexto y la relación con el interlocutor.",
+                    "ruleRef": "gp-b2p-remoto-modals"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has distinguido el registro de cada expresión."
+                  }
+                },
+                {
+                  "type": "AudioOnlyPrompt",
+                  "id": "es-en-b2-p0-u1-l05-e06",
+                  "audioText": "I'm used to working from home, but I might need a better chair; that said, the flexibility is worth it.",
+                  "question": "What is the speaker's view?",
+                  "options": [
+                    "The flexibility outweighs the drawback",
+                    "The chair is the only problem",
+                    "Remote work is impossible",
+                    "The office is better in every way"
+                  ],
+                  "correctIndex": 0,
+                  "allowSlowPlayback": true,
+                  "feedbackOnError": {
+                    "type": "comprehension",
+                    "explanation": "El audio matiza la información principal y añade una reserva.",
+                    "ruleRef": "gp-b2p-remoto-gerund"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has comprendido la postura del hablante."
+                  }
+                },
+                {
+                  "type": "AudioOnlyPrompt",
+                  "id": "es-en-b2-p0-u1-l05-e07",
+                  "audioText": "She suggested holding the meeting online; in other words, we can avoid the commute.",
+                  "question": "Why meet online?",
+                  "options": [
+                    "To avoid the commute",
+                    "To cancel the project",
+                    "To hire new staff",
+                    "To extend the deadline"
+                  ],
+                  "correctIndex": 0,
+                  "allowSlowPlayback": false,
+                  "feedbackOnError": {
+                    "type": "comprehension",
+                    "explanation": "La segunda parte del audio reformula la idea principal.",
+                    "ruleRef": "gp-b2p-remoto-modals"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has identificado la recomendación del audio."
+                  }
+                },
+                {
+                  "type": "ListenType",
+                  "id": "es-en-b2-p0-u1-l05-e08",
+                  "transcription": "She suggested holding the meeting online",
+                  "audioText": "She suggested holding the meeting online",
+                  "feedbackOnError": {
+                    "type": "spelling",
+                    "explanation": "Escribe exactamente «She suggested holding the meeting online».",
+                    "ruleRef": "gp-b2p-remoto-gerund"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La transcripción coincide con el audio."
+                  }
+                },
+                {
+                  "type": "SpeakRepeat",
+                  "id": "es-en-b2-p0-u1-l05-e09",
+                  "targetPhrase": "I'm used to working from home.",
+                  "audioText": "I'm used to working from home.",
+                  "feedbackOnError": {
+                    "type": "pronunciation",
+                    "explanation": "Repite «I'm used to working from home.» manteniendo el ritmo y las pausas.",
+                    "ruleRef": "gp-b2p-remoto-modals"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La frase se entiende y conserva la entonación."
+                  }
+                },
+                {
+                  "type": "FreeSpeakingPrompt",
+                  "id": "es-en-b2-p0-u1-l05-e10",
+                  "prompt": "Describe tu experiencia con el trabajo remoto: ventajas, dificultades y una propuesta.",
+                  "minTokens": 40,
+                  "conceptClusters": [
+                    [
+                      "remote work",
+                      "home",
+                      "flexibility"
+                    ],
+                    [
+                      "used to",
+                      "might",
+                      "suggested"
+                    ],
+                    [
+                      "that said",
+                      "in other words",
+                      "proposal"
+                    ]
+                  ],
+                  "grammarRuleRefs": [
+                    "gp-b2p-remoto-gerund",
+                    "gp-b2p-remoto-modals"
+                  ],
+                  "timeLimitSeconds": 90,
+                  "minWpm": 70,
+                  "maxWpm": 160,
+                  "modelAnswer": "I am used to working from home, and the flexibility is the biggest advantage for me. That said, I sometimes miss the office, so I suggested holding one team meeting in person every week. In other words, a hybrid routine might give us the best of both worlds.",
+                  "selfAssessmentCriteria": [
+                    "¿Mencionaste una ventaja?",
+                    "¿Reconociste una dificultad?",
+                    "¿Hiciste una propuesta concreta?"
+                  ],
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "La respuesta modelo cubre la tarea, usa el vocabulario clave y demuestra los dos focos gramaticales.",
+                    "ruleRef": "gp-b2p-remoto-gerund"
+                  }
+                }
+              ]
+            },
+            {
+              "id": "es-en-b2-p0-u1-l06",
+              "title": "Cine y cultura",
+              "cefrLevel": "B2",
+              "scenario": "Un club de cine compara una película reciente con su tráiler y debate si recomendarla.",
+              "canDo": "Puedo resumir una película, valorar la actuación y recomendar o no verla.",
+              "grammarPoints": [
+                {
+                  "id": "gp-b2p-cine-relative",
+                  "label": "Relative clauses",
+                  "description": "Cláusulas relativas con which, who y that."
+                },
+                {
+                  "id": "gp-b2p-cine-participle",
+                  "label": "Participle clauses",
+                  "description": "Cláusulas participiales para condensar información."
+                }
+              ],
+              "vocabFrequencyBand": "3000-5000",
+              "culturalNotes": [
+                {
+                  "idiom": "hit the nail on the head",
+                  "note": "Dar exactamente en el clavo con una observación o una crítica.",
+                  "translation": "dar en el clavo"
+                }
+              ],
+              "microLesson": {
+                "title": "Cine y cultura",
+                "goals": [
+                  "Usar vocabulario de el cine.",
+                  "Resolver una tarea comunicativa sobre el cine."
+                ],
+                "sections": [
+                  {
+                    "heading": "Foco 1: Relative clauses",
+                    "body": "Cláusulas relativas con which, who y that.",
+                    "examples": [
+                      {
+                        "source": "El director cuya película ganó el premio dio un discurso",
+                        "target": "The director whose film won the award gave a speech"
+                      }
+                    ]
+                  },
+                  {
+                    "heading": "Foco 2: Participle clauses",
+                    "body": "Cláusulas participiales para condensar información.",
+                    "examples": [
+                      {
+                        "source": "La película, que se estrenó el año pasado, ganó varios premios.",
+                        "target": "The film, which was released last year, won several awards."
+                      }
+                    ]
+                  }
+                ]
+              },
+              "glossary": [
+                {
+                  "term": "plot",
+                  "translations": [
+                    "trama"
+                  ]
+                },
+                {
+                  "term": "performance",
+                  "translations": [
+                    "actuación"
+                  ]
+                },
+                {
+                  "term": "subtitle",
+                  "translations": [
+                    "subtítulo"
+                  ]
+                }
+              ],
+              "exercises": [
+                {
+                  "type": "MultipleChoice",
+                  "id": "es-en-b2-p0-u1-l06-e01",
+                  "question": "Completa: The film, ___ was released last year, won several awards.",
+                  "options": [
+                    "which",
+                    "who",
+                    "where"
+                  ],
+                  "correctIndex": 0,
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "La forma correcta aparece en la micro-clase: «The director whose film won the award gave a speech».",
+                    "ruleRef": "gp-b2p-cine-relative"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has elegido la forma gramatical adecuada."
+                  }
+                },
+                {
+                  "type": "OrderWords",
+                  "id": "es-en-b2-p0-u1-l06-e02",
+                  "tokens": [
+                    "whose",
+                    "film",
+                    "won",
+                    "the",
+                    "award",
+                    "gave",
+                    "a",
+                    "speech",
+                    "The",
+                    "director"
+                  ],
+                  "answerTokens": [
+                    "The",
+                    "director",
+                    "whose",
+                    "film",
+                    "won",
+                    "the",
+                    "award",
+                    "gave",
+                    "a",
+                    "speech"
+                  ],
+                  "sourcePhrase": "El director cuya película ganó el premio dio un discurso",
+                  "feedbackOnError": {
+                    "type": "word_order",
+                    "explanation": "El orden natural es «The director whose film won the award gave a speech».",
+                    "ruleRef": "gp-b2p-cine-participle"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "El orden produce una frase natural."
+                  }
+                },
+                {
+                  "type": "ClozeDragDrop",
+                  "id": "es-en-b2-p0-u1-l06-e03",
+                  "passage": "The film {{b1}} we watched last night {{b2}} directed by a young filmmaker.",
+                  "blanks": [
+                    {
+                      "id": "b1",
+                      "answer": "that",
+                      "options": [
+                        "that",
+                        "who",
+                        "where"
+                      ]
+                    },
+                    {
+                      "id": "b2",
+                      "answer": "was",
+                      "options": [
+                        "was",
+                        "were",
+                        "is"
+                      ]
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "Cada hueco debe encajar con el tiempo verbal y el contexto.",
+                    "ruleRef": "gp-b2p-cine-relative"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Los huecos completan la frase con coherencia."
+                  }
+                },
+                {
+                  "type": "SemanticMatch",
+                  "id": "es-en-b2-p0-u1-l06-e04",
+                  "instructions": "Clasifica la función de cada frase en la reseña.",
+                  "pairs": [
+                    {
+                      "left": "The film, which was released last year, won an award.",
+                      "right": "Cláusula relativa",
+                      "register": "formal",
+                      "nuance": "Añade información sobre la película."
+                    },
+                    {
+                      "left": "Having seen the trailer, I expected more action.",
+                      "right": "Cláusula participial",
+                      "register": "formal",
+                      "nuance": "Condensa una acción previa."
+                    },
+                    {
+                      "left": "That said, the ending felt rushed.",
+                      "right": "Concesión",
+                      "register": "neutral",
+                      "nuance": "Añade una reserva tras el elogio."
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "Cada intervención cumple una función comunicativa distinta.",
+                    "ruleRef": "gp-b2p-cine-relative"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has identificado la función de cada intervención."
+                  }
+                },
+                {
+                  "type": "SemanticMatch",
+                  "id": "es-en-b2-p0-u1-l06-e05",
+                  "instructions": "Distingue el registro de cada valoración de la actuación.",
+                  "pairs": [
+                    {
+                      "left": "The performance was compelling.",
+                      "right": "Formal",
+                      "register": "formal",
+                      "nuance": "Crítica con vocabulario cuidado."
+                    },
+                    {
+                      "left": "The acting was really good.",
+                      "right": "Neutral",
+                      "register": "neutral",
+                      "nuance": "Valoración clara y sencilla."
+                    },
+                    {
+                      "left": "The acting was awesome.",
+                      "right": "Informal",
+                      "register": "informal",
+                      "nuance": "Entusiasmo coloquial."
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "register",
+                    "explanation": "El registro cambia según el contexto y la relación con el interlocutor.",
+                    "ruleRef": "gp-b2p-cine-participle"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has distinguido el registro de cada expresión."
+                  }
+                },
+                {
+                  "type": "AudioOnlyPrompt",
+                  "id": "es-en-b2-p0-u1-l06-e06",
+                  "audioText": "The film, which was released last year, is worth watching; that said, the ending felt rushed.",
+                  "question": "What is the reviewer's opinion?",
+                  "options": [
+                    "The film is good but the ending is weak",
+                    "The film is a complete failure",
+                    "The ending is the best part",
+                    "The film was never released"
+                  ],
+                  "correctIndex": 0,
+                  "allowSlowPlayback": true,
+                  "feedbackOnError": {
+                    "type": "comprehension",
+                    "explanation": "El audio matiza la información principal y añade una reserva.",
+                    "ruleRef": "gp-b2p-cine-relative"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has comprendido la postura del hablante."
+                  }
+                },
+                {
+                  "type": "AudioOnlyPrompt",
+                  "id": "es-en-b2-p0-u1-l06-e07",
+                  "audioText": "Having seen the trailer, I expected more action; in other words, the plot was slower than advertised.",
+                  "question": "What surprised the speaker?",
+                  "options": [
+                    "The plot was slower than expected",
+                    "The trailer had no music",
+                    "The film was too short",
+                    "The actors were unknown"
+                  ],
+                  "correctIndex": 0,
+                  "allowSlowPlayback": false,
+                  "feedbackOnError": {
+                    "type": "comprehension",
+                    "explanation": "La segunda parte del audio reformula la idea principal.",
+                    "ruleRef": "gp-b2p-cine-participle"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has identificado la recomendación del audio."
+                  }
+                },
+                {
+                  "type": "ListenType",
+                  "id": "es-en-b2-p0-u1-l06-e08",
+                  "transcription": "The film which we watched last night was directed by a young filmmaker",
+                  "audioText": "The film which we watched last night was directed by a young filmmaker",
+                  "feedbackOnError": {
+                    "type": "spelling",
+                    "explanation": "Escribe exactamente «The film which we watched last night was directed by a young filmmaker».",
+                    "ruleRef": "gp-b2p-cine-relative"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La transcripción coincide con el audio."
+                  }
+                },
+                {
+                  "type": "SpeakRepeat",
+                  "id": "es-en-b2-p0-u1-l06-e09",
+                  "targetPhrase": "The film, which was released last year, won several awards.",
+                  "audioText": "The film, which was released last year, won several awards.",
+                  "feedbackOnError": {
+                    "type": "pronunciation",
+                    "explanation": "Repite «The film, which was released last year, won several awards.» manteniendo el ritmo y las pausas.",
+                    "ruleRef": "gp-b2p-cine-participle"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La frase se entiende y conserva la entonación."
+                  }
+                },
+                {
+                  "type": "FreeSpeakingPrompt",
+                  "id": "es-en-b2-p0-u1-l06-e10",
+                  "prompt": "Reseña una película: describe la trama, valora la actuación y recomienda o no verla.",
+                  "minTokens": 40,
+                  "conceptClusters": [
+                    [
+                      "film",
+                      "plot",
+                      "performance"
+                    ],
+                    [
+                      "which",
+                      "having seen",
+                      "was"
+                    ],
+                    [
+                      "that said",
+                      "in other words",
+                      "recommend"
+                    ]
+                  ],
+                  "grammarRuleRefs": [
+                    "gp-b2p-cine-relative",
+                    "gp-b2p-cine-participle"
+                  ],
+                  "timeLimitSeconds": 90,
+                  "minWpm": 70,
+                  "maxWpm": 160,
+                  "modelAnswer": "The film, which was released last year, tells a simple story about a family moving to a new city. Having seen the trailer, I expected more action, but the performance was compelling. That said, the plot felt slow in the middle; in other words, I would recommend it for the acting rather than the story.",
+                  "selfAssessmentCriteria": [
+                    "¿Resumiste la trama?",
+                    "¿Valoraste la actuación?",
+                    "¿Recomendaste o no verla?"
+                  ],
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "La respuesta modelo cubre la tarea, usa el vocabulario clave y demuestra los dos focos gramaticales.",
+                    "ruleRef": "gp-b2p-cine-relative"
+                  }
+                }
+              ]
+            },
+            {
+              "id": "es-en-b2-p0-u1-l07",
+              "title": "Tecnología y privacidad",
+              "cefrLevel": "B2",
+              "scenario": "Una aplicación pide acceso a los contactos y el usuario revisa qué datos comparte.",
+              "canDo": "Puedo explicar cómo se protegen los datos, describir un riesgo y proponer una medida.",
+              "grammarPoints": [
+                {
+                  "id": "gp-b2p-privacidad-passive",
+                  "label": "Passive voice",
+                  "description": "Pasiva para describir procesos y sistemas."
+                },
+                {
+                  "id": "gp-b2p-privacidad-second-conditional",
+                  "label": "Second conditional",
+                  "description": "Hipótesis con if + past simple y would + infinitivo."
+                }
+              ],
+              "vocabFrequencyBand": "3000-5000",
+              "culturalNotes": [
+                {
+                  "idiom": "keep an eye on",
+                  "note": "Vigilar o prestar atención a algo durante un tiempo.",
+                  "translation": "vigilar algo"
+                }
+              ],
+              "microLesson": {
+                "title": "Tecnología y privacidad",
+                "goals": [
+                  "Usar vocabulario de la privacidad digital.",
+                  "Resolver una tarea comunicativa sobre la privacidad digital."
+                ],
+                "sections": [
+                  {
+                    "heading": "Foco 1: Passive voice",
+                    "body": "Pasiva para describir procesos y sistemas.",
+                    "examples": [
+                      {
+                        "source": "Si yo fuera tú cambiaría la contraseña",
+                        "target": "If I were you I would change the password"
+                      }
+                    ]
+                  },
+                  {
+                    "heading": "Foco 2: Second conditional",
+                    "body": "Hipótesis con if + past simple y would + infinitivo.",
+                    "examples": [
+                      {
+                        "source": "Tus datos se guardan en un servidor seguro.",
+                        "target": "Your data is stored on a secure server."
+                      }
+                    ]
+                  }
+                ]
+              },
+              "glossary": [
+                {
+                  "term": "password",
+                  "translations": [
+                    "contraseña"
+                  ]
+                },
+                {
+                  "term": "trace",
+                  "translations": [
+                    "rastro"
+                  ]
+                },
+                {
+                  "term": "consent",
+                  "translations": [
+                    "consentimiento"
+                  ]
+                }
+              ],
+              "exercises": [
+                {
+                  "type": "MultipleChoice",
+                  "id": "es-en-b2-p0-u1-l07-e01",
+                  "question": "Completa: Your data ___ stored on a secure server.",
+                  "options": [
+                    "is",
+                    "are",
+                    "be"
+                  ],
+                  "correctIndex": 0,
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "La forma correcta aparece en la micro-clase: «If I were you I would change the password».",
+                    "ruleRef": "gp-b2p-privacidad-passive"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has elegido la forma gramatical adecuada."
+                  }
+                },
+                {
+                  "type": "OrderWords",
+                  "id": "es-en-b2-p0-u1-l07-e02",
+                  "tokens": [
+                    "were",
+                    "you",
+                    "I",
+                    "would",
+                    "change",
+                    "the",
+                    "password",
+                    "If",
+                    "I"
+                  ],
+                  "answerTokens": [
+                    "If",
+                    "I",
+                    "were",
+                    "you",
+                    "I",
+                    "would",
+                    "change",
+                    "the",
+                    "password"
+                  ],
+                  "sourcePhrase": "Si yo fuera tú cambiaría la contraseña",
+                  "feedbackOnError": {
+                    "type": "word_order",
+                    "explanation": "El orden natural es «If I were you I would change the password».",
+                    "ruleRef": "gp-b2p-privacidad-second-conditional"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "El orden produce una frase natural."
+                  }
+                },
+                {
+                  "type": "ClozeDragDrop",
+                  "id": "es-en-b2-p0-u1-l07-e03",
+                  "passage": "If users {{b1}} the settings, their data {{b2}} shared with third parties.",
+                  "blanks": [
+                    {
+                      "id": "b1",
+                      "answer": "changed",
+                      "options": [
+                        "changed",
+                        "change",
+                        "will change"
+                      ]
+                    },
+                    {
+                      "id": "b2",
+                      "answer": "would not be",
+                      "options": [
+                        "would not be",
+                        "will not be",
+                        "is not"
+                      ]
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "Cada hueco debe encajar con el tiempo verbal y el contexto.",
+                    "ruleRef": "gp-b2p-privacidad-passive"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Los huecos completan la frase con coherencia."
+                  }
+                },
+                {
+                  "type": "SemanticMatch",
+                  "id": "es-en-b2-p0-u1-l07-e04",
+                  "instructions": "Clasifica la función de cada frase sobre la aplicación.",
+                  "pairs": [
+                    {
+                      "left": "Your data is stored on a secure server.",
+                      "right": "Afirmación pasiva",
+                      "register": "formal",
+                      "nuance": "Describe el sistema sin señalar al agente."
+                    },
+                    {
+                      "left": "If I were you, I would change the password.",
+                      "right": "Consejo hipotético",
+                      "register": "neutral",
+                      "nuance": "Recomienda una acción concreta."
+                    },
+                    {
+                      "left": "In other words, you are in control.",
+                      "right": "Reformulación",
+                      "register": "formal",
+                      "nuance": "Resume la idea anterior con claridad."
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "Cada intervención cumple una función comunicativa distinta.",
+                    "ruleRef": "gp-b2p-privacidad-passive"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has identificado la función de cada intervención."
+                  }
+                },
+                {
+                  "type": "SemanticMatch",
+                  "id": "es-en-b2-p0-u1-l07-e05",
+                  "instructions": "Distingue el registro de cada explicación sobre los datos.",
+                  "pairs": [
+                    {
+                      "left": "We obtain explicit consent before sharing data.",
+                      "right": "Formal",
+                      "register": "formal",
+                      "nuance": "Lenguaje de política de privacidad."
+                    },
+                    {
+                      "left": "We ask before sharing your data.",
+                      "right": "Neutral",
+                      "register": "neutral",
+                      "nuance": "Explicación directa y comprensible."
+                    },
+                    {
+                      "left": "We do not snoop on you.",
+                      "right": "Informal",
+                      "register": "informal",
+                      "nuance": "Expresión coloquial de confianza."
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "register",
+                    "explanation": "El registro cambia según el contexto y la relación con el interlocutor.",
+                    "ruleRef": "gp-b2p-privacidad-second-conditional"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has distinguido el registro de cada expresión."
+                  }
+                },
+                {
+                  "type": "AudioOnlyPrompt",
+                  "id": "es-en-b2-p0-u1-l07-e06",
+                  "audioText": "Your data is stored on a secure server; that said, you should keep an eye on unusual activity.",
+                  "question": "What should the user do?",
+                  "options": [
+                    "Monitor unusual activity",
+                    "Share the password",
+                    "Delete the account",
+                    "Ignore the settings"
+                  ],
+                  "correctIndex": 0,
+                  "allowSlowPlayback": true,
+                  "feedbackOnError": {
+                    "type": "comprehension",
+                    "explanation": "El audio matiza la información principal y añade una reserva.",
+                    "ruleRef": "gp-b2p-privacidad-passive"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has comprendido la postura del hablante."
+                  }
+                },
+                {
+                  "type": "AudioOnlyPrompt",
+                  "id": "es-en-b2-p0-u1-l07-e07",
+                  "audioText": "If you changed the settings, your data would not be shared; in other words, you are in control.",
+                  "question": "What do the settings control?",
+                  "options": [
+                    "Whether data is shared",
+                    "The password length",
+                    "The server location",
+                    "The price of the service"
+                  ],
+                  "correctIndex": 0,
+                  "allowSlowPlayback": false,
+                  "feedbackOnError": {
+                    "type": "comprehension",
+                    "explanation": "La segunda parte del audio reformula la idea principal.",
+                    "ruleRef": "gp-b2p-privacidad-second-conditional"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has identificado la recomendación del audio."
+                  }
+                },
+                {
+                  "type": "ListenType",
+                  "id": "es-en-b2-p0-u1-l07-e08",
+                  "transcription": "If I were you, I would change the password",
+                  "audioText": "If I were you, I would change the password",
+                  "feedbackOnError": {
+                    "type": "spelling",
+                    "explanation": "Escribe exactamente «If I were you, I would change the password».",
+                    "ruleRef": "gp-b2p-privacidad-passive"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La transcripción coincide con el audio."
+                  }
+                },
+                {
+                  "type": "SpeakRepeat",
+                  "id": "es-en-b2-p0-u1-l07-e09",
+                  "targetPhrase": "Your data is stored on a secure server.",
+                  "audioText": "Your data is stored on a secure server.",
+                  "feedbackOnError": {
+                    "type": "pronunciation",
+                    "explanation": "Repite «Your data is stored on a secure server.» manteniendo el ritmo y las pausas.",
+                    "ruleRef": "gp-b2p-privacidad-second-conditional"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La frase se entiende y conserva la entonación."
+                  }
+                },
+                {
+                  "type": "FreeSpeakingPrompt",
+                  "id": "es-en-b2-p0-u1-l07-e10",
+                  "prompt": "Explica cómo proteger tu privacidad: identifica un riesgo, propone una medida y justifícala.",
+                  "minTokens": 40,
+                  "conceptClusters": [
+                    [
+                      "privacy",
+                      "password",
+                      "data"
+                    ],
+                    [
+                      "if",
+                      "would",
+                      "should"
+                    ],
+                    [
+                      "in other words",
+                      "settings",
+                      "risk"
+                    ]
+                  ],
+                  "grammarRuleRefs": [
+                    "gp-b2p-privacidad-passive",
+                    "gp-b2p-privacidad-second-conditional"
+                  ],
+                  "timeLimitSeconds": 90,
+                  "minWpm": 70,
+                  "maxWpm": 160,
+                  "modelAnswer": "Your data is stored on a secure server, but there is still a privacy risk if you share your password. If I were you, I would change the password today and review the settings on every app. In other words, small actions can reduce the risk and give you more control over your data.",
+                  "selfAssessmentCriteria": [
+                    "¿Identificaste un riesgo?",
+                    "¿Propusiste una medida?",
+                    "¿La justificaste?"
+                  ],
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "La respuesta modelo cubre la tarea, usa el vocabulario clave y demuestra los dos focos gramaticales.",
+                    "ruleRef": "gp-b2p-privacidad-passive"
+                  }
+                }
+              ]
+            },
+            {
+              "id": "es-en-b2-p0-u1-l08",
+              "title": "Viajes y reclamaciones",
+              "cefrLevel": "B2",
+              "scenario": "Un vuelo se retrasa, se pierde la conexión y el equipaje no llega al destino.",
+              "canDo": "Puedo contar un problema de viaje, pedir información y presentar una reclamación.",
+              "grammarPoints": [
+                {
+                  "id": "gp-b2p-viaje-past-perfect",
+                  "label": "Past perfect",
+                  "description": "Acción anterior a otra en el pasado con had + participio."
+                },
+                {
+                  "id": "gp-b2p-viaje-indirect",
+                  "label": "Indirect questions",
+                  "description": "Preguntas corteses con could you tell me."
+                }
+              ],
+              "vocabFrequencyBand": "3000-5000",
+              "culturalNotes": [
+                {
+                  "idiom": "cost an arm and a leg",
+                  "note": "Costar muchísimo dinero; útil para hablar de precios abusivos.",
+                  "translation": "costar un ojo de la cara"
+                }
+              ],
+              "microLesson": {
+                "title": "Viajes y reclamaciones",
+                "goals": [
+                  "Usar vocabulario de los viajes.",
+                  "Resolver una tarea comunicativa sobre los viajes."
+                ],
+                "sections": [
+                  {
+                    "heading": "Foco 1: Past perfect",
+                    "body": "Acción anterior a otra en el pasado con had + participio.",
+                    "examples": [
+                      {
+                        "source": "¿Podrías decirme dónde puedo recoger mi equipaje?",
+                        "target": "Could you tell me where I can collect my luggage"
+                      }
+                    ]
+                  },
+                  {
+                    "heading": "Foco 2: Indirect questions",
+                    "body": "Preguntas corteses con could you tell me.",
+                    "examples": [
+                      {
+                        "source": "¿Podrías decirme dónde puedo recoger mi equipaje?",
+                        "target": "Could you tell me where I can collect my luggage?"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "glossary": [
+                {
+                  "term": "layover",
+                  "translations": [
+                    "escala"
+                  ]
+                },
+                {
+                  "term": "luggage",
+                  "translations": [
+                    "equipaje"
+                  ]
+                },
+                {
+                  "term": "claim",
+                  "translations": [
+                    "reclamación"
+                  ]
+                }
+              ],
+              "exercises": [
+                {
+                  "type": "MultipleChoice",
+                  "id": "es-en-b2-p0-u1-l08-e01",
+                  "question": "Completa: The flight ___ before we reached the gate.",
+                  "options": [
+                    "had left",
+                    "has left",
+                    "leaves"
+                  ],
+                  "correctIndex": 0,
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "La forma correcta aparece en la micro-clase: «Could you tell me where I can collect my luggage».",
+                    "ruleRef": "gp-b2p-viaje-past-perfect"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has elegido la forma gramatical adecuada."
+                  }
+                },
+                {
+                  "type": "OrderWords",
+                  "id": "es-en-b2-p0-u1-l08-e02",
+                  "tokens": [
+                    "tell",
+                    "me",
+                    "where",
+                    "I",
+                    "can",
+                    "collect",
+                    "my",
+                    "luggage",
+                    "Could",
+                    "you"
+                  ],
+                  "answerTokens": [
+                    "Could",
+                    "you",
+                    "tell",
+                    "me",
+                    "where",
+                    "I",
+                    "can",
+                    "collect",
+                    "my",
+                    "luggage"
+                  ],
+                  "sourcePhrase": "¿Podrías decirme dónde puedo recoger mi equipaje?",
+                  "feedbackOnError": {
+                    "type": "word_order",
+                    "explanation": "El orden natural es «Could you tell me where I can collect my luggage».",
+                    "ruleRef": "gp-b2p-viaje-indirect"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "El orden produce una frase natural."
+                  }
+                },
+                {
+                  "type": "ClozeDragDrop",
+                  "id": "es-en-b2-p0-u1-l08-e03",
+                  "passage": "We {{b1}} our connection because the flight {{b2}} late.",
+                  "blanks": [
+                    {
+                      "id": "b1",
+                      "answer": "missed",
+                      "options": [
+                        "missed",
+                        "miss",
+                        "have missed"
+                      ]
+                    },
+                    {
+                      "id": "b2",
+                      "answer": "had been",
+                      "options": [
+                        "had been",
+                        "has been",
+                        "was being"
+                      ]
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "Cada hueco debe encajar con el tiempo verbal y el contexto.",
+                    "ruleRef": "gp-b2p-viaje-past-perfect"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Los huecos completan la frase con coherencia."
+                  }
+                },
+                {
+                  "type": "SemanticMatch",
+                  "id": "es-en-b2-p0-u1-l08-e04",
+                  "instructions": "Clasifica la función de cada intervención en el aeropuerto.",
+                  "pairs": [
+                    {
+                      "left": "Could you tell me where I can collect my luggage?",
+                      "right": "Pregunta indirecta",
+                      "register": "formal",
+                      "nuance": "Pide información con cortesía."
+                    },
+                    {
+                      "left": "The flight had already left.",
+                      "right": "Acción anterior",
+                      "register": "neutral",
+                      "nuance": "Sitúa el hecho antes de otro pasado."
+                    },
+                    {
+                      "left": "I'm afraid we missed the connection.",
+                      "right": "Mala noticia atenuada",
+                      "register": "formal",
+                      "nuance": "Comunica el problema con suavidad."
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "Cada intervención cumple una función comunicativa distinta.",
+                    "ruleRef": "gp-b2p-viaje-past-perfect"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has identificado la función de cada intervención."
+                  }
+                },
+                {
+                  "type": "SemanticMatch",
+                  "id": "es-en-b2-p0-u1-l08-e05",
+                  "instructions": "Distingue el registro de cada forma de reclamar.",
+                  "pairs": [
+                    {
+                      "left": "I would like to submit a claim.",
+                      "right": "Formal",
+                      "register": "formal",
+                      "nuance": "Fórmula propia de una reclamación escrita."
+                    },
+                    {
+                      "left": "I want to complain about my luggage.",
+                      "right": "Neutral",
+                      "register": "neutral",
+                      "nuance": "Expresa el problema de forma directa."
+                    },
+                    {
+                      "left": "My bag never showed up.",
+                      "right": "Informal",
+                      "register": "informal",
+                      "nuance": "Relato coloquial de lo ocurrido."
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "register",
+                    "explanation": "El registro cambia según el contexto y la relación con el interlocutor.",
+                    "ruleRef": "gp-b2p-viaje-indirect"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has distinguido el registro de cada expresión."
+                  }
+                },
+                {
+                  "type": "AudioOnlyPrompt",
+                  "id": "es-en-b2-p0-u1-l08-e06",
+                  "audioText": "The flight had left before we reached the gate, and to make matters worse, our luggage never arrived.",
+                  "question": "What two problems did the traveller have?",
+                  "options": [
+                    "A missed flight and lost luggage",
+                    "A delayed train and a cold meal",
+                    "A cancelled tour and a lost ticket",
+                    "A late bus and a broken suitcase"
+                  ],
+                  "correctIndex": 0,
+                  "allowSlowPlayback": true,
+                  "feedbackOnError": {
+                    "type": "comprehension",
+                    "explanation": "El audio matiza la información principal y añade una reserva.",
+                    "ruleRef": "gp-b2p-viaje-past-perfect"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has comprendido la postura del hablante."
+                  }
+                },
+                {
+                  "type": "AudioOnlyPrompt",
+                  "id": "es-en-b2-p0-u1-l08-e07",
+                  "audioText": "Could you tell me where I can collect my luggage? I'm afraid it did not arrive with the flight.",
+                  "question": "What does the traveller need?",
+                  "options": [
+                    "Information about collecting luggage",
+                    "A new flight ticket",
+                    "A hotel reservation",
+                    "A taxi to the city"
+                  ],
+                  "correctIndex": 0,
+                  "allowSlowPlayback": false,
+                  "feedbackOnError": {
+                    "type": "comprehension",
+                    "explanation": "La segunda parte del audio reformula la idea principal.",
+                    "ruleRef": "gp-b2p-viaje-indirect"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has identificado la recomendación del audio."
+                  }
+                },
+                {
+                  "type": "ListenType",
+                  "id": "es-en-b2-p0-u1-l08-e08",
+                  "transcription": "The flight had left before we reached the gate",
+                  "audioText": "The flight had left before we reached the gate",
+                  "feedbackOnError": {
+                    "type": "spelling",
+                    "explanation": "Escribe exactamente «The flight had left before we reached the gate».",
+                    "ruleRef": "gp-b2p-viaje-past-perfect"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La transcripción coincide con el audio."
+                  }
+                },
+                {
+                  "type": "SpeakRepeat",
+                  "id": "es-en-b2-p0-u1-l08-e09",
+                  "targetPhrase": "Could you tell me where I can collect my luggage?",
+                  "audioText": "Could you tell me where I can collect my luggage?",
+                  "feedbackOnError": {
+                    "type": "pronunciation",
+                    "explanation": "Repite «Could you tell me where I can collect my luggage?» manteniendo el ritmo y las pausas.",
+                    "ruleRef": "gp-b2p-viaje-indirect"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La frase se entiende y conserva la entonación."
+                  }
+                },
+                {
+                  "type": "FreeSpeakingPrompt",
+                  "id": "es-en-b2-p0-u1-l08-e10",
+                  "prompt": "Explica un problema de viaje: cuenta qué pasó, pide información y solicita una solución.",
+                  "minTokens": 40,
+                  "conceptClusters": [
+                    [
+                      "flight",
+                      "luggage",
+                      "connection"
+                    ],
+                    [
+                      "had left",
+                      "missed",
+                      "could you tell me"
+                    ],
+                    [
+                      "in other words",
+                      "claim",
+                      "solution"
+                    ]
+                  ],
+                  "grammarRuleRefs": [
+                    "gp-b2p-viaje-past-perfect",
+                    "gp-b2p-viaje-indirect"
+                  ],
+                  "timeLimitSeconds": 90,
+                  "minWpm": 70,
+                  "maxWpm": 160,
+                  "modelAnswer": "The flight had left before we reached the gate, so we missed our connection and our luggage did not arrive. Could you tell me where I can collect it and how I can submit a claim? In other words, I need a clear solution today, because we have no clothes for the next two days.",
+                  "selfAssessmentCriteria": [
+                    "¿Contaste qué pasó?",
+                    "¿Pediste información?",
+                    "¿Solicitaste una solución?"
+                  ],
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "La respuesta modelo cubre la tarea, usa el vocabulario clave y demuestra los dos focos gramaticales.",
+                    "ruleRef": "gp-b2p-viaje-past-perfect"
+                  }
+                }
+              ]
+            },
+            {
+              "id": "es-en-b2-p0-u1-l09",
+              "title": "Salud y estrés",
+              "cefrLevel": "B2",
+              "scenario": "Un compañero lleva semanas durmiendo mal y su mánager nota el agotamiento.",
+              "canDo": "Puedo describir señales de estrés, recomendar una pausa y explicar sus beneficios.",
+              "grammarPoints": [
+                {
+                  "id": "gp-b2p-estres-perfect-continuous",
+                  "label": "Present perfect continuous",
+                  "description": "Acciones que continúan hasta ahora con have been + -ing."
+                },
+                {
+                  "id": "gp-b2p-estres-advice",
+                  "label": "Modals of advice",
+                  "description": "Consejos con should, ought to y had better."
+                }
+              ],
+              "vocabFrequencyBand": "3000-5000",
+              "culturalNotes": [
+                {
+                  "idiom": "burn the midnight oil",
+                  "note": "Trabajar hasta muy tarde; se usa para describir un esfuerzo intenso.",
+                  "translation": "trasnochar trabajando"
+                }
+              ],
+              "microLesson": {
+                "title": "Salud y estrés",
+                "goals": [
+                  "Usar vocabulario de el bienestar laboral.",
+                  "Resolver una tarea comunicativa sobre el bienestar laboral."
+                ],
+                "sections": [
+                  {
+                    "heading": "Foco 1: Present perfect continuous",
+                    "body": "Acciones que continúan hasta ahora con have been + -ing.",
+                    "examples": [
+                      {
+                        "source": "He estado trabajando hasta tarde todas las noches este mes",
+                        "target": "I have been working late every night this month"
+                      }
+                    ]
+                  },
+                  {
+                    "heading": "Foco 2: Modals of advice",
+                    "body": "Consejos con should, ought to y had better.",
+                    "examples": [
+                      {
+                        "source": "Deberías tomarte un descanso antes de agotarte.",
+                        "target": "You should take a break before you burn out."
+                      }
+                    ]
+                  }
+                ]
+              },
+              "glossary": [
+                {
+                  "term": "burnout",
+                  "translations": [
+                    "agotamiento"
+                  ]
+                },
+                {
+                  "term": "rest",
+                  "translations": [
+                    "descanso"
+                  ]
+                },
+                {
+                  "term": "boundary",
+                  "translations": [
+                    "límite"
+                  ]
+                }
+              ],
+              "exercises": [
+                {
+                  "type": "MultipleChoice",
+                  "id": "es-en-b2-p0-u1-l09-e01",
+                  "question": "Completa: You ___ take a break before you burn out.",
+                  "options": [
+                    "should",
+                    "would",
+                    "used to"
+                  ],
+                  "correctIndex": 0,
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "La forma correcta aparece en la micro-clase: «I have been working late every night this month».",
+                    "ruleRef": "gp-b2p-estres-perfect-continuous"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has elegido la forma gramatical adecuada."
+                  }
+                },
+                {
+                  "type": "OrderWords",
+                  "id": "es-en-b2-p0-u1-l09-e02",
+                  "tokens": [
+                    "been",
+                    "working",
+                    "late",
+                    "every",
+                    "night",
+                    "this",
+                    "month",
+                    "I",
+                    "have"
+                  ],
+                  "answerTokens": [
+                    "I",
+                    "have",
+                    "been",
+                    "working",
+                    "late",
+                    "every",
+                    "night",
+                    "this",
+                    "month"
+                  ],
+                  "sourcePhrase": "He estado trabajando hasta tarde todas las noches este mes",
+                  "feedbackOnError": {
+                    "type": "word_order",
+                    "explanation": "El orden natural es «I have been working late every night this month».",
+                    "ruleRef": "gp-b2p-estres-advice"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "El orden produce una frase natural."
+                  }
+                },
+                {
+                  "type": "ClozeDragDrop",
+                  "id": "es-en-b2-p0-u1-l09-e03",
+                  "passage": "I {{b1}} badly for weeks, so I {{b2}} talk to my manager.",
+                  "blanks": [
+                    {
+                      "id": "b1",
+                      "answer": "have been sleeping",
+                      "options": [
+                        "have been sleeping",
+                        "slept",
+                        "sleep"
+                      ]
+                    },
+                    {
+                      "id": "b2",
+                      "answer": "should",
+                      "options": [
+                        "should",
+                        "would",
+                        "could"
+                      ]
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "Cada hueco debe encajar con el tiempo verbal y el contexto.",
+                    "ruleRef": "gp-b2p-estres-perfect-continuous"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Los huecos completan la frase con coherencia."
+                  }
+                },
+                {
+                  "type": "SemanticMatch",
+                  "id": "es-en-b2-p0-u1-l09-e04",
+                  "instructions": "Clasifica la función de cada intervención en la conversación.",
+                  "pairs": [
+                    {
+                      "left": "You should take a break.",
+                      "right": "Consejo",
+                      "register": "neutral",
+                      "nuance": "Recomienda una acción beneficiosa."
+                    },
+                    {
+                      "left": "I have been working late for weeks.",
+                      "right": "Acción continua",
+                      "register": "neutral",
+                      "nuance": "Describe un hábito que sigue activo."
+                    },
+                    {
+                      "left": "That said, I enjoy the project.",
+                      "right": "Concesión",
+                      "register": "informal",
+                      "nuance": "Reconoce un aspecto positivo pese al problema."
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "Cada intervención cumple una función comunicativa distinta.",
+                    "ruleRef": "gp-b2p-estres-perfect-continuous"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has identificado la función de cada intervención."
+                  }
+                },
+                {
+                  "type": "SemanticMatch",
+                  "id": "es-en-b2-p0-u1-l09-e05",
+                  "instructions": "Distingue el registro de cada forma de describir el agotamiento.",
+                  "pairs": [
+                    {
+                      "left": "I am experiencing symptoms of burnout.",
+                      "right": "Formal",
+                      "register": "formal",
+                      "nuance": "Descripción propia de un contexto médico."
+                    },
+                    {
+                      "left": "I feel exhausted lately.",
+                      "right": "Neutral",
+                      "register": "neutral",
+                      "nuance": "Expresión clara y contenida."
+                    },
+                    {
+                      "left": "I'm totally wiped out.",
+                      "right": "Informal",
+                      "register": "informal",
+                      "nuance": "Expresión coloquial de cansancio extremo."
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "register",
+                    "explanation": "El registro cambia según el contexto y la relación con el interlocutor.",
+                    "ruleRef": "gp-b2p-estres-advice"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has distinguido el registro de cada expresión."
+                  }
+                },
+                {
+                  "type": "AudioOnlyPrompt",
+                  "id": "es-en-b2-p0-u1-l09-e06",
+                  "audioText": "I have been working late for weeks, and I'm afraid I'm heading for burnout; that said, I enjoy the project.",
+                  "question": "What is the speaker's situation?",
+                  "options": [
+                    "At risk of burnout despite enjoying the work",
+                    "Ready to leave the project",
+                    "Bored with the project",
+                    "On holiday for a week"
+                  ],
+                  "correctIndex": 0,
+                  "allowSlowPlayback": true,
+                  "feedbackOnError": {
+                    "type": "comprehension",
+                    "explanation": "El audio matiza la información principal y añade una reserva.",
+                    "ruleRef": "gp-b2p-estres-perfect-continuous"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has comprendido la postura del hablante."
+                  }
+                },
+                {
+                  "type": "AudioOnlyPrompt",
+                  "id": "es-en-b2-p0-u1-l09-e07",
+                  "audioText": "You should set a boundary and take a break; in other words, rest is part of the work.",
+                  "question": "What does the speaker recommend?",
+                  "options": [
+                    "Resting as part of the work",
+                    "Working longer hours",
+                    "Ignoring the problem",
+                    "Changing careers immediately"
+                  ],
+                  "correctIndex": 0,
+                  "allowSlowPlayback": false,
+                  "feedbackOnError": {
+                    "type": "comprehension",
+                    "explanation": "La segunda parte del audio reformula la idea principal.",
+                    "ruleRef": "gp-b2p-estres-advice"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has identificado la recomendación del audio."
+                  }
+                },
+                {
+                  "type": "ListenType",
+                  "id": "es-en-b2-p0-u1-l09-e08",
+                  "transcription": "I have been working late every night this month",
+                  "audioText": "I have been working late every night this month",
+                  "feedbackOnError": {
+                    "type": "spelling",
+                    "explanation": "Escribe exactamente «I have been working late every night this month».",
+                    "ruleRef": "gp-b2p-estres-perfect-continuous"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La transcripción coincide con el audio."
+                  }
+                },
+                {
+                  "type": "SpeakRepeat",
+                  "id": "es-en-b2-p0-u1-l09-e09",
+                  "targetPhrase": "You should take a break before you burn out.",
+                  "audioText": "You should take a break before you burn out.",
+                  "feedbackOnError": {
+                    "type": "pronunciation",
+                    "explanation": "Repite «You should take a break before you burn out.» manteniendo el ritmo y las pausas.",
+                    "ruleRef": "gp-b2p-estres-advice"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La frase se entiende y conserva la entonación."
+                  }
+                },
+                {
+                  "type": "FreeSpeakingPrompt",
+                  "id": "es-en-b2-p0-u1-l09-e10",
+                  "prompt": "Da un consejo a alguien con estrés laboral: describe las señales, recomienda una acción y explica por qué.",
+                  "minTokens": 40,
+                  "conceptClusters": [
+                    [
+                      "stress",
+                      "burnout",
+                      "rest"
+                    ],
+                    [
+                      "have been",
+                      "should",
+                      "might"
+                    ],
+                    [
+                      "in other words",
+                      "boundary",
+                      "break"
+                    ]
+                  ],
+                  "grammarRuleRefs": [
+                    "gp-b2p-estres-perfect-continuous",
+                    "gp-b2p-estres-advice"
+                  ],
+                  "timeLimitSeconds": 90,
+                  "minWpm": 70,
+                  "maxWpm": 160,
+                  "modelAnswer": "I have been sleeping badly for weeks, and I am afraid I am heading for burnout. You should set a boundary and take a real break, because rest is part of the work. In other words, a short pause now might prevent a much longer absence later.",
+                  "selfAssessmentCriteria": [
+                    "¿Describiste las señales?",
+                    "¿Recomendaste una acción?",
+                    "¿Explicaste por qué?"
+                  ],
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "La respuesta modelo cubre la tarea, usa el vocabulario clave y demuestra los dos focos gramaticales.",
+                    "ruleRef": "gp-b2p-estres-perfect-continuous"
+                  }
+                }
+              ]
+            },
+            {
+              "id": "es-en-b2-p0-u1-l10",
+              "title": "Educación y debate",
+              "cefrLevel": "B2",
+              "scenario": "El centro debate un plan caro para reducir el abandono escolar y pide evidencias antes de votar.",
+              "canDo": "Puedo reconocer una objeción, presentar evidencia y cerrar con una conclusión.",
+              "grammarPoints": [
+                {
+                  "id": "gp-b2p-educacion-concession",
+                  "label": "Concession clauses",
+                  "description": "Aunque con although, even though y while."
+                },
+                {
+                  "id": "gp-b2p-educacion-conditional",
+                  "label": "Conditionals",
+                  "description": "Condicionales para valorar una propuesta."
+                }
+              ],
+              "vocabFrequencyBand": "3000-5000",
+              "culturalNotes": [
+                {
+                  "idiom": "the bottom line",
+                  "note": "La conclusión o el dato decisivo de un debate.",
+                  "translation": "lo esencial"
+                }
+              ],
+              "microLesson": {
+                "title": "Educación y debate",
+                "goals": [
+                  "Usar vocabulario de la educación.",
+                  "Resolver una tarea comunicativa sobre la educación."
+                ],
+                "sections": [
+                  {
+                    "heading": "Foco 1: Concession clauses",
+                    "body": "Aunque con although, even though y while.",
+                    "examples": [
+                      {
+                        "source": "Aunque el plan es caro podría mejorar los resultados",
+                        "target": "Although the plan is expensive it could improve results"
+                      }
+                    ]
+                  },
+                  {
+                    "heading": "Foco 2: Conditionals",
+                    "body": "Condicionales para valorar una propuesta.",
+                    "examples": [
+                      {
+                        "source": "Lo esencial es que necesitamos más pruebas.",
+                        "target": "The bottom line is that we need more evidence."
+                      }
+                    ]
+                  }
+                ]
+              },
+              "glossary": [
+                {
+                  "term": "debate",
+                  "translations": [
+                    "debate"
+                  ]
+                },
+                {
+                  "term": "evidence",
+                  "translations": [
+                    "evidencia"
+                  ]
+                },
+                {
+                  "term": "agreement",
+                  "translations": [
+                    "acuerdo"
+                  ]
+                }
+              ],
+              "exercises": [
+                {
+                  "type": "MultipleChoice",
+                  "id": "es-en-b2-p0-u1-l10-e01",
+                  "question": "Completa: Although the proposal is expensive, it ___ worth it.",
+                  "options": [
+                    "might be",
+                    "might",
+                    "maybe"
+                  ],
+                  "correctIndex": 0,
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "La forma correcta aparece en la micro-clase: «Although the plan is expensive it could improve results».",
+                    "ruleRef": "gp-b2p-educacion-concession"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has elegido la forma gramatical adecuada."
+                  }
+                },
+                {
+                  "type": "OrderWords",
+                  "id": "es-en-b2-p0-u1-l10-e02",
+                  "tokens": [
+                    "plan",
+                    "is",
+                    "expensive",
+                    "it",
+                    "could",
+                    "improve",
+                    "results",
+                    "Although",
+                    "the"
+                  ],
+                  "answerTokens": [
+                    "Although",
+                    "the",
+                    "plan",
+                    "is",
+                    "expensive",
+                    "it",
+                    "could",
+                    "improve",
+                    "results"
+                  ],
+                  "sourcePhrase": "Aunque el plan es caro podría mejorar los resultados",
+                  "feedbackOnError": {
+                    "type": "word_order",
+                    "explanation": "El orden natural es «Although the plan is expensive it could improve results».",
+                    "ruleRef": "gp-b2p-educacion-conditional"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "El orden produce una frase natural."
+                  }
+                },
+                {
+                  "type": "ClozeDragDrop",
+                  "id": "es-en-b2-p0-u1-l10-e03",
+                  "passage": "{{b1}} the proposal is expensive, it {{b2}} improve results if we implement it carefully.",
+                  "blanks": [
+                    {
+                      "id": "b1",
+                      "answer": "Although",
+                      "options": [
+                        "Although",
+                        "However",
+                        "Despite"
+                      ]
+                    },
+                    {
+                      "id": "b2",
+                      "answer": "could",
+                      "options": [
+                        "could",
+                        "must",
+                        "should"
+                      ]
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "Cada hueco debe encajar con el tiempo verbal y el contexto.",
+                    "ruleRef": "gp-b2p-educacion-concession"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Los huecos completan la frase con coherencia."
+                  }
+                },
+                {
+                  "type": "SemanticMatch",
+                  "id": "es-en-b2-p0-u1-l10-e04",
+                  "instructions": "Clasifica la función de cada intervención en el debate.",
+                  "pairs": [
+                    {
+                      "left": "Although the plan is expensive, it could work.",
+                      "right": "Concesión",
+                      "register": "formal",
+                      "nuance": "Acepta una objeción y mantiene la propuesta."
+                    },
+                    {
+                      "left": "If we implemented it carefully, it would improve results.",
+                      "right": "Condicional",
+                      "register": "formal",
+                      "nuance": "Valora un escenario hipotético."
+                    },
+                    {
+                      "left": "The bottom line is that we need evidence.",
+                      "right": "Conclusión",
+                      "register": "neutral",
+                      "nuance": "Cierra el argumento con lo esencial."
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "Cada intervención cumple una función comunicativa distinta.",
+                    "ruleRef": "gp-b2p-educacion-concession"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has identificado la función de cada intervención."
+                  }
+                },
+                {
+                  "type": "SemanticMatch",
+                  "id": "es-en-b2-p0-u1-l10-e05",
+                  "instructions": "Distingue el registro de cada valoración de la evidencia.",
+                  "pairs": [
+                    {
+                      "left": "The evidence suggests a positive impact.",
+                      "right": "Formal",
+                      "register": "formal",
+                      "nuance": "Fórmula propia de un informe."
+                    },
+                    {
+                      "left": "It looks like it could work.",
+                      "right": "Neutral",
+                      "register": "neutral",
+                      "nuance": "Valoración prudente y sencilla."
+                    },
+                    {
+                      "left": "It's worth a shot.",
+                      "right": "Informal",
+                      "register": "informal",
+                      "nuance": "Propuesta coloquial de probar algo."
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "register",
+                    "explanation": "El registro cambia según el contexto y la relación con el interlocutor.",
+                    "ruleRef": "gp-b2p-educacion-conditional"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has distinguido el registro de cada expresión."
+                  }
+                },
+                {
+                  "type": "AudioOnlyPrompt",
+                  "id": "es-en-b2-p0-u1-l10-e06",
+                  "audioText": "Although the proposal is expensive, it could improve results; the bottom line is that we need evidence before deciding.",
+                  "question": "What does the speaker conclude?",
+                  "options": [
+                    "More evidence is needed before deciding",
+                    "The proposal is definitely too expensive",
+                    "The results are already proven",
+                    "The decision has been made"
+                  ],
+                  "correctIndex": 0,
+                  "allowSlowPlayback": true,
+                  "feedbackOnError": {
+                    "type": "comprehension",
+                    "explanation": "El audio matiza la información principal y añade una reserva.",
+                    "ruleRef": "gp-b2p-educacion-concession"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has comprendido la postura del hablante."
+                  }
+                },
+                {
+                  "type": "AudioOnlyPrompt",
+                  "id": "es-en-b2-p0-u1-l10-e07",
+                  "audioText": "If we implemented the plan carefully, it might improve results; in other words, the design matters.",
+                  "question": "What is the key point?",
+                  "options": [
+                    "How the plan is designed matters",
+                    "The plan is impossible",
+                    "Results do not matter",
+                    "The plan is too cheap"
+                  ],
+                  "correctIndex": 0,
+                  "allowSlowPlayback": false,
+                  "feedbackOnError": {
+                    "type": "comprehension",
+                    "explanation": "La segunda parte del audio reformula la idea principal.",
+                    "ruleRef": "gp-b2p-educacion-conditional"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has identificado la recomendación del audio."
+                  }
+                },
+                {
+                  "type": "ListenType",
+                  "id": "es-en-b2-p0-u1-l10-e08",
+                  "transcription": "Although the proposal is expensive it could improve results",
+                  "audioText": "Although the proposal is expensive it could improve results",
+                  "feedbackOnError": {
+                    "type": "spelling",
+                    "explanation": "Escribe exactamente «Although the proposal is expensive it could improve results».",
+                    "ruleRef": "gp-b2p-educacion-concession"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La transcripción coincide con el audio."
+                  }
+                },
+                {
+                  "type": "SpeakRepeat",
+                  "id": "es-en-b2-p0-u1-l10-e09",
+                  "targetPhrase": "The bottom line is that we need more evidence.",
+                  "audioText": "The bottom line is that we need more evidence.",
+                  "feedbackOnError": {
+                    "type": "pronunciation",
+                    "explanation": "Repite «The bottom line is that we need more evidence.» manteniendo el ritmo y las pausas.",
+                    "ruleRef": "gp-b2p-educacion-conditional"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La frase se entiende y conserva la entonación."
+                  }
+                },
+                {
+                  "type": "FreeSpeakingPrompt",
+                  "id": "es-en-b2-p0-u1-l10-e10",
+                  "prompt": "Debate una propuesta educativa: reconoce una objeción, presenta evidencia y cierra con una conclusión.",
+                  "minTokens": 40,
+                  "conceptClusters": [
+                    [
+                      "proposal",
+                      "evidence",
+                      "results"
+                    ],
+                    [
+                      "although",
+                      "if",
+                      "could"
+                    ],
+                    [
+                      "in other words",
+                      "bottom line",
+                      "decide"
+                    ]
+                  ],
+                  "grammarRuleRefs": [
+                    "gp-b2p-educacion-concession",
+                    "gp-b2p-educacion-conditional"
+                  ],
+                  "timeLimitSeconds": 90,
+                  "minWpm": 70,
+                  "maxWpm": 160,
+                  "modelAnswer": "Although the proposal is expensive, it could improve results if we implement it carefully. The evidence from similar schools suggests a positive impact, but we still need local data. In other words, the bottom line is that we should run a small pilot before we decide.",
+                  "selfAssessmentCriteria": [
+                    "¿Reconociste una objeción?",
+                    "¿Presentaste evidencia?",
+                    "¿Cerraste con una conclusión?"
+                  ],
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "La respuesta modelo cubre la tarea, usa el vocabulario clave y demuestra los dos focos gramaticales.",
+                    "ruleRef": "gp-b2p-educacion-concession"
+                  }
+                }
+              ]
+            }
+          ]
         }
       ]
     },
