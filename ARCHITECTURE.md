@@ -253,7 +253,7 @@ Raíz `dev.linguago.*` — refleja la ruta del módulo:
 | I3 | Sin fricción | degradación limpia sin bloquear; vidas con recuperación ≤10 min (ADR-025) |
 | I4 | Progreso intocable | merge monótono, upserts acumulativos, XP nunca decrece |
 | I5 | Identidad original | tokens/íconos propios en `core-ui` |
-| I6 | Código abierto | MIT + CC BY-SA 4.0 |
+| I6 | Software propietario | licencia comercial + avisos de terceros (ADR-056) |
 | I7 | Testabilidad | dominio puro + inyección de dispatchers/tiempo |
 | I8 | Accesibilidad | semántica de componentes + tests instrumentados |
 | I9 | Contenido validado | schema v1 + `validateContent` en CI |

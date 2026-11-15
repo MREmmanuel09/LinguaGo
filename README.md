@@ -6,15 +6,15 @@
 
 ES → EN — A1 a C2 · ES → PT, ES → FR y ES → JA — A1 a C2
 
-Código abierto · Sin anuncios · Sin backend · 100% offline · Vidas con
+Software propietario · Sin anuncios · Sin backend · 100% offline · Vidas con
 recuperación rápida
 
 [![CI](https://github.com/MREmmanuel09/LinguaGo/actions/workflows/ci.yml/badge.svg)](https://github.com/MREmmanuel09/LinguaGo/actions/workflows/ci.yml)
-![version](https://img.shields.io/badge/version-3.3.0-blue)
+![version](https://img.shields.io/badge/version-3.4.0-blue)
 ![Kotlin](https://img.shields.io/badge/Kotlin-2.4-7F52FF?logo=kotlin&logoColor=white)
 ![Android](https://img.shields.io/badge/Android-26%2B-3DDC84?logo=android&logoColor=white)
-![License](https://img.shields.io/badge/license-MIT-green)
-[![Content](https://img.shields.io/badge/content-CC%20BY--SA%204.0-lightgrey)](./LICENSE-CONTENT)
+![License](https://img.shields.io/badge/license-Proprietary-red)
+[![Content](https://img.shields.io/badge/content-All%20rights%20reserved-lightgrey)](./LICENSE-CONTENT)
 
 </div>
 
@@ -76,7 +76,9 @@ flowchart LR
    ≤10 min y nunca bloquean el acceso.
 4. **Progreso intocable** — la sincronización nunca elimina avances del usuario.
 5. **Identidad original** — cero elementos de terceros en marca, arte o contenido.
-6. **Código abierto real** — MIT para código, CC BY-SA 4.0 para contenido.
+6. **Software propietario** — código y contenido bajo licencia comercial
+   (todos los derechos reservados desde la 3.4.0); las dependencias de
+   terceros conservan sus licencias (ADR-056).
 7. **Testabilidad** — toda lógica de negocio es testeable en aislamiento.
 8. **Accesibilidad** — TalkBack, contraste y tamaños dinámicos desde el día uno.
 
@@ -228,8 +230,11 @@ ProgressBarRangeInfo de la barra, descripción de racha, touch targets
 
 ## Licencias
 
-- Código: [MIT](./LICENSE)
-- Contenido pedagógico: [CC BY-SA 4.0](./LICENSE-CONTENT)
+- Código: [licencia propietaria](./LICENSE) (todos los derechos reservados
+  desde la 3.4.0; las versiones 3.3.0 y anteriores siguen bajo MIT).
+- Contenido pedagógico: [todos los derechos reservados](./LICENSE-CONTENT)
+  (3.3.0 y anteriores bajo CC BY-SA 4.0).
+- Componentes de terceros: [THIRD_PARTY_NOTICES.md](./THIRD_PARTY_NOTICES.md).
 
 ## Contribuir
 

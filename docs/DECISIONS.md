@@ -62,6 +62,10 @@
 | 050 | Room v5, `SyncSnapshot` v3 y respaldo local por SAF | Aprobado |
 | 051 | `espeak-ng-data` compartido, gestor de voces y desglose CEFR | Aprobado |
 | 052 | Expansión controlada a 1.020 lecciones por idioma con paridad CEFR | Aprobado |
+| 053 | Cierre técnico de F0 con réplicas estructurales y revisión nativa diferida | Aprobado |
+| 054 | Aprobación técnica del release 3.2.0 con revisión nativa diferida | Aprobado |
+| 055 | Rediseño de identidad visual al prototipo «Warm Cream & Teal» | Aprobado |
+| 056 | Licencia comercial del código y del contenido (cierre del modelo open source) | Aprobado |
 
 ---
 ## ADR-000: Convención del registro de decisiones
@@ -249,7 +253,7 @@ se computan al finalizar la lección.
 
 ## ADR-008: Licencias y atribución de terceros
 
-**Estado:** Aprobado
+**Estado:** Aprobado (parcialmente sustituido por [ADR-056](#adr-056-licencia-comercial-del-código-y-del-contenido))
 **Fecha:** 2026-10-16
 
 **Contexto:** mezclamos componentes con distintas licencias (MIT, Apache,
@@ -259,6 +263,13 @@ CC0, OFL). Invariante I6: código abierto real.
 Contenido pedagógico bajo `LICENSE-CONTENT` (CC BY-SA 4.0). Cada dependencia
 de terceros se acredita en la pantalla Ajustes → Licencias y en el
 `THIRD_PARTY_NOTICES.md` que se genera en CI a partir del lockfile de dependencias.
+
+**Actualización (ADR-056):** desde la versión 3.4.0 el código y el contenido
+pasan a licencia comercial propia («todos los derechos reservados»). La parte
+de este ADR que sigue vigente es la **atribución de terceros**: todas las
+dependencias y recursos conservan sus licencias y se acreditan en
+`THIRD_PARTY_NOTICES.md` y en la hoja de Ajustes. Las versiones 3.3.0 y
+anteriores permanecen bajo MIT y CC BY-SA 4.0.
 
 **Consecuencias:**
 - Cumplimiento legal limpio; contribuidores ven el límites antes de añadir
@@ -2353,3 +2364,60 @@ en `core-ui` se actualizan junto con los tokens); los componentes existentes se
 reestilizan y se añaden los del prototipo; el snapshot de sincronización gana
 el campo `gems` con fusión máxima y tests; la mascota queda oculta a la espera
 de decisión; el QA nativo del usuario se hace después del rediseño.
+
+---
+
+## ADR-056: licencia comercial del código y del contenido
+
+**Estado:** Aprobado
+**Fecha:** 2026-11-15
+**Sustituye a:** la parte de licencias de [ADR-008](#adr-008-licencias-y-atribución-de-terceros)
+
+**Contexto:** el proyecto nació con licencia MIT para el código y CC BY-SA 4.0
+para el contenido pedagógico (ADR-008, invariante I6). El producto ya tiene
+4.080/lecciones por curso y un modelo de distribución directo (GitHub
+Releases), y el titular del copyright quiere’exploitation comercial, evitar
+copias de la app y del contenido, y decidir él la política de contribuciones
+futuras. Las dependencias y los recursos de terceros que ya usa la app
+(AndroidX, Compose, Kotlin, Hilt, OkHttp, sherpa-onnx, Vosk/Kaldi, JNA,
+Nunito, voces Piper) son permisivos y permiten el uso comercial conservando
+sus avisos.
+
+**Decisión:**
+
+1. **Código:** licencia propietaria de «todos los derechos reservados» en
+   `LICENSE`, aplicable desde la versión 3.4.0. No se concede uso, copia,
+   modificación, distribución ni venta sin autorización previa del titular.
+2. **Contenido pedagógico:** licencia comercial propia en `LICENSE-CONTENT`
+   desde la 3.4.0; el contenido deja de ser reutilizable con SharingAlike.
+3. **Versiones anteriores:** las copias ya distribuidas de la 3.3.0 y
+   anteriores siguen rigiéndose por MIT y CC BY-SA 4.0. Ambas licencias son
+   irrevocables: reescribir el `LICENSE` no altera el derecho de quien ya
+   obtuvo esas versiones. El texto histórico permanece en el historial
+   (etiqueta `v3.3.0`).
+4. **Terceros:** se añade `THIRD_PARTY_NOTICES.md` con la atribución de cada
+   componente y sus licencias, y la hoja **Ajustes → Licencias y créditos**
+   pasa a describir la licencia propia y las de terceros.
+5. **Contribuciones:** se exige un acuerdo de contribución (CLA) con cesión de
+   derechos para poder abrir pull requests de código o contenido; los informes
+   de errores siguen libres. Solo hay un autor en el historial, así que no hay
+   licencias de terceros que licenciar.
+6. **Identidad visual y marca:** «LinguaGo» y su identidad pasan a ser marca
+   del titular; la licencia no concede su uso a terceros.
+7. **Revisión jurídica:** `LICENSE` y `LICENSE-CONTENT` son borradores de
+   trabajo; antes de publicar en una tienda de aplicaciones o de cerrar
+   acuerdos con terceros deben revisarlos un profesional del derecho.
+
+**Alternativas consideradas:** mantener MIT y monetizar solo con contenido
+premium (descartada: no protege frente a copias de la app); doble licencia
+AGPL + comercial (descartada: obliga a mantener el repositorio abierto y no
+aporta frente a un único titular); BUSL/FSL source-available (descartada: el
+interés es cerrar la licencia, no solo limitar el uso comercial); licencia de
+solo contenido (descartada: la app y el contenido se distribuyen juntos).
+
+**Consecuencias:** el invariante I6 pasa de «código abierto» a «software
+propietario» en `README` y `ARCHITECTURE`; la versión 3.4.0 se publica con la
+nueva licencia y sus avisos de terceros; las contribuciones externas pasan a
+requerir CLA; las releases antiguas no se pueden «cerrar» y deben seguir
+citándose bajo MIT/CC BY-SA.
+

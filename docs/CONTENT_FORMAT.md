@@ -21,7 +21,7 @@
    `vocabFrequencyBand`, `culturalNotes[]`, al menos un `FreeSpeakingPrompt`
    y `feedbackOnError` en **todos** sus ejercicios. El schema lo exige; el
    validador estructural (F0.3) lo refuerza.
-5. **Contenido original** bajo CC BY-SA 4.0 (I6).
+5. **Contenido original** con licencia comercial propia (I6, ADR-056).
 
 ## Campos nuevos a nivel de curso
 

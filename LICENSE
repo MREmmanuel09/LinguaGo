@@ -1,21 +1,85 @@
-MIT License
+# Licencia propietaria de LinguaGo
 
-Copyright (c) 2026 MREmmanuel09
+**Copyright (c) 2026 MREmmanuel09. Todos los derechos reservados.**
 
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
+Este documento sustituye a la licencia MIT a partir de la versión **3.4.0**.
+Es un borrador de licencia propietaria para uso comercial: antes de distribuir
+el producto en una tienda de aplicaciones o ante terceros con fines comerciales,
+conviene que un profesional del derecho lo revise y lo adapte a tu jurisdicción
+y modelo de negocio.
 
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
+## 1. Alcance
 
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
+Esta licencia cubre **todo el código fuente** de este repositorio a partir de
+la versión 3.4.0: código Kotlin, scripts de build, recursos, pruebas,
+documentación de arquitectura y cualquier otro activo técnico propio.
+
+No se concede ninguna licencia de uso, copia, modificación, distribución,
+publicación, sublicencia ni venta del código, ni total ni parcialmente, sin
+autorización previa y por escrito del titular del copyright. Queda prohibido el
+reverse engineering, salvo en los casos en que la ley aplicable lo permita de
+forma expresa.
+
+## 2. Uso por el usuario final de la app
+
+Los binarios de la aplicación (APK) se distribuyen al usuario final bajo los
+términos de licencia de usuario final que acompañan a cada publicación:
+
+- Puedes instalar y usar la app en tus dispositivos personales.
+- Puedes usar la app sin conexión, conforme a sus invariantes offline-first.
+- No puedes redistribuir, reempaquetar, modificar ni vender el APK, ni
+  eliminar las atribuciones de terceros.
+- La app no incluye una vía de red para la nube: el progreso es local y las
+  copias de seguridad son responsabilidad del usuario.
+
+El uso comercial de la app por parte de terceros (revenderla, integrarla en
+otro producto o usarla como servicio) requiere una licencia separada escrita
+por el titular.
+
+## 3. Versiones anteriores
+
+El código de las versiones **3.3.0 y anteriores** se publicó bajo la licencia
+MIT, que sigue siendo la licencia aplicable a esas copias ya distribuidas.
+La licencia MIT es irrevocable: cambiar la licencia del repositorio no la
+altera para quien ya obtuvo esas versiones. Del mismo modo, el contenido
+pedagógico de esas versiones permanece bajo CC BY-SA 4.0.
+
+Para evitar ambigüedad, el texto histórico de MIT está en el historial del
+repositorio (por ejemplo, en la etiqueta `v3.3.0`).
+
+## 4. Componentes de terceros
+
+Esta licencia **no afecta** a las dependencias de terceros ni a los recursos
+incluidos que conservan sus propias licencias (Apache-2.0, MIT, CC0, SIL OFL,
+entre otras). Sus textos y atribuciones están en
+[`THIRD_PARTY_NOTICES.md`](./THIRD_PARTY_NOTICES.md) y en la pantalla
+**Ajustes → Licencias y créditos** de la app.
+
+Las licencias de terceros permiten el uso comercial, pero exigen conservar sus
+títulos y avisos de copyright. Ninguna contribución externa puede usar
+licencias copyleft fuertes (GPL/AGPL) sin autorización previa.
+
+## 5. Contribuciones
+
+Las contribuciones de código o contenido solo se aceptan si el colaborador
+cede los derechos de propiedad intelectual correspondientes al titular del
+copyright, mediante el acuerdo de contribución firmado que se solicita al
+abrir el pull request. Los informes de errores y las sugerencias no requieren
+cesión de derechos.
+
+## 6. Marcas
+
+«LinguaGo», su logotipo y su identidad visual son marcas del titular. Esta
+licencia no concede permiso para usarlas más allá del uso de la propia app.
+
+## 7. Sin garantía
+
+El software se distribuye «tal cual», sin garantía de ningún tipo, expresa o
+implícita, incluidos los de calidad, idoneidad o nonexistencia de errores. El
+titular no se hace responsable de los daños derivados del uso del software.
+
+## 8. Terminación
+
+El acceso al código y a las publicaciones se termina de forma automática si
+se vulnera esta licencia. Las licencias ya concedidas sobre versiones
+anteriores bajo MIT o CC BY-SA 4.0 no se ven afectadas.

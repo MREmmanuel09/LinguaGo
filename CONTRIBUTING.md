@@ -1,8 +1,12 @@
 # Contribuir a LinguaGo
 
-Gracias por tu interés. LinguaGo es un proyecto de código abierto offline-first:
-toda decisión debe alinearse con los invariantes del [README](README.md) y con
-la [arquitectura](ARCHITECTURE.md).
+Gracias por tu interés. LinguaGo es un proyecto **offline-first de software
+propietario**: toda decisión debe alinearse con los invariantes del
+[README](README.md) y con la [arquitectura](ARCHITECTURE.md).
+
+Desde la versión 3.4.0 el código y el contenido se distribuyen bajo licencia
+comercial (ver [LICENSE](LICENSE) y [LICENSE-CONTENT](LICENSE-CONTENT)). Los
+**informes de errores y sugerencias son bienvenidos** sin ninguna condición.
 
 ## Cómo reportar errores
 
@@ -13,6 +17,13 @@ la [arquitectura](ARCHITECTURE.md).
    [SECURITY.md](SECURITY.md).
 
 ## Cómo proponer cambios
+
+Las contribuciones de **código o contenido** requieren firmar un acuerdo de
+contribución (CLA) con el titular del copyright: al abrir el pull request se
+solicita la cesión de los derechos de propiedad intelectual correspondientes,
+de modo que la licencia propietaria del proyecto se mantiene coherente. Si
+prefieres contribuir sin ceder derechos, puedes enviar parches o ideas por
+issue sin abrir un pull request.
 
 1. **Fork**, luego **rama** con prefijo según el cambio:
    - `feat/<nombre>` — funcionalidad nueva

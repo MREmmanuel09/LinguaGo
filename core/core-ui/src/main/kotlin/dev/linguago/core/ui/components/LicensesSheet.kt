@@ -15,8 +15,9 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 
 /**
- * Hoja de licencias y créditos (ADR-008): atribuciones MIT/CC BY-SA/OFL/Apache
- * del código y del contenido pedagógico, accesible desde Ajustes.
+ * Hoja de licencias y créditos (ADR-008/ADR-056): la licencia comercial
+ * propia del proyecto y las atribuciones de terceros (OFL, Apache-2.0,
+ * MIT/CC0), accesible desde Ajustes.
  */
 @Composable
 public fun LicensesSheet(
@@ -37,14 +38,24 @@ public fun LicensesSheet(
             ) {
                 Text(
                     text =
-                        "LinguaGo — código bajo licencia MIT. " +
-                            "Contenido pedagógico bajo CC BY-SA 4.0. " +
-                            "Tipografía Nunito bajo SIL Open Font License. " +
-                            "Motor de síntesis y reconocimiento de voz bajo sus " +
-                            "respectivas licencias abiertas (Vosk, Piper, sherpa-onnx, " +
-                            "JNA y espeak-ng). Las bibliotecas que lo requieran " +
-                            "pueden estar licenciadas bajo Apache-2.0. Consulta el " +
-                            "archivo LICENSE del repositorio para el texto completo.",
+                        "LinguaGo — software propietario: todos los derechos " +
+                            "reservados. El uso comercial, la redistribución y la " +
+                            "modificación del código y del contenido requieren " +
+                            "autorización previa del titular. El contenido " +
+                            "pedagógico tiene licencia comercial propia.",
+                    style = MaterialTheme.typography.bodySmall,
+                )
+                Text(
+                    text =
+                        "Componentes de terceros con licencias abiertas: " +
+                            "tipografía Nunito (SIL OFL 1.1), síntesis de voz " +
+                            "Piper y sherpa-onnx (MIT/CC0/Apache-2.0), " +
+                            "reconocimiento de voz Vosk y modelos Kaldi " +
+                            "(Apache-2.0), JNA (LGPL-2.1 o Apache-2.0), " +
+                            "Jetpack Compose, Kotlin y AndroidX (Apache-2.0). " +
+                            "Consulta LICENSE, LICENSE-CONTENT y " +
+                            "THIRD_PARTY_NOTICES.md del repositorio para los " +
+                            "textos completos.",
                     style = MaterialTheme.typography.bodySmall,
                 )
                 Text(
