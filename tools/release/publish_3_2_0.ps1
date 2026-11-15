@@ -11,7 +11,7 @@ $env:JAVA_HOME = if ($env:JAVA_HOME) { $env:JAVA_HOME } else { "C:\Program Files
 
 Write-Host "== LinguaGo $Version =="
 
-$status = git status --porcelain
+$status = git status --porcelain --untracked-files=no
 if ($status) {
     throw "El árbol de trabajo no está limpio. Haz commit o stash antes de publicar."
 }
