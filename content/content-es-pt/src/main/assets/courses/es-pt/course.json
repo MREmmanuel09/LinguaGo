@@ -173716,6 +173716,2724 @@
               ]
             }
           ]
+        },
+        {
+          "id": "es-pt-b2-u14",
+          "title": "B2 · Tecnología y comunicación",
+          "lessons": [
+            {
+              "id": "es-pt-b2-u14-l01",
+              "title": "Repaso: cultura",
+              "cefrLevel": "B2",
+              "scenario": "Situación comunicativa avanzada sobre las fiestas y tradiciones.",
+              "canDo": "Puedo argumentar y matizar sobre las fiestas y tradiciones.",
+              "grammarPoints": [
+                {
+                  "id": "gp-b2-passive-voice",
+                  "label": "Passive voice",
+                  "description": "Be + participio desplaza el foco a la acción o al resultado."
+                },
+                {
+                  "id": "gp-b2-speculation",
+                  "label": "Speculation",
+                  "description": "May, might y could expresan distintos grados de posibilidad."
+                }
+              ],
+              "vocabFrequencyBand": "3000-5000",
+              "culturalNotes": [
+                {
+                  "idiom": "bater um papo",
+                  "note": "Expresión para conversar informalmente.",
+                  "translation": "charolar"
+                }
+              ],
+              "microLesson": {
+                "title": "Repaso: cultura",
+                "goals": [
+                  "Usar vocabulario avanzado de las fiestas y tradiciones.",
+                  "Aplicar passive voice y speculation.",
+                  "Argumentar y matizar sobre las fiestas y tradiciones."
+                ],
+                "sections": [
+                  {
+                    "heading": "Lengua en contexto",
+                    "body": "Passive voice: Be + participio desplaza el foco a la acción o al resultado. Speculation: May, might y could expresan distintos grados de posibilidad.",
+                    "examples": [
+                      {
+                        "source": "El año pasado fui a una fiesta tradicional. Dicho esto, depende del contexto.",
+                        "target": "No ano passado fui a uma festa tradicional. Dito isto, depende do contexto."
+                      },
+                      {
+                        "source": "Probé comida típica y escuché música en directo. En otras palabras, merece la pena considerarlo.",
+                        "target": "Experimentei comida típica e ouvi música ao vivo. Por outras palavras, vale a pena considerar."
+                      }
+                    ]
+                  }
+                ]
+              },
+              "glossary": [
+                {
+                  "term": "No ano passado fui a uma festa tradicional. Dito isto, depende do contexto.",
+                  "translations": [
+                    "El año pasado fui a una fiesta tradicional. Dicho esto, depende del contexto."
+                  ]
+                },
+                {
+                  "term": "Experimentei comida típica e ouvi música ao vivo. Por outras palavras, vale a pena considerar.",
+                  "translations": [
+                    "Probé comida típica y escuché música en directo. En otras palabras, merece la pena considerarlo."
+                  ]
+                },
+                {
+                  "term": "Adorei a experiência. Receio que possa ser mais complicado.",
+                  "translations": [
+                    "Me encantó la experiencia. Me temo que puede ser más complicado."
+                  ]
+                }
+              ],
+              "exercises": [
+                {
+                  "type": "MultipleChoice",
+                  "id": "es-pt-b2-u14-l01-e01",
+                  "question": "¿Cuál es la opción correcta para «El año pasado fui a una fiesta tradicional. Dicho esto, depende del contexto.»?",
+                  "options": [
+                    "No ano passado fui a uma festa tradicional. Dito isto, depende do contexto.",
+                    "Experimentei comida típica e ouvi música ao vivo. Por outras palavras, vale a pena considerar.",
+                    "Adorei a experiência. Receio que possa ser mais complicado."
+                  ],
+                  "correctIndex": 0,
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "«El año pasado fui a una fiesta tradicional. Dicho esto, depende del contexto.» se dice «No ano passado fui a uma festa tradicional. Dito isto, depende do contexto.».",
+                    "ruleRef": "gp-b2-passive-voice"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has elegido la traducción correcta."
+                  }
+                },
+                {
+                  "type": "OrderWords",
+                  "id": "es-pt-b2-u14-l01-e02",
+                  "tokens": [
+                    "ano",
+                    "passado",
+                    "fui",
+                    "a",
+                    "uma",
+                    "festa",
+                    "tradicional",
+                    "Dito",
+                    "isto",
+                    "depende",
+                    "do",
+                    "contexto",
+                    "No"
+                  ],
+                  "answerTokens": [
+                    "No",
+                    "ano",
+                    "passado",
+                    "fui",
+                    "a",
+                    "uma",
+                    "festa",
+                    "tradicional",
+                    "Dito",
+                    "isto",
+                    "depende",
+                    "do",
+                    "contexto"
+                  ],
+                  "sourcePhrase": "El año pasado fui a una fiesta tradicional. Dicho esto, depende del contexto.",
+                  "feedbackOnError": {
+                    "type": "word_order",
+                    "explanation": "El orden correcto es «No ano passado fui a uma festa tradicional Dito isto depende do contexto».",
+                    "ruleRef": "gp-b2-passive-voice"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "El orden produce una frase natural."
+                  }
+                },
+                {
+                  "type": "ClozeDragDrop",
+                  "id": "es-pt-b2-u14-l01-e03",
+                  "passage": "No {{b1}} {{b2}} fui a uma festa tradicional",
+                  "blanks": [
+                    {
+                      "id": "b1",
+                      "answer": "ano",
+                      "options": [
+                        "ano",
+                        "fui",
+                        "festa"
+                      ]
+                    },
+                    {
+                      "id": "b2",
+                      "answer": "passado",
+                      "options": [
+                        "passado",
+                        "fui",
+                        "festa"
+                      ]
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "Las dos formas deben encajar con el contexto de la frase.",
+                    "ruleRef": "gp-b2-speculation"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Los dos huecos encajan con la situación."
+                  }
+                },
+                {
+                  "type": "SemanticMatch",
+                  "id": "es-pt-b2-u14-l01-e04",
+                  "instructions": "Clasifica la función comunicativa de cada intervención.",
+                  "pairs": [
+                    {
+                      "left": "No ano passado fui a uma festa tradicional. Dito isto, depende do contexto.",
+                      "right": "Planteamiento",
+                      "register": "formal",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    },
+                    {
+                      "left": "Experimentei comida típica e ouvi música ao vivo. Por outras palavras, vale a pena considerar.",
+                      "right": "Concesión",
+                      "register": "neutral",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    },
+                    {
+                      "left": "Adorei a experiência. Receio que possa ser mais complicado.",
+                      "right": "Conclusión",
+                      "register": "informal",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "Cada intervención cumple una función comunicativa distinta.",
+                    "ruleRef": "gp-b2-passive-voice"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has identificado la función de cada intervención."
+                  }
+                },
+                {
+                  "type": "SemanticMatch",
+                  "id": "es-pt-b2-u14-l01-e05",
+                  "instructions": "Distingue el registro de cada intervención.",
+                  "pairs": [
+                    {
+                      "left": "No ano passado fui a uma festa tradicional. Dito isto, depende do contexto.",
+                      "right": "Formal",
+                      "register": "formal",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    },
+                    {
+                      "left": "Experimentei comida típica e ouvi música ao vivo. Por outras palavras, vale a pena considerar.",
+                      "right": "Neutral",
+                      "register": "neutral",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    },
+                    {
+                      "left": "Adorei a experiência. Receio que possa ser mais complicado.",
+                      "right": "Informal",
+                      "register": "informal",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "register",
+                    "explanation": "El registro cambia según el contexto y la relación con el interlocutor.",
+                    "ruleRef": "gp-b2-speculation"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has distinguido el registro de cada intervención."
+                  }
+                },
+                {
+                  "type": "AudioOnlyPrompt",
+                  "id": "es-pt-b2-u14-l01-e06",
+                  "audioText": "Experimentei comida típica e ouvi música ao vivo. Por outras palavras, vale a pena considerar.",
+                  "question": "¿Qué ha dicho el hablante?",
+                  "options": [
+                    "Experimentei comida típica e ouvi música ao vivo. Por outras palavras, vale a pena considerar.",
+                    "No ano passado fui a uma festa tradicional. Dito isto, depende do contexto.",
+                    "Adorei a experiência. Receio que possa ser mais complicado."
+                  ],
+                  "correctIndex": 0,
+                  "allowSlowPlayback": true,
+                  "feedbackOnError": {
+                    "type": "comprehension",
+                    "explanation": "El audio dice «Experimentei comida típica e ouvi música ao vivo. Por outras palavras, vale a pena considerar.».",
+                    "ruleRef": "gp-b2-passive-voice"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has comprendido el mensaje del audio."
+                  }
+                },
+                {
+                  "type": "AudioOnlyPrompt",
+                  "id": "es-pt-b2-u14-l01-e07",
+                  "audioText": "Adorei a experiência. Receio que possa ser mais complicado.",
+                  "question": "¿Cuál es la idea principal?",
+                  "options": [
+                    "Adorei a experiência. Receio que possa ser mais complicado.",
+                    "No ano passado fui a uma festa tradicional. Dito isto, depende do contexto.",
+                    "Experimentei comida típica e ouvi música ao vivo. Por outras palavras, vale a pena considerar."
+                  ],
+                  "correctIndex": 0,
+                  "allowSlowPlayback": false,
+                  "feedbackOnError": {
+                    "type": "comprehension",
+                    "explanation": "El audio dice «Adorei a experiência. Receio que possa ser mais complicado.».",
+                    "ruleRef": "gp-b2-speculation"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has identificado la idea principal."
+                  }
+                },
+                {
+                  "type": "ListenType",
+                  "id": "es-pt-b2-u14-l01-e08",
+                  "audioText": "Adorei a experiência. Receio que possa ser mais complicado.",
+                  "transcription": "Adorei a experiência. Receio que possa ser mais complicado.",
+                  "feedbackOnError": {
+                    "type": "spelling",
+                    "explanation": "Escribe exactamente «Adorei a experiência. Receio que possa ser mais complicado.».",
+                    "ruleRef": "gp-b2-passive-voice"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La transcripción coincide con el audio."
+                  }
+                },
+                {
+                  "type": "SpeakRepeat",
+                  "id": "es-pt-b2-u14-l01-e09",
+                  "targetPhrase": "Adorei a experiência. Receio que possa ser mais complicado.",
+                  "audioText": "Adorei a experiência. Receio que possa ser mais complicado.",
+                  "feedbackOnError": {
+                    "type": "pronunciation",
+                    "explanation": "Repite «Adorei a experiência. Receio que possa ser mais complicado.» con claridad.",
+                    "ruleRef": "gp-b2-passive-voice"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La frase se entiende y mantiene el ritmo."
+                  }
+                },
+                {
+                  "type": "FreeSpeakingPrompt",
+                  "id": "es-pt-b2-u14-l01-e10",
+                  "prompt": "Argumenta y matiza una opinión sobre las fiestas y tradiciones.",
+                  "minTokens": 20,
+                  "conceptClusters": [
+                    [
+                      "ano"
+                    ],
+                    [
+                      "passado"
+                    ],
+                    [
+                      "fui"
+                    ]
+                  ],
+                  "modelAnswer": "No ano passado fui a uma festa tradicional. Dito isto, depende do contexto. Experimentei comida típica e ouvi música ao vivo. Por outras palavras, vale a pena considerar. Adorei a experiência. Receio que possa ser mais complicado.",
+                  "selfAssessmentCriteria": [
+                    "¿La respuesta argumenta y responde a la tarea?",
+                    "¿Usa las dos estructuras gramaticales de la lección?",
+                    "¿Incluye una concesión o una matización?"
+                  ],
+                  "grammarRuleRefs": [
+                    "gp-b2-passive-voice",
+                    "gp-b2-speculation"
+                  ],
+                  "timeLimitSeconds": 90,
+                  "minWpm": 70,
+                  "maxWpm": 160,
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "La respuesta modelo desarrolla una opinión con matices y una concesión.",
+                    "ruleRef": "gp-b2-passive-voice"
+                  }
+                }
+              ]
+            },
+            {
+              "id": "es-pt-b2-u14-l02",
+              "title": "Dispositivos y apps",
+              "cefrLevel": "B2",
+              "scenario": "Situación comunicativa avanzada sobre la tecnología.",
+              "canDo": "Puedo argumentar y matizar sobre la tecnología.",
+              "grammarPoints": [
+                {
+                  "id": "gp-b2-passive-voice",
+                  "label": "Passive voice",
+                  "description": "Be + participio desplaza el foco a la acción o al resultado."
+                },
+                {
+                  "id": "gp-b2-speculation",
+                  "label": "Speculation",
+                  "description": "May, might y could expresan distintos grados de posibilidad."
+                }
+              ],
+              "vocabFrequencyBand": "3000-5000",
+              "culturalNotes": [
+                {
+                  "idiom": "cair a ficha",
+                  "note": "Expresión para comprender algo de repente.",
+                  "translation": "caer en la cuenta"
+                }
+              ],
+              "microLesson": {
+                "title": "Dispositivos y apps",
+                "goals": [
+                  "Usar vocabulario avanzado de la tecnología.",
+                  "Aplicar passive voice y speculation.",
+                  "Argumentar y matizar sobre la tecnología."
+                ],
+                "sections": [
+                  {
+                    "heading": "Lengua en contexto",
+                    "body": "Passive voice: Be + participio desplaza el foco a la acción o al resultado. Speculation: May, might y could expresan distintos grados de posibilidad.",
+                    "examples": [
+                      {
+                        "source": "Necesito un cargador. En otras palabras, merece la pena considerarlo.",
+                        "target": "Eu preciso de um carregador. Por outras palavras, vale a pena considerar."
+                      },
+                      {
+                        "source": "Necesito una aplicación de mensajes. Me temo que puede ser más complicado.",
+                        "target": "Preciso de um aplicativo de mensagens. Receio que possa ser mais complicado."
+                      }
+                    ]
+                  }
+                ]
+              },
+              "glossary": [
+                {
+                  "term": "Eu preciso de um carregador. Por outras palavras, vale a pena considerar.",
+                  "translations": [
+                    "Necesito un cargador. En otras palabras, merece la pena considerarlo."
+                  ]
+                },
+                {
+                  "term": "Preciso de um aplicativo de mensagens. Receio que possa ser mais complicado.",
+                  "translations": [
+                    "Necesito una aplicación de mensajes. Me temo que puede ser más complicado."
+                  ]
+                },
+                {
+                  "term": "Eu preciso de fones de ouvido. Para ser honesto, tenho sentimentos mistos.",
+                  "translations": [
+                    "Necesito unos auriculares. Sinceramente, tengo sentimientos encontrados."
+                  ]
+                }
+              ],
+              "exercises": [
+                {
+                  "type": "MultipleChoice",
+                  "id": "es-pt-b2-u14-l02-e01",
+                  "question": "¿Cuál es la opción correcta para «Necesito un cargador. En otras palabras, merece la pena considerarlo.»?",
+                  "options": [
+                    "Eu preciso de um carregador. Por outras palavras, vale a pena considerar.",
+                    "Preciso de um aplicativo de mensagens. Receio que possa ser mais complicado.",
+                    "Eu preciso de fones de ouvido. Para ser honesto, tenho sentimentos mistos."
+                  ],
+                  "correctIndex": 0,
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "«Necesito un cargador. En otras palabras, merece la pena considerarlo.» se dice «Eu preciso de um carregador. Por outras palavras, vale a pena considerar.».",
+                    "ruleRef": "gp-b2-passive-voice"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has elegido la traducción correcta."
+                  }
+                },
+                {
+                  "type": "OrderWords",
+                  "id": "es-pt-b2-u14-l02-e02",
+                  "tokens": [
+                    "preciso",
+                    "de",
+                    "um",
+                    "carregador",
+                    "Por",
+                    "outras",
+                    "palavras",
+                    "vale",
+                    "a",
+                    "pena",
+                    "considerar",
+                    "Eu"
+                  ],
+                  "answerTokens": [
+                    "Eu",
+                    "preciso",
+                    "de",
+                    "um",
+                    "carregador",
+                    "Por",
+                    "outras",
+                    "palavras",
+                    "vale",
+                    "a",
+                    "pena",
+                    "considerar"
+                  ],
+                  "sourcePhrase": "Necesito un cargador. En otras palabras, merece la pena considerarlo.",
+                  "feedbackOnError": {
+                    "type": "word_order",
+                    "explanation": "El orden correcto es «Eu preciso de um carregador Por outras palavras vale a pena considerar».",
+                    "ruleRef": "gp-b2-passive-voice"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "El orden produce una frase natural."
+                  }
+                },
+                {
+                  "type": "ClozeDragDrop",
+                  "id": "es-pt-b2-u14-l02-e03",
+                  "passage": "Eu {{b1}} de um {{b2}}",
+                  "blanks": [
+                    {
+                      "id": "b1",
+                      "answer": "preciso",
+                      "options": [
+                        "preciso",
+                        "muito",
+                        "hoje"
+                      ]
+                    },
+                    {
+                      "id": "b2",
+                      "answer": "carregador",
+                      "options": [
+                        "carregador",
+                        "muito",
+                        "hoje"
+                      ]
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "Las dos formas deben encajar con el contexto de la frase.",
+                    "ruleRef": "gp-b2-speculation"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Los dos huecos encajan con la situación."
+                  }
+                },
+                {
+                  "type": "SemanticMatch",
+                  "id": "es-pt-b2-u14-l02-e04",
+                  "instructions": "Clasifica la función comunicativa de cada intervención.",
+                  "pairs": [
+                    {
+                      "left": "Eu preciso de um carregador. Por outras palavras, vale a pena considerar.",
+                      "right": "Planteamiento",
+                      "register": "formal",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    },
+                    {
+                      "left": "Preciso de um aplicativo de mensagens. Receio que possa ser mais complicado.",
+                      "right": "Concesión",
+                      "register": "neutral",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    },
+                    {
+                      "left": "Eu preciso de fones de ouvido. Para ser honesto, tenho sentimentos mistos.",
+                      "right": "Conclusión",
+                      "register": "informal",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "Cada intervención cumple una función comunicativa distinta.",
+                    "ruleRef": "gp-b2-passive-voice"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has identificado la función de cada intervención."
+                  }
+                },
+                {
+                  "type": "SemanticMatch",
+                  "id": "es-pt-b2-u14-l02-e05",
+                  "instructions": "Distingue el registro de cada intervención.",
+                  "pairs": [
+                    {
+                      "left": "Eu preciso de um carregador. Por outras palavras, vale a pena considerar.",
+                      "right": "Formal",
+                      "register": "formal",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    },
+                    {
+                      "left": "Preciso de um aplicativo de mensagens. Receio que possa ser mais complicado.",
+                      "right": "Neutral",
+                      "register": "neutral",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    },
+                    {
+                      "left": "Eu preciso de fones de ouvido. Para ser honesto, tenho sentimentos mistos.",
+                      "right": "Informal",
+                      "register": "informal",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "register",
+                    "explanation": "El registro cambia según el contexto y la relación con el interlocutor.",
+                    "ruleRef": "gp-b2-speculation"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has distinguido el registro de cada intervención."
+                  }
+                },
+                {
+                  "type": "AudioOnlyPrompt",
+                  "id": "es-pt-b2-u14-l02-e06",
+                  "audioText": "Preciso de um aplicativo de mensagens. Receio que possa ser mais complicado.",
+                  "question": "¿Qué ha dicho el hablante?",
+                  "options": [
+                    "Preciso de um aplicativo de mensagens. Receio que possa ser mais complicado.",
+                    "Eu preciso de um carregador. Por outras palavras, vale a pena considerar.",
+                    "Eu preciso de fones de ouvido. Para ser honesto, tenho sentimentos mistos."
+                  ],
+                  "correctIndex": 0,
+                  "allowSlowPlayback": true,
+                  "feedbackOnError": {
+                    "type": "comprehension",
+                    "explanation": "El audio dice «Preciso de um aplicativo de mensagens. Receio que possa ser mais complicado.».",
+                    "ruleRef": "gp-b2-passive-voice"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has comprendido el mensaje del audio."
+                  }
+                },
+                {
+                  "type": "AudioOnlyPrompt",
+                  "id": "es-pt-b2-u14-l02-e07",
+                  "audioText": "Eu preciso de fones de ouvido. Para ser honesto, tenho sentimentos mistos.",
+                  "question": "¿Cuál es la idea principal?",
+                  "options": [
+                    "Eu preciso de fones de ouvido. Para ser honesto, tenho sentimentos mistos.",
+                    "Eu preciso de um carregador. Por outras palavras, vale a pena considerar.",
+                    "Preciso de um aplicativo de mensagens. Receio que possa ser mais complicado."
+                  ],
+                  "correctIndex": 0,
+                  "allowSlowPlayback": false,
+                  "feedbackOnError": {
+                    "type": "comprehension",
+                    "explanation": "El audio dice «Eu preciso de fones de ouvido. Para ser honesto, tenho sentimentos mistos.».",
+                    "ruleRef": "gp-b2-speculation"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has identificado la idea principal."
+                  }
+                },
+                {
+                  "type": "ListenType",
+                  "id": "es-pt-b2-u14-l02-e08",
+                  "audioText": "Eu preciso de fones de ouvido. Para ser honesto, tenho sentimentos mistos.",
+                  "transcription": "Eu preciso de fones de ouvido. Para ser honesto, tenho sentimentos mistos.",
+                  "feedbackOnError": {
+                    "type": "spelling",
+                    "explanation": "Escribe exactamente «Eu preciso de fones de ouvido. Para ser honesto, tenho sentimentos mistos.».",
+                    "ruleRef": "gp-b2-passive-voice"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La transcripción coincide con el audio."
+                  }
+                },
+                {
+                  "type": "SpeakRepeat",
+                  "id": "es-pt-b2-u14-l02-e09",
+                  "targetPhrase": "Eu preciso de fones de ouvido. Para ser honesto, tenho sentimentos mistos.",
+                  "audioText": "Eu preciso de fones de ouvido. Para ser honesto, tenho sentimentos mistos.",
+                  "feedbackOnError": {
+                    "type": "pronunciation",
+                    "explanation": "Repite «Eu preciso de fones de ouvido. Para ser honesto, tenho sentimentos mistos.» con claridad.",
+                    "ruleRef": "gp-b2-passive-voice"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La frase se entiende y mantiene el ritmo."
+                  }
+                },
+                {
+                  "type": "FreeSpeakingPrompt",
+                  "id": "es-pt-b2-u14-l02-e10",
+                  "prompt": "Argumenta y matiza una opinión sobre la tecnología.",
+                  "minTokens": 20,
+                  "conceptClusters": [
+                    [
+                      "preciso"
+                    ],
+                    [
+                      "carregador"
+                    ],
+                    [
+                      "outras"
+                    ]
+                  ],
+                  "modelAnswer": "Eu preciso de um carregador. Por outras palavras, vale a pena considerar. Preciso de um aplicativo de mensagens. Receio que possa ser mais complicado. Eu preciso de fones de ouvido. Para ser honesto, tenho sentimentos mistos.",
+                  "selfAssessmentCriteria": [
+                    "¿La respuesta argumenta y responde a la tarea?",
+                    "¿Usa las dos estructuras gramaticales de la lección?",
+                    "¿Incluye una concesión o una matización?"
+                  ],
+                  "grammarRuleRefs": [
+                    "gp-b2-passive-voice",
+                    "gp-b2-speculation"
+                  ],
+                  "timeLimitSeconds": 90,
+                  "minWpm": 70,
+                  "maxWpm": 160,
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "La respuesta modelo desarrolla una opinión con matices y una concesión.",
+                    "ruleRef": "gp-b2-passive-voice"
+                  }
+                }
+              ]
+            },
+            {
+              "id": "es-pt-b2-u14-l03",
+              "title": "Uso de las redes sociales",
+              "cefrLevel": "B2",
+              "scenario": "Situación comunicativa avanzada sobre las redes sociales.",
+              "canDo": "Puedo argumentar y matizar sobre las redes sociales.",
+              "grammarPoints": [
+                {
+                  "id": "gp-b2-passive-voice",
+                  "label": "Passive voice",
+                  "description": "Be + participio desplaza el foco a la acción o al resultado."
+                },
+                {
+                  "id": "gp-b2-speculation",
+                  "label": "Speculation",
+                  "description": "May, might y could expresan distintos grados de posibilidad."
+                }
+              ],
+              "vocabFrequencyBand": "3000-5000",
+              "culturalNotes": [
+                {
+                  "idiom": "ficar de olho",
+                  "note": "Expresión para vigilar algo.",
+                  "translation": "estar pendiente"
+                }
+              ],
+              "microLesson": {
+                "title": "Uso de las redes sociales",
+                "goals": [
+                  "Usar vocabulario avanzado de las redes sociales.",
+                  "Aplicar passive voice y speculation.",
+                  "Argumentar y matizar sobre las redes sociales."
+                ],
+                "sections": [
+                  {
+                    "heading": "Lengua en contexto",
+                    "body": "Passive voice: Be + participio desplaza el foco a la acción o al resultado. Speculation: May, might y could expresan distintos grados de posibilidad.",
+                    "examples": [
+                      {
+                        "source": "Uso las redes sociales para hablar con amigos. Me temo que puede ser más complicado.",
+                        "target": "Eu uso as redes sociais para conversar com amigos. Receio que possa ser mais complicado."
+                      },
+                      {
+                        "source": "Comparto fotos y vídeos de mis viajes. Sinceramente, tengo sentimientos encontrados.",
+                        "target": "Compartilho fotos e vídeos das minhas viagens. Para ser honesto, tenho sentimentos mistos."
+                      }
+                    ]
+                  }
+                ]
+              },
+              "glossary": [
+                {
+                  "term": "Eu uso as redes sociais para conversar com amigos. Receio que possa ser mais complicado.",
+                  "translations": [
+                    "Uso las redes sociales para hablar con amigos. Me temo que puede ser más complicado."
+                  ]
+                },
+                {
+                  "term": "Compartilho fotos e vídeos das minhas viagens. Para ser honesto, tenho sentimentos mistos.",
+                  "translations": [
+                    "Comparto fotos y vídeos de mis viajes. Sinceramente, tengo sentimientos encontrados."
+                  ]
+                },
+                {
+                  "term": "Tento não passar muito tempo no celular. Parece que isto está a mudar.",
+                  "translations": [
+                    "Intento no pasar demasiado tiempo en el móvil. Parece que esto está cambiando."
+                  ]
+                }
+              ],
+              "exercises": [
+                {
+                  "type": "MultipleChoice",
+                  "id": "es-pt-b2-u14-l03-e01",
+                  "question": "¿Cuál es la opción correcta para «Uso las redes sociales para hablar con amigos. Me temo que puede ser más complicado.»?",
+                  "options": [
+                    "Eu uso as redes sociais para conversar com amigos. Receio que possa ser mais complicado.",
+                    "Compartilho fotos e vídeos das minhas viagens. Para ser honesto, tenho sentimentos mistos.",
+                    "Tento não passar muito tempo no celular. Parece que isto está a mudar."
+                  ],
+                  "correctIndex": 0,
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "«Uso las redes sociales para hablar con amigos. Me temo que puede ser más complicado.» se dice «Eu uso as redes sociais para conversar com amigos. Receio que possa ser mais complicado.».",
+                    "ruleRef": "gp-b2-passive-voice"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has elegido la traducción correcta."
+                  }
+                },
+                {
+                  "type": "OrderWords",
+                  "id": "es-pt-b2-u14-l03-e02",
+                  "tokens": [
+                    "uso",
+                    "as",
+                    "redes",
+                    "sociais",
+                    "para",
+                    "conversar",
+                    "com",
+                    "amigos",
+                    "Receio",
+                    "que",
+                    "possa",
+                    "ser",
+                    "mais",
+                    "complicado",
+                    "Eu"
+                  ],
+                  "answerTokens": [
+                    "Eu",
+                    "uso",
+                    "as",
+                    "redes",
+                    "sociais",
+                    "para",
+                    "conversar",
+                    "com",
+                    "amigos",
+                    "Receio",
+                    "que",
+                    "possa",
+                    "ser",
+                    "mais",
+                    "complicado"
+                  ],
+                  "sourcePhrase": "Uso las redes sociales para hablar con amigos. Me temo que puede ser más complicado.",
+                  "feedbackOnError": {
+                    "type": "word_order",
+                    "explanation": "El orden correcto es «Eu uso as redes sociais para conversar com amigos Receio que possa ser mais complicado».",
+                    "ruleRef": "gp-b2-passive-voice"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "El orden produce una frase natural."
+                  }
+                },
+                {
+                  "type": "ClozeDragDrop",
+                  "id": "es-pt-b2-u14-l03-e03",
+                  "passage": "Eu {{b1}} as {{b2}} sociais para conversar com amigos",
+                  "blanks": [
+                    {
+                      "id": "b1",
+                      "answer": "uso",
+                      "options": [
+                        "uso",
+                        "sociais",
+                        "conversar"
+                      ]
+                    },
+                    {
+                      "id": "b2",
+                      "answer": "redes",
+                      "options": [
+                        "redes",
+                        "sociais",
+                        "conversar"
+                      ]
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "Las dos formas deben encajar con el contexto de la frase.",
+                    "ruleRef": "gp-b2-speculation"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Los dos huecos encajan con la situación."
+                  }
+                },
+                {
+                  "type": "SemanticMatch",
+                  "id": "es-pt-b2-u14-l03-e04",
+                  "instructions": "Clasifica la función comunicativa de cada intervención.",
+                  "pairs": [
+                    {
+                      "left": "Eu uso as redes sociais para conversar com amigos. Receio que possa ser mais complicado.",
+                      "right": "Planteamiento",
+                      "register": "formal",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    },
+                    {
+                      "left": "Compartilho fotos e vídeos das minhas viagens. Para ser honesto, tenho sentimentos mistos.",
+                      "right": "Concesión",
+                      "register": "neutral",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    },
+                    {
+                      "left": "Tento não passar muito tempo no celular. Parece que isto está a mudar.",
+                      "right": "Conclusión",
+                      "register": "informal",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "Cada intervención cumple una función comunicativa distinta.",
+                    "ruleRef": "gp-b2-passive-voice"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has identificado la función de cada intervención."
+                  }
+                },
+                {
+                  "type": "SemanticMatch",
+                  "id": "es-pt-b2-u14-l03-e05",
+                  "instructions": "Distingue el registro de cada intervención.",
+                  "pairs": [
+                    {
+                      "left": "Eu uso as redes sociais para conversar com amigos. Receio que possa ser mais complicado.",
+                      "right": "Formal",
+                      "register": "formal",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    },
+                    {
+                      "left": "Compartilho fotos e vídeos das minhas viagens. Para ser honesto, tenho sentimentos mistos.",
+                      "right": "Neutral",
+                      "register": "neutral",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    },
+                    {
+                      "left": "Tento não passar muito tempo no celular. Parece que isto está a mudar.",
+                      "right": "Informal",
+                      "register": "informal",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "register",
+                    "explanation": "El registro cambia según el contexto y la relación con el interlocutor.",
+                    "ruleRef": "gp-b2-speculation"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has distinguido el registro de cada intervención."
+                  }
+                },
+                {
+                  "type": "AudioOnlyPrompt",
+                  "id": "es-pt-b2-u14-l03-e06",
+                  "audioText": "Compartilho fotos e vídeos das minhas viagens. Para ser honesto, tenho sentimentos mistos.",
+                  "question": "¿Qué ha dicho el hablante?",
+                  "options": [
+                    "Compartilho fotos e vídeos das minhas viagens. Para ser honesto, tenho sentimentos mistos.",
+                    "Eu uso as redes sociais para conversar com amigos. Receio que possa ser mais complicado.",
+                    "Tento não passar muito tempo no celular. Parece que isto está a mudar."
+                  ],
+                  "correctIndex": 0,
+                  "allowSlowPlayback": true,
+                  "feedbackOnError": {
+                    "type": "comprehension",
+                    "explanation": "El audio dice «Compartilho fotos e vídeos das minhas viagens. Para ser honesto, tenho sentimentos mistos.».",
+                    "ruleRef": "gp-b2-passive-voice"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has comprendido el mensaje del audio."
+                  }
+                },
+                {
+                  "type": "AudioOnlyPrompt",
+                  "id": "es-pt-b2-u14-l03-e07",
+                  "audioText": "Tento não passar muito tempo no celular. Parece que isto está a mudar.",
+                  "question": "¿Cuál es la idea principal?",
+                  "options": [
+                    "Tento não passar muito tempo no celular. Parece que isto está a mudar.",
+                    "Eu uso as redes sociais para conversar com amigos. Receio que possa ser mais complicado.",
+                    "Compartilho fotos e vídeos das minhas viagens. Para ser honesto, tenho sentimentos mistos."
+                  ],
+                  "correctIndex": 0,
+                  "allowSlowPlayback": false,
+                  "feedbackOnError": {
+                    "type": "comprehension",
+                    "explanation": "El audio dice «Tento não passar muito tempo no celular. Parece que isto está a mudar.».",
+                    "ruleRef": "gp-b2-speculation"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has identificado la idea principal."
+                  }
+                },
+                {
+                  "type": "ListenType",
+                  "id": "es-pt-b2-u14-l03-e08",
+                  "audioText": "Tento não passar muito tempo no celular. Parece que isto está a mudar.",
+                  "transcription": "Tento não passar muito tempo no celular. Parece que isto está a mudar.",
+                  "feedbackOnError": {
+                    "type": "spelling",
+                    "explanation": "Escribe exactamente «Tento não passar muito tempo no celular. Parece que isto está a mudar.».",
+                    "ruleRef": "gp-b2-passive-voice"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La transcripción coincide con el audio."
+                  }
+                },
+                {
+                  "type": "SpeakRepeat",
+                  "id": "es-pt-b2-u14-l03-e09",
+                  "targetPhrase": "Tento não passar muito tempo no celular. Parece que isto está a mudar.",
+                  "audioText": "Tento não passar muito tempo no celular. Parece que isto está a mudar.",
+                  "feedbackOnError": {
+                    "type": "pronunciation",
+                    "explanation": "Repite «Tento não passar muito tempo no celular. Parece que isto está a mudar.» con claridad.",
+                    "ruleRef": "gp-b2-passive-voice"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La frase se entiende y mantiene el ritmo."
+                  }
+                },
+                {
+                  "type": "FreeSpeakingPrompt",
+                  "id": "es-pt-b2-u14-l03-e10",
+                  "prompt": "Argumenta y matiza una opinión sobre las redes sociales.",
+                  "minTokens": 20,
+                  "conceptClusters": [
+                    [
+                      "uso"
+                    ],
+                    [
+                      "redes"
+                    ],
+                    [
+                      "sociais"
+                    ]
+                  ],
+                  "modelAnswer": "Eu uso as redes sociais para conversar com amigos. Receio que possa ser mais complicado. Compartilho fotos e vídeos das minhas viagens. Para ser honesto, tenho sentimentos mistos. Tento não passar muito tempo no celular. Parece que isto está a mudar.",
+                  "selfAssessmentCriteria": [
+                    "¿La respuesta argumenta y responde a la tarea?",
+                    "¿Usa las dos estructuras gramaticales de la lección?",
+                    "¿Incluye una concesión o una matización?"
+                  ],
+                  "grammarRuleRefs": [
+                    "gp-b2-passive-voice",
+                    "gp-b2-speculation"
+                  ],
+                  "timeLimitSeconds": 90,
+                  "minWpm": 70,
+                  "maxWpm": 160,
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "La respuesta modelo desarrolla una opinión con matices y una concesión.",
+                    "ruleRef": "gp-b2-passive-voice"
+                  }
+                }
+              ]
+            },
+            {
+              "id": "es-pt-b2-u14-l04",
+              "title": "May / might",
+              "cefrLevel": "B2",
+              "scenario": "Situación comunicativa avanzada sobre la posibilidad.",
+              "canDo": "Puedo argumentar y matizar sobre la posibilidad.",
+              "grammarPoints": [
+                {
+                  "id": "gp-b2-passive-voice",
+                  "label": "Passive voice",
+                  "description": "Be + participio desplaza el foco a la acción o al resultado."
+                },
+                {
+                  "id": "gp-b2-speculation",
+                  "label": "Speculation",
+                  "description": "May, might y could expresan distintos grados de posibilidad."
+                }
+              ],
+              "vocabFrequencyBand": "3000-5000",
+              "culturalNotes": [
+                {
+                  "idiom": "custar os olhos da cara",
+                  "note": "Expresión para decir que algo es muy caro.",
+                  "translation": "costar un ojo de la cara"
+                }
+              ],
+              "microLesson": {
+                "title": "May / might",
+                "goals": [
+                  "Usar vocabulario avanzado de la posibilidad.",
+                  "Aplicar passive voice y speculation.",
+                  "Argumentar y matizar sobre la posibilidad."
+                ],
+                "sections": [
+                  {
+                    "heading": "Lengua en contexto",
+                    "body": "Passive voice: Be + participio desplaza el foco a la acción o al resultado. Speculation: May, might y could expresan distintos grados de posibilidad.",
+                    "examples": [
+                      {
+                        "source": "Quizá vaya al concierto el sábado. Sinceramente, tengo sentimientos encontrados.",
+                        "target": "Talvez eu vá ao show no sábado. Para ser honesto, tenho sentimentos mistos."
+                      },
+                      {
+                        "source": "Puede que llueva por la tarde. Parece que esto está cambiando.",
+                        "target": "Pode chover à tarde. Parece que isto está a mudar."
+                      }
+                    ]
+                  }
+                ]
+              },
+              "glossary": [
+                {
+                  "term": "Talvez eu vá ao show no sábado. Para ser honesto, tenho sentimentos mistos.",
+                  "translations": [
+                    "Quizá vaya al concierto el sábado. Sinceramente, tengo sentimientos encontrados."
+                  ]
+                },
+                {
+                  "term": "Pode chover à tarde. Parece que isto está a mudar.",
+                  "translations": [
+                    "Puede que llueva por la tarde. Parece que esto está cambiando."
+                  ]
+                },
+                {
+                  "term": "Talvez eu visite meus primos no domingo. Do meu ponto de vista, é uma opção razoável.",
+                  "translations": [
+                    "Quizá visite a mis primos el domingo. Desde mi punto de vista, es una opción razonable."
+                  ]
+                }
+              ],
+              "exercises": [
+                {
+                  "type": "MultipleChoice",
+                  "id": "es-pt-b2-u14-l04-e01",
+                  "question": "¿Cuál es la opción correcta para «Quizá vaya al concierto el sábado. Sinceramente, tengo sentimientos encontrados.»?",
+                  "options": [
+                    "Talvez eu vá ao show no sábado. Para ser honesto, tenho sentimentos mistos.",
+                    "Pode chover à tarde. Parece que isto está a mudar.",
+                    "Talvez eu visite meus primos no domingo. Do meu ponto de vista, é uma opção razoável."
+                  ],
+                  "correctIndex": 0,
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "«Quizá vaya al concierto el sábado. Sinceramente, tengo sentimientos encontrados.» se dice «Talvez eu vá ao show no sábado. Para ser honesto, tenho sentimentos mistos.».",
+                    "ruleRef": "gp-b2-passive-voice"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has elegido la traducción correcta."
+                  }
+                },
+                {
+                  "type": "OrderWords",
+                  "id": "es-pt-b2-u14-l04-e02",
+                  "tokens": [
+                    "eu",
+                    "vá",
+                    "ao",
+                    "show",
+                    "no",
+                    "sábado",
+                    "Para",
+                    "ser",
+                    "honesto",
+                    "tenho",
+                    "sentimentos",
+                    "mistos",
+                    "Talvez"
+                  ],
+                  "answerTokens": [
+                    "Talvez",
+                    "eu",
+                    "vá",
+                    "ao",
+                    "show",
+                    "no",
+                    "sábado",
+                    "Para",
+                    "ser",
+                    "honesto",
+                    "tenho",
+                    "sentimentos",
+                    "mistos"
+                  ],
+                  "sourcePhrase": "Quizá vaya al concierto el sábado. Sinceramente, tengo sentimientos encontrados.",
+                  "feedbackOnError": {
+                    "type": "word_order",
+                    "explanation": "El orden correcto es «Talvez eu vá ao show no sábado Para ser honesto tenho sentimentos mistos».",
+                    "ruleRef": "gp-b2-passive-voice"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "El orden produce una frase natural."
+                  }
+                },
+                {
+                  "type": "ClozeDragDrop",
+                  "id": "es-pt-b2-u14-l04-e03",
+                  "passage": "{{b1}} eu vá ao {{b2}} no sábado",
+                  "blanks": [
+                    {
+                      "id": "b1",
+                      "answer": "Talvez",
+                      "options": [
+                        "Talvez",
+                        "sábado",
+                        "muito"
+                      ]
+                    },
+                    {
+                      "id": "b2",
+                      "answer": "show",
+                      "options": [
+                        "show",
+                        "sábado",
+                        "muito"
+                      ]
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "Las dos formas deben encajar con el contexto de la frase.",
+                    "ruleRef": "gp-b2-speculation"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Los dos huecos encajan con la situación."
+                  }
+                },
+                {
+                  "type": "SemanticMatch",
+                  "id": "es-pt-b2-u14-l04-e04",
+                  "instructions": "Clasifica la función comunicativa de cada intervención.",
+                  "pairs": [
+                    {
+                      "left": "Talvez eu vá ao show no sábado. Para ser honesto, tenho sentimentos mistos.",
+                      "right": "Planteamiento",
+                      "register": "formal",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    },
+                    {
+                      "left": "Pode chover à tarde. Parece que isto está a mudar.",
+                      "right": "Concesión",
+                      "register": "neutral",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    },
+                    {
+                      "left": "Talvez eu visite meus primos no domingo. Do meu ponto de vista, é uma opção razoável.",
+                      "right": "Conclusión",
+                      "register": "informal",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "Cada intervención cumple una función comunicativa distinta.",
+                    "ruleRef": "gp-b2-passive-voice"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has identificado la función de cada intervención."
+                  }
+                },
+                {
+                  "type": "SemanticMatch",
+                  "id": "es-pt-b2-u14-l04-e05",
+                  "instructions": "Distingue el registro de cada intervención.",
+                  "pairs": [
+                    {
+                      "left": "Talvez eu vá ao show no sábado. Para ser honesto, tenho sentimentos mistos.",
+                      "right": "Formal",
+                      "register": "formal",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    },
+                    {
+                      "left": "Pode chover à tarde. Parece que isto está a mudar.",
+                      "right": "Neutral",
+                      "register": "neutral",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    },
+                    {
+                      "left": "Talvez eu visite meus primos no domingo. Do meu ponto de vista, é uma opção razoável.",
+                      "right": "Informal",
+                      "register": "informal",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "register",
+                    "explanation": "El registro cambia según el contexto y la relación con el interlocutor.",
+                    "ruleRef": "gp-b2-speculation"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has distinguido el registro de cada intervención."
+                  }
+                },
+                {
+                  "type": "AudioOnlyPrompt",
+                  "id": "es-pt-b2-u14-l04-e06",
+                  "audioText": "Pode chover à tarde. Parece que isto está a mudar.",
+                  "question": "¿Qué ha dicho el hablante?",
+                  "options": [
+                    "Pode chover à tarde. Parece que isto está a mudar.",
+                    "Talvez eu vá ao show no sábado. Para ser honesto, tenho sentimentos mistos.",
+                    "Talvez eu visite meus primos no domingo. Do meu ponto de vista, é uma opção razoável."
+                  ],
+                  "correctIndex": 0,
+                  "allowSlowPlayback": true,
+                  "feedbackOnError": {
+                    "type": "comprehension",
+                    "explanation": "El audio dice «Pode chover à tarde. Parece que isto está a mudar.».",
+                    "ruleRef": "gp-b2-passive-voice"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has comprendido el mensaje del audio."
+                  }
+                },
+                {
+                  "type": "AudioOnlyPrompt",
+                  "id": "es-pt-b2-u14-l04-e07",
+                  "audioText": "Talvez eu visite meus primos no domingo. Do meu ponto de vista, é uma opção razoável.",
+                  "question": "¿Cuál es la idea principal?",
+                  "options": [
+                    "Talvez eu visite meus primos no domingo. Do meu ponto de vista, é uma opção razoável.",
+                    "Talvez eu vá ao show no sábado. Para ser honesto, tenho sentimentos mistos.",
+                    "Pode chover à tarde. Parece que isto está a mudar."
+                  ],
+                  "correctIndex": 0,
+                  "allowSlowPlayback": false,
+                  "feedbackOnError": {
+                    "type": "comprehension",
+                    "explanation": "El audio dice «Talvez eu visite meus primos no domingo. Do meu ponto de vista, é uma opção razoável.».",
+                    "ruleRef": "gp-b2-speculation"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has identificado la idea principal."
+                  }
+                },
+                {
+                  "type": "ListenType",
+                  "id": "es-pt-b2-u14-l04-e08",
+                  "audioText": "Talvez eu visite meus primos no domingo. Do meu ponto de vista, é uma opção razoável.",
+                  "transcription": "Talvez eu visite meus primos no domingo. Do meu ponto de vista, é uma opção razoável.",
+                  "feedbackOnError": {
+                    "type": "spelling",
+                    "explanation": "Escribe exactamente «Talvez eu visite meus primos no domingo. Do meu ponto de vista, é uma opção razoável.».",
+                    "ruleRef": "gp-b2-passive-voice"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La transcripción coincide con el audio."
+                  }
+                },
+                {
+                  "type": "SpeakRepeat",
+                  "id": "es-pt-b2-u14-l04-e09",
+                  "targetPhrase": "Talvez eu visite meus primos no domingo. Do meu ponto de vista, é uma opção razoável.",
+                  "audioText": "Talvez eu visite meus primos no domingo. Do meu ponto de vista, é uma opção razoável.",
+                  "feedbackOnError": {
+                    "type": "pronunciation",
+                    "explanation": "Repite «Talvez eu visite meus primos no domingo. Do meu ponto de vista, é uma opção razoável.» con claridad.",
+                    "ruleRef": "gp-b2-passive-voice"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La frase se entiende y mantiene el ritmo."
+                  }
+                },
+                {
+                  "type": "FreeSpeakingPrompt",
+                  "id": "es-pt-b2-u14-l04-e10",
+                  "prompt": "Argumenta y matiza una opinión sobre la posibilidad.",
+                  "minTokens": 20,
+                  "conceptClusters": [
+                    [
+                      "Talvez"
+                    ],
+                    [
+                      "show"
+                    ],
+                    [
+                      "sábado"
+                    ]
+                  ],
+                  "modelAnswer": "Talvez eu vá ao show no sábado. Para ser honesto, tenho sentimentos mistos. Pode chover à tarde. Parece que isto está a mudar. Talvez eu visite meus primos no domingo. Do meu ponto de vista, é uma opção razoável.",
+                  "selfAssessmentCriteria": [
+                    "¿La respuesta argumenta y responde a la tarea?",
+                    "¿Usa las dos estructuras gramaticales de la lección?",
+                    "¿Incluye una concesión o una matización?"
+                  ],
+                  "grammarRuleRefs": [
+                    "gp-b2-passive-voice",
+                    "gp-b2-speculation"
+                  ],
+                  "timeLimitSeconds": 90,
+                  "minWpm": 70,
+                  "maxWpm": 160,
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "La respuesta modelo desarrolla una opinión con matices y una concesión.",
+                    "ruleRef": "gp-b2-passive-voice"
+                  }
+                }
+              ]
+            },
+            {
+              "id": "es-pt-b2-u14-l05",
+              "title": "Consejos tecnológicos",
+              "cefrLevel": "B2",
+              "scenario": "Situación comunicativa avanzada sobre los consejos tecnológicos.",
+              "canDo": "Puedo argumentar y matizar sobre los consejos tecnológicos.",
+              "grammarPoints": [
+                {
+                  "id": "gp-b2-passive-voice",
+                  "label": "Passive voice",
+                  "description": "Be + participio desplaza el foco a la acción o al resultado."
+                },
+                {
+                  "id": "gp-b2-speculation",
+                  "label": "Speculation",
+                  "description": "May, might y could expresan distintos grados de posibilidad."
+                }
+              ],
+              "vocabFrequencyBand": "3000-5000",
+              "culturalNotes": [
+                {
+                  "idiom": "virar a noite",
+                  "note": "Expresión para trabajar hasta muy tarde.",
+                  "translation": "trasnochar"
+                }
+              ],
+              "microLesson": {
+                "title": "Consejos tecnológicos",
+                "goals": [
+                  "Usar vocabulario avanzado de los consejos tecnológicos.",
+                  "Aplicar passive voice y speculation.",
+                  "Argumentar y matizar sobre los consejos tecnológicos."
+                ],
+                "sections": [
+                  {
+                    "heading": "Lengua en contexto",
+                    "body": "Passive voice: Be + participio desplaza el foco a la acción o al resultado. Speculation: May, might y could expresan distintos grados de posibilidad.",
+                    "examples": [
+                      {
+                        "source": "Deberías actualizar el sistema. Parece que esto está cambiando.",
+                        "target": "Você deve atualizar o sistema. Parece que isto está a mudar."
+                      },
+                      {
+                        "source": "Deberías hacer copias de seguridad. Desde mi punto de vista, es una opción razonable.",
+                        "target": "Você deve fazer cópias de segurança. Do meu ponto de vista, é uma opção razoável."
+                      }
+                    ]
+                  }
+                ]
+              },
+              "glossary": [
+                {
+                  "term": "Você deve atualizar o sistema. Parece que isto está a mudar.",
+                  "translations": [
+                    "Deberías actualizar el sistema. Parece que esto está cambiando."
+                  ]
+                },
+                {
+                  "term": "Você deve fazer cópias de segurança. Do meu ponto de vista, é uma opção razoável.",
+                  "translations": [
+                    "Deberías hacer copias de seguridad. Desde mi punto de vista, es una opción razonable."
+                  ]
+                },
+                {
+                  "term": "Você deve usar senhas fortes. Ainda assim, também há vantagens.",
+                  "translations": [
+                    "Deberías usar contraseñas seguras. No obstante, también tiene ventajas."
+                  ]
+                }
+              ],
+              "exercises": [
+                {
+                  "type": "MultipleChoice",
+                  "id": "es-pt-b2-u14-l05-e01",
+                  "question": "¿Cuál es la opción correcta para «Deberías actualizar el sistema. Parece que esto está cambiando.»?",
+                  "options": [
+                    "Você deve atualizar o sistema. Parece que isto está a mudar.",
+                    "Você deve fazer cópias de segurança. Do meu ponto de vista, é uma opção razoável.",
+                    "Você deve usar senhas fortes. Ainda assim, também há vantagens."
+                  ],
+                  "correctIndex": 0,
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "«Deberías actualizar el sistema. Parece que esto está cambiando.» se dice «Você deve atualizar o sistema. Parece que isto está a mudar.».",
+                    "ruleRef": "gp-b2-passive-voice"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has elegido la traducción correcta."
+                  }
+                },
+                {
+                  "type": "OrderWords",
+                  "id": "es-pt-b2-u14-l05-e02",
+                  "tokens": [
+                    "deve",
+                    "atualizar",
+                    "o",
+                    "sistema",
+                    "Parece",
+                    "que",
+                    "isto",
+                    "está",
+                    "a",
+                    "mudar",
+                    "Você"
+                  ],
+                  "answerTokens": [
+                    "Você",
+                    "deve",
+                    "atualizar",
+                    "o",
+                    "sistema",
+                    "Parece",
+                    "que",
+                    "isto",
+                    "está",
+                    "a",
+                    "mudar"
+                  ],
+                  "sourcePhrase": "Deberías actualizar el sistema. Parece que esto está cambiando.",
+                  "feedbackOnError": {
+                    "type": "word_order",
+                    "explanation": "El orden correcto es «Você deve atualizar o sistema Parece que isto está a mudar».",
+                    "ruleRef": "gp-b2-passive-voice"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "El orden produce una frase natural."
+                  }
+                },
+                {
+                  "type": "ClozeDragDrop",
+                  "id": "es-pt-b2-u14-l05-e03",
+                  "passage": "Você {{b1}} {{b2}} o sistema",
+                  "blanks": [
+                    {
+                      "id": "b1",
+                      "answer": "deve",
+                      "options": [
+                        "deve",
+                        "sistema",
+                        "muito"
+                      ]
+                    },
+                    {
+                      "id": "b2",
+                      "answer": "atualizar",
+                      "options": [
+                        "atualizar",
+                        "sistema",
+                        "muito"
+                      ]
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "Las dos formas deben encajar con el contexto de la frase.",
+                    "ruleRef": "gp-b2-speculation"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Los dos huecos encajan con la situación."
+                  }
+                },
+                {
+                  "type": "SemanticMatch",
+                  "id": "es-pt-b2-u14-l05-e04",
+                  "instructions": "Clasifica la función comunicativa de cada intervención.",
+                  "pairs": [
+                    {
+                      "left": "Você deve atualizar o sistema. Parece que isto está a mudar.",
+                      "right": "Planteamiento",
+                      "register": "formal",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    },
+                    {
+                      "left": "Você deve fazer cópias de segurança. Do meu ponto de vista, é uma opção razoável.",
+                      "right": "Concesión",
+                      "register": "neutral",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    },
+                    {
+                      "left": "Você deve usar senhas fortes. Ainda assim, também há vantagens.",
+                      "right": "Conclusión",
+                      "register": "informal",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "Cada intervención cumple una función comunicativa distinta.",
+                    "ruleRef": "gp-b2-passive-voice"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has identificado la función de cada intervención."
+                  }
+                },
+                {
+                  "type": "SemanticMatch",
+                  "id": "es-pt-b2-u14-l05-e05",
+                  "instructions": "Distingue el registro de cada intervención.",
+                  "pairs": [
+                    {
+                      "left": "Você deve atualizar o sistema. Parece que isto está a mudar.",
+                      "right": "Formal",
+                      "register": "formal",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    },
+                    {
+                      "left": "Você deve fazer cópias de segurança. Do meu ponto de vista, é uma opção razoável.",
+                      "right": "Neutral",
+                      "register": "neutral",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    },
+                    {
+                      "left": "Você deve usar senhas fortes. Ainda assim, também há vantagens.",
+                      "right": "Informal",
+                      "register": "informal",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "register",
+                    "explanation": "El registro cambia según el contexto y la relación con el interlocutor.",
+                    "ruleRef": "gp-b2-speculation"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has distinguido el registro de cada intervención."
+                  }
+                },
+                {
+                  "type": "AudioOnlyPrompt",
+                  "id": "es-pt-b2-u14-l05-e06",
+                  "audioText": "Você deve fazer cópias de segurança. Do meu ponto de vista, é uma opção razoável.",
+                  "question": "¿Qué ha dicho el hablante?",
+                  "options": [
+                    "Você deve fazer cópias de segurança. Do meu ponto de vista, é uma opção razoável.",
+                    "Você deve atualizar o sistema. Parece que isto está a mudar.",
+                    "Você deve usar senhas fortes. Ainda assim, também há vantagens."
+                  ],
+                  "correctIndex": 0,
+                  "allowSlowPlayback": true,
+                  "feedbackOnError": {
+                    "type": "comprehension",
+                    "explanation": "El audio dice «Você deve fazer cópias de segurança. Do meu ponto de vista, é uma opção razoável.».",
+                    "ruleRef": "gp-b2-passive-voice"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has comprendido el mensaje del audio."
+                  }
+                },
+                {
+                  "type": "AudioOnlyPrompt",
+                  "id": "es-pt-b2-u14-l05-e07",
+                  "audioText": "Você deve usar senhas fortes. Ainda assim, também há vantagens.",
+                  "question": "¿Cuál es la idea principal?",
+                  "options": [
+                    "Você deve usar senhas fortes. Ainda assim, também há vantagens.",
+                    "Você deve atualizar o sistema. Parece que isto está a mudar.",
+                    "Você deve fazer cópias de segurança. Do meu ponto de vista, é uma opção razoável."
+                  ],
+                  "correctIndex": 0,
+                  "allowSlowPlayback": false,
+                  "feedbackOnError": {
+                    "type": "comprehension",
+                    "explanation": "El audio dice «Você deve usar senhas fortes. Ainda assim, também há vantagens.».",
+                    "ruleRef": "gp-b2-speculation"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has identificado la idea principal."
+                  }
+                },
+                {
+                  "type": "ListenType",
+                  "id": "es-pt-b2-u14-l05-e08",
+                  "audioText": "Você deve usar senhas fortes. Ainda assim, também há vantagens.",
+                  "transcription": "Você deve usar senhas fortes. Ainda assim, também há vantagens.",
+                  "feedbackOnError": {
+                    "type": "spelling",
+                    "explanation": "Escribe exactamente «Você deve usar senhas fortes. Ainda assim, também há vantagens.».",
+                    "ruleRef": "gp-b2-passive-voice"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La transcripción coincide con el audio."
+                  }
+                },
+                {
+                  "type": "SpeakRepeat",
+                  "id": "es-pt-b2-u14-l05-e09",
+                  "targetPhrase": "Você deve usar senhas fortes. Ainda assim, também há vantagens.",
+                  "audioText": "Você deve usar senhas fortes. Ainda assim, também há vantagens.",
+                  "feedbackOnError": {
+                    "type": "pronunciation",
+                    "explanation": "Repite «Você deve usar senhas fortes. Ainda assim, também há vantagens.» con claridad.",
+                    "ruleRef": "gp-b2-passive-voice"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La frase se entiende y mantiene el ritmo."
+                  }
+                },
+                {
+                  "type": "FreeSpeakingPrompt",
+                  "id": "es-pt-b2-u14-l05-e10",
+                  "prompt": "Argumenta y matiza una opinión sobre los consejos tecnológicos.",
+                  "minTokens": 20,
+                  "conceptClusters": [
+                    [
+                      "deve"
+                    ],
+                    [
+                      "atualizar"
+                    ],
+                    [
+                      "sistema"
+                    ]
+                  ],
+                  "modelAnswer": "Você deve atualizar o sistema. Parece que isto está a mudar. Você deve fazer cópias de segurança. Do meu ponto de vista, é uma opção razoável. Você deve usar senhas fortes. Ainda assim, também há vantagens.",
+                  "selfAssessmentCriteria": [
+                    "¿La respuesta argumenta y responde a la tarea?",
+                    "¿Usa las dos estructuras gramaticales de la lección?",
+                    "¿Incluye una concesión o una matización?"
+                  ],
+                  "grammarRuleRefs": [
+                    "gp-b2-passive-voice",
+                    "gp-b2-speculation"
+                  ],
+                  "timeLimitSeconds": 90,
+                  "minWpm": 70,
+                  "maxWpm": 160,
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "La respuesta modelo desarrolla una opinión con matices y una concesión.",
+                    "ruleRef": "gp-b2-passive-voice"
+                  }
+                }
+              ]
+            },
+            {
+              "id": "es-pt-b2-u14-l06",
+              "title": "Problemas técnicos",
+              "cefrLevel": "B2",
+              "scenario": "Situación comunicativa avanzada sobre los problemas técnicos.",
+              "canDo": "Puedo argumentar y matizar sobre los problemas técnicos.",
+              "grammarPoints": [
+                {
+                  "id": "gp-b2-passive-voice",
+                  "label": "Passive voice",
+                  "description": "Be + participio desplaza el foco a la acción o al resultado."
+                },
+                {
+                  "id": "gp-b2-speculation",
+                  "label": "Speculation",
+                  "description": "May, might y could expresan distintos grados de posibilidad."
+                }
+              ],
+              "vocabFrequencyBand": "3000-5000",
+              "culturalNotes": [
+                {
+                  "idiom": "o que importa",
+                  "note": "Expresión para señalar lo esencial.",
+                  "translation": "lo que importa"
+                }
+              ],
+              "microLesson": {
+                "title": "Problemas técnicos",
+                "goals": [
+                  "Usar vocabulario avanzado de los problemas técnicos.",
+                  "Aplicar passive voice y speculation.",
+                  "Argumentar y matizar sobre los problemas técnicos."
+                ],
+                "sections": [
+                  {
+                    "heading": "Lengua en contexto",
+                    "body": "Passive voice: Be + participio desplaza el foco a la acción o al resultado. Speculation: May, might y could expresan distintos grados de posibilidad.",
+                    "examples": [
+                      {
+                        "source": "¿Podrías ayudarme con este problema? Desde mi punto de vista, es una opción razonable.",
+                        "target": "Você poderia me ajudar com esse problema. Do meu ponto de vista, é uma opção razoável."
+                      },
+                      {
+                        "source": "Mi ordenador no se enciende. No obstante, también tiene ventajas.",
+                        "target": "Meu computador não liga. Ainda assim, também há vantagens."
+                      }
+                    ]
+                  }
+                ]
+              },
+              "glossary": [
+                {
+                  "term": "Você poderia me ajudar com esse problema. Do meu ponto de vista, é uma opção razoável.",
+                  "translations": [
+                    "¿Podrías ayudarme con este problema? Desde mi punto de vista, es una opción razonable."
+                  ]
+                },
+                {
+                  "term": "Meu computador não liga. Ainda assim, também há vantagens.",
+                  "translations": [
+                    "Mi ordenador no se enciende. No obstante, también tiene ventajas."
+                  ]
+                },
+                {
+                  "term": "Você pode verificar a conexão. No fim do dia, é preciso priorizar.",
+                  "translations": [
+                    "¿Puedes revisar la conexión? A fin de cuentas, hay que priorizar."
+                  ]
+                }
+              ],
+              "exercises": [
+                {
+                  "type": "MultipleChoice",
+                  "id": "es-pt-b2-u14-l06-e01",
+                  "question": "¿Cuál es la opción correcta para «¿Podrías ayudarme con este problema? Desde mi punto de vista, es una opción razonable.»?",
+                  "options": [
+                    "Você poderia me ajudar com esse problema. Do meu ponto de vista, é uma opção razoável.",
+                    "Meu computador não liga. Ainda assim, também há vantagens.",
+                    "Você pode verificar a conexão. No fim do dia, é preciso priorizar."
+                  ],
+                  "correctIndex": 0,
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "«¿Podrías ayudarme con este problema? Desde mi punto de vista, es una opción razonable.» se dice «Você poderia me ajudar com esse problema. Do meu ponto de vista, é uma opção razoável.».",
+                    "ruleRef": "gp-b2-passive-voice"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has elegido la traducción correcta."
+                  }
+                },
+                {
+                  "type": "OrderWords",
+                  "id": "es-pt-b2-u14-l06-e02",
+                  "tokens": [
+                    "poderia",
+                    "me",
+                    "ajudar",
+                    "com",
+                    "esse",
+                    "problema",
+                    "Do",
+                    "meu",
+                    "ponto",
+                    "de",
+                    "vista",
+                    "é",
+                    "uma",
+                    "opção",
+                    "razoável",
+                    "Você"
+                  ],
+                  "answerTokens": [
+                    "Você",
+                    "poderia",
+                    "me",
+                    "ajudar",
+                    "com",
+                    "esse",
+                    "problema",
+                    "Do",
+                    "meu",
+                    "ponto",
+                    "de",
+                    "vista",
+                    "é",
+                    "uma",
+                    "opção",
+                    "razoável"
+                  ],
+                  "sourcePhrase": "¿Podrías ayudarme con este problema? Desde mi punto de vista, es una opción razonable.",
+                  "feedbackOnError": {
+                    "type": "word_order",
+                    "explanation": "El orden correcto es «Você poderia me ajudar com esse problema Do meu ponto de vista é uma opção razoável».",
+                    "ruleRef": "gp-b2-passive-voice"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "El orden produce una frase natural."
+                  }
+                },
+                {
+                  "type": "ClozeDragDrop",
+                  "id": "es-pt-b2-u14-l06-e03",
+                  "passage": "Você {{b1}} me {{b2}} com esse problema",
+                  "blanks": [
+                    {
+                      "id": "b1",
+                      "answer": "poderia",
+                      "options": [
+                        "poderia",
+                        "esse",
+                        "problema"
+                      ]
+                    },
+                    {
+                      "id": "b2",
+                      "answer": "ajudar",
+                      "options": [
+                        "ajudar",
+                        "esse",
+                        "problema"
+                      ]
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "Las dos formas deben encajar con el contexto de la frase.",
+                    "ruleRef": "gp-b2-speculation"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Los dos huecos encajan con la situación."
+                  }
+                },
+                {
+                  "type": "SemanticMatch",
+                  "id": "es-pt-b2-u14-l06-e04",
+                  "instructions": "Clasifica la función comunicativa de cada intervención.",
+                  "pairs": [
+                    {
+                      "left": "Você poderia me ajudar com esse problema. Do meu ponto de vista, é uma opção razoável.",
+                      "right": "Planteamiento",
+                      "register": "formal",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    },
+                    {
+                      "left": "Meu computador não liga. Ainda assim, também há vantagens.",
+                      "right": "Concesión",
+                      "register": "neutral",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    },
+                    {
+                      "left": "Você pode verificar a conexão. No fim do dia, é preciso priorizar.",
+                      "right": "Conclusión",
+                      "register": "informal",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "Cada intervención cumple una función comunicativa distinta.",
+                    "ruleRef": "gp-b2-passive-voice"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has identificado la función de cada intervención."
+                  }
+                },
+                {
+                  "type": "SemanticMatch",
+                  "id": "es-pt-b2-u14-l06-e05",
+                  "instructions": "Distingue el registro de cada intervención.",
+                  "pairs": [
+                    {
+                      "left": "Você poderia me ajudar com esse problema. Do meu ponto de vista, é uma opção razoável.",
+                      "right": "Formal",
+                      "register": "formal",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    },
+                    {
+                      "left": "Meu computador não liga. Ainda assim, também há vantagens.",
+                      "right": "Neutral",
+                      "register": "neutral",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    },
+                    {
+                      "left": "Você pode verificar a conexão. No fim do dia, é preciso priorizar.",
+                      "right": "Informal",
+                      "register": "informal",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "register",
+                    "explanation": "El registro cambia según el contexto y la relación con el interlocutor.",
+                    "ruleRef": "gp-b2-speculation"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has distinguido el registro de cada intervención."
+                  }
+                },
+                {
+                  "type": "AudioOnlyPrompt",
+                  "id": "es-pt-b2-u14-l06-e06",
+                  "audioText": "Meu computador não liga. Ainda assim, também há vantagens.",
+                  "question": "¿Qué ha dicho el hablante?",
+                  "options": [
+                    "Meu computador não liga. Ainda assim, também há vantagens.",
+                    "Você poderia me ajudar com esse problema. Do meu ponto de vista, é uma opção razoável.",
+                    "Você pode verificar a conexão. No fim do dia, é preciso priorizar."
+                  ],
+                  "correctIndex": 0,
+                  "allowSlowPlayback": true,
+                  "feedbackOnError": {
+                    "type": "comprehension",
+                    "explanation": "El audio dice «Meu computador não liga. Ainda assim, também há vantagens.».",
+                    "ruleRef": "gp-b2-passive-voice"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has comprendido el mensaje del audio."
+                  }
+                },
+                {
+                  "type": "AudioOnlyPrompt",
+                  "id": "es-pt-b2-u14-l06-e07",
+                  "audioText": "Você pode verificar a conexão. No fim do dia, é preciso priorizar.",
+                  "question": "¿Cuál es la idea principal?",
+                  "options": [
+                    "Você pode verificar a conexão. No fim do dia, é preciso priorizar.",
+                    "Você poderia me ajudar com esse problema. Do meu ponto de vista, é uma opção razoável.",
+                    "Meu computador não liga. Ainda assim, também há vantagens."
+                  ],
+                  "correctIndex": 0,
+                  "allowSlowPlayback": false,
+                  "feedbackOnError": {
+                    "type": "comprehension",
+                    "explanation": "El audio dice «Você pode verificar a conexão. No fim do dia, é preciso priorizar.».",
+                    "ruleRef": "gp-b2-speculation"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has identificado la idea principal."
+                  }
+                },
+                {
+                  "type": "ListenType",
+                  "id": "es-pt-b2-u14-l06-e08",
+                  "audioText": "Você pode verificar a conexão. No fim do dia, é preciso priorizar.",
+                  "transcription": "Você pode verificar a conexão. No fim do dia, é preciso priorizar.",
+                  "feedbackOnError": {
+                    "type": "spelling",
+                    "explanation": "Escribe exactamente «Você pode verificar a conexão. No fim do dia, é preciso priorizar.».",
+                    "ruleRef": "gp-b2-passive-voice"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La transcripción coincide con el audio."
+                  }
+                },
+                {
+                  "type": "SpeakRepeat",
+                  "id": "es-pt-b2-u14-l06-e09",
+                  "targetPhrase": "Você pode verificar a conexão. No fim do dia, é preciso priorizar.",
+                  "audioText": "Você pode verificar a conexão. No fim do dia, é preciso priorizar.",
+                  "feedbackOnError": {
+                    "type": "pronunciation",
+                    "explanation": "Repite «Você pode verificar a conexão. No fim do dia, é preciso priorizar.» con claridad.",
+                    "ruleRef": "gp-b2-passive-voice"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La frase se entiende y mantiene el ritmo."
+                  }
+                },
+                {
+                  "type": "FreeSpeakingPrompt",
+                  "id": "es-pt-b2-u14-l06-e10",
+                  "prompt": "Argumenta y matiza una opinión sobre los problemas técnicos.",
+                  "minTokens": 20,
+                  "conceptClusters": [
+                    [
+                      "poderia"
+                    ],
+                    [
+                      "ajudar"
+                    ],
+                    [
+                      "esse"
+                    ]
+                  ],
+                  "modelAnswer": "Você poderia me ajudar com esse problema. Do meu ponto de vista, é uma opção razoável. Meu computador não liga. Ainda assim, também há vantagens. Você pode verificar a conexão. No fim do dia, é preciso priorizar.",
+                  "selfAssessmentCriteria": [
+                    "¿La respuesta argumenta y responde a la tarea?",
+                    "¿Usa las dos estructuras gramaticales de la lección?",
+                    "¿Incluye una concesión o una matización?"
+                  ],
+                  "grammarRuleRefs": [
+                    "gp-b2-passive-voice",
+                    "gp-b2-speculation"
+                  ],
+                  "timeLimitSeconds": 90,
+                  "minWpm": 70,
+                  "maxWpm": 160,
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "La respuesta modelo desarrolla una opinión con matices y una concesión.",
+                    "ruleRef": "gp-b2-passive-voice"
+                  }
+                }
+              ]
+            },
+            {
+              "id": "es-pt-b2-u14-l07",
+              "title": "Artículo sobre pantallas",
+              "cefrLevel": "B2",
+              "scenario": "Situación comunicativa avanzada sobre el tiempo de pantalla.",
+              "canDo": "Puedo argumentar y matizar sobre el tiempo de pantalla.",
+              "grammarPoints": [
+                {
+                  "id": "gp-b2-passive-voice",
+                  "label": "Passive voice",
+                  "description": "Be + participio desplaza el foco a la acción o al resultado."
+                },
+                {
+                  "id": "gp-b2-speculation",
+                  "label": "Speculation",
+                  "description": "May, might y could expresan distintos grados de posibilidad."
+                }
+              ],
+              "vocabFrequencyBand": "3000-5000",
+              "culturalNotes": [
+                {
+                  "idiom": "quebrar o gelo",
+                  "note": "Expresión para iniciar una conversación.",
+                  "translation": "romper el hielo"
+                }
+              ],
+              "microLesson": {
+                "title": "Artículo sobre pantallas",
+                "goals": [
+                  "Usar vocabulario avanzado de el tiempo de pantalla.",
+                  "Aplicar passive voice y speculation.",
+                  "Argumentar y matizar sobre el tiempo de pantalla."
+                ],
+                "sections": [
+                  {
+                    "heading": "Lengua en contexto",
+                    "body": "Passive voice: Be + participio desplaza el foco a la acción o al resultado. Speculation: May, might y could expresan distintos grados de posibilidad.",
+                    "examples": [
+                      {
+                        "source": "Pasamos muchas horas delante de las pantallas. No obstante, también tiene ventajas.",
+                        "target": "Passamos muitas horas em frente às telas. Ainda assim, também há vantagens."
+                      },
+                      {
+                        "source": "Los expertos recomiendan hacer pausas. A fin de cuentas, hay que priorizar.",
+                        "target": "Os especialistas recomendam fazer pausas. No fim do dia, é preciso priorizar."
+                      }
+                    ]
+                  }
+                ]
+              },
+              "glossary": [
+                {
+                  "term": "Passamos muitas horas em frente às telas. Ainda assim, também há vantagens.",
+                  "translations": [
+                    "Pasamos muchas horas delante de las pantallas. No obstante, también tiene ventajas."
+                  ]
+                },
+                {
+                  "term": "Os especialistas recomendam fazer pausas. No fim do dia, é preciso priorizar.",
+                  "translations": [
+                    "Los expertos recomiendan hacer pausas. A fin de cuentas, hay que priorizar."
+                  ]
+                },
+                {
+                  "term": "Eles também aconselham não usar o celular antes de dormir. Em resumo, é um tema complexo.",
+                  "translations": [
+                    "También aconsejan no usar el móvil antes de dormir. En resumen, es un tema complejo."
+                  ]
+                }
+              ],
+              "exercises": [
+                {
+                  "type": "MultipleChoice",
+                  "id": "es-pt-b2-u14-l07-e01",
+                  "question": "¿Cuál es la opción correcta para «Pasamos muchas horas delante de las pantallas. No obstante, también tiene ventajas.»?",
+                  "options": [
+                    "Passamos muitas horas em frente às telas. Ainda assim, também há vantagens.",
+                    "Os especialistas recomendam fazer pausas. No fim do dia, é preciso priorizar.",
+                    "Eles também aconselham não usar o celular antes de dormir. Em resumo, é um tema complexo."
+                  ],
+                  "correctIndex": 0,
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "«Pasamos muchas horas delante de las pantallas. No obstante, también tiene ventajas.» se dice «Passamos muitas horas em frente às telas. Ainda assim, também há vantagens.».",
+                    "ruleRef": "gp-b2-passive-voice"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has elegido la traducción correcta."
+                  }
+                },
+                {
+                  "type": "OrderWords",
+                  "id": "es-pt-b2-u14-l07-e02",
+                  "tokens": [
+                    "muitas",
+                    "horas",
+                    "em",
+                    "frente",
+                    "às",
+                    "telas",
+                    "Ainda",
+                    "assim",
+                    "também",
+                    "há",
+                    "vantagens",
+                    "Passamos"
+                  ],
+                  "answerTokens": [
+                    "Passamos",
+                    "muitas",
+                    "horas",
+                    "em",
+                    "frente",
+                    "às",
+                    "telas",
+                    "Ainda",
+                    "assim",
+                    "também",
+                    "há",
+                    "vantagens"
+                  ],
+                  "sourcePhrase": "Pasamos muchas horas delante de las pantallas. No obstante, también tiene ventajas.",
+                  "feedbackOnError": {
+                    "type": "word_order",
+                    "explanation": "El orden correcto es «Passamos muitas horas em frente às telas Ainda assim também há vantagens».",
+                    "ruleRef": "gp-b2-passive-voice"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "El orden produce una frase natural."
+                  }
+                },
+                {
+                  "type": "ClozeDragDrop",
+                  "id": "es-pt-b2-u14-l07-e03",
+                  "passage": "{{b1}} {{b2}} horas em frente às telas",
+                  "blanks": [
+                    {
+                      "id": "b1",
+                      "answer": "Passamos",
+                      "options": [
+                        "Passamos",
+                        "horas",
+                        "frente"
+                      ]
+                    },
+                    {
+                      "id": "b2",
+                      "answer": "muitas",
+                      "options": [
+                        "muitas",
+                        "horas",
+                        "frente"
+                      ]
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "Las dos formas deben encajar con el contexto de la frase.",
+                    "ruleRef": "gp-b2-speculation"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Los dos huecos encajan con la situación."
+                  }
+                },
+                {
+                  "type": "SemanticMatch",
+                  "id": "es-pt-b2-u14-l07-e04",
+                  "instructions": "Clasifica la función comunicativa de cada intervención.",
+                  "pairs": [
+                    {
+                      "left": "Passamos muitas horas em frente às telas. Ainda assim, também há vantagens.",
+                      "right": "Planteamiento",
+                      "register": "formal",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    },
+                    {
+                      "left": "Os especialistas recomendam fazer pausas. No fim do dia, é preciso priorizar.",
+                      "right": "Concesión",
+                      "register": "neutral",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    },
+                    {
+                      "left": "Eles também aconselham não usar o celular antes de dormir. Em resumo, é um tema complexo.",
+                      "right": "Conclusión",
+                      "register": "informal",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "Cada intervención cumple una función comunicativa distinta.",
+                    "ruleRef": "gp-b2-passive-voice"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has identificado la función de cada intervención."
+                  }
+                },
+                {
+                  "type": "SemanticMatch",
+                  "id": "es-pt-b2-u14-l07-e05",
+                  "instructions": "Distingue el registro de cada intervención.",
+                  "pairs": [
+                    {
+                      "left": "Passamos muitas horas em frente às telas. Ainda assim, também há vantagens.",
+                      "right": "Formal",
+                      "register": "formal",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    },
+                    {
+                      "left": "Os especialistas recomendam fazer pausas. No fim do dia, é preciso priorizar.",
+                      "right": "Neutral",
+                      "register": "neutral",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    },
+                    {
+                      "left": "Eles também aconselham não usar o celular antes de dormir. Em resumo, é um tema complexo.",
+                      "right": "Informal",
+                      "register": "informal",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "register",
+                    "explanation": "El registro cambia según el contexto y la relación con el interlocutor.",
+                    "ruleRef": "gp-b2-speculation"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has distinguido el registro de cada intervención."
+                  }
+                },
+                {
+                  "type": "AudioOnlyPrompt",
+                  "id": "es-pt-b2-u14-l07-e06",
+                  "audioText": "Os especialistas recomendam fazer pausas. No fim do dia, é preciso priorizar.",
+                  "question": "¿Qué ha dicho el hablante?",
+                  "options": [
+                    "Os especialistas recomendam fazer pausas. No fim do dia, é preciso priorizar.",
+                    "Passamos muitas horas em frente às telas. Ainda assim, também há vantagens.",
+                    "Eles também aconselham não usar o celular antes de dormir. Em resumo, é um tema complexo."
+                  ],
+                  "correctIndex": 0,
+                  "allowSlowPlayback": true,
+                  "feedbackOnError": {
+                    "type": "comprehension",
+                    "explanation": "El audio dice «Os especialistas recomendam fazer pausas. No fim do dia, é preciso priorizar.».",
+                    "ruleRef": "gp-b2-passive-voice"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has comprendido el mensaje del audio."
+                  }
+                },
+                {
+                  "type": "AudioOnlyPrompt",
+                  "id": "es-pt-b2-u14-l07-e07",
+                  "audioText": "Eles também aconselham não usar o celular antes de dormir. Em resumo, é um tema complexo.",
+                  "question": "¿Cuál es la idea principal?",
+                  "options": [
+                    "Eles também aconselham não usar o celular antes de dormir. Em resumo, é um tema complexo.",
+                    "Passamos muitas horas em frente às telas. Ainda assim, também há vantagens.",
+                    "Os especialistas recomendam fazer pausas. No fim do dia, é preciso priorizar."
+                  ],
+                  "correctIndex": 0,
+                  "allowSlowPlayback": false,
+                  "feedbackOnError": {
+                    "type": "comprehension",
+                    "explanation": "El audio dice «Eles também aconselham não usar o celular antes de dormir. Em resumo, é um tema complexo.».",
+                    "ruleRef": "gp-b2-speculation"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has identificado la idea principal."
+                  }
+                },
+                {
+                  "type": "ListenType",
+                  "id": "es-pt-b2-u14-l07-e08",
+                  "audioText": "Eles também aconselham não usar o celular antes de dormir. Em resumo, é um tema complexo.",
+                  "transcription": "Eles também aconselham não usar o celular antes de dormir. Em resumo, é um tema complexo.",
+                  "feedbackOnError": {
+                    "type": "spelling",
+                    "explanation": "Escribe exactamente «Eles também aconselham não usar o celular antes de dormir. Em resumo, é um tema complexo.».",
+                    "ruleRef": "gp-b2-passive-voice"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La transcripción coincide con el audio."
+                  }
+                },
+                {
+                  "type": "SpeakRepeat",
+                  "id": "es-pt-b2-u14-l07-e09",
+                  "targetPhrase": "Eles também aconselham não usar o celular antes de dormir. Em resumo, é um tema complexo.",
+                  "audioText": "Eles também aconselham não usar o celular antes de dormir. Em resumo, é um tema complexo.",
+                  "feedbackOnError": {
+                    "type": "pronunciation",
+                    "explanation": "Repite «Eles também aconselham não usar o celular antes de dormir. Em resumo, é um tema complexo.» con claridad.",
+                    "ruleRef": "gp-b2-passive-voice"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La frase se entiende y mantiene el ritmo."
+                  }
+                },
+                {
+                  "type": "FreeSpeakingPrompt",
+                  "id": "es-pt-b2-u14-l07-e10",
+                  "prompt": "Argumenta y matiza una opinión sobre el tiempo de pantalla.",
+                  "minTokens": 20,
+                  "conceptClusters": [
+                    [
+                      "Passamos"
+                    ],
+                    [
+                      "muitas"
+                    ],
+                    [
+                      "horas"
+                    ]
+                  ],
+                  "modelAnswer": "Passamos muitas horas em frente às telas. Ainda assim, também há vantagens. Os especialistas recomendam fazer pausas. No fim do dia, é preciso priorizar. Eles também aconselham não usar o celular antes de dormir. Em resumo, é um tema complexo.",
+                  "selfAssessmentCriteria": [
+                    "¿La respuesta argumenta y responde a la tarea?",
+                    "¿Usa las dos estructuras gramaticales de la lección?",
+                    "¿Incluye una concesión o una matización?"
+                  ],
+                  "grammarRuleRefs": [
+                    "gp-b2-passive-voice",
+                    "gp-b2-speculation"
+                  ],
+                  "timeLimitSeconds": 90,
+                  "minWpm": 70,
+                  "maxWpm": 160,
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "La respuesta modelo desarrolla una opinión con matices y una concesión.",
+                    "ruleRef": "gp-b2-passive-voice"
+                  }
+                }
+              ]
+            },
+            {
+              "id": "es-pt-b2-u14-l08",
+              "title": "Netiqueta",
+              "cefrLevel": "B2",
+              "scenario": "Situación comunicativa avanzada sobre la netiqueta.",
+              "canDo": "Puedo argumentar y matizar sobre la netiqueta.",
+              "grammarPoints": [
+                {
+                  "id": "gp-b2-passive-voice",
+                  "label": "Passive voice",
+                  "description": "Be + participio desplaza el foco a la acción o al resultado."
+                },
+                {
+                  "id": "gp-b2-speculation",
+                  "label": "Speculation",
+                  "description": "May, might y could expresan distintos grados de posibilidad."
+                }
+              ],
+              "vocabFrequencyBand": "3000-5000",
+              "culturalNotes": [
+                {
+                  "idiom": "encerrar o dia",
+                  "note": "Expresión para terminar la jornada.",
+                  "translation": "cerrar el día"
+                }
+              ],
+              "microLesson": {
+                "title": "Netiqueta",
+                "goals": [
+                  "Usar vocabulario avanzado de la netiqueta.",
+                  "Aplicar passive voice y speculation.",
+                  "Argumentar y matizar sobre la netiqueta."
+                ],
+                "sections": [
+                  {
+                    "heading": "Lengua en contexto",
+                    "body": "Passive voice: Be + participio desplaza el foco a la acción o al resultado. Speculation: May, might y could expresan distintos grados de posibilidad.",
+                    "examples": [
+                      {
+                        "source": "Escribe mensajes claros y respetuosos. A fin de cuentas, hay que priorizar.",
+                        "target": "Escreva mensagens claras e respeitosas. No fim do dia, é preciso priorizar."
+                      },
+                      {
+                        "source": "No compartas información personal sin permiso. En resumen, es un tema complejo.",
+                        "target": "Não compartilhe informações pessoais sem permissão. Em resumo, é um tema complexo."
+                      }
+                    ]
+                  }
+                ]
+              },
+              "glossary": [
+                {
+                  "term": "Escreva mensagens claras e respeitosas. No fim do dia, é preciso priorizar.",
+                  "translations": [
+                    "Escribe mensajes claros y respetuosos. A fin de cuentas, hay que priorizar."
+                  ]
+                },
+                {
+                  "term": "Não compartilhe informações pessoais sem permissão. Em resumo, é um tema complexo.",
+                  "translations": [
+                    "No compartas información personal sin permiso. En resumen, es un tema complejo."
+                  ]
+                },
+                {
+                  "term": "Responda quando puder, sem pressa. No entanto, vale a pena qualificar.",
+                  "translations": [
+                    "Responde cuando puedas, sin prisas. Sin embargo, conviene matizarlo."
+                  ]
+                }
+              ],
+              "exercises": [
+                {
+                  "type": "MultipleChoice",
+                  "id": "es-pt-b2-u14-l08-e01",
+                  "question": "¿Cuál es la opción correcta para «Escribe mensajes claros y respetuosos. A fin de cuentas, hay que priorizar.»?",
+                  "options": [
+                    "Escreva mensagens claras e respeitosas. No fim do dia, é preciso priorizar.",
+                    "Não compartilhe informações pessoais sem permissão. Em resumo, é um tema complexo.",
+                    "Responda quando puder, sem pressa. No entanto, vale a pena qualificar."
+                  ],
+                  "correctIndex": 0,
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "«Escribe mensajes claros y respetuosos. A fin de cuentas, hay que priorizar.» se dice «Escreva mensagens claras e respeitosas. No fim do dia, é preciso priorizar.».",
+                    "ruleRef": "gp-b2-passive-voice"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has elegido la traducción correcta."
+                  }
+                },
+                {
+                  "type": "OrderWords",
+                  "id": "es-pt-b2-u14-l08-e02",
+                  "tokens": [
+                    "mensagens",
+                    "claras",
+                    "e",
+                    "respeitosas",
+                    "No",
+                    "fim",
+                    "do",
+                    "dia",
+                    "é",
+                    "preciso",
+                    "priorizar",
+                    "Escreva"
+                  ],
+                  "answerTokens": [
+                    "Escreva",
+                    "mensagens",
+                    "claras",
+                    "e",
+                    "respeitosas",
+                    "No",
+                    "fim",
+                    "do",
+                    "dia",
+                    "é",
+                    "preciso",
+                    "priorizar"
+                  ],
+                  "sourcePhrase": "Escribe mensajes claros y respetuosos. A fin de cuentas, hay que priorizar.",
+                  "feedbackOnError": {
+                    "type": "word_order",
+                    "explanation": "El orden correcto es «Escreva mensagens claras e respeitosas No fim do dia é preciso priorizar».",
+                    "ruleRef": "gp-b2-passive-voice"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "El orden produce una frase natural."
+                  }
+                },
+                {
+                  "type": "ClozeDragDrop",
+                  "id": "es-pt-b2-u14-l08-e03",
+                  "passage": "{{b1}} {{b2}} claras e respeitosas",
+                  "blanks": [
+                    {
+                      "id": "b1",
+                      "answer": "Escreva",
+                      "options": [
+                        "Escreva",
+                        "claras",
+                        "respeitosas"
+                      ]
+                    },
+                    {
+                      "id": "b2",
+                      "answer": "mensagens",
+                      "options": [
+                        "mensagens",
+                        "claras",
+                        "respeitosas"
+                      ]
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "Las dos formas deben encajar con el contexto de la frase.",
+                    "ruleRef": "gp-b2-speculation"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Los dos huecos encajan con la situación."
+                  }
+                },
+                {
+                  "type": "SemanticMatch",
+                  "id": "es-pt-b2-u14-l08-e04",
+                  "instructions": "Clasifica la función comunicativa de cada intervención.",
+                  "pairs": [
+                    {
+                      "left": "Escreva mensagens claras e respeitosas. No fim do dia, é preciso priorizar.",
+                      "right": "Planteamiento",
+                      "register": "formal",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    },
+                    {
+                      "left": "Não compartilhe informações pessoais sem permissão. Em resumo, é um tema complexo.",
+                      "right": "Concesión",
+                      "register": "neutral",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    },
+                    {
+                      "left": "Responda quando puder, sem pressa. No entanto, vale a pena qualificar.",
+                      "right": "Conclusión",
+                      "register": "informal",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "Cada intervención cumple una función comunicativa distinta.",
+                    "ruleRef": "gp-b2-passive-voice"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has identificado la función de cada intervención."
+                  }
+                },
+                {
+                  "type": "SemanticMatch",
+                  "id": "es-pt-b2-u14-l08-e05",
+                  "instructions": "Distingue el registro de cada intervención.",
+                  "pairs": [
+                    {
+                      "left": "Escreva mensagens claras e respeitosas. No fim do dia, é preciso priorizar.",
+                      "right": "Formal",
+                      "register": "formal",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    },
+                    {
+                      "left": "Não compartilhe informações pessoais sem permissão. Em resumo, é um tema complexo.",
+                      "right": "Neutral",
+                      "register": "neutral",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    },
+                    {
+                      "left": "Responda quando puder, sem pressa. No entanto, vale a pena qualificar.",
+                      "right": "Informal",
+                      "register": "informal",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "register",
+                    "explanation": "El registro cambia según el contexto y la relación con el interlocutor.",
+                    "ruleRef": "gp-b2-speculation"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has distinguido el registro de cada intervención."
+                  }
+                },
+                {
+                  "type": "AudioOnlyPrompt",
+                  "id": "es-pt-b2-u14-l08-e06",
+                  "audioText": "Não compartilhe informações pessoais sem permissão. Em resumo, é um tema complexo.",
+                  "question": "¿Qué ha dicho el hablante?",
+                  "options": [
+                    "Não compartilhe informações pessoais sem permissão. Em resumo, é um tema complexo.",
+                    "Escreva mensagens claras e respeitosas. No fim do dia, é preciso priorizar.",
+                    "Responda quando puder, sem pressa. No entanto, vale a pena qualificar."
+                  ],
+                  "correctIndex": 0,
+                  "allowSlowPlayback": true,
+                  "feedbackOnError": {
+                    "type": "comprehension",
+                    "explanation": "El audio dice «Não compartilhe informações pessoais sem permissão. Em resumo, é um tema complexo.».",
+                    "ruleRef": "gp-b2-passive-voice"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has comprendido el mensaje del audio."
+                  }
+                },
+                {
+                  "type": "AudioOnlyPrompt",
+                  "id": "es-pt-b2-u14-l08-e07",
+                  "audioText": "Responda quando puder, sem pressa. No entanto, vale a pena qualificar.",
+                  "question": "¿Cuál es la idea principal?",
+                  "options": [
+                    "Responda quando puder, sem pressa. No entanto, vale a pena qualificar.",
+                    "Escreva mensagens claras e respeitosas. No fim do dia, é preciso priorizar.",
+                    "Não compartilhe informações pessoais sem permissão. Em resumo, é um tema complexo."
+                  ],
+                  "correctIndex": 0,
+                  "allowSlowPlayback": false,
+                  "feedbackOnError": {
+                    "type": "comprehension",
+                    "explanation": "El audio dice «Responda quando puder, sem pressa. No entanto, vale a pena qualificar.».",
+                    "ruleRef": "gp-b2-speculation"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has identificado la idea principal."
+                  }
+                },
+                {
+                  "type": "ListenType",
+                  "id": "es-pt-b2-u14-l08-e08",
+                  "audioText": "Responda quando puder, sem pressa. No entanto, vale a pena qualificar.",
+                  "transcription": "Responda quando puder, sem pressa. No entanto, vale a pena qualificar.",
+                  "feedbackOnError": {
+                    "type": "spelling",
+                    "explanation": "Escribe exactamente «Responda quando puder, sem pressa. No entanto, vale a pena qualificar.».",
+                    "ruleRef": "gp-b2-passive-voice"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La transcripción coincide con el audio."
+                  }
+                },
+                {
+                  "type": "SpeakRepeat",
+                  "id": "es-pt-b2-u14-l08-e09",
+                  "targetPhrase": "Responda quando puder, sem pressa. No entanto, vale a pena qualificar.",
+                  "audioText": "Responda quando puder, sem pressa. No entanto, vale a pena qualificar.",
+                  "feedbackOnError": {
+                    "type": "pronunciation",
+                    "explanation": "Repite «Responda quando puder, sem pressa. No entanto, vale a pena qualificar.» con claridad.",
+                    "ruleRef": "gp-b2-passive-voice"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La frase se entiende y mantiene el ritmo."
+                  }
+                },
+                {
+                  "type": "FreeSpeakingPrompt",
+                  "id": "es-pt-b2-u14-l08-e10",
+                  "prompt": "Argumenta y matiza una opinión sobre la netiqueta.",
+                  "minTokens": 20,
+                  "conceptClusters": [
+                    [
+                      "Escreva"
+                    ],
+                    [
+                      "mensagens"
+                    ],
+                    [
+                      "claras"
+                    ]
+                  ],
+                  "modelAnswer": "Escreva mensagens claras e respeitosas. No fim do dia, é preciso priorizar. Não compartilhe informações pessoais sem permissão. Em resumo, é um tema complexo. Responda quando puder, sem pressa. No entanto, vale a pena qualificar.",
+                  "selfAssessmentCriteria": [
+                    "¿La respuesta argumenta y responde a la tarea?",
+                    "¿Usa las dos estructuras gramaticales de la lección?",
+                    "¿Incluye una concesión o una matización?"
+                  ],
+                  "grammarRuleRefs": [
+                    "gp-b2-passive-voice",
+                    "gp-b2-speculation"
+                  ],
+                  "timeLimitSeconds": 90,
+                  "minWpm": 70,
+                  "maxWpm": 160,
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "La respuesta modelo desarrolla una opinión con matices y una concesión.",
+                    "ruleRef": "gp-b2-passive-voice"
+                  }
+                }
+              ]
+            }
+          ]
         }
       ]
     },
