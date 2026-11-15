@@ -89517,6 +89517,2989 @@
               ]
             }
           ]
+        },
+        {
+          "id": "es-pt-b1-u05",
+          "title": "B1 · Salud y bienestar",
+          "lessons": [
+            {
+              "id": "es-pt-b1-u05-l01",
+              "title": "Repaso: mi ciudad",
+              "cefrLevel": "B1",
+              "scenario": "Situación comunicativa sobre mi ciudad.",
+              "canDo": "Puedo comunicarme con soltura sobre mi ciudad.",
+              "grammarPoints": [
+                {
+                  "id": "gp-b1-modals-obligation",
+                  "label": "Modales de obligación",
+                  "description": "Must, have to y should expresan obligación y consejo."
+                },
+                {
+                  "id": "gp-b1-modals-advice",
+                  "label": "Modales de consejo",
+                  "description": "Should, ought to y could ayudan a recomendar sin imponer."
+                }
+              ],
+              "vocabFrequencyBand": "2000-3000",
+              "culturalNotes": [
+                {
+                  "idiom": "um mal que vem para bem",
+                  "note": "Expresión para describir algo malo que acaba siendo bueno.",
+                  "translation": "un mal que acaba bien"
+                }
+              ],
+              "microLesson": {
+                "title": "Repaso: mi ciudad",
+                "goals": [
+                  "Usar vocabulario de mi ciudad.",
+                  "Aplicar modales de obligación y modales de consejo.",
+                  "Resolver una tarea comunicativa sobre mi ciudad."
+                ],
+                "sections": [
+                  {
+                    "heading": "Lengua en contexto",
+                    "body": "Modales de obligación: Must, have to y should expresan obligación y consejo. Modales de consejo: Should, ought to y could ayudan a recomendar sin imponer.",
+                    "examples": [
+                      {
+                        "source": "Mi ciudad es tranquila y tiene un parque. En general, es así.",
+                        "target": "Minha cidade é tranquila e tem um parque. Em geral, é assim."
+                      },
+                      {
+                        "source": "El transporte público es más barato que el coche. Además, me ayuda a aprender.",
+                        "target": "O transporte público é mais barato que o carro. Também me ajuda a aprender."
+                      }
+                    ]
+                  }
+                ]
+              },
+              "glossary": [
+                {
+                  "term": "Minha cidade é tranquila e tem um parque. Em geral, é assim.",
+                  "translations": [
+                    "Mi ciudad es tranquila y tiene un parque. En general, es así."
+                  ]
+                },
+                {
+                  "term": "O transporte público é mais barato que o carro. Também me ajuda a aprender.",
+                  "translations": [
+                    "El transporte público es más barato que el coche. Además, me ayuda a aprender."
+                  ]
+                },
+                {
+                  "term": "Eu gostaria de morar em um bairro assim. É por isso que recomendo.",
+                  "translations": [
+                    "Me gustaría vivir en un barrio así. Por eso lo recomiendo."
+                  ]
+                }
+              ],
+              "exercises": [
+                {
+                  "type": "MultipleChoice",
+                  "id": "es-pt-b1-u05-l01-e01",
+                  "question": "¿Cuál es la opción correcta para «Mi ciudad es tranquila y tiene un parque. En general, es así.»?",
+                  "options": [
+                    "Minha cidade é tranquila e tem um parque. Em geral, é assim.",
+                    "O transporte público é mais barato que o carro. Também me ajuda a aprender.",
+                    "Eu gostaria de morar em um bairro assim. É por isso que recomendo."
+                  ],
+                  "correctIndex": 0,
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "«Mi ciudad es tranquila y tiene un parque. En general, es así.» se dice «Minha cidade é tranquila e tem um parque. Em geral, é assim.».",
+                    "ruleRef": "gp-b1-modals-obligation"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has elegido la traducción correcta."
+                  }
+                },
+                {
+                  "type": "Translate",
+                  "id": "es-pt-b1-u05-l01-e02",
+                  "sourcePhrase": "Mi ciudad es tranquila y tiene un parque. En general, es así.",
+                  "correctTokens": [
+                    "Minha",
+                    "cidade",
+                    "é",
+                    "tranquila",
+                    "e",
+                    "tem",
+                    "um",
+                    "parque",
+                    "Em",
+                    "geral",
+                    "é",
+                    "assim"
+                  ],
+                  "distractorTokens": [
+                    "O",
+                    "transporte",
+                    "público"
+                  ],
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "El orden correcto es «Minha cidade é tranquila e tem um parque Em geral é assim». Modales de obligación: Must, have to y should expresan obligación y consejo.",
+                    "ruleRef": "gp-b1-modals-obligation"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La frase conserva el orden y el significado."
+                  }
+                },
+                {
+                  "type": "OrderWords",
+                  "id": "es-pt-b1-u05-l01-e03",
+                  "tokens": [
+                    "transporte",
+                    "público",
+                    "é",
+                    "mais",
+                    "barato",
+                    "que",
+                    "o",
+                    "carro",
+                    "Também",
+                    "me",
+                    "ajuda",
+                    "a",
+                    "aprender",
+                    "O"
+                  ],
+                  "answerTokens": [
+                    "O",
+                    "transporte",
+                    "público",
+                    "é",
+                    "mais",
+                    "barato",
+                    "que",
+                    "o",
+                    "carro",
+                    "Também",
+                    "me",
+                    "ajuda",
+                    "a",
+                    "aprender"
+                  ],
+                  "sourcePhrase": "El transporte público es más barato que el coche. Además, me ayuda a aprender.",
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "La frase correcta es «O transporte público é mais barato que o carro Também me ajuda a aprender». Modales de consejo: Should, ought to y could ayudan a recomendar sin imponer.",
+                    "ruleRef": "gp-b1-modals-advice"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "El orden produce una frase natural."
+                  }
+                },
+                {
+                  "type": "MatchPairs",
+                  "id": "es-pt-b1-u05-l01-e04",
+                  "pairs": [
+                    {
+                      "left": "Mi ciudad es tranquila y tiene un parque. En general, es así.",
+                      "right": "Minha cidade é tranquila e tem um parque. Em geral, é assim."
+                    },
+                    {
+                      "left": "El transporte público es más barato que el coche. Además, me ayuda a aprender.",
+                      "right": "O transporte público é mais barato que o carro. Também me ajuda a aprender."
+                    },
+                    {
+                      "left": "Me gustaría vivir en un barrio así. Por eso lo recomiendo.",
+                      "right": "Eu gostaria de morar em um bairro assim. É por isso que recomendo."
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "Cada expresión tiene una traducción distinta.",
+                    "ruleRef": "gp-b1-modals-obligation"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has asociado cada expresión con su traducción."
+                  }
+                },
+                {
+                  "type": "ListenChoose",
+                  "id": "es-pt-b1-u05-l01-e05",
+                  "audioText": "Eu gostaria de morar em um bairro assim. É por isso que recomendo.",
+                  "options": [
+                    "Minha cidade é tranquila e tem um parque. Em geral, é assim.",
+                    "O transporte público é mais barato que o carro. Também me ajuda a aprender.",
+                    "Eu gostaria de morar em um bairro assim. É por isso que recomendo."
+                  ],
+                  "correctIndex": 0,
+                  "feedbackOnError": {
+                    "type": "comprehension",
+                    "explanation": "El audio dice «Eu gostaria de morar em um bairro assim. É por isso que recomendo.».",
+                    "ruleRef": "gp-b1-modals-obligation"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has reconocido la frase del audio."
+                  }
+                },
+                {
+                  "type": "ListenType",
+                  "id": "es-pt-b1-u05-l01-e06",
+                  "audioText": "Eu gostaria de morar em um bairro assim. É por isso que recomendo.",
+                  "transcription": "Eu gostaria de morar em um bairro assim. É por isso que recomendo.",
+                  "feedbackOnError": {
+                    "type": "spelling",
+                    "explanation": "Escribe exactamente «Eu gostaria de morar em um bairro assim. É por isso que recomendo.».",
+                    "ruleRef": "gp-b1-modals-obligation"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La transcripción coincide con el audio."
+                  }
+                },
+                {
+                  "type": "ClozeDragDrop",
+                  "id": "es-pt-b1-u05-l01-e07",
+                  "passage": "Minha {{b1}} é {{b2}} e tem um parque",
+                  "blanks": [
+                    {
+                      "id": "b1",
+                      "answer": "cidade",
+                      "options": [
+                        "cidade",
+                        "tem",
+                        "parque"
+                      ]
+                    },
+                    {
+                      "id": "b2",
+                      "answer": "tranquila",
+                      "options": [
+                        "tranquila",
+                        "tem",
+                        "parque"
+                      ]
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "Las dos formas deben encajar con el contexto de la frase.",
+                    "ruleRef": "gp-b1-modals-advice"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Los dos huecos encajan con la situación."
+                  }
+                },
+                {
+                  "type": "FreeSpeakingPrompt",
+                  "id": "es-pt-b1-u05-l01-e08",
+                  "prompt": "Habla sobre mi ciudad y justifica tu respuesta.",
+                  "minTokens": 6,
+                  "conceptClusters": [
+                    [
+                      "gostaria"
+                    ],
+                    [
+                      "morar"
+                    ],
+                    [
+                      "bairro"
+                    ]
+                  ],
+                  "modelAnswer": "Eu gostaria de morar em um bairro assim. É por isso que recomendo.",
+                  "selfAssessmentCriteria": [
+                    "¿La respuesta es clara y responde a la tarea?",
+                    "¿Usa las dos estructuras gramaticales de la lección?"
+                  ],
+                  "grammarRuleRefs": [
+                    "gp-b1-modals-obligation",
+                    "gp-b1-modals-advice"
+                  ],
+                  "timeLimitSeconds": 60,
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "La respuesta modelo usa una frase completa y responde a la tarea.",
+                    "ruleRef": "gp-b1-modals-obligation"
+                  }
+                },
+                {
+                  "type": "SpeakRepeat",
+                  "id": "es-pt-b1-u05-l01-e09",
+                  "targetPhrase": "Eu gostaria de morar em um bairro assim. É por isso que recomendo.",
+                  "audioText": "Eu gostaria de morar em um bairro assim. É por isso que recomendo.",
+                  "feedbackOnError": {
+                    "type": "pronunciation",
+                    "explanation": "Repite «Eu gostaria de morar em um bairro assim. É por isso que recomendo.» con claridad.",
+                    "ruleRef": "gp-b1-modals-obligation"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La frase se entiende y mantiene el ritmo."
+                  }
+                }
+              ]
+            },
+            {
+              "id": "es-pt-b1-u05-l02",
+              "title": "Síntomas y estados",
+              "cefrLevel": "B1",
+              "scenario": "Situación comunicativa sobre los síntomas.",
+              "canDo": "Puedo comunicarme con soltura sobre los síntomas.",
+              "grammarPoints": [
+                {
+                  "id": "gp-b1-modals-obligation",
+                  "label": "Modales de obligación",
+                  "description": "Must, have to y should expresan obligación y consejo."
+                },
+                {
+                  "id": "gp-b1-modals-advice",
+                  "label": "Modales de consejo",
+                  "description": "Should, ought to y could ayudan a recomendar sin imponer."
+                }
+              ],
+              "vocabFrequencyBand": "2000-3000",
+              "culturalNotes": [
+                {
+                  "idiom": "um mal que vem para bem",
+                  "note": "Expresión para describir algo malo que acaba siendo bueno.",
+                  "translation": "un mal que acaba bien"
+                }
+              ],
+              "microLesson": {
+                "title": "Síntomas y estados",
+                "goals": [
+                  "Usar vocabulario de los síntomas.",
+                  "Aplicar modales de obligación y modales de consejo.",
+                  "Resolver una tarea comunicativa sobre los síntomas."
+                ],
+                "sections": [
+                  {
+                    "heading": "Lengua en contexto",
+                    "body": "Modales de obligación: Must, have to y should expresan obligación y consejo. Modales de consejo: Should, ought to y could ayudan a recomendar sin imponer.",
+                    "examples": [
+                      {
+                        "source": "Tengo dolor de cabeza. Además, me ayuda a aprender.",
+                        "target": "Estou com dor de cabeça. Também me ajuda a aprender."
+                      },
+                      {
+                        "source": "Me duele la garganta. Por eso lo recomiendo.",
+                        "target": "Minha garganta dói. É por isso que recomendo."
+                      }
+                    ]
+                  }
+                ]
+              },
+              "glossary": [
+                {
+                  "term": "Estou com dor de cabeça. Também me ajuda a aprender.",
+                  "translations": [
+                    "Tengo dolor de cabeza. Además, me ayuda a aprender."
+                  ]
+                },
+                {
+                  "term": "Minha garganta dói. É por isso que recomendo.",
+                  "translations": [
+                    "Me duele la garganta. Por eso lo recomiendo."
+                  ]
+                },
+                {
+                  "term": "Estou muito cansado. Embora nem sempre seja fácil.",
+                  "translations": [
+                    "Estoy muy cansado. Aunque no siempre es fácil."
+                  ]
+                }
+              ],
+              "exercises": [
+                {
+                  "type": "MultipleChoice",
+                  "id": "es-pt-b1-u05-l02-e01",
+                  "question": "¿Cuál es la opción correcta para «Tengo dolor de cabeza. Además, me ayuda a aprender.»?",
+                  "options": [
+                    "Estou com dor de cabeça. Também me ajuda a aprender.",
+                    "Minha garganta dói. É por isso que recomendo.",
+                    "Estou muito cansado. Embora nem sempre seja fácil."
+                  ],
+                  "correctIndex": 0,
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "«Tengo dolor de cabeza. Además, me ayuda a aprender.» se dice «Estou com dor de cabeça. Também me ajuda a aprender.».",
+                    "ruleRef": "gp-b1-modals-obligation"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has elegido la traducción correcta."
+                  }
+                },
+                {
+                  "type": "Translate",
+                  "id": "es-pt-b1-u05-l02-e02",
+                  "sourcePhrase": "Tengo dolor de cabeza. Además, me ayuda a aprender.",
+                  "correctTokens": [
+                    "Estou",
+                    "com",
+                    "dor",
+                    "de",
+                    "cabeça",
+                    "Também",
+                    "me",
+                    "ajuda",
+                    "a",
+                    "aprender"
+                  ],
+                  "distractorTokens": [
+                    "Minha",
+                    "garganta",
+                    "dói"
+                  ],
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "El orden correcto es «Estou com dor de cabeça Também me ajuda a aprender». Modales de obligación: Must, have to y should expresan obligación y consejo.",
+                    "ruleRef": "gp-b1-modals-obligation"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La frase conserva el orden y el significado."
+                  }
+                },
+                {
+                  "type": "OrderWords",
+                  "id": "es-pt-b1-u05-l02-e03",
+                  "tokens": [
+                    "garganta",
+                    "dói",
+                    "É",
+                    "por",
+                    "isso",
+                    "que",
+                    "recomendo",
+                    "Minha"
+                  ],
+                  "answerTokens": [
+                    "Minha",
+                    "garganta",
+                    "dói",
+                    "É",
+                    "por",
+                    "isso",
+                    "que",
+                    "recomendo"
+                  ],
+                  "sourcePhrase": "Me duele la garganta. Por eso lo recomiendo.",
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "La frase correcta es «Minha garganta dói É por isso que recomendo». Modales de consejo: Should, ought to y could ayudan a recomendar sin imponer.",
+                    "ruleRef": "gp-b1-modals-advice"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "El orden produce una frase natural."
+                  }
+                },
+                {
+                  "type": "MatchPairs",
+                  "id": "es-pt-b1-u05-l02-e04",
+                  "pairs": [
+                    {
+                      "left": "Tengo dolor de cabeza. Además, me ayuda a aprender.",
+                      "right": "Estou com dor de cabeça. Também me ajuda a aprender."
+                    },
+                    {
+                      "left": "Me duele la garganta. Por eso lo recomiendo.",
+                      "right": "Minha garganta dói. É por isso que recomendo."
+                    },
+                    {
+                      "left": "Estoy muy cansado. Aunque no siempre es fácil.",
+                      "right": "Estou muito cansado. Embora nem sempre seja fácil."
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "Cada expresión tiene una traducción distinta.",
+                    "ruleRef": "gp-b1-modals-obligation"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has asociado cada expresión con su traducción."
+                  }
+                },
+                {
+                  "type": "ListenChoose",
+                  "id": "es-pt-b1-u05-l02-e05",
+                  "audioText": "Estou muito cansado. Embora nem sempre seja fácil.",
+                  "options": [
+                    "Estou com dor de cabeça. Também me ajuda a aprender.",
+                    "Minha garganta dói. É por isso que recomendo.",
+                    "Estou muito cansado. Embora nem sempre seja fácil."
+                  ],
+                  "correctIndex": 0,
+                  "feedbackOnError": {
+                    "type": "comprehension",
+                    "explanation": "El audio dice «Estou muito cansado. Embora nem sempre seja fácil.».",
+                    "ruleRef": "gp-b1-modals-obligation"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has reconocido la frase del audio."
+                  }
+                },
+                {
+                  "type": "ListenType",
+                  "id": "es-pt-b1-u05-l02-e06",
+                  "audioText": "Estou muito cansado. Embora nem sempre seja fácil.",
+                  "transcription": "Estou muito cansado. Embora nem sempre seja fácil.",
+                  "feedbackOnError": {
+                    "type": "spelling",
+                    "explanation": "Escribe exactamente «Estou muito cansado. Embora nem sempre seja fácil.».",
+                    "ruleRef": "gp-b1-modals-obligation"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La transcripción coincide con el audio."
+                  }
+                },
+                {
+                  "type": "ClozeDragDrop",
+                  "id": "es-pt-b1-u05-l02-e07",
+                  "passage": "{{b1}} com {{b2}} de cabeça",
+                  "blanks": [
+                    {
+                      "id": "b1",
+                      "answer": "Estou",
+                      "options": [
+                        "Estou",
+                        "cabeça",
+                        "muito"
+                      ]
+                    },
+                    {
+                      "id": "b2",
+                      "answer": "dor",
+                      "options": [
+                        "dor",
+                        "cabeça",
+                        "muito"
+                      ]
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "Las dos formas deben encajar con el contexto de la frase.",
+                    "ruleRef": "gp-b1-modals-advice"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Los dos huecos encajan con la situación."
+                  }
+                },
+                {
+                  "type": "FreeSpeakingPrompt",
+                  "id": "es-pt-b1-u05-l02-e08",
+                  "prompt": "Habla sobre los síntomas y justifica tu respuesta.",
+                  "minTokens": 6,
+                  "conceptClusters": [
+                    [
+                      "Estou"
+                    ],
+                    [
+                      "cansado"
+                    ],
+                    [
+                      "Embora"
+                    ]
+                  ],
+                  "modelAnswer": "Estou muito cansado. Embora nem sempre seja fácil.",
+                  "selfAssessmentCriteria": [
+                    "¿La respuesta es clara y responde a la tarea?",
+                    "¿Usa las dos estructuras gramaticales de la lección?"
+                  ],
+                  "grammarRuleRefs": [
+                    "gp-b1-modals-obligation",
+                    "gp-b1-modals-advice"
+                  ],
+                  "timeLimitSeconds": 60,
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "La respuesta modelo usa una frase completa y responde a la tarea.",
+                    "ruleRef": "gp-b1-modals-obligation"
+                  }
+                },
+                {
+                  "type": "SpeakRepeat",
+                  "id": "es-pt-b1-u05-l02-e09",
+                  "targetPhrase": "Estou muito cansado. Embora nem sempre seja fácil.",
+                  "audioText": "Estou muito cansado. Embora nem sempre seja fácil.",
+                  "feedbackOnError": {
+                    "type": "pronunciation",
+                    "explanation": "Repite «Estou muito cansado. Embora nem sempre seja fácil.» con claridad.",
+                    "ruleRef": "gp-b1-modals-obligation"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La frase se entiende y mantiene el ritmo."
+                  }
+                }
+              ]
+            },
+            {
+              "id": "es-pt-b1-u05-l03",
+              "title": "Remedios y farmacia",
+              "cefrLevel": "B1",
+              "scenario": "Situación comunicativa sobre la farmacia.",
+              "canDo": "Puedo comunicarme con soltura sobre la farmacia.",
+              "grammarPoints": [
+                {
+                  "id": "gp-b1-modals-obligation",
+                  "label": "Modales de obligación",
+                  "description": "Must, have to y should expresan obligación y consejo."
+                },
+                {
+                  "id": "gp-b1-modals-advice",
+                  "label": "Modales de consejo",
+                  "description": "Should, ought to y could ayudan a recomendar sin imponer."
+                }
+              ],
+              "vocabFrequencyBand": "2000-3000",
+              "culturalNotes": [
+                {
+                  "idiom": "um mal que vem para bem",
+                  "note": "Expresión para describir algo malo que acaba siendo bueno.",
+                  "translation": "un mal que acaba bien"
+                }
+              ],
+              "microLesson": {
+                "title": "Remedios y farmacia",
+                "goals": [
+                  "Usar vocabulario de la farmacia.",
+                  "Aplicar modales de obligación y modales de consejo.",
+                  "Resolver una tarea comunicativa sobre la farmacia."
+                ],
+                "sections": [
+                  {
+                    "heading": "Lengua en contexto",
+                    "body": "Modales de obligación: Must, have to y should expresan obligación y consejo. Modales de consejo: Should, ought to y could ayudan a recomendar sin imponer.",
+                    "examples": [
+                      {
+                        "source": "Necesito un analgésico. Por eso lo recomiendo.",
+                        "target": "Eu preciso de um analgésico. É por isso que recomendo."
+                      },
+                      {
+                        "source": "Necesito un jarabe para la tos. Aunque no siempre es fácil.",
+                        "target": "Eu preciso de xarope para tosse. Embora nem sempre seja fácil."
+                      }
+                    ]
+                  }
+                ]
+              },
+              "glossary": [
+                {
+                  "term": "Eu preciso de um analgésico. É por isso que recomendo.",
+                  "translations": [
+                    "Necesito un analgésico. Por eso lo recomiendo."
+                  ]
+                },
+                {
+                  "term": "Eu preciso de xarope para tosse. Embora nem sempre seja fácil.",
+                  "translations": [
+                    "Necesito un jarabe para la tos. Aunque no siempre es fácil."
+                  ]
+                },
+                {
+                  "term": "Eu preciso de uma caixa de emplastros. É uma boa pergunta.",
+                  "translations": [
+                    "Necesito una caja de tiritas. Es una buena pregunta."
+                  ]
+                }
+              ],
+              "exercises": [
+                {
+                  "type": "MultipleChoice",
+                  "id": "es-pt-b1-u05-l03-e01",
+                  "question": "¿Cuál es la opción correcta para «Necesito un analgésico. Por eso lo recomiendo.»?",
+                  "options": [
+                    "Eu preciso de um analgésico. É por isso que recomendo.",
+                    "Eu preciso de xarope para tosse. Embora nem sempre seja fácil.",
+                    "Eu preciso de uma caixa de emplastros. É uma boa pergunta."
+                  ],
+                  "correctIndex": 0,
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "«Necesito un analgésico. Por eso lo recomiendo.» se dice «Eu preciso de um analgésico. É por isso que recomendo.».",
+                    "ruleRef": "gp-b1-modals-obligation"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has elegido la traducción correcta."
+                  }
+                },
+                {
+                  "type": "Translate",
+                  "id": "es-pt-b1-u05-l03-e02",
+                  "sourcePhrase": "Necesito un analgésico. Por eso lo recomiendo.",
+                  "correctTokens": [
+                    "Eu",
+                    "preciso",
+                    "de",
+                    "um",
+                    "analgésico",
+                    "É",
+                    "por",
+                    "isso",
+                    "que",
+                    "recomendo"
+                  ],
+                  "distractorTokens": [
+                    "xarope",
+                    "para",
+                    "tosse"
+                  ],
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "El orden correcto es «Eu preciso de um analgésico É por isso que recomendo». Modales de obligación: Must, have to y should expresan obligación y consejo.",
+                    "ruleRef": "gp-b1-modals-obligation"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La frase conserva el orden y el significado."
+                  }
+                },
+                {
+                  "type": "OrderWords",
+                  "id": "es-pt-b1-u05-l03-e03",
+                  "tokens": [
+                    "preciso",
+                    "de",
+                    "xarope",
+                    "para",
+                    "tosse",
+                    "Embora",
+                    "nem",
+                    "sempre",
+                    "seja",
+                    "fácil",
+                    "Eu"
+                  ],
+                  "answerTokens": [
+                    "Eu",
+                    "preciso",
+                    "de",
+                    "xarope",
+                    "para",
+                    "tosse",
+                    "Embora",
+                    "nem",
+                    "sempre",
+                    "seja",
+                    "fácil"
+                  ],
+                  "sourcePhrase": "Necesito un jarabe para la tos. Aunque no siempre es fácil.",
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "La frase correcta es «Eu preciso de xarope para tosse Embora nem sempre seja fácil». Modales de consejo: Should, ought to y could ayudan a recomendar sin imponer.",
+                    "ruleRef": "gp-b1-modals-advice"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "El orden produce una frase natural."
+                  }
+                },
+                {
+                  "type": "MatchPairs",
+                  "id": "es-pt-b1-u05-l03-e04",
+                  "pairs": [
+                    {
+                      "left": "Necesito un analgésico. Por eso lo recomiendo.",
+                      "right": "Eu preciso de um analgésico. É por isso que recomendo."
+                    },
+                    {
+                      "left": "Necesito un jarabe para la tos. Aunque no siempre es fácil.",
+                      "right": "Eu preciso de xarope para tosse. Embora nem sempre seja fácil."
+                    },
+                    {
+                      "left": "Necesito una caja de tiritas. Es una buena pregunta.",
+                      "right": "Eu preciso de uma caixa de emplastros. É uma boa pergunta."
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "Cada expresión tiene una traducción distinta.",
+                    "ruleRef": "gp-b1-modals-obligation"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has asociado cada expresión con su traducción."
+                  }
+                },
+                {
+                  "type": "ListenChoose",
+                  "id": "es-pt-b1-u05-l03-e05",
+                  "audioText": "Eu preciso de uma caixa de emplastros. É uma boa pergunta.",
+                  "options": [
+                    "Eu preciso de um analgésico. É por isso que recomendo.",
+                    "Eu preciso de xarope para tosse. Embora nem sempre seja fácil.",
+                    "Eu preciso de uma caixa de emplastros. É uma boa pergunta."
+                  ],
+                  "correctIndex": 0,
+                  "feedbackOnError": {
+                    "type": "comprehension",
+                    "explanation": "El audio dice «Eu preciso de uma caixa de emplastros. É uma boa pergunta.».",
+                    "ruleRef": "gp-b1-modals-obligation"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has reconocido la frase del audio."
+                  }
+                },
+                {
+                  "type": "ListenType",
+                  "id": "es-pt-b1-u05-l03-e06",
+                  "audioText": "Eu preciso de uma caixa de emplastros. É uma boa pergunta.",
+                  "transcription": "Eu preciso de uma caixa de emplastros. É uma boa pergunta.",
+                  "feedbackOnError": {
+                    "type": "spelling",
+                    "explanation": "Escribe exactamente «Eu preciso de uma caixa de emplastros. É uma boa pergunta.».",
+                    "ruleRef": "gp-b1-modals-obligation"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La transcripción coincide con el audio."
+                  }
+                },
+                {
+                  "type": "ClozeDragDrop",
+                  "id": "es-pt-b1-u05-l03-e07",
+                  "passage": "Eu {{b1}} de um {{b2}}",
+                  "blanks": [
+                    {
+                      "id": "b1",
+                      "answer": "preciso",
+                      "options": [
+                        "preciso",
+                        "muito",
+                        "hoje"
+                      ]
+                    },
+                    {
+                      "id": "b2",
+                      "answer": "analgésico",
+                      "options": [
+                        "analgésico",
+                        "muito",
+                        "hoje"
+                      ]
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "Las dos formas deben encajar con el contexto de la frase.",
+                    "ruleRef": "gp-b1-modals-advice"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Los dos huecos encajan con la situación."
+                  }
+                },
+                {
+                  "type": "FreeSpeakingPrompt",
+                  "id": "es-pt-b1-u05-l03-e08",
+                  "prompt": "Habla sobre la farmacia y justifica tu respuesta.",
+                  "minTokens": 6,
+                  "conceptClusters": [
+                    [
+                      "preciso"
+                    ],
+                    [
+                      "caixa"
+                    ],
+                    [
+                      "emplastros"
+                    ]
+                  ],
+                  "modelAnswer": "Eu preciso de uma caixa de emplastros. É uma boa pergunta.",
+                  "selfAssessmentCriteria": [
+                    "¿La respuesta es clara y responde a la tarea?",
+                    "¿Usa las dos estructuras gramaticales de la lección?"
+                  ],
+                  "grammarRuleRefs": [
+                    "gp-b1-modals-obligation",
+                    "gp-b1-modals-advice"
+                  ],
+                  "timeLimitSeconds": 60,
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "La respuesta modelo usa una frase completa y responde a la tarea.",
+                    "ruleRef": "gp-b1-modals-obligation"
+                  }
+                },
+                {
+                  "type": "SpeakRepeat",
+                  "id": "es-pt-b1-u05-l03-e09",
+                  "targetPhrase": "Eu preciso de uma caixa de emplastros. É uma boa pergunta.",
+                  "audioText": "Eu preciso de uma caixa de emplastros. É uma boa pergunta.",
+                  "feedbackOnError": {
+                    "type": "pronunciation",
+                    "explanation": "Repite «Eu preciso de uma caixa de emplastros. É uma boa pergunta.» con claridad.",
+                    "ruleRef": "gp-b1-modals-obligation"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La frase se entiende y mantiene el ritmo."
+                  }
+                }
+              ]
+            },
+            {
+              "id": "es-pt-b1-u05-l04",
+              "title": "Should / shouldn't",
+              "cefrLevel": "B1",
+              "scenario": "Situación comunicativa sobre los consejos de salud.",
+              "canDo": "Puedo comunicarme con soltura sobre los consejos de salud.",
+              "grammarPoints": [
+                {
+                  "id": "gp-b1-modals-obligation",
+                  "label": "Modales de obligación",
+                  "description": "Must, have to y should expresan obligación y consejo."
+                },
+                {
+                  "id": "gp-b1-modals-advice",
+                  "label": "Modales de consejo",
+                  "description": "Should, ought to y could ayudan a recomendar sin imponer."
+                }
+              ],
+              "vocabFrequencyBand": "2000-3000",
+              "culturalNotes": [
+                {
+                  "idiom": "um mal que vem para bem",
+                  "note": "Expresión para describir algo malo que acaba siendo bueno.",
+                  "translation": "un mal que acaba bien"
+                }
+              ],
+              "microLesson": {
+                "title": "Should / shouldn't",
+                "goals": [
+                  "Usar vocabulario de los consejos de salud.",
+                  "Aplicar modales de obligación y modales de consejo.",
+                  "Resolver una tarea comunicativa sobre los consejos de salud."
+                ],
+                "sections": [
+                  {
+                    "heading": "Lengua en contexto",
+                    "body": "Modales de obligación: Must, have to y should expresan obligación y consejo. Modales de consejo: Should, ought to y could ayudan a recomendar sin imponer.",
+                    "examples": [
+                      {
+                        "source": "Deberías descansar más. Aunque no siempre es fácil.",
+                        "target": "você deveria descansar mais. Embora nem sempre seja fácil."
+                      },
+                      {
+                        "source": "Deberías beber más agua. Es una buena pregunta.",
+                        "target": "você deveria beber mais água. É uma boa pergunta."
+                      }
+                    ]
+                  }
+                ]
+              },
+              "glossary": [
+                {
+                  "term": "você deveria descansar mais. Embora nem sempre seja fácil.",
+                  "translations": [
+                    "Deberías descansar más. Aunque no siempre es fácil."
+                  ]
+                },
+                {
+                  "term": "você deveria beber mais água. É uma boa pergunta.",
+                  "translations": [
+                    "Deberías beber más agua. Es una buena pregunta."
+                  ]
+                },
+                {
+                  "term": "Você deveria dormir oito horas. Sempre tento melhorar.",
+                  "translations": [
+                    "Deberías dormir ocho horas. Siempre intento mejorarlo."
+                  ]
+                }
+              ],
+              "exercises": [
+                {
+                  "type": "MultipleChoice",
+                  "id": "es-pt-b1-u05-l04-e01",
+                  "question": "¿Cuál es la opción correcta para «Deberías descansar más. Aunque no siempre es fácil.»?",
+                  "options": [
+                    "você deveria descansar mais. Embora nem sempre seja fácil.",
+                    "você deveria beber mais água. É uma boa pergunta.",
+                    "Você deveria dormir oito horas. Sempre tento melhorar."
+                  ],
+                  "correctIndex": 0,
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "«Deberías descansar más. Aunque no siempre es fácil.» se dice «você deveria descansar mais. Embora nem sempre seja fácil.».",
+                    "ruleRef": "gp-b1-modals-obligation"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has elegido la traducción correcta."
+                  }
+                },
+                {
+                  "type": "Translate",
+                  "id": "es-pt-b1-u05-l04-e02",
+                  "sourcePhrase": "Deberías descansar más. Aunque no siempre es fácil.",
+                  "correctTokens": [
+                    "você",
+                    "deveria",
+                    "descansar",
+                    "mais",
+                    "Embora",
+                    "nem",
+                    "sempre",
+                    "seja",
+                    "fácil"
+                  ],
+                  "distractorTokens": [
+                    "beber",
+                    "água",
+                    "É"
+                  ],
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "El orden correcto es «você deveria descansar mais Embora nem sempre seja fácil». Modales de obligación: Must, have to y should expresan obligación y consejo.",
+                    "ruleRef": "gp-b1-modals-obligation"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La frase conserva el orden y el significado."
+                  }
+                },
+                {
+                  "type": "OrderWords",
+                  "id": "es-pt-b1-u05-l04-e03",
+                  "tokens": [
+                    "deveria",
+                    "beber",
+                    "mais",
+                    "água",
+                    "É",
+                    "uma",
+                    "boa",
+                    "pergunta",
+                    "você"
+                  ],
+                  "answerTokens": [
+                    "você",
+                    "deveria",
+                    "beber",
+                    "mais",
+                    "água",
+                    "É",
+                    "uma",
+                    "boa",
+                    "pergunta"
+                  ],
+                  "sourcePhrase": "Deberías beber más agua. Es una buena pregunta.",
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "La frase correcta es «você deveria beber mais água É uma boa pergunta». Modales de consejo: Should, ought to y could ayudan a recomendar sin imponer.",
+                    "ruleRef": "gp-b1-modals-advice"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "El orden produce una frase natural."
+                  }
+                },
+                {
+                  "type": "MatchPairs",
+                  "id": "es-pt-b1-u05-l04-e04",
+                  "pairs": [
+                    {
+                      "left": "Deberías descansar más. Aunque no siempre es fácil.",
+                      "right": "você deveria descansar mais. Embora nem sempre seja fácil."
+                    },
+                    {
+                      "left": "Deberías beber más agua. Es una buena pregunta.",
+                      "right": "você deveria beber mais água. É uma boa pergunta."
+                    },
+                    {
+                      "left": "Deberías dormir ocho horas. Siempre intento mejorarlo.",
+                      "right": "Você deveria dormir oito horas. Sempre tento melhorar."
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "Cada expresión tiene una traducción distinta.",
+                    "ruleRef": "gp-b1-modals-obligation"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has asociado cada expresión con su traducción."
+                  }
+                },
+                {
+                  "type": "ListenChoose",
+                  "id": "es-pt-b1-u05-l04-e05",
+                  "audioText": "Você deveria dormir oito horas. Sempre tento melhorar.",
+                  "options": [
+                    "você deveria descansar mais. Embora nem sempre seja fácil.",
+                    "você deveria beber mais água. É uma boa pergunta.",
+                    "Você deveria dormir oito horas. Sempre tento melhorar."
+                  ],
+                  "correctIndex": 0,
+                  "feedbackOnError": {
+                    "type": "comprehension",
+                    "explanation": "El audio dice «Você deveria dormir oito horas. Sempre tento melhorar.».",
+                    "ruleRef": "gp-b1-modals-obligation"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has reconocido la frase del audio."
+                  }
+                },
+                {
+                  "type": "ListenType",
+                  "id": "es-pt-b1-u05-l04-e06",
+                  "audioText": "Você deveria dormir oito horas. Sempre tento melhorar.",
+                  "transcription": "Você deveria dormir oito horas. Sempre tento melhorar.",
+                  "feedbackOnError": {
+                    "type": "spelling",
+                    "explanation": "Escribe exactamente «Você deveria dormir oito horas. Sempre tento melhorar.».",
+                    "ruleRef": "gp-b1-modals-obligation"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La transcripción coincide con el audio."
+                  }
+                },
+                {
+                  "type": "ClozeDragDrop",
+                  "id": "es-pt-b1-u05-l04-e07",
+                  "passage": "você {{b1}} {{b2}} mais",
+                  "blanks": [
+                    {
+                      "id": "b1",
+                      "answer": "deveria",
+                      "options": [
+                        "deveria",
+                        "muito",
+                        "hoje"
+                      ]
+                    },
+                    {
+                      "id": "b2",
+                      "answer": "descansar",
+                      "options": [
+                        "descansar",
+                        "muito",
+                        "hoje"
+                      ]
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "Las dos formas deben encajar con el contexto de la frase.",
+                    "ruleRef": "gp-b1-modals-advice"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Los dos huecos encajan con la situación."
+                  }
+                },
+                {
+                  "type": "FreeSpeakingPrompt",
+                  "id": "es-pt-b1-u05-l04-e08",
+                  "prompt": "Habla sobre los consejos de salud y justifica tu respuesta.",
+                  "minTokens": 6,
+                  "conceptClusters": [
+                    [
+                      "deveria"
+                    ],
+                    [
+                      "dormir"
+                    ],
+                    [
+                      "oito"
+                    ]
+                  ],
+                  "modelAnswer": "Você deveria dormir oito horas. Sempre tento melhorar.",
+                  "selfAssessmentCriteria": [
+                    "¿La respuesta es clara y responde a la tarea?",
+                    "¿Usa las dos estructuras gramaticales de la lección?"
+                  ],
+                  "grammarRuleRefs": [
+                    "gp-b1-modals-obligation",
+                    "gp-b1-modals-advice"
+                  ],
+                  "timeLimitSeconds": 60,
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "La respuesta modelo usa una frase completa y responde a la tarea.",
+                    "ruleRef": "gp-b1-modals-obligation"
+                  }
+                },
+                {
+                  "type": "SpeakRepeat",
+                  "id": "es-pt-b1-u05-l04-e09",
+                  "targetPhrase": "Você deveria dormir oito horas. Sempre tento melhorar.",
+                  "audioText": "Você deveria dormir oito horas. Sempre tento melhorar.",
+                  "feedbackOnError": {
+                    "type": "pronunciation",
+                    "explanation": "Repite «Você deveria dormir oito horas. Sempre tento melhorar.» con claridad.",
+                    "ruleRef": "gp-b1-modals-obligation"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La frase se entiende y mantiene el ritmo."
+                  }
+                }
+              ]
+            },
+            {
+              "id": "es-pt-b1-u05-l05",
+              "title": "Have to / don't have to",
+              "cefrLevel": "B1",
+              "scenario": "Situación comunicativa sobre las obligaciones de salud.",
+              "canDo": "Puedo comunicarme con soltura sobre las obligaciones de salud.",
+              "grammarPoints": [
+                {
+                  "id": "gp-b1-modals-obligation",
+                  "label": "Modales de obligación",
+                  "description": "Must, have to y should expresan obligación y consejo."
+                },
+                {
+                  "id": "gp-b1-modals-advice",
+                  "label": "Modales de consejo",
+                  "description": "Should, ought to y could ayudan a recomendar sin imponer."
+                }
+              ],
+              "vocabFrequencyBand": "2000-3000",
+              "culturalNotes": [
+                {
+                  "idiom": "um mal que vem para bem",
+                  "note": "Expresión para describir algo malo que acaba siendo bueno.",
+                  "translation": "un mal que acaba bien"
+                }
+              ],
+              "microLesson": {
+                "title": "Have to / don't have to",
+                "goals": [
+                  "Usar vocabulario de las obligaciones de salud.",
+                  "Aplicar modales de obligación y modales de consejo.",
+                  "Resolver una tarea comunicativa sobre las obligaciones de salud."
+                ],
+                "sections": [
+                  {
+                    "heading": "Lengua en contexto",
+                    "body": "Modales de obligación: Must, have to y should expresan obligación y consejo. Modales de consejo: Should, ought to y could ayudan a recomendar sin imponer.",
+                    "examples": [
+                      {
+                        "source": "Tengo que tomar la medicina. Es una buena pregunta.",
+                        "target": "Eu tenho que tomar o remédio. É uma boa pergunta."
+                      },
+                      {
+                        "source": "Tengo que ir al médico. Siempre intento mejorarlo.",
+                        "target": "Eu tenho que ir ao médico. Sempre tento melhorar."
+                      }
+                    ]
+                  }
+                ]
+              },
+              "glossary": [
+                {
+                  "term": "Eu tenho que tomar o remédio. É uma boa pergunta.",
+                  "translations": [
+                    "Tengo que tomar la medicina. Es una buena pregunta."
+                  ]
+                },
+                {
+                  "term": "Eu tenho que ir ao médico. Sempre tento melhorar.",
+                  "translations": [
+                    "Tengo que ir al médico. Siempre intento mejorarlo."
+                  ]
+                },
+                {
+                  "term": "Eu tenho que me exercitar. No meu caso, funciona.",
+                  "translations": [
+                    "Tengo que hacer ejercicio. En mi caso, funciona."
+                  ]
+                }
+              ],
+              "exercises": [
+                {
+                  "type": "MultipleChoice",
+                  "id": "es-pt-b1-u05-l05-e01",
+                  "question": "¿Cuál es la opción correcta para «Tengo que tomar la medicina. Es una buena pregunta.»?",
+                  "options": [
+                    "Eu tenho que tomar o remédio. É uma boa pergunta.",
+                    "Eu tenho que ir ao médico. Sempre tento melhorar.",
+                    "Eu tenho que me exercitar. No meu caso, funciona."
+                  ],
+                  "correctIndex": 0,
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "«Tengo que tomar la medicina. Es una buena pregunta.» se dice «Eu tenho que tomar o remédio. É uma boa pergunta.».",
+                    "ruleRef": "gp-b1-modals-obligation"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has elegido la traducción correcta."
+                  }
+                },
+                {
+                  "type": "Translate",
+                  "id": "es-pt-b1-u05-l05-e02",
+                  "sourcePhrase": "Tengo que tomar la medicina. Es una buena pregunta.",
+                  "correctTokens": [
+                    "Eu",
+                    "tenho",
+                    "que",
+                    "tomar",
+                    "o",
+                    "remédio",
+                    "É",
+                    "uma",
+                    "boa",
+                    "pergunta"
+                  ],
+                  "distractorTokens": [
+                    "ir",
+                    "ao",
+                    "médico"
+                  ],
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "El orden correcto es «Eu tenho que tomar o remédio É uma boa pergunta». Modales de obligación: Must, have to y should expresan obligación y consejo.",
+                    "ruleRef": "gp-b1-modals-obligation"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La frase conserva el orden y el significado."
+                  }
+                },
+                {
+                  "type": "OrderWords",
+                  "id": "es-pt-b1-u05-l05-e03",
+                  "tokens": [
+                    "tenho",
+                    "que",
+                    "ir",
+                    "ao",
+                    "médico",
+                    "Sempre",
+                    "tento",
+                    "melhorar",
+                    "Eu"
+                  ],
+                  "answerTokens": [
+                    "Eu",
+                    "tenho",
+                    "que",
+                    "ir",
+                    "ao",
+                    "médico",
+                    "Sempre",
+                    "tento",
+                    "melhorar"
+                  ],
+                  "sourcePhrase": "Tengo que ir al médico. Siempre intento mejorarlo.",
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "La frase correcta es «Eu tenho que ir ao médico Sempre tento melhorar». Modales de consejo: Should, ought to y could ayudan a recomendar sin imponer.",
+                    "ruleRef": "gp-b1-modals-advice"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "El orden produce una frase natural."
+                  }
+                },
+                {
+                  "type": "MatchPairs",
+                  "id": "es-pt-b1-u05-l05-e04",
+                  "pairs": [
+                    {
+                      "left": "Tengo que tomar la medicina. Es una buena pregunta.",
+                      "right": "Eu tenho que tomar o remédio. É uma boa pergunta."
+                    },
+                    {
+                      "left": "Tengo que ir al médico. Siempre intento mejorarlo.",
+                      "right": "Eu tenho que ir ao médico. Sempre tento melhorar."
+                    },
+                    {
+                      "left": "Tengo que hacer ejercicio. En mi caso, funciona.",
+                      "right": "Eu tenho que me exercitar. No meu caso, funciona."
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "Cada expresión tiene una traducción distinta.",
+                    "ruleRef": "gp-b1-modals-obligation"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has asociado cada expresión con su traducción."
+                  }
+                },
+                {
+                  "type": "ListenChoose",
+                  "id": "es-pt-b1-u05-l05-e05",
+                  "audioText": "Eu tenho que me exercitar. No meu caso, funciona.",
+                  "options": [
+                    "Eu tenho que tomar o remédio. É uma boa pergunta.",
+                    "Eu tenho que ir ao médico. Sempre tento melhorar.",
+                    "Eu tenho que me exercitar. No meu caso, funciona."
+                  ],
+                  "correctIndex": 0,
+                  "feedbackOnError": {
+                    "type": "comprehension",
+                    "explanation": "El audio dice «Eu tenho que me exercitar. No meu caso, funciona.».",
+                    "ruleRef": "gp-b1-modals-obligation"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has reconocido la frase del audio."
+                  }
+                },
+                {
+                  "type": "ListenType",
+                  "id": "es-pt-b1-u05-l05-e06",
+                  "audioText": "Eu tenho que me exercitar. No meu caso, funciona.",
+                  "transcription": "Eu tenho que me exercitar. No meu caso, funciona.",
+                  "feedbackOnError": {
+                    "type": "spelling",
+                    "explanation": "Escribe exactamente «Eu tenho que me exercitar. No meu caso, funciona.».",
+                    "ruleRef": "gp-b1-modals-obligation"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La transcripción coincide con el audio."
+                  }
+                },
+                {
+                  "type": "ClozeDragDrop",
+                  "id": "es-pt-b1-u05-l05-e07",
+                  "passage": "Eu {{b1}} que {{b2}} o remédio",
+                  "blanks": [
+                    {
+                      "id": "b1",
+                      "answer": "tenho",
+                      "options": [
+                        "tenho",
+                        "remédio",
+                        "muito"
+                      ]
+                    },
+                    {
+                      "id": "b2",
+                      "answer": "tomar",
+                      "options": [
+                        "tomar",
+                        "remédio",
+                        "muito"
+                      ]
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "Las dos formas deben encajar con el contexto de la frase.",
+                    "ruleRef": "gp-b1-modals-advice"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Los dos huecos encajan con la situación."
+                  }
+                },
+                {
+                  "type": "FreeSpeakingPrompt",
+                  "id": "es-pt-b1-u05-l05-e08",
+                  "prompt": "Habla sobre las obligaciones de salud y justifica tu respuesta.",
+                  "minTokens": 6,
+                  "conceptClusters": [
+                    [
+                      "tenho"
+                    ],
+                    [
+                      "exercitar"
+                    ],
+                    [
+                      "caso"
+                    ]
+                  ],
+                  "modelAnswer": "Eu tenho que me exercitar. No meu caso, funciona.",
+                  "selfAssessmentCriteria": [
+                    "¿La respuesta es clara y responde a la tarea?",
+                    "¿Usa las dos estructuras gramaticales de la lección?"
+                  ],
+                  "grammarRuleRefs": [
+                    "gp-b1-modals-obligation",
+                    "gp-b1-modals-advice"
+                  ],
+                  "timeLimitSeconds": 60,
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "La respuesta modelo usa una frase completa y responde a la tarea.",
+                    "ruleRef": "gp-b1-modals-obligation"
+                  }
+                },
+                {
+                  "type": "SpeakRepeat",
+                  "id": "es-pt-b1-u05-l05-e09",
+                  "targetPhrase": "Eu tenho que me exercitar. No meu caso, funciona.",
+                  "audioText": "Eu tenho que me exercitar. No meu caso, funciona.",
+                  "feedbackOnError": {
+                    "type": "pronunciation",
+                    "explanation": "Repite «Eu tenho que me exercitar. No meu caso, funciona.» con claridad.",
+                    "ruleRef": "gp-b1-modals-obligation"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La frase se entiende y mantiene el ritmo."
+                  }
+                }
+              ]
+            },
+            {
+              "id": "es-pt-b1-u05-l06",
+              "title": "En la consulta médica",
+              "cefrLevel": "B1",
+              "scenario": "Situación comunicativa sobre la consulta médica.",
+              "canDo": "Puedo comunicarme con soltura sobre la consulta médica.",
+              "grammarPoints": [
+                {
+                  "id": "gp-b1-modals-obligation",
+                  "label": "Modales de obligación",
+                  "description": "Must, have to y should expresan obligación y consejo."
+                },
+                {
+                  "id": "gp-b1-modals-advice",
+                  "label": "Modales de consejo",
+                  "description": "Should, ought to y could ayudan a recomendar sin imponer."
+                }
+              ],
+              "vocabFrequencyBand": "2000-3000",
+              "culturalNotes": [
+                {
+                  "idiom": "um mal que vem para bem",
+                  "note": "Expresión para describir algo malo que acaba siendo bueno.",
+                  "translation": "un mal que acaba bien"
+                }
+              ],
+              "microLesson": {
+                "title": "En la consulta médica",
+                "goals": [
+                  "Usar vocabulario de la consulta médica.",
+                  "Aplicar modales de obligación y modales de consejo.",
+                  "Resolver una tarea comunicativa sobre la consulta médica."
+                ],
+                "sections": [
+                  {
+                    "heading": "Lengua en contexto",
+                    "body": "Modales de obligación: Must, have to y should expresan obligación y consejo. Modales de consejo: Should, ought to y could ayudan a recomendar sin imponer.",
+                    "examples": [
+                      {
+                        "source": "Me duele el estómago desde ayer. Siempre intento mejorarlo.",
+                        "target": "Minha barriga está doendo desde ontem. Sempre tento melhorar."
+                      },
+                      {
+                        "source": "¿Puedo tomar este medicamento? En mi caso, funciona.",
+                        "target": "Posso tomar este medicamento. No meu caso, funciona."
+                      }
+                    ]
+                  }
+                ]
+              },
+              "glossary": [
+                {
+                  "term": "Minha barriga está doendo desde ontem. Sempre tento melhorar.",
+                  "translations": [
+                    "Me duele el estómago desde ayer. Siempre intento mejorarlo."
+                  ]
+                },
+                {
+                  "term": "Posso tomar este medicamento. No meu caso, funciona.",
+                  "translations": [
+                    "¿Puedo tomar este medicamento? En mi caso, funciona."
+                  ]
+                },
+                {
+                  "term": "Você tem que descansar e beber água. Também tem vantagens.",
+                  "translations": [
+                    "Tiene que descansar y beber agua. También tiene ventajas."
+                  ]
+                }
+              ],
+              "exercises": [
+                {
+                  "type": "MultipleChoice",
+                  "id": "es-pt-b1-u05-l06-e01",
+                  "question": "¿Cuál es la opción correcta para «Me duele el estómago desde ayer. Siempre intento mejorarlo.»?",
+                  "options": [
+                    "Minha barriga está doendo desde ontem. Sempre tento melhorar.",
+                    "Posso tomar este medicamento. No meu caso, funciona.",
+                    "Você tem que descansar e beber água. Também tem vantagens."
+                  ],
+                  "correctIndex": 0,
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "«Me duele el estómago desde ayer. Siempre intento mejorarlo.» se dice «Minha barriga está doendo desde ontem. Sempre tento melhorar.».",
+                    "ruleRef": "gp-b1-modals-obligation"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has elegido la traducción correcta."
+                  }
+                },
+                {
+                  "type": "Translate",
+                  "id": "es-pt-b1-u05-l06-e02",
+                  "sourcePhrase": "Me duele el estómago desde ayer. Siempre intento mejorarlo.",
+                  "correctTokens": [
+                    "Minha",
+                    "barriga",
+                    "está",
+                    "doendo",
+                    "desde",
+                    "ontem",
+                    "Sempre",
+                    "tento",
+                    "melhorar"
+                  ],
+                  "distractorTokens": [
+                    "Posso",
+                    "tomar",
+                    "este"
+                  ],
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "El orden correcto es «Minha barriga está doendo desde ontem Sempre tento melhorar». Modales de obligación: Must, have to y should expresan obligación y consejo.",
+                    "ruleRef": "gp-b1-modals-obligation"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La frase conserva el orden y el significado."
+                  }
+                },
+                {
+                  "type": "OrderWords",
+                  "id": "es-pt-b1-u05-l06-e03",
+                  "tokens": [
+                    "tomar",
+                    "este",
+                    "medicamento",
+                    "No",
+                    "meu",
+                    "caso",
+                    "funciona",
+                    "Posso"
+                  ],
+                  "answerTokens": [
+                    "Posso",
+                    "tomar",
+                    "este",
+                    "medicamento",
+                    "No",
+                    "meu",
+                    "caso",
+                    "funciona"
+                  ],
+                  "sourcePhrase": "¿Puedo tomar este medicamento? En mi caso, funciona.",
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "La frase correcta es «Posso tomar este medicamento No meu caso funciona». Modales de consejo: Should, ought to y could ayudan a recomendar sin imponer.",
+                    "ruleRef": "gp-b1-modals-advice"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "El orden produce una frase natural."
+                  }
+                },
+                {
+                  "type": "MatchPairs",
+                  "id": "es-pt-b1-u05-l06-e04",
+                  "pairs": [
+                    {
+                      "left": "Me duele el estómago desde ayer. Siempre intento mejorarlo.",
+                      "right": "Minha barriga está doendo desde ontem. Sempre tento melhorar."
+                    },
+                    {
+                      "left": "¿Puedo tomar este medicamento? En mi caso, funciona.",
+                      "right": "Posso tomar este medicamento. No meu caso, funciona."
+                    },
+                    {
+                      "left": "Tiene que descansar y beber agua. También tiene ventajas.",
+                      "right": "Você tem que descansar e beber água. Também tem vantagens."
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "Cada expresión tiene una traducción distinta.",
+                    "ruleRef": "gp-b1-modals-obligation"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has asociado cada expresión con su traducción."
+                  }
+                },
+                {
+                  "type": "ListenChoose",
+                  "id": "es-pt-b1-u05-l06-e05",
+                  "audioText": "Você tem que descansar e beber água. Também tem vantagens.",
+                  "options": [
+                    "Minha barriga está doendo desde ontem. Sempre tento melhorar.",
+                    "Posso tomar este medicamento. No meu caso, funciona.",
+                    "Você tem que descansar e beber água. Também tem vantagens."
+                  ],
+                  "correctIndex": 0,
+                  "feedbackOnError": {
+                    "type": "comprehension",
+                    "explanation": "El audio dice «Você tem que descansar e beber água. Também tem vantagens.».",
+                    "ruleRef": "gp-b1-modals-obligation"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has reconocido la frase del audio."
+                  }
+                },
+                {
+                  "type": "ListenType",
+                  "id": "es-pt-b1-u05-l06-e06",
+                  "audioText": "Você tem que descansar e beber água. Também tem vantagens.",
+                  "transcription": "Você tem que descansar e beber água. Também tem vantagens.",
+                  "feedbackOnError": {
+                    "type": "spelling",
+                    "explanation": "Escribe exactamente «Você tem que descansar e beber água. Também tem vantagens.».",
+                    "ruleRef": "gp-b1-modals-obligation"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La transcripción coincide con el audio."
+                  }
+                },
+                {
+                  "type": "ClozeDragDrop",
+                  "id": "es-pt-b1-u05-l06-e07",
+                  "passage": "Minha {{b1}} {{b2}} doendo desde ontem",
+                  "blanks": [
+                    {
+                      "id": "b1",
+                      "answer": "barriga",
+                      "options": [
+                        "barriga",
+                        "doendo",
+                        "desde"
+                      ]
+                    },
+                    {
+                      "id": "b2",
+                      "answer": "está",
+                      "options": [
+                        "está",
+                        "doendo",
+                        "desde"
+                      ]
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "Las dos formas deben encajar con el contexto de la frase.",
+                    "ruleRef": "gp-b1-modals-advice"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Los dos huecos encajan con la situación."
+                  }
+                },
+                {
+                  "type": "FreeSpeakingPrompt",
+                  "id": "es-pt-b1-u05-l06-e08",
+                  "prompt": "Habla sobre la consulta médica y justifica tu respuesta.",
+                  "minTokens": 6,
+                  "conceptClusters": [
+                    [
+                      "tem"
+                    ],
+                    [
+                      "descansar"
+                    ],
+                    [
+                      "beber"
+                    ]
+                  ],
+                  "modelAnswer": "Você tem que descansar e beber água. Também tem vantagens.",
+                  "selfAssessmentCriteria": [
+                    "¿La respuesta es clara y responde a la tarea?",
+                    "¿Usa las dos estructuras gramaticales de la lección?"
+                  ],
+                  "grammarRuleRefs": [
+                    "gp-b1-modals-obligation",
+                    "gp-b1-modals-advice"
+                  ],
+                  "timeLimitSeconds": 60,
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "La respuesta modelo usa una frase completa y responde a la tarea.",
+                    "ruleRef": "gp-b1-modals-obligation"
+                  }
+                },
+                {
+                  "type": "SpeakRepeat",
+                  "id": "es-pt-b1-u05-l06-e09",
+                  "targetPhrase": "Você tem que descansar e beber água. Também tem vantagens.",
+                  "audioText": "Você tem que descansar e beber água. Também tem vantagens.",
+                  "feedbackOnError": {
+                    "type": "pronunciation",
+                    "explanation": "Repite «Você tem que descansar e beber água. Também tem vantagens.» con claridad.",
+                    "ruleRef": "gp-b1-modals-obligation"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La frase se entiende y mantiene el ritmo."
+                  }
+                }
+              ]
+            },
+            {
+              "id": "es-pt-b1-u05-l07",
+              "title": "Consejos de salud",
+              "cefrLevel": "B1",
+              "scenario": "Situación comunicativa sobre los hábitos saludables.",
+              "canDo": "Puedo comunicarme con soltura sobre los hábitos saludables.",
+              "grammarPoints": [
+                {
+                  "id": "gp-b1-modals-obligation",
+                  "label": "Modales de obligación",
+                  "description": "Must, have to y should expresan obligación y consejo."
+                },
+                {
+                  "id": "gp-b1-modals-advice",
+                  "label": "Modales de consejo",
+                  "description": "Should, ought to y could ayudan a recomendar sin imponer."
+                }
+              ],
+              "vocabFrequencyBand": "2000-3000",
+              "culturalNotes": [
+                {
+                  "idiom": "um mal que vem para bem",
+                  "note": "Expresión para describir algo malo que acaba siendo bueno.",
+                  "translation": "un mal que acaba bien"
+                }
+              ],
+              "microLesson": {
+                "title": "Consejos de salud",
+                "goals": [
+                  "Usar vocabulario de los hábitos saludables.",
+                  "Aplicar modales de obligación y modales de consejo.",
+                  "Resolver una tarea comunicativa sobre los hábitos saludables."
+                ],
+                "sections": [
+                  {
+                    "heading": "Lengua en contexto",
+                    "body": "Modales de obligación: Must, have to y should expresan obligación y consejo. Modales de consejo: Should, ought to y could ayudan a recomendar sin imponer.",
+                    "examples": [
+                      {
+                        "source": "Deberías caminar treinta minutos al día. En mi caso, funciona.",
+                        "target": "Você deve caminhar trinta minutos por dia. No meu caso, funciona."
+                      },
+                      {
+                        "source": "No deberías comer tanto azúcar. También tiene ventajas.",
+                        "target": "Você não deveria comer tanto açúcar. Também tem vantagens."
+                      }
+                    ]
+                  }
+                ]
+              },
+              "glossary": [
+                {
+                  "term": "Você deve caminhar trinta minutos por dia. No meu caso, funciona.",
+                  "translations": [
+                    "Deberías caminar treinta minutos al día. En mi caso, funciona."
+                  ]
+                },
+                {
+                  "term": "Você não deveria comer tanto açúcar. Também tem vantagens.",
+                  "translations": [
+                    "No deberías comer tanto azúcar. También tiene ventajas."
+                  ]
+                },
+                {
+                  "term": "Você deveria dormir melhor. E quero continuar praticando.",
+                  "translations": [
+                    "Deberías dormir mejor. Y quiero seguir practicando."
+                  ]
+                }
+              ],
+              "exercises": [
+                {
+                  "type": "MultipleChoice",
+                  "id": "es-pt-b1-u05-l07-e01",
+                  "question": "¿Cuál es la opción correcta para «Deberías caminar treinta minutos al día. En mi caso, funciona.»?",
+                  "options": [
+                    "Você deve caminhar trinta minutos por dia. No meu caso, funciona.",
+                    "Você não deveria comer tanto açúcar. Também tem vantagens.",
+                    "Você deveria dormir melhor. E quero continuar praticando."
+                  ],
+                  "correctIndex": 0,
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "«Deberías caminar treinta minutos al día. En mi caso, funciona.» se dice «Você deve caminhar trinta minutos por dia. No meu caso, funciona.».",
+                    "ruleRef": "gp-b1-modals-obligation"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has elegido la traducción correcta."
+                  }
+                },
+                {
+                  "type": "Translate",
+                  "id": "es-pt-b1-u05-l07-e02",
+                  "sourcePhrase": "Deberías caminar treinta minutos al día. En mi caso, funciona.",
+                  "correctTokens": [
+                    "Você",
+                    "deve",
+                    "caminhar",
+                    "trinta",
+                    "minutos",
+                    "por",
+                    "dia",
+                    "No",
+                    "meu",
+                    "caso",
+                    "funciona"
+                  ],
+                  "distractorTokens": [
+                    "não",
+                    "deveria",
+                    "comer"
+                  ],
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "El orden correcto es «Você deve caminhar trinta minutos por dia No meu caso funciona». Modales de obligación: Must, have to y should expresan obligación y consejo.",
+                    "ruleRef": "gp-b1-modals-obligation"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La frase conserva el orden y el significado."
+                  }
+                },
+                {
+                  "type": "OrderWords",
+                  "id": "es-pt-b1-u05-l07-e03",
+                  "tokens": [
+                    "não",
+                    "deveria",
+                    "comer",
+                    "tanto",
+                    "açúcar",
+                    "Também",
+                    "tem",
+                    "vantagens",
+                    "Você"
+                  ],
+                  "answerTokens": [
+                    "Você",
+                    "não",
+                    "deveria",
+                    "comer",
+                    "tanto",
+                    "açúcar",
+                    "Também",
+                    "tem",
+                    "vantagens"
+                  ],
+                  "sourcePhrase": "No deberías comer tanto azúcar. También tiene ventajas.",
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "La frase correcta es «Você não deveria comer tanto açúcar Também tem vantagens». Modales de consejo: Should, ought to y could ayudan a recomendar sin imponer.",
+                    "ruleRef": "gp-b1-modals-advice"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "El orden produce una frase natural."
+                  }
+                },
+                {
+                  "type": "MatchPairs",
+                  "id": "es-pt-b1-u05-l07-e04",
+                  "pairs": [
+                    {
+                      "left": "Deberías caminar treinta minutos al día. En mi caso, funciona.",
+                      "right": "Você deve caminhar trinta minutos por dia. No meu caso, funciona."
+                    },
+                    {
+                      "left": "No deberías comer tanto azúcar. También tiene ventajas.",
+                      "right": "Você não deveria comer tanto açúcar. Também tem vantagens."
+                    },
+                    {
+                      "left": "Deberías dormir mejor. Y quiero seguir practicando.",
+                      "right": "Você deveria dormir melhor. E quero continuar praticando."
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "Cada expresión tiene una traducción distinta.",
+                    "ruleRef": "gp-b1-modals-obligation"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has asociado cada expresión con su traducción."
+                  }
+                },
+                {
+                  "type": "ListenChoose",
+                  "id": "es-pt-b1-u05-l07-e05",
+                  "audioText": "Você deveria dormir melhor. E quero continuar praticando.",
+                  "options": [
+                    "Você deve caminhar trinta minutos por dia. No meu caso, funciona.",
+                    "Você não deveria comer tanto açúcar. Também tem vantagens.",
+                    "Você deveria dormir melhor. E quero continuar praticando."
+                  ],
+                  "correctIndex": 0,
+                  "feedbackOnError": {
+                    "type": "comprehension",
+                    "explanation": "El audio dice «Você deveria dormir melhor. E quero continuar praticando.».",
+                    "ruleRef": "gp-b1-modals-obligation"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has reconocido la frase del audio."
+                  }
+                },
+                {
+                  "type": "ListenType",
+                  "id": "es-pt-b1-u05-l07-e06",
+                  "audioText": "Você deveria dormir melhor. E quero continuar praticando.",
+                  "transcription": "Você deveria dormir melhor. E quero continuar praticando.",
+                  "feedbackOnError": {
+                    "type": "spelling",
+                    "explanation": "Escribe exactamente «Você deveria dormir melhor. E quero continuar praticando.».",
+                    "ruleRef": "gp-b1-modals-obligation"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La transcripción coincide con el audio."
+                  }
+                },
+                {
+                  "type": "ClozeDragDrop",
+                  "id": "es-pt-b1-u05-l07-e07",
+                  "passage": "Você {{b1}} {{b2}} trinta minutos por dia",
+                  "blanks": [
+                    {
+                      "id": "b1",
+                      "answer": "deve",
+                      "options": [
+                        "deve",
+                        "trinta",
+                        "minutos"
+                      ]
+                    },
+                    {
+                      "id": "b2",
+                      "answer": "caminhar",
+                      "options": [
+                        "caminhar",
+                        "trinta",
+                        "minutos"
+                      ]
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "Las dos formas deben encajar con el contexto de la frase.",
+                    "ruleRef": "gp-b1-modals-advice"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Los dos huecos encajan con la situación."
+                  }
+                },
+                {
+                  "type": "FreeSpeakingPrompt",
+                  "id": "es-pt-b1-u05-l07-e08",
+                  "prompt": "Habla sobre los hábitos saludables y justifica tu respuesta.",
+                  "minTokens": 6,
+                  "conceptClusters": [
+                    [
+                      "deveria"
+                    ],
+                    [
+                      "dormir"
+                    ],
+                    [
+                      "melhor"
+                    ]
+                  ],
+                  "modelAnswer": "Você deveria dormir melhor. E quero continuar praticando.",
+                  "selfAssessmentCriteria": [
+                    "¿La respuesta es clara y responde a la tarea?",
+                    "¿Usa las dos estructuras gramaticales de la lección?"
+                  ],
+                  "grammarRuleRefs": [
+                    "gp-b1-modals-obligation",
+                    "gp-b1-modals-advice"
+                  ],
+                  "timeLimitSeconds": 60,
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "La respuesta modelo usa una frase completa y responde a la tarea.",
+                    "ruleRef": "gp-b1-modals-obligation"
+                  }
+                },
+                {
+                  "type": "SpeakRepeat",
+                  "id": "es-pt-b1-u05-l07-e09",
+                  "targetPhrase": "Você deveria dormir melhor. E quero continuar praticando.",
+                  "audioText": "Você deveria dormir melhor. E quero continuar praticando.",
+                  "feedbackOnError": {
+                    "type": "pronunciation",
+                    "explanation": "Repite «Você deveria dormir melhor. E quero continuar praticando.» con claridad.",
+                    "ruleRef": "gp-b1-modals-obligation"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La frase se entiende y mantiene el ritmo."
+                  }
+                }
+              ]
+            },
+            {
+              "id": "es-pt-b1-u05-l08",
+              "title": "Hábitos saludables",
+              "cefrLevel": "B1",
+              "scenario": "Situación comunicativa sobre mi rutina saludable.",
+              "canDo": "Puedo comunicarme con soltura sobre mi rutina saludable.",
+              "grammarPoints": [
+                {
+                  "id": "gp-b1-modals-obligation",
+                  "label": "Modales de obligación",
+                  "description": "Must, have to y should expresan obligación y consejo."
+                },
+                {
+                  "id": "gp-b1-modals-advice",
+                  "label": "Modales de consejo",
+                  "description": "Should, ought to y could ayudan a recomendar sin imponer."
+                }
+              ],
+              "vocabFrequencyBand": "2000-3000",
+              "culturalNotes": [
+                {
+                  "idiom": "um mal que vem para bem",
+                  "note": "Expresión para describir algo malo que acaba siendo bueno.",
+                  "translation": "un mal que acaba bien"
+                }
+              ],
+              "microLesson": {
+                "title": "Hábitos saludables",
+                "goals": [
+                  "Usar vocabulario de mi rutina saludable.",
+                  "Aplicar modales de obligación y modales de consejo.",
+                  "Resolver una tarea comunicativa sobre mi rutina saludable."
+                ],
+                "sections": [
+                  {
+                    "heading": "Lengua en contexto",
+                    "body": "Modales de obligación: Must, have to y should expresan obligación y consejo. Modales de consejo: Should, ought to y could ayudan a recomendar sin imponer.",
+                    "examples": [
+                      {
+                        "source": "Desayuno fruta y cereales. También tiene ventajas.",
+                        "target": "Frutas e cereais para o café da manhã. Também tem vantagens."
+                      },
+                      {
+                        "source": "Camino al trabajo todos los días. Y quiero seguir practicando.",
+                        "target": "Vou a pé para o trabalho todos os dias. E quero continuar praticando."
+                      }
+                    ]
+                  }
+                ]
+              },
+              "glossary": [
+                {
+                  "term": "Frutas e cereais para o café da manhã. Também tem vantagens.",
+                  "translations": [
+                    "Desayuno fruta y cereales. También tiene ventajas."
+                  ]
+                },
+                {
+                  "term": "Vou a pé para o trabalho todos os dias. E quero continuar praticando.",
+                  "translations": [
+                    "Camino al trabajo todos los días. Y quiero seguir practicando."
+                  ]
+                },
+                {
+                  "term": "Durmo oito horas todas as noites. Isso é importante para mim.",
+                  "translations": [
+                    "Duermo ocho horas cada noche. Esto es importante para mí."
+                  ]
+                }
+              ],
+              "exercises": [
+                {
+                  "type": "MultipleChoice",
+                  "id": "es-pt-b1-u05-l08-e01",
+                  "question": "¿Cuál es la opción correcta para «Desayuno fruta y cereales. También tiene ventajas.»?",
+                  "options": [
+                    "Frutas e cereais para o café da manhã. Também tem vantagens.",
+                    "Vou a pé para o trabalho todos os dias. E quero continuar praticando.",
+                    "Durmo oito horas todas as noites. Isso é importante para mim."
+                  ],
+                  "correctIndex": 0,
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "«Desayuno fruta y cereales. También tiene ventajas.» se dice «Frutas e cereais para o café da manhã. Também tem vantagens.».",
+                    "ruleRef": "gp-b1-modals-obligation"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has elegido la traducción correcta."
+                  }
+                },
+                {
+                  "type": "Translate",
+                  "id": "es-pt-b1-u05-l08-e02",
+                  "sourcePhrase": "Desayuno fruta y cereales. También tiene ventajas.",
+                  "correctTokens": [
+                    "Frutas",
+                    "e",
+                    "cereais",
+                    "para",
+                    "o",
+                    "café",
+                    "da",
+                    "manhã",
+                    "Também",
+                    "tem",
+                    "vantagens"
+                  ],
+                  "distractorTokens": [
+                    "Vou",
+                    "a",
+                    "pé"
+                  ],
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "El orden correcto es «Frutas e cereais para o café da manhã Também tem vantagens». Modales de obligación: Must, have to y should expresan obligación y consejo.",
+                    "ruleRef": "gp-b1-modals-obligation"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La frase conserva el orden y el significado."
+                  }
+                },
+                {
+                  "type": "OrderWords",
+                  "id": "es-pt-b1-u05-l08-e03",
+                  "tokens": [
+                    "a",
+                    "pé",
+                    "para",
+                    "o",
+                    "trabalho",
+                    "todos",
+                    "os",
+                    "dias",
+                    "E",
+                    "quero",
+                    "continuar",
+                    "praticando",
+                    "Vou"
+                  ],
+                  "answerTokens": [
+                    "Vou",
+                    "a",
+                    "pé",
+                    "para",
+                    "o",
+                    "trabalho",
+                    "todos",
+                    "os",
+                    "dias",
+                    "E",
+                    "quero",
+                    "continuar",
+                    "praticando"
+                  ],
+                  "sourcePhrase": "Camino al trabajo todos los días. Y quiero seguir practicando.",
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "La frase correcta es «Vou a pé para o trabalho todos os dias E quero continuar praticando». Modales de consejo: Should, ought to y could ayudan a recomendar sin imponer.",
+                    "ruleRef": "gp-b1-modals-advice"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "El orden produce una frase natural."
+                  }
+                },
+                {
+                  "type": "MatchPairs",
+                  "id": "es-pt-b1-u05-l08-e04",
+                  "pairs": [
+                    {
+                      "left": "Desayuno fruta y cereales. También tiene ventajas.",
+                      "right": "Frutas e cereais para o café da manhã. Também tem vantagens."
+                    },
+                    {
+                      "left": "Camino al trabajo todos los días. Y quiero seguir practicando.",
+                      "right": "Vou a pé para o trabalho todos os dias. E quero continuar praticando."
+                    },
+                    {
+                      "left": "Duermo ocho horas cada noche. Esto es importante para mí.",
+                      "right": "Durmo oito horas todas as noites. Isso é importante para mim."
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "Cada expresión tiene una traducción distinta.",
+                    "ruleRef": "gp-b1-modals-obligation"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has asociado cada expresión con su traducción."
+                  }
+                },
+                {
+                  "type": "ListenChoose",
+                  "id": "es-pt-b1-u05-l08-e05",
+                  "audioText": "Durmo oito horas todas as noites. Isso é importante para mim.",
+                  "options": [
+                    "Frutas e cereais para o café da manhã. Também tem vantagens.",
+                    "Vou a pé para o trabalho todos os dias. E quero continuar praticando.",
+                    "Durmo oito horas todas as noites. Isso é importante para mim."
+                  ],
+                  "correctIndex": 0,
+                  "feedbackOnError": {
+                    "type": "comprehension",
+                    "explanation": "El audio dice «Durmo oito horas todas as noites. Isso é importante para mim.».",
+                    "ruleRef": "gp-b1-modals-obligation"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has reconocido la frase del audio."
+                  }
+                },
+                {
+                  "type": "ListenType",
+                  "id": "es-pt-b1-u05-l08-e06",
+                  "audioText": "Durmo oito horas todas as noites. Isso é importante para mim.",
+                  "transcription": "Durmo oito horas todas as noites. Isso é importante para mim.",
+                  "feedbackOnError": {
+                    "type": "spelling",
+                    "explanation": "Escribe exactamente «Durmo oito horas todas as noites. Isso é importante para mim.».",
+                    "ruleRef": "gp-b1-modals-obligation"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La transcripción coincide con el audio."
+                  }
+                },
+                {
+                  "type": "ClozeDragDrop",
+                  "id": "es-pt-b1-u05-l08-e07",
+                  "passage": "{{b1}} e {{b2}} para o café da manhã",
+                  "blanks": [
+                    {
+                      "id": "b1",
+                      "answer": "Frutas",
+                      "options": [
+                        "Frutas",
+                        "café",
+                        "manhã"
+                      ]
+                    },
+                    {
+                      "id": "b2",
+                      "answer": "cereais",
+                      "options": [
+                        "cereais",
+                        "café",
+                        "manhã"
+                      ]
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "Las dos formas deben encajar con el contexto de la frase.",
+                    "ruleRef": "gp-b1-modals-advice"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Los dos huecos encajan con la situación."
+                  }
+                },
+                {
+                  "type": "FreeSpeakingPrompt",
+                  "id": "es-pt-b1-u05-l08-e08",
+                  "prompt": "Habla sobre mi rutina saludable y justifica tu respuesta.",
+                  "minTokens": 6,
+                  "conceptClusters": [
+                    [
+                      "Durmo"
+                    ],
+                    [
+                      "oito"
+                    ],
+                    [
+                      "horas"
+                    ]
+                  ],
+                  "modelAnswer": "Durmo oito horas todas as noites. Isso é importante para mim.",
+                  "selfAssessmentCriteria": [
+                    "¿La respuesta es clara y responde a la tarea?",
+                    "¿Usa las dos estructuras gramaticales de la lección?"
+                  ],
+                  "grammarRuleRefs": [
+                    "gp-b1-modals-obligation",
+                    "gp-b1-modals-advice"
+                  ],
+                  "timeLimitSeconds": 60,
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "La respuesta modelo usa una frase completa y responde a la tarea.",
+                    "ruleRef": "gp-b1-modals-obligation"
+                  }
+                },
+                {
+                  "type": "SpeakRepeat",
+                  "id": "es-pt-b1-u05-l08-e09",
+                  "targetPhrase": "Durmo oito horas todas as noites. Isso é importante para mim.",
+                  "audioText": "Durmo oito horas todas as noites. Isso é importante para mim.",
+                  "feedbackOnError": {
+                    "type": "pronunciation",
+                    "explanation": "Repite «Durmo oito horas todas as noites. Isso é importante para mim.» con claridad.",
+                    "ruleRef": "gp-b1-modals-obligation"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La frase se entiende y mantiene el ritmo."
+                  }
+                }
+              ]
+            },
+            {
+              "id": "es-pt-b1-u05-l09",
+              "title": "Integración: plan de bienestar",
+              "cefrLevel": "B1",
+              "scenario": "Situación comunicativa sobre un plan de bienestar.",
+              "canDo": "Puedo comunicarme con soltura sobre un plan de bienestar.",
+              "grammarPoints": [
+                {
+                  "id": "gp-b1-modals-obligation",
+                  "label": "Modales de obligación",
+                  "description": "Must, have to y should expresan obligación y consejo."
+                },
+                {
+                  "id": "gp-b1-modals-advice",
+                  "label": "Modales de consejo",
+                  "description": "Should, ought to y could ayudan a recomendar sin imponer."
+                }
+              ],
+              "vocabFrequencyBand": "2000-3000",
+              "culturalNotes": [
+                {
+                  "idiom": "um mal que vem para bem",
+                  "note": "Expresión para describir algo malo que acaba siendo bueno.",
+                  "translation": "un mal que acaba bien"
+                }
+              ],
+              "microLesson": {
+                "title": "Integración: plan de bienestar",
+                "goals": [
+                  "Usar vocabulario de un plan de bienestar.",
+                  "Aplicar modales de obligación y modales de consejo.",
+                  "Resolver una tarea comunicativa sobre un plan de bienestar."
+                ],
+                "sections": [
+                  {
+                    "heading": "Lengua en contexto",
+                    "body": "Modales de obligación: Must, have to y should expresan obligación y consejo. Modales de consejo: Should, ought to y could ayudan a recomendar sin imponer.",
+                    "examples": [
+                      {
+                        "source": "Voy a hacer ejercicio tres veces por semana. Y quiero seguir practicando.",
+                        "target": "Vou fazer exercícios três vezes por semana. E quero continuar praticando."
+                      },
+                      {
+                        "source": "También voy a beber más agua. Esto es importante para mí.",
+                        "target": "Também vou beber mais água. Isso é importante para mim."
+                      }
+                    ]
+                  }
+                ]
+              },
+              "glossary": [
+                {
+                  "term": "Vou fazer exercícios três vezes por semana. E quero continuar praticando.",
+                  "translations": [
+                    "Voy a hacer ejercicio tres veces por semana. Y quiero seguir practicando."
+                  ]
+                },
+                {
+                  "term": "Também vou beber mais água. Isso é importante para mim.",
+                  "translations": [
+                    "También voy a beber más agua. Esto es importante para mí."
+                  ]
+                },
+                {
+                  "term": "E vou dormir melhor. Em geral, é assim.",
+                  "translations": [
+                    "Y voy a dormir mejor. En general, es así."
+                  ]
+                }
+              ],
+              "exercises": [
+                {
+                  "type": "MultipleChoice",
+                  "id": "es-pt-b1-u05-l09-e01",
+                  "question": "¿Cuál es la opción correcta para «Voy a hacer ejercicio tres veces por semana. Y quiero seguir practicando.»?",
+                  "options": [
+                    "Vou fazer exercícios três vezes por semana. E quero continuar praticando.",
+                    "Também vou beber mais água. Isso é importante para mim.",
+                    "E vou dormir melhor. Em geral, é assim."
+                  ],
+                  "correctIndex": 0,
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "«Voy a hacer ejercicio tres veces por semana. Y quiero seguir practicando.» se dice «Vou fazer exercícios três vezes por semana. E quero continuar praticando.».",
+                    "ruleRef": "gp-b1-modals-obligation"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has elegido la traducción correcta."
+                  }
+                },
+                {
+                  "type": "Translate",
+                  "id": "es-pt-b1-u05-l09-e02",
+                  "sourcePhrase": "Voy a hacer ejercicio tres veces por semana. Y quiero seguir practicando.",
+                  "correctTokens": [
+                    "Vou",
+                    "fazer",
+                    "exercícios",
+                    "três",
+                    "vezes",
+                    "por",
+                    "semana",
+                    "E",
+                    "quero",
+                    "continuar",
+                    "praticando"
+                  ],
+                  "distractorTokens": [
+                    "Também",
+                    "vou",
+                    "beber"
+                  ],
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "El orden correcto es «Vou fazer exercícios três vezes por semana E quero continuar praticando». Modales de obligación: Must, have to y should expresan obligación y consejo.",
+                    "ruleRef": "gp-b1-modals-obligation"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La frase conserva el orden y el significado."
+                  }
+                },
+                {
+                  "type": "OrderWords",
+                  "id": "es-pt-b1-u05-l09-e03",
+                  "tokens": [
+                    "vou",
+                    "beber",
+                    "mais",
+                    "água",
+                    "Isso",
+                    "é",
+                    "importante",
+                    "para",
+                    "mim",
+                    "Também"
+                  ],
+                  "answerTokens": [
+                    "Também",
+                    "vou",
+                    "beber",
+                    "mais",
+                    "água",
+                    "Isso",
+                    "é",
+                    "importante",
+                    "para",
+                    "mim"
+                  ],
+                  "sourcePhrase": "También voy a beber más agua. Esto es importante para mí.",
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "La frase correcta es «Também vou beber mais água Isso é importante para mim». Modales de consejo: Should, ought to y could ayudan a recomendar sin imponer.",
+                    "ruleRef": "gp-b1-modals-advice"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "El orden produce una frase natural."
+                  }
+                },
+                {
+                  "type": "MatchPairs",
+                  "id": "es-pt-b1-u05-l09-e04",
+                  "pairs": [
+                    {
+                      "left": "Voy a hacer ejercicio tres veces por semana. Y quiero seguir practicando.",
+                      "right": "Vou fazer exercícios três vezes por semana. E quero continuar praticando."
+                    },
+                    {
+                      "left": "También voy a beber más agua. Esto es importante para mí.",
+                      "right": "Também vou beber mais água. Isso é importante para mim."
+                    },
+                    {
+                      "left": "Y voy a dormir mejor. En general, es así.",
+                      "right": "E vou dormir melhor. Em geral, é assim."
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "Cada expresión tiene una traducción distinta.",
+                    "ruleRef": "gp-b1-modals-obligation"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has asociado cada expresión con su traducción."
+                  }
+                },
+                {
+                  "type": "ListenChoose",
+                  "id": "es-pt-b1-u05-l09-e05",
+                  "audioText": "E vou dormir melhor. Em geral, é assim.",
+                  "options": [
+                    "Vou fazer exercícios três vezes por semana. E quero continuar praticando.",
+                    "Também vou beber mais água. Isso é importante para mim.",
+                    "E vou dormir melhor. Em geral, é assim."
+                  ],
+                  "correctIndex": 0,
+                  "feedbackOnError": {
+                    "type": "comprehension",
+                    "explanation": "El audio dice «E vou dormir melhor. Em geral, é assim.».",
+                    "ruleRef": "gp-b1-modals-obligation"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has reconocido la frase del audio."
+                  }
+                },
+                {
+                  "type": "ListenType",
+                  "id": "es-pt-b1-u05-l09-e06",
+                  "audioText": "E vou dormir melhor. Em geral, é assim.",
+                  "transcription": "E vou dormir melhor. Em geral, é assim.",
+                  "feedbackOnError": {
+                    "type": "spelling",
+                    "explanation": "Escribe exactamente «E vou dormir melhor. Em geral, é assim.».",
+                    "ruleRef": "gp-b1-modals-obligation"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La transcripción coincide con el audio."
+                  }
+                },
+                {
+                  "type": "ClozeDragDrop",
+                  "id": "es-pt-b1-u05-l09-e07",
+                  "passage": "{{b1}} {{b2}} exercícios três vezes por semana",
+                  "blanks": [
+                    {
+                      "id": "b1",
+                      "answer": "Vou",
+                      "options": [
+                        "Vou",
+                        "exercícios",
+                        "três"
+                      ]
+                    },
+                    {
+                      "id": "b2",
+                      "answer": "fazer",
+                      "options": [
+                        "fazer",
+                        "exercícios",
+                        "três"
+                      ]
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "Las dos formas deben encajar con el contexto de la frase.",
+                    "ruleRef": "gp-b1-modals-advice"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Los dos huecos encajan con la situación."
+                  }
+                },
+                {
+                  "type": "FreeSpeakingPrompt",
+                  "id": "es-pt-b1-u05-l09-e08",
+                  "prompt": "Habla sobre un plan de bienestar y justifica tu respuesta.",
+                  "minTokens": 6,
+                  "conceptClusters": [
+                    [
+                      "vou"
+                    ],
+                    [
+                      "dormir"
+                    ],
+                    [
+                      "melhor"
+                    ]
+                  ],
+                  "modelAnswer": "E vou dormir melhor. Em geral, é assim.",
+                  "selfAssessmentCriteria": [
+                    "¿La respuesta es clara y responde a la tarea?",
+                    "¿Usa las dos estructuras gramaticales de la lección?"
+                  ],
+                  "grammarRuleRefs": [
+                    "gp-b1-modals-obligation",
+                    "gp-b1-modals-advice"
+                  ],
+                  "timeLimitSeconds": 60,
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "La respuesta modelo usa una frase completa y responde a la tarea.",
+                    "ruleRef": "gp-b1-modals-obligation"
+                  }
+                },
+                {
+                  "type": "SpeakRepeat",
+                  "id": "es-pt-b1-u05-l09-e09",
+                  "targetPhrase": "E vou dormir melhor. Em geral, é assim.",
+                  "audioText": "E vou dormir melhor. Em geral, é assim.",
+                  "feedbackOnError": {
+                    "type": "pronunciation",
+                    "explanation": "Repite «E vou dormir melhor. Em geral, é assim.» con claridad.",
+                    "ruleRef": "gp-b1-modals-obligation"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La frase se entiende y mantiene el ritmo."
+                  }
+                }
+              ]
+            },
+            {
+              "id": "es-pt-b1-u05-l10",
+              "title": "Evaluación: mi salud",
+              "cefrLevel": "B1",
+              "scenario": "Situación comunicativa sobre mi salud.",
+              "canDo": "Puedo comunicarme con soltura sobre mi salud.",
+              "grammarPoints": [
+                {
+                  "id": "gp-b1-modals-obligation",
+                  "label": "Modales de obligación",
+                  "description": "Must, have to y should expresan obligación y consejo."
+                },
+                {
+                  "id": "gp-b1-modals-advice",
+                  "label": "Modales de consejo",
+                  "description": "Should, ought to y could ayudan a recomendar sin imponer."
+                }
+              ],
+              "vocabFrequencyBand": "2000-3000",
+              "culturalNotes": [
+                {
+                  "idiom": "um mal que vem para bem",
+                  "note": "Expresión para describir algo malo que acaba siendo bueno.",
+                  "translation": "un mal que acaba bien"
+                }
+              ],
+              "microLesson": {
+                "title": "Evaluación: mi salud",
+                "goals": [
+                  "Usar vocabulario de mi salud.",
+                  "Aplicar modales de obligación y modales de consejo.",
+                  "Resolver una tarea comunicativa sobre mi salud."
+                ],
+                "sections": [
+                  {
+                    "heading": "Lengua en contexto",
+                    "body": "Modales de obligación: Must, have to y should expresan obligación y consejo. Modales de consejo: Should, ought to y could ayudan a recomendar sin imponer.",
+                    "examples": [
+                      {
+                        "source": "Me siento mejor que antes. Esto es importante para mí.",
+                        "target": "Eu me sinto melhor do que antes. Isso é importante para mim."
+                      },
+                      {
+                        "source": "He empezado a caminar cada día. En general, es así.",
+                        "target": "Comecei a caminhar todos os dias. Em geral, é assim."
+                      }
+                    ]
+                  }
+                ]
+              },
+              "glossary": [
+                {
+                  "term": "Eu me sinto melhor do que antes. Isso é importante para mim.",
+                  "translations": [
+                    "Me siento mejor que antes. Esto es importante para mí."
+                  ]
+                },
+                {
+                  "term": "Comecei a caminhar todos os dias. Em geral, é assim.",
+                  "translations": [
+                    "He empezado a caminar cada día. En general, es así."
+                  ]
+                },
+                {
+                  "term": "Ainda tenho que descansar mais. Também me ajuda a aprender.",
+                  "translations": [
+                    "Todavía tengo que descansar más. Además, me ayuda a aprender."
+                  ]
+                }
+              ],
+              "exercises": [
+                {
+                  "type": "MultipleChoice",
+                  "id": "es-pt-b1-u05-l10-e01",
+                  "question": "¿Cuál es la opción correcta para «Me siento mejor que antes. Esto es importante para mí.»?",
+                  "options": [
+                    "Eu me sinto melhor do que antes. Isso é importante para mim.",
+                    "Comecei a caminhar todos os dias. Em geral, é assim.",
+                    "Ainda tenho que descansar mais. Também me ajuda a aprender."
+                  ],
+                  "correctIndex": 0,
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "«Me siento mejor que antes. Esto es importante para mí.» se dice «Eu me sinto melhor do que antes. Isso é importante para mim.».",
+                    "ruleRef": "gp-b1-modals-obligation"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has elegido la traducción correcta."
+                  }
+                },
+                {
+                  "type": "Translate",
+                  "id": "es-pt-b1-u05-l10-e02",
+                  "sourcePhrase": "Me siento mejor que antes. Esto es importante para mí.",
+                  "correctTokens": [
+                    "Eu",
+                    "me",
+                    "sinto",
+                    "melhor",
+                    "do",
+                    "que",
+                    "antes",
+                    "Isso",
+                    "é",
+                    "importante",
+                    "para",
+                    "mim"
+                  ],
+                  "distractorTokens": [
+                    "Comecei",
+                    "a",
+                    "caminhar"
+                  ],
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "El orden correcto es «Eu me sinto melhor do que antes Isso é importante para mim». Modales de obligación: Must, have to y should expresan obligación y consejo.",
+                    "ruleRef": "gp-b1-modals-obligation"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La frase conserva el orden y el significado."
+                  }
+                },
+                {
+                  "type": "OrderWords",
+                  "id": "es-pt-b1-u05-l10-e03",
+                  "tokens": [
+                    "a",
+                    "caminhar",
+                    "todos",
+                    "os",
+                    "dias",
+                    "Em",
+                    "geral",
+                    "é",
+                    "assim",
+                    "Comecei"
+                  ],
+                  "answerTokens": [
+                    "Comecei",
+                    "a",
+                    "caminhar",
+                    "todos",
+                    "os",
+                    "dias",
+                    "Em",
+                    "geral",
+                    "é",
+                    "assim"
+                  ],
+                  "sourcePhrase": "He empezado a caminar cada día. En general, es así.",
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "La frase correcta es «Comecei a caminhar todos os dias Em geral é assim». Modales de consejo: Should, ought to y could ayudan a recomendar sin imponer.",
+                    "ruleRef": "gp-b1-modals-advice"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "El orden produce una frase natural."
+                  }
+                },
+                {
+                  "type": "MatchPairs",
+                  "id": "es-pt-b1-u05-l10-e04",
+                  "pairs": [
+                    {
+                      "left": "Me siento mejor que antes. Esto es importante para mí.",
+                      "right": "Eu me sinto melhor do que antes. Isso é importante para mim."
+                    },
+                    {
+                      "left": "He empezado a caminar cada día. En general, es así.",
+                      "right": "Comecei a caminhar todos os dias. Em geral, é assim."
+                    },
+                    {
+                      "left": "Todavía tengo que descansar más. Además, me ayuda a aprender.",
+                      "right": "Ainda tenho que descansar mais. Também me ajuda a aprender."
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "Cada expresión tiene una traducción distinta.",
+                    "ruleRef": "gp-b1-modals-obligation"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has asociado cada expresión con su traducción."
+                  }
+                },
+                {
+                  "type": "ListenChoose",
+                  "id": "es-pt-b1-u05-l10-e05",
+                  "audioText": "Ainda tenho que descansar mais. Também me ajuda a aprender.",
+                  "options": [
+                    "Eu me sinto melhor do que antes. Isso é importante para mim.",
+                    "Comecei a caminhar todos os dias. Em geral, é assim.",
+                    "Ainda tenho que descansar mais. Também me ajuda a aprender."
+                  ],
+                  "correctIndex": 0,
+                  "feedbackOnError": {
+                    "type": "comprehension",
+                    "explanation": "El audio dice «Ainda tenho que descansar mais. Também me ajuda a aprender.».",
+                    "ruleRef": "gp-b1-modals-obligation"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has reconocido la frase del audio."
+                  }
+                },
+                {
+                  "type": "ListenType",
+                  "id": "es-pt-b1-u05-l10-e06",
+                  "audioText": "Ainda tenho que descansar mais. Também me ajuda a aprender.",
+                  "transcription": "Ainda tenho que descansar mais. Também me ajuda a aprender.",
+                  "feedbackOnError": {
+                    "type": "spelling",
+                    "explanation": "Escribe exactamente «Ainda tenho que descansar mais. Também me ajuda a aprender.».",
+                    "ruleRef": "gp-b1-modals-obligation"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La transcripción coincide con el audio."
+                  }
+                },
+                {
+                  "type": "ClozeDragDrop",
+                  "id": "es-pt-b1-u05-l10-e07",
+                  "passage": "Eu me {{b1}} {{b2}} do que antes",
+                  "blanks": [
+                    {
+                      "id": "b1",
+                      "answer": "sinto",
+                      "options": [
+                        "sinto",
+                        "antes",
+                        "muito"
+                      ]
+                    },
+                    {
+                      "id": "b2",
+                      "answer": "melhor",
+                      "options": [
+                        "melhor",
+                        "antes",
+                        "muito"
+                      ]
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "Las dos formas deben encajar con el contexto de la frase.",
+                    "ruleRef": "gp-b1-modals-advice"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Los dos huecos encajan con la situación."
+                  }
+                },
+                {
+                  "type": "FreeSpeakingPrompt",
+                  "id": "es-pt-b1-u05-l10-e08",
+                  "prompt": "Habla sobre mi salud y justifica tu respuesta.",
+                  "minTokens": 6,
+                  "conceptClusters": [
+                    [
+                      "Ainda"
+                    ],
+                    [
+                      "tenho"
+                    ],
+                    [
+                      "descansar"
+                    ]
+                  ],
+                  "modelAnswer": "Ainda tenho que descansar mais. Também me ajuda a aprender.",
+                  "selfAssessmentCriteria": [
+                    "¿La respuesta es clara y responde a la tarea?",
+                    "¿Usa las dos estructuras gramaticales de la lección?"
+                  ],
+                  "grammarRuleRefs": [
+                    "gp-b1-modals-obligation",
+                    "gp-b1-modals-advice"
+                  ],
+                  "timeLimitSeconds": 60,
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "La respuesta modelo usa una frase completa y responde a la tarea.",
+                    "ruleRef": "gp-b1-modals-obligation"
+                  }
+                },
+                {
+                  "type": "SpeakRepeat",
+                  "id": "es-pt-b1-u05-l10-e09",
+                  "targetPhrase": "Ainda tenho que descansar mais. Também me ajuda a aprender.",
+                  "audioText": "Ainda tenho que descansar mais. Também me ajuda a aprender.",
+                  "feedbackOnError": {
+                    "type": "pronunciation",
+                    "explanation": "Repite «Ainda tenho que descansar mais. Também me ajuda a aprender.» con claridad.",
+                    "ruleRef": "gp-b1-modals-obligation"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La frase se entiende y mantiene el ritmo."
+                  }
+                }
+              ]
+            }
+          ]
         }
       ]
     },
