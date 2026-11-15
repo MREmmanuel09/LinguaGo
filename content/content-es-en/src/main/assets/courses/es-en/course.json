@@ -48810,6 +48810,2184 @@
               ]
             }
           ]
+        },
+        {
+          "id": "es-en-a2-u07",
+          "title": "A2 · Trabajo y estudios",
+          "lessons": [
+            {
+              "id": "es-en-a2-u07-l01",
+              "title": "Repaso: compras",
+              "cefrLevel": "A2",
+              "vocabFrequencyBand": "2000-3000",
+              "canDo": "Puedo recordar una compra y una reclamación.",
+              "microLesson": {
+                "title": "Repaso: compras",
+                "goals": [
+                  "Reconocer vocabulario de una compra reciente.",
+                  "Usar frases sencillas sobre una compra reciente.",
+                  "Producir un mensaje breve sobre una compra reciente."
+                ],
+                "sections": [
+                  {
+                    "heading": "Foco gramatical",
+                    "body": "Pasado simple: El pasado simple describe acciones terminadas en un momento concreto. Peticiones corteses: Could you...? y Would you...? suavizan una petición.",
+                    "examples": [
+                      {
+                        "source": "Ayer fui a la tienda a cambiar una camiseta.",
+                        "target": "Yesterday I went to the shop to change a T-shirt."
+                      },
+                      {
+                        "source": "El dependiente me ayudó mucho.",
+                        "target": "The shop assistant helped me a lot."
+                      }
+                    ]
+                  },
+                  {
+                    "heading": "En contexto",
+                    "body": "Observa cómo se usa pasado simple en una situación de una compra reciente.",
+                    "examples": [
+                      {
+                        "source": "Al final compré una chaqueta.",
+                        "target": "In the end I bought a jacket."
+                      }
+                    ]
+                  }
+                ]
+              },
+              "glossary": [
+                {
+                  "term": "Yesterday I went to the shop to change a T-shirt.",
+                  "translations": [
+                    "Ayer fui a la tienda a cambiar una camiseta."
+                  ]
+                },
+                {
+                  "term": "The shop assistant helped me a lot.",
+                  "translations": [
+                    "El dependiente me ayudó mucho."
+                  ]
+                },
+                {
+                  "term": "In the end I bought a jacket.",
+                  "translations": [
+                    "Al final compré una chaqueta."
+                  ]
+                }
+              ],
+              "exercises": [
+                {
+                  "type": "MultipleChoice",
+                  "id": "es-en-a2-u07-l01-e01",
+                  "question": "¿Cómo se dice «Ayer fui a la tienda a cambiar una camiseta.»?",
+                  "options": [
+                    "Yesterday I went to the shop to change a T-shirt.",
+                    "The shop assistant helped me a lot.",
+                    "In the end I bought a jacket."
+                  ],
+                  "correctIndex": 0,
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "«Ayer fui a la tienda a cambiar una camiseta.» se dice «Yesterday I went to the shop to change a T-shirt.»."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has elegido la traducción correcta."
+                  }
+                },
+                {
+                  "type": "Translate",
+                  "id": "es-en-a2-u07-l01-e02",
+                  "sourcePhrase": "Ayer fui a la tienda a cambiar una camiseta.",
+                  "correctTokens": [
+                    "Yesterday",
+                    "I",
+                    "went",
+                    "to",
+                    "the",
+                    "shop",
+                    "to",
+                    "change",
+                    "a",
+                    "T",
+                    "shirt"
+                  ],
+                  "distractorTokens": [
+                    "The",
+                    "assistant",
+                    "helped"
+                  ],
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "El orden correcto es «Yesterday I went to the shop to change a T shirt». Pasado simple: El pasado simple describe acciones terminadas en un momento concreto.",
+                    "ruleRef": "gp-past-simple"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La frase conserva el orden y el significado."
+                  }
+                },
+                {
+                  "type": "OrderWords",
+                  "id": "es-en-a2-u07-l01-e03",
+                  "tokens": [
+                    "shop",
+                    "assistant",
+                    "helped",
+                    "me",
+                    "a",
+                    "lot",
+                    "The"
+                  ],
+                  "answerTokens": [
+                    "The",
+                    "shop",
+                    "assistant",
+                    "helped",
+                    "me",
+                    "a",
+                    "lot"
+                  ],
+                  "sourcePhrase": "El dependiente me ayudó mucho.",
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "La frase correcta es «The shop assistant helped me a lot». Pasado simple: El pasado simple describe acciones terminadas en un momento concreto.",
+                    "ruleRef": "gp-past-simple"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "El orden produce una frase natural."
+                  }
+                },
+                {
+                  "type": "MatchPairs",
+                  "id": "es-en-a2-u07-l01-e04",
+                  "pairs": [
+                    {
+                      "left": "Ayer fui a la tienda a cambiar una camiseta.",
+                      "right": "Yesterday I went to the shop to change a T-shirt."
+                    },
+                    {
+                      "left": "El dependiente me ayudó mucho.",
+                      "right": "The shop assistant helped me a lot."
+                    },
+                    {
+                      "left": "Al final compré una chaqueta.",
+                      "right": "In the end I bought a jacket."
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "Cada expresión tiene una traducción distinta."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has asociado cada expresión con su traducción."
+                  }
+                },
+                {
+                  "type": "ListenChoose",
+                  "id": "es-en-a2-u07-l01-e05",
+                  "audioText": "In the end I bought a jacket.",
+                  "options": [
+                    "Yesterday I went to the shop to change a T-shirt.",
+                    "The shop assistant helped me a lot.",
+                    "In the end I bought a jacket."
+                  ],
+                  "correctIndex": 0,
+                  "feedbackOnError": {
+                    "type": "comprehension",
+                    "explanation": "El audio dice «In the end I bought a jacket.»."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has reconocido la frase del audio."
+                  }
+                },
+                {
+                  "type": "ListenType",
+                  "id": "es-en-a2-u07-l01-e06",
+                  "audioText": "In the end I bought a jacket.",
+                  "transcription": "In the end I bought a jacket.",
+                  "feedbackOnError": {
+                    "type": "spelling",
+                    "explanation": "Escribe exactamente «In the end I bought a jacket.»."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La transcripción coincide con el audio."
+                  }
+                },
+                {
+                  "type": "SpeakRepeat",
+                  "id": "es-en-a2-u07-l01-e07",
+                  "targetPhrase": "In the end I bought a jacket.",
+                  "audioText": "In the end I bought a jacket.",
+                  "feedbackOnError": {
+                    "type": "pronunciation",
+                    "explanation": "Repite «In the end I bought a jacket.» con claridad."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La frase se entiende y mantiene el ritmo."
+                  }
+                }
+              ],
+              "grammarPoints": [
+                {
+                  "id": "gp-past-simple",
+                  "label": "Pasado simple",
+                  "description": "El pasado simple describe acciones terminadas en un momento concreto."
+                },
+                {
+                  "id": "gp-polite-requests",
+                  "label": "Peticiones corteses",
+                  "description": "Could you...? y Would you...? suavizan una petición."
+                }
+              ]
+            },
+            {
+              "id": "es-en-a2-u07-l02",
+              "title": "Mi trabajo y mis estudios",
+              "cefrLevel": "A2",
+              "vocabFrequencyBand": "2000-3000",
+              "canDo": "Puedo describir mi trabajo o mis estudios.",
+              "microLesson": {
+                "title": "Mi trabajo y mis estudios",
+                "goals": [
+                  "Reconocer vocabulario de el trabajo y los estudios.",
+                  "Usar frases sencillas sobre el trabajo y los estudios.",
+                  "Producir un mensaje breve sobre el trabajo y los estudios."
+                ],
+                "sections": [
+                  {
+                    "heading": "Foco gramatical",
+                    "body": "Presente simple: Usa el presente simple para rutinas y hechos habituales.",
+                    "examples": [
+                      {
+                        "source": "Trabajo en una oficina pequeña.",
+                        "target": "I work in a small office."
+                      },
+                      {
+                        "source": "Estudio inglés dos veces por semana.",
+                        "target": "I study English twice a week."
+                      }
+                    ]
+                  },
+                  {
+                    "heading": "En contexto",
+                    "body": "Observa cómo se usa presente simple en una situación de el trabajo y los estudios.",
+                    "examples": [
+                      {
+                        "source": "Quiero mejorar mi currículum.",
+                        "target": "I want to improve my CV."
+                      }
+                    ]
+                  }
+                ]
+              },
+              "glossary": [
+                {
+                  "term": "I work in a small office.",
+                  "translations": [
+                    "Trabajo en una oficina pequeña."
+                  ]
+                },
+                {
+                  "term": "I study English twice a week.",
+                  "translations": [
+                    "Estudio inglés dos veces por semana."
+                  ]
+                },
+                {
+                  "term": "I want to improve my CV.",
+                  "translations": [
+                    "Quiero mejorar mi currículum."
+                  ]
+                }
+              ],
+              "exercises": [
+                {
+                  "type": "MultipleChoice",
+                  "id": "es-en-a2-u07-l02-e01",
+                  "question": "¿Cómo se dice «Trabajo en una oficina pequeña.»?",
+                  "options": [
+                    "I work in a small office.",
+                    "I study English twice a week.",
+                    "I want to improve my CV."
+                  ],
+                  "correctIndex": 0,
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "«Trabajo en una oficina pequeña.» se dice «I work in a small office.»."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has elegido la traducción correcta."
+                  }
+                },
+                {
+                  "type": "Translate",
+                  "id": "es-en-a2-u07-l02-e02",
+                  "sourcePhrase": "Trabajo en una oficina pequeña.",
+                  "correctTokens": [
+                    "I",
+                    "work",
+                    "in",
+                    "a",
+                    "small",
+                    "office"
+                  ],
+                  "distractorTokens": [
+                    "study",
+                    "English",
+                    "twice"
+                  ],
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "El orden correcto es «I work in a small office». Presente simple: Usa el presente simple para rutinas y hechos habituales.",
+                    "ruleRef": "gp-present-simple"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La frase conserva el orden y el significado."
+                  }
+                },
+                {
+                  "type": "OrderWords",
+                  "id": "es-en-a2-u07-l02-e03",
+                  "tokens": [
+                    "study",
+                    "English",
+                    "twice",
+                    "a",
+                    "week",
+                    "I"
+                  ],
+                  "answerTokens": [
+                    "I",
+                    "study",
+                    "English",
+                    "twice",
+                    "a",
+                    "week"
+                  ],
+                  "sourcePhrase": "Estudio inglés dos veces por semana.",
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "La frase correcta es «I study English twice a week». Presente simple: Usa el presente simple para rutinas y hechos habituales.",
+                    "ruleRef": "gp-present-simple"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "El orden produce una frase natural."
+                  }
+                },
+                {
+                  "type": "MatchPairs",
+                  "id": "es-en-a2-u07-l02-e04",
+                  "pairs": [
+                    {
+                      "left": "Trabajo en una oficina pequeña.",
+                      "right": "I work in a small office."
+                    },
+                    {
+                      "left": "Estudio inglés dos veces por semana.",
+                      "right": "I study English twice a week."
+                    },
+                    {
+                      "left": "Quiero mejorar mi currículum.",
+                      "right": "I want to improve my CV."
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "Cada expresión tiene una traducción distinta."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has asociado cada expresión con su traducción."
+                  }
+                },
+                {
+                  "type": "ListenChoose",
+                  "id": "es-en-a2-u07-l02-e05",
+                  "audioText": "I want to improve my CV.",
+                  "options": [
+                    "I work in a small office.",
+                    "I study English twice a week.",
+                    "I want to improve my CV."
+                  ],
+                  "correctIndex": 0,
+                  "feedbackOnError": {
+                    "type": "comprehension",
+                    "explanation": "El audio dice «I want to improve my CV.»."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has reconocido la frase del audio."
+                  }
+                },
+                {
+                  "type": "ListenType",
+                  "id": "es-en-a2-u07-l02-e06",
+                  "audioText": "I want to improve my CV.",
+                  "transcription": "I want to improve my CV.",
+                  "feedbackOnError": {
+                    "type": "spelling",
+                    "explanation": "Escribe exactamente «I want to improve my CV.»."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La transcripción coincide con el audio."
+                  }
+                },
+                {
+                  "type": "SpeakRepeat",
+                  "id": "es-en-a2-u07-l02-e07",
+                  "targetPhrase": "I want to improve my CV.",
+                  "audioText": "I want to improve my CV.",
+                  "feedbackOnError": {
+                    "type": "pronunciation",
+                    "explanation": "Repite «I want to improve my CV.» con claridad."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La frase se entiende y mantiene el ritmo."
+                  }
+                }
+              ],
+              "grammarPoints": [
+                {
+                  "id": "gp-present-simple",
+                  "label": "Presente simple",
+                  "description": "Usa el presente simple para rutinas y hechos habituales."
+                }
+              ]
+            },
+            {
+              "id": "es-en-a2-u07-l03",
+              "title": "Tareas y responsabilidades",
+              "cefrLevel": "A2",
+              "vocabFrequencyBand": "2000-3000",
+              "canDo": "Puedo hablar de mis tareas y responsabilidades.",
+              "microLesson": {
+                "title": "Tareas y responsabilidades",
+                "goals": [
+                  "Reconocer vocabulario de las tareas del trabajo.",
+                  "Usar frases sencillas sobre las tareas del trabajo.",
+                  "Producir un mensaje breve sobre las tareas del trabajo."
+                ],
+                "sections": [
+                  {
+                    "heading": "Foco gramatical",
+                    "body": "Have to: Have to expresa obligación externa; don't have to, ausencia de obligación.",
+                    "examples": [
+                      {
+                        "source": "Tengo que responder correos",
+                        "target": "I have to answer emails"
+                      },
+                      {
+                        "source": "Tengo que preparar reuniones",
+                        "target": "I have to prepare meetings"
+                      }
+                    ]
+                  },
+                  {
+                    "heading": "En contexto",
+                    "body": "Observa cómo se usa have to en una situación de las tareas del trabajo.",
+                    "examples": [
+                      {
+                        "source": "Tengo que hablar con clientes",
+                        "target": "I have to talk to clients"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "glossary": [
+                {
+                  "term": "answer emails",
+                  "translations": [
+                    "responder correos"
+                  ]
+                },
+                {
+                  "term": "prepare meetings",
+                  "translations": [
+                    "preparar reuniones"
+                  ]
+                },
+                {
+                  "term": "talk to clients",
+                  "translations": [
+                    "hablar con clientes"
+                  ]
+                }
+              ],
+              "exercises": [
+                {
+                  "type": "MultipleChoice",
+                  "id": "es-en-a2-u07-l03-e01",
+                  "question": "¿Cómo se dice «responder correos»?",
+                  "options": [
+                    "answer emails",
+                    "prepare meetings",
+                    "talk to clients"
+                  ],
+                  "correctIndex": 0,
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "«responder correos» se dice «answer emails»."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has elegido la traducción correcta."
+                  }
+                },
+                {
+                  "type": "Translate",
+                  "id": "es-en-a2-u07-l03-e02",
+                  "sourcePhrase": "Tengo que responder correos",
+                  "correctTokens": [
+                    "I",
+                    "have",
+                    "to",
+                    "answer",
+                    "emails"
+                  ],
+                  "distractorTokens": [
+                    "prepare",
+                    "meetings",
+                    "talk"
+                  ],
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "El orden correcto es «I have to answer emails». Have to: Have to expresa obligación externa; don't have to, ausencia de obligación.",
+                    "ruleRef": "gp-have-to"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La frase conserva el orden y el significado."
+                  }
+                },
+                {
+                  "type": "OrderWords",
+                  "id": "es-en-a2-u07-l03-e03",
+                  "tokens": [
+                    "have",
+                    "to",
+                    "prepare",
+                    "meetings",
+                    "I"
+                  ],
+                  "answerTokens": [
+                    "I",
+                    "have",
+                    "to",
+                    "prepare",
+                    "meetings"
+                  ],
+                  "sourcePhrase": "Tengo que preparar reuniones",
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "La frase correcta es «I have to prepare meetings». Have to: Have to expresa obligación externa; don't have to, ausencia de obligación.",
+                    "ruleRef": "gp-have-to"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "El orden produce una frase natural."
+                  }
+                },
+                {
+                  "type": "MatchPairs",
+                  "id": "es-en-a2-u07-l03-e04",
+                  "pairs": [
+                    {
+                      "left": "responder correos",
+                      "right": "answer emails"
+                    },
+                    {
+                      "left": "preparar reuniones",
+                      "right": "prepare meetings"
+                    },
+                    {
+                      "left": "hablar con clientes",
+                      "right": "talk to clients"
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "Cada expresión tiene una traducción distinta."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has asociado cada expresión con su traducción."
+                  }
+                },
+                {
+                  "type": "ListenChoose",
+                  "id": "es-en-a2-u07-l03-e05",
+                  "audioText": "I have to talk to clients",
+                  "options": [
+                    "I have to answer emails",
+                    "I have to prepare meetings",
+                    "I have to talk to clients"
+                  ],
+                  "correctIndex": 0,
+                  "feedbackOnError": {
+                    "type": "comprehension",
+                    "explanation": "El audio dice «I have to talk to clients»."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has reconocido la frase del audio."
+                  }
+                },
+                {
+                  "type": "ListenType",
+                  "id": "es-en-a2-u07-l03-e06",
+                  "audioText": "I have to talk to clients",
+                  "transcription": "I have to talk to clients",
+                  "feedbackOnError": {
+                    "type": "spelling",
+                    "explanation": "Escribe exactamente «I have to talk to clients»."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La transcripción coincide con el audio."
+                  }
+                },
+                {
+                  "type": "SpeakRepeat",
+                  "id": "es-en-a2-u07-l03-e07",
+                  "targetPhrase": "I have to talk to clients",
+                  "audioText": "I have to talk to clients",
+                  "feedbackOnError": {
+                    "type": "pronunciation",
+                    "explanation": "Repite «I have to talk to clients» con claridad."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La frase se entiende y mantiene el ritmo."
+                  }
+                }
+              ],
+              "grammarPoints": [
+                {
+                  "id": "gp-have-to",
+                  "label": "Have to",
+                  "description": "Have to expresa obligación externa; don't have to, ausencia de obligación."
+                }
+              ]
+            },
+            {
+              "id": "es-en-a2-u07-l04",
+              "title": "Present perfect",
+              "cefrLevel": "A2",
+              "vocabFrequencyBand": "2000-3000",
+              "canDo": "Puedo hablar de experiencias con el presente perfecto.",
+              "microLesson": {
+                "title": "Present perfect",
+                "goals": [
+                  "Reconocer vocabulario de las experiencias profesionales.",
+                  "Usar frases sencillas sobre las experiencias profesionales.",
+                  "Producir un mensaje breve sobre las experiencias profesionales."
+                ],
+                "sections": [
+                  {
+                    "heading": "Foco gramatical",
+                    "body": "Presente perfecto: Have/has + participio conecta una experiencia pasada con el presente.",
+                    "examples": [
+                      {
+                        "source": "He trabajado en tres países",
+                        "target": "I have worked in three countries"
+                      },
+                      {
+                        "source": "He estudiado inglés durante años",
+                        "target": "I have studied English for years"
+                      }
+                    ]
+                  },
+                  {
+                    "heading": "En contexto",
+                    "body": "Observa cómo se usa presente perfecto en una situación de las experiencias profesionales.",
+                    "examples": [
+                      {
+                        "source": "He aprendido a usar una nueva herramienta",
+                        "target": "I have learned to use a new tool"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "glossary": [
+                {
+                  "term": "worked in three countries",
+                  "translations": [
+                    "trabajado en tres países"
+                  ]
+                },
+                {
+                  "term": "studied English for years",
+                  "translations": [
+                    "estudiado inglés durante años"
+                  ]
+                },
+                {
+                  "term": "learned to use a new tool",
+                  "translations": [
+                    "aprendido a usar una nueva herramienta"
+                  ]
+                }
+              ],
+              "exercises": [
+                {
+                  "type": "MultipleChoice",
+                  "id": "es-en-a2-u07-l04-e01",
+                  "question": "¿Cómo se dice «trabajado en tres países»?",
+                  "options": [
+                    "worked in three countries",
+                    "studied English for years",
+                    "learned to use a new tool"
+                  ],
+                  "correctIndex": 0,
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "«trabajado en tres países» se dice «worked in three countries»."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has elegido la traducción correcta."
+                  }
+                },
+                {
+                  "type": "Translate",
+                  "id": "es-en-a2-u07-l04-e02",
+                  "sourcePhrase": "He trabajado en tres países",
+                  "correctTokens": [
+                    "I",
+                    "have",
+                    "worked",
+                    "in",
+                    "three",
+                    "countries"
+                  ],
+                  "distractorTokens": [
+                    "studied",
+                    "English",
+                    "for"
+                  ],
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "El orden correcto es «I have worked in three countries». Presente perfecto: Have/has + participio conecta una experiencia pasada con el presente.",
+                    "ruleRef": "gp-present-perfect"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La frase conserva el orden y el significado."
+                  }
+                },
+                {
+                  "type": "OrderWords",
+                  "id": "es-en-a2-u07-l04-e03",
+                  "tokens": [
+                    "have",
+                    "studied",
+                    "English",
+                    "for",
+                    "years",
+                    "I"
+                  ],
+                  "answerTokens": [
+                    "I",
+                    "have",
+                    "studied",
+                    "English",
+                    "for",
+                    "years"
+                  ],
+                  "sourcePhrase": "He estudiado inglés durante años",
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "La frase correcta es «I have studied English for years». Presente perfecto: Have/has + participio conecta una experiencia pasada con el presente.",
+                    "ruleRef": "gp-present-perfect"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "El orden produce una frase natural."
+                  }
+                },
+                {
+                  "type": "MatchPairs",
+                  "id": "es-en-a2-u07-l04-e04",
+                  "pairs": [
+                    {
+                      "left": "trabajado en tres países",
+                      "right": "worked in three countries"
+                    },
+                    {
+                      "left": "estudiado inglés durante años",
+                      "right": "studied English for years"
+                    },
+                    {
+                      "left": "aprendido a usar una nueva herramienta",
+                      "right": "learned to use a new tool"
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "Cada expresión tiene una traducción distinta."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has asociado cada expresión con su traducción."
+                  }
+                },
+                {
+                  "type": "ListenChoose",
+                  "id": "es-en-a2-u07-l04-e05",
+                  "audioText": "I have learned to use a new tool",
+                  "options": [
+                    "I have worked in three countries",
+                    "I have studied English for years",
+                    "I have learned to use a new tool"
+                  ],
+                  "correctIndex": 0,
+                  "feedbackOnError": {
+                    "type": "comprehension",
+                    "explanation": "El audio dice «I have learned to use a new tool»."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has reconocido la frase del audio."
+                  }
+                },
+                {
+                  "type": "ListenType",
+                  "id": "es-en-a2-u07-l04-e06",
+                  "audioText": "I have learned to use a new tool",
+                  "transcription": "I have learned to use a new tool",
+                  "feedbackOnError": {
+                    "type": "spelling",
+                    "explanation": "Escribe exactamente «I have learned to use a new tool»."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La transcripción coincide con el audio."
+                  }
+                },
+                {
+                  "type": "SpeakRepeat",
+                  "id": "es-en-a2-u07-l04-e07",
+                  "targetPhrase": "I have learned to use a new tool",
+                  "audioText": "I have learned to use a new tool",
+                  "feedbackOnError": {
+                    "type": "pronunciation",
+                    "explanation": "Repite «I have learned to use a new tool» con claridad."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La frase se entiende y mantiene el ritmo."
+                  }
+                }
+              ],
+              "grammarPoints": [
+                {
+                  "id": "gp-present-perfect",
+                  "label": "Presente perfecto",
+                  "description": "Have/has + participio conecta una experiencia pasada con el presente."
+                }
+              ]
+            },
+            {
+              "id": "es-en-a2-u07-l05",
+              "title": "For y since",
+              "cefrLevel": "A2",
+              "vocabFrequencyBand": "2000-3000",
+              "canDo": "Puedo expresar duración y punto de inicio con for y since.",
+              "microLesson": {
+                "title": "For y since",
+                "goals": [
+                  "Reconocer vocabulario de la duración.",
+                  "Usar frases sencillas sobre la duración.",
+                  "Producir un mensaje breve sobre la duración."
+                ],
+                "sections": [
+                  {
+                    "heading": "Foco gramatical",
+                    "body": "For y since: For indica duración; since, el punto de inicio.",
+                    "examples": [
+                      {
+                        "source": "Vivo en Madrid desde 2019.",
+                        "target": "I have lived in Madrid since 2019."
+                      },
+                      {
+                        "source": "Trabajo aquí desde hace tres años.",
+                        "target": "I have worked here for three years."
+                      }
+                    ]
+                  },
+                  {
+                    "heading": "En contexto",
+                    "body": "Observa cómo se usa for y since en una situación de la duración.",
+                    "examples": [
+                      {
+                        "source": "Estudio inglés desde el año pasado.",
+                        "target": "I have studied English since last year."
+                      }
+                    ]
+                  }
+                ]
+              },
+              "glossary": [
+                {
+                  "term": "I have lived in Madrid since 2019.",
+                  "translations": [
+                    "Vivo en Madrid desde 2019."
+                  ]
+                },
+                {
+                  "term": "I have worked here for three years.",
+                  "translations": [
+                    "Trabajo aquí desde hace tres años."
+                  ]
+                },
+                {
+                  "term": "I have studied English since last year.",
+                  "translations": [
+                    "Estudio inglés desde el año pasado."
+                  ]
+                }
+              ],
+              "exercises": [
+                {
+                  "type": "MultipleChoice",
+                  "id": "es-en-a2-u07-l05-e01",
+                  "question": "¿Cómo se dice «Vivo en Madrid desde 2019.»?",
+                  "options": [
+                    "I have lived in Madrid since 2019.",
+                    "I have worked here for three years.",
+                    "I have studied English since last year."
+                  ],
+                  "correctIndex": 0,
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "«Vivo en Madrid desde 2019.» se dice «I have lived in Madrid since 2019.»."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has elegido la traducción correcta."
+                  }
+                },
+                {
+                  "type": "Translate",
+                  "id": "es-en-a2-u07-l05-e02",
+                  "sourcePhrase": "Vivo en Madrid desde 2019.",
+                  "correctTokens": [
+                    "I",
+                    "have",
+                    "lived",
+                    "in",
+                    "Madrid",
+                    "since",
+                    "2019"
+                  ],
+                  "distractorTokens": [
+                    "worked",
+                    "here",
+                    "for"
+                  ],
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "El orden correcto es «I have lived in Madrid since 2019». For y since: For indica duración; since, el punto de inicio.",
+                    "ruleRef": "gp-for-since"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La frase conserva el orden y el significado."
+                  }
+                },
+                {
+                  "type": "OrderWords",
+                  "id": "es-en-a2-u07-l05-e03",
+                  "tokens": [
+                    "have",
+                    "worked",
+                    "here",
+                    "for",
+                    "three",
+                    "years",
+                    "I"
+                  ],
+                  "answerTokens": [
+                    "I",
+                    "have",
+                    "worked",
+                    "here",
+                    "for",
+                    "three",
+                    "years"
+                  ],
+                  "sourcePhrase": "Trabajo aquí desde hace tres años.",
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "La frase correcta es «I have worked here for three years». For y since: For indica duración; since, el punto de inicio.",
+                    "ruleRef": "gp-for-since"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "El orden produce una frase natural."
+                  }
+                },
+                {
+                  "type": "MatchPairs",
+                  "id": "es-en-a2-u07-l05-e04",
+                  "pairs": [
+                    {
+                      "left": "Vivo en Madrid desde 2019.",
+                      "right": "I have lived in Madrid since 2019."
+                    },
+                    {
+                      "left": "Trabajo aquí desde hace tres años.",
+                      "right": "I have worked here for three years."
+                    },
+                    {
+                      "left": "Estudio inglés desde el año pasado.",
+                      "right": "I have studied English since last year."
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "Cada expresión tiene una traducción distinta."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has asociado cada expresión con su traducción."
+                  }
+                },
+                {
+                  "type": "ListenChoose",
+                  "id": "es-en-a2-u07-l05-e05",
+                  "audioText": "I have studied English since last year.",
+                  "options": [
+                    "I have lived in Madrid since 2019.",
+                    "I have worked here for three years.",
+                    "I have studied English since last year."
+                  ],
+                  "correctIndex": 0,
+                  "feedbackOnError": {
+                    "type": "comprehension",
+                    "explanation": "El audio dice «I have studied English since last year.»."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has reconocido la frase del audio."
+                  }
+                },
+                {
+                  "type": "ListenType",
+                  "id": "es-en-a2-u07-l05-e06",
+                  "audioText": "I have studied English since last year.",
+                  "transcription": "I have studied English since last year.",
+                  "feedbackOnError": {
+                    "type": "spelling",
+                    "explanation": "Escribe exactamente «I have studied English since last year.»."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La transcripción coincide con el audio."
+                  }
+                },
+                {
+                  "type": "SpeakRepeat",
+                  "id": "es-en-a2-u07-l05-e07",
+                  "targetPhrase": "I have studied English since last year.",
+                  "audioText": "I have studied English since last year.",
+                  "feedbackOnError": {
+                    "type": "pronunciation",
+                    "explanation": "Repite «I have studied English since last year.» con claridad."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La frase se entiende y mantiene el ritmo."
+                  }
+                }
+              ],
+              "grammarPoints": [
+                {
+                  "id": "gp-for-since",
+                  "label": "For y since",
+                  "description": "For indica duración; since, el punto de inicio."
+                }
+              ]
+            },
+            {
+              "id": "es-en-a2-u07-l06",
+              "title": "Entrevista",
+              "cefrLevel": "A2",
+              "vocabFrequencyBand": "2000-3000",
+              "canDo": "Puedo responder preguntas sencillas en una entrevista.",
+              "microLesson": {
+                "title": "Entrevista",
+                "goals": [
+                  "Reconocer vocabulario de una entrevista de trabajo.",
+                  "Usar frases sencillas sobre una entrevista de trabajo.",
+                  "Producir un mensaje breve sobre una entrevista de trabajo."
+                ],
+                "sections": [
+                  {
+                    "heading": "Foco gramatical",
+                    "body": "Presente perfecto: Have/has + participio conecta una experiencia pasada con el presente. Preguntas: El orden auxiliar + sujeto + verbo forma preguntas claras.",
+                    "examples": [
+                      {
+                        "source": "¿Cuál es su experiencia profesional?",
+                        "target": "What is your professional experience?"
+                      },
+                      {
+                        "source": "He trabajado en atención al cliente.",
+                        "target": "I have worked in customer service."
+                      }
+                    ]
+                  },
+                  {
+                    "heading": "En contexto",
+                    "body": "Observa cómo se usa presente perfecto en una situación de una entrevista de trabajo.",
+                    "examples": [
+                      {
+                        "source": "¿Por qué quiere trabajar con nosotros?",
+                        "target": "Why do you want to work with us?"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "glossary": [
+                {
+                  "term": "What is your professional experience?",
+                  "translations": [
+                    "¿Cuál es su experiencia profesional?"
+                  ]
+                },
+                {
+                  "term": "I have worked in customer service.",
+                  "translations": [
+                    "He trabajado en atención al cliente."
+                  ]
+                },
+                {
+                  "term": "Why do you want to work with us?",
+                  "translations": [
+                    "¿Por qué quiere trabajar con nosotros?"
+                  ]
+                }
+              ],
+              "exercises": [
+                {
+                  "type": "MultipleChoice",
+                  "id": "es-en-a2-u07-l06-e01",
+                  "question": "¿Cómo se dice «¿Cuál es su experiencia profesional?»?",
+                  "options": [
+                    "What is your professional experience?",
+                    "I have worked in customer service.",
+                    "Why do you want to work with us?"
+                  ],
+                  "correctIndex": 0,
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "«¿Cuál es su experiencia profesional?» se dice «What is your professional experience?»."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has elegido la traducción correcta."
+                  }
+                },
+                {
+                  "type": "Translate",
+                  "id": "es-en-a2-u07-l06-e02",
+                  "sourcePhrase": "¿Cuál es su experiencia profesional?",
+                  "correctTokens": [
+                    "What",
+                    "is",
+                    "your",
+                    "professional",
+                    "experience"
+                  ],
+                  "distractorTokens": [
+                    "I",
+                    "have",
+                    "worked"
+                  ],
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "El orden correcto es «What is your professional experience». Presente perfecto: Have/has + participio conecta una experiencia pasada con el presente.",
+                    "ruleRef": "gp-present-perfect"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La frase conserva el orden y el significado."
+                  }
+                },
+                {
+                  "type": "OrderWords",
+                  "id": "es-en-a2-u07-l06-e03",
+                  "tokens": [
+                    "have",
+                    "worked",
+                    "in",
+                    "customer",
+                    "service",
+                    "I"
+                  ],
+                  "answerTokens": [
+                    "I",
+                    "have",
+                    "worked",
+                    "in",
+                    "customer",
+                    "service"
+                  ],
+                  "sourcePhrase": "He trabajado en atención al cliente.",
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "La frase correcta es «I have worked in customer service». Presente perfecto: Have/has + participio conecta una experiencia pasada con el presente.",
+                    "ruleRef": "gp-present-perfect"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "El orden produce una frase natural."
+                  }
+                },
+                {
+                  "type": "MatchPairs",
+                  "id": "es-en-a2-u07-l06-e04",
+                  "pairs": [
+                    {
+                      "left": "¿Cuál es su experiencia profesional?",
+                      "right": "What is your professional experience?"
+                    },
+                    {
+                      "left": "He trabajado en atención al cliente.",
+                      "right": "I have worked in customer service."
+                    },
+                    {
+                      "left": "¿Por qué quiere trabajar con nosotros?",
+                      "right": "Why do you want to work with us?"
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "Cada expresión tiene una traducción distinta."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has asociado cada expresión con su traducción."
+                  }
+                },
+                {
+                  "type": "ListenChoose",
+                  "id": "es-en-a2-u07-l06-e05",
+                  "audioText": "Why do you want to work with us?",
+                  "options": [
+                    "What is your professional experience?",
+                    "I have worked in customer service.",
+                    "Why do you want to work with us?"
+                  ],
+                  "correctIndex": 0,
+                  "feedbackOnError": {
+                    "type": "comprehension",
+                    "explanation": "El audio dice «Why do you want to work with us?»."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has reconocido la frase del audio."
+                  }
+                },
+                {
+                  "type": "ListenType",
+                  "id": "es-en-a2-u07-l06-e06",
+                  "audioText": "Why do you want to work with us?",
+                  "transcription": "Why do you want to work with us?",
+                  "feedbackOnError": {
+                    "type": "spelling",
+                    "explanation": "Escribe exactamente «Why do you want to work with us?»."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La transcripción coincide con el audio."
+                  }
+                },
+                {
+                  "type": "SpeakRepeat",
+                  "id": "es-en-a2-u07-l06-e07",
+                  "targetPhrase": "Why do you want to work with us?",
+                  "audioText": "Why do you want to work with us?",
+                  "feedbackOnError": {
+                    "type": "pronunciation",
+                    "explanation": "Repite «Why do you want to work with us?» con claridad."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La frase se entiende y mantiene el ritmo."
+                  }
+                }
+              ],
+              "grammarPoints": [
+                {
+                  "id": "gp-present-perfect",
+                  "label": "Presente perfecto",
+                  "description": "Have/has + participio conecta una experiencia pasada con el presente."
+                },
+                {
+                  "id": "gp-questions",
+                  "label": "Preguntas",
+                  "description": "El orden auxiliar + sujeto + verbo forma preguntas claras."
+                }
+              ]
+            },
+            {
+              "id": "es-en-a2-u07-l07",
+              "title": "Oferta de trabajo",
+              "cefrLevel": "A2",
+              "vocabFrequencyBand": "2000-3000",
+              "canDo": "Puedo entender una oferta de trabajo sencilla.",
+              "microLesson": {
+                "title": "Oferta de trabajo",
+                "goals": [
+                  "Reconocer vocabulario de una oferta de trabajo.",
+                  "Usar frases sencillas sobre una oferta de trabajo.",
+                  "Producir un mensaje breve sobre una oferta de trabajo."
+                ],
+                "sections": [
+                  {
+                    "heading": "Foco gramatical",
+                    "body": "Presente simple: Usa el presente simple para rutinas y hechos habituales. Preguntas: El orden auxiliar + sujeto + verbo forma preguntas claras.",
+                    "examples": [
+                      {
+                        "source": "La empresa busca un asistente administrativo.",
+                        "target": "The company is looking for an administrative assistant."
+                      },
+                      {
+                        "source": "El puesto es a tiempo completo.",
+                        "target": "The position is full-time."
+                      }
+                    ]
+                  },
+                  {
+                    "heading": "En contexto",
+                    "body": "Observa cómo se usa presente simple en una situación de una oferta de trabajo.",
+                    "examples": [
+                      {
+                        "source": "Ofrecen formación y horario flexible.",
+                        "target": "They offer training and flexible hours."
+                      }
+                    ]
+                  }
+                ]
+              },
+              "glossary": [
+                {
+                  "term": "The company is looking for an administrative assistant.",
+                  "translations": [
+                    "La empresa busca un asistente administrativo."
+                  ]
+                },
+                {
+                  "term": "The position is full-time.",
+                  "translations": [
+                    "El puesto es a tiempo completo."
+                  ]
+                },
+                {
+                  "term": "They offer training and flexible hours.",
+                  "translations": [
+                    "Ofrecen formación y horario flexible."
+                  ]
+                }
+              ],
+              "exercises": [
+                {
+                  "type": "MultipleChoice",
+                  "id": "es-en-a2-u07-l07-e01",
+                  "question": "¿Cómo se dice «La empresa busca un asistente administrativo.»?",
+                  "options": [
+                    "The company is looking for an administrative assistant.",
+                    "The position is full-time.",
+                    "They offer training and flexible hours."
+                  ],
+                  "correctIndex": 0,
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "«La empresa busca un asistente administrativo.» se dice «The company is looking for an administrative assistant.»."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has elegido la traducción correcta."
+                  }
+                },
+                {
+                  "type": "Translate",
+                  "id": "es-en-a2-u07-l07-e02",
+                  "sourcePhrase": "La empresa busca un asistente administrativo.",
+                  "correctTokens": [
+                    "The",
+                    "company",
+                    "is",
+                    "looking",
+                    "for",
+                    "an",
+                    "administrative",
+                    "assistant"
+                  ],
+                  "distractorTokens": [
+                    "position",
+                    "full",
+                    "time"
+                  ],
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "El orden correcto es «The company is looking for an administrative assistant». Presente simple: Usa el presente simple para rutinas y hechos habituales.",
+                    "ruleRef": "gp-present-simple"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La frase conserva el orden y el significado."
+                  }
+                },
+                {
+                  "type": "OrderWords",
+                  "id": "es-en-a2-u07-l07-e03",
+                  "tokens": [
+                    "position",
+                    "is",
+                    "full",
+                    "time",
+                    "The"
+                  ],
+                  "answerTokens": [
+                    "The",
+                    "position",
+                    "is",
+                    "full",
+                    "time"
+                  ],
+                  "sourcePhrase": "El puesto es a tiempo completo.",
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "La frase correcta es «The position is full time». Presente simple: Usa el presente simple para rutinas y hechos habituales.",
+                    "ruleRef": "gp-present-simple"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "El orden produce una frase natural."
+                  }
+                },
+                {
+                  "type": "MatchPairs",
+                  "id": "es-en-a2-u07-l07-e04",
+                  "pairs": [
+                    {
+                      "left": "La empresa busca un asistente administrativo.",
+                      "right": "The company is looking for an administrative assistant."
+                    },
+                    {
+                      "left": "El puesto es a tiempo completo.",
+                      "right": "The position is full-time."
+                    },
+                    {
+                      "left": "Ofrecen formación y horario flexible.",
+                      "right": "They offer training and flexible hours."
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "Cada expresión tiene una traducción distinta."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has asociado cada expresión con su traducción."
+                  }
+                },
+                {
+                  "type": "ListenChoose",
+                  "id": "es-en-a2-u07-l07-e05",
+                  "audioText": "They offer training and flexible hours.",
+                  "options": [
+                    "The company is looking for an administrative assistant.",
+                    "The position is full-time.",
+                    "They offer training and flexible hours."
+                  ],
+                  "correctIndex": 0,
+                  "feedbackOnError": {
+                    "type": "comprehension",
+                    "explanation": "El audio dice «They offer training and flexible hours.»."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has reconocido la frase del audio."
+                  }
+                },
+                {
+                  "type": "ListenType",
+                  "id": "es-en-a2-u07-l07-e06",
+                  "audioText": "They offer training and flexible hours.",
+                  "transcription": "They offer training and flexible hours.",
+                  "feedbackOnError": {
+                    "type": "spelling",
+                    "explanation": "Escribe exactamente «They offer training and flexible hours.»."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La transcripción coincide con el audio."
+                  }
+                },
+                {
+                  "type": "SpeakRepeat",
+                  "id": "es-en-a2-u07-l07-e07",
+                  "targetPhrase": "They offer training and flexible hours.",
+                  "audioText": "They offer training and flexible hours.",
+                  "feedbackOnError": {
+                    "type": "pronunciation",
+                    "explanation": "Repite «They offer training and flexible hours.» con claridad."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La frase se entiende y mantiene el ritmo."
+                  }
+                }
+              ],
+              "grammarPoints": [
+                {
+                  "id": "gp-present-simple",
+                  "label": "Presente simple",
+                  "description": "Usa el presente simple para rutinas y hechos habituales."
+                },
+                {
+                  "id": "gp-questions",
+                  "label": "Preguntas",
+                  "description": "El orden auxiliar + sujeto + verbo forma preguntas claras."
+                }
+              ]
+            },
+            {
+              "id": "es-en-a2-u07-l08",
+              "title": "Correo profesional",
+              "cefrLevel": "A2",
+              "vocabFrequencyBand": "2000-3000",
+              "canDo": "Puedo escribir un correo profesional breve.",
+              "microLesson": {
+                "title": "Correo profesional",
+                "goals": [
+                  "Reconocer vocabulario de un correo profesional.",
+                  "Usar frases sencillas sobre un correo profesional.",
+                  "Producir un mensaje breve sobre un correo profesional."
+                ],
+                "sections": [
+                  {
+                    "heading": "Foco gramatical",
+                    "body": "Presente simple: Usa el presente simple para rutinas y hechos habituales. Peticiones corteses: Could you...? y Would you...? suavizan una petición.",
+                    "examples": [
+                      {
+                        "source": "Escribo para solicitar una entrevista.",
+                        "target": "I am writing to request an interview."
+                      },
+                      {
+                        "source": "Adjunto mi currículum y una carta de presentación.",
+                        "target": "I attach my CV and a cover letter."
+                      }
+                    ]
+                  },
+                  {
+                    "heading": "En contexto",
+                    "body": "Observa cómo se usa presente simple en una situación de un correo profesional.",
+                    "examples": [
+                      {
+                        "source": "Quedo a su disposición para ampliar la información.",
+                        "target": "I am available to provide further information."
+                      }
+                    ]
+                  }
+                ]
+              },
+              "glossary": [
+                {
+                  "term": "I am writing to request an interview.",
+                  "translations": [
+                    "Escribo para solicitar una entrevista."
+                  ]
+                },
+                {
+                  "term": "I attach my CV and a cover letter.",
+                  "translations": [
+                    "Adjunto mi currículum y una carta de presentación."
+                  ]
+                },
+                {
+                  "term": "I am available to provide further information.",
+                  "translations": [
+                    "Quedo a su disposición para ampliar la información."
+                  ]
+                }
+              ],
+              "exercises": [
+                {
+                  "type": "MultipleChoice",
+                  "id": "es-en-a2-u07-l08-e01",
+                  "question": "¿Cómo se dice «Escribo para solicitar una entrevista.»?",
+                  "options": [
+                    "I am writing to request an interview.",
+                    "I attach my CV and a cover letter.",
+                    "I am available to provide further information."
+                  ],
+                  "correctIndex": 0,
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "«Escribo para solicitar una entrevista.» se dice «I am writing to request an interview.»."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has elegido la traducción correcta."
+                  }
+                },
+                {
+                  "type": "Translate",
+                  "id": "es-en-a2-u07-l08-e02",
+                  "sourcePhrase": "Escribo para solicitar una entrevista.",
+                  "correctTokens": [
+                    "I",
+                    "am",
+                    "writing",
+                    "to",
+                    "request",
+                    "an",
+                    "interview"
+                  ],
+                  "distractorTokens": [
+                    "attach",
+                    "my",
+                    "CV"
+                  ],
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "El orden correcto es «I am writing to request an interview». Presente simple: Usa el presente simple para rutinas y hechos habituales.",
+                    "ruleRef": "gp-present-simple"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La frase conserva el orden y el significado."
+                  }
+                },
+                {
+                  "type": "OrderWords",
+                  "id": "es-en-a2-u07-l08-e03",
+                  "tokens": [
+                    "attach",
+                    "my",
+                    "CV",
+                    "and",
+                    "a",
+                    "cover",
+                    "letter",
+                    "I"
+                  ],
+                  "answerTokens": [
+                    "I",
+                    "attach",
+                    "my",
+                    "CV",
+                    "and",
+                    "a",
+                    "cover",
+                    "letter"
+                  ],
+                  "sourcePhrase": "Adjunto mi currículum y una carta de presentación.",
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "La frase correcta es «I attach my CV and a cover letter». Presente simple: Usa el presente simple para rutinas y hechos habituales.",
+                    "ruleRef": "gp-present-simple"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "El orden produce una frase natural."
+                  }
+                },
+                {
+                  "type": "MatchPairs",
+                  "id": "es-en-a2-u07-l08-e04",
+                  "pairs": [
+                    {
+                      "left": "Escribo para solicitar una entrevista.",
+                      "right": "I am writing to request an interview."
+                    },
+                    {
+                      "left": "Adjunto mi currículum y una carta de presentación.",
+                      "right": "I attach my CV and a cover letter."
+                    },
+                    {
+                      "left": "Quedo a su disposición para ampliar la información.",
+                      "right": "I am available to provide further information."
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "Cada expresión tiene una traducción distinta."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has asociado cada expresión con su traducción."
+                  }
+                },
+                {
+                  "type": "ListenChoose",
+                  "id": "es-en-a2-u07-l08-e05",
+                  "audioText": "I am available to provide further information.",
+                  "options": [
+                    "I am writing to request an interview.",
+                    "I attach my CV and a cover letter.",
+                    "I am available to provide further information."
+                  ],
+                  "correctIndex": 0,
+                  "feedbackOnError": {
+                    "type": "comprehension",
+                    "explanation": "El audio dice «I am available to provide further information.»."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has reconocido la frase del audio."
+                  }
+                },
+                {
+                  "type": "ListenType",
+                  "id": "es-en-a2-u07-l08-e06",
+                  "audioText": "I am available to provide further information.",
+                  "transcription": "I am available to provide further information.",
+                  "feedbackOnError": {
+                    "type": "spelling",
+                    "explanation": "Escribe exactamente «I am available to provide further information.»."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La transcripción coincide con el audio."
+                  }
+                },
+                {
+                  "type": "SpeakRepeat",
+                  "id": "es-en-a2-u07-l08-e07",
+                  "targetPhrase": "I am available to provide further information.",
+                  "audioText": "I am available to provide further information.",
+                  "feedbackOnError": {
+                    "type": "pronunciation",
+                    "explanation": "Repite «I am available to provide further information.» con claridad."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La frase se entiende y mantiene el ritmo."
+                  }
+                }
+              ],
+              "grammarPoints": [
+                {
+                  "id": "gp-present-simple",
+                  "label": "Presente simple",
+                  "description": "Usa el presente simple para rutinas y hechos habituales."
+                },
+                {
+                  "id": "gp-polite-requests",
+                  "label": "Peticiones corteses",
+                  "description": "Could you...? y Would you...? suavizan una petición."
+                }
+              ]
+            },
+            {
+              "id": "es-en-a2-u07-l09",
+              "title": "Integración: trayectoria",
+              "cefrLevel": "A2",
+              "vocabFrequencyBand": "2000-3000",
+              "canDo": "Puedo contar mi trayectoria profesional.",
+              "microLesson": {
+                "title": "Integración: trayectoria",
+                "goals": [
+                  "Reconocer vocabulario de mi trayectoria profesional.",
+                  "Usar frases sencillas sobre mi trayectoria profesional.",
+                  "Producir un mensaje breve sobre mi trayectoria profesional."
+                ],
+                "sections": [
+                  {
+                    "heading": "Foco gramatical",
+                    "body": "Pasado simple: El pasado simple describe acciones terminadas en un momento concreto. Presente perfecto: Have/has + participio conecta una experiencia pasada con el presente.",
+                    "examples": [
+                      {
+                        "source": "Empecé como becario en una empresa pequeña.",
+                        "target": "I started as an intern in a small company."
+                      },
+                      {
+                        "source": "Después trabajé en varios proyectos internacionales.",
+                        "target": "Then I worked on several international projects."
+                      }
+                    ]
+                  },
+                  {
+                    "heading": "En contexto",
+                    "body": "Observa cómo se usa pasado simple en una situación de mi trayectoria profesional.",
+                    "examples": [
+                      {
+                        "source": "Ahora quiero asumir más responsabilidades.",
+                        "target": "Now I want to take on more responsibilities."
+                      }
+                    ]
+                  }
+                ]
+              },
+              "glossary": [
+                {
+                  "term": "I started as an intern in a small company.",
+                  "translations": [
+                    "Empecé como becario en una empresa pequeña."
+                  ]
+                },
+                {
+                  "term": "Then I worked on several international projects.",
+                  "translations": [
+                    "Después trabajé en varios proyectos internacionales."
+                  ]
+                },
+                {
+                  "term": "Now I want to take on more responsibilities.",
+                  "translations": [
+                    "Ahora quiero asumir más responsabilidades."
+                  ]
+                }
+              ],
+              "exercises": [
+                {
+                  "type": "MultipleChoice",
+                  "id": "es-en-a2-u07-l09-e01",
+                  "question": "¿Cómo se dice «Empecé como becario en una empresa pequeña.»?",
+                  "options": [
+                    "I started as an intern in a small company.",
+                    "Then I worked on several international projects.",
+                    "Now I want to take on more responsibilities."
+                  ],
+                  "correctIndex": 0,
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "«Empecé como becario en una empresa pequeña.» se dice «I started as an intern in a small company.»."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has elegido la traducción correcta."
+                  }
+                },
+                {
+                  "type": "Translate",
+                  "id": "es-en-a2-u07-l09-e02",
+                  "sourcePhrase": "Empecé como becario en una empresa pequeña.",
+                  "correctTokens": [
+                    "I",
+                    "started",
+                    "as",
+                    "an",
+                    "intern",
+                    "in",
+                    "a",
+                    "small",
+                    "company"
+                  ],
+                  "distractorTokens": [
+                    "Then",
+                    "worked",
+                    "on"
+                  ],
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "El orden correcto es «I started as an intern in a small company». Pasado simple: El pasado simple describe acciones terminadas en un momento concreto.",
+                    "ruleRef": "gp-past-simple"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La frase conserva el orden y el significado."
+                  }
+                },
+                {
+                  "type": "OrderWords",
+                  "id": "es-en-a2-u07-l09-e03",
+                  "tokens": [
+                    "I",
+                    "worked",
+                    "on",
+                    "several",
+                    "international",
+                    "projects",
+                    "Then"
+                  ],
+                  "answerTokens": [
+                    "Then",
+                    "I",
+                    "worked",
+                    "on",
+                    "several",
+                    "international",
+                    "projects"
+                  ],
+                  "sourcePhrase": "Después trabajé en varios proyectos internacionales.",
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "La frase correcta es «Then I worked on several international projects». Pasado simple: El pasado simple describe acciones terminadas en un momento concreto.",
+                    "ruleRef": "gp-past-simple"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "El orden produce una frase natural."
+                  }
+                },
+                {
+                  "type": "MatchPairs",
+                  "id": "es-en-a2-u07-l09-e04",
+                  "pairs": [
+                    {
+                      "left": "Empecé como becario en una empresa pequeña.",
+                      "right": "I started as an intern in a small company."
+                    },
+                    {
+                      "left": "Después trabajé en varios proyectos internacionales.",
+                      "right": "Then I worked on several international projects."
+                    },
+                    {
+                      "left": "Ahora quiero asumir más responsabilidades.",
+                      "right": "Now I want to take on more responsibilities."
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "Cada expresión tiene una traducción distinta."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has asociado cada expresión con su traducción."
+                  }
+                },
+                {
+                  "type": "ListenChoose",
+                  "id": "es-en-a2-u07-l09-e05",
+                  "audioText": "Now I want to take on more responsibilities.",
+                  "options": [
+                    "I started as an intern in a small company.",
+                    "Then I worked on several international projects.",
+                    "Now I want to take on more responsibilities."
+                  ],
+                  "correctIndex": 0,
+                  "feedbackOnError": {
+                    "type": "comprehension",
+                    "explanation": "El audio dice «Now I want to take on more responsibilities.»."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has reconocido la frase del audio."
+                  }
+                },
+                {
+                  "type": "ListenType",
+                  "id": "es-en-a2-u07-l09-e06",
+                  "audioText": "Now I want to take on more responsibilities.",
+                  "transcription": "Now I want to take on more responsibilities.",
+                  "feedbackOnError": {
+                    "type": "spelling",
+                    "explanation": "Escribe exactamente «Now I want to take on more responsibilities.»."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La transcripción coincide con el audio."
+                  }
+                },
+                {
+                  "type": "SpeakRepeat",
+                  "id": "es-en-a2-u07-l09-e07",
+                  "targetPhrase": "Now I want to take on more responsibilities.",
+                  "audioText": "Now I want to take on more responsibilities.",
+                  "feedbackOnError": {
+                    "type": "pronunciation",
+                    "explanation": "Repite «Now I want to take on more responsibilities.» con claridad."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La frase se entiende y mantiene el ritmo."
+                  }
+                }
+              ],
+              "grammarPoints": [
+                {
+                  "id": "gp-past-simple",
+                  "label": "Pasado simple",
+                  "description": "El pasado simple describe acciones terminadas en un momento concreto."
+                },
+                {
+                  "id": "gp-present-perfect",
+                  "label": "Presente perfecto",
+                  "description": "Have/has + participio conecta una experiencia pasada con el presente."
+                }
+              ]
+            },
+            {
+              "id": "es-en-a2-u07-l10",
+              "title": "Evaluación: mi perfil",
+              "cefrLevel": "A2",
+              "vocabFrequencyBand": "2000-3000",
+              "canDo": "Puedo presentar mi perfil y mis objetivos.",
+              "microLesson": {
+                "title": "Evaluación: mi perfil",
+                "goals": [
+                  "Reconocer vocabulario de mi perfil profesional.",
+                  "Usar frases sencillas sobre mi perfil profesional.",
+                  "Producir un mensaje breve sobre mi perfil profesional."
+                ],
+                "sections": [
+                  {
+                    "heading": "Foco gramatical",
+                    "body": "Presente perfecto: Have/has + participio conecta una experiencia pasada con el presente. For y since: For indica duración; since, el punto de inicio.",
+                    "examples": [
+                      {
+                        "source": "Tengo experiencia en atención al cliente.",
+                        "target": "I have experience in customer service."
+                      },
+                      {
+                        "source": "He trabajado en equipo durante cinco años.",
+                        "target": "I have worked in a team for five years."
+                      }
+                    ]
+                  },
+                  {
+                    "heading": "En contexto",
+                    "body": "Observa cómo se usa presente perfecto en una situación de mi perfil profesional.",
+                    "examples": [
+                      {
+                        "source": "Me gustaría aprender nuevas habilidades.",
+                        "target": "I would like to learn new skills."
+                      }
+                    ]
+                  }
+                ]
+              },
+              "glossary": [
+                {
+                  "term": "I have experience in customer service.",
+                  "translations": [
+                    "Tengo experiencia en atención al cliente."
+                  ]
+                },
+                {
+                  "term": "I have worked in a team for five years.",
+                  "translations": [
+                    "He trabajado en equipo durante cinco años."
+                  ]
+                },
+                {
+                  "term": "I would like to learn new skills.",
+                  "translations": [
+                    "Me gustaría aprender nuevas habilidades."
+                  ]
+                }
+              ],
+              "exercises": [
+                {
+                  "type": "MultipleChoice",
+                  "id": "es-en-a2-u07-l10-e01",
+                  "question": "¿Cómo se dice «Tengo experiencia en atención al cliente.»?",
+                  "options": [
+                    "I have experience in customer service.",
+                    "I have worked in a team for five years.",
+                    "I would like to learn new skills."
+                  ],
+                  "correctIndex": 0,
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "«Tengo experiencia en atención al cliente.» se dice «I have experience in customer service.»."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has elegido la traducción correcta."
+                  }
+                },
+                {
+                  "type": "Translate",
+                  "id": "es-en-a2-u07-l10-e02",
+                  "sourcePhrase": "Tengo experiencia en atención al cliente.",
+                  "correctTokens": [
+                    "I",
+                    "have",
+                    "experience",
+                    "in",
+                    "customer",
+                    "service"
+                  ],
+                  "distractorTokens": [
+                    "worked",
+                    "a",
+                    "team"
+                  ],
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "El orden correcto es «I have experience in customer service». Presente perfecto: Have/has + participio conecta una experiencia pasada con el presente.",
+                    "ruleRef": "gp-present-perfect"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La frase conserva el orden y el significado."
+                  }
+                },
+                {
+                  "type": "OrderWords",
+                  "id": "es-en-a2-u07-l10-e03",
+                  "tokens": [
+                    "have",
+                    "worked",
+                    "in",
+                    "a",
+                    "team",
+                    "for",
+                    "five",
+                    "years",
+                    "I"
+                  ],
+                  "answerTokens": [
+                    "I",
+                    "have",
+                    "worked",
+                    "in",
+                    "a",
+                    "team",
+                    "for",
+                    "five",
+                    "years"
+                  ],
+                  "sourcePhrase": "He trabajado en equipo durante cinco años.",
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "La frase correcta es «I have worked in a team for five years». Presente perfecto: Have/has + participio conecta una experiencia pasada con el presente.",
+                    "ruleRef": "gp-present-perfect"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "El orden produce una frase natural."
+                  }
+                },
+                {
+                  "type": "MatchPairs",
+                  "id": "es-en-a2-u07-l10-e04",
+                  "pairs": [
+                    {
+                      "left": "Tengo experiencia en atención al cliente.",
+                      "right": "I have experience in customer service."
+                    },
+                    {
+                      "left": "He trabajado en equipo durante cinco años.",
+                      "right": "I have worked in a team for five years."
+                    },
+                    {
+                      "left": "Me gustaría aprender nuevas habilidades.",
+                      "right": "I would like to learn new skills."
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "Cada expresión tiene una traducción distinta."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has asociado cada expresión con su traducción."
+                  }
+                },
+                {
+                  "type": "ListenChoose",
+                  "id": "es-en-a2-u07-l10-e05",
+                  "audioText": "I would like to learn new skills.",
+                  "options": [
+                    "I have experience in customer service.",
+                    "I have worked in a team for five years.",
+                    "I would like to learn new skills."
+                  ],
+                  "correctIndex": 0,
+                  "feedbackOnError": {
+                    "type": "comprehension",
+                    "explanation": "El audio dice «I would like to learn new skills.»."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has reconocido la frase del audio."
+                  }
+                },
+                {
+                  "type": "ListenType",
+                  "id": "es-en-a2-u07-l10-e06",
+                  "audioText": "I would like to learn new skills.",
+                  "transcription": "I would like to learn new skills.",
+                  "feedbackOnError": {
+                    "type": "spelling",
+                    "explanation": "Escribe exactamente «I would like to learn new skills.»."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La transcripción coincide con el audio."
+                  }
+                },
+                {
+                  "type": "SpeakRepeat",
+                  "id": "es-en-a2-u07-l10-e07",
+                  "targetPhrase": "I would like to learn new skills.",
+                  "audioText": "I would like to learn new skills.",
+                  "feedbackOnError": {
+                    "type": "pronunciation",
+                    "explanation": "Repite «I would like to learn new skills.» con claridad."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La frase se entiende y mantiene el ritmo."
+                  }
+                }
+              ],
+              "grammarPoints": [
+                {
+                  "id": "gp-present-perfect",
+                  "label": "Presente perfecto",
+                  "description": "Have/has + participio conecta una experiencia pasada con el presente."
+                },
+                {
+                  "id": "gp-for-since",
+                  "label": "For y since",
+                  "description": "For indica duración; since, el punto de inicio."
+                }
+              ]
+            }
+          ]
         }
       ]
     },
