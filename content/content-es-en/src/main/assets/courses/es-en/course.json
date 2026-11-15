@@ -121220,6 +121220,3418 @@
               ]
             }
           ]
+        },
+        {
+          "id": "es-en-b2-u01",
+          "title": "B2 · Recuerdos y pasado",
+          "lessons": [
+            {
+              "id": "es-en-b2-u01-l01",
+              "title": "Repaso: mi rutina",
+              "cefrLevel": "B2",
+              "scenario": "Situación comunicativa avanzada sobre la rutina diaria.",
+              "canDo": "Puedo argumentar y matizar sobre la rutina diaria.",
+              "grammarPoints": [
+                {
+                  "id": "gp-b2-hedging",
+                  "label": "Hedging",
+                  "description": "Matizar una opinión con I'm afraid, it seems o might."
+                },
+                {
+                  "id": "gp-b2-future-perfect",
+                  "label": "Future perfect",
+                  "description": "Will have + participio sitúa un resultado antes de una fecha."
+                }
+              ],
+              "vocabFrequencyBand": "3000-5000",
+              "culturalNotes": [
+                {
+                  "idiom": "a piece of cake",
+                  "note": "Modismo avanzado útil para hablar de la rutina diaria.",
+                  "translation": "expresión figurada"
+                }
+              ],
+              "microLesson": {
+                "title": "Repaso: mi rutina",
+                "goals": [
+                  "Usar vocabulario avanzado de la rutina diaria.",
+                  "Aplicar hedging y future perfect.",
+                  "Argumentar y matizar sobre la rutina diaria."
+                ],
+                "sections": [
+                  {
+                    "heading": "Lengua en contexto",
+                    "body": "Hedging: Matizar una opinión con I'm afraid, it seems o might. Future perfect: Will have + participio sitúa un resultado antes de una fecha.",
+                    "examples": [
+                      {
+                        "source": "Normalmente me levanto a las siete. Dicho esto, depende del contexto.",
+                        "target": "I usually get up at seven. That said, it depends on the context."
+                      },
+                      {
+                        "source": "Normalmente desayuno con mi familia. En otras palabras, merece la pena considerarlo.",
+                        "target": "I usually have breakfast with my family. In other words, it is worth considering."
+                      }
+                    ]
+                  }
+                ]
+              },
+              "glossary": [
+                {
+                  "term": "I usually get up at seven. That said, it depends on the context.",
+                  "translations": [
+                    "Normalmente me levanto a las siete. Dicho esto, depende del contexto."
+                  ]
+                },
+                {
+                  "term": "I usually have breakfast with my family. In other words, it is worth considering.",
+                  "translations": [
+                    "Normalmente desayuno con mi familia. En otras palabras, merece la pena considerarlo."
+                  ]
+                },
+                {
+                  "term": "I usually work from home. I'm afraid it may be more complicated.",
+                  "translations": [
+                    "Normalmente trabajo desde casa. Me temo que puede ser más complicado."
+                  ]
+                }
+              ],
+              "exercises": [
+                {
+                  "type": "MultipleChoice",
+                  "id": "es-en-b2-u01-l01-e01",
+                  "question": "¿Cuál es la opción correcta para «Normalmente me levanto a las siete. Dicho esto, depende del contexto.»?",
+                  "options": [
+                    "I usually get up at seven. That said, it depends on the context.",
+                    "I usually have breakfast with my family. In other words, it is worth considering.",
+                    "I usually work from home. I'm afraid it may be more complicated."
+                  ],
+                  "correctIndex": 0,
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "«Normalmente me levanto a las siete. Dicho esto, depende del contexto.» se dice «I usually get up at seven. That said, it depends on the context.».",
+                    "ruleRef": "gp-b2-hedging"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has elegido la traducción correcta."
+                  }
+                },
+                {
+                  "type": "OrderWords",
+                  "id": "es-en-b2-u01-l01-e02",
+                  "tokens": [
+                    "usually",
+                    "get",
+                    "up",
+                    "at",
+                    "seven",
+                    "That",
+                    "said",
+                    "it",
+                    "depends",
+                    "on",
+                    "the",
+                    "context",
+                    "I"
+                  ],
+                  "answerTokens": [
+                    "I",
+                    "usually",
+                    "get",
+                    "up",
+                    "at",
+                    "seven",
+                    "That",
+                    "said",
+                    "it",
+                    "depends",
+                    "on",
+                    "the",
+                    "context"
+                  ],
+                  "sourcePhrase": "Normalmente me levanto a las siete. Dicho esto, depende del contexto.",
+                  "feedbackOnError": {
+                    "type": "word_order",
+                    "explanation": "El orden correcto es «I usually get up at seven That said it depends on the context».",
+                    "ruleRef": "gp-b2-hedging"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "El orden produce una frase natural."
+                  }
+                },
+                {
+                  "type": "ClozeDragDrop",
+                  "id": "es-en-b2-u01-l01-e03",
+                  "passage": "I {{b1}} {{b2}} up at seven",
+                  "blanks": [
+                    {
+                      "id": "b1",
+                      "answer": "usually",
+                      "options": [
+                        "usually",
+                        "seven",
+                        "very"
+                      ]
+                    },
+                    {
+                      "id": "b2",
+                      "answer": "get",
+                      "options": [
+                        "get",
+                        "seven",
+                        "very"
+                      ]
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "Las dos formas deben encajar con el contexto de la frase.",
+                    "ruleRef": "gp-b2-future-perfect"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Los dos huecos encajan con la situación."
+                  }
+                },
+                {
+                  "type": "SemanticMatch",
+                  "id": "es-en-b2-u01-l01-e04",
+                  "instructions": "Clasifica la función comunicativa de cada intervención.",
+                  "pairs": [
+                    {
+                      "left": "I usually get up at seven. That said, it depends on the context.",
+                      "right": "Planteamiento",
+                      "register": "formal",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    },
+                    {
+                      "left": "I usually have breakfast with my family. In other words, it is worth considering.",
+                      "right": "Concesión",
+                      "register": "neutral",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    },
+                    {
+                      "left": "I usually work from home. I'm afraid it may be more complicated.",
+                      "right": "Conclusión",
+                      "register": "informal",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "Cada intervención cumple una función comunicativa distinta.",
+                    "ruleRef": "gp-b2-hedging"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has identificado la función de cada intervención."
+                  }
+                },
+                {
+                  "type": "SemanticMatch",
+                  "id": "es-en-b2-u01-l01-e05",
+                  "instructions": "Distingue el registro de cada intervención.",
+                  "pairs": [
+                    {
+                      "left": "I usually get up at seven. That said, it depends on the context.",
+                      "right": "Formal",
+                      "register": "formal",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    },
+                    {
+                      "left": "I usually have breakfast with my family. In other words, it is worth considering.",
+                      "right": "Neutral",
+                      "register": "neutral",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    },
+                    {
+                      "left": "I usually work from home. I'm afraid it may be more complicated.",
+                      "right": "Informal",
+                      "register": "informal",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "register",
+                    "explanation": "El registro cambia según el contexto y la relación con el interlocutor.",
+                    "ruleRef": "gp-b2-future-perfect"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has distinguido el registro de cada intervención."
+                  }
+                },
+                {
+                  "type": "AudioOnlyPrompt",
+                  "id": "es-en-b2-u01-l01-e06",
+                  "audioText": "I usually have breakfast with my family. In other words, it is worth considering.",
+                  "question": "¿Qué ha dicho el hablante?",
+                  "options": [
+                    "I usually have breakfast with my family. In other words, it is worth considering.",
+                    "I usually get up at seven. That said, it depends on the context.",
+                    "I usually work from home. I'm afraid it may be more complicated."
+                  ],
+                  "correctIndex": 0,
+                  "allowSlowPlayback": true,
+                  "feedbackOnError": {
+                    "type": "comprehension",
+                    "explanation": "El audio dice «I usually have breakfast with my family. In other words, it is worth considering.».",
+                    "ruleRef": "gp-b2-hedging"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has comprendido el mensaje del audio."
+                  }
+                },
+                {
+                  "type": "AudioOnlyPrompt",
+                  "id": "es-en-b2-u01-l01-e07",
+                  "audioText": "I usually work from home. I'm afraid it may be more complicated.",
+                  "question": "¿Cuál es la idea principal?",
+                  "options": [
+                    "I usually work from home. I'm afraid it may be more complicated.",
+                    "I usually get up at seven. That said, it depends on the context.",
+                    "I usually have breakfast with my family. In other words, it is worth considering."
+                  ],
+                  "correctIndex": 0,
+                  "allowSlowPlayback": false,
+                  "feedbackOnError": {
+                    "type": "comprehension",
+                    "explanation": "El audio dice «I usually work from home. I'm afraid it may be more complicated.».",
+                    "ruleRef": "gp-b2-future-perfect"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has identificado la idea principal."
+                  }
+                },
+                {
+                  "type": "ListenType",
+                  "id": "es-en-b2-u01-l01-e08",
+                  "audioText": "I usually work from home. I'm afraid it may be more complicated.",
+                  "transcription": "I usually work from home. I'm afraid it may be more complicated.",
+                  "feedbackOnError": {
+                    "type": "spelling",
+                    "explanation": "Escribe exactamente «I usually work from home. I'm afraid it may be more complicated.».",
+                    "ruleRef": "gp-b2-hedging"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La transcripción coincide con el audio."
+                  }
+                },
+                {
+                  "type": "SpeakRepeat",
+                  "id": "es-en-b2-u01-l01-e09",
+                  "targetPhrase": "I usually work from home. I'm afraid it may be more complicated.",
+                  "audioText": "I usually work from home. I'm afraid it may be more complicated.",
+                  "feedbackOnError": {
+                    "type": "pronunciation",
+                    "explanation": "Repite «I usually work from home. I'm afraid it may be more complicated.» con claridad.",
+                    "ruleRef": "gp-b2-hedging"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La frase se entiende y mantiene el ritmo."
+                  }
+                },
+                {
+                  "type": "FreeSpeakingPrompt",
+                  "id": "es-en-b2-u01-l01-e10",
+                  "prompt": "Argumenta y matiza una opinión sobre la rutina diaria.",
+                  "minTokens": 20,
+                  "conceptClusters": [
+                    [
+                      "usually"
+                    ],
+                    [
+                      "get"
+                    ],
+                    [
+                      "seven"
+                    ]
+                  ],
+                  "modelAnswer": "I usually get up at seven. That said, it depends on the context. I usually have breakfast with my family. In other words, it is worth considering. I usually work from home. I'm afraid it may be more complicated.",
+                  "selfAssessmentCriteria": [
+                    "¿La respuesta argumenta y responde a la tarea?",
+                    "¿Usa las dos estructuras gramaticales de la lección?",
+                    "¿Incluye una concesión o una matización?"
+                  ],
+                  "grammarRuleRefs": [
+                    "gp-b2-hedging",
+                    "gp-b2-future-perfect"
+                  ],
+                  "timeLimitSeconds": 90,
+                  "minWpm": 70,
+                  "maxWpm": 160,
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "La respuesta modelo desarrolla una opinión con matices y una concesión.",
+                    "ruleRef": "gp-b2-hedging"
+                  }
+                }
+              ]
+            },
+            {
+              "id": "es-en-b2-u01-l02",
+              "title": "Un día ocupado",
+              "cefrLevel": "B2",
+              "scenario": "Situación comunicativa avanzada sobre un día de trabajo.",
+              "canDo": "Puedo argumentar y matizar sobre un día de trabajo.",
+              "grammarPoints": [
+                {
+                  "id": "gp-b2-hedging",
+                  "label": "Hedging",
+                  "description": "Matizar una opinión con I'm afraid, it seems o might."
+                },
+                {
+                  "id": "gp-b2-future-perfect",
+                  "label": "Future perfect",
+                  "description": "Will have + participio sitúa un resultado antes de una fecha."
+                }
+              ],
+              "vocabFrequencyBand": "3000-5000",
+              "culturalNotes": [
+                {
+                  "idiom": "once in a blue moon",
+                  "note": "Modismo avanzado útil para hablar de un día de trabajo.",
+                  "translation": "expresión figurada"
+                }
+              ],
+              "microLesson": {
+                "title": "Un día ocupado",
+                "goals": [
+                  "Usar vocabulario avanzado de un día de trabajo.",
+                  "Aplicar hedging y future perfect.",
+                  "Argumentar y matizar sobre un día de trabajo."
+                ],
+                "sections": [
+                  {
+                    "heading": "Lengua en contexto",
+                    "body": "Hedging: Matizar una opinión con I'm afraid, it seems o might. Future perfect: Will have + participio sitúa un resultado antes de una fecha.",
+                    "examples": [
+                      {
+                        "source": "Por la mañana voy al trabajo en autobús. En otras palabras, merece la pena considerarlo.",
+                        "target": "In the morning I go to work by bus. In other words, it is worth considering."
+                      },
+                      {
+                        "source": "Por la tarde tengo una reunión. Me temo que puede ser más complicado.",
+                        "target": "In the afternoon I have a meeting. I'm afraid it may be more complicated."
+                      }
+                    ]
+                  }
+                ]
+              },
+              "glossary": [
+                {
+                  "term": "In the morning I go to work by bus. In other words, it is worth considering.",
+                  "translations": [
+                    "Por la mañana voy al trabajo en autobús. En otras palabras, merece la pena considerarlo."
+                  ]
+                },
+                {
+                  "term": "In the afternoon I have a meeting. I'm afraid it may be more complicated.",
+                  "translations": [
+                    "Por la tarde tengo una reunión. Me temo que puede ser más complicado."
+                  ]
+                },
+                {
+                  "term": "In the evening I have dinner with my friends. To be honest, I have mixed feelings.",
+                  "translations": [
+                    "Por la noche ceno con mis amigos. Sinceramente, tengo sentimientos encontrados."
+                  ]
+                }
+              ],
+              "exercises": [
+                {
+                  "type": "MultipleChoice",
+                  "id": "es-en-b2-u01-l02-e01",
+                  "question": "¿Cuál es la opción correcta para «Por la mañana voy al trabajo en autobús. En otras palabras, merece la pena considerarlo.»?",
+                  "options": [
+                    "In the morning I go to work by bus. In other words, it is worth considering.",
+                    "In the afternoon I have a meeting. I'm afraid it may be more complicated.",
+                    "In the evening I have dinner with my friends. To be honest, I have mixed feelings."
+                  ],
+                  "correctIndex": 0,
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "«Por la mañana voy al trabajo en autobús. En otras palabras, merece la pena considerarlo.» se dice «In the morning I go to work by bus. In other words, it is worth considering.».",
+                    "ruleRef": "gp-b2-hedging"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has elegido la traducción correcta."
+                  }
+                },
+                {
+                  "type": "OrderWords",
+                  "id": "es-en-b2-u01-l02-e02",
+                  "tokens": [
+                    "the",
+                    "morning",
+                    "I",
+                    "go",
+                    "to",
+                    "work",
+                    "by",
+                    "bus",
+                    "In",
+                    "other",
+                    "words",
+                    "it",
+                    "is",
+                    "worth",
+                    "considering",
+                    "In"
+                  ],
+                  "answerTokens": [
+                    "In",
+                    "the",
+                    "morning",
+                    "I",
+                    "go",
+                    "to",
+                    "work",
+                    "by",
+                    "bus",
+                    "In",
+                    "other",
+                    "words",
+                    "it",
+                    "is",
+                    "worth",
+                    "considering"
+                  ],
+                  "sourcePhrase": "Por la mañana voy al trabajo en autobús. En otras palabras, merece la pena considerarlo.",
+                  "feedbackOnError": {
+                    "type": "word_order",
+                    "explanation": "El orden correcto es «In the morning I go to work by bus In other words it is worth considering».",
+                    "ruleRef": "gp-b2-hedging"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "El orden produce una frase natural."
+                  }
+                },
+                {
+                  "type": "ClozeDragDrop",
+                  "id": "es-en-b2-u01-l02-e03",
+                  "passage": "In the {{b1}} I go to {{b2}} by bus.",
+                  "blanks": [
+                    {
+                      "id": "b1",
+                      "answer": "morning",
+                      "options": [
+                        "morning",
+                        "bus",
+                        "very"
+                      ]
+                    },
+                    {
+                      "id": "b2",
+                      "answer": "work",
+                      "options": [
+                        "work",
+                        "bus",
+                        "very"
+                      ]
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "Las dos formas deben encajar con el contexto de la frase.",
+                    "ruleRef": "gp-b2-future-perfect"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Los dos huecos encajan con la situación."
+                  }
+                },
+                {
+                  "type": "SemanticMatch",
+                  "id": "es-en-b2-u01-l02-e04",
+                  "instructions": "Clasifica la función comunicativa de cada intervención.",
+                  "pairs": [
+                    {
+                      "left": "In the morning I go to work by bus. In other words, it is worth considering.",
+                      "right": "Planteamiento",
+                      "register": "formal",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    },
+                    {
+                      "left": "In the afternoon I have a meeting. I'm afraid it may be more complicated.",
+                      "right": "Concesión",
+                      "register": "neutral",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    },
+                    {
+                      "left": "In the evening I have dinner with my friends. To be honest, I have mixed feelings.",
+                      "right": "Conclusión",
+                      "register": "informal",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "Cada intervención cumple una función comunicativa distinta.",
+                    "ruleRef": "gp-b2-hedging"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has identificado la función de cada intervención."
+                  }
+                },
+                {
+                  "type": "SemanticMatch",
+                  "id": "es-en-b2-u01-l02-e05",
+                  "instructions": "Distingue el registro de cada intervención.",
+                  "pairs": [
+                    {
+                      "left": "In the morning I go to work by bus. In other words, it is worth considering.",
+                      "right": "Formal",
+                      "register": "formal",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    },
+                    {
+                      "left": "In the afternoon I have a meeting. I'm afraid it may be more complicated.",
+                      "right": "Neutral",
+                      "register": "neutral",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    },
+                    {
+                      "left": "In the evening I have dinner with my friends. To be honest, I have mixed feelings.",
+                      "right": "Informal",
+                      "register": "informal",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "register",
+                    "explanation": "El registro cambia según el contexto y la relación con el interlocutor.",
+                    "ruleRef": "gp-b2-future-perfect"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has distinguido el registro de cada intervención."
+                  }
+                },
+                {
+                  "type": "AudioOnlyPrompt",
+                  "id": "es-en-b2-u01-l02-e06",
+                  "audioText": "In the afternoon I have a meeting. I'm afraid it may be more complicated.",
+                  "question": "¿Qué ha dicho el hablante?",
+                  "options": [
+                    "In the afternoon I have a meeting. I'm afraid it may be more complicated.",
+                    "In the morning I go to work by bus. In other words, it is worth considering.",
+                    "In the evening I have dinner with my friends. To be honest, I have mixed feelings."
+                  ],
+                  "correctIndex": 0,
+                  "allowSlowPlayback": true,
+                  "feedbackOnError": {
+                    "type": "comprehension",
+                    "explanation": "El audio dice «In the afternoon I have a meeting. I'm afraid it may be more complicated.».",
+                    "ruleRef": "gp-b2-hedging"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has comprendido el mensaje del audio."
+                  }
+                },
+                {
+                  "type": "AudioOnlyPrompt",
+                  "id": "es-en-b2-u01-l02-e07",
+                  "audioText": "In the evening I have dinner with my friends. To be honest, I have mixed feelings.",
+                  "question": "¿Cuál es la idea principal?",
+                  "options": [
+                    "In the evening I have dinner with my friends. To be honest, I have mixed feelings.",
+                    "In the morning I go to work by bus. In other words, it is worth considering.",
+                    "In the afternoon I have a meeting. I'm afraid it may be more complicated."
+                  ],
+                  "correctIndex": 0,
+                  "allowSlowPlayback": false,
+                  "feedbackOnError": {
+                    "type": "comprehension",
+                    "explanation": "El audio dice «In the evening I have dinner with my friends. To be honest, I have mixed feelings.».",
+                    "ruleRef": "gp-b2-future-perfect"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has identificado la idea principal."
+                  }
+                },
+                {
+                  "type": "ListenType",
+                  "id": "es-en-b2-u01-l02-e08",
+                  "audioText": "In the evening I have dinner with my friends. To be honest, I have mixed feelings.",
+                  "transcription": "In the evening I have dinner with my friends. To be honest, I have mixed feelings.",
+                  "feedbackOnError": {
+                    "type": "spelling",
+                    "explanation": "Escribe exactamente «In the evening I have dinner with my friends. To be honest, I have mixed feelings.».",
+                    "ruleRef": "gp-b2-hedging"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La transcripción coincide con el audio."
+                  }
+                },
+                {
+                  "type": "SpeakRepeat",
+                  "id": "es-en-b2-u01-l02-e09",
+                  "targetPhrase": "In the evening I have dinner with my friends. To be honest, I have mixed feelings.",
+                  "audioText": "In the evening I have dinner with my friends. To be honest, I have mixed feelings.",
+                  "feedbackOnError": {
+                    "type": "pronunciation",
+                    "explanation": "Repite «In the evening I have dinner with my friends. To be honest, I have mixed feelings.» con claridad.",
+                    "ruleRef": "gp-b2-hedging"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La frase se entiende y mantiene el ritmo."
+                  }
+                },
+                {
+                  "type": "FreeSpeakingPrompt",
+                  "id": "es-en-b2-u01-l02-e10",
+                  "prompt": "Argumenta y matiza una opinión sobre un día de trabajo.",
+                  "minTokens": 20,
+                  "conceptClusters": [
+                    [
+                      "morning"
+                    ],
+                    [
+                      "work"
+                    ],
+                    [
+                      "bus"
+                    ]
+                  ],
+                  "modelAnswer": "In the morning I go to work by bus. In other words, it is worth considering. In the afternoon I have a meeting. I'm afraid it may be more complicated. In the evening I have dinner with my friends. To be honest, I have mixed feelings.",
+                  "selfAssessmentCriteria": [
+                    "¿La respuesta argumenta y responde a la tarea?",
+                    "¿Usa las dos estructuras gramaticales de la lección?",
+                    "¿Incluye una concesión o una matización?"
+                  ],
+                  "grammarRuleRefs": [
+                    "gp-b2-hedging",
+                    "gp-b2-future-perfect"
+                  ],
+                  "timeLimitSeconds": 90,
+                  "minWpm": 70,
+                  "maxWpm": 160,
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "La respuesta modelo desarrolla una opinión con matices y una concesión.",
+                    "ruleRef": "gp-b2-hedging"
+                  }
+                }
+              ]
+            },
+            {
+              "id": "es-en-b2-u01-l03",
+              "title": "Verbos de rutina",
+              "cefrLevel": "B2",
+              "scenario": "Situación comunicativa avanzada sobre los objetos de la rutina.",
+              "canDo": "Puedo argumentar y matizar sobre los objetos de la rutina.",
+              "grammarPoints": [
+                {
+                  "id": "gp-b2-hedging",
+                  "label": "Hedging",
+                  "description": "Matizar una opinión con I'm afraid, it seems o might."
+                },
+                {
+                  "id": "gp-b2-future-perfect",
+                  "label": "Future perfect",
+                  "description": "Will have + participio sitúa un resultado antes de una fecha."
+                }
+              ],
+              "vocabFrequencyBand": "3000-5000",
+              "culturalNotes": [
+                {
+                  "idiom": "see eye to eye",
+                  "note": "Modismo avanzado útil para hablar de los objetos de la rutina.",
+                  "translation": "expresión figurada"
+                }
+              ],
+              "microLesson": {
+                "title": "Verbos de rutina",
+                "goals": [
+                  "Usar vocabulario avanzado de los objetos de la rutina.",
+                  "Aplicar hedging y future perfect.",
+                  "Argumentar y matizar sobre los objetos de la rutina."
+                ],
+                "sections": [
+                  {
+                    "heading": "Lengua en contexto",
+                    "body": "Hedging: Matizar una opinión con I'm afraid, it seems o might. Future perfect: Will have + participio sitúa un resultado antes de una fecha.",
+                    "examples": [
+                      {
+                        "source": "Necesito un despertador. Me temo que puede ser más complicado.",
+                        "target": "I need an alarm clock. I'm afraid it may be more complicated."
+                      },
+                      {
+                        "source": "Necesito un billete de autobús. Sinceramente, tengo sentimientos encontrados.",
+                        "target": "I need a bus ticket. To be honest, I have mixed feelings."
+                      }
+                    ]
+                  }
+                ]
+              },
+              "glossary": [
+                {
+                  "term": "I need an alarm clock. I'm afraid it may be more complicated.",
+                  "translations": [
+                    "Necesito un despertador. Me temo que puede ser más complicado."
+                  ]
+                },
+                {
+                  "term": "I need a bus ticket. To be honest, I have mixed feelings.",
+                  "translations": [
+                    "Necesito un billete de autobús. Sinceramente, tengo sentimientos encontrados."
+                  ]
+                },
+                {
+                  "term": "I need a hot shower. It seems that this is changing.",
+                  "translations": [
+                    "Necesito una ducha caliente. Parece que esto está cambiando."
+                  ]
+                }
+              ],
+              "exercises": [
+                {
+                  "type": "MultipleChoice",
+                  "id": "es-en-b2-u01-l03-e01",
+                  "question": "¿Cuál es la opción correcta para «Necesito un despertador. Me temo que puede ser más complicado.»?",
+                  "options": [
+                    "I need an alarm clock. I'm afraid it may be more complicated.",
+                    "I need a bus ticket. To be honest, I have mixed feelings.",
+                    "I need a hot shower. It seems that this is changing."
+                  ],
+                  "correctIndex": 0,
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "«Necesito un despertador. Me temo que puede ser más complicado.» se dice «I need an alarm clock. I'm afraid it may be more complicated.».",
+                    "ruleRef": "gp-b2-hedging"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has elegido la traducción correcta."
+                  }
+                },
+                {
+                  "type": "OrderWords",
+                  "id": "es-en-b2-u01-l03-e02",
+                  "tokens": [
+                    "need",
+                    "an",
+                    "alarm",
+                    "clock",
+                    "I'm",
+                    "afraid",
+                    "it",
+                    "may",
+                    "be",
+                    "more",
+                    "complicated",
+                    "I"
+                  ],
+                  "answerTokens": [
+                    "I",
+                    "need",
+                    "an",
+                    "alarm",
+                    "clock",
+                    "I'm",
+                    "afraid",
+                    "it",
+                    "may",
+                    "be",
+                    "more",
+                    "complicated"
+                  ],
+                  "sourcePhrase": "Necesito un despertador. Me temo que puede ser más complicado.",
+                  "feedbackOnError": {
+                    "type": "word_order",
+                    "explanation": "El orden correcto es «I need an alarm clock I'm afraid it may be more complicated».",
+                    "ruleRef": "gp-b2-hedging"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "El orden produce una frase natural."
+                  }
+                },
+                {
+                  "type": "ClozeDragDrop",
+                  "id": "es-en-b2-u01-l03-e03",
+                  "passage": "I {{b1}} an {{b2}} clock",
+                  "blanks": [
+                    {
+                      "id": "b1",
+                      "answer": "need",
+                      "options": [
+                        "need",
+                        "clock",
+                        "very"
+                      ]
+                    },
+                    {
+                      "id": "b2",
+                      "answer": "alarm",
+                      "options": [
+                        "alarm",
+                        "clock",
+                        "very"
+                      ]
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "Las dos formas deben encajar con el contexto de la frase.",
+                    "ruleRef": "gp-b2-future-perfect"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Los dos huecos encajan con la situación."
+                  }
+                },
+                {
+                  "type": "SemanticMatch",
+                  "id": "es-en-b2-u01-l03-e04",
+                  "instructions": "Clasifica la función comunicativa de cada intervención.",
+                  "pairs": [
+                    {
+                      "left": "I need an alarm clock. I'm afraid it may be more complicated.",
+                      "right": "Planteamiento",
+                      "register": "formal",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    },
+                    {
+                      "left": "I need a bus ticket. To be honest, I have mixed feelings.",
+                      "right": "Concesión",
+                      "register": "neutral",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    },
+                    {
+                      "left": "I need a hot shower. It seems that this is changing.",
+                      "right": "Conclusión",
+                      "register": "informal",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "Cada intervención cumple una función comunicativa distinta.",
+                    "ruleRef": "gp-b2-hedging"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has identificado la función de cada intervención."
+                  }
+                },
+                {
+                  "type": "SemanticMatch",
+                  "id": "es-en-b2-u01-l03-e05",
+                  "instructions": "Distingue el registro de cada intervención.",
+                  "pairs": [
+                    {
+                      "left": "I need an alarm clock. I'm afraid it may be more complicated.",
+                      "right": "Formal",
+                      "register": "formal",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    },
+                    {
+                      "left": "I need a bus ticket. To be honest, I have mixed feelings.",
+                      "right": "Neutral",
+                      "register": "neutral",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    },
+                    {
+                      "left": "I need a hot shower. It seems that this is changing.",
+                      "right": "Informal",
+                      "register": "informal",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "register",
+                    "explanation": "El registro cambia según el contexto y la relación con el interlocutor.",
+                    "ruleRef": "gp-b2-future-perfect"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has distinguido el registro de cada intervención."
+                  }
+                },
+                {
+                  "type": "AudioOnlyPrompt",
+                  "id": "es-en-b2-u01-l03-e06",
+                  "audioText": "I need a bus ticket. To be honest, I have mixed feelings.",
+                  "question": "¿Qué ha dicho el hablante?",
+                  "options": [
+                    "I need a bus ticket. To be honest, I have mixed feelings.",
+                    "I need an alarm clock. I'm afraid it may be more complicated.",
+                    "I need a hot shower. It seems that this is changing."
+                  ],
+                  "correctIndex": 0,
+                  "allowSlowPlayback": true,
+                  "feedbackOnError": {
+                    "type": "comprehension",
+                    "explanation": "El audio dice «I need a bus ticket. To be honest, I have mixed feelings.».",
+                    "ruleRef": "gp-b2-hedging"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has comprendido el mensaje del audio."
+                  }
+                },
+                {
+                  "type": "AudioOnlyPrompt",
+                  "id": "es-en-b2-u01-l03-e07",
+                  "audioText": "I need a hot shower. It seems that this is changing.",
+                  "question": "¿Cuál es la idea principal?",
+                  "options": [
+                    "I need a hot shower. It seems that this is changing.",
+                    "I need an alarm clock. I'm afraid it may be more complicated.",
+                    "I need a bus ticket. To be honest, I have mixed feelings."
+                  ],
+                  "correctIndex": 0,
+                  "allowSlowPlayback": false,
+                  "feedbackOnError": {
+                    "type": "comprehension",
+                    "explanation": "El audio dice «I need a hot shower. It seems that this is changing.».",
+                    "ruleRef": "gp-b2-future-perfect"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has identificado la idea principal."
+                  }
+                },
+                {
+                  "type": "ListenType",
+                  "id": "es-en-b2-u01-l03-e08",
+                  "audioText": "I need a hot shower. It seems that this is changing.",
+                  "transcription": "I need a hot shower. It seems that this is changing.",
+                  "feedbackOnError": {
+                    "type": "spelling",
+                    "explanation": "Escribe exactamente «I need a hot shower. It seems that this is changing.».",
+                    "ruleRef": "gp-b2-hedging"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La transcripción coincide con el audio."
+                  }
+                },
+                {
+                  "type": "SpeakRepeat",
+                  "id": "es-en-b2-u01-l03-e09",
+                  "targetPhrase": "I need a hot shower. It seems that this is changing.",
+                  "audioText": "I need a hot shower. It seems that this is changing.",
+                  "feedbackOnError": {
+                    "type": "pronunciation",
+                    "explanation": "Repite «I need a hot shower. It seems that this is changing.» con claridad.",
+                    "ruleRef": "gp-b2-hedging"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La frase se entiende y mantiene el ritmo."
+                  }
+                },
+                {
+                  "type": "FreeSpeakingPrompt",
+                  "id": "es-en-b2-u01-l03-e10",
+                  "prompt": "Argumenta y matiza una opinión sobre los objetos de la rutina.",
+                  "minTokens": 20,
+                  "conceptClusters": [
+                    [
+                      "need"
+                    ],
+                    [
+                      "alarm"
+                    ],
+                    [
+                      "clock"
+                    ]
+                  ],
+                  "modelAnswer": "I need an alarm clock. I'm afraid it may be more complicated. I need a bus ticket. To be honest, I have mixed feelings. I need a hot shower. It seems that this is changing.",
+                  "selfAssessmentCriteria": [
+                    "¿La respuesta argumenta y responde a la tarea?",
+                    "¿Usa las dos estructuras gramaticales de la lección?",
+                    "¿Incluye una concesión o una matización?"
+                  ],
+                  "grammarRuleRefs": [
+                    "gp-b2-hedging",
+                    "gp-b2-future-perfect"
+                  ],
+                  "timeLimitSeconds": 90,
+                  "minWpm": 70,
+                  "maxWpm": 160,
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "La respuesta modelo desarrolla una opinión con matices y una concesión.",
+                    "ruleRef": "gp-b2-hedging"
+                  }
+                }
+              ]
+            },
+            {
+              "id": "es-en-b2-u01-l04",
+              "title": "Pasado simple regular",
+              "cefrLevel": "B2",
+              "scenario": "Situación comunicativa avanzada sobre las acciones de ayer.",
+              "canDo": "Puedo argumentar y matizar sobre las acciones de ayer.",
+              "grammarPoints": [
+                {
+                  "id": "gp-b2-hedging",
+                  "label": "Hedging",
+                  "description": "Matizar una opinión con I'm afraid, it seems o might."
+                },
+                {
+                  "id": "gp-b2-future-perfect",
+                  "label": "Future perfect",
+                  "description": "Will have + participio sitúa un resultado antes de una fecha."
+                }
+              ],
+              "vocabFrequencyBand": "3000-5000",
+              "culturalNotes": [
+                {
+                  "idiom": "a hot potato",
+                  "note": "Modismo avanzado útil para hablar de las acciones de ayer.",
+                  "translation": "expresión figurada"
+                }
+              ],
+              "microLesson": {
+                "title": "Pasado simple regular",
+                "goals": [
+                  "Usar vocabulario avanzado de las acciones de ayer.",
+                  "Aplicar hedging y future perfect.",
+                  "Argumentar y matizar sobre las acciones de ayer."
+                ],
+                "sections": [
+                  {
+                    "heading": "Lengua en contexto",
+                    "body": "Hedging: Matizar una opinión con I'm afraid, it seems o might. Future perfect: Will have + participio sitúa un resultado antes de una fecha.",
+                    "examples": [
+                      {
+                        "source": "Ayer visité a mi familia. Sinceramente, tengo sentimientos encontrados.",
+                        "target": "Yesterday I visited my family. To be honest, I have mixed feelings."
+                      },
+                      {
+                        "source": "Ayer caminé por el parque. Parece que esto está cambiando.",
+                        "target": "Yesterday I walked in the park. It seems that this is changing."
+                      }
+                    ]
+                  }
+                ]
+              },
+              "glossary": [
+                {
+                  "term": "Yesterday I visited my family. To be honest, I have mixed feelings.",
+                  "translations": [
+                    "Ayer visité a mi familia. Sinceramente, tengo sentimientos encontrados."
+                  ]
+                },
+                {
+                  "term": "Yesterday I walked in the park. It seems that this is changing.",
+                  "translations": [
+                    "Ayer caminé por el parque. Parece que esto está cambiando."
+                  ]
+                },
+                {
+                  "term": "Yesterday I had dinner in a restaurant. From my point of view, it is a reasonable option.",
+                  "translations": [
+                    "Ayer cené en un restaurante. Desde mi punto de vista, es una opción razonable."
+                  ]
+                }
+              ],
+              "exercises": [
+                {
+                  "type": "MultipleChoice",
+                  "id": "es-en-b2-u01-l04-e01",
+                  "question": "¿Cuál es la opción correcta para «Ayer visité a mi familia. Sinceramente, tengo sentimientos encontrados.»?",
+                  "options": [
+                    "Yesterday I visited my family. To be honest, I have mixed feelings.",
+                    "Yesterday I walked in the park. It seems that this is changing.",
+                    "Yesterday I had dinner in a restaurant. From my point of view, it is a reasonable option."
+                  ],
+                  "correctIndex": 0,
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "«Ayer visité a mi familia. Sinceramente, tengo sentimientos encontrados.» se dice «Yesterday I visited my family. To be honest, I have mixed feelings.».",
+                    "ruleRef": "gp-b2-hedging"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has elegido la traducción correcta."
+                  }
+                },
+                {
+                  "type": "OrderWords",
+                  "id": "es-en-b2-u01-l04-e02",
+                  "tokens": [
+                    "I",
+                    "visited",
+                    "my",
+                    "family",
+                    "To",
+                    "be",
+                    "honest",
+                    "I",
+                    "have",
+                    "mixed",
+                    "feelings",
+                    "Yesterday"
+                  ],
+                  "answerTokens": [
+                    "Yesterday",
+                    "I",
+                    "visited",
+                    "my",
+                    "family",
+                    "To",
+                    "be",
+                    "honest",
+                    "I",
+                    "have",
+                    "mixed",
+                    "feelings"
+                  ],
+                  "sourcePhrase": "Ayer visité a mi familia. Sinceramente, tengo sentimientos encontrados.",
+                  "feedbackOnError": {
+                    "type": "word_order",
+                    "explanation": "El orden correcto es «Yesterday I visited my family To be honest I have mixed feelings».",
+                    "ruleRef": "gp-b2-hedging"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "El orden produce una frase natural."
+                  }
+                },
+                {
+                  "type": "ClozeDragDrop",
+                  "id": "es-en-b2-u01-l04-e03",
+                  "passage": "{{b1}} I {{b2}} my family",
+                  "blanks": [
+                    {
+                      "id": "b1",
+                      "answer": "Yesterday",
+                      "options": [
+                        "Yesterday",
+                        "family",
+                        "very"
+                      ]
+                    },
+                    {
+                      "id": "b2",
+                      "answer": "visited",
+                      "options": [
+                        "visited",
+                        "family",
+                        "very"
+                      ]
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "Las dos formas deben encajar con el contexto de la frase.",
+                    "ruleRef": "gp-b2-future-perfect"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Los dos huecos encajan con la situación."
+                  }
+                },
+                {
+                  "type": "SemanticMatch",
+                  "id": "es-en-b2-u01-l04-e04",
+                  "instructions": "Clasifica la función comunicativa de cada intervención.",
+                  "pairs": [
+                    {
+                      "left": "Yesterday I visited my family. To be honest, I have mixed feelings.",
+                      "right": "Planteamiento",
+                      "register": "formal",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    },
+                    {
+                      "left": "Yesterday I walked in the park. It seems that this is changing.",
+                      "right": "Concesión",
+                      "register": "neutral",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    },
+                    {
+                      "left": "Yesterday I had dinner in a restaurant. From my point of view, it is a reasonable option.",
+                      "right": "Conclusión",
+                      "register": "informal",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "Cada intervención cumple una función comunicativa distinta.",
+                    "ruleRef": "gp-b2-hedging"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has identificado la función de cada intervención."
+                  }
+                },
+                {
+                  "type": "SemanticMatch",
+                  "id": "es-en-b2-u01-l04-e05",
+                  "instructions": "Distingue el registro de cada intervención.",
+                  "pairs": [
+                    {
+                      "left": "Yesterday I visited my family. To be honest, I have mixed feelings.",
+                      "right": "Formal",
+                      "register": "formal",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    },
+                    {
+                      "left": "Yesterday I walked in the park. It seems that this is changing.",
+                      "right": "Neutral",
+                      "register": "neutral",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    },
+                    {
+                      "left": "Yesterday I had dinner in a restaurant. From my point of view, it is a reasonable option.",
+                      "right": "Informal",
+                      "register": "informal",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "register",
+                    "explanation": "El registro cambia según el contexto y la relación con el interlocutor.",
+                    "ruleRef": "gp-b2-future-perfect"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has distinguido el registro de cada intervención."
+                  }
+                },
+                {
+                  "type": "AudioOnlyPrompt",
+                  "id": "es-en-b2-u01-l04-e06",
+                  "audioText": "Yesterday I walked in the park. It seems that this is changing.",
+                  "question": "¿Qué ha dicho el hablante?",
+                  "options": [
+                    "Yesterday I walked in the park. It seems that this is changing.",
+                    "Yesterday I visited my family. To be honest, I have mixed feelings.",
+                    "Yesterday I had dinner in a restaurant. From my point of view, it is a reasonable option."
+                  ],
+                  "correctIndex": 0,
+                  "allowSlowPlayback": true,
+                  "feedbackOnError": {
+                    "type": "comprehension",
+                    "explanation": "El audio dice «Yesterday I walked in the park. It seems that this is changing.».",
+                    "ruleRef": "gp-b2-hedging"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has comprendido el mensaje del audio."
+                  }
+                },
+                {
+                  "type": "AudioOnlyPrompt",
+                  "id": "es-en-b2-u01-l04-e07",
+                  "audioText": "Yesterday I had dinner in a restaurant. From my point of view, it is a reasonable option.",
+                  "question": "¿Cuál es la idea principal?",
+                  "options": [
+                    "Yesterday I had dinner in a restaurant. From my point of view, it is a reasonable option.",
+                    "Yesterday I visited my family. To be honest, I have mixed feelings.",
+                    "Yesterday I walked in the park. It seems that this is changing."
+                  ],
+                  "correctIndex": 0,
+                  "allowSlowPlayback": false,
+                  "feedbackOnError": {
+                    "type": "comprehension",
+                    "explanation": "El audio dice «Yesterday I had dinner in a restaurant. From my point of view, it is a reasonable option.».",
+                    "ruleRef": "gp-b2-future-perfect"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has identificado la idea principal."
+                  }
+                },
+                {
+                  "type": "ListenType",
+                  "id": "es-en-b2-u01-l04-e08",
+                  "audioText": "Yesterday I had dinner in a restaurant. From my point of view, it is a reasonable option.",
+                  "transcription": "Yesterday I had dinner in a restaurant. From my point of view, it is a reasonable option.",
+                  "feedbackOnError": {
+                    "type": "spelling",
+                    "explanation": "Escribe exactamente «Yesterday I had dinner in a restaurant. From my point of view, it is a reasonable option.».",
+                    "ruleRef": "gp-b2-hedging"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La transcripción coincide con el audio."
+                  }
+                },
+                {
+                  "type": "SpeakRepeat",
+                  "id": "es-en-b2-u01-l04-e09",
+                  "targetPhrase": "Yesterday I had dinner in a restaurant. From my point of view, it is a reasonable option.",
+                  "audioText": "Yesterday I had dinner in a restaurant. From my point of view, it is a reasonable option.",
+                  "feedbackOnError": {
+                    "type": "pronunciation",
+                    "explanation": "Repite «Yesterday I had dinner in a restaurant. From my point of view, it is a reasonable option.» con claridad.",
+                    "ruleRef": "gp-b2-hedging"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La frase se entiende y mantiene el ritmo."
+                  }
+                },
+                {
+                  "type": "FreeSpeakingPrompt",
+                  "id": "es-en-b2-u01-l04-e10",
+                  "prompt": "Argumenta y matiza una opinión sobre las acciones de ayer.",
+                  "minTokens": 20,
+                  "conceptClusters": [
+                    [
+                      "Yesterday"
+                    ],
+                    [
+                      "visited"
+                    ],
+                    [
+                      "family"
+                    ]
+                  ],
+                  "modelAnswer": "Yesterday I visited my family. To be honest, I have mixed feelings. Yesterday I walked in the park. It seems that this is changing. Yesterday I had dinner in a restaurant. From my point of view, it is a reasonable option.",
+                  "selfAssessmentCriteria": [
+                    "¿La respuesta argumenta y responde a la tarea?",
+                    "¿Usa las dos estructuras gramaticales de la lección?",
+                    "¿Incluye una concesión o una matización?"
+                  ],
+                  "grammarRuleRefs": [
+                    "gp-b2-hedging",
+                    "gp-b2-future-perfect"
+                  ],
+                  "timeLimitSeconds": 90,
+                  "minWpm": 70,
+                  "maxWpm": 160,
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "La respuesta modelo desarrolla una opinión con matices y una concesión.",
+                    "ruleRef": "gp-b2-hedging"
+                  }
+                }
+              ]
+            },
+            {
+              "id": "es-en-b2-u01-l05",
+              "title": "Pasado simple irregular",
+              "cefrLevel": "B2",
+              "scenario": "Situación comunicativa avanzada sobre los recuerdos del fin de semana.",
+              "canDo": "Puedo argumentar y matizar sobre los recuerdos del fin de semana.",
+              "grammarPoints": [
+                {
+                  "id": "gp-b2-hedging",
+                  "label": "Hedging",
+                  "description": "Matizar una opinión con I'm afraid, it seems o might."
+                },
+                {
+                  "id": "gp-b2-future-perfect",
+                  "label": "Future perfect",
+                  "description": "Will have + participio sitúa un resultado antes de una fecha."
+                }
+              ],
+              "vocabFrequencyBand": "3000-5000",
+              "culturalNotes": [
+                {
+                  "idiom": "break a leg",
+                  "note": "Modismo avanzado útil para hablar de los recuerdos del fin de semana.",
+                  "translation": "expresión figurada"
+                }
+              ],
+              "microLesson": {
+                "title": "Pasado simple irregular",
+                "goals": [
+                  "Usar vocabulario avanzado de los recuerdos del fin de semana.",
+                  "Aplicar hedging y future perfect.",
+                  "Argumentar y matizar sobre los recuerdos del fin de semana."
+                ],
+                "sections": [
+                  {
+                    "heading": "Lengua en contexto",
+                    "body": "Hedging: Matizar una opinión con I'm afraid, it seems o might. Future perfect: Will have + participio sitúa un resultado antes de una fecha.",
+                    "examples": [
+                      {
+                        "source": "Ayer fui al mercado. Parece que esto está cambiando.",
+                        "target": "Yesterday I went to the market. It seems that this is changing."
+                      },
+                      {
+                        "source": "Ayer hice la compra. Desde mi punto de vista, es una opción razonable.",
+                        "target": "Yesterday I did the shopping. From my point of view, it is a reasonable option."
+                      }
+                    ]
+                  }
+                ]
+              },
+              "glossary": [
+                {
+                  "term": "Yesterday I went to the market. It seems that this is changing.",
+                  "translations": [
+                    "Ayer fui al mercado. Parece que esto está cambiando."
+                  ]
+                },
+                {
+                  "term": "Yesterday I did the shopping. From my point of view, it is a reasonable option.",
+                  "translations": [
+                    "Ayer hice la compra. Desde mi punto de vista, es una opción razonable."
+                  ]
+                },
+                {
+                  "term": "Yesterday I saw my friends. Nevertheless, there are also advantages.",
+                  "translations": [
+                    "Ayer vi a mis amigos. No obstante, también tiene ventajas."
+                  ]
+                }
+              ],
+              "exercises": [
+                {
+                  "type": "MultipleChoice",
+                  "id": "es-en-b2-u01-l05-e01",
+                  "question": "¿Cuál es la opción correcta para «Ayer fui al mercado. Parece que esto está cambiando.»?",
+                  "options": [
+                    "Yesterday I went to the market. It seems that this is changing.",
+                    "Yesterday I did the shopping. From my point of view, it is a reasonable option.",
+                    "Yesterday I saw my friends. Nevertheless, there are also advantages."
+                  ],
+                  "correctIndex": 0,
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "«Ayer fui al mercado. Parece que esto está cambiando.» se dice «Yesterday I went to the market. It seems that this is changing.».",
+                    "ruleRef": "gp-b2-hedging"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has elegido la traducción correcta."
+                  }
+                },
+                {
+                  "type": "OrderWords",
+                  "id": "es-en-b2-u01-l05-e02",
+                  "tokens": [
+                    "I",
+                    "went",
+                    "to",
+                    "the",
+                    "market",
+                    "It",
+                    "seems",
+                    "that",
+                    "this",
+                    "is",
+                    "changing",
+                    "Yesterday"
+                  ],
+                  "answerTokens": [
+                    "Yesterday",
+                    "I",
+                    "went",
+                    "to",
+                    "the",
+                    "market",
+                    "It",
+                    "seems",
+                    "that",
+                    "this",
+                    "is",
+                    "changing"
+                  ],
+                  "sourcePhrase": "Ayer fui al mercado. Parece que esto está cambiando.",
+                  "feedbackOnError": {
+                    "type": "word_order",
+                    "explanation": "El orden correcto es «Yesterday I went to the market It seems that this is changing».",
+                    "ruleRef": "gp-b2-hedging"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "El orden produce una frase natural."
+                  }
+                },
+                {
+                  "type": "ClozeDragDrop",
+                  "id": "es-en-b2-u01-l05-e03",
+                  "passage": "{{b1}} I {{b2}} to the market",
+                  "blanks": [
+                    {
+                      "id": "b1",
+                      "answer": "Yesterday",
+                      "options": [
+                        "Yesterday",
+                        "market",
+                        "very"
+                      ]
+                    },
+                    {
+                      "id": "b2",
+                      "answer": "went",
+                      "options": [
+                        "went",
+                        "market",
+                        "very"
+                      ]
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "Las dos formas deben encajar con el contexto de la frase.",
+                    "ruleRef": "gp-b2-future-perfect"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Los dos huecos encajan con la situación."
+                  }
+                },
+                {
+                  "type": "SemanticMatch",
+                  "id": "es-en-b2-u01-l05-e04",
+                  "instructions": "Clasifica la función comunicativa de cada intervención.",
+                  "pairs": [
+                    {
+                      "left": "Yesterday I went to the market. It seems that this is changing.",
+                      "right": "Planteamiento",
+                      "register": "formal",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    },
+                    {
+                      "left": "Yesterday I did the shopping. From my point of view, it is a reasonable option.",
+                      "right": "Concesión",
+                      "register": "neutral",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    },
+                    {
+                      "left": "Yesterday I saw my friends. Nevertheless, there are also advantages.",
+                      "right": "Conclusión",
+                      "register": "informal",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "Cada intervención cumple una función comunicativa distinta.",
+                    "ruleRef": "gp-b2-hedging"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has identificado la función de cada intervención."
+                  }
+                },
+                {
+                  "type": "SemanticMatch",
+                  "id": "es-en-b2-u01-l05-e05",
+                  "instructions": "Distingue el registro de cada intervención.",
+                  "pairs": [
+                    {
+                      "left": "Yesterday I went to the market. It seems that this is changing.",
+                      "right": "Formal",
+                      "register": "formal",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    },
+                    {
+                      "left": "Yesterday I did the shopping. From my point of view, it is a reasonable option.",
+                      "right": "Neutral",
+                      "register": "neutral",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    },
+                    {
+                      "left": "Yesterday I saw my friends. Nevertheless, there are also advantages.",
+                      "right": "Informal",
+                      "register": "informal",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "register",
+                    "explanation": "El registro cambia según el contexto y la relación con el interlocutor.",
+                    "ruleRef": "gp-b2-future-perfect"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has distinguido el registro de cada intervención."
+                  }
+                },
+                {
+                  "type": "AudioOnlyPrompt",
+                  "id": "es-en-b2-u01-l05-e06",
+                  "audioText": "Yesterday I did the shopping. From my point of view, it is a reasonable option.",
+                  "question": "¿Qué ha dicho el hablante?",
+                  "options": [
+                    "Yesterday I did the shopping. From my point of view, it is a reasonable option.",
+                    "Yesterday I went to the market. It seems that this is changing.",
+                    "Yesterday I saw my friends. Nevertheless, there are also advantages."
+                  ],
+                  "correctIndex": 0,
+                  "allowSlowPlayback": true,
+                  "feedbackOnError": {
+                    "type": "comprehension",
+                    "explanation": "El audio dice «Yesterday I did the shopping. From my point of view, it is a reasonable option.».",
+                    "ruleRef": "gp-b2-hedging"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has comprendido el mensaje del audio."
+                  }
+                },
+                {
+                  "type": "AudioOnlyPrompt",
+                  "id": "es-en-b2-u01-l05-e07",
+                  "audioText": "Yesterday I saw my friends. Nevertheless, there are also advantages.",
+                  "question": "¿Cuál es la idea principal?",
+                  "options": [
+                    "Yesterday I saw my friends. Nevertheless, there are also advantages.",
+                    "Yesterday I went to the market. It seems that this is changing.",
+                    "Yesterday I did the shopping. From my point of view, it is a reasonable option."
+                  ],
+                  "correctIndex": 0,
+                  "allowSlowPlayback": false,
+                  "feedbackOnError": {
+                    "type": "comprehension",
+                    "explanation": "El audio dice «Yesterday I saw my friends. Nevertheless, there are also advantages.».",
+                    "ruleRef": "gp-b2-future-perfect"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has identificado la idea principal."
+                  }
+                },
+                {
+                  "type": "ListenType",
+                  "id": "es-en-b2-u01-l05-e08",
+                  "audioText": "Yesterday I saw my friends. Nevertheless, there are also advantages.",
+                  "transcription": "Yesterday I saw my friends. Nevertheless, there are also advantages.",
+                  "feedbackOnError": {
+                    "type": "spelling",
+                    "explanation": "Escribe exactamente «Yesterday I saw my friends. Nevertheless, there are also advantages.».",
+                    "ruleRef": "gp-b2-hedging"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La transcripción coincide con el audio."
+                  }
+                },
+                {
+                  "type": "SpeakRepeat",
+                  "id": "es-en-b2-u01-l05-e09",
+                  "targetPhrase": "Yesterday I saw my friends. Nevertheless, there are also advantages.",
+                  "audioText": "Yesterday I saw my friends. Nevertheless, there are also advantages.",
+                  "feedbackOnError": {
+                    "type": "pronunciation",
+                    "explanation": "Repite «Yesterday I saw my friends. Nevertheless, there are also advantages.» con claridad.",
+                    "ruleRef": "gp-b2-hedging"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La frase se entiende y mantiene el ritmo."
+                  }
+                },
+                {
+                  "type": "FreeSpeakingPrompt",
+                  "id": "es-en-b2-u01-l05-e10",
+                  "prompt": "Argumenta y matiza una opinión sobre los recuerdos del fin de semana.",
+                  "minTokens": 20,
+                  "conceptClusters": [
+                    [
+                      "Yesterday"
+                    ],
+                    [
+                      "went"
+                    ],
+                    [
+                      "market"
+                    ]
+                  ],
+                  "modelAnswer": "Yesterday I went to the market. It seems that this is changing. Yesterday I did the shopping. From my point of view, it is a reasonable option. Yesterday I saw my friends. Nevertheless, there are also advantages.",
+                  "selfAssessmentCriteria": [
+                    "¿La respuesta argumenta y responde a la tarea?",
+                    "¿Usa las dos estructuras gramaticales de la lección?",
+                    "¿Incluye una concesión o una matización?"
+                  ],
+                  "grammarRuleRefs": [
+                    "gp-b2-hedging",
+                    "gp-b2-future-perfect"
+                  ],
+                  "timeLimitSeconds": 90,
+                  "minWpm": 70,
+                  "maxWpm": 160,
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "La respuesta modelo desarrolla una opinión con matices y una concesión.",
+                    "ruleRef": "gp-b2-hedging"
+                  }
+                }
+              ]
+            },
+            {
+              "id": "es-en-b2-u01-l06",
+              "title": "Contar el fin de semana",
+              "cefrLevel": "B2",
+              "scenario": "Situación comunicativa avanzada sobre el fin de semana.",
+              "canDo": "Puedo argumentar y matizar sobre el fin de semana.",
+              "grammarPoints": [
+                {
+                  "id": "gp-b2-hedging",
+                  "label": "Hedging",
+                  "description": "Matizar una opinión con I'm afraid, it seems o might."
+                },
+                {
+                  "id": "gp-b2-future-perfect",
+                  "label": "Future perfect",
+                  "description": "Will have + participio sitúa un resultado antes de una fecha."
+                }
+              ],
+              "vocabFrequencyBand": "3000-5000",
+              "culturalNotes": [
+                {
+                  "idiom": "under the weather",
+                  "note": "Modismo avanzado útil para hablar de el fin de semana.",
+                  "translation": "expresión figurada"
+                }
+              ],
+              "microLesson": {
+                "title": "Contar el fin de semana",
+                "goals": [
+                  "Usar vocabulario avanzado de el fin de semana.",
+                  "Aplicar hedging y future perfect.",
+                  "Argumentar y matizar sobre el fin de semana."
+                ],
+                "sections": [
+                  {
+                    "heading": "Lengua en contexto",
+                    "body": "Hedging: Matizar una opinión con I'm afraid, it seems o might. Future perfect: Will have + participio sitúa un resultado antes de una fecha.",
+                    "examples": [
+                      {
+                        "source": "El sábado jugué al fútbol con mis amigos. Desde mi punto de vista, es una opción razonable.",
+                        "target": "On Saturday I played football with my friends. From my point of view, it is a reasonable option."
+                      },
+                      {
+                        "source": "El sábado leí un libro en casa. No obstante, también tiene ventajas.",
+                        "target": "On Saturday I read a book at home. Nevertheless, there are also advantages."
+                      }
+                    ]
+                  }
+                ]
+              },
+              "glossary": [
+                {
+                  "term": "On Saturday I played football with my friends. From my point of view, it is a reasonable option.",
+                  "translations": [
+                    "El sábado jugué al fútbol con mis amigos. Desde mi punto de vista, es una opción razonable."
+                  ]
+                },
+                {
+                  "term": "On Saturday I read a book at home. Nevertheless, there are also advantages.",
+                  "translations": [
+                    "El sábado leí un libro en casa. No obstante, también tiene ventajas."
+                  ]
+                },
+                {
+                  "term": "On Saturday I listened to music in the park. At the end of the day, we need to prioritise.",
+                  "translations": [
+                    "El sábado escuché música en el parque. A fin de cuentas, hay que priorizar."
+                  ]
+                }
+              ],
+              "exercises": [
+                {
+                  "type": "MultipleChoice",
+                  "id": "es-en-b2-u01-l06-e01",
+                  "question": "¿Cuál es la opción correcta para «El sábado jugué al fútbol con mis amigos. Desde mi punto de vista, es una opción razonable.»?",
+                  "options": [
+                    "On Saturday I played football with my friends. From my point of view, it is a reasonable option.",
+                    "On Saturday I read a book at home. Nevertheless, there are also advantages.",
+                    "On Saturday I listened to music in the park. At the end of the day, we need to prioritise."
+                  ],
+                  "correctIndex": 0,
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "«El sábado jugué al fútbol con mis amigos. Desde mi punto de vista, es una opción razonable.» se dice «On Saturday I played football with my friends. From my point of view, it is a reasonable option.».",
+                    "ruleRef": "gp-b2-hedging"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has elegido la traducción correcta."
+                  }
+                },
+                {
+                  "type": "OrderWords",
+                  "id": "es-en-b2-u01-l06-e02",
+                  "tokens": [
+                    "Saturday",
+                    "I",
+                    "played",
+                    "football",
+                    "with",
+                    "my",
+                    "friends",
+                    "From",
+                    "my",
+                    "point",
+                    "of",
+                    "view",
+                    "it",
+                    "is",
+                    "a",
+                    "reasonable",
+                    "option",
+                    "On"
+                  ],
+                  "answerTokens": [
+                    "On",
+                    "Saturday",
+                    "I",
+                    "played",
+                    "football",
+                    "with",
+                    "my",
+                    "friends",
+                    "From",
+                    "my",
+                    "point",
+                    "of",
+                    "view",
+                    "it",
+                    "is",
+                    "a",
+                    "reasonable",
+                    "option"
+                  ],
+                  "sourcePhrase": "El sábado jugué al fútbol con mis amigos. Desde mi punto de vista, es una opción razonable.",
+                  "feedbackOnError": {
+                    "type": "word_order",
+                    "explanation": "El orden correcto es «On Saturday I played football with my friends From my point of view it is a reasonable option».",
+                    "ruleRef": "gp-b2-hedging"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "El orden produce una frase natural."
+                  }
+                },
+                {
+                  "type": "ClozeDragDrop",
+                  "id": "es-en-b2-u01-l06-e03",
+                  "passage": "On {{b1}} I {{b2}} football with my friends",
+                  "blanks": [
+                    {
+                      "id": "b1",
+                      "answer": "Saturday",
+                      "options": [
+                        "Saturday",
+                        "football",
+                        "friends"
+                      ]
+                    },
+                    {
+                      "id": "b2",
+                      "answer": "played",
+                      "options": [
+                        "played",
+                        "football",
+                        "friends"
+                      ]
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "Las dos formas deben encajar con el contexto de la frase.",
+                    "ruleRef": "gp-b2-future-perfect"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Los dos huecos encajan con la situación."
+                  }
+                },
+                {
+                  "type": "SemanticMatch",
+                  "id": "es-en-b2-u01-l06-e04",
+                  "instructions": "Clasifica la función comunicativa de cada intervención.",
+                  "pairs": [
+                    {
+                      "left": "On Saturday I played football with my friends. From my point of view, it is a reasonable option.",
+                      "right": "Planteamiento",
+                      "register": "formal",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    },
+                    {
+                      "left": "On Saturday I read a book at home. Nevertheless, there are also advantages.",
+                      "right": "Concesión",
+                      "register": "neutral",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    },
+                    {
+                      "left": "On Saturday I listened to music in the park. At the end of the day, we need to prioritise.",
+                      "right": "Conclusión",
+                      "register": "informal",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "Cada intervención cumple una función comunicativa distinta.",
+                    "ruleRef": "gp-b2-hedging"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has identificado la función de cada intervención."
+                  }
+                },
+                {
+                  "type": "SemanticMatch",
+                  "id": "es-en-b2-u01-l06-e05",
+                  "instructions": "Distingue el registro de cada intervención.",
+                  "pairs": [
+                    {
+                      "left": "On Saturday I played football with my friends. From my point of view, it is a reasonable option.",
+                      "right": "Formal",
+                      "register": "formal",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    },
+                    {
+                      "left": "On Saturday I read a book at home. Nevertheless, there are also advantages.",
+                      "right": "Neutral",
+                      "register": "neutral",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    },
+                    {
+                      "left": "On Saturday I listened to music in the park. At the end of the day, we need to prioritise.",
+                      "right": "Informal",
+                      "register": "informal",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "register",
+                    "explanation": "El registro cambia según el contexto y la relación con el interlocutor.",
+                    "ruleRef": "gp-b2-future-perfect"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has distinguido el registro de cada intervención."
+                  }
+                },
+                {
+                  "type": "AudioOnlyPrompt",
+                  "id": "es-en-b2-u01-l06-e06",
+                  "audioText": "On Saturday I read a book at home. Nevertheless, there are also advantages.",
+                  "question": "¿Qué ha dicho el hablante?",
+                  "options": [
+                    "On Saturday I read a book at home. Nevertheless, there are also advantages.",
+                    "On Saturday I played football with my friends. From my point of view, it is a reasonable option.",
+                    "On Saturday I listened to music in the park. At the end of the day, we need to prioritise."
+                  ],
+                  "correctIndex": 0,
+                  "allowSlowPlayback": true,
+                  "feedbackOnError": {
+                    "type": "comprehension",
+                    "explanation": "El audio dice «On Saturday I read a book at home. Nevertheless, there are also advantages.».",
+                    "ruleRef": "gp-b2-hedging"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has comprendido el mensaje del audio."
+                  }
+                },
+                {
+                  "type": "AudioOnlyPrompt",
+                  "id": "es-en-b2-u01-l06-e07",
+                  "audioText": "On Saturday I listened to music in the park. At the end of the day, we need to prioritise.",
+                  "question": "¿Cuál es la idea principal?",
+                  "options": [
+                    "On Saturday I listened to music in the park. At the end of the day, we need to prioritise.",
+                    "On Saturday I played football with my friends. From my point of view, it is a reasonable option.",
+                    "On Saturday I read a book at home. Nevertheless, there are also advantages."
+                  ],
+                  "correctIndex": 0,
+                  "allowSlowPlayback": false,
+                  "feedbackOnError": {
+                    "type": "comprehension",
+                    "explanation": "El audio dice «On Saturday I listened to music in the park. At the end of the day, we need to prioritise.».",
+                    "ruleRef": "gp-b2-future-perfect"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has identificado la idea principal."
+                  }
+                },
+                {
+                  "type": "ListenType",
+                  "id": "es-en-b2-u01-l06-e08",
+                  "audioText": "On Saturday I listened to music in the park. At the end of the day, we need to prioritise.",
+                  "transcription": "On Saturday I listened to music in the park. At the end of the day, we need to prioritise.",
+                  "feedbackOnError": {
+                    "type": "spelling",
+                    "explanation": "Escribe exactamente «On Saturday I listened to music in the park. At the end of the day, we need to prioritise.».",
+                    "ruleRef": "gp-b2-hedging"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La transcripción coincide con el audio."
+                  }
+                },
+                {
+                  "type": "SpeakRepeat",
+                  "id": "es-en-b2-u01-l06-e09",
+                  "targetPhrase": "On Saturday I listened to music in the park. At the end of the day, we need to prioritise.",
+                  "audioText": "On Saturday I listened to music in the park. At the end of the day, we need to prioritise.",
+                  "feedbackOnError": {
+                    "type": "pronunciation",
+                    "explanation": "Repite «On Saturday I listened to music in the park. At the end of the day, we need to prioritise.» con claridad.",
+                    "ruleRef": "gp-b2-hedging"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La frase se entiende y mantiene el ritmo."
+                  }
+                },
+                {
+                  "type": "FreeSpeakingPrompt",
+                  "id": "es-en-b2-u01-l06-e10",
+                  "prompt": "Argumenta y matiza una opinión sobre el fin de semana.",
+                  "minTokens": 20,
+                  "conceptClusters": [
+                    [
+                      "Saturday"
+                    ],
+                    [
+                      "played"
+                    ],
+                    [
+                      "football"
+                    ]
+                  ],
+                  "modelAnswer": "On Saturday I played football with my friends. From my point of view, it is a reasonable option. On Saturday I read a book at home. Nevertheless, there are also advantages. On Saturday I listened to music in the park. At the end of the day, we need to prioritise.",
+                  "selfAssessmentCriteria": [
+                    "¿La respuesta argumenta y responde a la tarea?",
+                    "¿Usa las dos estructuras gramaticales de la lección?",
+                    "¿Incluye una concesión o una matización?"
+                  ],
+                  "grammarRuleRefs": [
+                    "gp-b2-hedging",
+                    "gp-b2-future-perfect"
+                  ],
+                  "timeLimitSeconds": 90,
+                  "minWpm": 70,
+                  "maxWpm": 160,
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "La respuesta modelo desarrolla una opinión con matices y una concesión.",
+                    "ruleRef": "gp-b2-hedging"
+                  }
+                }
+              ]
+            },
+            {
+              "id": "es-en-b2-u01-l07",
+              "title": "Escuchar: un viaje corto",
+              "cefrLevel": "B2",
+              "scenario": "Situación comunicativa avanzada sobre un viaje corto.",
+              "canDo": "Puedo argumentar y matizar sobre un viaje corto.",
+              "grammarPoints": [
+                {
+                  "id": "gp-b2-hedging",
+                  "label": "Hedging",
+                  "description": "Matizar una opinión con I'm afraid, it seems o might."
+                },
+                {
+                  "id": "gp-b2-future-perfect",
+                  "label": "Future perfect",
+                  "description": "Will have + participio sitúa un resultado antes de una fecha."
+                }
+              ],
+              "vocabFrequencyBand": "3000-5000",
+              "culturalNotes": [
+                {
+                  "idiom": "the ball is in your court",
+                  "note": "Modismo avanzado útil para hablar de un viaje corto.",
+                  "translation": "expresión figurada"
+                }
+              ],
+              "microLesson": {
+                "title": "Escuchar: un viaje corto",
+                "goals": [
+                  "Usar vocabulario avanzado de un viaje corto.",
+                  "Aplicar hedging y future perfect.",
+                  "Argumentar y matizar sobre un viaje corto."
+                ],
+                "sections": [
+                  {
+                    "heading": "Lengua en contexto",
+                    "body": "Hedging: Matizar una opinión con I'm afraid, it seems o might. Future perfect: Will have + participio sitúa un resultado antes de una fecha.",
+                    "examples": [
+                      {
+                        "source": "El viaje fue tranquilo. No obstante, también tiene ventajas.",
+                        "target": "The trip was quiet. Nevertheless, there are also advantages."
+                      },
+                      {
+                        "source": "El viaje fue interesante. A fin de cuentas, hay que priorizar.",
+                        "target": "The trip was interesting. At the end of the day, we need to prioritise."
+                      }
+                    ]
+                  }
+                ]
+              },
+              "glossary": [
+                {
+                  "term": "The trip was quiet. Nevertheless, there are also advantages.",
+                  "translations": [
+                    "El viaje fue tranquilo. No obstante, también tiene ventajas."
+                  ]
+                },
+                {
+                  "term": "The trip was interesting. At the end of the day, we need to prioritise.",
+                  "translations": [
+                    "El viaje fue interesante. A fin de cuentas, hay que priorizar."
+                  ]
+                },
+                {
+                  "term": "The trip was a bit long. In short, it is a complex issue.",
+                  "translations": [
+                    "El viaje fue un poco largo. En resumen, es un tema complejo."
+                  ]
+                }
+              ],
+              "exercises": [
+                {
+                  "type": "MultipleChoice",
+                  "id": "es-en-b2-u01-l07-e01",
+                  "question": "¿Cuál es la opción correcta para «El viaje fue tranquilo. No obstante, también tiene ventajas.»?",
+                  "options": [
+                    "The trip was quiet. Nevertheless, there are also advantages.",
+                    "The trip was interesting. At the end of the day, we need to prioritise.",
+                    "The trip was a bit long. In short, it is a complex issue."
+                  ],
+                  "correctIndex": 0,
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "«El viaje fue tranquilo. No obstante, también tiene ventajas.» se dice «The trip was quiet. Nevertheless, there are also advantages.».",
+                    "ruleRef": "gp-b2-hedging"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has elegido la traducción correcta."
+                  }
+                },
+                {
+                  "type": "OrderWords",
+                  "id": "es-en-b2-u01-l07-e02",
+                  "tokens": [
+                    "trip",
+                    "was",
+                    "quiet",
+                    "Nevertheless",
+                    "there",
+                    "are",
+                    "also",
+                    "advantages",
+                    "The"
+                  ],
+                  "answerTokens": [
+                    "The",
+                    "trip",
+                    "was",
+                    "quiet",
+                    "Nevertheless",
+                    "there",
+                    "are",
+                    "also",
+                    "advantages"
+                  ],
+                  "sourcePhrase": "El viaje fue tranquilo. No obstante, también tiene ventajas.",
+                  "feedbackOnError": {
+                    "type": "word_order",
+                    "explanation": "El orden correcto es «The trip was quiet Nevertheless there are also advantages».",
+                    "ruleRef": "gp-b2-hedging"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "El orden produce una frase natural."
+                  }
+                },
+                {
+                  "type": "ClozeDragDrop",
+                  "id": "es-en-b2-u01-l07-e03",
+                  "passage": "The {{b1}} was {{b2}}",
+                  "blanks": [
+                    {
+                      "id": "b1",
+                      "answer": "trip",
+                      "options": [
+                        "trip",
+                        "very",
+                        "today"
+                      ]
+                    },
+                    {
+                      "id": "b2",
+                      "answer": "quiet",
+                      "options": [
+                        "quiet",
+                        "very",
+                        "today"
+                      ]
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "Las dos formas deben encajar con el contexto de la frase.",
+                    "ruleRef": "gp-b2-future-perfect"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Los dos huecos encajan con la situación."
+                  }
+                },
+                {
+                  "type": "SemanticMatch",
+                  "id": "es-en-b2-u01-l07-e04",
+                  "instructions": "Clasifica la función comunicativa de cada intervención.",
+                  "pairs": [
+                    {
+                      "left": "The trip was quiet. Nevertheless, there are also advantages.",
+                      "right": "Planteamiento",
+                      "register": "formal",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    },
+                    {
+                      "left": "The trip was interesting. At the end of the day, we need to prioritise.",
+                      "right": "Concesión",
+                      "register": "neutral",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    },
+                    {
+                      "left": "The trip was a bit long. In short, it is a complex issue.",
+                      "right": "Conclusión",
+                      "register": "informal",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "Cada intervención cumple una función comunicativa distinta.",
+                    "ruleRef": "gp-b2-hedging"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has identificado la función de cada intervención."
+                  }
+                },
+                {
+                  "type": "SemanticMatch",
+                  "id": "es-en-b2-u01-l07-e05",
+                  "instructions": "Distingue el registro de cada intervención.",
+                  "pairs": [
+                    {
+                      "left": "The trip was quiet. Nevertheless, there are also advantages.",
+                      "right": "Formal",
+                      "register": "formal",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    },
+                    {
+                      "left": "The trip was interesting. At the end of the day, we need to prioritise.",
+                      "right": "Neutral",
+                      "register": "neutral",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    },
+                    {
+                      "left": "The trip was a bit long. In short, it is a complex issue.",
+                      "right": "Informal",
+                      "register": "informal",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "register",
+                    "explanation": "El registro cambia según el contexto y la relación con el interlocutor.",
+                    "ruleRef": "gp-b2-future-perfect"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has distinguido el registro de cada intervención."
+                  }
+                },
+                {
+                  "type": "AudioOnlyPrompt",
+                  "id": "es-en-b2-u01-l07-e06",
+                  "audioText": "The trip was interesting. At the end of the day, we need to prioritise.",
+                  "question": "¿Qué ha dicho el hablante?",
+                  "options": [
+                    "The trip was interesting. At the end of the day, we need to prioritise.",
+                    "The trip was quiet. Nevertheless, there are also advantages.",
+                    "The trip was a bit long. In short, it is a complex issue."
+                  ],
+                  "correctIndex": 0,
+                  "allowSlowPlayback": true,
+                  "feedbackOnError": {
+                    "type": "comprehension",
+                    "explanation": "El audio dice «The trip was interesting. At the end of the day, we need to prioritise.».",
+                    "ruleRef": "gp-b2-hedging"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has comprendido el mensaje del audio."
+                  }
+                },
+                {
+                  "type": "AudioOnlyPrompt",
+                  "id": "es-en-b2-u01-l07-e07",
+                  "audioText": "The trip was a bit long. In short, it is a complex issue.",
+                  "question": "¿Cuál es la idea principal?",
+                  "options": [
+                    "The trip was a bit long. In short, it is a complex issue.",
+                    "The trip was quiet. Nevertheless, there are also advantages.",
+                    "The trip was interesting. At the end of the day, we need to prioritise."
+                  ],
+                  "correctIndex": 0,
+                  "allowSlowPlayback": false,
+                  "feedbackOnError": {
+                    "type": "comprehension",
+                    "explanation": "El audio dice «The trip was a bit long. In short, it is a complex issue.».",
+                    "ruleRef": "gp-b2-future-perfect"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has identificado la idea principal."
+                  }
+                },
+                {
+                  "type": "ListenType",
+                  "id": "es-en-b2-u01-l07-e08",
+                  "audioText": "The trip was a bit long. In short, it is a complex issue.",
+                  "transcription": "The trip was a bit long. In short, it is a complex issue.",
+                  "feedbackOnError": {
+                    "type": "spelling",
+                    "explanation": "Escribe exactamente «The trip was a bit long. In short, it is a complex issue.».",
+                    "ruleRef": "gp-b2-hedging"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La transcripción coincide con el audio."
+                  }
+                },
+                {
+                  "type": "SpeakRepeat",
+                  "id": "es-en-b2-u01-l07-e09",
+                  "targetPhrase": "The trip was a bit long. In short, it is a complex issue.",
+                  "audioText": "The trip was a bit long. In short, it is a complex issue.",
+                  "feedbackOnError": {
+                    "type": "pronunciation",
+                    "explanation": "Repite «The trip was a bit long. In short, it is a complex issue.» con claridad.",
+                    "ruleRef": "gp-b2-hedging"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La frase se entiende y mantiene el ritmo."
+                  }
+                },
+                {
+                  "type": "FreeSpeakingPrompt",
+                  "id": "es-en-b2-u01-l07-e10",
+                  "prompt": "Argumenta y matiza una opinión sobre un viaje corto.",
+                  "minTokens": 20,
+                  "conceptClusters": [
+                    [
+                      "trip"
+                    ],
+                    [
+                      "quiet"
+                    ],
+                    [
+                      "Nevertheless"
+                    ]
+                  ],
+                  "modelAnswer": "The trip was quiet. Nevertheless, there are also advantages. The trip was interesting. At the end of the day, we need to prioritise. The trip was a bit long. In short, it is a complex issue.",
+                  "selfAssessmentCriteria": [
+                    "¿La respuesta argumenta y responde a la tarea?",
+                    "¿Usa las dos estructuras gramaticales de la lección?",
+                    "¿Incluye una concesión o una matización?"
+                  ],
+                  "grammarRuleRefs": [
+                    "gp-b2-hedging",
+                    "gp-b2-future-perfect"
+                  ],
+                  "timeLimitSeconds": 90,
+                  "minWpm": 70,
+                  "maxWpm": 160,
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "La respuesta modelo desarrolla una opinión con matices y una concesión.",
+                    "ruleRef": "gp-b2-hedging"
+                  }
+                }
+              ]
+            },
+            {
+              "id": "es-en-b2-u01-l08",
+              "title": "Escribir una postal",
+              "cefrLevel": "B2",
+              "scenario": "Situación comunicativa avanzada sobre una postal de vacaciones.",
+              "canDo": "Puedo argumentar y matizar sobre una postal de vacaciones.",
+              "grammarPoints": [
+                {
+                  "id": "gp-b2-hedging",
+                  "label": "Hedging",
+                  "description": "Matizar una opinión con I'm afraid, it seems o might."
+                },
+                {
+                  "id": "gp-b2-future-perfect",
+                  "label": "Future perfect",
+                  "description": "Will have + participio sitúa un resultado antes de una fecha."
+                }
+              ],
+              "vocabFrequencyBand": "3000-5000",
+              "culturalNotes": [
+                {
+                  "idiom": "let the cat out of the bag",
+                  "note": "Modismo avanzado útil para hablar de una postal de vacaciones.",
+                  "translation": "expresión figurada"
+                }
+              ],
+              "microLesson": {
+                "title": "Escribir una postal",
+                "goals": [
+                  "Usar vocabulario avanzado de una postal de vacaciones.",
+                  "Aplicar hedging y future perfect.",
+                  "Argumentar y matizar sobre una postal de vacaciones."
+                ],
+                "sections": [
+                  {
+                    "heading": "Lengua en contexto",
+                    "body": "Hedging: Matizar una opinión con I'm afraid, it seems o might. Future perfect: Will have + participio sitúa un resultado antes de una fecha.",
+                    "examples": [
+                      {
+                        "source": "Estoy en la playa. A fin de cuentas, hay que priorizar.",
+                        "target": "I am at the beach. At the end of the day, we need to prioritise."
+                      },
+                      {
+                        "source": "Estoy en un hotel pequeño. En resumen, es un tema complejo.",
+                        "target": "I am in a small hotel. In short, it is a complex issue."
+                      }
+                    ]
+                  }
+                ]
+              },
+              "glossary": [
+                {
+                  "term": "I am at the beach. At the end of the day, we need to prioritise.",
+                  "translations": [
+                    "Estoy en la playa. A fin de cuentas, hay que priorizar."
+                  ]
+                },
+                {
+                  "term": "I am in a small hotel. In short, it is a complex issue.",
+                  "translations": [
+                    "Estoy en un hotel pequeño. En resumen, es un tema complejo."
+                  ]
+                },
+                {
+                  "term": "I am with my friends. However, it is worth qualifying that.",
+                  "translations": [
+                    "Estoy con mis amigos. Sin embargo, conviene matizarlo."
+                  ]
+                }
+              ],
+              "exercises": [
+                {
+                  "type": "MultipleChoice",
+                  "id": "es-en-b2-u01-l08-e01",
+                  "question": "¿Cuál es la opción correcta para «Estoy en la playa. A fin de cuentas, hay que priorizar.»?",
+                  "options": [
+                    "I am at the beach. At the end of the day, we need to prioritise.",
+                    "I am in a small hotel. In short, it is a complex issue.",
+                    "I am with my friends. However, it is worth qualifying that."
+                  ],
+                  "correctIndex": 0,
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "«Estoy en la playa. A fin de cuentas, hay que priorizar.» se dice «I am at the beach. At the end of the day, we need to prioritise.».",
+                    "ruleRef": "gp-b2-hedging"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has elegido la traducción correcta."
+                  }
+                },
+                {
+                  "type": "OrderWords",
+                  "id": "es-en-b2-u01-l08-e02",
+                  "tokens": [
+                    "am",
+                    "at",
+                    "the",
+                    "beach",
+                    "At",
+                    "the",
+                    "end",
+                    "of",
+                    "the",
+                    "day",
+                    "we",
+                    "need",
+                    "to",
+                    "prioritise",
+                    "I"
+                  ],
+                  "answerTokens": [
+                    "I",
+                    "am",
+                    "at",
+                    "the",
+                    "beach",
+                    "At",
+                    "the",
+                    "end",
+                    "of",
+                    "the",
+                    "day",
+                    "we",
+                    "need",
+                    "to",
+                    "prioritise"
+                  ],
+                  "sourcePhrase": "Estoy en la playa. A fin de cuentas, hay que priorizar.",
+                  "feedbackOnError": {
+                    "type": "word_order",
+                    "explanation": "El orden correcto es «I am at the beach At the end of the day we need to prioritise».",
+                    "ruleRef": "gp-b2-hedging"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "El orden produce una frase natural."
+                  }
+                },
+                {
+                  "type": "ClozeDragDrop",
+                  "id": "es-en-b2-u01-l08-e03",
+                  "passage": "{{b1}} {{b2}} at the beach",
+                  "blanks": [
+                    {
+                      "id": "b1",
+                      "answer": "I",
+                      "options": [
+                        "I",
+                        "at",
+                        "the"
+                      ]
+                    },
+                    {
+                      "id": "b2",
+                      "answer": "am",
+                      "options": [
+                        "am",
+                        "at",
+                        "the"
+                      ]
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "Las dos formas deben encajar con el contexto de la frase.",
+                    "ruleRef": "gp-b2-future-perfect"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Los dos huecos encajan con la situación."
+                  }
+                },
+                {
+                  "type": "SemanticMatch",
+                  "id": "es-en-b2-u01-l08-e04",
+                  "instructions": "Clasifica la función comunicativa de cada intervención.",
+                  "pairs": [
+                    {
+                      "left": "I am at the beach. At the end of the day, we need to prioritise.",
+                      "right": "Planteamiento",
+                      "register": "formal",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    },
+                    {
+                      "left": "I am in a small hotel. In short, it is a complex issue.",
+                      "right": "Concesión",
+                      "register": "neutral",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    },
+                    {
+                      "left": "I am with my friends. However, it is worth qualifying that.",
+                      "right": "Conclusión",
+                      "register": "informal",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "Cada intervención cumple una función comunicativa distinta.",
+                    "ruleRef": "gp-b2-hedging"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has identificado la función de cada intervención."
+                  }
+                },
+                {
+                  "type": "SemanticMatch",
+                  "id": "es-en-b2-u01-l08-e05",
+                  "instructions": "Distingue el registro de cada intervención.",
+                  "pairs": [
+                    {
+                      "left": "I am at the beach. At the end of the day, we need to prioritise.",
+                      "right": "Formal",
+                      "register": "formal",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    },
+                    {
+                      "left": "I am in a small hotel. In short, it is a complex issue.",
+                      "right": "Neutral",
+                      "register": "neutral",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    },
+                    {
+                      "left": "I am with my friends. However, it is worth qualifying that.",
+                      "right": "Informal",
+                      "register": "informal",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "register",
+                    "explanation": "El registro cambia según el contexto y la relación con el interlocutor.",
+                    "ruleRef": "gp-b2-future-perfect"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has distinguido el registro de cada intervención."
+                  }
+                },
+                {
+                  "type": "AudioOnlyPrompt",
+                  "id": "es-en-b2-u01-l08-e06",
+                  "audioText": "I am in a small hotel. In short, it is a complex issue.",
+                  "question": "¿Qué ha dicho el hablante?",
+                  "options": [
+                    "I am in a small hotel. In short, it is a complex issue.",
+                    "I am at the beach. At the end of the day, we need to prioritise.",
+                    "I am with my friends. However, it is worth qualifying that."
+                  ],
+                  "correctIndex": 0,
+                  "allowSlowPlayback": true,
+                  "feedbackOnError": {
+                    "type": "comprehension",
+                    "explanation": "El audio dice «I am in a small hotel. In short, it is a complex issue.».",
+                    "ruleRef": "gp-b2-hedging"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has comprendido el mensaje del audio."
+                  }
+                },
+                {
+                  "type": "AudioOnlyPrompt",
+                  "id": "es-en-b2-u01-l08-e07",
+                  "audioText": "I am with my friends. However, it is worth qualifying that.",
+                  "question": "¿Cuál es la idea principal?",
+                  "options": [
+                    "I am with my friends. However, it is worth qualifying that.",
+                    "I am at the beach. At the end of the day, we need to prioritise.",
+                    "I am in a small hotel. In short, it is a complex issue."
+                  ],
+                  "correctIndex": 0,
+                  "allowSlowPlayback": false,
+                  "feedbackOnError": {
+                    "type": "comprehension",
+                    "explanation": "El audio dice «I am with my friends. However, it is worth qualifying that.».",
+                    "ruleRef": "gp-b2-future-perfect"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has identificado la idea principal."
+                  }
+                },
+                {
+                  "type": "ListenType",
+                  "id": "es-en-b2-u01-l08-e08",
+                  "audioText": "I am with my friends. However, it is worth qualifying that.",
+                  "transcription": "I am with my friends. However, it is worth qualifying that.",
+                  "feedbackOnError": {
+                    "type": "spelling",
+                    "explanation": "Escribe exactamente «I am with my friends. However, it is worth qualifying that.».",
+                    "ruleRef": "gp-b2-hedging"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La transcripción coincide con el audio."
+                  }
+                },
+                {
+                  "type": "SpeakRepeat",
+                  "id": "es-en-b2-u01-l08-e09",
+                  "targetPhrase": "I am with my friends. However, it is worth qualifying that.",
+                  "audioText": "I am with my friends. However, it is worth qualifying that.",
+                  "feedbackOnError": {
+                    "type": "pronunciation",
+                    "explanation": "Repite «I am with my friends. However, it is worth qualifying that.» con claridad.",
+                    "ruleRef": "gp-b2-hedging"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La frase se entiende y mantiene el ritmo."
+                  }
+                },
+                {
+                  "type": "FreeSpeakingPrompt",
+                  "id": "es-en-b2-u01-l08-e10",
+                  "prompt": "Argumenta y matiza una opinión sobre una postal de vacaciones.",
+                  "minTokens": 20,
+                  "conceptClusters": [
+                    [
+                      "beach"
+                    ],
+                    [
+                      "end"
+                    ],
+                    [
+                      "day"
+                    ]
+                  ],
+                  "modelAnswer": "I am at the beach. At the end of the day, we need to prioritise. I am in a small hotel. In short, it is a complex issue. I am with my friends. However, it is worth qualifying that.",
+                  "selfAssessmentCriteria": [
+                    "¿La respuesta argumenta y responde a la tarea?",
+                    "¿Usa las dos estructuras gramaticales de la lección?",
+                    "¿Incluye una concesión o una matización?"
+                  ],
+                  "grammarRuleRefs": [
+                    "gp-b2-hedging",
+                    "gp-b2-future-perfect"
+                  ],
+                  "timeLimitSeconds": 90,
+                  "minWpm": 70,
+                  "maxWpm": 160,
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "La respuesta modelo desarrolla una opinión con matices y una concesión.",
+                    "ruleRef": "gp-b2-hedging"
+                  }
+                }
+              ]
+            },
+            {
+              "id": "es-en-b2-u01-l09",
+              "title": "Integración: ayer y hoy",
+              "cefrLevel": "B2",
+              "scenario": "Situación comunicativa avanzada sobre los cambios en mi vida.",
+              "canDo": "Puedo argumentar y matizar sobre los cambios en mi vida.",
+              "grammarPoints": [
+                {
+                  "id": "gp-b2-hedging",
+                  "label": "Hedging",
+                  "description": "Matizar una opinión con I'm afraid, it seems o might."
+                },
+                {
+                  "id": "gp-b2-future-perfect",
+                  "label": "Future perfect",
+                  "description": "Will have + participio sitúa un resultado antes de una fecha."
+                }
+              ],
+              "vocabFrequencyBand": "3000-5000",
+              "culturalNotes": [
+                {
+                  "idiom": "face the music",
+                  "note": "Modismo avanzado útil para hablar de los cambios en mi vida.",
+                  "translation": "expresión figurada"
+                }
+              ],
+              "microLesson": {
+                "title": "Integración: ayer y hoy",
+                "goals": [
+                  "Usar vocabulario avanzado de los cambios en mi vida.",
+                  "Aplicar hedging y future perfect.",
+                  "Argumentar y matizar sobre los cambios en mi vida."
+                ],
+                "sections": [
+                  {
+                    "heading": "Lengua en contexto",
+                    "body": "Hedging: Matizar una opinión con I'm afraid, it seems o might. Future perfect: Will have + participio sitúa un resultado antes de una fecha.",
+                    "examples": [
+                      {
+                        "source": "Antes iba al trabajo en autobús; ahora voy en bicicleta. En resumen, es un tema complejo.",
+                        "target": "I used to go to work by bus; now I cycle. In short, it is a complex issue."
+                      },
+                      {
+                        "source": "Antes comía en casa; ahora como en la oficina. Sin embargo, conviene matizarlo.",
+                        "target": "I used to eat at home; now I eat at the office. However, it is worth qualifying that."
+                      }
+                    ]
+                  }
+                ]
+              },
+              "glossary": [
+                {
+                  "term": "I used to go to work by bus; now I cycle. In short, it is a complex issue.",
+                  "translations": [
+                    "Antes iba al trabajo en autobús; ahora voy en bicicleta. En resumen, es un tema complejo."
+                  ]
+                },
+                {
+                  "term": "I used to eat at home; now I eat at the office. However, it is worth qualifying that.",
+                  "translations": [
+                    "Antes comía en casa; ahora como en la oficina. Sin embargo, conviene matizarlo."
+                  ]
+                },
+                {
+                  "term": "I used to watch TV; now I read a book. That said, it depends on the context.",
+                  "translations": [
+                    "Antes veía la televisión; ahora leo un libro. Dicho esto, depende del contexto."
+                  ]
+                }
+              ],
+              "exercises": [
+                {
+                  "type": "MultipleChoice",
+                  "id": "es-en-b2-u01-l09-e01",
+                  "question": "¿Cuál es la opción correcta para «Antes iba al trabajo en autobús; ahora voy en bicicleta. En resumen, es un tema complejo.»?",
+                  "options": [
+                    "I used to go to work by bus; now I cycle. In short, it is a complex issue.",
+                    "I used to eat at home; now I eat at the office. However, it is worth qualifying that.",
+                    "I used to watch TV; now I read a book. That said, it depends on the context."
+                  ],
+                  "correctIndex": 0,
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "«Antes iba al trabajo en autobús; ahora voy en bicicleta. En resumen, es un tema complejo.» se dice «I used to go to work by bus; now I cycle. In short, it is a complex issue.».",
+                    "ruleRef": "gp-b2-hedging"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has elegido la traducción correcta."
+                  }
+                },
+                {
+                  "type": "OrderWords",
+                  "id": "es-en-b2-u01-l09-e02",
+                  "tokens": [
+                    "used",
+                    "to",
+                    "go",
+                    "to",
+                    "work",
+                    "by",
+                    "bus",
+                    "now",
+                    "I",
+                    "cycle",
+                    "In",
+                    "short",
+                    "it",
+                    "is",
+                    "a",
+                    "complex",
+                    "issue",
+                    "I"
+                  ],
+                  "answerTokens": [
+                    "I",
+                    "used",
+                    "to",
+                    "go",
+                    "to",
+                    "work",
+                    "by",
+                    "bus",
+                    "now",
+                    "I",
+                    "cycle",
+                    "In",
+                    "short",
+                    "it",
+                    "is",
+                    "a",
+                    "complex",
+                    "issue"
+                  ],
+                  "sourcePhrase": "Antes iba al trabajo en autobús; ahora voy en bicicleta. En resumen, es un tema complejo.",
+                  "feedbackOnError": {
+                    "type": "word_order",
+                    "explanation": "El orden correcto es «I used to go to work by bus now I cycle In short it is a complex issue».",
+                    "ruleRef": "gp-b2-hedging"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "El orden produce una frase natural."
+                  }
+                },
+                {
+                  "type": "ClozeDragDrop",
+                  "id": "es-en-b2-u01-l09-e03",
+                  "passage": "I {{b1}} to go to {{b2}} by bus; now I cycle.",
+                  "blanks": [
+                    {
+                      "id": "b1",
+                      "answer": "used",
+                      "options": [
+                        "used",
+                        "bus",
+                        "now"
+                      ]
+                    },
+                    {
+                      "id": "b2",
+                      "answer": "work",
+                      "options": [
+                        "work",
+                        "bus",
+                        "now"
+                      ]
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "Las dos formas deben encajar con el contexto de la frase.",
+                    "ruleRef": "gp-b2-future-perfect"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Los dos huecos encajan con la situación."
+                  }
+                },
+                {
+                  "type": "SemanticMatch",
+                  "id": "es-en-b2-u01-l09-e04",
+                  "instructions": "Clasifica la función comunicativa de cada intervención.",
+                  "pairs": [
+                    {
+                      "left": "I used to go to work by bus; now I cycle. In short, it is a complex issue.",
+                      "right": "Planteamiento",
+                      "register": "formal",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    },
+                    {
+                      "left": "I used to eat at home; now I eat at the office. However, it is worth qualifying that.",
+                      "right": "Concesión",
+                      "register": "neutral",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    },
+                    {
+                      "left": "I used to watch TV; now I read a book. That said, it depends on the context.",
+                      "right": "Conclusión",
+                      "register": "informal",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "Cada intervención cumple una función comunicativa distinta.",
+                    "ruleRef": "gp-b2-hedging"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has identificado la función de cada intervención."
+                  }
+                },
+                {
+                  "type": "SemanticMatch",
+                  "id": "es-en-b2-u01-l09-e05",
+                  "instructions": "Distingue el registro de cada intervención.",
+                  "pairs": [
+                    {
+                      "left": "I used to go to work by bus; now I cycle. In short, it is a complex issue.",
+                      "right": "Formal",
+                      "register": "formal",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    },
+                    {
+                      "left": "I used to eat at home; now I eat at the office. However, it is worth qualifying that.",
+                      "right": "Neutral",
+                      "register": "neutral",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    },
+                    {
+                      "left": "I used to watch TV; now I read a book. That said, it depends on the context.",
+                      "right": "Informal",
+                      "register": "informal",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "register",
+                    "explanation": "El registro cambia según el contexto y la relación con el interlocutor.",
+                    "ruleRef": "gp-b2-future-perfect"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has distinguido el registro de cada intervención."
+                  }
+                },
+                {
+                  "type": "AudioOnlyPrompt",
+                  "id": "es-en-b2-u01-l09-e06",
+                  "audioText": "I used to eat at home; now I eat at the office. However, it is worth qualifying that.",
+                  "question": "¿Qué ha dicho el hablante?",
+                  "options": [
+                    "I used to eat at home; now I eat at the office. However, it is worth qualifying that.",
+                    "I used to go to work by bus; now I cycle. In short, it is a complex issue.",
+                    "I used to watch TV; now I read a book. That said, it depends on the context."
+                  ],
+                  "correctIndex": 0,
+                  "allowSlowPlayback": true,
+                  "feedbackOnError": {
+                    "type": "comprehension",
+                    "explanation": "El audio dice «I used to eat at home; now I eat at the office. However, it is worth qualifying that.».",
+                    "ruleRef": "gp-b2-hedging"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has comprendido el mensaje del audio."
+                  }
+                },
+                {
+                  "type": "AudioOnlyPrompt",
+                  "id": "es-en-b2-u01-l09-e07",
+                  "audioText": "I used to watch TV; now I read a book. That said, it depends on the context.",
+                  "question": "¿Cuál es la idea principal?",
+                  "options": [
+                    "I used to watch TV; now I read a book. That said, it depends on the context.",
+                    "I used to go to work by bus; now I cycle. In short, it is a complex issue.",
+                    "I used to eat at home; now I eat at the office. However, it is worth qualifying that."
+                  ],
+                  "correctIndex": 0,
+                  "allowSlowPlayback": false,
+                  "feedbackOnError": {
+                    "type": "comprehension",
+                    "explanation": "El audio dice «I used to watch TV; now I read a book. That said, it depends on the context.».",
+                    "ruleRef": "gp-b2-future-perfect"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has identificado la idea principal."
+                  }
+                },
+                {
+                  "type": "ListenType",
+                  "id": "es-en-b2-u01-l09-e08",
+                  "audioText": "I used to watch TV; now I read a book. That said, it depends on the context.",
+                  "transcription": "I used to watch TV; now I read a book. That said, it depends on the context.",
+                  "feedbackOnError": {
+                    "type": "spelling",
+                    "explanation": "Escribe exactamente «I used to watch TV; now I read a book. That said, it depends on the context.».",
+                    "ruleRef": "gp-b2-hedging"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La transcripción coincide con el audio."
+                  }
+                },
+                {
+                  "type": "SpeakRepeat",
+                  "id": "es-en-b2-u01-l09-e09",
+                  "targetPhrase": "I used to watch TV; now I read a book. That said, it depends on the context.",
+                  "audioText": "I used to watch TV; now I read a book. That said, it depends on the context.",
+                  "feedbackOnError": {
+                    "type": "pronunciation",
+                    "explanation": "Repite «I used to watch TV; now I read a book. That said, it depends on the context.» con claridad.",
+                    "ruleRef": "gp-b2-hedging"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La frase se entiende y mantiene el ritmo."
+                  }
+                },
+                {
+                  "type": "FreeSpeakingPrompt",
+                  "id": "es-en-b2-u01-l09-e10",
+                  "prompt": "Argumenta y matiza una opinión sobre los cambios en mi vida.",
+                  "minTokens": 20,
+                  "conceptClusters": [
+                    [
+                      "used"
+                    ],
+                    [
+                      "work"
+                    ],
+                    [
+                      "bus"
+                    ]
+                  ],
+                  "modelAnswer": "I used to go to work by bus; now I cycle. In short, it is a complex issue. I used to eat at home; now I eat at the office. However, it is worth qualifying that. I used to watch TV; now I read a book. That said, it depends on the context.",
+                  "selfAssessmentCriteria": [
+                    "¿La respuesta argumenta y responde a la tarea?",
+                    "¿Usa las dos estructuras gramaticales de la lección?",
+                    "¿Incluye una concesión o una matización?"
+                  ],
+                  "grammarRuleRefs": [
+                    "gp-b2-hedging",
+                    "gp-b2-future-perfect"
+                  ],
+                  "timeLimitSeconds": 90,
+                  "minWpm": 70,
+                  "maxWpm": 160,
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "La respuesta modelo desarrolla una opinión con matices y una concesión.",
+                    "ruleRef": "gp-b2-hedging"
+                  }
+                }
+              ]
+            },
+            {
+              "id": "es-en-b2-u01-l10",
+              "title": "Evaluación: mi semana",
+              "cefrLevel": "B2",
+              "scenario": "Situación comunicativa avanzada sobre mi semana.",
+              "canDo": "Puedo argumentar y matizar sobre mi semana.",
+              "grammarPoints": [
+                {
+                  "id": "gp-b2-hedging",
+                  "label": "Hedging",
+                  "description": "Matizar una opinión con I'm afraid, it seems o might."
+                },
+                {
+                  "id": "gp-b2-future-perfect",
+                  "label": "Future perfect",
+                  "description": "Will have + participio sitúa un resultado antes de una fecha."
+                }
+              ],
+              "vocabFrequencyBand": "3000-5000",
+              "culturalNotes": [
+                {
+                  "idiom": "on cloud nine",
+                  "note": "Modismo avanzado útil para hablar de mi semana.",
+                  "translation": "expresión figurada"
+                }
+              ],
+              "microLesson": {
+                "title": "Evaluación: mi semana",
+                "goals": [
+                  "Usar vocabulario avanzado de mi semana.",
+                  "Aplicar hedging y future perfect.",
+                  "Argumentar y matizar sobre mi semana."
+                ],
+                "sections": [
+                  {
+                    "heading": "Lengua en contexto",
+                    "body": "Hedging: Matizar una opinión con I'm afraid, it seems o might. Future perfect: Will have + participio sitúa un resultado antes de una fecha.",
+                    "examples": [
+                      {
+                        "source": "El lunes empecé un curso de inglés. Sin embargo, conviene matizarlo.",
+                        "target": "On Monday I started an English course. However, it is worth qualifying that."
+                      },
+                      {
+                        "source": "El miércoles visité a mi familia. Dicho esto, depende del contexto.",
+                        "target": "On Wednesday I visited my family. That said, it depends on the context."
+                      }
+                    ]
+                  }
+                ]
+              },
+              "glossary": [
+                {
+                  "term": "On Monday I started an English course. However, it is worth qualifying that.",
+                  "translations": [
+                    "El lunes empecé un curso de inglés. Sin embargo, conviene matizarlo."
+                  ]
+                },
+                {
+                  "term": "On Wednesday I visited my family. That said, it depends on the context.",
+                  "translations": [
+                    "El miércoles visité a mi familia. Dicho esto, depende del contexto."
+                  ]
+                },
+                {
+                  "term": "On Friday I finished a project. In other words, it is worth considering.",
+                  "translations": [
+                    "El viernes terminé un proyecto. En otras palabras, merece la pena considerarlo."
+                  ]
+                }
+              ],
+              "exercises": [
+                {
+                  "type": "MultipleChoice",
+                  "id": "es-en-b2-u01-l10-e01",
+                  "question": "¿Cuál es la opción correcta para «El lunes empecé un curso de inglés. Sin embargo, conviene matizarlo.»?",
+                  "options": [
+                    "On Monday I started an English course. However, it is worth qualifying that.",
+                    "On Wednesday I visited my family. That said, it depends on the context.",
+                    "On Friday I finished a project. In other words, it is worth considering."
+                  ],
+                  "correctIndex": 0,
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "«El lunes empecé un curso de inglés. Sin embargo, conviene matizarlo.» se dice «On Monday I started an English course. However, it is worth qualifying that.».",
+                    "ruleRef": "gp-b2-hedging"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has elegido la traducción correcta."
+                  }
+                },
+                {
+                  "type": "OrderWords",
+                  "id": "es-en-b2-u01-l10-e02",
+                  "tokens": [
+                    "Monday",
+                    "I",
+                    "started",
+                    "an",
+                    "English",
+                    "course",
+                    "However",
+                    "it",
+                    "is",
+                    "worth",
+                    "qualifying",
+                    "that",
+                    "On"
+                  ],
+                  "answerTokens": [
+                    "On",
+                    "Monday",
+                    "I",
+                    "started",
+                    "an",
+                    "English",
+                    "course",
+                    "However",
+                    "it",
+                    "is",
+                    "worth",
+                    "qualifying",
+                    "that"
+                  ],
+                  "sourcePhrase": "El lunes empecé un curso de inglés. Sin embargo, conviene matizarlo.",
+                  "feedbackOnError": {
+                    "type": "word_order",
+                    "explanation": "El orden correcto es «On Monday I started an English course However it is worth qualifying that».",
+                    "ruleRef": "gp-b2-hedging"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "El orden produce una frase natural."
+                  }
+                },
+                {
+                  "type": "ClozeDragDrop",
+                  "id": "es-en-b2-u01-l10-e03",
+                  "passage": "On {{b1}} I {{b2}} an English course.",
+                  "blanks": [
+                    {
+                      "id": "b1",
+                      "answer": "Monday",
+                      "options": [
+                        "Monday",
+                        "English",
+                        "course"
+                      ]
+                    },
+                    {
+                      "id": "b2",
+                      "answer": "started",
+                      "options": [
+                        "started",
+                        "English",
+                        "course"
+                      ]
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "Las dos formas deben encajar con el contexto de la frase.",
+                    "ruleRef": "gp-b2-future-perfect"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Los dos huecos encajan con la situación."
+                  }
+                },
+                {
+                  "type": "SemanticMatch",
+                  "id": "es-en-b2-u01-l10-e04",
+                  "instructions": "Clasifica la función comunicativa de cada intervención.",
+                  "pairs": [
+                    {
+                      "left": "On Monday I started an English course. However, it is worth qualifying that.",
+                      "right": "Planteamiento",
+                      "register": "formal",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    },
+                    {
+                      "left": "On Wednesday I visited my family. That said, it depends on the context.",
+                      "right": "Concesión",
+                      "register": "neutral",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    },
+                    {
+                      "left": "On Friday I finished a project. In other words, it is worth considering.",
+                      "right": "Conclusión",
+                      "register": "informal",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "Cada intervención cumple una función comunicativa distinta.",
+                    "ruleRef": "gp-b2-hedging"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has identificado la función de cada intervención."
+                  }
+                },
+                {
+                  "type": "SemanticMatch",
+                  "id": "es-en-b2-u01-l10-e05",
+                  "instructions": "Distingue el registro de cada intervención.",
+                  "pairs": [
+                    {
+                      "left": "On Monday I started an English course. However, it is worth qualifying that.",
+                      "right": "Formal",
+                      "register": "formal",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    },
+                    {
+                      "left": "On Wednesday I visited my family. That said, it depends on the context.",
+                      "right": "Neutral",
+                      "register": "neutral",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    },
+                    {
+                      "left": "On Friday I finished a project. In other words, it is worth considering.",
+                      "right": "Informal",
+                      "register": "informal",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "register",
+                    "explanation": "El registro cambia según el contexto y la relación con el interlocutor.",
+                    "ruleRef": "gp-b2-future-perfect"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has distinguido el registro de cada intervención."
+                  }
+                },
+                {
+                  "type": "AudioOnlyPrompt",
+                  "id": "es-en-b2-u01-l10-e06",
+                  "audioText": "On Wednesday I visited my family. That said, it depends on the context.",
+                  "question": "¿Qué ha dicho el hablante?",
+                  "options": [
+                    "On Wednesday I visited my family. That said, it depends on the context.",
+                    "On Monday I started an English course. However, it is worth qualifying that.",
+                    "On Friday I finished a project. In other words, it is worth considering."
+                  ],
+                  "correctIndex": 0,
+                  "allowSlowPlayback": true,
+                  "feedbackOnError": {
+                    "type": "comprehension",
+                    "explanation": "El audio dice «On Wednesday I visited my family. That said, it depends on the context.».",
+                    "ruleRef": "gp-b2-hedging"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has comprendido el mensaje del audio."
+                  }
+                },
+                {
+                  "type": "AudioOnlyPrompt",
+                  "id": "es-en-b2-u01-l10-e07",
+                  "audioText": "On Friday I finished a project. In other words, it is worth considering.",
+                  "question": "¿Cuál es la idea principal?",
+                  "options": [
+                    "On Friday I finished a project. In other words, it is worth considering.",
+                    "On Monday I started an English course. However, it is worth qualifying that.",
+                    "On Wednesday I visited my family. That said, it depends on the context."
+                  ],
+                  "correctIndex": 0,
+                  "allowSlowPlayback": false,
+                  "feedbackOnError": {
+                    "type": "comprehension",
+                    "explanation": "El audio dice «On Friday I finished a project. In other words, it is worth considering.».",
+                    "ruleRef": "gp-b2-future-perfect"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has identificado la idea principal."
+                  }
+                },
+                {
+                  "type": "ListenType",
+                  "id": "es-en-b2-u01-l10-e08",
+                  "audioText": "On Friday I finished a project. In other words, it is worth considering.",
+                  "transcription": "On Friday I finished a project. In other words, it is worth considering.",
+                  "feedbackOnError": {
+                    "type": "spelling",
+                    "explanation": "Escribe exactamente «On Friday I finished a project. In other words, it is worth considering.».",
+                    "ruleRef": "gp-b2-hedging"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La transcripción coincide con el audio."
+                  }
+                },
+                {
+                  "type": "SpeakRepeat",
+                  "id": "es-en-b2-u01-l10-e09",
+                  "targetPhrase": "On Friday I finished a project. In other words, it is worth considering.",
+                  "audioText": "On Friday I finished a project. In other words, it is worth considering.",
+                  "feedbackOnError": {
+                    "type": "pronunciation",
+                    "explanation": "Repite «On Friday I finished a project. In other words, it is worth considering.» con claridad.",
+                    "ruleRef": "gp-b2-hedging"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La frase se entiende y mantiene el ritmo."
+                  }
+                },
+                {
+                  "type": "FreeSpeakingPrompt",
+                  "id": "es-en-b2-u01-l10-e10",
+                  "prompt": "Argumenta y matiza una opinión sobre mi semana.",
+                  "minTokens": 20,
+                  "conceptClusters": [
+                    [
+                      "Monday"
+                    ],
+                    [
+                      "started"
+                    ],
+                    [
+                      "English"
+                    ]
+                  ],
+                  "modelAnswer": "On Monday I started an English course. However, it is worth qualifying that. On Wednesday I visited my family. That said, it depends on the context. On Friday I finished a project. In other words, it is worth considering.",
+                  "selfAssessmentCriteria": [
+                    "¿La respuesta argumenta y responde a la tarea?",
+                    "¿Usa las dos estructuras gramaticales de la lección?",
+                    "¿Incluye una concesión o una matización?"
+                  ],
+                  "grammarRuleRefs": [
+                    "gp-b2-hedging",
+                    "gp-b2-future-perfect"
+                  ],
+                  "timeLimitSeconds": 90,
+                  "minWpm": 70,
+                  "maxWpm": 160,
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "La respuesta modelo desarrolla una opinión con matices y una concesión.",
+                    "ruleRef": "gp-b2-hedging"
+                  }
+                }
+              ]
+            }
+          ]
         }
       ]
     },
