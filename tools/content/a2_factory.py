@@ -462,17 +462,21 @@ def build_lesson(
         raise ValueError(f"{lesson_id}: se esperaban 3 pares de vocabulario")
     target_index = TARGET_INDEX[lang]
     target_items = [item[target_index] for item in items]
+    if len(set(target_items)) != 3:
+        raise ValueError(f"{lesson_id}: vocabulario duplicado en la lección")
     sentences = spec.get("sentences")
     if sentences is None:
         sentences = sentences_for(spec["pattern"], items, lang)
     if len(sentences) != 3:
         raise ValueError(f"{lesson_id}: se esperaban 3 frases")
+    target_sentences = [sentence[1] for sentence in sentences]
+    if len(set(target_sentences)) != 3:
+        raise ValueError(f"{lesson_id}: frases duplicadas en la lección")
     grammar = resolve_grammar(spec.get("grammar", []))
     if len(grammar) > 2:
         raise ValueError(f"{lesson_id}: A2 admite como máximo 2 focos gramaticales")
 
     first_es, first_target = items[0][0], target_items[0]
-    target_sentences = [sentence[1] for sentence in sentences]
     s0_tokens = tokens(target_sentences[0])
     s1_tokens = tokens(target_sentences[1])
     s2_tokens = tokens(target_sentences[2])
@@ -668,6 +672,14 @@ def build_unit(
         for exercise in lesson["exercises"]:
             if exercise.get("feedbackOnError") is None:
                 raise ValueError(f"{exercise['id']}: falta feedbackOnError")
+            if exercise["type"] in {"MultipleChoice", "ListenChoose"}:
+                if len(set(exercise["options"])) != len(exercise["options"]):
+                    raise ValueError(f"{exercise['id']}: opciones duplicadas")
+            if exercise["type"] == "MatchPairs":
+                lefts = [pair["left"] for pair in exercise["pairs"]]
+                rights = [pair["right"] for pair in exercise["pairs"]]
+                if len(set(lefts)) != len(lefts) or len(set(rights)) != len(rights):
+                    raise ValueError(f"{exercise['id']}: pares duplicados")
             if exercise["type"] == "Translate":
                 overlap = set(exercise["correctTokens"]).intersection(
                     exercise["distractorTokens"]
