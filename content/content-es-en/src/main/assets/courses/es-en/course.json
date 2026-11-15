@@ -257724,6 +257724,3881 @@
                 ]
               }
             ]
+          },
+          {
+            "id": "es-en-c2-u05",
+            "title": "C2 · Salud y bienestar",
+            "lessons": [
+              {
+                "id": "es-en-c2-u05-l01",
+                "title": "Repaso: mi ciudad",
+                "cefrLevel": "C2",
+                "scenario": "Situación comunicativa avanzada sobre mi ciudad.",
+                "canDo": "Puedo argumentar con matices y precisión sobre mi ciudad.",
+                "grammarPoints": [
+                  {
+                    "id": "gp-c2-litotes",
+                    "label": "Litotes",
+                    "description": "La litote afirma algo negando lo contrario."
+                  },
+                  {
+                    "id": "gp-c1-subjunctive",
+                    "label": "Subjunctive",
+                    "description": "El subjuntivo expresa deseos, dudas y valoraciones."
+                  }
+                ],
+                "vocabFrequencyBand": "12000+",
+                "culturalNotes": [
+                  {
+                    "idiom": "sweep under the rug",
+                    "note": "Expresión para ocultar un problema.",
+                    "translation": "barrer debajo de la alfombra"
+                  }
+                ],
+                "microLesson": {
+                  "title": "Repaso: mi ciudad",
+                  "goals": [
+                    "Usar vocabulario avanzado de mi ciudad.",
+                    "Aplicar litotes y subjunctive.",
+                    "Argumentar con matices sobre mi ciudad."
+                  ],
+                  "sections": [
+                    {
+                      "heading": "Lengua en contexto",
+                      "body": "Litotes: La litote afirma algo negando lo contrario. Subjunctive: El subjuntivo expresa deseos, dudas y valoraciones.",
+                      "examples": [
+                        {
+                          "source": "Mi ciudad es tranquila y tiene un parque. Huelga decir que el matiz escapa a una lectura literal.",
+                          "target": "My city is quiet and has a park. Needless to say, the nuance escapes a literal reading."
+                        },
+                        {
+                          "source": "El transporte público es más barato que el coche. En rigor, la afirmación admite lecturas encontradas.",
+                          "target": "Public transport is cheaper than the car. Strictly speaking, the claim admits conflicting readings."
+                        }
+                      ]
+                    }
+                  ]
+                },
+                "glossary": [
+                  {
+                    "term": "My city is quiet and has a park. Needless to say, the nuance escapes a literal reading.",
+                    "translations": [
+                      "Mi ciudad es tranquila y tiene un parque. Huelga decir que el matiz escapa a una lectura literal."
+                    ]
+                  },
+                  {
+                    "term": "Public transport is cheaper than the car. Strictly speaking, the claim admits conflicting readings.",
+                    "translations": [
+                      "El transporte público es más barato que el coche. En rigor, la afirmación admite lecturas encontradas."
+                    ]
+                  },
+                  {
+                    "term": "I would like to live in a neighbourhood like that. At the risk of oversimplifying, the argument borders on contradiction.",
+                    "translations": [
+                      "Me gustaría vivir en un barrio así. A riesgo de simplificar, el argumento roza la contradicción."
+                    ]
+                  }
+                ],
+                "exercises": [
+                  {
+                    "type": "MultipleChoice",
+                    "id": "es-en-c2-u05-l01-e01",
+                    "question": "¿Cuál es la opción correcta para «Mi ciudad es tranquila y tiene un parque. Huelga decir que el matiz escapa a una lectura literal.»?",
+                    "options": [
+                      "My city is quiet and has a park. Needless to say, the nuance escapes a literal reading.",
+                      "Public transport is cheaper than the car. Strictly speaking, the claim admits conflicting readings.",
+                      "I would like to live in a neighbourhood like that. At the risk of oversimplifying, the argument borders on contradiction."
+                    ],
+                    "correctIndex": 0,
+                    "feedbackOnError": {
+                      "type": "vocabulary",
+                      "explanation": "«Mi ciudad es tranquila y tiene un parque. Huelga decir que el matiz escapa a una lectura literal.» se dice «My city is quiet and has a park. Needless to say, the nuance escapes a literal reading.».",
+                      "ruleRef": "gp-c2-litotes"
+                    },
+                    "feedbackOnSuccess": {
+                      "explanation": "Has elegido la opción precisa."
+                    }
+                  },
+                  {
+                    "type": "Translate",
+                    "id": "es-en-c2-u05-l01-e02",
+                    "sourcePhrase": "Mi ciudad es tranquila y tiene un parque. Huelga decir que el matiz escapa a una lectura literal.",
+                    "correctTokens": [
+                      "My",
+                      "city",
+                      "is",
+                      "quiet",
+                      "and",
+                      "has",
+                      "a",
+                      "park",
+                      "Needless",
+                      "to",
+                      "say",
+                      "the",
+                      "nuance",
+                      "escapes",
+                      "a",
+                      "literal",
+                      "reading"
+                    ],
+                    "distractorTokens": [
+                      "Public",
+                      "transport",
+                      "cheaper"
+                    ],
+                    "feedbackOnError": {
+                      "type": "grammar",
+                      "explanation": "El orden correcto es «My city is quiet and has a park Needless to say the nuance escapes a literal reading».",
+                      "ruleRef": "gp-c2-litotes"
+                    },
+                    "feedbackOnSuccess": {
+                      "explanation": "La frase conserva el orden y el significado."
+                    }
+                  },
+                  {
+                    "type": "ClozeDragDrop",
+                    "id": "es-en-c2-u05-l01-e03",
+                    "passage": "My {{b1}} is {{b2}} and has a park.",
+                    "blanks": [
+                      {
+                        "id": "b1",
+                        "answer": "city",
+                        "options": [
+                          "city",
+                          "park",
+                          "very"
+                        ]
+                      },
+                      {
+                        "id": "b2",
+                        "answer": "quiet",
+                        "options": [
+                          "quiet",
+                          "park",
+                          "very"
+                        ]
+                      }
+                    ],
+                    "feedbackOnError": {
+                      "type": "grammar",
+                      "explanation": "Las dos formas deben encajar con el contexto de la frase.",
+                      "ruleRef": "gp-c1-subjunctive"
+                    },
+                    "feedbackOnSuccess": {
+                      "explanation": "Los dos huecos encajan con la situación."
+                    }
+                  },
+                  {
+                    "type": "ClozeDragDrop",
+                    "id": "es-en-c2-u05-l01-e04",
+                    "passage": "{{b1}} {{b2}} is cheaper than the car.",
+                    "blanks": [
+                      {
+                        "id": "b1",
+                        "answer": "Public",
+                        "options": [
+                          "Public",
+                          "cheaper",
+                          "than"
+                        ]
+                      },
+                      {
+                        "id": "b2",
+                        "answer": "transport",
+                        "options": [
+                          "transport",
+                          "cheaper",
+                          "than"
+                        ]
+                      }
+                    ],
+                    "feedbackOnError": {
+                      "type": "grammar",
+                      "explanation": "Las dos formas deben encajar con el contexto de la frase.",
+                      "ruleRef": "gp-c1-subjunctive"
+                    },
+                    "feedbackOnSuccess": {
+                      "explanation": "Los dos huecos encajan con la situación."
+                    }
+                  },
+                  {
+                    "type": "ClozeDragDrop",
+                    "id": "es-en-c2-u05-l01-e05",
+                    "passage": "I would {{b1}} to {{b2}} in a neighbourhood like that.",
+                    "blanks": [
+                      {
+                        "id": "b1",
+                        "answer": "like",
+                        "options": [
+                          "like",
+                          "neighbourhood",
+                          "very"
+                        ]
+                      },
+                      {
+                        "id": "b2",
+                        "answer": "live",
+                        "options": [
+                          "live",
+                          "neighbourhood",
+                          "very"
+                        ]
+                      }
+                    ],
+                    "feedbackOnError": {
+                      "type": "grammar",
+                      "explanation": "Las dos formas deben encajar con el contexto de la frase.",
+                      "ruleRef": "gp-c1-subjunctive"
+                    },
+                    "feedbackOnSuccess": {
+                      "explanation": "Los dos huecos encajan con la situación."
+                    }
+                  },
+                  {
+                    "type": "SemanticMatch",
+                    "id": "es-en-c2-u05-l01-e06",
+                    "instructions": "Clasifica la función y el registro de cada intervención.",
+                    "pairs": [
+                      {
+                        "left": "My city is quiet and has a park. Needless to say, the nuance escapes a literal reading.",
+                        "right": "Ironía seca",
+                        "register": "literary",
+                        "nuance": "Clasifica la función y el registro de la intervención."
+                      },
+                      {
+                        "left": "Public transport is cheaper than the car. Strictly speaking, the claim admits conflicting readings.",
+                        "right": "Atenuación",
+                        "register": "formal",
+                        "nuance": "Clasifica la función y el registro de la intervención."
+                      },
+                      {
+                        "left": "I would like to live in a neighbourhood like that. At the risk of oversimplifying, the argument borders on contradiction.",
+                        "right": "Conclusión",
+                        "register": "neutral",
+                        "nuance": "Clasifica la función y el registro de la intervención."
+                      }
+                    ],
+                    "feedbackOnError": {
+                      "type": "register",
+                      "explanation": "Cada intervención cumple una función retórica distinta.",
+                      "ruleRef": "gp-c2-litotes"
+                    },
+                    "feedbackOnSuccess": {
+                      "explanation": "Has identificado función y registro."
+                    }
+                  },
+                  {
+                    "type": "ListenChoose",
+                    "id": "es-en-c2-u05-l01-e07",
+                    "audioText": "Public transport is cheaper than the car. Strictly speaking, the claim admits conflicting readings.",
+                    "options": [
+                      "Public transport is cheaper than the car. Strictly speaking, the claim admits conflicting readings.",
+                      "My city is quiet and has a park. Needless to say, the nuance escapes a literal reading.",
+                      "I would like to live in a neighbourhood like that. At the risk of oversimplifying, the argument borders on contradiction."
+                    ],
+                    "correctIndex": 0,
+                    "feedbackOnError": {
+                      "type": "comprehension",
+                      "explanation": "El audio dice «Public transport is cheaper than the car. Strictly speaking, the claim admits conflicting readings.».",
+                      "ruleRef": "gp-c2-litotes"
+                    },
+                    "feedbackOnSuccess": {
+                      "explanation": "Has reconocido la frase del audio."
+                    }
+                  },
+                  {
+                    "type": "AudioOnlyPrompt",
+                    "id": "es-en-c2-u05-l01-e08",
+                    "audioText": "I would like to live in a neighbourhood like that. At the risk of oversimplifying, the argument borders on contradiction.",
+                    "question": "¿Qué implica el hablante?",
+                    "options": [
+                      "I would like to live in a neighbourhood like that. At the risk of oversimplifying, the argument borders on contradiction.",
+                      "My city is quiet and has a park. Needless to say, the nuance escapes a literal reading.",
+                      "Public transport is cheaper than the car. Strictly speaking, the claim admits conflicting readings."
+                    ],
+                    "correctIndex": 0,
+                    "allowSlowPlayback": false,
+                    "feedbackOnError": {
+                      "type": "comprehension",
+                      "explanation": "El audio dice «I would like to live in a neighbourhood like that. At the risk of oversimplifying, the argument borders on contradiction.».",
+                      "ruleRef": "gp-c1-subjunctive"
+                    },
+                    "feedbackOnSuccess": {
+                      "explanation": "Has interpretado la implicación."
+                    }
+                  },
+                  {
+                    "type": "ListenType",
+                    "id": "es-en-c2-u05-l01-e09",
+                    "audioText": "I would like to live in a neighbourhood like that. At the risk of oversimplifying, the argument borders on contradiction.",
+                    "transcription": "I would like to live in a neighbourhood like that. At the risk of oversimplifying, the argument borders on contradiction.",
+                    "feedbackOnError": {
+                      "type": "spelling",
+                      "explanation": "Escribe exactamente «I would like to live in a neighbourhood like that. At the risk of oversimplifying, the argument borders on contradiction.».",
+                      "ruleRef": "gp-c2-litotes"
+                    },
+                    "feedbackOnSuccess": {
+                      "explanation": "La transcripción coincide con el audio."
+                    }
+                  },
+                  {
+                    "type": "SpeakRepeat",
+                    "id": "es-en-c2-u05-l01-e10",
+                    "targetPhrase": "I would like to live in a neighbourhood like that. At the risk of oversimplifying, the argument borders on contradiction.",
+                    "audioText": "I would like to live in a neighbourhood like that. At the risk of oversimplifying, the argument borders on contradiction.",
+                    "feedbackOnError": {
+                      "type": "pronunciation",
+                      "explanation": "Repite «I would like to live in a neighbourhood like that. At the risk of oversimplifying, the argument borders on contradiction.» con claridad.",
+                      "ruleRef": "gp-c2-litotes"
+                    },
+                    "feedbackOnSuccess": {
+                      "explanation": "La frase se entiende y mantiene el ritmo."
+                    }
+                  },
+                  {
+                    "type": "MatchPairs",
+                    "id": "es-en-c2-u05-l01-e11",
+                    "pairs": [
+                      {
+                        "left": "Mi ciudad es tranquila y tiene un parque. Huelga decir que el matiz escapa a una lectura literal.",
+                        "right": "My city is quiet and has a park. Needless to say, the nuance escapes a literal reading."
+                      },
+                      {
+                        "left": "El transporte público es más barato que el coche. En rigor, la afirmación admite lecturas encontradas.",
+                        "right": "Public transport is cheaper than the car. Strictly speaking, the claim admits conflicting readings."
+                      },
+                      {
+                        "left": "Me gustaría vivir en un barrio así. A riesgo de simplificar, el argumento roza la contradicción.",
+                        "right": "I would like to live in a neighbourhood like that. At the risk of oversimplifying, the argument borders on contradiction."
+                      }
+                    ],
+                    "feedbackOnError": {
+                      "type": "vocabulary",
+                      "explanation": "Cada expresión tiene una traducción distinta.",
+                      "ruleRef": "gp-c2-litotes"
+                    },
+                    "feedbackOnSuccess": {
+                      "explanation": "Has asociado cada expresión con su traducción."
+                    }
+                  },
+                  {
+                    "type": "FreeSpeakingPrompt",
+                    "id": "es-en-c2-u05-l01-e12",
+                    "prompt": "Defiende una interpretación matizada sobre mi ciudad.",
+                    "minTokens": 40,
+                    "conceptClusters": [
+                      [
+                        "city"
+                      ],
+                      [
+                        "quiet"
+                      ],
+                      [
+                        "park"
+                      ]
+                    ],
+                    "modelAnswer": "My city is quiet and has a park. Needless to say, the nuance escapes a literal reading. Public transport is cheaper than the car. Strictly speaking, the claim admits conflicting readings. I would like to live in a neighbourhood like that. At the risk of oversimplifying, the argument borders on contradiction.",
+                    "selfAssessmentCriteria": [
+                      "¿La respuesta argumenta y responde a la tarea?",
+                      "¿Usa las dos estructuras gramaticales de la lección?",
+                      "¿Incluye una concesión, una ironía o una atenuación?"
+                    ],
+                    "grammarRuleRefs": [
+                      "gp-c2-litotes",
+                      "gp-c1-subjunctive"
+                    ],
+                    "timeLimitSeconds": 120,
+                    "minWpm": 70,
+                    "maxWpm": 160,
+                    "feedbackOnError": {
+                      "type": "grammar",
+                      "explanation": "La respuesta modelo desarrolla una interpretación matizada.",
+                      "ruleRef": "gp-c2-litotes"
+                    }
+                  }
+                ]
+              },
+              {
+                "id": "es-en-c2-u05-l02",
+                "title": "Síntomas y estados",
+                "cefrLevel": "C2",
+                "scenario": "Situación comunicativa avanzada sobre los síntomas.",
+                "canDo": "Puedo argumentar con matices y precisión sobre los síntomas.",
+                "grammarPoints": [
+                  {
+                    "id": "gp-c2-litotes",
+                    "label": "Litotes",
+                    "description": "La litote afirma algo negando lo contrario."
+                  },
+                  {
+                    "id": "gp-c1-subjunctive",
+                    "label": "Subjunctive",
+                    "description": "El subjuntivo expresa deseos, dudas y valoraciones."
+                  }
+                ],
+                "vocabFrequencyBand": "12000+",
+                "culturalNotes": [
+                  {
+                    "idiom": "take the moral high ground",
+                    "note": "Expresión para adoptar una postura moral superior.",
+                    "translation": "adoptar superioridad moral"
+                  }
+                ],
+                "microLesson": {
+                  "title": "Síntomas y estados",
+                  "goals": [
+                    "Usar vocabulario avanzado de los síntomas.",
+                    "Aplicar litotes y subjunctive.",
+                    "Argumentar con matices sobre los síntomas."
+                  ],
+                  "sections": [
+                    {
+                      "heading": "Lengua en contexto",
+                      "body": "Litotes: La litote afirma algo negando lo contrario. Subjunctive: El subjuntivo expresa deseos, dudas y valoraciones.",
+                      "examples": [
+                        {
+                          "source": "Tengo dolor de cabeza. En rigor, la afirmación admite lecturas encontradas.",
+                          "target": "I have a headache. Strictly speaking, the claim admits conflicting readings."
+                        },
+                        {
+                          "source": "Me duele la garganta. A riesgo de simplificar, el argumento roza la contradicción.",
+                          "target": "I have a sore throat. At the risk of oversimplifying, the argument borders on contradiction."
+                        }
+                      ]
+                    }
+                  ]
+                },
+                "glossary": [
+                  {
+                    "term": "I have a headache. Strictly speaking, the claim admits conflicting readings.",
+                    "translations": [
+                      "Tengo dolor de cabeza. En rigor, la afirmación admite lecturas encontradas."
+                    ]
+                  },
+                  {
+                    "term": "I have a sore throat. At the risk of oversimplifying, the argument borders on contradiction.",
+                    "translations": [
+                      "Me duele la garganta. A riesgo de simplificar, el argumento roza la contradicción."
+                    ]
+                  },
+                  {
+                    "term": "I am very tired. Paradoxically, excessive caution undermines credibility.",
+                    "translations": [
+                      "Estoy muy cansado. Paradójicamente, el exceso de cautela resta credibilidad."
+                    ]
+                  }
+                ],
+                "exercises": [
+                  {
+                    "type": "MultipleChoice",
+                    "id": "es-en-c2-u05-l02-e01",
+                    "question": "¿Cuál es la opción correcta para «Tengo dolor de cabeza. En rigor, la afirmación admite lecturas encontradas.»?",
+                    "options": [
+                      "I have a headache. Strictly speaking, the claim admits conflicting readings.",
+                      "I have a sore throat. At the risk of oversimplifying, the argument borders on contradiction.",
+                      "I am very tired. Paradoxically, excessive caution undermines credibility."
+                    ],
+                    "correctIndex": 0,
+                    "feedbackOnError": {
+                      "type": "vocabulary",
+                      "explanation": "«Tengo dolor de cabeza. En rigor, la afirmación admite lecturas encontradas.» se dice «I have a headache. Strictly speaking, the claim admits conflicting readings.».",
+                      "ruleRef": "gp-c2-litotes"
+                    },
+                    "feedbackOnSuccess": {
+                      "explanation": "Has elegido la opción precisa."
+                    }
+                  },
+                  {
+                    "type": "Translate",
+                    "id": "es-en-c2-u05-l02-e02",
+                    "sourcePhrase": "Tengo dolor de cabeza. En rigor, la afirmación admite lecturas encontradas.",
+                    "correctTokens": [
+                      "I",
+                      "have",
+                      "a",
+                      "headache",
+                      "Strictly",
+                      "speaking",
+                      "the",
+                      "claim",
+                      "admits",
+                      "conflicting",
+                      "readings"
+                    ],
+                    "distractorTokens": [
+                      "sore",
+                      "throat",
+                      "At"
+                    ],
+                    "feedbackOnError": {
+                      "type": "grammar",
+                      "explanation": "El orden correcto es «I have a headache Strictly speaking the claim admits conflicting readings».",
+                      "ruleRef": "gp-c2-litotes"
+                    },
+                    "feedbackOnSuccess": {
+                      "explanation": "La frase conserva el orden y el significado."
+                    }
+                  },
+                  {
+                    "type": "ClozeDragDrop",
+                    "id": "es-en-c2-u05-l02-e03",
+                    "passage": "{{b1}} {{b2}} a headache.",
+                    "blanks": [
+                      {
+                        "id": "b1",
+                        "answer": "I",
+                        "options": [
+                          "I",
+                          "a",
+                          "headache"
+                        ]
+                      },
+                      {
+                        "id": "b2",
+                        "answer": "have",
+                        "options": [
+                          "have",
+                          "a",
+                          "headache"
+                        ]
+                      }
+                    ],
+                    "feedbackOnError": {
+                      "type": "grammar",
+                      "explanation": "Las dos formas deben encajar con el contexto de la frase.",
+                      "ruleRef": "gp-c1-subjunctive"
+                    },
+                    "feedbackOnSuccess": {
+                      "explanation": "Los dos huecos encajan con la situación."
+                    }
+                  },
+                  {
+                    "type": "ClozeDragDrop",
+                    "id": "es-en-c2-u05-l02-e04",
+                    "passage": "I have a {{b1}} {{b2}}.",
+                    "blanks": [
+                      {
+                        "id": "b1",
+                        "answer": "sore",
+                        "options": [
+                          "sore",
+                          "very",
+                          "today"
+                        ]
+                      },
+                      {
+                        "id": "b2",
+                        "answer": "throat",
+                        "options": [
+                          "throat",
+                          "very",
+                          "today"
+                        ]
+                      }
+                    ],
+                    "feedbackOnError": {
+                      "type": "grammar",
+                      "explanation": "Las dos formas deben encajar con el contexto de la frase.",
+                      "ruleRef": "gp-c1-subjunctive"
+                    },
+                    "feedbackOnSuccess": {
+                      "explanation": "Los dos huecos encajan con la situación."
+                    }
+                  },
+                  {
+                    "type": "ClozeDragDrop",
+                    "id": "es-en-c2-u05-l02-e05",
+                    "passage": "{{b1}} {{b2}} very tired.",
+                    "blanks": [
+                      {
+                        "id": "b1",
+                        "answer": "I",
+                        "options": [
+                          "I",
+                          "very",
+                          "tired"
+                        ]
+                      },
+                      {
+                        "id": "b2",
+                        "answer": "am",
+                        "options": [
+                          "am",
+                          "very",
+                          "tired"
+                        ]
+                      }
+                    ],
+                    "feedbackOnError": {
+                      "type": "grammar",
+                      "explanation": "Las dos formas deben encajar con el contexto de la frase.",
+                      "ruleRef": "gp-c1-subjunctive"
+                    },
+                    "feedbackOnSuccess": {
+                      "explanation": "Los dos huecos encajan con la situación."
+                    }
+                  },
+                  {
+                    "type": "SemanticMatch",
+                    "id": "es-en-c2-u05-l02-e06",
+                    "instructions": "Clasifica la función y el registro de cada intervención.",
+                    "pairs": [
+                      {
+                        "left": "I have a headache. Strictly speaking, the claim admits conflicting readings.",
+                        "right": "Ironía seca",
+                        "register": "literary",
+                        "nuance": "Clasifica la función y el registro de la intervención."
+                      },
+                      {
+                        "left": "I have a sore throat. At the risk of oversimplifying, the argument borders on contradiction.",
+                        "right": "Atenuación",
+                        "register": "formal",
+                        "nuance": "Clasifica la función y el registro de la intervención."
+                      },
+                      {
+                        "left": "I am very tired. Paradoxically, excessive caution undermines credibility.",
+                        "right": "Conclusión",
+                        "register": "neutral",
+                        "nuance": "Clasifica la función y el registro de la intervención."
+                      }
+                    ],
+                    "feedbackOnError": {
+                      "type": "register",
+                      "explanation": "Cada intervención cumple una función retórica distinta.",
+                      "ruleRef": "gp-c2-litotes"
+                    },
+                    "feedbackOnSuccess": {
+                      "explanation": "Has identificado función y registro."
+                    }
+                  },
+                  {
+                    "type": "ListenChoose",
+                    "id": "es-en-c2-u05-l02-e07",
+                    "audioText": "I have a sore throat. At the risk of oversimplifying, the argument borders on contradiction.",
+                    "options": [
+                      "I have a sore throat. At the risk of oversimplifying, the argument borders on contradiction.",
+                      "I have a headache. Strictly speaking, the claim admits conflicting readings.",
+                      "I am very tired. Paradoxically, excessive caution undermines credibility."
+                    ],
+                    "correctIndex": 0,
+                    "feedbackOnError": {
+                      "type": "comprehension",
+                      "explanation": "El audio dice «I have a sore throat. At the risk of oversimplifying, the argument borders on contradiction.».",
+                      "ruleRef": "gp-c2-litotes"
+                    },
+                    "feedbackOnSuccess": {
+                      "explanation": "Has reconocido la frase del audio."
+                    }
+                  },
+                  {
+                    "type": "AudioOnlyPrompt",
+                    "id": "es-en-c2-u05-l02-e08",
+                    "audioText": "I am very tired. Paradoxically, excessive caution undermines credibility.",
+                    "question": "¿Qué implica el hablante?",
+                    "options": [
+                      "I am very tired. Paradoxically, excessive caution undermines credibility.",
+                      "I have a headache. Strictly speaking, the claim admits conflicting readings.",
+                      "I have a sore throat. At the risk of oversimplifying, the argument borders on contradiction."
+                    ],
+                    "correctIndex": 0,
+                    "allowSlowPlayback": false,
+                    "feedbackOnError": {
+                      "type": "comprehension",
+                      "explanation": "El audio dice «I am very tired. Paradoxically, excessive caution undermines credibility.».",
+                      "ruleRef": "gp-c1-subjunctive"
+                    },
+                    "feedbackOnSuccess": {
+                      "explanation": "Has interpretado la implicación."
+                    }
+                  },
+                  {
+                    "type": "ListenType",
+                    "id": "es-en-c2-u05-l02-e09",
+                    "audioText": "I am very tired. Paradoxically, excessive caution undermines credibility.",
+                    "transcription": "I am very tired. Paradoxically, excessive caution undermines credibility.",
+                    "feedbackOnError": {
+                      "type": "spelling",
+                      "explanation": "Escribe exactamente «I am very tired. Paradoxically, excessive caution undermines credibility.».",
+                      "ruleRef": "gp-c2-litotes"
+                    },
+                    "feedbackOnSuccess": {
+                      "explanation": "La transcripción coincide con el audio."
+                    }
+                  },
+                  {
+                    "type": "SpeakRepeat",
+                    "id": "es-en-c2-u05-l02-e10",
+                    "targetPhrase": "I am very tired. Paradoxically, excessive caution undermines credibility.",
+                    "audioText": "I am very tired. Paradoxically, excessive caution undermines credibility.",
+                    "feedbackOnError": {
+                      "type": "pronunciation",
+                      "explanation": "Repite «I am very tired. Paradoxically, excessive caution undermines credibility.» con claridad.",
+                      "ruleRef": "gp-c2-litotes"
+                    },
+                    "feedbackOnSuccess": {
+                      "explanation": "La frase se entiende y mantiene el ritmo."
+                    }
+                  },
+                  {
+                    "type": "MatchPairs",
+                    "id": "es-en-c2-u05-l02-e11",
+                    "pairs": [
+                      {
+                        "left": "Tengo dolor de cabeza. En rigor, la afirmación admite lecturas encontradas.",
+                        "right": "I have a headache. Strictly speaking, the claim admits conflicting readings."
+                      },
+                      {
+                        "left": "Me duele la garganta. A riesgo de simplificar, el argumento roza la contradicción.",
+                        "right": "I have a sore throat. At the risk of oversimplifying, the argument borders on contradiction."
+                      },
+                      {
+                        "left": "Estoy muy cansado. Paradójicamente, el exceso de cautela resta credibilidad.",
+                        "right": "I am very tired. Paradoxically, excessive caution undermines credibility."
+                      }
+                    ],
+                    "feedbackOnError": {
+                      "type": "vocabulary",
+                      "explanation": "Cada expresión tiene una traducción distinta.",
+                      "ruleRef": "gp-c2-litotes"
+                    },
+                    "feedbackOnSuccess": {
+                      "explanation": "Has asociado cada expresión con su traducción."
+                    }
+                  },
+                  {
+                    "type": "FreeSpeakingPrompt",
+                    "id": "es-en-c2-u05-l02-e12",
+                    "prompt": "Defiende una interpretación matizada sobre los síntomas.",
+                    "minTokens": 40,
+                    "conceptClusters": [
+                      [
+                        "headache"
+                      ],
+                      [
+                        "Strictly"
+                      ],
+                      [
+                        "speaking"
+                      ]
+                    ],
+                    "modelAnswer": "I have a headache. Strictly speaking, the claim admits conflicting readings. I have a sore throat. At the risk of oversimplifying, the argument borders on contradiction. I am very tired. Paradoxically, excessive caution undermines credibility.",
+                    "selfAssessmentCriteria": [
+                      "¿La respuesta argumenta y responde a la tarea?",
+                      "¿Usa las dos estructuras gramaticales de la lección?",
+                      "¿Incluye una concesión, una ironía o una atenuación?"
+                    ],
+                    "grammarRuleRefs": [
+                      "gp-c2-litotes",
+                      "gp-c1-subjunctive"
+                    ],
+                    "timeLimitSeconds": 120,
+                    "minWpm": 70,
+                    "maxWpm": 160,
+                    "feedbackOnError": {
+                      "type": "grammar",
+                      "explanation": "La respuesta modelo desarrolla una interpretación matizada.",
+                      "ruleRef": "gp-c2-litotes"
+                    }
+                  }
+                ]
+              },
+              {
+                "id": "es-en-c2-u05-l03",
+                "title": "Remedios y farmacia",
+                "cefrLevel": "C2",
+                "scenario": "Situación comunicativa avanzada sobre la farmacia.",
+                "canDo": "Puedo argumentar con matices y precisión sobre la farmacia.",
+                "grammarPoints": [
+                  {
+                    "id": "gp-c2-litotes",
+                    "label": "Litotes",
+                    "description": "La litote afirma algo negando lo contrario."
+                  },
+                  {
+                    "id": "gp-c1-subjunctive",
+                    "label": "Subjunctive",
+                    "description": "El subjuntivo expresa deseos, dudas y valoraciones."
+                  }
+                ],
+                "vocabFrequencyBand": "12000+",
+                "culturalNotes": [
+                  {
+                    "idiom": "damn with faint praise",
+                    "note": "Expresión para elogiar de forma que en realidad critica.",
+                    "translation": "elogiar con tibieza"
+                  }
+                ],
+                "microLesson": {
+                  "title": "Remedios y farmacia",
+                  "goals": [
+                    "Usar vocabulario avanzado de la farmacia.",
+                    "Aplicar litotes y subjunctive.",
+                    "Argumentar con matices sobre la farmacia."
+                  ],
+                  "sections": [
+                    {
+                      "heading": "Lengua en contexto",
+                      "body": "Litotes: La litote afirma algo negando lo contrario. Subjunctive: El subjuntivo expresa deseos, dudas y valoraciones.",
+                      "examples": [
+                        {
+                          "source": "Necesito un analgésico. A riesgo de simplificar, el argumento roza la contradicción.",
+                          "target": "I need a painkiller. At the risk of oversimplifying, the argument borders on contradiction."
+                        },
+                        {
+                          "source": "Necesito un jarabe para la tos. Paradójicamente, el exceso de cautela resta credibilidad.",
+                          "target": "I need a cough syrup. Paradoxically, excessive caution undermines credibility."
+                        }
+                      ]
+                    }
+                  ]
+                },
+                "glossary": [
+                  {
+                    "term": "I need a painkiller. At the risk of oversimplifying, the argument borders on contradiction.",
+                    "translations": [
+                      "Necesito un analgésico. A riesgo de simplificar, el argumento roza la contradicción."
+                    ]
+                  },
+                  {
+                    "term": "I need a cough syrup. Paradoxically, excessive caution undermines credibility.",
+                    "translations": [
+                      "Necesito un jarabe para la tos. Paradójicamente, el exceso de cautela resta credibilidad."
+                    ]
+                  },
+                  {
+                    "term": "I need a box of plasters. With due critical distance, the thesis is suggestive.",
+                    "translations": [
+                      "Necesito una caja de tiritas. Con la debida distancia crítica, la tesis resulta sugerente."
+                    ]
+                  }
+                ],
+                "exercises": [
+                  {
+                    "type": "MultipleChoice",
+                    "id": "es-en-c2-u05-l03-e01",
+                    "question": "¿Cuál es la opción correcta para «Necesito un analgésico. A riesgo de simplificar, el argumento roza la contradicción.»?",
+                    "options": [
+                      "I need a painkiller. At the risk of oversimplifying, the argument borders on contradiction.",
+                      "I need a cough syrup. Paradoxically, excessive caution undermines credibility.",
+                      "I need a box of plasters. With due critical distance, the thesis is suggestive."
+                    ],
+                    "correctIndex": 0,
+                    "feedbackOnError": {
+                      "type": "vocabulary",
+                      "explanation": "«Necesito un analgésico. A riesgo de simplificar, el argumento roza la contradicción.» se dice «I need a painkiller. At the risk of oversimplifying, the argument borders on contradiction.».",
+                      "ruleRef": "gp-c2-litotes"
+                    },
+                    "feedbackOnSuccess": {
+                      "explanation": "Has elegido la opción precisa."
+                    }
+                  },
+                  {
+                    "type": "Translate",
+                    "id": "es-en-c2-u05-l03-e02",
+                    "sourcePhrase": "Necesito un analgésico. A riesgo de simplificar, el argumento roza la contradicción.",
+                    "correctTokens": [
+                      "I",
+                      "need",
+                      "a",
+                      "painkiller",
+                      "At",
+                      "the",
+                      "risk",
+                      "of",
+                      "oversimplifying",
+                      "the",
+                      "argument",
+                      "borders",
+                      "on",
+                      "contradiction"
+                    ],
+                    "distractorTokens": [
+                      "cough",
+                      "syrup",
+                      "Paradoxically"
+                    ],
+                    "feedbackOnError": {
+                      "type": "grammar",
+                      "explanation": "El orden correcto es «I need a painkiller At the risk of oversimplifying the argument borders on contradiction».",
+                      "ruleRef": "gp-c2-litotes"
+                    },
+                    "feedbackOnSuccess": {
+                      "explanation": "La frase conserva el orden y el significado."
+                    }
+                  },
+                  {
+                    "type": "ClozeDragDrop",
+                    "id": "es-en-c2-u05-l03-e03",
+                    "passage": "I {{b1}} a {{b2}}",
+                    "blanks": [
+                      {
+                        "id": "b1",
+                        "answer": "need",
+                        "options": [
+                          "need",
+                          "very",
+                          "today"
+                        ]
+                      },
+                      {
+                        "id": "b2",
+                        "answer": "painkiller",
+                        "options": [
+                          "painkiller",
+                          "very",
+                          "today"
+                        ]
+                      }
+                    ],
+                    "feedbackOnError": {
+                      "type": "grammar",
+                      "explanation": "Las dos formas deben encajar con el contexto de la frase.",
+                      "ruleRef": "gp-c1-subjunctive"
+                    },
+                    "feedbackOnSuccess": {
+                      "explanation": "Los dos huecos encajan con la situación."
+                    }
+                  },
+                  {
+                    "type": "ClozeDragDrop",
+                    "id": "es-en-c2-u05-l03-e04",
+                    "passage": "I {{b1}} a {{b2}} syrup",
+                    "blanks": [
+                      {
+                        "id": "b1",
+                        "answer": "need",
+                        "options": [
+                          "need",
+                          "syrup",
+                          "very"
+                        ]
+                      },
+                      {
+                        "id": "b2",
+                        "answer": "cough",
+                        "options": [
+                          "cough",
+                          "syrup",
+                          "very"
+                        ]
+                      }
+                    ],
+                    "feedbackOnError": {
+                      "type": "grammar",
+                      "explanation": "Las dos formas deben encajar con el contexto de la frase.",
+                      "ruleRef": "gp-c1-subjunctive"
+                    },
+                    "feedbackOnSuccess": {
+                      "explanation": "Los dos huecos encajan con la situación."
+                    }
+                  },
+                  {
+                    "type": "ClozeDragDrop",
+                    "id": "es-en-c2-u05-l03-e05",
+                    "passage": "I {{b1}} a {{b2}} of plasters",
+                    "blanks": [
+                      {
+                        "id": "b1",
+                        "answer": "need",
+                        "options": [
+                          "need",
+                          "plasters",
+                          "very"
+                        ]
+                      },
+                      {
+                        "id": "b2",
+                        "answer": "box",
+                        "options": [
+                          "box",
+                          "plasters",
+                          "very"
+                        ]
+                      }
+                    ],
+                    "feedbackOnError": {
+                      "type": "grammar",
+                      "explanation": "Las dos formas deben encajar con el contexto de la frase.",
+                      "ruleRef": "gp-c1-subjunctive"
+                    },
+                    "feedbackOnSuccess": {
+                      "explanation": "Los dos huecos encajan con la situación."
+                    }
+                  },
+                  {
+                    "type": "SemanticMatch",
+                    "id": "es-en-c2-u05-l03-e06",
+                    "instructions": "Clasifica la función y el registro de cada intervención.",
+                    "pairs": [
+                      {
+                        "left": "I need a painkiller. At the risk of oversimplifying, the argument borders on contradiction.",
+                        "right": "Ironía seca",
+                        "register": "literary",
+                        "nuance": "Clasifica la función y el registro de la intervención."
+                      },
+                      {
+                        "left": "I need a cough syrup. Paradoxically, excessive caution undermines credibility.",
+                        "right": "Atenuación",
+                        "register": "formal",
+                        "nuance": "Clasifica la función y el registro de la intervención."
+                      },
+                      {
+                        "left": "I need a box of plasters. With due critical distance, the thesis is suggestive.",
+                        "right": "Conclusión",
+                        "register": "neutral",
+                        "nuance": "Clasifica la función y el registro de la intervención."
+                      }
+                    ],
+                    "feedbackOnError": {
+                      "type": "register",
+                      "explanation": "Cada intervención cumple una función retórica distinta.",
+                      "ruleRef": "gp-c2-litotes"
+                    },
+                    "feedbackOnSuccess": {
+                      "explanation": "Has identificado función y registro."
+                    }
+                  },
+                  {
+                    "type": "ListenChoose",
+                    "id": "es-en-c2-u05-l03-e07",
+                    "audioText": "I need a cough syrup. Paradoxically, excessive caution undermines credibility.",
+                    "options": [
+                      "I need a cough syrup. Paradoxically, excessive caution undermines credibility.",
+                      "I need a painkiller. At the risk of oversimplifying, the argument borders on contradiction.",
+                      "I need a box of plasters. With due critical distance, the thesis is suggestive."
+                    ],
+                    "correctIndex": 0,
+                    "feedbackOnError": {
+                      "type": "comprehension",
+                      "explanation": "El audio dice «I need a cough syrup. Paradoxically, excessive caution undermines credibility.».",
+                      "ruleRef": "gp-c2-litotes"
+                    },
+                    "feedbackOnSuccess": {
+                      "explanation": "Has reconocido la frase del audio."
+                    }
+                  },
+                  {
+                    "type": "AudioOnlyPrompt",
+                    "id": "es-en-c2-u05-l03-e08",
+                    "audioText": "I need a box of plasters. With due critical distance, the thesis is suggestive.",
+                    "question": "¿Qué implica el hablante?",
+                    "options": [
+                      "I need a box of plasters. With due critical distance, the thesis is suggestive.",
+                      "I need a painkiller. At the risk of oversimplifying, the argument borders on contradiction.",
+                      "I need a cough syrup. Paradoxically, excessive caution undermines credibility."
+                    ],
+                    "correctIndex": 0,
+                    "allowSlowPlayback": false,
+                    "feedbackOnError": {
+                      "type": "comprehension",
+                      "explanation": "El audio dice «I need a box of plasters. With due critical distance, the thesis is suggestive.».",
+                      "ruleRef": "gp-c1-subjunctive"
+                    },
+                    "feedbackOnSuccess": {
+                      "explanation": "Has interpretado la implicación."
+                    }
+                  },
+                  {
+                    "type": "ListenType",
+                    "id": "es-en-c2-u05-l03-e09",
+                    "audioText": "I need a box of plasters. With due critical distance, the thesis is suggestive.",
+                    "transcription": "I need a box of plasters. With due critical distance, the thesis is suggestive.",
+                    "feedbackOnError": {
+                      "type": "spelling",
+                      "explanation": "Escribe exactamente «I need a box of plasters. With due critical distance, the thesis is suggestive.».",
+                      "ruleRef": "gp-c2-litotes"
+                    },
+                    "feedbackOnSuccess": {
+                      "explanation": "La transcripción coincide con el audio."
+                    }
+                  },
+                  {
+                    "type": "SpeakRepeat",
+                    "id": "es-en-c2-u05-l03-e10",
+                    "targetPhrase": "I need a box of plasters. With due critical distance, the thesis is suggestive.",
+                    "audioText": "I need a box of plasters. With due critical distance, the thesis is suggestive.",
+                    "feedbackOnError": {
+                      "type": "pronunciation",
+                      "explanation": "Repite «I need a box of plasters. With due critical distance, the thesis is suggestive.» con claridad.",
+                      "ruleRef": "gp-c2-litotes"
+                    },
+                    "feedbackOnSuccess": {
+                      "explanation": "La frase se entiende y mantiene el ritmo."
+                    }
+                  },
+                  {
+                    "type": "MatchPairs",
+                    "id": "es-en-c2-u05-l03-e11",
+                    "pairs": [
+                      {
+                        "left": "Necesito un analgésico. A riesgo de simplificar, el argumento roza la contradicción.",
+                        "right": "I need a painkiller. At the risk of oversimplifying, the argument borders on contradiction."
+                      },
+                      {
+                        "left": "Necesito un jarabe para la tos. Paradójicamente, el exceso de cautela resta credibilidad.",
+                        "right": "I need a cough syrup. Paradoxically, excessive caution undermines credibility."
+                      },
+                      {
+                        "left": "Necesito una caja de tiritas. Con la debida distancia crítica, la tesis resulta sugerente.",
+                        "right": "I need a box of plasters. With due critical distance, the thesis is suggestive."
+                      }
+                    ],
+                    "feedbackOnError": {
+                      "type": "vocabulary",
+                      "explanation": "Cada expresión tiene una traducción distinta.",
+                      "ruleRef": "gp-c2-litotes"
+                    },
+                    "feedbackOnSuccess": {
+                      "explanation": "Has asociado cada expresión con su traducción."
+                    }
+                  },
+                  {
+                    "type": "FreeSpeakingPrompt",
+                    "id": "es-en-c2-u05-l03-e12",
+                    "prompt": "Defiende una interpretación matizada sobre la farmacia.",
+                    "minTokens": 40,
+                    "conceptClusters": [
+                      [
+                        "need"
+                      ],
+                      [
+                        "painkiller"
+                      ],
+                      [
+                        "risk"
+                      ]
+                    ],
+                    "modelAnswer": "I need a painkiller. At the risk of oversimplifying, the argument borders on contradiction. I need a cough syrup. Paradoxically, excessive caution undermines credibility. I need a box of plasters. With due critical distance, the thesis is suggestive.",
+                    "selfAssessmentCriteria": [
+                      "¿La respuesta argumenta y responde a la tarea?",
+                      "¿Usa las dos estructuras gramaticales de la lección?",
+                      "¿Incluye una concesión, una ironía o una atenuación?"
+                    ],
+                    "grammarRuleRefs": [
+                      "gp-c2-litotes",
+                      "gp-c1-subjunctive"
+                    ],
+                    "timeLimitSeconds": 120,
+                    "minWpm": 70,
+                    "maxWpm": 160,
+                    "feedbackOnError": {
+                      "type": "grammar",
+                      "explanation": "La respuesta modelo desarrolla una interpretación matizada.",
+                      "ruleRef": "gp-c2-litotes"
+                    }
+                  }
+                ]
+              },
+              {
+                "id": "es-en-c2-u05-l04",
+                "title": "Should / shouldn't",
+                "cefrLevel": "C2",
+                "scenario": "Situación comunicativa avanzada sobre los consejos de salud.",
+                "canDo": "Puedo argumentar con matices y precisión sobre los consejos de salud.",
+                "grammarPoints": [
+                  {
+                    "id": "gp-c2-litotes",
+                    "label": "Litotes",
+                    "description": "La litote afirma algo negando lo contrario."
+                  },
+                  {
+                    "id": "gp-c1-subjunctive",
+                    "label": "Subjunctive",
+                    "description": "El subjuntivo expresa deseos, dudas y valoraciones."
+                  }
+                ],
+                "vocabFrequencyBand": "12000+",
+                "culturalNotes": [
+                  {
+                    "idiom": "bury the lede",
+                    "note": "Expresión para ocultar la información más importante.",
+                    "translation": "enterrar lo importante"
+                  }
+                ],
+                "microLesson": {
+                  "title": "Should / shouldn't",
+                  "goals": [
+                    "Usar vocabulario avanzado de los consejos de salud.",
+                    "Aplicar litotes y subjunctive.",
+                    "Argumentar con matices sobre los consejos de salud."
+                  ],
+                  "sections": [
+                    {
+                      "heading": "Lengua en contexto",
+                      "body": "Litotes: La litote afirma algo negando lo contrario. Subjunctive: El subjuntivo expresa deseos, dudas y valoraciones.",
+                      "examples": [
+                        {
+                          "source": "Deberías descansar más. Paradójicamente, el exceso de cautela resta credibilidad.",
+                          "target": "You should rest more. Paradoxically, excessive caution undermines credibility."
+                        },
+                        {
+                          "source": "Deberías beber más agua. Con la debida distancia crítica, la tesis resulta sugerente.",
+                          "target": "You should drink more water. With due critical distance, the thesis is suggestive."
+                        }
+                      ]
+                    }
+                  ]
+                },
+                "glossary": [
+                  {
+                    "term": "You should rest more. Paradoxically, excessive caution undermines credibility.",
+                    "translations": [
+                      "Deberías descansar más. Paradójicamente, el exceso de cautela resta credibilidad."
+                    ]
+                  },
+                  {
+                    "term": "You should drink more water. With due critical distance, the thesis is suggestive.",
+                    "translations": [
+                      "Deberías beber más agua. Con la debida distancia crítica, la tesis resulta sugerente."
+                    ]
+                  },
+                  {
+                    "term": "You should sleep eight hours. If I may indulge in irony, the outcome was predictable.",
+                    "translations": [
+                      "Deberías dormir ocho horas. Si se me permite la ironía, el resultado era previsible."
+                    ]
+                  }
+                ],
+                "exercises": [
+                  {
+                    "type": "MultipleChoice",
+                    "id": "es-en-c2-u05-l04-e01",
+                    "question": "¿Cuál es la opción correcta para «Deberías descansar más. Paradójicamente, el exceso de cautela resta credibilidad.»?",
+                    "options": [
+                      "You should rest more. Paradoxically, excessive caution undermines credibility.",
+                      "You should drink more water. With due critical distance, the thesis is suggestive.",
+                      "You should sleep eight hours. If I may indulge in irony, the outcome was predictable."
+                    ],
+                    "correctIndex": 0,
+                    "feedbackOnError": {
+                      "type": "vocabulary",
+                      "explanation": "«Deberías descansar más. Paradójicamente, el exceso de cautela resta credibilidad.» se dice «You should rest more. Paradoxically, excessive caution undermines credibility.».",
+                      "ruleRef": "gp-c2-litotes"
+                    },
+                    "feedbackOnSuccess": {
+                      "explanation": "Has elegido la opción precisa."
+                    }
+                  },
+                  {
+                    "type": "Translate",
+                    "id": "es-en-c2-u05-l04-e02",
+                    "sourcePhrase": "Deberías descansar más. Paradójicamente, el exceso de cautela resta credibilidad.",
+                    "correctTokens": [
+                      "You",
+                      "should",
+                      "rest",
+                      "more",
+                      "Paradoxically",
+                      "excessive",
+                      "caution",
+                      "undermines",
+                      "credibility"
+                    ],
+                    "distractorTokens": [
+                      "drink",
+                      "water",
+                      "With"
+                    ],
+                    "feedbackOnError": {
+                      "type": "grammar",
+                      "explanation": "El orden correcto es «You should rest more Paradoxically excessive caution undermines credibility».",
+                      "ruleRef": "gp-c2-litotes"
+                    },
+                    "feedbackOnSuccess": {
+                      "explanation": "La frase conserva el orden y el significado."
+                    }
+                  },
+                  {
+                    "type": "ClozeDragDrop",
+                    "id": "es-en-c2-u05-l04-e03",
+                    "passage": "You should {{b1}} {{b2}}",
+                    "blanks": [
+                      {
+                        "id": "b1",
+                        "answer": "rest",
+                        "options": [
+                          "rest",
+                          "very",
+                          "today"
+                        ]
+                      },
+                      {
+                        "id": "b2",
+                        "answer": "more",
+                        "options": [
+                          "more",
+                          "very",
+                          "today"
+                        ]
+                      }
+                    ],
+                    "feedbackOnError": {
+                      "type": "grammar",
+                      "explanation": "Las dos formas deben encajar con el contexto de la frase.",
+                      "ruleRef": "gp-c1-subjunctive"
+                    },
+                    "feedbackOnSuccess": {
+                      "explanation": "Los dos huecos encajan con la situación."
+                    }
+                  },
+                  {
+                    "type": "ClozeDragDrop",
+                    "id": "es-en-c2-u05-l04-e04",
+                    "passage": "You should {{b1}} {{b2}} water",
+                    "blanks": [
+                      {
+                        "id": "b1",
+                        "answer": "drink",
+                        "options": [
+                          "drink",
+                          "water",
+                          "very"
+                        ]
+                      },
+                      {
+                        "id": "b2",
+                        "answer": "more",
+                        "options": [
+                          "more",
+                          "water",
+                          "very"
+                        ]
+                      }
+                    ],
+                    "feedbackOnError": {
+                      "type": "grammar",
+                      "explanation": "Las dos formas deben encajar con el contexto de la frase.",
+                      "ruleRef": "gp-c1-subjunctive"
+                    },
+                    "feedbackOnSuccess": {
+                      "explanation": "Los dos huecos encajan con la situación."
+                    }
+                  },
+                  {
+                    "type": "ClozeDragDrop",
+                    "id": "es-en-c2-u05-l04-e05",
+                    "passage": "You should {{b1}} {{b2}} hours",
+                    "blanks": [
+                      {
+                        "id": "b1",
+                        "answer": "sleep",
+                        "options": [
+                          "sleep",
+                          "hours",
+                          "very"
+                        ]
+                      },
+                      {
+                        "id": "b2",
+                        "answer": "eight",
+                        "options": [
+                          "eight",
+                          "hours",
+                          "very"
+                        ]
+                      }
+                    ],
+                    "feedbackOnError": {
+                      "type": "grammar",
+                      "explanation": "Las dos formas deben encajar con el contexto de la frase.",
+                      "ruleRef": "gp-c1-subjunctive"
+                    },
+                    "feedbackOnSuccess": {
+                      "explanation": "Los dos huecos encajan con la situación."
+                    }
+                  },
+                  {
+                    "type": "SemanticMatch",
+                    "id": "es-en-c2-u05-l04-e06",
+                    "instructions": "Clasifica la función y el registro de cada intervención.",
+                    "pairs": [
+                      {
+                        "left": "You should rest more. Paradoxically, excessive caution undermines credibility.",
+                        "right": "Ironía seca",
+                        "register": "literary",
+                        "nuance": "Clasifica la función y el registro de la intervención."
+                      },
+                      {
+                        "left": "You should drink more water. With due critical distance, the thesis is suggestive.",
+                        "right": "Atenuación",
+                        "register": "formal",
+                        "nuance": "Clasifica la función y el registro de la intervención."
+                      },
+                      {
+                        "left": "You should sleep eight hours. If I may indulge in irony, the outcome was predictable.",
+                        "right": "Conclusión",
+                        "register": "neutral",
+                        "nuance": "Clasifica la función y el registro de la intervención."
+                      }
+                    ],
+                    "feedbackOnError": {
+                      "type": "register",
+                      "explanation": "Cada intervención cumple una función retórica distinta.",
+                      "ruleRef": "gp-c2-litotes"
+                    },
+                    "feedbackOnSuccess": {
+                      "explanation": "Has identificado función y registro."
+                    }
+                  },
+                  {
+                    "type": "ListenChoose",
+                    "id": "es-en-c2-u05-l04-e07",
+                    "audioText": "You should drink more water. With due critical distance, the thesis is suggestive.",
+                    "options": [
+                      "You should drink more water. With due critical distance, the thesis is suggestive.",
+                      "You should rest more. Paradoxically, excessive caution undermines credibility.",
+                      "You should sleep eight hours. If I may indulge in irony, the outcome was predictable."
+                    ],
+                    "correctIndex": 0,
+                    "feedbackOnError": {
+                      "type": "comprehension",
+                      "explanation": "El audio dice «You should drink more water. With due critical distance, the thesis is suggestive.».",
+                      "ruleRef": "gp-c2-litotes"
+                    },
+                    "feedbackOnSuccess": {
+                      "explanation": "Has reconocido la frase del audio."
+                    }
+                  },
+                  {
+                    "type": "AudioOnlyPrompt",
+                    "id": "es-en-c2-u05-l04-e08",
+                    "audioText": "You should sleep eight hours. If I may indulge in irony, the outcome was predictable.",
+                    "question": "¿Qué implica el hablante?",
+                    "options": [
+                      "You should sleep eight hours. If I may indulge in irony, the outcome was predictable.",
+                      "You should rest more. Paradoxically, excessive caution undermines credibility.",
+                      "You should drink more water. With due critical distance, the thesis is suggestive."
+                    ],
+                    "correctIndex": 0,
+                    "allowSlowPlayback": false,
+                    "feedbackOnError": {
+                      "type": "comprehension",
+                      "explanation": "El audio dice «You should sleep eight hours. If I may indulge in irony, the outcome was predictable.».",
+                      "ruleRef": "gp-c1-subjunctive"
+                    },
+                    "feedbackOnSuccess": {
+                      "explanation": "Has interpretado la implicación."
+                    }
+                  },
+                  {
+                    "type": "ListenType",
+                    "id": "es-en-c2-u05-l04-e09",
+                    "audioText": "You should sleep eight hours. If I may indulge in irony, the outcome was predictable.",
+                    "transcription": "You should sleep eight hours. If I may indulge in irony, the outcome was predictable.",
+                    "feedbackOnError": {
+                      "type": "spelling",
+                      "explanation": "Escribe exactamente «You should sleep eight hours. If I may indulge in irony, the outcome was predictable.».",
+                      "ruleRef": "gp-c2-litotes"
+                    },
+                    "feedbackOnSuccess": {
+                      "explanation": "La transcripción coincide con el audio."
+                    }
+                  },
+                  {
+                    "type": "SpeakRepeat",
+                    "id": "es-en-c2-u05-l04-e10",
+                    "targetPhrase": "You should sleep eight hours. If I may indulge in irony, the outcome was predictable.",
+                    "audioText": "You should sleep eight hours. If I may indulge in irony, the outcome was predictable.",
+                    "feedbackOnError": {
+                      "type": "pronunciation",
+                      "explanation": "Repite «You should sleep eight hours. If I may indulge in irony, the outcome was predictable.» con claridad.",
+                      "ruleRef": "gp-c2-litotes"
+                    },
+                    "feedbackOnSuccess": {
+                      "explanation": "La frase se entiende y mantiene el ritmo."
+                    }
+                  },
+                  {
+                    "type": "MatchPairs",
+                    "id": "es-en-c2-u05-l04-e11",
+                    "pairs": [
+                      {
+                        "left": "Deberías descansar más. Paradójicamente, el exceso de cautela resta credibilidad.",
+                        "right": "You should rest more. Paradoxically, excessive caution undermines credibility."
+                      },
+                      {
+                        "left": "Deberías beber más agua. Con la debida distancia crítica, la tesis resulta sugerente.",
+                        "right": "You should drink more water. With due critical distance, the thesis is suggestive."
+                      },
+                      {
+                        "left": "Deberías dormir ocho horas. Si se me permite la ironía, el resultado era previsible.",
+                        "right": "You should sleep eight hours. If I may indulge in irony, the outcome was predictable."
+                      }
+                    ],
+                    "feedbackOnError": {
+                      "type": "vocabulary",
+                      "explanation": "Cada expresión tiene una traducción distinta.",
+                      "ruleRef": "gp-c2-litotes"
+                    },
+                    "feedbackOnSuccess": {
+                      "explanation": "Has asociado cada expresión con su traducción."
+                    }
+                  },
+                  {
+                    "type": "FreeSpeakingPrompt",
+                    "id": "es-en-c2-u05-l04-e12",
+                    "prompt": "Defiende una interpretación matizada sobre los consejos de salud.",
+                    "minTokens": 40,
+                    "conceptClusters": [
+                      [
+                        "rest"
+                      ],
+                      [
+                        "more"
+                      ],
+                      [
+                        "Paradoxically"
+                      ]
+                    ],
+                    "modelAnswer": "You should rest more. Paradoxically, excessive caution undermines credibility. You should drink more water. With due critical distance, the thesis is suggestive. You should sleep eight hours. If I may indulge in irony, the outcome was predictable.",
+                    "selfAssessmentCriteria": [
+                      "¿La respuesta argumenta y responde a la tarea?",
+                      "¿Usa las dos estructuras gramaticales de la lección?",
+                      "¿Incluye una concesión, una ironía o una atenuación?"
+                    ],
+                    "grammarRuleRefs": [
+                      "gp-c2-litotes",
+                      "gp-c1-subjunctive"
+                    ],
+                    "timeLimitSeconds": 120,
+                    "minWpm": 70,
+                    "maxWpm": 160,
+                    "feedbackOnError": {
+                      "type": "grammar",
+                      "explanation": "La respuesta modelo desarrolla una interpretación matizada.",
+                      "ruleRef": "gp-c2-litotes"
+                    }
+                  }
+                ]
+              },
+              {
+                "id": "es-en-c2-u05-l05",
+                "title": "Have to / don't have to",
+                "cefrLevel": "C2",
+                "scenario": "Situación comunicativa avanzada sobre las obligaciones de salud.",
+                "canDo": "Puedo argumentar con matices y precisión sobre las obligaciones de salud.",
+                "grammarPoints": [
+                  {
+                    "id": "gp-c2-litotes",
+                    "label": "Litotes",
+                    "description": "La litote afirma algo negando lo contrario."
+                  },
+                  {
+                    "id": "gp-c1-subjunctive",
+                    "label": "Subjunctive",
+                    "description": "El subjuntivo expresa deseos, dudas y valoraciones."
+                  }
+                ],
+                "vocabFrequencyBand": "12000+",
+                "culturalNotes": [
+                  {
+                    "idiom": "jump the shark",
+                    "note": "Expresión para señalar que algo ha perdido calidad.",
+                    "translation": "tocar fondo"
+                  }
+                ],
+                "microLesson": {
+                  "title": "Have to / don't have to",
+                  "goals": [
+                    "Usar vocabulario avanzado de las obligaciones de salud.",
+                    "Aplicar litotes y subjunctive.",
+                    "Argumentar con matices sobre las obligaciones de salud."
+                  ],
+                  "sections": [
+                    {
+                      "heading": "Lengua en contexto",
+                      "body": "Litotes: La litote afirma algo negando lo contrario. Subjunctive: El subjuntivo expresa deseos, dudas y valoraciones.",
+                      "examples": [
+                        {
+                          "source": "Tengo que tomar la medicina. Con la debida distancia crítica, la tesis resulta sugerente.",
+                          "target": "I have to take the medicine. With due critical distance, the thesis is suggestive."
+                        },
+                        {
+                          "source": "Tengo que ir al médico. Si se me permite la ironía, el resultado era previsible.",
+                          "target": "I have to go to the doctor. If I may indulge in irony, the outcome was predictable."
+                        }
+                      ]
+                    }
+                  ]
+                },
+                "glossary": [
+                  {
+                    "term": "I have to take the medicine. With due critical distance, the thesis is suggestive.",
+                    "translations": [
+                      "Tengo que tomar la medicina. Con la debida distancia crítica, la tesis resulta sugerente."
+                    ]
+                  },
+                  {
+                    "term": "I have to go to the doctor. If I may indulge in irony, the outcome was predictable.",
+                    "translations": [
+                      "Tengo que ir al médico. Si se me permite la ironía, el resultado era previsible."
+                    ]
+                  },
+                  {
+                    "term": "I have to do exercise. Ultimately, an unresolved tension underpins the debate.",
+                    "translations": [
+                      "Tengo que hacer ejercicio. En última instancia, subyace una tensión no resuelta."
+                    ]
+                  }
+                ],
+                "exercises": [
+                  {
+                    "type": "MultipleChoice",
+                    "id": "es-en-c2-u05-l05-e01",
+                    "question": "¿Cuál es la opción correcta para «Tengo que tomar la medicina. Con la debida distancia crítica, la tesis resulta sugerente.»?",
+                    "options": [
+                      "I have to take the medicine. With due critical distance, the thesis is suggestive.",
+                      "I have to go to the doctor. If I may indulge in irony, the outcome was predictable.",
+                      "I have to do exercise. Ultimately, an unresolved tension underpins the debate."
+                    ],
+                    "correctIndex": 0,
+                    "feedbackOnError": {
+                      "type": "vocabulary",
+                      "explanation": "«Tengo que tomar la medicina. Con la debida distancia crítica, la tesis resulta sugerente.» se dice «I have to take the medicine. With due critical distance, the thesis is suggestive.».",
+                      "ruleRef": "gp-c2-litotes"
+                    },
+                    "feedbackOnSuccess": {
+                      "explanation": "Has elegido la opción precisa."
+                    }
+                  },
+                  {
+                    "type": "Translate",
+                    "id": "es-en-c2-u05-l05-e02",
+                    "sourcePhrase": "Tengo que tomar la medicina. Con la debida distancia crítica, la tesis resulta sugerente.",
+                    "correctTokens": [
+                      "I",
+                      "have",
+                      "to",
+                      "take",
+                      "the",
+                      "medicine",
+                      "With",
+                      "due",
+                      "critical",
+                      "distance",
+                      "the",
+                      "thesis",
+                      "is",
+                      "suggestive"
+                    ],
+                    "distractorTokens": [
+                      "go",
+                      "doctor",
+                      "If"
+                    ],
+                    "feedbackOnError": {
+                      "type": "grammar",
+                      "explanation": "El orden correcto es «I have to take the medicine With due critical distance the thesis is suggestive».",
+                      "ruleRef": "gp-c2-litotes"
+                    },
+                    "feedbackOnSuccess": {
+                      "explanation": "La frase conserva el orden y el significado."
+                    }
+                  },
+                  {
+                    "type": "ClozeDragDrop",
+                    "id": "es-en-c2-u05-l05-e03",
+                    "passage": "I have to {{b1}} the {{b2}}",
+                    "blanks": [
+                      {
+                        "id": "b1",
+                        "answer": "take",
+                        "options": [
+                          "take",
+                          "very",
+                          "today"
+                        ]
+                      },
+                      {
+                        "id": "b2",
+                        "answer": "medicine",
+                        "options": [
+                          "medicine",
+                          "very",
+                          "today"
+                        ]
+                      }
+                    ],
+                    "feedbackOnError": {
+                      "type": "grammar",
+                      "explanation": "Las dos formas deben encajar con el contexto de la frase.",
+                      "ruleRef": "gp-c1-subjunctive"
+                    },
+                    "feedbackOnSuccess": {
+                      "explanation": "Los dos huecos encajan con la situación."
+                    }
+                  },
+                  {
+                    "type": "ClozeDragDrop",
+                    "id": "es-en-c2-u05-l05-e04",
+                    "passage": "{{b1}} {{b2}} to go to the doctor",
+                    "blanks": [
+                      {
+                        "id": "b1",
+                        "answer": "I",
+                        "options": [
+                          "I",
+                          "to",
+                          "go"
+                        ]
+                      },
+                      {
+                        "id": "b2",
+                        "answer": "have",
+                        "options": [
+                          "have",
+                          "to",
+                          "go"
+                        ]
+                      }
+                    ],
+                    "feedbackOnError": {
+                      "type": "grammar",
+                      "explanation": "Las dos formas deben encajar con el contexto de la frase.",
+                      "ruleRef": "gp-c1-subjunctive"
+                    },
+                    "feedbackOnSuccess": {
+                      "explanation": "Los dos huecos encajan con la situación."
+                    }
+                  },
+                  {
+                    "type": "ClozeDragDrop",
+                    "id": "es-en-c2-u05-l05-e05",
+                    "passage": "{{b1}} {{b2}} to do exercise",
+                    "blanks": [
+                      {
+                        "id": "b1",
+                        "answer": "I",
+                        "options": [
+                          "I",
+                          "to",
+                          "do"
+                        ]
+                      },
+                      {
+                        "id": "b2",
+                        "answer": "have",
+                        "options": [
+                          "have",
+                          "to",
+                          "do"
+                        ]
+                      }
+                    ],
+                    "feedbackOnError": {
+                      "type": "grammar",
+                      "explanation": "Las dos formas deben encajar con el contexto de la frase.",
+                      "ruleRef": "gp-c1-subjunctive"
+                    },
+                    "feedbackOnSuccess": {
+                      "explanation": "Los dos huecos encajan con la situación."
+                    }
+                  },
+                  {
+                    "type": "SemanticMatch",
+                    "id": "es-en-c2-u05-l05-e06",
+                    "instructions": "Clasifica la función y el registro de cada intervención.",
+                    "pairs": [
+                      {
+                        "left": "I have to take the medicine. With due critical distance, the thesis is suggestive.",
+                        "right": "Ironía seca",
+                        "register": "literary",
+                        "nuance": "Clasifica la función y el registro de la intervención."
+                      },
+                      {
+                        "left": "I have to go to the doctor. If I may indulge in irony, the outcome was predictable.",
+                        "right": "Atenuación",
+                        "register": "formal",
+                        "nuance": "Clasifica la función y el registro de la intervención."
+                      },
+                      {
+                        "left": "I have to do exercise. Ultimately, an unresolved tension underpins the debate.",
+                        "right": "Conclusión",
+                        "register": "neutral",
+                        "nuance": "Clasifica la función y el registro de la intervención."
+                      }
+                    ],
+                    "feedbackOnError": {
+                      "type": "register",
+                      "explanation": "Cada intervención cumple una función retórica distinta.",
+                      "ruleRef": "gp-c2-litotes"
+                    },
+                    "feedbackOnSuccess": {
+                      "explanation": "Has identificado función y registro."
+                    }
+                  },
+                  {
+                    "type": "ListenChoose",
+                    "id": "es-en-c2-u05-l05-e07",
+                    "audioText": "I have to go to the doctor. If I may indulge in irony, the outcome was predictable.",
+                    "options": [
+                      "I have to go to the doctor. If I may indulge in irony, the outcome was predictable.",
+                      "I have to take the medicine. With due critical distance, the thesis is suggestive.",
+                      "I have to do exercise. Ultimately, an unresolved tension underpins the debate."
+                    ],
+                    "correctIndex": 0,
+                    "feedbackOnError": {
+                      "type": "comprehension",
+                      "explanation": "El audio dice «I have to go to the doctor. If I may indulge in irony, the outcome was predictable.».",
+                      "ruleRef": "gp-c2-litotes"
+                    },
+                    "feedbackOnSuccess": {
+                      "explanation": "Has reconocido la frase del audio."
+                    }
+                  },
+                  {
+                    "type": "AudioOnlyPrompt",
+                    "id": "es-en-c2-u05-l05-e08",
+                    "audioText": "I have to do exercise. Ultimately, an unresolved tension underpins the debate.",
+                    "question": "¿Qué implica el hablante?",
+                    "options": [
+                      "I have to do exercise. Ultimately, an unresolved tension underpins the debate.",
+                      "I have to take the medicine. With due critical distance, the thesis is suggestive.",
+                      "I have to go to the doctor. If I may indulge in irony, the outcome was predictable."
+                    ],
+                    "correctIndex": 0,
+                    "allowSlowPlayback": false,
+                    "feedbackOnError": {
+                      "type": "comprehension",
+                      "explanation": "El audio dice «I have to do exercise. Ultimately, an unresolved tension underpins the debate.».",
+                      "ruleRef": "gp-c1-subjunctive"
+                    },
+                    "feedbackOnSuccess": {
+                      "explanation": "Has interpretado la implicación."
+                    }
+                  },
+                  {
+                    "type": "ListenType",
+                    "id": "es-en-c2-u05-l05-e09",
+                    "audioText": "I have to do exercise. Ultimately, an unresolved tension underpins the debate.",
+                    "transcription": "I have to do exercise. Ultimately, an unresolved tension underpins the debate.",
+                    "feedbackOnError": {
+                      "type": "spelling",
+                      "explanation": "Escribe exactamente «I have to do exercise. Ultimately, an unresolved tension underpins the debate.».",
+                      "ruleRef": "gp-c2-litotes"
+                    },
+                    "feedbackOnSuccess": {
+                      "explanation": "La transcripción coincide con el audio."
+                    }
+                  },
+                  {
+                    "type": "SpeakRepeat",
+                    "id": "es-en-c2-u05-l05-e10",
+                    "targetPhrase": "I have to do exercise. Ultimately, an unresolved tension underpins the debate.",
+                    "audioText": "I have to do exercise. Ultimately, an unresolved tension underpins the debate.",
+                    "feedbackOnError": {
+                      "type": "pronunciation",
+                      "explanation": "Repite «I have to do exercise. Ultimately, an unresolved tension underpins the debate.» con claridad.",
+                      "ruleRef": "gp-c2-litotes"
+                    },
+                    "feedbackOnSuccess": {
+                      "explanation": "La frase se entiende y mantiene el ritmo."
+                    }
+                  },
+                  {
+                    "type": "MatchPairs",
+                    "id": "es-en-c2-u05-l05-e11",
+                    "pairs": [
+                      {
+                        "left": "Tengo que tomar la medicina. Con la debida distancia crítica, la tesis resulta sugerente.",
+                        "right": "I have to take the medicine. With due critical distance, the thesis is suggestive."
+                      },
+                      {
+                        "left": "Tengo que ir al médico. Si se me permite la ironía, el resultado era previsible.",
+                        "right": "I have to go to the doctor. If I may indulge in irony, the outcome was predictable."
+                      },
+                      {
+                        "left": "Tengo que hacer ejercicio. En última instancia, subyace una tensión no resuelta.",
+                        "right": "I have to do exercise. Ultimately, an unresolved tension underpins the debate."
+                      }
+                    ],
+                    "feedbackOnError": {
+                      "type": "vocabulary",
+                      "explanation": "Cada expresión tiene una traducción distinta.",
+                      "ruleRef": "gp-c2-litotes"
+                    },
+                    "feedbackOnSuccess": {
+                      "explanation": "Has asociado cada expresión con su traducción."
+                    }
+                  },
+                  {
+                    "type": "FreeSpeakingPrompt",
+                    "id": "es-en-c2-u05-l05-e12",
+                    "prompt": "Defiende una interpretación matizada sobre las obligaciones de salud.",
+                    "minTokens": 40,
+                    "conceptClusters": [
+                      [
+                        "take"
+                      ],
+                      [
+                        "medicine"
+                      ],
+                      [
+                        "due"
+                      ]
+                    ],
+                    "modelAnswer": "I have to take the medicine. With due critical distance, the thesis is suggestive. I have to go to the doctor. If I may indulge in irony, the outcome was predictable. I have to do exercise. Ultimately, an unresolved tension underpins the debate.",
+                    "selfAssessmentCriteria": [
+                      "¿La respuesta argumenta y responde a la tarea?",
+                      "¿Usa las dos estructuras gramaticales de la lección?",
+                      "¿Incluye una concesión, una ironía o una atenuación?"
+                    ],
+                    "grammarRuleRefs": [
+                      "gp-c2-litotes",
+                      "gp-c1-subjunctive"
+                    ],
+                    "timeLimitSeconds": 120,
+                    "minWpm": 70,
+                    "maxWpm": 160,
+                    "feedbackOnError": {
+                      "type": "grammar",
+                      "explanation": "La respuesta modelo desarrolla una interpretación matizada.",
+                      "ruleRef": "gp-c2-litotes"
+                    }
+                  }
+                ]
+              },
+              {
+                "id": "es-en-c2-u05-l06",
+                "title": "En la consulta médica",
+                "cefrLevel": "C2",
+                "scenario": "Situación comunicativa avanzada sobre la consulta médica.",
+                "canDo": "Puedo argumentar con matices y precisión sobre la consulta médica.",
+                "grammarPoints": [
+                  {
+                    "id": "gp-c2-litotes",
+                    "label": "Litotes",
+                    "description": "La litote afirma algo negando lo contrario."
+                  },
+                  {
+                    "id": "gp-c1-subjunctive",
+                    "label": "Subjunctive",
+                    "description": "El subjuntivo expresa deseos, dudas y valoraciones."
+                  }
+                ],
+                "vocabFrequencyBand": "12000+",
+                "culturalNotes": [
+                  {
+                    "idiom": "throw shade",
+                    "note": "Expresión para criticar de forma indirecta.",
+                    "translation": "lanzar una indirecta"
+                  }
+                ],
+                "microLesson": {
+                  "title": "En la consulta médica",
+                  "goals": [
+                    "Usar vocabulario avanzado de la consulta médica.",
+                    "Aplicar litotes y subjunctive.",
+                    "Argumentar con matices sobre la consulta médica."
+                  ],
+                  "sections": [
+                    {
+                      "heading": "Lengua en contexto",
+                      "body": "Litotes: La litote afirma algo negando lo contrario. Subjunctive: El subjuntivo expresa deseos, dudas y valoraciones.",
+                      "examples": [
+                        {
+                          "source": "Me duele el estómago desde ayer. Si se me permite la ironía, el resultado era previsible.",
+                          "target": "My stomach has hurt since yesterday. If I may indulge in irony, the outcome was predictable."
+                        },
+                        {
+                          "source": "¿Puedo tomar este medicamento? En última instancia, subyace una tensión no resuelta.",
+                          "target": "Can I take this medicine? Ultimately, an unresolved tension underpins the debate."
+                        }
+                      ]
+                    }
+                  ]
+                },
+                "glossary": [
+                  {
+                    "term": "My stomach has hurt since yesterday. If I may indulge in irony, the outcome was predictable.",
+                    "translations": [
+                      "Me duele el estómago desde ayer. Si se me permite la ironía, el resultado era previsible."
+                    ]
+                  },
+                  {
+                    "term": "Can I take this medicine? Ultimately, an unresolved tension underpins the debate.",
+                    "translations": [
+                      "¿Puedo tomar este medicamento? En última instancia, subyace una tensión no resuelta."
+                    ]
+                  },
+                  {
+                    "term": "You have to rest and drink water. Frankly, the proposal lacks a sound basis.",
+                    "translations": [
+                      "Tiene que descansar y beber agua. Dicho sin ambages, la propuesta carece de sustento."
+                    ]
+                  }
+                ],
+                "exercises": [
+                  {
+                    "type": "MultipleChoice",
+                    "id": "es-en-c2-u05-l06-e01",
+                    "question": "¿Cuál es la opción correcta para «Me duele el estómago desde ayer. Si se me permite la ironía, el resultado era previsible.»?",
+                    "options": [
+                      "My stomach has hurt since yesterday. If I may indulge in irony, the outcome was predictable.",
+                      "Can I take this medicine? Ultimately, an unresolved tension underpins the debate.",
+                      "You have to rest and drink water. Frankly, the proposal lacks a sound basis."
+                    ],
+                    "correctIndex": 0,
+                    "feedbackOnError": {
+                      "type": "vocabulary",
+                      "explanation": "«Me duele el estómago desde ayer. Si se me permite la ironía, el resultado era previsible.» se dice «My stomach has hurt since yesterday. If I may indulge in irony, the outcome was predictable.».",
+                      "ruleRef": "gp-c2-litotes"
+                    },
+                    "feedbackOnSuccess": {
+                      "explanation": "Has elegido la opción precisa."
+                    }
+                  },
+                  {
+                    "type": "Translate",
+                    "id": "es-en-c2-u05-l06-e02",
+                    "sourcePhrase": "Me duele el estómago desde ayer. Si se me permite la ironía, el resultado era previsible.",
+                    "correctTokens": [
+                      "My",
+                      "stomach",
+                      "has",
+                      "hurt",
+                      "since",
+                      "yesterday",
+                      "If",
+                      "I",
+                      "may",
+                      "indulge",
+                      "in",
+                      "irony",
+                      "the",
+                      "outcome",
+                      "was",
+                      "predictable"
+                    ],
+                    "distractorTokens": [
+                      "Can",
+                      "take",
+                      "this"
+                    ],
+                    "feedbackOnError": {
+                      "type": "grammar",
+                      "explanation": "El orden correcto es «My stomach has hurt since yesterday If I may indulge in irony the outcome was predictable».",
+                      "ruleRef": "gp-c2-litotes"
+                    },
+                    "feedbackOnSuccess": {
+                      "explanation": "La frase conserva el orden y el significado."
+                    }
+                  },
+                  {
+                    "type": "ClozeDragDrop",
+                    "id": "es-en-c2-u05-l06-e03",
+                    "passage": "My {{b1}} has {{b2}} since yesterday.",
+                    "blanks": [
+                      {
+                        "id": "b1",
+                        "answer": "stomach",
+                        "options": [
+                          "stomach",
+                          "since",
+                          "yesterday"
+                        ]
+                      },
+                      {
+                        "id": "b2",
+                        "answer": "hurt",
+                        "options": [
+                          "hurt",
+                          "since",
+                          "yesterday"
+                        ]
+                      }
+                    ],
+                    "feedbackOnError": {
+                      "type": "grammar",
+                      "explanation": "Las dos formas deben encajar con el contexto de la frase.",
+                      "ruleRef": "gp-c1-subjunctive"
+                    },
+                    "feedbackOnSuccess": {
+                      "explanation": "Los dos huecos encajan con la situación."
+                    }
+                  },
+                  {
+                    "type": "ClozeDragDrop",
+                    "id": "es-en-c2-u05-l06-e04",
+                    "passage": "Can I {{b1}} this {{b2}}?",
+                    "blanks": [
+                      {
+                        "id": "b1",
+                        "answer": "take",
+                        "options": [
+                          "take",
+                          "very",
+                          "today"
+                        ]
+                      },
+                      {
+                        "id": "b2",
+                        "answer": "medicine",
+                        "options": [
+                          "medicine",
+                          "very",
+                          "today"
+                        ]
+                      }
+                    ],
+                    "feedbackOnError": {
+                      "type": "grammar",
+                      "explanation": "Las dos formas deben encajar con el contexto de la frase.",
+                      "ruleRef": "gp-c1-subjunctive"
+                    },
+                    "feedbackOnSuccess": {
+                      "explanation": "Los dos huecos encajan con la situación."
+                    }
+                  },
+                  {
+                    "type": "ClozeDragDrop",
+                    "id": "es-en-c2-u05-l06-e05",
+                    "passage": "You have to {{b1}} and {{b2}} water.",
+                    "blanks": [
+                      {
+                        "id": "b1",
+                        "answer": "rest",
+                        "options": [
+                          "rest",
+                          "water",
+                          "very"
+                        ]
+                      },
+                      {
+                        "id": "b2",
+                        "answer": "drink",
+                        "options": [
+                          "drink",
+                          "water",
+                          "very"
+                        ]
+                      }
+                    ],
+                    "feedbackOnError": {
+                      "type": "grammar",
+                      "explanation": "Las dos formas deben encajar con el contexto de la frase.",
+                      "ruleRef": "gp-c1-subjunctive"
+                    },
+                    "feedbackOnSuccess": {
+                      "explanation": "Los dos huecos encajan con la situación."
+                    }
+                  },
+                  {
+                    "type": "SemanticMatch",
+                    "id": "es-en-c2-u05-l06-e06",
+                    "instructions": "Clasifica la función y el registro de cada intervención.",
+                    "pairs": [
+                      {
+                        "left": "My stomach has hurt since yesterday. If I may indulge in irony, the outcome was predictable.",
+                        "right": "Ironía seca",
+                        "register": "literary",
+                        "nuance": "Clasifica la función y el registro de la intervención."
+                      },
+                      {
+                        "left": "Can I take this medicine? Ultimately, an unresolved tension underpins the debate.",
+                        "right": "Atenuación",
+                        "register": "formal",
+                        "nuance": "Clasifica la función y el registro de la intervención."
+                      },
+                      {
+                        "left": "You have to rest and drink water. Frankly, the proposal lacks a sound basis.",
+                        "right": "Conclusión",
+                        "register": "neutral",
+                        "nuance": "Clasifica la función y el registro de la intervención."
+                      }
+                    ],
+                    "feedbackOnError": {
+                      "type": "register",
+                      "explanation": "Cada intervención cumple una función retórica distinta.",
+                      "ruleRef": "gp-c2-litotes"
+                    },
+                    "feedbackOnSuccess": {
+                      "explanation": "Has identificado función y registro."
+                    }
+                  },
+                  {
+                    "type": "ListenChoose",
+                    "id": "es-en-c2-u05-l06-e07",
+                    "audioText": "Can I take this medicine? Ultimately, an unresolved tension underpins the debate.",
+                    "options": [
+                      "Can I take this medicine? Ultimately, an unresolved tension underpins the debate.",
+                      "My stomach has hurt since yesterday. If I may indulge in irony, the outcome was predictable.",
+                      "You have to rest and drink water. Frankly, the proposal lacks a sound basis."
+                    ],
+                    "correctIndex": 0,
+                    "feedbackOnError": {
+                      "type": "comprehension",
+                      "explanation": "El audio dice «Can I take this medicine? Ultimately, an unresolved tension underpins the debate.».",
+                      "ruleRef": "gp-c2-litotes"
+                    },
+                    "feedbackOnSuccess": {
+                      "explanation": "Has reconocido la frase del audio."
+                    }
+                  },
+                  {
+                    "type": "AudioOnlyPrompt",
+                    "id": "es-en-c2-u05-l06-e08",
+                    "audioText": "You have to rest and drink water. Frankly, the proposal lacks a sound basis.",
+                    "question": "¿Qué implica el hablante?",
+                    "options": [
+                      "You have to rest and drink water. Frankly, the proposal lacks a sound basis.",
+                      "My stomach has hurt since yesterday. If I may indulge in irony, the outcome was predictable.",
+                      "Can I take this medicine? Ultimately, an unresolved tension underpins the debate."
+                    ],
+                    "correctIndex": 0,
+                    "allowSlowPlayback": false,
+                    "feedbackOnError": {
+                      "type": "comprehension",
+                      "explanation": "El audio dice «You have to rest and drink water. Frankly, the proposal lacks a sound basis.».",
+                      "ruleRef": "gp-c1-subjunctive"
+                    },
+                    "feedbackOnSuccess": {
+                      "explanation": "Has interpretado la implicación."
+                    }
+                  },
+                  {
+                    "type": "ListenType",
+                    "id": "es-en-c2-u05-l06-e09",
+                    "audioText": "You have to rest and drink water. Frankly, the proposal lacks a sound basis.",
+                    "transcription": "You have to rest and drink water. Frankly, the proposal lacks a sound basis.",
+                    "feedbackOnError": {
+                      "type": "spelling",
+                      "explanation": "Escribe exactamente «You have to rest and drink water. Frankly, the proposal lacks a sound basis.».",
+                      "ruleRef": "gp-c2-litotes"
+                    },
+                    "feedbackOnSuccess": {
+                      "explanation": "La transcripción coincide con el audio."
+                    }
+                  },
+                  {
+                    "type": "SpeakRepeat",
+                    "id": "es-en-c2-u05-l06-e10",
+                    "targetPhrase": "You have to rest and drink water. Frankly, the proposal lacks a sound basis.",
+                    "audioText": "You have to rest and drink water. Frankly, the proposal lacks a sound basis.",
+                    "feedbackOnError": {
+                      "type": "pronunciation",
+                      "explanation": "Repite «You have to rest and drink water. Frankly, the proposal lacks a sound basis.» con claridad.",
+                      "ruleRef": "gp-c2-litotes"
+                    },
+                    "feedbackOnSuccess": {
+                      "explanation": "La frase se entiende y mantiene el ritmo."
+                    }
+                  },
+                  {
+                    "type": "MatchPairs",
+                    "id": "es-en-c2-u05-l06-e11",
+                    "pairs": [
+                      {
+                        "left": "Me duele el estómago desde ayer. Si se me permite la ironía, el resultado era previsible.",
+                        "right": "My stomach has hurt since yesterday. If I may indulge in irony, the outcome was predictable."
+                      },
+                      {
+                        "left": "¿Puedo tomar este medicamento? En última instancia, subyace una tensión no resuelta.",
+                        "right": "Can I take this medicine? Ultimately, an unresolved tension underpins the debate."
+                      },
+                      {
+                        "left": "Tiene que descansar y beber agua. Dicho sin ambages, la propuesta carece de sustento.",
+                        "right": "You have to rest and drink water. Frankly, the proposal lacks a sound basis."
+                      }
+                    ],
+                    "feedbackOnError": {
+                      "type": "vocabulary",
+                      "explanation": "Cada expresión tiene una traducción distinta.",
+                      "ruleRef": "gp-c2-litotes"
+                    },
+                    "feedbackOnSuccess": {
+                      "explanation": "Has asociado cada expresión con su traducción."
+                    }
+                  },
+                  {
+                    "type": "FreeSpeakingPrompt",
+                    "id": "es-en-c2-u05-l06-e12",
+                    "prompt": "Defiende una interpretación matizada sobre la consulta médica.",
+                    "minTokens": 40,
+                    "conceptClusters": [
+                      [
+                        "stomach"
+                      ],
+                      [
+                        "hurt"
+                      ],
+                      [
+                        "since"
+                      ]
+                    ],
+                    "modelAnswer": "My stomach has hurt since yesterday. If I may indulge in irony, the outcome was predictable. Can I take this medicine? Ultimately, an unresolved tension underpins the debate. You have to rest and drink water. Frankly, the proposal lacks a sound basis.",
+                    "selfAssessmentCriteria": [
+                      "¿La respuesta argumenta y responde a la tarea?",
+                      "¿Usa las dos estructuras gramaticales de la lección?",
+                      "¿Incluye una concesión, una ironía o una atenuación?"
+                    ],
+                    "grammarRuleRefs": [
+                      "gp-c2-litotes",
+                      "gp-c1-subjunctive"
+                    ],
+                    "timeLimitSeconds": 120,
+                    "minWpm": 70,
+                    "maxWpm": 160,
+                    "feedbackOnError": {
+                      "type": "grammar",
+                      "explanation": "La respuesta modelo desarrolla una interpretación matizada.",
+                      "ruleRef": "gp-c2-litotes"
+                    }
+                  }
+                ]
+              },
+              {
+                "id": "es-en-c2-u05-l07",
+                "title": "Consejos de salud",
+                "cefrLevel": "C2",
+                "scenario": "Situación comunicativa avanzada sobre los hábitos saludables.",
+                "canDo": "Puedo argumentar con matices y precisión sobre los hábitos saludables.",
+                "grammarPoints": [
+                  {
+                    "id": "gp-c2-litotes",
+                    "label": "Litotes",
+                    "description": "La litote afirma algo negando lo contrario."
+                  },
+                  {
+                    "id": "gp-c1-subjunctive",
+                    "label": "Subjunctive",
+                    "description": "El subjuntivo expresa deseos, dudas y valoraciones."
+                  }
+                ],
+                "vocabFrequencyBand": "12000+",
+                "culturalNotes": [
+                  {
+                    "idiom": "spill the tea",
+                    "note": "Expresión para revelar un cotilleo.",
+                    "translation": "contar el cotilleo"
+                  }
+                ],
+                "microLesson": {
+                  "title": "Consejos de salud",
+                  "goals": [
+                    "Usar vocabulario avanzado de los hábitos saludables.",
+                    "Aplicar litotes y subjunctive.",
+                    "Argumentar con matices sobre los hábitos saludables."
+                  ],
+                  "sections": [
+                    {
+                      "heading": "Lengua en contexto",
+                      "body": "Litotes: La litote afirma algo negando lo contrario. Subjunctive: El subjuntivo expresa deseos, dudas y valoraciones.",
+                      "examples": [
+                        {
+                          "source": "Deberías caminar treinta minutos al día. En última instancia, subyace una tensión no resuelta.",
+                          "target": "You should walk thirty minutes a day. Ultimately, an unresolved tension underpins the debate."
+                        },
+                        {
+                          "source": "No deberías comer tanto azúcar. Dicho sin ambages, la propuesta carece de sustento.",
+                          "target": "You shouldn't eat so much sugar. Frankly, the proposal lacks a sound basis."
+                        }
+                      ]
+                    }
+                  ]
+                },
+                "glossary": [
+                  {
+                    "term": "You should walk thirty minutes a day. Ultimately, an unresolved tension underpins the debate.",
+                    "translations": [
+                      "Deberías caminar treinta minutos al día. En última instancia, subyace una tensión no resuelta."
+                    ]
+                  },
+                  {
+                    "term": "You shouldn't eat so much sugar. Frankly, the proposal lacks a sound basis.",
+                    "translations": [
+                      "No deberías comer tanto azúcar. Dicho sin ambages, la propuesta carece de sustento."
+                    ]
+                  },
+                  {
+                    "term": "You should sleep better. By all accounts, the approach deserves a second reading.",
+                    "translations": [
+                      "Deberías dormir mejor. A todas luces, conviene releer el planteamiento."
+                    ]
+                  }
+                ],
+                "exercises": [
+                  {
+                    "type": "MultipleChoice",
+                    "id": "es-en-c2-u05-l07-e01",
+                    "question": "¿Cuál es la opción correcta para «Deberías caminar treinta minutos al día. En última instancia, subyace una tensión no resuelta.»?",
+                    "options": [
+                      "You should walk thirty minutes a day. Ultimately, an unresolved tension underpins the debate.",
+                      "You shouldn't eat so much sugar. Frankly, the proposal lacks a sound basis.",
+                      "You should sleep better. By all accounts, the approach deserves a second reading."
+                    ],
+                    "correctIndex": 0,
+                    "feedbackOnError": {
+                      "type": "vocabulary",
+                      "explanation": "«Deberías caminar treinta minutos al día. En última instancia, subyace una tensión no resuelta.» se dice «You should walk thirty minutes a day. Ultimately, an unresolved tension underpins the debate.».",
+                      "ruleRef": "gp-c2-litotes"
+                    },
+                    "feedbackOnSuccess": {
+                      "explanation": "Has elegido la opción precisa."
+                    }
+                  },
+                  {
+                    "type": "Translate",
+                    "id": "es-en-c2-u05-l07-e02",
+                    "sourcePhrase": "Deberías caminar treinta minutos al día. En última instancia, subyace una tensión no resuelta.",
+                    "correctTokens": [
+                      "You",
+                      "should",
+                      "walk",
+                      "thirty",
+                      "minutes",
+                      "a",
+                      "day",
+                      "Ultimately",
+                      "an",
+                      "unresolved",
+                      "tension",
+                      "underpins",
+                      "the",
+                      "debate"
+                    ],
+                    "distractorTokens": [
+                      "shouldn't",
+                      "eat",
+                      "so"
+                    ],
+                    "feedbackOnError": {
+                      "type": "grammar",
+                      "explanation": "El orden correcto es «You should walk thirty minutes a day Ultimately an unresolved tension underpins the debate».",
+                      "ruleRef": "gp-c2-litotes"
+                    },
+                    "feedbackOnSuccess": {
+                      "explanation": "La frase conserva el orden y el significado."
+                    }
+                  },
+                  {
+                    "type": "ClozeDragDrop",
+                    "id": "es-en-c2-u05-l07-e03",
+                    "passage": "You should {{b1}} {{b2}} minutes a day.",
+                    "blanks": [
+                      {
+                        "id": "b1",
+                        "answer": "walk",
+                        "options": [
+                          "walk",
+                          "minutes",
+                          "day"
+                        ]
+                      },
+                      {
+                        "id": "b2",
+                        "answer": "thirty",
+                        "options": [
+                          "thirty",
+                          "minutes",
+                          "day"
+                        ]
+                      }
+                    ],
+                    "feedbackOnError": {
+                      "type": "grammar",
+                      "explanation": "Las dos formas deben encajar con el contexto de la frase.",
+                      "ruleRef": "gp-c1-subjunctive"
+                    },
+                    "feedbackOnSuccess": {
+                      "explanation": "Los dos huecos encajan con la situación."
+                    }
+                  },
+                  {
+                    "type": "ClozeDragDrop",
+                    "id": "es-en-c2-u05-l07-e04",
+                    "passage": "You {{b1}} {{b2}} so much sugar.",
+                    "blanks": [
+                      {
+                        "id": "b1",
+                        "answer": "shouldn't",
+                        "options": [
+                          "shouldn't",
+                          "much",
+                          "sugar"
+                        ]
+                      },
+                      {
+                        "id": "b2",
+                        "answer": "eat",
+                        "options": [
+                          "eat",
+                          "much",
+                          "sugar"
+                        ]
+                      }
+                    ],
+                    "feedbackOnError": {
+                      "type": "grammar",
+                      "explanation": "Las dos formas deben encajar con el contexto de la frase.",
+                      "ruleRef": "gp-c1-subjunctive"
+                    },
+                    "feedbackOnSuccess": {
+                      "explanation": "Los dos huecos encajan con la situación."
+                    }
+                  },
+                  {
+                    "type": "ClozeDragDrop",
+                    "id": "es-en-c2-u05-l07-e05",
+                    "passage": "You should {{b1}} {{b2}}.",
+                    "blanks": [
+                      {
+                        "id": "b1",
+                        "answer": "sleep",
+                        "options": [
+                          "sleep",
+                          "very",
+                          "today"
+                        ]
+                      },
+                      {
+                        "id": "b2",
+                        "answer": "better",
+                        "options": [
+                          "better",
+                          "very",
+                          "today"
+                        ]
+                      }
+                    ],
+                    "feedbackOnError": {
+                      "type": "grammar",
+                      "explanation": "Las dos formas deben encajar con el contexto de la frase.",
+                      "ruleRef": "gp-c1-subjunctive"
+                    },
+                    "feedbackOnSuccess": {
+                      "explanation": "Los dos huecos encajan con la situación."
+                    }
+                  },
+                  {
+                    "type": "SemanticMatch",
+                    "id": "es-en-c2-u05-l07-e06",
+                    "instructions": "Clasifica la función y el registro de cada intervención.",
+                    "pairs": [
+                      {
+                        "left": "You should walk thirty minutes a day. Ultimately, an unresolved tension underpins the debate.",
+                        "right": "Ironía seca",
+                        "register": "literary",
+                        "nuance": "Clasifica la función y el registro de la intervención."
+                      },
+                      {
+                        "left": "You shouldn't eat so much sugar. Frankly, the proposal lacks a sound basis.",
+                        "right": "Atenuación",
+                        "register": "formal",
+                        "nuance": "Clasifica la función y el registro de la intervención."
+                      },
+                      {
+                        "left": "You should sleep better. By all accounts, the approach deserves a second reading.",
+                        "right": "Conclusión",
+                        "register": "neutral",
+                        "nuance": "Clasifica la función y el registro de la intervención."
+                      }
+                    ],
+                    "feedbackOnError": {
+                      "type": "register",
+                      "explanation": "Cada intervención cumple una función retórica distinta.",
+                      "ruleRef": "gp-c2-litotes"
+                    },
+                    "feedbackOnSuccess": {
+                      "explanation": "Has identificado función y registro."
+                    }
+                  },
+                  {
+                    "type": "ListenChoose",
+                    "id": "es-en-c2-u05-l07-e07",
+                    "audioText": "You shouldn't eat so much sugar. Frankly, the proposal lacks a sound basis.",
+                    "options": [
+                      "You shouldn't eat so much sugar. Frankly, the proposal lacks a sound basis.",
+                      "You should walk thirty minutes a day. Ultimately, an unresolved tension underpins the debate.",
+                      "You should sleep better. By all accounts, the approach deserves a second reading."
+                    ],
+                    "correctIndex": 0,
+                    "feedbackOnError": {
+                      "type": "comprehension",
+                      "explanation": "El audio dice «You shouldn't eat so much sugar. Frankly, the proposal lacks a sound basis.».",
+                      "ruleRef": "gp-c2-litotes"
+                    },
+                    "feedbackOnSuccess": {
+                      "explanation": "Has reconocido la frase del audio."
+                    }
+                  },
+                  {
+                    "type": "AudioOnlyPrompt",
+                    "id": "es-en-c2-u05-l07-e08",
+                    "audioText": "You should sleep better. By all accounts, the approach deserves a second reading.",
+                    "question": "¿Qué implica el hablante?",
+                    "options": [
+                      "You should sleep better. By all accounts, the approach deserves a second reading.",
+                      "You should walk thirty minutes a day. Ultimately, an unresolved tension underpins the debate.",
+                      "You shouldn't eat so much sugar. Frankly, the proposal lacks a sound basis."
+                    ],
+                    "correctIndex": 0,
+                    "allowSlowPlayback": false,
+                    "feedbackOnError": {
+                      "type": "comprehension",
+                      "explanation": "El audio dice «You should sleep better. By all accounts, the approach deserves a second reading.».",
+                      "ruleRef": "gp-c1-subjunctive"
+                    },
+                    "feedbackOnSuccess": {
+                      "explanation": "Has interpretado la implicación."
+                    }
+                  },
+                  {
+                    "type": "ListenType",
+                    "id": "es-en-c2-u05-l07-e09",
+                    "audioText": "You should sleep better. By all accounts, the approach deserves a second reading.",
+                    "transcription": "You should sleep better. By all accounts, the approach deserves a second reading.",
+                    "feedbackOnError": {
+                      "type": "spelling",
+                      "explanation": "Escribe exactamente «You should sleep better. By all accounts, the approach deserves a second reading.».",
+                      "ruleRef": "gp-c2-litotes"
+                    },
+                    "feedbackOnSuccess": {
+                      "explanation": "La transcripción coincide con el audio."
+                    }
+                  },
+                  {
+                    "type": "SpeakRepeat",
+                    "id": "es-en-c2-u05-l07-e10",
+                    "targetPhrase": "You should sleep better. By all accounts, the approach deserves a second reading.",
+                    "audioText": "You should sleep better. By all accounts, the approach deserves a second reading.",
+                    "feedbackOnError": {
+                      "type": "pronunciation",
+                      "explanation": "Repite «You should sleep better. By all accounts, the approach deserves a second reading.» con claridad.",
+                      "ruleRef": "gp-c2-litotes"
+                    },
+                    "feedbackOnSuccess": {
+                      "explanation": "La frase se entiende y mantiene el ritmo."
+                    }
+                  },
+                  {
+                    "type": "MatchPairs",
+                    "id": "es-en-c2-u05-l07-e11",
+                    "pairs": [
+                      {
+                        "left": "Deberías caminar treinta minutos al día. En última instancia, subyace una tensión no resuelta.",
+                        "right": "You should walk thirty minutes a day. Ultimately, an unresolved tension underpins the debate."
+                      },
+                      {
+                        "left": "No deberías comer tanto azúcar. Dicho sin ambages, la propuesta carece de sustento.",
+                        "right": "You shouldn't eat so much sugar. Frankly, the proposal lacks a sound basis."
+                      },
+                      {
+                        "left": "Deberías dormir mejor. A todas luces, conviene releer el planteamiento.",
+                        "right": "You should sleep better. By all accounts, the approach deserves a second reading."
+                      }
+                    ],
+                    "feedbackOnError": {
+                      "type": "vocabulary",
+                      "explanation": "Cada expresión tiene una traducción distinta.",
+                      "ruleRef": "gp-c2-litotes"
+                    },
+                    "feedbackOnSuccess": {
+                      "explanation": "Has asociado cada expresión con su traducción."
+                    }
+                  },
+                  {
+                    "type": "FreeSpeakingPrompt",
+                    "id": "es-en-c2-u05-l07-e12",
+                    "prompt": "Defiende una interpretación matizada sobre los hábitos saludables.",
+                    "minTokens": 40,
+                    "conceptClusters": [
+                      [
+                        "walk"
+                      ],
+                      [
+                        "thirty"
+                      ],
+                      [
+                        "minutes"
+                      ]
+                    ],
+                    "modelAnswer": "You should walk thirty minutes a day. Ultimately, an unresolved tension underpins the debate. You shouldn't eat so much sugar. Frankly, the proposal lacks a sound basis. You should sleep better. By all accounts, the approach deserves a second reading.",
+                    "selfAssessmentCriteria": [
+                      "¿La respuesta argumenta y responde a la tarea?",
+                      "¿Usa las dos estructuras gramaticales de la lección?",
+                      "¿Incluye una concesión, una ironía o una atenuación?"
+                    ],
+                    "grammarRuleRefs": [
+                      "gp-c2-litotes",
+                      "gp-c1-subjunctive"
+                    ],
+                    "timeLimitSeconds": 120,
+                    "minWpm": 70,
+                    "maxWpm": 160,
+                    "feedbackOnError": {
+                      "type": "grammar",
+                      "explanation": "La respuesta modelo desarrolla una interpretación matizada.",
+                      "ruleRef": "gp-c2-litotes"
+                    }
+                  }
+                ]
+              },
+              {
+                "id": "es-en-c2-u05-l08",
+                "title": "Hábitos saludables",
+                "cefrLevel": "C2",
+                "scenario": "Situación comunicativa avanzada sobre mi rutina saludable.",
+                "canDo": "Puedo argumentar con matices y precisión sobre mi rutina saludable.",
+                "grammarPoints": [
+                  {
+                    "id": "gp-c2-litotes",
+                    "label": "Litotes",
+                    "description": "La litote afirma algo negando lo contrario."
+                  },
+                  {
+                    "id": "gp-c1-subjunctive",
+                    "label": "Subjunctive",
+                    "description": "El subjuntivo expresa deseos, dudas y valoraciones."
+                  }
+                ],
+                "vocabFrequencyBand": "12000+",
+                "culturalNotes": [
+                  {
+                    "idiom": "read the riot act",
+                    "note": "Expresión para reprender con severidad.",
+                    "translation": "leer la cartilla"
+                  }
+                ],
+                "microLesson": {
+                  "title": "Hábitos saludables",
+                  "goals": [
+                    "Usar vocabulario avanzado de mi rutina saludable.",
+                    "Aplicar litotes y subjunctive.",
+                    "Argumentar con matices sobre mi rutina saludable."
+                  ],
+                  "sections": [
+                    {
+                      "heading": "Lengua en contexto",
+                      "body": "Litotes: La litote afirma algo negando lo contrario. Subjunctive: El subjuntivo expresa deseos, dudas y valoraciones.",
+                      "examples": [
+                        {
+                          "source": "Desayuno fruta y cereales. Dicho sin ambages, la propuesta carece de sustento.",
+                          "target": "I have fruit and cereal for breakfast. Frankly, the proposal lacks a sound basis."
+                        },
+                        {
+                          "source": "Camino al trabajo todos los días. A todas luces, conviene releer el planteamiento.",
+                          "target": "I walk to work every day. By all accounts, the approach deserves a second reading."
+                        }
+                      ]
+                    }
+                  ]
+                },
+                "glossary": [
+                  {
+                    "term": "I have fruit and cereal for breakfast. Frankly, the proposal lacks a sound basis.",
+                    "translations": [
+                      "Desayuno fruta y cereales. Dicho sin ambages, la propuesta carece de sustento."
+                    ]
+                  },
+                  {
+                    "term": "I walk to work every day. By all accounts, the approach deserves a second reading.",
+                    "translations": [
+                      "Camino al trabajo todos los días. A todas luces, conviene releer el planteamiento."
+                    ]
+                  },
+                  {
+                    "term": "I sleep eight hours every night. Which, incidentally, is more than a little ironic.",
+                    "translations": [
+                      "Duermo ocho horas cada noche. Lo cual, dicho sea de paso, no deja de ser irónico."
+                    ]
+                  }
+                ],
+                "exercises": [
+                  {
+                    "type": "MultipleChoice",
+                    "id": "es-en-c2-u05-l08-e01",
+                    "question": "¿Cuál es la opción correcta para «Desayuno fruta y cereales. Dicho sin ambages, la propuesta carece de sustento.»?",
+                    "options": [
+                      "I have fruit and cereal for breakfast. Frankly, the proposal lacks a sound basis.",
+                      "I walk to work every day. By all accounts, the approach deserves a second reading.",
+                      "I sleep eight hours every night. Which, incidentally, is more than a little ironic."
+                    ],
+                    "correctIndex": 0,
+                    "feedbackOnError": {
+                      "type": "vocabulary",
+                      "explanation": "«Desayuno fruta y cereales. Dicho sin ambages, la propuesta carece de sustento.» se dice «I have fruit and cereal for breakfast. Frankly, the proposal lacks a sound basis.».",
+                      "ruleRef": "gp-c2-litotes"
+                    },
+                    "feedbackOnSuccess": {
+                      "explanation": "Has elegido la opción precisa."
+                    }
+                  },
+                  {
+                    "type": "Translate",
+                    "id": "es-en-c2-u05-l08-e02",
+                    "sourcePhrase": "Desayuno fruta y cereales. Dicho sin ambages, la propuesta carece de sustento.",
+                    "correctTokens": [
+                      "I",
+                      "have",
+                      "fruit",
+                      "and",
+                      "cereal",
+                      "for",
+                      "breakfast",
+                      "Frankly",
+                      "the",
+                      "proposal",
+                      "lacks",
+                      "a",
+                      "sound",
+                      "basis"
+                    ],
+                    "distractorTokens": [
+                      "walk",
+                      "to",
+                      "work"
+                    ],
+                    "feedbackOnError": {
+                      "type": "grammar",
+                      "explanation": "El orden correcto es «I have fruit and cereal for breakfast Frankly the proposal lacks a sound basis».",
+                      "ruleRef": "gp-c2-litotes"
+                    },
+                    "feedbackOnSuccess": {
+                      "explanation": "La frase conserva el orden y el significado."
+                    }
+                  },
+                  {
+                    "type": "ClozeDragDrop",
+                    "id": "es-en-c2-u05-l08-e03",
+                    "passage": "I have {{b1}} and {{b2}} for breakfast.",
+                    "blanks": [
+                      {
+                        "id": "b1",
+                        "answer": "fruit",
+                        "options": [
+                          "fruit",
+                          "breakfast",
+                          "very"
+                        ]
+                      },
+                      {
+                        "id": "b2",
+                        "answer": "cereal",
+                        "options": [
+                          "cereal",
+                          "breakfast",
+                          "very"
+                        ]
+                      }
+                    ],
+                    "feedbackOnError": {
+                      "type": "grammar",
+                      "explanation": "Las dos formas deben encajar con el contexto de la frase.",
+                      "ruleRef": "gp-c1-subjunctive"
+                    },
+                    "feedbackOnSuccess": {
+                      "explanation": "Los dos huecos encajan con la situación."
+                    }
+                  },
+                  {
+                    "type": "ClozeDragDrop",
+                    "id": "es-en-c2-u05-l08-e04",
+                    "passage": "I {{b1}} to {{b2}} every day.",
+                    "blanks": [
+                      {
+                        "id": "b1",
+                        "answer": "walk",
+                        "options": [
+                          "walk",
+                          "every",
+                          "day"
+                        ]
+                      },
+                      {
+                        "id": "b2",
+                        "answer": "work",
+                        "options": [
+                          "work",
+                          "every",
+                          "day"
+                        ]
+                      }
+                    ],
+                    "feedbackOnError": {
+                      "type": "grammar",
+                      "explanation": "Las dos formas deben encajar con el contexto de la frase.",
+                      "ruleRef": "gp-c1-subjunctive"
+                    },
+                    "feedbackOnSuccess": {
+                      "explanation": "Los dos huecos encajan con la situación."
+                    }
+                  },
+                  {
+                    "type": "ClozeDragDrop",
+                    "id": "es-en-c2-u05-l08-e05",
+                    "passage": "I {{b1}} {{b2}} hours every night.",
+                    "blanks": [
+                      {
+                        "id": "b1",
+                        "answer": "sleep",
+                        "options": [
+                          "sleep",
+                          "hours",
+                          "every"
+                        ]
+                      },
+                      {
+                        "id": "b2",
+                        "answer": "eight",
+                        "options": [
+                          "eight",
+                          "hours",
+                          "every"
+                        ]
+                      }
+                    ],
+                    "feedbackOnError": {
+                      "type": "grammar",
+                      "explanation": "Las dos formas deben encajar con el contexto de la frase.",
+                      "ruleRef": "gp-c1-subjunctive"
+                    },
+                    "feedbackOnSuccess": {
+                      "explanation": "Los dos huecos encajan con la situación."
+                    }
+                  },
+                  {
+                    "type": "SemanticMatch",
+                    "id": "es-en-c2-u05-l08-e06",
+                    "instructions": "Clasifica la función y el registro de cada intervención.",
+                    "pairs": [
+                      {
+                        "left": "I have fruit and cereal for breakfast. Frankly, the proposal lacks a sound basis.",
+                        "right": "Ironía seca",
+                        "register": "literary",
+                        "nuance": "Clasifica la función y el registro de la intervención."
+                      },
+                      {
+                        "left": "I walk to work every day. By all accounts, the approach deserves a second reading.",
+                        "right": "Atenuación",
+                        "register": "formal",
+                        "nuance": "Clasifica la función y el registro de la intervención."
+                      },
+                      {
+                        "left": "I sleep eight hours every night. Which, incidentally, is more than a little ironic.",
+                        "right": "Conclusión",
+                        "register": "neutral",
+                        "nuance": "Clasifica la función y el registro de la intervención."
+                      }
+                    ],
+                    "feedbackOnError": {
+                      "type": "register",
+                      "explanation": "Cada intervención cumple una función retórica distinta.",
+                      "ruleRef": "gp-c2-litotes"
+                    },
+                    "feedbackOnSuccess": {
+                      "explanation": "Has identificado función y registro."
+                    }
+                  },
+                  {
+                    "type": "ListenChoose",
+                    "id": "es-en-c2-u05-l08-e07",
+                    "audioText": "I walk to work every day. By all accounts, the approach deserves a second reading.",
+                    "options": [
+                      "I walk to work every day. By all accounts, the approach deserves a second reading.",
+                      "I have fruit and cereal for breakfast. Frankly, the proposal lacks a sound basis.",
+                      "I sleep eight hours every night. Which, incidentally, is more than a little ironic."
+                    ],
+                    "correctIndex": 0,
+                    "feedbackOnError": {
+                      "type": "comprehension",
+                      "explanation": "El audio dice «I walk to work every day. By all accounts, the approach deserves a second reading.».",
+                      "ruleRef": "gp-c2-litotes"
+                    },
+                    "feedbackOnSuccess": {
+                      "explanation": "Has reconocido la frase del audio."
+                    }
+                  },
+                  {
+                    "type": "AudioOnlyPrompt",
+                    "id": "es-en-c2-u05-l08-e08",
+                    "audioText": "I sleep eight hours every night. Which, incidentally, is more than a little ironic.",
+                    "question": "¿Qué implica el hablante?",
+                    "options": [
+                      "I sleep eight hours every night. Which, incidentally, is more than a little ironic.",
+                      "I have fruit and cereal for breakfast. Frankly, the proposal lacks a sound basis.",
+                      "I walk to work every day. By all accounts, the approach deserves a second reading."
+                    ],
+                    "correctIndex": 0,
+                    "allowSlowPlayback": false,
+                    "feedbackOnError": {
+                      "type": "comprehension",
+                      "explanation": "El audio dice «I sleep eight hours every night. Which, incidentally, is more than a little ironic.».",
+                      "ruleRef": "gp-c1-subjunctive"
+                    },
+                    "feedbackOnSuccess": {
+                      "explanation": "Has interpretado la implicación."
+                    }
+                  },
+                  {
+                    "type": "ListenType",
+                    "id": "es-en-c2-u05-l08-e09",
+                    "audioText": "I sleep eight hours every night. Which, incidentally, is more than a little ironic.",
+                    "transcription": "I sleep eight hours every night. Which, incidentally, is more than a little ironic.",
+                    "feedbackOnError": {
+                      "type": "spelling",
+                      "explanation": "Escribe exactamente «I sleep eight hours every night. Which, incidentally, is more than a little ironic.».",
+                      "ruleRef": "gp-c2-litotes"
+                    },
+                    "feedbackOnSuccess": {
+                      "explanation": "La transcripción coincide con el audio."
+                    }
+                  },
+                  {
+                    "type": "SpeakRepeat",
+                    "id": "es-en-c2-u05-l08-e10",
+                    "targetPhrase": "I sleep eight hours every night. Which, incidentally, is more than a little ironic.",
+                    "audioText": "I sleep eight hours every night. Which, incidentally, is more than a little ironic.",
+                    "feedbackOnError": {
+                      "type": "pronunciation",
+                      "explanation": "Repite «I sleep eight hours every night. Which, incidentally, is more than a little ironic.» con claridad.",
+                      "ruleRef": "gp-c2-litotes"
+                    },
+                    "feedbackOnSuccess": {
+                      "explanation": "La frase se entiende y mantiene el ritmo."
+                    }
+                  },
+                  {
+                    "type": "MatchPairs",
+                    "id": "es-en-c2-u05-l08-e11",
+                    "pairs": [
+                      {
+                        "left": "Desayuno fruta y cereales. Dicho sin ambages, la propuesta carece de sustento.",
+                        "right": "I have fruit and cereal for breakfast. Frankly, the proposal lacks a sound basis."
+                      },
+                      {
+                        "left": "Camino al trabajo todos los días. A todas luces, conviene releer el planteamiento.",
+                        "right": "I walk to work every day. By all accounts, the approach deserves a second reading."
+                      },
+                      {
+                        "left": "Duermo ocho horas cada noche. Lo cual, dicho sea de paso, no deja de ser irónico.",
+                        "right": "I sleep eight hours every night. Which, incidentally, is more than a little ironic."
+                      }
+                    ],
+                    "feedbackOnError": {
+                      "type": "vocabulary",
+                      "explanation": "Cada expresión tiene una traducción distinta.",
+                      "ruleRef": "gp-c2-litotes"
+                    },
+                    "feedbackOnSuccess": {
+                      "explanation": "Has asociado cada expresión con su traducción."
+                    }
+                  },
+                  {
+                    "type": "FreeSpeakingPrompt",
+                    "id": "es-en-c2-u05-l08-e12",
+                    "prompt": "Defiende una interpretación matizada sobre mi rutina saludable.",
+                    "minTokens": 40,
+                    "conceptClusters": [
+                      [
+                        "fruit"
+                      ],
+                      [
+                        "cereal"
+                      ],
+                      [
+                        "breakfast"
+                      ]
+                    ],
+                    "modelAnswer": "I have fruit and cereal for breakfast. Frankly, the proposal lacks a sound basis. I walk to work every day. By all accounts, the approach deserves a second reading. I sleep eight hours every night. Which, incidentally, is more than a little ironic.",
+                    "selfAssessmentCriteria": [
+                      "¿La respuesta argumenta y responde a la tarea?",
+                      "¿Usa las dos estructuras gramaticales de la lección?",
+                      "¿Incluye una concesión, una ironía o una atenuación?"
+                    ],
+                    "grammarRuleRefs": [
+                      "gp-c2-litotes",
+                      "gp-c1-subjunctive"
+                    ],
+                    "timeLimitSeconds": 120,
+                    "minWpm": 70,
+                    "maxWpm": 160,
+                    "feedbackOnError": {
+                      "type": "grammar",
+                      "explanation": "La respuesta modelo desarrolla una interpretación matizada.",
+                      "ruleRef": "gp-c2-litotes"
+                    }
+                  }
+                ]
+              },
+              {
+                "id": "es-en-c2-u05-l09",
+                "title": "Integración: plan de bienestar",
+                "cefrLevel": "C2",
+                "scenario": "Situación comunicativa avanzada sobre un plan de bienestar.",
+                "canDo": "Puedo argumentar con matices y precisión sobre un plan de bienestar.",
+                "grammarPoints": [
+                  {
+                    "id": "gp-c2-litotes",
+                    "label": "Litotes",
+                    "description": "La litote afirma algo negando lo contrario."
+                  },
+                  {
+                    "id": "gp-c1-subjunctive",
+                    "label": "Subjunctive",
+                    "description": "El subjuntivo expresa deseos, dudas y valoraciones."
+                  }
+                ],
+                "vocabFrequencyBand": "12000+",
+                "culturalNotes": [
+                  {
+                    "idiom": "move the goalposts",
+                    "note": "Expresión para cambiar las condiciones a mitad del proceso.",
+                    "translation": "cambiar las reglas"
+                  }
+                ],
+                "microLesson": {
+                  "title": "Integración: plan de bienestar",
+                  "goals": [
+                    "Usar vocabulario avanzado de un plan de bienestar.",
+                    "Aplicar litotes y subjunctive.",
+                    "Argumentar con matices sobre un plan de bienestar."
+                  ],
+                  "sections": [
+                    {
+                      "heading": "Lengua en contexto",
+                      "body": "Litotes: La litote afirma algo negando lo contrario. Subjunctive: El subjuntivo expresa deseos, dudas y valoraciones.",
+                      "examples": [
+                        {
+                          "source": "Voy a hacer ejercicio tres veces por semana. A todas luces, conviene releer el planteamiento.",
+                          "target": "I'm going to exercise three times a week. By all accounts, the approach deserves a second reading."
+                        },
+                        {
+                          "source": "También voy a beber más agua. Lo cual, dicho sea de paso, no deja de ser irónico.",
+                          "target": "I'm also going to drink more water. Which, incidentally, is more than a little ironic."
+                        }
+                      ]
+                    }
+                  ]
+                },
+                "glossary": [
+                  {
+                    "term": "I'm going to exercise three times a week. By all accounts, the approach deserves a second reading.",
+                    "translations": [
+                      "Voy a hacer ejercicio tres veces por semana. A todas luces, conviene releer el planteamiento."
+                    ]
+                  },
+                  {
+                    "term": "I'm also going to drink more water. Which, incidentally, is more than a little ironic.",
+                    "translations": [
+                      "También voy a beber más agua. Lo cual, dicho sea de paso, no deja de ser irónico."
+                    ]
+                  },
+                  {
+                    "term": "And I'm going to sleep better. Needless to say, the nuance escapes a literal reading.",
+                    "translations": [
+                      "Y voy a dormir mejor. Huelga decir que el matiz escapa a una lectura literal."
+                    ]
+                  }
+                ],
+                "exercises": [
+                  {
+                    "type": "MultipleChoice",
+                    "id": "es-en-c2-u05-l09-e01",
+                    "question": "¿Cuál es la opción correcta para «Voy a hacer ejercicio tres veces por semana. A todas luces, conviene releer el planteamiento.»?",
+                    "options": [
+                      "I'm going to exercise three times a week. By all accounts, the approach deserves a second reading.",
+                      "I'm also going to drink more water. Which, incidentally, is more than a little ironic.",
+                      "And I'm going to sleep better. Needless to say, the nuance escapes a literal reading."
+                    ],
+                    "correctIndex": 0,
+                    "feedbackOnError": {
+                      "type": "vocabulary",
+                      "explanation": "«Voy a hacer ejercicio tres veces por semana. A todas luces, conviene releer el planteamiento.» se dice «I'm going to exercise three times a week. By all accounts, the approach deserves a second reading.».",
+                      "ruleRef": "gp-c2-litotes"
+                    },
+                    "feedbackOnSuccess": {
+                      "explanation": "Has elegido la opción precisa."
+                    }
+                  },
+                  {
+                    "type": "Translate",
+                    "id": "es-en-c2-u05-l09-e02",
+                    "sourcePhrase": "Voy a hacer ejercicio tres veces por semana. A todas luces, conviene releer el planteamiento.",
+                    "correctTokens": [
+                      "I'm",
+                      "going",
+                      "to",
+                      "exercise",
+                      "three",
+                      "times",
+                      "a",
+                      "week",
+                      "By",
+                      "all",
+                      "accounts",
+                      "the",
+                      "approach",
+                      "deserves",
+                      "a",
+                      "second",
+                      "reading"
+                    ],
+                    "distractorTokens": [
+                      "also",
+                      "drink",
+                      "more"
+                    ],
+                    "feedbackOnError": {
+                      "type": "grammar",
+                      "explanation": "El orden correcto es «I'm going to exercise three times a week By all accounts the approach deserves a second reading».",
+                      "ruleRef": "gp-c2-litotes"
+                    },
+                    "feedbackOnSuccess": {
+                      "explanation": "La frase conserva el orden y el significado."
+                    }
+                  },
+                  {
+                    "type": "ClozeDragDrop",
+                    "id": "es-en-c2-u05-l09-e03",
+                    "passage": "{{b1}} {{b2}} to exercise three times a week.",
+                    "blanks": [
+                      {
+                        "id": "b1",
+                        "answer": "I'm",
+                        "options": [
+                          "I'm",
+                          "exercise",
+                          "three"
+                        ]
+                      },
+                      {
+                        "id": "b2",
+                        "answer": "going",
+                        "options": [
+                          "going",
+                          "exercise",
+                          "three"
+                        ]
+                      }
+                    ],
+                    "feedbackOnError": {
+                      "type": "grammar",
+                      "explanation": "Las dos formas deben encajar con el contexto de la frase.",
+                      "ruleRef": "gp-c1-subjunctive"
+                    },
+                    "feedbackOnSuccess": {
+                      "explanation": "Los dos huecos encajan con la situación."
+                    }
+                  },
+                  {
+                    "type": "ClozeDragDrop",
+                    "id": "es-en-c2-u05-l09-e04",
+                    "passage": "{{b1}} also {{b2}} to drink more water.",
+                    "blanks": [
+                      {
+                        "id": "b1",
+                        "answer": "I'm",
+                        "options": [
+                          "I'm",
+                          "drink",
+                          "more"
+                        ]
+                      },
+                      {
+                        "id": "b2",
+                        "answer": "going",
+                        "options": [
+                          "going",
+                          "drink",
+                          "more"
+                        ]
+                      }
+                    ],
+                    "feedbackOnError": {
+                      "type": "grammar",
+                      "explanation": "Las dos formas deben encajar con el contexto de la frase.",
+                      "ruleRef": "gp-c1-subjunctive"
+                    },
+                    "feedbackOnSuccess": {
+                      "explanation": "Los dos huecos encajan con la situación."
+                    }
+                  },
+                  {
+                    "type": "ClozeDragDrop",
+                    "id": "es-en-c2-u05-l09-e05",
+                    "passage": "And {{b1}} {{b2}} to sleep better.",
+                    "blanks": [
+                      {
+                        "id": "b1",
+                        "answer": "I'm",
+                        "options": [
+                          "I'm",
+                          "sleep",
+                          "better"
+                        ]
+                      },
+                      {
+                        "id": "b2",
+                        "answer": "going",
+                        "options": [
+                          "going",
+                          "sleep",
+                          "better"
+                        ]
+                      }
+                    ],
+                    "feedbackOnError": {
+                      "type": "grammar",
+                      "explanation": "Las dos formas deben encajar con el contexto de la frase.",
+                      "ruleRef": "gp-c1-subjunctive"
+                    },
+                    "feedbackOnSuccess": {
+                      "explanation": "Los dos huecos encajan con la situación."
+                    }
+                  },
+                  {
+                    "type": "SemanticMatch",
+                    "id": "es-en-c2-u05-l09-e06",
+                    "instructions": "Clasifica la función y el registro de cada intervención.",
+                    "pairs": [
+                      {
+                        "left": "I'm going to exercise three times a week. By all accounts, the approach deserves a second reading.",
+                        "right": "Ironía seca",
+                        "register": "literary",
+                        "nuance": "Clasifica la función y el registro de la intervención."
+                      },
+                      {
+                        "left": "I'm also going to drink more water. Which, incidentally, is more than a little ironic.",
+                        "right": "Atenuación",
+                        "register": "formal",
+                        "nuance": "Clasifica la función y el registro de la intervención."
+                      },
+                      {
+                        "left": "And I'm going to sleep better. Needless to say, the nuance escapes a literal reading.",
+                        "right": "Conclusión",
+                        "register": "neutral",
+                        "nuance": "Clasifica la función y el registro de la intervención."
+                      }
+                    ],
+                    "feedbackOnError": {
+                      "type": "register",
+                      "explanation": "Cada intervención cumple una función retórica distinta.",
+                      "ruleRef": "gp-c2-litotes"
+                    },
+                    "feedbackOnSuccess": {
+                      "explanation": "Has identificado función y registro."
+                    }
+                  },
+                  {
+                    "type": "ListenChoose",
+                    "id": "es-en-c2-u05-l09-e07",
+                    "audioText": "I'm also going to drink more water. Which, incidentally, is more than a little ironic.",
+                    "options": [
+                      "I'm also going to drink more water. Which, incidentally, is more than a little ironic.",
+                      "I'm going to exercise three times a week. By all accounts, the approach deserves a second reading.",
+                      "And I'm going to sleep better. Needless to say, the nuance escapes a literal reading."
+                    ],
+                    "correctIndex": 0,
+                    "feedbackOnError": {
+                      "type": "comprehension",
+                      "explanation": "El audio dice «I'm also going to drink more water. Which, incidentally, is more than a little ironic.».",
+                      "ruleRef": "gp-c2-litotes"
+                    },
+                    "feedbackOnSuccess": {
+                      "explanation": "Has reconocido la frase del audio."
+                    }
+                  },
+                  {
+                    "type": "AudioOnlyPrompt",
+                    "id": "es-en-c2-u05-l09-e08",
+                    "audioText": "And I'm going to sleep better. Needless to say, the nuance escapes a literal reading.",
+                    "question": "¿Qué implica el hablante?",
+                    "options": [
+                      "And I'm going to sleep better. Needless to say, the nuance escapes a literal reading.",
+                      "I'm going to exercise three times a week. By all accounts, the approach deserves a second reading.",
+                      "I'm also going to drink more water. Which, incidentally, is more than a little ironic."
+                    ],
+                    "correctIndex": 0,
+                    "allowSlowPlayback": false,
+                    "feedbackOnError": {
+                      "type": "comprehension",
+                      "explanation": "El audio dice «And I'm going to sleep better. Needless to say, the nuance escapes a literal reading.».",
+                      "ruleRef": "gp-c1-subjunctive"
+                    },
+                    "feedbackOnSuccess": {
+                      "explanation": "Has interpretado la implicación."
+                    }
+                  },
+                  {
+                    "type": "ListenType",
+                    "id": "es-en-c2-u05-l09-e09",
+                    "audioText": "And I'm going to sleep better. Needless to say, the nuance escapes a literal reading.",
+                    "transcription": "And I'm going to sleep better. Needless to say, the nuance escapes a literal reading.",
+                    "feedbackOnError": {
+                      "type": "spelling",
+                      "explanation": "Escribe exactamente «And I'm going to sleep better. Needless to say, the nuance escapes a literal reading.».",
+                      "ruleRef": "gp-c2-litotes"
+                    },
+                    "feedbackOnSuccess": {
+                      "explanation": "La transcripción coincide con el audio."
+                    }
+                  },
+                  {
+                    "type": "SpeakRepeat",
+                    "id": "es-en-c2-u05-l09-e10",
+                    "targetPhrase": "And I'm going to sleep better. Needless to say, the nuance escapes a literal reading.",
+                    "audioText": "And I'm going to sleep better. Needless to say, the nuance escapes a literal reading.",
+                    "feedbackOnError": {
+                      "type": "pronunciation",
+                      "explanation": "Repite «And I'm going to sleep better. Needless to say, the nuance escapes a literal reading.» con claridad.",
+                      "ruleRef": "gp-c2-litotes"
+                    },
+                    "feedbackOnSuccess": {
+                      "explanation": "La frase se entiende y mantiene el ritmo."
+                    }
+                  },
+                  {
+                    "type": "MatchPairs",
+                    "id": "es-en-c2-u05-l09-e11",
+                    "pairs": [
+                      {
+                        "left": "Voy a hacer ejercicio tres veces por semana. A todas luces, conviene releer el planteamiento.",
+                        "right": "I'm going to exercise three times a week. By all accounts, the approach deserves a second reading."
+                      },
+                      {
+                        "left": "También voy a beber más agua. Lo cual, dicho sea de paso, no deja de ser irónico.",
+                        "right": "I'm also going to drink more water. Which, incidentally, is more than a little ironic."
+                      },
+                      {
+                        "left": "Y voy a dormir mejor. Huelga decir que el matiz escapa a una lectura literal.",
+                        "right": "And I'm going to sleep better. Needless to say, the nuance escapes a literal reading."
+                      }
+                    ],
+                    "feedbackOnError": {
+                      "type": "vocabulary",
+                      "explanation": "Cada expresión tiene una traducción distinta.",
+                      "ruleRef": "gp-c2-litotes"
+                    },
+                    "feedbackOnSuccess": {
+                      "explanation": "Has asociado cada expresión con su traducción."
+                    }
+                  },
+                  {
+                    "type": "FreeSpeakingPrompt",
+                    "id": "es-en-c2-u05-l09-e12",
+                    "prompt": "Defiende una interpretación matizada sobre un plan de bienestar.",
+                    "minTokens": 40,
+                    "conceptClusters": [
+                      [
+                        "I'm"
+                      ],
+                      [
+                        "going"
+                      ],
+                      [
+                        "exercise"
+                      ]
+                    ],
+                    "modelAnswer": "I'm going to exercise three times a week. By all accounts, the approach deserves a second reading. I'm also going to drink more water. Which, incidentally, is more than a little ironic. And I'm going to sleep better. Needless to say, the nuance escapes a literal reading.",
+                    "selfAssessmentCriteria": [
+                      "¿La respuesta argumenta y responde a la tarea?",
+                      "¿Usa las dos estructuras gramaticales de la lección?",
+                      "¿Incluye una concesión, una ironía o una atenuación?"
+                    ],
+                    "grammarRuleRefs": [
+                      "gp-c2-litotes",
+                      "gp-c1-subjunctive"
+                    ],
+                    "timeLimitSeconds": 120,
+                    "minWpm": 70,
+                    "maxWpm": 160,
+                    "feedbackOnError": {
+                      "type": "grammar",
+                      "explanation": "La respuesta modelo desarrolla una interpretación matizada.",
+                      "ruleRef": "gp-c2-litotes"
+                    }
+                  }
+                ]
+              },
+              {
+                "id": "es-en-c2-u05-l10",
+                "title": "Evaluación: mi salud",
+                "cefrLevel": "C2",
+                "scenario": "Situación comunicativa avanzada sobre mi salud.",
+                "canDo": "Puedo argumentar con matices y precisión sobre mi salud.",
+                "grammarPoints": [
+                  {
+                    "id": "gp-c2-litotes",
+                    "label": "Litotes",
+                    "description": "La litote afirma algo negando lo contrario."
+                  },
+                  {
+                    "id": "gp-c1-subjunctive",
+                    "label": "Subjunctive",
+                    "description": "El subjuntivo expresa deseos, dudas y valoraciones."
+                  }
+                ],
+                "vocabFrequencyBand": "12000+",
+                "culturalNotes": [
+                  {
+                    "idiom": "take umbrage",
+                    "note": "Expresión para ofenderse por algo.",
+                    "translation": "ofenderse"
+                  }
+                ],
+                "microLesson": {
+                  "title": "Evaluación: mi salud",
+                  "goals": [
+                    "Usar vocabulario avanzado de mi salud.",
+                    "Aplicar litotes y subjunctive.",
+                    "Argumentar con matices sobre mi salud."
+                  ],
+                  "sections": [
+                    {
+                      "heading": "Lengua en contexto",
+                      "body": "Litotes: La litote afirma algo negando lo contrario. Subjunctive: El subjuntivo expresa deseos, dudas y valoraciones.",
+                      "examples": [
+                        {
+                          "source": "Me siento mejor que antes. Lo cual, dicho sea de paso, no deja de ser irónico.",
+                          "target": "I feel better than before. Which, incidentally, is more than a little ironic."
+                        },
+                        {
+                          "source": "He empezado a caminar cada día. Huelga decir que el matiz escapa a una lectura literal.",
+                          "target": "I have started walking every day. Needless to say, the nuance escapes a literal reading."
+                        }
+                      ]
+                    }
+                  ]
+                },
+                "glossary": [
+                  {
+                    "term": "I feel better than before. Which, incidentally, is more than a little ironic.",
+                    "translations": [
+                      "Me siento mejor que antes. Lo cual, dicho sea de paso, no deja de ser irónico."
+                    ]
+                  },
+                  {
+                    "term": "I have started walking every day. Needless to say, the nuance escapes a literal reading.",
+                    "translations": [
+                      "He empezado a caminar cada día. Huelga decir que el matiz escapa a una lectura literal."
+                    ]
+                  },
+                  {
+                    "term": "I still have to rest more. Strictly speaking, the claim admits conflicting readings.",
+                    "translations": [
+                      "Todavía tengo que descansar más. En rigor, la afirmación admite lecturas encontradas."
+                    ]
+                  }
+                ],
+                "exercises": [
+                  {
+                    "type": "MultipleChoice",
+                    "id": "es-en-c2-u05-l10-e01",
+                    "question": "¿Cuál es la opción correcta para «Me siento mejor que antes. Lo cual, dicho sea de paso, no deja de ser irónico.»?",
+                    "options": [
+                      "I feel better than before. Which, incidentally, is more than a little ironic.",
+                      "I have started walking every day. Needless to say, the nuance escapes a literal reading.",
+                      "I still have to rest more. Strictly speaking, the claim admits conflicting readings."
+                    ],
+                    "correctIndex": 0,
+                    "feedbackOnError": {
+                      "type": "vocabulary",
+                      "explanation": "«Me siento mejor que antes. Lo cual, dicho sea de paso, no deja de ser irónico.» se dice «I feel better than before. Which, incidentally, is more than a little ironic.».",
+                      "ruleRef": "gp-c2-litotes"
+                    },
+                    "feedbackOnSuccess": {
+                      "explanation": "Has elegido la opción precisa."
+                    }
+                  },
+                  {
+                    "type": "Translate",
+                    "id": "es-en-c2-u05-l10-e02",
+                    "sourcePhrase": "Me siento mejor que antes. Lo cual, dicho sea de paso, no deja de ser irónico.",
+                    "correctTokens": [
+                      "I",
+                      "feel",
+                      "better",
+                      "than",
+                      "before",
+                      "Which",
+                      "incidentally",
+                      "is",
+                      "more",
+                      "than",
+                      "a",
+                      "little",
+                      "ironic"
+                    ],
+                    "distractorTokens": [
+                      "have",
+                      "started",
+                      "walking"
+                    ],
+                    "feedbackOnError": {
+                      "type": "grammar",
+                      "explanation": "El orden correcto es «I feel better than before Which incidentally is more than a little ironic».",
+                      "ruleRef": "gp-c2-litotes"
+                    },
+                    "feedbackOnSuccess": {
+                      "explanation": "La frase conserva el orden y el significado."
+                    }
+                  },
+                  {
+                    "type": "ClozeDragDrop",
+                    "id": "es-en-c2-u05-l10-e03",
+                    "passage": "I {{b1}} {{b2}} than before.",
+                    "blanks": [
+                      {
+                        "id": "b1",
+                        "answer": "feel",
+                        "options": [
+                          "feel",
+                          "than",
+                          "before"
+                        ]
+                      },
+                      {
+                        "id": "b2",
+                        "answer": "better",
+                        "options": [
+                          "better",
+                          "than",
+                          "before"
+                        ]
+                      }
+                    ],
+                    "feedbackOnError": {
+                      "type": "grammar",
+                      "explanation": "Las dos formas deben encajar con el contexto de la frase.",
+                      "ruleRef": "gp-c1-subjunctive"
+                    },
+                    "feedbackOnSuccess": {
+                      "explanation": "Los dos huecos encajan con la situación."
+                    }
+                  },
+                  {
+                    "type": "ClozeDragDrop",
+                    "id": "es-en-c2-u05-l10-e04",
+                    "passage": "I have {{b1}} {{b2}} every day.",
+                    "blanks": [
+                      {
+                        "id": "b1",
+                        "answer": "started",
+                        "options": [
+                          "started",
+                          "every",
+                          "day"
+                        ]
+                      },
+                      {
+                        "id": "b2",
+                        "answer": "walking",
+                        "options": [
+                          "walking",
+                          "every",
+                          "day"
+                        ]
+                      }
+                    ],
+                    "feedbackOnError": {
+                      "type": "grammar",
+                      "explanation": "Las dos formas deben encajar con el contexto de la frase.",
+                      "ruleRef": "gp-c1-subjunctive"
+                    },
+                    "feedbackOnSuccess": {
+                      "explanation": "Los dos huecos encajan con la situación."
+                    }
+                  },
+                  {
+                    "type": "ClozeDragDrop",
+                    "id": "es-en-c2-u05-l10-e05",
+                    "passage": "I {{b1}} have to {{b2}} more.",
+                    "blanks": [
+                      {
+                        "id": "b1",
+                        "answer": "still",
+                        "options": [
+                          "still",
+                          "more",
+                          "very"
+                        ]
+                      },
+                      {
+                        "id": "b2",
+                        "answer": "rest",
+                        "options": [
+                          "rest",
+                          "more",
+                          "very"
+                        ]
+                      }
+                    ],
+                    "feedbackOnError": {
+                      "type": "grammar",
+                      "explanation": "Las dos formas deben encajar con el contexto de la frase.",
+                      "ruleRef": "gp-c1-subjunctive"
+                    },
+                    "feedbackOnSuccess": {
+                      "explanation": "Los dos huecos encajan con la situación."
+                    }
+                  },
+                  {
+                    "type": "SemanticMatch",
+                    "id": "es-en-c2-u05-l10-e06",
+                    "instructions": "Clasifica la función y el registro de cada intervención.",
+                    "pairs": [
+                      {
+                        "left": "I feel better than before. Which, incidentally, is more than a little ironic.",
+                        "right": "Ironía seca",
+                        "register": "literary",
+                        "nuance": "Clasifica la función y el registro de la intervención."
+                      },
+                      {
+                        "left": "I have started walking every day. Needless to say, the nuance escapes a literal reading.",
+                        "right": "Atenuación",
+                        "register": "formal",
+                        "nuance": "Clasifica la función y el registro de la intervención."
+                      },
+                      {
+                        "left": "I still have to rest more. Strictly speaking, the claim admits conflicting readings.",
+                        "right": "Conclusión",
+                        "register": "neutral",
+                        "nuance": "Clasifica la función y el registro de la intervención."
+                      }
+                    ],
+                    "feedbackOnError": {
+                      "type": "register",
+                      "explanation": "Cada intervención cumple una función retórica distinta.",
+                      "ruleRef": "gp-c2-litotes"
+                    },
+                    "feedbackOnSuccess": {
+                      "explanation": "Has identificado función y registro."
+                    }
+                  },
+                  {
+                    "type": "ListenChoose",
+                    "id": "es-en-c2-u05-l10-e07",
+                    "audioText": "I have started walking every day. Needless to say, the nuance escapes a literal reading.",
+                    "options": [
+                      "I have started walking every day. Needless to say, the nuance escapes a literal reading.",
+                      "I feel better than before. Which, incidentally, is more than a little ironic.",
+                      "I still have to rest more. Strictly speaking, the claim admits conflicting readings."
+                    ],
+                    "correctIndex": 0,
+                    "feedbackOnError": {
+                      "type": "comprehension",
+                      "explanation": "El audio dice «I have started walking every day. Needless to say, the nuance escapes a literal reading.».",
+                      "ruleRef": "gp-c2-litotes"
+                    },
+                    "feedbackOnSuccess": {
+                      "explanation": "Has reconocido la frase del audio."
+                    }
+                  },
+                  {
+                    "type": "AudioOnlyPrompt",
+                    "id": "es-en-c2-u05-l10-e08",
+                    "audioText": "I still have to rest more. Strictly speaking, the claim admits conflicting readings.",
+                    "question": "¿Qué implica el hablante?",
+                    "options": [
+                      "I still have to rest more. Strictly speaking, the claim admits conflicting readings.",
+                      "I feel better than before. Which, incidentally, is more than a little ironic.",
+                      "I have started walking every day. Needless to say, the nuance escapes a literal reading."
+                    ],
+                    "correctIndex": 0,
+                    "allowSlowPlayback": false,
+                    "feedbackOnError": {
+                      "type": "comprehension",
+                      "explanation": "El audio dice «I still have to rest more. Strictly speaking, the claim admits conflicting readings.».",
+                      "ruleRef": "gp-c1-subjunctive"
+                    },
+                    "feedbackOnSuccess": {
+                      "explanation": "Has interpretado la implicación."
+                    }
+                  },
+                  {
+                    "type": "ListenType",
+                    "id": "es-en-c2-u05-l10-e09",
+                    "audioText": "I still have to rest more. Strictly speaking, the claim admits conflicting readings.",
+                    "transcription": "I still have to rest more. Strictly speaking, the claim admits conflicting readings.",
+                    "feedbackOnError": {
+                      "type": "spelling",
+                      "explanation": "Escribe exactamente «I still have to rest more. Strictly speaking, the claim admits conflicting readings.».",
+                      "ruleRef": "gp-c2-litotes"
+                    },
+                    "feedbackOnSuccess": {
+                      "explanation": "La transcripción coincide con el audio."
+                    }
+                  },
+                  {
+                    "type": "SpeakRepeat",
+                    "id": "es-en-c2-u05-l10-e10",
+                    "targetPhrase": "I still have to rest more. Strictly speaking, the claim admits conflicting readings.",
+                    "audioText": "I still have to rest more. Strictly speaking, the claim admits conflicting readings.",
+                    "feedbackOnError": {
+                      "type": "pronunciation",
+                      "explanation": "Repite «I still have to rest more. Strictly speaking, the claim admits conflicting readings.» con claridad.",
+                      "ruleRef": "gp-c2-litotes"
+                    },
+                    "feedbackOnSuccess": {
+                      "explanation": "La frase se entiende y mantiene el ritmo."
+                    }
+                  },
+                  {
+                    "type": "MatchPairs",
+                    "id": "es-en-c2-u05-l10-e11",
+                    "pairs": [
+                      {
+                        "left": "Me siento mejor que antes. Lo cual, dicho sea de paso, no deja de ser irónico.",
+                        "right": "I feel better than before. Which, incidentally, is more than a little ironic."
+                      },
+                      {
+                        "left": "He empezado a caminar cada día. Huelga decir que el matiz escapa a una lectura literal.",
+                        "right": "I have started walking every day. Needless to say, the nuance escapes a literal reading."
+                      },
+                      {
+                        "left": "Todavía tengo que descansar más. En rigor, la afirmación admite lecturas encontradas.",
+                        "right": "I still have to rest more. Strictly speaking, the claim admits conflicting readings."
+                      }
+                    ],
+                    "feedbackOnError": {
+                      "type": "vocabulary",
+                      "explanation": "Cada expresión tiene una traducción distinta.",
+                      "ruleRef": "gp-c2-litotes"
+                    },
+                    "feedbackOnSuccess": {
+                      "explanation": "Has asociado cada expresión con su traducción."
+                    }
+                  },
+                  {
+                    "type": "FreeSpeakingPrompt",
+                    "id": "es-en-c2-u05-l10-e12",
+                    "prompt": "Defiende una interpretación matizada sobre mi salud.",
+                    "minTokens": 40,
+                    "conceptClusters": [
+                      [
+                        "feel"
+                      ],
+                      [
+                        "better"
+                      ],
+                      [
+                        "than"
+                      ]
+                    ],
+                    "modelAnswer": "I feel better than before. Which, incidentally, is more than a little ironic. I have started walking every day. Needless to say, the nuance escapes a literal reading. I still have to rest more. Strictly speaking, the claim admits conflicting readings.",
+                    "selfAssessmentCriteria": [
+                      "¿La respuesta argumenta y responde a la tarea?",
+                      "¿Usa las dos estructuras gramaticales de la lección?",
+                      "¿Incluye una concesión, una ironía o una atenuación?"
+                    ],
+                    "grammarRuleRefs": [
+                      "gp-c2-litotes",
+                      "gp-c1-subjunctive"
+                    ],
+                    "timeLimitSeconds": 120,
+                    "minWpm": 70,
+                    "maxWpm": 160,
+                    "feedbackOnError": {
+                      "type": "grammar",
+                      "explanation": "La respuesta modelo desarrolla una interpretación matizada.",
+                      "ruleRef": "gp-c2-litotes"
+                    }
+                  }
+                ]
+              }
+            ]
           }
         ]
       }
