@@ -241,7 +241,7 @@ public object CourseValidator {
                     exercise.options,
                     exercise.correctIndex,
                     exercise.id.value,
-                ) ?: validateNotBlank(exercise.audioText, exercise)
+                ) ?: validateListenChoose(exercise)
             is Exercise.KanaChoose ->
                 requireWithin(
                     exercise.correctRomaji,
@@ -284,6 +284,25 @@ public object CourseValidator {
         } else {
             null
         }
+
+    /**
+     * En A1/A2 (y en parte de B1) las opciones son transcripciones y la
+     * correcta debe ser exactamente el audio. En comprensión B1+ las opciones
+     * son paráfrasis y no se puede inferir por igualdad.
+     */
+    private fun validateListenChoose(exercise: Exercise.ListenChoose): CourseValidation.Invalid? {
+        validateNotBlank(exercise.audioText, exercise)?.let { return it }
+        if (exercise.audioText in exercise.options &&
+            exercise.options[exercise.correctIndex] != exercise.audioText
+        ) {
+            return Invalid(
+                "Ejercicio '${exercise.id.value}' marca como correcta " +
+                    "'${exercise.options[exercise.correctIndex]}' pero el audio es " +
+                    "'${exercise.audioText}'",
+            )
+        }
+        return null
+    }
 
     private fun requireWithin(
         correct: String,

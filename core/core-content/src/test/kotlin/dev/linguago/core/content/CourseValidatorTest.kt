@@ -91,6 +91,33 @@ class CourseValidatorTest {
     }
 
     @Test
+    fun rechaza_listen_choose_cuya_clave_no_es_el_audio() {
+        val exercise =
+            Exercise.ListenChoose(
+                id = ExerciseId("e1"),
+                options = listOf("I say hello", "I say goodbye"),
+                correctIndex = 0,
+                audioText = "I say goodbye",
+            )
+        waits_for_invalid(cursoUnEjercicio(id = "e1", exercise = exercise), "audio")
+    }
+
+    @Test
+    fun acepta_listen_choose_cuya_clave_es_el_audio() {
+        val exercise =
+            Exercise.ListenChoose(
+                id = ExerciseId("e1"),
+                options = listOf("I say hello", "I say goodbye"),
+                correctIndex = 1,
+                audioText = "I say goodbye",
+            )
+        assertEquals(
+            CourseValidation.Valid,
+            CourseValidator.validate(cursoUnEjercicio(id = "e1", exercise = exercise)),
+        )
+    }
+
+    @Test
     fun rechaza_respuesta_kanji_no_presente_en_opciones() {
         val exercise =
             Exercise.KanjiReading(
