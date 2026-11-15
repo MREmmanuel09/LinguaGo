@@ -145136,6 +145136,3430 @@
               ]
             }
           ]
+        },
+        {
+          "id": "es-en-b2-u08",
+          "title": "B2 · Casa y convivencia",
+          "lessons": [
+            {
+              "id": "es-en-b2-u08-l01",
+              "title": "Repaso: trabajo",
+              "cefrLevel": "B2",
+              "scenario": "Situación comunicativa avanzada sobre la experiencia profesional.",
+              "canDo": "Puedo argumentar y matizar sobre la experiencia profesional.",
+              "grammarPoints": [
+                {
+                  "id": "gp-b2-concession",
+                  "label": "Concession",
+                  "description": "Although, despite y however introducen concesiones."
+                },
+                {
+                  "id": "gp-b2-modal-perfect",
+                  "label": "Modal perfect",
+                  "description": "Must have, might have y should have especulan sobre el pasado."
+                }
+              ],
+              "vocabFrequencyBand": "3000-5000",
+              "culturalNotes": [
+                {
+                  "idiom": "feel off colour",
+                  "note": "Modismo avanzado útil para hablar de la experiencia profesional.",
+                  "translation": "expresión figurada"
+                }
+              ],
+              "microLesson": {
+                "title": "Repaso: trabajo",
+                "goals": [
+                  "Usar vocabulario avanzado de la experiencia profesional.",
+                  "Aplicar concession y modal perfect.",
+                  "Argumentar y matizar sobre la experiencia profesional."
+                ],
+                "sections": [
+                  {
+                    "heading": "Lengua en contexto",
+                    "body": "Concession: Although, despite y however introducen concesiones. Modal perfect: Must have, might have y should have especulan sobre el pasado.",
+                    "examples": [
+                      {
+                        "source": "He trabajado en tres países. Dicho esto, depende del contexto.",
+                        "target": "I have worked in three countries. That said, it depends on the context."
+                      },
+                      {
+                        "source": "Tengo experiencia en atención al cliente. En otras palabras, merece la pena considerarlo.",
+                        "target": "I have experience in customer service. In other words, it is worth considering."
+                      }
+                    ]
+                  }
+                ]
+              },
+              "glossary": [
+                {
+                  "term": "I have worked in three countries. That said, it depends on the context.",
+                  "translations": [
+                    "He trabajado en tres países. Dicho esto, depende del contexto."
+                  ]
+                },
+                {
+                  "term": "I have experience in customer service. In other words, it is worth considering.",
+                  "translations": [
+                    "Tengo experiencia en atención al cliente. En otras palabras, merece la pena considerarlo."
+                  ]
+                },
+                {
+                  "term": "I want to learn new skills. I'm afraid it may be more complicated.",
+                  "translations": [
+                    "Quiero aprender nuevas habilidades. Me temo que puede ser más complicado."
+                  ]
+                }
+              ],
+              "exercises": [
+                {
+                  "type": "MultipleChoice",
+                  "id": "es-en-b2-u08-l01-e01",
+                  "question": "¿Cuál es la opción correcta para «He trabajado en tres países. Dicho esto, depende del contexto.»?",
+                  "options": [
+                    "I have worked in three countries. That said, it depends on the context.",
+                    "I have experience in customer service. In other words, it is worth considering.",
+                    "I want to learn new skills. I'm afraid it may be more complicated."
+                  ],
+                  "correctIndex": 0,
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "«He trabajado en tres países. Dicho esto, depende del contexto.» se dice «I have worked in three countries. That said, it depends on the context.».",
+                    "ruleRef": "gp-b2-concession"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has elegido la traducción correcta."
+                  }
+                },
+                {
+                  "type": "OrderWords",
+                  "id": "es-en-b2-u08-l01-e02",
+                  "tokens": [
+                    "have",
+                    "worked",
+                    "in",
+                    "three",
+                    "countries",
+                    "That",
+                    "said",
+                    "it",
+                    "depends",
+                    "on",
+                    "the",
+                    "context",
+                    "I"
+                  ],
+                  "answerTokens": [
+                    "I",
+                    "have",
+                    "worked",
+                    "in",
+                    "three",
+                    "countries",
+                    "That",
+                    "said",
+                    "it",
+                    "depends",
+                    "on",
+                    "the",
+                    "context"
+                  ],
+                  "sourcePhrase": "He trabajado en tres países. Dicho esto, depende del contexto.",
+                  "feedbackOnError": {
+                    "type": "word_order",
+                    "explanation": "El orden correcto es «I have worked in three countries That said it depends on the context».",
+                    "ruleRef": "gp-b2-concession"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "El orden produce una frase natural."
+                  }
+                },
+                {
+                  "type": "ClozeDragDrop",
+                  "id": "es-en-b2-u08-l01-e03",
+                  "passage": "I have {{b1}} in {{b2}} countries.",
+                  "blanks": [
+                    {
+                      "id": "b1",
+                      "answer": "worked",
+                      "options": [
+                        "worked",
+                        "countries",
+                        "very"
+                      ]
+                    },
+                    {
+                      "id": "b2",
+                      "answer": "three",
+                      "options": [
+                        "three",
+                        "countries",
+                        "very"
+                      ]
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "Las dos formas deben encajar con el contexto de la frase.",
+                    "ruleRef": "gp-b2-modal-perfect"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Los dos huecos encajan con la situación."
+                  }
+                },
+                {
+                  "type": "SemanticMatch",
+                  "id": "es-en-b2-u08-l01-e04",
+                  "instructions": "Clasifica la función comunicativa de cada intervención.",
+                  "pairs": [
+                    {
+                      "left": "I have worked in three countries. That said, it depends on the context.",
+                      "right": "Planteamiento",
+                      "register": "formal",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    },
+                    {
+                      "left": "I have experience in customer service. In other words, it is worth considering.",
+                      "right": "Concesión",
+                      "register": "neutral",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    },
+                    {
+                      "left": "I want to learn new skills. I'm afraid it may be more complicated.",
+                      "right": "Conclusión",
+                      "register": "informal",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "Cada intervención cumple una función comunicativa distinta.",
+                    "ruleRef": "gp-b2-concession"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has identificado la función de cada intervención."
+                  }
+                },
+                {
+                  "type": "SemanticMatch",
+                  "id": "es-en-b2-u08-l01-e05",
+                  "instructions": "Distingue el registro de cada intervención.",
+                  "pairs": [
+                    {
+                      "left": "I have worked in three countries. That said, it depends on the context.",
+                      "right": "Formal",
+                      "register": "formal",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    },
+                    {
+                      "left": "I have experience in customer service. In other words, it is worth considering.",
+                      "right": "Neutral",
+                      "register": "neutral",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    },
+                    {
+                      "left": "I want to learn new skills. I'm afraid it may be more complicated.",
+                      "right": "Informal",
+                      "register": "informal",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "register",
+                    "explanation": "El registro cambia según el contexto y la relación con el interlocutor.",
+                    "ruleRef": "gp-b2-modal-perfect"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has distinguido el registro de cada intervención."
+                  }
+                },
+                {
+                  "type": "AudioOnlyPrompt",
+                  "id": "es-en-b2-u08-l01-e06",
+                  "audioText": "I have experience in customer service. In other words, it is worth considering.",
+                  "question": "¿Qué ha dicho el hablante?",
+                  "options": [
+                    "I have experience in customer service. In other words, it is worth considering.",
+                    "I have worked in three countries. That said, it depends on the context.",
+                    "I want to learn new skills. I'm afraid it may be more complicated."
+                  ],
+                  "correctIndex": 0,
+                  "allowSlowPlayback": true,
+                  "feedbackOnError": {
+                    "type": "comprehension",
+                    "explanation": "El audio dice «I have experience in customer service. In other words, it is worth considering.».",
+                    "ruleRef": "gp-b2-concession"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has comprendido el mensaje del audio."
+                  }
+                },
+                {
+                  "type": "AudioOnlyPrompt",
+                  "id": "es-en-b2-u08-l01-e07",
+                  "audioText": "I want to learn new skills. I'm afraid it may be more complicated.",
+                  "question": "¿Cuál es la idea principal?",
+                  "options": [
+                    "I want to learn new skills. I'm afraid it may be more complicated.",
+                    "I have worked in three countries. That said, it depends on the context.",
+                    "I have experience in customer service. In other words, it is worth considering."
+                  ],
+                  "correctIndex": 0,
+                  "allowSlowPlayback": false,
+                  "feedbackOnError": {
+                    "type": "comprehension",
+                    "explanation": "El audio dice «I want to learn new skills. I'm afraid it may be more complicated.».",
+                    "ruleRef": "gp-b2-modal-perfect"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has identificado la idea principal."
+                  }
+                },
+                {
+                  "type": "ListenType",
+                  "id": "es-en-b2-u08-l01-e08",
+                  "audioText": "I want to learn new skills. I'm afraid it may be more complicated.",
+                  "transcription": "I want to learn new skills. I'm afraid it may be more complicated.",
+                  "feedbackOnError": {
+                    "type": "spelling",
+                    "explanation": "Escribe exactamente «I want to learn new skills. I'm afraid it may be more complicated.».",
+                    "ruleRef": "gp-b2-concession"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La transcripción coincide con el audio."
+                  }
+                },
+                {
+                  "type": "SpeakRepeat",
+                  "id": "es-en-b2-u08-l01-e09",
+                  "targetPhrase": "I want to learn new skills. I'm afraid it may be more complicated.",
+                  "audioText": "I want to learn new skills. I'm afraid it may be more complicated.",
+                  "feedbackOnError": {
+                    "type": "pronunciation",
+                    "explanation": "Repite «I want to learn new skills. I'm afraid it may be more complicated.» con claridad.",
+                    "ruleRef": "gp-b2-concession"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La frase se entiende y mantiene el ritmo."
+                  }
+                },
+                {
+                  "type": "FreeSpeakingPrompt",
+                  "id": "es-en-b2-u08-l01-e10",
+                  "prompt": "Argumenta y matiza una opinión sobre la experiencia profesional.",
+                  "minTokens": 20,
+                  "conceptClusters": [
+                    [
+                      "worked"
+                    ],
+                    [
+                      "three"
+                    ],
+                    [
+                      "countries"
+                    ]
+                  ],
+                  "modelAnswer": "I have worked in three countries. That said, it depends on the context. I have experience in customer service. In other words, it is worth considering. I want to learn new skills. I'm afraid it may be more complicated.",
+                  "selfAssessmentCriteria": [
+                    "¿La respuesta argumenta y responde a la tarea?",
+                    "¿Usa las dos estructuras gramaticales de la lección?",
+                    "¿Incluye una concesión o una matización?"
+                  ],
+                  "grammarRuleRefs": [
+                    "gp-b2-concession",
+                    "gp-b2-modal-perfect"
+                  ],
+                  "timeLimitSeconds": 90,
+                  "minWpm": 70,
+                  "maxWpm": 160,
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "La respuesta modelo desarrolla una opinión con matices y una concesión.",
+                    "ruleRef": "gp-b2-concession"
+                  }
+                }
+              ]
+            },
+            {
+              "id": "es-en-b2-u08-l02",
+              "title": "Mi casa y sus habitaciones",
+              "cefrLevel": "B2",
+              "scenario": "Situación comunicativa avanzada sobre mi casa.",
+              "canDo": "Puedo argumentar y matizar sobre mi casa.",
+              "grammarPoints": [
+                {
+                  "id": "gp-b2-concession",
+                  "label": "Concession",
+                  "description": "Although, despite y however introducen concesiones."
+                },
+                {
+                  "id": "gp-b2-modal-perfect",
+                  "label": "Modal perfect",
+                  "description": "Must have, might have y should have especulan sobre el pasado."
+                }
+              ],
+              "vocabFrequencyBand": "3000-5000",
+              "culturalNotes": [
+                {
+                  "idiom": "fill someone's shoes",
+                  "note": "Modismo avanzado útil para hablar de mi casa.",
+                  "translation": "expresión figurada"
+                }
+              ],
+              "microLesson": {
+                "title": "Mi casa y sus habitaciones",
+                "goals": [
+                  "Usar vocabulario avanzado de mi casa.",
+                  "Aplicar concession y modal perfect.",
+                  "Argumentar y matizar sobre mi casa."
+                ],
+                "sections": [
+                  {
+                    "heading": "Lengua en contexto",
+                    "body": "Concession: Although, despite y however introducen concesiones. Modal perfect: Must have, might have y should have especulan sobre el pasado.",
+                    "examples": [
+                      {
+                        "source": "Vivo en un piso pequeño con dos habitaciones. En otras palabras, merece la pena considerarlo.",
+                        "target": "I live in a small flat with two bedrooms. In other words, it is worth considering."
+                      },
+                      {
+                        "source": "La cocina es grande y luminosa. Me temo que puede ser más complicado.",
+                        "target": "The kitchen is big and bright. I'm afraid it may be more complicated."
+                      }
+                    ]
+                  }
+                ]
+              },
+              "glossary": [
+                {
+                  "term": "I live in a small flat with two bedrooms. In other words, it is worth considering.",
+                  "translations": [
+                    "Vivo en un piso pequeño con dos habitaciones. En otras palabras, merece la pena considerarlo."
+                  ]
+                },
+                {
+                  "term": "The kitchen is big and bright. I'm afraid it may be more complicated.",
+                  "translations": [
+                    "La cocina es grande y luminosa. Me temo que puede ser más complicado."
+                  ]
+                },
+                {
+                  "term": "There is a balcony with views of the street. To be honest, I have mixed feelings.",
+                  "translations": [
+                    "Hay un balcón con vistas a la calle. Sinceramente, tengo sentimientos encontrados."
+                  ]
+                }
+              ],
+              "exercises": [
+                {
+                  "type": "MultipleChoice",
+                  "id": "es-en-b2-u08-l02-e01",
+                  "question": "¿Cuál es la opción correcta para «Vivo en un piso pequeño con dos habitaciones. En otras palabras, merece la pena considerarlo.»?",
+                  "options": [
+                    "I live in a small flat with two bedrooms. In other words, it is worth considering.",
+                    "The kitchen is big and bright. I'm afraid it may be more complicated.",
+                    "There is a balcony with views of the street. To be honest, I have mixed feelings."
+                  ],
+                  "correctIndex": 0,
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "«Vivo en un piso pequeño con dos habitaciones. En otras palabras, merece la pena considerarlo.» se dice «I live in a small flat with two bedrooms. In other words, it is worth considering.».",
+                    "ruleRef": "gp-b2-concession"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has elegido la traducción correcta."
+                  }
+                },
+                {
+                  "type": "OrderWords",
+                  "id": "es-en-b2-u08-l02-e02",
+                  "tokens": [
+                    "live",
+                    "in",
+                    "a",
+                    "small",
+                    "flat",
+                    "with",
+                    "two",
+                    "bedrooms",
+                    "In",
+                    "other",
+                    "words",
+                    "it",
+                    "is",
+                    "worth",
+                    "considering",
+                    "I"
+                  ],
+                  "answerTokens": [
+                    "I",
+                    "live",
+                    "in",
+                    "a",
+                    "small",
+                    "flat",
+                    "with",
+                    "two",
+                    "bedrooms",
+                    "In",
+                    "other",
+                    "words",
+                    "it",
+                    "is",
+                    "worth",
+                    "considering"
+                  ],
+                  "sourcePhrase": "Vivo en un piso pequeño con dos habitaciones. En otras palabras, merece la pena considerarlo.",
+                  "feedbackOnError": {
+                    "type": "word_order",
+                    "explanation": "El orden correcto es «I live in a small flat with two bedrooms In other words it is worth considering».",
+                    "ruleRef": "gp-b2-concession"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "El orden produce una frase natural."
+                  }
+                },
+                {
+                  "type": "ClozeDragDrop",
+                  "id": "es-en-b2-u08-l02-e03",
+                  "passage": "I {{b1}} in a {{b2}} flat with two bedrooms.",
+                  "blanks": [
+                    {
+                      "id": "b1",
+                      "answer": "live",
+                      "options": [
+                        "live",
+                        "flat",
+                        "two"
+                      ]
+                    },
+                    {
+                      "id": "b2",
+                      "answer": "small",
+                      "options": [
+                        "small",
+                        "flat",
+                        "two"
+                      ]
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "Las dos formas deben encajar con el contexto de la frase.",
+                    "ruleRef": "gp-b2-modal-perfect"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Los dos huecos encajan con la situación."
+                  }
+                },
+                {
+                  "type": "SemanticMatch",
+                  "id": "es-en-b2-u08-l02-e04",
+                  "instructions": "Clasifica la función comunicativa de cada intervención.",
+                  "pairs": [
+                    {
+                      "left": "I live in a small flat with two bedrooms. In other words, it is worth considering.",
+                      "right": "Planteamiento",
+                      "register": "formal",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    },
+                    {
+                      "left": "The kitchen is big and bright. I'm afraid it may be more complicated.",
+                      "right": "Concesión",
+                      "register": "neutral",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    },
+                    {
+                      "left": "There is a balcony with views of the street. To be honest, I have mixed feelings.",
+                      "right": "Conclusión",
+                      "register": "informal",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "Cada intervención cumple una función comunicativa distinta.",
+                    "ruleRef": "gp-b2-concession"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has identificado la función de cada intervención."
+                  }
+                },
+                {
+                  "type": "SemanticMatch",
+                  "id": "es-en-b2-u08-l02-e05",
+                  "instructions": "Distingue el registro de cada intervención.",
+                  "pairs": [
+                    {
+                      "left": "I live in a small flat with two bedrooms. In other words, it is worth considering.",
+                      "right": "Formal",
+                      "register": "formal",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    },
+                    {
+                      "left": "The kitchen is big and bright. I'm afraid it may be more complicated.",
+                      "right": "Neutral",
+                      "register": "neutral",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    },
+                    {
+                      "left": "There is a balcony with views of the street. To be honest, I have mixed feelings.",
+                      "right": "Informal",
+                      "register": "informal",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "register",
+                    "explanation": "El registro cambia según el contexto y la relación con el interlocutor.",
+                    "ruleRef": "gp-b2-modal-perfect"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has distinguido el registro de cada intervención."
+                  }
+                },
+                {
+                  "type": "AudioOnlyPrompt",
+                  "id": "es-en-b2-u08-l02-e06",
+                  "audioText": "The kitchen is big and bright. I'm afraid it may be more complicated.",
+                  "question": "¿Qué ha dicho el hablante?",
+                  "options": [
+                    "The kitchen is big and bright. I'm afraid it may be more complicated.",
+                    "I live in a small flat with two bedrooms. In other words, it is worth considering.",
+                    "There is a balcony with views of the street. To be honest, I have mixed feelings."
+                  ],
+                  "correctIndex": 0,
+                  "allowSlowPlayback": true,
+                  "feedbackOnError": {
+                    "type": "comprehension",
+                    "explanation": "El audio dice «The kitchen is big and bright. I'm afraid it may be more complicated.».",
+                    "ruleRef": "gp-b2-concession"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has comprendido el mensaje del audio."
+                  }
+                },
+                {
+                  "type": "AudioOnlyPrompt",
+                  "id": "es-en-b2-u08-l02-e07",
+                  "audioText": "There is a balcony with views of the street. To be honest, I have mixed feelings.",
+                  "question": "¿Cuál es la idea principal?",
+                  "options": [
+                    "There is a balcony with views of the street. To be honest, I have mixed feelings.",
+                    "I live in a small flat with two bedrooms. In other words, it is worth considering.",
+                    "The kitchen is big and bright. I'm afraid it may be more complicated."
+                  ],
+                  "correctIndex": 0,
+                  "allowSlowPlayback": false,
+                  "feedbackOnError": {
+                    "type": "comprehension",
+                    "explanation": "El audio dice «There is a balcony with views of the street. To be honest, I have mixed feelings.».",
+                    "ruleRef": "gp-b2-modal-perfect"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has identificado la idea principal."
+                  }
+                },
+                {
+                  "type": "ListenType",
+                  "id": "es-en-b2-u08-l02-e08",
+                  "audioText": "There is a balcony with views of the street. To be honest, I have mixed feelings.",
+                  "transcription": "There is a balcony with views of the street. To be honest, I have mixed feelings.",
+                  "feedbackOnError": {
+                    "type": "spelling",
+                    "explanation": "Escribe exactamente «There is a balcony with views of the street. To be honest, I have mixed feelings.».",
+                    "ruleRef": "gp-b2-concession"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La transcripción coincide con el audio."
+                  }
+                },
+                {
+                  "type": "SpeakRepeat",
+                  "id": "es-en-b2-u08-l02-e09",
+                  "targetPhrase": "There is a balcony with views of the street. To be honest, I have mixed feelings.",
+                  "audioText": "There is a balcony with views of the street. To be honest, I have mixed feelings.",
+                  "feedbackOnError": {
+                    "type": "pronunciation",
+                    "explanation": "Repite «There is a balcony with views of the street. To be honest, I have mixed feelings.» con claridad.",
+                    "ruleRef": "gp-b2-concession"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La frase se entiende y mantiene el ritmo."
+                  }
+                },
+                {
+                  "type": "FreeSpeakingPrompt",
+                  "id": "es-en-b2-u08-l02-e10",
+                  "prompt": "Argumenta y matiza una opinión sobre mi casa.",
+                  "minTokens": 20,
+                  "conceptClusters": [
+                    [
+                      "live"
+                    ],
+                    [
+                      "small"
+                    ],
+                    [
+                      "flat"
+                    ]
+                  ],
+                  "modelAnswer": "I live in a small flat with two bedrooms. In other words, it is worth considering. The kitchen is big and bright. I'm afraid it may be more complicated. There is a balcony with views of the street. To be honest, I have mixed feelings.",
+                  "selfAssessmentCriteria": [
+                    "¿La respuesta argumenta y responde a la tarea?",
+                    "¿Usa las dos estructuras gramaticales de la lección?",
+                    "¿Incluye una concesión o una matización?"
+                  ],
+                  "grammarRuleRefs": [
+                    "gp-b2-concession",
+                    "gp-b2-modal-perfect"
+                  ],
+                  "timeLimitSeconds": 90,
+                  "minWpm": 70,
+                  "maxWpm": 160,
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "La respuesta modelo desarrolla una opinión con matices y una concesión.",
+                    "ruleRef": "gp-b2-concession"
+                  }
+                }
+              ]
+            },
+            {
+              "id": "es-en-b2-u08-l03",
+              "title": "Muebles y tareas",
+              "cefrLevel": "B2",
+              "scenario": "Situación comunicativa avanzada sobre los muebles y las tareas.",
+              "canDo": "Puedo argumentar y matizar sobre los muebles y las tareas.",
+              "grammarPoints": [
+                {
+                  "id": "gp-b2-concession",
+                  "label": "Concession",
+                  "description": "Although, despite y however introducen concesiones."
+                },
+                {
+                  "id": "gp-b2-modal-perfect",
+                  "label": "Modal perfect",
+                  "description": "Must have, might have y should have especulan sobre el pasado."
+                }
+              ],
+              "vocabFrequencyBand": "3000-5000",
+              "culturalNotes": [
+                {
+                  "idiom": "find your feet",
+                  "note": "Modismo avanzado útil para hablar de los muebles y las tareas.",
+                  "translation": "expresión figurada"
+                }
+              ],
+              "microLesson": {
+                "title": "Muebles y tareas",
+                "goals": [
+                  "Usar vocabulario avanzado de los muebles y las tareas.",
+                  "Aplicar concession y modal perfect.",
+                  "Argumentar y matizar sobre los muebles y las tareas."
+                ],
+                "sections": [
+                  {
+                    "heading": "Lengua en contexto",
+                    "body": "Concession: Although, despite y however introducen concesiones. Modal perfect: Must have, might have y should have especulan sobre el pasado.",
+                    "examples": [
+                      {
+                        "source": "Necesito una lavadora. Me temo que puede ser más complicado.",
+                        "target": "I need a washing machine. I'm afraid it may be more complicated."
+                      },
+                      {
+                        "source": "Necesito una mesa grande. Sinceramente, tengo sentimientos encontrados.",
+                        "target": "I need a big table. To be honest, I have mixed feelings."
+                      }
+                    ]
+                  }
+                ]
+              },
+              "glossary": [
+                {
+                  "term": "I need a washing machine. I'm afraid it may be more complicated.",
+                  "translations": [
+                    "Necesito una lavadora. Me temo que puede ser más complicado."
+                  ]
+                },
+                {
+                  "term": "I need a big table. To be honest, I have mixed feelings.",
+                  "translations": [
+                    "Necesito una mesa grande. Sinceramente, tengo sentimientos encontrados."
+                  ]
+                },
+                {
+                  "term": "I need a new wardrobe. It seems that this is changing.",
+                  "translations": [
+                    "Necesito un armario nuevo. Parece que esto está cambiando."
+                  ]
+                }
+              ],
+              "exercises": [
+                {
+                  "type": "MultipleChoice",
+                  "id": "es-en-b2-u08-l03-e01",
+                  "question": "¿Cuál es la opción correcta para «Necesito una lavadora. Me temo que puede ser más complicado.»?",
+                  "options": [
+                    "I need a washing machine. I'm afraid it may be more complicated.",
+                    "I need a big table. To be honest, I have mixed feelings.",
+                    "I need a new wardrobe. It seems that this is changing."
+                  ],
+                  "correctIndex": 0,
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "«Necesito una lavadora. Me temo que puede ser más complicado.» se dice «I need a washing machine. I'm afraid it may be more complicated.».",
+                    "ruleRef": "gp-b2-concession"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has elegido la traducción correcta."
+                  }
+                },
+                {
+                  "type": "OrderWords",
+                  "id": "es-en-b2-u08-l03-e02",
+                  "tokens": [
+                    "need",
+                    "a",
+                    "washing",
+                    "machine",
+                    "I'm",
+                    "afraid",
+                    "it",
+                    "may",
+                    "be",
+                    "more",
+                    "complicated",
+                    "I"
+                  ],
+                  "answerTokens": [
+                    "I",
+                    "need",
+                    "a",
+                    "washing",
+                    "machine",
+                    "I'm",
+                    "afraid",
+                    "it",
+                    "may",
+                    "be",
+                    "more",
+                    "complicated"
+                  ],
+                  "sourcePhrase": "Necesito una lavadora. Me temo que puede ser más complicado.",
+                  "feedbackOnError": {
+                    "type": "word_order",
+                    "explanation": "El orden correcto es «I need a washing machine I'm afraid it may be more complicated».",
+                    "ruleRef": "gp-b2-concession"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "El orden produce una frase natural."
+                  }
+                },
+                {
+                  "type": "ClozeDragDrop",
+                  "id": "es-en-b2-u08-l03-e03",
+                  "passage": "I {{b1}} a {{b2}} machine",
+                  "blanks": [
+                    {
+                      "id": "b1",
+                      "answer": "need",
+                      "options": [
+                        "need",
+                        "machine",
+                        "very"
+                      ]
+                    },
+                    {
+                      "id": "b2",
+                      "answer": "washing",
+                      "options": [
+                        "washing",
+                        "machine",
+                        "very"
+                      ]
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "Las dos formas deben encajar con el contexto de la frase.",
+                    "ruleRef": "gp-b2-modal-perfect"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Los dos huecos encajan con la situación."
+                  }
+                },
+                {
+                  "type": "SemanticMatch",
+                  "id": "es-en-b2-u08-l03-e04",
+                  "instructions": "Clasifica la función comunicativa de cada intervención.",
+                  "pairs": [
+                    {
+                      "left": "I need a washing machine. I'm afraid it may be more complicated.",
+                      "right": "Planteamiento",
+                      "register": "formal",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    },
+                    {
+                      "left": "I need a big table. To be honest, I have mixed feelings.",
+                      "right": "Concesión",
+                      "register": "neutral",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    },
+                    {
+                      "left": "I need a new wardrobe. It seems that this is changing.",
+                      "right": "Conclusión",
+                      "register": "informal",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "Cada intervención cumple una función comunicativa distinta.",
+                    "ruleRef": "gp-b2-concession"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has identificado la función de cada intervención."
+                  }
+                },
+                {
+                  "type": "SemanticMatch",
+                  "id": "es-en-b2-u08-l03-e05",
+                  "instructions": "Distingue el registro de cada intervención.",
+                  "pairs": [
+                    {
+                      "left": "I need a washing machine. I'm afraid it may be more complicated.",
+                      "right": "Formal",
+                      "register": "formal",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    },
+                    {
+                      "left": "I need a big table. To be honest, I have mixed feelings.",
+                      "right": "Neutral",
+                      "register": "neutral",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    },
+                    {
+                      "left": "I need a new wardrobe. It seems that this is changing.",
+                      "right": "Informal",
+                      "register": "informal",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "register",
+                    "explanation": "El registro cambia según el contexto y la relación con el interlocutor.",
+                    "ruleRef": "gp-b2-modal-perfect"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has distinguido el registro de cada intervención."
+                  }
+                },
+                {
+                  "type": "AudioOnlyPrompt",
+                  "id": "es-en-b2-u08-l03-e06",
+                  "audioText": "I need a big table. To be honest, I have mixed feelings.",
+                  "question": "¿Qué ha dicho el hablante?",
+                  "options": [
+                    "I need a big table. To be honest, I have mixed feelings.",
+                    "I need a washing machine. I'm afraid it may be more complicated.",
+                    "I need a new wardrobe. It seems that this is changing."
+                  ],
+                  "correctIndex": 0,
+                  "allowSlowPlayback": true,
+                  "feedbackOnError": {
+                    "type": "comprehension",
+                    "explanation": "El audio dice «I need a big table. To be honest, I have mixed feelings.».",
+                    "ruleRef": "gp-b2-concession"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has comprendido el mensaje del audio."
+                  }
+                },
+                {
+                  "type": "AudioOnlyPrompt",
+                  "id": "es-en-b2-u08-l03-e07",
+                  "audioText": "I need a new wardrobe. It seems that this is changing.",
+                  "question": "¿Cuál es la idea principal?",
+                  "options": [
+                    "I need a new wardrobe. It seems that this is changing.",
+                    "I need a washing machine. I'm afraid it may be more complicated.",
+                    "I need a big table. To be honest, I have mixed feelings."
+                  ],
+                  "correctIndex": 0,
+                  "allowSlowPlayback": false,
+                  "feedbackOnError": {
+                    "type": "comprehension",
+                    "explanation": "El audio dice «I need a new wardrobe. It seems that this is changing.».",
+                    "ruleRef": "gp-b2-modal-perfect"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has identificado la idea principal."
+                  }
+                },
+                {
+                  "type": "ListenType",
+                  "id": "es-en-b2-u08-l03-e08",
+                  "audioText": "I need a new wardrobe. It seems that this is changing.",
+                  "transcription": "I need a new wardrobe. It seems that this is changing.",
+                  "feedbackOnError": {
+                    "type": "spelling",
+                    "explanation": "Escribe exactamente «I need a new wardrobe. It seems that this is changing.».",
+                    "ruleRef": "gp-b2-concession"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La transcripción coincide con el audio."
+                  }
+                },
+                {
+                  "type": "SpeakRepeat",
+                  "id": "es-en-b2-u08-l03-e09",
+                  "targetPhrase": "I need a new wardrobe. It seems that this is changing.",
+                  "audioText": "I need a new wardrobe. It seems that this is changing.",
+                  "feedbackOnError": {
+                    "type": "pronunciation",
+                    "explanation": "Repite «I need a new wardrobe. It seems that this is changing.» con claridad.",
+                    "ruleRef": "gp-b2-concession"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La frase se entiende y mantiene el ritmo."
+                  }
+                },
+                {
+                  "type": "FreeSpeakingPrompt",
+                  "id": "es-en-b2-u08-l03-e10",
+                  "prompt": "Argumenta y matiza una opinión sobre los muebles y las tareas.",
+                  "minTokens": 20,
+                  "conceptClusters": [
+                    [
+                      "need"
+                    ],
+                    [
+                      "washing"
+                    ],
+                    [
+                      "machine"
+                    ]
+                  ],
+                  "modelAnswer": "I need a washing machine. I'm afraid it may be more complicated. I need a big table. To be honest, I have mixed feelings. I need a new wardrobe. It seems that this is changing.",
+                  "selfAssessmentCriteria": [
+                    "¿La respuesta argumenta y responde a la tarea?",
+                    "¿Usa las dos estructuras gramaticales de la lección?",
+                    "¿Incluye una concesión o una matización?"
+                  ],
+                  "grammarRuleRefs": [
+                    "gp-b2-concession",
+                    "gp-b2-modal-perfect"
+                  ],
+                  "timeLimitSeconds": 90,
+                  "minWpm": 70,
+                  "maxWpm": 160,
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "La respuesta modelo desarrolla una opinión con matices y una concesión.",
+                    "ruleRef": "gp-b2-concession"
+                  }
+                }
+              ]
+            },
+            {
+              "id": "es-en-b2-u08-l04",
+              "title": "Must / mustn't",
+              "cefrLevel": "B2",
+              "scenario": "Situación comunicativa avanzada sobre las normas de la casa.",
+              "canDo": "Puedo argumentar y matizar sobre las normas de la casa.",
+              "grammarPoints": [
+                {
+                  "id": "gp-b2-concession",
+                  "label": "Concession",
+                  "description": "Although, despite y however introducen concesiones."
+                },
+                {
+                  "id": "gp-b2-modal-perfect",
+                  "label": "Modal perfect",
+                  "description": "Must have, might have y should have especulan sobre el pasado."
+                }
+              ],
+              "vocabFrequencyBand": "3000-5000",
+              "culturalNotes": [
+                {
+                  "idiom": "get a grip",
+                  "note": "Modismo avanzado útil para hablar de las normas de la casa.",
+                  "translation": "expresión figurada"
+                }
+              ],
+              "microLesson": {
+                "title": "Must / mustn't",
+                "goals": [
+                  "Usar vocabulario avanzado de las normas de la casa.",
+                  "Aplicar concession y modal perfect.",
+                  "Argumentar y matizar sobre las normas de la casa."
+                ],
+                "sections": [
+                  {
+                    "heading": "Lengua en contexto",
+                    "body": "Concession: Although, despite y however introducen concesiones. Modal perfect: Must have, might have y should have especulan sobre el pasado.",
+                    "examples": [
+                      {
+                        "source": "Debes respetar el silencio por la noche. Sinceramente, tengo sentimientos encontrados.",
+                        "target": "You must keep quiet at night. To be honest, I have mixed feelings."
+                      },
+                      {
+                        "source": "Debes limpiar la cocina después de cocinar. Parece que esto está cambiando.",
+                        "target": "You must clean the kitchen after cooking. It seems that this is changing."
+                      }
+                    ]
+                  }
+                ]
+              },
+              "glossary": [
+                {
+                  "term": "You must keep quiet at night. To be honest, I have mixed feelings.",
+                  "translations": [
+                    "Debes respetar el silencio por la noche. Sinceramente, tengo sentimientos encontrados."
+                  ]
+                },
+                {
+                  "term": "You must clean the kitchen after cooking. It seems that this is changing.",
+                  "translations": [
+                    "Debes limpiar la cocina después de cocinar. Parece que esto está cambiando."
+                  ]
+                },
+                {
+                  "term": "You must lock the door. From my point of view, it is a reasonable option.",
+                  "translations": [
+                    "Debes cerrar la puerta con llave. Desde mi punto de vista, es una opción razonable."
+                  ]
+                }
+              ],
+              "exercises": [
+                {
+                  "type": "MultipleChoice",
+                  "id": "es-en-b2-u08-l04-e01",
+                  "question": "¿Cuál es la opción correcta para «Debes respetar el silencio por la noche. Sinceramente, tengo sentimientos encontrados.»?",
+                  "options": [
+                    "You must keep quiet at night. To be honest, I have mixed feelings.",
+                    "You must clean the kitchen after cooking. It seems that this is changing.",
+                    "You must lock the door. From my point of view, it is a reasonable option."
+                  ],
+                  "correctIndex": 0,
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "«Debes respetar el silencio por la noche. Sinceramente, tengo sentimientos encontrados.» se dice «You must keep quiet at night. To be honest, I have mixed feelings.».",
+                    "ruleRef": "gp-b2-concession"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has elegido la traducción correcta."
+                  }
+                },
+                {
+                  "type": "OrderWords",
+                  "id": "es-en-b2-u08-l04-e02",
+                  "tokens": [
+                    "must",
+                    "keep",
+                    "quiet",
+                    "at",
+                    "night",
+                    "To",
+                    "be",
+                    "honest",
+                    "I",
+                    "have",
+                    "mixed",
+                    "feelings",
+                    "You"
+                  ],
+                  "answerTokens": [
+                    "You",
+                    "must",
+                    "keep",
+                    "quiet",
+                    "at",
+                    "night",
+                    "To",
+                    "be",
+                    "honest",
+                    "I",
+                    "have",
+                    "mixed",
+                    "feelings"
+                  ],
+                  "sourcePhrase": "Debes respetar el silencio por la noche. Sinceramente, tengo sentimientos encontrados.",
+                  "feedbackOnError": {
+                    "type": "word_order",
+                    "explanation": "El orden correcto es «You must keep quiet at night To be honest I have mixed feelings».",
+                    "ruleRef": "gp-b2-concession"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "El orden produce una frase natural."
+                  }
+                },
+                {
+                  "type": "ClozeDragDrop",
+                  "id": "es-en-b2-u08-l04-e03",
+                  "passage": "You must {{b1}} {{b2}} at night",
+                  "blanks": [
+                    {
+                      "id": "b1",
+                      "answer": "keep",
+                      "options": [
+                        "keep",
+                        "night",
+                        "very"
+                      ]
+                    },
+                    {
+                      "id": "b2",
+                      "answer": "quiet",
+                      "options": [
+                        "quiet",
+                        "night",
+                        "very"
+                      ]
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "Las dos formas deben encajar con el contexto de la frase.",
+                    "ruleRef": "gp-b2-modal-perfect"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Los dos huecos encajan con la situación."
+                  }
+                },
+                {
+                  "type": "SemanticMatch",
+                  "id": "es-en-b2-u08-l04-e04",
+                  "instructions": "Clasifica la función comunicativa de cada intervención.",
+                  "pairs": [
+                    {
+                      "left": "You must keep quiet at night. To be honest, I have mixed feelings.",
+                      "right": "Planteamiento",
+                      "register": "formal",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    },
+                    {
+                      "left": "You must clean the kitchen after cooking. It seems that this is changing.",
+                      "right": "Concesión",
+                      "register": "neutral",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    },
+                    {
+                      "left": "You must lock the door. From my point of view, it is a reasonable option.",
+                      "right": "Conclusión",
+                      "register": "informal",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "Cada intervención cumple una función comunicativa distinta.",
+                    "ruleRef": "gp-b2-concession"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has identificado la función de cada intervención."
+                  }
+                },
+                {
+                  "type": "SemanticMatch",
+                  "id": "es-en-b2-u08-l04-e05",
+                  "instructions": "Distingue el registro de cada intervención.",
+                  "pairs": [
+                    {
+                      "left": "You must keep quiet at night. To be honest, I have mixed feelings.",
+                      "right": "Formal",
+                      "register": "formal",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    },
+                    {
+                      "left": "You must clean the kitchen after cooking. It seems that this is changing.",
+                      "right": "Neutral",
+                      "register": "neutral",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    },
+                    {
+                      "left": "You must lock the door. From my point of view, it is a reasonable option.",
+                      "right": "Informal",
+                      "register": "informal",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "register",
+                    "explanation": "El registro cambia según el contexto y la relación con el interlocutor.",
+                    "ruleRef": "gp-b2-modal-perfect"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has distinguido el registro de cada intervención."
+                  }
+                },
+                {
+                  "type": "AudioOnlyPrompt",
+                  "id": "es-en-b2-u08-l04-e06",
+                  "audioText": "You must clean the kitchen after cooking. It seems that this is changing.",
+                  "question": "¿Qué ha dicho el hablante?",
+                  "options": [
+                    "You must clean the kitchen after cooking. It seems that this is changing.",
+                    "You must keep quiet at night. To be honest, I have mixed feelings.",
+                    "You must lock the door. From my point of view, it is a reasonable option."
+                  ],
+                  "correctIndex": 0,
+                  "allowSlowPlayback": true,
+                  "feedbackOnError": {
+                    "type": "comprehension",
+                    "explanation": "El audio dice «You must clean the kitchen after cooking. It seems that this is changing.».",
+                    "ruleRef": "gp-b2-concession"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has comprendido el mensaje del audio."
+                  }
+                },
+                {
+                  "type": "AudioOnlyPrompt",
+                  "id": "es-en-b2-u08-l04-e07",
+                  "audioText": "You must lock the door. From my point of view, it is a reasonable option.",
+                  "question": "¿Cuál es la idea principal?",
+                  "options": [
+                    "You must lock the door. From my point of view, it is a reasonable option.",
+                    "You must keep quiet at night. To be honest, I have mixed feelings.",
+                    "You must clean the kitchen after cooking. It seems that this is changing."
+                  ],
+                  "correctIndex": 0,
+                  "allowSlowPlayback": false,
+                  "feedbackOnError": {
+                    "type": "comprehension",
+                    "explanation": "El audio dice «You must lock the door. From my point of view, it is a reasonable option.».",
+                    "ruleRef": "gp-b2-modal-perfect"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has identificado la idea principal."
+                  }
+                },
+                {
+                  "type": "ListenType",
+                  "id": "es-en-b2-u08-l04-e08",
+                  "audioText": "You must lock the door. From my point of view, it is a reasonable option.",
+                  "transcription": "You must lock the door. From my point of view, it is a reasonable option.",
+                  "feedbackOnError": {
+                    "type": "spelling",
+                    "explanation": "Escribe exactamente «You must lock the door. From my point of view, it is a reasonable option.».",
+                    "ruleRef": "gp-b2-concession"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La transcripción coincide con el audio."
+                  }
+                },
+                {
+                  "type": "SpeakRepeat",
+                  "id": "es-en-b2-u08-l04-e09",
+                  "targetPhrase": "You must lock the door. From my point of view, it is a reasonable option.",
+                  "audioText": "You must lock the door. From my point of view, it is a reasonable option.",
+                  "feedbackOnError": {
+                    "type": "pronunciation",
+                    "explanation": "Repite «You must lock the door. From my point of view, it is a reasonable option.» con claridad.",
+                    "ruleRef": "gp-b2-concession"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La frase se entiende y mantiene el ritmo."
+                  }
+                },
+                {
+                  "type": "FreeSpeakingPrompt",
+                  "id": "es-en-b2-u08-l04-e10",
+                  "prompt": "Argumenta y matiza una opinión sobre las normas de la casa.",
+                  "minTokens": 20,
+                  "conceptClusters": [
+                    [
+                      "keep"
+                    ],
+                    [
+                      "quiet"
+                    ],
+                    [
+                      "night"
+                    ]
+                  ],
+                  "modelAnswer": "You must keep quiet at night. To be honest, I have mixed feelings. You must clean the kitchen after cooking. It seems that this is changing. You must lock the door. From my point of view, it is a reasonable option.",
+                  "selfAssessmentCriteria": [
+                    "¿La respuesta argumenta y responde a la tarea?",
+                    "¿Usa las dos estructuras gramaticales de la lección?",
+                    "¿Incluye una concesión o una matización?"
+                  ],
+                  "grammarRuleRefs": [
+                    "gp-b2-concession",
+                    "gp-b2-modal-perfect"
+                  ],
+                  "timeLimitSeconds": 90,
+                  "minWpm": 70,
+                  "maxWpm": 160,
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "La respuesta modelo desarrolla una opinión con matices y una concesión.",
+                    "ruleRef": "gp-b2-concession"
+                  }
+                }
+              ]
+            },
+            {
+              "id": "es-en-b2-u08-l05",
+              "title": "Have to / allowed to",
+              "cefrLevel": "B2",
+              "scenario": "Situación comunicativa avanzada sobre las obligaciones de la casa.",
+              "canDo": "Puedo argumentar y matizar sobre las obligaciones de la casa.",
+              "grammarPoints": [
+                {
+                  "id": "gp-b2-concession",
+                  "label": "Concession",
+                  "description": "Although, despite y however introducen concesiones."
+                },
+                {
+                  "id": "gp-b2-modal-perfect",
+                  "label": "Modal perfect",
+                  "description": "Must have, might have y should have especulan sobre el pasado."
+                }
+              ],
+              "vocabFrequencyBand": "3000-5000",
+              "culturalNotes": [
+                {
+                  "idiom": "get cold feet",
+                  "note": "Modismo avanzado útil para hablar de las obligaciones de la casa.",
+                  "translation": "expresión figurada"
+                }
+              ],
+              "microLesson": {
+                "title": "Have to / allowed to",
+                "goals": [
+                  "Usar vocabulario avanzado de las obligaciones de la casa.",
+                  "Aplicar concession y modal perfect.",
+                  "Argumentar y matizar sobre las obligaciones de la casa."
+                ],
+                "sections": [
+                  {
+                    "heading": "Lengua en contexto",
+                    "body": "Concession: Although, despite y however introducen concesiones. Modal perfect: Must have, might have y should have especulan sobre el pasado.",
+                    "examples": [
+                      {
+                        "source": "Tengo que pagar el alquiler el primer día. Parece que esto está cambiando.",
+                        "target": "I have to pay the rent on the first day. It seems that this is changing."
+                      },
+                      {
+                        "source": "Tengo que sacar la basura los martes. Desde mi punto de vista, es una opción razonable.",
+                        "target": "I have to take out the rubbish on Tuesdays. From my point of view, it is a reasonable option."
+                      }
+                    ]
+                  }
+                ]
+              },
+              "glossary": [
+                {
+                  "term": "I have to pay the rent on the first day. It seems that this is changing.",
+                  "translations": [
+                    "Tengo que pagar el alquiler el primer día. Parece que esto está cambiando."
+                  ]
+                },
+                {
+                  "term": "I have to take out the rubbish on Tuesdays. From my point of view, it is a reasonable option.",
+                  "translations": [
+                    "Tengo que sacar la basura los martes. Desde mi punto de vista, es una opción razonable."
+                  ]
+                },
+                {
+                  "term": "I have to share the expenses. Nevertheless, there are also advantages.",
+                  "translations": [
+                    "Tengo que compartir los gastos. No obstante, también tiene ventajas."
+                  ]
+                }
+              ],
+              "exercises": [
+                {
+                  "type": "MultipleChoice",
+                  "id": "es-en-b2-u08-l05-e01",
+                  "question": "¿Cuál es la opción correcta para «Tengo que pagar el alquiler el primer día. Parece que esto está cambiando.»?",
+                  "options": [
+                    "I have to pay the rent on the first day. It seems that this is changing.",
+                    "I have to take out the rubbish on Tuesdays. From my point of view, it is a reasonable option.",
+                    "I have to share the expenses. Nevertheless, there are also advantages."
+                  ],
+                  "correctIndex": 0,
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "«Tengo que pagar el alquiler el primer día. Parece que esto está cambiando.» se dice «I have to pay the rent on the first day. It seems that this is changing.».",
+                    "ruleRef": "gp-b2-concession"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has elegido la traducción correcta."
+                  }
+                },
+                {
+                  "type": "OrderWords",
+                  "id": "es-en-b2-u08-l05-e02",
+                  "tokens": [
+                    "have",
+                    "to",
+                    "pay",
+                    "the",
+                    "rent",
+                    "on",
+                    "the",
+                    "first",
+                    "day",
+                    "It",
+                    "seems",
+                    "that",
+                    "this",
+                    "is",
+                    "changing",
+                    "I"
+                  ],
+                  "answerTokens": [
+                    "I",
+                    "have",
+                    "to",
+                    "pay",
+                    "the",
+                    "rent",
+                    "on",
+                    "the",
+                    "first",
+                    "day",
+                    "It",
+                    "seems",
+                    "that",
+                    "this",
+                    "is",
+                    "changing"
+                  ],
+                  "sourcePhrase": "Tengo que pagar el alquiler el primer día. Parece que esto está cambiando.",
+                  "feedbackOnError": {
+                    "type": "word_order",
+                    "explanation": "El orden correcto es «I have to pay the rent on the first day It seems that this is changing».",
+                    "ruleRef": "gp-b2-concession"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "El orden produce una frase natural."
+                  }
+                },
+                {
+                  "type": "ClozeDragDrop",
+                  "id": "es-en-b2-u08-l05-e03",
+                  "passage": "I have to {{b1}} the {{b2}} on the first day",
+                  "blanks": [
+                    {
+                      "id": "b1",
+                      "answer": "pay",
+                      "options": [
+                        "pay",
+                        "first",
+                        "day"
+                      ]
+                    },
+                    {
+                      "id": "b2",
+                      "answer": "rent",
+                      "options": [
+                        "rent",
+                        "first",
+                        "day"
+                      ]
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "Las dos formas deben encajar con el contexto de la frase.",
+                    "ruleRef": "gp-b2-modal-perfect"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Los dos huecos encajan con la situación."
+                  }
+                },
+                {
+                  "type": "SemanticMatch",
+                  "id": "es-en-b2-u08-l05-e04",
+                  "instructions": "Clasifica la función comunicativa de cada intervención.",
+                  "pairs": [
+                    {
+                      "left": "I have to pay the rent on the first day. It seems that this is changing.",
+                      "right": "Planteamiento",
+                      "register": "formal",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    },
+                    {
+                      "left": "I have to take out the rubbish on Tuesdays. From my point of view, it is a reasonable option.",
+                      "right": "Concesión",
+                      "register": "neutral",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    },
+                    {
+                      "left": "I have to share the expenses. Nevertheless, there are also advantages.",
+                      "right": "Conclusión",
+                      "register": "informal",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "Cada intervención cumple una función comunicativa distinta.",
+                    "ruleRef": "gp-b2-concession"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has identificado la función de cada intervención."
+                  }
+                },
+                {
+                  "type": "SemanticMatch",
+                  "id": "es-en-b2-u08-l05-e05",
+                  "instructions": "Distingue el registro de cada intervención.",
+                  "pairs": [
+                    {
+                      "left": "I have to pay the rent on the first day. It seems that this is changing.",
+                      "right": "Formal",
+                      "register": "formal",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    },
+                    {
+                      "left": "I have to take out the rubbish on Tuesdays. From my point of view, it is a reasonable option.",
+                      "right": "Neutral",
+                      "register": "neutral",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    },
+                    {
+                      "left": "I have to share the expenses. Nevertheless, there are also advantages.",
+                      "right": "Informal",
+                      "register": "informal",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "register",
+                    "explanation": "El registro cambia según el contexto y la relación con el interlocutor.",
+                    "ruleRef": "gp-b2-modal-perfect"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has distinguido el registro de cada intervención."
+                  }
+                },
+                {
+                  "type": "AudioOnlyPrompt",
+                  "id": "es-en-b2-u08-l05-e06",
+                  "audioText": "I have to take out the rubbish on Tuesdays. From my point of view, it is a reasonable option.",
+                  "question": "¿Qué ha dicho el hablante?",
+                  "options": [
+                    "I have to take out the rubbish on Tuesdays. From my point of view, it is a reasonable option.",
+                    "I have to pay the rent on the first day. It seems that this is changing.",
+                    "I have to share the expenses. Nevertheless, there are also advantages."
+                  ],
+                  "correctIndex": 0,
+                  "allowSlowPlayback": true,
+                  "feedbackOnError": {
+                    "type": "comprehension",
+                    "explanation": "El audio dice «I have to take out the rubbish on Tuesdays. From my point of view, it is a reasonable option.».",
+                    "ruleRef": "gp-b2-concession"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has comprendido el mensaje del audio."
+                  }
+                },
+                {
+                  "type": "AudioOnlyPrompt",
+                  "id": "es-en-b2-u08-l05-e07",
+                  "audioText": "I have to share the expenses. Nevertheless, there are also advantages.",
+                  "question": "¿Cuál es la idea principal?",
+                  "options": [
+                    "I have to share the expenses. Nevertheless, there are also advantages.",
+                    "I have to pay the rent on the first day. It seems that this is changing.",
+                    "I have to take out the rubbish on Tuesdays. From my point of view, it is a reasonable option."
+                  ],
+                  "correctIndex": 0,
+                  "allowSlowPlayback": false,
+                  "feedbackOnError": {
+                    "type": "comprehension",
+                    "explanation": "El audio dice «I have to share the expenses. Nevertheless, there are also advantages.».",
+                    "ruleRef": "gp-b2-modal-perfect"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has identificado la idea principal."
+                  }
+                },
+                {
+                  "type": "ListenType",
+                  "id": "es-en-b2-u08-l05-e08",
+                  "audioText": "I have to share the expenses. Nevertheless, there are also advantages.",
+                  "transcription": "I have to share the expenses. Nevertheless, there are also advantages.",
+                  "feedbackOnError": {
+                    "type": "spelling",
+                    "explanation": "Escribe exactamente «I have to share the expenses. Nevertheless, there are also advantages.».",
+                    "ruleRef": "gp-b2-concession"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La transcripción coincide con el audio."
+                  }
+                },
+                {
+                  "type": "SpeakRepeat",
+                  "id": "es-en-b2-u08-l05-e09",
+                  "targetPhrase": "I have to share the expenses. Nevertheless, there are also advantages.",
+                  "audioText": "I have to share the expenses. Nevertheless, there are also advantages.",
+                  "feedbackOnError": {
+                    "type": "pronunciation",
+                    "explanation": "Repite «I have to share the expenses. Nevertheless, there are also advantages.» con claridad.",
+                    "ruleRef": "gp-b2-concession"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La frase se entiende y mantiene el ritmo."
+                  }
+                },
+                {
+                  "type": "FreeSpeakingPrompt",
+                  "id": "es-en-b2-u08-l05-e10",
+                  "prompt": "Argumenta y matiza una opinión sobre las obligaciones de la casa.",
+                  "minTokens": 20,
+                  "conceptClusters": [
+                    [
+                      "pay"
+                    ],
+                    [
+                      "rent"
+                    ],
+                    [
+                      "first"
+                    ]
+                  ],
+                  "modelAnswer": "I have to pay the rent on the first day. It seems that this is changing. I have to take out the rubbish on Tuesdays. From my point of view, it is a reasonable option. I have to share the expenses. Nevertheless, there are also advantages.",
+                  "selfAssessmentCriteria": [
+                    "¿La respuesta argumenta y responde a la tarea?",
+                    "¿Usa las dos estructuras gramaticales de la lección?",
+                    "¿Incluye una concesión o una matización?"
+                  ],
+                  "grammarRuleRefs": [
+                    "gp-b2-concession",
+                    "gp-b2-modal-perfect"
+                  ],
+                  "timeLimitSeconds": 90,
+                  "minWpm": 70,
+                  "maxWpm": 160,
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "La respuesta modelo desarrolla una opinión con matices y una concesión.",
+                    "ruleRef": "gp-b2-concession"
+                  }
+                }
+              ]
+            },
+            {
+              "id": "es-en-b2-u08-l06",
+              "title": "Normas de convivencia",
+              "cefrLevel": "B2",
+              "scenario": "Situación comunicativa avanzada sobre la convivencia.",
+              "canDo": "Puedo argumentar y matizar sobre la convivencia.",
+              "grammarPoints": [
+                {
+                  "id": "gp-b2-concession",
+                  "label": "Concession",
+                  "description": "Although, despite y however introducen concesiones."
+                },
+                {
+                  "id": "gp-b2-modal-perfect",
+                  "label": "Modal perfect",
+                  "description": "Must have, might have y should have especulan sobre el pasado."
+                }
+              ],
+              "vocabFrequencyBand": "3000-5000",
+              "culturalNotes": [
+                {
+                  "idiom": "get the hang of it",
+                  "note": "Modismo avanzado útil para hablar de la convivencia.",
+                  "translation": "expresión figurada"
+                }
+              ],
+              "microLesson": {
+                "title": "Normas de convivencia",
+                "goals": [
+                  "Usar vocabulario avanzado de la convivencia.",
+                  "Aplicar concession y modal perfect.",
+                  "Argumentar y matizar sobre la convivencia."
+                ],
+                "sections": [
+                  {
+                    "heading": "Lengua en contexto",
+                    "body": "Concession: Although, despite y however introducen concesiones. Modal perfect: Must have, might have y should have especulan sobre el pasado.",
+                    "examples": [
+                      {
+                        "source": "En casa tenemos que respetar el descanso. Desde mi punto de vista, es una opción razonable.",
+                        "target": "At home we have to respect each other's rest. From my point of view, it is a reasonable option."
+                      },
+                      {
+                        "source": "No se puede fumar dentro. No obstante, también tiene ventajas.",
+                        "target": "You can't smoke inside. Nevertheless, there are also advantages."
+                      }
+                    ]
+                  }
+                ]
+              },
+              "glossary": [
+                {
+                  "term": "At home we have to respect each other's rest. From my point of view, it is a reasonable option.",
+                  "translations": [
+                    "En casa tenemos que respetar el descanso. Desde mi punto de vista, es una opción razonable."
+                  ]
+                },
+                {
+                  "term": "You can't smoke inside. Nevertheless, there are also advantages.",
+                  "translations": [
+                    "No se puede fumar dentro. No obstante, también tiene ventajas."
+                  ]
+                },
+                {
+                  "term": "Everyone cleans their own room. At the end of the day, we need to prioritise.",
+                  "translations": [
+                    "Cada uno limpia su habitación. A fin de cuentas, hay que priorizar."
+                  ]
+                }
+              ],
+              "exercises": [
+                {
+                  "type": "MultipleChoice",
+                  "id": "es-en-b2-u08-l06-e01",
+                  "question": "¿Cuál es la opción correcta para «En casa tenemos que respetar el descanso. Desde mi punto de vista, es una opción razonable.»?",
+                  "options": [
+                    "At home we have to respect each other's rest. From my point of view, it is a reasonable option.",
+                    "You can't smoke inside. Nevertheless, there are also advantages.",
+                    "Everyone cleans their own room. At the end of the day, we need to prioritise."
+                  ],
+                  "correctIndex": 0,
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "«En casa tenemos que respetar el descanso. Desde mi punto de vista, es una opción razonable.» se dice «At home we have to respect each other's rest. From my point of view, it is a reasonable option.».",
+                    "ruleRef": "gp-b2-concession"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has elegido la traducción correcta."
+                  }
+                },
+                {
+                  "type": "OrderWords",
+                  "id": "es-en-b2-u08-l06-e02",
+                  "tokens": [
+                    "home",
+                    "we",
+                    "have",
+                    "to",
+                    "respect",
+                    "each",
+                    "other's",
+                    "rest",
+                    "From",
+                    "my",
+                    "point",
+                    "of",
+                    "view",
+                    "it",
+                    "is",
+                    "a",
+                    "reasonable",
+                    "option",
+                    "At"
+                  ],
+                  "answerTokens": [
+                    "At",
+                    "home",
+                    "we",
+                    "have",
+                    "to",
+                    "respect",
+                    "each",
+                    "other's",
+                    "rest",
+                    "From",
+                    "my",
+                    "point",
+                    "of",
+                    "view",
+                    "it",
+                    "is",
+                    "a",
+                    "reasonable",
+                    "option"
+                  ],
+                  "sourcePhrase": "En casa tenemos que respetar el descanso. Desde mi punto de vista, es una opción razonable.",
+                  "feedbackOnError": {
+                    "type": "word_order",
+                    "explanation": "El orden correcto es «At home we have to respect each other's rest From my point of view it is a reasonable option».",
+                    "ruleRef": "gp-b2-concession"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "El orden produce una frase natural."
+                  }
+                },
+                {
+                  "type": "ClozeDragDrop",
+                  "id": "es-en-b2-u08-l06-e03",
+                  "passage": "At {{b1}} we have to {{b2}} each other's rest.",
+                  "blanks": [
+                    {
+                      "id": "b1",
+                      "answer": "home",
+                      "options": [
+                        "home",
+                        "each",
+                        "other's"
+                      ]
+                    },
+                    {
+                      "id": "b2",
+                      "answer": "respect",
+                      "options": [
+                        "respect",
+                        "each",
+                        "other's"
+                      ]
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "Las dos formas deben encajar con el contexto de la frase.",
+                    "ruleRef": "gp-b2-modal-perfect"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Los dos huecos encajan con la situación."
+                  }
+                },
+                {
+                  "type": "SemanticMatch",
+                  "id": "es-en-b2-u08-l06-e04",
+                  "instructions": "Clasifica la función comunicativa de cada intervención.",
+                  "pairs": [
+                    {
+                      "left": "At home we have to respect each other's rest. From my point of view, it is a reasonable option.",
+                      "right": "Planteamiento",
+                      "register": "formal",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    },
+                    {
+                      "left": "You can't smoke inside. Nevertheless, there are also advantages.",
+                      "right": "Concesión",
+                      "register": "neutral",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    },
+                    {
+                      "left": "Everyone cleans their own room. At the end of the day, we need to prioritise.",
+                      "right": "Conclusión",
+                      "register": "informal",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "Cada intervención cumple una función comunicativa distinta.",
+                    "ruleRef": "gp-b2-concession"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has identificado la función de cada intervención."
+                  }
+                },
+                {
+                  "type": "SemanticMatch",
+                  "id": "es-en-b2-u08-l06-e05",
+                  "instructions": "Distingue el registro de cada intervención.",
+                  "pairs": [
+                    {
+                      "left": "At home we have to respect each other's rest. From my point of view, it is a reasonable option.",
+                      "right": "Formal",
+                      "register": "formal",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    },
+                    {
+                      "left": "You can't smoke inside. Nevertheless, there are also advantages.",
+                      "right": "Neutral",
+                      "register": "neutral",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    },
+                    {
+                      "left": "Everyone cleans their own room. At the end of the day, we need to prioritise.",
+                      "right": "Informal",
+                      "register": "informal",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "register",
+                    "explanation": "El registro cambia según el contexto y la relación con el interlocutor.",
+                    "ruleRef": "gp-b2-modal-perfect"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has distinguido el registro de cada intervención."
+                  }
+                },
+                {
+                  "type": "AudioOnlyPrompt",
+                  "id": "es-en-b2-u08-l06-e06",
+                  "audioText": "You can't smoke inside. Nevertheless, there are also advantages.",
+                  "question": "¿Qué ha dicho el hablante?",
+                  "options": [
+                    "You can't smoke inside. Nevertheless, there are also advantages.",
+                    "At home we have to respect each other's rest. From my point of view, it is a reasonable option.",
+                    "Everyone cleans their own room. At the end of the day, we need to prioritise."
+                  ],
+                  "correctIndex": 0,
+                  "allowSlowPlayback": true,
+                  "feedbackOnError": {
+                    "type": "comprehension",
+                    "explanation": "El audio dice «You can't smoke inside. Nevertheless, there are also advantages.».",
+                    "ruleRef": "gp-b2-concession"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has comprendido el mensaje del audio."
+                  }
+                },
+                {
+                  "type": "AudioOnlyPrompt",
+                  "id": "es-en-b2-u08-l06-e07",
+                  "audioText": "Everyone cleans their own room. At the end of the day, we need to prioritise.",
+                  "question": "¿Cuál es la idea principal?",
+                  "options": [
+                    "Everyone cleans their own room. At the end of the day, we need to prioritise.",
+                    "At home we have to respect each other's rest. From my point of view, it is a reasonable option.",
+                    "You can't smoke inside. Nevertheless, there are also advantages."
+                  ],
+                  "correctIndex": 0,
+                  "allowSlowPlayback": false,
+                  "feedbackOnError": {
+                    "type": "comprehension",
+                    "explanation": "El audio dice «Everyone cleans their own room. At the end of the day, we need to prioritise.».",
+                    "ruleRef": "gp-b2-modal-perfect"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has identificado la idea principal."
+                  }
+                },
+                {
+                  "type": "ListenType",
+                  "id": "es-en-b2-u08-l06-e08",
+                  "audioText": "Everyone cleans their own room. At the end of the day, we need to prioritise.",
+                  "transcription": "Everyone cleans their own room. At the end of the day, we need to prioritise.",
+                  "feedbackOnError": {
+                    "type": "spelling",
+                    "explanation": "Escribe exactamente «Everyone cleans their own room. At the end of the day, we need to prioritise.».",
+                    "ruleRef": "gp-b2-concession"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La transcripción coincide con el audio."
+                  }
+                },
+                {
+                  "type": "SpeakRepeat",
+                  "id": "es-en-b2-u08-l06-e09",
+                  "targetPhrase": "Everyone cleans their own room. At the end of the day, we need to prioritise.",
+                  "audioText": "Everyone cleans their own room. At the end of the day, we need to prioritise.",
+                  "feedbackOnError": {
+                    "type": "pronunciation",
+                    "explanation": "Repite «Everyone cleans their own room. At the end of the day, we need to prioritise.» con claridad.",
+                    "ruleRef": "gp-b2-concession"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La frase se entiende y mantiene el ritmo."
+                  }
+                },
+                {
+                  "type": "FreeSpeakingPrompt",
+                  "id": "es-en-b2-u08-l06-e10",
+                  "prompt": "Argumenta y matiza una opinión sobre la convivencia.",
+                  "minTokens": 20,
+                  "conceptClusters": [
+                    [
+                      "home"
+                    ],
+                    [
+                      "respect"
+                    ],
+                    [
+                      "each"
+                    ]
+                  ],
+                  "modelAnswer": "At home we have to respect each other's rest. From my point of view, it is a reasonable option. You can't smoke inside. Nevertheless, there are also advantages. Everyone cleans their own room. At the end of the day, we need to prioritise.",
+                  "selfAssessmentCriteria": [
+                    "¿La respuesta argumenta y responde a la tarea?",
+                    "¿Usa las dos estructuras gramaticales de la lección?",
+                    "¿Incluye una concesión o una matización?"
+                  ],
+                  "grammarRuleRefs": [
+                    "gp-b2-concession",
+                    "gp-b2-modal-perfect"
+                  ],
+                  "timeLimitSeconds": 90,
+                  "minWpm": 70,
+                  "maxWpm": 160,
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "La respuesta modelo desarrolla una opinión con matices y una concesión.",
+                    "ruleRef": "gp-b2-concession"
+                  }
+                }
+              ]
+            },
+            {
+              "id": "es-en-b2-u08-l07",
+              "title": "Anuncio de piso",
+              "cefrLevel": "B2",
+              "scenario": "Situación comunicativa avanzada sobre un anuncio de alquiler.",
+              "canDo": "Puedo argumentar y matizar sobre un anuncio de alquiler.",
+              "grammarPoints": [
+                {
+                  "id": "gp-b2-concession",
+                  "label": "Concession",
+                  "description": "Although, despite y however introducen concesiones."
+                },
+                {
+                  "id": "gp-b2-modal-perfect",
+                  "label": "Modal perfect",
+                  "description": "Must have, might have y should have especulan sobre el pasado."
+                }
+              ],
+              "vocabFrequencyBand": "3000-5000",
+              "culturalNotes": [
+                {
+                  "idiom": "give someone the benefit of the doubt",
+                  "note": "Modismo avanzado útil para hablar de un anuncio de alquiler.",
+                  "translation": "expresión figurada"
+                }
+              ],
+              "microLesson": {
+                "title": "Anuncio de piso",
+                "goals": [
+                  "Usar vocabulario avanzado de un anuncio de alquiler.",
+                  "Aplicar concession y modal perfect.",
+                  "Argumentar y matizar sobre un anuncio de alquiler."
+                ],
+                "sections": [
+                  {
+                    "heading": "Lengua en contexto",
+                    "body": "Concession: Although, despite y however introducen concesiones. Modal perfect: Must have, might have y should have especulan sobre el pasado.",
+                    "examples": [
+                      {
+                        "source": "Se alquila piso de dos habitaciones. No obstante, también tiene ventajas.",
+                        "target": "Two-bedroom flat for rent. Nevertheless, there are also advantages."
+                      },
+                      {
+                        "source": "Está amueblado y tiene ascensor. A fin de cuentas, hay que priorizar.",
+                        "target": "It is furnished and has a lift. At the end of the day, we need to prioritise."
+                      }
+                    ]
+                  }
+                ]
+              },
+              "glossary": [
+                {
+                  "term": "Two-bedroom flat for rent. Nevertheless, there are also advantages.",
+                  "translations": [
+                    "Se alquila piso de dos habitaciones. No obstante, también tiene ventajas."
+                  ]
+                },
+                {
+                  "term": "It is furnished and has a lift. At the end of the day, we need to prioritise.",
+                  "translations": [
+                    "Está amueblado y tiene ascensor. A fin de cuentas, hay que priorizar."
+                  ]
+                },
+                {
+                  "term": "The rent is eight hundred euros a month. In short, it is a complex issue.",
+                  "translations": [
+                    "El alquiler es de ochocientos euros al mes. En resumen, es un tema complejo."
+                  ]
+                }
+              ],
+              "exercises": [
+                {
+                  "type": "MultipleChoice",
+                  "id": "es-en-b2-u08-l07-e01",
+                  "question": "¿Cuál es la opción correcta para «Se alquila piso de dos habitaciones. No obstante, también tiene ventajas.»?",
+                  "options": [
+                    "Two-bedroom flat for rent. Nevertheless, there are also advantages.",
+                    "It is furnished and has a lift. At the end of the day, we need to prioritise.",
+                    "The rent is eight hundred euros a month. In short, it is a complex issue."
+                  ],
+                  "correctIndex": 0,
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "«Se alquila piso de dos habitaciones. No obstante, también tiene ventajas.» se dice «Two-bedroom flat for rent. Nevertheless, there are also advantages.».",
+                    "ruleRef": "gp-b2-concession"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has elegido la traducción correcta."
+                  }
+                },
+                {
+                  "type": "OrderWords",
+                  "id": "es-en-b2-u08-l07-e02",
+                  "tokens": [
+                    "bedroom",
+                    "flat",
+                    "for",
+                    "rent",
+                    "Nevertheless",
+                    "there",
+                    "are",
+                    "also",
+                    "advantages",
+                    "Two"
+                  ],
+                  "answerTokens": [
+                    "Two",
+                    "bedroom",
+                    "flat",
+                    "for",
+                    "rent",
+                    "Nevertheless",
+                    "there",
+                    "are",
+                    "also",
+                    "advantages"
+                  ],
+                  "sourcePhrase": "Se alquila piso de dos habitaciones. No obstante, también tiene ventajas.",
+                  "feedbackOnError": {
+                    "type": "word_order",
+                    "explanation": "El orden correcto es «Two bedroom flat for rent Nevertheless there are also advantages».",
+                    "ruleRef": "gp-b2-concession"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "El orden produce una frase natural."
+                  }
+                },
+                {
+                  "type": "ClozeDragDrop",
+                  "id": "es-en-b2-u08-l07-e03",
+                  "passage": "{{b1}}-{{b2}} flat for rent.",
+                  "blanks": [
+                    {
+                      "id": "b1",
+                      "answer": "Two",
+                      "options": [
+                        "Two",
+                        "flat",
+                        "rent"
+                      ]
+                    },
+                    {
+                      "id": "b2",
+                      "answer": "bedroom",
+                      "options": [
+                        "bedroom",
+                        "flat",
+                        "rent"
+                      ]
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "Las dos formas deben encajar con el contexto de la frase.",
+                    "ruleRef": "gp-b2-modal-perfect"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Los dos huecos encajan con la situación."
+                  }
+                },
+                {
+                  "type": "SemanticMatch",
+                  "id": "es-en-b2-u08-l07-e04",
+                  "instructions": "Clasifica la función comunicativa de cada intervención.",
+                  "pairs": [
+                    {
+                      "left": "Two-bedroom flat for rent. Nevertheless, there are also advantages.",
+                      "right": "Planteamiento",
+                      "register": "formal",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    },
+                    {
+                      "left": "It is furnished and has a lift. At the end of the day, we need to prioritise.",
+                      "right": "Concesión",
+                      "register": "neutral",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    },
+                    {
+                      "left": "The rent is eight hundred euros a month. In short, it is a complex issue.",
+                      "right": "Conclusión",
+                      "register": "informal",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "Cada intervención cumple una función comunicativa distinta.",
+                    "ruleRef": "gp-b2-concession"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has identificado la función de cada intervención."
+                  }
+                },
+                {
+                  "type": "SemanticMatch",
+                  "id": "es-en-b2-u08-l07-e05",
+                  "instructions": "Distingue el registro de cada intervención.",
+                  "pairs": [
+                    {
+                      "left": "Two-bedroom flat for rent. Nevertheless, there are also advantages.",
+                      "right": "Formal",
+                      "register": "formal",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    },
+                    {
+                      "left": "It is furnished and has a lift. At the end of the day, we need to prioritise.",
+                      "right": "Neutral",
+                      "register": "neutral",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    },
+                    {
+                      "left": "The rent is eight hundred euros a month. In short, it is a complex issue.",
+                      "right": "Informal",
+                      "register": "informal",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "register",
+                    "explanation": "El registro cambia según el contexto y la relación con el interlocutor.",
+                    "ruleRef": "gp-b2-modal-perfect"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has distinguido el registro de cada intervención."
+                  }
+                },
+                {
+                  "type": "AudioOnlyPrompt",
+                  "id": "es-en-b2-u08-l07-e06",
+                  "audioText": "It is furnished and has a lift. At the end of the day, we need to prioritise.",
+                  "question": "¿Qué ha dicho el hablante?",
+                  "options": [
+                    "It is furnished and has a lift. At the end of the day, we need to prioritise.",
+                    "Two-bedroom flat for rent. Nevertheless, there are also advantages.",
+                    "The rent is eight hundred euros a month. In short, it is a complex issue."
+                  ],
+                  "correctIndex": 0,
+                  "allowSlowPlayback": true,
+                  "feedbackOnError": {
+                    "type": "comprehension",
+                    "explanation": "El audio dice «It is furnished and has a lift. At the end of the day, we need to prioritise.».",
+                    "ruleRef": "gp-b2-concession"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has comprendido el mensaje del audio."
+                  }
+                },
+                {
+                  "type": "AudioOnlyPrompt",
+                  "id": "es-en-b2-u08-l07-e07",
+                  "audioText": "The rent is eight hundred euros a month. In short, it is a complex issue.",
+                  "question": "¿Cuál es la idea principal?",
+                  "options": [
+                    "The rent is eight hundred euros a month. In short, it is a complex issue.",
+                    "Two-bedroom flat for rent. Nevertheless, there are also advantages.",
+                    "It is furnished and has a lift. At the end of the day, we need to prioritise."
+                  ],
+                  "correctIndex": 0,
+                  "allowSlowPlayback": false,
+                  "feedbackOnError": {
+                    "type": "comprehension",
+                    "explanation": "El audio dice «The rent is eight hundred euros a month. In short, it is a complex issue.».",
+                    "ruleRef": "gp-b2-modal-perfect"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has identificado la idea principal."
+                  }
+                },
+                {
+                  "type": "ListenType",
+                  "id": "es-en-b2-u08-l07-e08",
+                  "audioText": "The rent is eight hundred euros a month. In short, it is a complex issue.",
+                  "transcription": "The rent is eight hundred euros a month. In short, it is a complex issue.",
+                  "feedbackOnError": {
+                    "type": "spelling",
+                    "explanation": "Escribe exactamente «The rent is eight hundred euros a month. In short, it is a complex issue.».",
+                    "ruleRef": "gp-b2-concession"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La transcripción coincide con el audio."
+                  }
+                },
+                {
+                  "type": "SpeakRepeat",
+                  "id": "es-en-b2-u08-l07-e09",
+                  "targetPhrase": "The rent is eight hundred euros a month. In short, it is a complex issue.",
+                  "audioText": "The rent is eight hundred euros a month. In short, it is a complex issue.",
+                  "feedbackOnError": {
+                    "type": "pronunciation",
+                    "explanation": "Repite «The rent is eight hundred euros a month. In short, it is a complex issue.» con claridad.",
+                    "ruleRef": "gp-b2-concession"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La frase se entiende y mantiene el ritmo."
+                  }
+                },
+                {
+                  "type": "FreeSpeakingPrompt",
+                  "id": "es-en-b2-u08-l07-e10",
+                  "prompt": "Argumenta y matiza una opinión sobre un anuncio de alquiler.",
+                  "minTokens": 20,
+                  "conceptClusters": [
+                    [
+                      "Two"
+                    ],
+                    [
+                      "bedroom"
+                    ],
+                    [
+                      "flat"
+                    ]
+                  ],
+                  "modelAnswer": "Two-bedroom flat for rent. Nevertheless, there are also advantages. It is furnished and has a lift. At the end of the day, we need to prioritise. The rent is eight hundred euros a month. In short, it is a complex issue.",
+                  "selfAssessmentCriteria": [
+                    "¿La respuesta argumenta y responde a la tarea?",
+                    "¿Usa las dos estructuras gramaticales de la lección?",
+                    "¿Incluye una concesión o una matización?"
+                  ],
+                  "grammarRuleRefs": [
+                    "gp-b2-concession",
+                    "gp-b2-modal-perfect"
+                  ],
+                  "timeLimitSeconds": 90,
+                  "minWpm": 70,
+                  "maxWpm": 160,
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "La respuesta modelo desarrolla una opinión con matices y una concesión.",
+                    "ruleRef": "gp-b2-concession"
+                  }
+                }
+              ]
+            },
+            {
+              "id": "es-en-b2-u08-l08",
+              "title": "Negociar tareas",
+              "cefrLevel": "B2",
+              "scenario": "Situación comunicativa avanzada sobre repartir las tareas.",
+              "canDo": "Puedo argumentar y matizar sobre repartir las tareas.",
+              "grammarPoints": [
+                {
+                  "id": "gp-b2-concession",
+                  "label": "Concession",
+                  "description": "Although, despite y however introducen concesiones."
+                },
+                {
+                  "id": "gp-b2-modal-perfect",
+                  "label": "Modal perfect",
+                  "description": "Must have, might have y should have especulan sobre el pasado."
+                }
+              ],
+              "vocabFrequencyBand": "3000-5000",
+              "culturalNotes": [
+                {
+                  "idiom": "go the extra mile",
+                  "note": "Modismo avanzado útil para hablar de repartir las tareas.",
+                  "translation": "expresión figurada"
+                }
+              ],
+              "microLesson": {
+                "title": "Negociar tareas",
+                "goals": [
+                  "Usar vocabulario avanzado de repartir las tareas.",
+                  "Aplicar concession y modal perfect.",
+                  "Argumentar y matizar sobre repartir las tareas."
+                ],
+                "sections": [
+                  {
+                    "heading": "Lengua en contexto",
+                    "body": "Concession: Although, despite y however introducen concesiones. Modal perfect: Must have, might have y should have especulan sobre el pasado.",
+                    "examples": [
+                      {
+                        "source": "¿Podrías encargarte de la compra esta semana? A fin de cuentas, hay que priorizar.",
+                        "target": "Could you do the shopping this week? At the end of the day, we need to prioritise."
+                      },
+                      {
+                        "source": "Yo puedo limpiar el baño. En resumen, es un tema complejo.",
+                        "target": "I can clean the bathroom. In short, it is a complex issue."
+                      }
+                    ]
+                  }
+                ]
+              },
+              "glossary": [
+                {
+                  "term": "Could you do the shopping this week? At the end of the day, we need to prioritise.",
+                  "translations": [
+                    "¿Podrías encargarte de la compra esta semana? A fin de cuentas, hay que priorizar."
+                  ]
+                },
+                {
+                  "term": "I can clean the bathroom. In short, it is a complex issue.",
+                  "translations": [
+                    "Yo puedo limpiar el baño. En resumen, es un tema complejo."
+                  ]
+                },
+                {
+                  "term": "Is it okay if we swap the chores? However, it is worth qualifying that.",
+                  "translations": [
+                    "¿Te parece bien si cambiamos las tareas? Sin embargo, conviene matizarlo."
+                  ]
+                }
+              ],
+              "exercises": [
+                {
+                  "type": "MultipleChoice",
+                  "id": "es-en-b2-u08-l08-e01",
+                  "question": "¿Cuál es la opción correcta para «¿Podrías encargarte de la compra esta semana? A fin de cuentas, hay que priorizar.»?",
+                  "options": [
+                    "Could you do the shopping this week? At the end of the day, we need to prioritise.",
+                    "I can clean the bathroom. In short, it is a complex issue.",
+                    "Is it okay if we swap the chores? However, it is worth qualifying that."
+                  ],
+                  "correctIndex": 0,
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "«¿Podrías encargarte de la compra esta semana? A fin de cuentas, hay que priorizar.» se dice «Could you do the shopping this week? At the end of the day, we need to prioritise.».",
+                    "ruleRef": "gp-b2-concession"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has elegido la traducción correcta."
+                  }
+                },
+                {
+                  "type": "OrderWords",
+                  "id": "es-en-b2-u08-l08-e02",
+                  "tokens": [
+                    "you",
+                    "do",
+                    "the",
+                    "shopping",
+                    "this",
+                    "week",
+                    "At",
+                    "the",
+                    "end",
+                    "of",
+                    "the",
+                    "day",
+                    "we",
+                    "need",
+                    "to",
+                    "prioritise",
+                    "Could"
+                  ],
+                  "answerTokens": [
+                    "Could",
+                    "you",
+                    "do",
+                    "the",
+                    "shopping",
+                    "this",
+                    "week",
+                    "At",
+                    "the",
+                    "end",
+                    "of",
+                    "the",
+                    "day",
+                    "we",
+                    "need",
+                    "to",
+                    "prioritise"
+                  ],
+                  "sourcePhrase": "¿Podrías encargarte de la compra esta semana? A fin de cuentas, hay que priorizar.",
+                  "feedbackOnError": {
+                    "type": "word_order",
+                    "explanation": "El orden correcto es «Could you do the shopping this week At the end of the day we need to prioritise».",
+                    "ruleRef": "gp-b2-concession"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "El orden produce una frase natural."
+                  }
+                },
+                {
+                  "type": "ClozeDragDrop",
+                  "id": "es-en-b2-u08-l08-e03",
+                  "passage": "Could you do the {{b1}} this {{b2}}?",
+                  "blanks": [
+                    {
+                      "id": "b1",
+                      "answer": "shopping",
+                      "options": [
+                        "shopping",
+                        "very",
+                        "today"
+                      ]
+                    },
+                    {
+                      "id": "b2",
+                      "answer": "week",
+                      "options": [
+                        "week",
+                        "very",
+                        "today"
+                      ]
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "Las dos formas deben encajar con el contexto de la frase.",
+                    "ruleRef": "gp-b2-modal-perfect"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Los dos huecos encajan con la situación."
+                  }
+                },
+                {
+                  "type": "SemanticMatch",
+                  "id": "es-en-b2-u08-l08-e04",
+                  "instructions": "Clasifica la función comunicativa de cada intervención.",
+                  "pairs": [
+                    {
+                      "left": "Could you do the shopping this week? At the end of the day, we need to prioritise.",
+                      "right": "Planteamiento",
+                      "register": "formal",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    },
+                    {
+                      "left": "I can clean the bathroom. In short, it is a complex issue.",
+                      "right": "Concesión",
+                      "register": "neutral",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    },
+                    {
+                      "left": "Is it okay if we swap the chores? However, it is worth qualifying that.",
+                      "right": "Conclusión",
+                      "register": "informal",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "Cada intervención cumple una función comunicativa distinta.",
+                    "ruleRef": "gp-b2-concession"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has identificado la función de cada intervención."
+                  }
+                },
+                {
+                  "type": "SemanticMatch",
+                  "id": "es-en-b2-u08-l08-e05",
+                  "instructions": "Distingue el registro de cada intervención.",
+                  "pairs": [
+                    {
+                      "left": "Could you do the shopping this week? At the end of the day, we need to prioritise.",
+                      "right": "Formal",
+                      "register": "formal",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    },
+                    {
+                      "left": "I can clean the bathroom. In short, it is a complex issue.",
+                      "right": "Neutral",
+                      "register": "neutral",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    },
+                    {
+                      "left": "Is it okay if we swap the chores? However, it is worth qualifying that.",
+                      "right": "Informal",
+                      "register": "informal",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "register",
+                    "explanation": "El registro cambia según el contexto y la relación con el interlocutor.",
+                    "ruleRef": "gp-b2-modal-perfect"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has distinguido el registro de cada intervención."
+                  }
+                },
+                {
+                  "type": "AudioOnlyPrompt",
+                  "id": "es-en-b2-u08-l08-e06",
+                  "audioText": "I can clean the bathroom. In short, it is a complex issue.",
+                  "question": "¿Qué ha dicho el hablante?",
+                  "options": [
+                    "I can clean the bathroom. In short, it is a complex issue.",
+                    "Could you do the shopping this week? At the end of the day, we need to prioritise.",
+                    "Is it okay if we swap the chores? However, it is worth qualifying that."
+                  ],
+                  "correctIndex": 0,
+                  "allowSlowPlayback": true,
+                  "feedbackOnError": {
+                    "type": "comprehension",
+                    "explanation": "El audio dice «I can clean the bathroom. In short, it is a complex issue.».",
+                    "ruleRef": "gp-b2-concession"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has comprendido el mensaje del audio."
+                  }
+                },
+                {
+                  "type": "AudioOnlyPrompt",
+                  "id": "es-en-b2-u08-l08-e07",
+                  "audioText": "Is it okay if we swap the chores? However, it is worth qualifying that.",
+                  "question": "¿Cuál es la idea principal?",
+                  "options": [
+                    "Is it okay if we swap the chores? However, it is worth qualifying that.",
+                    "Could you do the shopping this week? At the end of the day, we need to prioritise.",
+                    "I can clean the bathroom. In short, it is a complex issue."
+                  ],
+                  "correctIndex": 0,
+                  "allowSlowPlayback": false,
+                  "feedbackOnError": {
+                    "type": "comprehension",
+                    "explanation": "El audio dice «Is it okay if we swap the chores? However, it is worth qualifying that.».",
+                    "ruleRef": "gp-b2-modal-perfect"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has identificado la idea principal."
+                  }
+                },
+                {
+                  "type": "ListenType",
+                  "id": "es-en-b2-u08-l08-e08",
+                  "audioText": "Is it okay if we swap the chores? However, it is worth qualifying that.",
+                  "transcription": "Is it okay if we swap the chores? However, it is worth qualifying that.",
+                  "feedbackOnError": {
+                    "type": "spelling",
+                    "explanation": "Escribe exactamente «Is it okay if we swap the chores? However, it is worth qualifying that.».",
+                    "ruleRef": "gp-b2-concession"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La transcripción coincide con el audio."
+                  }
+                },
+                {
+                  "type": "SpeakRepeat",
+                  "id": "es-en-b2-u08-l08-e09",
+                  "targetPhrase": "Is it okay if we swap the chores? However, it is worth qualifying that.",
+                  "audioText": "Is it okay if we swap the chores? However, it is worth qualifying that.",
+                  "feedbackOnError": {
+                    "type": "pronunciation",
+                    "explanation": "Repite «Is it okay if we swap the chores? However, it is worth qualifying that.» con claridad.",
+                    "ruleRef": "gp-b2-concession"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La frase se entiende y mantiene el ritmo."
+                  }
+                },
+                {
+                  "type": "FreeSpeakingPrompt",
+                  "id": "es-en-b2-u08-l08-e10",
+                  "prompt": "Argumenta y matiza una opinión sobre repartir las tareas.",
+                  "minTokens": 20,
+                  "conceptClusters": [
+                    [
+                      "shopping"
+                    ],
+                    [
+                      "week"
+                    ],
+                    [
+                      "end"
+                    ]
+                  ],
+                  "modelAnswer": "Could you do the shopping this week? At the end of the day, we need to prioritise. I can clean the bathroom. In short, it is a complex issue. Is it okay if we swap the chores? However, it is worth qualifying that.",
+                  "selfAssessmentCriteria": [
+                    "¿La respuesta argumenta y responde a la tarea?",
+                    "¿Usa las dos estructuras gramaticales de la lección?",
+                    "¿Incluye una concesión o una matización?"
+                  ],
+                  "grammarRuleRefs": [
+                    "gp-b2-concession",
+                    "gp-b2-modal-perfect"
+                  ],
+                  "timeLimitSeconds": 90,
+                  "minWpm": 70,
+                  "maxWpm": 160,
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "La respuesta modelo desarrolla una opinión con matices y una concesión.",
+                    "ruleRef": "gp-b2-concession"
+                  }
+                }
+              ]
+            },
+            {
+              "id": "es-en-b2-u08-l09",
+              "title": "Integración: contrato",
+              "cefrLevel": "B2",
+              "scenario": "Situación comunicativa avanzada sobre un contrato de alquiler.",
+              "canDo": "Puedo argumentar y matizar sobre un contrato de alquiler.",
+              "grammarPoints": [
+                {
+                  "id": "gp-b2-concession",
+                  "label": "Concession",
+                  "description": "Although, despite y however introducen concesiones."
+                },
+                {
+                  "id": "gp-b2-modal-perfect",
+                  "label": "Modal perfect",
+                  "description": "Must have, might have y should have especulan sobre el pasado."
+                }
+              ],
+              "vocabFrequencyBand": "3000-5000",
+              "culturalNotes": [
+                {
+                  "idiom": "grasp the nettle",
+                  "note": "Modismo avanzado útil para hablar de un contrato de alquiler.",
+                  "translation": "expresión figurada"
+                }
+              ],
+              "microLesson": {
+                "title": "Integración: contrato",
+                "goals": [
+                  "Usar vocabulario avanzado de un contrato de alquiler.",
+                  "Aplicar concession y modal perfect.",
+                  "Argumentar y matizar sobre un contrato de alquiler."
+                ],
+                "sections": [
+                  {
+                    "heading": "Lengua en contexto",
+                    "body": "Concession: Although, despite y however introducen concesiones. Modal perfect: Must have, might have y should have especulan sobre el pasado.",
+                    "examples": [
+                      {
+                        "source": "Antes de firmar, lee las condiciones del contrato. En resumen, es un tema complejo.",
+                        "target": "Before signing, read the contract terms. In short, it is a complex issue."
+                      },
+                      {
+                        "source": "Comprueba la duración y la fianza. Sin embargo, conviene matizarlo.",
+                        "target": "Check the duration and the deposit. However, it is worth qualifying that."
+                      }
+                    ]
+                  }
+                ]
+              },
+              "glossary": [
+                {
+                  "term": "Before signing, read the contract terms. In short, it is a complex issue.",
+                  "translations": [
+                    "Antes de firmar, lee las condiciones del contrato. En resumen, es un tema complejo."
+                  ]
+                },
+                {
+                  "term": "Check the duration and the deposit. However, it is worth qualifying that.",
+                  "translations": [
+                    "Comprueba la duración y la fianza. Sin embargo, conviene matizarlo."
+                  ]
+                },
+                {
+                  "term": "Keep a signed copy. That said, it depends on the context.",
+                  "translations": [
+                    "Guarda una copia firmada. Dicho esto, depende del contexto."
+                  ]
+                }
+              ],
+              "exercises": [
+                {
+                  "type": "MultipleChoice",
+                  "id": "es-en-b2-u08-l09-e01",
+                  "question": "¿Cuál es la opción correcta para «Antes de firmar, lee las condiciones del contrato. En resumen, es un tema complejo.»?",
+                  "options": [
+                    "Before signing, read the contract terms. In short, it is a complex issue.",
+                    "Check the duration and the deposit. However, it is worth qualifying that.",
+                    "Keep a signed copy. That said, it depends on the context."
+                  ],
+                  "correctIndex": 0,
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "«Antes de firmar, lee las condiciones del contrato. En resumen, es un tema complejo.» se dice «Before signing, read the contract terms. In short, it is a complex issue.».",
+                    "ruleRef": "gp-b2-concession"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has elegido la traducción correcta."
+                  }
+                },
+                {
+                  "type": "OrderWords",
+                  "id": "es-en-b2-u08-l09-e02",
+                  "tokens": [
+                    "signing",
+                    "read",
+                    "the",
+                    "contract",
+                    "terms",
+                    "In",
+                    "short",
+                    "it",
+                    "is",
+                    "a",
+                    "complex",
+                    "issue",
+                    "Before"
+                  ],
+                  "answerTokens": [
+                    "Before",
+                    "signing",
+                    "read",
+                    "the",
+                    "contract",
+                    "terms",
+                    "In",
+                    "short",
+                    "it",
+                    "is",
+                    "a",
+                    "complex",
+                    "issue"
+                  ],
+                  "sourcePhrase": "Antes de firmar, lee las condiciones del contrato. En resumen, es un tema complejo.",
+                  "feedbackOnError": {
+                    "type": "word_order",
+                    "explanation": "El orden correcto es «Before signing read the contract terms In short it is a complex issue».",
+                    "ruleRef": "gp-b2-concession"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "El orden produce una frase natural."
+                  }
+                },
+                {
+                  "type": "ClozeDragDrop",
+                  "id": "es-en-b2-u08-l09-e03",
+                  "passage": "{{b1}} {{b2}}, read the contract terms.",
+                  "blanks": [
+                    {
+                      "id": "b1",
+                      "answer": "Before",
+                      "options": [
+                        "Before",
+                        "read",
+                        "contract"
+                      ]
+                    },
+                    {
+                      "id": "b2",
+                      "answer": "signing",
+                      "options": [
+                        "signing",
+                        "read",
+                        "contract"
+                      ]
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "Las dos formas deben encajar con el contexto de la frase.",
+                    "ruleRef": "gp-b2-modal-perfect"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Los dos huecos encajan con la situación."
+                  }
+                },
+                {
+                  "type": "SemanticMatch",
+                  "id": "es-en-b2-u08-l09-e04",
+                  "instructions": "Clasifica la función comunicativa de cada intervención.",
+                  "pairs": [
+                    {
+                      "left": "Before signing, read the contract terms. In short, it is a complex issue.",
+                      "right": "Planteamiento",
+                      "register": "formal",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    },
+                    {
+                      "left": "Check the duration and the deposit. However, it is worth qualifying that.",
+                      "right": "Concesión",
+                      "register": "neutral",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    },
+                    {
+                      "left": "Keep a signed copy. That said, it depends on the context.",
+                      "right": "Conclusión",
+                      "register": "informal",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "Cada intervención cumple una función comunicativa distinta.",
+                    "ruleRef": "gp-b2-concession"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has identificado la función de cada intervención."
+                  }
+                },
+                {
+                  "type": "SemanticMatch",
+                  "id": "es-en-b2-u08-l09-e05",
+                  "instructions": "Distingue el registro de cada intervención.",
+                  "pairs": [
+                    {
+                      "left": "Before signing, read the contract terms. In short, it is a complex issue.",
+                      "right": "Formal",
+                      "register": "formal",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    },
+                    {
+                      "left": "Check the duration and the deposit. However, it is worth qualifying that.",
+                      "right": "Neutral",
+                      "register": "neutral",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    },
+                    {
+                      "left": "Keep a signed copy. That said, it depends on the context.",
+                      "right": "Informal",
+                      "register": "informal",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "register",
+                    "explanation": "El registro cambia según el contexto y la relación con el interlocutor.",
+                    "ruleRef": "gp-b2-modal-perfect"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has distinguido el registro de cada intervención."
+                  }
+                },
+                {
+                  "type": "AudioOnlyPrompt",
+                  "id": "es-en-b2-u08-l09-e06",
+                  "audioText": "Check the duration and the deposit. However, it is worth qualifying that.",
+                  "question": "¿Qué ha dicho el hablante?",
+                  "options": [
+                    "Check the duration and the deposit. However, it is worth qualifying that.",
+                    "Before signing, read the contract terms. In short, it is a complex issue.",
+                    "Keep a signed copy. That said, it depends on the context."
+                  ],
+                  "correctIndex": 0,
+                  "allowSlowPlayback": true,
+                  "feedbackOnError": {
+                    "type": "comprehension",
+                    "explanation": "El audio dice «Check the duration and the deposit. However, it is worth qualifying that.».",
+                    "ruleRef": "gp-b2-concession"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has comprendido el mensaje del audio."
+                  }
+                },
+                {
+                  "type": "AudioOnlyPrompt",
+                  "id": "es-en-b2-u08-l09-e07",
+                  "audioText": "Keep a signed copy. That said, it depends on the context.",
+                  "question": "¿Cuál es la idea principal?",
+                  "options": [
+                    "Keep a signed copy. That said, it depends on the context.",
+                    "Before signing, read the contract terms. In short, it is a complex issue.",
+                    "Check the duration and the deposit. However, it is worth qualifying that."
+                  ],
+                  "correctIndex": 0,
+                  "allowSlowPlayback": false,
+                  "feedbackOnError": {
+                    "type": "comprehension",
+                    "explanation": "El audio dice «Keep a signed copy. That said, it depends on the context.».",
+                    "ruleRef": "gp-b2-modal-perfect"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has identificado la idea principal."
+                  }
+                },
+                {
+                  "type": "ListenType",
+                  "id": "es-en-b2-u08-l09-e08",
+                  "audioText": "Keep a signed copy. That said, it depends on the context.",
+                  "transcription": "Keep a signed copy. That said, it depends on the context.",
+                  "feedbackOnError": {
+                    "type": "spelling",
+                    "explanation": "Escribe exactamente «Keep a signed copy. That said, it depends on the context.».",
+                    "ruleRef": "gp-b2-concession"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La transcripción coincide con el audio."
+                  }
+                },
+                {
+                  "type": "SpeakRepeat",
+                  "id": "es-en-b2-u08-l09-e09",
+                  "targetPhrase": "Keep a signed copy. That said, it depends on the context.",
+                  "audioText": "Keep a signed copy. That said, it depends on the context.",
+                  "feedbackOnError": {
+                    "type": "pronunciation",
+                    "explanation": "Repite «Keep a signed copy. That said, it depends on the context.» con claridad.",
+                    "ruleRef": "gp-b2-concession"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La frase se entiende y mantiene el ritmo."
+                  }
+                },
+                {
+                  "type": "FreeSpeakingPrompt",
+                  "id": "es-en-b2-u08-l09-e10",
+                  "prompt": "Argumenta y matiza una opinión sobre un contrato de alquiler.",
+                  "minTokens": 20,
+                  "conceptClusters": [
+                    [
+                      "Before"
+                    ],
+                    [
+                      "signing"
+                    ],
+                    [
+                      "read"
+                    ]
+                  ],
+                  "modelAnswer": "Before signing, read the contract terms. In short, it is a complex issue. Check the duration and the deposit. However, it is worth qualifying that. Keep a signed copy. That said, it depends on the context.",
+                  "selfAssessmentCriteria": [
+                    "¿La respuesta argumenta y responde a la tarea?",
+                    "¿Usa las dos estructuras gramaticales de la lección?",
+                    "¿Incluye una concesión o una matización?"
+                  ],
+                  "grammarRuleRefs": [
+                    "gp-b2-concession",
+                    "gp-b2-modal-perfect"
+                  ],
+                  "timeLimitSeconds": 90,
+                  "minWpm": 70,
+                  "maxWpm": 160,
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "La respuesta modelo desarrolla una opinión con matices y una concesión.",
+                    "ruleRef": "gp-b2-concession"
+                  }
+                }
+              ]
+            },
+            {
+              "id": "es-en-b2-u08-l10",
+              "title": "Evaluación: mi casa ideal",
+              "cefrLevel": "B2",
+              "scenario": "Situación comunicativa avanzada sobre mi casa ideal.",
+              "canDo": "Puedo argumentar y matizar sobre mi casa ideal.",
+              "grammarPoints": [
+                {
+                  "id": "gp-b2-concession",
+                  "label": "Concession",
+                  "description": "Although, despite y however introducen concesiones."
+                },
+                {
+                  "id": "gp-b2-modal-perfect",
+                  "label": "Modal perfect",
+                  "description": "Must have, might have y should have especulan sobre el pasado."
+                }
+              ],
+              "vocabFrequencyBand": "3000-5000",
+              "culturalNotes": [
+                {
+                  "idiom": "have a lot on your plate",
+                  "note": "Modismo avanzado útil para hablar de mi casa ideal.",
+                  "translation": "expresión figurada"
+                }
+              ],
+              "microLesson": {
+                "title": "Evaluación: mi casa ideal",
+                "goals": [
+                  "Usar vocabulario avanzado de mi casa ideal.",
+                  "Aplicar concession y modal perfect.",
+                  "Argumentar y matizar sobre mi casa ideal."
+                ],
+                "sections": [
+                  {
+                    "heading": "Lengua en contexto",
+                    "body": "Concession: Although, despite y however introducen concesiones. Modal perfect: Must have, might have y should have especulan sobre el pasado.",
+                    "examples": [
+                      {
+                        "source": "Mi casa ideal es luminosa y tiene un jardín. Sin embargo, conviene matizarlo.",
+                        "target": "My ideal house is bright and has a garden. However, it is worth qualifying that."
+                      },
+                      {
+                        "source": "Me gustaría vivir cerca del centro. Dicho esto, depende del contexto.",
+                        "target": "I would like to live near the centre. That said, it depends on the context."
+                      }
+                    ]
+                  }
+                ]
+              },
+              "glossary": [
+                {
+                  "term": "My ideal house is bright and has a garden. However, it is worth qualifying that.",
+                  "translations": [
+                    "Mi casa ideal es luminosa y tiene un jardín. Sin embargo, conviene matizarlo."
+                  ]
+                },
+                {
+                  "term": "I would like to live near the centre. That said, it depends on the context.",
+                  "translations": [
+                    "Me gustaría vivir cerca del centro. Dicho esto, depende del contexto."
+                  ]
+                },
+                {
+                  "term": "But I also need a quiet space. In other words, it is worth considering.",
+                  "translations": [
+                    "Pero también necesito un espacio tranquilo. En otras palabras, merece la pena considerarlo."
+                  ]
+                }
+              ],
+              "exercises": [
+                {
+                  "type": "MultipleChoice",
+                  "id": "es-en-b2-u08-l10-e01",
+                  "question": "¿Cuál es la opción correcta para «Mi casa ideal es luminosa y tiene un jardín. Sin embargo, conviene matizarlo.»?",
+                  "options": [
+                    "My ideal house is bright and has a garden. However, it is worth qualifying that.",
+                    "I would like to live near the centre. That said, it depends on the context.",
+                    "But I also need a quiet space. In other words, it is worth considering."
+                  ],
+                  "correctIndex": 0,
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "«Mi casa ideal es luminosa y tiene un jardín. Sin embargo, conviene matizarlo.» se dice «My ideal house is bright and has a garden. However, it is worth qualifying that.».",
+                    "ruleRef": "gp-b2-concession"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has elegido la traducción correcta."
+                  }
+                },
+                {
+                  "type": "OrderWords",
+                  "id": "es-en-b2-u08-l10-e02",
+                  "tokens": [
+                    "ideal",
+                    "house",
+                    "is",
+                    "bright",
+                    "and",
+                    "has",
+                    "a",
+                    "garden",
+                    "However",
+                    "it",
+                    "is",
+                    "worth",
+                    "qualifying",
+                    "that",
+                    "My"
+                  ],
+                  "answerTokens": [
+                    "My",
+                    "ideal",
+                    "house",
+                    "is",
+                    "bright",
+                    "and",
+                    "has",
+                    "a",
+                    "garden",
+                    "However",
+                    "it",
+                    "is",
+                    "worth",
+                    "qualifying",
+                    "that"
+                  ],
+                  "sourcePhrase": "Mi casa ideal es luminosa y tiene un jardín. Sin embargo, conviene matizarlo.",
+                  "feedbackOnError": {
+                    "type": "word_order",
+                    "explanation": "El orden correcto es «My ideal house is bright and has a garden However it is worth qualifying that».",
+                    "ruleRef": "gp-b2-concession"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "El orden produce una frase natural."
+                  }
+                },
+                {
+                  "type": "ClozeDragDrop",
+                  "id": "es-en-b2-u08-l10-e03",
+                  "passage": "My {{b1}} {{b2}} is bright and has a garden.",
+                  "blanks": [
+                    {
+                      "id": "b1",
+                      "answer": "ideal",
+                      "options": [
+                        "ideal",
+                        "bright",
+                        "garden"
+                      ]
+                    },
+                    {
+                      "id": "b2",
+                      "answer": "house",
+                      "options": [
+                        "house",
+                        "bright",
+                        "garden"
+                      ]
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "Las dos formas deben encajar con el contexto de la frase.",
+                    "ruleRef": "gp-b2-modal-perfect"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Los dos huecos encajan con la situación."
+                  }
+                },
+                {
+                  "type": "SemanticMatch",
+                  "id": "es-en-b2-u08-l10-e04",
+                  "instructions": "Clasifica la función comunicativa de cada intervención.",
+                  "pairs": [
+                    {
+                      "left": "My ideal house is bright and has a garden. However, it is worth qualifying that.",
+                      "right": "Planteamiento",
+                      "register": "formal",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    },
+                    {
+                      "left": "I would like to live near the centre. That said, it depends on the context.",
+                      "right": "Concesión",
+                      "register": "neutral",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    },
+                    {
+                      "left": "But I also need a quiet space. In other words, it is worth considering.",
+                      "right": "Conclusión",
+                      "register": "informal",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "Cada intervención cumple una función comunicativa distinta.",
+                    "ruleRef": "gp-b2-concession"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has identificado la función de cada intervención."
+                  }
+                },
+                {
+                  "type": "SemanticMatch",
+                  "id": "es-en-b2-u08-l10-e05",
+                  "instructions": "Distingue el registro de cada intervención.",
+                  "pairs": [
+                    {
+                      "left": "My ideal house is bright and has a garden. However, it is worth qualifying that.",
+                      "right": "Formal",
+                      "register": "formal",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    },
+                    {
+                      "left": "I would like to live near the centre. That said, it depends on the context.",
+                      "right": "Neutral",
+                      "register": "neutral",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    },
+                    {
+                      "left": "But I also need a quiet space. In other words, it is worth considering.",
+                      "right": "Informal",
+                      "register": "informal",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "register",
+                    "explanation": "El registro cambia según el contexto y la relación con el interlocutor.",
+                    "ruleRef": "gp-b2-modal-perfect"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has distinguido el registro de cada intervención."
+                  }
+                },
+                {
+                  "type": "AudioOnlyPrompt",
+                  "id": "es-en-b2-u08-l10-e06",
+                  "audioText": "I would like to live near the centre. That said, it depends on the context.",
+                  "question": "¿Qué ha dicho el hablante?",
+                  "options": [
+                    "I would like to live near the centre. That said, it depends on the context.",
+                    "My ideal house is bright and has a garden. However, it is worth qualifying that.",
+                    "But I also need a quiet space. In other words, it is worth considering."
+                  ],
+                  "correctIndex": 0,
+                  "allowSlowPlayback": true,
+                  "feedbackOnError": {
+                    "type": "comprehension",
+                    "explanation": "El audio dice «I would like to live near the centre. That said, it depends on the context.».",
+                    "ruleRef": "gp-b2-concession"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has comprendido el mensaje del audio."
+                  }
+                },
+                {
+                  "type": "AudioOnlyPrompt",
+                  "id": "es-en-b2-u08-l10-e07",
+                  "audioText": "But I also need a quiet space. In other words, it is worth considering.",
+                  "question": "¿Cuál es la idea principal?",
+                  "options": [
+                    "But I also need a quiet space. In other words, it is worth considering.",
+                    "My ideal house is bright and has a garden. However, it is worth qualifying that.",
+                    "I would like to live near the centre. That said, it depends on the context."
+                  ],
+                  "correctIndex": 0,
+                  "allowSlowPlayback": false,
+                  "feedbackOnError": {
+                    "type": "comprehension",
+                    "explanation": "El audio dice «But I also need a quiet space. In other words, it is worth considering.».",
+                    "ruleRef": "gp-b2-modal-perfect"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has identificado la idea principal."
+                  }
+                },
+                {
+                  "type": "ListenType",
+                  "id": "es-en-b2-u08-l10-e08",
+                  "audioText": "But I also need a quiet space. In other words, it is worth considering.",
+                  "transcription": "But I also need a quiet space. In other words, it is worth considering.",
+                  "feedbackOnError": {
+                    "type": "spelling",
+                    "explanation": "Escribe exactamente «But I also need a quiet space. In other words, it is worth considering.».",
+                    "ruleRef": "gp-b2-concession"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La transcripción coincide con el audio."
+                  }
+                },
+                {
+                  "type": "SpeakRepeat",
+                  "id": "es-en-b2-u08-l10-e09",
+                  "targetPhrase": "But I also need a quiet space. In other words, it is worth considering.",
+                  "audioText": "But I also need a quiet space. In other words, it is worth considering.",
+                  "feedbackOnError": {
+                    "type": "pronunciation",
+                    "explanation": "Repite «But I also need a quiet space. In other words, it is worth considering.» con claridad.",
+                    "ruleRef": "gp-b2-concession"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La frase se entiende y mantiene el ritmo."
+                  }
+                },
+                {
+                  "type": "FreeSpeakingPrompt",
+                  "id": "es-en-b2-u08-l10-e10",
+                  "prompt": "Argumenta y matiza una opinión sobre mi casa ideal.",
+                  "minTokens": 20,
+                  "conceptClusters": [
+                    [
+                      "ideal"
+                    ],
+                    [
+                      "house"
+                    ],
+                    [
+                      "bright"
+                    ]
+                  ],
+                  "modelAnswer": "My ideal house is bright and has a garden. However, it is worth qualifying that. I would like to live near the centre. That said, it depends on the context. But I also need a quiet space. In other words, it is worth considering.",
+                  "selfAssessmentCriteria": [
+                    "¿La respuesta argumenta y responde a la tarea?",
+                    "¿Usa las dos estructuras gramaticales de la lección?",
+                    "¿Incluye una concesión o una matización?"
+                  ],
+                  "grammarRuleRefs": [
+                    "gp-b2-concession",
+                    "gp-b2-modal-perfect"
+                  ],
+                  "timeLimitSeconds": 90,
+                  "minWpm": 70,
+                  "maxWpm": 160,
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "La respuesta modelo desarrolla una opinión con matices y una concesión.",
+                    "ruleRef": "gp-b2-concession"
+                  }
+                }
+              ]
+            }
+          ]
         }
       ]
     },
