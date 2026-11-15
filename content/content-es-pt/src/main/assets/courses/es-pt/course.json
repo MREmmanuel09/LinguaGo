@@ -143228,6 +143228,3394 @@
               ]
             }
           ]
+        },
+        {
+          "id": "es-pt-b2-u05",
+          "title": "B2 · Salud y bienestar",
+          "lessons": [
+            {
+              "id": "es-pt-b2-u05-l01",
+              "title": "Repaso: mi ciudad",
+              "cefrLevel": "B2",
+              "scenario": "Situación comunicativa avanzada sobre mi ciudad.",
+              "canDo": "Puedo argumentar y matizar sobre mi ciudad.",
+              "grammarPoints": [
+                {
+                  "id": "gp-b2-modal-perfect",
+                  "label": "Modal perfect",
+                  "description": "Must have, might have y should have especulan sobre el pasado."
+                },
+                {
+                  "id": "gp-b2-subjunctive",
+                  "label": "Subjunctive",
+                  "description": "El subjuntivo expresa deseos, dudas y valoraciones."
+                }
+              ],
+              "vocabFrequencyBand": "3000-5000",
+              "culturalNotes": [
+                {
+                  "idiom": "fazer nas coxas",
+                  "note": "Expresión para hacer algo con poco cuidado.",
+                  "translation": "hacerlo de cualquier manera"
+                }
+              ],
+              "microLesson": {
+                "title": "Repaso: mi ciudad",
+                "goals": [
+                  "Usar vocabulario avanzado de mi ciudad.",
+                  "Aplicar modal perfect y subjunctive.",
+                  "Argumentar y matizar sobre mi ciudad."
+                ],
+                "sections": [
+                  {
+                    "heading": "Lengua en contexto",
+                    "body": "Modal perfect: Must have, might have y should have especulan sobre el pasado. Subjunctive: El subjuntivo expresa deseos, dudas y valoraciones.",
+                    "examples": [
+                      {
+                        "source": "Mi ciudad es tranquila y tiene un parque. Dicho esto, depende del contexto.",
+                        "target": "Minha cidade é tranquila e tem um parque. Dito isto, depende do contexto."
+                      },
+                      {
+                        "source": "El transporte público es más barato que el coche. En otras palabras, merece la pena considerarlo.",
+                        "target": "O transporte público é mais barato que o carro. Por outras palavras, vale a pena considerar."
+                      }
+                    ]
+                  }
+                ]
+              },
+              "glossary": [
+                {
+                  "term": "Minha cidade é tranquila e tem um parque. Dito isto, depende do contexto.",
+                  "translations": [
+                    "Mi ciudad es tranquila y tiene un parque. Dicho esto, depende del contexto."
+                  ]
+                },
+                {
+                  "term": "O transporte público é mais barato que o carro. Por outras palavras, vale a pena considerar.",
+                  "translations": [
+                    "El transporte público es más barato que el coche. En otras palabras, merece la pena considerarlo."
+                  ]
+                },
+                {
+                  "term": "Eu gostaria de morar em um bairro assim. Receio que possa ser mais complicado.",
+                  "translations": [
+                    "Me gustaría vivir en un barrio así. Me temo que puede ser más complicado."
+                  ]
+                }
+              ],
+              "exercises": [
+                {
+                  "type": "MultipleChoice",
+                  "id": "es-pt-b2-u05-l01-e01",
+                  "question": "¿Cuál es la opción correcta para «Mi ciudad es tranquila y tiene un parque. Dicho esto, depende del contexto.»?",
+                  "options": [
+                    "Minha cidade é tranquila e tem um parque. Dito isto, depende do contexto.",
+                    "O transporte público é mais barato que o carro. Por outras palavras, vale a pena considerar.",
+                    "Eu gostaria de morar em um bairro assim. Receio que possa ser mais complicado."
+                  ],
+                  "correctIndex": 0,
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "«Mi ciudad es tranquila y tiene un parque. Dicho esto, depende del contexto.» se dice «Minha cidade é tranquila e tem um parque. Dito isto, depende do contexto.».",
+                    "ruleRef": "gp-b2-modal-perfect"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has elegido la traducción correcta."
+                  }
+                },
+                {
+                  "type": "OrderWords",
+                  "id": "es-pt-b2-u05-l01-e02",
+                  "tokens": [
+                    "cidade",
+                    "é",
+                    "tranquila",
+                    "e",
+                    "tem",
+                    "um",
+                    "parque",
+                    "Dito",
+                    "isto",
+                    "depende",
+                    "do",
+                    "contexto",
+                    "Minha"
+                  ],
+                  "answerTokens": [
+                    "Minha",
+                    "cidade",
+                    "é",
+                    "tranquila",
+                    "e",
+                    "tem",
+                    "um",
+                    "parque",
+                    "Dito",
+                    "isto",
+                    "depende",
+                    "do",
+                    "contexto"
+                  ],
+                  "sourcePhrase": "Mi ciudad es tranquila y tiene un parque. Dicho esto, depende del contexto.",
+                  "feedbackOnError": {
+                    "type": "word_order",
+                    "explanation": "El orden correcto es «Minha cidade é tranquila e tem um parque Dito isto depende do contexto».",
+                    "ruleRef": "gp-b2-modal-perfect"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "El orden produce una frase natural."
+                  }
+                },
+                {
+                  "type": "ClozeDragDrop",
+                  "id": "es-pt-b2-u05-l01-e03",
+                  "passage": "Minha {{b1}} é {{b2}} e tem um parque",
+                  "blanks": [
+                    {
+                      "id": "b1",
+                      "answer": "cidade",
+                      "options": [
+                        "cidade",
+                        "tem",
+                        "parque"
+                      ]
+                    },
+                    {
+                      "id": "b2",
+                      "answer": "tranquila",
+                      "options": [
+                        "tranquila",
+                        "tem",
+                        "parque"
+                      ]
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "Las dos formas deben encajar con el contexto de la frase.",
+                    "ruleRef": "gp-b2-subjunctive"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Los dos huecos encajan con la situación."
+                  }
+                },
+                {
+                  "type": "SemanticMatch",
+                  "id": "es-pt-b2-u05-l01-e04",
+                  "instructions": "Clasifica la función comunicativa de cada intervención.",
+                  "pairs": [
+                    {
+                      "left": "Minha cidade é tranquila e tem um parque. Dito isto, depende do contexto.",
+                      "right": "Planteamiento",
+                      "register": "formal",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    },
+                    {
+                      "left": "O transporte público é mais barato que o carro. Por outras palavras, vale a pena considerar.",
+                      "right": "Concesión",
+                      "register": "neutral",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    },
+                    {
+                      "left": "Eu gostaria de morar em um bairro assim. Receio que possa ser mais complicado.",
+                      "right": "Conclusión",
+                      "register": "informal",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "Cada intervención cumple una función comunicativa distinta.",
+                    "ruleRef": "gp-b2-modal-perfect"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has identificado la función de cada intervención."
+                  }
+                },
+                {
+                  "type": "SemanticMatch",
+                  "id": "es-pt-b2-u05-l01-e05",
+                  "instructions": "Distingue el registro de cada intervención.",
+                  "pairs": [
+                    {
+                      "left": "Minha cidade é tranquila e tem um parque. Dito isto, depende do contexto.",
+                      "right": "Formal",
+                      "register": "formal",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    },
+                    {
+                      "left": "O transporte público é mais barato que o carro. Por outras palavras, vale a pena considerar.",
+                      "right": "Neutral",
+                      "register": "neutral",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    },
+                    {
+                      "left": "Eu gostaria de morar em um bairro assim. Receio que possa ser mais complicado.",
+                      "right": "Informal",
+                      "register": "informal",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "register",
+                    "explanation": "El registro cambia según el contexto y la relación con el interlocutor.",
+                    "ruleRef": "gp-b2-subjunctive"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has distinguido el registro de cada intervención."
+                  }
+                },
+                {
+                  "type": "AudioOnlyPrompt",
+                  "id": "es-pt-b2-u05-l01-e06",
+                  "audioText": "O transporte público é mais barato que o carro. Por outras palavras, vale a pena considerar.",
+                  "question": "¿Qué ha dicho el hablante?",
+                  "options": [
+                    "O transporte público é mais barato que o carro. Por outras palavras, vale a pena considerar.",
+                    "Minha cidade é tranquila e tem um parque. Dito isto, depende do contexto.",
+                    "Eu gostaria de morar em um bairro assim. Receio que possa ser mais complicado."
+                  ],
+                  "correctIndex": 0,
+                  "allowSlowPlayback": true,
+                  "feedbackOnError": {
+                    "type": "comprehension",
+                    "explanation": "El audio dice «O transporte público é mais barato que o carro. Por outras palavras, vale a pena considerar.».",
+                    "ruleRef": "gp-b2-modal-perfect"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has comprendido el mensaje del audio."
+                  }
+                },
+                {
+                  "type": "AudioOnlyPrompt",
+                  "id": "es-pt-b2-u05-l01-e07",
+                  "audioText": "Eu gostaria de morar em um bairro assim. Receio que possa ser mais complicado.",
+                  "question": "¿Cuál es la idea principal?",
+                  "options": [
+                    "Eu gostaria de morar em um bairro assim. Receio que possa ser mais complicado.",
+                    "Minha cidade é tranquila e tem um parque. Dito isto, depende do contexto.",
+                    "O transporte público é mais barato que o carro. Por outras palavras, vale a pena considerar."
+                  ],
+                  "correctIndex": 0,
+                  "allowSlowPlayback": false,
+                  "feedbackOnError": {
+                    "type": "comprehension",
+                    "explanation": "El audio dice «Eu gostaria de morar em um bairro assim. Receio que possa ser mais complicado.».",
+                    "ruleRef": "gp-b2-subjunctive"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has identificado la idea principal."
+                  }
+                },
+                {
+                  "type": "ListenType",
+                  "id": "es-pt-b2-u05-l01-e08",
+                  "audioText": "Eu gostaria de morar em um bairro assim. Receio que possa ser mais complicado.",
+                  "transcription": "Eu gostaria de morar em um bairro assim. Receio que possa ser mais complicado.",
+                  "feedbackOnError": {
+                    "type": "spelling",
+                    "explanation": "Escribe exactamente «Eu gostaria de morar em um bairro assim. Receio que possa ser mais complicado.».",
+                    "ruleRef": "gp-b2-modal-perfect"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La transcripción coincide con el audio."
+                  }
+                },
+                {
+                  "type": "SpeakRepeat",
+                  "id": "es-pt-b2-u05-l01-e09",
+                  "targetPhrase": "Eu gostaria de morar em um bairro assim. Receio que possa ser mais complicado.",
+                  "audioText": "Eu gostaria de morar em um bairro assim. Receio que possa ser mais complicado.",
+                  "feedbackOnError": {
+                    "type": "pronunciation",
+                    "explanation": "Repite «Eu gostaria de morar em um bairro assim. Receio que possa ser mais complicado.» con claridad.",
+                    "ruleRef": "gp-b2-modal-perfect"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La frase se entiende y mantiene el ritmo."
+                  }
+                },
+                {
+                  "type": "FreeSpeakingPrompt",
+                  "id": "es-pt-b2-u05-l01-e10",
+                  "prompt": "Argumenta y matiza una opinión sobre mi ciudad.",
+                  "minTokens": 20,
+                  "conceptClusters": [
+                    [
+                      "cidade"
+                    ],
+                    [
+                      "tranquila"
+                    ],
+                    [
+                      "tem"
+                    ]
+                  ],
+                  "modelAnswer": "Minha cidade é tranquila e tem um parque. Dito isto, depende do contexto. O transporte público é mais barato que o carro. Por outras palavras, vale a pena considerar. Eu gostaria de morar em um bairro assim. Receio que possa ser mais complicado.",
+                  "selfAssessmentCriteria": [
+                    "¿La respuesta argumenta y responde a la tarea?",
+                    "¿Usa las dos estructuras gramaticales de la lección?",
+                    "¿Incluye una concesión o una matización?"
+                  ],
+                  "grammarRuleRefs": [
+                    "gp-b2-modal-perfect",
+                    "gp-b2-subjunctive"
+                  ],
+                  "timeLimitSeconds": 90,
+                  "minWpm": 70,
+                  "maxWpm": 160,
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "La respuesta modelo desarrolla una opinión con matices y una concesión.",
+                    "ruleRef": "gp-b2-modal-perfect"
+                  }
+                }
+              ]
+            },
+            {
+              "id": "es-pt-b2-u05-l02",
+              "title": "Síntomas y estados",
+              "cefrLevel": "B2",
+              "scenario": "Situación comunicativa avanzada sobre los síntomas.",
+              "canDo": "Puedo argumentar y matizar sobre los síntomas.",
+              "grammarPoints": [
+                {
+                  "id": "gp-b2-modal-perfect",
+                  "label": "Modal perfect",
+                  "description": "Must have, might have y should have especulan sobre el pasado."
+                },
+                {
+                  "id": "gp-b2-subjunctive",
+                  "label": "Subjunctive",
+                  "description": "El subjuntivo expresa deseos, dudas y valoraciones."
+                }
+              ],
+              "vocabFrequencyBand": "3000-5000",
+              "culturalNotes": [
+                {
+                  "idiom": "estar de baixo do tempo",
+                  "note": "Expresión para decir que alguien no se siente bien.",
+                  "translation": "sentirse mal"
+                }
+              ],
+              "microLesson": {
+                "title": "Síntomas y estados",
+                "goals": [
+                  "Usar vocabulario avanzado de los síntomas.",
+                  "Aplicar modal perfect y subjunctive.",
+                  "Argumentar y matizar sobre los síntomas."
+                ],
+                "sections": [
+                  {
+                    "heading": "Lengua en contexto",
+                    "body": "Modal perfect: Must have, might have y should have especulan sobre el pasado. Subjunctive: El subjuntivo expresa deseos, dudas y valoraciones.",
+                    "examples": [
+                      {
+                        "source": "Tengo dolor de cabeza. En otras palabras, merece la pena considerarlo.",
+                        "target": "Estou com dor de cabeça. Por outras palavras, vale a pena considerar."
+                      },
+                      {
+                        "source": "Me duele la garganta. Me temo que puede ser más complicado.",
+                        "target": "Minha garganta dói. Receio que possa ser mais complicado."
+                      }
+                    ]
+                  }
+                ]
+              },
+              "glossary": [
+                {
+                  "term": "Estou com dor de cabeça. Por outras palavras, vale a pena considerar.",
+                  "translations": [
+                    "Tengo dolor de cabeza. En otras palabras, merece la pena considerarlo."
+                  ]
+                },
+                {
+                  "term": "Minha garganta dói. Receio que possa ser mais complicado.",
+                  "translations": [
+                    "Me duele la garganta. Me temo que puede ser más complicado."
+                  ]
+                },
+                {
+                  "term": "Estou muito cansado. Para ser honesto, tenho sentimentos mistos.",
+                  "translations": [
+                    "Estoy muy cansado. Sinceramente, tengo sentimientos encontrados."
+                  ]
+                }
+              ],
+              "exercises": [
+                {
+                  "type": "MultipleChoice",
+                  "id": "es-pt-b2-u05-l02-e01",
+                  "question": "¿Cuál es la opción correcta para «Tengo dolor de cabeza. En otras palabras, merece la pena considerarlo.»?",
+                  "options": [
+                    "Estou com dor de cabeça. Por outras palavras, vale a pena considerar.",
+                    "Minha garganta dói. Receio que possa ser mais complicado.",
+                    "Estou muito cansado. Para ser honesto, tenho sentimentos mistos."
+                  ],
+                  "correctIndex": 0,
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "«Tengo dolor de cabeza. En otras palabras, merece la pena considerarlo.» se dice «Estou com dor de cabeça. Por outras palavras, vale a pena considerar.».",
+                    "ruleRef": "gp-b2-modal-perfect"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has elegido la traducción correcta."
+                  }
+                },
+                {
+                  "type": "OrderWords",
+                  "id": "es-pt-b2-u05-l02-e02",
+                  "tokens": [
+                    "com",
+                    "dor",
+                    "de",
+                    "cabeça",
+                    "Por",
+                    "outras",
+                    "palavras",
+                    "vale",
+                    "a",
+                    "pena",
+                    "considerar",
+                    "Estou"
+                  ],
+                  "answerTokens": [
+                    "Estou",
+                    "com",
+                    "dor",
+                    "de",
+                    "cabeça",
+                    "Por",
+                    "outras",
+                    "palavras",
+                    "vale",
+                    "a",
+                    "pena",
+                    "considerar"
+                  ],
+                  "sourcePhrase": "Tengo dolor de cabeza. En otras palabras, merece la pena considerarlo.",
+                  "feedbackOnError": {
+                    "type": "word_order",
+                    "explanation": "El orden correcto es «Estou com dor de cabeça Por outras palavras vale a pena considerar».",
+                    "ruleRef": "gp-b2-modal-perfect"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "El orden produce una frase natural."
+                  }
+                },
+                {
+                  "type": "ClozeDragDrop",
+                  "id": "es-pt-b2-u05-l02-e03",
+                  "passage": "{{b1}} com {{b2}} de cabeça",
+                  "blanks": [
+                    {
+                      "id": "b1",
+                      "answer": "Estou",
+                      "options": [
+                        "Estou",
+                        "cabeça",
+                        "muito"
+                      ]
+                    },
+                    {
+                      "id": "b2",
+                      "answer": "dor",
+                      "options": [
+                        "dor",
+                        "cabeça",
+                        "muito"
+                      ]
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "Las dos formas deben encajar con el contexto de la frase.",
+                    "ruleRef": "gp-b2-subjunctive"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Los dos huecos encajan con la situación."
+                  }
+                },
+                {
+                  "type": "SemanticMatch",
+                  "id": "es-pt-b2-u05-l02-e04",
+                  "instructions": "Clasifica la función comunicativa de cada intervención.",
+                  "pairs": [
+                    {
+                      "left": "Estou com dor de cabeça. Por outras palavras, vale a pena considerar.",
+                      "right": "Planteamiento",
+                      "register": "formal",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    },
+                    {
+                      "left": "Minha garganta dói. Receio que possa ser mais complicado.",
+                      "right": "Concesión",
+                      "register": "neutral",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    },
+                    {
+                      "left": "Estou muito cansado. Para ser honesto, tenho sentimentos mistos.",
+                      "right": "Conclusión",
+                      "register": "informal",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "Cada intervención cumple una función comunicativa distinta.",
+                    "ruleRef": "gp-b2-modal-perfect"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has identificado la función de cada intervención."
+                  }
+                },
+                {
+                  "type": "SemanticMatch",
+                  "id": "es-pt-b2-u05-l02-e05",
+                  "instructions": "Distingue el registro de cada intervención.",
+                  "pairs": [
+                    {
+                      "left": "Estou com dor de cabeça. Por outras palavras, vale a pena considerar.",
+                      "right": "Formal",
+                      "register": "formal",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    },
+                    {
+                      "left": "Minha garganta dói. Receio que possa ser mais complicado.",
+                      "right": "Neutral",
+                      "register": "neutral",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    },
+                    {
+                      "left": "Estou muito cansado. Para ser honesto, tenho sentimentos mistos.",
+                      "right": "Informal",
+                      "register": "informal",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "register",
+                    "explanation": "El registro cambia según el contexto y la relación con el interlocutor.",
+                    "ruleRef": "gp-b2-subjunctive"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has distinguido el registro de cada intervención."
+                  }
+                },
+                {
+                  "type": "AudioOnlyPrompt",
+                  "id": "es-pt-b2-u05-l02-e06",
+                  "audioText": "Minha garganta dói. Receio que possa ser mais complicado.",
+                  "question": "¿Qué ha dicho el hablante?",
+                  "options": [
+                    "Minha garganta dói. Receio que possa ser mais complicado.",
+                    "Estou com dor de cabeça. Por outras palavras, vale a pena considerar.",
+                    "Estou muito cansado. Para ser honesto, tenho sentimentos mistos."
+                  ],
+                  "correctIndex": 0,
+                  "allowSlowPlayback": true,
+                  "feedbackOnError": {
+                    "type": "comprehension",
+                    "explanation": "El audio dice «Minha garganta dói. Receio que possa ser mais complicado.».",
+                    "ruleRef": "gp-b2-modal-perfect"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has comprendido el mensaje del audio."
+                  }
+                },
+                {
+                  "type": "AudioOnlyPrompt",
+                  "id": "es-pt-b2-u05-l02-e07",
+                  "audioText": "Estou muito cansado. Para ser honesto, tenho sentimentos mistos.",
+                  "question": "¿Cuál es la idea principal?",
+                  "options": [
+                    "Estou muito cansado. Para ser honesto, tenho sentimentos mistos.",
+                    "Estou com dor de cabeça. Por outras palavras, vale a pena considerar.",
+                    "Minha garganta dói. Receio que possa ser mais complicado."
+                  ],
+                  "correctIndex": 0,
+                  "allowSlowPlayback": false,
+                  "feedbackOnError": {
+                    "type": "comprehension",
+                    "explanation": "El audio dice «Estou muito cansado. Para ser honesto, tenho sentimentos mistos.».",
+                    "ruleRef": "gp-b2-subjunctive"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has identificado la idea principal."
+                  }
+                },
+                {
+                  "type": "ListenType",
+                  "id": "es-pt-b2-u05-l02-e08",
+                  "audioText": "Estou muito cansado. Para ser honesto, tenho sentimentos mistos.",
+                  "transcription": "Estou muito cansado. Para ser honesto, tenho sentimentos mistos.",
+                  "feedbackOnError": {
+                    "type": "spelling",
+                    "explanation": "Escribe exactamente «Estou muito cansado. Para ser honesto, tenho sentimentos mistos.».",
+                    "ruleRef": "gp-b2-modal-perfect"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La transcripción coincide con el audio."
+                  }
+                },
+                {
+                  "type": "SpeakRepeat",
+                  "id": "es-pt-b2-u05-l02-e09",
+                  "targetPhrase": "Estou muito cansado. Para ser honesto, tenho sentimentos mistos.",
+                  "audioText": "Estou muito cansado. Para ser honesto, tenho sentimentos mistos.",
+                  "feedbackOnError": {
+                    "type": "pronunciation",
+                    "explanation": "Repite «Estou muito cansado. Para ser honesto, tenho sentimentos mistos.» con claridad.",
+                    "ruleRef": "gp-b2-modal-perfect"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La frase se entiende y mantiene el ritmo."
+                  }
+                },
+                {
+                  "type": "FreeSpeakingPrompt",
+                  "id": "es-pt-b2-u05-l02-e10",
+                  "prompt": "Argumenta y matiza una opinión sobre los síntomas.",
+                  "minTokens": 20,
+                  "conceptClusters": [
+                    [
+                      "Estou"
+                    ],
+                    [
+                      "dor"
+                    ],
+                    [
+                      "cabeça"
+                    ]
+                  ],
+                  "modelAnswer": "Estou com dor de cabeça. Por outras palavras, vale a pena considerar. Minha garganta dói. Receio que possa ser mais complicado. Estou muito cansado. Para ser honesto, tenho sentimentos mistos.",
+                  "selfAssessmentCriteria": [
+                    "¿La respuesta argumenta y responde a la tarea?",
+                    "¿Usa las dos estructuras gramaticales de la lección?",
+                    "¿Incluye una concesión o una matización?"
+                  ],
+                  "grammarRuleRefs": [
+                    "gp-b2-modal-perfect",
+                    "gp-b2-subjunctive"
+                  ],
+                  "timeLimitSeconds": 90,
+                  "minWpm": 70,
+                  "maxWpm": 160,
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "La respuesta modelo desarrolla una opinión con matices y una concesión.",
+                    "ruleRef": "gp-b2-modal-perfect"
+                  }
+                }
+              ]
+            },
+            {
+              "id": "es-pt-b2-u05-l03",
+              "title": "Remedios y farmacia",
+              "cefrLevel": "B2",
+              "scenario": "Situación comunicativa avanzada sobre la farmacia.",
+              "canDo": "Puedo argumentar y matizar sobre la farmacia.",
+              "grammarPoints": [
+                {
+                  "id": "gp-b2-modal-perfect",
+                  "label": "Modal perfect",
+                  "description": "Must have, might have y should have especulan sobre el pasado."
+                },
+                {
+                  "id": "gp-b2-subjunctive",
+                  "label": "Subjunctive",
+                  "description": "El subjuntivo expresa deseos, dudas y valoraciones."
+                }
+              ],
+              "vocabFrequencyBand": "3000-5000",
+              "culturalNotes": [
+                {
+                  "idiom": "dar uma mão",
+                  "note": "Expresión para ofrecer ayuda.",
+                  "translation": "echar una mano"
+                }
+              ],
+              "microLesson": {
+                "title": "Remedios y farmacia",
+                "goals": [
+                  "Usar vocabulario avanzado de la farmacia.",
+                  "Aplicar modal perfect y subjunctive.",
+                  "Argumentar y matizar sobre la farmacia."
+                ],
+                "sections": [
+                  {
+                    "heading": "Lengua en contexto",
+                    "body": "Modal perfect: Must have, might have y should have especulan sobre el pasado. Subjunctive: El subjuntivo expresa deseos, dudas y valoraciones.",
+                    "examples": [
+                      {
+                        "source": "Necesito un analgésico. Me temo que puede ser más complicado.",
+                        "target": "Eu preciso de um analgésico. Receio que possa ser mais complicado."
+                      },
+                      {
+                        "source": "Necesito un jarabe para la tos. Sinceramente, tengo sentimientos encontrados.",
+                        "target": "Eu preciso de xarope para tosse. Para ser honesto, tenho sentimentos mistos."
+                      }
+                    ]
+                  }
+                ]
+              },
+              "glossary": [
+                {
+                  "term": "Eu preciso de um analgésico. Receio que possa ser mais complicado.",
+                  "translations": [
+                    "Necesito un analgésico. Me temo que puede ser más complicado."
+                  ]
+                },
+                {
+                  "term": "Eu preciso de xarope para tosse. Para ser honesto, tenho sentimentos mistos.",
+                  "translations": [
+                    "Necesito un jarabe para la tos. Sinceramente, tengo sentimientos encontrados."
+                  ]
+                },
+                {
+                  "term": "Eu preciso de uma caixa de emplastros. Parece que isto está a mudar.",
+                  "translations": [
+                    "Necesito una caja de tiritas. Parece que esto está cambiando."
+                  ]
+                }
+              ],
+              "exercises": [
+                {
+                  "type": "MultipleChoice",
+                  "id": "es-pt-b2-u05-l03-e01",
+                  "question": "¿Cuál es la opción correcta para «Necesito un analgésico. Me temo que puede ser más complicado.»?",
+                  "options": [
+                    "Eu preciso de um analgésico. Receio que possa ser mais complicado.",
+                    "Eu preciso de xarope para tosse. Para ser honesto, tenho sentimentos mistos.",
+                    "Eu preciso de uma caixa de emplastros. Parece que isto está a mudar."
+                  ],
+                  "correctIndex": 0,
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "«Necesito un analgésico. Me temo que puede ser más complicado.» se dice «Eu preciso de um analgésico. Receio que possa ser mais complicado.».",
+                    "ruleRef": "gp-b2-modal-perfect"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has elegido la traducción correcta."
+                  }
+                },
+                {
+                  "type": "OrderWords",
+                  "id": "es-pt-b2-u05-l03-e02",
+                  "tokens": [
+                    "preciso",
+                    "de",
+                    "um",
+                    "analgésico",
+                    "Receio",
+                    "que",
+                    "possa",
+                    "ser",
+                    "mais",
+                    "complicado",
+                    "Eu"
+                  ],
+                  "answerTokens": [
+                    "Eu",
+                    "preciso",
+                    "de",
+                    "um",
+                    "analgésico",
+                    "Receio",
+                    "que",
+                    "possa",
+                    "ser",
+                    "mais",
+                    "complicado"
+                  ],
+                  "sourcePhrase": "Necesito un analgésico. Me temo que puede ser más complicado.",
+                  "feedbackOnError": {
+                    "type": "word_order",
+                    "explanation": "El orden correcto es «Eu preciso de um analgésico Receio que possa ser mais complicado».",
+                    "ruleRef": "gp-b2-modal-perfect"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "El orden produce una frase natural."
+                  }
+                },
+                {
+                  "type": "ClozeDragDrop",
+                  "id": "es-pt-b2-u05-l03-e03",
+                  "passage": "Eu {{b1}} de um {{b2}}",
+                  "blanks": [
+                    {
+                      "id": "b1",
+                      "answer": "preciso",
+                      "options": [
+                        "preciso",
+                        "muito",
+                        "hoje"
+                      ]
+                    },
+                    {
+                      "id": "b2",
+                      "answer": "analgésico",
+                      "options": [
+                        "analgésico",
+                        "muito",
+                        "hoje"
+                      ]
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "Las dos formas deben encajar con el contexto de la frase.",
+                    "ruleRef": "gp-b2-subjunctive"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Los dos huecos encajan con la situación."
+                  }
+                },
+                {
+                  "type": "SemanticMatch",
+                  "id": "es-pt-b2-u05-l03-e04",
+                  "instructions": "Clasifica la función comunicativa de cada intervención.",
+                  "pairs": [
+                    {
+                      "left": "Eu preciso de um analgésico. Receio que possa ser mais complicado.",
+                      "right": "Planteamiento",
+                      "register": "formal",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    },
+                    {
+                      "left": "Eu preciso de xarope para tosse. Para ser honesto, tenho sentimentos mistos.",
+                      "right": "Concesión",
+                      "register": "neutral",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    },
+                    {
+                      "left": "Eu preciso de uma caixa de emplastros. Parece que isto está a mudar.",
+                      "right": "Conclusión",
+                      "register": "informal",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "Cada intervención cumple una función comunicativa distinta.",
+                    "ruleRef": "gp-b2-modal-perfect"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has identificado la función de cada intervención."
+                  }
+                },
+                {
+                  "type": "SemanticMatch",
+                  "id": "es-pt-b2-u05-l03-e05",
+                  "instructions": "Distingue el registro de cada intervención.",
+                  "pairs": [
+                    {
+                      "left": "Eu preciso de um analgésico. Receio que possa ser mais complicado.",
+                      "right": "Formal",
+                      "register": "formal",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    },
+                    {
+                      "left": "Eu preciso de xarope para tosse. Para ser honesto, tenho sentimentos mistos.",
+                      "right": "Neutral",
+                      "register": "neutral",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    },
+                    {
+                      "left": "Eu preciso de uma caixa de emplastros. Parece que isto está a mudar.",
+                      "right": "Informal",
+                      "register": "informal",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "register",
+                    "explanation": "El registro cambia según el contexto y la relación con el interlocutor.",
+                    "ruleRef": "gp-b2-subjunctive"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has distinguido el registro de cada intervención."
+                  }
+                },
+                {
+                  "type": "AudioOnlyPrompt",
+                  "id": "es-pt-b2-u05-l03-e06",
+                  "audioText": "Eu preciso de xarope para tosse. Para ser honesto, tenho sentimentos mistos.",
+                  "question": "¿Qué ha dicho el hablante?",
+                  "options": [
+                    "Eu preciso de xarope para tosse. Para ser honesto, tenho sentimentos mistos.",
+                    "Eu preciso de um analgésico. Receio que possa ser mais complicado.",
+                    "Eu preciso de uma caixa de emplastros. Parece que isto está a mudar."
+                  ],
+                  "correctIndex": 0,
+                  "allowSlowPlayback": true,
+                  "feedbackOnError": {
+                    "type": "comprehension",
+                    "explanation": "El audio dice «Eu preciso de xarope para tosse. Para ser honesto, tenho sentimentos mistos.».",
+                    "ruleRef": "gp-b2-modal-perfect"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has comprendido el mensaje del audio."
+                  }
+                },
+                {
+                  "type": "AudioOnlyPrompt",
+                  "id": "es-pt-b2-u05-l03-e07",
+                  "audioText": "Eu preciso de uma caixa de emplastros. Parece que isto está a mudar.",
+                  "question": "¿Cuál es la idea principal?",
+                  "options": [
+                    "Eu preciso de uma caixa de emplastros. Parece que isto está a mudar.",
+                    "Eu preciso de um analgésico. Receio que possa ser mais complicado.",
+                    "Eu preciso de xarope para tosse. Para ser honesto, tenho sentimentos mistos."
+                  ],
+                  "correctIndex": 0,
+                  "allowSlowPlayback": false,
+                  "feedbackOnError": {
+                    "type": "comprehension",
+                    "explanation": "El audio dice «Eu preciso de uma caixa de emplastros. Parece que isto está a mudar.».",
+                    "ruleRef": "gp-b2-subjunctive"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has identificado la idea principal."
+                  }
+                },
+                {
+                  "type": "ListenType",
+                  "id": "es-pt-b2-u05-l03-e08",
+                  "audioText": "Eu preciso de uma caixa de emplastros. Parece que isto está a mudar.",
+                  "transcription": "Eu preciso de uma caixa de emplastros. Parece que isto está a mudar.",
+                  "feedbackOnError": {
+                    "type": "spelling",
+                    "explanation": "Escribe exactamente «Eu preciso de uma caixa de emplastros. Parece que isto está a mudar.».",
+                    "ruleRef": "gp-b2-modal-perfect"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La transcripción coincide con el audio."
+                  }
+                },
+                {
+                  "type": "SpeakRepeat",
+                  "id": "es-pt-b2-u05-l03-e09",
+                  "targetPhrase": "Eu preciso de uma caixa de emplastros. Parece que isto está a mudar.",
+                  "audioText": "Eu preciso de uma caixa de emplastros. Parece que isto está a mudar.",
+                  "feedbackOnError": {
+                    "type": "pronunciation",
+                    "explanation": "Repite «Eu preciso de uma caixa de emplastros. Parece que isto está a mudar.» con claridad.",
+                    "ruleRef": "gp-b2-modal-perfect"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La frase se entiende y mantiene el ritmo."
+                  }
+                },
+                {
+                  "type": "FreeSpeakingPrompt",
+                  "id": "es-pt-b2-u05-l03-e10",
+                  "prompt": "Argumenta y matiza una opinión sobre la farmacia.",
+                  "minTokens": 20,
+                  "conceptClusters": [
+                    [
+                      "preciso"
+                    ],
+                    [
+                      "analgésico"
+                    ],
+                    [
+                      "Receio"
+                    ]
+                  ],
+                  "modelAnswer": "Eu preciso de um analgésico. Receio que possa ser mais complicado. Eu preciso de xarope para tosse. Para ser honesto, tenho sentimentos mistos. Eu preciso de uma caixa de emplastros. Parece que isto está a mudar.",
+                  "selfAssessmentCriteria": [
+                    "¿La respuesta argumenta y responde a la tarea?",
+                    "¿Usa las dos estructuras gramaticales de la lección?",
+                    "¿Incluye una concesión o una matización?"
+                  ],
+                  "grammarRuleRefs": [
+                    "gp-b2-modal-perfect",
+                    "gp-b2-subjunctive"
+                  ],
+                  "timeLimitSeconds": 90,
+                  "minWpm": 70,
+                  "maxWpm": 160,
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "La respuesta modelo desarrolla una opinión con matices y una concesión.",
+                    "ruleRef": "gp-b2-modal-perfect"
+                  }
+                }
+              ]
+            },
+            {
+              "id": "es-pt-b2-u05-l04",
+              "title": "Should / shouldn't",
+              "cefrLevel": "B2",
+              "scenario": "Situación comunicativa avanzada sobre los consejos de salud.",
+              "canDo": "Puedo argumentar y matizar sobre los consejos de salud.",
+              "grammarPoints": [
+                {
+                  "id": "gp-b2-modal-perfect",
+                  "label": "Modal perfect",
+                  "description": "Must have, might have y should have especulan sobre el pasado."
+                },
+                {
+                  "id": "gp-b2-subjunctive",
+                  "label": "Subjunctive",
+                  "description": "El subjuntivo expresa deseos, dudas y valoraciones."
+                }
+              ],
+              "vocabFrequencyBand": "3000-5000",
+              "culturalNotes": [
+                {
+                  "idiom": "estar por dentro",
+                  "note": "Expresión para conocer un asunto.",
+                  "translation": "estar al tanto"
+                }
+              ],
+              "microLesson": {
+                "title": "Should / shouldn't",
+                "goals": [
+                  "Usar vocabulario avanzado de los consejos de salud.",
+                  "Aplicar modal perfect y subjunctive.",
+                  "Argumentar y matizar sobre los consejos de salud."
+                ],
+                "sections": [
+                  {
+                    "heading": "Lengua en contexto",
+                    "body": "Modal perfect: Must have, might have y should have especulan sobre el pasado. Subjunctive: El subjuntivo expresa deseos, dudas y valoraciones.",
+                    "examples": [
+                      {
+                        "source": "Deberías descansar más. Sinceramente, tengo sentimientos encontrados.",
+                        "target": "você deveria descansar mais. Para ser honesto, tenho sentimentos mistos."
+                      },
+                      {
+                        "source": "Deberías beber más agua. Parece que esto está cambiando.",
+                        "target": "você deveria beber mais água. Parece que isto está a mudar."
+                      }
+                    ]
+                  }
+                ]
+              },
+              "glossary": [
+                {
+                  "term": "você deveria descansar mais. Para ser honesto, tenho sentimentos mistos.",
+                  "translations": [
+                    "Deberías descansar más. Sinceramente, tengo sentimientos encontrados."
+                  ]
+                },
+                {
+                  "term": "você deveria beber mais água. Parece que isto está a mudar.",
+                  "translations": [
+                    "Deberías beber más agua. Parece que esto está cambiando."
+                  ]
+                },
+                {
+                  "term": "Você deveria dormir oito horas. Do meu ponto de vista, é uma opção razoável.",
+                  "translations": [
+                    "Deberías dormir ocho horas. Desde mi punto de vista, es una opción razonable."
+                  ]
+                }
+              ],
+              "exercises": [
+                {
+                  "type": "MultipleChoice",
+                  "id": "es-pt-b2-u05-l04-e01",
+                  "question": "¿Cuál es la opción correcta para «Deberías descansar más. Sinceramente, tengo sentimientos encontrados.»?",
+                  "options": [
+                    "você deveria descansar mais. Para ser honesto, tenho sentimentos mistos.",
+                    "você deveria beber mais água. Parece que isto está a mudar.",
+                    "Você deveria dormir oito horas. Do meu ponto de vista, é uma opção razoável."
+                  ],
+                  "correctIndex": 0,
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "«Deberías descansar más. Sinceramente, tengo sentimientos encontrados.» se dice «você deveria descansar mais. Para ser honesto, tenho sentimentos mistos.».",
+                    "ruleRef": "gp-b2-modal-perfect"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has elegido la traducción correcta."
+                  }
+                },
+                {
+                  "type": "OrderWords",
+                  "id": "es-pt-b2-u05-l04-e02",
+                  "tokens": [
+                    "deveria",
+                    "descansar",
+                    "mais",
+                    "Para",
+                    "ser",
+                    "honesto",
+                    "tenho",
+                    "sentimentos",
+                    "mistos",
+                    "você"
+                  ],
+                  "answerTokens": [
+                    "você",
+                    "deveria",
+                    "descansar",
+                    "mais",
+                    "Para",
+                    "ser",
+                    "honesto",
+                    "tenho",
+                    "sentimentos",
+                    "mistos"
+                  ],
+                  "sourcePhrase": "Deberías descansar más. Sinceramente, tengo sentimientos encontrados.",
+                  "feedbackOnError": {
+                    "type": "word_order",
+                    "explanation": "El orden correcto es «você deveria descansar mais Para ser honesto tenho sentimentos mistos».",
+                    "ruleRef": "gp-b2-modal-perfect"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "El orden produce una frase natural."
+                  }
+                },
+                {
+                  "type": "ClozeDragDrop",
+                  "id": "es-pt-b2-u05-l04-e03",
+                  "passage": "você {{b1}} {{b2}} mais",
+                  "blanks": [
+                    {
+                      "id": "b1",
+                      "answer": "deveria",
+                      "options": [
+                        "deveria",
+                        "muito",
+                        "hoje"
+                      ]
+                    },
+                    {
+                      "id": "b2",
+                      "answer": "descansar",
+                      "options": [
+                        "descansar",
+                        "muito",
+                        "hoje"
+                      ]
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "Las dos formas deben encajar con el contexto de la frase.",
+                    "ruleRef": "gp-b2-subjunctive"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Los dos huecos encajan con la situación."
+                  }
+                },
+                {
+                  "type": "SemanticMatch",
+                  "id": "es-pt-b2-u05-l04-e04",
+                  "instructions": "Clasifica la función comunicativa de cada intervención.",
+                  "pairs": [
+                    {
+                      "left": "você deveria descansar mais. Para ser honesto, tenho sentimentos mistos.",
+                      "right": "Planteamiento",
+                      "register": "formal",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    },
+                    {
+                      "left": "você deveria beber mais água. Parece que isto está a mudar.",
+                      "right": "Concesión",
+                      "register": "neutral",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    },
+                    {
+                      "left": "Você deveria dormir oito horas. Do meu ponto de vista, é uma opção razoável.",
+                      "right": "Conclusión",
+                      "register": "informal",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "Cada intervención cumple una función comunicativa distinta.",
+                    "ruleRef": "gp-b2-modal-perfect"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has identificado la función de cada intervención."
+                  }
+                },
+                {
+                  "type": "SemanticMatch",
+                  "id": "es-pt-b2-u05-l04-e05",
+                  "instructions": "Distingue el registro de cada intervención.",
+                  "pairs": [
+                    {
+                      "left": "você deveria descansar mais. Para ser honesto, tenho sentimentos mistos.",
+                      "right": "Formal",
+                      "register": "formal",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    },
+                    {
+                      "left": "você deveria beber mais água. Parece que isto está a mudar.",
+                      "right": "Neutral",
+                      "register": "neutral",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    },
+                    {
+                      "left": "Você deveria dormir oito horas. Do meu ponto de vista, é uma opção razoável.",
+                      "right": "Informal",
+                      "register": "informal",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "register",
+                    "explanation": "El registro cambia según el contexto y la relación con el interlocutor.",
+                    "ruleRef": "gp-b2-subjunctive"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has distinguido el registro de cada intervención."
+                  }
+                },
+                {
+                  "type": "AudioOnlyPrompt",
+                  "id": "es-pt-b2-u05-l04-e06",
+                  "audioText": "você deveria beber mais água. Parece que isto está a mudar.",
+                  "question": "¿Qué ha dicho el hablante?",
+                  "options": [
+                    "você deveria beber mais água. Parece que isto está a mudar.",
+                    "você deveria descansar mais. Para ser honesto, tenho sentimentos mistos.",
+                    "Você deveria dormir oito horas. Do meu ponto de vista, é uma opção razoável."
+                  ],
+                  "correctIndex": 0,
+                  "allowSlowPlayback": true,
+                  "feedbackOnError": {
+                    "type": "comprehension",
+                    "explanation": "El audio dice «você deveria beber mais água. Parece que isto está a mudar.».",
+                    "ruleRef": "gp-b2-modal-perfect"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has comprendido el mensaje del audio."
+                  }
+                },
+                {
+                  "type": "AudioOnlyPrompt",
+                  "id": "es-pt-b2-u05-l04-e07",
+                  "audioText": "Você deveria dormir oito horas. Do meu ponto de vista, é uma opção razoável.",
+                  "question": "¿Cuál es la idea principal?",
+                  "options": [
+                    "Você deveria dormir oito horas. Do meu ponto de vista, é uma opção razoável.",
+                    "você deveria descansar mais. Para ser honesto, tenho sentimentos mistos.",
+                    "você deveria beber mais água. Parece que isto está a mudar."
+                  ],
+                  "correctIndex": 0,
+                  "allowSlowPlayback": false,
+                  "feedbackOnError": {
+                    "type": "comprehension",
+                    "explanation": "El audio dice «Você deveria dormir oito horas. Do meu ponto de vista, é uma opção razoável.».",
+                    "ruleRef": "gp-b2-subjunctive"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has identificado la idea principal."
+                  }
+                },
+                {
+                  "type": "ListenType",
+                  "id": "es-pt-b2-u05-l04-e08",
+                  "audioText": "Você deveria dormir oito horas. Do meu ponto de vista, é uma opção razoável.",
+                  "transcription": "Você deveria dormir oito horas. Do meu ponto de vista, é uma opção razoável.",
+                  "feedbackOnError": {
+                    "type": "spelling",
+                    "explanation": "Escribe exactamente «Você deveria dormir oito horas. Do meu ponto de vista, é uma opção razoável.».",
+                    "ruleRef": "gp-b2-modal-perfect"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La transcripción coincide con el audio."
+                  }
+                },
+                {
+                  "type": "SpeakRepeat",
+                  "id": "es-pt-b2-u05-l04-e09",
+                  "targetPhrase": "Você deveria dormir oito horas. Do meu ponto de vista, é uma opção razoável.",
+                  "audioText": "Você deveria dormir oito horas. Do meu ponto de vista, é uma opção razoável.",
+                  "feedbackOnError": {
+                    "type": "pronunciation",
+                    "explanation": "Repite «Você deveria dormir oito horas. Do meu ponto de vista, é uma opção razoável.» con claridad.",
+                    "ruleRef": "gp-b2-modal-perfect"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La frase se entiende y mantiene el ritmo."
+                  }
+                },
+                {
+                  "type": "FreeSpeakingPrompt",
+                  "id": "es-pt-b2-u05-l04-e10",
+                  "prompt": "Argumenta y matiza una opinión sobre los consejos de salud.",
+                  "minTokens": 20,
+                  "conceptClusters": [
+                    [
+                      "deveria"
+                    ],
+                    [
+                      "descansar"
+                    ],
+                    [
+                      "honesto"
+                    ]
+                  ],
+                  "modelAnswer": "você deveria descansar mais. Para ser honesto, tenho sentimentos mistos. você deveria beber mais água. Parece que isto está a mudar. Você deveria dormir oito horas. Do meu ponto de vista, é uma opção razoável.",
+                  "selfAssessmentCriteria": [
+                    "¿La respuesta argumenta y responde a la tarea?",
+                    "¿Usa las dos estructuras gramaticales de la lección?",
+                    "¿Incluye una concesión o una matización?"
+                  ],
+                  "grammarRuleRefs": [
+                    "gp-b2-modal-perfect",
+                    "gp-b2-subjunctive"
+                  ],
+                  "timeLimitSeconds": 90,
+                  "minWpm": 70,
+                  "maxWpm": 160,
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "La respuesta modelo desarrolla una opinión con matices y una concesión.",
+                    "ruleRef": "gp-b2-modal-perfect"
+                  }
+                }
+              ]
+            },
+            {
+              "id": "es-pt-b2-u05-l05",
+              "title": "Have to / don't have to",
+              "cefrLevel": "B2",
+              "scenario": "Situación comunicativa avanzada sobre las obligaciones de salud.",
+              "canDo": "Puedo argumentar y matizar sobre las obligaciones de salud.",
+              "grammarPoints": [
+                {
+                  "id": "gp-b2-modal-perfect",
+                  "label": "Modal perfect",
+                  "description": "Must have, might have y should have especulan sobre el pasado."
+                },
+                {
+                  "id": "gp-b2-subjunctive",
+                  "label": "Subjunctive",
+                  "description": "El subjuntivo expresa deseos, dudas y valoraciones."
+                }
+              ],
+              "vocabFrequencyBand": "3000-5000",
+              "culturalNotes": [
+                {
+                  "idiom": "pôr a mão na massa",
+                  "note": "Expresión para empezar a trabajar.",
+                  "translation": "ponerse manos a la obra"
+                }
+              ],
+              "microLesson": {
+                "title": "Have to / don't have to",
+                "goals": [
+                  "Usar vocabulario avanzado de las obligaciones de salud.",
+                  "Aplicar modal perfect y subjunctive.",
+                  "Argumentar y matizar sobre las obligaciones de salud."
+                ],
+                "sections": [
+                  {
+                    "heading": "Lengua en contexto",
+                    "body": "Modal perfect: Must have, might have y should have especulan sobre el pasado. Subjunctive: El subjuntivo expresa deseos, dudas y valoraciones.",
+                    "examples": [
+                      {
+                        "source": "Tengo que tomar la medicina. Parece que esto está cambiando.",
+                        "target": "Eu tenho que tomar o remédio. Parece que isto está a mudar."
+                      },
+                      {
+                        "source": "Tengo que ir al médico. Desde mi punto de vista, es una opción razonable.",
+                        "target": "Eu tenho que ir ao médico. Do meu ponto de vista, é uma opção razoável."
+                      }
+                    ]
+                  }
+                ]
+              },
+              "glossary": [
+                {
+                  "term": "Eu tenho que tomar o remédio. Parece que isto está a mudar.",
+                  "translations": [
+                    "Tengo que tomar la medicina. Parece que esto está cambiando."
+                  ]
+                },
+                {
+                  "term": "Eu tenho que ir ao médico. Do meu ponto de vista, é uma opção razoável.",
+                  "translations": [
+                    "Tengo que ir al médico. Desde mi punto de vista, es una opción razonable."
+                  ]
+                },
+                {
+                  "term": "Eu tenho que me exercitar. Ainda assim, também há vantagens.",
+                  "translations": [
+                    "Tengo que hacer ejercicio. No obstante, también tiene ventajas."
+                  ]
+                }
+              ],
+              "exercises": [
+                {
+                  "type": "MultipleChoice",
+                  "id": "es-pt-b2-u05-l05-e01",
+                  "question": "¿Cuál es la opción correcta para «Tengo que tomar la medicina. Parece que esto está cambiando.»?",
+                  "options": [
+                    "Eu tenho que tomar o remédio. Parece que isto está a mudar.",
+                    "Eu tenho que ir ao médico. Do meu ponto de vista, é uma opção razoável.",
+                    "Eu tenho que me exercitar. Ainda assim, também há vantagens."
+                  ],
+                  "correctIndex": 0,
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "«Tengo que tomar la medicina. Parece que esto está cambiando.» se dice «Eu tenho que tomar o remédio. Parece que isto está a mudar.».",
+                    "ruleRef": "gp-b2-modal-perfect"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has elegido la traducción correcta."
+                  }
+                },
+                {
+                  "type": "OrderWords",
+                  "id": "es-pt-b2-u05-l05-e02",
+                  "tokens": [
+                    "tenho",
+                    "que",
+                    "tomar",
+                    "o",
+                    "remédio",
+                    "Parece",
+                    "que",
+                    "isto",
+                    "está",
+                    "a",
+                    "mudar",
+                    "Eu"
+                  ],
+                  "answerTokens": [
+                    "Eu",
+                    "tenho",
+                    "que",
+                    "tomar",
+                    "o",
+                    "remédio",
+                    "Parece",
+                    "que",
+                    "isto",
+                    "está",
+                    "a",
+                    "mudar"
+                  ],
+                  "sourcePhrase": "Tengo que tomar la medicina. Parece que esto está cambiando.",
+                  "feedbackOnError": {
+                    "type": "word_order",
+                    "explanation": "El orden correcto es «Eu tenho que tomar o remédio Parece que isto está a mudar».",
+                    "ruleRef": "gp-b2-modal-perfect"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "El orden produce una frase natural."
+                  }
+                },
+                {
+                  "type": "ClozeDragDrop",
+                  "id": "es-pt-b2-u05-l05-e03",
+                  "passage": "Eu {{b1}} que {{b2}} o remédio",
+                  "blanks": [
+                    {
+                      "id": "b1",
+                      "answer": "tenho",
+                      "options": [
+                        "tenho",
+                        "remédio",
+                        "muito"
+                      ]
+                    },
+                    {
+                      "id": "b2",
+                      "answer": "tomar",
+                      "options": [
+                        "tomar",
+                        "remédio",
+                        "muito"
+                      ]
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "Las dos formas deben encajar con el contexto de la frase.",
+                    "ruleRef": "gp-b2-subjunctive"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Los dos huecos encajan con la situación."
+                  }
+                },
+                {
+                  "type": "SemanticMatch",
+                  "id": "es-pt-b2-u05-l05-e04",
+                  "instructions": "Clasifica la función comunicativa de cada intervención.",
+                  "pairs": [
+                    {
+                      "left": "Eu tenho que tomar o remédio. Parece que isto está a mudar.",
+                      "right": "Planteamiento",
+                      "register": "formal",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    },
+                    {
+                      "left": "Eu tenho que ir ao médico. Do meu ponto de vista, é uma opção razoável.",
+                      "right": "Concesión",
+                      "register": "neutral",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    },
+                    {
+                      "left": "Eu tenho que me exercitar. Ainda assim, também há vantagens.",
+                      "right": "Conclusión",
+                      "register": "informal",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "Cada intervención cumple una función comunicativa distinta.",
+                    "ruleRef": "gp-b2-modal-perfect"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has identificado la función de cada intervención."
+                  }
+                },
+                {
+                  "type": "SemanticMatch",
+                  "id": "es-pt-b2-u05-l05-e05",
+                  "instructions": "Distingue el registro de cada intervención.",
+                  "pairs": [
+                    {
+                      "left": "Eu tenho que tomar o remédio. Parece que isto está a mudar.",
+                      "right": "Formal",
+                      "register": "formal",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    },
+                    {
+                      "left": "Eu tenho que ir ao médico. Do meu ponto de vista, é uma opção razoável.",
+                      "right": "Neutral",
+                      "register": "neutral",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    },
+                    {
+                      "left": "Eu tenho que me exercitar. Ainda assim, também há vantagens.",
+                      "right": "Informal",
+                      "register": "informal",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "register",
+                    "explanation": "El registro cambia según el contexto y la relación con el interlocutor.",
+                    "ruleRef": "gp-b2-subjunctive"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has distinguido el registro de cada intervención."
+                  }
+                },
+                {
+                  "type": "AudioOnlyPrompt",
+                  "id": "es-pt-b2-u05-l05-e06",
+                  "audioText": "Eu tenho que ir ao médico. Do meu ponto de vista, é uma opção razoável.",
+                  "question": "¿Qué ha dicho el hablante?",
+                  "options": [
+                    "Eu tenho que ir ao médico. Do meu ponto de vista, é uma opção razoável.",
+                    "Eu tenho que tomar o remédio. Parece que isto está a mudar.",
+                    "Eu tenho que me exercitar. Ainda assim, também há vantagens."
+                  ],
+                  "correctIndex": 0,
+                  "allowSlowPlayback": true,
+                  "feedbackOnError": {
+                    "type": "comprehension",
+                    "explanation": "El audio dice «Eu tenho que ir ao médico. Do meu ponto de vista, é uma opção razoável.».",
+                    "ruleRef": "gp-b2-modal-perfect"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has comprendido el mensaje del audio."
+                  }
+                },
+                {
+                  "type": "AudioOnlyPrompt",
+                  "id": "es-pt-b2-u05-l05-e07",
+                  "audioText": "Eu tenho que me exercitar. Ainda assim, também há vantagens.",
+                  "question": "¿Cuál es la idea principal?",
+                  "options": [
+                    "Eu tenho que me exercitar. Ainda assim, também há vantagens.",
+                    "Eu tenho que tomar o remédio. Parece que isto está a mudar.",
+                    "Eu tenho que ir ao médico. Do meu ponto de vista, é uma opção razoável."
+                  ],
+                  "correctIndex": 0,
+                  "allowSlowPlayback": false,
+                  "feedbackOnError": {
+                    "type": "comprehension",
+                    "explanation": "El audio dice «Eu tenho que me exercitar. Ainda assim, também há vantagens.».",
+                    "ruleRef": "gp-b2-subjunctive"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has identificado la idea principal."
+                  }
+                },
+                {
+                  "type": "ListenType",
+                  "id": "es-pt-b2-u05-l05-e08",
+                  "audioText": "Eu tenho que me exercitar. Ainda assim, também há vantagens.",
+                  "transcription": "Eu tenho que me exercitar. Ainda assim, também há vantagens.",
+                  "feedbackOnError": {
+                    "type": "spelling",
+                    "explanation": "Escribe exactamente «Eu tenho que me exercitar. Ainda assim, também há vantagens.».",
+                    "ruleRef": "gp-b2-modal-perfect"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La transcripción coincide con el audio."
+                  }
+                },
+                {
+                  "type": "SpeakRepeat",
+                  "id": "es-pt-b2-u05-l05-e09",
+                  "targetPhrase": "Eu tenho que me exercitar. Ainda assim, também há vantagens.",
+                  "audioText": "Eu tenho que me exercitar. Ainda assim, também há vantagens.",
+                  "feedbackOnError": {
+                    "type": "pronunciation",
+                    "explanation": "Repite «Eu tenho que me exercitar. Ainda assim, também há vantagens.» con claridad.",
+                    "ruleRef": "gp-b2-modal-perfect"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La frase se entiende y mantiene el ritmo."
+                  }
+                },
+                {
+                  "type": "FreeSpeakingPrompt",
+                  "id": "es-pt-b2-u05-l05-e10",
+                  "prompt": "Argumenta y matiza una opinión sobre las obligaciones de salud.",
+                  "minTokens": 20,
+                  "conceptClusters": [
+                    [
+                      "tenho"
+                    ],
+                    [
+                      "tomar"
+                    ],
+                    [
+                      "remédio"
+                    ]
+                  ],
+                  "modelAnswer": "Eu tenho que tomar o remédio. Parece que isto está a mudar. Eu tenho que ir ao médico. Do meu ponto de vista, é uma opção razoável. Eu tenho que me exercitar. Ainda assim, também há vantagens.",
+                  "selfAssessmentCriteria": [
+                    "¿La respuesta argumenta y responde a la tarea?",
+                    "¿Usa las dos estructuras gramaticales de la lección?",
+                    "¿Incluye una concesión o una matización?"
+                  ],
+                  "grammarRuleRefs": [
+                    "gp-b2-modal-perfect",
+                    "gp-b2-subjunctive"
+                  ],
+                  "timeLimitSeconds": 90,
+                  "minWpm": 70,
+                  "maxWpm": 160,
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "La respuesta modelo desarrolla una opinión con matices y una concesión.",
+                    "ruleRef": "gp-b2-modal-perfect"
+                  }
+                }
+              ]
+            },
+            {
+              "id": "es-pt-b2-u05-l06",
+              "title": "En la consulta médica",
+              "cefrLevel": "B2",
+              "scenario": "Situación comunicativa avanzada sobre la consulta médica.",
+              "canDo": "Puedo argumentar y matizar sobre la consulta médica.",
+              "grammarPoints": [
+                {
+                  "id": "gp-b2-modal-perfect",
+                  "label": "Modal perfect",
+                  "description": "Must have, might have y should have especulan sobre el pasado."
+                },
+                {
+                  "id": "gp-b2-subjunctive",
+                  "label": "Subjunctive",
+                  "description": "El subjuntivo expresa deseos, dudas y valoraciones."
+                }
+              ],
+              "vocabFrequencyBand": "3000-5000",
+              "culturalNotes": [
+                {
+                  "idiom": "fazer vista grossa",
+                  "note": "Expresión para ignorar algo a propósito.",
+                  "translation": "hacer la vista gorda"
+                }
+              ],
+              "microLesson": {
+                "title": "En la consulta médica",
+                "goals": [
+                  "Usar vocabulario avanzado de la consulta médica.",
+                  "Aplicar modal perfect y subjunctive.",
+                  "Argumentar y matizar sobre la consulta médica."
+                ],
+                "sections": [
+                  {
+                    "heading": "Lengua en contexto",
+                    "body": "Modal perfect: Must have, might have y should have especulan sobre el pasado. Subjunctive: El subjuntivo expresa deseos, dudas y valoraciones.",
+                    "examples": [
+                      {
+                        "source": "Me duele el estómago desde ayer. Desde mi punto de vista, es una opción razonable.",
+                        "target": "Minha barriga está doendo desde ontem. Do meu ponto de vista, é uma opção razoável."
+                      },
+                      {
+                        "source": "¿Puedo tomar este medicamento? No obstante, también tiene ventajas.",
+                        "target": "Posso tomar este medicamento. Ainda assim, também há vantagens."
+                      }
+                    ]
+                  }
+                ]
+              },
+              "glossary": [
+                {
+                  "term": "Minha barriga está doendo desde ontem. Do meu ponto de vista, é uma opção razoável.",
+                  "translations": [
+                    "Me duele el estómago desde ayer. Desde mi punto de vista, es una opción razonable."
+                  ]
+                },
+                {
+                  "term": "Posso tomar este medicamento. Ainda assim, também há vantagens.",
+                  "translations": [
+                    "¿Puedo tomar este medicamento? No obstante, también tiene ventajas."
+                  ]
+                },
+                {
+                  "term": "Você tem que descansar e beber água. No fim do dia, é preciso priorizar.",
+                  "translations": [
+                    "Tiene que descansar y beber agua. A fin de cuentas, hay que priorizar."
+                  ]
+                }
+              ],
+              "exercises": [
+                {
+                  "type": "MultipleChoice",
+                  "id": "es-pt-b2-u05-l06-e01",
+                  "question": "¿Cuál es la opción correcta para «Me duele el estómago desde ayer. Desde mi punto de vista, es una opción razonable.»?",
+                  "options": [
+                    "Minha barriga está doendo desde ontem. Do meu ponto de vista, é uma opção razoável.",
+                    "Posso tomar este medicamento. Ainda assim, também há vantagens.",
+                    "Você tem que descansar e beber água. No fim do dia, é preciso priorizar."
+                  ],
+                  "correctIndex": 0,
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "«Me duele el estómago desde ayer. Desde mi punto de vista, es una opción razonable.» se dice «Minha barriga está doendo desde ontem. Do meu ponto de vista, é uma opção razoável.».",
+                    "ruleRef": "gp-b2-modal-perfect"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has elegido la traducción correcta."
+                  }
+                },
+                {
+                  "type": "OrderWords",
+                  "id": "es-pt-b2-u05-l06-e02",
+                  "tokens": [
+                    "barriga",
+                    "está",
+                    "doendo",
+                    "desde",
+                    "ontem",
+                    "Do",
+                    "meu",
+                    "ponto",
+                    "de",
+                    "vista",
+                    "é",
+                    "uma",
+                    "opção",
+                    "razoável",
+                    "Minha"
+                  ],
+                  "answerTokens": [
+                    "Minha",
+                    "barriga",
+                    "está",
+                    "doendo",
+                    "desde",
+                    "ontem",
+                    "Do",
+                    "meu",
+                    "ponto",
+                    "de",
+                    "vista",
+                    "é",
+                    "uma",
+                    "opção",
+                    "razoável"
+                  ],
+                  "sourcePhrase": "Me duele el estómago desde ayer. Desde mi punto de vista, es una opción razonable.",
+                  "feedbackOnError": {
+                    "type": "word_order",
+                    "explanation": "El orden correcto es «Minha barriga está doendo desde ontem Do meu ponto de vista é uma opção razoável».",
+                    "ruleRef": "gp-b2-modal-perfect"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "El orden produce una frase natural."
+                  }
+                },
+                {
+                  "type": "ClozeDragDrop",
+                  "id": "es-pt-b2-u05-l06-e03",
+                  "passage": "Minha {{b1}} {{b2}} doendo desde ontem",
+                  "blanks": [
+                    {
+                      "id": "b1",
+                      "answer": "barriga",
+                      "options": [
+                        "barriga",
+                        "doendo",
+                        "desde"
+                      ]
+                    },
+                    {
+                      "id": "b2",
+                      "answer": "está",
+                      "options": [
+                        "está",
+                        "doendo",
+                        "desde"
+                      ]
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "Las dos formas deben encajar con el contexto de la frase.",
+                    "ruleRef": "gp-b2-subjunctive"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Los dos huecos encajan con la situación."
+                  }
+                },
+                {
+                  "type": "SemanticMatch",
+                  "id": "es-pt-b2-u05-l06-e04",
+                  "instructions": "Clasifica la función comunicativa de cada intervención.",
+                  "pairs": [
+                    {
+                      "left": "Minha barriga está doendo desde ontem. Do meu ponto de vista, é uma opção razoável.",
+                      "right": "Planteamiento",
+                      "register": "formal",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    },
+                    {
+                      "left": "Posso tomar este medicamento. Ainda assim, também há vantagens.",
+                      "right": "Concesión",
+                      "register": "neutral",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    },
+                    {
+                      "left": "Você tem que descansar e beber água. No fim do dia, é preciso priorizar.",
+                      "right": "Conclusión",
+                      "register": "informal",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "Cada intervención cumple una función comunicativa distinta.",
+                    "ruleRef": "gp-b2-modal-perfect"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has identificado la función de cada intervención."
+                  }
+                },
+                {
+                  "type": "SemanticMatch",
+                  "id": "es-pt-b2-u05-l06-e05",
+                  "instructions": "Distingue el registro de cada intervención.",
+                  "pairs": [
+                    {
+                      "left": "Minha barriga está doendo desde ontem. Do meu ponto de vista, é uma opção razoável.",
+                      "right": "Formal",
+                      "register": "formal",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    },
+                    {
+                      "left": "Posso tomar este medicamento. Ainda assim, também há vantagens.",
+                      "right": "Neutral",
+                      "register": "neutral",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    },
+                    {
+                      "left": "Você tem que descansar e beber água. No fim do dia, é preciso priorizar.",
+                      "right": "Informal",
+                      "register": "informal",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "register",
+                    "explanation": "El registro cambia según el contexto y la relación con el interlocutor.",
+                    "ruleRef": "gp-b2-subjunctive"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has distinguido el registro de cada intervención."
+                  }
+                },
+                {
+                  "type": "AudioOnlyPrompt",
+                  "id": "es-pt-b2-u05-l06-e06",
+                  "audioText": "Posso tomar este medicamento. Ainda assim, também há vantagens.",
+                  "question": "¿Qué ha dicho el hablante?",
+                  "options": [
+                    "Posso tomar este medicamento. Ainda assim, também há vantagens.",
+                    "Minha barriga está doendo desde ontem. Do meu ponto de vista, é uma opção razoável.",
+                    "Você tem que descansar e beber água. No fim do dia, é preciso priorizar."
+                  ],
+                  "correctIndex": 0,
+                  "allowSlowPlayback": true,
+                  "feedbackOnError": {
+                    "type": "comprehension",
+                    "explanation": "El audio dice «Posso tomar este medicamento. Ainda assim, também há vantagens.».",
+                    "ruleRef": "gp-b2-modal-perfect"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has comprendido el mensaje del audio."
+                  }
+                },
+                {
+                  "type": "AudioOnlyPrompt",
+                  "id": "es-pt-b2-u05-l06-e07",
+                  "audioText": "Você tem que descansar e beber água. No fim do dia, é preciso priorizar.",
+                  "question": "¿Cuál es la idea principal?",
+                  "options": [
+                    "Você tem que descansar e beber água. No fim do dia, é preciso priorizar.",
+                    "Minha barriga está doendo desde ontem. Do meu ponto de vista, é uma opção razoável.",
+                    "Posso tomar este medicamento. Ainda assim, também há vantagens."
+                  ],
+                  "correctIndex": 0,
+                  "allowSlowPlayback": false,
+                  "feedbackOnError": {
+                    "type": "comprehension",
+                    "explanation": "El audio dice «Você tem que descansar e beber água. No fim do dia, é preciso priorizar.».",
+                    "ruleRef": "gp-b2-subjunctive"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has identificado la idea principal."
+                  }
+                },
+                {
+                  "type": "ListenType",
+                  "id": "es-pt-b2-u05-l06-e08",
+                  "audioText": "Você tem que descansar e beber água. No fim do dia, é preciso priorizar.",
+                  "transcription": "Você tem que descansar e beber água. No fim do dia, é preciso priorizar.",
+                  "feedbackOnError": {
+                    "type": "spelling",
+                    "explanation": "Escribe exactamente «Você tem que descansar e beber água. No fim do dia, é preciso priorizar.».",
+                    "ruleRef": "gp-b2-modal-perfect"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La transcripción coincide con el audio."
+                  }
+                },
+                {
+                  "type": "SpeakRepeat",
+                  "id": "es-pt-b2-u05-l06-e09",
+                  "targetPhrase": "Você tem que descansar e beber água. No fim do dia, é preciso priorizar.",
+                  "audioText": "Você tem que descansar e beber água. No fim do dia, é preciso priorizar.",
+                  "feedbackOnError": {
+                    "type": "pronunciation",
+                    "explanation": "Repite «Você tem que descansar e beber água. No fim do dia, é preciso priorizar.» con claridad.",
+                    "ruleRef": "gp-b2-modal-perfect"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La frase se entiende y mantiene el ritmo."
+                  }
+                },
+                {
+                  "type": "FreeSpeakingPrompt",
+                  "id": "es-pt-b2-u05-l06-e10",
+                  "prompt": "Argumenta y matiza una opinión sobre la consulta médica.",
+                  "minTokens": 20,
+                  "conceptClusters": [
+                    [
+                      "barriga"
+                    ],
+                    [
+                      "está"
+                    ],
+                    [
+                      "doendo"
+                    ]
+                  ],
+                  "modelAnswer": "Minha barriga está doendo desde ontem. Do meu ponto de vista, é uma opção razoável. Posso tomar este medicamento. Ainda assim, também há vantagens. Você tem que descansar e beber água. No fim do dia, é preciso priorizar.",
+                  "selfAssessmentCriteria": [
+                    "¿La respuesta argumenta y responde a la tarea?",
+                    "¿Usa las dos estructuras gramaticales de la lección?",
+                    "¿Incluye una concesión o una matización?"
+                  ],
+                  "grammarRuleRefs": [
+                    "gp-b2-modal-perfect",
+                    "gp-b2-subjunctive"
+                  ],
+                  "timeLimitSeconds": 90,
+                  "minWpm": 70,
+                  "maxWpm": 160,
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "La respuesta modelo desarrolla una opinión con matices y una concesión.",
+                    "ruleRef": "gp-b2-modal-perfect"
+                  }
+                }
+              ]
+            },
+            {
+              "id": "es-pt-b2-u05-l07",
+              "title": "Consejos de salud",
+              "cefrLevel": "B2",
+              "scenario": "Situación comunicativa avanzada sobre los hábitos saludables.",
+              "canDo": "Puedo argumentar y matizar sobre los hábitos saludables.",
+              "grammarPoints": [
+                {
+                  "id": "gp-b2-modal-perfect",
+                  "label": "Modal perfect",
+                  "description": "Must have, might have y should have especulan sobre el pasado."
+                },
+                {
+                  "id": "gp-b2-subjunctive",
+                  "label": "Subjunctive",
+                  "description": "El subjuntivo expresa deseos, dudas y valoraciones."
+                }
+              ],
+              "vocabFrequencyBand": "3000-5000",
+              "culturalNotes": [
+                {
+                  "idiom": "bater um papo",
+                  "note": "Expresión para conversar informalmente.",
+                  "translation": "charolar"
+                }
+              ],
+              "microLesson": {
+                "title": "Consejos de salud",
+                "goals": [
+                  "Usar vocabulario avanzado de los hábitos saludables.",
+                  "Aplicar modal perfect y subjunctive.",
+                  "Argumentar y matizar sobre los hábitos saludables."
+                ],
+                "sections": [
+                  {
+                    "heading": "Lengua en contexto",
+                    "body": "Modal perfect: Must have, might have y should have especulan sobre el pasado. Subjunctive: El subjuntivo expresa deseos, dudas y valoraciones.",
+                    "examples": [
+                      {
+                        "source": "Deberías caminar treinta minutos al día. No obstante, también tiene ventajas.",
+                        "target": "Você deve caminhar trinta minutos por dia. Ainda assim, também há vantagens."
+                      },
+                      {
+                        "source": "No deberías comer tanto azúcar. A fin de cuentas, hay que priorizar.",
+                        "target": "Você não deveria comer tanto açúcar. No fim do dia, é preciso priorizar."
+                      }
+                    ]
+                  }
+                ]
+              },
+              "glossary": [
+                {
+                  "term": "Você deve caminhar trinta minutos por dia. Ainda assim, também há vantagens.",
+                  "translations": [
+                    "Deberías caminar treinta minutos al día. No obstante, también tiene ventajas."
+                  ]
+                },
+                {
+                  "term": "Você não deveria comer tanto açúcar. No fim do dia, é preciso priorizar.",
+                  "translations": [
+                    "No deberías comer tanto azúcar. A fin de cuentas, hay que priorizar."
+                  ]
+                },
+                {
+                  "term": "Você deveria dormir melhor. Em resumo, é um tema complexo.",
+                  "translations": [
+                    "Deberías dormir mejor. En resumen, es un tema complejo."
+                  ]
+                }
+              ],
+              "exercises": [
+                {
+                  "type": "MultipleChoice",
+                  "id": "es-pt-b2-u05-l07-e01",
+                  "question": "¿Cuál es la opción correcta para «Deberías caminar treinta minutos al día. No obstante, también tiene ventajas.»?",
+                  "options": [
+                    "Você deve caminhar trinta minutos por dia. Ainda assim, também há vantagens.",
+                    "Você não deveria comer tanto açúcar. No fim do dia, é preciso priorizar.",
+                    "Você deveria dormir melhor. Em resumo, é um tema complexo."
+                  ],
+                  "correctIndex": 0,
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "«Deberías caminar treinta minutos al día. No obstante, también tiene ventajas.» se dice «Você deve caminhar trinta minutos por dia. Ainda assim, também há vantagens.».",
+                    "ruleRef": "gp-b2-modal-perfect"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has elegido la traducción correcta."
+                  }
+                },
+                {
+                  "type": "OrderWords",
+                  "id": "es-pt-b2-u05-l07-e02",
+                  "tokens": [
+                    "deve",
+                    "caminhar",
+                    "trinta",
+                    "minutos",
+                    "por",
+                    "dia",
+                    "Ainda",
+                    "assim",
+                    "também",
+                    "há",
+                    "vantagens",
+                    "Você"
+                  ],
+                  "answerTokens": [
+                    "Você",
+                    "deve",
+                    "caminhar",
+                    "trinta",
+                    "minutos",
+                    "por",
+                    "dia",
+                    "Ainda",
+                    "assim",
+                    "também",
+                    "há",
+                    "vantagens"
+                  ],
+                  "sourcePhrase": "Deberías caminar treinta minutos al día. No obstante, también tiene ventajas.",
+                  "feedbackOnError": {
+                    "type": "word_order",
+                    "explanation": "El orden correcto es «Você deve caminhar trinta minutos por dia Ainda assim também há vantagens».",
+                    "ruleRef": "gp-b2-modal-perfect"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "El orden produce una frase natural."
+                  }
+                },
+                {
+                  "type": "ClozeDragDrop",
+                  "id": "es-pt-b2-u05-l07-e03",
+                  "passage": "Você {{b1}} {{b2}} trinta minutos por dia",
+                  "blanks": [
+                    {
+                      "id": "b1",
+                      "answer": "deve",
+                      "options": [
+                        "deve",
+                        "trinta",
+                        "minutos"
+                      ]
+                    },
+                    {
+                      "id": "b2",
+                      "answer": "caminhar",
+                      "options": [
+                        "caminhar",
+                        "trinta",
+                        "minutos"
+                      ]
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "Las dos formas deben encajar con el contexto de la frase.",
+                    "ruleRef": "gp-b2-subjunctive"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Los dos huecos encajan con la situación."
+                  }
+                },
+                {
+                  "type": "SemanticMatch",
+                  "id": "es-pt-b2-u05-l07-e04",
+                  "instructions": "Clasifica la función comunicativa de cada intervención.",
+                  "pairs": [
+                    {
+                      "left": "Você deve caminhar trinta minutos por dia. Ainda assim, também há vantagens.",
+                      "right": "Planteamiento",
+                      "register": "formal",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    },
+                    {
+                      "left": "Você não deveria comer tanto açúcar. No fim do dia, é preciso priorizar.",
+                      "right": "Concesión",
+                      "register": "neutral",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    },
+                    {
+                      "left": "Você deveria dormir melhor. Em resumo, é um tema complexo.",
+                      "right": "Conclusión",
+                      "register": "informal",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "Cada intervención cumple una función comunicativa distinta.",
+                    "ruleRef": "gp-b2-modal-perfect"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has identificado la función de cada intervención."
+                  }
+                },
+                {
+                  "type": "SemanticMatch",
+                  "id": "es-pt-b2-u05-l07-e05",
+                  "instructions": "Distingue el registro de cada intervención.",
+                  "pairs": [
+                    {
+                      "left": "Você deve caminhar trinta minutos por dia. Ainda assim, também há vantagens.",
+                      "right": "Formal",
+                      "register": "formal",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    },
+                    {
+                      "left": "Você não deveria comer tanto açúcar. No fim do dia, é preciso priorizar.",
+                      "right": "Neutral",
+                      "register": "neutral",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    },
+                    {
+                      "left": "Você deveria dormir melhor. Em resumo, é um tema complexo.",
+                      "right": "Informal",
+                      "register": "informal",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "register",
+                    "explanation": "El registro cambia según el contexto y la relación con el interlocutor.",
+                    "ruleRef": "gp-b2-subjunctive"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has distinguido el registro de cada intervención."
+                  }
+                },
+                {
+                  "type": "AudioOnlyPrompt",
+                  "id": "es-pt-b2-u05-l07-e06",
+                  "audioText": "Você não deveria comer tanto açúcar. No fim do dia, é preciso priorizar.",
+                  "question": "¿Qué ha dicho el hablante?",
+                  "options": [
+                    "Você não deveria comer tanto açúcar. No fim do dia, é preciso priorizar.",
+                    "Você deve caminhar trinta minutos por dia. Ainda assim, também há vantagens.",
+                    "Você deveria dormir melhor. Em resumo, é um tema complexo."
+                  ],
+                  "correctIndex": 0,
+                  "allowSlowPlayback": true,
+                  "feedbackOnError": {
+                    "type": "comprehension",
+                    "explanation": "El audio dice «Você não deveria comer tanto açúcar. No fim do dia, é preciso priorizar.».",
+                    "ruleRef": "gp-b2-modal-perfect"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has comprendido el mensaje del audio."
+                  }
+                },
+                {
+                  "type": "AudioOnlyPrompt",
+                  "id": "es-pt-b2-u05-l07-e07",
+                  "audioText": "Você deveria dormir melhor. Em resumo, é um tema complexo.",
+                  "question": "¿Cuál es la idea principal?",
+                  "options": [
+                    "Você deveria dormir melhor. Em resumo, é um tema complexo.",
+                    "Você deve caminhar trinta minutos por dia. Ainda assim, também há vantagens.",
+                    "Você não deveria comer tanto açúcar. No fim do dia, é preciso priorizar."
+                  ],
+                  "correctIndex": 0,
+                  "allowSlowPlayback": false,
+                  "feedbackOnError": {
+                    "type": "comprehension",
+                    "explanation": "El audio dice «Você deveria dormir melhor. Em resumo, é um tema complexo.».",
+                    "ruleRef": "gp-b2-subjunctive"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has identificado la idea principal."
+                  }
+                },
+                {
+                  "type": "ListenType",
+                  "id": "es-pt-b2-u05-l07-e08",
+                  "audioText": "Você deveria dormir melhor. Em resumo, é um tema complexo.",
+                  "transcription": "Você deveria dormir melhor. Em resumo, é um tema complexo.",
+                  "feedbackOnError": {
+                    "type": "spelling",
+                    "explanation": "Escribe exactamente «Você deveria dormir melhor. Em resumo, é um tema complexo.».",
+                    "ruleRef": "gp-b2-modal-perfect"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La transcripción coincide con el audio."
+                  }
+                },
+                {
+                  "type": "SpeakRepeat",
+                  "id": "es-pt-b2-u05-l07-e09",
+                  "targetPhrase": "Você deveria dormir melhor. Em resumo, é um tema complexo.",
+                  "audioText": "Você deveria dormir melhor. Em resumo, é um tema complexo.",
+                  "feedbackOnError": {
+                    "type": "pronunciation",
+                    "explanation": "Repite «Você deveria dormir melhor. Em resumo, é um tema complexo.» con claridad.",
+                    "ruleRef": "gp-b2-modal-perfect"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La frase se entiende y mantiene el ritmo."
+                  }
+                },
+                {
+                  "type": "FreeSpeakingPrompt",
+                  "id": "es-pt-b2-u05-l07-e10",
+                  "prompt": "Argumenta y matiza una opinión sobre los hábitos saludables.",
+                  "minTokens": 20,
+                  "conceptClusters": [
+                    [
+                      "deve"
+                    ],
+                    [
+                      "caminhar"
+                    ],
+                    [
+                      "trinta"
+                    ]
+                  ],
+                  "modelAnswer": "Você deve caminhar trinta minutos por dia. Ainda assim, também há vantagens. Você não deveria comer tanto açúcar. No fim do dia, é preciso priorizar. Você deveria dormir melhor. Em resumo, é um tema complexo.",
+                  "selfAssessmentCriteria": [
+                    "¿La respuesta argumenta y responde a la tarea?",
+                    "¿Usa las dos estructuras gramaticales de la lección?",
+                    "¿Incluye una concesión o una matización?"
+                  ],
+                  "grammarRuleRefs": [
+                    "gp-b2-modal-perfect",
+                    "gp-b2-subjunctive"
+                  ],
+                  "timeLimitSeconds": 90,
+                  "minWpm": 70,
+                  "maxWpm": 160,
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "La respuesta modelo desarrolla una opinión con matices y una concesión.",
+                    "ruleRef": "gp-b2-modal-perfect"
+                  }
+                }
+              ]
+            },
+            {
+              "id": "es-pt-b2-u05-l08",
+              "title": "Hábitos saludables",
+              "cefrLevel": "B2",
+              "scenario": "Situación comunicativa avanzada sobre mi rutina saludable.",
+              "canDo": "Puedo argumentar y matizar sobre mi rutina saludable.",
+              "grammarPoints": [
+                {
+                  "id": "gp-b2-modal-perfect",
+                  "label": "Modal perfect",
+                  "description": "Must have, might have y should have especulan sobre el pasado."
+                },
+                {
+                  "id": "gp-b2-subjunctive",
+                  "label": "Subjunctive",
+                  "description": "El subjuntivo expresa deseos, dudas y valoraciones."
+                }
+              ],
+              "vocabFrequencyBand": "3000-5000",
+              "culturalNotes": [
+                {
+                  "idiom": "cair a ficha",
+                  "note": "Expresión para comprender algo de repente.",
+                  "translation": "caer en la cuenta"
+                }
+              ],
+              "microLesson": {
+                "title": "Hábitos saludables",
+                "goals": [
+                  "Usar vocabulario avanzado de mi rutina saludable.",
+                  "Aplicar modal perfect y subjunctive.",
+                  "Argumentar y matizar sobre mi rutina saludable."
+                ],
+                "sections": [
+                  {
+                    "heading": "Lengua en contexto",
+                    "body": "Modal perfect: Must have, might have y should have especulan sobre el pasado. Subjunctive: El subjuntivo expresa deseos, dudas y valoraciones.",
+                    "examples": [
+                      {
+                        "source": "Desayuno fruta y cereales. A fin de cuentas, hay que priorizar.",
+                        "target": "Frutas e cereais para o café da manhã. No fim do dia, é preciso priorizar."
+                      },
+                      {
+                        "source": "Camino al trabajo todos los días. En resumen, es un tema complejo.",
+                        "target": "Vou a pé para o trabalho todos os dias. Em resumo, é um tema complexo."
+                      }
+                    ]
+                  }
+                ]
+              },
+              "glossary": [
+                {
+                  "term": "Frutas e cereais para o café da manhã. No fim do dia, é preciso priorizar.",
+                  "translations": [
+                    "Desayuno fruta y cereales. A fin de cuentas, hay que priorizar."
+                  ]
+                },
+                {
+                  "term": "Vou a pé para o trabalho todos os dias. Em resumo, é um tema complexo.",
+                  "translations": [
+                    "Camino al trabajo todos los días. En resumen, es un tema complejo."
+                  ]
+                },
+                {
+                  "term": "Durmo oito horas todas as noites. No entanto, vale a pena qualificar.",
+                  "translations": [
+                    "Duermo ocho horas cada noche. Sin embargo, conviene matizarlo."
+                  ]
+                }
+              ],
+              "exercises": [
+                {
+                  "type": "MultipleChoice",
+                  "id": "es-pt-b2-u05-l08-e01",
+                  "question": "¿Cuál es la opción correcta para «Desayuno fruta y cereales. A fin de cuentas, hay que priorizar.»?",
+                  "options": [
+                    "Frutas e cereais para o café da manhã. No fim do dia, é preciso priorizar.",
+                    "Vou a pé para o trabalho todos os dias. Em resumo, é um tema complexo.",
+                    "Durmo oito horas todas as noites. No entanto, vale a pena qualificar."
+                  ],
+                  "correctIndex": 0,
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "«Desayuno fruta y cereales. A fin de cuentas, hay que priorizar.» se dice «Frutas e cereais para o café da manhã. No fim do dia, é preciso priorizar.».",
+                    "ruleRef": "gp-b2-modal-perfect"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has elegido la traducción correcta."
+                  }
+                },
+                {
+                  "type": "OrderWords",
+                  "id": "es-pt-b2-u05-l08-e02",
+                  "tokens": [
+                    "e",
+                    "cereais",
+                    "para",
+                    "o",
+                    "café",
+                    "da",
+                    "manhã",
+                    "No",
+                    "fim",
+                    "do",
+                    "dia",
+                    "é",
+                    "preciso",
+                    "priorizar",
+                    "Frutas"
+                  ],
+                  "answerTokens": [
+                    "Frutas",
+                    "e",
+                    "cereais",
+                    "para",
+                    "o",
+                    "café",
+                    "da",
+                    "manhã",
+                    "No",
+                    "fim",
+                    "do",
+                    "dia",
+                    "é",
+                    "preciso",
+                    "priorizar"
+                  ],
+                  "sourcePhrase": "Desayuno fruta y cereales. A fin de cuentas, hay que priorizar.",
+                  "feedbackOnError": {
+                    "type": "word_order",
+                    "explanation": "El orden correcto es «Frutas e cereais para o café da manhã No fim do dia é preciso priorizar».",
+                    "ruleRef": "gp-b2-modal-perfect"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "El orden produce una frase natural."
+                  }
+                },
+                {
+                  "type": "ClozeDragDrop",
+                  "id": "es-pt-b2-u05-l08-e03",
+                  "passage": "{{b1}} e {{b2}} para o café da manhã",
+                  "blanks": [
+                    {
+                      "id": "b1",
+                      "answer": "Frutas",
+                      "options": [
+                        "Frutas",
+                        "café",
+                        "manhã"
+                      ]
+                    },
+                    {
+                      "id": "b2",
+                      "answer": "cereais",
+                      "options": [
+                        "cereais",
+                        "café",
+                        "manhã"
+                      ]
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "Las dos formas deben encajar con el contexto de la frase.",
+                    "ruleRef": "gp-b2-subjunctive"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Los dos huecos encajan con la situación."
+                  }
+                },
+                {
+                  "type": "SemanticMatch",
+                  "id": "es-pt-b2-u05-l08-e04",
+                  "instructions": "Clasifica la función comunicativa de cada intervención.",
+                  "pairs": [
+                    {
+                      "left": "Frutas e cereais para o café da manhã. No fim do dia, é preciso priorizar.",
+                      "right": "Planteamiento",
+                      "register": "formal",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    },
+                    {
+                      "left": "Vou a pé para o trabalho todos os dias. Em resumo, é um tema complexo.",
+                      "right": "Concesión",
+                      "register": "neutral",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    },
+                    {
+                      "left": "Durmo oito horas todas as noites. No entanto, vale a pena qualificar.",
+                      "right": "Conclusión",
+                      "register": "informal",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "Cada intervención cumple una función comunicativa distinta.",
+                    "ruleRef": "gp-b2-modal-perfect"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has identificado la función de cada intervención."
+                  }
+                },
+                {
+                  "type": "SemanticMatch",
+                  "id": "es-pt-b2-u05-l08-e05",
+                  "instructions": "Distingue el registro de cada intervención.",
+                  "pairs": [
+                    {
+                      "left": "Frutas e cereais para o café da manhã. No fim do dia, é preciso priorizar.",
+                      "right": "Formal",
+                      "register": "formal",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    },
+                    {
+                      "left": "Vou a pé para o trabalho todos os dias. Em resumo, é um tema complexo.",
+                      "right": "Neutral",
+                      "register": "neutral",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    },
+                    {
+                      "left": "Durmo oito horas todas as noites. No entanto, vale a pena qualificar.",
+                      "right": "Informal",
+                      "register": "informal",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "register",
+                    "explanation": "El registro cambia según el contexto y la relación con el interlocutor.",
+                    "ruleRef": "gp-b2-subjunctive"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has distinguido el registro de cada intervención."
+                  }
+                },
+                {
+                  "type": "AudioOnlyPrompt",
+                  "id": "es-pt-b2-u05-l08-e06",
+                  "audioText": "Vou a pé para o trabalho todos os dias. Em resumo, é um tema complexo.",
+                  "question": "¿Qué ha dicho el hablante?",
+                  "options": [
+                    "Vou a pé para o trabalho todos os dias. Em resumo, é um tema complexo.",
+                    "Frutas e cereais para o café da manhã. No fim do dia, é preciso priorizar.",
+                    "Durmo oito horas todas as noites. No entanto, vale a pena qualificar."
+                  ],
+                  "correctIndex": 0,
+                  "allowSlowPlayback": true,
+                  "feedbackOnError": {
+                    "type": "comprehension",
+                    "explanation": "El audio dice «Vou a pé para o trabalho todos os dias. Em resumo, é um tema complexo.».",
+                    "ruleRef": "gp-b2-modal-perfect"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has comprendido el mensaje del audio."
+                  }
+                },
+                {
+                  "type": "AudioOnlyPrompt",
+                  "id": "es-pt-b2-u05-l08-e07",
+                  "audioText": "Durmo oito horas todas as noites. No entanto, vale a pena qualificar.",
+                  "question": "¿Cuál es la idea principal?",
+                  "options": [
+                    "Durmo oito horas todas as noites. No entanto, vale a pena qualificar.",
+                    "Frutas e cereais para o café da manhã. No fim do dia, é preciso priorizar.",
+                    "Vou a pé para o trabalho todos os dias. Em resumo, é um tema complexo."
+                  ],
+                  "correctIndex": 0,
+                  "allowSlowPlayback": false,
+                  "feedbackOnError": {
+                    "type": "comprehension",
+                    "explanation": "El audio dice «Durmo oito horas todas as noites. No entanto, vale a pena qualificar.».",
+                    "ruleRef": "gp-b2-subjunctive"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has identificado la idea principal."
+                  }
+                },
+                {
+                  "type": "ListenType",
+                  "id": "es-pt-b2-u05-l08-e08",
+                  "audioText": "Durmo oito horas todas as noites. No entanto, vale a pena qualificar.",
+                  "transcription": "Durmo oito horas todas as noites. No entanto, vale a pena qualificar.",
+                  "feedbackOnError": {
+                    "type": "spelling",
+                    "explanation": "Escribe exactamente «Durmo oito horas todas as noites. No entanto, vale a pena qualificar.».",
+                    "ruleRef": "gp-b2-modal-perfect"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La transcripción coincide con el audio."
+                  }
+                },
+                {
+                  "type": "SpeakRepeat",
+                  "id": "es-pt-b2-u05-l08-e09",
+                  "targetPhrase": "Durmo oito horas todas as noites. No entanto, vale a pena qualificar.",
+                  "audioText": "Durmo oito horas todas as noites. No entanto, vale a pena qualificar.",
+                  "feedbackOnError": {
+                    "type": "pronunciation",
+                    "explanation": "Repite «Durmo oito horas todas as noites. No entanto, vale a pena qualificar.» con claridad.",
+                    "ruleRef": "gp-b2-modal-perfect"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La frase se entiende y mantiene el ritmo."
+                  }
+                },
+                {
+                  "type": "FreeSpeakingPrompt",
+                  "id": "es-pt-b2-u05-l08-e10",
+                  "prompt": "Argumenta y matiza una opinión sobre mi rutina saludable.",
+                  "minTokens": 20,
+                  "conceptClusters": [
+                    [
+                      "Frutas"
+                    ],
+                    [
+                      "cereais"
+                    ],
+                    [
+                      "café"
+                    ]
+                  ],
+                  "modelAnswer": "Frutas e cereais para o café da manhã. No fim do dia, é preciso priorizar. Vou a pé para o trabalho todos os dias. Em resumo, é um tema complexo. Durmo oito horas todas as noites. No entanto, vale a pena qualificar.",
+                  "selfAssessmentCriteria": [
+                    "¿La respuesta argumenta y responde a la tarea?",
+                    "¿Usa las dos estructuras gramaticales de la lección?",
+                    "¿Incluye una concesión o una matización?"
+                  ],
+                  "grammarRuleRefs": [
+                    "gp-b2-modal-perfect",
+                    "gp-b2-subjunctive"
+                  ],
+                  "timeLimitSeconds": 90,
+                  "minWpm": 70,
+                  "maxWpm": 160,
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "La respuesta modelo desarrolla una opinión con matices y una concesión.",
+                    "ruleRef": "gp-b2-modal-perfect"
+                  }
+                }
+              ]
+            },
+            {
+              "id": "es-pt-b2-u05-l09",
+              "title": "Integración: plan de bienestar",
+              "cefrLevel": "B2",
+              "scenario": "Situación comunicativa avanzada sobre un plan de bienestar.",
+              "canDo": "Puedo argumentar y matizar sobre un plan de bienestar.",
+              "grammarPoints": [
+                {
+                  "id": "gp-b2-modal-perfect",
+                  "label": "Modal perfect",
+                  "description": "Must have, might have y should have especulan sobre el pasado."
+                },
+                {
+                  "id": "gp-b2-subjunctive",
+                  "label": "Subjunctive",
+                  "description": "El subjuntivo expresa deseos, dudas y valoraciones."
+                }
+              ],
+              "vocabFrequencyBand": "3000-5000",
+              "culturalNotes": [
+                {
+                  "idiom": "ficar de olho",
+                  "note": "Expresión para vigilar algo.",
+                  "translation": "estar pendiente"
+                }
+              ],
+              "microLesson": {
+                "title": "Integración: plan de bienestar",
+                "goals": [
+                  "Usar vocabulario avanzado de un plan de bienestar.",
+                  "Aplicar modal perfect y subjunctive.",
+                  "Argumentar y matizar sobre un plan de bienestar."
+                ],
+                "sections": [
+                  {
+                    "heading": "Lengua en contexto",
+                    "body": "Modal perfect: Must have, might have y should have especulan sobre el pasado. Subjunctive: El subjuntivo expresa deseos, dudas y valoraciones.",
+                    "examples": [
+                      {
+                        "source": "Voy a hacer ejercicio tres veces por semana. En resumen, es un tema complejo.",
+                        "target": "Vou fazer exercícios três vezes por semana. Em resumo, é um tema complexo."
+                      },
+                      {
+                        "source": "También voy a beber más agua. Sin embargo, conviene matizarlo.",
+                        "target": "Também vou beber mais água. No entanto, vale a pena qualificar."
+                      }
+                    ]
+                  }
+                ]
+              },
+              "glossary": [
+                {
+                  "term": "Vou fazer exercícios três vezes por semana. Em resumo, é um tema complexo.",
+                  "translations": [
+                    "Voy a hacer ejercicio tres veces por semana. En resumen, es un tema complejo."
+                  ]
+                },
+                {
+                  "term": "Também vou beber mais água. No entanto, vale a pena qualificar.",
+                  "translations": [
+                    "También voy a beber más agua. Sin embargo, conviene matizarlo."
+                  ]
+                },
+                {
+                  "term": "E vou dormir melhor. Dito isto, depende do contexto.",
+                  "translations": [
+                    "Y voy a dormir mejor. Dicho esto, depende del contexto."
+                  ]
+                }
+              ],
+              "exercises": [
+                {
+                  "type": "MultipleChoice",
+                  "id": "es-pt-b2-u05-l09-e01",
+                  "question": "¿Cuál es la opción correcta para «Voy a hacer ejercicio tres veces por semana. En resumen, es un tema complejo.»?",
+                  "options": [
+                    "Vou fazer exercícios três vezes por semana. Em resumo, é um tema complexo.",
+                    "Também vou beber mais água. No entanto, vale a pena qualificar.",
+                    "E vou dormir melhor. Dito isto, depende do contexto."
+                  ],
+                  "correctIndex": 0,
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "«Voy a hacer ejercicio tres veces por semana. En resumen, es un tema complejo.» se dice «Vou fazer exercícios três vezes por semana. Em resumo, é um tema complexo.».",
+                    "ruleRef": "gp-b2-modal-perfect"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has elegido la traducción correcta."
+                  }
+                },
+                {
+                  "type": "OrderWords",
+                  "id": "es-pt-b2-u05-l09-e02",
+                  "tokens": [
+                    "fazer",
+                    "exercícios",
+                    "três",
+                    "vezes",
+                    "por",
+                    "semana",
+                    "Em",
+                    "resumo",
+                    "é",
+                    "um",
+                    "tema",
+                    "complexo",
+                    "Vou"
+                  ],
+                  "answerTokens": [
+                    "Vou",
+                    "fazer",
+                    "exercícios",
+                    "três",
+                    "vezes",
+                    "por",
+                    "semana",
+                    "Em",
+                    "resumo",
+                    "é",
+                    "um",
+                    "tema",
+                    "complexo"
+                  ],
+                  "sourcePhrase": "Voy a hacer ejercicio tres veces por semana. En resumen, es un tema complejo.",
+                  "feedbackOnError": {
+                    "type": "word_order",
+                    "explanation": "El orden correcto es «Vou fazer exercícios três vezes por semana Em resumo é um tema complexo».",
+                    "ruleRef": "gp-b2-modal-perfect"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "El orden produce una frase natural."
+                  }
+                },
+                {
+                  "type": "ClozeDragDrop",
+                  "id": "es-pt-b2-u05-l09-e03",
+                  "passage": "{{b1}} {{b2}} exercícios três vezes por semana",
+                  "blanks": [
+                    {
+                      "id": "b1",
+                      "answer": "Vou",
+                      "options": [
+                        "Vou",
+                        "exercícios",
+                        "três"
+                      ]
+                    },
+                    {
+                      "id": "b2",
+                      "answer": "fazer",
+                      "options": [
+                        "fazer",
+                        "exercícios",
+                        "três"
+                      ]
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "Las dos formas deben encajar con el contexto de la frase.",
+                    "ruleRef": "gp-b2-subjunctive"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Los dos huecos encajan con la situación."
+                  }
+                },
+                {
+                  "type": "SemanticMatch",
+                  "id": "es-pt-b2-u05-l09-e04",
+                  "instructions": "Clasifica la función comunicativa de cada intervención.",
+                  "pairs": [
+                    {
+                      "left": "Vou fazer exercícios três vezes por semana. Em resumo, é um tema complexo.",
+                      "right": "Planteamiento",
+                      "register": "formal",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    },
+                    {
+                      "left": "Também vou beber mais água. No entanto, vale a pena qualificar.",
+                      "right": "Concesión",
+                      "register": "neutral",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    },
+                    {
+                      "left": "E vou dormir melhor. Dito isto, depende do contexto.",
+                      "right": "Conclusión",
+                      "register": "informal",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "Cada intervención cumple una función comunicativa distinta.",
+                    "ruleRef": "gp-b2-modal-perfect"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has identificado la función de cada intervención."
+                  }
+                },
+                {
+                  "type": "SemanticMatch",
+                  "id": "es-pt-b2-u05-l09-e05",
+                  "instructions": "Distingue el registro de cada intervención.",
+                  "pairs": [
+                    {
+                      "left": "Vou fazer exercícios três vezes por semana. Em resumo, é um tema complexo.",
+                      "right": "Formal",
+                      "register": "formal",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    },
+                    {
+                      "left": "Também vou beber mais água. No entanto, vale a pena qualificar.",
+                      "right": "Neutral",
+                      "register": "neutral",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    },
+                    {
+                      "left": "E vou dormir melhor. Dito isto, depende do contexto.",
+                      "right": "Informal",
+                      "register": "informal",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "register",
+                    "explanation": "El registro cambia según el contexto y la relación con el interlocutor.",
+                    "ruleRef": "gp-b2-subjunctive"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has distinguido el registro de cada intervención."
+                  }
+                },
+                {
+                  "type": "AudioOnlyPrompt",
+                  "id": "es-pt-b2-u05-l09-e06",
+                  "audioText": "Também vou beber mais água. No entanto, vale a pena qualificar.",
+                  "question": "¿Qué ha dicho el hablante?",
+                  "options": [
+                    "Também vou beber mais água. No entanto, vale a pena qualificar.",
+                    "Vou fazer exercícios três vezes por semana. Em resumo, é um tema complexo.",
+                    "E vou dormir melhor. Dito isto, depende do contexto."
+                  ],
+                  "correctIndex": 0,
+                  "allowSlowPlayback": true,
+                  "feedbackOnError": {
+                    "type": "comprehension",
+                    "explanation": "El audio dice «Também vou beber mais água. No entanto, vale a pena qualificar.».",
+                    "ruleRef": "gp-b2-modal-perfect"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has comprendido el mensaje del audio."
+                  }
+                },
+                {
+                  "type": "AudioOnlyPrompt",
+                  "id": "es-pt-b2-u05-l09-e07",
+                  "audioText": "E vou dormir melhor. Dito isto, depende do contexto.",
+                  "question": "¿Cuál es la idea principal?",
+                  "options": [
+                    "E vou dormir melhor. Dito isto, depende do contexto.",
+                    "Vou fazer exercícios três vezes por semana. Em resumo, é um tema complexo.",
+                    "Também vou beber mais água. No entanto, vale a pena qualificar."
+                  ],
+                  "correctIndex": 0,
+                  "allowSlowPlayback": false,
+                  "feedbackOnError": {
+                    "type": "comprehension",
+                    "explanation": "El audio dice «E vou dormir melhor. Dito isto, depende do contexto.».",
+                    "ruleRef": "gp-b2-subjunctive"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has identificado la idea principal."
+                  }
+                },
+                {
+                  "type": "ListenType",
+                  "id": "es-pt-b2-u05-l09-e08",
+                  "audioText": "E vou dormir melhor. Dito isto, depende do contexto.",
+                  "transcription": "E vou dormir melhor. Dito isto, depende do contexto.",
+                  "feedbackOnError": {
+                    "type": "spelling",
+                    "explanation": "Escribe exactamente «E vou dormir melhor. Dito isto, depende do contexto.».",
+                    "ruleRef": "gp-b2-modal-perfect"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La transcripción coincide con el audio."
+                  }
+                },
+                {
+                  "type": "SpeakRepeat",
+                  "id": "es-pt-b2-u05-l09-e09",
+                  "targetPhrase": "E vou dormir melhor. Dito isto, depende do contexto.",
+                  "audioText": "E vou dormir melhor. Dito isto, depende do contexto.",
+                  "feedbackOnError": {
+                    "type": "pronunciation",
+                    "explanation": "Repite «E vou dormir melhor. Dito isto, depende do contexto.» con claridad.",
+                    "ruleRef": "gp-b2-modal-perfect"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La frase se entiende y mantiene el ritmo."
+                  }
+                },
+                {
+                  "type": "FreeSpeakingPrompt",
+                  "id": "es-pt-b2-u05-l09-e10",
+                  "prompt": "Argumenta y matiza una opinión sobre un plan de bienestar.",
+                  "minTokens": 20,
+                  "conceptClusters": [
+                    [
+                      "Vou"
+                    ],
+                    [
+                      "fazer"
+                    ],
+                    [
+                      "exercícios"
+                    ]
+                  ],
+                  "modelAnswer": "Vou fazer exercícios três vezes por semana. Em resumo, é um tema complexo. Também vou beber mais água. No entanto, vale a pena qualificar. E vou dormir melhor. Dito isto, depende do contexto.",
+                  "selfAssessmentCriteria": [
+                    "¿La respuesta argumenta y responde a la tarea?",
+                    "¿Usa las dos estructuras gramaticales de la lección?",
+                    "¿Incluye una concesión o una matización?"
+                  ],
+                  "grammarRuleRefs": [
+                    "gp-b2-modal-perfect",
+                    "gp-b2-subjunctive"
+                  ],
+                  "timeLimitSeconds": 90,
+                  "minWpm": 70,
+                  "maxWpm": 160,
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "La respuesta modelo desarrolla una opinión con matices y una concesión.",
+                    "ruleRef": "gp-b2-modal-perfect"
+                  }
+                }
+              ]
+            },
+            {
+              "id": "es-pt-b2-u05-l10",
+              "title": "Evaluación: mi salud",
+              "cefrLevel": "B2",
+              "scenario": "Situación comunicativa avanzada sobre mi salud.",
+              "canDo": "Puedo argumentar y matizar sobre mi salud.",
+              "grammarPoints": [
+                {
+                  "id": "gp-b2-modal-perfect",
+                  "label": "Modal perfect",
+                  "description": "Must have, might have y should have especulan sobre el pasado."
+                },
+                {
+                  "id": "gp-b2-subjunctive",
+                  "label": "Subjunctive",
+                  "description": "El subjuntivo expresa deseos, dudas y valoraciones."
+                }
+              ],
+              "vocabFrequencyBand": "3000-5000",
+              "culturalNotes": [
+                {
+                  "idiom": "custar os olhos da cara",
+                  "note": "Expresión para decir que algo es muy caro.",
+                  "translation": "costar un ojo de la cara"
+                }
+              ],
+              "microLesson": {
+                "title": "Evaluación: mi salud",
+                "goals": [
+                  "Usar vocabulario avanzado de mi salud.",
+                  "Aplicar modal perfect y subjunctive.",
+                  "Argumentar y matizar sobre mi salud."
+                ],
+                "sections": [
+                  {
+                    "heading": "Lengua en contexto",
+                    "body": "Modal perfect: Must have, might have y should have especulan sobre el pasado. Subjunctive: El subjuntivo expresa deseos, dudas y valoraciones.",
+                    "examples": [
+                      {
+                        "source": "Me siento mejor que antes. Sin embargo, conviene matizarlo.",
+                        "target": "Eu me sinto melhor do que antes. No entanto, vale a pena qualificar."
+                      },
+                      {
+                        "source": "He empezado a caminar cada día. Dicho esto, depende del contexto.",
+                        "target": "Comecei a caminhar todos os dias. Dito isto, depende do contexto."
+                      }
+                    ]
+                  }
+                ]
+              },
+              "glossary": [
+                {
+                  "term": "Eu me sinto melhor do que antes. No entanto, vale a pena qualificar.",
+                  "translations": [
+                    "Me siento mejor que antes. Sin embargo, conviene matizarlo."
+                  ]
+                },
+                {
+                  "term": "Comecei a caminhar todos os dias. Dito isto, depende do contexto.",
+                  "translations": [
+                    "He empezado a caminar cada día. Dicho esto, depende del contexto."
+                  ]
+                },
+                {
+                  "term": "Ainda tenho que descansar mais. Por outras palavras, vale a pena considerar.",
+                  "translations": [
+                    "Todavía tengo que descansar más. En otras palabras, merece la pena considerarlo."
+                  ]
+                }
+              ],
+              "exercises": [
+                {
+                  "type": "MultipleChoice",
+                  "id": "es-pt-b2-u05-l10-e01",
+                  "question": "¿Cuál es la opción correcta para «Me siento mejor que antes. Sin embargo, conviene matizarlo.»?",
+                  "options": [
+                    "Eu me sinto melhor do que antes. No entanto, vale a pena qualificar.",
+                    "Comecei a caminhar todos os dias. Dito isto, depende do contexto.",
+                    "Ainda tenho que descansar mais. Por outras palavras, vale a pena considerar."
+                  ],
+                  "correctIndex": 0,
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "«Me siento mejor que antes. Sin embargo, conviene matizarlo.» se dice «Eu me sinto melhor do que antes. No entanto, vale a pena qualificar.».",
+                    "ruleRef": "gp-b2-modal-perfect"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has elegido la traducción correcta."
+                  }
+                },
+                {
+                  "type": "OrderWords",
+                  "id": "es-pt-b2-u05-l10-e02",
+                  "tokens": [
+                    "me",
+                    "sinto",
+                    "melhor",
+                    "do",
+                    "que",
+                    "antes",
+                    "No",
+                    "entanto",
+                    "vale",
+                    "a",
+                    "pena",
+                    "qualificar",
+                    "Eu"
+                  ],
+                  "answerTokens": [
+                    "Eu",
+                    "me",
+                    "sinto",
+                    "melhor",
+                    "do",
+                    "que",
+                    "antes",
+                    "No",
+                    "entanto",
+                    "vale",
+                    "a",
+                    "pena",
+                    "qualificar"
+                  ],
+                  "sourcePhrase": "Me siento mejor que antes. Sin embargo, conviene matizarlo.",
+                  "feedbackOnError": {
+                    "type": "word_order",
+                    "explanation": "El orden correcto es «Eu me sinto melhor do que antes No entanto vale a pena qualificar».",
+                    "ruleRef": "gp-b2-modal-perfect"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "El orden produce una frase natural."
+                  }
+                },
+                {
+                  "type": "ClozeDragDrop",
+                  "id": "es-pt-b2-u05-l10-e03",
+                  "passage": "Eu me {{b1}} {{b2}} do que antes",
+                  "blanks": [
+                    {
+                      "id": "b1",
+                      "answer": "sinto",
+                      "options": [
+                        "sinto",
+                        "antes",
+                        "muito"
+                      ]
+                    },
+                    {
+                      "id": "b2",
+                      "answer": "melhor",
+                      "options": [
+                        "melhor",
+                        "antes",
+                        "muito"
+                      ]
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "Las dos formas deben encajar con el contexto de la frase.",
+                    "ruleRef": "gp-b2-subjunctive"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Los dos huecos encajan con la situación."
+                  }
+                },
+                {
+                  "type": "SemanticMatch",
+                  "id": "es-pt-b2-u05-l10-e04",
+                  "instructions": "Clasifica la función comunicativa de cada intervención.",
+                  "pairs": [
+                    {
+                      "left": "Eu me sinto melhor do que antes. No entanto, vale a pena qualificar.",
+                      "right": "Planteamiento",
+                      "register": "formal",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    },
+                    {
+                      "left": "Comecei a caminhar todos os dias. Dito isto, depende do contexto.",
+                      "right": "Concesión",
+                      "register": "neutral",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    },
+                    {
+                      "left": "Ainda tenho que descansar mais. Por outras palavras, vale a pena considerar.",
+                      "right": "Conclusión",
+                      "register": "informal",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "Cada intervención cumple una función comunicativa distinta.",
+                    "ruleRef": "gp-b2-modal-perfect"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has identificado la función de cada intervención."
+                  }
+                },
+                {
+                  "type": "SemanticMatch",
+                  "id": "es-pt-b2-u05-l10-e05",
+                  "instructions": "Distingue el registro de cada intervención.",
+                  "pairs": [
+                    {
+                      "left": "Eu me sinto melhor do que antes. No entanto, vale a pena qualificar.",
+                      "right": "Formal",
+                      "register": "formal",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    },
+                    {
+                      "left": "Comecei a caminhar todos os dias. Dito isto, depende do contexto.",
+                      "right": "Neutral",
+                      "register": "neutral",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    },
+                    {
+                      "left": "Ainda tenho que descansar mais. Por outras palavras, vale a pena considerar.",
+                      "right": "Informal",
+                      "register": "informal",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "register",
+                    "explanation": "El registro cambia según el contexto y la relación con el interlocutor.",
+                    "ruleRef": "gp-b2-subjunctive"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has distinguido el registro de cada intervención."
+                  }
+                },
+                {
+                  "type": "AudioOnlyPrompt",
+                  "id": "es-pt-b2-u05-l10-e06",
+                  "audioText": "Comecei a caminhar todos os dias. Dito isto, depende do contexto.",
+                  "question": "¿Qué ha dicho el hablante?",
+                  "options": [
+                    "Comecei a caminhar todos os dias. Dito isto, depende do contexto.",
+                    "Eu me sinto melhor do que antes. No entanto, vale a pena qualificar.",
+                    "Ainda tenho que descansar mais. Por outras palavras, vale a pena considerar."
+                  ],
+                  "correctIndex": 0,
+                  "allowSlowPlayback": true,
+                  "feedbackOnError": {
+                    "type": "comprehension",
+                    "explanation": "El audio dice «Comecei a caminhar todos os dias. Dito isto, depende do contexto.».",
+                    "ruleRef": "gp-b2-modal-perfect"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has comprendido el mensaje del audio."
+                  }
+                },
+                {
+                  "type": "AudioOnlyPrompt",
+                  "id": "es-pt-b2-u05-l10-e07",
+                  "audioText": "Ainda tenho que descansar mais. Por outras palavras, vale a pena considerar.",
+                  "question": "¿Cuál es la idea principal?",
+                  "options": [
+                    "Ainda tenho que descansar mais. Por outras palavras, vale a pena considerar.",
+                    "Eu me sinto melhor do que antes. No entanto, vale a pena qualificar.",
+                    "Comecei a caminhar todos os dias. Dito isto, depende do contexto."
+                  ],
+                  "correctIndex": 0,
+                  "allowSlowPlayback": false,
+                  "feedbackOnError": {
+                    "type": "comprehension",
+                    "explanation": "El audio dice «Ainda tenho que descansar mais. Por outras palavras, vale a pena considerar.».",
+                    "ruleRef": "gp-b2-subjunctive"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has identificado la idea principal."
+                  }
+                },
+                {
+                  "type": "ListenType",
+                  "id": "es-pt-b2-u05-l10-e08",
+                  "audioText": "Ainda tenho que descansar mais. Por outras palavras, vale a pena considerar.",
+                  "transcription": "Ainda tenho que descansar mais. Por outras palavras, vale a pena considerar.",
+                  "feedbackOnError": {
+                    "type": "spelling",
+                    "explanation": "Escribe exactamente «Ainda tenho que descansar mais. Por outras palavras, vale a pena considerar.».",
+                    "ruleRef": "gp-b2-modal-perfect"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La transcripción coincide con el audio."
+                  }
+                },
+                {
+                  "type": "SpeakRepeat",
+                  "id": "es-pt-b2-u05-l10-e09",
+                  "targetPhrase": "Ainda tenho que descansar mais. Por outras palavras, vale a pena considerar.",
+                  "audioText": "Ainda tenho que descansar mais. Por outras palavras, vale a pena considerar.",
+                  "feedbackOnError": {
+                    "type": "pronunciation",
+                    "explanation": "Repite «Ainda tenho que descansar mais. Por outras palavras, vale a pena considerar.» con claridad.",
+                    "ruleRef": "gp-b2-modal-perfect"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La frase se entiende y mantiene el ritmo."
+                  }
+                },
+                {
+                  "type": "FreeSpeakingPrompt",
+                  "id": "es-pt-b2-u05-l10-e10",
+                  "prompt": "Argumenta y matiza una opinión sobre mi salud.",
+                  "minTokens": 20,
+                  "conceptClusters": [
+                    [
+                      "sinto"
+                    ],
+                    [
+                      "melhor"
+                    ],
+                    [
+                      "antes"
+                    ]
+                  ],
+                  "modelAnswer": "Eu me sinto melhor do que antes. No entanto, vale a pena qualificar. Comecei a caminhar todos os dias. Dito isto, depende do contexto. Ainda tenho que descansar mais. Por outras palavras, vale a pena considerar.",
+                  "selfAssessmentCriteria": [
+                    "¿La respuesta argumenta y responde a la tarea?",
+                    "¿Usa las dos estructuras gramaticales de la lección?",
+                    "¿Incluye una concesión o una matización?"
+                  ],
+                  "grammarRuleRefs": [
+                    "gp-b2-modal-perfect",
+                    "gp-b2-subjunctive"
+                  ],
+                  "timeLimitSeconds": 90,
+                  "minWpm": 70,
+                  "maxWpm": 160,
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "La respuesta modelo desarrolla una opinión con matices y una concesión.",
+                    "ruleRef": "gp-b2-modal-perfect"
+                  }
+                }
+              ]
+            }
+          ]
         }
       ]
     },
