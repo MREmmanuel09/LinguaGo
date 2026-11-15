@@ -20,6 +20,7 @@ import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.offset
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.requiredSize
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
@@ -210,9 +211,9 @@ fun PathNode(
             Box(
                 modifier =
                     Modifier
-                        .size(92.dp)
+                        .requiredSize(92.dp)
                         .clip(CircleShape)
-                        .border(4.dp, ring.copy(alpha = 0.35f), CircleShape),
+                        .border(4.dp, ring.copy(alpha = 0.5f), CircleShape),
             )
         }
         Box(
