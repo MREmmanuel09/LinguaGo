@@ -20,6 +20,8 @@
 - Cada lección tiene 7 ejercicios y hasta 2 focos gramaticales (A2).
 - PT y JA reutilizan el currículo semántico A2; JA se segmenta con Janome para
   que `OrderWords` y `Translate` tengan tokens estables.
+- Las versiones PT/JA se generaron con traducción asistida. La revisión nativa
+  debe validar registro, naturalidad y segmentación antes del 3.3.0.
 
 ## 2. Resultado de la auditoría
 
