@@ -47,6 +47,9 @@ Ruta: `app/build/outputs/apk/full/release/`.
 4. Autenticar `gh` y publicar la release con el APK firmado.
 5. Etiquetar `v3.2.0` y actualizar el CHANGELOG.
 
+La secuencia está automatizada en `tools/release/publish_3_2_0.ps1` y
+documentada en `docs/qa/fase1.5-release-stable.md`.
+
 ## 6. Conclusión
 
 El contenido y el build de F1 están listos. El release **3.2.0-rc1** es un

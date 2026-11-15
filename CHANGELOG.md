@@ -19,6 +19,8 @@ Release candidate técnico de F1. Incluye F0 (240 lecciones piloto) y F1
 - `contentScaleReport`: 1.257/4.080 lecciones.
 - Kit de revisión nativa: 840 lecciones y 40 modismos B2 en
   `docs/qa/fase1.5-revision-nativa.md`.
+- Automatización de publicación en `tools/release/` con checks de revisión
+  nativa, firma y GitHub CLI.
 
 ### Pendiente / bloqueado
 

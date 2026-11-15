@@ -304,8 +304,9 @@ intacto.
 | F1.5 Auditoría de F1 | ✅ |
 | F1.5 Release candidate 3.2.0-rc1 | ✅ (no distribuible) |
 | Kit de revisión nativa (`docs/qa/fase1.5-revision-nativa.md`) | ✅ |
+| Automatización de publicación (`tools/release/`) | ✅ |
 | Revisión nativa humana de F0/F1 | Pendiente |
-| Release estable 3.2.0 | Pendiente (revisión nativa + keystore) |
+| Release estable 3.2.0 | Pendiente (revisión nativa + keystore + `gh auth`)|
 
 Las réplicas PT/FR/JA cierran F0 con unidades de repaso construidas sobre
 lecciones ya validadas del mismo nivel. La auditoría asistida está cerrada;
