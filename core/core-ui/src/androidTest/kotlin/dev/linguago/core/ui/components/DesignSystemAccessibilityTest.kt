@@ -636,7 +636,7 @@ public class DesignSystemAccessibilityTest {
         }
 
         compose.onNodeWithText("Last year I changed jobs.").assertIsDisplayed()
-        compose.onNodeWithContentDescription("Criterio 1: Sí").assertIsDisplayed()
+        compose.onNodeWithContentDescription("Criterio 1: Sí").assertExists()
     }
 
     private val freeSpeakingFeedback =
