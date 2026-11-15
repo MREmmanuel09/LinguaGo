@@ -1,9 +1,10 @@
 # Plan de expansión a 1.020 lecciones por idioma
 
-> **Estado:** F1 completa y release 3.2.0 **publicado**. F2 (A2 170/170),
-> F3 (B1 170/170) y F4 (B2 170/170) completos en los cuatro cursos. La
-> revisión nativa de F2–F4 sigue abierta y los releases 3.3.0, 3.4.0 y 3.5.0
-> quedan **aparcados por decisión de producto** hasta el QA manual.
+> **Estado:** F1 completa y release 3.2.0 **publicado**. F2–F6 completos:
+> A2, B1, B2, C1 y C2 a 170/170 en los cuatro cursos. **Meta alcanzada:
+> 1.020/1.020 por idioma y 4.080/4.080 lecciones.** La revisión nativa de
+> F2–F6 sigue abierta y los releases 3.3.0–4.0.0 quedan **aparcados por
+> decisión de producto** hasta el QA manual.
 > **Objetivo:** mínimo 1.000 lecciones por cada curso de destino, con la misma
 > cantidad en cada nivel CEFR.
 > **Fecha:** 2026-11-09.
@@ -216,6 +217,12 @@ La ejecución se organiza en **7 fases** (F0–F6) y **14 olas internas**:
 > **F4 completo:** B2 170/170 en los cuatro cursos (138 nuevas por curso, 552
 > en total, 138 modismos únicos en ES→EN). El release 3.5.0 queda **aparcado**
 > hasta el QA manual.
+>
+> **F5 completo:** C1 170/170 en los cuatro cursos (136 nuevas por curso, 544
+> en total). El release 3.6.0 queda **aparcado** hasta el QA manual.
+>
+> **F6 completo:** C2 170/170 en los cuatro cursos (142 nuevas por curso, 568
+> en total). El release 4.0.0 queda **aparcado** hasta el QA manual.
 
 ### Tres puertas de calidad por fase
 
@@ -338,6 +345,18 @@ intacto.
 | F4.4 B2 ES→JA (138 lecciones / 1.380 ejercicios) | ✅ |
 | Auditoría F4 (`docs/qa/fase4-auditoria.md`) | ✅ |
 | Revisión nativa humana de F4 | Pendiente (puerta de 3.5.0) |
+| F5.1 C1 ES→EN (136 lecciones / 1.496 ejercicios) | ✅ |
+| F5.2 C1 ES→PT (136 lecciones / 1.496 ejercicios) | ✅ |
+| F5.3 C1 ES→FR (136 lecciones / 1.496 ejercicios) | ✅ |
+| F5.4 C1 ES→JA (136 lecciones / 1.496 ejercicios) | ✅ |
+| Auditoría F5 (`docs/qa/fase5-auditoria.md`) | ✅ |
+| Revisión nativa humana de F5 | Pendiente (puerta de 3.6.0) |
+| F6.1 C2 ES→EN (142 lecciones / 1.704 ejercicios) | ✅ |
+| F6.2 C2 ES→PT (142 lecciones / 1.704 ejercicios) | ✅ |
+| F6.3 C2 ES→FR (142 lecciones / 1.704 ejercicios) | ✅ |
+| F6.4 C2 ES→JA (142 lecciones / 1.704 ejercicios) | ✅ |
+| Auditoría F6 (`docs/qa/fase6-auditoria.md`) | ✅ |
+| Revisión nativa humana de F6 | Pendiente (puerta de 4.0.0) |
 
 Las réplicas PT/FR/JA cierran F0 con unidades de repaso construidas sobre
 lecciones ya validadas del mismo nivel. La auditoría asistida está cerrada;
@@ -345,12 +364,14 @@ la revisión nativa humana sigue pendiente antes del release de F1.
 
 Estado actual medido con `./gradlew contentScaleReport`:
 
-- ES→EN: **742/1.020** lecciones (A1 170, A2 170, B1 170, B2 170, C1 34, C2 28).
-- ES→PT: **742/1.020** lecciones (A1 170, A2 170, B1 170, B2 170, C1 34, C2 28).
-- ES→FR: **742/1.020** lecciones (A1 170, A2 170, B1 170, B2 170, C1 34, C2 28).
-- ES→JA: **742/1.020** lecciones (A1 170, A2 170, B1 170, B2 170, C1 34, C2 28).
-- Total: **2.968/4.080** lecciones y **25.280** ejercicios.
+- ES→EN: **1.020/1.020** lecciones (A1 170, A2 170, B1 170, B2 170, C1 170, C2 170).
+- ES→PT: **1.020/1.020** lecciones (A1 170, A2 170, B1 170, B2 170, C1 170, C2 170).
+- ES→FR: **1.020/1.020** lecciones (A1 170, A2 170, B1 170, B2 170, C1 170, C2 170).
+- ES→JA: **1.020/1.020** lecciones (A1 170, A2 170, B1 170, B2 170, C1 170, C2 170).
+- Total: **4.080/4.080** lecciones y **38.080** ejercicios.
 - F2 añade **599 lecciones** y **4.193 ejercicios** (EN 143/1.001; PT, FR y JA
   152/1.064 cada uno).
 - F3 añade **560 lecciones** y **5.040 ejercicios** (140/1.260 por curso).
 - F4 añade **552 lecciones** y **5.520 ejercicios** (138/1.380 por curso).
+- F5 añade **544 lecciones** y **5.984 ejercicios** (136/1.496 por curso).
+- F6 añade **568 lecciones** y **6.816 ejercicios** (142/1.704 por curso).
