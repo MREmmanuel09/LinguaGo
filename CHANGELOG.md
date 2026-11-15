@@ -6,6 +6,25 @@ El formato sigue [Keep a Changelog](https://keepachangelog.com/es-ES/1.1.0/)
 y el versionado sigue [SemVer](https://semver.org/lang/es/).
 Pre-1.0: los cambios incompatibles pueden ocurrir en `0.y.0`.
 
+## [3.2.0-rc1] - 2026-11-15
+
+Release candidate técnico de F1. Incluye F0 (240 lecciones piloto) y F1
+(600 lecciones A1 nuevas: 150 por curso). Total: 1.257/4.080 lecciones.
+
+### Añadido
+
+- A1 completo en ES→EN, ES→PT, ES→FR y ES→JA (170/170 por curso).
+- 60 bloques nuevos de A1 (15 por curso) con 4.200 ejercicios.
+- Auditoría F1: 0 lecciones duplicadas, 19 tests de contenido y 11 de rampa.
+- `contentScaleReport`: 1.257/4.080 lecciones.
+
+### Pendiente / bloqueado
+
+- Revisión nativa humana de F0/F1 (ADR-053).
+- Firma de release: sin keystore, el APK release usa la clave debug; no
+  distribuir.
+- Publicación en GitHub: `gh` sin autenticar.
+
 ## [3.0.0] - 2026-11-09
 
 Rediseño de experiencia (ADR-048/050) en cuatro fases. Fases 1–4 completadas.

@@ -1,8 +1,9 @@
 # Plan de expansión a 1.020 lecciones por idioma
 
-> **Estado:** F0 cerrada técnicamente (ADR-053). **F1.1–F1.3 en borrador:**
-> A1 ES→EN, A1 ES→PT y A1 ES→FR completos (450 lecciones nuevas). La
-> revisión nativa humana de F0/F1 sigue pendiente antes del release 3.2.0.
+> **Estado:** F0 cerrada técnicamente (ADR-053). **F1 completa en borrador:**
+> A1 170/170 en los cuatro cursos (600 lecciones nuevas). Release candidate
+> `3.2.0-rc1` preparado; el estable 3.2.0 queda bloqueado por la revisión
+> nativa y la firma de distribución.
 > **Objetivo:** mínimo 1.000 lecciones por cada curso de destino, con la misma
 > cantidad en cada nivel CEFR.
 > **Fecha:** 2026-11-09.
@@ -299,8 +300,10 @@ intacto.
 | F1.1 A1 ES→EN (150 lecciones / 1.050 ejercicios) | ✅ Borrador |
 | F1.2 A1 ES→PT (150 lecciones / 1.050 ejercicios) | ✅ Borrador |
 | F1.3 A1 ES→FR (150 lecciones / 1.050 ejercicios) | ✅ Borrador |
-| F1.4 A1 ES→JA | Pendiente |
-| F1.5 Auditoría y release 3.2.0 | Pendiente |
+| F1.4 A1 ES→JA (150 lecciones / 1.050 ejercicios) | ✅ Borrador |
+| F1.5 Auditoría de F1 | ✅ |
+| F1.5 Release candidate 3.2.0-rc1 | ✅ (no distribuible) |
+| Release estable 3.2.0 | Pendiente (revisión nativa + keystore) |
 
 Las réplicas PT/FR/JA cierran F0 con unidades de repaso construidas sobre
 lecciones ya validadas del mismo nivel. La auditoría asistida está cerrada;
@@ -311,5 +314,5 @@ Estado actual medido con `./gradlew contentScaleReport`:
 - ES→EN: **321/1.020** lecciones (A1 170, A2 27, B1 30, B2 32, C1 34, C2 28).
 - ES→PT: **312/1.020** lecciones (A1 170, A2 18, B1 30, B2 32, C1 34, C2 28).
 - ES→FR: **312/1.020** lecciones (A1 170, A2 18, B1 30, B2 32, C1 34, C2 28).
-- ES→JA: **162/1.020** lecciones (A1 20, A2 18, B1 30, B2 32, C1 34, C2 28).
-- Total: **1.107/4.080** lecciones.
+- ES→JA: **312/1.020** lecciones (A1 170, A2 18, B1 30, B2 32, C1 34, C2 28).
+- Total: **1.257/4.080** lecciones.
