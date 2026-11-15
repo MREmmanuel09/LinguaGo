@@ -273258,6 +273258,3886 @@
                 ]
               }
             ]
+          },
+          {
+            "id": "es-en-c2-u09",
+            "title": "C2 · Comida y restaurantes",
+            "lessons": [
+              {
+                "id": "es-en-c2-u09-l01",
+                "title": "Repaso: casa",
+                "cefrLevel": "C2",
+                "scenario": "Situación comunicativa avanzada sobre mi casa.",
+                "canDo": "Puedo argumentar con matices y precisión sobre mi casa.",
+                "grammarPoints": [
+                  {
+                    "id": "gp-c2-litotes",
+                    "label": "Litotes",
+                    "description": "La litote afirma algo negando lo contrario."
+                  },
+                  {
+                    "id": "gp-c2-apposition",
+                    "label": "Apposition",
+                    "description": "La aposición añade una explicación al sustantivo."
+                  }
+                ],
+                "vocabFrequencyBand": "12000+",
+                "culturalNotes": [
+                  {
+                    "idiom": "keep a stiff upper lip",
+                    "note": "Expresión para mantener la compostura.",
+                    "translation": "mantener la compostura"
+                  }
+                ],
+                "microLesson": {
+                  "title": "Repaso: casa",
+                  "goals": [
+                    "Usar vocabulario avanzado de mi casa.",
+                    "Aplicar litotes y apposition.",
+                    "Argumentar con matices sobre mi casa."
+                  ],
+                  "sections": [
+                    {
+                      "heading": "Lengua en contexto",
+                      "body": "Litotes: La litote afirma algo negando lo contrario. Apposition: La aposición añade una explicación al sustantivo.",
+                      "examples": [
+                        {
+                          "source": "Vivo en un piso pequeño con dos habitaciones. Huelga decir que el matiz escapa a una lectura literal.",
+                          "target": "I live in a small flat with two bedrooms. Needless to say, the nuance escapes a literal reading."
+                        },
+                        {
+                          "source": "La cocina es grande y luminosa. En rigor, la afirmación admite lecturas encontradas.",
+                          "target": "The kitchen is big and bright. Strictly speaking, the claim admits conflicting readings."
+                        }
+                      ]
+                    }
+                  ]
+                },
+                "glossary": [
+                  {
+                    "term": "I live in a small flat with two bedrooms. Needless to say, the nuance escapes a literal reading.",
+                    "translations": [
+                      "Vivo en un piso pequeño con dos habitaciones. Huelga decir que el matiz escapa a una lectura literal."
+                    ]
+                  },
+                  {
+                    "term": "The kitchen is big and bright. Strictly speaking, the claim admits conflicting readings.",
+                    "translations": [
+                      "La cocina es grande y luminosa. En rigor, la afirmación admite lecturas encontradas."
+                    ]
+                  },
+                  {
+                    "term": "I like spending time at home. At the risk of oversimplifying, the argument borders on contradiction.",
+                    "translations": [
+                      "Me gusta pasar tiempo en casa. A riesgo de simplificar, el argumento roza la contradicción."
+                    ]
+                  }
+                ],
+                "exercises": [
+                  {
+                    "type": "MultipleChoice",
+                    "id": "es-en-c2-u09-l01-e01",
+                    "question": "¿Cuál es la opción correcta para «Vivo en un piso pequeño con dos habitaciones. Huelga decir que el matiz escapa a una lectura literal.»?",
+                    "options": [
+                      "I live in a small flat with two bedrooms. Needless to say, the nuance escapes a literal reading.",
+                      "The kitchen is big and bright. Strictly speaking, the claim admits conflicting readings.",
+                      "I like spending time at home. At the risk of oversimplifying, the argument borders on contradiction."
+                    ],
+                    "correctIndex": 0,
+                    "feedbackOnError": {
+                      "type": "vocabulary",
+                      "explanation": "«Vivo en un piso pequeño con dos habitaciones. Huelga decir que el matiz escapa a una lectura literal.» se dice «I live in a small flat with two bedrooms. Needless to say, the nuance escapes a literal reading.».",
+                      "ruleRef": "gp-c2-litotes"
+                    },
+                    "feedbackOnSuccess": {
+                      "explanation": "Has elegido la opción precisa."
+                    }
+                  },
+                  {
+                    "type": "Translate",
+                    "id": "es-en-c2-u09-l01-e02",
+                    "sourcePhrase": "Vivo en un piso pequeño con dos habitaciones. Huelga decir que el matiz escapa a una lectura literal.",
+                    "correctTokens": [
+                      "I",
+                      "live",
+                      "in",
+                      "a",
+                      "small",
+                      "flat",
+                      "with",
+                      "two",
+                      "bedrooms",
+                      "Needless",
+                      "to",
+                      "say",
+                      "the",
+                      "nuance",
+                      "escapes",
+                      "a",
+                      "literal",
+                      "reading"
+                    ],
+                    "distractorTokens": [
+                      "The",
+                      "kitchen",
+                      "is"
+                    ],
+                    "feedbackOnError": {
+                      "type": "grammar",
+                      "explanation": "El orden correcto es «I live in a small flat with two bedrooms Needless to say the nuance escapes a literal reading».",
+                      "ruleRef": "gp-c2-litotes"
+                    },
+                    "feedbackOnSuccess": {
+                      "explanation": "La frase conserva el orden y el significado."
+                    }
+                  },
+                  {
+                    "type": "ClozeDragDrop",
+                    "id": "es-en-c2-u09-l01-e03",
+                    "passage": "I {{b1}} in a {{b2}} flat with two bedrooms.",
+                    "blanks": [
+                      {
+                        "id": "b1",
+                        "answer": "live",
+                        "options": [
+                          "live",
+                          "flat",
+                          "two"
+                        ]
+                      },
+                      {
+                        "id": "b2",
+                        "answer": "small",
+                        "options": [
+                          "small",
+                          "flat",
+                          "two"
+                        ]
+                      }
+                    ],
+                    "feedbackOnError": {
+                      "type": "grammar",
+                      "explanation": "Las dos formas deben encajar con el contexto de la frase.",
+                      "ruleRef": "gp-c2-apposition"
+                    },
+                    "feedbackOnSuccess": {
+                      "explanation": "Los dos huecos encajan con la situación."
+                    }
+                  },
+                  {
+                    "type": "ClozeDragDrop",
+                    "id": "es-en-c2-u09-l01-e04",
+                    "passage": "The {{b1}} is {{b2}} and bright.",
+                    "blanks": [
+                      {
+                        "id": "b1",
+                        "answer": "kitchen",
+                        "options": [
+                          "kitchen",
+                          "bright",
+                          "very"
+                        ]
+                      },
+                      {
+                        "id": "b2",
+                        "answer": "big",
+                        "options": [
+                          "big",
+                          "bright",
+                          "very"
+                        ]
+                      }
+                    ],
+                    "feedbackOnError": {
+                      "type": "grammar",
+                      "explanation": "Las dos formas deben encajar con el contexto de la frase.",
+                      "ruleRef": "gp-c2-apposition"
+                    },
+                    "feedbackOnSuccess": {
+                      "explanation": "Los dos huecos encajan con la situación."
+                    }
+                  },
+                  {
+                    "type": "ClozeDragDrop",
+                    "id": "es-en-c2-u09-l01-e05",
+                    "passage": "I {{b1}} {{b2}} time at home.",
+                    "blanks": [
+                      {
+                        "id": "b1",
+                        "answer": "like",
+                        "options": [
+                          "like",
+                          "time",
+                          "home"
+                        ]
+                      },
+                      {
+                        "id": "b2",
+                        "answer": "spending",
+                        "options": [
+                          "spending",
+                          "time",
+                          "home"
+                        ]
+                      }
+                    ],
+                    "feedbackOnError": {
+                      "type": "grammar",
+                      "explanation": "Las dos formas deben encajar con el contexto de la frase.",
+                      "ruleRef": "gp-c2-apposition"
+                    },
+                    "feedbackOnSuccess": {
+                      "explanation": "Los dos huecos encajan con la situación."
+                    }
+                  },
+                  {
+                    "type": "SemanticMatch",
+                    "id": "es-en-c2-u09-l01-e06",
+                    "instructions": "Clasifica la función y el registro de cada intervención.",
+                    "pairs": [
+                      {
+                        "left": "I live in a small flat with two bedrooms. Needless to say, the nuance escapes a literal reading.",
+                        "right": "Ironía seca",
+                        "register": "literary",
+                        "nuance": "Clasifica la función y el registro de la intervención."
+                      },
+                      {
+                        "left": "The kitchen is big and bright. Strictly speaking, the claim admits conflicting readings.",
+                        "right": "Atenuación",
+                        "register": "formal",
+                        "nuance": "Clasifica la función y el registro de la intervención."
+                      },
+                      {
+                        "left": "I like spending time at home. At the risk of oversimplifying, the argument borders on contradiction.",
+                        "right": "Conclusión",
+                        "register": "neutral",
+                        "nuance": "Clasifica la función y el registro de la intervención."
+                      }
+                    ],
+                    "feedbackOnError": {
+                      "type": "register",
+                      "explanation": "Cada intervención cumple una función retórica distinta.",
+                      "ruleRef": "gp-c2-litotes"
+                    },
+                    "feedbackOnSuccess": {
+                      "explanation": "Has identificado función y registro."
+                    }
+                  },
+                  {
+                    "type": "ListenChoose",
+                    "id": "es-en-c2-u09-l01-e07",
+                    "audioText": "The kitchen is big and bright. Strictly speaking, the claim admits conflicting readings.",
+                    "options": [
+                      "The kitchen is big and bright. Strictly speaking, the claim admits conflicting readings.",
+                      "I live in a small flat with two bedrooms. Needless to say, the nuance escapes a literal reading.",
+                      "I like spending time at home. At the risk of oversimplifying, the argument borders on contradiction."
+                    ],
+                    "correctIndex": 0,
+                    "feedbackOnError": {
+                      "type": "comprehension",
+                      "explanation": "El audio dice «The kitchen is big and bright. Strictly speaking, the claim admits conflicting readings.».",
+                      "ruleRef": "gp-c2-litotes"
+                    },
+                    "feedbackOnSuccess": {
+                      "explanation": "Has reconocido la frase del audio."
+                    }
+                  },
+                  {
+                    "type": "AudioOnlyPrompt",
+                    "id": "es-en-c2-u09-l01-e08",
+                    "audioText": "I like spending time at home. At the risk of oversimplifying, the argument borders on contradiction.",
+                    "question": "¿Qué implica el hablante?",
+                    "options": [
+                      "I like spending time at home. At the risk of oversimplifying, the argument borders on contradiction.",
+                      "I live in a small flat with two bedrooms. Needless to say, the nuance escapes a literal reading.",
+                      "The kitchen is big and bright. Strictly speaking, the claim admits conflicting readings."
+                    ],
+                    "correctIndex": 0,
+                    "allowSlowPlayback": false,
+                    "feedbackOnError": {
+                      "type": "comprehension",
+                      "explanation": "El audio dice «I like spending time at home. At the risk of oversimplifying, the argument borders on contradiction.».",
+                      "ruleRef": "gp-c2-apposition"
+                    },
+                    "feedbackOnSuccess": {
+                      "explanation": "Has interpretado la implicación."
+                    }
+                  },
+                  {
+                    "type": "ListenType",
+                    "id": "es-en-c2-u09-l01-e09",
+                    "audioText": "I like spending time at home. At the risk of oversimplifying, the argument borders on contradiction.",
+                    "transcription": "I like spending time at home. At the risk of oversimplifying, the argument borders on contradiction.",
+                    "feedbackOnError": {
+                      "type": "spelling",
+                      "explanation": "Escribe exactamente «I like spending time at home. At the risk of oversimplifying, the argument borders on contradiction.».",
+                      "ruleRef": "gp-c2-litotes"
+                    },
+                    "feedbackOnSuccess": {
+                      "explanation": "La transcripción coincide con el audio."
+                    }
+                  },
+                  {
+                    "type": "SpeakRepeat",
+                    "id": "es-en-c2-u09-l01-e10",
+                    "targetPhrase": "I like spending time at home. At the risk of oversimplifying, the argument borders on contradiction.",
+                    "audioText": "I like spending time at home. At the risk of oversimplifying, the argument borders on contradiction.",
+                    "feedbackOnError": {
+                      "type": "pronunciation",
+                      "explanation": "Repite «I like spending time at home. At the risk of oversimplifying, the argument borders on contradiction.» con claridad.",
+                      "ruleRef": "gp-c2-litotes"
+                    },
+                    "feedbackOnSuccess": {
+                      "explanation": "La frase se entiende y mantiene el ritmo."
+                    }
+                  },
+                  {
+                    "type": "MatchPairs",
+                    "id": "es-en-c2-u09-l01-e11",
+                    "pairs": [
+                      {
+                        "left": "Vivo en un piso pequeño con dos habitaciones. Huelga decir que el matiz escapa a una lectura literal.",
+                        "right": "I live in a small flat with two bedrooms. Needless to say, the nuance escapes a literal reading."
+                      },
+                      {
+                        "left": "La cocina es grande y luminosa. En rigor, la afirmación admite lecturas encontradas.",
+                        "right": "The kitchen is big and bright. Strictly speaking, the claim admits conflicting readings."
+                      },
+                      {
+                        "left": "Me gusta pasar tiempo en casa. A riesgo de simplificar, el argumento roza la contradicción.",
+                        "right": "I like spending time at home. At the risk of oversimplifying, the argument borders on contradiction."
+                      }
+                    ],
+                    "feedbackOnError": {
+                      "type": "vocabulary",
+                      "explanation": "Cada expresión tiene una traducción distinta.",
+                      "ruleRef": "gp-c2-litotes"
+                    },
+                    "feedbackOnSuccess": {
+                      "explanation": "Has asociado cada expresión con su traducción."
+                    }
+                  },
+                  {
+                    "type": "FreeSpeakingPrompt",
+                    "id": "es-en-c2-u09-l01-e12",
+                    "prompt": "Defiende una interpretación matizada sobre mi casa.",
+                    "minTokens": 40,
+                    "conceptClusters": [
+                      [
+                        "live"
+                      ],
+                      [
+                        "small"
+                      ],
+                      [
+                        "flat"
+                      ]
+                    ],
+                    "modelAnswer": "I live in a small flat with two bedrooms. Needless to say, the nuance escapes a literal reading. The kitchen is big and bright. Strictly speaking, the claim admits conflicting readings. I like spending time at home. At the risk of oversimplifying, the argument borders on contradiction.",
+                    "selfAssessmentCriteria": [
+                      "¿La respuesta argumenta y responde a la tarea?",
+                      "¿Usa las dos estructuras gramaticales de la lección?",
+                      "¿Incluye una concesión, una ironía o una atenuación?"
+                    ],
+                    "grammarRuleRefs": [
+                      "gp-c2-litotes",
+                      "gp-c2-apposition"
+                    ],
+                    "timeLimitSeconds": 120,
+                    "minWpm": 70,
+                    "maxWpm": 160,
+                    "feedbackOnError": {
+                      "type": "grammar",
+                      "explanation": "La respuesta modelo desarrolla una interpretación matizada.",
+                      "ruleRef": "gp-c2-litotes"
+                    }
+                  }
+                ]
+              },
+              {
+                "id": "es-en-c2-u09-l02",
+                "title": "En el mercado",
+                "cefrLevel": "C2",
+                "scenario": "Situación comunicativa avanzada sobre el mercado.",
+                "canDo": "Puedo argumentar con matices y precisión sobre el mercado.",
+                "grammarPoints": [
+                  {
+                    "id": "gp-c2-litotes",
+                    "label": "Litotes",
+                    "description": "La litote afirma algo negando lo contrario."
+                  },
+                  {
+                    "id": "gp-c2-apposition",
+                    "label": "Apposition",
+                    "description": "La aposición añade una explicación al sustantivo."
+                  }
+                ],
+                "vocabFrequencyBand": "12000+",
+                "culturalNotes": [
+                  {
+                    "idiom": "put a spin on",
+                    "note": "Expresión para presentar algo desde un ángulo interesado.",
+                    "translation": "darle un giro"
+                  }
+                ],
+                "microLesson": {
+                  "title": "En el mercado",
+                  "goals": [
+                    "Usar vocabulario avanzado de el mercado.",
+                    "Aplicar litotes y apposition.",
+                    "Argumentar con matices sobre el mercado."
+                  ],
+                  "sections": [
+                    {
+                      "heading": "Lengua en contexto",
+                      "body": "Litotes: La litote afirma algo negando lo contrario. Apposition: La aposición añade una explicación al sustantivo.",
+                      "examples": [
+                        {
+                          "source": "Necesito un kilo de tomates. En rigor, la afirmación admite lecturas encontradas.",
+                          "target": "I need a kilo of tomatoes. Strictly speaking, the claim admits conflicting readings."
+                        },
+                        {
+                          "source": "Necesito una barra de pan. A riesgo de simplificar, el argumento roza la contradicción.",
+                          "target": "I need a loaf of bread. At the risk of oversimplifying, the argument borders on contradiction."
+                        }
+                      ]
+                    }
+                  ]
+                },
+                "glossary": [
+                  {
+                    "term": "I need a kilo of tomatoes. Strictly speaking, the claim admits conflicting readings.",
+                    "translations": [
+                      "Necesito un kilo de tomates. En rigor, la afirmación admite lecturas encontradas."
+                    ]
+                  },
+                  {
+                    "term": "I need a loaf of bread. At the risk of oversimplifying, the argument borders on contradiction.",
+                    "translations": [
+                      "Necesito una barra de pan. A riesgo de simplificar, el argumento roza la contradicción."
+                    ]
+                  },
+                  {
+                    "term": "I need a piece of cheese. Paradoxically, excessive caution undermines credibility.",
+                    "translations": [
+                      "Necesito un trozo de queso. Paradójicamente, el exceso de cautela resta credibilidad."
+                    ]
+                  }
+                ],
+                "exercises": [
+                  {
+                    "type": "MultipleChoice",
+                    "id": "es-en-c2-u09-l02-e01",
+                    "question": "¿Cuál es la opción correcta para «Necesito un kilo de tomates. En rigor, la afirmación admite lecturas encontradas.»?",
+                    "options": [
+                      "I need a kilo of tomatoes. Strictly speaking, the claim admits conflicting readings.",
+                      "I need a loaf of bread. At the risk of oversimplifying, the argument borders on contradiction.",
+                      "I need a piece of cheese. Paradoxically, excessive caution undermines credibility."
+                    ],
+                    "correctIndex": 0,
+                    "feedbackOnError": {
+                      "type": "vocabulary",
+                      "explanation": "«Necesito un kilo de tomates. En rigor, la afirmación admite lecturas encontradas.» se dice «I need a kilo of tomatoes. Strictly speaking, the claim admits conflicting readings.».",
+                      "ruleRef": "gp-c2-litotes"
+                    },
+                    "feedbackOnSuccess": {
+                      "explanation": "Has elegido la opción precisa."
+                    }
+                  },
+                  {
+                    "type": "Translate",
+                    "id": "es-en-c2-u09-l02-e02",
+                    "sourcePhrase": "Necesito un kilo de tomates. En rigor, la afirmación admite lecturas encontradas.",
+                    "correctTokens": [
+                      "I",
+                      "need",
+                      "a",
+                      "kilo",
+                      "of",
+                      "tomatoes",
+                      "Strictly",
+                      "speaking",
+                      "the",
+                      "claim",
+                      "admits",
+                      "conflicting",
+                      "readings"
+                    ],
+                    "distractorTokens": [
+                      "loaf",
+                      "bread",
+                      "At"
+                    ],
+                    "feedbackOnError": {
+                      "type": "grammar",
+                      "explanation": "El orden correcto es «I need a kilo of tomatoes Strictly speaking the claim admits conflicting readings».",
+                      "ruleRef": "gp-c2-litotes"
+                    },
+                    "feedbackOnSuccess": {
+                      "explanation": "La frase conserva el orden y el significado."
+                    }
+                  },
+                  {
+                    "type": "ClozeDragDrop",
+                    "id": "es-en-c2-u09-l02-e03",
+                    "passage": "I {{b1}} a {{b2}} of tomatoes",
+                    "blanks": [
+                      {
+                        "id": "b1",
+                        "answer": "need",
+                        "options": [
+                          "need",
+                          "tomatoes",
+                          "very"
+                        ]
+                      },
+                      {
+                        "id": "b2",
+                        "answer": "kilo",
+                        "options": [
+                          "kilo",
+                          "tomatoes",
+                          "very"
+                        ]
+                      }
+                    ],
+                    "feedbackOnError": {
+                      "type": "grammar",
+                      "explanation": "Las dos formas deben encajar con el contexto de la frase.",
+                      "ruleRef": "gp-c2-apposition"
+                    },
+                    "feedbackOnSuccess": {
+                      "explanation": "Los dos huecos encajan con la situación."
+                    }
+                  },
+                  {
+                    "type": "ClozeDragDrop",
+                    "id": "es-en-c2-u09-l02-e04",
+                    "passage": "I {{b1}} a {{b2}} of bread",
+                    "blanks": [
+                      {
+                        "id": "b1",
+                        "answer": "need",
+                        "options": [
+                          "need",
+                          "bread",
+                          "very"
+                        ]
+                      },
+                      {
+                        "id": "b2",
+                        "answer": "loaf",
+                        "options": [
+                          "loaf",
+                          "bread",
+                          "very"
+                        ]
+                      }
+                    ],
+                    "feedbackOnError": {
+                      "type": "grammar",
+                      "explanation": "Las dos formas deben encajar con el contexto de la frase.",
+                      "ruleRef": "gp-c2-apposition"
+                    },
+                    "feedbackOnSuccess": {
+                      "explanation": "Los dos huecos encajan con la situación."
+                    }
+                  },
+                  {
+                    "type": "ClozeDragDrop",
+                    "id": "es-en-c2-u09-l02-e05",
+                    "passage": "I {{b1}} a {{b2}} of cheese",
+                    "blanks": [
+                      {
+                        "id": "b1",
+                        "answer": "need",
+                        "options": [
+                          "need",
+                          "cheese",
+                          "very"
+                        ]
+                      },
+                      {
+                        "id": "b2",
+                        "answer": "piece",
+                        "options": [
+                          "piece",
+                          "cheese",
+                          "very"
+                        ]
+                      }
+                    ],
+                    "feedbackOnError": {
+                      "type": "grammar",
+                      "explanation": "Las dos formas deben encajar con el contexto de la frase.",
+                      "ruleRef": "gp-c2-apposition"
+                    },
+                    "feedbackOnSuccess": {
+                      "explanation": "Los dos huecos encajan con la situación."
+                    }
+                  },
+                  {
+                    "type": "SemanticMatch",
+                    "id": "es-en-c2-u09-l02-e06",
+                    "instructions": "Clasifica la función y el registro de cada intervención.",
+                    "pairs": [
+                      {
+                        "left": "I need a kilo of tomatoes. Strictly speaking, the claim admits conflicting readings.",
+                        "right": "Ironía seca",
+                        "register": "literary",
+                        "nuance": "Clasifica la función y el registro de la intervención."
+                      },
+                      {
+                        "left": "I need a loaf of bread. At the risk of oversimplifying, the argument borders on contradiction.",
+                        "right": "Atenuación",
+                        "register": "formal",
+                        "nuance": "Clasifica la función y el registro de la intervención."
+                      },
+                      {
+                        "left": "I need a piece of cheese. Paradoxically, excessive caution undermines credibility.",
+                        "right": "Conclusión",
+                        "register": "neutral",
+                        "nuance": "Clasifica la función y el registro de la intervención."
+                      }
+                    ],
+                    "feedbackOnError": {
+                      "type": "register",
+                      "explanation": "Cada intervención cumple una función retórica distinta.",
+                      "ruleRef": "gp-c2-litotes"
+                    },
+                    "feedbackOnSuccess": {
+                      "explanation": "Has identificado función y registro."
+                    }
+                  },
+                  {
+                    "type": "ListenChoose",
+                    "id": "es-en-c2-u09-l02-e07",
+                    "audioText": "I need a loaf of bread. At the risk of oversimplifying, the argument borders on contradiction.",
+                    "options": [
+                      "I need a loaf of bread. At the risk of oversimplifying, the argument borders on contradiction.",
+                      "I need a kilo of tomatoes. Strictly speaking, the claim admits conflicting readings.",
+                      "I need a piece of cheese. Paradoxically, excessive caution undermines credibility."
+                    ],
+                    "correctIndex": 0,
+                    "feedbackOnError": {
+                      "type": "comprehension",
+                      "explanation": "El audio dice «I need a loaf of bread. At the risk of oversimplifying, the argument borders on contradiction.».",
+                      "ruleRef": "gp-c2-litotes"
+                    },
+                    "feedbackOnSuccess": {
+                      "explanation": "Has reconocido la frase del audio."
+                    }
+                  },
+                  {
+                    "type": "AudioOnlyPrompt",
+                    "id": "es-en-c2-u09-l02-e08",
+                    "audioText": "I need a piece of cheese. Paradoxically, excessive caution undermines credibility.",
+                    "question": "¿Qué implica el hablante?",
+                    "options": [
+                      "I need a piece of cheese. Paradoxically, excessive caution undermines credibility.",
+                      "I need a kilo of tomatoes. Strictly speaking, the claim admits conflicting readings.",
+                      "I need a loaf of bread. At the risk of oversimplifying, the argument borders on contradiction."
+                    ],
+                    "correctIndex": 0,
+                    "allowSlowPlayback": false,
+                    "feedbackOnError": {
+                      "type": "comprehension",
+                      "explanation": "El audio dice «I need a piece of cheese. Paradoxically, excessive caution undermines credibility.».",
+                      "ruleRef": "gp-c2-apposition"
+                    },
+                    "feedbackOnSuccess": {
+                      "explanation": "Has interpretado la implicación."
+                    }
+                  },
+                  {
+                    "type": "ListenType",
+                    "id": "es-en-c2-u09-l02-e09",
+                    "audioText": "I need a piece of cheese. Paradoxically, excessive caution undermines credibility.",
+                    "transcription": "I need a piece of cheese. Paradoxically, excessive caution undermines credibility.",
+                    "feedbackOnError": {
+                      "type": "spelling",
+                      "explanation": "Escribe exactamente «I need a piece of cheese. Paradoxically, excessive caution undermines credibility.».",
+                      "ruleRef": "gp-c2-litotes"
+                    },
+                    "feedbackOnSuccess": {
+                      "explanation": "La transcripción coincide con el audio."
+                    }
+                  },
+                  {
+                    "type": "SpeakRepeat",
+                    "id": "es-en-c2-u09-l02-e10",
+                    "targetPhrase": "I need a piece of cheese. Paradoxically, excessive caution undermines credibility.",
+                    "audioText": "I need a piece of cheese. Paradoxically, excessive caution undermines credibility.",
+                    "feedbackOnError": {
+                      "type": "pronunciation",
+                      "explanation": "Repite «I need a piece of cheese. Paradoxically, excessive caution undermines credibility.» con claridad.",
+                      "ruleRef": "gp-c2-litotes"
+                    },
+                    "feedbackOnSuccess": {
+                      "explanation": "La frase se entiende y mantiene el ritmo."
+                    }
+                  },
+                  {
+                    "type": "MatchPairs",
+                    "id": "es-en-c2-u09-l02-e11",
+                    "pairs": [
+                      {
+                        "left": "Necesito un kilo de tomates. En rigor, la afirmación admite lecturas encontradas.",
+                        "right": "I need a kilo of tomatoes. Strictly speaking, the claim admits conflicting readings."
+                      },
+                      {
+                        "left": "Necesito una barra de pan. A riesgo de simplificar, el argumento roza la contradicción.",
+                        "right": "I need a loaf of bread. At the risk of oversimplifying, the argument borders on contradiction."
+                      },
+                      {
+                        "left": "Necesito un trozo de queso. Paradójicamente, el exceso de cautela resta credibilidad.",
+                        "right": "I need a piece of cheese. Paradoxically, excessive caution undermines credibility."
+                      }
+                    ],
+                    "feedbackOnError": {
+                      "type": "vocabulary",
+                      "explanation": "Cada expresión tiene una traducción distinta.",
+                      "ruleRef": "gp-c2-litotes"
+                    },
+                    "feedbackOnSuccess": {
+                      "explanation": "Has asociado cada expresión con su traducción."
+                    }
+                  },
+                  {
+                    "type": "FreeSpeakingPrompt",
+                    "id": "es-en-c2-u09-l02-e12",
+                    "prompt": "Defiende una interpretación matizada sobre el mercado.",
+                    "minTokens": 40,
+                    "conceptClusters": [
+                      [
+                        "need"
+                      ],
+                      [
+                        "kilo"
+                      ],
+                      [
+                        "tomatoes"
+                      ]
+                    ],
+                    "modelAnswer": "I need a kilo of tomatoes. Strictly speaking, the claim admits conflicting readings. I need a loaf of bread. At the risk of oversimplifying, the argument borders on contradiction. I need a piece of cheese. Paradoxically, excessive caution undermines credibility.",
+                    "selfAssessmentCriteria": [
+                      "¿La respuesta argumenta y responde a la tarea?",
+                      "¿Usa las dos estructuras gramaticales de la lección?",
+                      "¿Incluye una concesión, una ironía o una atenuación?"
+                    ],
+                    "grammarRuleRefs": [
+                      "gp-c2-litotes",
+                      "gp-c2-apposition"
+                    ],
+                    "timeLimitSeconds": 120,
+                    "minWpm": 70,
+                    "maxWpm": 160,
+                    "feedbackOnError": {
+                      "type": "grammar",
+                      "explanation": "La respuesta modelo desarrolla una interpretación matizada.",
+                      "ruleRef": "gp-c2-litotes"
+                    }
+                  }
+                ]
+              },
+              {
+                "id": "es-en-c2-u09-l03",
+                "title": "Ingredientes y platos",
+                "cefrLevel": "C2",
+                "scenario": "Situación comunicativa avanzada sobre los ingredientes.",
+                "canDo": "Puedo argumentar con matices y precisión sobre los ingredientes.",
+                "grammarPoints": [
+                  {
+                    "id": "gp-c2-litotes",
+                    "label": "Litotes",
+                    "description": "La litote afirma algo negando lo contrario."
+                  },
+                  {
+                    "id": "gp-c2-apposition",
+                    "label": "Apposition",
+                    "description": "La aposición añade una explicación al sustantivo."
+                  }
+                ],
+                "vocabFrequencyBand": "12000+",
+                "culturalNotes": [
+                  {
+                    "idiom": "sweep under the rug",
+                    "note": "Expresión para ocultar un problema.",
+                    "translation": "barrer debajo de la alfombra"
+                  }
+                ],
+                "microLesson": {
+                  "title": "Ingredientes y platos",
+                  "goals": [
+                    "Usar vocabulario avanzado de los ingredientes.",
+                    "Aplicar litotes y apposition.",
+                    "Argumentar con matices sobre los ingredientes."
+                  ],
+                  "sections": [
+                    {
+                      "heading": "Lengua en contexto",
+                      "body": "Litotes: La litote afirma algo negando lo contrario. Apposition: La aposición añade una explicación al sustantivo.",
+                      "examples": [
+                        {
+                          "source": "Necesito arroz. A riesgo de simplificar, el argumento roza la contradicción.",
+                          "target": "I need rice. At the risk of oversimplifying, the argument borders on contradiction."
+                        },
+                        {
+                          "source": "Necesito pollo. Paradójicamente, el exceso de cautela resta credibilidad.",
+                          "target": "I need chicken. Paradoxically, excessive caution undermines credibility."
+                        }
+                      ]
+                    }
+                  ]
+                },
+                "glossary": [
+                  {
+                    "term": "I need rice. At the risk of oversimplifying, the argument borders on contradiction.",
+                    "translations": [
+                      "Necesito arroz. A riesgo de simplificar, el argumento roza la contradicción."
+                    ]
+                  },
+                  {
+                    "term": "I need chicken. Paradoxically, excessive caution undermines credibility.",
+                    "translations": [
+                      "Necesito pollo. Paradójicamente, el exceso de cautela resta credibilidad."
+                    ]
+                  },
+                  {
+                    "term": "I need fresh vegetables. With due critical distance, the thesis is suggestive.",
+                    "translations": [
+                      "Necesito verduras frescas. Con la debida distancia crítica, la tesis resulta sugerente."
+                    ]
+                  }
+                ],
+                "exercises": [
+                  {
+                    "type": "MultipleChoice",
+                    "id": "es-en-c2-u09-l03-e01",
+                    "question": "¿Cuál es la opción correcta para «Necesito arroz. A riesgo de simplificar, el argumento roza la contradicción.»?",
+                    "options": [
+                      "I need rice. At the risk of oversimplifying, the argument borders on contradiction.",
+                      "I need chicken. Paradoxically, excessive caution undermines credibility.",
+                      "I need fresh vegetables. With due critical distance, the thesis is suggestive."
+                    ],
+                    "correctIndex": 0,
+                    "feedbackOnError": {
+                      "type": "vocabulary",
+                      "explanation": "«Necesito arroz. A riesgo de simplificar, el argumento roza la contradicción.» se dice «I need rice. At the risk of oversimplifying, the argument borders on contradiction.».",
+                      "ruleRef": "gp-c2-litotes"
+                    },
+                    "feedbackOnSuccess": {
+                      "explanation": "Has elegido la opción precisa."
+                    }
+                  },
+                  {
+                    "type": "Translate",
+                    "id": "es-en-c2-u09-l03-e02",
+                    "sourcePhrase": "Necesito arroz. A riesgo de simplificar, el argumento roza la contradicción.",
+                    "correctTokens": [
+                      "I",
+                      "need",
+                      "rice",
+                      "At",
+                      "the",
+                      "risk",
+                      "of",
+                      "oversimplifying",
+                      "the",
+                      "argument",
+                      "borders",
+                      "on",
+                      "contradiction"
+                    ],
+                    "distractorTokens": [
+                      "chicken",
+                      "Paradoxically",
+                      "excessive"
+                    ],
+                    "feedbackOnError": {
+                      "type": "grammar",
+                      "explanation": "El orden correcto es «I need rice At the risk of oversimplifying the argument borders on contradiction».",
+                      "ruleRef": "gp-c2-litotes"
+                    },
+                    "feedbackOnSuccess": {
+                      "explanation": "La frase conserva el orden y el significado."
+                    }
+                  },
+                  {
+                    "type": "ClozeDragDrop",
+                    "id": "es-en-c2-u09-l03-e03",
+                    "passage": "I {{b1}} {{b2}}",
+                    "blanks": [
+                      {
+                        "id": "b1",
+                        "answer": "need",
+                        "options": [
+                          "need",
+                          "very",
+                          "today"
+                        ]
+                      },
+                      {
+                        "id": "b2",
+                        "answer": "rice",
+                        "options": [
+                          "rice",
+                          "very",
+                          "today"
+                        ]
+                      }
+                    ],
+                    "feedbackOnError": {
+                      "type": "grammar",
+                      "explanation": "Las dos formas deben encajar con el contexto de la frase.",
+                      "ruleRef": "gp-c2-apposition"
+                    },
+                    "feedbackOnSuccess": {
+                      "explanation": "Los dos huecos encajan con la situación."
+                    }
+                  },
+                  {
+                    "type": "ClozeDragDrop",
+                    "id": "es-en-c2-u09-l03-e04",
+                    "passage": "I {{b1}} {{b2}}",
+                    "blanks": [
+                      {
+                        "id": "b1",
+                        "answer": "need",
+                        "options": [
+                          "need",
+                          "very",
+                          "today"
+                        ]
+                      },
+                      {
+                        "id": "b2",
+                        "answer": "chicken",
+                        "options": [
+                          "chicken",
+                          "very",
+                          "today"
+                        ]
+                      }
+                    ],
+                    "feedbackOnError": {
+                      "type": "grammar",
+                      "explanation": "Las dos formas deben encajar con el contexto de la frase.",
+                      "ruleRef": "gp-c2-apposition"
+                    },
+                    "feedbackOnSuccess": {
+                      "explanation": "Los dos huecos encajan con la situación."
+                    }
+                  },
+                  {
+                    "type": "ClozeDragDrop",
+                    "id": "es-en-c2-u09-l03-e05",
+                    "passage": "I {{b1}} {{b2}} vegetables",
+                    "blanks": [
+                      {
+                        "id": "b1",
+                        "answer": "need",
+                        "options": [
+                          "need",
+                          "vegetables",
+                          "very"
+                        ]
+                      },
+                      {
+                        "id": "b2",
+                        "answer": "fresh",
+                        "options": [
+                          "fresh",
+                          "vegetables",
+                          "very"
+                        ]
+                      }
+                    ],
+                    "feedbackOnError": {
+                      "type": "grammar",
+                      "explanation": "Las dos formas deben encajar con el contexto de la frase.",
+                      "ruleRef": "gp-c2-apposition"
+                    },
+                    "feedbackOnSuccess": {
+                      "explanation": "Los dos huecos encajan con la situación."
+                    }
+                  },
+                  {
+                    "type": "SemanticMatch",
+                    "id": "es-en-c2-u09-l03-e06",
+                    "instructions": "Clasifica la función y el registro de cada intervención.",
+                    "pairs": [
+                      {
+                        "left": "I need rice. At the risk of oversimplifying, the argument borders on contradiction.",
+                        "right": "Ironía seca",
+                        "register": "literary",
+                        "nuance": "Clasifica la función y el registro de la intervención."
+                      },
+                      {
+                        "left": "I need chicken. Paradoxically, excessive caution undermines credibility.",
+                        "right": "Atenuación",
+                        "register": "formal",
+                        "nuance": "Clasifica la función y el registro de la intervención."
+                      },
+                      {
+                        "left": "I need fresh vegetables. With due critical distance, the thesis is suggestive.",
+                        "right": "Conclusión",
+                        "register": "neutral",
+                        "nuance": "Clasifica la función y el registro de la intervención."
+                      }
+                    ],
+                    "feedbackOnError": {
+                      "type": "register",
+                      "explanation": "Cada intervención cumple una función retórica distinta.",
+                      "ruleRef": "gp-c2-litotes"
+                    },
+                    "feedbackOnSuccess": {
+                      "explanation": "Has identificado función y registro."
+                    }
+                  },
+                  {
+                    "type": "ListenChoose",
+                    "id": "es-en-c2-u09-l03-e07",
+                    "audioText": "I need chicken. Paradoxically, excessive caution undermines credibility.",
+                    "options": [
+                      "I need chicken. Paradoxically, excessive caution undermines credibility.",
+                      "I need rice. At the risk of oversimplifying, the argument borders on contradiction.",
+                      "I need fresh vegetables. With due critical distance, the thesis is suggestive."
+                    ],
+                    "correctIndex": 0,
+                    "feedbackOnError": {
+                      "type": "comprehension",
+                      "explanation": "El audio dice «I need chicken. Paradoxically, excessive caution undermines credibility.».",
+                      "ruleRef": "gp-c2-litotes"
+                    },
+                    "feedbackOnSuccess": {
+                      "explanation": "Has reconocido la frase del audio."
+                    }
+                  },
+                  {
+                    "type": "AudioOnlyPrompt",
+                    "id": "es-en-c2-u09-l03-e08",
+                    "audioText": "I need fresh vegetables. With due critical distance, the thesis is suggestive.",
+                    "question": "¿Qué implica el hablante?",
+                    "options": [
+                      "I need fresh vegetables. With due critical distance, the thesis is suggestive.",
+                      "I need rice. At the risk of oversimplifying, the argument borders on contradiction.",
+                      "I need chicken. Paradoxically, excessive caution undermines credibility."
+                    ],
+                    "correctIndex": 0,
+                    "allowSlowPlayback": false,
+                    "feedbackOnError": {
+                      "type": "comprehension",
+                      "explanation": "El audio dice «I need fresh vegetables. With due critical distance, the thesis is suggestive.».",
+                      "ruleRef": "gp-c2-apposition"
+                    },
+                    "feedbackOnSuccess": {
+                      "explanation": "Has interpretado la implicación."
+                    }
+                  },
+                  {
+                    "type": "ListenType",
+                    "id": "es-en-c2-u09-l03-e09",
+                    "audioText": "I need fresh vegetables. With due critical distance, the thesis is suggestive.",
+                    "transcription": "I need fresh vegetables. With due critical distance, the thesis is suggestive.",
+                    "feedbackOnError": {
+                      "type": "spelling",
+                      "explanation": "Escribe exactamente «I need fresh vegetables. With due critical distance, the thesis is suggestive.».",
+                      "ruleRef": "gp-c2-litotes"
+                    },
+                    "feedbackOnSuccess": {
+                      "explanation": "La transcripción coincide con el audio."
+                    }
+                  },
+                  {
+                    "type": "SpeakRepeat",
+                    "id": "es-en-c2-u09-l03-e10",
+                    "targetPhrase": "I need fresh vegetables. With due critical distance, the thesis is suggestive.",
+                    "audioText": "I need fresh vegetables. With due critical distance, the thesis is suggestive.",
+                    "feedbackOnError": {
+                      "type": "pronunciation",
+                      "explanation": "Repite «I need fresh vegetables. With due critical distance, the thesis is suggestive.» con claridad.",
+                      "ruleRef": "gp-c2-litotes"
+                    },
+                    "feedbackOnSuccess": {
+                      "explanation": "La frase se entiende y mantiene el ritmo."
+                    }
+                  },
+                  {
+                    "type": "MatchPairs",
+                    "id": "es-en-c2-u09-l03-e11",
+                    "pairs": [
+                      {
+                        "left": "Necesito arroz. A riesgo de simplificar, el argumento roza la contradicción.",
+                        "right": "I need rice. At the risk of oversimplifying, the argument borders on contradiction."
+                      },
+                      {
+                        "left": "Necesito pollo. Paradójicamente, el exceso de cautela resta credibilidad.",
+                        "right": "I need chicken. Paradoxically, excessive caution undermines credibility."
+                      },
+                      {
+                        "left": "Necesito verduras frescas. Con la debida distancia crítica, la tesis resulta sugerente.",
+                        "right": "I need fresh vegetables. With due critical distance, the thesis is suggestive."
+                      }
+                    ],
+                    "feedbackOnError": {
+                      "type": "vocabulary",
+                      "explanation": "Cada expresión tiene una traducción distinta.",
+                      "ruleRef": "gp-c2-litotes"
+                    },
+                    "feedbackOnSuccess": {
+                      "explanation": "Has asociado cada expresión con su traducción."
+                    }
+                  },
+                  {
+                    "type": "FreeSpeakingPrompt",
+                    "id": "es-en-c2-u09-l03-e12",
+                    "prompt": "Defiende una interpretación matizada sobre los ingredientes.",
+                    "minTokens": 40,
+                    "conceptClusters": [
+                      [
+                        "need"
+                      ],
+                      [
+                        "rice"
+                      ],
+                      [
+                        "risk"
+                      ]
+                    ],
+                    "modelAnswer": "I need rice. At the risk of oversimplifying, the argument borders on contradiction. I need chicken. Paradoxically, excessive caution undermines credibility. I need fresh vegetables. With due critical distance, the thesis is suggestive.",
+                    "selfAssessmentCriteria": [
+                      "¿La respuesta argumenta y responde a la tarea?",
+                      "¿Usa las dos estructuras gramaticales de la lección?",
+                      "¿Incluye una concesión, una ironía o una atenuación?"
+                    ],
+                    "grammarRuleRefs": [
+                      "gp-c2-litotes",
+                      "gp-c2-apposition"
+                    ],
+                    "timeLimitSeconds": 120,
+                    "minWpm": 70,
+                    "maxWpm": 160,
+                    "feedbackOnError": {
+                      "type": "grammar",
+                      "explanation": "La respuesta modelo desarrolla una interpretación matizada.",
+                      "ruleRef": "gp-c2-litotes"
+                    }
+                  }
+                ]
+              },
+              {
+                "id": "es-en-c2-u09-l04",
+                "title": "Countable / uncountable",
+                "cefrLevel": "C2",
+                "scenario": "Situación comunicativa avanzada sobre los contables e incontables.",
+                "canDo": "Puedo argumentar con matices y precisión sobre los contables e incontables.",
+                "grammarPoints": [
+                  {
+                    "id": "gp-c2-litotes",
+                    "label": "Litotes",
+                    "description": "La litote afirma algo negando lo contrario."
+                  },
+                  {
+                    "id": "gp-c2-apposition",
+                    "label": "Apposition",
+                    "description": "La aposición añade una explicación al sustantivo."
+                  }
+                ],
+                "vocabFrequencyBand": "12000+",
+                "culturalNotes": [
+                  {
+                    "idiom": "take the moral high ground",
+                    "note": "Expresión para adoptar una postura moral superior.",
+                    "translation": "adoptar superioridad moral"
+                  }
+                ],
+                "microLesson": {
+                  "title": "Countable / uncountable",
+                  "goals": [
+                    "Usar vocabulario avanzado de los contables e incontables.",
+                    "Aplicar litotes y apposition.",
+                    "Argumentar con matices sobre los contables e incontables."
+                  ],
+                  "sections": [
+                    {
+                      "heading": "Lengua en contexto",
+                      "body": "Litotes: La litote afirma algo negando lo contrario. Apposition: La aposición añade una explicación al sustantivo.",
+                      "examples": [
+                        {
+                          "source": "Hay mucha agua en la botella. Paradójicamente, el exceso de cautela resta credibilidad.",
+                          "target": "There is a lot of water in the bottle. Paradoxically, excessive caution undermines credibility."
+                        },
+                        {
+                          "source": "Necesito tres manzanas para la receta. Con la debida distancia crítica, la tesis resulta sugerente.",
+                          "target": "I need three apples for the recipe. With due critical distance, the thesis is suggestive."
+                        }
+                      ]
+                    }
+                  ]
+                },
+                "glossary": [
+                  {
+                    "term": "There is a lot of water in the bottle. Paradoxically, excessive caution undermines credibility.",
+                    "translations": [
+                      "Hay mucha agua en la botella. Paradójicamente, el exceso de cautela resta credibilidad."
+                    ]
+                  },
+                  {
+                    "term": "I need three apples for the recipe. With due critical distance, the thesis is suggestive.",
+                    "translations": [
+                      "Necesito tres manzanas para la receta. Con la debida distancia crítica, la tesis resulta sugerente."
+                    ]
+                  },
+                  {
+                    "term": "There isn't much milk left. If I may indulge in irony, the outcome was predictable.",
+                    "translations": [
+                      "No queda mucha leche. Si se me permite la ironía, el resultado era previsible."
+                    ]
+                  }
+                ],
+                "exercises": [
+                  {
+                    "type": "MultipleChoice",
+                    "id": "es-en-c2-u09-l04-e01",
+                    "question": "¿Cuál es la opción correcta para «Hay mucha agua en la botella. Paradójicamente, el exceso de cautela resta credibilidad.»?",
+                    "options": [
+                      "There is a lot of water in the bottle. Paradoxically, excessive caution undermines credibility.",
+                      "I need three apples for the recipe. With due critical distance, the thesis is suggestive.",
+                      "There isn't much milk left. If I may indulge in irony, the outcome was predictable."
+                    ],
+                    "correctIndex": 0,
+                    "feedbackOnError": {
+                      "type": "vocabulary",
+                      "explanation": "«Hay mucha agua en la botella. Paradójicamente, el exceso de cautela resta credibilidad.» se dice «There is a lot of water in the bottle. Paradoxically, excessive caution undermines credibility.».",
+                      "ruleRef": "gp-c2-litotes"
+                    },
+                    "feedbackOnSuccess": {
+                      "explanation": "Has elegido la opción precisa."
+                    }
+                  },
+                  {
+                    "type": "Translate",
+                    "id": "es-en-c2-u09-l04-e02",
+                    "sourcePhrase": "Hay mucha agua en la botella. Paradójicamente, el exceso de cautela resta credibilidad.",
+                    "correctTokens": [
+                      "There",
+                      "is",
+                      "a",
+                      "lot",
+                      "of",
+                      "water",
+                      "in",
+                      "the",
+                      "bottle",
+                      "Paradoxically",
+                      "excessive",
+                      "caution",
+                      "undermines",
+                      "credibility"
+                    ],
+                    "distractorTokens": [
+                      "I",
+                      "need",
+                      "three"
+                    ],
+                    "feedbackOnError": {
+                      "type": "grammar",
+                      "explanation": "El orden correcto es «There is a lot of water in the bottle Paradoxically excessive caution undermines credibility».",
+                      "ruleRef": "gp-c2-litotes"
+                    },
+                    "feedbackOnSuccess": {
+                      "explanation": "La frase conserva el orden y el significado."
+                    }
+                  },
+                  {
+                    "type": "ClozeDragDrop",
+                    "id": "es-en-c2-u09-l04-e03",
+                    "passage": "There is a {{b1}} of {{b2}} in the bottle.",
+                    "blanks": [
+                      {
+                        "id": "b1",
+                        "answer": "lot",
+                        "options": [
+                          "lot",
+                          "bottle",
+                          "very"
+                        ]
+                      },
+                      {
+                        "id": "b2",
+                        "answer": "water",
+                        "options": [
+                          "water",
+                          "bottle",
+                          "very"
+                        ]
+                      }
+                    ],
+                    "feedbackOnError": {
+                      "type": "grammar",
+                      "explanation": "Las dos formas deben encajar con el contexto de la frase.",
+                      "ruleRef": "gp-c2-apposition"
+                    },
+                    "feedbackOnSuccess": {
+                      "explanation": "Los dos huecos encajan con la situación."
+                    }
+                  },
+                  {
+                    "type": "ClozeDragDrop",
+                    "id": "es-en-c2-u09-l04-e04",
+                    "passage": "I {{b1}} {{b2}} apples for the recipe.",
+                    "blanks": [
+                      {
+                        "id": "b1",
+                        "answer": "need",
+                        "options": [
+                          "need",
+                          "apples",
+                          "recipe"
+                        ]
+                      },
+                      {
+                        "id": "b2",
+                        "answer": "three",
+                        "options": [
+                          "three",
+                          "apples",
+                          "recipe"
+                        ]
+                      }
+                    ],
+                    "feedbackOnError": {
+                      "type": "grammar",
+                      "explanation": "Las dos formas deben encajar con el contexto de la frase.",
+                      "ruleRef": "gp-c2-apposition"
+                    },
+                    "feedbackOnSuccess": {
+                      "explanation": "Los dos huecos encajan con la situación."
+                    }
+                  },
+                  {
+                    "type": "ClozeDragDrop",
+                    "id": "es-en-c2-u09-l04-e05",
+                    "passage": "There {{b1}} {{b2}} milk left.",
+                    "blanks": [
+                      {
+                        "id": "b1",
+                        "answer": "isn't",
+                        "options": [
+                          "isn't",
+                          "milk",
+                          "left"
+                        ]
+                      },
+                      {
+                        "id": "b2",
+                        "answer": "much",
+                        "options": [
+                          "much",
+                          "milk",
+                          "left"
+                        ]
+                      }
+                    ],
+                    "feedbackOnError": {
+                      "type": "grammar",
+                      "explanation": "Las dos formas deben encajar con el contexto de la frase.",
+                      "ruleRef": "gp-c2-apposition"
+                    },
+                    "feedbackOnSuccess": {
+                      "explanation": "Los dos huecos encajan con la situación."
+                    }
+                  },
+                  {
+                    "type": "SemanticMatch",
+                    "id": "es-en-c2-u09-l04-e06",
+                    "instructions": "Clasifica la función y el registro de cada intervención.",
+                    "pairs": [
+                      {
+                        "left": "There is a lot of water in the bottle. Paradoxically, excessive caution undermines credibility.",
+                        "right": "Ironía seca",
+                        "register": "literary",
+                        "nuance": "Clasifica la función y el registro de la intervención."
+                      },
+                      {
+                        "left": "I need three apples for the recipe. With due critical distance, the thesis is suggestive.",
+                        "right": "Atenuación",
+                        "register": "formal",
+                        "nuance": "Clasifica la función y el registro de la intervención."
+                      },
+                      {
+                        "left": "There isn't much milk left. If I may indulge in irony, the outcome was predictable.",
+                        "right": "Conclusión",
+                        "register": "neutral",
+                        "nuance": "Clasifica la función y el registro de la intervención."
+                      }
+                    ],
+                    "feedbackOnError": {
+                      "type": "register",
+                      "explanation": "Cada intervención cumple una función retórica distinta.",
+                      "ruleRef": "gp-c2-litotes"
+                    },
+                    "feedbackOnSuccess": {
+                      "explanation": "Has identificado función y registro."
+                    }
+                  },
+                  {
+                    "type": "ListenChoose",
+                    "id": "es-en-c2-u09-l04-e07",
+                    "audioText": "I need three apples for the recipe. With due critical distance, the thesis is suggestive.",
+                    "options": [
+                      "I need three apples for the recipe. With due critical distance, the thesis is suggestive.",
+                      "There is a lot of water in the bottle. Paradoxically, excessive caution undermines credibility.",
+                      "There isn't much milk left. If I may indulge in irony, the outcome was predictable."
+                    ],
+                    "correctIndex": 0,
+                    "feedbackOnError": {
+                      "type": "comprehension",
+                      "explanation": "El audio dice «I need three apples for the recipe. With due critical distance, the thesis is suggestive.».",
+                      "ruleRef": "gp-c2-litotes"
+                    },
+                    "feedbackOnSuccess": {
+                      "explanation": "Has reconocido la frase del audio."
+                    }
+                  },
+                  {
+                    "type": "AudioOnlyPrompt",
+                    "id": "es-en-c2-u09-l04-e08",
+                    "audioText": "There isn't much milk left. If I may indulge in irony, the outcome was predictable.",
+                    "question": "¿Qué implica el hablante?",
+                    "options": [
+                      "There isn't much milk left. If I may indulge in irony, the outcome was predictable.",
+                      "There is a lot of water in the bottle. Paradoxically, excessive caution undermines credibility.",
+                      "I need three apples for the recipe. With due critical distance, the thesis is suggestive."
+                    ],
+                    "correctIndex": 0,
+                    "allowSlowPlayback": false,
+                    "feedbackOnError": {
+                      "type": "comprehension",
+                      "explanation": "El audio dice «There isn't much milk left. If I may indulge in irony, the outcome was predictable.».",
+                      "ruleRef": "gp-c2-apposition"
+                    },
+                    "feedbackOnSuccess": {
+                      "explanation": "Has interpretado la implicación."
+                    }
+                  },
+                  {
+                    "type": "ListenType",
+                    "id": "es-en-c2-u09-l04-e09",
+                    "audioText": "There isn't much milk left. If I may indulge in irony, the outcome was predictable.",
+                    "transcription": "There isn't much milk left. If I may indulge in irony, the outcome was predictable.",
+                    "feedbackOnError": {
+                      "type": "spelling",
+                      "explanation": "Escribe exactamente «There isn't much milk left. If I may indulge in irony, the outcome was predictable.».",
+                      "ruleRef": "gp-c2-litotes"
+                    },
+                    "feedbackOnSuccess": {
+                      "explanation": "La transcripción coincide con el audio."
+                    }
+                  },
+                  {
+                    "type": "SpeakRepeat",
+                    "id": "es-en-c2-u09-l04-e10",
+                    "targetPhrase": "There isn't much milk left. If I may indulge in irony, the outcome was predictable.",
+                    "audioText": "There isn't much milk left. If I may indulge in irony, the outcome was predictable.",
+                    "feedbackOnError": {
+                      "type": "pronunciation",
+                      "explanation": "Repite «There isn't much milk left. If I may indulge in irony, the outcome was predictable.» con claridad.",
+                      "ruleRef": "gp-c2-litotes"
+                    },
+                    "feedbackOnSuccess": {
+                      "explanation": "La frase se entiende y mantiene el ritmo."
+                    }
+                  },
+                  {
+                    "type": "MatchPairs",
+                    "id": "es-en-c2-u09-l04-e11",
+                    "pairs": [
+                      {
+                        "left": "Hay mucha agua en la botella. Paradójicamente, el exceso de cautela resta credibilidad.",
+                        "right": "There is a lot of water in the bottle. Paradoxically, excessive caution undermines credibility."
+                      },
+                      {
+                        "left": "Necesito tres manzanas para la receta. Con la debida distancia crítica, la tesis resulta sugerente.",
+                        "right": "I need three apples for the recipe. With due critical distance, the thesis is suggestive."
+                      },
+                      {
+                        "left": "No queda mucha leche. Si se me permite la ironía, el resultado era previsible.",
+                        "right": "There isn't much milk left. If I may indulge in irony, the outcome was predictable."
+                      }
+                    ],
+                    "feedbackOnError": {
+                      "type": "vocabulary",
+                      "explanation": "Cada expresión tiene una traducción distinta.",
+                      "ruleRef": "gp-c2-litotes"
+                    },
+                    "feedbackOnSuccess": {
+                      "explanation": "Has asociado cada expresión con su traducción."
+                    }
+                  },
+                  {
+                    "type": "FreeSpeakingPrompt",
+                    "id": "es-en-c2-u09-l04-e12",
+                    "prompt": "Defiende una interpretación matizada sobre los contables e incontables.",
+                    "minTokens": 40,
+                    "conceptClusters": [
+                      [
+                        "lot"
+                      ],
+                      [
+                        "water"
+                      ],
+                      [
+                        "bottle"
+                      ]
+                    ],
+                    "modelAnswer": "There is a lot of water in the bottle. Paradoxically, excessive caution undermines credibility. I need three apples for the recipe. With due critical distance, the thesis is suggestive. There isn't much milk left. If I may indulge in irony, the outcome was predictable.",
+                    "selfAssessmentCriteria": [
+                      "¿La respuesta argumenta y responde a la tarea?",
+                      "¿Usa las dos estructuras gramaticales de la lección?",
+                      "¿Incluye una concesión, una ironía o una atenuación?"
+                    ],
+                    "grammarRuleRefs": [
+                      "gp-c2-litotes",
+                      "gp-c2-apposition"
+                    ],
+                    "timeLimitSeconds": 120,
+                    "minWpm": 70,
+                    "maxWpm": 160,
+                    "feedbackOnError": {
+                      "type": "grammar",
+                      "explanation": "La respuesta modelo desarrolla una interpretación matizada.",
+                      "ruleRef": "gp-c2-litotes"
+                    }
+                  }
+                ]
+              },
+              {
+                "id": "es-en-c2-u09-l05",
+                "title": "Some / any / much / many",
+                "cefrLevel": "C2",
+                "scenario": "Situación comunicativa avanzada sobre las cantidades.",
+                "canDo": "Puedo argumentar con matices y precisión sobre las cantidades.",
+                "grammarPoints": [
+                  {
+                    "id": "gp-c2-litotes",
+                    "label": "Litotes",
+                    "description": "La litote afirma algo negando lo contrario."
+                  },
+                  {
+                    "id": "gp-c2-apposition",
+                    "label": "Apposition",
+                    "description": "La aposición añade una explicación al sustantivo."
+                  }
+                ],
+                "vocabFrequencyBand": "12000+",
+                "culturalNotes": [
+                  {
+                    "idiom": "damn with faint praise",
+                    "note": "Expresión para elogiar de forma que en realidad critica.",
+                    "translation": "elogiar con tibieza"
+                  }
+                ],
+                "microLesson": {
+                  "title": "Some / any / much / many",
+                  "goals": [
+                    "Usar vocabulario avanzado de las cantidades.",
+                    "Aplicar litotes y apposition.",
+                    "Argumentar con matices sobre las cantidades."
+                  ],
+                  "sections": [
+                    {
+                      "heading": "Lengua en contexto",
+                      "body": "Litotes: La litote afirma algo negando lo contrario. Apposition: La aposición añade una explicación al sustantivo.",
+                      "examples": [
+                        {
+                          "source": "Hay fruta en la nevera. Con la debida distancia crítica, la tesis resulta sugerente.",
+                          "target": "There is some fruit in the fridge. With due critical distance, the thesis is suggestive."
+                        },
+                        {
+                          "source": "No hay leche. Si se me permite la ironía, el resultado era previsible.",
+                          "target": "There isn't any milk. If I may indulge in irony, the outcome was predictable."
+                        }
+                      ]
+                    }
+                  ]
+                },
+                "glossary": [
+                  {
+                    "term": "There is some fruit in the fridge. With due critical distance, the thesis is suggestive.",
+                    "translations": [
+                      "Hay fruta en la nevera. Con la debida distancia crítica, la tesis resulta sugerente."
+                    ]
+                  },
+                  {
+                    "term": "There isn't any milk. If I may indulge in irony, the outcome was predictable.",
+                    "translations": [
+                      "No hay leche. Si se me permite la ironía, el resultado era previsible."
+                    ]
+                  },
+                  {
+                    "term": "Do you have any sugar? Ultimately, an unresolved tension underpins the debate.",
+                    "translations": [
+                      "¿Tienes azúcar? En última instancia, subyace una tensión no resuelta."
+                    ]
+                  }
+                ],
+                "exercises": [
+                  {
+                    "type": "MultipleChoice",
+                    "id": "es-en-c2-u09-l05-e01",
+                    "question": "¿Cuál es la opción correcta para «Hay fruta en la nevera. Con la debida distancia crítica, la tesis resulta sugerente.»?",
+                    "options": [
+                      "There is some fruit in the fridge. With due critical distance, the thesis is suggestive.",
+                      "There isn't any milk. If I may indulge in irony, the outcome was predictable.",
+                      "Do you have any sugar? Ultimately, an unresolved tension underpins the debate."
+                    ],
+                    "correctIndex": 0,
+                    "feedbackOnError": {
+                      "type": "vocabulary",
+                      "explanation": "«Hay fruta en la nevera. Con la debida distancia crítica, la tesis resulta sugerente.» se dice «There is some fruit in the fridge. With due critical distance, the thesis is suggestive.».",
+                      "ruleRef": "gp-c2-litotes"
+                    },
+                    "feedbackOnSuccess": {
+                      "explanation": "Has elegido la opción precisa."
+                    }
+                  },
+                  {
+                    "type": "Translate",
+                    "id": "es-en-c2-u09-l05-e02",
+                    "sourcePhrase": "Hay fruta en la nevera. Con la debida distancia crítica, la tesis resulta sugerente.",
+                    "correctTokens": [
+                      "There",
+                      "is",
+                      "some",
+                      "fruit",
+                      "in",
+                      "the",
+                      "fridge",
+                      "With",
+                      "due",
+                      "critical",
+                      "distance",
+                      "the",
+                      "thesis",
+                      "is",
+                      "suggestive"
+                    ],
+                    "distractorTokens": [
+                      "isn't",
+                      "any",
+                      "milk"
+                    ],
+                    "feedbackOnError": {
+                      "type": "grammar",
+                      "explanation": "El orden correcto es «There is some fruit in the fridge With due critical distance the thesis is suggestive».",
+                      "ruleRef": "gp-c2-litotes"
+                    },
+                    "feedbackOnSuccess": {
+                      "explanation": "La frase conserva el orden y el significado."
+                    }
+                  },
+                  {
+                    "type": "ClozeDragDrop",
+                    "id": "es-en-c2-u09-l05-e03",
+                    "passage": "There is {{b1}} {{b2}} in the fridge.",
+                    "blanks": [
+                      {
+                        "id": "b1",
+                        "answer": "some",
+                        "options": [
+                          "some",
+                          "fridge",
+                          "very"
+                        ]
+                      },
+                      {
+                        "id": "b2",
+                        "answer": "fruit",
+                        "options": [
+                          "fruit",
+                          "fridge",
+                          "very"
+                        ]
+                      }
+                    ],
+                    "feedbackOnError": {
+                      "type": "grammar",
+                      "explanation": "Las dos formas deben encajar con el contexto de la frase.",
+                      "ruleRef": "gp-c2-apposition"
+                    },
+                    "feedbackOnSuccess": {
+                      "explanation": "Los dos huecos encajan con la situación."
+                    }
+                  },
+                  {
+                    "type": "ClozeDragDrop",
+                    "id": "es-en-c2-u09-l05-e04",
+                    "passage": "There {{b1}} {{b2}} milk.",
+                    "blanks": [
+                      {
+                        "id": "b1",
+                        "answer": "isn't",
+                        "options": [
+                          "isn't",
+                          "milk",
+                          "very"
+                        ]
+                      },
+                      {
+                        "id": "b2",
+                        "answer": "any",
+                        "options": [
+                          "any",
+                          "milk",
+                          "very"
+                        ]
+                      }
+                    ],
+                    "feedbackOnError": {
+                      "type": "grammar",
+                      "explanation": "Las dos formas deben encajar con el contexto de la frase.",
+                      "ruleRef": "gp-c2-apposition"
+                    },
+                    "feedbackOnSuccess": {
+                      "explanation": "Los dos huecos encajan con la situación."
+                    }
+                  },
+                  {
+                    "type": "ClozeDragDrop",
+                    "id": "es-en-c2-u09-l05-e05",
+                    "passage": "Do you have {{b1}} {{b2}}?",
+                    "blanks": [
+                      {
+                        "id": "b1",
+                        "answer": "any",
+                        "options": [
+                          "any",
+                          "very",
+                          "today"
+                        ]
+                      },
+                      {
+                        "id": "b2",
+                        "answer": "sugar",
+                        "options": [
+                          "sugar",
+                          "very",
+                          "today"
+                        ]
+                      }
+                    ],
+                    "feedbackOnError": {
+                      "type": "grammar",
+                      "explanation": "Las dos formas deben encajar con el contexto de la frase.",
+                      "ruleRef": "gp-c2-apposition"
+                    },
+                    "feedbackOnSuccess": {
+                      "explanation": "Los dos huecos encajan con la situación."
+                    }
+                  },
+                  {
+                    "type": "SemanticMatch",
+                    "id": "es-en-c2-u09-l05-e06",
+                    "instructions": "Clasifica la función y el registro de cada intervención.",
+                    "pairs": [
+                      {
+                        "left": "There is some fruit in the fridge. With due critical distance, the thesis is suggestive.",
+                        "right": "Ironía seca",
+                        "register": "literary",
+                        "nuance": "Clasifica la función y el registro de la intervención."
+                      },
+                      {
+                        "left": "There isn't any milk. If I may indulge in irony, the outcome was predictable.",
+                        "right": "Atenuación",
+                        "register": "formal",
+                        "nuance": "Clasifica la función y el registro de la intervención."
+                      },
+                      {
+                        "left": "Do you have any sugar? Ultimately, an unresolved tension underpins the debate.",
+                        "right": "Conclusión",
+                        "register": "neutral",
+                        "nuance": "Clasifica la función y el registro de la intervención."
+                      }
+                    ],
+                    "feedbackOnError": {
+                      "type": "register",
+                      "explanation": "Cada intervención cumple una función retórica distinta.",
+                      "ruleRef": "gp-c2-litotes"
+                    },
+                    "feedbackOnSuccess": {
+                      "explanation": "Has identificado función y registro."
+                    }
+                  },
+                  {
+                    "type": "ListenChoose",
+                    "id": "es-en-c2-u09-l05-e07",
+                    "audioText": "There isn't any milk. If I may indulge in irony, the outcome was predictable.",
+                    "options": [
+                      "There isn't any milk. If I may indulge in irony, the outcome was predictable.",
+                      "There is some fruit in the fridge. With due critical distance, the thesis is suggestive.",
+                      "Do you have any sugar? Ultimately, an unresolved tension underpins the debate."
+                    ],
+                    "correctIndex": 0,
+                    "feedbackOnError": {
+                      "type": "comprehension",
+                      "explanation": "El audio dice «There isn't any milk. If I may indulge in irony, the outcome was predictable.».",
+                      "ruleRef": "gp-c2-litotes"
+                    },
+                    "feedbackOnSuccess": {
+                      "explanation": "Has reconocido la frase del audio."
+                    }
+                  },
+                  {
+                    "type": "AudioOnlyPrompt",
+                    "id": "es-en-c2-u09-l05-e08",
+                    "audioText": "Do you have any sugar? Ultimately, an unresolved tension underpins the debate.",
+                    "question": "¿Qué implica el hablante?",
+                    "options": [
+                      "Do you have any sugar? Ultimately, an unresolved tension underpins the debate.",
+                      "There is some fruit in the fridge. With due critical distance, the thesis is suggestive.",
+                      "There isn't any milk. If I may indulge in irony, the outcome was predictable."
+                    ],
+                    "correctIndex": 0,
+                    "allowSlowPlayback": false,
+                    "feedbackOnError": {
+                      "type": "comprehension",
+                      "explanation": "El audio dice «Do you have any sugar? Ultimately, an unresolved tension underpins the debate.».",
+                      "ruleRef": "gp-c2-apposition"
+                    },
+                    "feedbackOnSuccess": {
+                      "explanation": "Has interpretado la implicación."
+                    }
+                  },
+                  {
+                    "type": "ListenType",
+                    "id": "es-en-c2-u09-l05-e09",
+                    "audioText": "Do you have any sugar? Ultimately, an unresolved tension underpins the debate.",
+                    "transcription": "Do you have any sugar? Ultimately, an unresolved tension underpins the debate.",
+                    "feedbackOnError": {
+                      "type": "spelling",
+                      "explanation": "Escribe exactamente «Do you have any sugar? Ultimately, an unresolved tension underpins the debate.».",
+                      "ruleRef": "gp-c2-litotes"
+                    },
+                    "feedbackOnSuccess": {
+                      "explanation": "La transcripción coincide con el audio."
+                    }
+                  },
+                  {
+                    "type": "SpeakRepeat",
+                    "id": "es-en-c2-u09-l05-e10",
+                    "targetPhrase": "Do you have any sugar? Ultimately, an unresolved tension underpins the debate.",
+                    "audioText": "Do you have any sugar? Ultimately, an unresolved tension underpins the debate.",
+                    "feedbackOnError": {
+                      "type": "pronunciation",
+                      "explanation": "Repite «Do you have any sugar? Ultimately, an unresolved tension underpins the debate.» con claridad.",
+                      "ruleRef": "gp-c2-litotes"
+                    },
+                    "feedbackOnSuccess": {
+                      "explanation": "La frase se entiende y mantiene el ritmo."
+                    }
+                  },
+                  {
+                    "type": "MatchPairs",
+                    "id": "es-en-c2-u09-l05-e11",
+                    "pairs": [
+                      {
+                        "left": "Hay fruta en la nevera. Con la debida distancia crítica, la tesis resulta sugerente.",
+                        "right": "There is some fruit in the fridge. With due critical distance, the thesis is suggestive."
+                      },
+                      {
+                        "left": "No hay leche. Si se me permite la ironía, el resultado era previsible.",
+                        "right": "There isn't any milk. If I may indulge in irony, the outcome was predictable."
+                      },
+                      {
+                        "left": "¿Tienes azúcar? En última instancia, subyace una tensión no resuelta.",
+                        "right": "Do you have any sugar? Ultimately, an unresolved tension underpins the debate."
+                      }
+                    ],
+                    "feedbackOnError": {
+                      "type": "vocabulary",
+                      "explanation": "Cada expresión tiene una traducción distinta.",
+                      "ruleRef": "gp-c2-litotes"
+                    },
+                    "feedbackOnSuccess": {
+                      "explanation": "Has asociado cada expresión con su traducción."
+                    }
+                  },
+                  {
+                    "type": "FreeSpeakingPrompt",
+                    "id": "es-en-c2-u09-l05-e12",
+                    "prompt": "Defiende una interpretación matizada sobre las cantidades.",
+                    "minTokens": 40,
+                    "conceptClusters": [
+                      [
+                        "some"
+                      ],
+                      [
+                        "fruit"
+                      ],
+                      [
+                        "fridge"
+                      ]
+                    ],
+                    "modelAnswer": "There is some fruit in the fridge. With due critical distance, the thesis is suggestive. There isn't any milk. If I may indulge in irony, the outcome was predictable. Do you have any sugar? Ultimately, an unresolved tension underpins the debate.",
+                    "selfAssessmentCriteria": [
+                      "¿La respuesta argumenta y responde a la tarea?",
+                      "¿Usa las dos estructuras gramaticales de la lección?",
+                      "¿Incluye una concesión, una ironía o una atenuación?"
+                    ],
+                    "grammarRuleRefs": [
+                      "gp-c2-litotes",
+                      "gp-c2-apposition"
+                    ],
+                    "timeLimitSeconds": 120,
+                    "minWpm": 70,
+                    "maxWpm": 160,
+                    "feedbackOnError": {
+                      "type": "grammar",
+                      "explanation": "La respuesta modelo desarrolla una interpretación matizada.",
+                      "ruleRef": "gp-c2-litotes"
+                    }
+                  }
+                ]
+              },
+              {
+                "id": "es-en-c2-u09-l06",
+                "title": "Pedir en un restaurante",
+                "cefrLevel": "C2",
+                "scenario": "Situación comunicativa avanzada sobre el restaurante.",
+                "canDo": "Puedo argumentar con matices y precisión sobre el restaurante.",
+                "grammarPoints": [
+                  {
+                    "id": "gp-c2-litotes",
+                    "label": "Litotes",
+                    "description": "La litote afirma algo negando lo contrario."
+                  },
+                  {
+                    "id": "gp-c2-apposition",
+                    "label": "Apposition",
+                    "description": "La aposición añade una explicación al sustantivo."
+                  }
+                ],
+                "vocabFrequencyBand": "12000+",
+                "culturalNotes": [
+                  {
+                    "idiom": "bury the lede",
+                    "note": "Expresión para ocultar la información más importante.",
+                    "translation": "enterrar lo importante"
+                  }
+                ],
+                "microLesson": {
+                  "title": "Pedir en un restaurante",
+                  "goals": [
+                    "Usar vocabulario avanzado de el restaurante.",
+                    "Aplicar litotes y apposition.",
+                    "Argumentar con matices sobre el restaurante."
+                  ],
+                  "sections": [
+                    {
+                      "heading": "Lengua en contexto",
+                      "body": "Litotes: La litote afirma algo negando lo contrario. Apposition: La aposición añade una explicación al sustantivo.",
+                      "examples": [
+                        {
+                          "source": "¿Tienen una mesa para dos? Si se me permite la ironía, el resultado era previsible.",
+                          "target": "Do you have a table for two? If I may indulge in irony, the outcome was predictable."
+                        },
+                        {
+                          "source": "Quisiera el menú del día. En última instancia, subyace una tensión no resuelta.",
+                          "target": "I would like the menu of the day. Ultimately, an unresolved tension underpins the debate."
+                        }
+                      ]
+                    }
+                  ]
+                },
+                "glossary": [
+                  {
+                    "term": "Do you have a table for two? If I may indulge in irony, the outcome was predictable.",
+                    "translations": [
+                      "¿Tienen una mesa para dos? Si se me permite la ironía, el resultado era previsible."
+                    ]
+                  },
+                  {
+                    "term": "I would like the menu of the day. Ultimately, an unresolved tension underpins the debate.",
+                    "translations": [
+                      "Quisiera el menú del día. En última instancia, subyace una tensión no resuelta."
+                    ]
+                  },
+                  {
+                    "term": "Could you bring us the bill, please? Frankly, the proposal lacks a sound basis.",
+                    "translations": [
+                      "¿Nos trae la cuenta, por favor? Dicho sin ambages, la propuesta carece de sustento."
+                    ]
+                  }
+                ],
+                "exercises": [
+                  {
+                    "type": "MultipleChoice",
+                    "id": "es-en-c2-u09-l06-e01",
+                    "question": "¿Cuál es la opción correcta para «¿Tienen una mesa para dos? Si se me permite la ironía, el resultado era previsible.»?",
+                    "options": [
+                      "Do you have a table for two? If I may indulge in irony, the outcome was predictable.",
+                      "I would like the menu of the day. Ultimately, an unresolved tension underpins the debate.",
+                      "Could you bring us the bill, please? Frankly, the proposal lacks a sound basis."
+                    ],
+                    "correctIndex": 0,
+                    "feedbackOnError": {
+                      "type": "vocabulary",
+                      "explanation": "«¿Tienen una mesa para dos? Si se me permite la ironía, el resultado era previsible.» se dice «Do you have a table for two? If I may indulge in irony, the outcome was predictable.».",
+                      "ruleRef": "gp-c2-litotes"
+                    },
+                    "feedbackOnSuccess": {
+                      "explanation": "Has elegido la opción precisa."
+                    }
+                  },
+                  {
+                    "type": "Translate",
+                    "id": "es-en-c2-u09-l06-e02",
+                    "sourcePhrase": "¿Tienen una mesa para dos? Si se me permite la ironía, el resultado era previsible.",
+                    "correctTokens": [
+                      "Do",
+                      "you",
+                      "have",
+                      "a",
+                      "table",
+                      "for",
+                      "two",
+                      "If",
+                      "I",
+                      "may",
+                      "indulge",
+                      "in",
+                      "irony",
+                      "the",
+                      "outcome",
+                      "was",
+                      "predictable"
+                    ],
+                    "distractorTokens": [
+                      "would",
+                      "like",
+                      "menu"
+                    ],
+                    "feedbackOnError": {
+                      "type": "grammar",
+                      "explanation": "El orden correcto es «Do you have a table for two If I may indulge in irony the outcome was predictable».",
+                      "ruleRef": "gp-c2-litotes"
+                    },
+                    "feedbackOnSuccess": {
+                      "explanation": "La frase conserva el orden y el significado."
+                    }
+                  },
+                  {
+                    "type": "ClozeDragDrop",
+                    "id": "es-en-c2-u09-l06-e03",
+                    "passage": "Do you have a {{b1}} for {{b2}}?",
+                    "blanks": [
+                      {
+                        "id": "b1",
+                        "answer": "table",
+                        "options": [
+                          "table",
+                          "very",
+                          "today"
+                        ]
+                      },
+                      {
+                        "id": "b2",
+                        "answer": "two",
+                        "options": [
+                          "two",
+                          "very",
+                          "today"
+                        ]
+                      }
+                    ],
+                    "feedbackOnError": {
+                      "type": "grammar",
+                      "explanation": "Las dos formas deben encajar con el contexto de la frase.",
+                      "ruleRef": "gp-c2-apposition"
+                    },
+                    "feedbackOnSuccess": {
+                      "explanation": "Los dos huecos encajan con la situación."
+                    }
+                  },
+                  {
+                    "type": "ClozeDragDrop",
+                    "id": "es-en-c2-u09-l06-e04",
+                    "passage": "I would {{b1}} the {{b2}} of the day.",
+                    "blanks": [
+                      {
+                        "id": "b1",
+                        "answer": "like",
+                        "options": [
+                          "like",
+                          "day",
+                          "very"
+                        ]
+                      },
+                      {
+                        "id": "b2",
+                        "answer": "menu",
+                        "options": [
+                          "menu",
+                          "day",
+                          "very"
+                        ]
+                      }
+                    ],
+                    "feedbackOnError": {
+                      "type": "grammar",
+                      "explanation": "Las dos formas deben encajar con el contexto de la frase.",
+                      "ruleRef": "gp-c2-apposition"
+                    },
+                    "feedbackOnSuccess": {
+                      "explanation": "Los dos huecos encajan con la situación."
+                    }
+                  },
+                  {
+                    "type": "ClozeDragDrop",
+                    "id": "es-en-c2-u09-l06-e05",
+                    "passage": "Could you {{b1}} us the {{b2}}, please?",
+                    "blanks": [
+                      {
+                        "id": "b1",
+                        "answer": "bring",
+                        "options": [
+                          "bring",
+                          "please",
+                          "very"
+                        ]
+                      },
+                      {
+                        "id": "b2",
+                        "answer": "bill",
+                        "options": [
+                          "bill",
+                          "please",
+                          "very"
+                        ]
+                      }
+                    ],
+                    "feedbackOnError": {
+                      "type": "grammar",
+                      "explanation": "Las dos formas deben encajar con el contexto de la frase.",
+                      "ruleRef": "gp-c2-apposition"
+                    },
+                    "feedbackOnSuccess": {
+                      "explanation": "Los dos huecos encajan con la situación."
+                    }
+                  },
+                  {
+                    "type": "SemanticMatch",
+                    "id": "es-en-c2-u09-l06-e06",
+                    "instructions": "Clasifica la función y el registro de cada intervención.",
+                    "pairs": [
+                      {
+                        "left": "Do you have a table for two? If I may indulge in irony, the outcome was predictable.",
+                        "right": "Ironía seca",
+                        "register": "literary",
+                        "nuance": "Clasifica la función y el registro de la intervención."
+                      },
+                      {
+                        "left": "I would like the menu of the day. Ultimately, an unresolved tension underpins the debate.",
+                        "right": "Atenuación",
+                        "register": "formal",
+                        "nuance": "Clasifica la función y el registro de la intervención."
+                      },
+                      {
+                        "left": "Could you bring us the bill, please? Frankly, the proposal lacks a sound basis.",
+                        "right": "Conclusión",
+                        "register": "neutral",
+                        "nuance": "Clasifica la función y el registro de la intervención."
+                      }
+                    ],
+                    "feedbackOnError": {
+                      "type": "register",
+                      "explanation": "Cada intervención cumple una función retórica distinta.",
+                      "ruleRef": "gp-c2-litotes"
+                    },
+                    "feedbackOnSuccess": {
+                      "explanation": "Has identificado función y registro."
+                    }
+                  },
+                  {
+                    "type": "ListenChoose",
+                    "id": "es-en-c2-u09-l06-e07",
+                    "audioText": "I would like the menu of the day. Ultimately, an unresolved tension underpins the debate.",
+                    "options": [
+                      "I would like the menu of the day. Ultimately, an unresolved tension underpins the debate.",
+                      "Do you have a table for two? If I may indulge in irony, the outcome was predictable.",
+                      "Could you bring us the bill, please? Frankly, the proposal lacks a sound basis."
+                    ],
+                    "correctIndex": 0,
+                    "feedbackOnError": {
+                      "type": "comprehension",
+                      "explanation": "El audio dice «I would like the menu of the day. Ultimately, an unresolved tension underpins the debate.».",
+                      "ruleRef": "gp-c2-litotes"
+                    },
+                    "feedbackOnSuccess": {
+                      "explanation": "Has reconocido la frase del audio."
+                    }
+                  },
+                  {
+                    "type": "AudioOnlyPrompt",
+                    "id": "es-en-c2-u09-l06-e08",
+                    "audioText": "Could you bring us the bill, please? Frankly, the proposal lacks a sound basis.",
+                    "question": "¿Qué implica el hablante?",
+                    "options": [
+                      "Could you bring us the bill, please? Frankly, the proposal lacks a sound basis.",
+                      "Do you have a table for two? If I may indulge in irony, the outcome was predictable.",
+                      "I would like the menu of the day. Ultimately, an unresolved tension underpins the debate."
+                    ],
+                    "correctIndex": 0,
+                    "allowSlowPlayback": false,
+                    "feedbackOnError": {
+                      "type": "comprehension",
+                      "explanation": "El audio dice «Could you bring us the bill, please? Frankly, the proposal lacks a sound basis.».",
+                      "ruleRef": "gp-c2-apposition"
+                    },
+                    "feedbackOnSuccess": {
+                      "explanation": "Has interpretado la implicación."
+                    }
+                  },
+                  {
+                    "type": "ListenType",
+                    "id": "es-en-c2-u09-l06-e09",
+                    "audioText": "Could you bring us the bill, please? Frankly, the proposal lacks a sound basis.",
+                    "transcription": "Could you bring us the bill, please? Frankly, the proposal lacks a sound basis.",
+                    "feedbackOnError": {
+                      "type": "spelling",
+                      "explanation": "Escribe exactamente «Could you bring us the bill, please? Frankly, the proposal lacks a sound basis.».",
+                      "ruleRef": "gp-c2-litotes"
+                    },
+                    "feedbackOnSuccess": {
+                      "explanation": "La transcripción coincide con el audio."
+                    }
+                  },
+                  {
+                    "type": "SpeakRepeat",
+                    "id": "es-en-c2-u09-l06-e10",
+                    "targetPhrase": "Could you bring us the bill, please? Frankly, the proposal lacks a sound basis.",
+                    "audioText": "Could you bring us the bill, please? Frankly, the proposal lacks a sound basis.",
+                    "feedbackOnError": {
+                      "type": "pronunciation",
+                      "explanation": "Repite «Could you bring us the bill, please? Frankly, the proposal lacks a sound basis.» con claridad.",
+                      "ruleRef": "gp-c2-litotes"
+                    },
+                    "feedbackOnSuccess": {
+                      "explanation": "La frase se entiende y mantiene el ritmo."
+                    }
+                  },
+                  {
+                    "type": "MatchPairs",
+                    "id": "es-en-c2-u09-l06-e11",
+                    "pairs": [
+                      {
+                        "left": "¿Tienen una mesa para dos? Si se me permite la ironía, el resultado era previsible.",
+                        "right": "Do you have a table for two? If I may indulge in irony, the outcome was predictable."
+                      },
+                      {
+                        "left": "Quisiera el menú del día. En última instancia, subyace una tensión no resuelta.",
+                        "right": "I would like the menu of the day. Ultimately, an unresolved tension underpins the debate."
+                      },
+                      {
+                        "left": "¿Nos trae la cuenta, por favor? Dicho sin ambages, la propuesta carece de sustento.",
+                        "right": "Could you bring us the bill, please? Frankly, the proposal lacks a sound basis."
+                      }
+                    ],
+                    "feedbackOnError": {
+                      "type": "vocabulary",
+                      "explanation": "Cada expresión tiene una traducción distinta.",
+                      "ruleRef": "gp-c2-litotes"
+                    },
+                    "feedbackOnSuccess": {
+                      "explanation": "Has asociado cada expresión con su traducción."
+                    }
+                  },
+                  {
+                    "type": "FreeSpeakingPrompt",
+                    "id": "es-en-c2-u09-l06-e12",
+                    "prompt": "Defiende una interpretación matizada sobre el restaurante.",
+                    "minTokens": 40,
+                    "conceptClusters": [
+                      [
+                        "table"
+                      ],
+                      [
+                        "two"
+                      ],
+                      [
+                        "indulge"
+                      ]
+                    ],
+                    "modelAnswer": "Do you have a table for two? If I may indulge in irony, the outcome was predictable. I would like the menu of the day. Ultimately, an unresolved tension underpins the debate. Could you bring us the bill, please? Frankly, the proposal lacks a sound basis.",
+                    "selfAssessmentCriteria": [
+                      "¿La respuesta argumenta y responde a la tarea?",
+                      "¿Usa las dos estructuras gramaticales de la lección?",
+                      "¿Incluye una concesión, una ironía o una atenuación?"
+                    ],
+                    "grammarRuleRefs": [
+                      "gp-c2-litotes",
+                      "gp-c2-apposition"
+                    ],
+                    "timeLimitSeconds": 120,
+                    "minWpm": 70,
+                    "maxWpm": 160,
+                    "feedbackOnError": {
+                      "type": "grammar",
+                      "explanation": "La respuesta modelo desarrolla una interpretación matizada.",
+                      "ruleRef": "gp-c2-litotes"
+                    }
+                  }
+                ]
+              },
+              {
+                "id": "es-en-c2-u09-l07",
+                "title": "Reseña de un restaurante",
+                "cefrLevel": "C2",
+                "scenario": "Situación comunicativa avanzada sobre una reseña gastronómica.",
+                "canDo": "Puedo argumentar con matices y precisión sobre una reseña gastronómica.",
+                "grammarPoints": [
+                  {
+                    "id": "gp-c2-litotes",
+                    "label": "Litotes",
+                    "description": "La litote afirma algo negando lo contrario."
+                  },
+                  {
+                    "id": "gp-c2-apposition",
+                    "label": "Apposition",
+                    "description": "La aposición añade una explicación al sustantivo."
+                  }
+                ],
+                "vocabFrequencyBand": "12000+",
+                "culturalNotes": [
+                  {
+                    "idiom": "jump the shark",
+                    "note": "Expresión para señalar que algo ha perdido calidad.",
+                    "translation": "tocar fondo"
+                  }
+                ],
+                "microLesson": {
+                  "title": "Reseña de un restaurante",
+                  "goals": [
+                    "Usar vocabulario avanzado de una reseña gastronómica.",
+                    "Aplicar litotes y apposition.",
+                    "Argumentar con matices sobre una reseña gastronómica."
+                  ],
+                  "sections": [
+                    {
+                      "heading": "Lengua en contexto",
+                      "body": "Litotes: La litote afirma algo negando lo contrario. Apposition: La aposición añade una explicación al sustantivo.",
+                      "examples": [
+                        {
+                          "source": "El restaurante es pequeño pero acogedor. En última instancia, subyace una tensión no resuelta.",
+                          "target": "The restaurant is small but cosy. Ultimately, an unresolved tension underpins the debate."
+                        },
+                        {
+                          "source": "La comida estaba deliciosa y el servicio fue rápido. Dicho sin ambages, la propuesta carece de sustento.",
+                          "target": "The food was delicious and the service was fast. Frankly, the proposal lacks a sound basis."
+                        }
+                      ]
+                    }
+                  ]
+                },
+                "glossary": [
+                  {
+                    "term": "The restaurant is small but cosy. Ultimately, an unresolved tension underpins the debate.",
+                    "translations": [
+                      "El restaurante es pequeño pero acogedor. En última instancia, subyace una tensión no resuelta."
+                    ]
+                  },
+                  {
+                    "term": "The food was delicious and the service was fast. Frankly, the proposal lacks a sound basis.",
+                    "translations": [
+                      "La comida estaba deliciosa y el servicio fue rápido. Dicho sin ambages, la propuesta carece de sustento."
+                    ]
+                  },
+                  {
+                    "term": "I would go back without hesitation. By all accounts, the approach deserves a second reading.",
+                    "translations": [
+                      "Volvería sin dudarlo. A todas luces, conviene releer el planteamiento."
+                    ]
+                  }
+                ],
+                "exercises": [
+                  {
+                    "type": "MultipleChoice",
+                    "id": "es-en-c2-u09-l07-e01",
+                    "question": "¿Cuál es la opción correcta para «El restaurante es pequeño pero acogedor. En última instancia, subyace una tensión no resuelta.»?",
+                    "options": [
+                      "The restaurant is small but cosy. Ultimately, an unresolved tension underpins the debate.",
+                      "The food was delicious and the service was fast. Frankly, the proposal lacks a sound basis.",
+                      "I would go back without hesitation. By all accounts, the approach deserves a second reading."
+                    ],
+                    "correctIndex": 0,
+                    "feedbackOnError": {
+                      "type": "vocabulary",
+                      "explanation": "«El restaurante es pequeño pero acogedor. En última instancia, subyace una tensión no resuelta.» se dice «The restaurant is small but cosy. Ultimately, an unresolved tension underpins the debate.».",
+                      "ruleRef": "gp-c2-litotes"
+                    },
+                    "feedbackOnSuccess": {
+                      "explanation": "Has elegido la opción precisa."
+                    }
+                  },
+                  {
+                    "type": "Translate",
+                    "id": "es-en-c2-u09-l07-e02",
+                    "sourcePhrase": "El restaurante es pequeño pero acogedor. En última instancia, subyace una tensión no resuelta.",
+                    "correctTokens": [
+                      "The",
+                      "restaurant",
+                      "is",
+                      "small",
+                      "but",
+                      "cosy",
+                      "Ultimately",
+                      "an",
+                      "unresolved",
+                      "tension",
+                      "underpins",
+                      "the",
+                      "debate"
+                    ],
+                    "distractorTokens": [
+                      "food",
+                      "was",
+                      "delicious"
+                    ],
+                    "feedbackOnError": {
+                      "type": "grammar",
+                      "explanation": "El orden correcto es «The restaurant is small but cosy Ultimately an unresolved tension underpins the debate».",
+                      "ruleRef": "gp-c2-litotes"
+                    },
+                    "feedbackOnSuccess": {
+                      "explanation": "La frase conserva el orden y el significado."
+                    }
+                  },
+                  {
+                    "type": "ClozeDragDrop",
+                    "id": "es-en-c2-u09-l07-e03",
+                    "passage": "The {{b1}} is {{b2}} but cosy.",
+                    "blanks": [
+                      {
+                        "id": "b1",
+                        "answer": "restaurant",
+                        "options": [
+                          "restaurant",
+                          "cosy",
+                          "very"
+                        ]
+                      },
+                      {
+                        "id": "b2",
+                        "answer": "small",
+                        "options": [
+                          "small",
+                          "cosy",
+                          "very"
+                        ]
+                      }
+                    ],
+                    "feedbackOnError": {
+                      "type": "grammar",
+                      "explanation": "Las dos formas deben encajar con el contexto de la frase.",
+                      "ruleRef": "gp-c2-apposition"
+                    },
+                    "feedbackOnSuccess": {
+                      "explanation": "Los dos huecos encajan con la situación."
+                    }
+                  },
+                  {
+                    "type": "ClozeDragDrop",
+                    "id": "es-en-c2-u09-l07-e04",
+                    "passage": "The {{b1}} was {{b2}} and the service was fast.",
+                    "blanks": [
+                      {
+                        "id": "b1",
+                        "answer": "food",
+                        "options": [
+                          "food",
+                          "service",
+                          "fast"
+                        ]
+                      },
+                      {
+                        "id": "b2",
+                        "answer": "delicious",
+                        "options": [
+                          "delicious",
+                          "service",
+                          "fast"
+                        ]
+                      }
+                    ],
+                    "feedbackOnError": {
+                      "type": "grammar",
+                      "explanation": "Las dos formas deben encajar con el contexto de la frase.",
+                      "ruleRef": "gp-c2-apposition"
+                    },
+                    "feedbackOnSuccess": {
+                      "explanation": "Los dos huecos encajan con la situación."
+                    }
+                  },
+                  {
+                    "type": "ClozeDragDrop",
+                    "id": "es-en-c2-u09-l07-e05",
+                    "passage": "I would go {{b1}} {{b2}} hesitation.",
+                    "blanks": [
+                      {
+                        "id": "b1",
+                        "answer": "back",
+                        "options": [
+                          "back",
+                          "hesitation",
+                          "very"
+                        ]
+                      },
+                      {
+                        "id": "b2",
+                        "answer": "without",
+                        "options": [
+                          "without",
+                          "hesitation",
+                          "very"
+                        ]
+                      }
+                    ],
+                    "feedbackOnError": {
+                      "type": "grammar",
+                      "explanation": "Las dos formas deben encajar con el contexto de la frase.",
+                      "ruleRef": "gp-c2-apposition"
+                    },
+                    "feedbackOnSuccess": {
+                      "explanation": "Los dos huecos encajan con la situación."
+                    }
+                  },
+                  {
+                    "type": "SemanticMatch",
+                    "id": "es-en-c2-u09-l07-e06",
+                    "instructions": "Clasifica la función y el registro de cada intervención.",
+                    "pairs": [
+                      {
+                        "left": "The restaurant is small but cosy. Ultimately, an unresolved tension underpins the debate.",
+                        "right": "Ironía seca",
+                        "register": "literary",
+                        "nuance": "Clasifica la función y el registro de la intervención."
+                      },
+                      {
+                        "left": "The food was delicious and the service was fast. Frankly, the proposal lacks a sound basis.",
+                        "right": "Atenuación",
+                        "register": "formal",
+                        "nuance": "Clasifica la función y el registro de la intervención."
+                      },
+                      {
+                        "left": "I would go back without hesitation. By all accounts, the approach deserves a second reading.",
+                        "right": "Conclusión",
+                        "register": "neutral",
+                        "nuance": "Clasifica la función y el registro de la intervención."
+                      }
+                    ],
+                    "feedbackOnError": {
+                      "type": "register",
+                      "explanation": "Cada intervención cumple una función retórica distinta.",
+                      "ruleRef": "gp-c2-litotes"
+                    },
+                    "feedbackOnSuccess": {
+                      "explanation": "Has identificado función y registro."
+                    }
+                  },
+                  {
+                    "type": "ListenChoose",
+                    "id": "es-en-c2-u09-l07-e07",
+                    "audioText": "The food was delicious and the service was fast. Frankly, the proposal lacks a sound basis.",
+                    "options": [
+                      "The food was delicious and the service was fast. Frankly, the proposal lacks a sound basis.",
+                      "The restaurant is small but cosy. Ultimately, an unresolved tension underpins the debate.",
+                      "I would go back without hesitation. By all accounts, the approach deserves a second reading."
+                    ],
+                    "correctIndex": 0,
+                    "feedbackOnError": {
+                      "type": "comprehension",
+                      "explanation": "El audio dice «The food was delicious and the service was fast. Frankly, the proposal lacks a sound basis.».",
+                      "ruleRef": "gp-c2-litotes"
+                    },
+                    "feedbackOnSuccess": {
+                      "explanation": "Has reconocido la frase del audio."
+                    }
+                  },
+                  {
+                    "type": "AudioOnlyPrompt",
+                    "id": "es-en-c2-u09-l07-e08",
+                    "audioText": "I would go back without hesitation. By all accounts, the approach deserves a second reading.",
+                    "question": "¿Qué implica el hablante?",
+                    "options": [
+                      "I would go back without hesitation. By all accounts, the approach deserves a second reading.",
+                      "The restaurant is small but cosy. Ultimately, an unresolved tension underpins the debate.",
+                      "The food was delicious and the service was fast. Frankly, the proposal lacks a sound basis."
+                    ],
+                    "correctIndex": 0,
+                    "allowSlowPlayback": false,
+                    "feedbackOnError": {
+                      "type": "comprehension",
+                      "explanation": "El audio dice «I would go back without hesitation. By all accounts, the approach deserves a second reading.».",
+                      "ruleRef": "gp-c2-apposition"
+                    },
+                    "feedbackOnSuccess": {
+                      "explanation": "Has interpretado la implicación."
+                    }
+                  },
+                  {
+                    "type": "ListenType",
+                    "id": "es-en-c2-u09-l07-e09",
+                    "audioText": "I would go back without hesitation. By all accounts, the approach deserves a second reading.",
+                    "transcription": "I would go back without hesitation. By all accounts, the approach deserves a second reading.",
+                    "feedbackOnError": {
+                      "type": "spelling",
+                      "explanation": "Escribe exactamente «I would go back without hesitation. By all accounts, the approach deserves a second reading.».",
+                      "ruleRef": "gp-c2-litotes"
+                    },
+                    "feedbackOnSuccess": {
+                      "explanation": "La transcripción coincide con el audio."
+                    }
+                  },
+                  {
+                    "type": "SpeakRepeat",
+                    "id": "es-en-c2-u09-l07-e10",
+                    "targetPhrase": "I would go back without hesitation. By all accounts, the approach deserves a second reading.",
+                    "audioText": "I would go back without hesitation. By all accounts, the approach deserves a second reading.",
+                    "feedbackOnError": {
+                      "type": "pronunciation",
+                      "explanation": "Repite «I would go back without hesitation. By all accounts, the approach deserves a second reading.» con claridad.",
+                      "ruleRef": "gp-c2-litotes"
+                    },
+                    "feedbackOnSuccess": {
+                      "explanation": "La frase se entiende y mantiene el ritmo."
+                    }
+                  },
+                  {
+                    "type": "MatchPairs",
+                    "id": "es-en-c2-u09-l07-e11",
+                    "pairs": [
+                      {
+                        "left": "El restaurante es pequeño pero acogedor. En última instancia, subyace una tensión no resuelta.",
+                        "right": "The restaurant is small but cosy. Ultimately, an unresolved tension underpins the debate."
+                      },
+                      {
+                        "left": "La comida estaba deliciosa y el servicio fue rápido. Dicho sin ambages, la propuesta carece de sustento.",
+                        "right": "The food was delicious and the service was fast. Frankly, the proposal lacks a sound basis."
+                      },
+                      {
+                        "left": "Volvería sin dudarlo. A todas luces, conviene releer el planteamiento.",
+                        "right": "I would go back without hesitation. By all accounts, the approach deserves a second reading."
+                      }
+                    ],
+                    "feedbackOnError": {
+                      "type": "vocabulary",
+                      "explanation": "Cada expresión tiene una traducción distinta.",
+                      "ruleRef": "gp-c2-litotes"
+                    },
+                    "feedbackOnSuccess": {
+                      "explanation": "Has asociado cada expresión con su traducción."
+                    }
+                  },
+                  {
+                    "type": "FreeSpeakingPrompt",
+                    "id": "es-en-c2-u09-l07-e12",
+                    "prompt": "Defiende una interpretación matizada sobre una reseña gastronómica.",
+                    "minTokens": 40,
+                    "conceptClusters": [
+                      [
+                        "restaurant"
+                      ],
+                      [
+                        "small"
+                      ],
+                      [
+                        "cosy"
+                      ]
+                    ],
+                    "modelAnswer": "The restaurant is small but cosy. Ultimately, an unresolved tension underpins the debate. The food was delicious and the service was fast. Frankly, the proposal lacks a sound basis. I would go back without hesitation. By all accounts, the approach deserves a second reading.",
+                    "selfAssessmentCriteria": [
+                      "¿La respuesta argumenta y responde a la tarea?",
+                      "¿Usa las dos estructuras gramaticales de la lección?",
+                      "¿Incluye una concesión, una ironía o una atenuación?"
+                    ],
+                    "grammarRuleRefs": [
+                      "gp-c2-litotes",
+                      "gp-c2-apposition"
+                    ],
+                    "timeLimitSeconds": 120,
+                    "minWpm": 70,
+                    "maxWpm": 160,
+                    "feedbackOnError": {
+                      "type": "grammar",
+                      "explanation": "La respuesta modelo desarrolla una interpretación matizada.",
+                      "ruleRef": "gp-c2-litotes"
+                    }
+                  }
+                ]
+              },
+              {
+                "id": "es-en-c2-u09-l08",
+                "title": "Escribir una receta",
+                "cefrLevel": "C2",
+                "scenario": "Situación comunicativa avanzada sobre una receta.",
+                "canDo": "Puedo argumentar con matices y precisión sobre una receta.",
+                "grammarPoints": [
+                  {
+                    "id": "gp-c2-litotes",
+                    "label": "Litotes",
+                    "description": "La litote afirma algo negando lo contrario."
+                  },
+                  {
+                    "id": "gp-c2-apposition",
+                    "label": "Apposition",
+                    "description": "La aposición añade una explicación al sustantivo."
+                  }
+                ],
+                "vocabFrequencyBand": "12000+",
+                "culturalNotes": [
+                  {
+                    "idiom": "throw shade",
+                    "note": "Expresión para criticar de forma indirecta.",
+                    "translation": "lanzar una indirecta"
+                  }
+                ],
+                "microLesson": {
+                  "title": "Escribir una receta",
+                  "goals": [
+                    "Usar vocabulario avanzado de una receta.",
+                    "Aplicar litotes y apposition.",
+                    "Argumentar con matices sobre una receta."
+                  ],
+                  "sections": [
+                    {
+                      "heading": "Lengua en contexto",
+                      "body": "Litotes: La litote afirma algo negando lo contrario. Apposition: La aposición añade una explicación al sustantivo.",
+                      "examples": [
+                        {
+                          "source": "Primero corta las verduras. Dicho sin ambages, la propuesta carece de sustento.",
+                          "target": "First, cut the vegetables. Frankly, the proposal lacks a sound basis."
+                        },
+                        {
+                          "source": "Después añade el arroz y el agua. A todas luces, conviene releer el planteamiento.",
+                          "target": "Then add the rice and the water. By all accounts, the approach deserves a second reading."
+                        }
+                      ]
+                    }
+                  ]
+                },
+                "glossary": [
+                  {
+                    "term": "First, cut the vegetables. Frankly, the proposal lacks a sound basis.",
+                    "translations": [
+                      "Primero corta las verduras. Dicho sin ambages, la propuesta carece de sustento."
+                    ]
+                  },
+                  {
+                    "term": "Then add the rice and the water. By all accounts, the approach deserves a second reading.",
+                    "translations": [
+                      "Después añade el arroz y el agua. A todas luces, conviene releer el planteamiento."
+                    ]
+                  },
+                  {
+                    "term": "Cook everything for twenty minutes. Which, incidentally, is more than a little ironic.",
+                    "translations": [
+                      "Cocina todo durante veinte minutos. Lo cual, dicho sea de paso, no deja de ser irónico."
+                    ]
+                  }
+                ],
+                "exercises": [
+                  {
+                    "type": "MultipleChoice",
+                    "id": "es-en-c2-u09-l08-e01",
+                    "question": "¿Cuál es la opción correcta para «Primero corta las verduras. Dicho sin ambages, la propuesta carece de sustento.»?",
+                    "options": [
+                      "First, cut the vegetables. Frankly, the proposal lacks a sound basis.",
+                      "Then add the rice and the water. By all accounts, the approach deserves a second reading.",
+                      "Cook everything for twenty minutes. Which, incidentally, is more than a little ironic."
+                    ],
+                    "correctIndex": 0,
+                    "feedbackOnError": {
+                      "type": "vocabulary",
+                      "explanation": "«Primero corta las verduras. Dicho sin ambages, la propuesta carece de sustento.» se dice «First, cut the vegetables. Frankly, the proposal lacks a sound basis.».",
+                      "ruleRef": "gp-c2-litotes"
+                    },
+                    "feedbackOnSuccess": {
+                      "explanation": "Has elegido la opción precisa."
+                    }
+                  },
+                  {
+                    "type": "Translate",
+                    "id": "es-en-c2-u09-l08-e02",
+                    "sourcePhrase": "Primero corta las verduras. Dicho sin ambages, la propuesta carece de sustento.",
+                    "correctTokens": [
+                      "First",
+                      "cut",
+                      "the",
+                      "vegetables",
+                      "Frankly",
+                      "the",
+                      "proposal",
+                      "lacks",
+                      "a",
+                      "sound",
+                      "basis"
+                    ],
+                    "distractorTokens": [
+                      "Then",
+                      "add",
+                      "rice"
+                    ],
+                    "feedbackOnError": {
+                      "type": "grammar",
+                      "explanation": "El orden correcto es «First cut the vegetables Frankly the proposal lacks a sound basis».",
+                      "ruleRef": "gp-c2-litotes"
+                    },
+                    "feedbackOnSuccess": {
+                      "explanation": "La frase conserva el orden y el significado."
+                    }
+                  },
+                  {
+                    "type": "ClozeDragDrop",
+                    "id": "es-en-c2-u09-l08-e03",
+                    "passage": "{{b1}}, {{b2}} the vegetables.",
+                    "blanks": [
+                      {
+                        "id": "b1",
+                        "answer": "First",
+                        "options": [
+                          "First",
+                          "vegetables",
+                          "very"
+                        ]
+                      },
+                      {
+                        "id": "b2",
+                        "answer": "cut",
+                        "options": [
+                          "cut",
+                          "vegetables",
+                          "very"
+                        ]
+                      }
+                    ],
+                    "feedbackOnError": {
+                      "type": "grammar",
+                      "explanation": "Las dos formas deben encajar con el contexto de la frase.",
+                      "ruleRef": "gp-c2-apposition"
+                    },
+                    "feedbackOnSuccess": {
+                      "explanation": "Los dos huecos encajan con la situación."
+                    }
+                  },
+                  {
+                    "type": "ClozeDragDrop",
+                    "id": "es-en-c2-u09-l08-e04",
+                    "passage": "{{b1}} {{b2}} the rice and the water.",
+                    "blanks": [
+                      {
+                        "id": "b1",
+                        "answer": "Then",
+                        "options": [
+                          "Then",
+                          "rice",
+                          "water"
+                        ]
+                      },
+                      {
+                        "id": "b2",
+                        "answer": "add",
+                        "options": [
+                          "add",
+                          "rice",
+                          "water"
+                        ]
+                      }
+                    ],
+                    "feedbackOnError": {
+                      "type": "grammar",
+                      "explanation": "Las dos formas deben encajar con el contexto de la frase.",
+                      "ruleRef": "gp-c2-apposition"
+                    },
+                    "feedbackOnSuccess": {
+                      "explanation": "Los dos huecos encajan con la situación."
+                    }
+                  },
+                  {
+                    "type": "ClozeDragDrop",
+                    "id": "es-en-c2-u09-l08-e05",
+                    "passage": "{{b1}} {{b2}} for twenty minutes.",
+                    "blanks": [
+                      {
+                        "id": "b1",
+                        "answer": "Cook",
+                        "options": [
+                          "Cook",
+                          "twenty",
+                          "minutes"
+                        ]
+                      },
+                      {
+                        "id": "b2",
+                        "answer": "everything",
+                        "options": [
+                          "everything",
+                          "twenty",
+                          "minutes"
+                        ]
+                      }
+                    ],
+                    "feedbackOnError": {
+                      "type": "grammar",
+                      "explanation": "Las dos formas deben encajar con el contexto de la frase.",
+                      "ruleRef": "gp-c2-apposition"
+                    },
+                    "feedbackOnSuccess": {
+                      "explanation": "Los dos huecos encajan con la situación."
+                    }
+                  },
+                  {
+                    "type": "SemanticMatch",
+                    "id": "es-en-c2-u09-l08-e06",
+                    "instructions": "Clasifica la función y el registro de cada intervención.",
+                    "pairs": [
+                      {
+                        "left": "First, cut the vegetables. Frankly, the proposal lacks a sound basis.",
+                        "right": "Ironía seca",
+                        "register": "literary",
+                        "nuance": "Clasifica la función y el registro de la intervención."
+                      },
+                      {
+                        "left": "Then add the rice and the water. By all accounts, the approach deserves a second reading.",
+                        "right": "Atenuación",
+                        "register": "formal",
+                        "nuance": "Clasifica la función y el registro de la intervención."
+                      },
+                      {
+                        "left": "Cook everything for twenty minutes. Which, incidentally, is more than a little ironic.",
+                        "right": "Conclusión",
+                        "register": "neutral",
+                        "nuance": "Clasifica la función y el registro de la intervención."
+                      }
+                    ],
+                    "feedbackOnError": {
+                      "type": "register",
+                      "explanation": "Cada intervención cumple una función retórica distinta.",
+                      "ruleRef": "gp-c2-litotes"
+                    },
+                    "feedbackOnSuccess": {
+                      "explanation": "Has identificado función y registro."
+                    }
+                  },
+                  {
+                    "type": "ListenChoose",
+                    "id": "es-en-c2-u09-l08-e07",
+                    "audioText": "Then add the rice and the water. By all accounts, the approach deserves a second reading.",
+                    "options": [
+                      "Then add the rice and the water. By all accounts, the approach deserves a second reading.",
+                      "First, cut the vegetables. Frankly, the proposal lacks a sound basis.",
+                      "Cook everything for twenty minutes. Which, incidentally, is more than a little ironic."
+                    ],
+                    "correctIndex": 0,
+                    "feedbackOnError": {
+                      "type": "comprehension",
+                      "explanation": "El audio dice «Then add the rice and the water. By all accounts, the approach deserves a second reading.».",
+                      "ruleRef": "gp-c2-litotes"
+                    },
+                    "feedbackOnSuccess": {
+                      "explanation": "Has reconocido la frase del audio."
+                    }
+                  },
+                  {
+                    "type": "AudioOnlyPrompt",
+                    "id": "es-en-c2-u09-l08-e08",
+                    "audioText": "Cook everything for twenty minutes. Which, incidentally, is more than a little ironic.",
+                    "question": "¿Qué implica el hablante?",
+                    "options": [
+                      "Cook everything for twenty minutes. Which, incidentally, is more than a little ironic.",
+                      "First, cut the vegetables. Frankly, the proposal lacks a sound basis.",
+                      "Then add the rice and the water. By all accounts, the approach deserves a second reading."
+                    ],
+                    "correctIndex": 0,
+                    "allowSlowPlayback": false,
+                    "feedbackOnError": {
+                      "type": "comprehension",
+                      "explanation": "El audio dice «Cook everything for twenty minutes. Which, incidentally, is more than a little ironic.».",
+                      "ruleRef": "gp-c2-apposition"
+                    },
+                    "feedbackOnSuccess": {
+                      "explanation": "Has interpretado la implicación."
+                    }
+                  },
+                  {
+                    "type": "ListenType",
+                    "id": "es-en-c2-u09-l08-e09",
+                    "audioText": "Cook everything for twenty minutes. Which, incidentally, is more than a little ironic.",
+                    "transcription": "Cook everything for twenty minutes. Which, incidentally, is more than a little ironic.",
+                    "feedbackOnError": {
+                      "type": "spelling",
+                      "explanation": "Escribe exactamente «Cook everything for twenty minutes. Which, incidentally, is more than a little ironic.».",
+                      "ruleRef": "gp-c2-litotes"
+                    },
+                    "feedbackOnSuccess": {
+                      "explanation": "La transcripción coincide con el audio."
+                    }
+                  },
+                  {
+                    "type": "SpeakRepeat",
+                    "id": "es-en-c2-u09-l08-e10",
+                    "targetPhrase": "Cook everything for twenty minutes. Which, incidentally, is more than a little ironic.",
+                    "audioText": "Cook everything for twenty minutes. Which, incidentally, is more than a little ironic.",
+                    "feedbackOnError": {
+                      "type": "pronunciation",
+                      "explanation": "Repite «Cook everything for twenty minutes. Which, incidentally, is more than a little ironic.» con claridad.",
+                      "ruleRef": "gp-c2-litotes"
+                    },
+                    "feedbackOnSuccess": {
+                      "explanation": "La frase se entiende y mantiene el ritmo."
+                    }
+                  },
+                  {
+                    "type": "MatchPairs",
+                    "id": "es-en-c2-u09-l08-e11",
+                    "pairs": [
+                      {
+                        "left": "Primero corta las verduras. Dicho sin ambages, la propuesta carece de sustento.",
+                        "right": "First, cut the vegetables. Frankly, the proposal lacks a sound basis."
+                      },
+                      {
+                        "left": "Después añade el arroz y el agua. A todas luces, conviene releer el planteamiento.",
+                        "right": "Then add the rice and the water. By all accounts, the approach deserves a second reading."
+                      },
+                      {
+                        "left": "Cocina todo durante veinte minutos. Lo cual, dicho sea de paso, no deja de ser irónico.",
+                        "right": "Cook everything for twenty minutes. Which, incidentally, is more than a little ironic."
+                      }
+                    ],
+                    "feedbackOnError": {
+                      "type": "vocabulary",
+                      "explanation": "Cada expresión tiene una traducción distinta.",
+                      "ruleRef": "gp-c2-litotes"
+                    },
+                    "feedbackOnSuccess": {
+                      "explanation": "Has asociado cada expresión con su traducción."
+                    }
+                  },
+                  {
+                    "type": "FreeSpeakingPrompt",
+                    "id": "es-en-c2-u09-l08-e12",
+                    "prompt": "Defiende una interpretación matizada sobre una receta.",
+                    "minTokens": 40,
+                    "conceptClusters": [
+                      [
+                        "First"
+                      ],
+                      [
+                        "cut"
+                      ],
+                      [
+                        "vegetables"
+                      ]
+                    ],
+                    "modelAnswer": "First, cut the vegetables. Frankly, the proposal lacks a sound basis. Then add the rice and the water. By all accounts, the approach deserves a second reading. Cook everything for twenty minutes. Which, incidentally, is more than a little ironic.",
+                    "selfAssessmentCriteria": [
+                      "¿La respuesta argumenta y responde a la tarea?",
+                      "¿Usa las dos estructuras gramaticales de la lección?",
+                      "¿Incluye una concesión, una ironía o una atenuación?"
+                    ],
+                    "grammarRuleRefs": [
+                      "gp-c2-litotes",
+                      "gp-c2-apposition"
+                    ],
+                    "timeLimitSeconds": 120,
+                    "minWpm": 70,
+                    "maxWpm": 160,
+                    "feedbackOnError": {
+                      "type": "grammar",
+                      "explanation": "La respuesta modelo desarrolla una interpretación matizada.",
+                      "ruleRef": "gp-c2-litotes"
+                    }
+                  }
+                ]
+              },
+              {
+                "id": "es-en-c2-u09-l09",
+                "title": "Integración: organizar una cena",
+                "cefrLevel": "C2",
+                "scenario": "Situación comunicativa avanzada sobre una cena con amigos.",
+                "canDo": "Puedo argumentar con matices y precisión sobre una cena con amigos.",
+                "grammarPoints": [
+                  {
+                    "id": "gp-c2-litotes",
+                    "label": "Litotes",
+                    "description": "La litote afirma algo negando lo contrario."
+                  },
+                  {
+                    "id": "gp-c2-apposition",
+                    "label": "Apposition",
+                    "description": "La aposición añade una explicación al sustantivo."
+                  }
+                ],
+                "vocabFrequencyBand": "12000+",
+                "culturalNotes": [
+                  {
+                    "idiom": "spill the tea",
+                    "note": "Expresión para revelar un cotilleo.",
+                    "translation": "contar el cotilleo"
+                  }
+                ],
+                "microLesson": {
+                  "title": "Integración: organizar una cena",
+                  "goals": [
+                    "Usar vocabulario avanzado de una cena con amigos.",
+                    "Aplicar litotes y apposition.",
+                    "Argumentar con matices sobre una cena con amigos."
+                  ],
+                  "sections": [
+                    {
+                      "heading": "Lengua en contexto",
+                      "body": "Litotes: La litote afirma algo negando lo contrario. Apposition: La aposición añade una explicación al sustantivo.",
+                      "examples": [
+                        {
+                          "source": "Voy a organizar una cena el sábado. A todas luces, conviene releer el planteamiento.",
+                          "target": "I'm going to organise a dinner on Saturday. By all accounts, the approach deserves a second reading."
+                        },
+                        {
+                          "source": "Necesito comprar comida para seis personas. Lo cual, dicho sea de paso, no deja de ser irónico.",
+                          "target": "I need to buy food for six people. Which, incidentally, is more than a little ironic."
+                        }
+                      ]
+                    }
+                  ]
+                },
+                "glossary": [
+                  {
+                    "term": "I'm going to organise a dinner on Saturday. By all accounts, the approach deserves a second reading.",
+                    "translations": [
+                      "Voy a organizar una cena el sábado. A todas luces, conviene releer el planteamiento."
+                    ]
+                  },
+                  {
+                    "term": "I need to buy food for six people. Which, incidentally, is more than a little ironic.",
+                    "translations": [
+                      "Necesito comprar comida para seis personas. Lo cual, dicho sea de paso, no deja de ser irónico."
+                    ]
+                  },
+                  {
+                    "term": "I'm also going to make a cake. Needless to say, the nuance escapes a literal reading.",
+                    "translations": [
+                      "También voy a preparar una tarta. Huelga decir que el matiz escapa a una lectura literal."
+                    ]
+                  }
+                ],
+                "exercises": [
+                  {
+                    "type": "MultipleChoice",
+                    "id": "es-en-c2-u09-l09-e01",
+                    "question": "¿Cuál es la opción correcta para «Voy a organizar una cena el sábado. A todas luces, conviene releer el planteamiento.»?",
+                    "options": [
+                      "I'm going to organise a dinner on Saturday. By all accounts, the approach deserves a second reading.",
+                      "I need to buy food for six people. Which, incidentally, is more than a little ironic.",
+                      "I'm also going to make a cake. Needless to say, the nuance escapes a literal reading."
+                    ],
+                    "correctIndex": 0,
+                    "feedbackOnError": {
+                      "type": "vocabulary",
+                      "explanation": "«Voy a organizar una cena el sábado. A todas luces, conviene releer el planteamiento.» se dice «I'm going to organise a dinner on Saturday. By all accounts, the approach deserves a second reading.».",
+                      "ruleRef": "gp-c2-litotes"
+                    },
+                    "feedbackOnSuccess": {
+                      "explanation": "Has elegido la opción precisa."
+                    }
+                  },
+                  {
+                    "type": "Translate",
+                    "id": "es-en-c2-u09-l09-e02",
+                    "sourcePhrase": "Voy a organizar una cena el sábado. A todas luces, conviene releer el planteamiento.",
+                    "correctTokens": [
+                      "I'm",
+                      "going",
+                      "to",
+                      "organise",
+                      "a",
+                      "dinner",
+                      "on",
+                      "Saturday",
+                      "By",
+                      "all",
+                      "accounts",
+                      "the",
+                      "approach",
+                      "deserves",
+                      "a",
+                      "second",
+                      "reading"
+                    ],
+                    "distractorTokens": [
+                      "I",
+                      "need",
+                      "buy"
+                    ],
+                    "feedbackOnError": {
+                      "type": "grammar",
+                      "explanation": "El orden correcto es «I'm going to organise a dinner on Saturday By all accounts the approach deserves a second reading».",
+                      "ruleRef": "gp-c2-litotes"
+                    },
+                    "feedbackOnSuccess": {
+                      "explanation": "La frase conserva el orden y el significado."
+                    }
+                  },
+                  {
+                    "type": "ClozeDragDrop",
+                    "id": "es-en-c2-u09-l09-e03",
+                    "passage": "{{b1}} {{b2}} to organise a dinner on Saturday.",
+                    "blanks": [
+                      {
+                        "id": "b1",
+                        "answer": "I'm",
+                        "options": [
+                          "I'm",
+                          "organise",
+                          "dinner"
+                        ]
+                      },
+                      {
+                        "id": "b2",
+                        "answer": "going",
+                        "options": [
+                          "going",
+                          "organise",
+                          "dinner"
+                        ]
+                      }
+                    ],
+                    "feedbackOnError": {
+                      "type": "grammar",
+                      "explanation": "Las dos formas deben encajar con el contexto de la frase.",
+                      "ruleRef": "gp-c2-apposition"
+                    },
+                    "feedbackOnSuccess": {
+                      "explanation": "Los dos huecos encajan con la situación."
+                    }
+                  },
+                  {
+                    "type": "ClozeDragDrop",
+                    "id": "es-en-c2-u09-l09-e04",
+                    "passage": "I {{b1}} to {{b2}} food for six people.",
+                    "blanks": [
+                      {
+                        "id": "b1",
+                        "answer": "need",
+                        "options": [
+                          "need",
+                          "food",
+                          "six"
+                        ]
+                      },
+                      {
+                        "id": "b2",
+                        "answer": "buy",
+                        "options": [
+                          "buy",
+                          "food",
+                          "six"
+                        ]
+                      }
+                    ],
+                    "feedbackOnError": {
+                      "type": "grammar",
+                      "explanation": "Las dos formas deben encajar con el contexto de la frase.",
+                      "ruleRef": "gp-c2-apposition"
+                    },
+                    "feedbackOnSuccess": {
+                      "explanation": "Los dos huecos encajan con la situación."
+                    }
+                  },
+                  {
+                    "type": "ClozeDragDrop",
+                    "id": "es-en-c2-u09-l09-e05",
+                    "passage": "{{b1}} also {{b2}} to make a cake.",
+                    "blanks": [
+                      {
+                        "id": "b1",
+                        "answer": "I'm",
+                        "options": [
+                          "I'm",
+                          "make",
+                          "cake"
+                        ]
+                      },
+                      {
+                        "id": "b2",
+                        "answer": "going",
+                        "options": [
+                          "going",
+                          "make",
+                          "cake"
+                        ]
+                      }
+                    ],
+                    "feedbackOnError": {
+                      "type": "grammar",
+                      "explanation": "Las dos formas deben encajar con el contexto de la frase.",
+                      "ruleRef": "gp-c2-apposition"
+                    },
+                    "feedbackOnSuccess": {
+                      "explanation": "Los dos huecos encajan con la situación."
+                    }
+                  },
+                  {
+                    "type": "SemanticMatch",
+                    "id": "es-en-c2-u09-l09-e06",
+                    "instructions": "Clasifica la función y el registro de cada intervención.",
+                    "pairs": [
+                      {
+                        "left": "I'm going to organise a dinner on Saturday. By all accounts, the approach deserves a second reading.",
+                        "right": "Ironía seca",
+                        "register": "literary",
+                        "nuance": "Clasifica la función y el registro de la intervención."
+                      },
+                      {
+                        "left": "I need to buy food for six people. Which, incidentally, is more than a little ironic.",
+                        "right": "Atenuación",
+                        "register": "formal",
+                        "nuance": "Clasifica la función y el registro de la intervención."
+                      },
+                      {
+                        "left": "I'm also going to make a cake. Needless to say, the nuance escapes a literal reading.",
+                        "right": "Conclusión",
+                        "register": "neutral",
+                        "nuance": "Clasifica la función y el registro de la intervención."
+                      }
+                    ],
+                    "feedbackOnError": {
+                      "type": "register",
+                      "explanation": "Cada intervención cumple una función retórica distinta.",
+                      "ruleRef": "gp-c2-litotes"
+                    },
+                    "feedbackOnSuccess": {
+                      "explanation": "Has identificado función y registro."
+                    }
+                  },
+                  {
+                    "type": "ListenChoose",
+                    "id": "es-en-c2-u09-l09-e07",
+                    "audioText": "I need to buy food for six people. Which, incidentally, is more than a little ironic.",
+                    "options": [
+                      "I need to buy food for six people. Which, incidentally, is more than a little ironic.",
+                      "I'm going to organise a dinner on Saturday. By all accounts, the approach deserves a second reading.",
+                      "I'm also going to make a cake. Needless to say, the nuance escapes a literal reading."
+                    ],
+                    "correctIndex": 0,
+                    "feedbackOnError": {
+                      "type": "comprehension",
+                      "explanation": "El audio dice «I need to buy food for six people. Which, incidentally, is more than a little ironic.».",
+                      "ruleRef": "gp-c2-litotes"
+                    },
+                    "feedbackOnSuccess": {
+                      "explanation": "Has reconocido la frase del audio."
+                    }
+                  },
+                  {
+                    "type": "AudioOnlyPrompt",
+                    "id": "es-en-c2-u09-l09-e08",
+                    "audioText": "I'm also going to make a cake. Needless to say, the nuance escapes a literal reading.",
+                    "question": "¿Qué implica el hablante?",
+                    "options": [
+                      "I'm also going to make a cake. Needless to say, the nuance escapes a literal reading.",
+                      "I'm going to organise a dinner on Saturday. By all accounts, the approach deserves a second reading.",
+                      "I need to buy food for six people. Which, incidentally, is more than a little ironic."
+                    ],
+                    "correctIndex": 0,
+                    "allowSlowPlayback": false,
+                    "feedbackOnError": {
+                      "type": "comprehension",
+                      "explanation": "El audio dice «I'm also going to make a cake. Needless to say, the nuance escapes a literal reading.».",
+                      "ruleRef": "gp-c2-apposition"
+                    },
+                    "feedbackOnSuccess": {
+                      "explanation": "Has interpretado la implicación."
+                    }
+                  },
+                  {
+                    "type": "ListenType",
+                    "id": "es-en-c2-u09-l09-e09",
+                    "audioText": "I'm also going to make a cake. Needless to say, the nuance escapes a literal reading.",
+                    "transcription": "I'm also going to make a cake. Needless to say, the nuance escapes a literal reading.",
+                    "feedbackOnError": {
+                      "type": "spelling",
+                      "explanation": "Escribe exactamente «I'm also going to make a cake. Needless to say, the nuance escapes a literal reading.».",
+                      "ruleRef": "gp-c2-litotes"
+                    },
+                    "feedbackOnSuccess": {
+                      "explanation": "La transcripción coincide con el audio."
+                    }
+                  },
+                  {
+                    "type": "SpeakRepeat",
+                    "id": "es-en-c2-u09-l09-e10",
+                    "targetPhrase": "I'm also going to make a cake. Needless to say, the nuance escapes a literal reading.",
+                    "audioText": "I'm also going to make a cake. Needless to say, the nuance escapes a literal reading.",
+                    "feedbackOnError": {
+                      "type": "pronunciation",
+                      "explanation": "Repite «I'm also going to make a cake. Needless to say, the nuance escapes a literal reading.» con claridad.",
+                      "ruleRef": "gp-c2-litotes"
+                    },
+                    "feedbackOnSuccess": {
+                      "explanation": "La frase se entiende y mantiene el ritmo."
+                    }
+                  },
+                  {
+                    "type": "MatchPairs",
+                    "id": "es-en-c2-u09-l09-e11",
+                    "pairs": [
+                      {
+                        "left": "Voy a organizar una cena el sábado. A todas luces, conviene releer el planteamiento.",
+                        "right": "I'm going to organise a dinner on Saturday. By all accounts, the approach deserves a second reading."
+                      },
+                      {
+                        "left": "Necesito comprar comida para seis personas. Lo cual, dicho sea de paso, no deja de ser irónico.",
+                        "right": "I need to buy food for six people. Which, incidentally, is more than a little ironic."
+                      },
+                      {
+                        "left": "También voy a preparar una tarta. Huelga decir que el matiz escapa a una lectura literal.",
+                        "right": "I'm also going to make a cake. Needless to say, the nuance escapes a literal reading."
+                      }
+                    ],
+                    "feedbackOnError": {
+                      "type": "vocabulary",
+                      "explanation": "Cada expresión tiene una traducción distinta.",
+                      "ruleRef": "gp-c2-litotes"
+                    },
+                    "feedbackOnSuccess": {
+                      "explanation": "Has asociado cada expresión con su traducción."
+                    }
+                  },
+                  {
+                    "type": "FreeSpeakingPrompt",
+                    "id": "es-en-c2-u09-l09-e12",
+                    "prompt": "Defiende una interpretación matizada sobre una cena con amigos.",
+                    "minTokens": 40,
+                    "conceptClusters": [
+                      [
+                        "I'm"
+                      ],
+                      [
+                        "going"
+                      ],
+                      [
+                        "organise"
+                      ]
+                    ],
+                    "modelAnswer": "I'm going to organise a dinner on Saturday. By all accounts, the approach deserves a second reading. I need to buy food for six people. Which, incidentally, is more than a little ironic. I'm also going to make a cake. Needless to say, the nuance escapes a literal reading.",
+                    "selfAssessmentCriteria": [
+                      "¿La respuesta argumenta y responde a la tarea?",
+                      "¿Usa las dos estructuras gramaticales de la lección?",
+                      "¿Incluye una concesión, una ironía o una atenuación?"
+                    ],
+                    "grammarRuleRefs": [
+                      "gp-c2-litotes",
+                      "gp-c2-apposition"
+                    ],
+                    "timeLimitSeconds": 120,
+                    "minWpm": 70,
+                    "maxWpm": 160,
+                    "feedbackOnError": {
+                      "type": "grammar",
+                      "explanation": "La respuesta modelo desarrolla una interpretación matizada.",
+                      "ruleRef": "gp-c2-litotes"
+                    }
+                  }
+                ]
+              },
+              {
+                "id": "es-en-c2-u09-l10",
+                "title": "Evaluación: mi comida favorita",
+                "cefrLevel": "C2",
+                "scenario": "Situación comunicativa avanzada sobre mi comida favorita.",
+                "canDo": "Puedo argumentar con matices y precisión sobre mi comida favorita.",
+                "grammarPoints": [
+                  {
+                    "id": "gp-c2-litotes",
+                    "label": "Litotes",
+                    "description": "La litote afirma algo negando lo contrario."
+                  },
+                  {
+                    "id": "gp-c2-apposition",
+                    "label": "Apposition",
+                    "description": "La aposición añade una explicación al sustantivo."
+                  }
+                ],
+                "vocabFrequencyBand": "12000+",
+                "culturalNotes": [
+                  {
+                    "idiom": "read the riot act",
+                    "note": "Expresión para reprender con severidad.",
+                    "translation": "leer la cartilla"
+                  }
+                ],
+                "microLesson": {
+                  "title": "Evaluación: mi comida favorita",
+                  "goals": [
+                    "Usar vocabulario avanzado de mi comida favorita.",
+                    "Aplicar litotes y apposition.",
+                    "Argumentar con matices sobre mi comida favorita."
+                  ],
+                  "sections": [
+                    {
+                      "heading": "Lengua en contexto",
+                      "body": "Litotes: La litote afirma algo negando lo contrario. Apposition: La aposición añade una explicación al sustantivo.",
+                      "examples": [
+                        {
+                          "source": "Mi comida favorita es la paella. Lo cual, dicho sea de paso, no deja de ser irónico.",
+                          "target": "My favourite food is paella. Which, incidentally, is more than a little ironic."
+                        },
+                        {
+                          "source": "Me gusta porque tiene arroz, marisco y verduras. Huelga decir que el matiz escapa a una lectura literal.",
+                          "target": "I like it because it has rice, seafood and vegetables. Needless to say, the nuance escapes a literal reading."
+                        }
+                      ]
+                    }
+                  ]
+                },
+                "glossary": [
+                  {
+                    "term": "My favourite food is paella. Which, incidentally, is more than a little ironic.",
+                    "translations": [
+                      "Mi comida favorita es la paella. Lo cual, dicho sea de paso, no deja de ser irónico."
+                    ]
+                  },
+                  {
+                    "term": "I like it because it has rice, seafood and vegetables. Needless to say, the nuance escapes a literal reading.",
+                    "translations": [
+                      "Me gusta porque tiene arroz, marisco y verduras. Huelga decir que el matiz escapa a una lectura literal."
+                    ]
+                  },
+                  {
+                    "term": "My family makes it on Sundays. Strictly speaking, the claim admits conflicting readings.",
+                    "translations": [
+                      "Mi familia la prepara los domingos. En rigor, la afirmación admite lecturas encontradas."
+                    ]
+                  }
+                ],
+                "exercises": [
+                  {
+                    "type": "MultipleChoice",
+                    "id": "es-en-c2-u09-l10-e01",
+                    "question": "¿Cuál es la opción correcta para «Mi comida favorita es la paella. Lo cual, dicho sea de paso, no deja de ser irónico.»?",
+                    "options": [
+                      "My favourite food is paella. Which, incidentally, is more than a little ironic.",
+                      "I like it because it has rice, seafood and vegetables. Needless to say, the nuance escapes a literal reading.",
+                      "My family makes it on Sundays. Strictly speaking, the claim admits conflicting readings."
+                    ],
+                    "correctIndex": 0,
+                    "feedbackOnError": {
+                      "type": "vocabulary",
+                      "explanation": "«Mi comida favorita es la paella. Lo cual, dicho sea de paso, no deja de ser irónico.» se dice «My favourite food is paella. Which, incidentally, is more than a little ironic.».",
+                      "ruleRef": "gp-c2-litotes"
+                    },
+                    "feedbackOnSuccess": {
+                      "explanation": "Has elegido la opción precisa."
+                    }
+                  },
+                  {
+                    "type": "Translate",
+                    "id": "es-en-c2-u09-l10-e02",
+                    "sourcePhrase": "Mi comida favorita es la paella. Lo cual, dicho sea de paso, no deja de ser irónico.",
+                    "correctTokens": [
+                      "My",
+                      "favourite",
+                      "food",
+                      "is",
+                      "paella",
+                      "Which",
+                      "incidentally",
+                      "is",
+                      "more",
+                      "than",
+                      "a",
+                      "little",
+                      "ironic"
+                    ],
+                    "distractorTokens": [
+                      "I",
+                      "like",
+                      "it"
+                    ],
+                    "feedbackOnError": {
+                      "type": "grammar",
+                      "explanation": "El orden correcto es «My favourite food is paella Which incidentally is more than a little ironic».",
+                      "ruleRef": "gp-c2-litotes"
+                    },
+                    "feedbackOnSuccess": {
+                      "explanation": "La frase conserva el orden y el significado."
+                    }
+                  },
+                  {
+                    "type": "ClozeDragDrop",
+                    "id": "es-en-c2-u09-l10-e03",
+                    "passage": "My {{b1}} {{b2}} is paella.",
+                    "blanks": [
+                      {
+                        "id": "b1",
+                        "answer": "favourite",
+                        "options": [
+                          "favourite",
+                          "paella",
+                          "very"
+                        ]
+                      },
+                      {
+                        "id": "b2",
+                        "answer": "food",
+                        "options": [
+                          "food",
+                          "paella",
+                          "very"
+                        ]
+                      }
+                    ],
+                    "feedbackOnError": {
+                      "type": "grammar",
+                      "explanation": "Las dos formas deben encajar con el contexto de la frase.",
+                      "ruleRef": "gp-c2-apposition"
+                    },
+                    "feedbackOnSuccess": {
+                      "explanation": "Los dos huecos encajan con la situación."
+                    }
+                  },
+                  {
+                    "type": "ClozeDragDrop",
+                    "id": "es-en-c2-u09-l10-e04",
+                    "passage": "I {{b1}} it {{b2}} it has rice, seafood and vegetables.",
+                    "blanks": [
+                      {
+                        "id": "b1",
+                        "answer": "like",
+                        "options": [
+                          "like",
+                          "rice",
+                          "seafood"
+                        ]
+                      },
+                      {
+                        "id": "b2",
+                        "answer": "because",
+                        "options": [
+                          "because",
+                          "rice",
+                          "seafood"
+                        ]
+                      }
+                    ],
+                    "feedbackOnError": {
+                      "type": "grammar",
+                      "explanation": "Las dos formas deben encajar con el contexto de la frase.",
+                      "ruleRef": "gp-c2-apposition"
+                    },
+                    "feedbackOnSuccess": {
+                      "explanation": "Los dos huecos encajan con la situación."
+                    }
+                  },
+                  {
+                    "type": "ClozeDragDrop",
+                    "id": "es-en-c2-u09-l10-e05",
+                    "passage": "My {{b1}} {{b2}} it on Sundays.",
+                    "blanks": [
+                      {
+                        "id": "b1",
+                        "answer": "family",
+                        "options": [
+                          "family",
+                          "Sundays",
+                          "very"
+                        ]
+                      },
+                      {
+                        "id": "b2",
+                        "answer": "makes",
+                        "options": [
+                          "makes",
+                          "Sundays",
+                          "very"
+                        ]
+                      }
+                    ],
+                    "feedbackOnError": {
+                      "type": "grammar",
+                      "explanation": "Las dos formas deben encajar con el contexto de la frase.",
+                      "ruleRef": "gp-c2-apposition"
+                    },
+                    "feedbackOnSuccess": {
+                      "explanation": "Los dos huecos encajan con la situación."
+                    }
+                  },
+                  {
+                    "type": "SemanticMatch",
+                    "id": "es-en-c2-u09-l10-e06",
+                    "instructions": "Clasifica la función y el registro de cada intervención.",
+                    "pairs": [
+                      {
+                        "left": "My favourite food is paella. Which, incidentally, is more than a little ironic.",
+                        "right": "Ironía seca",
+                        "register": "literary",
+                        "nuance": "Clasifica la función y el registro de la intervención."
+                      },
+                      {
+                        "left": "I like it because it has rice, seafood and vegetables. Needless to say, the nuance escapes a literal reading.",
+                        "right": "Atenuación",
+                        "register": "formal",
+                        "nuance": "Clasifica la función y el registro de la intervención."
+                      },
+                      {
+                        "left": "My family makes it on Sundays. Strictly speaking, the claim admits conflicting readings.",
+                        "right": "Conclusión",
+                        "register": "neutral",
+                        "nuance": "Clasifica la función y el registro de la intervención."
+                      }
+                    ],
+                    "feedbackOnError": {
+                      "type": "register",
+                      "explanation": "Cada intervención cumple una función retórica distinta.",
+                      "ruleRef": "gp-c2-litotes"
+                    },
+                    "feedbackOnSuccess": {
+                      "explanation": "Has identificado función y registro."
+                    }
+                  },
+                  {
+                    "type": "ListenChoose",
+                    "id": "es-en-c2-u09-l10-e07",
+                    "audioText": "I like it because it has rice, seafood and vegetables. Needless to say, the nuance escapes a literal reading.",
+                    "options": [
+                      "I like it because it has rice, seafood and vegetables. Needless to say, the nuance escapes a literal reading.",
+                      "My favourite food is paella. Which, incidentally, is more than a little ironic.",
+                      "My family makes it on Sundays. Strictly speaking, the claim admits conflicting readings."
+                    ],
+                    "correctIndex": 0,
+                    "feedbackOnError": {
+                      "type": "comprehension",
+                      "explanation": "El audio dice «I like it because it has rice, seafood and vegetables. Needless to say, the nuance escapes a literal reading.».",
+                      "ruleRef": "gp-c2-litotes"
+                    },
+                    "feedbackOnSuccess": {
+                      "explanation": "Has reconocido la frase del audio."
+                    }
+                  },
+                  {
+                    "type": "AudioOnlyPrompt",
+                    "id": "es-en-c2-u09-l10-e08",
+                    "audioText": "My family makes it on Sundays. Strictly speaking, the claim admits conflicting readings.",
+                    "question": "¿Qué implica el hablante?",
+                    "options": [
+                      "My family makes it on Sundays. Strictly speaking, the claim admits conflicting readings.",
+                      "My favourite food is paella. Which, incidentally, is more than a little ironic.",
+                      "I like it because it has rice, seafood and vegetables. Needless to say, the nuance escapes a literal reading."
+                    ],
+                    "correctIndex": 0,
+                    "allowSlowPlayback": false,
+                    "feedbackOnError": {
+                      "type": "comprehension",
+                      "explanation": "El audio dice «My family makes it on Sundays. Strictly speaking, the claim admits conflicting readings.».",
+                      "ruleRef": "gp-c2-apposition"
+                    },
+                    "feedbackOnSuccess": {
+                      "explanation": "Has interpretado la implicación."
+                    }
+                  },
+                  {
+                    "type": "ListenType",
+                    "id": "es-en-c2-u09-l10-e09",
+                    "audioText": "My family makes it on Sundays. Strictly speaking, the claim admits conflicting readings.",
+                    "transcription": "My family makes it on Sundays. Strictly speaking, the claim admits conflicting readings.",
+                    "feedbackOnError": {
+                      "type": "spelling",
+                      "explanation": "Escribe exactamente «My family makes it on Sundays. Strictly speaking, the claim admits conflicting readings.».",
+                      "ruleRef": "gp-c2-litotes"
+                    },
+                    "feedbackOnSuccess": {
+                      "explanation": "La transcripción coincide con el audio."
+                    }
+                  },
+                  {
+                    "type": "SpeakRepeat",
+                    "id": "es-en-c2-u09-l10-e10",
+                    "targetPhrase": "My family makes it on Sundays. Strictly speaking, the claim admits conflicting readings.",
+                    "audioText": "My family makes it on Sundays. Strictly speaking, the claim admits conflicting readings.",
+                    "feedbackOnError": {
+                      "type": "pronunciation",
+                      "explanation": "Repite «My family makes it on Sundays. Strictly speaking, the claim admits conflicting readings.» con claridad.",
+                      "ruleRef": "gp-c2-litotes"
+                    },
+                    "feedbackOnSuccess": {
+                      "explanation": "La frase se entiende y mantiene el ritmo."
+                    }
+                  },
+                  {
+                    "type": "MatchPairs",
+                    "id": "es-en-c2-u09-l10-e11",
+                    "pairs": [
+                      {
+                        "left": "Mi comida favorita es la paella. Lo cual, dicho sea de paso, no deja de ser irónico.",
+                        "right": "My favourite food is paella. Which, incidentally, is more than a little ironic."
+                      },
+                      {
+                        "left": "Me gusta porque tiene arroz, marisco y verduras. Huelga decir que el matiz escapa a una lectura literal.",
+                        "right": "I like it because it has rice, seafood and vegetables. Needless to say, the nuance escapes a literal reading."
+                      },
+                      {
+                        "left": "Mi familia la prepara los domingos. En rigor, la afirmación admite lecturas encontradas.",
+                        "right": "My family makes it on Sundays. Strictly speaking, the claim admits conflicting readings."
+                      }
+                    ],
+                    "feedbackOnError": {
+                      "type": "vocabulary",
+                      "explanation": "Cada expresión tiene una traducción distinta.",
+                      "ruleRef": "gp-c2-litotes"
+                    },
+                    "feedbackOnSuccess": {
+                      "explanation": "Has asociado cada expresión con su traducción."
+                    }
+                  },
+                  {
+                    "type": "FreeSpeakingPrompt",
+                    "id": "es-en-c2-u09-l10-e12",
+                    "prompt": "Defiende una interpretación matizada sobre mi comida favorita.",
+                    "minTokens": 40,
+                    "conceptClusters": [
+                      [
+                        "favourite"
+                      ],
+                      [
+                        "food"
+                      ],
+                      [
+                        "paella"
+                      ]
+                    ],
+                    "modelAnswer": "My favourite food is paella. Which, incidentally, is more than a little ironic. I like it because it has rice, seafood and vegetables. Needless to say, the nuance escapes a literal reading. My family makes it on Sundays. Strictly speaking, the claim admits conflicting readings.",
+                    "selfAssessmentCriteria": [
+                      "¿La respuesta argumenta y responde a la tarea?",
+                      "¿Usa las dos estructuras gramaticales de la lección?",
+                      "¿Incluye una concesión, una ironía o una atenuación?"
+                    ],
+                    "grammarRuleRefs": [
+                      "gp-c2-litotes",
+                      "gp-c2-apposition"
+                    ],
+                    "timeLimitSeconds": 120,
+                    "minWpm": 70,
+                    "maxWpm": 160,
+                    "feedbackOnError": {
+                      "type": "grammar",
+                      "explanation": "La respuesta modelo desarrolla una interpretación matizada.",
+                      "ruleRef": "gp-c2-litotes"
+                    }
+                  }
+                ]
+              }
+            ]
           }
         ]
       }
