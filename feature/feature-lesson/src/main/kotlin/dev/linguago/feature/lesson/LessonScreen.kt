@@ -93,7 +93,7 @@ import dev.linguago.core.ui.theme.LinguaTokens
 import dev.linguago.core.ui.util.rememberAnimationsEnabled
 
 /**
- * Motor de lecciÃ³n (RFC Â§2.3, ADR-002). Renderiza cada ejercicio segÃºn su
+ * Motor de lección (RFC §2.3, ADR-002). Renderiza cada ejercicio según su
  * tipo: opciones listadas, tablero de tokens, dictado libre o parejas.
  * Tras responder muestra FeedbackBanner y avanza con "Continuar".
  */
@@ -107,8 +107,8 @@ fun LessonScreen(
     var exitConfirm by rememberSaveable { mutableStateOf(false) }
     val requestExit: () -> Unit = { exitConfirm = true }
 
-    // H1/B-09: Back nunca abandona la lecciÃ³n en curso sin confirmar; en la
-    // micro-clase cierra la guÃ­a y en pantallas terminales sale directamente.
+    // H1/B-09: Back nunca abandona la lección en curso sin confirmar; en la
+    // micro-clase cierra la guía y en pantallas terminales sale directamente.
     BackHandler {
         when {
             uiState.briefVisible -> viewModel.beginLesson()
@@ -117,7 +117,7 @@ fun LessonScreen(
         }
     }
 
-    /** SpeakRepeat: pide el permiso de micrÃ³fono antes de escuchar (I3). */
+    /** SpeakRepeat: pide el permiso de micrófono antes de escuchar (I3). */
     val context = LocalContext.current
     val micPermission = Manifest.permission.RECORD_AUDIO
     var micPermissionDenied by remember { mutableStateOf(false) }
@@ -214,10 +214,10 @@ private fun ExitLessonConfirmDialog(
 ) {
     AlertDialog(
         onDismissRequest = onDismiss,
-        title = { Text(text = "Â¿Salir de la lecciÃ³n?") },
+        title = { Text(text = "¿Salir de la lección?") },
         text = {
             Text(
-                text = "PerderÃ¡s el avance de esta sesiÃ³n: la lecciÃ³n solo se guarda al terminarla.",
+                text = "Perderás el avance de esta sesión: la lección solo se guarda al terminarla.",
             )
         },
         confirmButton = {
@@ -301,7 +301,7 @@ private fun LessonContent(
         uiState.briefVisible && uiState.brief != null ->
             LessonBriefScreen(
                 brief = uiState.brief,
-                startLabel = if (uiState.briefSeen) "Volver a la lecciÃ³n" else "Empezar lecciÃ³n",
+                startLabel = if (uiState.briefSeen) "Volver a la lección" else "Empezar lección",
                 onStart = onBeginLesson,
                 onExit = onExit,
                 modifier = modifier,
@@ -401,7 +401,7 @@ private fun ExerciseStage(
         }
 
     // Feedback sensorial (ADR-027): acierto/error al evaluar y encaje al
-    // aÃ±adir o quitar tokens y parejas. Es un refuerzo, no la Ãºnica seÃ±al.
+    // añadir o quitar tokens y parejas. Es un refuerzo, no la única señal.
     val feedback = LocalInteractionFeedback.current
     LaunchedEffect(uiState.feedback, uiState.index) {
         val current = uiState.feedback ?: return@LaunchedEffect
@@ -453,7 +453,7 @@ private fun ExerciseStage(
                 modifier = Modifier.weight(1f),
             )
             PillButton(
-                text = "GuÃ­a",
+                text = "Guía",
                 onClick = onOpenBrief,
             )
             PillButton(
@@ -475,7 +475,7 @@ private fun ExerciseStage(
         }
         if (uiState.voiceWarmingUp) {
             Spacer(Modifier.height(8.dp))
-            InfoBanner(message = "Preparando motor de voz offlineâ€¦")
+            InfoBanner(message = "Preparando motor de voz offline…")
         }
         Spacer(Modifier.height(16.dp))
 
@@ -571,14 +571,14 @@ private fun ExerciseStage(
     }
 }
 
-/** RÃ³tulo de tarea por tipo de ejercicio para la insignia slate (ADR-055). */
+/** Rótulo de tarea por tipo de ejercicio para la insignia slate (ADR-055). */
 private fun taskLabelFor(exercise: Exercise): String =
     when (exercise) {
-        is Exercise.MultipleChoice -> "Elige la opciÃ³n"
+        is Exercise.MultipleChoice -> "Elige la opción"
         is Exercise.KanaChoose -> "Elige el romaji"
         is Exercise.KanjiReading -> "Lee el kanji"
-        is Exercise.ParticleFill -> "Elige la partÃ­cula"
-        is Exercise.Translate -> "Traduce esta oraciÃ³n"
+        is Exercise.ParticleFill -> "Elige la partícula"
+        is Exercise.Translate -> "Traduce esta oración"
         is Exercise.OrderWords -> "Ordena las palabras"
         is Exercise.ListenChoose -> "Escucha y elige"
         is Exercise.ListenType -> "Escribe lo que escuchas"
@@ -674,7 +674,7 @@ private fun Renderer(
                     speaking = uiState.speaking,
                 )
                 OptionsStep(
-                    prompt = "Â¿QuÃ© escuchaste?",
+                    prompt = "¿Qué escuchaste?",
                     options = exercise.options,
                     selectedIndex = uiState.selectedOption,
                     correctIndex = exercise.correctIndex,
@@ -698,7 +698,7 @@ private fun Renderer(
                     speaking = uiState.speaking,
                 )
                 OptionsStep(
-                    prompt = "Â¿QuÃ© escuchaste?",
+                    prompt = "¿Qué escuchaste?",
                     options = exercise.options,
                     selectedIndex = uiState.selectedOption,
                     correctIndex = exercise.correctIndex,
@@ -789,7 +789,7 @@ private fun Renderer(
                 onSelectLeft = onMatchLeft,
                 onMatchRight = onMatchRight,
                 onUnpair = onUnpair,
-                instructions = exercise.instructions ?: "Empareja cada expresiÃ³n con su equivalente",
+                instructions = exercise.instructions ?: "Empareja cada expresión con su equivalente",
                 enabled = !uiState.answerLocked,
                 result = uiState.feedback?.takeIf { !it.skipped }?.isCorrect,
             )
@@ -911,7 +911,7 @@ private fun BottomActions(
     }
 }
 
-/** Panel de feedback del prototipo: sheet cÃ¡lido con Â«Ver por quÃ©Â» (ADR-055). */
+/** Panel de feedback del prototipo: sheet cálido con «Ver por qué» (ADR-055). */
 @Composable
 private fun FeedbackPanel(
     feedback: ExerciseFeedback,
@@ -922,7 +922,7 @@ private fun FeedbackPanel(
 ) {
     FeedbackSheet(
         isCorrect = feedback.isCorrect,
-        message = if (feedback.isCorrect) "Â¡Correcto!" else "Revisa la respuesta",
+        message = if (feedback.isCorrect) "¡Correcto!" else "Revisa la respuesta",
         skipped = feedback.skipped,
         diagnostic = feedback.diagnostic,
         idiom = feedback.idiom,
@@ -938,7 +938,7 @@ private fun FeedbackPanel(
     )
 }
 
-/** Acciones previas a calificar segÃºn el tipo de ejercicio. */
+/** Acciones previas a calificar según el tipo de ejercicio. */
 @Composable
 private fun ActionButtons(
     exercise: Exercise,
@@ -1020,9 +1020,9 @@ private fun ActionButtons(
 }
 
 /**
- * RepeticiÃ³n hablada (SpeakRepeat, Fase 2.3): escucha el modelo con TTS y
- * repite con el micrÃ³fono; muestra lo que el STT reconociÃ³. Sin STT/permiso se
- * puede omitir sin penalizaciÃ³n (B-02, I3).
+ * Repetición hablada (SpeakRepeat, Fase 2.3): escucha el modelo con TTS y
+ * repite con el micrófono; muestra lo que el STT reconoció. Sin STT/permiso se
+ * puede omitir sin penalización (B-02, I3).
  */
 @Composable
 private fun SpeechPanel(
@@ -1062,7 +1062,7 @@ private fun SpeechPanel(
         }
         if (micPermissionDenied) {
             InfoBanner(
-                message = "Permiso de micrÃ³fono denegado. Puedes omitir el ejercicio.",
+                message = "Permiso de micrófono denegado. Puedes omitir el ejercicio.",
             )
         }
         Box(
@@ -1078,10 +1078,10 @@ private fun SpeechPanel(
         Text(
             text =
                 when {
-                    listening -> "Escuchandoâ€¦"
+                    listening -> "Escuchando…"
                     !speechAvailable -> "Voz no disponible"
                     answerLocked -> "Respuesta enviada"
-                    else -> "Toca el micrÃ³fono y repite la frase"
+                    else -> "Toca el micrófono y repite la frase"
                 },
             style = MaterialTheme.typography.titleMedium,
             color = MaterialTheme.colorScheme.onBackground,
@@ -1090,7 +1090,7 @@ private fun SpeechPanel(
         )
         recognized?.let { text ->
             Text(
-                text = "Lo que reconociÃ³ el micrÃ³fono: \"$text\"",
+                text = "Lo que reconoció el micrófono: \"$text\"",
                 style = MaterialTheme.typography.bodyMedium,
                 color = MaterialTheme.colorScheme.onSurfaceVariant,
                 modifier = Modifier.fillMaxWidth(),
@@ -1099,7 +1099,7 @@ private fun SpeechPanel(
         }
         if (listening) {
             PrimaryButton3D(
-                text = "Detener grabaciÃ³n",
+                text = "Detener grabación",
                 onClick = onStop,
                 modifier = Modifier.fillMaxWidth(),
             )
@@ -1107,7 +1107,7 @@ private fun SpeechPanel(
     }
 }
 
-/** Dictado libre (ListenType): su propio campo de texto y botÃ³n Comprobar. */
+/** Dictado libre (ListenType): su propio campo de texto y botón Comprobar. */
 @Composable
 private fun TypePanel(
     audioTitle: String,
@@ -1185,8 +1185,8 @@ private fun OptionsStep(
 
 /**
  * Reproductor de audio del ejercicio (ADR-037/ADR-038): la tarjeta compartida
- * mantiene el botÃ³n circular, la onda y la pÃ­ldora de velocidad; sin voz
- * disponible queda inactiva en lugar de bloquear el ejercicio (degradaciÃ³n I1).
+ * mantiene el botón circular, la onda y la píldora de velocidad; sin voz
+ * disponible queda inactiva en lugar de bloquear el ejercicio (degradación I1).
  */
 @Composable
 private fun AudioPanel(
@@ -1421,7 +1421,7 @@ private fun Loading(modifier: Modifier = Modifier) {
         verticalArrangement = Arrangement.Center,
         horizontalAlignment = Alignment.CenterHorizontally,
     ) {
-        Text(text = "Cargando la lecciÃ³nâ€¦", style = MaterialTheme.typography.bodyMedium)
+        Text(text = "Cargando la lección…", style = MaterialTheme.typography.bodyMedium)
     }
 }
 
@@ -1435,9 +1435,9 @@ private fun Invalid(
         verticalArrangement = Arrangement.Center,
         horizontalAlignment = Alignment.CenterHorizontally,
     ) {
-        Text(text = "No pudimos abrir la lecciÃ³n", style = MaterialTheme.typography.titleMedium)
+        Text(text = "No pudimos abrir la lección", style = MaterialTheme.typography.titleMedium)
         Text(
-            text = "Vuelve al camino e intÃ©ntalo de nuevo",
+            text = "Vuelve al camino e inténtalo de nuevo",
             style = MaterialTheme.typography.bodyMedium,
         )
         TextButton(onClick = onExit) { Text(text = "Salir") }
@@ -1456,7 +1456,7 @@ private fun LessonScreenPreview() {
                     listOf(
                         Exercise.MultipleChoice(
                             id = ExerciseId("ex-1"),
-                            question = "Elige la traducciÃ³n",
+                            question = "Elige la traducción",
                             options = listOf("Hello", "Bye", "Good morning"),
                             correctIndex = 0,
                         ),
