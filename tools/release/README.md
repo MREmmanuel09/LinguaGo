@@ -67,6 +67,21 @@ python tools/release/mark_reviewed.py --lesson-id es-en-a1-p0-u1-l01 `
 
 El release queda bloqueado mientras haya filas `pending` o `needs_change`.
 
+## Revisión nativa de F2 (3.3.0)
+
+F2 añade 599 lecciones A2. El kit y el validador son independientes del de F1:
+
+```powershell
+python tools/content/prepare_native_review_f2.py
+python tools/release/mark_reviewed_f2.py --course es-en --unit 01 `
+  --status approved --reviewer "Tu nombre"
+python tools/release/check_native_review_f2.py
+```
+
+El CSV de F2 vive en `build/reports/native-review-f2-plan.csv` y cubre
+ES→EN (143), ES→PT (152), ES→FR (152) y ES→JA (152). El release 3.3.0 queda
+bloqueado mientras queden filas `pending` o `needs_change`.
+
 ## Keystore de distribución
 
 Si no tienes keystore, créalo una sola vez:
