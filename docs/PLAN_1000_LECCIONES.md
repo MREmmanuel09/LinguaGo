@@ -1,8 +1,8 @@
 # Plan de expansión a 1.020 lecciones por idioma
 
-> **Estado:** F1 completa y release 3.2.0 **publicado**. F2.1 (A2 ES→EN) y
-> F2.3 (A2 ES→FR) completos: 170/170 A2 en ambos cursos. F2.2 (ES→PT) y
-> F2.4 (ES→JA) pendientes; la revisión nativa de F2 sigue abierta.
+> **Estado:** F1 completa y release 3.2.0 **publicado**. F2 completo: A2
+> 170/170 en los cuatro cursos (599 lecciones nuevas). La revisión nativa de
+> F2 sigue abierta y el release 3.3.0 no se publica hasta cerrarla.
 > **Objetivo:** mínimo 1.000 lecciones por cada curso de destino, con la misma
 > cantidad en cada nivel CEFR.
 > **Fecha:** 2026-11-09.
@@ -205,10 +205,9 @@ La ejecución se organiza en **7 fases** (F0–F6) y **14 olas internas**:
 | **F5** | **3.6.0** | C1 completo | ~544 | A: EN · B: PT/FR/JA |
 | **F6** | **4.0.0** | C2 completo y meta 1.020/idioma | ~568 | A: EN · B: PT/FR/JA |
 
-> **F2 en curso:** F2.1 (A2 ES→EN, 143 lecciones) y F2.3 (A2 ES→FR, 152
-> lecciones) están completos. F2.2 (ES→PT) y F2.4 (ES→JA) siguen pendientes;
-> el release 3.3.0 no se abre hasta cerrar los cuatro cursos y su revisión
-> nativa.
+> **F2 completo:** A2 170/170 en ES→EN (143 nuevas), ES→PT (152), ES→FR
+> (152) y ES→JA (152). Total: 599 lecciones nuevas. El release 3.3.0 queda
+> bloqueado hasta cerrar la revisión nativa de los cuatro cursos.
 
 ### Tres puertas de calidad por fase
 
@@ -314,9 +313,9 @@ intacto.
 | Revisión nativa humana de F0/F1 | Pendiente (deuda 3.2.x) |
 | Release estable 3.2.0 | ✅ Publicado (`v3.2.0`, 2026-11-15) |
 | F2.1 A2 ES→EN (143 lecciones / 1.001 ejercicios) | ✅ |
+| F2.2 A2 ES→PT (152 lecciones / 1.064 ejercicios) | ✅ |
 | F2.3 A2 ES→FR (152 lecciones / 1.064 ejercicios) | ✅ |
-| F2.2 A2 ES→PT | Pendiente |
-| F2.4 A2 ES→JA | Pendiente |
+| F2.4 A2 ES→JA (152 lecciones / 1.064 ejercicios) | ✅ |
 | Auditoría F2 (`docs/qa/fase2-auditoria.md`) | ✅ |
 | Revisión nativa humana de F2 | Pendiente (puerta de 3.3.0) |
 
@@ -327,8 +326,9 @@ la revisión nativa humana sigue pendiente antes del release de F1.
 Estado actual medido con `./gradlew contentScaleReport`:
 
 - ES→EN: **464/1.020** lecciones (A1 170, A2 170, B1 30, B2 32, C1 34, C2 28).
-- ES→PT: **312/1.020** lecciones (A1 170, A2 18, B1 30, B2 32, C1 34, C2 28).
+- ES→PT: **464/1.020** lecciones (A1 170, A2 170, B1 30, B2 32, C1 34, C2 28).
 - ES→FR: **464/1.020** lecciones (A1 170, A2 170, B1 30, B2 32, C1 34, C2 28).
-- ES→JA: **312/1.020** lecciones (A1 170, A2 18, B1 30, B2 32, C1 34, C2 28).
-- Total: **1.552/4.080** lecciones y **12.592** ejercicios.
-- F2 añade **295 lecciones** y **2.065 ejercicios** (EN 143/1.001, FR 152/1.064).
+- ES→JA: **464/1.020** lecciones (A1 170, A2 170, B1 30, B2 32, C1 34, C2 28).
+- Total: **1.856/4.080** lecciones y **14.720** ejercicios.
+- F2 añade **599 lecciones** y **4.193 ejercicios** (EN 143/1.001; PT, FR y JA
+  152/1.064 cada uno).
