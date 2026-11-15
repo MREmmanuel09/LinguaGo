@@ -131101,6 +131101,3406 @@
               ]
             }
           ]
+        },
+        {
+          "id": "es-fr-b2-u01",
+          "title": "B2 · Recuerdos y pasado",
+          "lessons": [
+            {
+              "id": "es-fr-b2-u01-l01",
+              "title": "Repaso: mi rutina",
+              "cefrLevel": "B2",
+              "scenario": "Situación comunicativa avanzada sobre la rutina diaria.",
+              "canDo": "Puedo argumentar y matizar sobre la rutina diaria.",
+              "grammarPoints": [
+                {
+                  "id": "gp-b2-hedging",
+                  "label": "Hedging",
+                  "description": "Matizar una opinión con I'm afraid, it seems o might."
+                },
+                {
+                  "id": "gp-b2-future-perfect",
+                  "label": "Future perfect",
+                  "description": "Will have + participio sitúa un resultado antes de una fecha."
+                }
+              ],
+              "vocabFrequencyBand": "3000-5000",
+              "culturalNotes": [
+                {
+                  "idiom": "donner un coup de main",
+                  "note": "Expresión para ofrecer ayuda.",
+                  "translation": "echar una mano"
+                }
+              ],
+              "microLesson": {
+                "title": "Repaso: mi rutina",
+                "goals": [
+                  "Usar vocabulario avanzado de la rutina diaria.",
+                  "Aplicar hedging y future perfect.",
+                  "Argumentar y matizar sobre la rutina diaria."
+                ],
+                "sections": [
+                  {
+                    "heading": "Lengua en contexto",
+                    "body": "Hedging: Matizar una opinión con I'm afraid, it seems o might. Future perfect: Will have + participio sitúa un resultado antes de una fecha.",
+                    "examples": [
+                      {
+                        "source": "Normalmente me levanto a las siete. Dicho esto, depende del contexto.",
+                        "target": "D'habitude, je me lève à sept heures. Cela dit, cela dépend du contexte."
+                      },
+                      {
+                        "source": "Normalmente desayuno con mi familia. En otras palabras, merece la pena considerarlo.",
+                        "target": "D'habitude, je prends le petit-déjeuner avec ma famille. En d'autres termes, cela vaut la peine d'être considéré."
+                      }
+                    ]
+                  }
+                ]
+              },
+              "glossary": [
+                {
+                  "term": "D'habitude, je me lève à sept heures. Cela dit, cela dépend du contexte.",
+                  "translations": [
+                    "Normalmente me levanto a las siete. Dicho esto, depende del contexto."
+                  ]
+                },
+                {
+                  "term": "D'habitude, je prends le petit-déjeuner avec ma famille. En d'autres termes, cela vaut la peine d'être considéré.",
+                  "translations": [
+                    "Normalmente desayuno con mi familia. En otras palabras, merece la pena considerarlo."
+                  ]
+                },
+                {
+                  "term": "D'habitude, je travaille depuis la maison. Je crains que ce soit plus compliqué.",
+                  "translations": [
+                    "Normalmente trabajo desde casa. Me temo que puede ser más complicado."
+                  ]
+                }
+              ],
+              "exercises": [
+                {
+                  "type": "MultipleChoice",
+                  "id": "es-fr-b2-u01-l01-e01",
+                  "question": "¿Cuál es la opción correcta para «Normalmente me levanto a las siete. Dicho esto, depende del contexto.»?",
+                  "options": [
+                    "D'habitude, je me lève à sept heures. Cela dit, cela dépend du contexte.",
+                    "D'habitude, je prends le petit-déjeuner avec ma famille. En d'autres termes, cela vaut la peine d'être considéré.",
+                    "D'habitude, je travaille depuis la maison. Je crains que ce soit plus compliqué."
+                  ],
+                  "correctIndex": 0,
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "«Normalmente me levanto a las siete. Dicho esto, depende del contexto.» se dice «D'habitude, je me lève à sept heures. Cela dit, cela dépend du contexte.».",
+                    "ruleRef": "gp-b2-hedging"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has elegido la traducción correcta."
+                  }
+                },
+                {
+                  "type": "OrderWords",
+                  "id": "es-fr-b2-u01-l01-e02",
+                  "tokens": [
+                    "je",
+                    "me",
+                    "lève",
+                    "à",
+                    "sept",
+                    "heures",
+                    "Cela",
+                    "dit",
+                    "cela",
+                    "dépend",
+                    "du",
+                    "contexte",
+                    "D'habitude"
+                  ],
+                  "answerTokens": [
+                    "D'habitude",
+                    "je",
+                    "me",
+                    "lève",
+                    "à",
+                    "sept",
+                    "heures",
+                    "Cela",
+                    "dit",
+                    "cela",
+                    "dépend",
+                    "du",
+                    "contexte"
+                  ],
+                  "sourcePhrase": "Normalmente me levanto a las siete. Dicho esto, depende del contexto.",
+                  "feedbackOnError": {
+                    "type": "word_order",
+                    "explanation": "El orden correcto es «D'habitude je me lève à sept heures Cela dit cela dépend du contexte».",
+                    "ruleRef": "gp-b2-hedging"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "El orden produce una frase natural."
+                  }
+                },
+                {
+                  "type": "ClozeDragDrop",
+                  "id": "es-fr-b2-u01-l01-e03",
+                  "passage": "{{b1}}, je me {{b2}} à sept heures",
+                  "blanks": [
+                    {
+                      "id": "b1",
+                      "answer": "D'habitude",
+                      "options": [
+                        "D'habitude",
+                        "sept",
+                        "heures"
+                      ]
+                    },
+                    {
+                      "id": "b2",
+                      "answer": "lève",
+                      "options": [
+                        "lève",
+                        "sept",
+                        "heures"
+                      ]
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "Las dos formas deben encajar con el contexto de la frase.",
+                    "ruleRef": "gp-b2-future-perfect"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Los dos huecos encajan con la situación."
+                  }
+                },
+                {
+                  "type": "SemanticMatch",
+                  "id": "es-fr-b2-u01-l01-e04",
+                  "instructions": "Clasifica la función comunicativa de cada intervención.",
+                  "pairs": [
+                    {
+                      "left": "D'habitude, je me lève à sept heures. Cela dit, cela dépend du contexte.",
+                      "right": "Planteamiento",
+                      "register": "formal",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    },
+                    {
+                      "left": "D'habitude, je prends le petit-déjeuner avec ma famille. En d'autres termes, cela vaut la peine d'être considéré.",
+                      "right": "Concesión",
+                      "register": "neutral",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    },
+                    {
+                      "left": "D'habitude, je travaille depuis la maison. Je crains que ce soit plus compliqué.",
+                      "right": "Conclusión",
+                      "register": "informal",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "Cada intervención cumple una función comunicativa distinta.",
+                    "ruleRef": "gp-b2-hedging"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has identificado la función de cada intervención."
+                  }
+                },
+                {
+                  "type": "SemanticMatch",
+                  "id": "es-fr-b2-u01-l01-e05",
+                  "instructions": "Distingue el registro de cada intervención.",
+                  "pairs": [
+                    {
+                      "left": "D'habitude, je me lève à sept heures. Cela dit, cela dépend du contexte.",
+                      "right": "Formal",
+                      "register": "formal",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    },
+                    {
+                      "left": "D'habitude, je prends le petit-déjeuner avec ma famille. En d'autres termes, cela vaut la peine d'être considéré.",
+                      "right": "Neutral",
+                      "register": "neutral",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    },
+                    {
+                      "left": "D'habitude, je travaille depuis la maison. Je crains que ce soit plus compliqué.",
+                      "right": "Informal",
+                      "register": "informal",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "register",
+                    "explanation": "El registro cambia según el contexto y la relación con el interlocutor.",
+                    "ruleRef": "gp-b2-future-perfect"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has distinguido el registro de cada intervención."
+                  }
+                },
+                {
+                  "type": "AudioOnlyPrompt",
+                  "id": "es-fr-b2-u01-l01-e06",
+                  "audioText": "D'habitude, je prends le petit-déjeuner avec ma famille. En d'autres termes, cela vaut la peine d'être considéré.",
+                  "question": "¿Qué ha dicho el hablante?",
+                  "options": [
+                    "D'habitude, je prends le petit-déjeuner avec ma famille. En d'autres termes, cela vaut la peine d'être considéré.",
+                    "D'habitude, je me lève à sept heures. Cela dit, cela dépend du contexte.",
+                    "D'habitude, je travaille depuis la maison. Je crains que ce soit plus compliqué."
+                  ],
+                  "correctIndex": 0,
+                  "allowSlowPlayback": true,
+                  "feedbackOnError": {
+                    "type": "comprehension",
+                    "explanation": "El audio dice «D'habitude, je prends le petit-déjeuner avec ma famille. En d'autres termes, cela vaut la peine d'être considéré.».",
+                    "ruleRef": "gp-b2-hedging"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has comprendido el mensaje del audio."
+                  }
+                },
+                {
+                  "type": "AudioOnlyPrompt",
+                  "id": "es-fr-b2-u01-l01-e07",
+                  "audioText": "D'habitude, je travaille depuis la maison. Je crains que ce soit plus compliqué.",
+                  "question": "¿Cuál es la idea principal?",
+                  "options": [
+                    "D'habitude, je travaille depuis la maison. Je crains que ce soit plus compliqué.",
+                    "D'habitude, je me lève à sept heures. Cela dit, cela dépend du contexte.",
+                    "D'habitude, je prends le petit-déjeuner avec ma famille. En d'autres termes, cela vaut la peine d'être considéré."
+                  ],
+                  "correctIndex": 0,
+                  "allowSlowPlayback": false,
+                  "feedbackOnError": {
+                    "type": "comprehension",
+                    "explanation": "El audio dice «D'habitude, je travaille depuis la maison. Je crains que ce soit plus compliqué.».",
+                    "ruleRef": "gp-b2-future-perfect"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has identificado la idea principal."
+                  }
+                },
+                {
+                  "type": "ListenType",
+                  "id": "es-fr-b2-u01-l01-e08",
+                  "audioText": "D'habitude, je travaille depuis la maison. Je crains que ce soit plus compliqué.",
+                  "transcription": "D'habitude, je travaille depuis la maison. Je crains que ce soit plus compliqué.",
+                  "feedbackOnError": {
+                    "type": "spelling",
+                    "explanation": "Escribe exactamente «D'habitude, je travaille depuis la maison. Je crains que ce soit plus compliqué.».",
+                    "ruleRef": "gp-b2-hedging"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La transcripción coincide con el audio."
+                  }
+                },
+                {
+                  "type": "SpeakRepeat",
+                  "id": "es-fr-b2-u01-l01-e09",
+                  "targetPhrase": "D'habitude, je travaille depuis la maison. Je crains que ce soit plus compliqué.",
+                  "audioText": "D'habitude, je travaille depuis la maison. Je crains que ce soit plus compliqué.",
+                  "feedbackOnError": {
+                    "type": "pronunciation",
+                    "explanation": "Repite «D'habitude, je travaille depuis la maison. Je crains que ce soit plus compliqué.» con claridad.",
+                    "ruleRef": "gp-b2-hedging"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La frase se entiende y mantiene el ritmo."
+                  }
+                },
+                {
+                  "type": "FreeSpeakingPrompt",
+                  "id": "es-fr-b2-u01-l01-e10",
+                  "prompt": "Argumenta y matiza una opinión sobre la rutina diaria.",
+                  "minTokens": 20,
+                  "conceptClusters": [
+                    [
+                      "D'habitude"
+                    ],
+                    [
+                      "lève"
+                    ],
+                    [
+                      "sept"
+                    ]
+                  ],
+                  "modelAnswer": "D'habitude, je me lève à sept heures. Cela dit, cela dépend du contexte. D'habitude, je prends le petit-déjeuner avec ma famille. En d'autres termes, cela vaut la peine d'être considéré. D'habitude, je travaille depuis la maison. Je crains que ce soit plus compliqué.",
+                  "selfAssessmentCriteria": [
+                    "¿La respuesta argumenta y responde a la tarea?",
+                    "¿Usa las dos estructuras gramaticales de la lección?",
+                    "¿Incluye una concesión o una matización?"
+                  ],
+                  "grammarRuleRefs": [
+                    "gp-b2-hedging",
+                    "gp-b2-future-perfect"
+                  ],
+                  "timeLimitSeconds": 90,
+                  "minWpm": 70,
+                  "maxWpm": 160,
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "La respuesta modelo desarrolla una opinión con matices y una concesión.",
+                    "ruleRef": "gp-b2-hedging"
+                  }
+                }
+              ]
+            },
+            {
+              "id": "es-fr-b2-u01-l02",
+              "title": "Un día ocupado",
+              "cefrLevel": "B2",
+              "scenario": "Situación comunicativa avanzada sobre un día de trabajo.",
+              "canDo": "Puedo argumentar y matizar sobre un día de trabajo.",
+              "grammarPoints": [
+                {
+                  "id": "gp-b2-hedging",
+                  "label": "Hedging",
+                  "description": "Matizar una opinión con I'm afraid, it seems o might."
+                },
+                {
+                  "id": "gp-b2-future-perfect",
+                  "label": "Future perfect",
+                  "description": "Will have + participio sitúa un resultado antes de una fecha."
+                }
+              ],
+              "vocabFrequencyBand": "3000-5000",
+              "culturalNotes": [
+                {
+                  "idiom": "être dans le coup",
+                  "note": "Expresión para estar al tanto.",
+                  "translation": "estar al tanto"
+                }
+              ],
+              "microLesson": {
+                "title": "Un día ocupado",
+                "goals": [
+                  "Usar vocabulario avanzado de un día de trabajo.",
+                  "Aplicar hedging y future perfect.",
+                  "Argumentar y matizar sobre un día de trabajo."
+                ],
+                "sections": [
+                  {
+                    "heading": "Lengua en contexto",
+                    "body": "Hedging: Matizar una opinión con I'm afraid, it seems o might. Future perfect: Will have + participio sitúa un resultado antes de una fecha.",
+                    "examples": [
+                      {
+                        "source": "Por la mañana voy al trabajo en autobús. En otras palabras, merece la pena considerarlo.",
+                        "target": "Le matin, je vais au travail en bus. En d'autres termes, cela vaut la peine d'être considéré."
+                      },
+                      {
+                        "source": "Por la tarde tengo una reunión. Me temo que puede ser más complicado.",
+                        "target": "L'après-midi, j'ai une réunion. Je crains que ce soit plus compliqué."
+                      }
+                    ]
+                  }
+                ]
+              },
+              "glossary": [
+                {
+                  "term": "Le matin, je vais au travail en bus. En d'autres termes, cela vaut la peine d'être considéré.",
+                  "translations": [
+                    "Por la mañana voy al trabajo en autobús. En otras palabras, merece la pena considerarlo."
+                  ]
+                },
+                {
+                  "term": "L'après-midi, j'ai une réunion. Je crains que ce soit plus compliqué.",
+                  "translations": [
+                    "Por la tarde tengo una reunión. Me temo que puede ser más complicado."
+                  ]
+                },
+                {
+                  "term": "Le soir, je dîne avec mes amis. Pour être honnête, j'ai des sentiments mitigés.",
+                  "translations": [
+                    "Por la noche ceno con mis amigos. Sinceramente, tengo sentimientos encontrados."
+                  ]
+                }
+              ],
+              "exercises": [
+                {
+                  "type": "MultipleChoice",
+                  "id": "es-fr-b2-u01-l02-e01",
+                  "question": "¿Cuál es la opción correcta para «Por la mañana voy al trabajo en autobús. En otras palabras, merece la pena considerarlo.»?",
+                  "options": [
+                    "Le matin, je vais au travail en bus. En d'autres termes, cela vaut la peine d'être considéré.",
+                    "L'après-midi, j'ai une réunion. Je crains que ce soit plus compliqué.",
+                    "Le soir, je dîne avec mes amis. Pour être honnête, j'ai des sentiments mitigés."
+                  ],
+                  "correctIndex": 0,
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "«Por la mañana voy al trabajo en autobús. En otras palabras, merece la pena considerarlo.» se dice «Le matin, je vais au travail en bus. En d'autres termes, cela vaut la peine d'être considéré.».",
+                    "ruleRef": "gp-b2-hedging"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has elegido la traducción correcta."
+                  }
+                },
+                {
+                  "type": "OrderWords",
+                  "id": "es-fr-b2-u01-l02-e02",
+                  "tokens": [
+                    "matin",
+                    "je",
+                    "vais",
+                    "au",
+                    "travail",
+                    "en",
+                    "bus",
+                    "En",
+                    "d'autres",
+                    "termes",
+                    "cela",
+                    "vaut",
+                    "la",
+                    "peine",
+                    "d'être",
+                    "considéré",
+                    "Le"
+                  ],
+                  "answerTokens": [
+                    "Le",
+                    "matin",
+                    "je",
+                    "vais",
+                    "au",
+                    "travail",
+                    "en",
+                    "bus",
+                    "En",
+                    "d'autres",
+                    "termes",
+                    "cela",
+                    "vaut",
+                    "la",
+                    "peine",
+                    "d'être",
+                    "considéré"
+                  ],
+                  "sourcePhrase": "Por la mañana voy al trabajo en autobús. En otras palabras, merece la pena considerarlo.",
+                  "feedbackOnError": {
+                    "type": "word_order",
+                    "explanation": "El orden correcto es «Le matin je vais au travail en bus En d'autres termes cela vaut la peine d'être considéré».",
+                    "ruleRef": "gp-b2-hedging"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "El orden produce una frase natural."
+                  }
+                },
+                {
+                  "type": "ClozeDragDrop",
+                  "id": "es-fr-b2-u01-l02-e03",
+                  "passage": "Le {{b1}}, je {{b2}} au travail en bus.",
+                  "blanks": [
+                    {
+                      "id": "b1",
+                      "answer": "matin",
+                      "options": [
+                        "matin",
+                        "travail",
+                        "bus"
+                      ]
+                    },
+                    {
+                      "id": "b2",
+                      "answer": "vais",
+                      "options": [
+                        "vais",
+                        "travail",
+                        "bus"
+                      ]
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "Las dos formas deben encajar con el contexto de la frase.",
+                    "ruleRef": "gp-b2-future-perfect"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Los dos huecos encajan con la situación."
+                  }
+                },
+                {
+                  "type": "SemanticMatch",
+                  "id": "es-fr-b2-u01-l02-e04",
+                  "instructions": "Clasifica la función comunicativa de cada intervención.",
+                  "pairs": [
+                    {
+                      "left": "Le matin, je vais au travail en bus. En d'autres termes, cela vaut la peine d'être considéré.",
+                      "right": "Planteamiento",
+                      "register": "formal",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    },
+                    {
+                      "left": "L'après-midi, j'ai une réunion. Je crains que ce soit plus compliqué.",
+                      "right": "Concesión",
+                      "register": "neutral",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    },
+                    {
+                      "left": "Le soir, je dîne avec mes amis. Pour être honnête, j'ai des sentiments mitigés.",
+                      "right": "Conclusión",
+                      "register": "informal",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "Cada intervención cumple una función comunicativa distinta.",
+                    "ruleRef": "gp-b2-hedging"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has identificado la función de cada intervención."
+                  }
+                },
+                {
+                  "type": "SemanticMatch",
+                  "id": "es-fr-b2-u01-l02-e05",
+                  "instructions": "Distingue el registro de cada intervención.",
+                  "pairs": [
+                    {
+                      "left": "Le matin, je vais au travail en bus. En d'autres termes, cela vaut la peine d'être considéré.",
+                      "right": "Formal",
+                      "register": "formal",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    },
+                    {
+                      "left": "L'après-midi, j'ai une réunion. Je crains que ce soit plus compliqué.",
+                      "right": "Neutral",
+                      "register": "neutral",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    },
+                    {
+                      "left": "Le soir, je dîne avec mes amis. Pour être honnête, j'ai des sentiments mitigés.",
+                      "right": "Informal",
+                      "register": "informal",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "register",
+                    "explanation": "El registro cambia según el contexto y la relación con el interlocutor.",
+                    "ruleRef": "gp-b2-future-perfect"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has distinguido el registro de cada intervención."
+                  }
+                },
+                {
+                  "type": "AudioOnlyPrompt",
+                  "id": "es-fr-b2-u01-l02-e06",
+                  "audioText": "L'après-midi, j'ai une réunion. Je crains que ce soit plus compliqué.",
+                  "question": "¿Qué ha dicho el hablante?",
+                  "options": [
+                    "L'après-midi, j'ai une réunion. Je crains que ce soit plus compliqué.",
+                    "Le matin, je vais au travail en bus. En d'autres termes, cela vaut la peine d'être considéré.",
+                    "Le soir, je dîne avec mes amis. Pour être honnête, j'ai des sentiments mitigés."
+                  ],
+                  "correctIndex": 0,
+                  "allowSlowPlayback": true,
+                  "feedbackOnError": {
+                    "type": "comprehension",
+                    "explanation": "El audio dice «L'après-midi, j'ai une réunion. Je crains que ce soit plus compliqué.».",
+                    "ruleRef": "gp-b2-hedging"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has comprendido el mensaje del audio."
+                  }
+                },
+                {
+                  "type": "AudioOnlyPrompt",
+                  "id": "es-fr-b2-u01-l02-e07",
+                  "audioText": "Le soir, je dîne avec mes amis. Pour être honnête, j'ai des sentiments mitigés.",
+                  "question": "¿Cuál es la idea principal?",
+                  "options": [
+                    "Le soir, je dîne avec mes amis. Pour être honnête, j'ai des sentiments mitigés.",
+                    "Le matin, je vais au travail en bus. En d'autres termes, cela vaut la peine d'être considéré.",
+                    "L'après-midi, j'ai une réunion. Je crains que ce soit plus compliqué."
+                  ],
+                  "correctIndex": 0,
+                  "allowSlowPlayback": false,
+                  "feedbackOnError": {
+                    "type": "comprehension",
+                    "explanation": "El audio dice «Le soir, je dîne avec mes amis. Pour être honnête, j'ai des sentiments mitigés.».",
+                    "ruleRef": "gp-b2-future-perfect"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has identificado la idea principal."
+                  }
+                },
+                {
+                  "type": "ListenType",
+                  "id": "es-fr-b2-u01-l02-e08",
+                  "audioText": "Le soir, je dîne avec mes amis. Pour être honnête, j'ai des sentiments mitigés.",
+                  "transcription": "Le soir, je dîne avec mes amis. Pour être honnête, j'ai des sentiments mitigés.",
+                  "feedbackOnError": {
+                    "type": "spelling",
+                    "explanation": "Escribe exactamente «Le soir, je dîne avec mes amis. Pour être honnête, j'ai des sentiments mitigés.».",
+                    "ruleRef": "gp-b2-hedging"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La transcripción coincide con el audio."
+                  }
+                },
+                {
+                  "type": "SpeakRepeat",
+                  "id": "es-fr-b2-u01-l02-e09",
+                  "targetPhrase": "Le soir, je dîne avec mes amis. Pour être honnête, j'ai des sentiments mitigés.",
+                  "audioText": "Le soir, je dîne avec mes amis. Pour être honnête, j'ai des sentiments mitigés.",
+                  "feedbackOnError": {
+                    "type": "pronunciation",
+                    "explanation": "Repite «Le soir, je dîne avec mes amis. Pour être honnête, j'ai des sentiments mitigés.» con claridad.",
+                    "ruleRef": "gp-b2-hedging"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La frase se entiende y mantiene el ritmo."
+                  }
+                },
+                {
+                  "type": "FreeSpeakingPrompt",
+                  "id": "es-fr-b2-u01-l02-e10",
+                  "prompt": "Argumenta y matiza una opinión sobre un día de trabajo.",
+                  "minTokens": 20,
+                  "conceptClusters": [
+                    [
+                      "matin"
+                    ],
+                    [
+                      "vais"
+                    ],
+                    [
+                      "travail"
+                    ]
+                  ],
+                  "modelAnswer": "Le matin, je vais au travail en bus. En d'autres termes, cela vaut la peine d'être considéré. L'après-midi, j'ai une réunion. Je crains que ce soit plus compliqué. Le soir, je dîne avec mes amis. Pour être honnête, j'ai des sentiments mitigés.",
+                  "selfAssessmentCriteria": [
+                    "¿La respuesta argumenta y responde a la tarea?",
+                    "¿Usa las dos estructuras gramaticales de la lección?",
+                    "¿Incluye una concesión o una matización?"
+                  ],
+                  "grammarRuleRefs": [
+                    "gp-b2-hedging",
+                    "gp-b2-future-perfect"
+                  ],
+                  "timeLimitSeconds": 90,
+                  "minWpm": 70,
+                  "maxWpm": 160,
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "La respuesta modelo desarrolla una opinión con matices y una concesión.",
+                    "ruleRef": "gp-b2-hedging"
+                  }
+                }
+              ]
+            },
+            {
+              "id": "es-fr-b2-u01-l03",
+              "title": "Verbos de rutina",
+              "cefrLevel": "B2",
+              "scenario": "Situación comunicativa avanzada sobre los objetos de la rutina.",
+              "canDo": "Puedo argumentar y matizar sobre los objetos de la rutina.",
+              "grammarPoints": [
+                {
+                  "id": "gp-b2-hedging",
+                  "label": "Hedging",
+                  "description": "Matizar una opinión con I'm afraid, it seems o might."
+                },
+                {
+                  "id": "gp-b2-future-perfect",
+                  "label": "Future perfect",
+                  "description": "Will have + participio sitúa un resultado antes de una fecha."
+                }
+              ],
+              "vocabFrequencyBand": "3000-5000",
+              "culturalNotes": [
+                {
+                  "idiom": "se mettre au travail",
+                  "note": "Expresión para empezar a trabajar.",
+                  "translation": "ponerse a trabajar"
+                }
+              ],
+              "microLesson": {
+                "title": "Verbos de rutina",
+                "goals": [
+                  "Usar vocabulario avanzado de los objetos de la rutina.",
+                  "Aplicar hedging y future perfect.",
+                  "Argumentar y matizar sobre los objetos de la rutina."
+                ],
+                "sections": [
+                  {
+                    "heading": "Lengua en contexto",
+                    "body": "Hedging: Matizar una opinión con I'm afraid, it seems o might. Future perfect: Will have + participio sitúa un resultado antes de una fecha.",
+                    "examples": [
+                      {
+                        "source": "Necesito un despertador. Me temo que puede ser más complicado.",
+                        "target": "J'ai besoin d'un réveil. Je crains que ce soit plus compliqué."
+                      },
+                      {
+                        "source": "Necesito un billete de autobús. Sinceramente, tengo sentimientos encontrados.",
+                        "target": "J'ai besoin d'un ticket de bus. Pour être honnête, j'ai des sentiments mitigés."
+                      }
+                    ]
+                  }
+                ]
+              },
+              "glossary": [
+                {
+                  "term": "J'ai besoin d'un réveil. Je crains que ce soit plus compliqué.",
+                  "translations": [
+                    "Necesito un despertador. Me temo que puede ser más complicado."
+                  ]
+                },
+                {
+                  "term": "J'ai besoin d'un ticket de bus. Pour être honnête, j'ai des sentiments mitigés.",
+                  "translations": [
+                    "Necesito un billete de autobús. Sinceramente, tengo sentimientos encontrados."
+                  ]
+                },
+                {
+                  "term": "J'ai besoin d'une douche chaude. Il semble que cela change.",
+                  "translations": [
+                    "Necesito una ducha caliente. Parece que esto está cambiando."
+                  ]
+                }
+              ],
+              "exercises": [
+                {
+                  "type": "MultipleChoice",
+                  "id": "es-fr-b2-u01-l03-e01",
+                  "question": "¿Cuál es la opción correcta para «Necesito un despertador. Me temo que puede ser más complicado.»?",
+                  "options": [
+                    "J'ai besoin d'un réveil. Je crains que ce soit plus compliqué.",
+                    "J'ai besoin d'un ticket de bus. Pour être honnête, j'ai des sentiments mitigés.",
+                    "J'ai besoin d'une douche chaude. Il semble que cela change."
+                  ],
+                  "correctIndex": 0,
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "«Necesito un despertador. Me temo que puede ser más complicado.» se dice «J'ai besoin d'un réveil. Je crains que ce soit plus compliqué.».",
+                    "ruleRef": "gp-b2-hedging"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has elegido la traducción correcta."
+                  }
+                },
+                {
+                  "type": "OrderWords",
+                  "id": "es-fr-b2-u01-l03-e02",
+                  "tokens": [
+                    "besoin",
+                    "d'un",
+                    "réveil",
+                    "Je",
+                    "crains",
+                    "que",
+                    "ce",
+                    "soit",
+                    "plus",
+                    "compliqué",
+                    "J'ai"
+                  ],
+                  "answerTokens": [
+                    "J'ai",
+                    "besoin",
+                    "d'un",
+                    "réveil",
+                    "Je",
+                    "crains",
+                    "que",
+                    "ce",
+                    "soit",
+                    "plus",
+                    "compliqué"
+                  ],
+                  "sourcePhrase": "Necesito un despertador. Me temo que puede ser más complicado.",
+                  "feedbackOnError": {
+                    "type": "word_order",
+                    "explanation": "El orden correcto es «J'ai besoin d'un réveil Je crains que ce soit plus compliqué».",
+                    "ruleRef": "gp-b2-hedging"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "El orden produce una frase natural."
+                  }
+                },
+                {
+                  "type": "ClozeDragDrop",
+                  "id": "es-fr-b2-u01-l03-e03",
+                  "passage": "{{b1}} {{b2}} d'un réveil",
+                  "blanks": [
+                    {
+                      "id": "b1",
+                      "answer": "J'ai",
+                      "options": [
+                        "J'ai",
+                        "d'un",
+                        "réveil"
+                      ]
+                    },
+                    {
+                      "id": "b2",
+                      "answer": "besoin",
+                      "options": [
+                        "besoin",
+                        "d'un",
+                        "réveil"
+                      ]
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "Las dos formas deben encajar con el contexto de la frase.",
+                    "ruleRef": "gp-b2-future-perfect"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Los dos huecos encajan con la situación."
+                  }
+                },
+                {
+                  "type": "SemanticMatch",
+                  "id": "es-fr-b2-u01-l03-e04",
+                  "instructions": "Clasifica la función comunicativa de cada intervención.",
+                  "pairs": [
+                    {
+                      "left": "J'ai besoin d'un réveil. Je crains que ce soit plus compliqué.",
+                      "right": "Planteamiento",
+                      "register": "formal",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    },
+                    {
+                      "left": "J'ai besoin d'un ticket de bus. Pour être honnête, j'ai des sentiments mitigés.",
+                      "right": "Concesión",
+                      "register": "neutral",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    },
+                    {
+                      "left": "J'ai besoin d'une douche chaude. Il semble que cela change.",
+                      "right": "Conclusión",
+                      "register": "informal",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "Cada intervención cumple una función comunicativa distinta.",
+                    "ruleRef": "gp-b2-hedging"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has identificado la función de cada intervención."
+                  }
+                },
+                {
+                  "type": "SemanticMatch",
+                  "id": "es-fr-b2-u01-l03-e05",
+                  "instructions": "Distingue el registro de cada intervención.",
+                  "pairs": [
+                    {
+                      "left": "J'ai besoin d'un réveil. Je crains que ce soit plus compliqué.",
+                      "right": "Formal",
+                      "register": "formal",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    },
+                    {
+                      "left": "J'ai besoin d'un ticket de bus. Pour être honnête, j'ai des sentiments mitigés.",
+                      "right": "Neutral",
+                      "register": "neutral",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    },
+                    {
+                      "left": "J'ai besoin d'une douche chaude. Il semble que cela change.",
+                      "right": "Informal",
+                      "register": "informal",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "register",
+                    "explanation": "El registro cambia según el contexto y la relación con el interlocutor.",
+                    "ruleRef": "gp-b2-future-perfect"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has distinguido el registro de cada intervención."
+                  }
+                },
+                {
+                  "type": "AudioOnlyPrompt",
+                  "id": "es-fr-b2-u01-l03-e06",
+                  "audioText": "J'ai besoin d'un ticket de bus. Pour être honnête, j'ai des sentiments mitigés.",
+                  "question": "¿Qué ha dicho el hablante?",
+                  "options": [
+                    "J'ai besoin d'un ticket de bus. Pour être honnête, j'ai des sentiments mitigés.",
+                    "J'ai besoin d'un réveil. Je crains que ce soit plus compliqué.",
+                    "J'ai besoin d'une douche chaude. Il semble que cela change."
+                  ],
+                  "correctIndex": 0,
+                  "allowSlowPlayback": true,
+                  "feedbackOnError": {
+                    "type": "comprehension",
+                    "explanation": "El audio dice «J'ai besoin d'un ticket de bus. Pour être honnête, j'ai des sentiments mitigés.».",
+                    "ruleRef": "gp-b2-hedging"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has comprendido el mensaje del audio."
+                  }
+                },
+                {
+                  "type": "AudioOnlyPrompt",
+                  "id": "es-fr-b2-u01-l03-e07",
+                  "audioText": "J'ai besoin d'une douche chaude. Il semble que cela change.",
+                  "question": "¿Cuál es la idea principal?",
+                  "options": [
+                    "J'ai besoin d'une douche chaude. Il semble que cela change.",
+                    "J'ai besoin d'un réveil. Je crains que ce soit plus compliqué.",
+                    "J'ai besoin d'un ticket de bus. Pour être honnête, j'ai des sentiments mitigés."
+                  ],
+                  "correctIndex": 0,
+                  "allowSlowPlayback": false,
+                  "feedbackOnError": {
+                    "type": "comprehension",
+                    "explanation": "El audio dice «J'ai besoin d'une douche chaude. Il semble que cela change.».",
+                    "ruleRef": "gp-b2-future-perfect"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has identificado la idea principal."
+                  }
+                },
+                {
+                  "type": "ListenType",
+                  "id": "es-fr-b2-u01-l03-e08",
+                  "audioText": "J'ai besoin d'une douche chaude. Il semble que cela change.",
+                  "transcription": "J'ai besoin d'une douche chaude. Il semble que cela change.",
+                  "feedbackOnError": {
+                    "type": "spelling",
+                    "explanation": "Escribe exactamente «J'ai besoin d'une douche chaude. Il semble que cela change.».",
+                    "ruleRef": "gp-b2-hedging"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La transcripción coincide con el audio."
+                  }
+                },
+                {
+                  "type": "SpeakRepeat",
+                  "id": "es-fr-b2-u01-l03-e09",
+                  "targetPhrase": "J'ai besoin d'une douche chaude. Il semble que cela change.",
+                  "audioText": "J'ai besoin d'une douche chaude. Il semble que cela change.",
+                  "feedbackOnError": {
+                    "type": "pronunciation",
+                    "explanation": "Repite «J'ai besoin d'une douche chaude. Il semble que cela change.» con claridad.",
+                    "ruleRef": "gp-b2-hedging"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La frase se entiende y mantiene el ritmo."
+                  }
+                },
+                {
+                  "type": "FreeSpeakingPrompt",
+                  "id": "es-fr-b2-u01-l03-e10",
+                  "prompt": "Argumenta y matiza una opinión sobre los objetos de la rutina.",
+                  "minTokens": 20,
+                  "conceptClusters": [
+                    [
+                      "J'ai"
+                    ],
+                    [
+                      "besoin"
+                    ],
+                    [
+                      "d'un"
+                    ]
+                  ],
+                  "modelAnswer": "J'ai besoin d'un réveil. Je crains que ce soit plus compliqué. J'ai besoin d'un ticket de bus. Pour être honnête, j'ai des sentiments mitigés. J'ai besoin d'une douche chaude. Il semble que cela change.",
+                  "selfAssessmentCriteria": [
+                    "¿La respuesta argumenta y responde a la tarea?",
+                    "¿Usa las dos estructuras gramaticales de la lección?",
+                    "¿Incluye una concesión o una matización?"
+                  ],
+                  "grammarRuleRefs": [
+                    "gp-b2-hedging",
+                    "gp-b2-future-perfect"
+                  ],
+                  "timeLimitSeconds": 90,
+                  "minWpm": 70,
+                  "maxWpm": 160,
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "La respuesta modelo desarrolla una opinión con matices y una concesión.",
+                    "ruleRef": "gp-b2-hedging"
+                  }
+                }
+              ]
+            },
+            {
+              "id": "es-fr-b2-u01-l04",
+              "title": "Pasado simple regular",
+              "cefrLevel": "B2",
+              "scenario": "Situación comunicativa avanzada sobre las acciones de ayer.",
+              "canDo": "Puedo argumentar y matizar sobre las acciones de ayer.",
+              "grammarPoints": [
+                {
+                  "id": "gp-b2-hedging",
+                  "label": "Hedging",
+                  "description": "Matizar una opinión con I'm afraid, it seems o might."
+                },
+                {
+                  "id": "gp-b2-future-perfect",
+                  "label": "Future perfect",
+                  "description": "Will have + participio sitúa un resultado antes de una fecha."
+                }
+              ],
+              "vocabFrequencyBand": "3000-5000",
+              "culturalNotes": [
+                {
+                  "idiom": "fermer les yeux",
+                  "note": "Expresión para ignorar algo a propósito.",
+                  "translation": "hacer la vista gorda"
+                }
+              ],
+              "microLesson": {
+                "title": "Pasado simple regular",
+                "goals": [
+                  "Usar vocabulario avanzado de las acciones de ayer.",
+                  "Aplicar hedging y future perfect.",
+                  "Argumentar y matizar sobre las acciones de ayer."
+                ],
+                "sections": [
+                  {
+                    "heading": "Lengua en contexto",
+                    "body": "Hedging: Matizar una opinión con I'm afraid, it seems o might. Future perfect: Will have + participio sitúa un resultado antes de una fecha.",
+                    "examples": [
+                      {
+                        "source": "Ayer visité a mi familia. Sinceramente, tengo sentimientos encontrados.",
+                        "target": "Hier, j'ai visité ma famille. Pour être honnête, j'ai des sentiments mitigés."
+                      },
+                      {
+                        "source": "Ayer caminé por el parque. Parece que esto está cambiando.",
+                        "target": "Hier, je me suis promené dans le parc. Il semble que cela change."
+                      }
+                    ]
+                  }
+                ]
+              },
+              "glossary": [
+                {
+                  "term": "Hier, j'ai visité ma famille. Pour être honnête, j'ai des sentiments mitigés.",
+                  "translations": [
+                    "Ayer visité a mi familia. Sinceramente, tengo sentimientos encontrados."
+                  ]
+                },
+                {
+                  "term": "Hier, je me suis promené dans le parc. Il semble que cela change.",
+                  "translations": [
+                    "Ayer caminé por el parque. Parece que esto está cambiando."
+                  ]
+                },
+                {
+                  "term": "Hier, j'ai dîné dans un restaurant. De mon point de vue, c'est une option raisonnable.",
+                  "translations": [
+                    "Ayer cené en un restaurante. Desde mi punto de vista, es una opción razonable."
+                  ]
+                }
+              ],
+              "exercises": [
+                {
+                  "type": "MultipleChoice",
+                  "id": "es-fr-b2-u01-l04-e01",
+                  "question": "¿Cuál es la opción correcta para «Ayer visité a mi familia. Sinceramente, tengo sentimientos encontrados.»?",
+                  "options": [
+                    "Hier, j'ai visité ma famille. Pour être honnête, j'ai des sentiments mitigés.",
+                    "Hier, je me suis promené dans le parc. Il semble que cela change.",
+                    "Hier, j'ai dîné dans un restaurant. De mon point de vue, c'est une option raisonnable."
+                  ],
+                  "correctIndex": 0,
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "«Ayer visité a mi familia. Sinceramente, tengo sentimientos encontrados.» se dice «Hier, j'ai visité ma famille. Pour être honnête, j'ai des sentiments mitigés.».",
+                    "ruleRef": "gp-b2-hedging"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has elegido la traducción correcta."
+                  }
+                },
+                {
+                  "type": "OrderWords",
+                  "id": "es-fr-b2-u01-l04-e02",
+                  "tokens": [
+                    "j'ai",
+                    "visité",
+                    "ma",
+                    "famille",
+                    "Pour",
+                    "être",
+                    "honnête",
+                    "j'ai",
+                    "des",
+                    "sentiments",
+                    "mitigés",
+                    "Hier"
+                  ],
+                  "answerTokens": [
+                    "Hier",
+                    "j'ai",
+                    "visité",
+                    "ma",
+                    "famille",
+                    "Pour",
+                    "être",
+                    "honnête",
+                    "j'ai",
+                    "des",
+                    "sentiments",
+                    "mitigés"
+                  ],
+                  "sourcePhrase": "Ayer visité a mi familia. Sinceramente, tengo sentimientos encontrados.",
+                  "feedbackOnError": {
+                    "type": "word_order",
+                    "explanation": "El orden correcto es «Hier j'ai visité ma famille Pour être honnête j'ai des sentiments mitigés».",
+                    "ruleRef": "gp-b2-hedging"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "El orden produce una frase natural."
+                  }
+                },
+                {
+                  "type": "ClozeDragDrop",
+                  "id": "es-fr-b2-u01-l04-e03",
+                  "passage": "{{b1}}, {{b2}} visité ma famille",
+                  "blanks": [
+                    {
+                      "id": "b1",
+                      "answer": "Hier",
+                      "options": [
+                        "Hier",
+                        "visité",
+                        "famille"
+                      ]
+                    },
+                    {
+                      "id": "b2",
+                      "answer": "j'ai",
+                      "options": [
+                        "j'ai",
+                        "visité",
+                        "famille"
+                      ]
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "Las dos formas deben encajar con el contexto de la frase.",
+                    "ruleRef": "gp-b2-future-perfect"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Los dos huecos encajan con la situación."
+                  }
+                },
+                {
+                  "type": "SemanticMatch",
+                  "id": "es-fr-b2-u01-l04-e04",
+                  "instructions": "Clasifica la función comunicativa de cada intervención.",
+                  "pairs": [
+                    {
+                      "left": "Hier, j'ai visité ma famille. Pour être honnête, j'ai des sentiments mitigés.",
+                      "right": "Planteamiento",
+                      "register": "formal",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    },
+                    {
+                      "left": "Hier, je me suis promené dans le parc. Il semble que cela change.",
+                      "right": "Concesión",
+                      "register": "neutral",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    },
+                    {
+                      "left": "Hier, j'ai dîné dans un restaurant. De mon point de vue, c'est une option raisonnable.",
+                      "right": "Conclusión",
+                      "register": "informal",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "Cada intervención cumple una función comunicativa distinta.",
+                    "ruleRef": "gp-b2-hedging"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has identificado la función de cada intervención."
+                  }
+                },
+                {
+                  "type": "SemanticMatch",
+                  "id": "es-fr-b2-u01-l04-e05",
+                  "instructions": "Distingue el registro de cada intervención.",
+                  "pairs": [
+                    {
+                      "left": "Hier, j'ai visité ma famille. Pour être honnête, j'ai des sentiments mitigés.",
+                      "right": "Formal",
+                      "register": "formal",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    },
+                    {
+                      "left": "Hier, je me suis promené dans le parc. Il semble que cela change.",
+                      "right": "Neutral",
+                      "register": "neutral",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    },
+                    {
+                      "left": "Hier, j'ai dîné dans un restaurant. De mon point de vue, c'est une option raisonnable.",
+                      "right": "Informal",
+                      "register": "informal",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "register",
+                    "explanation": "El registro cambia según el contexto y la relación con el interlocutor.",
+                    "ruleRef": "gp-b2-future-perfect"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has distinguido el registro de cada intervención."
+                  }
+                },
+                {
+                  "type": "AudioOnlyPrompt",
+                  "id": "es-fr-b2-u01-l04-e06",
+                  "audioText": "Hier, je me suis promené dans le parc. Il semble que cela change.",
+                  "question": "¿Qué ha dicho el hablante?",
+                  "options": [
+                    "Hier, je me suis promené dans le parc. Il semble que cela change.",
+                    "Hier, j'ai visité ma famille. Pour être honnête, j'ai des sentiments mitigés.",
+                    "Hier, j'ai dîné dans un restaurant. De mon point de vue, c'est une option raisonnable."
+                  ],
+                  "correctIndex": 0,
+                  "allowSlowPlayback": true,
+                  "feedbackOnError": {
+                    "type": "comprehension",
+                    "explanation": "El audio dice «Hier, je me suis promené dans le parc. Il semble que cela change.».",
+                    "ruleRef": "gp-b2-hedging"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has comprendido el mensaje del audio."
+                  }
+                },
+                {
+                  "type": "AudioOnlyPrompt",
+                  "id": "es-fr-b2-u01-l04-e07",
+                  "audioText": "Hier, j'ai dîné dans un restaurant. De mon point de vue, c'est une option raisonnable.",
+                  "question": "¿Cuál es la idea principal?",
+                  "options": [
+                    "Hier, j'ai dîné dans un restaurant. De mon point de vue, c'est une option raisonnable.",
+                    "Hier, j'ai visité ma famille. Pour être honnête, j'ai des sentiments mitigés.",
+                    "Hier, je me suis promené dans le parc. Il semble que cela change."
+                  ],
+                  "correctIndex": 0,
+                  "allowSlowPlayback": false,
+                  "feedbackOnError": {
+                    "type": "comprehension",
+                    "explanation": "El audio dice «Hier, j'ai dîné dans un restaurant. De mon point de vue, c'est une option raisonnable.».",
+                    "ruleRef": "gp-b2-future-perfect"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has identificado la idea principal."
+                  }
+                },
+                {
+                  "type": "ListenType",
+                  "id": "es-fr-b2-u01-l04-e08",
+                  "audioText": "Hier, j'ai dîné dans un restaurant. De mon point de vue, c'est une option raisonnable.",
+                  "transcription": "Hier, j'ai dîné dans un restaurant. De mon point de vue, c'est une option raisonnable.",
+                  "feedbackOnError": {
+                    "type": "spelling",
+                    "explanation": "Escribe exactamente «Hier, j'ai dîné dans un restaurant. De mon point de vue, c'est une option raisonnable.».",
+                    "ruleRef": "gp-b2-hedging"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La transcripción coincide con el audio."
+                  }
+                },
+                {
+                  "type": "SpeakRepeat",
+                  "id": "es-fr-b2-u01-l04-e09",
+                  "targetPhrase": "Hier, j'ai dîné dans un restaurant. De mon point de vue, c'est une option raisonnable.",
+                  "audioText": "Hier, j'ai dîné dans un restaurant. De mon point de vue, c'est une option raisonnable.",
+                  "feedbackOnError": {
+                    "type": "pronunciation",
+                    "explanation": "Repite «Hier, j'ai dîné dans un restaurant. De mon point de vue, c'est une option raisonnable.» con claridad.",
+                    "ruleRef": "gp-b2-hedging"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La frase se entiende y mantiene el ritmo."
+                  }
+                },
+                {
+                  "type": "FreeSpeakingPrompt",
+                  "id": "es-fr-b2-u01-l04-e10",
+                  "prompt": "Argumenta y matiza una opinión sobre las acciones de ayer.",
+                  "minTokens": 20,
+                  "conceptClusters": [
+                    [
+                      "Hier"
+                    ],
+                    [
+                      "j'ai"
+                    ],
+                    [
+                      "visité"
+                    ]
+                  ],
+                  "modelAnswer": "Hier, j'ai visité ma famille. Pour être honnête, j'ai des sentiments mitigés. Hier, je me suis promené dans le parc. Il semble que cela change. Hier, j'ai dîné dans un restaurant. De mon point de vue, c'est une option raisonnable.",
+                  "selfAssessmentCriteria": [
+                    "¿La respuesta argumenta y responde a la tarea?",
+                    "¿Usa las dos estructuras gramaticales de la lección?",
+                    "¿Incluye una concesión o una matización?"
+                  ],
+                  "grammarRuleRefs": [
+                    "gp-b2-hedging",
+                    "gp-b2-future-perfect"
+                  ],
+                  "timeLimitSeconds": 90,
+                  "minWpm": 70,
+                  "maxWpm": 160,
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "La respuesta modelo desarrolla una opinión con matices y una concesión.",
+                    "ruleRef": "gp-b2-hedging"
+                  }
+                }
+              ]
+            },
+            {
+              "id": "es-fr-b2-u01-l05",
+              "title": "Pasado simple irregular",
+              "cefrLevel": "B2",
+              "scenario": "Situación comunicativa avanzada sobre los recuerdos del fin de semana.",
+              "canDo": "Puedo argumentar y matizar sobre los recuerdos del fin de semana.",
+              "grammarPoints": [
+                {
+                  "id": "gp-b2-hedging",
+                  "label": "Hedging",
+                  "description": "Matizar una opinión con I'm afraid, it seems o might."
+                },
+                {
+                  "id": "gp-b2-future-perfect",
+                  "label": "Future perfect",
+                  "description": "Will have + participio sitúa un resultado antes de una fecha."
+                }
+              ],
+              "vocabFrequencyBand": "3000-5000",
+              "culturalNotes": [
+                {
+                  "idiom": "tailler une bavette",
+                  "note": "Expresión para conversar informalmente.",
+                  "translation": "charolar"
+                }
+              ],
+              "microLesson": {
+                "title": "Pasado simple irregular",
+                "goals": [
+                  "Usar vocabulario avanzado de los recuerdos del fin de semana.",
+                  "Aplicar hedging y future perfect.",
+                  "Argumentar y matizar sobre los recuerdos del fin de semana."
+                ],
+                "sections": [
+                  {
+                    "heading": "Lengua en contexto",
+                    "body": "Hedging: Matizar una opinión con I'm afraid, it seems o might. Future perfect: Will have + participio sitúa un resultado antes de una fecha.",
+                    "examples": [
+                      {
+                        "source": "Ayer fui al mercado. Parece que esto está cambiando.",
+                        "target": "Hier, je suis allé au marché. Il semble que cela change."
+                      },
+                      {
+                        "source": "Ayer hice la compra. Desde mi punto de vista, es una opción razonable.",
+                        "target": "Hier, j'ai fait les courses. De mon point de vue, c'est une option raisonnable."
+                      }
+                    ]
+                  }
+                ]
+              },
+              "glossary": [
+                {
+                  "term": "Hier, je suis allé au marché. Il semble que cela change.",
+                  "translations": [
+                    "Ayer fui al mercado. Parece que esto está cambiando."
+                  ]
+                },
+                {
+                  "term": "Hier, j'ai fait les courses. De mon point de vue, c'est une option raisonnable.",
+                  "translations": [
+                    "Ayer hice la compra. Desde mi punto de vista, es una opción razonable."
+                  ]
+                },
+                {
+                  "term": "Hier, j'ai vu mes amis. Néanmoins, il y a aussi des avantages.",
+                  "translations": [
+                    "Ayer vi a mis amigos. No obstante, también tiene ventajas."
+                  ]
+                }
+              ],
+              "exercises": [
+                {
+                  "type": "MultipleChoice",
+                  "id": "es-fr-b2-u01-l05-e01",
+                  "question": "¿Cuál es la opción correcta para «Ayer fui al mercado. Parece que esto está cambiando.»?",
+                  "options": [
+                    "Hier, je suis allé au marché. Il semble que cela change.",
+                    "Hier, j'ai fait les courses. De mon point de vue, c'est une option raisonnable.",
+                    "Hier, j'ai vu mes amis. Néanmoins, il y a aussi des avantages."
+                  ],
+                  "correctIndex": 0,
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "«Ayer fui al mercado. Parece que esto está cambiando.» se dice «Hier, je suis allé au marché. Il semble que cela change.».",
+                    "ruleRef": "gp-b2-hedging"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has elegido la traducción correcta."
+                  }
+                },
+                {
+                  "type": "OrderWords",
+                  "id": "es-fr-b2-u01-l05-e02",
+                  "tokens": [
+                    "je",
+                    "suis",
+                    "allé",
+                    "au",
+                    "marché",
+                    "Il",
+                    "semble",
+                    "que",
+                    "cela",
+                    "change",
+                    "Hier"
+                  ],
+                  "answerTokens": [
+                    "Hier",
+                    "je",
+                    "suis",
+                    "allé",
+                    "au",
+                    "marché",
+                    "Il",
+                    "semble",
+                    "que",
+                    "cela",
+                    "change"
+                  ],
+                  "sourcePhrase": "Ayer fui al mercado. Parece que esto está cambiando.",
+                  "feedbackOnError": {
+                    "type": "word_order",
+                    "explanation": "El orden correcto es «Hier je suis allé au marché Il semble que cela change».",
+                    "ruleRef": "gp-b2-hedging"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "El orden produce una frase natural."
+                  }
+                },
+                {
+                  "type": "ClozeDragDrop",
+                  "id": "es-fr-b2-u01-l05-e03",
+                  "passage": "{{b1}}, je {{b2}} allé au marché",
+                  "blanks": [
+                    {
+                      "id": "b1",
+                      "answer": "Hier",
+                      "options": [
+                        "Hier",
+                        "allé",
+                        "marché"
+                      ]
+                    },
+                    {
+                      "id": "b2",
+                      "answer": "suis",
+                      "options": [
+                        "suis",
+                        "allé",
+                        "marché"
+                      ]
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "Las dos formas deben encajar con el contexto de la frase.",
+                    "ruleRef": "gp-b2-future-perfect"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Los dos huecos encajan con la situación."
+                  }
+                },
+                {
+                  "type": "SemanticMatch",
+                  "id": "es-fr-b2-u01-l05-e04",
+                  "instructions": "Clasifica la función comunicativa de cada intervención.",
+                  "pairs": [
+                    {
+                      "left": "Hier, je suis allé au marché. Il semble que cela change.",
+                      "right": "Planteamiento",
+                      "register": "formal",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    },
+                    {
+                      "left": "Hier, j'ai fait les courses. De mon point de vue, c'est une option raisonnable.",
+                      "right": "Concesión",
+                      "register": "neutral",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    },
+                    {
+                      "left": "Hier, j'ai vu mes amis. Néanmoins, il y a aussi des avantages.",
+                      "right": "Conclusión",
+                      "register": "informal",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "Cada intervención cumple una función comunicativa distinta.",
+                    "ruleRef": "gp-b2-hedging"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has identificado la función de cada intervención."
+                  }
+                },
+                {
+                  "type": "SemanticMatch",
+                  "id": "es-fr-b2-u01-l05-e05",
+                  "instructions": "Distingue el registro de cada intervención.",
+                  "pairs": [
+                    {
+                      "left": "Hier, je suis allé au marché. Il semble que cela change.",
+                      "right": "Formal",
+                      "register": "formal",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    },
+                    {
+                      "left": "Hier, j'ai fait les courses. De mon point de vue, c'est une option raisonnable.",
+                      "right": "Neutral",
+                      "register": "neutral",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    },
+                    {
+                      "left": "Hier, j'ai vu mes amis. Néanmoins, il y a aussi des avantages.",
+                      "right": "Informal",
+                      "register": "informal",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "register",
+                    "explanation": "El registro cambia según el contexto y la relación con el interlocutor.",
+                    "ruleRef": "gp-b2-future-perfect"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has distinguido el registro de cada intervención."
+                  }
+                },
+                {
+                  "type": "AudioOnlyPrompt",
+                  "id": "es-fr-b2-u01-l05-e06",
+                  "audioText": "Hier, j'ai fait les courses. De mon point de vue, c'est une option raisonnable.",
+                  "question": "¿Qué ha dicho el hablante?",
+                  "options": [
+                    "Hier, j'ai fait les courses. De mon point de vue, c'est une option raisonnable.",
+                    "Hier, je suis allé au marché. Il semble que cela change.",
+                    "Hier, j'ai vu mes amis. Néanmoins, il y a aussi des avantages."
+                  ],
+                  "correctIndex": 0,
+                  "allowSlowPlayback": true,
+                  "feedbackOnError": {
+                    "type": "comprehension",
+                    "explanation": "El audio dice «Hier, j'ai fait les courses. De mon point de vue, c'est une option raisonnable.».",
+                    "ruleRef": "gp-b2-hedging"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has comprendido el mensaje del audio."
+                  }
+                },
+                {
+                  "type": "AudioOnlyPrompt",
+                  "id": "es-fr-b2-u01-l05-e07",
+                  "audioText": "Hier, j'ai vu mes amis. Néanmoins, il y a aussi des avantages.",
+                  "question": "¿Cuál es la idea principal?",
+                  "options": [
+                    "Hier, j'ai vu mes amis. Néanmoins, il y a aussi des avantages.",
+                    "Hier, je suis allé au marché. Il semble que cela change.",
+                    "Hier, j'ai fait les courses. De mon point de vue, c'est une option raisonnable."
+                  ],
+                  "correctIndex": 0,
+                  "allowSlowPlayback": false,
+                  "feedbackOnError": {
+                    "type": "comprehension",
+                    "explanation": "El audio dice «Hier, j'ai vu mes amis. Néanmoins, il y a aussi des avantages.».",
+                    "ruleRef": "gp-b2-future-perfect"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has identificado la idea principal."
+                  }
+                },
+                {
+                  "type": "ListenType",
+                  "id": "es-fr-b2-u01-l05-e08",
+                  "audioText": "Hier, j'ai vu mes amis. Néanmoins, il y a aussi des avantages.",
+                  "transcription": "Hier, j'ai vu mes amis. Néanmoins, il y a aussi des avantages.",
+                  "feedbackOnError": {
+                    "type": "spelling",
+                    "explanation": "Escribe exactamente «Hier, j'ai vu mes amis. Néanmoins, il y a aussi des avantages.».",
+                    "ruleRef": "gp-b2-hedging"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La transcripción coincide con el audio."
+                  }
+                },
+                {
+                  "type": "SpeakRepeat",
+                  "id": "es-fr-b2-u01-l05-e09",
+                  "targetPhrase": "Hier, j'ai vu mes amis. Néanmoins, il y a aussi des avantages.",
+                  "audioText": "Hier, j'ai vu mes amis. Néanmoins, il y a aussi des avantages.",
+                  "feedbackOnError": {
+                    "type": "pronunciation",
+                    "explanation": "Repite «Hier, j'ai vu mes amis. Néanmoins, il y a aussi des avantages.» con claridad.",
+                    "ruleRef": "gp-b2-hedging"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La frase se entiende y mantiene el ritmo."
+                  }
+                },
+                {
+                  "type": "FreeSpeakingPrompt",
+                  "id": "es-fr-b2-u01-l05-e10",
+                  "prompt": "Argumenta y matiza una opinión sobre los recuerdos del fin de semana.",
+                  "minTokens": 20,
+                  "conceptClusters": [
+                    [
+                      "Hier"
+                    ],
+                    [
+                      "suis"
+                    ],
+                    [
+                      "allé"
+                    ]
+                  ],
+                  "modelAnswer": "Hier, je suis allé au marché. Il semble que cela change. Hier, j'ai fait les courses. De mon point de vue, c'est une option raisonnable. Hier, j'ai vu mes amis. Néanmoins, il y a aussi des avantages.",
+                  "selfAssessmentCriteria": [
+                    "¿La respuesta argumenta y responde a la tarea?",
+                    "¿Usa las dos estructuras gramaticales de la lección?",
+                    "¿Incluye una concesión o una matización?"
+                  ],
+                  "grammarRuleRefs": [
+                    "gp-b2-hedging",
+                    "gp-b2-future-perfect"
+                  ],
+                  "timeLimitSeconds": 90,
+                  "minWpm": 70,
+                  "maxWpm": 160,
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "La respuesta modelo desarrolla una opinión con matices y una concesión.",
+                    "ruleRef": "gp-b2-hedging"
+                  }
+                }
+              ]
+            },
+            {
+              "id": "es-fr-b2-u01-l06",
+              "title": "Contar el fin de semana",
+              "cefrLevel": "B2",
+              "scenario": "Situación comunicativa avanzada sobre el fin de semana.",
+              "canDo": "Puedo argumentar y matizar sobre el fin de semana.",
+              "grammarPoints": [
+                {
+                  "id": "gp-b2-hedging",
+                  "label": "Hedging",
+                  "description": "Matizar una opinión con I'm afraid, it seems o might."
+                },
+                {
+                  "id": "gp-b2-future-perfect",
+                  "label": "Future perfect",
+                  "description": "Will have + participio sitúa un resultado antes de una fecha."
+                }
+              ],
+              "vocabFrequencyBand": "3000-5000",
+              "culturalNotes": [
+                {
+                  "idiom": "percuter",
+                  "note": "Expresión para comprender algo de repente.",
+                  "translation": "caer en la cuenta"
+                }
+              ],
+              "microLesson": {
+                "title": "Contar el fin de semana",
+                "goals": [
+                  "Usar vocabulario avanzado de el fin de semana.",
+                  "Aplicar hedging y future perfect.",
+                  "Argumentar y matizar sobre el fin de semana."
+                ],
+                "sections": [
+                  {
+                    "heading": "Lengua en contexto",
+                    "body": "Hedging: Matizar una opinión con I'm afraid, it seems o might. Future perfect: Will have + participio sitúa un resultado antes de una fecha.",
+                    "examples": [
+                      {
+                        "source": "El sábado jugué al fútbol con mis amigos. Desde mi punto de vista, es una opción razonable.",
+                        "target": "Samedi, j'ai joué au football avec mes amis. De mon point de vue, c'est une option raisonnable."
+                      },
+                      {
+                        "source": "El sábado leí un libro en casa. No obstante, también tiene ventajas.",
+                        "target": "Samedi, j'ai lu un livre à la maison. Néanmoins, il y a aussi des avantages."
+                      }
+                    ]
+                  }
+                ]
+              },
+              "glossary": [
+                {
+                  "term": "Samedi, j'ai joué au football avec mes amis. De mon point de vue, c'est une option raisonnable.",
+                  "translations": [
+                    "El sábado jugué al fútbol con mis amigos. Desde mi punto de vista, es una opción razonable."
+                  ]
+                },
+                {
+                  "term": "Samedi, j'ai lu un livre à la maison. Néanmoins, il y a aussi des avantages.",
+                  "translations": [
+                    "El sábado leí un libro en casa. No obstante, también tiene ventajas."
+                  ]
+                },
+                {
+                  "term": "Samedi, j'ai écouté de la musique au parc. En fin de compte, il faut prioriser.",
+                  "translations": [
+                    "El sábado escuché música en el parque. A fin de cuentas, hay que priorizar."
+                  ]
+                }
+              ],
+              "exercises": [
+                {
+                  "type": "MultipleChoice",
+                  "id": "es-fr-b2-u01-l06-e01",
+                  "question": "¿Cuál es la opción correcta para «El sábado jugué al fútbol con mis amigos. Desde mi punto de vista, es una opción razonable.»?",
+                  "options": [
+                    "Samedi, j'ai joué au football avec mes amis. De mon point de vue, c'est une option raisonnable.",
+                    "Samedi, j'ai lu un livre à la maison. Néanmoins, il y a aussi des avantages.",
+                    "Samedi, j'ai écouté de la musique au parc. En fin de compte, il faut prioriser."
+                  ],
+                  "correctIndex": 0,
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "«El sábado jugué al fútbol con mis amigos. Desde mi punto de vista, es una opción razonable.» se dice «Samedi, j'ai joué au football avec mes amis. De mon point de vue, c'est une option raisonnable.».",
+                    "ruleRef": "gp-b2-hedging"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has elegido la traducción correcta."
+                  }
+                },
+                {
+                  "type": "OrderWords",
+                  "id": "es-fr-b2-u01-l06-e02",
+                  "tokens": [
+                    "j'ai",
+                    "joué",
+                    "au",
+                    "football",
+                    "avec",
+                    "mes",
+                    "amis",
+                    "De",
+                    "mon",
+                    "point",
+                    "de",
+                    "vue",
+                    "c'est",
+                    "une",
+                    "option",
+                    "raisonnable",
+                    "Samedi"
+                  ],
+                  "answerTokens": [
+                    "Samedi",
+                    "j'ai",
+                    "joué",
+                    "au",
+                    "football",
+                    "avec",
+                    "mes",
+                    "amis",
+                    "De",
+                    "mon",
+                    "point",
+                    "de",
+                    "vue",
+                    "c'est",
+                    "une",
+                    "option",
+                    "raisonnable"
+                  ],
+                  "sourcePhrase": "El sábado jugué al fútbol con mis amigos. Desde mi punto de vista, es una opción razonable.",
+                  "feedbackOnError": {
+                    "type": "word_order",
+                    "explanation": "El orden correcto es «Samedi j'ai joué au football avec mes amis De mon point de vue c'est une option raisonnable».",
+                    "ruleRef": "gp-b2-hedging"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "El orden produce una frase natural."
+                  }
+                },
+                {
+                  "type": "ClozeDragDrop",
+                  "id": "es-fr-b2-u01-l06-e03",
+                  "passage": "{{b1}}, {{b2}} joué au football avec mes amis",
+                  "blanks": [
+                    {
+                      "id": "b1",
+                      "answer": "Samedi",
+                      "options": [
+                        "Samedi",
+                        "joué",
+                        "football"
+                      ]
+                    },
+                    {
+                      "id": "b2",
+                      "answer": "j'ai",
+                      "options": [
+                        "j'ai",
+                        "joué",
+                        "football"
+                      ]
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "Las dos formas deben encajar con el contexto de la frase.",
+                    "ruleRef": "gp-b2-future-perfect"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Los dos huecos encajan con la situación."
+                  }
+                },
+                {
+                  "type": "SemanticMatch",
+                  "id": "es-fr-b2-u01-l06-e04",
+                  "instructions": "Clasifica la función comunicativa de cada intervención.",
+                  "pairs": [
+                    {
+                      "left": "Samedi, j'ai joué au football avec mes amis. De mon point de vue, c'est une option raisonnable.",
+                      "right": "Planteamiento",
+                      "register": "formal",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    },
+                    {
+                      "left": "Samedi, j'ai lu un livre à la maison. Néanmoins, il y a aussi des avantages.",
+                      "right": "Concesión",
+                      "register": "neutral",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    },
+                    {
+                      "left": "Samedi, j'ai écouté de la musique au parc. En fin de compte, il faut prioriser.",
+                      "right": "Conclusión",
+                      "register": "informal",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "Cada intervención cumple una función comunicativa distinta.",
+                    "ruleRef": "gp-b2-hedging"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has identificado la función de cada intervención."
+                  }
+                },
+                {
+                  "type": "SemanticMatch",
+                  "id": "es-fr-b2-u01-l06-e05",
+                  "instructions": "Distingue el registro de cada intervención.",
+                  "pairs": [
+                    {
+                      "left": "Samedi, j'ai joué au football avec mes amis. De mon point de vue, c'est une option raisonnable.",
+                      "right": "Formal",
+                      "register": "formal",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    },
+                    {
+                      "left": "Samedi, j'ai lu un livre à la maison. Néanmoins, il y a aussi des avantages.",
+                      "right": "Neutral",
+                      "register": "neutral",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    },
+                    {
+                      "left": "Samedi, j'ai écouté de la musique au parc. En fin de compte, il faut prioriser.",
+                      "right": "Informal",
+                      "register": "informal",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "register",
+                    "explanation": "El registro cambia según el contexto y la relación con el interlocutor.",
+                    "ruleRef": "gp-b2-future-perfect"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has distinguido el registro de cada intervención."
+                  }
+                },
+                {
+                  "type": "AudioOnlyPrompt",
+                  "id": "es-fr-b2-u01-l06-e06",
+                  "audioText": "Samedi, j'ai lu un livre à la maison. Néanmoins, il y a aussi des avantages.",
+                  "question": "¿Qué ha dicho el hablante?",
+                  "options": [
+                    "Samedi, j'ai lu un livre à la maison. Néanmoins, il y a aussi des avantages.",
+                    "Samedi, j'ai joué au football avec mes amis. De mon point de vue, c'est une option raisonnable.",
+                    "Samedi, j'ai écouté de la musique au parc. En fin de compte, il faut prioriser."
+                  ],
+                  "correctIndex": 0,
+                  "allowSlowPlayback": true,
+                  "feedbackOnError": {
+                    "type": "comprehension",
+                    "explanation": "El audio dice «Samedi, j'ai lu un livre à la maison. Néanmoins, il y a aussi des avantages.».",
+                    "ruleRef": "gp-b2-hedging"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has comprendido el mensaje del audio."
+                  }
+                },
+                {
+                  "type": "AudioOnlyPrompt",
+                  "id": "es-fr-b2-u01-l06-e07",
+                  "audioText": "Samedi, j'ai écouté de la musique au parc. En fin de compte, il faut prioriser.",
+                  "question": "¿Cuál es la idea principal?",
+                  "options": [
+                    "Samedi, j'ai écouté de la musique au parc. En fin de compte, il faut prioriser.",
+                    "Samedi, j'ai joué au football avec mes amis. De mon point de vue, c'est une option raisonnable.",
+                    "Samedi, j'ai lu un livre à la maison. Néanmoins, il y a aussi des avantages."
+                  ],
+                  "correctIndex": 0,
+                  "allowSlowPlayback": false,
+                  "feedbackOnError": {
+                    "type": "comprehension",
+                    "explanation": "El audio dice «Samedi, j'ai écouté de la musique au parc. En fin de compte, il faut prioriser.».",
+                    "ruleRef": "gp-b2-future-perfect"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has identificado la idea principal."
+                  }
+                },
+                {
+                  "type": "ListenType",
+                  "id": "es-fr-b2-u01-l06-e08",
+                  "audioText": "Samedi, j'ai écouté de la musique au parc. En fin de compte, il faut prioriser.",
+                  "transcription": "Samedi, j'ai écouté de la musique au parc. En fin de compte, il faut prioriser.",
+                  "feedbackOnError": {
+                    "type": "spelling",
+                    "explanation": "Escribe exactamente «Samedi, j'ai écouté de la musique au parc. En fin de compte, il faut prioriser.».",
+                    "ruleRef": "gp-b2-hedging"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La transcripción coincide con el audio."
+                  }
+                },
+                {
+                  "type": "SpeakRepeat",
+                  "id": "es-fr-b2-u01-l06-e09",
+                  "targetPhrase": "Samedi, j'ai écouté de la musique au parc. En fin de compte, il faut prioriser.",
+                  "audioText": "Samedi, j'ai écouté de la musique au parc. En fin de compte, il faut prioriser.",
+                  "feedbackOnError": {
+                    "type": "pronunciation",
+                    "explanation": "Repite «Samedi, j'ai écouté de la musique au parc. En fin de compte, il faut prioriser.» con claridad.",
+                    "ruleRef": "gp-b2-hedging"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La frase se entiende y mantiene el ritmo."
+                  }
+                },
+                {
+                  "type": "FreeSpeakingPrompt",
+                  "id": "es-fr-b2-u01-l06-e10",
+                  "prompt": "Argumenta y matiza una opinión sobre el fin de semana.",
+                  "minTokens": 20,
+                  "conceptClusters": [
+                    [
+                      "Samedi"
+                    ],
+                    [
+                      "j'ai"
+                    ],
+                    [
+                      "joué"
+                    ]
+                  ],
+                  "modelAnswer": "Samedi, j'ai joué au football avec mes amis. De mon point de vue, c'est une option raisonnable. Samedi, j'ai lu un livre à la maison. Néanmoins, il y a aussi des avantages. Samedi, j'ai écouté de la musique au parc. En fin de compte, il faut prioriser.",
+                  "selfAssessmentCriteria": [
+                    "¿La respuesta argumenta y responde a la tarea?",
+                    "¿Usa las dos estructuras gramaticales de la lección?",
+                    "¿Incluye una concesión o una matización?"
+                  ],
+                  "grammarRuleRefs": [
+                    "gp-b2-hedging",
+                    "gp-b2-future-perfect"
+                  ],
+                  "timeLimitSeconds": 90,
+                  "minWpm": 70,
+                  "maxWpm": 160,
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "La respuesta modelo desarrolla una opinión con matices y una concesión.",
+                    "ruleRef": "gp-b2-hedging"
+                  }
+                }
+              ]
+            },
+            {
+              "id": "es-fr-b2-u01-l07",
+              "title": "Escuchar: un viaje corto",
+              "cefrLevel": "B2",
+              "scenario": "Situación comunicativa avanzada sobre un viaje corto.",
+              "canDo": "Puedo argumentar y matizar sobre un viaje corto.",
+              "grammarPoints": [
+                {
+                  "id": "gp-b2-hedging",
+                  "label": "Hedging",
+                  "description": "Matizar una opinión con I'm afraid, it seems o might."
+                },
+                {
+                  "id": "gp-b2-future-perfect",
+                  "label": "Future perfect",
+                  "description": "Will have + participio sitúa un resultado antes de una fecha."
+                }
+              ],
+              "vocabFrequencyBand": "3000-5000",
+              "culturalNotes": [
+                {
+                  "idiom": "garder un œil sur",
+                  "note": "Expresión para vigilar algo.",
+                  "translation": "estar pendiente"
+                }
+              ],
+              "microLesson": {
+                "title": "Escuchar: un viaje corto",
+                "goals": [
+                  "Usar vocabulario avanzado de un viaje corto.",
+                  "Aplicar hedging y future perfect.",
+                  "Argumentar y matizar sobre un viaje corto."
+                ],
+                "sections": [
+                  {
+                    "heading": "Lengua en contexto",
+                    "body": "Hedging: Matizar una opinión con I'm afraid, it seems o might. Future perfect: Will have + participio sitúa un resultado antes de una fecha.",
+                    "examples": [
+                      {
+                        "source": "El viaje fue tranquilo. No obstante, también tiene ventajas.",
+                        "target": "Le voyage était tranquille. Néanmoins, il y a aussi des avantages."
+                      },
+                      {
+                        "source": "El viaje fue interesante. A fin de cuentas, hay que priorizar.",
+                        "target": "Le voyage était intéressant. En fin de compte, il faut prioriser."
+                      }
+                    ]
+                  }
+                ]
+              },
+              "glossary": [
+                {
+                  "term": "Le voyage était tranquille. Néanmoins, il y a aussi des avantages.",
+                  "translations": [
+                    "El viaje fue tranquilo. No obstante, también tiene ventajas."
+                  ]
+                },
+                {
+                  "term": "Le voyage était intéressant. En fin de compte, il faut prioriser.",
+                  "translations": [
+                    "El viaje fue interesante. A fin de cuentas, hay que priorizar."
+                  ]
+                },
+                {
+                  "term": "Le voyage était un peu long. En bref, c'est un sujet complexe.",
+                  "translations": [
+                    "El viaje fue un poco largo. En resumen, es un tema complejo."
+                  ]
+                }
+              ],
+              "exercises": [
+                {
+                  "type": "MultipleChoice",
+                  "id": "es-fr-b2-u01-l07-e01",
+                  "question": "¿Cuál es la opción correcta para «El viaje fue tranquilo. No obstante, también tiene ventajas.»?",
+                  "options": [
+                    "Le voyage était tranquille. Néanmoins, il y a aussi des avantages.",
+                    "Le voyage était intéressant. En fin de compte, il faut prioriser.",
+                    "Le voyage était un peu long. En bref, c'est un sujet complexe."
+                  ],
+                  "correctIndex": 0,
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "«El viaje fue tranquilo. No obstante, también tiene ventajas.» se dice «Le voyage était tranquille. Néanmoins, il y a aussi des avantages.».",
+                    "ruleRef": "gp-b2-hedging"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has elegido la traducción correcta."
+                  }
+                },
+                {
+                  "type": "OrderWords",
+                  "id": "es-fr-b2-u01-l07-e02",
+                  "tokens": [
+                    "voyage",
+                    "était",
+                    "tranquille",
+                    "Néanmoins",
+                    "il",
+                    "y",
+                    "a",
+                    "aussi",
+                    "des",
+                    "avantages",
+                    "Le"
+                  ],
+                  "answerTokens": [
+                    "Le",
+                    "voyage",
+                    "était",
+                    "tranquille",
+                    "Néanmoins",
+                    "il",
+                    "y",
+                    "a",
+                    "aussi",
+                    "des",
+                    "avantages"
+                  ],
+                  "sourcePhrase": "El viaje fue tranquilo. No obstante, también tiene ventajas.",
+                  "feedbackOnError": {
+                    "type": "word_order",
+                    "explanation": "El orden correcto es «Le voyage était tranquille Néanmoins il y a aussi des avantages».",
+                    "ruleRef": "gp-b2-hedging"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "El orden produce una frase natural."
+                  }
+                },
+                {
+                  "type": "ClozeDragDrop",
+                  "id": "es-fr-b2-u01-l07-e03",
+                  "passage": "Le {{b1}} était {{b2}}",
+                  "blanks": [
+                    {
+                      "id": "b1",
+                      "answer": "voyage",
+                      "options": [
+                        "voyage",
+                        "très",
+                        "aujourd'hui"
+                      ]
+                    },
+                    {
+                      "id": "b2",
+                      "answer": "tranquille",
+                      "options": [
+                        "tranquille",
+                        "très",
+                        "aujourd'hui"
+                      ]
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "Las dos formas deben encajar con el contexto de la frase.",
+                    "ruleRef": "gp-b2-future-perfect"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Los dos huecos encajan con la situación."
+                  }
+                },
+                {
+                  "type": "SemanticMatch",
+                  "id": "es-fr-b2-u01-l07-e04",
+                  "instructions": "Clasifica la función comunicativa de cada intervención.",
+                  "pairs": [
+                    {
+                      "left": "Le voyage était tranquille. Néanmoins, il y a aussi des avantages.",
+                      "right": "Planteamiento",
+                      "register": "formal",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    },
+                    {
+                      "left": "Le voyage était intéressant. En fin de compte, il faut prioriser.",
+                      "right": "Concesión",
+                      "register": "neutral",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    },
+                    {
+                      "left": "Le voyage était un peu long. En bref, c'est un sujet complexe.",
+                      "right": "Conclusión",
+                      "register": "informal",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "Cada intervención cumple una función comunicativa distinta.",
+                    "ruleRef": "gp-b2-hedging"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has identificado la función de cada intervención."
+                  }
+                },
+                {
+                  "type": "SemanticMatch",
+                  "id": "es-fr-b2-u01-l07-e05",
+                  "instructions": "Distingue el registro de cada intervención.",
+                  "pairs": [
+                    {
+                      "left": "Le voyage était tranquille. Néanmoins, il y a aussi des avantages.",
+                      "right": "Formal",
+                      "register": "formal",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    },
+                    {
+                      "left": "Le voyage était intéressant. En fin de compte, il faut prioriser.",
+                      "right": "Neutral",
+                      "register": "neutral",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    },
+                    {
+                      "left": "Le voyage était un peu long. En bref, c'est un sujet complexe.",
+                      "right": "Informal",
+                      "register": "informal",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "register",
+                    "explanation": "El registro cambia según el contexto y la relación con el interlocutor.",
+                    "ruleRef": "gp-b2-future-perfect"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has distinguido el registro de cada intervención."
+                  }
+                },
+                {
+                  "type": "AudioOnlyPrompt",
+                  "id": "es-fr-b2-u01-l07-e06",
+                  "audioText": "Le voyage était intéressant. En fin de compte, il faut prioriser.",
+                  "question": "¿Qué ha dicho el hablante?",
+                  "options": [
+                    "Le voyage était intéressant. En fin de compte, il faut prioriser.",
+                    "Le voyage était tranquille. Néanmoins, il y a aussi des avantages.",
+                    "Le voyage était un peu long. En bref, c'est un sujet complexe."
+                  ],
+                  "correctIndex": 0,
+                  "allowSlowPlayback": true,
+                  "feedbackOnError": {
+                    "type": "comprehension",
+                    "explanation": "El audio dice «Le voyage était intéressant. En fin de compte, il faut prioriser.».",
+                    "ruleRef": "gp-b2-hedging"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has comprendido el mensaje del audio."
+                  }
+                },
+                {
+                  "type": "AudioOnlyPrompt",
+                  "id": "es-fr-b2-u01-l07-e07",
+                  "audioText": "Le voyage était un peu long. En bref, c'est un sujet complexe.",
+                  "question": "¿Cuál es la idea principal?",
+                  "options": [
+                    "Le voyage était un peu long. En bref, c'est un sujet complexe.",
+                    "Le voyage était tranquille. Néanmoins, il y a aussi des avantages.",
+                    "Le voyage était intéressant. En fin de compte, il faut prioriser."
+                  ],
+                  "correctIndex": 0,
+                  "allowSlowPlayback": false,
+                  "feedbackOnError": {
+                    "type": "comprehension",
+                    "explanation": "El audio dice «Le voyage était un peu long. En bref, c'est un sujet complexe.».",
+                    "ruleRef": "gp-b2-future-perfect"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has identificado la idea principal."
+                  }
+                },
+                {
+                  "type": "ListenType",
+                  "id": "es-fr-b2-u01-l07-e08",
+                  "audioText": "Le voyage était un peu long. En bref, c'est un sujet complexe.",
+                  "transcription": "Le voyage était un peu long. En bref, c'est un sujet complexe.",
+                  "feedbackOnError": {
+                    "type": "spelling",
+                    "explanation": "Escribe exactamente «Le voyage était un peu long. En bref, c'est un sujet complexe.».",
+                    "ruleRef": "gp-b2-hedging"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La transcripción coincide con el audio."
+                  }
+                },
+                {
+                  "type": "SpeakRepeat",
+                  "id": "es-fr-b2-u01-l07-e09",
+                  "targetPhrase": "Le voyage était un peu long. En bref, c'est un sujet complexe.",
+                  "audioText": "Le voyage était un peu long. En bref, c'est un sujet complexe.",
+                  "feedbackOnError": {
+                    "type": "pronunciation",
+                    "explanation": "Repite «Le voyage était un peu long. En bref, c'est un sujet complexe.» con claridad.",
+                    "ruleRef": "gp-b2-hedging"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La frase se entiende y mantiene el ritmo."
+                  }
+                },
+                {
+                  "type": "FreeSpeakingPrompt",
+                  "id": "es-fr-b2-u01-l07-e10",
+                  "prompt": "Argumenta y matiza una opinión sobre un viaje corto.",
+                  "minTokens": 20,
+                  "conceptClusters": [
+                    [
+                      "voyage"
+                    ],
+                    [
+                      "tranquille"
+                    ],
+                    [
+                      "Néanmoins"
+                    ]
+                  ],
+                  "modelAnswer": "Le voyage était tranquille. Néanmoins, il y a aussi des avantages. Le voyage était intéressant. En fin de compte, il faut prioriser. Le voyage était un peu long. En bref, c'est un sujet complexe.",
+                  "selfAssessmentCriteria": [
+                    "¿La respuesta argumenta y responde a la tarea?",
+                    "¿Usa las dos estructuras gramaticales de la lección?",
+                    "¿Incluye una concesión o una matización?"
+                  ],
+                  "grammarRuleRefs": [
+                    "gp-b2-hedging",
+                    "gp-b2-future-perfect"
+                  ],
+                  "timeLimitSeconds": 90,
+                  "minWpm": 70,
+                  "maxWpm": 160,
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "La respuesta modelo desarrolla una opinión con matices y una concesión.",
+                    "ruleRef": "gp-b2-hedging"
+                  }
+                }
+              ]
+            },
+            {
+              "id": "es-fr-b2-u01-l08",
+              "title": "Escribir una postal",
+              "cefrLevel": "B2",
+              "scenario": "Situación comunicativa avanzada sobre una postal de vacaciones.",
+              "canDo": "Puedo argumentar y matizar sobre una postal de vacaciones.",
+              "grammarPoints": [
+                {
+                  "id": "gp-b2-hedging",
+                  "label": "Hedging",
+                  "description": "Matizar una opinión con I'm afraid, it seems o might."
+                },
+                {
+                  "id": "gp-b2-future-perfect",
+                  "label": "Future perfect",
+                  "description": "Will have + participio sitúa un resultado antes de una fecha."
+                }
+              ],
+              "vocabFrequencyBand": "3000-5000",
+              "culturalNotes": [
+                {
+                  "idiom": "coûter les yeux de la tête",
+                  "note": "Expresión para decir que algo es muy caro.",
+                  "translation": "costar un ojo de la cara"
+                }
+              ],
+              "microLesson": {
+                "title": "Escribir una postal",
+                "goals": [
+                  "Usar vocabulario avanzado de una postal de vacaciones.",
+                  "Aplicar hedging y future perfect.",
+                  "Argumentar y matizar sobre una postal de vacaciones."
+                ],
+                "sections": [
+                  {
+                    "heading": "Lengua en contexto",
+                    "body": "Hedging: Matizar una opinión con I'm afraid, it seems o might. Future perfect: Will have + participio sitúa un resultado antes de una fecha.",
+                    "examples": [
+                      {
+                        "source": "Estoy en la playa. A fin de cuentas, hay que priorizar.",
+                        "target": "Je suis à la plage. En fin de compte, il faut prioriser."
+                      },
+                      {
+                        "source": "Estoy en un hotel pequeño. En resumen, es un tema complejo.",
+                        "target": "Je suis dans un petit hôtel. En bref, c'est un sujet complexe."
+                      }
+                    ]
+                  }
+                ]
+              },
+              "glossary": [
+                {
+                  "term": "Je suis à la plage. En fin de compte, il faut prioriser.",
+                  "translations": [
+                    "Estoy en la playa. A fin de cuentas, hay que priorizar."
+                  ]
+                },
+                {
+                  "term": "Je suis dans un petit hôtel. En bref, c'est un sujet complexe.",
+                  "translations": [
+                    "Estoy en un hotel pequeño. En resumen, es un tema complejo."
+                  ]
+                },
+                {
+                  "term": "Je suis avec mes amis. Cependant, il convient de nuancer.",
+                  "translations": [
+                    "Estoy con mis amigos. Sin embargo, conviene matizarlo."
+                  ]
+                }
+              ],
+              "exercises": [
+                {
+                  "type": "MultipleChoice",
+                  "id": "es-fr-b2-u01-l08-e01",
+                  "question": "¿Cuál es la opción correcta para «Estoy en la playa. A fin de cuentas, hay que priorizar.»?",
+                  "options": [
+                    "Je suis à la plage. En fin de compte, il faut prioriser.",
+                    "Je suis dans un petit hôtel. En bref, c'est un sujet complexe.",
+                    "Je suis avec mes amis. Cependant, il convient de nuancer."
+                  ],
+                  "correctIndex": 0,
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "«Estoy en la playa. A fin de cuentas, hay que priorizar.» se dice «Je suis à la plage. En fin de compte, il faut prioriser.».",
+                    "ruleRef": "gp-b2-hedging"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has elegido la traducción correcta."
+                  }
+                },
+                {
+                  "type": "OrderWords",
+                  "id": "es-fr-b2-u01-l08-e02",
+                  "tokens": [
+                    "suis",
+                    "à",
+                    "la",
+                    "plage",
+                    "En",
+                    "fin",
+                    "de",
+                    "compte",
+                    "il",
+                    "faut",
+                    "prioriser",
+                    "Je"
+                  ],
+                  "answerTokens": [
+                    "Je",
+                    "suis",
+                    "à",
+                    "la",
+                    "plage",
+                    "En",
+                    "fin",
+                    "de",
+                    "compte",
+                    "il",
+                    "faut",
+                    "prioriser"
+                  ],
+                  "sourcePhrase": "Estoy en la playa. A fin de cuentas, hay que priorizar.",
+                  "feedbackOnError": {
+                    "type": "word_order",
+                    "explanation": "El orden correcto es «Je suis à la plage En fin de compte il faut prioriser».",
+                    "ruleRef": "gp-b2-hedging"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "El orden produce una frase natural."
+                  }
+                },
+                {
+                  "type": "ClozeDragDrop",
+                  "id": "es-fr-b2-u01-l08-e03",
+                  "passage": "Je {{b1}} à la {{b2}}",
+                  "blanks": [
+                    {
+                      "id": "b1",
+                      "answer": "suis",
+                      "options": [
+                        "suis",
+                        "très",
+                        "aujourd'hui"
+                      ]
+                    },
+                    {
+                      "id": "b2",
+                      "answer": "plage",
+                      "options": [
+                        "plage",
+                        "très",
+                        "aujourd'hui"
+                      ]
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "Las dos formas deben encajar con el contexto de la frase.",
+                    "ruleRef": "gp-b2-future-perfect"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Los dos huecos encajan con la situación."
+                  }
+                },
+                {
+                  "type": "SemanticMatch",
+                  "id": "es-fr-b2-u01-l08-e04",
+                  "instructions": "Clasifica la función comunicativa de cada intervención.",
+                  "pairs": [
+                    {
+                      "left": "Je suis à la plage. En fin de compte, il faut prioriser.",
+                      "right": "Planteamiento",
+                      "register": "formal",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    },
+                    {
+                      "left": "Je suis dans un petit hôtel. En bref, c'est un sujet complexe.",
+                      "right": "Concesión",
+                      "register": "neutral",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    },
+                    {
+                      "left": "Je suis avec mes amis. Cependant, il convient de nuancer.",
+                      "right": "Conclusión",
+                      "register": "informal",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "Cada intervención cumple una función comunicativa distinta.",
+                    "ruleRef": "gp-b2-hedging"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has identificado la función de cada intervención."
+                  }
+                },
+                {
+                  "type": "SemanticMatch",
+                  "id": "es-fr-b2-u01-l08-e05",
+                  "instructions": "Distingue el registro de cada intervención.",
+                  "pairs": [
+                    {
+                      "left": "Je suis à la plage. En fin de compte, il faut prioriser.",
+                      "right": "Formal",
+                      "register": "formal",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    },
+                    {
+                      "left": "Je suis dans un petit hôtel. En bref, c'est un sujet complexe.",
+                      "right": "Neutral",
+                      "register": "neutral",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    },
+                    {
+                      "left": "Je suis avec mes amis. Cependant, il convient de nuancer.",
+                      "right": "Informal",
+                      "register": "informal",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "register",
+                    "explanation": "El registro cambia según el contexto y la relación con el interlocutor.",
+                    "ruleRef": "gp-b2-future-perfect"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has distinguido el registro de cada intervención."
+                  }
+                },
+                {
+                  "type": "AudioOnlyPrompt",
+                  "id": "es-fr-b2-u01-l08-e06",
+                  "audioText": "Je suis dans un petit hôtel. En bref, c'est un sujet complexe.",
+                  "question": "¿Qué ha dicho el hablante?",
+                  "options": [
+                    "Je suis dans un petit hôtel. En bref, c'est un sujet complexe.",
+                    "Je suis à la plage. En fin de compte, il faut prioriser.",
+                    "Je suis avec mes amis. Cependant, il convient de nuancer."
+                  ],
+                  "correctIndex": 0,
+                  "allowSlowPlayback": true,
+                  "feedbackOnError": {
+                    "type": "comprehension",
+                    "explanation": "El audio dice «Je suis dans un petit hôtel. En bref, c'est un sujet complexe.».",
+                    "ruleRef": "gp-b2-hedging"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has comprendido el mensaje del audio."
+                  }
+                },
+                {
+                  "type": "AudioOnlyPrompt",
+                  "id": "es-fr-b2-u01-l08-e07",
+                  "audioText": "Je suis avec mes amis. Cependant, il convient de nuancer.",
+                  "question": "¿Cuál es la idea principal?",
+                  "options": [
+                    "Je suis avec mes amis. Cependant, il convient de nuancer.",
+                    "Je suis à la plage. En fin de compte, il faut prioriser.",
+                    "Je suis dans un petit hôtel. En bref, c'est un sujet complexe."
+                  ],
+                  "correctIndex": 0,
+                  "allowSlowPlayback": false,
+                  "feedbackOnError": {
+                    "type": "comprehension",
+                    "explanation": "El audio dice «Je suis avec mes amis. Cependant, il convient de nuancer.».",
+                    "ruleRef": "gp-b2-future-perfect"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has identificado la idea principal."
+                  }
+                },
+                {
+                  "type": "ListenType",
+                  "id": "es-fr-b2-u01-l08-e08",
+                  "audioText": "Je suis avec mes amis. Cependant, il convient de nuancer.",
+                  "transcription": "Je suis avec mes amis. Cependant, il convient de nuancer.",
+                  "feedbackOnError": {
+                    "type": "spelling",
+                    "explanation": "Escribe exactamente «Je suis avec mes amis. Cependant, il convient de nuancer.».",
+                    "ruleRef": "gp-b2-hedging"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La transcripción coincide con el audio."
+                  }
+                },
+                {
+                  "type": "SpeakRepeat",
+                  "id": "es-fr-b2-u01-l08-e09",
+                  "targetPhrase": "Je suis avec mes amis. Cependant, il convient de nuancer.",
+                  "audioText": "Je suis avec mes amis. Cependant, il convient de nuancer.",
+                  "feedbackOnError": {
+                    "type": "pronunciation",
+                    "explanation": "Repite «Je suis avec mes amis. Cependant, il convient de nuancer.» con claridad.",
+                    "ruleRef": "gp-b2-hedging"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La frase se entiende y mantiene el ritmo."
+                  }
+                },
+                {
+                  "type": "FreeSpeakingPrompt",
+                  "id": "es-fr-b2-u01-l08-e10",
+                  "prompt": "Argumenta y matiza una opinión sobre una postal de vacaciones.",
+                  "minTokens": 20,
+                  "conceptClusters": [
+                    [
+                      "suis"
+                    ],
+                    [
+                      "plage"
+                    ],
+                    [
+                      "fin"
+                    ]
+                  ],
+                  "modelAnswer": "Je suis à la plage. En fin de compte, il faut prioriser. Je suis dans un petit hôtel. En bref, c'est un sujet complexe. Je suis avec mes amis. Cependant, il convient de nuancer.",
+                  "selfAssessmentCriteria": [
+                    "¿La respuesta argumenta y responde a la tarea?",
+                    "¿Usa las dos estructuras gramaticales de la lección?",
+                    "¿Incluye una concesión o una matización?"
+                  ],
+                  "grammarRuleRefs": [
+                    "gp-b2-hedging",
+                    "gp-b2-future-perfect"
+                  ],
+                  "timeLimitSeconds": 90,
+                  "minWpm": 70,
+                  "maxWpm": 160,
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "La respuesta modelo desarrolla una opinión con matices y una concesión.",
+                    "ruleRef": "gp-b2-hedging"
+                  }
+                }
+              ]
+            },
+            {
+              "id": "es-fr-b2-u01-l09",
+              "title": "Integración: ayer y hoy",
+              "cefrLevel": "B2",
+              "scenario": "Situación comunicativa avanzada sobre los cambios en mi vida.",
+              "canDo": "Puedo argumentar y matizar sobre los cambios en mi vida.",
+              "grammarPoints": [
+                {
+                  "id": "gp-b2-hedging",
+                  "label": "Hedging",
+                  "description": "Matizar una opinión con I'm afraid, it seems o might."
+                },
+                {
+                  "id": "gp-b2-future-perfect",
+                  "label": "Future perfect",
+                  "description": "Will have + participio sitúa un resultado antes de una fecha."
+                }
+              ],
+              "vocabFrequencyBand": "3000-5000",
+              "culturalNotes": [
+                {
+                  "idiom": "travailler tard",
+                  "note": "Expresión para trabajar hasta muy tarde.",
+                  "translation": "trabajar hasta tarde"
+                }
+              ],
+              "microLesson": {
+                "title": "Integración: ayer y hoy",
+                "goals": [
+                  "Usar vocabulario avanzado de los cambios en mi vida.",
+                  "Aplicar hedging y future perfect.",
+                  "Argumentar y matizar sobre los cambios en mi vida."
+                ],
+                "sections": [
+                  {
+                    "heading": "Lengua en contexto",
+                    "body": "Hedging: Matizar una opinión con I'm afraid, it seems o might. Future perfect: Will have + participio sitúa un resultado antes de una fecha.",
+                    "examples": [
+                      {
+                        "source": "Antes iba al trabajo en autobús; ahora voy en bicicleta. En resumen, es un tema complejo.",
+                        "target": "Avant, j'allais au travail en bus ; maintenant, je vais à vélo. En bref, c'est un sujet complexe."
+                      },
+                      {
+                        "source": "Antes comía en casa; ahora como en la oficina. Sin embargo, conviene matizarlo.",
+                        "target": "Avant, je mangeais à la maison ; maintenant, je mange au bureau. Cependant, il convient de nuancer."
+                      }
+                    ]
+                  }
+                ]
+              },
+              "glossary": [
+                {
+                  "term": "Avant, j'allais au travail en bus ; maintenant, je vais à vélo. En bref, c'est un sujet complexe.",
+                  "translations": [
+                    "Antes iba al trabajo en autobús; ahora voy en bicicleta. En resumen, es un tema complejo."
+                  ]
+                },
+                {
+                  "term": "Avant, je mangeais à la maison ; maintenant, je mange au bureau. Cependant, il convient de nuancer.",
+                  "translations": [
+                    "Antes comía en casa; ahora como en la oficina. Sin embargo, conviene matizarlo."
+                  ]
+                },
+                {
+                  "term": "Avant, je regardais la télévision ; maintenant, je lis un livre. Cela dit, cela dépend du contexte.",
+                  "translations": [
+                    "Antes veía la televisión; ahora leo un libro. Dicho esto, depende del contexto."
+                  ]
+                }
+              ],
+              "exercises": [
+                {
+                  "type": "MultipleChoice",
+                  "id": "es-fr-b2-u01-l09-e01",
+                  "question": "¿Cuál es la opción correcta para «Antes iba al trabajo en autobús; ahora voy en bicicleta. En resumen, es un tema complejo.»?",
+                  "options": [
+                    "Avant, j'allais au travail en bus ; maintenant, je vais à vélo. En bref, c'est un sujet complexe.",
+                    "Avant, je mangeais à la maison ; maintenant, je mange au bureau. Cependant, il convient de nuancer.",
+                    "Avant, je regardais la télévision ; maintenant, je lis un livre. Cela dit, cela dépend du contexte."
+                  ],
+                  "correctIndex": 0,
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "«Antes iba al trabajo en autobús; ahora voy en bicicleta. En resumen, es un tema complejo.» se dice «Avant, j'allais au travail en bus ; maintenant, je vais à vélo. En bref, c'est un sujet complexe.».",
+                    "ruleRef": "gp-b2-hedging"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has elegido la traducción correcta."
+                  }
+                },
+                {
+                  "type": "OrderWords",
+                  "id": "es-fr-b2-u01-l09-e02",
+                  "tokens": [
+                    "j'allais",
+                    "au",
+                    "travail",
+                    "en",
+                    "bus",
+                    "maintenant",
+                    "je",
+                    "vais",
+                    "à",
+                    "vélo",
+                    "En",
+                    "bref",
+                    "c'est",
+                    "un",
+                    "sujet",
+                    "complexe",
+                    "Avant"
+                  ],
+                  "answerTokens": [
+                    "Avant",
+                    "j'allais",
+                    "au",
+                    "travail",
+                    "en",
+                    "bus",
+                    "maintenant",
+                    "je",
+                    "vais",
+                    "à",
+                    "vélo",
+                    "En",
+                    "bref",
+                    "c'est",
+                    "un",
+                    "sujet",
+                    "complexe"
+                  ],
+                  "sourcePhrase": "Antes iba al trabajo en autobús; ahora voy en bicicleta. En resumen, es un tema complejo.",
+                  "feedbackOnError": {
+                    "type": "word_order",
+                    "explanation": "El orden correcto es «Avant j'allais au travail en bus maintenant je vais à vélo En bref c'est un sujet complexe».",
+                    "ruleRef": "gp-b2-hedging"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "El orden produce una frase natural."
+                  }
+                },
+                {
+                  "type": "ClozeDragDrop",
+                  "id": "es-fr-b2-u01-l09-e03",
+                  "passage": "{{b1}}, {{b2}} au travail en bus ; maintenant, je vais à vélo.",
+                  "blanks": [
+                    {
+                      "id": "b1",
+                      "answer": "Avant",
+                      "options": [
+                        "Avant",
+                        "travail",
+                        "bus"
+                      ]
+                    },
+                    {
+                      "id": "b2",
+                      "answer": "j'allais",
+                      "options": [
+                        "j'allais",
+                        "travail",
+                        "bus"
+                      ]
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "Las dos formas deben encajar con el contexto de la frase.",
+                    "ruleRef": "gp-b2-future-perfect"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Los dos huecos encajan con la situación."
+                  }
+                },
+                {
+                  "type": "SemanticMatch",
+                  "id": "es-fr-b2-u01-l09-e04",
+                  "instructions": "Clasifica la función comunicativa de cada intervención.",
+                  "pairs": [
+                    {
+                      "left": "Avant, j'allais au travail en bus ; maintenant, je vais à vélo. En bref, c'est un sujet complexe.",
+                      "right": "Planteamiento",
+                      "register": "formal",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    },
+                    {
+                      "left": "Avant, je mangeais à la maison ; maintenant, je mange au bureau. Cependant, il convient de nuancer.",
+                      "right": "Concesión",
+                      "register": "neutral",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    },
+                    {
+                      "left": "Avant, je regardais la télévision ; maintenant, je lis un livre. Cela dit, cela dépend du contexte.",
+                      "right": "Conclusión",
+                      "register": "informal",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "Cada intervención cumple una función comunicativa distinta.",
+                    "ruleRef": "gp-b2-hedging"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has identificado la función de cada intervención."
+                  }
+                },
+                {
+                  "type": "SemanticMatch",
+                  "id": "es-fr-b2-u01-l09-e05",
+                  "instructions": "Distingue el registro de cada intervención.",
+                  "pairs": [
+                    {
+                      "left": "Avant, j'allais au travail en bus ; maintenant, je vais à vélo. En bref, c'est un sujet complexe.",
+                      "right": "Formal",
+                      "register": "formal",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    },
+                    {
+                      "left": "Avant, je mangeais à la maison ; maintenant, je mange au bureau. Cependant, il convient de nuancer.",
+                      "right": "Neutral",
+                      "register": "neutral",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    },
+                    {
+                      "left": "Avant, je regardais la télévision ; maintenant, je lis un livre. Cela dit, cela dépend du contexte.",
+                      "right": "Informal",
+                      "register": "informal",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "register",
+                    "explanation": "El registro cambia según el contexto y la relación con el interlocutor.",
+                    "ruleRef": "gp-b2-future-perfect"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has distinguido el registro de cada intervención."
+                  }
+                },
+                {
+                  "type": "AudioOnlyPrompt",
+                  "id": "es-fr-b2-u01-l09-e06",
+                  "audioText": "Avant, je mangeais à la maison ; maintenant, je mange au bureau. Cependant, il convient de nuancer.",
+                  "question": "¿Qué ha dicho el hablante?",
+                  "options": [
+                    "Avant, je mangeais à la maison ; maintenant, je mange au bureau. Cependant, il convient de nuancer.",
+                    "Avant, j'allais au travail en bus ; maintenant, je vais à vélo. En bref, c'est un sujet complexe.",
+                    "Avant, je regardais la télévision ; maintenant, je lis un livre. Cela dit, cela dépend du contexte."
+                  ],
+                  "correctIndex": 0,
+                  "allowSlowPlayback": true,
+                  "feedbackOnError": {
+                    "type": "comprehension",
+                    "explanation": "El audio dice «Avant, je mangeais à la maison ; maintenant, je mange au bureau. Cependant, il convient de nuancer.».",
+                    "ruleRef": "gp-b2-hedging"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has comprendido el mensaje del audio."
+                  }
+                },
+                {
+                  "type": "AudioOnlyPrompt",
+                  "id": "es-fr-b2-u01-l09-e07",
+                  "audioText": "Avant, je regardais la télévision ; maintenant, je lis un livre. Cela dit, cela dépend du contexte.",
+                  "question": "¿Cuál es la idea principal?",
+                  "options": [
+                    "Avant, je regardais la télévision ; maintenant, je lis un livre. Cela dit, cela dépend du contexte.",
+                    "Avant, j'allais au travail en bus ; maintenant, je vais à vélo. En bref, c'est un sujet complexe.",
+                    "Avant, je mangeais à la maison ; maintenant, je mange au bureau. Cependant, il convient de nuancer."
+                  ],
+                  "correctIndex": 0,
+                  "allowSlowPlayback": false,
+                  "feedbackOnError": {
+                    "type": "comprehension",
+                    "explanation": "El audio dice «Avant, je regardais la télévision ; maintenant, je lis un livre. Cela dit, cela dépend du contexte.».",
+                    "ruleRef": "gp-b2-future-perfect"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has identificado la idea principal."
+                  }
+                },
+                {
+                  "type": "ListenType",
+                  "id": "es-fr-b2-u01-l09-e08",
+                  "audioText": "Avant, je regardais la télévision ; maintenant, je lis un livre. Cela dit, cela dépend du contexte.",
+                  "transcription": "Avant, je regardais la télévision ; maintenant, je lis un livre. Cela dit, cela dépend du contexte.",
+                  "feedbackOnError": {
+                    "type": "spelling",
+                    "explanation": "Escribe exactamente «Avant, je regardais la télévision ; maintenant, je lis un livre. Cela dit, cela dépend du contexte.».",
+                    "ruleRef": "gp-b2-hedging"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La transcripción coincide con el audio."
+                  }
+                },
+                {
+                  "type": "SpeakRepeat",
+                  "id": "es-fr-b2-u01-l09-e09",
+                  "targetPhrase": "Avant, je regardais la télévision ; maintenant, je lis un livre. Cela dit, cela dépend du contexte.",
+                  "audioText": "Avant, je regardais la télévision ; maintenant, je lis un livre. Cela dit, cela dépend du contexte.",
+                  "feedbackOnError": {
+                    "type": "pronunciation",
+                    "explanation": "Repite «Avant, je regardais la télévision ; maintenant, je lis un livre. Cela dit, cela dépend du contexte.» con claridad.",
+                    "ruleRef": "gp-b2-hedging"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La frase se entiende y mantiene el ritmo."
+                  }
+                },
+                {
+                  "type": "FreeSpeakingPrompt",
+                  "id": "es-fr-b2-u01-l09-e10",
+                  "prompt": "Argumenta y matiza una opinión sobre los cambios en mi vida.",
+                  "minTokens": 20,
+                  "conceptClusters": [
+                    [
+                      "Avant"
+                    ],
+                    [
+                      "j'allais"
+                    ],
+                    [
+                      "travail"
+                    ]
+                  ],
+                  "modelAnswer": "Avant, j'allais au travail en bus ; maintenant, je vais à vélo. En bref, c'est un sujet complexe. Avant, je mangeais à la maison ; maintenant, je mange au bureau. Cependant, il convient de nuancer. Avant, je regardais la télévision ; maintenant, je lis un livre. Cela dit, cela dépend du contexte.",
+                  "selfAssessmentCriteria": [
+                    "¿La respuesta argumenta y responde a la tarea?",
+                    "¿Usa las dos estructuras gramaticales de la lección?",
+                    "¿Incluye una concesión o una matización?"
+                  ],
+                  "grammarRuleRefs": [
+                    "gp-b2-hedging",
+                    "gp-b2-future-perfect"
+                  ],
+                  "timeLimitSeconds": 90,
+                  "minWpm": 70,
+                  "maxWpm": 160,
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "La respuesta modelo desarrolla una opinión con matices y una concesión.",
+                    "ruleRef": "gp-b2-hedging"
+                  }
+                }
+              ]
+            },
+            {
+              "id": "es-fr-b2-u01-l10",
+              "title": "Evaluación: mi semana",
+              "cefrLevel": "B2",
+              "scenario": "Situación comunicativa avanzada sobre mi semana.",
+              "canDo": "Puedo argumentar y matizar sobre mi semana.",
+              "grammarPoints": [
+                {
+                  "id": "gp-b2-hedging",
+                  "label": "Hedging",
+                  "description": "Matizar una opinión con I'm afraid, it seems o might."
+                },
+                {
+                  "id": "gp-b2-future-perfect",
+                  "label": "Future perfect",
+                  "description": "Will have + participio sitúa un resultado antes de una fecha."
+                }
+              ],
+              "vocabFrequencyBand": "3000-5000",
+              "culturalNotes": [
+                {
+                  "idiom": "l'essentiel",
+                  "note": "Expresión para señalar lo esencial.",
+                  "translation": "lo esencial"
+                }
+              ],
+              "microLesson": {
+                "title": "Evaluación: mi semana",
+                "goals": [
+                  "Usar vocabulario avanzado de mi semana.",
+                  "Aplicar hedging y future perfect.",
+                  "Argumentar y matizar sobre mi semana."
+                ],
+                "sections": [
+                  {
+                    "heading": "Lengua en contexto",
+                    "body": "Hedging: Matizar una opinión con I'm afraid, it seems o might. Future perfect: Will have + participio sitúa un resultado antes de una fecha.",
+                    "examples": [
+                      {
+                        "source": "El lunes empecé un curso de inglés. Sin embargo, conviene matizarlo.",
+                        "target": "Lundi, j'ai commencé un cours d'anglais. Cependant, il convient de nuancer."
+                      },
+                      {
+                        "source": "El miércoles visité a mi familia. Dicho esto, depende del contexto.",
+                        "target": "Mercredi, j'ai rendu visite à ma famille. Cela dit, cela dépend du contexte."
+                      }
+                    ]
+                  }
+                ]
+              },
+              "glossary": [
+                {
+                  "term": "Lundi, j'ai commencé un cours d'anglais. Cependant, il convient de nuancer.",
+                  "translations": [
+                    "El lunes empecé un curso de inglés. Sin embargo, conviene matizarlo."
+                  ]
+                },
+                {
+                  "term": "Mercredi, j'ai rendu visite à ma famille. Cela dit, cela dépend du contexte.",
+                  "translations": [
+                    "El miércoles visité a mi familia. Dicho esto, depende del contexto."
+                  ]
+                },
+                {
+                  "term": "Vendredi, j'ai terminé un projet. En d'autres termes, cela vaut la peine d'être considéré.",
+                  "translations": [
+                    "El viernes terminé un proyecto. En otras palabras, merece la pena considerarlo."
+                  ]
+                }
+              ],
+              "exercises": [
+                {
+                  "type": "MultipleChoice",
+                  "id": "es-fr-b2-u01-l10-e01",
+                  "question": "¿Cuál es la opción correcta para «El lunes empecé un curso de inglés. Sin embargo, conviene matizarlo.»?",
+                  "options": [
+                    "Lundi, j'ai commencé un cours d'anglais. Cependant, il convient de nuancer.",
+                    "Mercredi, j'ai rendu visite à ma famille. Cela dit, cela dépend du contexte.",
+                    "Vendredi, j'ai terminé un projet. En d'autres termes, cela vaut la peine d'être considéré."
+                  ],
+                  "correctIndex": 0,
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "«El lunes empecé un curso de inglés. Sin embargo, conviene matizarlo.» se dice «Lundi, j'ai commencé un cours d'anglais. Cependant, il convient de nuancer.».",
+                    "ruleRef": "gp-b2-hedging"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has elegido la traducción correcta."
+                  }
+                },
+                {
+                  "type": "OrderWords",
+                  "id": "es-fr-b2-u01-l10-e02",
+                  "tokens": [
+                    "j'ai",
+                    "commencé",
+                    "un",
+                    "cours",
+                    "d'anglais",
+                    "Cependant",
+                    "il",
+                    "convient",
+                    "de",
+                    "nuancer",
+                    "Lundi"
+                  ],
+                  "answerTokens": [
+                    "Lundi",
+                    "j'ai",
+                    "commencé",
+                    "un",
+                    "cours",
+                    "d'anglais",
+                    "Cependant",
+                    "il",
+                    "convient",
+                    "de",
+                    "nuancer"
+                  ],
+                  "sourcePhrase": "El lunes empecé un curso de inglés. Sin embargo, conviene matizarlo.",
+                  "feedbackOnError": {
+                    "type": "word_order",
+                    "explanation": "El orden correcto es «Lundi j'ai commencé un cours d'anglais Cependant il convient de nuancer».",
+                    "ruleRef": "gp-b2-hedging"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "El orden produce una frase natural."
+                  }
+                },
+                {
+                  "type": "ClozeDragDrop",
+                  "id": "es-fr-b2-u01-l10-e03",
+                  "passage": "{{b1}}, {{b2}} commencé un cours d'anglais.",
+                  "blanks": [
+                    {
+                      "id": "b1",
+                      "answer": "Lundi",
+                      "options": [
+                        "Lundi",
+                        "commencé",
+                        "cours"
+                      ]
+                    },
+                    {
+                      "id": "b2",
+                      "answer": "j'ai",
+                      "options": [
+                        "j'ai",
+                        "commencé",
+                        "cours"
+                      ]
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "Las dos formas deben encajar con el contexto de la frase.",
+                    "ruleRef": "gp-b2-future-perfect"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Los dos huecos encajan con la situación."
+                  }
+                },
+                {
+                  "type": "SemanticMatch",
+                  "id": "es-fr-b2-u01-l10-e04",
+                  "instructions": "Clasifica la función comunicativa de cada intervención.",
+                  "pairs": [
+                    {
+                      "left": "Lundi, j'ai commencé un cours d'anglais. Cependant, il convient de nuancer.",
+                      "right": "Planteamiento",
+                      "register": "formal",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    },
+                    {
+                      "left": "Mercredi, j'ai rendu visite à ma famille. Cela dit, cela dépend du contexte.",
+                      "right": "Concesión",
+                      "register": "neutral",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    },
+                    {
+                      "left": "Vendredi, j'ai terminé un projet. En d'autres termes, cela vaut la peine d'être considéré.",
+                      "right": "Conclusión",
+                      "register": "informal",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "Cada intervención cumple una función comunicativa distinta.",
+                    "ruleRef": "gp-b2-hedging"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has identificado la función de cada intervención."
+                  }
+                },
+                {
+                  "type": "SemanticMatch",
+                  "id": "es-fr-b2-u01-l10-e05",
+                  "instructions": "Distingue el registro de cada intervención.",
+                  "pairs": [
+                    {
+                      "left": "Lundi, j'ai commencé un cours d'anglais. Cependant, il convient de nuancer.",
+                      "right": "Formal",
+                      "register": "formal",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    },
+                    {
+                      "left": "Mercredi, j'ai rendu visite à ma famille. Cela dit, cela dépend du contexte.",
+                      "right": "Neutral",
+                      "register": "neutral",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    },
+                    {
+                      "left": "Vendredi, j'ai terminé un projet. En d'autres termes, cela vaut la peine d'être considéré.",
+                      "right": "Informal",
+                      "register": "informal",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "register",
+                    "explanation": "El registro cambia según el contexto y la relación con el interlocutor.",
+                    "ruleRef": "gp-b2-future-perfect"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has distinguido el registro de cada intervención."
+                  }
+                },
+                {
+                  "type": "AudioOnlyPrompt",
+                  "id": "es-fr-b2-u01-l10-e06",
+                  "audioText": "Mercredi, j'ai rendu visite à ma famille. Cela dit, cela dépend du contexte.",
+                  "question": "¿Qué ha dicho el hablante?",
+                  "options": [
+                    "Mercredi, j'ai rendu visite à ma famille. Cela dit, cela dépend du contexte.",
+                    "Lundi, j'ai commencé un cours d'anglais. Cependant, il convient de nuancer.",
+                    "Vendredi, j'ai terminé un projet. En d'autres termes, cela vaut la peine d'être considéré."
+                  ],
+                  "correctIndex": 0,
+                  "allowSlowPlayback": true,
+                  "feedbackOnError": {
+                    "type": "comprehension",
+                    "explanation": "El audio dice «Mercredi, j'ai rendu visite à ma famille. Cela dit, cela dépend du contexte.».",
+                    "ruleRef": "gp-b2-hedging"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has comprendido el mensaje del audio."
+                  }
+                },
+                {
+                  "type": "AudioOnlyPrompt",
+                  "id": "es-fr-b2-u01-l10-e07",
+                  "audioText": "Vendredi, j'ai terminé un projet. En d'autres termes, cela vaut la peine d'être considéré.",
+                  "question": "¿Cuál es la idea principal?",
+                  "options": [
+                    "Vendredi, j'ai terminé un projet. En d'autres termes, cela vaut la peine d'être considéré.",
+                    "Lundi, j'ai commencé un cours d'anglais. Cependant, il convient de nuancer.",
+                    "Mercredi, j'ai rendu visite à ma famille. Cela dit, cela dépend du contexte."
+                  ],
+                  "correctIndex": 0,
+                  "allowSlowPlayback": false,
+                  "feedbackOnError": {
+                    "type": "comprehension",
+                    "explanation": "El audio dice «Vendredi, j'ai terminé un projet. En d'autres termes, cela vaut la peine d'être considéré.».",
+                    "ruleRef": "gp-b2-future-perfect"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has identificado la idea principal."
+                  }
+                },
+                {
+                  "type": "ListenType",
+                  "id": "es-fr-b2-u01-l10-e08",
+                  "audioText": "Vendredi, j'ai terminé un projet. En d'autres termes, cela vaut la peine d'être considéré.",
+                  "transcription": "Vendredi, j'ai terminé un projet. En d'autres termes, cela vaut la peine d'être considéré.",
+                  "feedbackOnError": {
+                    "type": "spelling",
+                    "explanation": "Escribe exactamente «Vendredi, j'ai terminé un projet. En d'autres termes, cela vaut la peine d'être considéré.».",
+                    "ruleRef": "gp-b2-hedging"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La transcripción coincide con el audio."
+                  }
+                },
+                {
+                  "type": "SpeakRepeat",
+                  "id": "es-fr-b2-u01-l10-e09",
+                  "targetPhrase": "Vendredi, j'ai terminé un projet. En d'autres termes, cela vaut la peine d'être considéré.",
+                  "audioText": "Vendredi, j'ai terminé un projet. En d'autres termes, cela vaut la peine d'être considéré.",
+                  "feedbackOnError": {
+                    "type": "pronunciation",
+                    "explanation": "Repite «Vendredi, j'ai terminé un projet. En d'autres termes, cela vaut la peine d'être considéré.» con claridad.",
+                    "ruleRef": "gp-b2-hedging"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La frase se entiende y mantiene el ritmo."
+                  }
+                },
+                {
+                  "type": "FreeSpeakingPrompt",
+                  "id": "es-fr-b2-u01-l10-e10",
+                  "prompt": "Argumenta y matiza una opinión sobre mi semana.",
+                  "minTokens": 20,
+                  "conceptClusters": [
+                    [
+                      "Lundi"
+                    ],
+                    [
+                      "j'ai"
+                    ],
+                    [
+                      "commencé"
+                    ]
+                  ],
+                  "modelAnswer": "Lundi, j'ai commencé un cours d'anglais. Cependant, il convient de nuancer. Mercredi, j'ai rendu visite à ma famille. Cela dit, cela dépend du contexte. Vendredi, j'ai terminé un projet. En d'autres termes, cela vaut la peine d'être considéré.",
+                  "selfAssessmentCriteria": [
+                    "¿La respuesta argumenta y responde a la tarea?",
+                    "¿Usa las dos estructuras gramaticales de la lección?",
+                    "¿Incluye una concesión o una matización?"
+                  ],
+                  "grammarRuleRefs": [
+                    "gp-b2-hedging",
+                    "gp-b2-future-perfect"
+                  ],
+                  "timeLimitSeconds": 90,
+                  "minWpm": 70,
+                  "maxWpm": 160,
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "La respuesta modelo desarrolla una opinión con matices y una concesión.",
+                    "ruleRef": "gp-b2-hedging"
+                  }
+                }
+              ]
+            }
+          ]
         }
       ]
     },
