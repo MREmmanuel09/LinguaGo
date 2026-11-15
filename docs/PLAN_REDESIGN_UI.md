@@ -1,6 +1,9 @@
 # Plan de rediseño de UI — prototipo «Warm Cream & Teal»
 
-> **Estado:** plan operativo aprobado para ejecución por fases (ADR-055).
+> **Estado:** R1–R7 **ejecutadas y verificadas en emulador** (Medium_Phone_API_37.0).
+> Rediseño completo: ruta, lección, repaso, progreso, ajustes, onboarding,
+> modo oscuro y gemas reales (DataStore + snapshot v4). QA nativo del usuario
+> pendiente antes de publicar releases.
 > **Referencia visual:** vídeo `C:\Users\emman\Downloads\gemini_generated_video_1b2a83df.mp4`
 > y cuatro pantallas: ruta, lección, escucha/STT y repaso.
 > **Fecha:** 2026-11-15.

@@ -2280,7 +2280,7 @@ mitiga con el parche 3.2.x si aparecen incidencias.
 
 ## ADR-055: rediseño de identidad visual al prototipo «Warm Cream & Teal»
 
-**Estado:** Propuesto (pendiente de aprobación del responsable)
+> **Estado:** Propuesto (aprobado y **ejecutado**: R1–R7 completas).
 **Fecha:** 2026-11-15
 **Se aplica en:** `core-ui` (tokens, tipografía, componentes) y pantallas de
 `feature-*`. El plan operativo está en `docs/PLAN_REDESIGN_UI.md`.
