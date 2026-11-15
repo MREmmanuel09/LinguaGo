@@ -4,10 +4,11 @@ import androidx.compose.ui.graphics.Color
 import dev.linguago.core.ui.theme.LinguaTokens
 
 /**
- * Etapa CEFR del camino (ADR-032; C1/C2 en ADR-042). Se asigna por el CEFR
- * del contenido del nivel; no se persiste. Usa tokens existentes, sin hex
- * nuevos: C1 reutiliza `PrimaryEdge` (violeta profundo, siguiente expresión
- * de la rampa B1) y C2 el oro de cofre, que marca la cima del camino.
+ * Etapa CEFR del camino (ADR-032; C1/C2 en ADR-042) con la paleta
+ * «Warm Cream & Teal» (ADR-055). Se asigna por el CEFR del contenido del
+ * nivel; no se persiste. Usa tokens existentes, sin hex nuevos: A1 sage,
+ * A2 slate, B1 teal, B2 ámbar, C1 teal profundo y C2 el oro de cofre que
+ * marca la cima del camino.
  */
 public enum class PathStage(
     public val label: String,
@@ -34,13 +35,16 @@ public enum class PathStage(
 
     /**
      * Color de contenido sobre [accent] con contraste AA (I8). A1, A2, B2 y
-     * C2 usan tintes claros y necesitan tinta oscura; B1 y C1 son violetas
-     * profundos y mantienen blanco (ADR-045).
+     * C2 usan tintes claros y necesitan tinta oscura; B1 y C1 son tonos
+     * profundos y mantienen crema (ADR-055).
      */
     public val onAccent: Color
         get() =
             when (this) {
-                PathStage.A1, PathStage.A2, PathStage.B2, PathStage.C2 -> LinguaTokens.Fg
-                else -> Color.White
+                PathStage.A1 -> LinguaTokens.AccentInk
+                PathStage.A2 -> LinguaTokens.OnInfoFill
+                PathStage.B2 -> LinguaTokens.WarningInk
+                PathStage.C2 -> LinguaTokens.Fg
+                else -> LinguaTokens.Bg
             }
 }

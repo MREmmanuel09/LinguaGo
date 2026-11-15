@@ -80,8 +80,8 @@ val LinguaTypography =
             TextStyle(
                 fontFamily = Nunito,
                 fontWeight = FontWeight.ExtraBold,
-                fontSize = 26.sp,
-                lineHeight = 34.sp,
+                fontSize = 30.sp,
+                lineHeight = 38.sp,
             ),
         headlineSmall =
             TextStyle(
@@ -115,8 +115,8 @@ val LinguaTypography =
             TextStyle(
                 fontFamily = Nunito,
                 fontWeight = FontWeight.Medium,
-                fontSize = 18.sp,
-                lineHeight = 26.sp,
+                fontSize = 16.sp,
+                lineHeight = 24.sp,
             ),
         bodyMedium =
             TextStyle(

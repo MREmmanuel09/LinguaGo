@@ -5,8 +5,8 @@ import androidx.compose.material3.lightColorScheme
 import androidx.compose.ui.graphics.Color
 
 /**
- * Voces de color Material 3 derivadas de los tokens LinguaGo (RFC §7.1) para
- * modo claro y oscuro. Los roles se mapean manteniendo la identidad original.
+ * Voces de color Material 3 derivadas de los tokens LinguaGo (ADR-055,
+ * prototipo «Warm Cream & Teal») para modo claro y oscuro.
  */
 val LinguaLightColors =
     lightColorScheme(
@@ -15,15 +15,15 @@ val LinguaLightColors =
         primaryContainer = LinguaTokens.PrimaryEdge,
         onPrimaryContainer = LinguaTokens.Bg,
         secondary = LinguaTokens.Accent,
-        onSecondary = LinguaTokens.Bg,
+        onSecondary = LinguaTokens.AccentInk,
         secondaryContainer = Color(LinguaTokens.SECONDARY_CONTAINER_HEX),
         onSecondaryContainer = Color(LinguaTokens.ON_SECONDARY_CONTAINER_HEX),
         tertiary = LinguaTokens.Info,
-        onTertiary = LinguaTokens.Bg,
+        onTertiary = LinguaTokens.OnInfoFill,
         tertiaryContainer = Color(LinguaTokens.TERTIARY_CONTAINER_HEX),
         onTertiaryContainer = Color(LinguaTokens.ON_TERTIARY_CONTAINER_HEX),
         error = LinguaTokens.Destructive,
-        onError = LinguaTokens.Bg,
+        onError = LinguaTokens.DestructiveInk,
         errorContainer = Color(LinguaTokens.ERROR_CONTAINER_HEX),
         onErrorContainer = Color(LinguaTokens.ON_ERROR_CONTAINER_HEX),
         background = LinguaTokens.Bg,
@@ -38,20 +38,20 @@ val LinguaLightColors =
 
 val LinguaDarkColors =
     darkColorScheme(
-        primary = LinguaTokens.Primary,
-        onPrimary = LinguaTokens.Bg,
-        primaryContainer = LinguaTokens.PrimaryEdge,
-        onPrimaryContainer = LinguaTokens.Bg,
+        primary = Color(LinguaTokens.DARK_PRIMARY_HEX),
+        onPrimary = Color(LinguaTokens.DARK_BG_HEX),
+        primaryContainer = Color(LinguaTokens.DARK_PRIMARY_EDGE_HEX),
+        onPrimaryContainer = Color(LinguaTokens.DARK_PRIMARY_INK_HEX),
         secondary = LinguaTokens.Accent,
-        onSecondary = LinguaTokens.Bg,
+        onSecondary = LinguaTokens.AccentInk,
         secondaryContainer = Color(LinguaTokens.DARK_SECONDARY_CONTAINER_HEX),
         onSecondaryContainer = Color(LinguaTokens.DARK_ON_SECONDARY_CONTAINER_HEX),
-        tertiary = LinguaTokens.Info,
-        onTertiary = LinguaTokens.Bg,
+        tertiary = Color(LinguaTokens.DARK_INFO_HEX),
+        onTertiary = Color(LinguaTokens.DARK_ON_INFO_FILL_HEX),
         tertiaryContainer = Color(LinguaTokens.DARK_TERTIARY_CONTAINER_HEX),
         onTertiaryContainer = Color(LinguaTokens.DARK_ON_TERTIARY_CONTAINER_HEX),
         error = LinguaTokens.Destructive,
-        onError = LinguaTokens.Bg,
+        onError = Color(LinguaTokens.DARK_BG_HEX),
         errorContainer = Color(LinguaTokens.DARK_ERROR_CONTAINER_HEX),
         onErrorContainer = Color(LinguaTokens.DARK_ON_ERROR_CONTAINER_HEX),
         background = Color(LinguaTokens.DARK_BG_HEX),
