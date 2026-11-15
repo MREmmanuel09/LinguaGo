@@ -11,9 +11,9 @@ import javax.inject.Singleton
 /**
  * Codec JSON del snapshot (ADR-013/ADR-050): parseo estricto (sin claves
  * extra) y verificación de versión del formato. Se aceptan versiones
- * anteriores (v1 sin vidas, v2 con vidas) para no perder respaldos
- * existentes; una versión futura se rechaza como InvalidContent (I4: nunca
- * aplica mutaciones de otro formato).
+ * anteriores (v1 sin vidas, v2 con vidas, v3 con FSRS) para no perder
+ * respaldos existentes; una versión futura se rechaza como InvalidContent
+ * (I4: nunca aplica mutaciones de otro formato). v4 añade gemas (ADR-055).
  */
 @Singleton
 public class SnapshotCodec

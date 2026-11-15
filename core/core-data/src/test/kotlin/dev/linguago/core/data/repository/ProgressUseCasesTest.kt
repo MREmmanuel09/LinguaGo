@@ -83,6 +83,8 @@ private class RecordingProgressRepository : ProgressRepository {
 
     override fun observeStreak(): Flow<StreakState> = MutableStateFlow(streak)
 
+    override fun observeGems(): Flow<Int> = MutableStateFlow(0)
+
     override suspend fun applyDailyActivity(today: LocalDate): Result<StreakState> {
         dailyActivityCalls += 1
         return Result.success(streak)

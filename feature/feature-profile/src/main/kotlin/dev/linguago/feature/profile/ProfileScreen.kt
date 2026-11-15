@@ -49,8 +49,6 @@ import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import dev.linguago.core.ui.components.LinguaCard3D
 import dev.linguago.core.ui.components.LinguaIcons
 import dev.linguago.core.ui.components.LiquidXpBar
-import dev.linguago.core.ui.components.LumiMascot
-import dev.linguago.core.ui.components.LumiMood
 import dev.linguago.core.ui.components.path.PathStage
 import dev.linguago.core.ui.theme.LinguaTheme
 import dev.linguago.core.ui.theme.LinguaTokens
@@ -137,10 +135,6 @@ private fun ProfileContent(
                     )
                     LiquidXpBar(progress = uiState.xpIntoLevel)
                 }
-                LumiMascot(
-                    size = 34.dp,
-                    mood = if (mastery >= 0.5f) LumiMood.HAPPY else LumiMood.IDLE,
-                )
             }
         }
 

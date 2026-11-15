@@ -66,6 +66,12 @@ public const val XP_PER_CORRECT_ANSWER: Int = 10
 public const val XP_PER_CHEST: Int = 20
 
 /**
+ * Gema otorgada al completar una lección (ADR-055): divisa del prototipo,
+ * persistida en DataStore (no Room) y fusionada con máximo en el snapshot.
+ */
+public const val GEMS_PER_LESSON: Int = 1
+
+/**
  * Estado FSRS de una tarjeta de vocabulario (ADR-016, Fase 5).
  * `stability` = días para decaer a la retención objetivo; `difficulty` =
  * 1..10. La tarjeta se identifica por la pareja (courseId, word).

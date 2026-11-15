@@ -31,6 +31,7 @@ public class SnapshotMergeTest {
         hearts: Int = HEARTS_MAX,
         heartsLastRegen: Long = 0L,
         words: List<SyncSnapshot.WordEntry> = emptyList(),
+        gems: Int = 0,
     ): SyncSnapshot =
         SyncSnapshot(
             exportedAtMillis = exportedAtMillis,
@@ -42,6 +43,7 @@ public class SnapshotMergeTest {
             heartsCurrent = hearts,
             heartsLastRegenEpochSecond = heartsLastRegen,
             words = words,
+            gemsCurrent = gems,
         )
 
     private fun word(
@@ -198,6 +200,23 @@ public class SnapshotMergeTest {
         val remote = snapshot(words = listOf(word("hola", reviewCount = 5, lastReview = 500)))
 
         assertEquals(local.mergedWith(remote), remote.mergedWith(local))
+    }
+
+    @Test
+    public fun `las gemas toman el maximo en ambas direcciones`() {
+        val local = snapshot(gems = 2)
+        val remote = snapshot(gems = 5)
+
+        assertEquals(5, local.mergedWith(remote).gemsCurrent)
+        assertEquals(5, remote.mergedWith(local).gemsCurrent)
+    }
+
+    @Test
+    public fun `un snapshot viejo sin gemas no borra el saldo local`() {
+        val local = snapshot(gems = 7)
+        val legacy = snapshot()
+
+        assertEquals(7, local.mergedWith(legacy).gemsCurrent)
     }
 
     @Test

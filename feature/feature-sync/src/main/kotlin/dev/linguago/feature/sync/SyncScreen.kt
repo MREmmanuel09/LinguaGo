@@ -209,7 +209,7 @@ private fun SyncContent(
             )
             Text(
                 text =
-                    "Exporta un .json con racha, XP, vidas, lecciones y tarjetas FSRS. " +
+                    "Exporta un .json con racha, XP, gemas, vidas, lecciones y tarjetas FSRS. " +
                         "Al importarlo se fusiona y nunca borra avances.",
                 style = MaterialTheme.typography.bodySmall,
                 color = colors.onSurfaceVariant,

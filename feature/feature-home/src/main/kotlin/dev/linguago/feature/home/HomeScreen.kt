@@ -180,7 +180,7 @@ private fun HomeHeader(
             horizontalArrangement = Arrangement.SpaceBetween,
         ) {
             StreakIndicator(days = uiState.streakDays)
-            GemsChip(count = null)
+            GemsChip(count = uiState.gems)
             HeartsCounter(hearts = uiState.hearts)
         }
 

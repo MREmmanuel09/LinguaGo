@@ -14,6 +14,8 @@ import dev.linguago.core.domain.model.SyncSnapshot
  * Tarjetas FSRS (ADR-050): para cada clave `(word, courseId)` gana la entrada
  * con más repasos y, en empate, la de `lastReviewEpochMillis` más reciente.
  * Así una tarjeta aprendida nunca desaparece ni retrocede a no aprendida.
+ *
+ * Gemas (ADR-055): toman el **máximo**, igual que la racha y el XP.
  */
 public fun SyncSnapshot.mergedWith(remote: SyncSnapshot): SyncSnapshot {
     val mergedLessons = LinkedHashMap<String, SyncSnapshot.LessonEntry>()
@@ -39,6 +41,7 @@ public fun SyncSnapshot.mergedWith(remote: SyncSnapshot): SyncSnapshot {
         heartsCurrent = minOf(heartsCurrent, remote.heartsCurrent),
         heartsLastRegenEpochSecond = maxOf(heartsLastRegenEpochSecond, remote.heartsLastRegenEpochSecond),
         words = mergedWords.values.sortedWith(compareBy({ it.courseId }, { it.word })),
+        gemsCurrent = maxOf(gemsCurrent, remote.gemsCurrent),
     )
 }
 

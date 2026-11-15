@@ -8,7 +8,8 @@ import kotlinx.serialization.Serializable
  * documento JSON autocontenido: racha, lecciones, vidas y mazo FSRS. La nube
  * es opcional (I2) y el merge resultante es monótono (I4: nunca borra
  * progreso). v2 añadió vidas (ADR-025); v3 añade tarjetas FSRS y métricas de
- * voz/precisión. Los snapshots v1/v2 siguen decodificando.
+ * voz/precisión; v4 añade gemas (ADR-055). Los snapshots v1/v2/v3 siguen
+ * decodificando (los campos nuevos tienen valor por defecto).
  */
 @Serializable
 public data class SyncSnapshot(
@@ -25,6 +26,8 @@ public data class SyncSnapshot(
     val heartsLastRegenEpochSecond: Long = 0L,
     /** Mazo FSRS completo (ADR-050); vacío en snapshots v1/v2. */
     val words: List<WordEntry> = emptyList(),
+    /** Gemas acumuladas (ADR-055); 0 en snapshots v1/v2/v3. */
+    val gemsCurrent: Int = 0,
 ) {
     /** Fila de progreso de una lección dentro del snapshot. */
     @Serializable
@@ -58,7 +61,7 @@ public data class SyncSnapshot(
     )
 
     public companion object {
-        /** Versión del formato de snapshot: v3 añade `words` (ADR-050). */
-        public const val SCHEMA_VERSION: Int = 3
+        /** Versión del formato de snapshot: v4 añade `gemsCurrent` (ADR-055). */
+        public const val SCHEMA_VERSION: Int = 4
     }
 }

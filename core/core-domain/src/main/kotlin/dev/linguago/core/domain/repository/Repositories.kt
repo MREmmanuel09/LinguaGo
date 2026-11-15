@@ -25,6 +25,9 @@ public interface ProgressRepository {
     /** Observa el estado de racha como flujo reactivo (patrón Observer). */
     public fun observeStreak(): Flow<StreakState>
 
+    /** Observa las gemas acumuladas (ADR-055, DataStore). */
+    public fun observeGems(): Flow<Int>
+
     /** Aplica la regla de racha para el día indicado y devuelve la racha resultante. */
     public suspend fun applyDailyActivity(today: LocalDate): Result<StreakState>
 

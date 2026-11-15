@@ -51,6 +51,7 @@ data class HomeUiState(
     val units: List<UnitTile> = emptyList(),
     val pathItems: List<PathItem> = emptyList(),
     val hearts: Int = HEARTS_MAX,
+    val gems: Int = 0,
     val level: Int = 1,
     val xpIntoLevel: Float = 0f,
     val courses: List<CourseSwitchOption> = emptyList(),
@@ -92,13 +93,22 @@ class HomeViewModel
 
         private val courseState =
             combine(
-                combine(progressRepository.observeStreak(), heartsRepository.observe()) { streak, hearts ->
-                    streak to hearts
+                combine(
+                    combine(
+                        progressRepository.observeStreak(),
+                        heartsRepository.observe(),
+                        progressRepository.observeGems(),
+                    ) { streak, hearts, gems ->
+                        Triple(streak, hearts, gems)
+                    },
+                    progressRepository.observeLessonProgress(),
+                ) { stats, lessonProgress ->
+                    stats to lessonProgress
                 },
-                progressRepository.observeLessonProgress(),
                 loading,
                 course,
-            ) { (streak, hearts), lessonProgress, isLoading, courseValue ->
+            ) { (stats, lessonProgress), isLoading, courseValue ->
+                val (streak, hearts, gems) = stats
                 val xp = xpLevelFor(streak.totalXp)
                 HomeUiState(
                     loading = isLoading,
@@ -110,6 +120,7 @@ class HomeViewModel
                     units = courseValue?.let { value -> buildTiles(value, lessonProgress) } ?: emptyList(),
                     pathItems = courseValue?.let { value -> buildPathItems(value, lessonProgress) } ?: emptyList(),
                     hearts = hearts.hearts,
+                    gems = gems,
                     level = xp.level,
                     xpIntoLevel = xp.progressToNext,
                 )

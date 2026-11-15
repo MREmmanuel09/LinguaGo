@@ -11,10 +11,12 @@ import dev.linguago.core.data.database.LinguagoDatabase
 import dev.linguago.core.data.database.StreakProgressDao
 import dev.linguago.core.data.database.StreakProgressEntity
 import dev.linguago.core.data.database.WordProgressEntity
+import dev.linguago.core.data.preferences.GemsStore
 import dev.linguago.core.domain.hearts.HEARTS_MAX
 import dev.linguago.core.domain.hearts.HeartsRules
 import dev.linguago.core.domain.hearts.HeartsState
 import dev.linguago.core.domain.model.DailyActivity
+import dev.linguago.core.domain.model.GEMS_PER_LESSON
 import dev.linguago.core.domain.model.LessonId
 import dev.linguago.core.domain.model.LessonProgress
 import dev.linguago.core.domain.model.StreakState
@@ -40,10 +42,13 @@ public class ProgressRepositoryImpl
     @Inject
     constructor(
         private val database: LinguagoDatabase,
+        private val gemsStore: GemsStore,
         private val dispatchers: DispatcherProvider,
     ) : ProgressRepository {
         override fun observeStreak(): Flow<StreakState> =
             database.streakProgressDao().observe().map { entity -> entity?.toDomain() ?: StreakState.zero() }
+
+        override fun observeGems(): Flow<Int> = gemsStore.observe()
 
         override fun observeLessonProgress(): Flow<List<LessonProgress>> =
             database.lessonProgressDao().observeAll().map { entities -> entities.map { it.toDomain() } }
@@ -106,6 +111,7 @@ public class ProgressRepositoryImpl
                             lastScorePercent = scorePercent,
                         )
                     dao.upsert(entity)
+                    gemsStore.add(GEMS_PER_LESSON)
                     Result.success(Unit)
                 } catch (e: Exception) {
                     Result.error(LinguaError.Unknown)
@@ -219,6 +225,7 @@ public class ProgressRepositoryImpl
                             lastRegenEpochSecond = merged.heartsLastRegenEpochSecond,
                         ),
                     )
+                    gemsStore.applyMax(merged.gemsCurrent)
                     Result.success(
                         StreakState(
                             current = merged.streakCurrent,
@@ -247,6 +254,7 @@ public class ProgressRepositoryImpl
                 heartsCurrent = hearts.hearts,
                 heartsLastRegenEpochSecond = hearts.lastRegenEpochSecond,
                 words = database.wordProgressDao().snapshotAll().map { entity -> entity.toSnapshotEntry() },
+                gemsCurrent = gemsStore.current(),
             )
         }
 

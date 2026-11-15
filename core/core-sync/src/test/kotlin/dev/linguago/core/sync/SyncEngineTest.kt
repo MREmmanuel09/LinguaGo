@@ -34,6 +34,8 @@ public class SyncEngineTest {
 
         override fun observeStreak(): Flow<StreakState> = MutableStateFlow(StreakState.zero())
 
+        override fun observeGems(): Flow<Int> = MutableStateFlow(0)
+
         override suspend fun applyDailyActivity(today: LocalDate): Result<StreakState> = Result.success(StreakState.zero())
 
         override suspend fun addXp(amount: Int): Result<StreakState> = Result.success(StreakState.zero())
@@ -120,7 +122,7 @@ public class SyncEngineTest {
         }
 
     @Test
-    public fun `exportSnapshot produce JSON v3 con tarjetas FSRS`() =
+    public fun `exportSnapshot produce JSON v4 con tarjetas FSRS`() =
         runTest {
             val repo = FakeProgressRepository()
             repo.local =
@@ -151,7 +153,7 @@ public class SyncEngineTest {
             val payload = (engine.exportSnapshot() as Result.Success).value
             val json = String(payload, Charsets.UTF_8)
 
-            assertTrue(json.contains("\"schemaVersion\":3"))
+            assertTrue(json.contains("\"schemaVersion\":4"))
             assertTrue(json.contains("\"word\":\"hola\""))
             assertTrue(json.contains("\"culturalNote\":\"Saludo informal\""))
         }

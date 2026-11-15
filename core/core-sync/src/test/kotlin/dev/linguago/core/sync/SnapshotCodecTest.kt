@@ -41,7 +41,7 @@ public class SnapshotCodecTest {
     @Test
     public fun `encode incluye la version del formato`() {
         val encoded = String((codec.encode(snapshot) as Result.Success).value, Charsets.UTF_8)
-        assertTrue(encoded.contains("\"schemaVersion\":3"))
+        assertTrue(encoded.contains("\"schemaVersion\":4"))
     }
 
     @Test
