@@ -79,7 +79,14 @@ if (-not (Test-Path $universal) -or -not (Test-Path $arm64)) {
 $sdk = if ($env:ANDROID_HOME) { $env:ANDROID_HOME } else { Join-Path $env:LOCALAPPDATA "Android\Sdk" }
 $buildTools = Get-ChildItem (Join-Path $sdk "build-tools") -Directory | Sort-Object Name -Descending | Select-Object -First 1
 $apksigner = Join-Path $buildTools.FullName "apksigner.bat"
+$previousErrorAction = $ErrorActionPreference
+$ErrorActionPreference = "Continue"
 $certs = & $apksigner verify --print-certs $universal 2>&1 | Out-String
+$signingExit = $LASTEXITCODE
+$ErrorActionPreference = $previousErrorAction
+if ($signingExit -ne 0) {
+    throw "No se pudo verificar la firma del APK."
+}
 if ($certs -match "CN=Android Debug") {
     throw "El APK está firmado con Android Debug. Configura el keystore de distribución antes de publicar."
 }
