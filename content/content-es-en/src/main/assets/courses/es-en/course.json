@@ -44482,6 +44482,2154 @@
               ]
             }
           ]
+        },
+        {
+          "id": "es-en-a2-u05",
+          "title": "A2 · Salud y bienestar",
+          "lessons": [
+            {
+              "id": "es-en-a2-u05-l01",
+              "title": "Repaso: mi ciudad",
+              "cefrLevel": "A2",
+              "vocabFrequencyBand": "2000-3000",
+              "canDo": "Puedo describir mi ciudad y compararla con otras.",
+              "microLesson": {
+                "title": "Repaso: mi ciudad",
+                "goals": [
+                  "Reconocer vocabulario de mi ciudad.",
+                  "Usar frases sencillas sobre mi ciudad.",
+                  "Producir un mensaje breve sobre mi ciudad."
+                ],
+                "sections": [
+                  {
+                    "heading": "Foco gramatical",
+                    "body": "Comparativos: Compara con -er/more ... than o tan ... como. Superlativos: El superlativo expresa el grado máximo: the best, the most interesting.",
+                    "examples": [
+                      {
+                        "source": "Mi ciudad es tranquila y tiene un parque.",
+                        "target": "My city is quiet and has a park."
+                      },
+                      {
+                        "source": "El transporte público es más barato que el coche.",
+                        "target": "Public transport is cheaper than the car."
+                      }
+                    ]
+                  },
+                  {
+                    "heading": "En contexto",
+                    "body": "Observa cómo se usa comparativos en una situación de mi ciudad.",
+                    "examples": [
+                      {
+                        "source": "Me gustaría vivir en un barrio así.",
+                        "target": "I would like to live in a neighbourhood like that."
+                      }
+                    ]
+                  }
+                ]
+              },
+              "glossary": [
+                {
+                  "term": "My city is quiet and has a park.",
+                  "translations": [
+                    "Mi ciudad es tranquila y tiene un parque."
+                  ]
+                },
+                {
+                  "term": "Public transport is cheaper than the car.",
+                  "translations": [
+                    "El transporte público es más barato que el coche."
+                  ]
+                },
+                {
+                  "term": "I would like to live in a neighbourhood like that.",
+                  "translations": [
+                    "Me gustaría vivir en un barrio así."
+                  ]
+                }
+              ],
+              "exercises": [
+                {
+                  "type": "MultipleChoice",
+                  "id": "es-en-a2-u05-l01-e01",
+                  "question": "¿Cómo se dice «Mi ciudad es tranquila y tiene un parque.»?",
+                  "options": [
+                    "My city is quiet and has a park.",
+                    "Public transport is cheaper than the car.",
+                    "I would like to live in a neighbourhood like that."
+                  ],
+                  "correctIndex": 0,
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "«Mi ciudad es tranquila y tiene un parque.» se dice «My city is quiet and has a park.»."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has elegido la traducción correcta."
+                  }
+                },
+                {
+                  "type": "Translate",
+                  "id": "es-en-a2-u05-l01-e02",
+                  "sourcePhrase": "Mi ciudad es tranquila y tiene un parque.",
+                  "correctTokens": [
+                    "My",
+                    "city",
+                    "is",
+                    "quiet",
+                    "and",
+                    "has",
+                    "a",
+                    "park"
+                  ],
+                  "distractorTokens": [
+                    "Public",
+                    "transport",
+                    "cheaper"
+                  ],
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "El orden correcto es «My city is quiet and has a park». Comparativos: Compara con -er/more ... than o tan ... como.",
+                    "ruleRef": "gp-comparatives"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La frase conserva el orden y el significado."
+                  }
+                },
+                {
+                  "type": "OrderWords",
+                  "id": "es-en-a2-u05-l01-e03",
+                  "tokens": [
+                    "transport",
+                    "is",
+                    "cheaper",
+                    "than",
+                    "the",
+                    "car",
+                    "Public"
+                  ],
+                  "answerTokens": [
+                    "Public",
+                    "transport",
+                    "is",
+                    "cheaper",
+                    "than",
+                    "the",
+                    "car"
+                  ],
+                  "sourcePhrase": "El transporte público es más barato que el coche.",
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "La frase correcta es «Public transport is cheaper than the car». Comparativos: Compara con -er/more ... than o tan ... como.",
+                    "ruleRef": "gp-comparatives"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "El orden produce una frase natural."
+                  }
+                },
+                {
+                  "type": "MatchPairs",
+                  "id": "es-en-a2-u05-l01-e04",
+                  "pairs": [
+                    {
+                      "left": "Mi ciudad es tranquila y tiene un parque.",
+                      "right": "My city is quiet and has a park."
+                    },
+                    {
+                      "left": "El transporte público es más barato que el coche.",
+                      "right": "Public transport is cheaper than the car."
+                    },
+                    {
+                      "left": "Me gustaría vivir en un barrio así.",
+                      "right": "I would like to live in a neighbourhood like that."
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "Cada expresión tiene una traducción distinta."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has asociado cada expresión con su traducción."
+                  }
+                },
+                {
+                  "type": "ListenChoose",
+                  "id": "es-en-a2-u05-l01-e05",
+                  "audioText": "I would like to live in a neighbourhood like that.",
+                  "options": [
+                    "My city is quiet and has a park.",
+                    "Public transport is cheaper than the car.",
+                    "I would like to live in a neighbourhood like that."
+                  ],
+                  "correctIndex": 0,
+                  "feedbackOnError": {
+                    "type": "comprehension",
+                    "explanation": "El audio dice «I would like to live in a neighbourhood like that.»."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has reconocido la frase del audio."
+                  }
+                },
+                {
+                  "type": "ListenType",
+                  "id": "es-en-a2-u05-l01-e06",
+                  "audioText": "I would like to live in a neighbourhood like that.",
+                  "transcription": "I would like to live in a neighbourhood like that.",
+                  "feedbackOnError": {
+                    "type": "spelling",
+                    "explanation": "Escribe exactamente «I would like to live in a neighbourhood like that.»."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La transcripción coincide con el audio."
+                  }
+                },
+                {
+                  "type": "SpeakRepeat",
+                  "id": "es-en-a2-u05-l01-e07",
+                  "targetPhrase": "I would like to live in a neighbourhood like that.",
+                  "audioText": "I would like to live in a neighbourhood like that.",
+                  "feedbackOnError": {
+                    "type": "pronunciation",
+                    "explanation": "Repite «I would like to live in a neighbourhood like that.» con claridad."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La frase se entiende y mantiene el ritmo."
+                  }
+                }
+              ],
+              "grammarPoints": [
+                {
+                  "id": "gp-comparatives",
+                  "label": "Comparativos",
+                  "description": "Compara con -er/more ... than o tan ... como."
+                },
+                {
+                  "id": "gp-superlatives",
+                  "label": "Superlativos",
+                  "description": "El superlativo expresa el grado máximo: the best, the most interesting."
+                }
+              ]
+            },
+            {
+              "id": "es-en-a2-u05-l02",
+              "title": "Síntomas y estados",
+              "cefrLevel": "A2",
+              "vocabFrequencyBand": "2000-3000",
+              "canDo": "Puedo describir síntomas y decir cómo me siento.",
+              "microLesson": {
+                "title": "Síntomas y estados",
+                "goals": [
+                  "Reconocer vocabulario de los síntomas.",
+                  "Usar frases sencillas sobre los síntomas.",
+                  "Producir un mensaje breve sobre los síntomas."
+                ],
+                "sections": [
+                  {
+                    "heading": "Foco gramatical",
+                    "body": "Presente simple: Usa el presente simple para rutinas y hechos habituales.",
+                    "examples": [
+                      {
+                        "source": "Tengo dolor de cabeza.",
+                        "target": "I have a headache."
+                      },
+                      {
+                        "source": "Me duele la garganta.",
+                        "target": "I have a sore throat."
+                      }
+                    ]
+                  },
+                  {
+                    "heading": "En contexto",
+                    "body": "Observa cómo se usa presente simple en una situación de los síntomas.",
+                    "examples": [
+                      {
+                        "source": "Estoy muy cansado.",
+                        "target": "I am very tired."
+                      }
+                    ]
+                  }
+                ]
+              },
+              "glossary": [
+                {
+                  "term": "I have a headache.",
+                  "translations": [
+                    "Tengo dolor de cabeza."
+                  ]
+                },
+                {
+                  "term": "I have a sore throat.",
+                  "translations": [
+                    "Me duele la garganta."
+                  ]
+                },
+                {
+                  "term": "I am very tired.",
+                  "translations": [
+                    "Estoy muy cansado."
+                  ]
+                }
+              ],
+              "exercises": [
+                {
+                  "type": "MultipleChoice",
+                  "id": "es-en-a2-u05-l02-e01",
+                  "question": "¿Cómo se dice «Tengo dolor de cabeza.»?",
+                  "options": [
+                    "I have a headache.",
+                    "I have a sore throat.",
+                    "I am very tired."
+                  ],
+                  "correctIndex": 0,
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "«Tengo dolor de cabeza.» se dice «I have a headache.»."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has elegido la traducción correcta."
+                  }
+                },
+                {
+                  "type": "Translate",
+                  "id": "es-en-a2-u05-l02-e02",
+                  "sourcePhrase": "Tengo dolor de cabeza.",
+                  "correctTokens": [
+                    "I",
+                    "have",
+                    "a",
+                    "headache"
+                  ],
+                  "distractorTokens": [
+                    "sore",
+                    "throat",
+                    "am"
+                  ],
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "El orden correcto es «I have a headache». Presente simple: Usa el presente simple para rutinas y hechos habituales.",
+                    "ruleRef": "gp-present-simple"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La frase conserva el orden y el significado."
+                  }
+                },
+                {
+                  "type": "OrderWords",
+                  "id": "es-en-a2-u05-l02-e03",
+                  "tokens": [
+                    "have",
+                    "a",
+                    "sore",
+                    "throat",
+                    "I"
+                  ],
+                  "answerTokens": [
+                    "I",
+                    "have",
+                    "a",
+                    "sore",
+                    "throat"
+                  ],
+                  "sourcePhrase": "Me duele la garganta.",
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "La frase correcta es «I have a sore throat». Presente simple: Usa el presente simple para rutinas y hechos habituales.",
+                    "ruleRef": "gp-present-simple"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "El orden produce una frase natural."
+                  }
+                },
+                {
+                  "type": "MatchPairs",
+                  "id": "es-en-a2-u05-l02-e04",
+                  "pairs": [
+                    {
+                      "left": "Tengo dolor de cabeza.",
+                      "right": "I have a headache."
+                    },
+                    {
+                      "left": "Me duele la garganta.",
+                      "right": "I have a sore throat."
+                    },
+                    {
+                      "left": "Estoy muy cansado.",
+                      "right": "I am very tired."
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "Cada expresión tiene una traducción distinta."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has asociado cada expresión con su traducción."
+                  }
+                },
+                {
+                  "type": "ListenChoose",
+                  "id": "es-en-a2-u05-l02-e05",
+                  "audioText": "I am very tired.",
+                  "options": [
+                    "I have a headache.",
+                    "I have a sore throat.",
+                    "I am very tired."
+                  ],
+                  "correctIndex": 0,
+                  "feedbackOnError": {
+                    "type": "comprehension",
+                    "explanation": "El audio dice «I am very tired.»."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has reconocido la frase del audio."
+                  }
+                },
+                {
+                  "type": "ListenType",
+                  "id": "es-en-a2-u05-l02-e06",
+                  "audioText": "I am very tired.",
+                  "transcription": "I am very tired.",
+                  "feedbackOnError": {
+                    "type": "spelling",
+                    "explanation": "Escribe exactamente «I am very tired.»."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La transcripción coincide con el audio."
+                  }
+                },
+                {
+                  "type": "SpeakRepeat",
+                  "id": "es-en-a2-u05-l02-e07",
+                  "targetPhrase": "I am very tired.",
+                  "audioText": "I am very tired.",
+                  "feedbackOnError": {
+                    "type": "pronunciation",
+                    "explanation": "Repite «I am very tired.» con claridad."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La frase se entiende y mantiene el ritmo."
+                  }
+                }
+              ],
+              "grammarPoints": [
+                {
+                  "id": "gp-present-simple",
+                  "label": "Presente simple",
+                  "description": "Usa el presente simple para rutinas y hechos habituales."
+                }
+              ]
+            },
+            {
+              "id": "es-en-a2-u05-l03",
+              "title": "Remedios y farmacia",
+              "cefrLevel": "A2",
+              "vocabFrequencyBand": "2000-3000",
+              "canDo": "Puedo pedir remedios sencillos en la farmacia.",
+              "microLesson": {
+                "title": "Remedios y farmacia",
+                "goals": [
+                  "Reconocer vocabulario de la farmacia.",
+                  "Usar frases sencillas sobre la farmacia.",
+                  "Producir un mensaje breve sobre la farmacia."
+                ],
+                "sections": [
+                  {
+                    "heading": "Foco gramatical",
+                    "body": "Cantidad: Some, much, many, a lot of y enough expresan cantidad.",
+                    "examples": [
+                      {
+                        "source": "Necesito un analgésico",
+                        "target": "I need a painkiller"
+                      },
+                      {
+                        "source": "Necesito un jarabe para la tos",
+                        "target": "I need a cough syrup"
+                      }
+                    ]
+                  },
+                  {
+                    "heading": "En contexto",
+                    "body": "Observa cómo se usa cantidad en una situación de la farmacia.",
+                    "examples": [
+                      {
+                        "source": "Necesito una caja de tiritas",
+                        "target": "I need a box of plasters"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "glossary": [
+                {
+                  "term": "a painkiller",
+                  "translations": [
+                    "un analgésico"
+                  ]
+                },
+                {
+                  "term": "a cough syrup",
+                  "translations": [
+                    "un jarabe para la tos"
+                  ]
+                },
+                {
+                  "term": "a box of plasters",
+                  "translations": [
+                    "una caja de tiritas"
+                  ]
+                }
+              ],
+              "exercises": [
+                {
+                  "type": "MultipleChoice",
+                  "id": "es-en-a2-u05-l03-e01",
+                  "question": "¿Cómo se dice «un analgésico»?",
+                  "options": [
+                    "a painkiller",
+                    "a cough syrup",
+                    "a box of plasters"
+                  ],
+                  "correctIndex": 0,
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "«un analgésico» se dice «a painkiller»."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has elegido la traducción correcta."
+                  }
+                },
+                {
+                  "type": "Translate",
+                  "id": "es-en-a2-u05-l03-e02",
+                  "sourcePhrase": "Necesito un analgésico",
+                  "correctTokens": [
+                    "I",
+                    "need",
+                    "a",
+                    "painkiller"
+                  ],
+                  "distractorTokens": [
+                    "cough",
+                    "syrup",
+                    "box"
+                  ],
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "El orden correcto es «I need a painkiller». Cantidad: Some, much, many, a lot of y enough expresan cantidad.",
+                    "ruleRef": "gp-quantity"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La frase conserva el orden y el significado."
+                  }
+                },
+                {
+                  "type": "OrderWords",
+                  "id": "es-en-a2-u05-l03-e03",
+                  "tokens": [
+                    "need",
+                    "a",
+                    "cough",
+                    "syrup",
+                    "I"
+                  ],
+                  "answerTokens": [
+                    "I",
+                    "need",
+                    "a",
+                    "cough",
+                    "syrup"
+                  ],
+                  "sourcePhrase": "Necesito un jarabe para la tos",
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "La frase correcta es «I need a cough syrup». Cantidad: Some, much, many, a lot of y enough expresan cantidad.",
+                    "ruleRef": "gp-quantity"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "El orden produce una frase natural."
+                  }
+                },
+                {
+                  "type": "MatchPairs",
+                  "id": "es-en-a2-u05-l03-e04",
+                  "pairs": [
+                    {
+                      "left": "un analgésico",
+                      "right": "a painkiller"
+                    },
+                    {
+                      "left": "un jarabe para la tos",
+                      "right": "a cough syrup"
+                    },
+                    {
+                      "left": "una caja de tiritas",
+                      "right": "a box of plasters"
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "Cada expresión tiene una traducción distinta."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has asociado cada expresión con su traducción."
+                  }
+                },
+                {
+                  "type": "ListenChoose",
+                  "id": "es-en-a2-u05-l03-e05",
+                  "audioText": "I need a box of plasters",
+                  "options": [
+                    "I need a painkiller",
+                    "I need a cough syrup",
+                    "I need a box of plasters"
+                  ],
+                  "correctIndex": 0,
+                  "feedbackOnError": {
+                    "type": "comprehension",
+                    "explanation": "El audio dice «I need a box of plasters»."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has reconocido la frase del audio."
+                  }
+                },
+                {
+                  "type": "ListenType",
+                  "id": "es-en-a2-u05-l03-e06",
+                  "audioText": "I need a box of plasters",
+                  "transcription": "I need a box of plasters",
+                  "feedbackOnError": {
+                    "type": "spelling",
+                    "explanation": "Escribe exactamente «I need a box of plasters»."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La transcripción coincide con el audio."
+                  }
+                },
+                {
+                  "type": "SpeakRepeat",
+                  "id": "es-en-a2-u05-l03-e07",
+                  "targetPhrase": "I need a box of plasters",
+                  "audioText": "I need a box of plasters",
+                  "feedbackOnError": {
+                    "type": "pronunciation",
+                    "explanation": "Repite «I need a box of plasters» con claridad."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La frase se entiende y mantiene el ritmo."
+                  }
+                }
+              ],
+              "grammarPoints": [
+                {
+                  "id": "gp-quantity",
+                  "label": "Cantidad",
+                  "description": "Some, much, many, a lot of y enough expresan cantidad."
+                }
+              ]
+            },
+            {
+              "id": "es-en-a2-u05-l04",
+              "title": "Should / shouldn't",
+              "cefrLevel": "A2",
+              "vocabFrequencyBand": "2000-3000",
+              "canDo": "Puedo dar consejos con should y shouldn't.",
+              "microLesson": {
+                "title": "Should / shouldn't",
+                "goals": [
+                  "Reconocer vocabulario de los consejos de salud.",
+                  "Usar frases sencillas sobre los consejos de salud.",
+                  "Producir un mensaje breve sobre los consejos de salud."
+                ],
+                "sections": [
+                  {
+                    "heading": "Foco gramatical",
+                    "body": "Should para consejos: Should y shouldn't dan consejos y recomendaciones.",
+                    "examples": [
+                      {
+                        "source": "Deberías descansar más",
+                        "target": "You should rest more"
+                      },
+                      {
+                        "source": "Deberías beber más agua",
+                        "target": "You should drink more water"
+                      }
+                    ]
+                  },
+                  {
+                    "heading": "En contexto",
+                    "body": "Observa cómo se usa should para consejos en una situación de los consejos de salud.",
+                    "examples": [
+                      {
+                        "source": "Deberías dormir ocho horas",
+                        "target": "You should sleep eight hours"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "glossary": [
+                {
+                  "term": "rest more",
+                  "translations": [
+                    "descansar más"
+                  ]
+                },
+                {
+                  "term": "drink more water",
+                  "translations": [
+                    "beber más agua"
+                  ]
+                },
+                {
+                  "term": "sleep eight hours",
+                  "translations": [
+                    "dormir ocho horas"
+                  ]
+                }
+              ],
+              "exercises": [
+                {
+                  "type": "MultipleChoice",
+                  "id": "es-en-a2-u05-l04-e01",
+                  "question": "¿Cómo se dice «descansar más»?",
+                  "options": [
+                    "rest more",
+                    "drink more water",
+                    "sleep eight hours"
+                  ],
+                  "correctIndex": 0,
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "«descansar más» se dice «rest more»."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has elegido la traducción correcta."
+                  }
+                },
+                {
+                  "type": "Translate",
+                  "id": "es-en-a2-u05-l04-e02",
+                  "sourcePhrase": "Deberías descansar más",
+                  "correctTokens": [
+                    "You",
+                    "should",
+                    "rest",
+                    "more"
+                  ],
+                  "distractorTokens": [
+                    "drink",
+                    "water",
+                    "sleep"
+                  ],
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "El orden correcto es «You should rest more». Should para consejos: Should y shouldn't dan consejos y recomendaciones.",
+                    "ruleRef": "gp-should"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La frase conserva el orden y el significado."
+                  }
+                },
+                {
+                  "type": "OrderWords",
+                  "id": "es-en-a2-u05-l04-e03",
+                  "tokens": [
+                    "should",
+                    "drink",
+                    "more",
+                    "water",
+                    "You"
+                  ],
+                  "answerTokens": [
+                    "You",
+                    "should",
+                    "drink",
+                    "more",
+                    "water"
+                  ],
+                  "sourcePhrase": "Deberías beber más agua",
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "La frase correcta es «You should drink more water». Should para consejos: Should y shouldn't dan consejos y recomendaciones.",
+                    "ruleRef": "gp-should"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "El orden produce una frase natural."
+                  }
+                },
+                {
+                  "type": "MatchPairs",
+                  "id": "es-en-a2-u05-l04-e04",
+                  "pairs": [
+                    {
+                      "left": "descansar más",
+                      "right": "rest more"
+                    },
+                    {
+                      "left": "beber más agua",
+                      "right": "drink more water"
+                    },
+                    {
+                      "left": "dormir ocho horas",
+                      "right": "sleep eight hours"
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "Cada expresión tiene una traducción distinta."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has asociado cada expresión con su traducción."
+                  }
+                },
+                {
+                  "type": "ListenChoose",
+                  "id": "es-en-a2-u05-l04-e05",
+                  "audioText": "You should sleep eight hours",
+                  "options": [
+                    "You should rest more",
+                    "You should drink more water",
+                    "You should sleep eight hours"
+                  ],
+                  "correctIndex": 0,
+                  "feedbackOnError": {
+                    "type": "comprehension",
+                    "explanation": "El audio dice «You should sleep eight hours»."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has reconocido la frase del audio."
+                  }
+                },
+                {
+                  "type": "ListenType",
+                  "id": "es-en-a2-u05-l04-e06",
+                  "audioText": "You should sleep eight hours",
+                  "transcription": "You should sleep eight hours",
+                  "feedbackOnError": {
+                    "type": "spelling",
+                    "explanation": "Escribe exactamente «You should sleep eight hours»."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La transcripción coincide con el audio."
+                  }
+                },
+                {
+                  "type": "SpeakRepeat",
+                  "id": "es-en-a2-u05-l04-e07",
+                  "targetPhrase": "You should sleep eight hours",
+                  "audioText": "You should sleep eight hours",
+                  "feedbackOnError": {
+                    "type": "pronunciation",
+                    "explanation": "Repite «You should sleep eight hours» con claridad."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La frase se entiende y mantiene el ritmo."
+                  }
+                }
+              ],
+              "grammarPoints": [
+                {
+                  "id": "gp-should",
+                  "label": "Should para consejos",
+                  "description": "Should y shouldn't dan consejos y recomendaciones."
+                }
+              ]
+            },
+            {
+              "id": "es-en-a2-u05-l05",
+              "title": "Have to / don't have to",
+              "cefrLevel": "A2",
+              "vocabFrequencyBand": "2000-3000",
+              "canDo": "Puedo expresar obligaciones y ausencia de obligación.",
+              "microLesson": {
+                "title": "Have to / don't have to",
+                "goals": [
+                  "Reconocer vocabulario de las obligaciones de salud.",
+                  "Usar frases sencillas sobre las obligaciones de salud.",
+                  "Producir un mensaje breve sobre las obligaciones de salud."
+                ],
+                "sections": [
+                  {
+                    "heading": "Foco gramatical",
+                    "body": "Have to: Have to expresa obligación externa; don't have to, ausencia de obligación.",
+                    "examples": [
+                      {
+                        "source": "Tengo que tomar la medicina",
+                        "target": "I have to take the medicine"
+                      },
+                      {
+                        "source": "Tengo que ir al médico",
+                        "target": "I have to go to the doctor"
+                      }
+                    ]
+                  },
+                  {
+                    "heading": "En contexto",
+                    "body": "Observa cómo se usa have to en una situación de las obligaciones de salud.",
+                    "examples": [
+                      {
+                        "source": "Tengo que hacer ejercicio",
+                        "target": "I have to do exercise"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "glossary": [
+                {
+                  "term": "take the medicine",
+                  "translations": [
+                    "tomar la medicina"
+                  ]
+                },
+                {
+                  "term": "go to the doctor",
+                  "translations": [
+                    "ir al médico"
+                  ]
+                },
+                {
+                  "term": "do exercise",
+                  "translations": [
+                    "hacer ejercicio"
+                  ]
+                }
+              ],
+              "exercises": [
+                {
+                  "type": "MultipleChoice",
+                  "id": "es-en-a2-u05-l05-e01",
+                  "question": "¿Cómo se dice «tomar la medicina»?",
+                  "options": [
+                    "take the medicine",
+                    "go to the doctor",
+                    "do exercise"
+                  ],
+                  "correctIndex": 0,
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "«tomar la medicina» se dice «take the medicine»."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has elegido la traducción correcta."
+                  }
+                },
+                {
+                  "type": "Translate",
+                  "id": "es-en-a2-u05-l05-e02",
+                  "sourcePhrase": "Tengo que tomar la medicina",
+                  "correctTokens": [
+                    "I",
+                    "have",
+                    "to",
+                    "take",
+                    "the",
+                    "medicine"
+                  ],
+                  "distractorTokens": [
+                    "go",
+                    "doctor",
+                    "do"
+                  ],
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "El orden correcto es «I have to take the medicine». Have to: Have to expresa obligación externa; don't have to, ausencia de obligación.",
+                    "ruleRef": "gp-have-to"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La frase conserva el orden y el significado."
+                  }
+                },
+                {
+                  "type": "OrderWords",
+                  "id": "es-en-a2-u05-l05-e03",
+                  "tokens": [
+                    "have",
+                    "to",
+                    "go",
+                    "to",
+                    "the",
+                    "doctor",
+                    "I"
+                  ],
+                  "answerTokens": [
+                    "I",
+                    "have",
+                    "to",
+                    "go",
+                    "to",
+                    "the",
+                    "doctor"
+                  ],
+                  "sourcePhrase": "Tengo que ir al médico",
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "La frase correcta es «I have to go to the doctor». Have to: Have to expresa obligación externa; don't have to, ausencia de obligación.",
+                    "ruleRef": "gp-have-to"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "El orden produce una frase natural."
+                  }
+                },
+                {
+                  "type": "MatchPairs",
+                  "id": "es-en-a2-u05-l05-e04",
+                  "pairs": [
+                    {
+                      "left": "tomar la medicina",
+                      "right": "take the medicine"
+                    },
+                    {
+                      "left": "ir al médico",
+                      "right": "go to the doctor"
+                    },
+                    {
+                      "left": "hacer ejercicio",
+                      "right": "do exercise"
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "Cada expresión tiene una traducción distinta."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has asociado cada expresión con su traducción."
+                  }
+                },
+                {
+                  "type": "ListenChoose",
+                  "id": "es-en-a2-u05-l05-e05",
+                  "audioText": "I have to do exercise",
+                  "options": [
+                    "I have to take the medicine",
+                    "I have to go to the doctor",
+                    "I have to do exercise"
+                  ],
+                  "correctIndex": 0,
+                  "feedbackOnError": {
+                    "type": "comprehension",
+                    "explanation": "El audio dice «I have to do exercise»."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has reconocido la frase del audio."
+                  }
+                },
+                {
+                  "type": "ListenType",
+                  "id": "es-en-a2-u05-l05-e06",
+                  "audioText": "I have to do exercise",
+                  "transcription": "I have to do exercise",
+                  "feedbackOnError": {
+                    "type": "spelling",
+                    "explanation": "Escribe exactamente «I have to do exercise»."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La transcripción coincide con el audio."
+                  }
+                },
+                {
+                  "type": "SpeakRepeat",
+                  "id": "es-en-a2-u05-l05-e07",
+                  "targetPhrase": "I have to do exercise",
+                  "audioText": "I have to do exercise",
+                  "feedbackOnError": {
+                    "type": "pronunciation",
+                    "explanation": "Repite «I have to do exercise» con claridad."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La frase se entiende y mantiene el ritmo."
+                  }
+                }
+              ],
+              "grammarPoints": [
+                {
+                  "id": "gp-have-to",
+                  "label": "Have to",
+                  "description": "Have to expresa obligación externa; don't have to, ausencia de obligación."
+                }
+              ]
+            },
+            {
+              "id": "es-en-a2-u05-l06",
+              "title": "En la consulta médica",
+              "cefrLevel": "A2",
+              "vocabFrequencyBand": "2000-3000",
+              "canDo": "Puedo explicar un problema de salud en la consulta.",
+              "microLesson": {
+                "title": "En la consulta médica",
+                "goals": [
+                  "Reconocer vocabulario de la consulta médica.",
+                  "Usar frases sencillas sobre la consulta médica.",
+                  "Producir un mensaje breve sobre la consulta médica."
+                ],
+                "sections": [
+                  {
+                    "heading": "Foco gramatical",
+                    "body": "Presente perfecto: Have/has + participio conecta una experiencia pasada con el presente. Preguntas: El orden auxiliar + sujeto + verbo forma preguntas claras.",
+                    "examples": [
+                      {
+                        "source": "Me duele el estómago desde ayer.",
+                        "target": "My stomach has hurt since yesterday."
+                      },
+                      {
+                        "source": "¿Puedo tomar este medicamento?",
+                        "target": "Can I take this medicine?"
+                      }
+                    ]
+                  },
+                  {
+                    "heading": "En contexto",
+                    "body": "Observa cómo se usa presente perfecto en una situación de la consulta médica.",
+                    "examples": [
+                      {
+                        "source": "Tiene que descansar y beber agua.",
+                        "target": "You have to rest and drink water."
+                      }
+                    ]
+                  }
+                ]
+              },
+              "glossary": [
+                {
+                  "term": "My stomach has hurt since yesterday.",
+                  "translations": [
+                    "Me duele el estómago desde ayer."
+                  ]
+                },
+                {
+                  "term": "Can I take this medicine?",
+                  "translations": [
+                    "¿Puedo tomar este medicamento?"
+                  ]
+                },
+                {
+                  "term": "You have to rest and drink water.",
+                  "translations": [
+                    "Tiene que descansar y beber agua."
+                  ]
+                }
+              ],
+              "exercises": [
+                {
+                  "type": "MultipleChoice",
+                  "id": "es-en-a2-u05-l06-e01",
+                  "question": "¿Cómo se dice «Me duele el estómago desde ayer.»?",
+                  "options": [
+                    "My stomach has hurt since yesterday.",
+                    "Can I take this medicine?",
+                    "You have to rest and drink water."
+                  ],
+                  "correctIndex": 0,
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "«Me duele el estómago desde ayer.» se dice «My stomach has hurt since yesterday.»."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has elegido la traducción correcta."
+                  }
+                },
+                {
+                  "type": "Translate",
+                  "id": "es-en-a2-u05-l06-e02",
+                  "sourcePhrase": "Me duele el estómago desde ayer.",
+                  "correctTokens": [
+                    "My",
+                    "stomach",
+                    "has",
+                    "hurt",
+                    "since",
+                    "yesterday"
+                  ],
+                  "distractorTokens": [
+                    "Can",
+                    "I",
+                    "take"
+                  ],
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "El orden correcto es «My stomach has hurt since yesterday». Presente perfecto: Have/has + participio conecta una experiencia pasada con el presente.",
+                    "ruleRef": "gp-present-perfect"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La frase conserva el orden y el significado."
+                  }
+                },
+                {
+                  "type": "OrderWords",
+                  "id": "es-en-a2-u05-l06-e03",
+                  "tokens": [
+                    "I",
+                    "take",
+                    "this",
+                    "medicine",
+                    "Can"
+                  ],
+                  "answerTokens": [
+                    "Can",
+                    "I",
+                    "take",
+                    "this",
+                    "medicine"
+                  ],
+                  "sourcePhrase": "¿Puedo tomar este medicamento?",
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "La frase correcta es «Can I take this medicine». Presente perfecto: Have/has + participio conecta una experiencia pasada con el presente.",
+                    "ruleRef": "gp-present-perfect"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "El orden produce una frase natural."
+                  }
+                },
+                {
+                  "type": "MatchPairs",
+                  "id": "es-en-a2-u05-l06-e04",
+                  "pairs": [
+                    {
+                      "left": "Me duele el estómago desde ayer.",
+                      "right": "My stomach has hurt since yesterday."
+                    },
+                    {
+                      "left": "¿Puedo tomar este medicamento?",
+                      "right": "Can I take this medicine?"
+                    },
+                    {
+                      "left": "Tiene que descansar y beber agua.",
+                      "right": "You have to rest and drink water."
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "Cada expresión tiene una traducción distinta."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has asociado cada expresión con su traducción."
+                  }
+                },
+                {
+                  "type": "ListenChoose",
+                  "id": "es-en-a2-u05-l06-e05",
+                  "audioText": "You have to rest and drink water.",
+                  "options": [
+                    "My stomach has hurt since yesterday.",
+                    "Can I take this medicine?",
+                    "You have to rest and drink water."
+                  ],
+                  "correctIndex": 0,
+                  "feedbackOnError": {
+                    "type": "comprehension",
+                    "explanation": "El audio dice «You have to rest and drink water.»."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has reconocido la frase del audio."
+                  }
+                },
+                {
+                  "type": "ListenType",
+                  "id": "es-en-a2-u05-l06-e06",
+                  "audioText": "You have to rest and drink water.",
+                  "transcription": "You have to rest and drink water.",
+                  "feedbackOnError": {
+                    "type": "spelling",
+                    "explanation": "Escribe exactamente «You have to rest and drink water.»."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La transcripción coincide con el audio."
+                  }
+                },
+                {
+                  "type": "SpeakRepeat",
+                  "id": "es-en-a2-u05-l06-e07",
+                  "targetPhrase": "You have to rest and drink water.",
+                  "audioText": "You have to rest and drink water.",
+                  "feedbackOnError": {
+                    "type": "pronunciation",
+                    "explanation": "Repite «You have to rest and drink water.» con claridad."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La frase se entiende y mantiene el ritmo."
+                  }
+                }
+              ],
+              "grammarPoints": [
+                {
+                  "id": "gp-present-perfect",
+                  "label": "Presente perfecto",
+                  "description": "Have/has + participio conecta una experiencia pasada con el presente."
+                },
+                {
+                  "id": "gp-questions",
+                  "label": "Preguntas",
+                  "description": "El orden auxiliar + sujeto + verbo forma preguntas claras."
+                }
+              ]
+            },
+            {
+              "id": "es-en-a2-u05-l07",
+              "title": "Consejos de salud",
+              "cefrLevel": "A2",
+              "vocabFrequencyBand": "2000-3000",
+              "canDo": "Puedo dar consejos para llevar una vida más sana.",
+              "microLesson": {
+                "title": "Consejos de salud",
+                "goals": [
+                  "Reconocer vocabulario de los hábitos saludables.",
+                  "Usar frases sencillas sobre los hábitos saludables.",
+                  "Producir un mensaje breve sobre los hábitos saludables."
+                ],
+                "sections": [
+                  {
+                    "heading": "Foco gramatical",
+                    "body": "Should para consejos: Should y shouldn't dan consejos y recomendaciones.",
+                    "examples": [
+                      {
+                        "source": "Deberías caminar treinta minutos al día.",
+                        "target": "You should walk thirty minutes a day."
+                      },
+                      {
+                        "source": "No deberías comer tanto azúcar.",
+                        "target": "You shouldn't eat so much sugar."
+                      }
+                    ]
+                  },
+                  {
+                    "heading": "En contexto",
+                    "body": "Observa cómo se usa should para consejos en una situación de los hábitos saludables.",
+                    "examples": [
+                      {
+                        "source": "Deberías dormir mejor.",
+                        "target": "You should sleep better."
+                      }
+                    ]
+                  }
+                ]
+              },
+              "glossary": [
+                {
+                  "term": "You should walk thirty minutes a day.",
+                  "translations": [
+                    "Deberías caminar treinta minutos al día."
+                  ]
+                },
+                {
+                  "term": "You shouldn't eat so much sugar.",
+                  "translations": [
+                    "No deberías comer tanto azúcar."
+                  ]
+                },
+                {
+                  "term": "You should sleep better.",
+                  "translations": [
+                    "Deberías dormir mejor."
+                  ]
+                }
+              ],
+              "exercises": [
+                {
+                  "type": "MultipleChoice",
+                  "id": "es-en-a2-u05-l07-e01",
+                  "question": "¿Cómo se dice «Deberías caminar treinta minutos al día.»?",
+                  "options": [
+                    "You should walk thirty minutes a day.",
+                    "You shouldn't eat so much sugar.",
+                    "You should sleep better."
+                  ],
+                  "correctIndex": 0,
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "«Deberías caminar treinta minutos al día.» se dice «You should walk thirty minutes a day.»."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has elegido la traducción correcta."
+                  }
+                },
+                {
+                  "type": "Translate",
+                  "id": "es-en-a2-u05-l07-e02",
+                  "sourcePhrase": "Deberías caminar treinta minutos al día.",
+                  "correctTokens": [
+                    "You",
+                    "should",
+                    "walk",
+                    "thirty",
+                    "minutes",
+                    "a",
+                    "day"
+                  ],
+                  "distractorTokens": [
+                    "shouldn't",
+                    "eat",
+                    "so"
+                  ],
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "El orden correcto es «You should walk thirty minutes a day». Should para consejos: Should y shouldn't dan consejos y recomendaciones.",
+                    "ruleRef": "gp-should"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La frase conserva el orden y el significado."
+                  }
+                },
+                {
+                  "type": "OrderWords",
+                  "id": "es-en-a2-u05-l07-e03",
+                  "tokens": [
+                    "shouldn't",
+                    "eat",
+                    "so",
+                    "much",
+                    "sugar",
+                    "You"
+                  ],
+                  "answerTokens": [
+                    "You",
+                    "shouldn't",
+                    "eat",
+                    "so",
+                    "much",
+                    "sugar"
+                  ],
+                  "sourcePhrase": "No deberías comer tanto azúcar.",
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "La frase correcta es «You shouldn't eat so much sugar». Should para consejos: Should y shouldn't dan consejos y recomendaciones.",
+                    "ruleRef": "gp-should"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "El orden produce una frase natural."
+                  }
+                },
+                {
+                  "type": "MatchPairs",
+                  "id": "es-en-a2-u05-l07-e04",
+                  "pairs": [
+                    {
+                      "left": "Deberías caminar treinta minutos al día.",
+                      "right": "You should walk thirty minutes a day."
+                    },
+                    {
+                      "left": "No deberías comer tanto azúcar.",
+                      "right": "You shouldn't eat so much sugar."
+                    },
+                    {
+                      "left": "Deberías dormir mejor.",
+                      "right": "You should sleep better."
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "Cada expresión tiene una traducción distinta."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has asociado cada expresión con su traducción."
+                  }
+                },
+                {
+                  "type": "ListenChoose",
+                  "id": "es-en-a2-u05-l07-e05",
+                  "audioText": "You should sleep better.",
+                  "options": [
+                    "You should walk thirty minutes a day.",
+                    "You shouldn't eat so much sugar.",
+                    "You should sleep better."
+                  ],
+                  "correctIndex": 0,
+                  "feedbackOnError": {
+                    "type": "comprehension",
+                    "explanation": "El audio dice «You should sleep better.»."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has reconocido la frase del audio."
+                  }
+                },
+                {
+                  "type": "ListenType",
+                  "id": "es-en-a2-u05-l07-e06",
+                  "audioText": "You should sleep better.",
+                  "transcription": "You should sleep better.",
+                  "feedbackOnError": {
+                    "type": "spelling",
+                    "explanation": "Escribe exactamente «You should sleep better.»."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La transcripción coincide con el audio."
+                  }
+                },
+                {
+                  "type": "SpeakRepeat",
+                  "id": "es-en-a2-u05-l07-e07",
+                  "targetPhrase": "You should sleep better.",
+                  "audioText": "You should sleep better.",
+                  "feedbackOnError": {
+                    "type": "pronunciation",
+                    "explanation": "Repite «You should sleep better.» con claridad."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La frase se entiende y mantiene el ritmo."
+                  }
+                }
+              ],
+              "grammarPoints": [
+                {
+                  "id": "gp-should",
+                  "label": "Should para consejos",
+                  "description": "Should y shouldn't dan consejos y recomendaciones."
+                }
+              ]
+            },
+            {
+              "id": "es-en-a2-u05-l08",
+              "title": "Hábitos saludables",
+              "cefrLevel": "A2",
+              "vocabFrequencyBand": "2000-3000",
+              "canDo": "Puedo describir mis hábitos saludables.",
+              "microLesson": {
+                "title": "Hábitos saludables",
+                "goals": [
+                  "Reconocer vocabulario de mi rutina saludable.",
+                  "Usar frases sencillas sobre mi rutina saludable.",
+                  "Producir un mensaje breve sobre mi rutina saludable."
+                ],
+                "sections": [
+                  {
+                    "heading": "Foco gramatical",
+                    "body": "Presente simple: Usa el presente simple para rutinas y hechos habituales. Adverbios de frecuencia: Always, usually y sometimes indican con qué frecuencia ocurre algo.",
+                    "examples": [
+                      {
+                        "source": "Desayuno fruta y cereales.",
+                        "target": "I have fruit and cereal for breakfast."
+                      },
+                      {
+                        "source": "Camino al trabajo todos los días.",
+                        "target": "I walk to work every day."
+                      }
+                    ]
+                  },
+                  {
+                    "heading": "En contexto",
+                    "body": "Observa cómo se usa presente simple en una situación de mi rutina saludable.",
+                    "examples": [
+                      {
+                        "source": "Duermo ocho horas cada noche.",
+                        "target": "I sleep eight hours every night."
+                      }
+                    ]
+                  }
+                ]
+              },
+              "glossary": [
+                {
+                  "term": "I have fruit and cereal for breakfast.",
+                  "translations": [
+                    "Desayuno fruta y cereales."
+                  ]
+                },
+                {
+                  "term": "I walk to work every day.",
+                  "translations": [
+                    "Camino al trabajo todos los días."
+                  ]
+                },
+                {
+                  "term": "I sleep eight hours every night.",
+                  "translations": [
+                    "Duermo ocho horas cada noche."
+                  ]
+                }
+              ],
+              "exercises": [
+                {
+                  "type": "MultipleChoice",
+                  "id": "es-en-a2-u05-l08-e01",
+                  "question": "¿Cómo se dice «Desayuno fruta y cereales.»?",
+                  "options": [
+                    "I have fruit and cereal for breakfast.",
+                    "I walk to work every day.",
+                    "I sleep eight hours every night."
+                  ],
+                  "correctIndex": 0,
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "«Desayuno fruta y cereales.» se dice «I have fruit and cereal for breakfast.»."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has elegido la traducción correcta."
+                  }
+                },
+                {
+                  "type": "Translate",
+                  "id": "es-en-a2-u05-l08-e02",
+                  "sourcePhrase": "Desayuno fruta y cereales.",
+                  "correctTokens": [
+                    "I",
+                    "have",
+                    "fruit",
+                    "and",
+                    "cereal",
+                    "for",
+                    "breakfast"
+                  ],
+                  "distractorTokens": [
+                    "walk",
+                    "to",
+                    "work"
+                  ],
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "El orden correcto es «I have fruit and cereal for breakfast». Presente simple: Usa el presente simple para rutinas y hechos habituales.",
+                    "ruleRef": "gp-present-simple"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La frase conserva el orden y el significado."
+                  }
+                },
+                {
+                  "type": "OrderWords",
+                  "id": "es-en-a2-u05-l08-e03",
+                  "tokens": [
+                    "walk",
+                    "to",
+                    "work",
+                    "every",
+                    "day",
+                    "I"
+                  ],
+                  "answerTokens": [
+                    "I",
+                    "walk",
+                    "to",
+                    "work",
+                    "every",
+                    "day"
+                  ],
+                  "sourcePhrase": "Camino al trabajo todos los días.",
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "La frase correcta es «I walk to work every day». Presente simple: Usa el presente simple para rutinas y hechos habituales.",
+                    "ruleRef": "gp-present-simple"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "El orden produce una frase natural."
+                  }
+                },
+                {
+                  "type": "MatchPairs",
+                  "id": "es-en-a2-u05-l08-e04",
+                  "pairs": [
+                    {
+                      "left": "Desayuno fruta y cereales.",
+                      "right": "I have fruit and cereal for breakfast."
+                    },
+                    {
+                      "left": "Camino al trabajo todos los días.",
+                      "right": "I walk to work every day."
+                    },
+                    {
+                      "left": "Duermo ocho horas cada noche.",
+                      "right": "I sleep eight hours every night."
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "Cada expresión tiene una traducción distinta."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has asociado cada expresión con su traducción."
+                  }
+                },
+                {
+                  "type": "ListenChoose",
+                  "id": "es-en-a2-u05-l08-e05",
+                  "audioText": "I sleep eight hours every night.",
+                  "options": [
+                    "I have fruit and cereal for breakfast.",
+                    "I walk to work every day.",
+                    "I sleep eight hours every night."
+                  ],
+                  "correctIndex": 0,
+                  "feedbackOnError": {
+                    "type": "comprehension",
+                    "explanation": "El audio dice «I sleep eight hours every night.»."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has reconocido la frase del audio."
+                  }
+                },
+                {
+                  "type": "ListenType",
+                  "id": "es-en-a2-u05-l08-e06",
+                  "audioText": "I sleep eight hours every night.",
+                  "transcription": "I sleep eight hours every night.",
+                  "feedbackOnError": {
+                    "type": "spelling",
+                    "explanation": "Escribe exactamente «I sleep eight hours every night.»."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La transcripción coincide con el audio."
+                  }
+                },
+                {
+                  "type": "SpeakRepeat",
+                  "id": "es-en-a2-u05-l08-e07",
+                  "targetPhrase": "I sleep eight hours every night.",
+                  "audioText": "I sleep eight hours every night.",
+                  "feedbackOnError": {
+                    "type": "pronunciation",
+                    "explanation": "Repite «I sleep eight hours every night.» con claridad."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La frase se entiende y mantiene el ritmo."
+                  }
+                }
+              ],
+              "grammarPoints": [
+                {
+                  "id": "gp-present-simple",
+                  "label": "Presente simple",
+                  "description": "Usa el presente simple para rutinas y hechos habituales."
+                },
+                {
+                  "id": "gp-adverbs-frequency",
+                  "label": "Adverbios de frecuencia",
+                  "description": "Always, usually y sometimes indican con qué frecuencia ocurre algo."
+                }
+              ]
+            },
+            {
+              "id": "es-en-a2-u05-l09",
+              "title": "Integración: plan de bienestar",
+              "cefrLevel": "A2",
+              "vocabFrequencyBand": "2000-3000",
+              "canDo": "Puedo diseñar un plan sencillo para sentirme mejor.",
+              "microLesson": {
+                "title": "Integración: plan de bienestar",
+                "goals": [
+                  "Reconocer vocabulario de un plan de bienestar.",
+                  "Usar frases sencillas sobre un plan de bienestar.",
+                  "Producir un mensaje breve sobre un plan de bienestar."
+                ],
+                "sections": [
+                  {
+                    "heading": "Foco gramatical",
+                    "body": "Going to: Going to expresa planes e intenciones ya decididos. Should para consejos: Should y shouldn't dan consejos y recomendaciones.",
+                    "examples": [
+                      {
+                        "source": "Voy a hacer ejercicio tres veces por semana.",
+                        "target": "I'm going to exercise three times a week."
+                      },
+                      {
+                        "source": "También voy a beber más agua.",
+                        "target": "I'm also going to drink more water."
+                      }
+                    ]
+                  },
+                  {
+                    "heading": "En contexto",
+                    "body": "Observa cómo se usa going to en una situación de un plan de bienestar.",
+                    "examples": [
+                      {
+                        "source": "Y voy a dormir mejor.",
+                        "target": "And I'm going to sleep better."
+                      }
+                    ]
+                  }
+                ]
+              },
+              "glossary": [
+                {
+                  "term": "I'm going to exercise three times a week.",
+                  "translations": [
+                    "Voy a hacer ejercicio tres veces por semana."
+                  ]
+                },
+                {
+                  "term": "I'm also going to drink more water.",
+                  "translations": [
+                    "También voy a beber más agua."
+                  ]
+                },
+                {
+                  "term": "And I'm going to sleep better.",
+                  "translations": [
+                    "Y voy a dormir mejor."
+                  ]
+                }
+              ],
+              "exercises": [
+                {
+                  "type": "MultipleChoice",
+                  "id": "es-en-a2-u05-l09-e01",
+                  "question": "¿Cómo se dice «Voy a hacer ejercicio tres veces por semana.»?",
+                  "options": [
+                    "I'm going to exercise three times a week.",
+                    "I'm also going to drink more water.",
+                    "And I'm going to sleep better."
+                  ],
+                  "correctIndex": 0,
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "«Voy a hacer ejercicio tres veces por semana.» se dice «I'm going to exercise three times a week.»."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has elegido la traducción correcta."
+                  }
+                },
+                {
+                  "type": "Translate",
+                  "id": "es-en-a2-u05-l09-e02",
+                  "sourcePhrase": "Voy a hacer ejercicio tres veces por semana.",
+                  "correctTokens": [
+                    "I'm",
+                    "going",
+                    "to",
+                    "exercise",
+                    "three",
+                    "times",
+                    "a",
+                    "week"
+                  ],
+                  "distractorTokens": [
+                    "also",
+                    "drink",
+                    "more"
+                  ],
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "El orden correcto es «I'm going to exercise three times a week». Going to: Going to expresa planes e intenciones ya decididos.",
+                    "ruleRef": "gp-going-to"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La frase conserva el orden y el significado."
+                  }
+                },
+                {
+                  "type": "OrderWords",
+                  "id": "es-en-a2-u05-l09-e03",
+                  "tokens": [
+                    "also",
+                    "going",
+                    "to",
+                    "drink",
+                    "more",
+                    "water",
+                    "I'm"
+                  ],
+                  "answerTokens": [
+                    "I'm",
+                    "also",
+                    "going",
+                    "to",
+                    "drink",
+                    "more",
+                    "water"
+                  ],
+                  "sourcePhrase": "También voy a beber más agua.",
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "La frase correcta es «I'm also going to drink more water». Going to: Going to expresa planes e intenciones ya decididos.",
+                    "ruleRef": "gp-going-to"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "El orden produce una frase natural."
+                  }
+                },
+                {
+                  "type": "MatchPairs",
+                  "id": "es-en-a2-u05-l09-e04",
+                  "pairs": [
+                    {
+                      "left": "Voy a hacer ejercicio tres veces por semana.",
+                      "right": "I'm going to exercise three times a week."
+                    },
+                    {
+                      "left": "También voy a beber más agua.",
+                      "right": "I'm also going to drink more water."
+                    },
+                    {
+                      "left": "Y voy a dormir mejor.",
+                      "right": "And I'm going to sleep better."
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "Cada expresión tiene una traducción distinta."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has asociado cada expresión con su traducción."
+                  }
+                },
+                {
+                  "type": "ListenChoose",
+                  "id": "es-en-a2-u05-l09-e05",
+                  "audioText": "And I'm going to sleep better.",
+                  "options": [
+                    "I'm going to exercise three times a week.",
+                    "I'm also going to drink more water.",
+                    "And I'm going to sleep better."
+                  ],
+                  "correctIndex": 0,
+                  "feedbackOnError": {
+                    "type": "comprehension",
+                    "explanation": "El audio dice «And I'm going to sleep better.»."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has reconocido la frase del audio."
+                  }
+                },
+                {
+                  "type": "ListenType",
+                  "id": "es-en-a2-u05-l09-e06",
+                  "audioText": "And I'm going to sleep better.",
+                  "transcription": "And I'm going to sleep better.",
+                  "feedbackOnError": {
+                    "type": "spelling",
+                    "explanation": "Escribe exactamente «And I'm going to sleep better.»."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La transcripción coincide con el audio."
+                  }
+                },
+                {
+                  "type": "SpeakRepeat",
+                  "id": "es-en-a2-u05-l09-e07",
+                  "targetPhrase": "And I'm going to sleep better.",
+                  "audioText": "And I'm going to sleep better.",
+                  "feedbackOnError": {
+                    "type": "pronunciation",
+                    "explanation": "Repite «And I'm going to sleep better.» con claridad."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La frase se entiende y mantiene el ritmo."
+                  }
+                }
+              ],
+              "grammarPoints": [
+                {
+                  "id": "gp-going-to",
+                  "label": "Going to",
+                  "description": "Going to expresa planes e intenciones ya decididos."
+                },
+                {
+                  "id": "gp-should",
+                  "label": "Should para consejos",
+                  "description": "Should y shouldn't dan consejos y recomendaciones."
+                }
+              ]
+            },
+            {
+              "id": "es-en-a2-u05-l10",
+              "title": "Evaluación: mi salud",
+              "cefrLevel": "A2",
+              "vocabFrequencyBand": "2000-3000",
+              "canDo": "Puedo hablar de mi salud y de mis propósitos.",
+              "microLesson": {
+                "title": "Evaluación: mi salud",
+                "goals": [
+                  "Reconocer vocabulario de mi salud.",
+                  "Usar frases sencillas sobre mi salud.",
+                  "Producir un mensaje breve sobre mi salud."
+                ],
+                "sections": [
+                  {
+                    "heading": "Foco gramatical",
+                    "body": "Presente perfecto: Have/has + participio conecta una experiencia pasada con el presente. Have to: Have to expresa obligación externa; don't have to, ausencia de obligación.",
+                    "examples": [
+                      {
+                        "source": "Me siento mejor que antes.",
+                        "target": "I feel better than before."
+                      },
+                      {
+                        "source": "He empezado a caminar cada día.",
+                        "target": "I have started walking every day."
+                      }
+                    ]
+                  },
+                  {
+                    "heading": "En contexto",
+                    "body": "Observa cómo se usa presente perfecto en una situación de mi salud.",
+                    "examples": [
+                      {
+                        "source": "Todavía tengo que descansar más.",
+                        "target": "I still have to rest more."
+                      }
+                    ]
+                  }
+                ]
+              },
+              "glossary": [
+                {
+                  "term": "I feel better than before.",
+                  "translations": [
+                    "Me siento mejor que antes."
+                  ]
+                },
+                {
+                  "term": "I have started walking every day.",
+                  "translations": [
+                    "He empezado a caminar cada día."
+                  ]
+                },
+                {
+                  "term": "I still have to rest more.",
+                  "translations": [
+                    "Todavía tengo que descansar más."
+                  ]
+                }
+              ],
+              "exercises": [
+                {
+                  "type": "MultipleChoice",
+                  "id": "es-en-a2-u05-l10-e01",
+                  "question": "¿Cómo se dice «Me siento mejor que antes.»?",
+                  "options": [
+                    "I feel better than before.",
+                    "I have started walking every day.",
+                    "I still have to rest more."
+                  ],
+                  "correctIndex": 0,
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "«Me siento mejor que antes.» se dice «I feel better than before.»."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has elegido la traducción correcta."
+                  }
+                },
+                {
+                  "type": "Translate",
+                  "id": "es-en-a2-u05-l10-e02",
+                  "sourcePhrase": "Me siento mejor que antes.",
+                  "correctTokens": [
+                    "I",
+                    "feel",
+                    "better",
+                    "than",
+                    "before"
+                  ],
+                  "distractorTokens": [
+                    "have",
+                    "started",
+                    "walking"
+                  ],
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "El orden correcto es «I feel better than before». Presente perfecto: Have/has + participio conecta una experiencia pasada con el presente.",
+                    "ruleRef": "gp-present-perfect"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La frase conserva el orden y el significado."
+                  }
+                },
+                {
+                  "type": "OrderWords",
+                  "id": "es-en-a2-u05-l10-e03",
+                  "tokens": [
+                    "have",
+                    "started",
+                    "walking",
+                    "every",
+                    "day",
+                    "I"
+                  ],
+                  "answerTokens": [
+                    "I",
+                    "have",
+                    "started",
+                    "walking",
+                    "every",
+                    "day"
+                  ],
+                  "sourcePhrase": "He empezado a caminar cada día.",
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "La frase correcta es «I have started walking every day». Presente perfecto: Have/has + participio conecta una experiencia pasada con el presente.",
+                    "ruleRef": "gp-present-perfect"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "El orden produce una frase natural."
+                  }
+                },
+                {
+                  "type": "MatchPairs",
+                  "id": "es-en-a2-u05-l10-e04",
+                  "pairs": [
+                    {
+                      "left": "Me siento mejor que antes.",
+                      "right": "I feel better than before."
+                    },
+                    {
+                      "left": "He empezado a caminar cada día.",
+                      "right": "I have started walking every day."
+                    },
+                    {
+                      "left": "Todavía tengo que descansar más.",
+                      "right": "I still have to rest more."
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "Cada expresión tiene una traducción distinta."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has asociado cada expresión con su traducción."
+                  }
+                },
+                {
+                  "type": "ListenChoose",
+                  "id": "es-en-a2-u05-l10-e05",
+                  "audioText": "I still have to rest more.",
+                  "options": [
+                    "I feel better than before.",
+                    "I have started walking every day.",
+                    "I still have to rest more."
+                  ],
+                  "correctIndex": 0,
+                  "feedbackOnError": {
+                    "type": "comprehension",
+                    "explanation": "El audio dice «I still have to rest more.»."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has reconocido la frase del audio."
+                  }
+                },
+                {
+                  "type": "ListenType",
+                  "id": "es-en-a2-u05-l10-e06",
+                  "audioText": "I still have to rest more.",
+                  "transcription": "I still have to rest more.",
+                  "feedbackOnError": {
+                    "type": "spelling",
+                    "explanation": "Escribe exactamente «I still have to rest more.»."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La transcripción coincide con el audio."
+                  }
+                },
+                {
+                  "type": "SpeakRepeat",
+                  "id": "es-en-a2-u05-l10-e07",
+                  "targetPhrase": "I still have to rest more.",
+                  "audioText": "I still have to rest more.",
+                  "feedbackOnError": {
+                    "type": "pronunciation",
+                    "explanation": "Repite «I still have to rest more.» con claridad."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La frase se entiende y mantiene el ritmo."
+                  }
+                }
+              ],
+              "grammarPoints": [
+                {
+                  "id": "gp-present-perfect",
+                  "label": "Presente perfecto",
+                  "description": "Have/has + participio conecta una experiencia pasada con el presente."
+                },
+                {
+                  "id": "gp-have-to",
+                  "label": "Have to",
+                  "description": "Have to expresa obligación externa; don't have to, ausencia de obligación."
+                }
+              ]
+            }
+          ]
         }
       ]
     },
