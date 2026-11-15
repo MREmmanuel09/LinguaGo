@@ -303915,6 +303915,787 @@
                 ]
               }
             ]
+          },
+          {
+            "id": "es-pt-c2-u15",
+            "title": "C2 · Proyecto final",
+            "lessons": [
+              {
+                "id": "es-pt-c2-u15-l01",
+                "title": "Repaso de hitos A2",
+                "cefrLevel": "C2",
+                "scenario": "Situación comunicativa avanzada sobre los hitos de A2.",
+                "canDo": "Puedo argumentar con matices y precisión sobre los hitos de A2.",
+                "grammarPoints": [
+                  {
+                    "id": "gp-c2-dry-irony",
+                    "label": "Dry irony",
+                    "description": "La ironía seca dice lo contrario de lo que sugiere el contexto."
+                  },
+                  {
+                    "id": "gp-c2-rhetorical-questions",
+                    "label": "Rhetorical questions",
+                    "description": "Las preguntas retóricas orientan la argumentación."
+                  }
+                ],
+                "vocabFrequencyBand": "12000+",
+                "culturalNotes": [
+                  {
+                    "idiom": "elogiar com parcimónia",
+                    "note": "Expresión para elogiar de forma que en realidad critica.",
+                    "translation": "elogiar con tibieza"
+                  }
+                ],
+                "microLesson": {
+                  "title": "Repaso de hitos A2",
+                  "goals": [
+                    "Usar vocabulario avanzado de los hitos de A2.",
+                    "Aplicar dry irony y rhetorical questions.",
+                    "Argumentar con matices sobre los hitos de A2."
+                  ],
+                  "sections": [
+                    {
+                      "heading": "Lengua en contexto",
+                      "body": "Dry irony: La ironía seca dice lo contrario de lo que sugiere el contexto. Rhetorical questions: Las preguntas retóricas orientan la argumentación.",
+                      "examples": [
+                        {
+                          "source": "He aprendido a contar historias en pasado. Huelga decir que el matiz escapa a una lectura literal.",
+                          "target": "Aprendi a contar histórias no passado. Escusado será dizer que o matiz escapa a uma leitura literal."
+                        },
+                        {
+                          "source": "También puedo hablar de planes y comparar opciones. En rigor, la afirmación admite lecturas encontradas.",
+                          "target": "Também posso falar sobre planos e comparar opções. Em rigor, a afirmação admite leituras contraditórias."
+                        }
+                      ]
+                    }
+                  ]
+                },
+                "glossary": [
+                  {
+                    "term": "Aprendi a contar histórias no passado. Escusado será dizer que o matiz escapa a uma leitura literal.",
+                    "translations": [
+                      "He aprendido a contar historias en pasado. Huelga decir que el matiz escapa a una lectura literal."
+                    ]
+                  },
+                  {
+                    "term": "Também posso falar sobre planos e comparar opções. Em rigor, a afirmação admite leituras contraditórias.",
+                    "translations": [
+                      "También puedo hablar de planes y comparar opciones. En rigor, la afirmación admite lecturas encontradas."
+                    ]
+                  },
+                  {
+                    "term": "Ainda quero praticar mais a conversação. Com o risco de simplificar, o argumento roça a contradição.",
+                    "translations": [
+                      "Todavía quiero practicar más la conversación. A riesgo de simplificar, el argumento roza la contradicción."
+                    ]
+                  }
+                ],
+                "exercises": [
+                  {
+                    "type": "MultipleChoice",
+                    "id": "es-pt-c2-u15-l01-e01",
+                    "question": "¿Cuál es la opción correcta para «He aprendido a contar historias en pasado. Huelga decir que el matiz escapa a una lectura literal.»?",
+                    "options": [
+                      "Aprendi a contar histórias no passado. Escusado será dizer que o matiz escapa a uma leitura literal.",
+                      "Também posso falar sobre planos e comparar opções. Em rigor, a afirmação admite leituras contraditórias.",
+                      "Ainda quero praticar mais a conversação. Com o risco de simplificar, o argumento roça a contradição."
+                    ],
+                    "correctIndex": 0,
+                    "feedbackOnError": {
+                      "type": "vocabulary",
+                      "explanation": "«He aprendido a contar historias en pasado. Huelga decir que el matiz escapa a una lectura literal.» se dice «Aprendi a contar histórias no passado. Escusado será dizer que o matiz escapa a uma leitura literal.».",
+                      "ruleRef": "gp-c2-dry-irony"
+                    },
+                    "feedbackOnSuccess": {
+                      "explanation": "Has elegido la opción precisa."
+                    }
+                  },
+                  {
+                    "type": "Translate",
+                    "id": "es-pt-c2-u15-l01-e02",
+                    "sourcePhrase": "He aprendido a contar historias en pasado. Huelga decir que el matiz escapa a una lectura literal.",
+                    "correctTokens": [
+                      "Aprendi",
+                      "a",
+                      "contar",
+                      "histórias",
+                      "no",
+                      "passado",
+                      "Escusado",
+                      "será",
+                      "dizer",
+                      "que",
+                      "o",
+                      "matiz",
+                      "escapa",
+                      "a",
+                      "uma",
+                      "leitura",
+                      "literal"
+                    ],
+                    "distractorTokens": [
+                      "Também",
+                      "posso",
+                      "falar"
+                    ],
+                    "feedbackOnError": {
+                      "type": "grammar",
+                      "explanation": "El orden correcto es «Aprendi a contar histórias no passado Escusado será dizer que o matiz escapa a uma leitura literal».",
+                      "ruleRef": "gp-c2-dry-irony"
+                    },
+                    "feedbackOnSuccess": {
+                      "explanation": "La frase conserva el orden y el significado."
+                    }
+                  },
+                  {
+                    "type": "ClozeDragDrop",
+                    "id": "es-pt-c2-u15-l01-e03",
+                    "passage": "{{b1}} a {{b2}} histórias no passado",
+                    "blanks": [
+                      {
+                        "id": "b1",
+                        "answer": "Aprendi",
+                        "options": [
+                          "Aprendi",
+                          "histórias",
+                          "passado"
+                        ]
+                      },
+                      {
+                        "id": "b2",
+                        "answer": "contar",
+                        "options": [
+                          "contar",
+                          "histórias",
+                          "passado"
+                        ]
+                      }
+                    ],
+                    "feedbackOnError": {
+                      "type": "grammar",
+                      "explanation": "Las dos formas deben encajar con el contexto de la frase.",
+                      "ruleRef": "gp-c2-rhetorical-questions"
+                    },
+                    "feedbackOnSuccess": {
+                      "explanation": "Los dos huecos encajan con la situación."
+                    }
+                  },
+                  {
+                    "type": "ClozeDragDrop",
+                    "id": "es-pt-c2-u15-l01-e04",
+                    "passage": "Também {{b1}} {{b2}} sobre planos e comparar opções",
+                    "blanks": [
+                      {
+                        "id": "b1",
+                        "answer": "posso",
+                        "options": [
+                          "posso",
+                          "sobre",
+                          "planos"
+                        ]
+                      },
+                      {
+                        "id": "b2",
+                        "answer": "falar",
+                        "options": [
+                          "falar",
+                          "sobre",
+                          "planos"
+                        ]
+                      }
+                    ],
+                    "feedbackOnError": {
+                      "type": "grammar",
+                      "explanation": "Las dos formas deben encajar con el contexto de la frase.",
+                      "ruleRef": "gp-c2-rhetorical-questions"
+                    },
+                    "feedbackOnSuccess": {
+                      "explanation": "Los dos huecos encajan con la situación."
+                    }
+                  },
+                  {
+                    "type": "ClozeDragDrop",
+                    "id": "es-pt-c2-u15-l01-e05",
+                    "passage": "{{b1}} {{b2}} praticar mais a conversação",
+                    "blanks": [
+                      {
+                        "id": "b1",
+                        "answer": "Ainda",
+                        "options": [
+                          "Ainda",
+                          "praticar",
+                          "conversação"
+                        ]
+                      },
+                      {
+                        "id": "b2",
+                        "answer": "quero",
+                        "options": [
+                          "quero",
+                          "praticar",
+                          "conversação"
+                        ]
+                      }
+                    ],
+                    "feedbackOnError": {
+                      "type": "grammar",
+                      "explanation": "Las dos formas deben encajar con el contexto de la frase.",
+                      "ruleRef": "gp-c2-rhetorical-questions"
+                    },
+                    "feedbackOnSuccess": {
+                      "explanation": "Los dos huecos encajan con la situación."
+                    }
+                  },
+                  {
+                    "type": "SemanticMatch",
+                    "id": "es-pt-c2-u15-l01-e06",
+                    "instructions": "Clasifica la función y el registro de cada intervención.",
+                    "pairs": [
+                      {
+                        "left": "Aprendi a contar histórias no passado. Escusado será dizer que o matiz escapa a uma leitura literal.",
+                        "right": "Ironía seca",
+                        "register": "literary",
+                        "nuance": "Clasifica la función y el registro de la intervención."
+                      },
+                      {
+                        "left": "Também posso falar sobre planos e comparar opções. Em rigor, a afirmação admite leituras contraditórias.",
+                        "right": "Atenuación",
+                        "register": "formal",
+                        "nuance": "Clasifica la función y el registro de la intervención."
+                      },
+                      {
+                        "left": "Ainda quero praticar mais a conversação. Com o risco de simplificar, o argumento roça a contradição.",
+                        "right": "Conclusión",
+                        "register": "neutral",
+                        "nuance": "Clasifica la función y el registro de la intervención."
+                      }
+                    ],
+                    "feedbackOnError": {
+                      "type": "register",
+                      "explanation": "Cada intervención cumple una función retórica distinta.",
+                      "ruleRef": "gp-c2-dry-irony"
+                    },
+                    "feedbackOnSuccess": {
+                      "explanation": "Has identificado función y registro."
+                    }
+                  },
+                  {
+                    "type": "ListenChoose",
+                    "id": "es-pt-c2-u15-l01-e07",
+                    "audioText": "Também posso falar sobre planos e comparar opções. Em rigor, a afirmação admite leituras contraditórias.",
+                    "options": [
+                      "Também posso falar sobre planos e comparar opções. Em rigor, a afirmação admite leituras contraditórias.",
+                      "Aprendi a contar histórias no passado. Escusado será dizer que o matiz escapa a uma leitura literal.",
+                      "Ainda quero praticar mais a conversação. Com o risco de simplificar, o argumento roça a contradição."
+                    ],
+                    "correctIndex": 0,
+                    "feedbackOnError": {
+                      "type": "comprehension",
+                      "explanation": "El audio dice «Também posso falar sobre planos e comparar opções. Em rigor, a afirmação admite leituras contraditórias.».",
+                      "ruleRef": "gp-c2-dry-irony"
+                    },
+                    "feedbackOnSuccess": {
+                      "explanation": "Has reconocido la frase del audio."
+                    }
+                  },
+                  {
+                    "type": "AudioOnlyPrompt",
+                    "id": "es-pt-c2-u15-l01-e08",
+                    "audioText": "Ainda quero praticar mais a conversação. Com o risco de simplificar, o argumento roça a contradição.",
+                    "question": "¿Qué implica el hablante?",
+                    "options": [
+                      "Ainda quero praticar mais a conversação. Com o risco de simplificar, o argumento roça a contradição.",
+                      "Aprendi a contar histórias no passado. Escusado será dizer que o matiz escapa a uma leitura literal.",
+                      "Também posso falar sobre planos e comparar opções. Em rigor, a afirmação admite leituras contraditórias."
+                    ],
+                    "correctIndex": 0,
+                    "allowSlowPlayback": false,
+                    "feedbackOnError": {
+                      "type": "comprehension",
+                      "explanation": "El audio dice «Ainda quero praticar mais a conversação. Com o risco de simplificar, o argumento roça a contradição.».",
+                      "ruleRef": "gp-c2-rhetorical-questions"
+                    },
+                    "feedbackOnSuccess": {
+                      "explanation": "Has interpretado la implicación."
+                    }
+                  },
+                  {
+                    "type": "ListenType",
+                    "id": "es-pt-c2-u15-l01-e09",
+                    "audioText": "Ainda quero praticar mais a conversação. Com o risco de simplificar, o argumento roça a contradição.",
+                    "transcription": "Ainda quero praticar mais a conversação. Com o risco de simplificar, o argumento roça a contradição.",
+                    "feedbackOnError": {
+                      "type": "spelling",
+                      "explanation": "Escribe exactamente «Ainda quero praticar mais a conversação. Com o risco de simplificar, o argumento roça a contradição.».",
+                      "ruleRef": "gp-c2-dry-irony"
+                    },
+                    "feedbackOnSuccess": {
+                      "explanation": "La transcripción coincide con el audio."
+                    }
+                  },
+                  {
+                    "type": "SpeakRepeat",
+                    "id": "es-pt-c2-u15-l01-e10",
+                    "targetPhrase": "Ainda quero praticar mais a conversação. Com o risco de simplificar, o argumento roça a contradição.",
+                    "audioText": "Ainda quero praticar mais a conversação. Com o risco de simplificar, o argumento roça a contradição.",
+                    "feedbackOnError": {
+                      "type": "pronunciation",
+                      "explanation": "Repite «Ainda quero praticar mais a conversação. Com o risco de simplificar, o argumento roça a contradição.» con claridad.",
+                      "ruleRef": "gp-c2-dry-irony"
+                    },
+                    "feedbackOnSuccess": {
+                      "explanation": "La frase se entiende y mantiene el ritmo."
+                    }
+                  },
+                  {
+                    "type": "MatchPairs",
+                    "id": "es-pt-c2-u15-l01-e11",
+                    "pairs": [
+                      {
+                        "left": "He aprendido a contar historias en pasado. Huelga decir que el matiz escapa a una lectura literal.",
+                        "right": "Aprendi a contar histórias no passado. Escusado será dizer que o matiz escapa a uma leitura literal."
+                      },
+                      {
+                        "left": "También puedo hablar de planes y comparar opciones. En rigor, la afirmación admite lecturas encontradas.",
+                        "right": "Também posso falar sobre planos e comparar opções. Em rigor, a afirmação admite leituras contraditórias."
+                      },
+                      {
+                        "left": "Todavía quiero practicar más la conversación. A riesgo de simplificar, el argumento roza la contradicción.",
+                        "right": "Ainda quero praticar mais a conversação. Com o risco de simplificar, o argumento roça a contradição."
+                      }
+                    ],
+                    "feedbackOnError": {
+                      "type": "vocabulary",
+                      "explanation": "Cada expresión tiene una traducción distinta.",
+                      "ruleRef": "gp-c2-dry-irony"
+                    },
+                    "feedbackOnSuccess": {
+                      "explanation": "Has asociado cada expresión con su traducción."
+                    }
+                  },
+                  {
+                    "type": "FreeSpeakingPrompt",
+                    "id": "es-pt-c2-u15-l01-e12",
+                    "prompt": "Defiende una interpretación matizada sobre los hitos de A2.",
+                    "minTokens": 40,
+                    "conceptClusters": [
+                      [
+                        "Aprendi"
+                      ],
+                      [
+                        "contar"
+                      ],
+                      [
+                        "histórias"
+                      ]
+                    ],
+                    "modelAnswer": "Aprendi a contar histórias no passado. Escusado será dizer que o matiz escapa a uma leitura literal. Também posso falar sobre planos e comparar opções. Em rigor, a afirmação admite leituras contraditórias. Ainda quero praticar mais a conversação. Com o risco de simplificar, o argumento roça a contradição.",
+                    "selfAssessmentCriteria": [
+                      "¿La respuesta argumenta y responde a la tarea?",
+                      "¿Usa las dos estructuras gramaticales de la lección?",
+                      "¿Incluye una concesión, una ironía o una atenuación?"
+                    ],
+                    "grammarRuleRefs": [
+                      "gp-c2-dry-irony",
+                      "gp-c2-rhetorical-questions"
+                    ],
+                    "timeLimitSeconds": 120,
+                    "minWpm": 70,
+                    "maxWpm": 160,
+                    "feedbackOnError": {
+                      "type": "grammar",
+                      "explanation": "La respuesta modelo desarrolla una interpretación matizada.",
+                      "ruleRef": "gp-c2-dry-irony"
+                    }
+                  }
+                ]
+              },
+              {
+                "id": "es-pt-c2-u15-l02",
+                "title": "Mi historia personal",
+                "cefrLevel": "C2",
+                "scenario": "Situación comunicativa avanzada sobre mi historia personal.",
+                "canDo": "Puedo argumentar con matices y precisión sobre mi historia personal.",
+                "grammarPoints": [
+                  {
+                    "id": "gp-c2-dry-irony",
+                    "label": "Dry irony",
+                    "description": "La ironía seca dice lo contrario de lo que sugiere el contexto."
+                  },
+                  {
+                    "id": "gp-c2-rhetorical-questions",
+                    "label": "Rhetorical questions",
+                    "description": "Las preguntas retóricas orientan la argumentación."
+                  }
+                ],
+                "vocabFrequencyBand": "12000+",
+                "culturalNotes": [
+                  {
+                    "idiom": "esconder o essencial",
+                    "note": "Expresión para ocultar la información más importante.",
+                    "translation": "enterrar lo importante"
+                  }
+                ],
+                "microLesson": {
+                  "title": "Mi historia personal",
+                  "goals": [
+                    "Usar vocabulario avanzado de mi historia personal.",
+                    "Aplicar dry irony y rhetorical questions.",
+                    "Argumentar con matices sobre mi historia personal."
+                  ],
+                  "sections": [
+                    {
+                      "heading": "Lengua en contexto",
+                      "body": "Dry irony: La ironía seca dice lo contrario de lo que sugiere el contexto. Rhetorical questions: Las preguntas retóricas orientan la argumentación.",
+                      "examples": [
+                        {
+                          "source": "Nací en una ciudad pequeña. En rigor, la afirmación admite lecturas encontradas.",
+                          "target": "Nasci em uma cidade pequena. Em rigor, a afirmação admite leituras contraditórias."
+                        },
+                        {
+                          "source": "Crecí con mis padres y mis dos hermanos. A riesgo de simplificar, el argumento roza la contradicción.",
+                          "target": "Cresci com meus pais e meus dois irmãos. Com o risco de simplificar, o argumento roça a contradição."
+                        }
+                      ]
+                    }
+                  ]
+                },
+                "glossary": [
+                  {
+                    "term": "Nasci em uma cidade pequena. Em rigor, a afirmação admite leituras contraditórias.",
+                    "translations": [
+                      "Nací en una ciudad pequeña. En rigor, la afirmación admite lecturas encontradas."
+                    ]
+                  },
+                  {
+                    "term": "Cresci com meus pais e meus dois irmãos. Com o risco de simplificar, o argumento roça a contradição.",
+                    "translations": [
+                      "Crecí con mis padres y mis dos hermanos. A riesgo de simplificar, el argumento roza la contradicción."
+                    ]
+                  },
+                  {
+                    "term": "Aos dezoito anos mudei-me para Madrid. Paradoxalmente, o excesso de cautela retira credibilidade.",
+                    "translations": [
+                      "A los dieciocho años me mudé a Madrid. Paradójicamente, el exceso de cautela resta credibilidad."
+                    ]
+                  }
+                ],
+                "exercises": [
+                  {
+                    "type": "MultipleChoice",
+                    "id": "es-pt-c2-u15-l02-e01",
+                    "question": "¿Cuál es la opción correcta para «Nací en una ciudad pequeña. En rigor, la afirmación admite lecturas encontradas.»?",
+                    "options": [
+                      "Nasci em uma cidade pequena. Em rigor, a afirmação admite leituras contraditórias.",
+                      "Cresci com meus pais e meus dois irmãos. Com o risco de simplificar, o argumento roça a contradição.",
+                      "Aos dezoito anos mudei-me para Madrid. Paradoxalmente, o excesso de cautela retira credibilidade."
+                    ],
+                    "correctIndex": 0,
+                    "feedbackOnError": {
+                      "type": "vocabulary",
+                      "explanation": "«Nací en una ciudad pequeña. En rigor, la afirmación admite lecturas encontradas.» se dice «Nasci em uma cidade pequena. Em rigor, a afirmação admite leituras contraditórias.».",
+                      "ruleRef": "gp-c2-dry-irony"
+                    },
+                    "feedbackOnSuccess": {
+                      "explanation": "Has elegido la opción precisa."
+                    }
+                  },
+                  {
+                    "type": "Translate",
+                    "id": "es-pt-c2-u15-l02-e02",
+                    "sourcePhrase": "Nací en una ciudad pequeña. En rigor, la afirmación admite lecturas encontradas.",
+                    "correctTokens": [
+                      "Nasci",
+                      "em",
+                      "uma",
+                      "cidade",
+                      "pequena",
+                      "Em",
+                      "rigor",
+                      "a",
+                      "afirmação",
+                      "admite",
+                      "leituras",
+                      "contraditórias"
+                    ],
+                    "distractorTokens": [
+                      "Cresci",
+                      "com",
+                      "meus"
+                    ],
+                    "feedbackOnError": {
+                      "type": "grammar",
+                      "explanation": "El orden correcto es «Nasci em uma cidade pequena Em rigor a afirmação admite leituras contraditórias».",
+                      "ruleRef": "gp-c2-dry-irony"
+                    },
+                    "feedbackOnSuccess": {
+                      "explanation": "La frase conserva el orden y el significado."
+                    }
+                  },
+                  {
+                    "type": "ClozeDragDrop",
+                    "id": "es-pt-c2-u15-l02-e03",
+                    "passage": "{{b1}} em uma {{b2}} pequena",
+                    "blanks": [
+                      {
+                        "id": "b1",
+                        "answer": "Nasci",
+                        "options": [
+                          "Nasci",
+                          "pequena",
+                          "muito"
+                        ]
+                      },
+                      {
+                        "id": "b2",
+                        "answer": "cidade",
+                        "options": [
+                          "cidade",
+                          "pequena",
+                          "muito"
+                        ]
+                      }
+                    ],
+                    "feedbackOnError": {
+                      "type": "grammar",
+                      "explanation": "Las dos formas deben encajar con el contexto de la frase.",
+                      "ruleRef": "gp-c2-rhetorical-questions"
+                    },
+                    "feedbackOnSuccess": {
+                      "explanation": "Los dos huecos encajan con la situación."
+                    }
+                  },
+                  {
+                    "type": "ClozeDragDrop",
+                    "id": "es-pt-c2-u15-l02-e04",
+                    "passage": "{{b1}} com meus {{b2}} e meus dois irmãos",
+                    "blanks": [
+                      {
+                        "id": "b1",
+                        "answer": "Cresci",
+                        "options": [
+                          "Cresci",
+                          "dois",
+                          "irmãos"
+                        ]
+                      },
+                      {
+                        "id": "b2",
+                        "answer": "pais",
+                        "options": [
+                          "pais",
+                          "dois",
+                          "irmãos"
+                        ]
+                      }
+                    ],
+                    "feedbackOnError": {
+                      "type": "grammar",
+                      "explanation": "Las dos formas deben encajar con el contexto de la frase.",
+                      "ruleRef": "gp-c2-rhetorical-questions"
+                    },
+                    "feedbackOnSuccess": {
+                      "explanation": "Los dos huecos encajan con la situación."
+                    }
+                  },
+                  {
+                    "type": "ClozeDragDrop",
+                    "id": "es-pt-c2-u15-l02-e05",
+                    "passage": "{{b1}} {{b2}} anos mudei-me para Madrid",
+                    "blanks": [
+                      {
+                        "id": "b1",
+                        "answer": "Aos",
+                        "options": [
+                          "Aos",
+                          "anos",
+                          "mudei"
+                        ]
+                      },
+                      {
+                        "id": "b2",
+                        "answer": "dezoito",
+                        "options": [
+                          "dezoito",
+                          "anos",
+                          "mudei"
+                        ]
+                      }
+                    ],
+                    "feedbackOnError": {
+                      "type": "grammar",
+                      "explanation": "Las dos formas deben encajar con el contexto de la frase.",
+                      "ruleRef": "gp-c2-rhetorical-questions"
+                    },
+                    "feedbackOnSuccess": {
+                      "explanation": "Los dos huecos encajan con la situación."
+                    }
+                  },
+                  {
+                    "type": "SemanticMatch",
+                    "id": "es-pt-c2-u15-l02-e06",
+                    "instructions": "Clasifica la función y el registro de cada intervención.",
+                    "pairs": [
+                      {
+                        "left": "Nasci em uma cidade pequena. Em rigor, a afirmação admite leituras contraditórias.",
+                        "right": "Ironía seca",
+                        "register": "literary",
+                        "nuance": "Clasifica la función y el registro de la intervención."
+                      },
+                      {
+                        "left": "Cresci com meus pais e meus dois irmãos. Com o risco de simplificar, o argumento roça a contradição.",
+                        "right": "Atenuación",
+                        "register": "formal",
+                        "nuance": "Clasifica la función y el registro de la intervención."
+                      },
+                      {
+                        "left": "Aos dezoito anos mudei-me para Madrid. Paradoxalmente, o excesso de cautela retira credibilidade.",
+                        "right": "Conclusión",
+                        "register": "neutral",
+                        "nuance": "Clasifica la función y el registro de la intervención."
+                      }
+                    ],
+                    "feedbackOnError": {
+                      "type": "register",
+                      "explanation": "Cada intervención cumple una función retórica distinta.",
+                      "ruleRef": "gp-c2-dry-irony"
+                    },
+                    "feedbackOnSuccess": {
+                      "explanation": "Has identificado función y registro."
+                    }
+                  },
+                  {
+                    "type": "ListenChoose",
+                    "id": "es-pt-c2-u15-l02-e07",
+                    "audioText": "Cresci com meus pais e meus dois irmãos. Com o risco de simplificar, o argumento roça a contradição.",
+                    "options": [
+                      "Cresci com meus pais e meus dois irmãos. Com o risco de simplificar, o argumento roça a contradição.",
+                      "Nasci em uma cidade pequena. Em rigor, a afirmação admite leituras contraditórias.",
+                      "Aos dezoito anos mudei-me para Madrid. Paradoxalmente, o excesso de cautela retira credibilidade."
+                    ],
+                    "correctIndex": 0,
+                    "feedbackOnError": {
+                      "type": "comprehension",
+                      "explanation": "El audio dice «Cresci com meus pais e meus dois irmãos. Com o risco de simplificar, o argumento roça a contradição.».",
+                      "ruleRef": "gp-c2-dry-irony"
+                    },
+                    "feedbackOnSuccess": {
+                      "explanation": "Has reconocido la frase del audio."
+                    }
+                  },
+                  {
+                    "type": "AudioOnlyPrompt",
+                    "id": "es-pt-c2-u15-l02-e08",
+                    "audioText": "Aos dezoito anos mudei-me para Madrid. Paradoxalmente, o excesso de cautela retira credibilidade.",
+                    "question": "¿Qué implica el hablante?",
+                    "options": [
+                      "Aos dezoito anos mudei-me para Madrid. Paradoxalmente, o excesso de cautela retira credibilidade.",
+                      "Nasci em uma cidade pequena. Em rigor, a afirmação admite leituras contraditórias.",
+                      "Cresci com meus pais e meus dois irmãos. Com o risco de simplificar, o argumento roça a contradição."
+                    ],
+                    "correctIndex": 0,
+                    "allowSlowPlayback": false,
+                    "feedbackOnError": {
+                      "type": "comprehension",
+                      "explanation": "El audio dice «Aos dezoito anos mudei-me para Madrid. Paradoxalmente, o excesso de cautela retira credibilidade.».",
+                      "ruleRef": "gp-c2-rhetorical-questions"
+                    },
+                    "feedbackOnSuccess": {
+                      "explanation": "Has interpretado la implicación."
+                    }
+                  },
+                  {
+                    "type": "ListenType",
+                    "id": "es-pt-c2-u15-l02-e09",
+                    "audioText": "Aos dezoito anos mudei-me para Madrid. Paradoxalmente, o excesso de cautela retira credibilidade.",
+                    "transcription": "Aos dezoito anos mudei-me para Madrid. Paradoxalmente, o excesso de cautela retira credibilidade.",
+                    "feedbackOnError": {
+                      "type": "spelling",
+                      "explanation": "Escribe exactamente «Aos dezoito anos mudei-me para Madrid. Paradoxalmente, o excesso de cautela retira credibilidade.».",
+                      "ruleRef": "gp-c2-dry-irony"
+                    },
+                    "feedbackOnSuccess": {
+                      "explanation": "La transcripción coincide con el audio."
+                    }
+                  },
+                  {
+                    "type": "SpeakRepeat",
+                    "id": "es-pt-c2-u15-l02-e10",
+                    "targetPhrase": "Aos dezoito anos mudei-me para Madrid. Paradoxalmente, o excesso de cautela retira credibilidade.",
+                    "audioText": "Aos dezoito anos mudei-me para Madrid. Paradoxalmente, o excesso de cautela retira credibilidade.",
+                    "feedbackOnError": {
+                      "type": "pronunciation",
+                      "explanation": "Repite «Aos dezoito anos mudei-me para Madrid. Paradoxalmente, o excesso de cautela retira credibilidade.» con claridad.",
+                      "ruleRef": "gp-c2-dry-irony"
+                    },
+                    "feedbackOnSuccess": {
+                      "explanation": "La frase se entiende y mantiene el ritmo."
+                    }
+                  },
+                  {
+                    "type": "MatchPairs",
+                    "id": "es-pt-c2-u15-l02-e11",
+                    "pairs": [
+                      {
+                        "left": "Nací en una ciudad pequeña. En rigor, la afirmación admite lecturas encontradas.",
+                        "right": "Nasci em uma cidade pequena. Em rigor, a afirmação admite leituras contraditórias."
+                      },
+                      {
+                        "left": "Crecí con mis padres y mis dos hermanos. A riesgo de simplificar, el argumento roza la contradicción.",
+                        "right": "Cresci com meus pais e meus dois irmãos. Com o risco de simplificar, o argumento roça a contradição."
+                      },
+                      {
+                        "left": "A los dieciocho años me mudé a Madrid. Paradójicamente, el exceso de cautela resta credibilidad.",
+                        "right": "Aos dezoito anos mudei-me para Madrid. Paradoxalmente, o excesso de cautela retira credibilidade."
+                      }
+                    ],
+                    "feedbackOnError": {
+                      "type": "vocabulary",
+                      "explanation": "Cada expresión tiene una traducción distinta.",
+                      "ruleRef": "gp-c2-dry-irony"
+                    },
+                    "feedbackOnSuccess": {
+                      "explanation": "Has asociado cada expresión con su traducción."
+                    }
+                  },
+                  {
+                    "type": "FreeSpeakingPrompt",
+                    "id": "es-pt-c2-u15-l02-e12",
+                    "prompt": "Defiende una interpretación matizada sobre mi historia personal.",
+                    "minTokens": 40,
+                    "conceptClusters": [
+                      [
+                        "Nasci"
+                      ],
+                      [
+                        "cidade"
+                      ],
+                      [
+                        "pequena"
+                      ]
+                    ],
+                    "modelAnswer": "Nasci em uma cidade pequena. Em rigor, a afirmação admite leituras contraditórias. Cresci com meus pais e meus dois irmãos. Com o risco de simplificar, o argumento roça a contradição. Aos dezoito anos mudei-me para Madrid. Paradoxalmente, o excesso de cautela retira credibilidade.",
+                    "selfAssessmentCriteria": [
+                      "¿La respuesta argumenta y responde a la tarea?",
+                      "¿Usa las dos estructuras gramaticales de la lección?",
+                      "¿Incluye una concesión, una ironía o una atenuación?"
+                    ],
+                    "grammarRuleRefs": [
+                      "gp-c2-dry-irony",
+                      "gp-c2-rhetorical-questions"
+                    ],
+                    "timeLimitSeconds": 120,
+                    "minWpm": 70,
+                    "maxWpm": 160,
+                    "feedbackOnError": {
+                      "type": "grammar",
+                      "explanation": "La respuesta modelo desarrolla una interpretación matizada.",
+                      "ruleRef": "gp-c2-dry-irony"
+                    }
+                  }
+                ]
+              }
+            ]
           }
         ]
       }
