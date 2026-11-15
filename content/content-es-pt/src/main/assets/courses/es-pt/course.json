@@ -38209,6 +38209,2186 @@
               ]
             }
           ]
+        },
+        {
+          "id": "es-pt-a2-u02",
+          "title": "A2 · Viajes y transporte",
+          "lessons": [
+            {
+              "id": "es-pt-a2-u02-l01",
+              "title": "Repaso: mi último viaje",
+              "cefrLevel": "A2",
+              "vocabFrequencyBand": "2000-3000",
+              "canDo": "Puedo contar las etapas de mi último viaje.",
+              "microLesson": {
+                "title": "Repaso: mi último viaje",
+                "goals": [
+                  "Reconocer vocabulario de mi último viaje.",
+                  "Usar frases sencillas sobre mi último viaje.",
+                  "Producir un mensaje breve sobre mi último viaje."
+                ],
+                "sections": [
+                  {
+                    "heading": "Foco gramatical",
+                    "body": "Pasado simple: El pasado simple describe acciones terminadas en un momento concreto. Expresiones de tiempo: In the morning, on Monday y at seven sitúan la acción en el tiempo.",
+                    "examples": [
+                      {
+                        "source": "El verano pasado viajé a Lisboa.",
+                        "target": "No verão passado viajei para Lisboa"
+                      },
+                      {
+                        "source": "Pasé cinco días en un hotel pequeño.",
+                        "target": "Passei cinco dias em um pequeno hotel"
+                      }
+                    ]
+                  },
+                  {
+                    "heading": "En contexto",
+                    "body": "Observa cómo se usa pasado simple en una situación de mi último viaje.",
+                    "examples": [
+                      {
+                        "source": "Visité el centro y probé la comida local.",
+                        "target": "Visitei o centro e experimentei a comida local"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "glossary": [
+                {
+                  "term": "No verão passado viajei para Lisboa",
+                  "translations": [
+                    "El verano pasado viajé a Lisboa."
+                  ]
+                },
+                {
+                  "term": "Passei cinco dias em um pequeno hotel",
+                  "translations": [
+                    "Pasé cinco días en un hotel pequeño."
+                  ]
+                },
+                {
+                  "term": "Visitei o centro e experimentei a comida local",
+                  "translations": [
+                    "Visité el centro y probé la comida local."
+                  ]
+                }
+              ],
+              "exercises": [
+                {
+                  "type": "MultipleChoice",
+                  "id": "es-pt-a2-u02-l01-e01",
+                  "question": "¿Cómo se dice «El verano pasado viajé a Lisboa.»?",
+                  "options": [
+                    "No verão passado viajei para Lisboa",
+                    "Passei cinco dias em um pequeno hotel",
+                    "Visitei o centro e experimentei a comida local"
+                  ],
+                  "correctIndex": 0,
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "«El verano pasado viajé a Lisboa.» se dice «No verão passado viajei para Lisboa»."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has elegido la traducción correcta."
+                  }
+                },
+                {
+                  "type": "Translate",
+                  "id": "es-pt-a2-u02-l01-e02",
+                  "sourcePhrase": "El verano pasado viajé a Lisboa.",
+                  "correctTokens": [
+                    "No",
+                    "verão",
+                    "passado",
+                    "viajei",
+                    "para",
+                    "Lisboa"
+                  ],
+                  "distractorTokens": [
+                    "Passei",
+                    "cinco",
+                    "dias"
+                  ],
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "El orden correcto es «No verão passado viajei para Lisboa». Pasado simple: El pasado simple describe acciones terminadas en un momento concreto.",
+                    "ruleRef": "gp-past-simple"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La frase conserva el orden y el significado."
+                  }
+                },
+                {
+                  "type": "OrderWords",
+                  "id": "es-pt-a2-u02-l01-e03",
+                  "tokens": [
+                    "cinco",
+                    "dias",
+                    "em",
+                    "um",
+                    "pequeno",
+                    "hotel",
+                    "Passei"
+                  ],
+                  "answerTokens": [
+                    "Passei",
+                    "cinco",
+                    "dias",
+                    "em",
+                    "um",
+                    "pequeno",
+                    "hotel"
+                  ],
+                  "sourcePhrase": "Pasé cinco días en un hotel pequeño.",
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "La frase correcta es «Passei cinco dias em um pequeno hotel». Pasado simple: El pasado simple describe acciones terminadas en un momento concreto.",
+                    "ruleRef": "gp-past-simple"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "El orden produce una frase natural."
+                  }
+                },
+                {
+                  "type": "MatchPairs",
+                  "id": "es-pt-a2-u02-l01-e04",
+                  "pairs": [
+                    {
+                      "left": "El verano pasado viajé a Lisboa.",
+                      "right": "No verão passado viajei para Lisboa"
+                    },
+                    {
+                      "left": "Pasé cinco días en un hotel pequeño.",
+                      "right": "Passei cinco dias em um pequeno hotel"
+                    },
+                    {
+                      "left": "Visité el centro y probé la comida local.",
+                      "right": "Visitei o centro e experimentei a comida local"
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "Cada expresión tiene una traducción distinta."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has asociado cada expresión con su traducción."
+                  }
+                },
+                {
+                  "type": "ListenChoose",
+                  "id": "es-pt-a2-u02-l01-e05",
+                  "audioText": "Visitei o centro e experimentei a comida local",
+                  "options": [
+                    "No verão passado viajei para Lisboa",
+                    "Passei cinco dias em um pequeno hotel",
+                    "Visitei o centro e experimentei a comida local"
+                  ],
+                  "correctIndex": 0,
+                  "feedbackOnError": {
+                    "type": "comprehension",
+                    "explanation": "El audio dice «Visitei o centro e experimentei a comida local»."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has reconocido la frase del audio."
+                  }
+                },
+                {
+                  "type": "ListenType",
+                  "id": "es-pt-a2-u02-l01-e06",
+                  "audioText": "Visitei o centro e experimentei a comida local",
+                  "transcription": "Visitei o centro e experimentei a comida local",
+                  "feedbackOnError": {
+                    "type": "spelling",
+                    "explanation": "Escribe exactamente «Visitei o centro e experimentei a comida local»."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La transcripción coincide con el audio."
+                  }
+                },
+                {
+                  "type": "SpeakRepeat",
+                  "id": "es-pt-a2-u02-l01-e07",
+                  "targetPhrase": "Visitei o centro e experimentei a comida local",
+                  "audioText": "Visitei o centro e experimentei a comida local",
+                  "feedbackOnError": {
+                    "type": "pronunciation",
+                    "explanation": "Repite «Visitei o centro e experimentei a comida local» con claridad."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La frase se entiende y mantiene el ritmo."
+                  }
+                }
+              ],
+              "grammarPoints": [
+                {
+                  "id": "gp-past-simple",
+                  "label": "Pasado simple",
+                  "description": "El pasado simple describe acciones terminadas en un momento concreto."
+                },
+                {
+                  "id": "gp-time-expressions",
+                  "label": "Expresiones de tiempo",
+                  "description": "In the morning, on Monday y at seven sitúan la acción en el tiempo."
+                }
+              ]
+            },
+            {
+              "id": "es-pt-a2-u02-l02",
+              "title": "En la estación",
+              "cefrLevel": "A2",
+              "vocabFrequencyBand": "2000-3000",
+              "canDo": "Puedo preguntar horarios y comprar billetes en la estación.",
+              "microLesson": {
+                "title": "En la estación",
+                "goals": [
+                  "Reconocer vocabulario de la estación de tren.",
+                  "Usar frases sencillas sobre la estación de tren.",
+                  "Producir un mensaje breve sobre la estación de tren."
+                ],
+                "sections": [
+                  {
+                    "heading": "Foco gramatical",
+                    "body": "Presente simple: Usa el presente simple para rutinas y hechos habituales. Preguntas: El orden auxiliar + sujeto + verbo forma preguntas claras.",
+                    "examples": [
+                      {
+                        "source": "¿A qué hora sale el tren?",
+                        "target": "A que horas o trem sai"
+                      },
+                      {
+                        "source": "El andén está al final del pasillo.",
+                        "target": "A plataforma fica no final do corredor"
+                      }
+                    ]
+                  },
+                  {
+                    "heading": "En contexto",
+                    "body": "Observa cómo se usa presente simple en una situación de la estación de tren.",
+                    "examples": [
+                      {
+                        "source": "Necesito comprar un billete de ida y vuelta.",
+                        "target": "Preciso comprar uma passagem de ida e volta"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "glossary": [
+                {
+                  "term": "A que horas o trem sai",
+                  "translations": [
+                    "¿A qué hora sale el tren?"
+                  ]
+                },
+                {
+                  "term": "A plataforma fica no final do corredor",
+                  "translations": [
+                    "El andén está al final del pasillo."
+                  ]
+                },
+                {
+                  "term": "Preciso comprar uma passagem de ida e volta",
+                  "translations": [
+                    "Necesito comprar un billete de ida y vuelta."
+                  ]
+                }
+              ],
+              "exercises": [
+                {
+                  "type": "MultipleChoice",
+                  "id": "es-pt-a2-u02-l02-e01",
+                  "question": "¿Cómo se dice «¿A qué hora sale el tren?»?",
+                  "options": [
+                    "A que horas o trem sai",
+                    "A plataforma fica no final do corredor",
+                    "Preciso comprar uma passagem de ida e volta"
+                  ],
+                  "correctIndex": 0,
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "«¿A qué hora sale el tren?» se dice «A que horas o trem sai»."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has elegido la traducción correcta."
+                  }
+                },
+                {
+                  "type": "Translate",
+                  "id": "es-pt-a2-u02-l02-e02",
+                  "sourcePhrase": "¿A qué hora sale el tren?",
+                  "correctTokens": [
+                    "A",
+                    "que",
+                    "horas",
+                    "o",
+                    "trem",
+                    "sai"
+                  ],
+                  "distractorTokens": [
+                    "plataforma",
+                    "fica",
+                    "no"
+                  ],
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "El orden correcto es «A que horas o trem sai». Presente simple: Usa el presente simple para rutinas y hechos habituales.",
+                    "ruleRef": "gp-present-simple"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La frase conserva el orden y el significado."
+                  }
+                },
+                {
+                  "type": "OrderWords",
+                  "id": "es-pt-a2-u02-l02-e03",
+                  "tokens": [
+                    "plataforma",
+                    "fica",
+                    "no",
+                    "final",
+                    "do",
+                    "corredor",
+                    "A"
+                  ],
+                  "answerTokens": [
+                    "A",
+                    "plataforma",
+                    "fica",
+                    "no",
+                    "final",
+                    "do",
+                    "corredor"
+                  ],
+                  "sourcePhrase": "El andén está al final del pasillo.",
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "La frase correcta es «A plataforma fica no final do corredor». Presente simple: Usa el presente simple para rutinas y hechos habituales.",
+                    "ruleRef": "gp-present-simple"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "El orden produce una frase natural."
+                  }
+                },
+                {
+                  "type": "MatchPairs",
+                  "id": "es-pt-a2-u02-l02-e04",
+                  "pairs": [
+                    {
+                      "left": "¿A qué hora sale el tren?",
+                      "right": "A que horas o trem sai"
+                    },
+                    {
+                      "left": "El andén está al final del pasillo.",
+                      "right": "A plataforma fica no final do corredor"
+                    },
+                    {
+                      "left": "Necesito comprar un billete de ida y vuelta.",
+                      "right": "Preciso comprar uma passagem de ida e volta"
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "Cada expresión tiene una traducción distinta."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has asociado cada expresión con su traducción."
+                  }
+                },
+                {
+                  "type": "ListenChoose",
+                  "id": "es-pt-a2-u02-l02-e05",
+                  "audioText": "Preciso comprar uma passagem de ida e volta",
+                  "options": [
+                    "A que horas o trem sai",
+                    "A plataforma fica no final do corredor",
+                    "Preciso comprar uma passagem de ida e volta"
+                  ],
+                  "correctIndex": 0,
+                  "feedbackOnError": {
+                    "type": "comprehension",
+                    "explanation": "El audio dice «Preciso comprar uma passagem de ida e volta»."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has reconocido la frase del audio."
+                  }
+                },
+                {
+                  "type": "ListenType",
+                  "id": "es-pt-a2-u02-l02-e06",
+                  "audioText": "Preciso comprar uma passagem de ida e volta",
+                  "transcription": "Preciso comprar uma passagem de ida e volta",
+                  "feedbackOnError": {
+                    "type": "spelling",
+                    "explanation": "Escribe exactamente «Preciso comprar uma passagem de ida e volta»."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La transcripción coincide con el audio."
+                  }
+                },
+                {
+                  "type": "SpeakRepeat",
+                  "id": "es-pt-a2-u02-l02-e07",
+                  "targetPhrase": "Preciso comprar uma passagem de ida e volta",
+                  "audioText": "Preciso comprar uma passagem de ida e volta",
+                  "feedbackOnError": {
+                    "type": "pronunciation",
+                    "explanation": "Repite «Preciso comprar uma passagem de ida e volta» con claridad."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La frase se entiende y mantiene el ritmo."
+                  }
+                }
+              ],
+              "grammarPoints": [
+                {
+                  "id": "gp-present-simple",
+                  "label": "Presente simple",
+                  "description": "Usa el presente simple para rutinas y hechos habituales."
+                },
+                {
+                  "id": "gp-questions",
+                  "label": "Preguntas",
+                  "description": "El orden auxiliar + sujeto + verbo forma preguntas claras."
+                }
+              ]
+            },
+            {
+              "id": "es-pt-a2-u02-l03",
+              "title": "Alojamiento y billetes",
+              "cefrLevel": "A2",
+              "vocabFrequencyBand": "2000-3000",
+              "canDo": "Puedo pedir alojamiento y billetes para un viaje.",
+              "microLesson": {
+                "title": "Alojamiento y billetes",
+                "goals": [
+                  "Reconocer vocabulario de el alojamiento.",
+                  "Usar frases sencillas sobre el alojamiento.",
+                  "Producir un mensaje breve sobre el alojamiento."
+                ],
+                "sections": [
+                  {
+                    "heading": "Foco gramatical",
+                    "body": "Cantidad: Some, much, many, a lot of y enough expresan cantidad. Preguntas: El orden auxiliar + sujeto + verbo forma preguntas claras.",
+                    "examples": [
+                      {
+                        "source": "Necesito una habitación doble",
+                        "target": "Eu preciso de um quarto duplo"
+                      },
+                      {
+                        "source": "Necesito una reserva para dos noches",
+                        "target": "Preciso de uma reserva para duas noites"
+                      }
+                    ]
+                  },
+                  {
+                    "heading": "En contexto",
+                    "body": "Observa cómo se usa cantidad en una situación de el alojamiento.",
+                    "examples": [
+                      {
+                        "source": "Necesito un billete de tren",
+                        "target": "Eu preciso de uma passagem de trem"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "glossary": [
+                {
+                  "term": "Eu preciso de um quarto duplo",
+                  "translations": [
+                    "Necesito una habitación doble"
+                  ]
+                },
+                {
+                  "term": "Preciso de uma reserva para duas noites",
+                  "translations": [
+                    "Necesito una reserva para dos noches"
+                  ]
+                },
+                {
+                  "term": "Eu preciso de uma passagem de trem",
+                  "translations": [
+                    "Necesito un billete de tren"
+                  ]
+                }
+              ],
+              "exercises": [
+                {
+                  "type": "MultipleChoice",
+                  "id": "es-pt-a2-u02-l03-e01",
+                  "question": "¿Cómo se dice «Necesito una habitación doble»?",
+                  "options": [
+                    "Eu preciso de um quarto duplo",
+                    "Preciso de uma reserva para duas noites",
+                    "Eu preciso de uma passagem de trem"
+                  ],
+                  "correctIndex": 0,
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "«Necesito una habitación doble» se dice «Eu preciso de um quarto duplo»."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has elegido la traducción correcta."
+                  }
+                },
+                {
+                  "type": "Translate",
+                  "id": "es-pt-a2-u02-l03-e02",
+                  "sourcePhrase": "Necesito una habitación doble",
+                  "correctTokens": [
+                    "Eu",
+                    "preciso",
+                    "de",
+                    "um",
+                    "quarto",
+                    "duplo"
+                  ],
+                  "distractorTokens": [
+                    "Preciso",
+                    "uma",
+                    "reserva"
+                  ],
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "El orden correcto es «Eu preciso de um quarto duplo». Cantidad: Some, much, many, a lot of y enough expresan cantidad.",
+                    "ruleRef": "gp-quantity"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La frase conserva el orden y el significado."
+                  }
+                },
+                {
+                  "type": "OrderWords",
+                  "id": "es-pt-a2-u02-l03-e03",
+                  "tokens": [
+                    "de",
+                    "uma",
+                    "reserva",
+                    "para",
+                    "duas",
+                    "noites",
+                    "Preciso"
+                  ],
+                  "answerTokens": [
+                    "Preciso",
+                    "de",
+                    "uma",
+                    "reserva",
+                    "para",
+                    "duas",
+                    "noites"
+                  ],
+                  "sourcePhrase": "Necesito una reserva para dos noches",
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "La frase correcta es «Preciso de uma reserva para duas noites». Cantidad: Some, much, many, a lot of y enough expresan cantidad.",
+                    "ruleRef": "gp-quantity"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "El orden produce una frase natural."
+                  }
+                },
+                {
+                  "type": "MatchPairs",
+                  "id": "es-pt-a2-u02-l03-e04",
+                  "pairs": [
+                    {
+                      "left": "Necesito una habitación doble",
+                      "right": "Eu preciso de um quarto duplo"
+                    },
+                    {
+                      "left": "Necesito una reserva para dos noches",
+                      "right": "Preciso de uma reserva para duas noites"
+                    },
+                    {
+                      "left": "Necesito un billete de tren",
+                      "right": "Eu preciso de uma passagem de trem"
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "Cada expresión tiene una traducción distinta."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has asociado cada expresión con su traducción."
+                  }
+                },
+                {
+                  "type": "ListenChoose",
+                  "id": "es-pt-a2-u02-l03-e05",
+                  "audioText": "Eu preciso de uma passagem de trem",
+                  "options": [
+                    "Eu preciso de um quarto duplo",
+                    "Preciso de uma reserva para duas noites",
+                    "Eu preciso de uma passagem de trem"
+                  ],
+                  "correctIndex": 0,
+                  "feedbackOnError": {
+                    "type": "comprehension",
+                    "explanation": "El audio dice «Eu preciso de uma passagem de trem»."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has reconocido la frase del audio."
+                  }
+                },
+                {
+                  "type": "ListenType",
+                  "id": "es-pt-a2-u02-l03-e06",
+                  "audioText": "Eu preciso de uma passagem de trem",
+                  "transcription": "Eu preciso de uma passagem de trem",
+                  "feedbackOnError": {
+                    "type": "spelling",
+                    "explanation": "Escribe exactamente «Eu preciso de uma passagem de trem»."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La transcripción coincide con el audio."
+                  }
+                },
+                {
+                  "type": "SpeakRepeat",
+                  "id": "es-pt-a2-u02-l03-e07",
+                  "targetPhrase": "Eu preciso de uma passagem de trem",
+                  "audioText": "Eu preciso de uma passagem de trem",
+                  "feedbackOnError": {
+                    "type": "pronunciation",
+                    "explanation": "Repite «Eu preciso de uma passagem de trem» con claridad."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La frase se entiende y mantiene el ritmo."
+                  }
+                }
+              ],
+              "grammarPoints": [
+                {
+                  "id": "gp-quantity",
+                  "label": "Cantidad",
+                  "description": "Some, much, many, a lot of y enough expresan cantidad."
+                },
+                {
+                  "id": "gp-questions",
+                  "label": "Preguntas",
+                  "description": "El orden auxiliar + sujeto + verbo forma preguntas claras."
+                }
+              ]
+            },
+            {
+              "id": "es-pt-a2-u02-l04",
+              "title": "Pasado continuo en un viaje",
+              "cefrLevel": "A2",
+              "vocabFrequencyBand": "2000-3000",
+              "canDo": "Puedo describir qué estaba pasando en un momento del pasado.",
+              "microLesson": {
+                "title": "Pasado continuo en un viaje",
+                "goals": [
+                  "Reconocer vocabulario de acciones en desarrollo.",
+                  "Usar frases sencillas sobre acciones en desarrollo.",
+                  "Producir un mensaje breve sobre acciones en desarrollo."
+                ],
+                "sections": [
+                  {
+                    "heading": "Foco gramatical",
+                    "body": "Pasado continuo: Was/were + -ing describe una acción en desarrollo en el pasado.",
+                    "examples": [
+                      {
+                        "source": "Estaba esperando el tren cuando llegó Ana.",
+                        "target": "Eu estava esperando o trem quando Ana chegou"
+                      },
+                      {
+                        "source": "Estábamos hablando cuando sonó el teléfono.",
+                        "target": "Estávamos conversando quando o telefone tocou"
+                      }
+                    ]
+                  },
+                  {
+                    "heading": "En contexto",
+                    "body": "Observa cómo se usa pasado continuo en una situación de acciones en desarrollo.",
+                    "examples": [
+                      {
+                        "source": "Estaba lloviendo cuando salimos del hotel.",
+                        "target": "Estava chovendo quando saímos do hotel"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "glossary": [
+                {
+                  "term": "Eu estava esperando o trem quando Ana chegou",
+                  "translations": [
+                    "Estaba esperando el tren cuando llegó Ana."
+                  ]
+                },
+                {
+                  "term": "Estávamos conversando quando o telefone tocou",
+                  "translations": [
+                    "Estábamos hablando cuando sonó el teléfono."
+                  ]
+                },
+                {
+                  "term": "Estava chovendo quando saímos do hotel",
+                  "translations": [
+                    "Estaba lloviendo cuando salimos del hotel."
+                  ]
+                }
+              ],
+              "exercises": [
+                {
+                  "type": "MultipleChoice",
+                  "id": "es-pt-a2-u02-l04-e01",
+                  "question": "¿Cómo se dice «Estaba esperando el tren cuando llegó Ana.»?",
+                  "options": [
+                    "Eu estava esperando o trem quando Ana chegou",
+                    "Estávamos conversando quando o telefone tocou",
+                    "Estava chovendo quando saímos do hotel"
+                  ],
+                  "correctIndex": 0,
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "«Estaba esperando el tren cuando llegó Ana.» se dice «Eu estava esperando o trem quando Ana chegou»."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has elegido la traducción correcta."
+                  }
+                },
+                {
+                  "type": "Translate",
+                  "id": "es-pt-a2-u02-l04-e02",
+                  "sourcePhrase": "Estaba esperando el tren cuando llegó Ana.",
+                  "correctTokens": [
+                    "Eu",
+                    "estava",
+                    "esperando",
+                    "o",
+                    "trem",
+                    "quando",
+                    "Ana",
+                    "chegou"
+                  ],
+                  "distractorTokens": [
+                    "Estávamos",
+                    "conversando",
+                    "telefone"
+                  ],
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "El orden correcto es «Eu estava esperando o trem quando Ana chegou». Pasado continuo: Was/were + -ing describe una acción en desarrollo en el pasado.",
+                    "ruleRef": "gp-past-continuous"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La frase conserva el orden y el significado."
+                  }
+                },
+                {
+                  "type": "OrderWords",
+                  "id": "es-pt-a2-u02-l04-e03",
+                  "tokens": [
+                    "conversando",
+                    "quando",
+                    "o",
+                    "telefone",
+                    "tocou",
+                    "Estávamos"
+                  ],
+                  "answerTokens": [
+                    "Estávamos",
+                    "conversando",
+                    "quando",
+                    "o",
+                    "telefone",
+                    "tocou"
+                  ],
+                  "sourcePhrase": "Estábamos hablando cuando sonó el teléfono.",
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "La frase correcta es «Estávamos conversando quando o telefone tocou». Pasado continuo: Was/were + -ing describe una acción en desarrollo en el pasado.",
+                    "ruleRef": "gp-past-continuous"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "El orden produce una frase natural."
+                  }
+                },
+                {
+                  "type": "MatchPairs",
+                  "id": "es-pt-a2-u02-l04-e04",
+                  "pairs": [
+                    {
+                      "left": "Estaba esperando el tren cuando llegó Ana.",
+                      "right": "Eu estava esperando o trem quando Ana chegou"
+                    },
+                    {
+                      "left": "Estábamos hablando cuando sonó el teléfono.",
+                      "right": "Estávamos conversando quando o telefone tocou"
+                    },
+                    {
+                      "left": "Estaba lloviendo cuando salimos del hotel.",
+                      "right": "Estava chovendo quando saímos do hotel"
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "Cada expresión tiene una traducción distinta."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has asociado cada expresión con su traducción."
+                  }
+                },
+                {
+                  "type": "ListenChoose",
+                  "id": "es-pt-a2-u02-l04-e05",
+                  "audioText": "Estava chovendo quando saímos do hotel",
+                  "options": [
+                    "Eu estava esperando o trem quando Ana chegou",
+                    "Estávamos conversando quando o telefone tocou",
+                    "Estava chovendo quando saímos do hotel"
+                  ],
+                  "correctIndex": 0,
+                  "feedbackOnError": {
+                    "type": "comprehension",
+                    "explanation": "El audio dice «Estava chovendo quando saímos do hotel»."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has reconocido la frase del audio."
+                  }
+                },
+                {
+                  "type": "ListenType",
+                  "id": "es-pt-a2-u02-l04-e06",
+                  "audioText": "Estava chovendo quando saímos do hotel",
+                  "transcription": "Estava chovendo quando saímos do hotel",
+                  "feedbackOnError": {
+                    "type": "spelling",
+                    "explanation": "Escribe exactamente «Estava chovendo quando saímos do hotel»."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La transcripción coincide con el audio."
+                  }
+                },
+                {
+                  "type": "SpeakRepeat",
+                  "id": "es-pt-a2-u02-l04-e07",
+                  "targetPhrase": "Estava chovendo quando saímos do hotel",
+                  "audioText": "Estava chovendo quando saímos do hotel",
+                  "feedbackOnError": {
+                    "type": "pronunciation",
+                    "explanation": "Repite «Estava chovendo quando saímos do hotel» con claridad."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La frase se entiende y mantiene el ritmo."
+                  }
+                }
+              ],
+              "grammarPoints": [
+                {
+                  "id": "gp-past-continuous",
+                  "label": "Pasado continuo",
+                  "description": "Was/were + -ing describe una acción en desarrollo en el pasado."
+                }
+              ]
+            },
+            {
+              "id": "es-pt-a2-u02-l05",
+              "title": "Pasado simple y continuo",
+              "cefrLevel": "A2",
+              "vocabFrequencyBand": "2000-3000",
+              "canDo": "Puedo combinar el pasado continuo y el simple para contar una anécdota.",
+              "microLesson": {
+                "title": "Pasado simple y continuo",
+                "goals": [
+                  "Reconocer vocabulario de una anécdota de viaje.",
+                  "Usar frases sencillas sobre una anécdota de viaje.",
+                  "Producir un mensaje breve sobre una anécdota de viaje."
+                ],
+                "sections": [
+                  {
+                    "heading": "Foco gramatical",
+                    "body": "Pasado simple y continuo: El continuo pinta el fondo; el simple marca el hecho que interrumpe.",
+                    "examples": [
+                      {
+                        "source": "Mientras esperaba, vi un anuncio.",
+                        "target": "Enquanto esperava, vi um anúncio"
+                      },
+                      {
+                        "source": "Cuando llegamos, el hotel estaba cerrado.",
+                        "target": "Quando chegamos, o hotel estava fechado"
+                      }
+                    ]
+                  },
+                  {
+                    "heading": "En contexto",
+                    "body": "Observa cómo se usa pasado simple y continuo en una situación de una anécdota de viaje.",
+                    "examples": [
+                      {
+                        "source": "Mientras dormía, perdí el billete.",
+                        "target": "Enquanto dormia, perdi a passagem"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "glossary": [
+                {
+                  "term": "Enquanto esperava, vi um anúncio",
+                  "translations": [
+                    "Mientras esperaba, vi un anuncio."
+                  ]
+                },
+                {
+                  "term": "Quando chegamos, o hotel estava fechado",
+                  "translations": [
+                    "Cuando llegamos, el hotel estaba cerrado."
+                  ]
+                },
+                {
+                  "term": "Enquanto dormia, perdi a passagem",
+                  "translations": [
+                    "Mientras dormía, perdí el billete."
+                  ]
+                }
+              ],
+              "exercises": [
+                {
+                  "type": "MultipleChoice",
+                  "id": "es-pt-a2-u02-l05-e01",
+                  "question": "¿Cómo se dice «Mientras esperaba, vi un anuncio.»?",
+                  "options": [
+                    "Enquanto esperava, vi um anúncio",
+                    "Quando chegamos, o hotel estava fechado",
+                    "Enquanto dormia, perdi a passagem"
+                  ],
+                  "correctIndex": 0,
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "«Mientras esperaba, vi un anuncio.» se dice «Enquanto esperava, vi um anúncio»."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has elegido la traducción correcta."
+                  }
+                },
+                {
+                  "type": "Translate",
+                  "id": "es-pt-a2-u02-l05-e02",
+                  "sourcePhrase": "Mientras esperaba, vi un anuncio.",
+                  "correctTokens": [
+                    "Enquanto",
+                    "esperava",
+                    "vi",
+                    "um",
+                    "anúncio"
+                  ],
+                  "distractorTokens": [
+                    "Quando",
+                    "chegamos",
+                    "o"
+                  ],
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "El orden correcto es «Enquanto esperava vi um anúncio». Pasado simple y continuo: El continuo pinta el fondo; el simple marca el hecho que interrumpe.",
+                    "ruleRef": "gp-past-simple-vs-continuous"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La frase conserva el orden y el significado."
+                  }
+                },
+                {
+                  "type": "OrderWords",
+                  "id": "es-pt-a2-u02-l05-e03",
+                  "tokens": [
+                    "chegamos",
+                    "o",
+                    "hotel",
+                    "estava",
+                    "fechado",
+                    "Quando"
+                  ],
+                  "answerTokens": [
+                    "Quando",
+                    "chegamos",
+                    "o",
+                    "hotel",
+                    "estava",
+                    "fechado"
+                  ],
+                  "sourcePhrase": "Cuando llegamos, el hotel estaba cerrado.",
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "La frase correcta es «Quando chegamos o hotel estava fechado». Pasado simple y continuo: El continuo pinta el fondo; el simple marca el hecho que interrumpe.",
+                    "ruleRef": "gp-past-simple-vs-continuous"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "El orden produce una frase natural."
+                  }
+                },
+                {
+                  "type": "MatchPairs",
+                  "id": "es-pt-a2-u02-l05-e04",
+                  "pairs": [
+                    {
+                      "left": "Mientras esperaba, vi un anuncio.",
+                      "right": "Enquanto esperava, vi um anúncio"
+                    },
+                    {
+                      "left": "Cuando llegamos, el hotel estaba cerrado.",
+                      "right": "Quando chegamos, o hotel estava fechado"
+                    },
+                    {
+                      "left": "Mientras dormía, perdí el billete.",
+                      "right": "Enquanto dormia, perdi a passagem"
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "Cada expresión tiene una traducción distinta."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has asociado cada expresión con su traducción."
+                  }
+                },
+                {
+                  "type": "ListenChoose",
+                  "id": "es-pt-a2-u02-l05-e05",
+                  "audioText": "Enquanto dormia, perdi a passagem",
+                  "options": [
+                    "Enquanto esperava, vi um anúncio",
+                    "Quando chegamos, o hotel estava fechado",
+                    "Enquanto dormia, perdi a passagem"
+                  ],
+                  "correctIndex": 0,
+                  "feedbackOnError": {
+                    "type": "comprehension",
+                    "explanation": "El audio dice «Enquanto dormia, perdi a passagem»."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has reconocido la frase del audio."
+                  }
+                },
+                {
+                  "type": "ListenType",
+                  "id": "es-pt-a2-u02-l05-e06",
+                  "audioText": "Enquanto dormia, perdi a passagem",
+                  "transcription": "Enquanto dormia, perdi a passagem",
+                  "feedbackOnError": {
+                    "type": "spelling",
+                    "explanation": "Escribe exactamente «Enquanto dormia, perdi a passagem»."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La transcripción coincide con el audio."
+                  }
+                },
+                {
+                  "type": "SpeakRepeat",
+                  "id": "es-pt-a2-u02-l05-e07",
+                  "targetPhrase": "Enquanto dormia, perdi a passagem",
+                  "audioText": "Enquanto dormia, perdi a passagem",
+                  "feedbackOnError": {
+                    "type": "pronunciation",
+                    "explanation": "Repite «Enquanto dormia, perdi a passagem» con claridad."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La frase se entiende y mantiene el ritmo."
+                  }
+                }
+              ],
+              "grammarPoints": [
+                {
+                  "id": "gp-past-simple-vs-continuous",
+                  "label": "Pasado simple y continuo",
+                  "description": "El continuo pinta el fondo; el simple marca el hecho que interrumpe."
+                }
+              ]
+            },
+            {
+              "id": "es-pt-a2-u02-l06",
+              "title": "Cambiar un billete",
+              "cefrLevel": "A2",
+              "vocabFrequencyBand": "2000-3000",
+              "canDo": "Puedo pedir cortésmente un cambio de billete o de asiento.",
+              "microLesson": {
+                "title": "Cambiar un billete",
+                "goals": [
+                  "Reconocer vocabulario de cambiar un billete.",
+                  "Usar frases sencillas sobre cambiar un billete.",
+                  "Producir un mensaje breve sobre cambiar un billete."
+                ],
+                "sections": [
+                  {
+                    "heading": "Foco gramatical",
+                    "body": "Peticiones corteses: Could you...? y Would you...? suavizan una petición.",
+                    "examples": [
+                      {
+                        "source": "¿Podrías cambiar mi billete?",
+                        "target": "Você poderia alterar meu ingresso"
+                      },
+                      {
+                        "source": "¿Podrías reservar otro asiento?",
+                        "target": "Você poderia reservar outro assento"
+                      }
+                    ]
+                  },
+                  {
+                    "heading": "En contexto",
+                    "body": "Observa cómo se usa peticiones corteses en una situación de cambiar un billete.",
+                    "examples": [
+                      {
+                        "source": "¿Podrías llamarme por teléfono?",
+                        "target": "Você poderia me ligar no telefone"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "glossary": [
+                {
+                  "term": "Você poderia alterar meu ingresso",
+                  "translations": [
+                    "¿Podrías cambiar mi billete?"
+                  ]
+                },
+                {
+                  "term": "Você poderia reservar outro assento",
+                  "translations": [
+                    "¿Podrías reservar otro asiento?"
+                  ]
+                },
+                {
+                  "term": "Você poderia me ligar no telefone",
+                  "translations": [
+                    "¿Podrías llamarme por teléfono?"
+                  ]
+                }
+              ],
+              "exercises": [
+                {
+                  "type": "MultipleChoice",
+                  "id": "es-pt-a2-u02-l06-e01",
+                  "question": "¿Cómo se dice «¿Podrías cambiar mi billete?»?",
+                  "options": [
+                    "Você poderia alterar meu ingresso",
+                    "Você poderia reservar outro assento",
+                    "Você poderia me ligar no telefone"
+                  ],
+                  "correctIndex": 0,
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "«¿Podrías cambiar mi billete?» se dice «Você poderia alterar meu ingresso»."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has elegido la traducción correcta."
+                  }
+                },
+                {
+                  "type": "Translate",
+                  "id": "es-pt-a2-u02-l06-e02",
+                  "sourcePhrase": "¿Podrías cambiar mi billete?",
+                  "correctTokens": [
+                    "Você",
+                    "poderia",
+                    "alterar",
+                    "meu",
+                    "ingresso"
+                  ],
+                  "distractorTokens": [
+                    "reservar",
+                    "outro",
+                    "assento"
+                  ],
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "El orden correcto es «Você poderia alterar meu ingresso». Peticiones corteses: Could you...? y Would you...? suavizan una petición.",
+                    "ruleRef": "gp-polite-requests"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La frase conserva el orden y el significado."
+                  }
+                },
+                {
+                  "type": "OrderWords",
+                  "id": "es-pt-a2-u02-l06-e03",
+                  "tokens": [
+                    "poderia",
+                    "reservar",
+                    "outro",
+                    "assento",
+                    "Você"
+                  ],
+                  "answerTokens": [
+                    "Você",
+                    "poderia",
+                    "reservar",
+                    "outro",
+                    "assento"
+                  ],
+                  "sourcePhrase": "¿Podrías reservar otro asiento?",
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "La frase correcta es «Você poderia reservar outro assento». Peticiones corteses: Could you...? y Would you...? suavizan una petición.",
+                    "ruleRef": "gp-polite-requests"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "El orden produce una frase natural."
+                  }
+                },
+                {
+                  "type": "MatchPairs",
+                  "id": "es-pt-a2-u02-l06-e04",
+                  "pairs": [
+                    {
+                      "left": "¿Podrías cambiar mi billete?",
+                      "right": "Você poderia alterar meu ingresso"
+                    },
+                    {
+                      "left": "¿Podrías reservar otro asiento?",
+                      "right": "Você poderia reservar outro assento"
+                    },
+                    {
+                      "left": "¿Podrías llamarme por teléfono?",
+                      "right": "Você poderia me ligar no telefone"
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "Cada expresión tiene una traducción distinta."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has asociado cada expresión con su traducción."
+                  }
+                },
+                {
+                  "type": "ListenChoose",
+                  "id": "es-pt-a2-u02-l06-e05",
+                  "audioText": "Você poderia me ligar no telefone",
+                  "options": [
+                    "Você poderia alterar meu ingresso",
+                    "Você poderia reservar outro assento",
+                    "Você poderia me ligar no telefone"
+                  ],
+                  "correctIndex": 0,
+                  "feedbackOnError": {
+                    "type": "comprehension",
+                    "explanation": "El audio dice «Você poderia me ligar no telefone»."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has reconocido la frase del audio."
+                  }
+                },
+                {
+                  "type": "ListenType",
+                  "id": "es-pt-a2-u02-l06-e06",
+                  "audioText": "Você poderia me ligar no telefone",
+                  "transcription": "Você poderia me ligar no telefone",
+                  "feedbackOnError": {
+                    "type": "spelling",
+                    "explanation": "Escribe exactamente «Você poderia me ligar no telefone»."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La transcripción coincide con el audio."
+                  }
+                },
+                {
+                  "type": "SpeakRepeat",
+                  "id": "es-pt-a2-u02-l06-e07",
+                  "targetPhrase": "Você poderia me ligar no telefone",
+                  "audioText": "Você poderia me ligar no telefone",
+                  "feedbackOnError": {
+                    "type": "pronunciation",
+                    "explanation": "Repite «Você poderia me ligar no telefone» con claridad."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La frase se entiende y mantiene el ritmo."
+                  }
+                }
+              ],
+              "grammarPoints": [
+                {
+                  "id": "gp-polite-requests",
+                  "label": "Peticiones corteses",
+                  "description": "Could you...? y Would you...? suavizan una petición."
+                }
+              ]
+            },
+            {
+              "id": "es-pt-a2-u02-l07",
+              "title": "Anuncio en el aeropuerto",
+              "cefrLevel": "A2",
+              "vocabFrequencyBand": "2000-3000",
+              "canDo": "Puedo entender anuncios sencillos en un aeropuerto.",
+              "microLesson": {
+                "title": "Anuncio en el aeropuerto",
+                "goals": [
+                  "Reconocer vocabulario de un anuncio del aeropuerto.",
+                  "Usar frases sencillas sobre un anuncio del aeropuerto.",
+                  "Producir un mensaje breve sobre un anuncio del aeropuerto."
+                ],
+                "sections": [
+                  {
+                    "heading": "Foco gramatical",
+                    "body": "Presente simple: Usa el presente simple para rutinas y hechos habituales. Preguntas: El orden auxiliar + sujeto + verbo forma preguntas claras.",
+                    "examples": [
+                      {
+                        "source": "El vuelo a Roma sale a las nueve.",
+                        "target": "O vôo para Roma sai às nove"
+                      },
+                      {
+                        "source": "Los pasajeros deben ir a la puerta doce.",
+                        "target": "Os passageiros deverão dirigir-se ao portão doze"
+                      }
+                    ]
+                  },
+                  {
+                    "heading": "En contexto",
+                    "body": "Observa cómo se usa presente simple en una situación de un anuncio del aeropuerto.",
+                    "examples": [
+                      {
+                        "source": "El vuelo lleva veinte minutos de retraso.",
+                        "target": "O vôo está vinte minutos atrasado"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "glossary": [
+                {
+                  "term": "O vôo para Roma sai às nove",
+                  "translations": [
+                    "El vuelo a Roma sale a las nueve."
+                  ]
+                },
+                {
+                  "term": "Os passageiros deverão dirigir-se ao portão doze",
+                  "translations": [
+                    "Los pasajeros deben ir a la puerta doce."
+                  ]
+                },
+                {
+                  "term": "O vôo está vinte minutos atrasado",
+                  "translations": [
+                    "El vuelo lleva veinte minutos de retraso."
+                  ]
+                }
+              ],
+              "exercises": [
+                {
+                  "type": "MultipleChoice",
+                  "id": "es-pt-a2-u02-l07-e01",
+                  "question": "¿Cómo se dice «El vuelo a Roma sale a las nueve.»?",
+                  "options": [
+                    "O vôo para Roma sai às nove",
+                    "Os passageiros deverão dirigir-se ao portão doze",
+                    "O vôo está vinte minutos atrasado"
+                  ],
+                  "correctIndex": 0,
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "«El vuelo a Roma sale a las nueve.» se dice «O vôo para Roma sai às nove»."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has elegido la traducción correcta."
+                  }
+                },
+                {
+                  "type": "Translate",
+                  "id": "es-pt-a2-u02-l07-e02",
+                  "sourcePhrase": "El vuelo a Roma sale a las nueve.",
+                  "correctTokens": [
+                    "O",
+                    "vôo",
+                    "para",
+                    "Roma",
+                    "sai",
+                    "às",
+                    "nove"
+                  ],
+                  "distractorTokens": [
+                    "Os",
+                    "passageiros",
+                    "deverão"
+                  ],
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "El orden correcto es «O vôo para Roma sai às nove». Presente simple: Usa el presente simple para rutinas y hechos habituales.",
+                    "ruleRef": "gp-present-simple"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La frase conserva el orden y el significado."
+                  }
+                },
+                {
+                  "type": "OrderWords",
+                  "id": "es-pt-a2-u02-l07-e03",
+                  "tokens": [
+                    "passageiros",
+                    "deverão",
+                    "dirigir",
+                    "se",
+                    "ao",
+                    "portão",
+                    "doze",
+                    "Os"
+                  ],
+                  "answerTokens": [
+                    "Os",
+                    "passageiros",
+                    "deverão",
+                    "dirigir",
+                    "se",
+                    "ao",
+                    "portão",
+                    "doze"
+                  ],
+                  "sourcePhrase": "Los pasajeros deben ir a la puerta doce.",
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "La frase correcta es «Os passageiros deverão dirigir se ao portão doze». Presente simple: Usa el presente simple para rutinas y hechos habituales.",
+                    "ruleRef": "gp-present-simple"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "El orden produce una frase natural."
+                  }
+                },
+                {
+                  "type": "MatchPairs",
+                  "id": "es-pt-a2-u02-l07-e04",
+                  "pairs": [
+                    {
+                      "left": "El vuelo a Roma sale a las nueve.",
+                      "right": "O vôo para Roma sai às nove"
+                    },
+                    {
+                      "left": "Los pasajeros deben ir a la puerta doce.",
+                      "right": "Os passageiros deverão dirigir-se ao portão doze"
+                    },
+                    {
+                      "left": "El vuelo lleva veinte minutos de retraso.",
+                      "right": "O vôo está vinte minutos atrasado"
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "Cada expresión tiene una traducción distinta."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has asociado cada expresión con su traducción."
+                  }
+                },
+                {
+                  "type": "ListenChoose",
+                  "id": "es-pt-a2-u02-l07-e05",
+                  "audioText": "O vôo está vinte minutos atrasado",
+                  "options": [
+                    "O vôo para Roma sai às nove",
+                    "Os passageiros deverão dirigir-se ao portão doze",
+                    "O vôo está vinte minutos atrasado"
+                  ],
+                  "correctIndex": 0,
+                  "feedbackOnError": {
+                    "type": "comprehension",
+                    "explanation": "El audio dice «O vôo está vinte minutos atrasado»."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has reconocido la frase del audio."
+                  }
+                },
+                {
+                  "type": "ListenType",
+                  "id": "es-pt-a2-u02-l07-e06",
+                  "audioText": "O vôo está vinte minutos atrasado",
+                  "transcription": "O vôo está vinte minutos atrasado",
+                  "feedbackOnError": {
+                    "type": "spelling",
+                    "explanation": "Escribe exactamente «O vôo está vinte minutos atrasado»."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La transcripción coincide con el audio."
+                  }
+                },
+                {
+                  "type": "SpeakRepeat",
+                  "id": "es-pt-a2-u02-l07-e07",
+                  "targetPhrase": "O vôo está vinte minutos atrasado",
+                  "audioText": "O vôo está vinte minutos atrasado",
+                  "feedbackOnError": {
+                    "type": "pronunciation",
+                    "explanation": "Repite «O vôo está vinte minutos atrasado» con claridad."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La frase se entiende y mantiene el ritmo."
+                  }
+                }
+              ],
+              "grammarPoints": [
+                {
+                  "id": "gp-present-simple",
+                  "label": "Presente simple",
+                  "description": "Usa el presente simple para rutinas y hechos habituales."
+                },
+                {
+                  "id": "gp-questions",
+                  "label": "Preguntas",
+                  "description": "El orden auxiliar + sujeto + verbo forma preguntas claras."
+                }
+              ]
+            },
+            {
+              "id": "es-pt-a2-u02-l08",
+              "title": "Contar un viaje",
+              "cefrLevel": "A2",
+              "vocabFrequencyBand": "2000-3000",
+              "canDo": "Puedo contar experiencias de un viaje inolvidable.",
+              "microLesson": {
+                "title": "Contar un viaje",
+                "goals": [
+                  "Reconocer vocabulario de un viaje inolvidable.",
+                  "Usar frases sencillas sobre un viaje inolvidable.",
+                  "Producir un mensaje breve sobre un viaje inolvidable."
+                ],
+                "sections": [
+                  {
+                    "heading": "Foco gramatical",
+                    "body": "Pasado simple: El pasado simple describe acciones terminadas en un momento concreto. Pasado simple irregular: Muchos verbos frecuentes forman el pasado sin -ed: go-went, see-saw.",
+                    "examples": [
+                      {
+                        "source": "Ayer viajé en tren a la costa",
+                        "target": "Ontem viajei de trem para o litoral"
+                      },
+                      {
+                        "source": "Ayer conocí a gente muy amable",
+                        "target": "Ontem conheci pessoas muito legais"
+                      }
+                    ]
+                  },
+                  {
+                    "heading": "En contexto",
+                    "body": "Observa cómo se usa pasado simple en una situación de un viaje inolvidable.",
+                    "examples": [
+                      {
+                        "source": "Ayer probé un plato típico",
+                        "target": "Ontem experimentei um prato típico"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "glossary": [
+                {
+                  "term": "Ontem viajei de trem para o litoral",
+                  "translations": [
+                    "Ayer viajé en tren a la costa"
+                  ]
+                },
+                {
+                  "term": "Ontem conheci pessoas muito legais",
+                  "translations": [
+                    "Ayer conocí a gente muy amable"
+                  ]
+                },
+                {
+                  "term": "Ontem experimentei um prato típico",
+                  "translations": [
+                    "Ayer probé un plato típico"
+                  ]
+                }
+              ],
+              "exercises": [
+                {
+                  "type": "MultipleChoice",
+                  "id": "es-pt-a2-u02-l08-e01",
+                  "question": "¿Cómo se dice «Ayer viajé en tren a la costa»?",
+                  "options": [
+                    "Ontem viajei de trem para o litoral",
+                    "Ontem conheci pessoas muito legais",
+                    "Ontem experimentei um prato típico"
+                  ],
+                  "correctIndex": 0,
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "«Ayer viajé en tren a la costa» se dice «Ontem viajei de trem para o litoral»."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has elegido la traducción correcta."
+                  }
+                },
+                {
+                  "type": "Translate",
+                  "id": "es-pt-a2-u02-l08-e02",
+                  "sourcePhrase": "Ayer viajé en tren a la costa",
+                  "correctTokens": [
+                    "Ontem",
+                    "viajei",
+                    "de",
+                    "trem",
+                    "para",
+                    "o",
+                    "litoral"
+                  ],
+                  "distractorTokens": [
+                    "conheci",
+                    "pessoas",
+                    "muito"
+                  ],
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "El orden correcto es «Ontem viajei de trem para o litoral». Pasado simple: El pasado simple describe acciones terminadas en un momento concreto.",
+                    "ruleRef": "gp-past-simple"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La frase conserva el orden y el significado."
+                  }
+                },
+                {
+                  "type": "OrderWords",
+                  "id": "es-pt-a2-u02-l08-e03",
+                  "tokens": [
+                    "conheci",
+                    "pessoas",
+                    "muito",
+                    "legais",
+                    "Ontem"
+                  ],
+                  "answerTokens": [
+                    "Ontem",
+                    "conheci",
+                    "pessoas",
+                    "muito",
+                    "legais"
+                  ],
+                  "sourcePhrase": "Ayer conocí a gente muy amable",
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "La frase correcta es «Ontem conheci pessoas muito legais». Pasado simple: El pasado simple describe acciones terminadas en un momento concreto.",
+                    "ruleRef": "gp-past-simple"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "El orden produce una frase natural."
+                  }
+                },
+                {
+                  "type": "MatchPairs",
+                  "id": "es-pt-a2-u02-l08-e04",
+                  "pairs": [
+                    {
+                      "left": "Ayer viajé en tren a la costa",
+                      "right": "Ontem viajei de trem para o litoral"
+                    },
+                    {
+                      "left": "Ayer conocí a gente muy amable",
+                      "right": "Ontem conheci pessoas muito legais"
+                    },
+                    {
+                      "left": "Ayer probé un plato típico",
+                      "right": "Ontem experimentei um prato típico"
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "Cada expresión tiene una traducción distinta."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has asociado cada expresión con su traducción."
+                  }
+                },
+                {
+                  "type": "ListenChoose",
+                  "id": "es-pt-a2-u02-l08-e05",
+                  "audioText": "Ontem experimentei um prato típico",
+                  "options": [
+                    "Ontem viajei de trem para o litoral",
+                    "Ontem conheci pessoas muito legais",
+                    "Ontem experimentei um prato típico"
+                  ],
+                  "correctIndex": 0,
+                  "feedbackOnError": {
+                    "type": "comprehension",
+                    "explanation": "El audio dice «Ontem experimentei um prato típico»."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has reconocido la frase del audio."
+                  }
+                },
+                {
+                  "type": "ListenType",
+                  "id": "es-pt-a2-u02-l08-e06",
+                  "audioText": "Ontem experimentei um prato típico",
+                  "transcription": "Ontem experimentei um prato típico",
+                  "feedbackOnError": {
+                    "type": "spelling",
+                    "explanation": "Escribe exactamente «Ontem experimentei um prato típico»."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La transcripción coincide con el audio."
+                  }
+                },
+                {
+                  "type": "SpeakRepeat",
+                  "id": "es-pt-a2-u02-l08-e07",
+                  "targetPhrase": "Ontem experimentei um prato típico",
+                  "audioText": "Ontem experimentei um prato típico",
+                  "feedbackOnError": {
+                    "type": "pronunciation",
+                    "explanation": "Repite «Ontem experimentei um prato típico» con claridad."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La frase se entiende y mantiene el ritmo."
+                  }
+                }
+              ],
+              "grammarPoints": [
+                {
+                  "id": "gp-past-simple",
+                  "label": "Pasado simple",
+                  "description": "El pasado simple describe acciones terminadas en un momento concreto."
+                },
+                {
+                  "id": "gp-past-irregular",
+                  "label": "Pasado simple irregular",
+                  "description": "Muchos verbos frecuentes forman el pasado sin -ed: go-went, see-saw."
+                }
+              ]
+            },
+            {
+              "id": "es-pt-a2-u02-l09",
+              "title": "Integración: incidencias",
+              "cefrLevel": "A2",
+              "vocabFrequencyBand": "2000-3000",
+              "canDo": "Puedo resolver incidencias habituales durante un viaje.",
+              "microLesson": {
+                "title": "Integración: incidencias",
+                "goals": [
+                  "Reconocer vocabulario de las incidencias de un viaje.",
+                  "Usar frases sencillas sobre las incidencias de un viaje.",
+                  "Producir un mensaje breve sobre las incidencias de un viaje."
+                ],
+                "sections": [
+                  {
+                    "heading": "Foco gramatical",
+                    "body": "Pasado simple y continuo: El continuo pinta el fondo; el simple marca el hecho que interrumpe. Peticiones corteses: Could you...? y Would you...? suavizan una petición.",
+                    "examples": [
+                      {
+                        "source": "Perdí mi maleta y fui a reclamarla.",
+                        "target": "Perdi minha mala e fui buscá-la"
+                      },
+                      {
+                        "source": "El vuelo se canceló y cambié el billete.",
+                        "target": "O voo foi cancelado e mudei a passagem"
+                      }
+                    ]
+                  },
+                  {
+                    "heading": "En contexto",
+                    "body": "Observa cómo se usa pasado simple y continuo en una situación de las incidencias de un viaje.",
+                    "examples": [
+                      {
+                        "source": "El hotel estaba lleno y busqué otro.",
+                        "target": "O hotel estava lotado e procurei outro"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "glossary": [
+                {
+                  "term": "Perdi minha mala e fui buscá-la",
+                  "translations": [
+                    "Perdí mi maleta y fui a reclamarla."
+                  ]
+                },
+                {
+                  "term": "O voo foi cancelado e mudei a passagem",
+                  "translations": [
+                    "El vuelo se canceló y cambié el billete."
+                  ]
+                },
+                {
+                  "term": "O hotel estava lotado e procurei outro",
+                  "translations": [
+                    "El hotel estaba lleno y busqué otro."
+                  ]
+                }
+              ],
+              "exercises": [
+                {
+                  "type": "MultipleChoice",
+                  "id": "es-pt-a2-u02-l09-e01",
+                  "question": "¿Cómo se dice «Perdí mi maleta y fui a reclamarla.»?",
+                  "options": [
+                    "Perdi minha mala e fui buscá-la",
+                    "O voo foi cancelado e mudei a passagem",
+                    "O hotel estava lotado e procurei outro"
+                  ],
+                  "correctIndex": 0,
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "«Perdí mi maleta y fui a reclamarla.» se dice «Perdi minha mala e fui buscá-la»."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has elegido la traducción correcta."
+                  }
+                },
+                {
+                  "type": "Translate",
+                  "id": "es-pt-a2-u02-l09-e02",
+                  "sourcePhrase": "Perdí mi maleta y fui a reclamarla.",
+                  "correctTokens": [
+                    "Perdi",
+                    "minha",
+                    "mala",
+                    "e",
+                    "fui",
+                    "buscá",
+                    "la"
+                  ],
+                  "distractorTokens": [
+                    "O",
+                    "voo",
+                    "foi"
+                  ],
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "El orden correcto es «Perdi minha mala e fui buscá la». Pasado simple y continuo: El continuo pinta el fondo; el simple marca el hecho que interrumpe.",
+                    "ruleRef": "gp-past-simple-vs-continuous"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La frase conserva el orden y el significado."
+                  }
+                },
+                {
+                  "type": "OrderWords",
+                  "id": "es-pt-a2-u02-l09-e03",
+                  "tokens": [
+                    "voo",
+                    "foi",
+                    "cancelado",
+                    "e",
+                    "mudei",
+                    "a",
+                    "passagem",
+                    "O"
+                  ],
+                  "answerTokens": [
+                    "O",
+                    "voo",
+                    "foi",
+                    "cancelado",
+                    "e",
+                    "mudei",
+                    "a",
+                    "passagem"
+                  ],
+                  "sourcePhrase": "El vuelo se canceló y cambié el billete.",
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "La frase correcta es «O voo foi cancelado e mudei a passagem». Pasado simple y continuo: El continuo pinta el fondo; el simple marca el hecho que interrumpe.",
+                    "ruleRef": "gp-past-simple-vs-continuous"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "El orden produce una frase natural."
+                  }
+                },
+                {
+                  "type": "MatchPairs",
+                  "id": "es-pt-a2-u02-l09-e04",
+                  "pairs": [
+                    {
+                      "left": "Perdí mi maleta y fui a reclamarla.",
+                      "right": "Perdi minha mala e fui buscá-la"
+                    },
+                    {
+                      "left": "El vuelo se canceló y cambié el billete.",
+                      "right": "O voo foi cancelado e mudei a passagem"
+                    },
+                    {
+                      "left": "El hotel estaba lleno y busqué otro.",
+                      "right": "O hotel estava lotado e procurei outro"
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "Cada expresión tiene una traducción distinta."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has asociado cada expresión con su traducción."
+                  }
+                },
+                {
+                  "type": "ListenChoose",
+                  "id": "es-pt-a2-u02-l09-e05",
+                  "audioText": "O hotel estava lotado e procurei outro",
+                  "options": [
+                    "Perdi minha mala e fui buscá-la",
+                    "O voo foi cancelado e mudei a passagem",
+                    "O hotel estava lotado e procurei outro"
+                  ],
+                  "correctIndex": 0,
+                  "feedbackOnError": {
+                    "type": "comprehension",
+                    "explanation": "El audio dice «O hotel estava lotado e procurei outro»."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has reconocido la frase del audio."
+                  }
+                },
+                {
+                  "type": "ListenType",
+                  "id": "es-pt-a2-u02-l09-e06",
+                  "audioText": "O hotel estava lotado e procurei outro",
+                  "transcription": "O hotel estava lotado e procurei outro",
+                  "feedbackOnError": {
+                    "type": "spelling",
+                    "explanation": "Escribe exactamente «O hotel estava lotado e procurei outro»."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La transcripción coincide con el audio."
+                  }
+                },
+                {
+                  "type": "SpeakRepeat",
+                  "id": "es-pt-a2-u02-l09-e07",
+                  "targetPhrase": "O hotel estava lotado e procurei outro",
+                  "audioText": "O hotel estava lotado e procurei outro",
+                  "feedbackOnError": {
+                    "type": "pronunciation",
+                    "explanation": "Repite «O hotel estava lotado e procurei outro» con claridad."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La frase se entiende y mantiene el ritmo."
+                  }
+                }
+              ],
+              "grammarPoints": [
+                {
+                  "id": "gp-past-simple-vs-continuous",
+                  "label": "Pasado simple y continuo",
+                  "description": "El continuo pinta el fondo; el simple marca el hecho que interrumpe."
+                },
+                {
+                  "id": "gp-polite-requests",
+                  "label": "Peticiones corteses",
+                  "description": "Could you...? y Would you...? suavizan una petición."
+                }
+              ]
+            },
+            {
+              "id": "es-pt-a2-u02-l10",
+              "title": "Evaluación: mi último viaje",
+              "cefrLevel": "A2",
+              "vocabFrequencyBand": "2000-3000",
+              "canDo": "Puedo narrar mi último viaje con detalle y orden.",
+              "microLesson": {
+                "title": "Evaluación: mi último viaje",
+                "goals": [
+                  "Reconocer vocabulario de mi último viaje.",
+                  "Usar frases sencillas sobre mi último viaje.",
+                  "Producir un mensaje breve sobre mi último viaje."
+                ],
+                "sections": [
+                  {
+                    "heading": "Foco gramatical",
+                    "body": "Pasado simple: El pasado simple describe acciones terminadas en un momento concreto. Pasado continuo: Was/were + -ing describe una acción en desarrollo en el pasado.",
+                    "examples": [
+                      {
+                        "source": "El año pasado viajé a México con mi familia.",
+                        "target": "No ano passado viajei para o México com minha família"
+                      },
+                      {
+                        "source": "Mientras visitábamos la ciudad, empezó a llover.",
+                        "target": "Enquanto visitávamos a cidade, começou a chover"
+                      }
+                    ]
+                  },
+                  {
+                    "heading": "En contexto",
+                    "body": "Observa cómo se usa pasado simple en una situación de mi último viaje.",
+                    "examples": [
+                      {
+                        "source": "Volvimos a casa cansados pero contentos.",
+                        "target": "Voltamos para casa cansados, mas felizes"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "glossary": [
+                {
+                  "term": "No ano passado viajei para o México com minha família",
+                  "translations": [
+                    "El año pasado viajé a México con mi familia."
+                  ]
+                },
+                {
+                  "term": "Enquanto visitávamos a cidade, começou a chover",
+                  "translations": [
+                    "Mientras visitábamos la ciudad, empezó a llover."
+                  ]
+                },
+                {
+                  "term": "Voltamos para casa cansados, mas felizes",
+                  "translations": [
+                    "Volvimos a casa cansados pero contentos."
+                  ]
+                }
+              ],
+              "exercises": [
+                {
+                  "type": "MultipleChoice",
+                  "id": "es-pt-a2-u02-l10-e01",
+                  "question": "¿Cómo se dice «El año pasado viajé a México con mi familia.»?",
+                  "options": [
+                    "No ano passado viajei para o México com minha família",
+                    "Enquanto visitávamos a cidade, começou a chover",
+                    "Voltamos para casa cansados, mas felizes"
+                  ],
+                  "correctIndex": 0,
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "«El año pasado viajé a México con mi familia.» se dice «No ano passado viajei para o México com minha família»."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has elegido la traducción correcta."
+                  }
+                },
+                {
+                  "type": "Translate",
+                  "id": "es-pt-a2-u02-l10-e02",
+                  "sourcePhrase": "El año pasado viajé a México con mi familia.",
+                  "correctTokens": [
+                    "No",
+                    "ano",
+                    "passado",
+                    "viajei",
+                    "para",
+                    "o",
+                    "México",
+                    "com",
+                    "minha",
+                    "família"
+                  ],
+                  "distractorTokens": [
+                    "Enquanto",
+                    "visitávamos",
+                    "a"
+                  ],
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "El orden correcto es «No ano passado viajei para o México com minha família». Pasado simple: El pasado simple describe acciones terminadas en un momento concreto.",
+                    "ruleRef": "gp-past-simple"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La frase conserva el orden y el significado."
+                  }
+                },
+                {
+                  "type": "OrderWords",
+                  "id": "es-pt-a2-u02-l10-e03",
+                  "tokens": [
+                    "visitávamos",
+                    "a",
+                    "cidade",
+                    "começou",
+                    "a",
+                    "chover",
+                    "Enquanto"
+                  ],
+                  "answerTokens": [
+                    "Enquanto",
+                    "visitávamos",
+                    "a",
+                    "cidade",
+                    "começou",
+                    "a",
+                    "chover"
+                  ],
+                  "sourcePhrase": "Mientras visitábamos la ciudad, empezó a llover.",
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "La frase correcta es «Enquanto visitávamos a cidade começou a chover». Pasado simple: El pasado simple describe acciones terminadas en un momento concreto.",
+                    "ruleRef": "gp-past-simple"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "El orden produce una frase natural."
+                  }
+                },
+                {
+                  "type": "MatchPairs",
+                  "id": "es-pt-a2-u02-l10-e04",
+                  "pairs": [
+                    {
+                      "left": "El año pasado viajé a México con mi familia.",
+                      "right": "No ano passado viajei para o México com minha família"
+                    },
+                    {
+                      "left": "Mientras visitábamos la ciudad, empezó a llover.",
+                      "right": "Enquanto visitávamos a cidade, começou a chover"
+                    },
+                    {
+                      "left": "Volvimos a casa cansados pero contentos.",
+                      "right": "Voltamos para casa cansados, mas felizes"
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "Cada expresión tiene una traducción distinta."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has asociado cada expresión con su traducción."
+                  }
+                },
+                {
+                  "type": "ListenChoose",
+                  "id": "es-pt-a2-u02-l10-e05",
+                  "audioText": "Voltamos para casa cansados, mas felizes",
+                  "options": [
+                    "No ano passado viajei para o México com minha família",
+                    "Enquanto visitávamos a cidade, começou a chover",
+                    "Voltamos para casa cansados, mas felizes"
+                  ],
+                  "correctIndex": 0,
+                  "feedbackOnError": {
+                    "type": "comprehension",
+                    "explanation": "El audio dice «Voltamos para casa cansados, mas felizes»."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has reconocido la frase del audio."
+                  }
+                },
+                {
+                  "type": "ListenType",
+                  "id": "es-pt-a2-u02-l10-e06",
+                  "audioText": "Voltamos para casa cansados, mas felizes",
+                  "transcription": "Voltamos para casa cansados, mas felizes",
+                  "feedbackOnError": {
+                    "type": "spelling",
+                    "explanation": "Escribe exactamente «Voltamos para casa cansados, mas felizes»."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La transcripción coincide con el audio."
+                  }
+                },
+                {
+                  "type": "SpeakRepeat",
+                  "id": "es-pt-a2-u02-l10-e07",
+                  "targetPhrase": "Voltamos para casa cansados, mas felizes",
+                  "audioText": "Voltamos para casa cansados, mas felizes",
+                  "feedbackOnError": {
+                    "type": "pronunciation",
+                    "explanation": "Repite «Voltamos para casa cansados, mas felizes» con claridad."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La frase se entiende y mantiene el ritmo."
+                  }
+                }
+              ],
+              "grammarPoints": [
+                {
+                  "id": "gp-past-simple",
+                  "label": "Pasado simple",
+                  "description": "El pasado simple describe acciones terminadas en un momento concreto."
+                },
+                {
+                  "id": "gp-past-continuous",
+                  "label": "Pasado continuo",
+                  "description": "Was/were + -ing describe una acción en desarrollo en el pasado."
+                }
+              ]
+            }
+          ]
         }
       ]
     },
