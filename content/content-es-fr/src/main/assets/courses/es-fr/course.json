@@ -172041,6 +172041,3428 @@
               ]
             }
           ]
+        },
+        {
+          "id": "es-fr-b2-u13",
+          "title": "B2 · Cultura y celebraciones",
+          "lessons": [
+            {
+              "id": "es-fr-b2-u13-l01",
+              "title": "Repaso: relaciones",
+              "cefrLevel": "B2",
+              "scenario": "Situación comunicativa avanzada sobre las relaciones.",
+              "canDo": "Puedo argumentar y matizar sobre las relaciones.",
+              "grammarPoints": [
+                {
+                  "id": "gp-b2-reported-speech",
+                  "label": "Reported speech",
+                  "description": "El estilo indirecto ajusta tiempos, pronombres y referencias."
+                },
+                {
+                  "id": "gp-b2-participle-clauses",
+                  "label": "Participle clauses",
+                  "description": "Las cláusulas de participio reducen y conectan ideas."
+                }
+              ],
+              "vocabFrequencyBand": "3000-5000",
+              "culturalNotes": [
+                {
+                  "idiom": "travailler tard",
+                  "note": "Expresión para trabajar hasta muy tarde.",
+                  "translation": "trabajar hasta tarde"
+                }
+              ],
+              "microLesson": {
+                "title": "Repaso: relaciones",
+                "goals": [
+                  "Usar vocabulario avanzado de las relaciones.",
+                  "Aplicar reported speech y participle clauses.",
+                  "Argumentar y matizar sobre las relaciones."
+                ],
+                "sections": [
+                  {
+                    "heading": "Lengua en contexto",
+                    "body": "Reported speech: El estilo indirecto ajusta tiempos, pronombres y referencias. Participle clauses: Las cláusulas de participio reducen y conectan ideas.",
+                    "examples": [
+                      {
+                        "source": "Hablo con mi familia todos los días. Dicho esto, depende del contexto.",
+                        "target": "Je parle à ma famille tous les jours. Cela dit, cela dépend du contexte."
+                      },
+                      {
+                        "source": "Quedo con mis amigos los fines de semana. En otras palabras, merece la pena considerarlo.",
+                        "target": "Je retrouve mes amis le week-end. En d'autres termes, cela vaut la peine d'être considéré."
+                      }
+                    ]
+                  }
+                ]
+              },
+              "glossary": [
+                {
+                  "term": "Je parle à ma famille tous les jours. Cela dit, cela dépend du contexte.",
+                  "translations": [
+                    "Hablo con mi familia todos los días. Dicho esto, depende del contexto."
+                  ]
+                },
+                {
+                  "term": "Je retrouve mes amis le week-end. En d'autres termes, cela vaut la peine d'être considéré.",
+                  "translations": [
+                    "Quedo con mis amigos los fines de semana. En otras palabras, merece la pena considerarlo."
+                  ]
+                },
+                {
+                  "term": "J'essaie d'écouter avant de donner mon avis. Je crains que ce soit plus compliqué.",
+                  "translations": [
+                    "Intento escuchar antes de opinar. Me temo que puede ser más complicado."
+                  ]
+                }
+              ],
+              "exercises": [
+                {
+                  "type": "MultipleChoice",
+                  "id": "es-fr-b2-u13-l01-e01",
+                  "question": "¿Cuál es la opción correcta para «Hablo con mi familia todos los días. Dicho esto, depende del contexto.»?",
+                  "options": [
+                    "Je parle à ma famille tous les jours. Cela dit, cela dépend du contexte.",
+                    "Je retrouve mes amis le week-end. En d'autres termes, cela vaut la peine d'être considéré.",
+                    "J'essaie d'écouter avant de donner mon avis. Je crains que ce soit plus compliqué."
+                  ],
+                  "correctIndex": 0,
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "«Hablo con mi familia todos los días. Dicho esto, depende del contexto.» se dice «Je parle à ma famille tous les jours. Cela dit, cela dépend du contexte.».",
+                    "ruleRef": "gp-b2-reported-speech"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has elegido la traducción correcta."
+                  }
+                },
+                {
+                  "type": "OrderWords",
+                  "id": "es-fr-b2-u13-l01-e02",
+                  "tokens": [
+                    "parle",
+                    "à",
+                    "ma",
+                    "famille",
+                    "tous",
+                    "les",
+                    "jours",
+                    "Cela",
+                    "dit",
+                    "cela",
+                    "dépend",
+                    "du",
+                    "contexte",
+                    "Je"
+                  ],
+                  "answerTokens": [
+                    "Je",
+                    "parle",
+                    "à",
+                    "ma",
+                    "famille",
+                    "tous",
+                    "les",
+                    "jours",
+                    "Cela",
+                    "dit",
+                    "cela",
+                    "dépend",
+                    "du",
+                    "contexte"
+                  ],
+                  "sourcePhrase": "Hablo con mi familia todos los días. Dicho esto, depende del contexto.",
+                  "feedbackOnError": {
+                    "type": "word_order",
+                    "explanation": "El orden correcto es «Je parle à ma famille tous les jours Cela dit cela dépend du contexte».",
+                    "ruleRef": "gp-b2-reported-speech"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "El orden produce una frase natural."
+                  }
+                },
+                {
+                  "type": "ClozeDragDrop",
+                  "id": "es-fr-b2-u13-l01-e03",
+                  "passage": "Je {{b1}} à ma {{b2}} tous les jours.",
+                  "blanks": [
+                    {
+                      "id": "b1",
+                      "answer": "parle",
+                      "options": [
+                        "parle",
+                        "tous",
+                        "jours"
+                      ]
+                    },
+                    {
+                      "id": "b2",
+                      "answer": "famille",
+                      "options": [
+                        "famille",
+                        "tous",
+                        "jours"
+                      ]
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "Las dos formas deben encajar con el contexto de la frase.",
+                    "ruleRef": "gp-b2-participle-clauses"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Los dos huecos encajan con la situación."
+                  }
+                },
+                {
+                  "type": "SemanticMatch",
+                  "id": "es-fr-b2-u13-l01-e04",
+                  "instructions": "Clasifica la función comunicativa de cada intervención.",
+                  "pairs": [
+                    {
+                      "left": "Je parle à ma famille tous les jours. Cela dit, cela dépend du contexte.",
+                      "right": "Planteamiento",
+                      "register": "formal",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    },
+                    {
+                      "left": "Je retrouve mes amis le week-end. En d'autres termes, cela vaut la peine d'être considéré.",
+                      "right": "Concesión",
+                      "register": "neutral",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    },
+                    {
+                      "left": "J'essaie d'écouter avant de donner mon avis. Je crains que ce soit plus compliqué.",
+                      "right": "Conclusión",
+                      "register": "informal",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "Cada intervención cumple una función comunicativa distinta.",
+                    "ruleRef": "gp-b2-reported-speech"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has identificado la función de cada intervención."
+                  }
+                },
+                {
+                  "type": "SemanticMatch",
+                  "id": "es-fr-b2-u13-l01-e05",
+                  "instructions": "Distingue el registro de cada intervención.",
+                  "pairs": [
+                    {
+                      "left": "Je parle à ma famille tous les jours. Cela dit, cela dépend du contexte.",
+                      "right": "Formal",
+                      "register": "formal",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    },
+                    {
+                      "left": "Je retrouve mes amis le week-end. En d'autres termes, cela vaut la peine d'être considéré.",
+                      "right": "Neutral",
+                      "register": "neutral",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    },
+                    {
+                      "left": "J'essaie d'écouter avant de donner mon avis. Je crains que ce soit plus compliqué.",
+                      "right": "Informal",
+                      "register": "informal",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "register",
+                    "explanation": "El registro cambia según el contexto y la relación con el interlocutor.",
+                    "ruleRef": "gp-b2-participle-clauses"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has distinguido el registro de cada intervención."
+                  }
+                },
+                {
+                  "type": "AudioOnlyPrompt",
+                  "id": "es-fr-b2-u13-l01-e06",
+                  "audioText": "Je retrouve mes amis le week-end. En d'autres termes, cela vaut la peine d'être considéré.",
+                  "question": "¿Qué ha dicho el hablante?",
+                  "options": [
+                    "Je retrouve mes amis le week-end. En d'autres termes, cela vaut la peine d'être considéré.",
+                    "Je parle à ma famille tous les jours. Cela dit, cela dépend du contexte.",
+                    "J'essaie d'écouter avant de donner mon avis. Je crains que ce soit plus compliqué."
+                  ],
+                  "correctIndex": 0,
+                  "allowSlowPlayback": true,
+                  "feedbackOnError": {
+                    "type": "comprehension",
+                    "explanation": "El audio dice «Je retrouve mes amis le week-end. En d'autres termes, cela vaut la peine d'être considéré.».",
+                    "ruleRef": "gp-b2-reported-speech"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has comprendido el mensaje del audio."
+                  }
+                },
+                {
+                  "type": "AudioOnlyPrompt",
+                  "id": "es-fr-b2-u13-l01-e07",
+                  "audioText": "J'essaie d'écouter avant de donner mon avis. Je crains que ce soit plus compliqué.",
+                  "question": "¿Cuál es la idea principal?",
+                  "options": [
+                    "J'essaie d'écouter avant de donner mon avis. Je crains que ce soit plus compliqué.",
+                    "Je parle à ma famille tous les jours. Cela dit, cela dépend du contexte.",
+                    "Je retrouve mes amis le week-end. En d'autres termes, cela vaut la peine d'être considéré."
+                  ],
+                  "correctIndex": 0,
+                  "allowSlowPlayback": false,
+                  "feedbackOnError": {
+                    "type": "comprehension",
+                    "explanation": "El audio dice «J'essaie d'écouter avant de donner mon avis. Je crains que ce soit plus compliqué.».",
+                    "ruleRef": "gp-b2-participle-clauses"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has identificado la idea principal."
+                  }
+                },
+                {
+                  "type": "ListenType",
+                  "id": "es-fr-b2-u13-l01-e08",
+                  "audioText": "J'essaie d'écouter avant de donner mon avis. Je crains que ce soit plus compliqué.",
+                  "transcription": "J'essaie d'écouter avant de donner mon avis. Je crains que ce soit plus compliqué.",
+                  "feedbackOnError": {
+                    "type": "spelling",
+                    "explanation": "Escribe exactamente «J'essaie d'écouter avant de donner mon avis. Je crains que ce soit plus compliqué.».",
+                    "ruleRef": "gp-b2-reported-speech"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La transcripción coincide con el audio."
+                  }
+                },
+                {
+                  "type": "SpeakRepeat",
+                  "id": "es-fr-b2-u13-l01-e09",
+                  "targetPhrase": "J'essaie d'écouter avant de donner mon avis. Je crains que ce soit plus compliqué.",
+                  "audioText": "J'essaie d'écouter avant de donner mon avis. Je crains que ce soit plus compliqué.",
+                  "feedbackOnError": {
+                    "type": "pronunciation",
+                    "explanation": "Repite «J'essaie d'écouter avant de donner mon avis. Je crains que ce soit plus compliqué.» con claridad.",
+                    "ruleRef": "gp-b2-reported-speech"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La frase se entiende y mantiene el ritmo."
+                  }
+                },
+                {
+                  "type": "FreeSpeakingPrompt",
+                  "id": "es-fr-b2-u13-l01-e10",
+                  "prompt": "Argumenta y matiza una opinión sobre las relaciones.",
+                  "minTokens": 20,
+                  "conceptClusters": [
+                    [
+                      "parle"
+                    ],
+                    [
+                      "famille"
+                    ],
+                    [
+                      "tous"
+                    ]
+                  ],
+                  "modelAnswer": "Je parle à ma famille tous les jours. Cela dit, cela dépend du contexte. Je retrouve mes amis le week-end. En d'autres termes, cela vaut la peine d'être considéré. J'essaie d'écouter avant de donner mon avis. Je crains que ce soit plus compliqué.",
+                  "selfAssessmentCriteria": [
+                    "¿La respuesta argumenta y responde a la tarea?",
+                    "¿Usa las dos estructuras gramaticales de la lección?",
+                    "¿Incluye una concesión o una matización?"
+                  ],
+                  "grammarRuleRefs": [
+                    "gp-b2-reported-speech",
+                    "gp-b2-participle-clauses"
+                  ],
+                  "timeLimitSeconds": 90,
+                  "minWpm": 70,
+                  "maxWpm": 160,
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "La respuesta modelo desarrolla una opinión con matices y una concesión.",
+                    "ruleRef": "gp-b2-reported-speech"
+                  }
+                }
+              ]
+            },
+            {
+              "id": "es-fr-b2-u13-l02",
+              "title": "Fiestas y tradiciones",
+              "cefrLevel": "B2",
+              "scenario": "Situación comunicativa avanzada sobre las fiestas y tradiciones.",
+              "canDo": "Puedo argumentar y matizar sobre las fiestas y tradiciones.",
+              "grammarPoints": [
+                {
+                  "id": "gp-b2-reported-speech",
+                  "label": "Reported speech",
+                  "description": "El estilo indirecto ajusta tiempos, pronombres y referencias."
+                },
+                {
+                  "id": "gp-b2-participle-clauses",
+                  "label": "Participle clauses",
+                  "description": "Las cláusulas de participio reducen y conectan ideas."
+                }
+              ],
+              "vocabFrequencyBand": "3000-5000",
+              "culturalNotes": [
+                {
+                  "idiom": "l'essentiel",
+                  "note": "Expresión para señalar lo esencial.",
+                  "translation": "lo esencial"
+                }
+              ],
+              "microLesson": {
+                "title": "Fiestas y tradiciones",
+                "goals": [
+                  "Usar vocabulario avanzado de las fiestas y tradiciones.",
+                  "Aplicar reported speech y participle clauses.",
+                  "Argumentar y matizar sobre las fiestas y tradiciones."
+                ],
+                "sections": [
+                  {
+                    "heading": "Lengua en contexto",
+                    "body": "Reported speech: El estilo indirecto ajusta tiempos, pronombres y referencias. Participle clauses: Las cláusulas de participio reducen y conectan ideas.",
+                    "examples": [
+                      {
+                        "source": "En mi pueblo celebramos una fiesta en agosto. En otras palabras, merece la pena considerarlo.",
+                        "target": "Dans mon village, nous célébrons une fête en août. En d'autres termes, cela vaut la peine d'être considéré."
+                      },
+                      {
+                        "source": "Hay música, comida y bailes tradicionales. Me temo que puede ser más complicado.",
+                        "target": "Il y a de la musique et des danses traditionnelles. Je crains que ce soit plus compliqué."
+                      }
+                    ]
+                  }
+                ]
+              },
+              "glossary": [
+                {
+                  "term": "Dans mon village, nous célébrons une fête en août. En d'autres termes, cela vaut la peine d'être considéré.",
+                  "translations": [
+                    "En mi pueblo celebramos una fiesta en agosto. En otras palabras, merece la pena considerarlo."
+                  ]
+                },
+                {
+                  "term": "Il y a de la musique et des danses traditionnelles. Je crains que ce soit plus compliqué.",
+                  "translations": [
+                    "Hay música, comida y bailes tradicionales. Me temo que puede ser más complicado."
+                  ]
+                },
+                {
+                  "term": "Toute la famille participe. Pour être honnête, j'ai des sentiments mitigés.",
+                  "translations": [
+                    "Toda la familia participa. Sinceramente, tengo sentimientos encontrados."
+                  ]
+                }
+              ],
+              "exercises": [
+                {
+                  "type": "MultipleChoice",
+                  "id": "es-fr-b2-u13-l02-e01",
+                  "question": "¿Cuál es la opción correcta para «En mi pueblo celebramos una fiesta en agosto. En otras palabras, merece la pena considerarlo.»?",
+                  "options": [
+                    "Dans mon village, nous célébrons une fête en août. En d'autres termes, cela vaut la peine d'être considéré.",
+                    "Il y a de la musique et des danses traditionnelles. Je crains que ce soit plus compliqué.",
+                    "Toute la famille participe. Pour être honnête, j'ai des sentiments mitigés."
+                  ],
+                  "correctIndex": 0,
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "«En mi pueblo celebramos una fiesta en agosto. En otras palabras, merece la pena considerarlo.» se dice «Dans mon village, nous célébrons une fête en août. En d'autres termes, cela vaut la peine d'être considéré.».",
+                    "ruleRef": "gp-b2-reported-speech"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has elegido la traducción correcta."
+                  }
+                },
+                {
+                  "type": "OrderWords",
+                  "id": "es-fr-b2-u13-l02-e02",
+                  "tokens": [
+                    "mon",
+                    "village",
+                    "nous",
+                    "célébrons",
+                    "une",
+                    "fête",
+                    "en",
+                    "août",
+                    "En",
+                    "d'autres",
+                    "termes",
+                    "cela",
+                    "vaut",
+                    "la",
+                    "peine",
+                    "d'être",
+                    "considéré",
+                    "Dans"
+                  ],
+                  "answerTokens": [
+                    "Dans",
+                    "mon",
+                    "village",
+                    "nous",
+                    "célébrons",
+                    "une",
+                    "fête",
+                    "en",
+                    "août",
+                    "En",
+                    "d'autres",
+                    "termes",
+                    "cela",
+                    "vaut",
+                    "la",
+                    "peine",
+                    "d'être",
+                    "considéré"
+                  ],
+                  "sourcePhrase": "En mi pueblo celebramos una fiesta en agosto. En otras palabras, merece la pena considerarlo.",
+                  "feedbackOnError": {
+                    "type": "word_order",
+                    "explanation": "El orden correcto es «Dans mon village nous célébrons une fête en août En d'autres termes cela vaut la peine d'être considéré».",
+                    "ruleRef": "gp-b2-reported-speech"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "El orden produce una frase natural."
+                  }
+                },
+                {
+                  "type": "ClozeDragDrop",
+                  "id": "es-fr-b2-u13-l02-e03",
+                  "passage": "Dans mon {{b1}}, nous {{b2}} une fête en août.",
+                  "blanks": [
+                    {
+                      "id": "b1",
+                      "answer": "village",
+                      "options": [
+                        "village",
+                        "fête",
+                        "août"
+                      ]
+                    },
+                    {
+                      "id": "b2",
+                      "answer": "célébrons",
+                      "options": [
+                        "célébrons",
+                        "fête",
+                        "août"
+                      ]
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "Las dos formas deben encajar con el contexto de la frase.",
+                    "ruleRef": "gp-b2-participle-clauses"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Los dos huecos encajan con la situación."
+                  }
+                },
+                {
+                  "type": "SemanticMatch",
+                  "id": "es-fr-b2-u13-l02-e04",
+                  "instructions": "Clasifica la función comunicativa de cada intervención.",
+                  "pairs": [
+                    {
+                      "left": "Dans mon village, nous célébrons une fête en août. En d'autres termes, cela vaut la peine d'être considéré.",
+                      "right": "Planteamiento",
+                      "register": "formal",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    },
+                    {
+                      "left": "Il y a de la musique et des danses traditionnelles. Je crains que ce soit plus compliqué.",
+                      "right": "Concesión",
+                      "register": "neutral",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    },
+                    {
+                      "left": "Toute la famille participe. Pour être honnête, j'ai des sentiments mitigés.",
+                      "right": "Conclusión",
+                      "register": "informal",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "Cada intervención cumple una función comunicativa distinta.",
+                    "ruleRef": "gp-b2-reported-speech"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has identificado la función de cada intervención."
+                  }
+                },
+                {
+                  "type": "SemanticMatch",
+                  "id": "es-fr-b2-u13-l02-e05",
+                  "instructions": "Distingue el registro de cada intervención.",
+                  "pairs": [
+                    {
+                      "left": "Dans mon village, nous célébrons une fête en août. En d'autres termes, cela vaut la peine d'être considéré.",
+                      "right": "Formal",
+                      "register": "formal",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    },
+                    {
+                      "left": "Il y a de la musique et des danses traditionnelles. Je crains que ce soit plus compliqué.",
+                      "right": "Neutral",
+                      "register": "neutral",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    },
+                    {
+                      "left": "Toute la famille participe. Pour être honnête, j'ai des sentiments mitigés.",
+                      "right": "Informal",
+                      "register": "informal",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "register",
+                    "explanation": "El registro cambia según el contexto y la relación con el interlocutor.",
+                    "ruleRef": "gp-b2-participle-clauses"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has distinguido el registro de cada intervención."
+                  }
+                },
+                {
+                  "type": "AudioOnlyPrompt",
+                  "id": "es-fr-b2-u13-l02-e06",
+                  "audioText": "Il y a de la musique et des danses traditionnelles. Je crains que ce soit plus compliqué.",
+                  "question": "¿Qué ha dicho el hablante?",
+                  "options": [
+                    "Il y a de la musique et des danses traditionnelles. Je crains que ce soit plus compliqué.",
+                    "Dans mon village, nous célébrons une fête en août. En d'autres termes, cela vaut la peine d'être considéré.",
+                    "Toute la famille participe. Pour être honnête, j'ai des sentiments mitigés."
+                  ],
+                  "correctIndex": 0,
+                  "allowSlowPlayback": true,
+                  "feedbackOnError": {
+                    "type": "comprehension",
+                    "explanation": "El audio dice «Il y a de la musique et des danses traditionnelles. Je crains que ce soit plus compliqué.».",
+                    "ruleRef": "gp-b2-reported-speech"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has comprendido el mensaje del audio."
+                  }
+                },
+                {
+                  "type": "AudioOnlyPrompt",
+                  "id": "es-fr-b2-u13-l02-e07",
+                  "audioText": "Toute la famille participe. Pour être honnête, j'ai des sentiments mitigés.",
+                  "question": "¿Cuál es la idea principal?",
+                  "options": [
+                    "Toute la famille participe. Pour être honnête, j'ai des sentiments mitigés.",
+                    "Dans mon village, nous célébrons une fête en août. En d'autres termes, cela vaut la peine d'être considéré.",
+                    "Il y a de la musique et des danses traditionnelles. Je crains que ce soit plus compliqué."
+                  ],
+                  "correctIndex": 0,
+                  "allowSlowPlayback": false,
+                  "feedbackOnError": {
+                    "type": "comprehension",
+                    "explanation": "El audio dice «Toute la famille participe. Pour être honnête, j'ai des sentiments mitigés.».",
+                    "ruleRef": "gp-b2-participle-clauses"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has identificado la idea principal."
+                  }
+                },
+                {
+                  "type": "ListenType",
+                  "id": "es-fr-b2-u13-l02-e08",
+                  "audioText": "Toute la famille participe. Pour être honnête, j'ai des sentiments mitigés.",
+                  "transcription": "Toute la famille participe. Pour être honnête, j'ai des sentiments mitigés.",
+                  "feedbackOnError": {
+                    "type": "spelling",
+                    "explanation": "Escribe exactamente «Toute la famille participe. Pour être honnête, j'ai des sentiments mitigés.».",
+                    "ruleRef": "gp-b2-reported-speech"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La transcripción coincide con el audio."
+                  }
+                },
+                {
+                  "type": "SpeakRepeat",
+                  "id": "es-fr-b2-u13-l02-e09",
+                  "targetPhrase": "Toute la famille participe. Pour être honnête, j'ai des sentiments mitigés.",
+                  "audioText": "Toute la famille participe. Pour être honnête, j'ai des sentiments mitigés.",
+                  "feedbackOnError": {
+                    "type": "pronunciation",
+                    "explanation": "Repite «Toute la famille participe. Pour être honnête, j'ai des sentiments mitigés.» con claridad.",
+                    "ruleRef": "gp-b2-reported-speech"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La frase se entiende y mantiene el ritmo."
+                  }
+                },
+                {
+                  "type": "FreeSpeakingPrompt",
+                  "id": "es-fr-b2-u13-l02-e10",
+                  "prompt": "Argumenta y matiza una opinión sobre las fiestas y tradiciones.",
+                  "minTokens": 20,
+                  "conceptClusters": [
+                    [
+                      "village"
+                    ],
+                    [
+                      "célébrons"
+                    ],
+                    [
+                      "fête"
+                    ]
+                  ],
+                  "modelAnswer": "Dans mon village, nous célébrons une fête en août. En d'autres termes, cela vaut la peine d'être considéré. Il y a de la musique et des danses traditionnelles. Je crains que ce soit plus compliqué. Toute la famille participe. Pour être honnête, j'ai des sentiments mitigés.",
+                  "selfAssessmentCriteria": [
+                    "¿La respuesta argumenta y responde a la tarea?",
+                    "¿Usa las dos estructuras gramaticales de la lección?",
+                    "¿Incluye una concesión o una matización?"
+                  ],
+                  "grammarRuleRefs": [
+                    "gp-b2-reported-speech",
+                    "gp-b2-participle-clauses"
+                  ],
+                  "timeLimitSeconds": 90,
+                  "minWpm": 70,
+                  "maxWpm": 160,
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "La respuesta modelo desarrolla una opinión con matices y una concesión.",
+                    "ruleRef": "gp-b2-reported-speech"
+                  }
+                }
+              ]
+            },
+            {
+              "id": "es-fr-b2-u13-l03",
+              "title": "Comida y música",
+              "cefrLevel": "B2",
+              "scenario": "Situación comunicativa avanzada sobre la comida y la música.",
+              "canDo": "Puedo argumentar y matizar sobre la comida y la música.",
+              "grammarPoints": [
+                {
+                  "id": "gp-b2-reported-speech",
+                  "label": "Reported speech",
+                  "description": "El estilo indirecto ajusta tiempos, pronombres y referencias."
+                },
+                {
+                  "id": "gp-b2-participle-clauses",
+                  "label": "Participle clauses",
+                  "description": "Las cláusulas de participio reducen y conectan ideas."
+                }
+              ],
+              "vocabFrequencyBand": "3000-5000",
+              "culturalNotes": [
+                {
+                  "idiom": "briser la glace",
+                  "note": "Expresión para iniciar una conversación.",
+                  "translation": "romper el hielo"
+                }
+              ],
+              "microLesson": {
+                "title": "Comida y música",
+                "goals": [
+                  "Usar vocabulario avanzado de la comida y la música.",
+                  "Aplicar reported speech y participle clauses.",
+                  "Argumentar y matizar sobre la comida y la música."
+                ],
+                "sections": [
+                  {
+                    "heading": "Lengua en contexto",
+                    "body": "Reported speech: El estilo indirecto ajusta tiempos, pronombres y referencias. Participle clauses: Las cláusulas de participio reducen y conectan ideas.",
+                    "examples": [
+                      {
+                        "source": "Necesito una tarta de cumpleaños. Me temo que puede ser más complicado.",
+                        "target": "J'ai besoin d'un gâteau d'anniversaire. Je crains que ce soit plus compliqué."
+                      },
+                      {
+                        "source": "Necesito música en directo. Sinceramente, tengo sentimientos encontrados.",
+                        "target": "J'ai besoin de de la musique live. Pour être honnête, j'ai des sentiments mitigés."
+                      }
+                    ]
+                  }
+                ]
+              },
+              "glossary": [
+                {
+                  "term": "J'ai besoin d'un gâteau d'anniversaire. Je crains que ce soit plus compliqué.",
+                  "translations": [
+                    "Necesito una tarta de cumpleaños. Me temo que puede ser más complicado."
+                  ]
+                },
+                {
+                  "term": "J'ai besoin de de la musique live. Pour être honnête, j'ai des sentiments mitigés.",
+                  "translations": [
+                    "Necesito música en directo. Sinceramente, tengo sentimientos encontrados."
+                  ]
+                },
+                {
+                  "term": "J'ai besoin de des feux d'artifice. Il semble que cela change.",
+                  "translations": [
+                    "Necesito fuegos artificiales. Parece que esto está cambiando."
+                  ]
+                }
+              ],
+              "exercises": [
+                {
+                  "type": "MultipleChoice",
+                  "id": "es-fr-b2-u13-l03-e01",
+                  "question": "¿Cuál es la opción correcta para «Necesito una tarta de cumpleaños. Me temo que puede ser más complicado.»?",
+                  "options": [
+                    "J'ai besoin d'un gâteau d'anniversaire. Je crains que ce soit plus compliqué.",
+                    "J'ai besoin de de la musique live. Pour être honnête, j'ai des sentiments mitigés.",
+                    "J'ai besoin de des feux d'artifice. Il semble que cela change."
+                  ],
+                  "correctIndex": 0,
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "«Necesito una tarta de cumpleaños. Me temo que puede ser más complicado.» se dice «J'ai besoin d'un gâteau d'anniversaire. Je crains que ce soit plus compliqué.».",
+                    "ruleRef": "gp-b2-reported-speech"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has elegido la traducción correcta."
+                  }
+                },
+                {
+                  "type": "OrderWords",
+                  "id": "es-fr-b2-u13-l03-e02",
+                  "tokens": [
+                    "besoin",
+                    "d'un",
+                    "gâteau",
+                    "d'anniversaire",
+                    "Je",
+                    "crains",
+                    "que",
+                    "ce",
+                    "soit",
+                    "plus",
+                    "compliqué",
+                    "J'ai"
+                  ],
+                  "answerTokens": [
+                    "J'ai",
+                    "besoin",
+                    "d'un",
+                    "gâteau",
+                    "d'anniversaire",
+                    "Je",
+                    "crains",
+                    "que",
+                    "ce",
+                    "soit",
+                    "plus",
+                    "compliqué"
+                  ],
+                  "sourcePhrase": "Necesito una tarta de cumpleaños. Me temo que puede ser más complicado.",
+                  "feedbackOnError": {
+                    "type": "word_order",
+                    "explanation": "El orden correcto es «J'ai besoin d'un gâteau d'anniversaire Je crains que ce soit plus compliqué».",
+                    "ruleRef": "gp-b2-reported-speech"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "El orden produce una frase natural."
+                  }
+                },
+                {
+                  "type": "ClozeDragDrop",
+                  "id": "es-fr-b2-u13-l03-e03",
+                  "passage": "{{b1}} {{b2}} d'un gâteau d'anniversaire",
+                  "blanks": [
+                    {
+                      "id": "b1",
+                      "answer": "J'ai",
+                      "options": [
+                        "J'ai",
+                        "d'un",
+                        "gâteau"
+                      ]
+                    },
+                    {
+                      "id": "b2",
+                      "answer": "besoin",
+                      "options": [
+                        "besoin",
+                        "d'un",
+                        "gâteau"
+                      ]
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "Las dos formas deben encajar con el contexto de la frase.",
+                    "ruleRef": "gp-b2-participle-clauses"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Los dos huecos encajan con la situación."
+                  }
+                },
+                {
+                  "type": "SemanticMatch",
+                  "id": "es-fr-b2-u13-l03-e04",
+                  "instructions": "Clasifica la función comunicativa de cada intervención.",
+                  "pairs": [
+                    {
+                      "left": "J'ai besoin d'un gâteau d'anniversaire. Je crains que ce soit plus compliqué.",
+                      "right": "Planteamiento",
+                      "register": "formal",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    },
+                    {
+                      "left": "J'ai besoin de de la musique live. Pour être honnête, j'ai des sentiments mitigés.",
+                      "right": "Concesión",
+                      "register": "neutral",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    },
+                    {
+                      "left": "J'ai besoin de des feux d'artifice. Il semble que cela change.",
+                      "right": "Conclusión",
+                      "register": "informal",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "Cada intervención cumple una función comunicativa distinta.",
+                    "ruleRef": "gp-b2-reported-speech"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has identificado la función de cada intervención."
+                  }
+                },
+                {
+                  "type": "SemanticMatch",
+                  "id": "es-fr-b2-u13-l03-e05",
+                  "instructions": "Distingue el registro de cada intervención.",
+                  "pairs": [
+                    {
+                      "left": "J'ai besoin d'un gâteau d'anniversaire. Je crains que ce soit plus compliqué.",
+                      "right": "Formal",
+                      "register": "formal",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    },
+                    {
+                      "left": "J'ai besoin de de la musique live. Pour être honnête, j'ai des sentiments mitigés.",
+                      "right": "Neutral",
+                      "register": "neutral",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    },
+                    {
+                      "left": "J'ai besoin de des feux d'artifice. Il semble que cela change.",
+                      "right": "Informal",
+                      "register": "informal",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "register",
+                    "explanation": "El registro cambia según el contexto y la relación con el interlocutor.",
+                    "ruleRef": "gp-b2-participle-clauses"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has distinguido el registro de cada intervención."
+                  }
+                },
+                {
+                  "type": "AudioOnlyPrompt",
+                  "id": "es-fr-b2-u13-l03-e06",
+                  "audioText": "J'ai besoin de de la musique live. Pour être honnête, j'ai des sentiments mitigés.",
+                  "question": "¿Qué ha dicho el hablante?",
+                  "options": [
+                    "J'ai besoin de de la musique live. Pour être honnête, j'ai des sentiments mitigés.",
+                    "J'ai besoin d'un gâteau d'anniversaire. Je crains que ce soit plus compliqué.",
+                    "J'ai besoin de des feux d'artifice. Il semble que cela change."
+                  ],
+                  "correctIndex": 0,
+                  "allowSlowPlayback": true,
+                  "feedbackOnError": {
+                    "type": "comprehension",
+                    "explanation": "El audio dice «J'ai besoin de de la musique live. Pour être honnête, j'ai des sentiments mitigés.».",
+                    "ruleRef": "gp-b2-reported-speech"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has comprendido el mensaje del audio."
+                  }
+                },
+                {
+                  "type": "AudioOnlyPrompt",
+                  "id": "es-fr-b2-u13-l03-e07",
+                  "audioText": "J'ai besoin de des feux d'artifice. Il semble que cela change.",
+                  "question": "¿Cuál es la idea principal?",
+                  "options": [
+                    "J'ai besoin de des feux d'artifice. Il semble que cela change.",
+                    "J'ai besoin d'un gâteau d'anniversaire. Je crains que ce soit plus compliqué.",
+                    "J'ai besoin de de la musique live. Pour être honnête, j'ai des sentiments mitigés."
+                  ],
+                  "correctIndex": 0,
+                  "allowSlowPlayback": false,
+                  "feedbackOnError": {
+                    "type": "comprehension",
+                    "explanation": "El audio dice «J'ai besoin de des feux d'artifice. Il semble que cela change.».",
+                    "ruleRef": "gp-b2-participle-clauses"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has identificado la idea principal."
+                  }
+                },
+                {
+                  "type": "ListenType",
+                  "id": "es-fr-b2-u13-l03-e08",
+                  "audioText": "J'ai besoin de des feux d'artifice. Il semble que cela change.",
+                  "transcription": "J'ai besoin de des feux d'artifice. Il semble que cela change.",
+                  "feedbackOnError": {
+                    "type": "spelling",
+                    "explanation": "Escribe exactamente «J'ai besoin de des feux d'artifice. Il semble que cela change.».",
+                    "ruleRef": "gp-b2-reported-speech"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La transcripción coincide con el audio."
+                  }
+                },
+                {
+                  "type": "SpeakRepeat",
+                  "id": "es-fr-b2-u13-l03-e09",
+                  "targetPhrase": "J'ai besoin de des feux d'artifice. Il semble que cela change.",
+                  "audioText": "J'ai besoin de des feux d'artifice. Il semble que cela change.",
+                  "feedbackOnError": {
+                    "type": "pronunciation",
+                    "explanation": "Repite «J'ai besoin de des feux d'artifice. Il semble que cela change.» con claridad.",
+                    "ruleRef": "gp-b2-reported-speech"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La frase se entiende y mantiene el ritmo."
+                  }
+                },
+                {
+                  "type": "FreeSpeakingPrompt",
+                  "id": "es-fr-b2-u13-l03-e10",
+                  "prompt": "Argumenta y matiza una opinión sobre la comida y la música.",
+                  "minTokens": 20,
+                  "conceptClusters": [
+                    [
+                      "J'ai"
+                    ],
+                    [
+                      "besoin"
+                    ],
+                    [
+                      "d'un"
+                    ]
+                  ],
+                  "modelAnswer": "J'ai besoin d'un gâteau d'anniversaire. Je crains que ce soit plus compliqué. J'ai besoin de de la musique live. Pour être honnête, j'ai des sentiments mitigés. J'ai besoin de des feux d'artifice. Il semble que cela change.",
+                  "selfAssessmentCriteria": [
+                    "¿La respuesta argumenta y responde a la tarea?",
+                    "¿Usa las dos estructuras gramaticales de la lección?",
+                    "¿Incluye una concesión o una matización?"
+                  ],
+                  "grammarRuleRefs": [
+                    "gp-b2-reported-speech",
+                    "gp-b2-participle-clauses"
+                  ],
+                  "timeLimitSeconds": 90,
+                  "minWpm": 70,
+                  "maxWpm": 160,
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "La respuesta modelo desarrolla una opinión con matices y una concesión.",
+                    "ruleRef": "gp-b2-reported-speech"
+                  }
+                }
+              ]
+            },
+            {
+              "id": "es-fr-b2-u13-l04",
+              "title": "Present perfect vs past simple",
+              "cefrLevel": "B2",
+              "scenario": "Situación comunicativa avanzada sobre las experiencias y los recuerdos.",
+              "canDo": "Puedo argumentar y matizar sobre las experiencias y los recuerdos.",
+              "grammarPoints": [
+                {
+                  "id": "gp-b2-reported-speech",
+                  "label": "Reported speech",
+                  "description": "El estilo indirecto ajusta tiempos, pronombres y referencias."
+                },
+                {
+                  "id": "gp-b2-participle-clauses",
+                  "label": "Participle clauses",
+                  "description": "Las cláusulas de participio reducen y conectan ideas."
+                }
+              ],
+              "vocabFrequencyBand": "3000-5000",
+              "culturalNotes": [
+                {
+                  "idiom": "en rester là",
+                  "note": "Expresión para terminar una actividad.",
+                  "translation": "dejarlo por hoy"
+                }
+              ],
+              "microLesson": {
+                "title": "Present perfect vs past simple",
+                "goals": [
+                  "Usar vocabulario avanzado de las experiencias y los recuerdos.",
+                  "Aplicar reported speech y participle clauses.",
+                  "Argumentar y matizar sobre las experiencias y los recuerdos."
+                ],
+                "sections": [
+                  {
+                    "heading": "Lengua en contexto",
+                    "body": "Reported speech: El estilo indirecto ajusta tiempos, pronombres y referencias. Participle clauses: Las cláusulas de participio reducen y conectan ideas.",
+                    "examples": [
+                      {
+                        "source": "He visitado muchas fiestas este año. Sinceramente, tengo sentimientos encontrados.",
+                        "target": "J'ai visité beaucoup de fêtes cette année. Pour être honnête, j'ai des sentiments mitigés."
+                      },
+                      {
+                        "source": "El año pasado fui a una boda muy bonita. Parece que esto está cambiando.",
+                        "target": "L'année dernière, je suis allé à un très beau mariage. Il semble que cela change."
+                      }
+                    ]
+                  }
+                ]
+              },
+              "glossary": [
+                {
+                  "term": "J'ai visité beaucoup de fêtes cette année. Pour être honnête, j'ai des sentiments mitigés.",
+                  "translations": [
+                    "He visitado muchas fiestas este año. Sinceramente, tengo sentimientos encontrados."
+                  ]
+                },
+                {
+                  "term": "L'année dernière, je suis allé à un très beau mariage. Il semble que cela change.",
+                  "translations": [
+                    "El año pasado fui a una boda muy bonita. Parece que esto está cambiando."
+                  ]
+                },
+                {
+                  "term": "Je n'ai jamais goûté ce plat. De mon point de vue, c'est une option raisonnable.",
+                  "translations": [
+                    "Nunca he probado ese plato. Desde mi punto de vista, es una opción razonable."
+                  ]
+                }
+              ],
+              "exercises": [
+                {
+                  "type": "MultipleChoice",
+                  "id": "es-fr-b2-u13-l04-e01",
+                  "question": "¿Cuál es la opción correcta para «He visitado muchas fiestas este año. Sinceramente, tengo sentimientos encontrados.»?",
+                  "options": [
+                    "J'ai visité beaucoup de fêtes cette année. Pour être honnête, j'ai des sentiments mitigés.",
+                    "L'année dernière, je suis allé à un très beau mariage. Il semble que cela change.",
+                    "Je n'ai jamais goûté ce plat. De mon point de vue, c'est une option raisonnable."
+                  ],
+                  "correctIndex": 0,
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "«He visitado muchas fiestas este año. Sinceramente, tengo sentimientos encontrados.» se dice «J'ai visité beaucoup de fêtes cette année. Pour être honnête, j'ai des sentiments mitigés.».",
+                    "ruleRef": "gp-b2-reported-speech"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has elegido la traducción correcta."
+                  }
+                },
+                {
+                  "type": "OrderWords",
+                  "id": "es-fr-b2-u13-l04-e02",
+                  "tokens": [
+                    "visité",
+                    "beaucoup",
+                    "de",
+                    "fêtes",
+                    "cette",
+                    "année",
+                    "Pour",
+                    "être",
+                    "honnête",
+                    "j'ai",
+                    "des",
+                    "sentiments",
+                    "mitigés",
+                    "J'ai"
+                  ],
+                  "answerTokens": [
+                    "J'ai",
+                    "visité",
+                    "beaucoup",
+                    "de",
+                    "fêtes",
+                    "cette",
+                    "année",
+                    "Pour",
+                    "être",
+                    "honnête",
+                    "j'ai",
+                    "des",
+                    "sentiments",
+                    "mitigés"
+                  ],
+                  "sourcePhrase": "He visitado muchas fiestas este año. Sinceramente, tengo sentimientos encontrados.",
+                  "feedbackOnError": {
+                    "type": "word_order",
+                    "explanation": "El orden correcto es «J'ai visité beaucoup de fêtes cette année Pour être honnête j'ai des sentiments mitigés».",
+                    "ruleRef": "gp-b2-reported-speech"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "El orden produce una frase natural."
+                  }
+                },
+                {
+                  "type": "ClozeDragDrop",
+                  "id": "es-fr-b2-u13-l04-e03",
+                  "passage": "{{b1}} {{b2}} beaucoup de fêtes cette année.",
+                  "blanks": [
+                    {
+                      "id": "b1",
+                      "answer": "J'ai",
+                      "options": [
+                        "J'ai",
+                        "beaucoup",
+                        "fêtes"
+                      ]
+                    },
+                    {
+                      "id": "b2",
+                      "answer": "visité",
+                      "options": [
+                        "visité",
+                        "beaucoup",
+                        "fêtes"
+                      ]
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "Las dos formas deben encajar con el contexto de la frase.",
+                    "ruleRef": "gp-b2-participle-clauses"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Los dos huecos encajan con la situación."
+                  }
+                },
+                {
+                  "type": "SemanticMatch",
+                  "id": "es-fr-b2-u13-l04-e04",
+                  "instructions": "Clasifica la función comunicativa de cada intervención.",
+                  "pairs": [
+                    {
+                      "left": "J'ai visité beaucoup de fêtes cette année. Pour être honnête, j'ai des sentiments mitigés.",
+                      "right": "Planteamiento",
+                      "register": "formal",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    },
+                    {
+                      "left": "L'année dernière, je suis allé à un très beau mariage. Il semble que cela change.",
+                      "right": "Concesión",
+                      "register": "neutral",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    },
+                    {
+                      "left": "Je n'ai jamais goûté ce plat. De mon point de vue, c'est une option raisonnable.",
+                      "right": "Conclusión",
+                      "register": "informal",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "Cada intervención cumple una función comunicativa distinta.",
+                    "ruleRef": "gp-b2-reported-speech"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has identificado la función de cada intervención."
+                  }
+                },
+                {
+                  "type": "SemanticMatch",
+                  "id": "es-fr-b2-u13-l04-e05",
+                  "instructions": "Distingue el registro de cada intervención.",
+                  "pairs": [
+                    {
+                      "left": "J'ai visité beaucoup de fêtes cette année. Pour être honnête, j'ai des sentiments mitigés.",
+                      "right": "Formal",
+                      "register": "formal",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    },
+                    {
+                      "left": "L'année dernière, je suis allé à un très beau mariage. Il semble que cela change.",
+                      "right": "Neutral",
+                      "register": "neutral",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    },
+                    {
+                      "left": "Je n'ai jamais goûté ce plat. De mon point de vue, c'est une option raisonnable.",
+                      "right": "Informal",
+                      "register": "informal",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "register",
+                    "explanation": "El registro cambia según el contexto y la relación con el interlocutor.",
+                    "ruleRef": "gp-b2-participle-clauses"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has distinguido el registro de cada intervención."
+                  }
+                },
+                {
+                  "type": "AudioOnlyPrompt",
+                  "id": "es-fr-b2-u13-l04-e06",
+                  "audioText": "L'année dernière, je suis allé à un très beau mariage. Il semble que cela change.",
+                  "question": "¿Qué ha dicho el hablante?",
+                  "options": [
+                    "L'année dernière, je suis allé à un très beau mariage. Il semble que cela change.",
+                    "J'ai visité beaucoup de fêtes cette année. Pour être honnête, j'ai des sentiments mitigés.",
+                    "Je n'ai jamais goûté ce plat. De mon point de vue, c'est une option raisonnable."
+                  ],
+                  "correctIndex": 0,
+                  "allowSlowPlayback": true,
+                  "feedbackOnError": {
+                    "type": "comprehension",
+                    "explanation": "El audio dice «L'année dernière, je suis allé à un très beau mariage. Il semble que cela change.».",
+                    "ruleRef": "gp-b2-reported-speech"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has comprendido el mensaje del audio."
+                  }
+                },
+                {
+                  "type": "AudioOnlyPrompt",
+                  "id": "es-fr-b2-u13-l04-e07",
+                  "audioText": "Je n'ai jamais goûté ce plat. De mon point de vue, c'est une option raisonnable.",
+                  "question": "¿Cuál es la idea principal?",
+                  "options": [
+                    "Je n'ai jamais goûté ce plat. De mon point de vue, c'est une option raisonnable.",
+                    "J'ai visité beaucoup de fêtes cette année. Pour être honnête, j'ai des sentiments mitigés.",
+                    "L'année dernière, je suis allé à un très beau mariage. Il semble que cela change."
+                  ],
+                  "correctIndex": 0,
+                  "allowSlowPlayback": false,
+                  "feedbackOnError": {
+                    "type": "comprehension",
+                    "explanation": "El audio dice «Je n'ai jamais goûté ce plat. De mon point de vue, c'est une option raisonnable.».",
+                    "ruleRef": "gp-b2-participle-clauses"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has identificado la idea principal."
+                  }
+                },
+                {
+                  "type": "ListenType",
+                  "id": "es-fr-b2-u13-l04-e08",
+                  "audioText": "Je n'ai jamais goûté ce plat. De mon point de vue, c'est une option raisonnable.",
+                  "transcription": "Je n'ai jamais goûté ce plat. De mon point de vue, c'est une option raisonnable.",
+                  "feedbackOnError": {
+                    "type": "spelling",
+                    "explanation": "Escribe exactamente «Je n'ai jamais goûté ce plat. De mon point de vue, c'est une option raisonnable.».",
+                    "ruleRef": "gp-b2-reported-speech"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La transcripción coincide con el audio."
+                  }
+                },
+                {
+                  "type": "SpeakRepeat",
+                  "id": "es-fr-b2-u13-l04-e09",
+                  "targetPhrase": "Je n'ai jamais goûté ce plat. De mon point de vue, c'est une option raisonnable.",
+                  "audioText": "Je n'ai jamais goûté ce plat. De mon point de vue, c'est une option raisonnable.",
+                  "feedbackOnError": {
+                    "type": "pronunciation",
+                    "explanation": "Repite «Je n'ai jamais goûté ce plat. De mon point de vue, c'est une option raisonnable.» con claridad.",
+                    "ruleRef": "gp-b2-reported-speech"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La frase se entiende y mantiene el ritmo."
+                  }
+                },
+                {
+                  "type": "FreeSpeakingPrompt",
+                  "id": "es-fr-b2-u13-l04-e10",
+                  "prompt": "Argumenta y matiza una opinión sobre las experiencias y los recuerdos.",
+                  "minTokens": 20,
+                  "conceptClusters": [
+                    [
+                      "J'ai"
+                    ],
+                    [
+                      "visité"
+                    ],
+                    [
+                      "beaucoup"
+                    ]
+                  ],
+                  "modelAnswer": "J'ai visité beaucoup de fêtes cette année. Pour être honnête, j'ai des sentiments mitigés. L'année dernière, je suis allé à un très beau mariage. Il semble que cela change. Je n'ai jamais goûté ce plat. De mon point de vue, c'est une option raisonnable.",
+                  "selfAssessmentCriteria": [
+                    "¿La respuesta argumenta y responde a la tarea?",
+                    "¿Usa las dos estructuras gramaticales de la lección?",
+                    "¿Incluye una concesión o una matización?"
+                  ],
+                  "grammarRuleRefs": [
+                    "gp-b2-reported-speech",
+                    "gp-b2-participle-clauses"
+                  ],
+                  "timeLimitSeconds": 90,
+                  "minWpm": 70,
+                  "maxWpm": 160,
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "La respuesta modelo desarrolla una opinión con matices y una concesión.",
+                    "ruleRef": "gp-b2-reported-speech"
+                  }
+                }
+              ]
+            },
+            {
+              "id": "es-fr-b2-u13-l05",
+              "title": "Used to",
+              "cefrLevel": "B2",
+              "scenario": "Situación comunicativa avanzada sobre los hábitos del pasado.",
+              "canDo": "Puedo argumentar y matizar sobre los hábitos del pasado.",
+              "grammarPoints": [
+                {
+                  "id": "gp-b2-reported-speech",
+                  "label": "Reported speech",
+                  "description": "El estilo indirecto ajusta tiempos, pronombres y referencias."
+                },
+                {
+                  "id": "gp-b2-participle-clauses",
+                  "label": "Participle clauses",
+                  "description": "Las cláusulas de participio reducen y conectan ideas."
+                }
+              ],
+              "vocabFrequencyBand": "3000-5000",
+              "culturalNotes": [
+                {
+                  "idiom": "faire des raccourcis",
+                  "note": "Expresión para hacer algo con poco cuidado.",
+                  "translation": "hacerlo de forma rápida"
+                }
+              ],
+              "microLesson": {
+                "title": "Used to",
+                "goals": [
+                  "Usar vocabulario avanzado de los hábitos del pasado.",
+                  "Aplicar reported speech y participle clauses.",
+                  "Argumentar y matizar sobre los hábitos del pasado."
+                ],
+                "sections": [
+                  {
+                    "heading": "Lengua en contexto",
+                    "body": "Reported speech: El estilo indirecto ajusta tiempos, pronombres y referencias. Participle clauses: Las cláusulas de participio reducen y conectan ideas.",
+                    "examples": [
+                      {
+                        "source": "Antes jugaba a las cartas con mis abuelos. Parece que esto está cambiando.",
+                        "target": "Avant, je je jouais aux cartes avec mes grands-parents. Il semble que cela change."
+                      },
+                      {
+                        "source": "Antes íbamos a la playa cada verano. Desde mi punto de vista, es una opción razonable.",
+                        "target": "Avant, je nous allions à la plage chaque été. De mon point de vue, c'est une option raisonnable."
+                      }
+                    ]
+                  }
+                ]
+              },
+              "glossary": [
+                {
+                  "term": "Avant, je je jouais aux cartes avec mes grands-parents. Il semble que cela change.",
+                  "translations": [
+                    "Antes jugaba a las cartas con mis abuelos. Parece que esto está cambiando."
+                  ]
+                },
+                {
+                  "term": "Avant, je nous allions à la plage chaque été. De mon point de vue, c'est une option raisonnable.",
+                  "translations": [
+                    "Antes íbamos a la playa cada verano. Desde mi punto de vista, es una opción razonable."
+                  ]
+                },
+                {
+                  "term": "Avant, je nous fêtions mon anniversaire dans le jardin. Néanmoins, il y a aussi des avantages.",
+                  "translations": [
+                    "Antes celebrábamos mi cumpleaños en el jardín. No obstante, también tiene ventajas."
+                  ]
+                }
+              ],
+              "exercises": [
+                {
+                  "type": "MultipleChoice",
+                  "id": "es-fr-b2-u13-l05-e01",
+                  "question": "¿Cuál es la opción correcta para «Antes jugaba a las cartas con mis abuelos. Parece que esto está cambiando.»?",
+                  "options": [
+                    "Avant, je je jouais aux cartes avec mes grands-parents. Il semble que cela change.",
+                    "Avant, je nous allions à la plage chaque été. De mon point de vue, c'est une option raisonnable.",
+                    "Avant, je nous fêtions mon anniversaire dans le jardin. Néanmoins, il y a aussi des avantages."
+                  ],
+                  "correctIndex": 0,
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "«Antes jugaba a las cartas con mis abuelos. Parece que esto está cambiando.» se dice «Avant, je je jouais aux cartes avec mes grands-parents. Il semble que cela change.».",
+                    "ruleRef": "gp-b2-reported-speech"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has elegido la traducción correcta."
+                  }
+                },
+                {
+                  "type": "OrderWords",
+                  "id": "es-fr-b2-u13-l05-e02",
+                  "tokens": [
+                    "je",
+                    "je",
+                    "jouais",
+                    "aux",
+                    "cartes",
+                    "avec",
+                    "mes",
+                    "grands",
+                    "parents",
+                    "Il",
+                    "semble",
+                    "que",
+                    "cela",
+                    "change",
+                    "Avant"
+                  ],
+                  "answerTokens": [
+                    "Avant",
+                    "je",
+                    "je",
+                    "jouais",
+                    "aux",
+                    "cartes",
+                    "avec",
+                    "mes",
+                    "grands",
+                    "parents",
+                    "Il",
+                    "semble",
+                    "que",
+                    "cela",
+                    "change"
+                  ],
+                  "sourcePhrase": "Antes jugaba a las cartas con mis abuelos. Parece que esto está cambiando.",
+                  "feedbackOnError": {
+                    "type": "word_order",
+                    "explanation": "El orden correcto es «Avant je je jouais aux cartes avec mes grands parents Il semble que cela change».",
+                    "ruleRef": "gp-b2-reported-speech"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "El orden produce una frase natural."
+                  }
+                },
+                {
+                  "type": "ClozeDragDrop",
+                  "id": "es-fr-b2-u13-l05-e03",
+                  "passage": "{{b1}}, je je {{b2}} aux cartes avec mes grands-parents",
+                  "blanks": [
+                    {
+                      "id": "b1",
+                      "answer": "Avant",
+                      "options": [
+                        "Avant",
+                        "aux",
+                        "cartes"
+                      ]
+                    },
+                    {
+                      "id": "b2",
+                      "answer": "jouais",
+                      "options": [
+                        "jouais",
+                        "aux",
+                        "cartes"
+                      ]
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "Las dos formas deben encajar con el contexto de la frase.",
+                    "ruleRef": "gp-b2-participle-clauses"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Los dos huecos encajan con la situación."
+                  }
+                },
+                {
+                  "type": "SemanticMatch",
+                  "id": "es-fr-b2-u13-l05-e04",
+                  "instructions": "Clasifica la función comunicativa de cada intervención.",
+                  "pairs": [
+                    {
+                      "left": "Avant, je je jouais aux cartes avec mes grands-parents. Il semble que cela change.",
+                      "right": "Planteamiento",
+                      "register": "formal",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    },
+                    {
+                      "left": "Avant, je nous allions à la plage chaque été. De mon point de vue, c'est une option raisonnable.",
+                      "right": "Concesión",
+                      "register": "neutral",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    },
+                    {
+                      "left": "Avant, je nous fêtions mon anniversaire dans le jardin. Néanmoins, il y a aussi des avantages.",
+                      "right": "Conclusión",
+                      "register": "informal",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "Cada intervención cumple una función comunicativa distinta.",
+                    "ruleRef": "gp-b2-reported-speech"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has identificado la función de cada intervención."
+                  }
+                },
+                {
+                  "type": "SemanticMatch",
+                  "id": "es-fr-b2-u13-l05-e05",
+                  "instructions": "Distingue el registro de cada intervención.",
+                  "pairs": [
+                    {
+                      "left": "Avant, je je jouais aux cartes avec mes grands-parents. Il semble que cela change.",
+                      "right": "Formal",
+                      "register": "formal",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    },
+                    {
+                      "left": "Avant, je nous allions à la plage chaque été. De mon point de vue, c'est une option raisonnable.",
+                      "right": "Neutral",
+                      "register": "neutral",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    },
+                    {
+                      "left": "Avant, je nous fêtions mon anniversaire dans le jardin. Néanmoins, il y a aussi des avantages.",
+                      "right": "Informal",
+                      "register": "informal",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "register",
+                    "explanation": "El registro cambia según el contexto y la relación con el interlocutor.",
+                    "ruleRef": "gp-b2-participle-clauses"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has distinguido el registro de cada intervención."
+                  }
+                },
+                {
+                  "type": "AudioOnlyPrompt",
+                  "id": "es-fr-b2-u13-l05-e06",
+                  "audioText": "Avant, je nous allions à la plage chaque été. De mon point de vue, c'est une option raisonnable.",
+                  "question": "¿Qué ha dicho el hablante?",
+                  "options": [
+                    "Avant, je nous allions à la plage chaque été. De mon point de vue, c'est une option raisonnable.",
+                    "Avant, je je jouais aux cartes avec mes grands-parents. Il semble que cela change.",
+                    "Avant, je nous fêtions mon anniversaire dans le jardin. Néanmoins, il y a aussi des avantages."
+                  ],
+                  "correctIndex": 0,
+                  "allowSlowPlayback": true,
+                  "feedbackOnError": {
+                    "type": "comprehension",
+                    "explanation": "El audio dice «Avant, je nous allions à la plage chaque été. De mon point de vue, c'est une option raisonnable.».",
+                    "ruleRef": "gp-b2-reported-speech"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has comprendido el mensaje del audio."
+                  }
+                },
+                {
+                  "type": "AudioOnlyPrompt",
+                  "id": "es-fr-b2-u13-l05-e07",
+                  "audioText": "Avant, je nous fêtions mon anniversaire dans le jardin. Néanmoins, il y a aussi des avantages.",
+                  "question": "¿Cuál es la idea principal?",
+                  "options": [
+                    "Avant, je nous fêtions mon anniversaire dans le jardin. Néanmoins, il y a aussi des avantages.",
+                    "Avant, je je jouais aux cartes avec mes grands-parents. Il semble que cela change.",
+                    "Avant, je nous allions à la plage chaque été. De mon point de vue, c'est une option raisonnable."
+                  ],
+                  "correctIndex": 0,
+                  "allowSlowPlayback": false,
+                  "feedbackOnError": {
+                    "type": "comprehension",
+                    "explanation": "El audio dice «Avant, je nous fêtions mon anniversaire dans le jardin. Néanmoins, il y a aussi des avantages.».",
+                    "ruleRef": "gp-b2-participle-clauses"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has identificado la idea principal."
+                  }
+                },
+                {
+                  "type": "ListenType",
+                  "id": "es-fr-b2-u13-l05-e08",
+                  "audioText": "Avant, je nous fêtions mon anniversaire dans le jardin. Néanmoins, il y a aussi des avantages.",
+                  "transcription": "Avant, je nous fêtions mon anniversaire dans le jardin. Néanmoins, il y a aussi des avantages.",
+                  "feedbackOnError": {
+                    "type": "spelling",
+                    "explanation": "Escribe exactamente «Avant, je nous fêtions mon anniversaire dans le jardin. Néanmoins, il y a aussi des avantages.».",
+                    "ruleRef": "gp-b2-reported-speech"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La transcripción coincide con el audio."
+                  }
+                },
+                {
+                  "type": "SpeakRepeat",
+                  "id": "es-fr-b2-u13-l05-e09",
+                  "targetPhrase": "Avant, je nous fêtions mon anniversaire dans le jardin. Néanmoins, il y a aussi des avantages.",
+                  "audioText": "Avant, je nous fêtions mon anniversaire dans le jardin. Néanmoins, il y a aussi des avantages.",
+                  "feedbackOnError": {
+                    "type": "pronunciation",
+                    "explanation": "Repite «Avant, je nous fêtions mon anniversaire dans le jardin. Néanmoins, il y a aussi des avantages.» con claridad.",
+                    "ruleRef": "gp-b2-reported-speech"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La frase se entiende y mantiene el ritmo."
+                  }
+                },
+                {
+                  "type": "FreeSpeakingPrompt",
+                  "id": "es-fr-b2-u13-l05-e10",
+                  "prompt": "Argumenta y matiza una opinión sobre los hábitos del pasado.",
+                  "minTokens": 20,
+                  "conceptClusters": [
+                    [
+                      "Avant"
+                    ],
+                    [
+                      "jouais"
+                    ],
+                    [
+                      "aux"
+                    ]
+                  ],
+                  "modelAnswer": "Avant, je je jouais aux cartes avec mes grands-parents. Il semble que cela change. Avant, je nous allions à la plage chaque été. De mon point de vue, c'est une option raisonnable. Avant, je nous fêtions mon anniversaire dans le jardin. Néanmoins, il y a aussi des avantages.",
+                  "selfAssessmentCriteria": [
+                    "¿La respuesta argumenta y responde a la tarea?",
+                    "¿Usa las dos estructuras gramaticales de la lección?",
+                    "¿Incluye una concesión o una matización?"
+                  ],
+                  "grammarRuleRefs": [
+                    "gp-b2-reported-speech",
+                    "gp-b2-participle-clauses"
+                  ],
+                  "timeLimitSeconds": 90,
+                  "minWpm": 70,
+                  "maxWpm": 160,
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "La respuesta modelo desarrolla una opinión con matices y una concesión.",
+                    "ruleRef": "gp-b2-reported-speech"
+                  }
+                }
+              ]
+            },
+            {
+              "id": "es-fr-b2-u13-l06",
+              "title": "Invitar a una fiesta",
+              "cefrLevel": "B2",
+              "scenario": "Situación comunicativa avanzada sobre una invitación.",
+              "canDo": "Puedo argumentar y matizar sobre una invitación.",
+              "grammarPoints": [
+                {
+                  "id": "gp-b2-reported-speech",
+                  "label": "Reported speech",
+                  "description": "El estilo indirecto ajusta tiempos, pronombres y referencias."
+                },
+                {
+                  "id": "gp-b2-participle-clauses",
+                  "label": "Participle clauses",
+                  "description": "Las cláusulas de participio reducen y conectan ideas."
+                }
+              ],
+              "vocabFrequencyBand": "3000-5000",
+              "culturalNotes": [
+                {
+                  "idiom": "ne pas être dans son assiette",
+                  "note": "Expresión para decir que alguien no se siente bien.",
+                  "translation": "sentirse mal"
+                }
+              ],
+              "microLesson": {
+                "title": "Invitar a una fiesta",
+                "goals": [
+                  "Usar vocabulario avanzado de una invitación.",
+                  "Aplicar reported speech y participle clauses.",
+                  "Argumentar y matizar sobre una invitación."
+                ],
+                "sections": [
+                  {
+                    "heading": "Lengua en contexto",
+                    "body": "Reported speech: El estilo indirecto ajusta tiempos, pronombres y referencias. Participle clauses: Las cláusulas de participio reducen y conectan ideas.",
+                    "examples": [
+                      {
+                        "source": "¿Quieres venir a mi fiesta el sábado? Desde mi punto de vista, es una opción razonable.",
+                        "target": "Tu veux venir à ma fête samedi ? De mon point de vue, c'est une option raisonnable."
+                      },
+                      {
+                        "source": "Empieza a las ocho en mi casa. No obstante, también tiene ventajas.",
+                        "target": "Ça commence à huit heures chez moi. Néanmoins, il y a aussi des avantages."
+                      }
+                    ]
+                  }
+                ]
+              },
+              "glossary": [
+                {
+                  "term": "Tu veux venir à ma fête samedi ? De mon point de vue, c'est une option raisonnable.",
+                  "translations": [
+                    "¿Quieres venir a mi fiesta el sábado? Desde mi punto de vista, es una opción razonable."
+                  ]
+                },
+                {
+                  "term": "Ça commence à huit heures chez moi. Néanmoins, il y a aussi des avantages.",
+                  "translations": [
+                    "Empieza a las ocho en mi casa. No obstante, también tiene ventajas."
+                  ]
+                },
+                {
+                  "term": "Tu peux amener qui tu veux. En fin de compte, il faut prioriser.",
+                  "translations": [
+                    "Puedes traer a quien quieras. A fin de cuentas, hay que priorizar."
+                  ]
+                }
+              ],
+              "exercises": [
+                {
+                  "type": "MultipleChoice",
+                  "id": "es-fr-b2-u13-l06-e01",
+                  "question": "¿Cuál es la opción correcta para «¿Quieres venir a mi fiesta el sábado? Desde mi punto de vista, es una opción razonable.»?",
+                  "options": [
+                    "Tu veux venir à ma fête samedi ? De mon point de vue, c'est une option raisonnable.",
+                    "Ça commence à huit heures chez moi. Néanmoins, il y a aussi des avantages.",
+                    "Tu peux amener qui tu veux. En fin de compte, il faut prioriser."
+                  ],
+                  "correctIndex": 0,
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "«¿Quieres venir a mi fiesta el sábado? Desde mi punto de vista, es una opción razonable.» se dice «Tu veux venir à ma fête samedi ? De mon point de vue, c'est une option raisonnable.».",
+                    "ruleRef": "gp-b2-reported-speech"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has elegido la traducción correcta."
+                  }
+                },
+                {
+                  "type": "OrderWords",
+                  "id": "es-fr-b2-u13-l06-e02",
+                  "tokens": [
+                    "veux",
+                    "venir",
+                    "à",
+                    "ma",
+                    "fête",
+                    "samedi",
+                    "De",
+                    "mon",
+                    "point",
+                    "de",
+                    "vue",
+                    "c'est",
+                    "une",
+                    "option",
+                    "raisonnable",
+                    "Tu"
+                  ],
+                  "answerTokens": [
+                    "Tu",
+                    "veux",
+                    "venir",
+                    "à",
+                    "ma",
+                    "fête",
+                    "samedi",
+                    "De",
+                    "mon",
+                    "point",
+                    "de",
+                    "vue",
+                    "c'est",
+                    "une",
+                    "option",
+                    "raisonnable"
+                  ],
+                  "sourcePhrase": "¿Quieres venir a mi fiesta el sábado? Desde mi punto de vista, es una opción razonable.",
+                  "feedbackOnError": {
+                    "type": "word_order",
+                    "explanation": "El orden correcto es «Tu veux venir à ma fête samedi De mon point de vue c'est une option raisonnable».",
+                    "ruleRef": "gp-b2-reported-speech"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "El orden produce una frase natural."
+                  }
+                },
+                {
+                  "type": "ClozeDragDrop",
+                  "id": "es-fr-b2-u13-l06-e03",
+                  "passage": "Tu {{b1}} {{b2}} à ma fête samedi ?",
+                  "blanks": [
+                    {
+                      "id": "b1",
+                      "answer": "veux",
+                      "options": [
+                        "veux",
+                        "fête",
+                        "samedi"
+                      ]
+                    },
+                    {
+                      "id": "b2",
+                      "answer": "venir",
+                      "options": [
+                        "venir",
+                        "fête",
+                        "samedi"
+                      ]
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "Las dos formas deben encajar con el contexto de la frase.",
+                    "ruleRef": "gp-b2-participle-clauses"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Los dos huecos encajan con la situación."
+                  }
+                },
+                {
+                  "type": "SemanticMatch",
+                  "id": "es-fr-b2-u13-l06-e04",
+                  "instructions": "Clasifica la función comunicativa de cada intervención.",
+                  "pairs": [
+                    {
+                      "left": "Tu veux venir à ma fête samedi ? De mon point de vue, c'est une option raisonnable.",
+                      "right": "Planteamiento",
+                      "register": "formal",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    },
+                    {
+                      "left": "Ça commence à huit heures chez moi. Néanmoins, il y a aussi des avantages.",
+                      "right": "Concesión",
+                      "register": "neutral",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    },
+                    {
+                      "left": "Tu peux amener qui tu veux. En fin de compte, il faut prioriser.",
+                      "right": "Conclusión",
+                      "register": "informal",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "Cada intervención cumple una función comunicativa distinta.",
+                    "ruleRef": "gp-b2-reported-speech"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has identificado la función de cada intervención."
+                  }
+                },
+                {
+                  "type": "SemanticMatch",
+                  "id": "es-fr-b2-u13-l06-e05",
+                  "instructions": "Distingue el registro de cada intervención.",
+                  "pairs": [
+                    {
+                      "left": "Tu veux venir à ma fête samedi ? De mon point de vue, c'est une option raisonnable.",
+                      "right": "Formal",
+                      "register": "formal",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    },
+                    {
+                      "left": "Ça commence à huit heures chez moi. Néanmoins, il y a aussi des avantages.",
+                      "right": "Neutral",
+                      "register": "neutral",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    },
+                    {
+                      "left": "Tu peux amener qui tu veux. En fin de compte, il faut prioriser.",
+                      "right": "Informal",
+                      "register": "informal",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "register",
+                    "explanation": "El registro cambia según el contexto y la relación con el interlocutor.",
+                    "ruleRef": "gp-b2-participle-clauses"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has distinguido el registro de cada intervención."
+                  }
+                },
+                {
+                  "type": "AudioOnlyPrompt",
+                  "id": "es-fr-b2-u13-l06-e06",
+                  "audioText": "Ça commence à huit heures chez moi. Néanmoins, il y a aussi des avantages.",
+                  "question": "¿Qué ha dicho el hablante?",
+                  "options": [
+                    "Ça commence à huit heures chez moi. Néanmoins, il y a aussi des avantages.",
+                    "Tu veux venir à ma fête samedi ? De mon point de vue, c'est une option raisonnable.",
+                    "Tu peux amener qui tu veux. En fin de compte, il faut prioriser."
+                  ],
+                  "correctIndex": 0,
+                  "allowSlowPlayback": true,
+                  "feedbackOnError": {
+                    "type": "comprehension",
+                    "explanation": "El audio dice «Ça commence à huit heures chez moi. Néanmoins, il y a aussi des avantages.».",
+                    "ruleRef": "gp-b2-reported-speech"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has comprendido el mensaje del audio."
+                  }
+                },
+                {
+                  "type": "AudioOnlyPrompt",
+                  "id": "es-fr-b2-u13-l06-e07",
+                  "audioText": "Tu peux amener qui tu veux. En fin de compte, il faut prioriser.",
+                  "question": "¿Cuál es la idea principal?",
+                  "options": [
+                    "Tu peux amener qui tu veux. En fin de compte, il faut prioriser.",
+                    "Tu veux venir à ma fête samedi ? De mon point de vue, c'est une option raisonnable.",
+                    "Ça commence à huit heures chez moi. Néanmoins, il y a aussi des avantages."
+                  ],
+                  "correctIndex": 0,
+                  "allowSlowPlayback": false,
+                  "feedbackOnError": {
+                    "type": "comprehension",
+                    "explanation": "El audio dice «Tu peux amener qui tu veux. En fin de compte, il faut prioriser.».",
+                    "ruleRef": "gp-b2-participle-clauses"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has identificado la idea principal."
+                  }
+                },
+                {
+                  "type": "ListenType",
+                  "id": "es-fr-b2-u13-l06-e08",
+                  "audioText": "Tu peux amener qui tu veux. En fin de compte, il faut prioriser.",
+                  "transcription": "Tu peux amener qui tu veux. En fin de compte, il faut prioriser.",
+                  "feedbackOnError": {
+                    "type": "spelling",
+                    "explanation": "Escribe exactamente «Tu peux amener qui tu veux. En fin de compte, il faut prioriser.».",
+                    "ruleRef": "gp-b2-reported-speech"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La transcripción coincide con el audio."
+                  }
+                },
+                {
+                  "type": "SpeakRepeat",
+                  "id": "es-fr-b2-u13-l06-e09",
+                  "targetPhrase": "Tu peux amener qui tu veux. En fin de compte, il faut prioriser.",
+                  "audioText": "Tu peux amener qui tu veux. En fin de compte, il faut prioriser.",
+                  "feedbackOnError": {
+                    "type": "pronunciation",
+                    "explanation": "Repite «Tu peux amener qui tu veux. En fin de compte, il faut prioriser.» con claridad.",
+                    "ruleRef": "gp-b2-reported-speech"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La frase se entiende y mantiene el ritmo."
+                  }
+                },
+                {
+                  "type": "FreeSpeakingPrompt",
+                  "id": "es-fr-b2-u13-l06-e10",
+                  "prompt": "Argumenta y matiza una opinión sobre una invitación.",
+                  "minTokens": 20,
+                  "conceptClusters": [
+                    [
+                      "veux"
+                    ],
+                    [
+                      "venir"
+                    ],
+                    [
+                      "fête"
+                    ]
+                  ],
+                  "modelAnswer": "Tu veux venir à ma fête samedi ? De mon point de vue, c'est une option raisonnable. Ça commence à huit heures chez moi. Néanmoins, il y a aussi des avantages. Tu peux amener qui tu veux. En fin de compte, il faut prioriser.",
+                  "selfAssessmentCriteria": [
+                    "¿La respuesta argumenta y responde a la tarea?",
+                    "¿Usa las dos estructuras gramaticales de la lección?",
+                    "¿Incluye una concesión o una matización?"
+                  ],
+                  "grammarRuleRefs": [
+                    "gp-b2-reported-speech",
+                    "gp-b2-participle-clauses"
+                  ],
+                  "timeLimitSeconds": 90,
+                  "minWpm": 70,
+                  "maxWpm": 160,
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "La respuesta modelo desarrolla una opinión con matices y una concesión.",
+                    "ruleRef": "gp-b2-reported-speech"
+                  }
+                }
+              ]
+            },
+            {
+              "id": "es-fr-b2-u13-l07",
+              "title": "Programa cultural",
+              "cefrLevel": "B2",
+              "scenario": "Situación comunicativa avanzada sobre un programa cultural.",
+              "canDo": "Puedo argumentar y matizar sobre un programa cultural.",
+              "grammarPoints": [
+                {
+                  "id": "gp-b2-reported-speech",
+                  "label": "Reported speech",
+                  "description": "El estilo indirecto ajusta tiempos, pronombres y referencias."
+                },
+                {
+                  "id": "gp-b2-participle-clauses",
+                  "label": "Participle clauses",
+                  "description": "Las cláusulas de participio reducen y conectan ideas."
+                }
+              ],
+              "vocabFrequencyBand": "3000-5000",
+              "culturalNotes": [
+                {
+                  "idiom": "donner un coup de main",
+                  "note": "Expresión para ofrecer ayuda.",
+                  "translation": "echar una mano"
+                }
+              ],
+              "microLesson": {
+                "title": "Programa cultural",
+                "goals": [
+                  "Usar vocabulario avanzado de un programa cultural.",
+                  "Aplicar reported speech y participle clauses.",
+                  "Argumentar y matizar sobre un programa cultural."
+                ],
+                "sections": [
+                  {
+                    "heading": "Lengua en contexto",
+                    "body": "Reported speech: El estilo indirecto ajusta tiempos, pronombres y referencias. Participle clauses: Las cláusulas de participio reducen y conectan ideas.",
+                    "examples": [
+                      {
+                        "source": "El programa incluye un concierto y una exposición. No obstante, también tiene ventajas.",
+                        "target": "Le programme comprend un concert et une exposition. Néanmoins, il y a aussi des avantages."
+                      },
+                      {
+                        "source": "La entrada es gratuita para estudiantes. A fin de cuentas, hay que priorizar.",
+                        "target": "L'entrée est gratuite pour les étudiants. En fin de compte, il faut prioriser."
+                      }
+                    ]
+                  }
+                ]
+              },
+              "glossary": [
+                {
+                  "term": "Le programme comprend un concert et une exposition. Néanmoins, il y a aussi des avantages.",
+                  "translations": [
+                    "El programa incluye un concierto y una exposición. No obstante, también tiene ventajas."
+                  ]
+                },
+                {
+                  "term": "L'entrée est gratuite pour les étudiants. En fin de compte, il faut prioriser.",
+                  "translations": [
+                    "La entrada es gratuita para estudiantes. A fin de cuentas, hay que priorizar."
+                  ]
+                },
+                {
+                  "term": "L'événement se termine à dix heures. En bref, c'est un sujet complexe.",
+                  "translations": [
+                    "El evento termina a las diez. En resumen, es un tema complejo."
+                  ]
+                }
+              ],
+              "exercises": [
+                {
+                  "type": "MultipleChoice",
+                  "id": "es-fr-b2-u13-l07-e01",
+                  "question": "¿Cuál es la opción correcta para «El programa incluye un concierto y una exposición. No obstante, también tiene ventajas.»?",
+                  "options": [
+                    "Le programme comprend un concert et une exposition. Néanmoins, il y a aussi des avantages.",
+                    "L'entrée est gratuite pour les étudiants. En fin de compte, il faut prioriser.",
+                    "L'événement se termine à dix heures. En bref, c'est un sujet complexe."
+                  ],
+                  "correctIndex": 0,
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "«El programa incluye un concierto y una exposición. No obstante, también tiene ventajas.» se dice «Le programme comprend un concert et une exposition. Néanmoins, il y a aussi des avantages.».",
+                    "ruleRef": "gp-b2-reported-speech"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has elegido la traducción correcta."
+                  }
+                },
+                {
+                  "type": "OrderWords",
+                  "id": "es-fr-b2-u13-l07-e02",
+                  "tokens": [
+                    "programme",
+                    "comprend",
+                    "un",
+                    "concert",
+                    "et",
+                    "une",
+                    "exposition",
+                    "Néanmoins",
+                    "il",
+                    "y",
+                    "a",
+                    "aussi",
+                    "des",
+                    "avantages",
+                    "Le"
+                  ],
+                  "answerTokens": [
+                    "Le",
+                    "programme",
+                    "comprend",
+                    "un",
+                    "concert",
+                    "et",
+                    "une",
+                    "exposition",
+                    "Néanmoins",
+                    "il",
+                    "y",
+                    "a",
+                    "aussi",
+                    "des",
+                    "avantages"
+                  ],
+                  "sourcePhrase": "El programa incluye un concierto y una exposición. No obstante, también tiene ventajas.",
+                  "feedbackOnError": {
+                    "type": "word_order",
+                    "explanation": "El orden correcto es «Le programme comprend un concert et une exposition Néanmoins il y a aussi des avantages».",
+                    "ruleRef": "gp-b2-reported-speech"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "El orden produce una frase natural."
+                  }
+                },
+                {
+                  "type": "ClozeDragDrop",
+                  "id": "es-fr-b2-u13-l07-e03",
+                  "passage": "Le {{b1}} {{b2}} un concert et une exposition.",
+                  "blanks": [
+                    {
+                      "id": "b1",
+                      "answer": "programme",
+                      "options": [
+                        "programme",
+                        "concert",
+                        "exposition"
+                      ]
+                    },
+                    {
+                      "id": "b2",
+                      "answer": "comprend",
+                      "options": [
+                        "comprend",
+                        "concert",
+                        "exposition"
+                      ]
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "Las dos formas deben encajar con el contexto de la frase.",
+                    "ruleRef": "gp-b2-participle-clauses"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Los dos huecos encajan con la situación."
+                  }
+                },
+                {
+                  "type": "SemanticMatch",
+                  "id": "es-fr-b2-u13-l07-e04",
+                  "instructions": "Clasifica la función comunicativa de cada intervención.",
+                  "pairs": [
+                    {
+                      "left": "Le programme comprend un concert et une exposition. Néanmoins, il y a aussi des avantages.",
+                      "right": "Planteamiento",
+                      "register": "formal",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    },
+                    {
+                      "left": "L'entrée est gratuite pour les étudiants. En fin de compte, il faut prioriser.",
+                      "right": "Concesión",
+                      "register": "neutral",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    },
+                    {
+                      "left": "L'événement se termine à dix heures. En bref, c'est un sujet complexe.",
+                      "right": "Conclusión",
+                      "register": "informal",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "Cada intervención cumple una función comunicativa distinta.",
+                    "ruleRef": "gp-b2-reported-speech"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has identificado la función de cada intervención."
+                  }
+                },
+                {
+                  "type": "SemanticMatch",
+                  "id": "es-fr-b2-u13-l07-e05",
+                  "instructions": "Distingue el registro de cada intervención.",
+                  "pairs": [
+                    {
+                      "left": "Le programme comprend un concert et une exposition. Néanmoins, il y a aussi des avantages.",
+                      "right": "Formal",
+                      "register": "formal",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    },
+                    {
+                      "left": "L'entrée est gratuite pour les étudiants. En fin de compte, il faut prioriser.",
+                      "right": "Neutral",
+                      "register": "neutral",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    },
+                    {
+                      "left": "L'événement se termine à dix heures. En bref, c'est un sujet complexe.",
+                      "right": "Informal",
+                      "register": "informal",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "register",
+                    "explanation": "El registro cambia según el contexto y la relación con el interlocutor.",
+                    "ruleRef": "gp-b2-participle-clauses"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has distinguido el registro de cada intervención."
+                  }
+                },
+                {
+                  "type": "AudioOnlyPrompt",
+                  "id": "es-fr-b2-u13-l07-e06",
+                  "audioText": "L'entrée est gratuite pour les étudiants. En fin de compte, il faut prioriser.",
+                  "question": "¿Qué ha dicho el hablante?",
+                  "options": [
+                    "L'entrée est gratuite pour les étudiants. En fin de compte, il faut prioriser.",
+                    "Le programme comprend un concert et une exposition. Néanmoins, il y a aussi des avantages.",
+                    "L'événement se termine à dix heures. En bref, c'est un sujet complexe."
+                  ],
+                  "correctIndex": 0,
+                  "allowSlowPlayback": true,
+                  "feedbackOnError": {
+                    "type": "comprehension",
+                    "explanation": "El audio dice «L'entrée est gratuite pour les étudiants. En fin de compte, il faut prioriser.».",
+                    "ruleRef": "gp-b2-reported-speech"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has comprendido el mensaje del audio."
+                  }
+                },
+                {
+                  "type": "AudioOnlyPrompt",
+                  "id": "es-fr-b2-u13-l07-e07",
+                  "audioText": "L'événement se termine à dix heures. En bref, c'est un sujet complexe.",
+                  "question": "¿Cuál es la idea principal?",
+                  "options": [
+                    "L'événement se termine à dix heures. En bref, c'est un sujet complexe.",
+                    "Le programme comprend un concert et une exposition. Néanmoins, il y a aussi des avantages.",
+                    "L'entrée est gratuite pour les étudiants. En fin de compte, il faut prioriser."
+                  ],
+                  "correctIndex": 0,
+                  "allowSlowPlayback": false,
+                  "feedbackOnError": {
+                    "type": "comprehension",
+                    "explanation": "El audio dice «L'événement se termine à dix heures. En bref, c'est un sujet complexe.».",
+                    "ruleRef": "gp-b2-participle-clauses"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has identificado la idea principal."
+                  }
+                },
+                {
+                  "type": "ListenType",
+                  "id": "es-fr-b2-u13-l07-e08",
+                  "audioText": "L'événement se termine à dix heures. En bref, c'est un sujet complexe.",
+                  "transcription": "L'événement se termine à dix heures. En bref, c'est un sujet complexe.",
+                  "feedbackOnError": {
+                    "type": "spelling",
+                    "explanation": "Escribe exactamente «L'événement se termine à dix heures. En bref, c'est un sujet complexe.».",
+                    "ruleRef": "gp-b2-reported-speech"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La transcripción coincide con el audio."
+                  }
+                },
+                {
+                  "type": "SpeakRepeat",
+                  "id": "es-fr-b2-u13-l07-e09",
+                  "targetPhrase": "L'événement se termine à dix heures. En bref, c'est un sujet complexe.",
+                  "audioText": "L'événement se termine à dix heures. En bref, c'est un sujet complexe.",
+                  "feedbackOnError": {
+                    "type": "pronunciation",
+                    "explanation": "Repite «L'événement se termine à dix heures. En bref, c'est un sujet complexe.» con claridad.",
+                    "ruleRef": "gp-b2-reported-speech"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La frase se entiende y mantiene el ritmo."
+                  }
+                },
+                {
+                  "type": "FreeSpeakingPrompt",
+                  "id": "es-fr-b2-u13-l07-e10",
+                  "prompt": "Argumenta y matiza una opinión sobre un programa cultural.",
+                  "minTokens": 20,
+                  "conceptClusters": [
+                    [
+                      "programme"
+                    ],
+                    [
+                      "comprend"
+                    ],
+                    [
+                      "concert"
+                    ]
+                  ],
+                  "modelAnswer": "Le programme comprend un concert et une exposition. Néanmoins, il y a aussi des avantages. L'entrée est gratuite pour les étudiants. En fin de compte, il faut prioriser. L'événement se termine à dix heures. En bref, c'est un sujet complexe.",
+                  "selfAssessmentCriteria": [
+                    "¿La respuesta argumenta y responde a la tarea?",
+                    "¿Usa las dos estructuras gramaticales de la lección?",
+                    "¿Incluye una concesión o una matización?"
+                  ],
+                  "grammarRuleRefs": [
+                    "gp-b2-reported-speech",
+                    "gp-b2-participle-clauses"
+                  ],
+                  "timeLimitSeconds": 90,
+                  "minWpm": 70,
+                  "maxWpm": 160,
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "La respuesta modelo desarrolla una opinión con matices y una concesión.",
+                    "ruleRef": "gp-b2-reported-speech"
+                  }
+                }
+              ]
+            },
+            {
+              "id": "es-fr-b2-u13-l08",
+              "title": "Describir una tradición",
+              "cefrLevel": "B2",
+              "scenario": "Situación comunicativa avanzada sobre una tradición.",
+              "canDo": "Puedo argumentar y matizar sobre una tradición.",
+              "grammarPoints": [
+                {
+                  "id": "gp-b2-reported-speech",
+                  "label": "Reported speech",
+                  "description": "El estilo indirecto ajusta tiempos, pronombres y referencias."
+                },
+                {
+                  "id": "gp-b2-participle-clauses",
+                  "label": "Participle clauses",
+                  "description": "Las cláusulas de participio reducen y conectan ideas."
+                }
+              ],
+              "vocabFrequencyBand": "3000-5000",
+              "culturalNotes": [
+                {
+                  "idiom": "être dans le coup",
+                  "note": "Expresión para estar al tanto.",
+                  "translation": "estar al tanto"
+                }
+              ],
+              "microLesson": {
+                "title": "Describir una tradición",
+                "goals": [
+                  "Usar vocabulario avanzado de una tradición.",
+                  "Aplicar reported speech y participle clauses.",
+                  "Argumentar y matizar sobre una tradición."
+                ],
+                "sections": [
+                  {
+                    "heading": "Lengua en contexto",
+                    "body": "Reported speech: El estilo indirecto ajusta tiempos, pronombres y referencias. Participle clauses: Las cláusulas de participio reducen y conectan ideas.",
+                    "examples": [
+                      {
+                        "source": "Cada primavera celebramos la llegada del buen tiempo. A fin de cuentas, hay que priorizar.",
+                        "target": "Chaque printemps, nous célébrons l'arrivée du beau temps. En fin de compte, il faut prioriser."
+                      },
+                      {
+                        "source": "Las familias se reúnen y comparten comida. En resumen, es un tema complejo.",
+                        "target": "Les familles se réunissent et partagent de la nourriture. En bref, c'est un sujet complexe."
+                      }
+                    ]
+                  }
+                ]
+              },
+              "glossary": [
+                {
+                  "term": "Chaque printemps, nous célébrons l'arrivée du beau temps. En fin de compte, il faut prioriser.",
+                  "translations": [
+                    "Cada primavera celebramos la llegada del buen tiempo. A fin de cuentas, hay que priorizar."
+                  ]
+                },
+                {
+                  "term": "Les familles se réunissent et partagent de la nourriture. En bref, c'est un sujet complexe.",
+                  "translations": [
+                    "Las familias se reúnen y comparten comida. En resumen, es un tema complejo."
+                  ]
+                },
+                {
+                  "term": "C'est une tradition transmise de génération en génération. Cependant, il convient de nuancer.",
+                  "translations": [
+                    "Es una tradición que pasa de generación en generación. Sin embargo, conviene matizarlo."
+                  ]
+                }
+              ],
+              "exercises": [
+                {
+                  "type": "MultipleChoice",
+                  "id": "es-fr-b2-u13-l08-e01",
+                  "question": "¿Cuál es la opción correcta para «Cada primavera celebramos la llegada del buen tiempo. A fin de cuentas, hay que priorizar.»?",
+                  "options": [
+                    "Chaque printemps, nous célébrons l'arrivée du beau temps. En fin de compte, il faut prioriser.",
+                    "Les familles se réunissent et partagent de la nourriture. En bref, c'est un sujet complexe.",
+                    "C'est une tradition transmise de génération en génération. Cependant, il convient de nuancer."
+                  ],
+                  "correctIndex": 0,
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "«Cada primavera celebramos la llegada del buen tiempo. A fin de cuentas, hay que priorizar.» se dice «Chaque printemps, nous célébrons l'arrivée du beau temps. En fin de compte, il faut prioriser.».",
+                    "ruleRef": "gp-b2-reported-speech"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has elegido la traducción correcta."
+                  }
+                },
+                {
+                  "type": "OrderWords",
+                  "id": "es-fr-b2-u13-l08-e02",
+                  "tokens": [
+                    "printemps",
+                    "nous",
+                    "célébrons",
+                    "l'arrivée",
+                    "du",
+                    "beau",
+                    "temps",
+                    "En",
+                    "fin",
+                    "de",
+                    "compte",
+                    "il",
+                    "faut",
+                    "prioriser",
+                    "Chaque"
+                  ],
+                  "answerTokens": [
+                    "Chaque",
+                    "printemps",
+                    "nous",
+                    "célébrons",
+                    "l'arrivée",
+                    "du",
+                    "beau",
+                    "temps",
+                    "En",
+                    "fin",
+                    "de",
+                    "compte",
+                    "il",
+                    "faut",
+                    "prioriser"
+                  ],
+                  "sourcePhrase": "Cada primavera celebramos la llegada del buen tiempo. A fin de cuentas, hay que priorizar.",
+                  "feedbackOnError": {
+                    "type": "word_order",
+                    "explanation": "El orden correcto es «Chaque printemps nous célébrons l'arrivée du beau temps En fin de compte il faut prioriser».",
+                    "ruleRef": "gp-b2-reported-speech"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "El orden produce una frase natural."
+                  }
+                },
+                {
+                  "type": "ClozeDragDrop",
+                  "id": "es-fr-b2-u13-l08-e03",
+                  "passage": "{{b1}} {{b2}}, nous célébrons l'arrivée du beau temps.",
+                  "blanks": [
+                    {
+                      "id": "b1",
+                      "answer": "Chaque",
+                      "options": [
+                        "Chaque",
+                        "célébrons",
+                        "l'arrivée"
+                      ]
+                    },
+                    {
+                      "id": "b2",
+                      "answer": "printemps",
+                      "options": [
+                        "printemps",
+                        "célébrons",
+                        "l'arrivée"
+                      ]
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "Las dos formas deben encajar con el contexto de la frase.",
+                    "ruleRef": "gp-b2-participle-clauses"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Los dos huecos encajan con la situación."
+                  }
+                },
+                {
+                  "type": "SemanticMatch",
+                  "id": "es-fr-b2-u13-l08-e04",
+                  "instructions": "Clasifica la función comunicativa de cada intervención.",
+                  "pairs": [
+                    {
+                      "left": "Chaque printemps, nous célébrons l'arrivée du beau temps. En fin de compte, il faut prioriser.",
+                      "right": "Planteamiento",
+                      "register": "formal",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    },
+                    {
+                      "left": "Les familles se réunissent et partagent de la nourriture. En bref, c'est un sujet complexe.",
+                      "right": "Concesión",
+                      "register": "neutral",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    },
+                    {
+                      "left": "C'est une tradition transmise de génération en génération. Cependant, il convient de nuancer.",
+                      "right": "Conclusión",
+                      "register": "informal",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "Cada intervención cumple una función comunicativa distinta.",
+                    "ruleRef": "gp-b2-reported-speech"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has identificado la función de cada intervención."
+                  }
+                },
+                {
+                  "type": "SemanticMatch",
+                  "id": "es-fr-b2-u13-l08-e05",
+                  "instructions": "Distingue el registro de cada intervención.",
+                  "pairs": [
+                    {
+                      "left": "Chaque printemps, nous célébrons l'arrivée du beau temps. En fin de compte, il faut prioriser.",
+                      "right": "Formal",
+                      "register": "formal",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    },
+                    {
+                      "left": "Les familles se réunissent et partagent de la nourriture. En bref, c'est un sujet complexe.",
+                      "right": "Neutral",
+                      "register": "neutral",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    },
+                    {
+                      "left": "C'est une tradition transmise de génération en génération. Cependant, il convient de nuancer.",
+                      "right": "Informal",
+                      "register": "informal",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "register",
+                    "explanation": "El registro cambia según el contexto y la relación con el interlocutor.",
+                    "ruleRef": "gp-b2-participle-clauses"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has distinguido el registro de cada intervención."
+                  }
+                },
+                {
+                  "type": "AudioOnlyPrompt",
+                  "id": "es-fr-b2-u13-l08-e06",
+                  "audioText": "Les familles se réunissent et partagent de la nourriture. En bref, c'est un sujet complexe.",
+                  "question": "¿Qué ha dicho el hablante?",
+                  "options": [
+                    "Les familles se réunissent et partagent de la nourriture. En bref, c'est un sujet complexe.",
+                    "Chaque printemps, nous célébrons l'arrivée du beau temps. En fin de compte, il faut prioriser.",
+                    "C'est une tradition transmise de génération en génération. Cependant, il convient de nuancer."
+                  ],
+                  "correctIndex": 0,
+                  "allowSlowPlayback": true,
+                  "feedbackOnError": {
+                    "type": "comprehension",
+                    "explanation": "El audio dice «Les familles se réunissent et partagent de la nourriture. En bref, c'est un sujet complexe.».",
+                    "ruleRef": "gp-b2-reported-speech"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has comprendido el mensaje del audio."
+                  }
+                },
+                {
+                  "type": "AudioOnlyPrompt",
+                  "id": "es-fr-b2-u13-l08-e07",
+                  "audioText": "C'est une tradition transmise de génération en génération. Cependant, il convient de nuancer.",
+                  "question": "¿Cuál es la idea principal?",
+                  "options": [
+                    "C'est une tradition transmise de génération en génération. Cependant, il convient de nuancer.",
+                    "Chaque printemps, nous célébrons l'arrivée du beau temps. En fin de compte, il faut prioriser.",
+                    "Les familles se réunissent et partagent de la nourriture. En bref, c'est un sujet complexe."
+                  ],
+                  "correctIndex": 0,
+                  "allowSlowPlayback": false,
+                  "feedbackOnError": {
+                    "type": "comprehension",
+                    "explanation": "El audio dice «C'est une tradition transmise de génération en génération. Cependant, il convient de nuancer.».",
+                    "ruleRef": "gp-b2-participle-clauses"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has identificado la idea principal."
+                  }
+                },
+                {
+                  "type": "ListenType",
+                  "id": "es-fr-b2-u13-l08-e08",
+                  "audioText": "C'est une tradition transmise de génération en génération. Cependant, il convient de nuancer.",
+                  "transcription": "C'est une tradition transmise de génération en génération. Cependant, il convient de nuancer.",
+                  "feedbackOnError": {
+                    "type": "spelling",
+                    "explanation": "Escribe exactamente «C'est une tradition transmise de génération en génération. Cependant, il convient de nuancer.».",
+                    "ruleRef": "gp-b2-reported-speech"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La transcripción coincide con el audio."
+                  }
+                },
+                {
+                  "type": "SpeakRepeat",
+                  "id": "es-fr-b2-u13-l08-e09",
+                  "targetPhrase": "C'est une tradition transmise de génération en génération. Cependant, il convient de nuancer.",
+                  "audioText": "C'est une tradition transmise de génération en génération. Cependant, il convient de nuancer.",
+                  "feedbackOnError": {
+                    "type": "pronunciation",
+                    "explanation": "Repite «C'est une tradition transmise de génération en génération. Cependant, il convient de nuancer.» con claridad.",
+                    "ruleRef": "gp-b2-reported-speech"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La frase se entiende y mantiene el ritmo."
+                  }
+                },
+                {
+                  "type": "FreeSpeakingPrompt",
+                  "id": "es-fr-b2-u13-l08-e10",
+                  "prompt": "Argumenta y matiza una opinión sobre una tradición.",
+                  "minTokens": 20,
+                  "conceptClusters": [
+                    [
+                      "Chaque"
+                    ],
+                    [
+                      "printemps"
+                    ],
+                    [
+                      "célébrons"
+                    ]
+                  ],
+                  "modelAnswer": "Chaque printemps, nous célébrons l'arrivée du beau temps. En fin de compte, il faut prioriser. Les familles se réunissent et partagent de la nourriture. En bref, c'est un sujet complexe. C'est une tradition transmise de génération en génération. Cependant, il convient de nuancer.",
+                  "selfAssessmentCriteria": [
+                    "¿La respuesta argumenta y responde a la tarea?",
+                    "¿Usa las dos estructuras gramaticales de la lección?",
+                    "¿Incluye una concesión o una matización?"
+                  ],
+                  "grammarRuleRefs": [
+                    "gp-b2-reported-speech",
+                    "gp-b2-participle-clauses"
+                  ],
+                  "timeLimitSeconds": 90,
+                  "minWpm": 70,
+                  "maxWpm": 160,
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "La respuesta modelo desarrolla una opinión con matices y una concesión.",
+                    "ruleRef": "gp-b2-reported-speech"
+                  }
+                }
+              ]
+            },
+            {
+              "id": "es-fr-b2-u13-l09",
+              "title": "Integración: organizar una fiesta",
+              "cefrLevel": "B2",
+              "scenario": "Situación comunicativa avanzada sobre organizar una fiesta.",
+              "canDo": "Puedo argumentar y matizar sobre organizar una fiesta.",
+              "grammarPoints": [
+                {
+                  "id": "gp-b2-reported-speech",
+                  "label": "Reported speech",
+                  "description": "El estilo indirecto ajusta tiempos, pronombres y referencias."
+                },
+                {
+                  "id": "gp-b2-participle-clauses",
+                  "label": "Participle clauses",
+                  "description": "Las cláusulas de participio reducen y conectan ideas."
+                }
+              ],
+              "vocabFrequencyBand": "3000-5000",
+              "culturalNotes": [
+                {
+                  "idiom": "se mettre au travail",
+                  "note": "Expresión para empezar a trabajar.",
+                  "translation": "ponerse a trabajar"
+                }
+              ],
+              "microLesson": {
+                "title": "Integración: organizar una fiesta",
+                "goals": [
+                  "Usar vocabulario avanzado de organizar una fiesta.",
+                  "Aplicar reported speech y participle clauses.",
+                  "Argumentar y matizar sobre organizar una fiesta."
+                ],
+                "sections": [
+                  {
+                    "heading": "Lengua en contexto",
+                    "body": "Reported speech: El estilo indirecto ajusta tiempos, pronombres y referencias. Participle clauses: Las cláusulas de participio reducen y conectan ideas.",
+                    "examples": [
+                      {
+                        "source": "Voy a organizar una fiesta sorpresa. En resumen, es un tema complejo.",
+                        "target": "Je vais organiser une fête surprise. En bref, c'est un sujet complexe."
+                      },
+                      {
+                        "source": "Necesito comprar bebidas y decoración. Sin embargo, conviene matizarlo.",
+                        "target": "J'ai besoin d'acheter des boissons et des décorations. Cependant, il convient de nuancer."
+                      }
+                    ]
+                  }
+                ]
+              },
+              "glossary": [
+                {
+                  "term": "Je vais organiser une fête surprise. En bref, c'est un sujet complexe.",
+                  "translations": [
+                    "Voy a organizar una fiesta sorpresa. En resumen, es un tema complejo."
+                  ]
+                },
+                {
+                  "term": "J'ai besoin d'acheter des boissons et des décorations. Cependant, il convient de nuancer.",
+                  "translations": [
+                    "Necesito comprar bebidas y decoración. Sin embargo, conviene matizarlo."
+                  ]
+                },
+                {
+                  "term": "Je vais aussi préparer une playlist. Cela dit, cela dépend du contexte.",
+                  "translations": [
+                    "También voy a preparar una lista de música. Dicho esto, depende del contexto."
+                  ]
+                }
+              ],
+              "exercises": [
+                {
+                  "type": "MultipleChoice",
+                  "id": "es-fr-b2-u13-l09-e01",
+                  "question": "¿Cuál es la opción correcta para «Voy a organizar una fiesta sorpresa. En resumen, es un tema complejo.»?",
+                  "options": [
+                    "Je vais organiser une fête surprise. En bref, c'est un sujet complexe.",
+                    "J'ai besoin d'acheter des boissons et des décorations. Cependant, il convient de nuancer.",
+                    "Je vais aussi préparer une playlist. Cela dit, cela dépend du contexte."
+                  ],
+                  "correctIndex": 0,
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "«Voy a organizar una fiesta sorpresa. En resumen, es un tema complejo.» se dice «Je vais organiser une fête surprise. En bref, c'est un sujet complexe.».",
+                    "ruleRef": "gp-b2-reported-speech"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has elegido la traducción correcta."
+                  }
+                },
+                {
+                  "type": "OrderWords",
+                  "id": "es-fr-b2-u13-l09-e02",
+                  "tokens": [
+                    "vais",
+                    "organiser",
+                    "une",
+                    "fête",
+                    "surprise",
+                    "En",
+                    "bref",
+                    "c'est",
+                    "un",
+                    "sujet",
+                    "complexe",
+                    "Je"
+                  ],
+                  "answerTokens": [
+                    "Je",
+                    "vais",
+                    "organiser",
+                    "une",
+                    "fête",
+                    "surprise",
+                    "En",
+                    "bref",
+                    "c'est",
+                    "un",
+                    "sujet",
+                    "complexe"
+                  ],
+                  "sourcePhrase": "Voy a organizar una fiesta sorpresa. En resumen, es un tema complejo.",
+                  "feedbackOnError": {
+                    "type": "word_order",
+                    "explanation": "El orden correcto es «Je vais organiser une fête surprise En bref c'est un sujet complexe».",
+                    "ruleRef": "gp-b2-reported-speech"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "El orden produce una frase natural."
+                  }
+                },
+                {
+                  "type": "ClozeDragDrop",
+                  "id": "es-fr-b2-u13-l09-e03",
+                  "passage": "Je {{b1}} {{b2}} une fête surprise.",
+                  "blanks": [
+                    {
+                      "id": "b1",
+                      "answer": "vais",
+                      "options": [
+                        "vais",
+                        "fête",
+                        "surprise"
+                      ]
+                    },
+                    {
+                      "id": "b2",
+                      "answer": "organiser",
+                      "options": [
+                        "organiser",
+                        "fête",
+                        "surprise"
+                      ]
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "Las dos formas deben encajar con el contexto de la frase.",
+                    "ruleRef": "gp-b2-participle-clauses"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Los dos huecos encajan con la situación."
+                  }
+                },
+                {
+                  "type": "SemanticMatch",
+                  "id": "es-fr-b2-u13-l09-e04",
+                  "instructions": "Clasifica la función comunicativa de cada intervención.",
+                  "pairs": [
+                    {
+                      "left": "Je vais organiser une fête surprise. En bref, c'est un sujet complexe.",
+                      "right": "Planteamiento",
+                      "register": "formal",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    },
+                    {
+                      "left": "J'ai besoin d'acheter des boissons et des décorations. Cependant, il convient de nuancer.",
+                      "right": "Concesión",
+                      "register": "neutral",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    },
+                    {
+                      "left": "Je vais aussi préparer une playlist. Cela dit, cela dépend du contexte.",
+                      "right": "Conclusión",
+                      "register": "informal",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "Cada intervención cumple una función comunicativa distinta.",
+                    "ruleRef": "gp-b2-reported-speech"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has identificado la función de cada intervención."
+                  }
+                },
+                {
+                  "type": "SemanticMatch",
+                  "id": "es-fr-b2-u13-l09-e05",
+                  "instructions": "Distingue el registro de cada intervención.",
+                  "pairs": [
+                    {
+                      "left": "Je vais organiser une fête surprise. En bref, c'est un sujet complexe.",
+                      "right": "Formal",
+                      "register": "formal",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    },
+                    {
+                      "left": "J'ai besoin d'acheter des boissons et des décorations. Cependant, il convient de nuancer.",
+                      "right": "Neutral",
+                      "register": "neutral",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    },
+                    {
+                      "left": "Je vais aussi préparer une playlist. Cela dit, cela dépend du contexte.",
+                      "right": "Informal",
+                      "register": "informal",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "register",
+                    "explanation": "El registro cambia según el contexto y la relación con el interlocutor.",
+                    "ruleRef": "gp-b2-participle-clauses"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has distinguido el registro de cada intervención."
+                  }
+                },
+                {
+                  "type": "AudioOnlyPrompt",
+                  "id": "es-fr-b2-u13-l09-e06",
+                  "audioText": "J'ai besoin d'acheter des boissons et des décorations. Cependant, il convient de nuancer.",
+                  "question": "¿Qué ha dicho el hablante?",
+                  "options": [
+                    "J'ai besoin d'acheter des boissons et des décorations. Cependant, il convient de nuancer.",
+                    "Je vais organiser une fête surprise. En bref, c'est un sujet complexe.",
+                    "Je vais aussi préparer une playlist. Cela dit, cela dépend du contexte."
+                  ],
+                  "correctIndex": 0,
+                  "allowSlowPlayback": true,
+                  "feedbackOnError": {
+                    "type": "comprehension",
+                    "explanation": "El audio dice «J'ai besoin d'acheter des boissons et des décorations. Cependant, il convient de nuancer.».",
+                    "ruleRef": "gp-b2-reported-speech"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has comprendido el mensaje del audio."
+                  }
+                },
+                {
+                  "type": "AudioOnlyPrompt",
+                  "id": "es-fr-b2-u13-l09-e07",
+                  "audioText": "Je vais aussi préparer une playlist. Cela dit, cela dépend du contexte.",
+                  "question": "¿Cuál es la idea principal?",
+                  "options": [
+                    "Je vais aussi préparer une playlist. Cela dit, cela dépend du contexte.",
+                    "Je vais organiser une fête surprise. En bref, c'est un sujet complexe.",
+                    "J'ai besoin d'acheter des boissons et des décorations. Cependant, il convient de nuancer."
+                  ],
+                  "correctIndex": 0,
+                  "allowSlowPlayback": false,
+                  "feedbackOnError": {
+                    "type": "comprehension",
+                    "explanation": "El audio dice «Je vais aussi préparer une playlist. Cela dit, cela dépend du contexte.».",
+                    "ruleRef": "gp-b2-participle-clauses"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has identificado la idea principal."
+                  }
+                },
+                {
+                  "type": "ListenType",
+                  "id": "es-fr-b2-u13-l09-e08",
+                  "audioText": "Je vais aussi préparer une playlist. Cela dit, cela dépend du contexte.",
+                  "transcription": "Je vais aussi préparer une playlist. Cela dit, cela dépend du contexte.",
+                  "feedbackOnError": {
+                    "type": "spelling",
+                    "explanation": "Escribe exactamente «Je vais aussi préparer une playlist. Cela dit, cela dépend du contexte.».",
+                    "ruleRef": "gp-b2-reported-speech"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La transcripción coincide con el audio."
+                  }
+                },
+                {
+                  "type": "SpeakRepeat",
+                  "id": "es-fr-b2-u13-l09-e09",
+                  "targetPhrase": "Je vais aussi préparer une playlist. Cela dit, cela dépend du contexte.",
+                  "audioText": "Je vais aussi préparer une playlist. Cela dit, cela dépend du contexte.",
+                  "feedbackOnError": {
+                    "type": "pronunciation",
+                    "explanation": "Repite «Je vais aussi préparer une playlist. Cela dit, cela dépend du contexte.» con claridad.",
+                    "ruleRef": "gp-b2-reported-speech"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La frase se entiende y mantiene el ritmo."
+                  }
+                },
+                {
+                  "type": "FreeSpeakingPrompt",
+                  "id": "es-fr-b2-u13-l09-e10",
+                  "prompt": "Argumenta y matiza una opinión sobre organizar una fiesta.",
+                  "minTokens": 20,
+                  "conceptClusters": [
+                    [
+                      "vais"
+                    ],
+                    [
+                      "organiser"
+                    ],
+                    [
+                      "fête"
+                    ]
+                  ],
+                  "modelAnswer": "Je vais organiser une fête surprise. En bref, c'est un sujet complexe. J'ai besoin d'acheter des boissons et des décorations. Cependant, il convient de nuancer. Je vais aussi préparer une playlist. Cela dit, cela dépend du contexte.",
+                  "selfAssessmentCriteria": [
+                    "¿La respuesta argumenta y responde a la tarea?",
+                    "¿Usa las dos estructuras gramaticales de la lección?",
+                    "¿Incluye una concesión o una matización?"
+                  ],
+                  "grammarRuleRefs": [
+                    "gp-b2-reported-speech",
+                    "gp-b2-participle-clauses"
+                  ],
+                  "timeLimitSeconds": 90,
+                  "minWpm": 70,
+                  "maxWpm": 160,
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "La respuesta modelo desarrolla una opinión con matices y una concesión.",
+                    "ruleRef": "gp-b2-reported-speech"
+                  }
+                }
+              ]
+            },
+            {
+              "id": "es-fr-b2-u13-l10",
+              "title": "Evaluación: mi celebración",
+              "cefrLevel": "B2",
+              "scenario": "Situación comunicativa avanzada sobre mi celebración favorita.",
+              "canDo": "Puedo argumentar y matizar sobre mi celebración favorita.",
+              "grammarPoints": [
+                {
+                  "id": "gp-b2-reported-speech",
+                  "label": "Reported speech",
+                  "description": "El estilo indirecto ajusta tiempos, pronombres y referencias."
+                },
+                {
+                  "id": "gp-b2-participle-clauses",
+                  "label": "Participle clauses",
+                  "description": "Las cláusulas de participio reducen y conectan ideas."
+                }
+              ],
+              "vocabFrequencyBand": "3000-5000",
+              "culturalNotes": [
+                {
+                  "idiom": "fermer les yeux",
+                  "note": "Expresión para ignorar algo a propósito.",
+                  "translation": "hacer la vista gorda"
+                }
+              ],
+              "microLesson": {
+                "title": "Evaluación: mi celebración",
+                "goals": [
+                  "Usar vocabulario avanzado de mi celebración favorita.",
+                  "Aplicar reported speech y participle clauses.",
+                  "Argumentar y matizar sobre mi celebración favorita."
+                ],
+                "sections": [
+                  {
+                    "heading": "Lengua en contexto",
+                    "body": "Reported speech: El estilo indirecto ajusta tiempos, pronombres y referencias. Participle clauses: Las cláusulas de participio reducen y conectan ideas.",
+                    "examples": [
+                      {
+                        "source": "Mi celebración favorita es la Nochevieja. Sin embargo, conviene matizarlo.",
+                        "target": "Ma fête préférée est la Saint-Sylvestre. Cependant, il convient de nuancer."
+                      },
+                      {
+                        "source": "Cenamos en familia y vemos los fuegos artificiales. Dicho esto, depende del contexto.",
+                        "target": "Nous dînons en famille et regardons les feux d'artifice. Cela dit, cela dépend du contexte."
+                      }
+                    ]
+                  }
+                ]
+              },
+              "glossary": [
+                {
+                  "term": "Ma fête préférée est la Saint-Sylvestre. Cependant, il convient de nuancer.",
+                  "translations": [
+                    "Mi celebración favorita es la Nochevieja. Sin embargo, conviene matizarlo."
+                  ]
+                },
+                {
+                  "term": "Nous dînons en famille et regardons les feux d'artifice. Cela dit, cela dépend du contexte.",
+                  "translations": [
+                    "Cenamos en familia y vemos los fuegos artificiales. Dicho esto, depende del contexto."
+                  ]
+                },
+                {
+                  "term": "Nous portons toujours un toast à la nouvelle année. En d'autres termes, cela vaut la peine d'être considéré.",
+                  "translations": [
+                    "Siempre brindamos por el nuevo año. En otras palabras, merece la pena considerarlo."
+                  ]
+                }
+              ],
+              "exercises": [
+                {
+                  "type": "MultipleChoice",
+                  "id": "es-fr-b2-u13-l10-e01",
+                  "question": "¿Cuál es la opción correcta para «Mi celebración favorita es la Nochevieja. Sin embargo, conviene matizarlo.»?",
+                  "options": [
+                    "Ma fête préférée est la Saint-Sylvestre. Cependant, il convient de nuancer.",
+                    "Nous dînons en famille et regardons les feux d'artifice. Cela dit, cela dépend du contexte.",
+                    "Nous portons toujours un toast à la nouvelle année. En d'autres termes, cela vaut la peine d'être considéré."
+                  ],
+                  "correctIndex": 0,
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "«Mi celebración favorita es la Nochevieja. Sin embargo, conviene matizarlo.» se dice «Ma fête préférée est la Saint-Sylvestre. Cependant, il convient de nuancer.».",
+                    "ruleRef": "gp-b2-reported-speech"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has elegido la traducción correcta."
+                  }
+                },
+                {
+                  "type": "OrderWords",
+                  "id": "es-fr-b2-u13-l10-e02",
+                  "tokens": [
+                    "fête",
+                    "préférée",
+                    "est",
+                    "la",
+                    "Saint",
+                    "Sylvestre",
+                    "Cependant",
+                    "il",
+                    "convient",
+                    "de",
+                    "nuancer",
+                    "Ma"
+                  ],
+                  "answerTokens": [
+                    "Ma",
+                    "fête",
+                    "préférée",
+                    "est",
+                    "la",
+                    "Saint",
+                    "Sylvestre",
+                    "Cependant",
+                    "il",
+                    "convient",
+                    "de",
+                    "nuancer"
+                  ],
+                  "sourcePhrase": "Mi celebración favorita es la Nochevieja. Sin embargo, conviene matizarlo.",
+                  "feedbackOnError": {
+                    "type": "word_order",
+                    "explanation": "El orden correcto es «Ma fête préférée est la Saint Sylvestre Cependant il convient de nuancer».",
+                    "ruleRef": "gp-b2-reported-speech"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "El orden produce una frase natural."
+                  }
+                },
+                {
+                  "type": "ClozeDragDrop",
+                  "id": "es-fr-b2-u13-l10-e03",
+                  "passage": "Ma {{b1}} {{b2}} est la Saint-Sylvestre.",
+                  "blanks": [
+                    {
+                      "id": "b1",
+                      "answer": "fête",
+                      "options": [
+                        "fête",
+                        "Saint",
+                        "Sylvestre"
+                      ]
+                    },
+                    {
+                      "id": "b2",
+                      "answer": "préférée",
+                      "options": [
+                        "préférée",
+                        "Saint",
+                        "Sylvestre"
+                      ]
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "Las dos formas deben encajar con el contexto de la frase.",
+                    "ruleRef": "gp-b2-participle-clauses"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Los dos huecos encajan con la situación."
+                  }
+                },
+                {
+                  "type": "SemanticMatch",
+                  "id": "es-fr-b2-u13-l10-e04",
+                  "instructions": "Clasifica la función comunicativa de cada intervención.",
+                  "pairs": [
+                    {
+                      "left": "Ma fête préférée est la Saint-Sylvestre. Cependant, il convient de nuancer.",
+                      "right": "Planteamiento",
+                      "register": "formal",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    },
+                    {
+                      "left": "Nous dînons en famille et regardons les feux d'artifice. Cela dit, cela dépend du contexte.",
+                      "right": "Concesión",
+                      "register": "neutral",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    },
+                    {
+                      "left": "Nous portons toujours un toast à la nouvelle année. En d'autres termes, cela vaut la peine d'être considéré.",
+                      "right": "Conclusión",
+                      "register": "informal",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "Cada intervención cumple una función comunicativa distinta.",
+                    "ruleRef": "gp-b2-reported-speech"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has identificado la función de cada intervención."
+                  }
+                },
+                {
+                  "type": "SemanticMatch",
+                  "id": "es-fr-b2-u13-l10-e05",
+                  "instructions": "Distingue el registro de cada intervención.",
+                  "pairs": [
+                    {
+                      "left": "Ma fête préférée est la Saint-Sylvestre. Cependant, il convient de nuancer.",
+                      "right": "Formal",
+                      "register": "formal",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    },
+                    {
+                      "left": "Nous dînons en famille et regardons les feux d'artifice. Cela dit, cela dépend du contexte.",
+                      "right": "Neutral",
+                      "register": "neutral",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    },
+                    {
+                      "left": "Nous portons toujours un toast à la nouvelle année. En d'autres termes, cela vaut la peine d'être considéré.",
+                      "right": "Informal",
+                      "register": "informal",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "register",
+                    "explanation": "El registro cambia según el contexto y la relación con el interlocutor.",
+                    "ruleRef": "gp-b2-participle-clauses"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has distinguido el registro de cada intervención."
+                  }
+                },
+                {
+                  "type": "AudioOnlyPrompt",
+                  "id": "es-fr-b2-u13-l10-e06",
+                  "audioText": "Nous dînons en famille et regardons les feux d'artifice. Cela dit, cela dépend du contexte.",
+                  "question": "¿Qué ha dicho el hablante?",
+                  "options": [
+                    "Nous dînons en famille et regardons les feux d'artifice. Cela dit, cela dépend du contexte.",
+                    "Ma fête préférée est la Saint-Sylvestre. Cependant, il convient de nuancer.",
+                    "Nous portons toujours un toast à la nouvelle année. En d'autres termes, cela vaut la peine d'être considéré."
+                  ],
+                  "correctIndex": 0,
+                  "allowSlowPlayback": true,
+                  "feedbackOnError": {
+                    "type": "comprehension",
+                    "explanation": "El audio dice «Nous dînons en famille et regardons les feux d'artifice. Cela dit, cela dépend du contexte.».",
+                    "ruleRef": "gp-b2-reported-speech"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has comprendido el mensaje del audio."
+                  }
+                },
+                {
+                  "type": "AudioOnlyPrompt",
+                  "id": "es-fr-b2-u13-l10-e07",
+                  "audioText": "Nous portons toujours un toast à la nouvelle année. En d'autres termes, cela vaut la peine d'être considéré.",
+                  "question": "¿Cuál es la idea principal?",
+                  "options": [
+                    "Nous portons toujours un toast à la nouvelle année. En d'autres termes, cela vaut la peine d'être considéré.",
+                    "Ma fête préférée est la Saint-Sylvestre. Cependant, il convient de nuancer.",
+                    "Nous dînons en famille et regardons les feux d'artifice. Cela dit, cela dépend du contexte."
+                  ],
+                  "correctIndex": 0,
+                  "allowSlowPlayback": false,
+                  "feedbackOnError": {
+                    "type": "comprehension",
+                    "explanation": "El audio dice «Nous portons toujours un toast à la nouvelle année. En d'autres termes, cela vaut la peine d'être considéré.».",
+                    "ruleRef": "gp-b2-participle-clauses"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has identificado la idea principal."
+                  }
+                },
+                {
+                  "type": "ListenType",
+                  "id": "es-fr-b2-u13-l10-e08",
+                  "audioText": "Nous portons toujours un toast à la nouvelle année. En d'autres termes, cela vaut la peine d'être considéré.",
+                  "transcription": "Nous portons toujours un toast à la nouvelle année. En d'autres termes, cela vaut la peine d'être considéré.",
+                  "feedbackOnError": {
+                    "type": "spelling",
+                    "explanation": "Escribe exactamente «Nous portons toujours un toast à la nouvelle année. En d'autres termes, cela vaut la peine d'être considéré.».",
+                    "ruleRef": "gp-b2-reported-speech"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La transcripción coincide con el audio."
+                  }
+                },
+                {
+                  "type": "SpeakRepeat",
+                  "id": "es-fr-b2-u13-l10-e09",
+                  "targetPhrase": "Nous portons toujours un toast à la nouvelle année. En d'autres termes, cela vaut la peine d'être considéré.",
+                  "audioText": "Nous portons toujours un toast à la nouvelle année. En d'autres termes, cela vaut la peine d'être considéré.",
+                  "feedbackOnError": {
+                    "type": "pronunciation",
+                    "explanation": "Repite «Nous portons toujours un toast à la nouvelle année. En d'autres termes, cela vaut la peine d'être considéré.» con claridad.",
+                    "ruleRef": "gp-b2-reported-speech"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La frase se entiende y mantiene el ritmo."
+                  }
+                },
+                {
+                  "type": "FreeSpeakingPrompt",
+                  "id": "es-fr-b2-u13-l10-e10",
+                  "prompt": "Argumenta y matiza una opinión sobre mi celebración favorita.",
+                  "minTokens": 20,
+                  "conceptClusters": [
+                    [
+                      "fête"
+                    ],
+                    [
+                      "préférée"
+                    ],
+                    [
+                      "Saint"
+                    ]
+                  ],
+                  "modelAnswer": "Ma fête préférée est la Saint-Sylvestre. Cependant, il convient de nuancer. Nous dînons en famille et regardons les feux d'artifice. Cela dit, cela dépend du contexte. Nous portons toujours un toast à la nouvelle année. En d'autres termes, cela vaut la peine d'être considéré.",
+                  "selfAssessmentCriteria": [
+                    "¿La respuesta argumenta y responde a la tarea?",
+                    "¿Usa las dos estructuras gramaticales de la lección?",
+                    "¿Incluye una concesión o una matización?"
+                  ],
+                  "grammarRuleRefs": [
+                    "gp-b2-reported-speech",
+                    "gp-b2-participle-clauses"
+                  ],
+                  "timeLimitSeconds": 90,
+                  "minWpm": 70,
+                  "maxWpm": 160,
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "La respuesta modelo desarrolla una opinión con matices y una concesión.",
+                    "ruleRef": "gp-b2-reported-speech"
+                  }
+                }
+              ]
+            }
+          ]
         }
       ]
     },
