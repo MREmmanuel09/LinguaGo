@@ -56,9 +56,9 @@ Archivos: `LinguaTokens.kt`, `LinguaColors.kt`, `LinguaExtendedColors.kt`,
    nuevos (tan, terracota, sheet cálido, tintas AA).
 2. Modo oscuro derivado (valores propuestos en R7, pero compilar desde R1 con
    mapping provisional y tests de contraste).
-3. Tipografía Manrope empaquetada (`res/font/manrope_variable.ttf`, OFL) con
-   fallback Roboto; escalas del prototipo: título 32/40, título de ejercicio
-   30/36, cuerpo 16/24.
+3. Tipografía: **Nunito se mantiene** (ya coincide con el prototipo). Solo se
+   ajustan dos escalas: `headlineMedium` 30/38 (título de ejercicio) y
+   `bodyLarge` 16/24.
 4. Radios y sombras: píldora 999, tarjeta 16, sheet 24; sombra 3D marrón para
    chips/botones (`TAN_SHADOW`).
 5. Actualizar los tests de identidad de color de `core-ui` (JVM) para los hex

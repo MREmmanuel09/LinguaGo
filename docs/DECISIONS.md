@@ -2313,12 +2313,16 @@ tocan: FSRS, Room y el progreso intocable se mantienen; la nueva métrica
    Tokens nuevos: `TAN_HEX 0xFFE4D3B4`, `TAN_EDGE_HEX 0xFFC9B58C`,
    `TAN_SHADOW_HEX 0xFFB99F76`, `TERRACOTTA_HEX 0xFFC96A4A`,
    `SHEET_WARM_HEX 0xFFF6DFC8`, `SHEET_WARM_SURFACE_HEX 0xFFEBD5B5`,
-   `SHEET_TITLE_INK_HEX 0xFFA6552F`, y tintas AA: `TEAL_INK 0xFFF2F7F5`,
-   `SAGE_INK 0xFF2F4A33`, `CORAL_INK 0xFFFDF3EF`, `AMBER_INK 0xFF5A3E08`.
+   `SHEET_TITLE_INK_HEX 0xFF8F4526` (ajustada a AA sobre `SHEET_WARM`),
+   `CORAL_STRONG_HEX 0xFFC25A3F` (solo texto grande/negrita) y tintas AA:
+   `TEAL_INK 0xFFF2F7F5`, `SAGE_INK 0xFF2F4A33`, `CORAL_INK 0xFF6E2413`,
+   `AMBER_INK 0xFF5A3E08`.
    `HEART_RED` y `CHEST_GOLD` se conservan (coinciden con el prototipo).
 
-2. **Tipografía:** Manrope (variable, pesos 400/500/700/800) empaquetada en
-   `res/font` para respetar I1 (offline). Fallback Roboto.
+2. **Tipografía:** se **mantiene Nunito** (SIL OFL, variable 400–800, ya
+   empaquetada en `res/font/nunito_variable`): sus terminales redondeadas
+   coinciden con el prototipo y evita añadir un binario nuevo. No se añade
+   Manrope. Fallback Roboto.
 
 3. **Formas y sombras:** píldoras `RoundedCornerShape(999)`, tarjetas 16–20 dp,
    chips con borde tan y sombra inferior marrón (`TAN_SHADOW`) para el efecto
