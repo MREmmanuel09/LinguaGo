@@ -10,7 +10,7 @@ Código abierto · Sin anuncios · Sin backend · 100% offline · Vidas con
 recuperación rápida
 
 [![CI](https://github.com/MREmmanuel09/LinguaGo/actions/workflows/ci.yml/badge.svg)](https://github.com/MREmmanuel09/LinguaGo/actions/workflows/ci.yml)
-![version](https://img.shields.io/badge/version-3.0.0-blue)
+![version](https://img.shields.io/badge/version-3.3.0-blue)
 ![Kotlin](https://img.shields.io/badge/Kotlin-2.4-7F52FF?logo=kotlin&logoColor=white)
 ![Android](https://img.shields.io/badge/Android-26%2B-3DDC84?logo=android&logoColor=white)
 ![License](https://img.shields.io/badge/license-MIT-green)

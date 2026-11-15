@@ -6,6 +6,33 @@ El formato sigue [Keep a Changelog](https://keepachangelog.com/es-ES/1.1.0/)
 y el versionado sigue [SemVer](https://semver.org/lang/es/).
 Pre-1.0: los cambios incompatibles pueden ocurrir en `0.y.0`.
 
+## [3.3.0] - 2026-11-15
+
+Release de contenido completo. Incluye las 4.080 lecciones (A1–C2) en los
+cuatro cursos y las correcciones de la auditoría global.
+
+### Corregido
+
+- 1.759 claves de `ListenChoose` que no apuntaban al audio.
+- 146 lecciones piloto duplicadas en PT/FR/JA, convertidas en repasos mixtos.
+- 42 micro-clases B1/B2 de ES→EN que faltaban.
+- Opciones de cloze repetidas y `minTokens` incoherentes con la respuesta modelo.
+- Higiene de espacios, «de el» y títulos repetidos dentro del nivel.
+- Metalenguaje inglés en la gramática de PT/FR/JA y títulos de gramática.
+- `MatchPairs` de JA con columnas invertidas.
+
+### Calidad
+
+- Auditoría global: 0 errores estructurales; 922 avisos informativos.
+- `ktlintCheck detekt validateContent test` y `assembleFullRelease` en verde.
+- Revisión nativa humana de las 4.080 lecciones pendiente; si detecta
+  incidencias se publicará 3.3.x.
+
+### APKs
+
+- `LinguaGo-3.3.0-global.apk`: APK full universal.
+- `LinguaGo-3.3.0-arm64.apk`: APK full arm64.
+
 ## [3.2.0] - 2026-11-15
 
 Estable con aprobación técnica (ADR-054). La revisión nativa humana de F0/F1

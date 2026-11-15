@@ -1,10 +1,10 @@
 # Plan de expansión a 1.020 lecciones por idioma
 
-> **Estado:** F1 completa y release 3.2.0 **publicado**. F2–F6 completos:
-> A2, B1, B2, C1 y C2 a 170/170 en los cuatro cursos. **Meta alcanzada:
-> 1.020/1.020 por idioma y 4.080/4.080 lecciones.** La revisión nativa de
-> F2–F6 sigue abierta y los releases 3.3.0–4.0.0 quedan **aparcados por
-> decisión de producto** hasta el QA manual.
+> **Estado:** releases 3.2.0 (A1) y 3.3.0 (contenido completo) **publicados**.
+> F2–F6 completos: A2, B1, B2, C1 y C2 a 170/170 en los cuatro cursos. **Meta
+> alcanzada: 1.020/1.020 por idioma y 4.080/4.080 lecciones.** La revisión
+> nativa humana de F2–F6 sigue abierta; si detecta incidencias se publicará
+> un parche 3.3.x.
 > **Objetivo:** mínimo 1.000 lecciones por cada curso de destino, con la misma
 > cantidad en cada nivel CEFR.
 > **Fecha:** 2026-11-09.
