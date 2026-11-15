@@ -90349,6 +90349,3049 @@
               ]
             }
           ]
+        },
+        {
+          "id": "es-en-b1-u07",
+          "title": "B1 · Trabajo y estudios",
+          "lessons": [
+            {
+              "id": "es-en-b1-u07-l01",
+              "title": "Repaso: compras",
+              "cefrLevel": "B1",
+              "scenario": "Situación comunicativa sobre una compra reciente.",
+              "canDo": "Puedo comunicarme con soltura sobre una compra reciente.",
+              "grammarPoints": [
+                {
+                  "id": "gp-b1-present-perfect",
+                  "label": "Presente perfecto",
+                  "description": "Have/has + participio conecta experiencias pasadas con el presente."
+                },
+                {
+                  "id": "gp-b1-passive-voice",
+                  "label": "Voz pasiva",
+                  "description": "Be + participio desplaza el foco a la acción o al resultado."
+                }
+              ],
+              "vocabFrequencyBand": "2000-3000",
+              "culturalNotes": [
+                {
+                  "idiom": "hit the nail on the head",
+                  "note": "Expresión para decir que alguien ha acertado exactamente.",
+                  "translation": "dar en el clavo"
+                }
+              ],
+              "microLesson": {
+                "title": "Repaso: compras",
+                "goals": [
+                  "Usar vocabulario de una compra reciente.",
+                  "Aplicar presente perfecto y voz pasiva.",
+                  "Resolver una tarea comunicativa sobre una compra reciente."
+                ],
+                "sections": [
+                  {
+                    "heading": "Lengua en contexto",
+                    "body": "Presente perfecto: Have/has + participio conecta experiencias pasadas con el presente. Voz pasiva: Be + participio desplaza el foco a la acción o al resultado.",
+                    "examples": [
+                      {
+                        "source": "Ayer fui a la tienda a cambiar una camiseta. En general, es así.",
+                        "target": "Yesterday I went to the shop to change a T-shirt. In general, that is how it is."
+                      },
+                      {
+                        "source": "El dependiente me ayudó mucho. Además, me ayuda a aprender.",
+                        "target": "The shop assistant helped me a lot. It also helps me learn."
+                      }
+                    ]
+                  }
+                ]
+              },
+              "glossary": [
+                {
+                  "term": "Yesterday I went to the shop to change a T-shirt. In general, that is how it is.",
+                  "translations": [
+                    "Ayer fui a la tienda a cambiar una camiseta. En general, es así."
+                  ]
+                },
+                {
+                  "term": "The shop assistant helped me a lot. It also helps me learn.",
+                  "translations": [
+                    "El dependiente me ayudó mucho. Además, me ayuda a aprender."
+                  ]
+                },
+                {
+                  "term": "In the end I bought a jacket. That is why I recommend it.",
+                  "translations": [
+                    "Al final compré una chaqueta. Por eso lo recomiendo."
+                  ]
+                }
+              ],
+              "exercises": [
+                {
+                  "type": "MultipleChoice",
+                  "id": "es-en-b1-u07-l01-e01",
+                  "question": "¿Cuál es la opción correcta para «Ayer fui a la tienda a cambiar una camiseta. En general, es así.»?",
+                  "options": [
+                    "Yesterday I went to the shop to change a T-shirt. In general, that is how it is.",
+                    "The shop assistant helped me a lot. It also helps me learn.",
+                    "In the end I bought a jacket. That is why I recommend it."
+                  ],
+                  "correctIndex": 0,
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "«Ayer fui a la tienda a cambiar una camiseta. En general, es así.» se dice «Yesterday I went to the shop to change a T-shirt. In general, that is how it is.».",
+                    "ruleRef": "gp-b1-present-perfect"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has elegido la traducción correcta."
+                  }
+                },
+                {
+                  "type": "Translate",
+                  "id": "es-en-b1-u07-l01-e02",
+                  "sourcePhrase": "Ayer fui a la tienda a cambiar una camiseta. En general, es así.",
+                  "correctTokens": [
+                    "Yesterday",
+                    "I",
+                    "went",
+                    "to",
+                    "the",
+                    "shop",
+                    "to",
+                    "change",
+                    "a",
+                    "T",
+                    "shirt",
+                    "In",
+                    "general",
+                    "that",
+                    "is",
+                    "how",
+                    "it",
+                    "is"
+                  ],
+                  "distractorTokens": [
+                    "The",
+                    "assistant",
+                    "helped"
+                  ],
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "El orden correcto es «Yesterday I went to the shop to change a T shirt In general that is how it is». Presente perfecto: Have/has + participio conecta experiencias pasadas con el presente.",
+                    "ruleRef": "gp-b1-present-perfect"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La frase conserva el orden y el significado."
+                  }
+                },
+                {
+                  "type": "OrderWords",
+                  "id": "es-en-b1-u07-l01-e03",
+                  "tokens": [
+                    "shop",
+                    "assistant",
+                    "helped",
+                    "me",
+                    "a",
+                    "lot",
+                    "It",
+                    "also",
+                    "helps",
+                    "me",
+                    "learn",
+                    "The"
+                  ],
+                  "answerTokens": [
+                    "The",
+                    "shop",
+                    "assistant",
+                    "helped",
+                    "me",
+                    "a",
+                    "lot",
+                    "It",
+                    "also",
+                    "helps",
+                    "me",
+                    "learn"
+                  ],
+                  "sourcePhrase": "El dependiente me ayudó mucho. Además, me ayuda a aprender.",
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "La frase correcta es «The shop assistant helped me a lot It also helps me learn». Voz pasiva: Be + participio desplaza el foco a la acción o al resultado.",
+                    "ruleRef": "gp-b1-passive-voice"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "El orden produce una frase natural."
+                  }
+                },
+                {
+                  "type": "MatchPairs",
+                  "id": "es-en-b1-u07-l01-e04",
+                  "pairs": [
+                    {
+                      "left": "Ayer fui a la tienda a cambiar una camiseta. En general, es así.",
+                      "right": "Yesterday I went to the shop to change a T-shirt. In general, that is how it is."
+                    },
+                    {
+                      "left": "El dependiente me ayudó mucho. Además, me ayuda a aprender.",
+                      "right": "The shop assistant helped me a lot. It also helps me learn."
+                    },
+                    {
+                      "left": "Al final compré una chaqueta. Por eso lo recomiendo.",
+                      "right": "In the end I bought a jacket. That is why I recommend it."
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "Cada expresión tiene una traducción distinta.",
+                    "ruleRef": "gp-b1-present-perfect"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has asociado cada expresión con su traducción."
+                  }
+                },
+                {
+                  "type": "ListenChoose",
+                  "id": "es-en-b1-u07-l01-e05",
+                  "audioText": "In the end I bought a jacket. That is why I recommend it.",
+                  "options": [
+                    "Yesterday I went to the shop to change a T-shirt. In general, that is how it is.",
+                    "The shop assistant helped me a lot. It also helps me learn.",
+                    "In the end I bought a jacket. That is why I recommend it."
+                  ],
+                  "correctIndex": 0,
+                  "feedbackOnError": {
+                    "type": "comprehension",
+                    "explanation": "El audio dice «In the end I bought a jacket. That is why I recommend it.».",
+                    "ruleRef": "gp-b1-present-perfect"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has reconocido la frase del audio."
+                  }
+                },
+                {
+                  "type": "ListenType",
+                  "id": "es-en-b1-u07-l01-e06",
+                  "audioText": "In the end I bought a jacket. That is why I recommend it.",
+                  "transcription": "In the end I bought a jacket. That is why I recommend it.",
+                  "feedbackOnError": {
+                    "type": "spelling",
+                    "explanation": "Escribe exactamente «In the end I bought a jacket. That is why I recommend it.».",
+                    "ruleRef": "gp-b1-present-perfect"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La transcripción coincide con el audio."
+                  }
+                },
+                {
+                  "type": "ClozeDragDrop",
+                  "id": "es-en-b1-u07-l01-e07",
+                  "passage": "{{b1}} I {{b2}} to the shop to change a T-shirt.",
+                  "blanks": [
+                    {
+                      "id": "b1",
+                      "answer": "Yesterday",
+                      "options": [
+                        "Yesterday",
+                        "shop",
+                        "change"
+                      ]
+                    },
+                    {
+                      "id": "b2",
+                      "answer": "went",
+                      "options": [
+                        "went",
+                        "shop",
+                        "change"
+                      ]
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "Las dos formas deben encajar con el contexto de la frase.",
+                    "ruleRef": "gp-b1-passive-voice"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Los dos huecos encajan con la situación."
+                  }
+                },
+                {
+                  "type": "FreeSpeakingPrompt",
+                  "id": "es-en-b1-u07-l01-e08",
+                  "prompt": "Habla sobre una compra reciente y justifica tu respuesta.",
+                  "minTokens": 6,
+                  "conceptClusters": [
+                    [
+                      "end"
+                    ],
+                    [
+                      "bought"
+                    ],
+                    [
+                      "jacket"
+                    ]
+                  ],
+                  "modelAnswer": "In the end I bought a jacket. That is why I recommend it.",
+                  "selfAssessmentCriteria": [
+                    "¿La respuesta es clara y responde a la tarea?",
+                    "¿Usa las dos estructuras gramaticales de la lección?"
+                  ],
+                  "grammarRuleRefs": [
+                    "gp-b1-present-perfect",
+                    "gp-b1-passive-voice"
+                  ],
+                  "timeLimitSeconds": 60,
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "La respuesta modelo usa una frase completa y responde a la tarea.",
+                    "ruleRef": "gp-b1-present-perfect"
+                  }
+                },
+                {
+                  "type": "SpeakRepeat",
+                  "id": "es-en-b1-u07-l01-e09",
+                  "targetPhrase": "In the end I bought a jacket. That is why I recommend it.",
+                  "audioText": "In the end I bought a jacket. That is why I recommend it.",
+                  "feedbackOnError": {
+                    "type": "pronunciation",
+                    "explanation": "Repite «In the end I bought a jacket. That is why I recommend it.» con claridad.",
+                    "ruleRef": "gp-b1-present-perfect"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La frase se entiende y mantiene el ritmo."
+                  }
+                }
+              ]
+            },
+            {
+              "id": "es-en-b1-u07-l02",
+              "title": "Mi trabajo y mis estudios",
+              "cefrLevel": "B1",
+              "scenario": "Situación comunicativa sobre el trabajo y los estudios.",
+              "canDo": "Puedo comunicarme con soltura sobre el trabajo y los estudios.",
+              "grammarPoints": [
+                {
+                  "id": "gp-b1-present-perfect",
+                  "label": "Presente perfecto",
+                  "description": "Have/has + participio conecta experiencias pasadas con el presente."
+                },
+                {
+                  "id": "gp-b1-passive-voice",
+                  "label": "Voz pasiva",
+                  "description": "Be + participio desplaza el foco a la acción o al resultado."
+                }
+              ],
+              "vocabFrequencyBand": "2000-3000",
+              "culturalNotes": [
+                {
+                  "idiom": "hit the nail on the head",
+                  "note": "Expresión para decir que alguien ha acertado exactamente.",
+                  "translation": "dar en el clavo"
+                }
+              ],
+              "microLesson": {
+                "title": "Mi trabajo y mis estudios",
+                "goals": [
+                  "Usar vocabulario de el trabajo y los estudios.",
+                  "Aplicar presente perfecto y voz pasiva.",
+                  "Resolver una tarea comunicativa sobre el trabajo y los estudios."
+                ],
+                "sections": [
+                  {
+                    "heading": "Lengua en contexto",
+                    "body": "Presente perfecto: Have/has + participio conecta experiencias pasadas con el presente. Voz pasiva: Be + participio desplaza el foco a la acción o al resultado.",
+                    "examples": [
+                      {
+                        "source": "Trabajo en una oficina pequeña. Además, me ayuda a aprender.",
+                        "target": "I work in a small office. It also helps me learn."
+                      },
+                      {
+                        "source": "Estudio inglés dos veces por semana. Por eso lo recomiendo.",
+                        "target": "I study English twice a week. That is why I recommend it."
+                      }
+                    ]
+                  }
+                ]
+              },
+              "glossary": [
+                {
+                  "term": "I work in a small office. It also helps me learn.",
+                  "translations": [
+                    "Trabajo en una oficina pequeña. Además, me ayuda a aprender."
+                  ]
+                },
+                {
+                  "term": "I study English twice a week. That is why I recommend it.",
+                  "translations": [
+                    "Estudio inglés dos veces por semana. Por eso lo recomiendo."
+                  ]
+                },
+                {
+                  "term": "I want to improve my CV. Although it is not always easy.",
+                  "translations": [
+                    "Quiero mejorar mi currículum. Aunque no siempre es fácil."
+                  ]
+                }
+              ],
+              "exercises": [
+                {
+                  "type": "MultipleChoice",
+                  "id": "es-en-b1-u07-l02-e01",
+                  "question": "¿Cuál es la opción correcta para «Trabajo en una oficina pequeña. Además, me ayuda a aprender.»?",
+                  "options": [
+                    "I work in a small office. It also helps me learn.",
+                    "I study English twice a week. That is why I recommend it.",
+                    "I want to improve my CV. Although it is not always easy."
+                  ],
+                  "correctIndex": 0,
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "«Trabajo en una oficina pequeña. Además, me ayuda a aprender.» se dice «I work in a small office. It also helps me learn.».",
+                    "ruleRef": "gp-b1-present-perfect"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has elegido la traducción correcta."
+                  }
+                },
+                {
+                  "type": "Translate",
+                  "id": "es-en-b1-u07-l02-e02",
+                  "sourcePhrase": "Trabajo en una oficina pequeña. Además, me ayuda a aprender.",
+                  "correctTokens": [
+                    "I",
+                    "work",
+                    "in",
+                    "a",
+                    "small",
+                    "office",
+                    "It",
+                    "also",
+                    "helps",
+                    "me",
+                    "learn"
+                  ],
+                  "distractorTokens": [
+                    "study",
+                    "English",
+                    "twice"
+                  ],
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "El orden correcto es «I work in a small office It also helps me learn». Presente perfecto: Have/has + participio conecta experiencias pasadas con el presente.",
+                    "ruleRef": "gp-b1-present-perfect"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La frase conserva el orden y el significado."
+                  }
+                },
+                {
+                  "type": "OrderWords",
+                  "id": "es-en-b1-u07-l02-e03",
+                  "tokens": [
+                    "study",
+                    "English",
+                    "twice",
+                    "a",
+                    "week",
+                    "That",
+                    "is",
+                    "why",
+                    "I",
+                    "recommend",
+                    "it",
+                    "I"
+                  ],
+                  "answerTokens": [
+                    "I",
+                    "study",
+                    "English",
+                    "twice",
+                    "a",
+                    "week",
+                    "That",
+                    "is",
+                    "why",
+                    "I",
+                    "recommend",
+                    "it"
+                  ],
+                  "sourcePhrase": "Estudio inglés dos veces por semana. Por eso lo recomiendo.",
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "La frase correcta es «I study English twice a week That is why I recommend it». Voz pasiva: Be + participio desplaza el foco a la acción o al resultado.",
+                    "ruleRef": "gp-b1-passive-voice"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "El orden produce una frase natural."
+                  }
+                },
+                {
+                  "type": "MatchPairs",
+                  "id": "es-en-b1-u07-l02-e04",
+                  "pairs": [
+                    {
+                      "left": "Trabajo en una oficina pequeña. Además, me ayuda a aprender.",
+                      "right": "I work in a small office. It also helps me learn."
+                    },
+                    {
+                      "left": "Estudio inglés dos veces por semana. Por eso lo recomiendo.",
+                      "right": "I study English twice a week. That is why I recommend it."
+                    },
+                    {
+                      "left": "Quiero mejorar mi currículum. Aunque no siempre es fácil.",
+                      "right": "I want to improve my CV. Although it is not always easy."
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "Cada expresión tiene una traducción distinta.",
+                    "ruleRef": "gp-b1-present-perfect"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has asociado cada expresión con su traducción."
+                  }
+                },
+                {
+                  "type": "ListenChoose",
+                  "id": "es-en-b1-u07-l02-e05",
+                  "audioText": "I want to improve my CV. Although it is not always easy.",
+                  "options": [
+                    "I work in a small office. It also helps me learn.",
+                    "I study English twice a week. That is why I recommend it.",
+                    "I want to improve my CV. Although it is not always easy."
+                  ],
+                  "correctIndex": 0,
+                  "feedbackOnError": {
+                    "type": "comprehension",
+                    "explanation": "El audio dice «I want to improve my CV. Although it is not always easy.».",
+                    "ruleRef": "gp-b1-present-perfect"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has reconocido la frase del audio."
+                  }
+                },
+                {
+                  "type": "ListenType",
+                  "id": "es-en-b1-u07-l02-e06",
+                  "audioText": "I want to improve my CV. Although it is not always easy.",
+                  "transcription": "I want to improve my CV. Although it is not always easy.",
+                  "feedbackOnError": {
+                    "type": "spelling",
+                    "explanation": "Escribe exactamente «I want to improve my CV. Although it is not always easy.».",
+                    "ruleRef": "gp-b1-present-perfect"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La transcripción coincide con el audio."
+                  }
+                },
+                {
+                  "type": "ClozeDragDrop",
+                  "id": "es-en-b1-u07-l02-e07",
+                  "passage": "I {{b1}} in a {{b2}} office.",
+                  "blanks": [
+                    {
+                      "id": "b1",
+                      "answer": "work",
+                      "options": [
+                        "work",
+                        "office",
+                        "very"
+                      ]
+                    },
+                    {
+                      "id": "b2",
+                      "answer": "small",
+                      "options": [
+                        "small",
+                        "office",
+                        "very"
+                      ]
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "Las dos formas deben encajar con el contexto de la frase.",
+                    "ruleRef": "gp-b1-passive-voice"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Los dos huecos encajan con la situación."
+                  }
+                },
+                {
+                  "type": "FreeSpeakingPrompt",
+                  "id": "es-en-b1-u07-l02-e08",
+                  "prompt": "Habla sobre el trabajo y los estudios y justifica tu respuesta.",
+                  "minTokens": 6,
+                  "conceptClusters": [
+                    [
+                      "want"
+                    ],
+                    [
+                      "improve"
+                    ],
+                    [
+                      "Although"
+                    ]
+                  ],
+                  "modelAnswer": "I want to improve my CV. Although it is not always easy.",
+                  "selfAssessmentCriteria": [
+                    "¿La respuesta es clara y responde a la tarea?",
+                    "¿Usa las dos estructuras gramaticales de la lección?"
+                  ],
+                  "grammarRuleRefs": [
+                    "gp-b1-present-perfect",
+                    "gp-b1-passive-voice"
+                  ],
+                  "timeLimitSeconds": 60,
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "La respuesta modelo usa una frase completa y responde a la tarea.",
+                    "ruleRef": "gp-b1-present-perfect"
+                  }
+                },
+                {
+                  "type": "SpeakRepeat",
+                  "id": "es-en-b1-u07-l02-e09",
+                  "targetPhrase": "I want to improve my CV. Although it is not always easy.",
+                  "audioText": "I want to improve my CV. Although it is not always easy.",
+                  "feedbackOnError": {
+                    "type": "pronunciation",
+                    "explanation": "Repite «I want to improve my CV. Although it is not always easy.» con claridad.",
+                    "ruleRef": "gp-b1-present-perfect"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La frase se entiende y mantiene el ritmo."
+                  }
+                }
+              ]
+            },
+            {
+              "id": "es-en-b1-u07-l03",
+              "title": "Tareas y responsabilidades",
+              "cefrLevel": "B1",
+              "scenario": "Situación comunicativa sobre las tareas del trabajo.",
+              "canDo": "Puedo comunicarme con soltura sobre las tareas del trabajo.",
+              "grammarPoints": [
+                {
+                  "id": "gp-b1-present-perfect",
+                  "label": "Presente perfecto",
+                  "description": "Have/has + participio conecta experiencias pasadas con el presente."
+                },
+                {
+                  "id": "gp-b1-passive-voice",
+                  "label": "Voz pasiva",
+                  "description": "Be + participio desplaza el foco a la acción o al resultado."
+                }
+              ],
+              "vocabFrequencyBand": "2000-3000",
+              "culturalNotes": [
+                {
+                  "idiom": "hit the nail on the head",
+                  "note": "Expresión para decir que alguien ha acertado exactamente.",
+                  "translation": "dar en el clavo"
+                }
+              ],
+              "microLesson": {
+                "title": "Tareas y responsabilidades",
+                "goals": [
+                  "Usar vocabulario de las tareas del trabajo.",
+                  "Aplicar presente perfecto y voz pasiva.",
+                  "Resolver una tarea comunicativa sobre las tareas del trabajo."
+                ],
+                "sections": [
+                  {
+                    "heading": "Lengua en contexto",
+                    "body": "Presente perfecto: Have/has + participio conecta experiencias pasadas con el presente. Voz pasiva: Be + participio desplaza el foco a la acción o al resultado.",
+                    "examples": [
+                      {
+                        "source": "Tengo que responder correos. Por eso lo recomiendo.",
+                        "target": "I have to answer emails. That is why I recommend it."
+                      },
+                      {
+                        "source": "Tengo que preparar reuniones. Aunque no siempre es fácil.",
+                        "target": "I have to prepare meetings. Although it is not always easy."
+                      }
+                    ]
+                  }
+                ]
+              },
+              "glossary": [
+                {
+                  "term": "I have to answer emails. That is why I recommend it.",
+                  "translations": [
+                    "Tengo que responder correos. Por eso lo recomiendo."
+                  ]
+                },
+                {
+                  "term": "I have to prepare meetings. Although it is not always easy.",
+                  "translations": [
+                    "Tengo que preparar reuniones. Aunque no siempre es fácil."
+                  ]
+                },
+                {
+                  "term": "I have to talk to clients. That is a good question.",
+                  "translations": [
+                    "Tengo que hablar con clientes. Es una buena pregunta."
+                  ]
+                }
+              ],
+              "exercises": [
+                {
+                  "type": "MultipleChoice",
+                  "id": "es-en-b1-u07-l03-e01",
+                  "question": "¿Cuál es la opción correcta para «Tengo que responder correos. Por eso lo recomiendo.»?",
+                  "options": [
+                    "I have to answer emails. That is why I recommend it.",
+                    "I have to prepare meetings. Although it is not always easy.",
+                    "I have to talk to clients. That is a good question."
+                  ],
+                  "correctIndex": 0,
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "«Tengo que responder correos. Por eso lo recomiendo.» se dice «I have to answer emails. That is why I recommend it.».",
+                    "ruleRef": "gp-b1-present-perfect"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has elegido la traducción correcta."
+                  }
+                },
+                {
+                  "type": "Translate",
+                  "id": "es-en-b1-u07-l03-e02",
+                  "sourcePhrase": "Tengo que responder correos. Por eso lo recomiendo.",
+                  "correctTokens": [
+                    "I",
+                    "have",
+                    "to",
+                    "answer",
+                    "emails",
+                    "That",
+                    "is",
+                    "why",
+                    "I",
+                    "recommend",
+                    "it"
+                  ],
+                  "distractorTokens": [
+                    "prepare",
+                    "meetings",
+                    "Although"
+                  ],
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "El orden correcto es «I have to answer emails That is why I recommend it». Presente perfecto: Have/has + participio conecta experiencias pasadas con el presente.",
+                    "ruleRef": "gp-b1-present-perfect"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La frase conserva el orden y el significado."
+                  }
+                },
+                {
+                  "type": "OrderWords",
+                  "id": "es-en-b1-u07-l03-e03",
+                  "tokens": [
+                    "have",
+                    "to",
+                    "prepare",
+                    "meetings",
+                    "Although",
+                    "it",
+                    "is",
+                    "not",
+                    "always",
+                    "easy",
+                    "I"
+                  ],
+                  "answerTokens": [
+                    "I",
+                    "have",
+                    "to",
+                    "prepare",
+                    "meetings",
+                    "Although",
+                    "it",
+                    "is",
+                    "not",
+                    "always",
+                    "easy"
+                  ],
+                  "sourcePhrase": "Tengo que preparar reuniones. Aunque no siempre es fácil.",
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "La frase correcta es «I have to prepare meetings Although it is not always easy». Voz pasiva: Be + participio desplaza el foco a la acción o al resultado.",
+                    "ruleRef": "gp-b1-passive-voice"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "El orden produce una frase natural."
+                  }
+                },
+                {
+                  "type": "MatchPairs",
+                  "id": "es-en-b1-u07-l03-e04",
+                  "pairs": [
+                    {
+                      "left": "Tengo que responder correos. Por eso lo recomiendo.",
+                      "right": "I have to answer emails. That is why I recommend it."
+                    },
+                    {
+                      "left": "Tengo que preparar reuniones. Aunque no siempre es fácil.",
+                      "right": "I have to prepare meetings. Although it is not always easy."
+                    },
+                    {
+                      "left": "Tengo que hablar con clientes. Es una buena pregunta.",
+                      "right": "I have to talk to clients. That is a good question."
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "Cada expresión tiene una traducción distinta.",
+                    "ruleRef": "gp-b1-present-perfect"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has asociado cada expresión con su traducción."
+                  }
+                },
+                {
+                  "type": "ListenChoose",
+                  "id": "es-en-b1-u07-l03-e05",
+                  "audioText": "I have to talk to clients. That is a good question.",
+                  "options": [
+                    "I have to answer emails. That is why I recommend it.",
+                    "I have to prepare meetings. Although it is not always easy.",
+                    "I have to talk to clients. That is a good question."
+                  ],
+                  "correctIndex": 0,
+                  "feedbackOnError": {
+                    "type": "comprehension",
+                    "explanation": "El audio dice «I have to talk to clients. That is a good question.».",
+                    "ruleRef": "gp-b1-present-perfect"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has reconocido la frase del audio."
+                  }
+                },
+                {
+                  "type": "ListenType",
+                  "id": "es-en-b1-u07-l03-e06",
+                  "audioText": "I have to talk to clients. That is a good question.",
+                  "transcription": "I have to talk to clients. That is a good question.",
+                  "feedbackOnError": {
+                    "type": "spelling",
+                    "explanation": "Escribe exactamente «I have to talk to clients. That is a good question.».",
+                    "ruleRef": "gp-b1-present-perfect"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La transcripción coincide con el audio."
+                  }
+                },
+                {
+                  "type": "ClozeDragDrop",
+                  "id": "es-en-b1-u07-l03-e07",
+                  "passage": "I have to {{b1}} {{b2}}",
+                  "blanks": [
+                    {
+                      "id": "b1",
+                      "answer": "answer",
+                      "options": [
+                        "answer",
+                        "very",
+                        "today"
+                      ]
+                    },
+                    {
+                      "id": "b2",
+                      "answer": "emails",
+                      "options": [
+                        "emails",
+                        "very",
+                        "today"
+                      ]
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "Las dos formas deben encajar con el contexto de la frase.",
+                    "ruleRef": "gp-b1-passive-voice"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Los dos huecos encajan con la situación."
+                  }
+                },
+                {
+                  "type": "FreeSpeakingPrompt",
+                  "id": "es-en-b1-u07-l03-e08",
+                  "prompt": "Habla sobre las tareas del trabajo y justifica tu respuesta.",
+                  "minTokens": 6,
+                  "conceptClusters": [
+                    [
+                      "talk"
+                    ],
+                    [
+                      "clients"
+                    ],
+                    [
+                      "good"
+                    ]
+                  ],
+                  "modelAnswer": "I have to talk to clients. That is a good question.",
+                  "selfAssessmentCriteria": [
+                    "¿La respuesta es clara y responde a la tarea?",
+                    "¿Usa las dos estructuras gramaticales de la lección?"
+                  ],
+                  "grammarRuleRefs": [
+                    "gp-b1-present-perfect",
+                    "gp-b1-passive-voice"
+                  ],
+                  "timeLimitSeconds": 60,
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "La respuesta modelo usa una frase completa y responde a la tarea.",
+                    "ruleRef": "gp-b1-present-perfect"
+                  }
+                },
+                {
+                  "type": "SpeakRepeat",
+                  "id": "es-en-b1-u07-l03-e09",
+                  "targetPhrase": "I have to talk to clients. That is a good question.",
+                  "audioText": "I have to talk to clients. That is a good question.",
+                  "feedbackOnError": {
+                    "type": "pronunciation",
+                    "explanation": "Repite «I have to talk to clients. That is a good question.» con claridad.",
+                    "ruleRef": "gp-b1-present-perfect"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La frase se entiende y mantiene el ritmo."
+                  }
+                }
+              ]
+            },
+            {
+              "id": "es-en-b1-u07-l04",
+              "title": "Present perfect",
+              "cefrLevel": "B1",
+              "scenario": "Situación comunicativa sobre las experiencias profesionales.",
+              "canDo": "Puedo comunicarme con soltura sobre las experiencias profesionales.",
+              "grammarPoints": [
+                {
+                  "id": "gp-b1-present-perfect",
+                  "label": "Presente perfecto",
+                  "description": "Have/has + participio conecta experiencias pasadas con el presente."
+                },
+                {
+                  "id": "gp-b1-passive-voice",
+                  "label": "Voz pasiva",
+                  "description": "Be + participio desplaza el foco a la acción o al resultado."
+                }
+              ],
+              "vocabFrequencyBand": "2000-3000",
+              "culturalNotes": [
+                {
+                  "idiom": "hit the nail on the head",
+                  "note": "Expresión para decir que alguien ha acertado exactamente.",
+                  "translation": "dar en el clavo"
+                }
+              ],
+              "microLesson": {
+                "title": "Present perfect",
+                "goals": [
+                  "Usar vocabulario de las experiencias profesionales.",
+                  "Aplicar presente perfecto y voz pasiva.",
+                  "Resolver una tarea comunicativa sobre las experiencias profesionales."
+                ],
+                "sections": [
+                  {
+                    "heading": "Lengua en contexto",
+                    "body": "Presente perfecto: Have/has + participio conecta experiencias pasadas con el presente. Voz pasiva: Be + participio desplaza el foco a la acción o al resultado.",
+                    "examples": [
+                      {
+                        "source": "He trabajado en tres países. Aunque no siempre es fácil.",
+                        "target": "I have worked in three countries. Although it is not always easy."
+                      },
+                      {
+                        "source": "He estudiado inglés durante años. Es una buena pregunta.",
+                        "target": "I have studied English for years. That is a good question."
+                      }
+                    ]
+                  }
+                ]
+              },
+              "glossary": [
+                {
+                  "term": "I have worked in three countries. Although it is not always easy.",
+                  "translations": [
+                    "He trabajado en tres países. Aunque no siempre es fácil."
+                  ]
+                },
+                {
+                  "term": "I have studied English for years. That is a good question.",
+                  "translations": [
+                    "He estudiado inglés durante años. Es una buena pregunta."
+                  ]
+                },
+                {
+                  "term": "I have learned to use a new tool. I always try to improve it.",
+                  "translations": [
+                    "He aprendido a usar una nueva herramienta. Siempre intento mejorarlo."
+                  ]
+                }
+              ],
+              "exercises": [
+                {
+                  "type": "MultipleChoice",
+                  "id": "es-en-b1-u07-l04-e01",
+                  "question": "¿Cuál es la opción correcta para «He trabajado en tres países. Aunque no siempre es fácil.»?",
+                  "options": [
+                    "I have worked in three countries. Although it is not always easy.",
+                    "I have studied English for years. That is a good question.",
+                    "I have learned to use a new tool. I always try to improve it."
+                  ],
+                  "correctIndex": 0,
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "«He trabajado en tres países. Aunque no siempre es fácil.» se dice «I have worked in three countries. Although it is not always easy.».",
+                    "ruleRef": "gp-b1-present-perfect"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has elegido la traducción correcta."
+                  }
+                },
+                {
+                  "type": "Translate",
+                  "id": "es-en-b1-u07-l04-e02",
+                  "sourcePhrase": "He trabajado en tres países. Aunque no siempre es fácil.",
+                  "correctTokens": [
+                    "I",
+                    "have",
+                    "worked",
+                    "in",
+                    "three",
+                    "countries",
+                    "Although",
+                    "it",
+                    "is",
+                    "not",
+                    "always",
+                    "easy"
+                  ],
+                  "distractorTokens": [
+                    "studied",
+                    "English",
+                    "for"
+                  ],
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "El orden correcto es «I have worked in three countries Although it is not always easy». Presente perfecto: Have/has + participio conecta experiencias pasadas con el presente.",
+                    "ruleRef": "gp-b1-present-perfect"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La frase conserva el orden y el significado."
+                  }
+                },
+                {
+                  "type": "OrderWords",
+                  "id": "es-en-b1-u07-l04-e03",
+                  "tokens": [
+                    "have",
+                    "studied",
+                    "English",
+                    "for",
+                    "years",
+                    "That",
+                    "is",
+                    "a",
+                    "good",
+                    "question",
+                    "I"
+                  ],
+                  "answerTokens": [
+                    "I",
+                    "have",
+                    "studied",
+                    "English",
+                    "for",
+                    "years",
+                    "That",
+                    "is",
+                    "a",
+                    "good",
+                    "question"
+                  ],
+                  "sourcePhrase": "He estudiado inglés durante años. Es una buena pregunta.",
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "La frase correcta es «I have studied English for years That is a good question». Voz pasiva: Be + participio desplaza el foco a la acción o al resultado.",
+                    "ruleRef": "gp-b1-passive-voice"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "El orden produce una frase natural."
+                  }
+                },
+                {
+                  "type": "MatchPairs",
+                  "id": "es-en-b1-u07-l04-e04",
+                  "pairs": [
+                    {
+                      "left": "He trabajado en tres países. Aunque no siempre es fácil.",
+                      "right": "I have worked in three countries. Although it is not always easy."
+                    },
+                    {
+                      "left": "He estudiado inglés durante años. Es una buena pregunta.",
+                      "right": "I have studied English for years. That is a good question."
+                    },
+                    {
+                      "left": "He aprendido a usar una nueva herramienta. Siempre intento mejorarlo.",
+                      "right": "I have learned to use a new tool. I always try to improve it."
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "Cada expresión tiene una traducción distinta.",
+                    "ruleRef": "gp-b1-present-perfect"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has asociado cada expresión con su traducción."
+                  }
+                },
+                {
+                  "type": "ListenChoose",
+                  "id": "es-en-b1-u07-l04-e05",
+                  "audioText": "I have learned to use a new tool. I always try to improve it.",
+                  "options": [
+                    "I have worked in three countries. Although it is not always easy.",
+                    "I have studied English for years. That is a good question.",
+                    "I have learned to use a new tool. I always try to improve it."
+                  ],
+                  "correctIndex": 0,
+                  "feedbackOnError": {
+                    "type": "comprehension",
+                    "explanation": "El audio dice «I have learned to use a new tool. I always try to improve it.».",
+                    "ruleRef": "gp-b1-present-perfect"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has reconocido la frase del audio."
+                  }
+                },
+                {
+                  "type": "ListenType",
+                  "id": "es-en-b1-u07-l04-e06",
+                  "audioText": "I have learned to use a new tool. I always try to improve it.",
+                  "transcription": "I have learned to use a new tool. I always try to improve it.",
+                  "feedbackOnError": {
+                    "type": "spelling",
+                    "explanation": "Escribe exactamente «I have learned to use a new tool. I always try to improve it.».",
+                    "ruleRef": "gp-b1-present-perfect"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La transcripción coincide con el audio."
+                  }
+                },
+                {
+                  "type": "ClozeDragDrop",
+                  "id": "es-en-b1-u07-l04-e07",
+                  "passage": "I have {{b1}} in {{b2}} countries",
+                  "blanks": [
+                    {
+                      "id": "b1",
+                      "answer": "worked",
+                      "options": [
+                        "worked",
+                        "countries",
+                        "very"
+                      ]
+                    },
+                    {
+                      "id": "b2",
+                      "answer": "three",
+                      "options": [
+                        "three",
+                        "countries",
+                        "very"
+                      ]
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "Las dos formas deben encajar con el contexto de la frase.",
+                    "ruleRef": "gp-b1-passive-voice"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Los dos huecos encajan con la situación."
+                  }
+                },
+                {
+                  "type": "FreeSpeakingPrompt",
+                  "id": "es-en-b1-u07-l04-e08",
+                  "prompt": "Habla sobre las experiencias profesionales y justifica tu respuesta.",
+                  "minTokens": 6,
+                  "conceptClusters": [
+                    [
+                      "learned"
+                    ],
+                    [
+                      "use"
+                    ],
+                    [
+                      "new"
+                    ]
+                  ],
+                  "modelAnswer": "I have learned to use a new tool. I always try to improve it.",
+                  "selfAssessmentCriteria": [
+                    "¿La respuesta es clara y responde a la tarea?",
+                    "¿Usa las dos estructuras gramaticales de la lección?"
+                  ],
+                  "grammarRuleRefs": [
+                    "gp-b1-present-perfect",
+                    "gp-b1-passive-voice"
+                  ],
+                  "timeLimitSeconds": 60,
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "La respuesta modelo usa una frase completa y responde a la tarea.",
+                    "ruleRef": "gp-b1-present-perfect"
+                  }
+                },
+                {
+                  "type": "SpeakRepeat",
+                  "id": "es-en-b1-u07-l04-e09",
+                  "targetPhrase": "I have learned to use a new tool. I always try to improve it.",
+                  "audioText": "I have learned to use a new tool. I always try to improve it.",
+                  "feedbackOnError": {
+                    "type": "pronunciation",
+                    "explanation": "Repite «I have learned to use a new tool. I always try to improve it.» con claridad.",
+                    "ruleRef": "gp-b1-present-perfect"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La frase se entiende y mantiene el ritmo."
+                  }
+                }
+              ]
+            },
+            {
+              "id": "es-en-b1-u07-l05",
+              "title": "For y since",
+              "cefrLevel": "B1",
+              "scenario": "Situación comunicativa sobre la duración.",
+              "canDo": "Puedo comunicarme con soltura sobre la duración.",
+              "grammarPoints": [
+                {
+                  "id": "gp-b1-present-perfect",
+                  "label": "Presente perfecto",
+                  "description": "Have/has + participio conecta experiencias pasadas con el presente."
+                },
+                {
+                  "id": "gp-b1-passive-voice",
+                  "label": "Voz pasiva",
+                  "description": "Be + participio desplaza el foco a la acción o al resultado."
+                }
+              ],
+              "vocabFrequencyBand": "2000-3000",
+              "culturalNotes": [
+                {
+                  "idiom": "hit the nail on the head",
+                  "note": "Expresión para decir que alguien ha acertado exactamente.",
+                  "translation": "dar en el clavo"
+                }
+              ],
+              "microLesson": {
+                "title": "For y since",
+                "goals": [
+                  "Usar vocabulario de la duración.",
+                  "Aplicar presente perfecto y voz pasiva.",
+                  "Resolver una tarea comunicativa sobre la duración."
+                ],
+                "sections": [
+                  {
+                    "heading": "Lengua en contexto",
+                    "body": "Presente perfecto: Have/has + participio conecta experiencias pasadas con el presente. Voz pasiva: Be + participio desplaza el foco a la acción o al resultado.",
+                    "examples": [
+                      {
+                        "source": "Vivo en Madrid desde 2019. Es una buena pregunta.",
+                        "target": "I have lived in Madrid since 2019. That is a good question."
+                      },
+                      {
+                        "source": "Trabajo aquí desde hace tres años. Siempre intento mejorarlo.",
+                        "target": "I have worked here for three years. I always try to improve it."
+                      }
+                    ]
+                  }
+                ]
+              },
+              "glossary": [
+                {
+                  "term": "I have lived in Madrid since 2019. That is a good question.",
+                  "translations": [
+                    "Vivo en Madrid desde 2019. Es una buena pregunta."
+                  ]
+                },
+                {
+                  "term": "I have worked here for three years. I always try to improve it.",
+                  "translations": [
+                    "Trabajo aquí desde hace tres años. Siempre intento mejorarlo."
+                  ]
+                },
+                {
+                  "term": "I have studied English since last year. In my case, it works.",
+                  "translations": [
+                    "Estudio inglés desde el año pasado. En mi caso, funciona."
+                  ]
+                }
+              ],
+              "exercises": [
+                {
+                  "type": "MultipleChoice",
+                  "id": "es-en-b1-u07-l05-e01",
+                  "question": "¿Cuál es la opción correcta para «Vivo en Madrid desde 2019. Es una buena pregunta.»?",
+                  "options": [
+                    "I have lived in Madrid since 2019. That is a good question.",
+                    "I have worked here for three years. I always try to improve it.",
+                    "I have studied English since last year. In my case, it works."
+                  ],
+                  "correctIndex": 0,
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "«Vivo en Madrid desde 2019. Es una buena pregunta.» se dice «I have lived in Madrid since 2019. That is a good question.».",
+                    "ruleRef": "gp-b1-present-perfect"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has elegido la traducción correcta."
+                  }
+                },
+                {
+                  "type": "Translate",
+                  "id": "es-en-b1-u07-l05-e02",
+                  "sourcePhrase": "Vivo en Madrid desde 2019. Es una buena pregunta.",
+                  "correctTokens": [
+                    "I",
+                    "have",
+                    "lived",
+                    "in",
+                    "Madrid",
+                    "since",
+                    "2019",
+                    "That",
+                    "is",
+                    "a",
+                    "good",
+                    "question"
+                  ],
+                  "distractorTokens": [
+                    "worked",
+                    "here",
+                    "for"
+                  ],
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "El orden correcto es «I have lived in Madrid since 2019 That is a good question». Presente perfecto: Have/has + participio conecta experiencias pasadas con el presente.",
+                    "ruleRef": "gp-b1-present-perfect"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La frase conserva el orden y el significado."
+                  }
+                },
+                {
+                  "type": "OrderWords",
+                  "id": "es-en-b1-u07-l05-e03",
+                  "tokens": [
+                    "have",
+                    "worked",
+                    "here",
+                    "for",
+                    "three",
+                    "years",
+                    "I",
+                    "always",
+                    "try",
+                    "to",
+                    "improve",
+                    "it",
+                    "I"
+                  ],
+                  "answerTokens": [
+                    "I",
+                    "have",
+                    "worked",
+                    "here",
+                    "for",
+                    "three",
+                    "years",
+                    "I",
+                    "always",
+                    "try",
+                    "to",
+                    "improve",
+                    "it"
+                  ],
+                  "sourcePhrase": "Trabajo aquí desde hace tres años. Siempre intento mejorarlo.",
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "La frase correcta es «I have worked here for three years I always try to improve it». Voz pasiva: Be + participio desplaza el foco a la acción o al resultado.",
+                    "ruleRef": "gp-b1-passive-voice"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "El orden produce una frase natural."
+                  }
+                },
+                {
+                  "type": "MatchPairs",
+                  "id": "es-en-b1-u07-l05-e04",
+                  "pairs": [
+                    {
+                      "left": "Vivo en Madrid desde 2019. Es una buena pregunta.",
+                      "right": "I have lived in Madrid since 2019. That is a good question."
+                    },
+                    {
+                      "left": "Trabajo aquí desde hace tres años. Siempre intento mejorarlo.",
+                      "right": "I have worked here for three years. I always try to improve it."
+                    },
+                    {
+                      "left": "Estudio inglés desde el año pasado. En mi caso, funciona.",
+                      "right": "I have studied English since last year. In my case, it works."
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "Cada expresión tiene una traducción distinta.",
+                    "ruleRef": "gp-b1-present-perfect"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has asociado cada expresión con su traducción."
+                  }
+                },
+                {
+                  "type": "ListenChoose",
+                  "id": "es-en-b1-u07-l05-e05",
+                  "audioText": "I have studied English since last year. In my case, it works.",
+                  "options": [
+                    "I have lived in Madrid since 2019. That is a good question.",
+                    "I have worked here for three years. I always try to improve it.",
+                    "I have studied English since last year. In my case, it works."
+                  ],
+                  "correctIndex": 0,
+                  "feedbackOnError": {
+                    "type": "comprehension",
+                    "explanation": "El audio dice «I have studied English since last year. In my case, it works.».",
+                    "ruleRef": "gp-b1-present-perfect"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has reconocido la frase del audio."
+                  }
+                },
+                {
+                  "type": "ListenType",
+                  "id": "es-en-b1-u07-l05-e06",
+                  "audioText": "I have studied English since last year. In my case, it works.",
+                  "transcription": "I have studied English since last year. In my case, it works.",
+                  "feedbackOnError": {
+                    "type": "spelling",
+                    "explanation": "Escribe exactamente «I have studied English since last year. In my case, it works.».",
+                    "ruleRef": "gp-b1-present-perfect"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La transcripción coincide con el audio."
+                  }
+                },
+                {
+                  "type": "ClozeDragDrop",
+                  "id": "es-en-b1-u07-l05-e07",
+                  "passage": "I have {{b1}} in {{b2}} since 2019.",
+                  "blanks": [
+                    {
+                      "id": "b1",
+                      "answer": "lived",
+                      "options": [
+                        "lived",
+                        "since",
+                        "2019"
+                      ]
+                    },
+                    {
+                      "id": "b2",
+                      "answer": "Madrid",
+                      "options": [
+                        "Madrid",
+                        "since",
+                        "2019"
+                      ]
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "Las dos formas deben encajar con el contexto de la frase.",
+                    "ruleRef": "gp-b1-passive-voice"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Los dos huecos encajan con la situación."
+                  }
+                },
+                {
+                  "type": "FreeSpeakingPrompt",
+                  "id": "es-en-b1-u07-l05-e08",
+                  "prompt": "Habla sobre la duración y justifica tu respuesta.",
+                  "minTokens": 6,
+                  "conceptClusters": [
+                    [
+                      "studied"
+                    ],
+                    [
+                      "English"
+                    ],
+                    [
+                      "since"
+                    ]
+                  ],
+                  "modelAnswer": "I have studied English since last year. In my case, it works.",
+                  "selfAssessmentCriteria": [
+                    "¿La respuesta es clara y responde a la tarea?",
+                    "¿Usa las dos estructuras gramaticales de la lección?"
+                  ],
+                  "grammarRuleRefs": [
+                    "gp-b1-present-perfect",
+                    "gp-b1-passive-voice"
+                  ],
+                  "timeLimitSeconds": 60,
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "La respuesta modelo usa una frase completa y responde a la tarea.",
+                    "ruleRef": "gp-b1-present-perfect"
+                  }
+                },
+                {
+                  "type": "SpeakRepeat",
+                  "id": "es-en-b1-u07-l05-e09",
+                  "targetPhrase": "I have studied English since last year. In my case, it works.",
+                  "audioText": "I have studied English since last year. In my case, it works.",
+                  "feedbackOnError": {
+                    "type": "pronunciation",
+                    "explanation": "Repite «I have studied English since last year. In my case, it works.» con claridad.",
+                    "ruleRef": "gp-b1-present-perfect"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La frase se entiende y mantiene el ritmo."
+                  }
+                }
+              ]
+            },
+            {
+              "id": "es-en-b1-u07-l06",
+              "title": "Entrevista",
+              "cefrLevel": "B1",
+              "scenario": "Situación comunicativa sobre una entrevista de trabajo.",
+              "canDo": "Puedo comunicarme con soltura sobre una entrevista de trabajo.",
+              "grammarPoints": [
+                {
+                  "id": "gp-b1-present-perfect",
+                  "label": "Presente perfecto",
+                  "description": "Have/has + participio conecta experiencias pasadas con el presente."
+                },
+                {
+                  "id": "gp-b1-passive-voice",
+                  "label": "Voz pasiva",
+                  "description": "Be + participio desplaza el foco a la acción o al resultado."
+                }
+              ],
+              "vocabFrequencyBand": "2000-3000",
+              "culturalNotes": [
+                {
+                  "idiom": "hit the nail on the head",
+                  "note": "Expresión para decir que alguien ha acertado exactamente.",
+                  "translation": "dar en el clavo"
+                }
+              ],
+              "microLesson": {
+                "title": "Entrevista",
+                "goals": [
+                  "Usar vocabulario de una entrevista de trabajo.",
+                  "Aplicar presente perfecto y voz pasiva.",
+                  "Resolver una tarea comunicativa sobre una entrevista de trabajo."
+                ],
+                "sections": [
+                  {
+                    "heading": "Lengua en contexto",
+                    "body": "Presente perfecto: Have/has + participio conecta experiencias pasadas con el presente. Voz pasiva: Be + participio desplaza el foco a la acción o al resultado.",
+                    "examples": [
+                      {
+                        "source": "¿Cuál es su experiencia profesional? Siempre intento mejorarlo.",
+                        "target": "What is your professional experience? I always try to improve it."
+                      },
+                      {
+                        "source": "He trabajado en atención al cliente. En mi caso, funciona.",
+                        "target": "I have worked in customer service. In my case, it works."
+                      }
+                    ]
+                  }
+                ]
+              },
+              "glossary": [
+                {
+                  "term": "What is your professional experience? I always try to improve it.",
+                  "translations": [
+                    "¿Cuál es su experiencia profesional? Siempre intento mejorarlo."
+                  ]
+                },
+                {
+                  "term": "I have worked in customer service. In my case, it works.",
+                  "translations": [
+                    "He trabajado en atención al cliente. En mi caso, funciona."
+                  ]
+                },
+                {
+                  "term": "Why do you want to work with us? It also has advantages.",
+                  "translations": [
+                    "¿Por qué quiere trabajar con nosotros? También tiene ventajas."
+                  ]
+                }
+              ],
+              "exercises": [
+                {
+                  "type": "MultipleChoice",
+                  "id": "es-en-b1-u07-l06-e01",
+                  "question": "¿Cuál es la opción correcta para «¿Cuál es su experiencia profesional? Siempre intento mejorarlo.»?",
+                  "options": [
+                    "What is your professional experience? I always try to improve it.",
+                    "I have worked in customer service. In my case, it works.",
+                    "Why do you want to work with us? It also has advantages."
+                  ],
+                  "correctIndex": 0,
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "«¿Cuál es su experiencia profesional? Siempre intento mejorarlo.» se dice «What is your professional experience? I always try to improve it.».",
+                    "ruleRef": "gp-b1-present-perfect"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has elegido la traducción correcta."
+                  }
+                },
+                {
+                  "type": "Translate",
+                  "id": "es-en-b1-u07-l06-e02",
+                  "sourcePhrase": "¿Cuál es su experiencia profesional? Siempre intento mejorarlo.",
+                  "correctTokens": [
+                    "What",
+                    "is",
+                    "your",
+                    "professional",
+                    "experience",
+                    "I",
+                    "always",
+                    "try",
+                    "to",
+                    "improve",
+                    "it"
+                  ],
+                  "distractorTokens": [
+                    "have",
+                    "worked",
+                    "in"
+                  ],
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "El orden correcto es «What is your professional experience I always try to improve it». Presente perfecto: Have/has + participio conecta experiencias pasadas con el presente.",
+                    "ruleRef": "gp-b1-present-perfect"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La frase conserva el orden y el significado."
+                  }
+                },
+                {
+                  "type": "OrderWords",
+                  "id": "es-en-b1-u07-l06-e03",
+                  "tokens": [
+                    "have",
+                    "worked",
+                    "in",
+                    "customer",
+                    "service",
+                    "In",
+                    "my",
+                    "case",
+                    "it",
+                    "works",
+                    "I"
+                  ],
+                  "answerTokens": [
+                    "I",
+                    "have",
+                    "worked",
+                    "in",
+                    "customer",
+                    "service",
+                    "In",
+                    "my",
+                    "case",
+                    "it",
+                    "works"
+                  ],
+                  "sourcePhrase": "He trabajado en atención al cliente. En mi caso, funciona.",
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "La frase correcta es «I have worked in customer service In my case it works». Voz pasiva: Be + participio desplaza el foco a la acción o al resultado.",
+                    "ruleRef": "gp-b1-passive-voice"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "El orden produce una frase natural."
+                  }
+                },
+                {
+                  "type": "MatchPairs",
+                  "id": "es-en-b1-u07-l06-e04",
+                  "pairs": [
+                    {
+                      "left": "¿Cuál es su experiencia profesional? Siempre intento mejorarlo.",
+                      "right": "What is your professional experience? I always try to improve it."
+                    },
+                    {
+                      "left": "He trabajado en atención al cliente. En mi caso, funciona.",
+                      "right": "I have worked in customer service. In my case, it works."
+                    },
+                    {
+                      "left": "¿Por qué quiere trabajar con nosotros? También tiene ventajas.",
+                      "right": "Why do you want to work with us? It also has advantages."
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "Cada expresión tiene una traducción distinta.",
+                    "ruleRef": "gp-b1-present-perfect"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has asociado cada expresión con su traducción."
+                  }
+                },
+                {
+                  "type": "ListenChoose",
+                  "id": "es-en-b1-u07-l06-e05",
+                  "audioText": "Why do you want to work with us? It also has advantages.",
+                  "options": [
+                    "What is your professional experience? I always try to improve it.",
+                    "I have worked in customer service. In my case, it works.",
+                    "Why do you want to work with us? It also has advantages."
+                  ],
+                  "correctIndex": 0,
+                  "feedbackOnError": {
+                    "type": "comprehension",
+                    "explanation": "El audio dice «Why do you want to work with us? It also has advantages.».",
+                    "ruleRef": "gp-b1-present-perfect"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has reconocido la frase del audio."
+                  }
+                },
+                {
+                  "type": "ListenType",
+                  "id": "es-en-b1-u07-l06-e06",
+                  "audioText": "Why do you want to work with us? It also has advantages.",
+                  "transcription": "Why do you want to work with us? It also has advantages.",
+                  "feedbackOnError": {
+                    "type": "spelling",
+                    "explanation": "Escribe exactamente «Why do you want to work with us? It also has advantages.».",
+                    "ruleRef": "gp-b1-present-perfect"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La transcripción coincide con el audio."
+                  }
+                },
+                {
+                  "type": "ClozeDragDrop",
+                  "id": "es-en-b1-u07-l06-e07",
+                  "passage": "{{b1}} is your {{b2}} experience?",
+                  "blanks": [
+                    {
+                      "id": "b1",
+                      "answer": "What",
+                      "options": [
+                        "What",
+                        "experience",
+                        "very"
+                      ]
+                    },
+                    {
+                      "id": "b2",
+                      "answer": "professional",
+                      "options": [
+                        "professional",
+                        "experience",
+                        "very"
+                      ]
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "Las dos formas deben encajar con el contexto de la frase.",
+                    "ruleRef": "gp-b1-passive-voice"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Los dos huecos encajan con la situación."
+                  }
+                },
+                {
+                  "type": "FreeSpeakingPrompt",
+                  "id": "es-en-b1-u07-l06-e08",
+                  "prompt": "Habla sobre una entrevista de trabajo y justifica tu respuesta.",
+                  "minTokens": 6,
+                  "conceptClusters": [
+                    [
+                      "Why"
+                    ],
+                    [
+                      "want"
+                    ],
+                    [
+                      "work"
+                    ]
+                  ],
+                  "modelAnswer": "Why do you want to work with us? It also has advantages.",
+                  "selfAssessmentCriteria": [
+                    "¿La respuesta es clara y responde a la tarea?",
+                    "¿Usa las dos estructuras gramaticales de la lección?"
+                  ],
+                  "grammarRuleRefs": [
+                    "gp-b1-present-perfect",
+                    "gp-b1-passive-voice"
+                  ],
+                  "timeLimitSeconds": 60,
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "La respuesta modelo usa una frase completa y responde a la tarea.",
+                    "ruleRef": "gp-b1-present-perfect"
+                  }
+                },
+                {
+                  "type": "SpeakRepeat",
+                  "id": "es-en-b1-u07-l06-e09",
+                  "targetPhrase": "Why do you want to work with us? It also has advantages.",
+                  "audioText": "Why do you want to work with us? It also has advantages.",
+                  "feedbackOnError": {
+                    "type": "pronunciation",
+                    "explanation": "Repite «Why do you want to work with us? It also has advantages.» con claridad.",
+                    "ruleRef": "gp-b1-present-perfect"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La frase se entiende y mantiene el ritmo."
+                  }
+                }
+              ]
+            },
+            {
+              "id": "es-en-b1-u07-l07",
+              "title": "Oferta de trabajo",
+              "cefrLevel": "B1",
+              "scenario": "Situación comunicativa sobre una oferta de trabajo.",
+              "canDo": "Puedo comunicarme con soltura sobre una oferta de trabajo.",
+              "grammarPoints": [
+                {
+                  "id": "gp-b1-present-perfect",
+                  "label": "Presente perfecto",
+                  "description": "Have/has + participio conecta experiencias pasadas con el presente."
+                },
+                {
+                  "id": "gp-b1-passive-voice",
+                  "label": "Voz pasiva",
+                  "description": "Be + participio desplaza el foco a la acción o al resultado."
+                }
+              ],
+              "vocabFrequencyBand": "2000-3000",
+              "culturalNotes": [
+                {
+                  "idiom": "hit the nail on the head",
+                  "note": "Expresión para decir que alguien ha acertado exactamente.",
+                  "translation": "dar en el clavo"
+                }
+              ],
+              "microLesson": {
+                "title": "Oferta de trabajo",
+                "goals": [
+                  "Usar vocabulario de una oferta de trabajo.",
+                  "Aplicar presente perfecto y voz pasiva.",
+                  "Resolver una tarea comunicativa sobre una oferta de trabajo."
+                ],
+                "sections": [
+                  {
+                    "heading": "Lengua en contexto",
+                    "body": "Presente perfecto: Have/has + participio conecta experiencias pasadas con el presente. Voz pasiva: Be + participio desplaza el foco a la acción o al resultado.",
+                    "examples": [
+                      {
+                        "source": "La empresa busca un asistente administrativo. En mi caso, funciona.",
+                        "target": "The company is looking for an administrative assistant. In my case, it works."
+                      },
+                      {
+                        "source": "El puesto es a tiempo completo. También tiene ventajas.",
+                        "target": "The position is full-time. It also has advantages."
+                      }
+                    ]
+                  }
+                ]
+              },
+              "glossary": [
+                {
+                  "term": "The company is looking for an administrative assistant. In my case, it works.",
+                  "translations": [
+                    "La empresa busca un asistente administrativo. En mi caso, funciona."
+                  ]
+                },
+                {
+                  "term": "The position is full-time. It also has advantages.",
+                  "translations": [
+                    "El puesto es a tiempo completo. También tiene ventajas."
+                  ]
+                },
+                {
+                  "term": "They offer training and flexible hours. And I want to keep practising.",
+                  "translations": [
+                    "Ofrecen formación y horario flexible. Y quiero seguir practicando."
+                  ]
+                }
+              ],
+              "exercises": [
+                {
+                  "type": "MultipleChoice",
+                  "id": "es-en-b1-u07-l07-e01",
+                  "question": "¿Cuál es la opción correcta para «La empresa busca un asistente administrativo. En mi caso, funciona.»?",
+                  "options": [
+                    "The company is looking for an administrative assistant. In my case, it works.",
+                    "The position is full-time. It also has advantages.",
+                    "They offer training and flexible hours. And I want to keep practising."
+                  ],
+                  "correctIndex": 0,
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "«La empresa busca un asistente administrativo. En mi caso, funciona.» se dice «The company is looking for an administrative assistant. In my case, it works.».",
+                    "ruleRef": "gp-b1-present-perfect"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has elegido la traducción correcta."
+                  }
+                },
+                {
+                  "type": "Translate",
+                  "id": "es-en-b1-u07-l07-e02",
+                  "sourcePhrase": "La empresa busca un asistente administrativo. En mi caso, funciona.",
+                  "correctTokens": [
+                    "The",
+                    "company",
+                    "is",
+                    "looking",
+                    "for",
+                    "an",
+                    "administrative",
+                    "assistant",
+                    "In",
+                    "my",
+                    "case",
+                    "it",
+                    "works"
+                  ],
+                  "distractorTokens": [
+                    "position",
+                    "full",
+                    "time"
+                  ],
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "El orden correcto es «The company is looking for an administrative assistant In my case it works». Presente perfecto: Have/has + participio conecta experiencias pasadas con el presente.",
+                    "ruleRef": "gp-b1-present-perfect"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La frase conserva el orden y el significado."
+                  }
+                },
+                {
+                  "type": "OrderWords",
+                  "id": "es-en-b1-u07-l07-e03",
+                  "tokens": [
+                    "position",
+                    "is",
+                    "full",
+                    "time",
+                    "It",
+                    "also",
+                    "has",
+                    "advantages",
+                    "The"
+                  ],
+                  "answerTokens": [
+                    "The",
+                    "position",
+                    "is",
+                    "full",
+                    "time",
+                    "It",
+                    "also",
+                    "has",
+                    "advantages"
+                  ],
+                  "sourcePhrase": "El puesto es a tiempo completo. También tiene ventajas.",
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "La frase correcta es «The position is full time It also has advantages». Voz pasiva: Be + participio desplaza el foco a la acción o al resultado.",
+                    "ruleRef": "gp-b1-passive-voice"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "El orden produce una frase natural."
+                  }
+                },
+                {
+                  "type": "MatchPairs",
+                  "id": "es-en-b1-u07-l07-e04",
+                  "pairs": [
+                    {
+                      "left": "La empresa busca un asistente administrativo. En mi caso, funciona.",
+                      "right": "The company is looking for an administrative assistant. In my case, it works."
+                    },
+                    {
+                      "left": "El puesto es a tiempo completo. También tiene ventajas.",
+                      "right": "The position is full-time. It also has advantages."
+                    },
+                    {
+                      "left": "Ofrecen formación y horario flexible. Y quiero seguir practicando.",
+                      "right": "They offer training and flexible hours. And I want to keep practising."
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "Cada expresión tiene una traducción distinta.",
+                    "ruleRef": "gp-b1-present-perfect"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has asociado cada expresión con su traducción."
+                  }
+                },
+                {
+                  "type": "ListenChoose",
+                  "id": "es-en-b1-u07-l07-e05",
+                  "audioText": "They offer training and flexible hours. And I want to keep practising.",
+                  "options": [
+                    "The company is looking for an administrative assistant. In my case, it works.",
+                    "The position is full-time. It also has advantages.",
+                    "They offer training and flexible hours. And I want to keep practising."
+                  ],
+                  "correctIndex": 0,
+                  "feedbackOnError": {
+                    "type": "comprehension",
+                    "explanation": "El audio dice «They offer training and flexible hours. And I want to keep practising.».",
+                    "ruleRef": "gp-b1-present-perfect"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has reconocido la frase del audio."
+                  }
+                },
+                {
+                  "type": "ListenType",
+                  "id": "es-en-b1-u07-l07-e06",
+                  "audioText": "They offer training and flexible hours. And I want to keep practising.",
+                  "transcription": "They offer training and flexible hours. And I want to keep practising.",
+                  "feedbackOnError": {
+                    "type": "spelling",
+                    "explanation": "Escribe exactamente «They offer training and flexible hours. And I want to keep practising.».",
+                    "ruleRef": "gp-b1-present-perfect"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La transcripción coincide con el audio."
+                  }
+                },
+                {
+                  "type": "ClozeDragDrop",
+                  "id": "es-en-b1-u07-l07-e07",
+                  "passage": "The {{b1}} is {{b2}} for an administrative assistant.",
+                  "blanks": [
+                    {
+                      "id": "b1",
+                      "answer": "company",
+                      "options": [
+                        "company",
+                        "administrative",
+                        "assistant"
+                      ]
+                    },
+                    {
+                      "id": "b2",
+                      "answer": "looking",
+                      "options": [
+                        "looking",
+                        "administrative",
+                        "assistant"
+                      ]
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "Las dos formas deben encajar con el contexto de la frase.",
+                    "ruleRef": "gp-b1-passive-voice"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Los dos huecos encajan con la situación."
+                  }
+                },
+                {
+                  "type": "FreeSpeakingPrompt",
+                  "id": "es-en-b1-u07-l07-e08",
+                  "prompt": "Habla sobre una oferta de trabajo y justifica tu respuesta.",
+                  "minTokens": 6,
+                  "conceptClusters": [
+                    [
+                      "offer"
+                    ],
+                    [
+                      "training"
+                    ],
+                    [
+                      "flexible"
+                    ]
+                  ],
+                  "modelAnswer": "They offer training and flexible hours. And I want to keep practising.",
+                  "selfAssessmentCriteria": [
+                    "¿La respuesta es clara y responde a la tarea?",
+                    "¿Usa las dos estructuras gramaticales de la lección?"
+                  ],
+                  "grammarRuleRefs": [
+                    "gp-b1-present-perfect",
+                    "gp-b1-passive-voice"
+                  ],
+                  "timeLimitSeconds": 60,
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "La respuesta modelo usa una frase completa y responde a la tarea.",
+                    "ruleRef": "gp-b1-present-perfect"
+                  }
+                },
+                {
+                  "type": "SpeakRepeat",
+                  "id": "es-en-b1-u07-l07-e09",
+                  "targetPhrase": "They offer training and flexible hours. And I want to keep practising.",
+                  "audioText": "They offer training and flexible hours. And I want to keep practising.",
+                  "feedbackOnError": {
+                    "type": "pronunciation",
+                    "explanation": "Repite «They offer training and flexible hours. And I want to keep practising.» con claridad.",
+                    "ruleRef": "gp-b1-present-perfect"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La frase se entiende y mantiene el ritmo."
+                  }
+                }
+              ]
+            },
+            {
+              "id": "es-en-b1-u07-l08",
+              "title": "Correo profesional",
+              "cefrLevel": "B1",
+              "scenario": "Situación comunicativa sobre un correo profesional.",
+              "canDo": "Puedo comunicarme con soltura sobre un correo profesional.",
+              "grammarPoints": [
+                {
+                  "id": "gp-b1-present-perfect",
+                  "label": "Presente perfecto",
+                  "description": "Have/has + participio conecta experiencias pasadas con el presente."
+                },
+                {
+                  "id": "gp-b1-passive-voice",
+                  "label": "Voz pasiva",
+                  "description": "Be + participio desplaza el foco a la acción o al resultado."
+                }
+              ],
+              "vocabFrequencyBand": "2000-3000",
+              "culturalNotes": [
+                {
+                  "idiom": "hit the nail on the head",
+                  "note": "Expresión para decir que alguien ha acertado exactamente.",
+                  "translation": "dar en el clavo"
+                }
+              ],
+              "microLesson": {
+                "title": "Correo profesional",
+                "goals": [
+                  "Usar vocabulario de un correo profesional.",
+                  "Aplicar presente perfecto y voz pasiva.",
+                  "Resolver una tarea comunicativa sobre un correo profesional."
+                ],
+                "sections": [
+                  {
+                    "heading": "Lengua en contexto",
+                    "body": "Presente perfecto: Have/has + participio conecta experiencias pasadas con el presente. Voz pasiva: Be + participio desplaza el foco a la acción o al resultado.",
+                    "examples": [
+                      {
+                        "source": "Escribo para solicitar una entrevista. También tiene ventajas.",
+                        "target": "I am writing to request an interview. It also has advantages."
+                      },
+                      {
+                        "source": "Adjunto mi currículum y una carta de presentación. Y quiero seguir practicando.",
+                        "target": "I attach my CV and a cover letter. And I want to keep practising."
+                      }
+                    ]
+                  }
+                ]
+              },
+              "glossary": [
+                {
+                  "term": "I am writing to request an interview. It also has advantages.",
+                  "translations": [
+                    "Escribo para solicitar una entrevista. También tiene ventajas."
+                  ]
+                },
+                {
+                  "term": "I attach my CV and a cover letter. And I want to keep practising.",
+                  "translations": [
+                    "Adjunto mi currículum y una carta de presentación. Y quiero seguir practicando."
+                  ]
+                },
+                {
+                  "term": "I am available to provide further information. This is important to me.",
+                  "translations": [
+                    "Quedo a su disposición para ampliar la información. Esto es importante para mí."
+                  ]
+                }
+              ],
+              "exercises": [
+                {
+                  "type": "MultipleChoice",
+                  "id": "es-en-b1-u07-l08-e01",
+                  "question": "¿Cuál es la opción correcta para «Escribo para solicitar una entrevista. También tiene ventajas.»?",
+                  "options": [
+                    "I am writing to request an interview. It also has advantages.",
+                    "I attach my CV and a cover letter. And I want to keep practising.",
+                    "I am available to provide further information. This is important to me."
+                  ],
+                  "correctIndex": 0,
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "«Escribo para solicitar una entrevista. También tiene ventajas.» se dice «I am writing to request an interview. It also has advantages.».",
+                    "ruleRef": "gp-b1-present-perfect"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has elegido la traducción correcta."
+                  }
+                },
+                {
+                  "type": "Translate",
+                  "id": "es-en-b1-u07-l08-e02",
+                  "sourcePhrase": "Escribo para solicitar una entrevista. También tiene ventajas.",
+                  "correctTokens": [
+                    "I",
+                    "am",
+                    "writing",
+                    "to",
+                    "request",
+                    "an",
+                    "interview",
+                    "It",
+                    "also",
+                    "has",
+                    "advantages"
+                  ],
+                  "distractorTokens": [
+                    "attach",
+                    "my",
+                    "CV"
+                  ],
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "El orden correcto es «I am writing to request an interview It also has advantages». Presente perfecto: Have/has + participio conecta experiencias pasadas con el presente.",
+                    "ruleRef": "gp-b1-present-perfect"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La frase conserva el orden y el significado."
+                  }
+                },
+                {
+                  "type": "OrderWords",
+                  "id": "es-en-b1-u07-l08-e03",
+                  "tokens": [
+                    "attach",
+                    "my",
+                    "CV",
+                    "and",
+                    "a",
+                    "cover",
+                    "letter",
+                    "And",
+                    "I",
+                    "want",
+                    "to",
+                    "keep",
+                    "practising",
+                    "I"
+                  ],
+                  "answerTokens": [
+                    "I",
+                    "attach",
+                    "my",
+                    "CV",
+                    "and",
+                    "a",
+                    "cover",
+                    "letter",
+                    "And",
+                    "I",
+                    "want",
+                    "to",
+                    "keep",
+                    "practising"
+                  ],
+                  "sourcePhrase": "Adjunto mi currículum y una carta de presentación. Y quiero seguir practicando.",
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "La frase correcta es «I attach my CV and a cover letter And I want to keep practising». Voz pasiva: Be + participio desplaza el foco a la acción o al resultado.",
+                    "ruleRef": "gp-b1-passive-voice"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "El orden produce una frase natural."
+                  }
+                },
+                {
+                  "type": "MatchPairs",
+                  "id": "es-en-b1-u07-l08-e04",
+                  "pairs": [
+                    {
+                      "left": "Escribo para solicitar una entrevista. También tiene ventajas.",
+                      "right": "I am writing to request an interview. It also has advantages."
+                    },
+                    {
+                      "left": "Adjunto mi currículum y una carta de presentación. Y quiero seguir practicando.",
+                      "right": "I attach my CV and a cover letter. And I want to keep practising."
+                    },
+                    {
+                      "left": "Quedo a su disposición para ampliar la información. Esto es importante para mí.",
+                      "right": "I am available to provide further information. This is important to me."
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "Cada expresión tiene una traducción distinta.",
+                    "ruleRef": "gp-b1-present-perfect"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has asociado cada expresión con su traducción."
+                  }
+                },
+                {
+                  "type": "ListenChoose",
+                  "id": "es-en-b1-u07-l08-e05",
+                  "audioText": "I am available to provide further information. This is important to me.",
+                  "options": [
+                    "I am writing to request an interview. It also has advantages.",
+                    "I attach my CV and a cover letter. And I want to keep practising.",
+                    "I am available to provide further information. This is important to me."
+                  ],
+                  "correctIndex": 0,
+                  "feedbackOnError": {
+                    "type": "comprehension",
+                    "explanation": "El audio dice «I am available to provide further information. This is important to me.».",
+                    "ruleRef": "gp-b1-present-perfect"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has reconocido la frase del audio."
+                  }
+                },
+                {
+                  "type": "ListenType",
+                  "id": "es-en-b1-u07-l08-e06",
+                  "audioText": "I am available to provide further information. This is important to me.",
+                  "transcription": "I am available to provide further information. This is important to me.",
+                  "feedbackOnError": {
+                    "type": "spelling",
+                    "explanation": "Escribe exactamente «I am available to provide further information. This is important to me.».",
+                    "ruleRef": "gp-b1-present-perfect"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La transcripción coincide con el audio."
+                  }
+                },
+                {
+                  "type": "ClozeDragDrop",
+                  "id": "es-en-b1-u07-l08-e07",
+                  "passage": "I am {{b1}} to {{b2}} an interview.",
+                  "blanks": [
+                    {
+                      "id": "b1",
+                      "answer": "writing",
+                      "options": [
+                        "writing",
+                        "interview",
+                        "very"
+                      ]
+                    },
+                    {
+                      "id": "b2",
+                      "answer": "request",
+                      "options": [
+                        "request",
+                        "interview",
+                        "very"
+                      ]
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "Las dos formas deben encajar con el contexto de la frase.",
+                    "ruleRef": "gp-b1-passive-voice"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Los dos huecos encajan con la situación."
+                  }
+                },
+                {
+                  "type": "FreeSpeakingPrompt",
+                  "id": "es-en-b1-u07-l08-e08",
+                  "prompt": "Habla sobre un correo profesional y justifica tu respuesta.",
+                  "minTokens": 6,
+                  "conceptClusters": [
+                    [
+                      "available"
+                    ],
+                    [
+                      "provide"
+                    ],
+                    [
+                      "further"
+                    ]
+                  ],
+                  "modelAnswer": "I am available to provide further information. This is important to me.",
+                  "selfAssessmentCriteria": [
+                    "¿La respuesta es clara y responde a la tarea?",
+                    "¿Usa las dos estructuras gramaticales de la lección?"
+                  ],
+                  "grammarRuleRefs": [
+                    "gp-b1-present-perfect",
+                    "gp-b1-passive-voice"
+                  ],
+                  "timeLimitSeconds": 60,
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "La respuesta modelo usa una frase completa y responde a la tarea.",
+                    "ruleRef": "gp-b1-present-perfect"
+                  }
+                },
+                {
+                  "type": "SpeakRepeat",
+                  "id": "es-en-b1-u07-l08-e09",
+                  "targetPhrase": "I am available to provide further information. This is important to me.",
+                  "audioText": "I am available to provide further information. This is important to me.",
+                  "feedbackOnError": {
+                    "type": "pronunciation",
+                    "explanation": "Repite «I am available to provide further information. This is important to me.» con claridad.",
+                    "ruleRef": "gp-b1-present-perfect"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La frase se entiende y mantiene el ritmo."
+                  }
+                }
+              ]
+            },
+            {
+              "id": "es-en-b1-u07-l09",
+              "title": "Integración: trayectoria",
+              "cefrLevel": "B1",
+              "scenario": "Situación comunicativa sobre mi trayectoria profesional.",
+              "canDo": "Puedo comunicarme con soltura sobre mi trayectoria profesional.",
+              "grammarPoints": [
+                {
+                  "id": "gp-b1-present-perfect",
+                  "label": "Presente perfecto",
+                  "description": "Have/has + participio conecta experiencias pasadas con el presente."
+                },
+                {
+                  "id": "gp-b1-passive-voice",
+                  "label": "Voz pasiva",
+                  "description": "Be + participio desplaza el foco a la acción o al resultado."
+                }
+              ],
+              "vocabFrequencyBand": "2000-3000",
+              "culturalNotes": [
+                {
+                  "idiom": "hit the nail on the head",
+                  "note": "Expresión para decir que alguien ha acertado exactamente.",
+                  "translation": "dar en el clavo"
+                }
+              ],
+              "microLesson": {
+                "title": "Integración: trayectoria",
+                "goals": [
+                  "Usar vocabulario de mi trayectoria profesional.",
+                  "Aplicar presente perfecto y voz pasiva.",
+                  "Resolver una tarea comunicativa sobre mi trayectoria profesional."
+                ],
+                "sections": [
+                  {
+                    "heading": "Lengua en contexto",
+                    "body": "Presente perfecto: Have/has + participio conecta experiencias pasadas con el presente. Voz pasiva: Be + participio desplaza el foco a la acción o al resultado.",
+                    "examples": [
+                      {
+                        "source": "Empecé como becario en una empresa pequeña. Y quiero seguir practicando.",
+                        "target": "I started as an intern in a small company. And I want to keep practising."
+                      },
+                      {
+                        "source": "Después trabajé en varios proyectos internacionales. Esto es importante para mí.",
+                        "target": "Then I worked on several international projects. This is important to me."
+                      }
+                    ]
+                  }
+                ]
+              },
+              "glossary": [
+                {
+                  "term": "I started as an intern in a small company. And I want to keep practising.",
+                  "translations": [
+                    "Empecé como becario en una empresa pequeña. Y quiero seguir practicando."
+                  ]
+                },
+                {
+                  "term": "Then I worked on several international projects. This is important to me.",
+                  "translations": [
+                    "Después trabajé en varios proyectos internacionales. Esto es importante para mí."
+                  ]
+                },
+                {
+                  "term": "Now I want to take on more responsibilities. In general, that is how it is.",
+                  "translations": [
+                    "Ahora quiero asumir más responsabilidades. En general, es así."
+                  ]
+                }
+              ],
+              "exercises": [
+                {
+                  "type": "MultipleChoice",
+                  "id": "es-en-b1-u07-l09-e01",
+                  "question": "¿Cuál es la opción correcta para «Empecé como becario en una empresa pequeña. Y quiero seguir practicando.»?",
+                  "options": [
+                    "I started as an intern in a small company. And I want to keep practising.",
+                    "Then I worked on several international projects. This is important to me.",
+                    "Now I want to take on more responsibilities. In general, that is how it is."
+                  ],
+                  "correctIndex": 0,
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "«Empecé como becario en una empresa pequeña. Y quiero seguir practicando.» se dice «I started as an intern in a small company. And I want to keep practising.».",
+                    "ruleRef": "gp-b1-present-perfect"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has elegido la traducción correcta."
+                  }
+                },
+                {
+                  "type": "Translate",
+                  "id": "es-en-b1-u07-l09-e02",
+                  "sourcePhrase": "Empecé como becario en una empresa pequeña. Y quiero seguir practicando.",
+                  "correctTokens": [
+                    "I",
+                    "started",
+                    "as",
+                    "an",
+                    "intern",
+                    "in",
+                    "a",
+                    "small",
+                    "company",
+                    "And",
+                    "I",
+                    "want",
+                    "to",
+                    "keep",
+                    "practising"
+                  ],
+                  "distractorTokens": [
+                    "Then",
+                    "worked",
+                    "on"
+                  ],
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "El orden correcto es «I started as an intern in a small company And I want to keep practising». Presente perfecto: Have/has + participio conecta experiencias pasadas con el presente.",
+                    "ruleRef": "gp-b1-present-perfect"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La frase conserva el orden y el significado."
+                  }
+                },
+                {
+                  "type": "OrderWords",
+                  "id": "es-en-b1-u07-l09-e03",
+                  "tokens": [
+                    "I",
+                    "worked",
+                    "on",
+                    "several",
+                    "international",
+                    "projects",
+                    "This",
+                    "is",
+                    "important",
+                    "to",
+                    "me",
+                    "Then"
+                  ],
+                  "answerTokens": [
+                    "Then",
+                    "I",
+                    "worked",
+                    "on",
+                    "several",
+                    "international",
+                    "projects",
+                    "This",
+                    "is",
+                    "important",
+                    "to",
+                    "me"
+                  ],
+                  "sourcePhrase": "Después trabajé en varios proyectos internacionales. Esto es importante para mí.",
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "La frase correcta es «Then I worked on several international projects This is important to me». Voz pasiva: Be + participio desplaza el foco a la acción o al resultado.",
+                    "ruleRef": "gp-b1-passive-voice"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "El orden produce una frase natural."
+                  }
+                },
+                {
+                  "type": "MatchPairs",
+                  "id": "es-en-b1-u07-l09-e04",
+                  "pairs": [
+                    {
+                      "left": "Empecé como becario en una empresa pequeña. Y quiero seguir practicando.",
+                      "right": "I started as an intern in a small company. And I want to keep practising."
+                    },
+                    {
+                      "left": "Después trabajé en varios proyectos internacionales. Esto es importante para mí.",
+                      "right": "Then I worked on several international projects. This is important to me."
+                    },
+                    {
+                      "left": "Ahora quiero asumir más responsabilidades. En general, es así.",
+                      "right": "Now I want to take on more responsibilities. In general, that is how it is."
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "Cada expresión tiene una traducción distinta.",
+                    "ruleRef": "gp-b1-present-perfect"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has asociado cada expresión con su traducción."
+                  }
+                },
+                {
+                  "type": "ListenChoose",
+                  "id": "es-en-b1-u07-l09-e05",
+                  "audioText": "Now I want to take on more responsibilities. In general, that is how it is.",
+                  "options": [
+                    "I started as an intern in a small company. And I want to keep practising.",
+                    "Then I worked on several international projects. This is important to me.",
+                    "Now I want to take on more responsibilities. In general, that is how it is."
+                  ],
+                  "correctIndex": 0,
+                  "feedbackOnError": {
+                    "type": "comprehension",
+                    "explanation": "El audio dice «Now I want to take on more responsibilities. In general, that is how it is.».",
+                    "ruleRef": "gp-b1-present-perfect"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has reconocido la frase del audio."
+                  }
+                },
+                {
+                  "type": "ListenType",
+                  "id": "es-en-b1-u07-l09-e06",
+                  "audioText": "Now I want to take on more responsibilities. In general, that is how it is.",
+                  "transcription": "Now I want to take on more responsibilities. In general, that is how it is.",
+                  "feedbackOnError": {
+                    "type": "spelling",
+                    "explanation": "Escribe exactamente «Now I want to take on more responsibilities. In general, that is how it is.».",
+                    "ruleRef": "gp-b1-present-perfect"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La transcripción coincide con el audio."
+                  }
+                },
+                {
+                  "type": "ClozeDragDrop",
+                  "id": "es-en-b1-u07-l09-e07",
+                  "passage": "I {{b1}} as an {{b2}} in a small company.",
+                  "blanks": [
+                    {
+                      "id": "b1",
+                      "answer": "started",
+                      "options": [
+                        "started",
+                        "small",
+                        "company"
+                      ]
+                    },
+                    {
+                      "id": "b2",
+                      "answer": "intern",
+                      "options": [
+                        "intern",
+                        "small",
+                        "company"
+                      ]
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "Las dos formas deben encajar con el contexto de la frase.",
+                    "ruleRef": "gp-b1-passive-voice"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Los dos huecos encajan con la situación."
+                  }
+                },
+                {
+                  "type": "FreeSpeakingPrompt",
+                  "id": "es-en-b1-u07-l09-e08",
+                  "prompt": "Habla sobre mi trayectoria profesional y justifica tu respuesta.",
+                  "minTokens": 6,
+                  "conceptClusters": [
+                    [
+                      "Now"
+                    ],
+                    [
+                      "want"
+                    ],
+                    [
+                      "take"
+                    ]
+                  ],
+                  "modelAnswer": "Now I want to take on more responsibilities. In general, that is how it is.",
+                  "selfAssessmentCriteria": [
+                    "¿La respuesta es clara y responde a la tarea?",
+                    "¿Usa las dos estructuras gramaticales de la lección?"
+                  ],
+                  "grammarRuleRefs": [
+                    "gp-b1-present-perfect",
+                    "gp-b1-passive-voice"
+                  ],
+                  "timeLimitSeconds": 60,
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "La respuesta modelo usa una frase completa y responde a la tarea.",
+                    "ruleRef": "gp-b1-present-perfect"
+                  }
+                },
+                {
+                  "type": "SpeakRepeat",
+                  "id": "es-en-b1-u07-l09-e09",
+                  "targetPhrase": "Now I want to take on more responsibilities. In general, that is how it is.",
+                  "audioText": "Now I want to take on more responsibilities. In general, that is how it is.",
+                  "feedbackOnError": {
+                    "type": "pronunciation",
+                    "explanation": "Repite «Now I want to take on more responsibilities. In general, that is how it is.» con claridad.",
+                    "ruleRef": "gp-b1-present-perfect"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La frase se entiende y mantiene el ritmo."
+                  }
+                }
+              ]
+            },
+            {
+              "id": "es-en-b1-u07-l10",
+              "title": "Evaluación: mi perfil",
+              "cefrLevel": "B1",
+              "scenario": "Situación comunicativa sobre mi perfil profesional.",
+              "canDo": "Puedo comunicarme con soltura sobre mi perfil profesional.",
+              "grammarPoints": [
+                {
+                  "id": "gp-b1-present-perfect",
+                  "label": "Presente perfecto",
+                  "description": "Have/has + participio conecta experiencias pasadas con el presente."
+                },
+                {
+                  "id": "gp-b1-passive-voice",
+                  "label": "Voz pasiva",
+                  "description": "Be + participio desplaza el foco a la acción o al resultado."
+                }
+              ],
+              "vocabFrequencyBand": "2000-3000",
+              "culturalNotes": [
+                {
+                  "idiom": "hit the nail on the head",
+                  "note": "Expresión para decir que alguien ha acertado exactamente.",
+                  "translation": "dar en el clavo"
+                }
+              ],
+              "microLesson": {
+                "title": "Evaluación: mi perfil",
+                "goals": [
+                  "Usar vocabulario de mi perfil profesional.",
+                  "Aplicar presente perfecto y voz pasiva.",
+                  "Resolver una tarea comunicativa sobre mi perfil profesional."
+                ],
+                "sections": [
+                  {
+                    "heading": "Lengua en contexto",
+                    "body": "Presente perfecto: Have/has + participio conecta experiencias pasadas con el presente. Voz pasiva: Be + participio desplaza el foco a la acción o al resultado.",
+                    "examples": [
+                      {
+                        "source": "Tengo experiencia en atención al cliente. Esto es importante para mí.",
+                        "target": "I have experience in customer service. This is important to me."
+                      },
+                      {
+                        "source": "He trabajado en equipo durante cinco años. En general, es así.",
+                        "target": "I have worked in a team for five years. In general, that is how it is."
+                      }
+                    ]
+                  }
+                ]
+              },
+              "glossary": [
+                {
+                  "term": "I have experience in customer service. This is important to me.",
+                  "translations": [
+                    "Tengo experiencia en atención al cliente. Esto es importante para mí."
+                  ]
+                },
+                {
+                  "term": "I have worked in a team for five years. In general, that is how it is.",
+                  "translations": [
+                    "He trabajado en equipo durante cinco años. En general, es así."
+                  ]
+                },
+                {
+                  "term": "I would like to learn new skills. It also helps me learn.",
+                  "translations": [
+                    "Me gustaría aprender nuevas habilidades. Además, me ayuda a aprender."
+                  ]
+                }
+              ],
+              "exercises": [
+                {
+                  "type": "MultipleChoice",
+                  "id": "es-en-b1-u07-l10-e01",
+                  "question": "¿Cuál es la opción correcta para «Tengo experiencia en atención al cliente. Esto es importante para mí.»?",
+                  "options": [
+                    "I have experience in customer service. This is important to me.",
+                    "I have worked in a team for five years. In general, that is how it is.",
+                    "I would like to learn new skills. It also helps me learn."
+                  ],
+                  "correctIndex": 0,
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "«Tengo experiencia en atención al cliente. Esto es importante para mí.» se dice «I have experience in customer service. This is important to me.».",
+                    "ruleRef": "gp-b1-present-perfect"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has elegido la traducción correcta."
+                  }
+                },
+                {
+                  "type": "Translate",
+                  "id": "es-en-b1-u07-l10-e02",
+                  "sourcePhrase": "Tengo experiencia en atención al cliente. Esto es importante para mí.",
+                  "correctTokens": [
+                    "I",
+                    "have",
+                    "experience",
+                    "in",
+                    "customer",
+                    "service",
+                    "This",
+                    "is",
+                    "important",
+                    "to",
+                    "me"
+                  ],
+                  "distractorTokens": [
+                    "worked",
+                    "a",
+                    "team"
+                  ],
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "El orden correcto es «I have experience in customer service This is important to me». Presente perfecto: Have/has + participio conecta experiencias pasadas con el presente.",
+                    "ruleRef": "gp-b1-present-perfect"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La frase conserva el orden y el significado."
+                  }
+                },
+                {
+                  "type": "OrderWords",
+                  "id": "es-en-b1-u07-l10-e03",
+                  "tokens": [
+                    "have",
+                    "worked",
+                    "in",
+                    "a",
+                    "team",
+                    "for",
+                    "five",
+                    "years",
+                    "In",
+                    "general",
+                    "that",
+                    "is",
+                    "how",
+                    "it",
+                    "is",
+                    "I"
+                  ],
+                  "answerTokens": [
+                    "I",
+                    "have",
+                    "worked",
+                    "in",
+                    "a",
+                    "team",
+                    "for",
+                    "five",
+                    "years",
+                    "In",
+                    "general",
+                    "that",
+                    "is",
+                    "how",
+                    "it",
+                    "is"
+                  ],
+                  "sourcePhrase": "He trabajado en equipo durante cinco años. En general, es así.",
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "La frase correcta es «I have worked in a team for five years In general that is how it is». Voz pasiva: Be + participio desplaza el foco a la acción o al resultado.",
+                    "ruleRef": "gp-b1-passive-voice"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "El orden produce una frase natural."
+                  }
+                },
+                {
+                  "type": "MatchPairs",
+                  "id": "es-en-b1-u07-l10-e04",
+                  "pairs": [
+                    {
+                      "left": "Tengo experiencia en atención al cliente. Esto es importante para mí.",
+                      "right": "I have experience in customer service. This is important to me."
+                    },
+                    {
+                      "left": "He trabajado en equipo durante cinco años. En general, es así.",
+                      "right": "I have worked in a team for five years. In general, that is how it is."
+                    },
+                    {
+                      "left": "Me gustaría aprender nuevas habilidades. Además, me ayuda a aprender.",
+                      "right": "I would like to learn new skills. It also helps me learn."
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "Cada expresión tiene una traducción distinta.",
+                    "ruleRef": "gp-b1-present-perfect"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has asociado cada expresión con su traducción."
+                  }
+                },
+                {
+                  "type": "ListenChoose",
+                  "id": "es-en-b1-u07-l10-e05",
+                  "audioText": "I would like to learn new skills. It also helps me learn.",
+                  "options": [
+                    "I have experience in customer service. This is important to me.",
+                    "I have worked in a team for five years. In general, that is how it is.",
+                    "I would like to learn new skills. It also helps me learn."
+                  ],
+                  "correctIndex": 0,
+                  "feedbackOnError": {
+                    "type": "comprehension",
+                    "explanation": "El audio dice «I would like to learn new skills. It also helps me learn.».",
+                    "ruleRef": "gp-b1-present-perfect"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has reconocido la frase del audio."
+                  }
+                },
+                {
+                  "type": "ListenType",
+                  "id": "es-en-b1-u07-l10-e06",
+                  "audioText": "I would like to learn new skills. It also helps me learn.",
+                  "transcription": "I would like to learn new skills. It also helps me learn.",
+                  "feedbackOnError": {
+                    "type": "spelling",
+                    "explanation": "Escribe exactamente «I would like to learn new skills. It also helps me learn.».",
+                    "ruleRef": "gp-b1-present-perfect"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La transcripción coincide con el audio."
+                  }
+                },
+                {
+                  "type": "ClozeDragDrop",
+                  "id": "es-en-b1-u07-l10-e07",
+                  "passage": "I have {{b1}} in {{b2}} service.",
+                  "blanks": [
+                    {
+                      "id": "b1",
+                      "answer": "experience",
+                      "options": [
+                        "experience",
+                        "service",
+                        "very"
+                      ]
+                    },
+                    {
+                      "id": "b2",
+                      "answer": "customer",
+                      "options": [
+                        "customer",
+                        "service",
+                        "very"
+                      ]
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "Las dos formas deben encajar con el contexto de la frase.",
+                    "ruleRef": "gp-b1-passive-voice"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Los dos huecos encajan con la situación."
+                  }
+                },
+                {
+                  "type": "FreeSpeakingPrompt",
+                  "id": "es-en-b1-u07-l10-e08",
+                  "prompt": "Habla sobre mi perfil profesional y justifica tu respuesta.",
+                  "minTokens": 6,
+                  "conceptClusters": [
+                    [
+                      "like"
+                    ],
+                    [
+                      "learn"
+                    ],
+                    [
+                      "new"
+                    ]
+                  ],
+                  "modelAnswer": "I would like to learn new skills. It also helps me learn.",
+                  "selfAssessmentCriteria": [
+                    "¿La respuesta es clara y responde a la tarea?",
+                    "¿Usa las dos estructuras gramaticales de la lección?"
+                  ],
+                  "grammarRuleRefs": [
+                    "gp-b1-present-perfect",
+                    "gp-b1-passive-voice"
+                  ],
+                  "timeLimitSeconds": 60,
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "La respuesta modelo usa una frase completa y responde a la tarea.",
+                    "ruleRef": "gp-b1-present-perfect"
+                  }
+                },
+                {
+                  "type": "SpeakRepeat",
+                  "id": "es-en-b1-u07-l10-e09",
+                  "targetPhrase": "I would like to learn new skills. It also helps me learn.",
+                  "audioText": "I would like to learn new skills. It also helps me learn.",
+                  "feedbackOnError": {
+                    "type": "pronunciation",
+                    "explanation": "Repite «I would like to learn new skills. It also helps me learn.» con claridad.",
+                    "ruleRef": "gp-b1-present-perfect"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La frase se entiende y mantiene el ritmo."
+                  }
+                }
+              ]
+            }
+          ]
         }
       ]
     },
