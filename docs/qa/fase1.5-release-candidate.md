@@ -32,7 +32,8 @@ Ruta: `app/build/outputs/apk/full/release/`.
    (`CN=Android Debug`) porque no hay keystore de distribución configurado.
    **No debe distribuirse.**
 2. **Revisión nativa:** ADR-053 exige completar la revisión nativa de F0/F1
-   antes del release estable.
+   antes del release estable. El kit está en
+   `docs/qa/fase1.5-revision-nativa.md`.
 3. **GitHub:** `gh` no está autenticado en este entorno; no se puede publicar
    la release ni subir el APK.
 

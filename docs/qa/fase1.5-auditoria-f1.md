@@ -68,3 +68,7 @@ Tras la corrección, `audit_f1.py` reporta **0 duplicados** en los cuatro cursos
 F1 queda **auditada técnicamente**. El release estable 3.2.0 no debe publicarse
 hasta completar la revisión nativa humana y firmar el APK con el keystore de
 distribución.
+
+Kit de revisión nativa: `docs/qa/fase1.5-revision-nativa.md`.
+CSV: `build/reports/native-review-plan.csv` (840 lecciones) y
+`build/reports/native-review-b2-idioms.csv` (40 modismos).

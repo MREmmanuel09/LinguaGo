@@ -303,6 +303,8 @@ intacto.
 | F1.4 A1 ES→JA (150 lecciones / 1.050 ejercicios) | ✅ Borrador |
 | F1.5 Auditoría de F1 | ✅ |
 | F1.5 Release candidate 3.2.0-rc1 | ✅ (no distribuible) |
+| Kit de revisión nativa (`docs/qa/fase1.5-revision-nativa.md`) | ✅ |
+| Revisión nativa humana de F0/F1 | Pendiente |
 | Release estable 3.2.0 | Pendiente (revisión nativa + keystore) |
 
 Las réplicas PT/FR/JA cierran F0 con unidades de repaso construidas sobre

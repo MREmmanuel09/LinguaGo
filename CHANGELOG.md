@@ -17,6 +17,8 @@ Release candidate técnico de F1. Incluye F0 (240 lecciones piloto) y F1
 - 60 bloques nuevos de A1 (15 por curso) con 4.200 ejercicios.
 - Auditoría F1: 0 lecciones duplicadas, 19 tests de contenido y 11 de rampa.
 - `contentScaleReport`: 1.257/4.080 lecciones.
+- Kit de revisión nativa: 840 lecciones y 40 modismos B2 en
+  `docs/qa/fase1.5-revision-nativa.md`.
 
 ### Pendiente / bloqueado
 
