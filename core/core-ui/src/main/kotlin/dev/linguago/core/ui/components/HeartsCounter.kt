@@ -2,12 +2,10 @@ package dev.linguago.core.ui.components
 
 import androidx.compose.animation.core.Animatable
 import androidx.compose.animation.core.tween
-import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
-import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
@@ -16,7 +14,6 @@ import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.remember
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.graphicsLayer
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.semantics.contentDescription
@@ -28,7 +25,6 @@ import dev.linguago.core.domain.hearts.HEARTS_MAX
 import dev.linguago.core.domain.model.ThemeMode
 import dev.linguago.core.ui.theme.LinguaMotion
 import dev.linguago.core.ui.theme.LinguaTheme
-import dev.linguago.core.ui.theme.LinguaTokens
 import dev.linguago.core.ui.theme.linguaExtendedColors
 import dev.linguago.core.ui.util.rememberAnimationsEnabled
 
@@ -60,8 +56,6 @@ public fun HeartsCounter(
     Row(
         modifier =
             modifier
-                .clip(RoundedCornerShape(LinguaTokens.RADIUS_PILL_DP.dp))
-                .background(MaterialTheme.colorScheme.surfaceVariant)
                 .semantics(mergeDescendants = true) {
                     contentDescription = "$clamped de $max vidas"
                 }.padding(horizontal = 10.dp, vertical = 4.dp),

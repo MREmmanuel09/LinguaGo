@@ -7,6 +7,7 @@ import androidx.compose.animation.core.infiniteRepeatable
 import androidx.compose.animation.core.rememberInfiniteTransition
 import androidx.compose.animation.core.tween
 import androidx.compose.foundation.background
+import androidx.compose.foundation.border
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.interaction.MutableInteractionSource
 import androidx.compose.foundation.interaction.collectIsPressedAsState
@@ -90,49 +91,55 @@ fun PathNode(
 ) {
     val extended = linguaExtendedColors()
     val animations = rememberAnimationsEnabled()
-    val colors = MaterialTheme.colorScheme
     val feedback = LocalInteractionFeedback.current
 
     val body: Color
     val edge: Color
     val iconRes: Int
     val iconTint: Color
+    val ringColor: Color?
     when (node.state) {
         PathNodeState.COMPLETED -> {
             body = LinguaTokens.Accent
             edge = LinguaTokens.Accent.copy(alpha = 0.72f)
             iconRes = LinguaIcons.CheckRes
-            iconTint = Color.White
+            iconTint = LinguaTokens.Bg
+            ringColor = null
         }
         PathNodeState.AVAILABLE -> {
             body = LinguaTokens.Primary
             edge = LinguaTokens.PrimaryEdge
             iconRes = LinguaIcons.PlayRes
-            iconTint = Color.White
+            iconTint = LinguaTokens.Bg
+            ringColor = LinguaTokens.Primary
         }
         PathNodeState.IN_PROGRESS -> {
-            body = LinguaTokens.Warning
-            edge = LinguaTokens.Warning.copy(alpha = 0.72f)
+            body = LinguaTokens.Primary
+            edge = LinguaTokens.PrimaryEdge
             iconRes = LinguaIcons.PlayRes
-            iconTint = LinguaTokens.Fg
+            iconTint = LinguaTokens.Bg
+            ringColor = LinguaTokens.Primary
         }
         PathNodeState.CHEST -> {
             body = extended.chestGold
             edge = extended.chestEdge
             iconRes = LinguaIcons.ChestRes
             iconTint = LinguaTokens.Fg
+            ringColor = null
         }
         PathNodeState.CHEST_LOCKED -> {
-            body = colors.surfaceVariant
-            edge = colors.outline
+            body = LinguaTokens.Tan
+            edge = LinguaTokens.TanShadow
             iconRes = LinguaIcons.ChestRes
-            iconTint = colors.onSurfaceVariant
+            iconTint = LinguaTokens.Fg
+            ringColor = null
         }
         PathNodeState.LOCKED -> {
-            body = colors.surfaceVariant
-            edge = colors.outline
+            body = LinguaTokens.Tan
+            edge = LinguaTokens.TanShadow
             iconRes = LinguaIcons.LockRes
-            iconTint = colors.onSurfaceVariant
+            iconTint = LinguaTokens.Fg
+            ringColor = null
         }
     }
 
@@ -199,6 +206,15 @@ fun PathNode(
                 ),
         contentAlignment = Alignment.Center,
     ) {
+        ringColor?.let { ring ->
+            Box(
+                modifier =
+                    Modifier
+                        .size(92.dp)
+                        .clip(CircleShape)
+                        .border(4.dp, ring.copy(alpha = 0.35f), CircleShape),
+            )
+        }
         Box(
             modifier =
                 Modifier
