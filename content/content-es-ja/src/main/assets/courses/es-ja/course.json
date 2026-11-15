@@ -144640,6 +144640,3388 @@
               ]
             }
           ]
+        },
+        {
+          "id": "es-ja-b2-u05",
+          "title": "B2 · Salud y bienestar",
+          "lessons": [
+            {
+              "id": "es-ja-b2-u05-l01",
+              "title": "Repaso: mi ciudad",
+              "cefrLevel": "B2",
+              "scenario": "Situación comunicativa avanzada sobre mi ciudad.",
+              "canDo": "Puedo argumentar y matizar sobre mi ciudad.",
+              "grammarPoints": [
+                {
+                  "id": "gp-b2-modal-perfect",
+                  "label": "Modal perfect",
+                  "description": "Must have, might have y should have especulan sobre el pasado."
+                },
+                {
+                  "id": "gp-b2-subjunctive",
+                  "label": "Subjunctive",
+                  "description": "El subjuntivo expresa deseos, dudas y valoraciones."
+                }
+              ],
+              "vocabFrequencyBand": "3000-5000",
+              "culturalNotes": [
+                {
+                  "idiom": "手 を 抜く",
+                  "note": "Expresión para hacer algo con poco cuidado.",
+                  "translation": "hacerlo de cualquier manera"
+                }
+              ],
+              "microLesson": {
+                "title": "Repaso: mi ciudad",
+                "goals": [
+                  "Usar vocabulario avanzado de mi ciudad.",
+                  "Aplicar modal perfect y subjunctive.",
+                  "Argumentar y matizar sobre mi ciudad."
+                ],
+                "sections": [
+                  {
+                    "heading": "Lengua en contexto",
+                    "body": "Modal perfect: Must have, might have y should have especulan sobre el pasado. Subjunctive: El subjuntivo expresa deseos, dudas y valoraciones.",
+                    "examples": [
+                      {
+                        "source": "Mi ciudad es tranquila y tiene un parque. Dicho esto, depende del contexto.",
+                        "target": "私 の 街 は 静かで 公園 が あります。 そう は いえ 、状況 に よります 。"
+                      },
+                      {
+                        "source": "El transporte público es más barato que el coche. En otras palabras, merece la pena considerarlo.",
+                        "target": "公共交通機関 は 車 より も 安いです。 つまり 、検討 する 価値 が あります 。"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "glossary": [
+                {
+                  "term": "私 の 街 は 静かで 公園 が あります。 そう は いえ 、状況 に よります 。",
+                  "translations": [
+                    "Mi ciudad es tranquila y tiene un parque. Dicho esto, depende del contexto."
+                  ]
+                },
+                {
+                  "term": "公共交通機関 は 車 より も 安いです。 つまり 、検討 する 価値 が あります 。",
+                  "translations": [
+                    "El transporte público es más barato que el coche. En otras palabras, merece la pena considerarlo."
+                  ]
+                },
+                {
+                  "term": "そんな 近所 に 住みたいです。 残念 ながら 、もっと 複雑 かも しれません 。",
+                  "translations": [
+                    "Me gustaría vivir en un barrio así. Me temo que puede ser más complicado."
+                  ]
+                }
+              ],
+              "exercises": [
+                {
+                  "type": "MultipleChoice",
+                  "id": "es-ja-b2-u05-l01-e01",
+                  "question": "¿Cuál es la opción correcta para «Mi ciudad es tranquila y tiene un parque. Dicho esto, depende del contexto.»?",
+                  "options": [
+                    "私 の 街 は 静かで 公園 が あります。 そう は いえ 、状況 に よります 。",
+                    "公共交通機関 は 車 より も 安いです。 つまり 、検討 する 価値 が あります 。",
+                    "そんな 近所 に 住みたいです。 残念 ながら 、もっと 複雑 かも しれません 。"
+                  ],
+                  "correctIndex": 0,
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "«Mi ciudad es tranquila y tiene un parque. Dicho esto, depende del contexto.» se dice «私 の 街 は 静かで 公園 が あります。 そう は いえ 、状況 に よります 。».",
+                    "ruleRef": "gp-b2-modal-perfect"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has elegido la traducción correcta."
+                  }
+                },
+                {
+                  "type": "OrderWords",
+                  "id": "es-ja-b2-u05-l01-e02",
+                  "tokens": [
+                    "の",
+                    "街",
+                    "は",
+                    "静かで",
+                    "公園",
+                    "が",
+                    "あります。",
+                    "そう",
+                    "は",
+                    "いえ",
+                    "、状況",
+                    "に",
+                    "よります",
+                    "。",
+                    "私"
+                  ],
+                  "answerTokens": [
+                    "私",
+                    "の",
+                    "街",
+                    "は",
+                    "静かで",
+                    "公園",
+                    "が",
+                    "あります。",
+                    "そう",
+                    "は",
+                    "いえ",
+                    "、状況",
+                    "に",
+                    "よります",
+                    "。"
+                  ],
+                  "sourcePhrase": "Mi ciudad es tranquila y tiene un parque. Dicho esto, depende del contexto.",
+                  "feedbackOnError": {
+                    "type": "word_order",
+                    "explanation": "El orden correcto es «私 の 街 は 静かで 公園 が あります。 そう は いえ 、状況 に よります 。».",
+                    "ruleRef": "gp-b2-modal-perfect"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "El orden produce una frase natural."
+                  }
+                },
+                {
+                  "type": "ClozeDragDrop",
+                  "id": "es-ja-b2-u05-l01-e03",
+                  "passage": "私 の 街 は {{b1}} {{b2}} が あります",
+                  "blanks": [
+                    {
+                      "id": "b1",
+                      "answer": "静かで",
+                      "options": [
+                        "静かで",
+                        "あります",
+                        "とても"
+                      ]
+                    },
+                    {
+                      "id": "b2",
+                      "answer": "公園",
+                      "options": [
+                        "公園",
+                        "あります",
+                        "とても"
+                      ]
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "Las dos formas deben encajar con el contexto de la frase.",
+                    "ruleRef": "gp-b2-subjunctive"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Los dos huecos encajan con la situación."
+                  }
+                },
+                {
+                  "type": "SemanticMatch",
+                  "id": "es-ja-b2-u05-l01-e04",
+                  "instructions": "Clasifica la función comunicativa de cada intervención.",
+                  "pairs": [
+                    {
+                      "left": "私 の 街 は 静かで 公園 が あります。 そう は いえ 、状況 に よります 。",
+                      "right": "Planteamiento",
+                      "register": "formal",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    },
+                    {
+                      "left": "公共交通機関 は 車 より も 安いです。 つまり 、検討 する 価値 が あります 。",
+                      "right": "Concesión",
+                      "register": "neutral",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    },
+                    {
+                      "left": "そんな 近所 に 住みたいです。 残念 ながら 、もっと 複雑 かも しれません 。",
+                      "right": "Conclusión",
+                      "register": "informal",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "Cada intervención cumple una función comunicativa distinta.",
+                    "ruleRef": "gp-b2-modal-perfect"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has identificado la función de cada intervención."
+                  }
+                },
+                {
+                  "type": "SemanticMatch",
+                  "id": "es-ja-b2-u05-l01-e05",
+                  "instructions": "Distingue el registro de cada intervención.",
+                  "pairs": [
+                    {
+                      "left": "私 の 街 は 静かで 公園 が あります。 そう は いえ 、状況 に よります 。",
+                      "right": "Formal",
+                      "register": "formal",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    },
+                    {
+                      "left": "公共交通機関 は 車 より も 安いです。 つまり 、検討 する 価値 が あります 。",
+                      "right": "Neutral",
+                      "register": "neutral",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    },
+                    {
+                      "left": "そんな 近所 に 住みたいです。 残念 ながら 、もっと 複雑 かも しれません 。",
+                      "right": "Informal",
+                      "register": "informal",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "register",
+                    "explanation": "El registro cambia según el contexto y la relación con el interlocutor.",
+                    "ruleRef": "gp-b2-subjunctive"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has distinguido el registro de cada intervención."
+                  }
+                },
+                {
+                  "type": "AudioOnlyPrompt",
+                  "id": "es-ja-b2-u05-l01-e06",
+                  "audioText": "公共交通機関 は 車 より も 安いです。 つまり 、検討 する 価値 が あります 。",
+                  "question": "¿Qué ha dicho el hablante?",
+                  "options": [
+                    "公共交通機関 は 車 より も 安いです。 つまり 、検討 する 価値 が あります 。",
+                    "私 の 街 は 静かで 公園 が あります。 そう は いえ 、状況 に よります 。",
+                    "そんな 近所 に 住みたいです。 残念 ながら 、もっと 複雑 かも しれません 。"
+                  ],
+                  "correctIndex": 0,
+                  "allowSlowPlayback": true,
+                  "feedbackOnError": {
+                    "type": "comprehension",
+                    "explanation": "El audio dice «公共交通機関 は 車 より も 安いです。 つまり 、検討 する 価値 が あります 。».",
+                    "ruleRef": "gp-b2-modal-perfect"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has comprendido el mensaje del audio."
+                  }
+                },
+                {
+                  "type": "AudioOnlyPrompt",
+                  "id": "es-ja-b2-u05-l01-e07",
+                  "audioText": "そんな 近所 に 住みたいです。 残念 ながら 、もっと 複雑 かも しれません 。",
+                  "question": "¿Cuál es la idea principal?",
+                  "options": [
+                    "そんな 近所 に 住みたいです。 残念 ながら 、もっと 複雑 かも しれません 。",
+                    "私 の 街 は 静かで 公園 が あります。 そう は いえ 、状況 に よります 。",
+                    "公共交通機関 は 車 より も 安いです。 つまり 、検討 する 価値 が あります 。"
+                  ],
+                  "correctIndex": 0,
+                  "allowSlowPlayback": false,
+                  "feedbackOnError": {
+                    "type": "comprehension",
+                    "explanation": "El audio dice «そんな 近所 に 住みたいです。 残念 ながら 、もっと 複雑 かも しれません 。».",
+                    "ruleRef": "gp-b2-subjunctive"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has identificado la idea principal."
+                  }
+                },
+                {
+                  "type": "ListenType",
+                  "id": "es-ja-b2-u05-l01-e08",
+                  "audioText": "そんな 近所 に 住みたいです。 残念 ながら 、もっと 複雑 かも しれません 。",
+                  "transcription": "そんな 近所 に 住みたいです。 残念 ながら 、もっと 複雑 かも しれません 。",
+                  "feedbackOnError": {
+                    "type": "spelling",
+                    "explanation": "Escribe exactamente «そんな 近所 に 住みたいです。 残念 ながら 、もっと 複雑 かも しれません 。».",
+                    "ruleRef": "gp-b2-modal-perfect"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La transcripción coincide con el audio."
+                  }
+                },
+                {
+                  "type": "SpeakRepeat",
+                  "id": "es-ja-b2-u05-l01-e09",
+                  "targetPhrase": "そんな 近所 に 住みたいです。 残念 ながら 、もっと 複雑 かも しれません 。",
+                  "audioText": "そんな 近所 に 住みたいです。 残念 ながら 、もっと 複雑 かも しれません 。",
+                  "feedbackOnError": {
+                    "type": "pronunciation",
+                    "explanation": "Repite «そんな 近所 に 住みたいです。 残念 ながら 、もっと 複雑 かも しれません 。» con claridad.",
+                    "ruleRef": "gp-b2-modal-perfect"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La frase se entiende y mantiene el ritmo."
+                  }
+                },
+                {
+                  "type": "FreeSpeakingPrompt",
+                  "id": "es-ja-b2-u05-l01-e10",
+                  "prompt": "Argumenta y matiza una opinión sobre mi ciudad.",
+                  "minTokens": 20,
+                  "conceptClusters": [
+                    [
+                      "静かで"
+                    ],
+                    [
+                      "公園"
+                    ],
+                    [
+                      "あります。"
+                    ]
+                  ],
+                  "modelAnswer": "私 の 街 は 静かで 公園 が あります。 そう は いえ 、状況 に よります 。 公共交通機関 は 車 より も 安いです。 つまり 、検討 する 価値 が あります 。 そんな 近所 に 住みたいです。 残念 ながら 、もっと 複雑 かも しれません 。",
+                  "selfAssessmentCriteria": [
+                    "¿La respuesta argumenta y responde a la tarea?",
+                    "¿Usa las dos estructuras gramaticales de la lección?",
+                    "¿Incluye una concesión o una matización?"
+                  ],
+                  "grammarRuleRefs": [
+                    "gp-b2-modal-perfect",
+                    "gp-b2-subjunctive"
+                  ],
+                  "timeLimitSeconds": 90,
+                  "minWpm": 70,
+                  "maxWpm": 160,
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "La respuesta modelo desarrolla una opinión con matices y una concesión.",
+                    "ruleRef": "gp-b2-modal-perfect"
+                  }
+                }
+              ]
+            },
+            {
+              "id": "es-ja-b2-u05-l02",
+              "title": "Síntomas y estados",
+              "cefrLevel": "B2",
+              "scenario": "Situación comunicativa avanzada sobre los síntomas.",
+              "canDo": "Puedo argumentar y matizar sobre los síntomas.",
+              "grammarPoints": [
+                {
+                  "id": "gp-b2-modal-perfect",
+                  "label": "Modal perfect",
+                  "description": "Must have, might have y should have especulan sobre el pasado."
+                },
+                {
+                  "id": "gp-b2-subjunctive",
+                  "label": "Subjunctive",
+                  "description": "El subjuntivo expresa deseos, dudas y valoraciones."
+                }
+              ],
+              "vocabFrequencyBand": "3000-5000",
+              "culturalNotes": [
+                {
+                  "idiom": "体調 が すぐれない",
+                  "note": "Expresión para decir que alguien no se siente bien.",
+                  "translation": "sentirse mal"
+                }
+              ],
+              "microLesson": {
+                "title": "Síntomas y estados",
+                "goals": [
+                  "Usar vocabulario avanzado de los síntomas.",
+                  "Aplicar modal perfect y subjunctive.",
+                  "Argumentar y matizar sobre los síntomas."
+                ],
+                "sections": [
+                  {
+                    "heading": "Lengua en contexto",
+                    "body": "Modal perfect: Must have, might have y should have especulan sobre el pasado. Subjunctive: El subjuntivo expresa deseos, dudas y valoraciones.",
+                    "examples": [
+                      {
+                        "source": "Tengo dolor de cabeza. En otras palabras, merece la pena considerarlo.",
+                        "target": "頭痛 が します。 つまり 、検討 する 価値 が あります 。"
+                      },
+                      {
+                        "source": "Me duele la garganta. Me temo que puede ser más complicado.",
+                        "target": "喉 が 痛いです。 残念 ながら 、もっと 複雑 かも しれません 。"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "glossary": [
+                {
+                  "term": "頭痛 が します。 つまり 、検討 する 価値 が あります 。",
+                  "translations": [
+                    "Tengo dolor de cabeza. En otras palabras, merece la pena considerarlo."
+                  ]
+                },
+                {
+                  "term": "喉 が 痛いです。 残念 ながら 、もっと 複雑 かも しれません 。",
+                  "translations": [
+                    "Me duele la garganta. Me temo que puede ser más complicado."
+                  ]
+                },
+                {
+                  "term": "とても 疲れています。 正直 に 言う と 、複雑 な 気持ち です 。",
+                  "translations": [
+                    "Estoy muy cansado. Sinceramente, tengo sentimientos encontrados."
+                  ]
+                }
+              ],
+              "exercises": [
+                {
+                  "type": "MultipleChoice",
+                  "id": "es-ja-b2-u05-l02-e01",
+                  "question": "¿Cuál es la opción correcta para «Tengo dolor de cabeza. En otras palabras, merece la pena considerarlo.»?",
+                  "options": [
+                    "頭痛 が します。 つまり 、検討 する 価値 が あります 。",
+                    "喉 が 痛いです。 残念 ながら 、もっと 複雑 かも しれません 。",
+                    "とても 疲れています。 正直 に 言う と 、複雑 な 気持ち です 。"
+                  ],
+                  "correctIndex": 0,
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "«Tengo dolor de cabeza. En otras palabras, merece la pena considerarlo.» se dice «頭痛 が します。 つまり 、検討 する 価値 が あります 。».",
+                    "ruleRef": "gp-b2-modal-perfect"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has elegido la traducción correcta."
+                  }
+                },
+                {
+                  "type": "OrderWords",
+                  "id": "es-ja-b2-u05-l02-e02",
+                  "tokens": [
+                    "が",
+                    "します。",
+                    "つまり",
+                    "、検討",
+                    "する",
+                    "価値",
+                    "が",
+                    "あります",
+                    "。",
+                    "頭痛"
+                  ],
+                  "answerTokens": [
+                    "頭痛",
+                    "が",
+                    "します。",
+                    "つまり",
+                    "、検討",
+                    "する",
+                    "価値",
+                    "が",
+                    "あります",
+                    "。"
+                  ],
+                  "sourcePhrase": "Tengo dolor de cabeza. En otras palabras, merece la pena considerarlo.",
+                  "feedbackOnError": {
+                    "type": "word_order",
+                    "explanation": "El orden correcto es «頭痛 が します。 つまり 、検討 する 価値 が あります 。».",
+                    "ruleRef": "gp-b2-modal-perfect"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "El orden produce una frase natural."
+                  }
+                },
+                {
+                  "type": "ClozeDragDrop",
+                  "id": "es-ja-b2-u05-l02-e03",
+                  "passage": "{{b1}} が {{b2}}",
+                  "blanks": [
+                    {
+                      "id": "b1",
+                      "answer": "頭痛",
+                      "options": [
+                        "頭痛",
+                        "とても",
+                        "今日"
+                      ]
+                    },
+                    {
+                      "id": "b2",
+                      "answer": "します",
+                      "options": [
+                        "します",
+                        "とても",
+                        "今日"
+                      ]
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "Las dos formas deben encajar con el contexto de la frase.",
+                    "ruleRef": "gp-b2-subjunctive"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Los dos huecos encajan con la situación."
+                  }
+                },
+                {
+                  "type": "SemanticMatch",
+                  "id": "es-ja-b2-u05-l02-e04",
+                  "instructions": "Clasifica la función comunicativa de cada intervención.",
+                  "pairs": [
+                    {
+                      "left": "頭痛 が します。 つまり 、検討 する 価値 が あります 。",
+                      "right": "Planteamiento",
+                      "register": "formal",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    },
+                    {
+                      "left": "喉 が 痛いです。 残念 ながら 、もっと 複雑 かも しれません 。",
+                      "right": "Concesión",
+                      "register": "neutral",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    },
+                    {
+                      "left": "とても 疲れています。 正直 に 言う と 、複雑 な 気持ち です 。",
+                      "right": "Conclusión",
+                      "register": "informal",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "Cada intervención cumple una función comunicativa distinta.",
+                    "ruleRef": "gp-b2-modal-perfect"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has identificado la función de cada intervención."
+                  }
+                },
+                {
+                  "type": "SemanticMatch",
+                  "id": "es-ja-b2-u05-l02-e05",
+                  "instructions": "Distingue el registro de cada intervención.",
+                  "pairs": [
+                    {
+                      "left": "頭痛 が します。 つまり 、検討 する 価値 が あります 。",
+                      "right": "Formal",
+                      "register": "formal",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    },
+                    {
+                      "left": "喉 が 痛いです。 残念 ながら 、もっと 複雑 かも しれません 。",
+                      "right": "Neutral",
+                      "register": "neutral",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    },
+                    {
+                      "left": "とても 疲れています。 正直 に 言う と 、複雑 な 気持ち です 。",
+                      "right": "Informal",
+                      "register": "informal",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "register",
+                    "explanation": "El registro cambia según el contexto y la relación con el interlocutor.",
+                    "ruleRef": "gp-b2-subjunctive"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has distinguido el registro de cada intervención."
+                  }
+                },
+                {
+                  "type": "AudioOnlyPrompt",
+                  "id": "es-ja-b2-u05-l02-e06",
+                  "audioText": "喉 が 痛いです。 残念 ながら 、もっと 複雑 かも しれません 。",
+                  "question": "¿Qué ha dicho el hablante?",
+                  "options": [
+                    "喉 が 痛いです。 残念 ながら 、もっと 複雑 かも しれません 。",
+                    "頭痛 が します。 つまり 、検討 する 価値 が あります 。",
+                    "とても 疲れています。 正直 に 言う と 、複雑 な 気持ち です 。"
+                  ],
+                  "correctIndex": 0,
+                  "allowSlowPlayback": true,
+                  "feedbackOnError": {
+                    "type": "comprehension",
+                    "explanation": "El audio dice «喉 が 痛いです。 残念 ながら 、もっと 複雑 かも しれません 。».",
+                    "ruleRef": "gp-b2-modal-perfect"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has comprendido el mensaje del audio."
+                  }
+                },
+                {
+                  "type": "AudioOnlyPrompt",
+                  "id": "es-ja-b2-u05-l02-e07",
+                  "audioText": "とても 疲れています。 正直 に 言う と 、複雑 な 気持ち です 。",
+                  "question": "¿Cuál es la idea principal?",
+                  "options": [
+                    "とても 疲れています。 正直 に 言う と 、複雑 な 気持ち です 。",
+                    "頭痛 が します。 つまり 、検討 する 価値 が あります 。",
+                    "喉 が 痛いです。 残念 ながら 、もっと 複雑 かも しれません 。"
+                  ],
+                  "correctIndex": 0,
+                  "allowSlowPlayback": false,
+                  "feedbackOnError": {
+                    "type": "comprehension",
+                    "explanation": "El audio dice «とても 疲れています。 正直 に 言う と 、複雑 な 気持ち です 。».",
+                    "ruleRef": "gp-b2-subjunctive"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has identificado la idea principal."
+                  }
+                },
+                {
+                  "type": "ListenType",
+                  "id": "es-ja-b2-u05-l02-e08",
+                  "audioText": "とても 疲れています。 正直 に 言う と 、複雑 な 気持ち です 。",
+                  "transcription": "とても 疲れています。 正直 に 言う と 、複雑 な 気持ち です 。",
+                  "feedbackOnError": {
+                    "type": "spelling",
+                    "explanation": "Escribe exactamente «とても 疲れています。 正直 に 言う と 、複雑 な 気持ち です 。».",
+                    "ruleRef": "gp-b2-modal-perfect"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La transcripción coincide con el audio."
+                  }
+                },
+                {
+                  "type": "SpeakRepeat",
+                  "id": "es-ja-b2-u05-l02-e09",
+                  "targetPhrase": "とても 疲れています。 正直 に 言う と 、複雑 な 気持ち です 。",
+                  "audioText": "とても 疲れています。 正直 に 言う と 、複雑 な 気持ち です 。",
+                  "feedbackOnError": {
+                    "type": "pronunciation",
+                    "explanation": "Repite «とても 疲れています。 正直 に 言う と 、複雑 な 気持ち です 。» con claridad.",
+                    "ruleRef": "gp-b2-modal-perfect"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La frase se entiende y mantiene el ritmo."
+                  }
+                },
+                {
+                  "type": "FreeSpeakingPrompt",
+                  "id": "es-ja-b2-u05-l02-e10",
+                  "prompt": "Argumenta y matiza una opinión sobre los síntomas.",
+                  "minTokens": 20,
+                  "conceptClusters": [
+                    [
+                      "頭痛"
+                    ],
+                    [
+                      "します。"
+                    ],
+                    [
+                      "つまり"
+                    ]
+                  ],
+                  "modelAnswer": "頭痛 が します。 つまり 、検討 する 価値 が あります 。 喉 が 痛いです。 残念 ながら 、もっと 複雑 かも しれません 。 とても 疲れています。 正直 に 言う と 、複雑 な 気持ち です 。",
+                  "selfAssessmentCriteria": [
+                    "¿La respuesta argumenta y responde a la tarea?",
+                    "¿Usa las dos estructuras gramaticales de la lección?",
+                    "¿Incluye una concesión o una matización?"
+                  ],
+                  "grammarRuleRefs": [
+                    "gp-b2-modal-perfect",
+                    "gp-b2-subjunctive"
+                  ],
+                  "timeLimitSeconds": 90,
+                  "minWpm": 70,
+                  "maxWpm": 160,
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "La respuesta modelo desarrolla una opinión con matices y una concesión.",
+                    "ruleRef": "gp-b2-modal-perfect"
+                  }
+                }
+              ]
+            },
+            {
+              "id": "es-ja-b2-u05-l03",
+              "title": "Remedios y farmacia",
+              "cefrLevel": "B2",
+              "scenario": "Situación comunicativa avanzada sobre la farmacia.",
+              "canDo": "Puedo argumentar y matizar sobre la farmacia.",
+              "grammarPoints": [
+                {
+                  "id": "gp-b2-modal-perfect",
+                  "label": "Modal perfect",
+                  "description": "Must have, might have y should have especulan sobre el pasado."
+                },
+                {
+                  "id": "gp-b2-subjunctive",
+                  "label": "Subjunctive",
+                  "description": "El subjuntivo expresa deseos, dudas y valoraciones."
+                }
+              ],
+              "vocabFrequencyBand": "3000-5000",
+              "culturalNotes": [
+                {
+                  "idiom": "手 を 貸す",
+                  "note": "Expresión para ofrecer ayuda.",
+                  "translation": "echar una mano"
+                }
+              ],
+              "microLesson": {
+                "title": "Remedios y farmacia",
+                "goals": [
+                  "Usar vocabulario avanzado de la farmacia.",
+                  "Aplicar modal perfect y subjunctive.",
+                  "Argumentar y matizar sobre la farmacia."
+                ],
+                "sections": [
+                  {
+                    "heading": "Lengua en contexto",
+                    "body": "Modal perfect: Must have, might have y should have especulan sobre el pasado. Subjunctive: El subjuntivo expresa deseos, dudas y valoraciones.",
+                    "examples": [
+                      {
+                        "source": "Necesito un analgésico. Me temo que puede ser más complicado.",
+                        "target": "鎮痛剤 が 必要です。 残念 ながら 、もっと 複雑 かも しれません 。"
+                      },
+                      {
+                        "source": "Necesito un jarabe para la tos. Sinceramente, tengo sentimientos encontrados.",
+                        "target": "咳止めシロップ が 必要です。 正直 に 言う と 、複雑 な 気持ち です 。"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "glossary": [
+                {
+                  "term": "鎮痛剤 が 必要です。 残念 ながら 、もっと 複雑 かも しれません 。",
+                  "translations": [
+                    "Necesito un analgésico. Me temo que puede ser más complicado."
+                  ]
+                },
+                {
+                  "term": "咳止めシロップ が 必要です。 正直 に 言う と 、複雑 な 気持ち です 。",
+                  "translations": [
+                    "Necesito un jarabe para la tos. Sinceramente, tengo sentimientos encontrados."
+                  ]
+                },
+                {
+                  "term": "絆創膏 の 箱 が 必要です。 これ は 変わって きて いる よう です 。",
+                  "translations": [
+                    "Necesito una caja de tiritas. Parece que esto está cambiando."
+                  ]
+                }
+              ],
+              "exercises": [
+                {
+                  "type": "MultipleChoice",
+                  "id": "es-ja-b2-u05-l03-e01",
+                  "question": "¿Cuál es la opción correcta para «Necesito un analgésico. Me temo que puede ser más complicado.»?",
+                  "options": [
+                    "鎮痛剤 が 必要です。 残念 ながら 、もっと 複雑 かも しれません 。",
+                    "咳止めシロップ が 必要です。 正直 に 言う と 、複雑 な 気持ち です 。",
+                    "絆創膏 の 箱 が 必要です。 これ は 変わって きて いる よう です 。"
+                  ],
+                  "correctIndex": 0,
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "«Necesito un analgésico. Me temo que puede ser más complicado.» se dice «鎮痛剤 が 必要です。 残念 ながら 、もっと 複雑 かも しれません 。».",
+                    "ruleRef": "gp-b2-modal-perfect"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has elegido la traducción correcta."
+                  }
+                },
+                {
+                  "type": "OrderWords",
+                  "id": "es-ja-b2-u05-l03-e02",
+                  "tokens": [
+                    "が",
+                    "必要です。",
+                    "残念",
+                    "ながら",
+                    "、もっと",
+                    "複雑",
+                    "かも",
+                    "しれません",
+                    "。",
+                    "鎮痛剤"
+                  ],
+                  "answerTokens": [
+                    "鎮痛剤",
+                    "が",
+                    "必要です。",
+                    "残念",
+                    "ながら",
+                    "、もっと",
+                    "複雑",
+                    "かも",
+                    "しれません",
+                    "。"
+                  ],
+                  "sourcePhrase": "Necesito un analgésico. Me temo que puede ser más complicado.",
+                  "feedbackOnError": {
+                    "type": "word_order",
+                    "explanation": "El orden correcto es «鎮痛剤 が 必要です。 残念 ながら 、もっと 複雑 かも しれません 。».",
+                    "ruleRef": "gp-b2-modal-perfect"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "El orden produce una frase natural."
+                  }
+                },
+                {
+                  "type": "ClozeDragDrop",
+                  "id": "es-ja-b2-u05-l03-e03",
+                  "passage": "{{b1}} が {{b2}}",
+                  "blanks": [
+                    {
+                      "id": "b1",
+                      "answer": "鎮痛剤",
+                      "options": [
+                        "鎮痛剤",
+                        "とても",
+                        "今日"
+                      ]
+                    },
+                    {
+                      "id": "b2",
+                      "answer": "必要です",
+                      "options": [
+                        "必要です",
+                        "とても",
+                        "今日"
+                      ]
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "Las dos formas deben encajar con el contexto de la frase.",
+                    "ruleRef": "gp-b2-subjunctive"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Los dos huecos encajan con la situación."
+                  }
+                },
+                {
+                  "type": "SemanticMatch",
+                  "id": "es-ja-b2-u05-l03-e04",
+                  "instructions": "Clasifica la función comunicativa de cada intervención.",
+                  "pairs": [
+                    {
+                      "left": "鎮痛剤 が 必要です。 残念 ながら 、もっと 複雑 かも しれません 。",
+                      "right": "Planteamiento",
+                      "register": "formal",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    },
+                    {
+                      "left": "咳止めシロップ が 必要です。 正直 に 言う と 、複雑 な 気持ち です 。",
+                      "right": "Concesión",
+                      "register": "neutral",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    },
+                    {
+                      "left": "絆創膏 の 箱 が 必要です。 これ は 変わって きて いる よう です 。",
+                      "right": "Conclusión",
+                      "register": "informal",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "Cada intervención cumple una función comunicativa distinta.",
+                    "ruleRef": "gp-b2-modal-perfect"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has identificado la función de cada intervención."
+                  }
+                },
+                {
+                  "type": "SemanticMatch",
+                  "id": "es-ja-b2-u05-l03-e05",
+                  "instructions": "Distingue el registro de cada intervención.",
+                  "pairs": [
+                    {
+                      "left": "鎮痛剤 が 必要です。 残念 ながら 、もっと 複雑 かも しれません 。",
+                      "right": "Formal",
+                      "register": "formal",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    },
+                    {
+                      "left": "咳止めシロップ が 必要です。 正直 に 言う と 、複雑 な 気持ち です 。",
+                      "right": "Neutral",
+                      "register": "neutral",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    },
+                    {
+                      "left": "絆創膏 の 箱 が 必要です。 これ は 変わって きて いる よう です 。",
+                      "right": "Informal",
+                      "register": "informal",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "register",
+                    "explanation": "El registro cambia según el contexto y la relación con el interlocutor.",
+                    "ruleRef": "gp-b2-subjunctive"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has distinguido el registro de cada intervención."
+                  }
+                },
+                {
+                  "type": "AudioOnlyPrompt",
+                  "id": "es-ja-b2-u05-l03-e06",
+                  "audioText": "咳止めシロップ が 必要です。 正直 に 言う と 、複雑 な 気持ち です 。",
+                  "question": "¿Qué ha dicho el hablante?",
+                  "options": [
+                    "咳止めシロップ が 必要です。 正直 に 言う と 、複雑 な 気持ち です 。",
+                    "鎮痛剤 が 必要です。 残念 ながら 、もっと 複雑 かも しれません 。",
+                    "絆創膏 の 箱 が 必要です。 これ は 変わって きて いる よう です 。"
+                  ],
+                  "correctIndex": 0,
+                  "allowSlowPlayback": true,
+                  "feedbackOnError": {
+                    "type": "comprehension",
+                    "explanation": "El audio dice «咳止めシロップ が 必要です。 正直 に 言う と 、複雑 な 気持ち です 。».",
+                    "ruleRef": "gp-b2-modal-perfect"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has comprendido el mensaje del audio."
+                  }
+                },
+                {
+                  "type": "AudioOnlyPrompt",
+                  "id": "es-ja-b2-u05-l03-e07",
+                  "audioText": "絆創膏 の 箱 が 必要です。 これ は 変わって きて いる よう です 。",
+                  "question": "¿Cuál es la idea principal?",
+                  "options": [
+                    "絆創膏 の 箱 が 必要です。 これ は 変わって きて いる よう です 。",
+                    "鎮痛剤 が 必要です。 残念 ながら 、もっと 複雑 かも しれません 。",
+                    "咳止めシロップ が 必要です。 正直 に 言う と 、複雑 な 気持ち です 。"
+                  ],
+                  "correctIndex": 0,
+                  "allowSlowPlayback": false,
+                  "feedbackOnError": {
+                    "type": "comprehension",
+                    "explanation": "El audio dice «絆創膏 の 箱 が 必要です。 これ は 変わって きて いる よう です 。».",
+                    "ruleRef": "gp-b2-subjunctive"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has identificado la idea principal."
+                  }
+                },
+                {
+                  "type": "ListenType",
+                  "id": "es-ja-b2-u05-l03-e08",
+                  "audioText": "絆創膏 の 箱 が 必要です。 これ は 変わって きて いる よう です 。",
+                  "transcription": "絆創膏 の 箱 が 必要です。 これ は 変わって きて いる よう です 。",
+                  "feedbackOnError": {
+                    "type": "spelling",
+                    "explanation": "Escribe exactamente «絆創膏 の 箱 が 必要です。 これ は 変わって きて いる よう です 。».",
+                    "ruleRef": "gp-b2-modal-perfect"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La transcripción coincide con el audio."
+                  }
+                },
+                {
+                  "type": "SpeakRepeat",
+                  "id": "es-ja-b2-u05-l03-e09",
+                  "targetPhrase": "絆創膏 の 箱 が 必要です。 これ は 変わって きて いる よう です 。",
+                  "audioText": "絆創膏 の 箱 が 必要です。 これ は 変わって きて いる よう です 。",
+                  "feedbackOnError": {
+                    "type": "pronunciation",
+                    "explanation": "Repite «絆創膏 の 箱 が 必要です。 これ は 変わって きて いる よう です 。» con claridad.",
+                    "ruleRef": "gp-b2-modal-perfect"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La frase se entiende y mantiene el ritmo."
+                  }
+                },
+                {
+                  "type": "FreeSpeakingPrompt",
+                  "id": "es-ja-b2-u05-l03-e10",
+                  "prompt": "Argumenta y matiza una opinión sobre la farmacia.",
+                  "minTokens": 20,
+                  "conceptClusters": [
+                    [
+                      "鎮痛剤"
+                    ],
+                    [
+                      "必要です。"
+                    ],
+                    [
+                      "残念"
+                    ]
+                  ],
+                  "modelAnswer": "鎮痛剤 が 必要です。 残念 ながら 、もっと 複雑 かも しれません 。 咳止めシロップ が 必要です。 正直 に 言う と 、複雑 な 気持ち です 。 絆創膏 の 箱 が 必要です。 これ は 変わって きて いる よう です 。",
+                  "selfAssessmentCriteria": [
+                    "¿La respuesta argumenta y responde a la tarea?",
+                    "¿Usa las dos estructuras gramaticales de la lección?",
+                    "¿Incluye una concesión o una matización?"
+                  ],
+                  "grammarRuleRefs": [
+                    "gp-b2-modal-perfect",
+                    "gp-b2-subjunctive"
+                  ],
+                  "timeLimitSeconds": 90,
+                  "minWpm": 70,
+                  "maxWpm": 160,
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "La respuesta modelo desarrolla una opinión con matices y una concesión.",
+                    "ruleRef": "gp-b2-modal-perfect"
+                  }
+                }
+              ]
+            },
+            {
+              "id": "es-ja-b2-u05-l04",
+              "title": "Should / shouldn't",
+              "cefrLevel": "B2",
+              "scenario": "Situación comunicativa avanzada sobre los consejos de salud.",
+              "canDo": "Puedo argumentar y matizar sobre los consejos de salud.",
+              "grammarPoints": [
+                {
+                  "id": "gp-b2-modal-perfect",
+                  "label": "Modal perfect",
+                  "description": "Must have, might have y should have especulan sobre el pasado."
+                },
+                {
+                  "id": "gp-b2-subjunctive",
+                  "label": "Subjunctive",
+                  "description": "El subjuntivo expresa deseos, dudas y valoraciones."
+                }
+              ],
+              "vocabFrequencyBand": "3000-5000",
+              "culturalNotes": [
+                {
+                  "idiom": "事情 を 知る",
+                  "note": "Expresión para conocer un asunto.",
+                  "translation": "estar al tanto"
+                }
+              ],
+              "microLesson": {
+                "title": "Should / shouldn't",
+                "goals": [
+                  "Usar vocabulario avanzado de los consejos de salud.",
+                  "Aplicar modal perfect y subjunctive.",
+                  "Argumentar y matizar sobre los consejos de salud."
+                ],
+                "sections": [
+                  {
+                    "heading": "Lengua en contexto",
+                    "body": "Modal perfect: Must have, might have y should have especulan sobre el pasado. Subjunctive: El subjuntivo expresa deseos, dudas y valoraciones.",
+                    "examples": [
+                      {
+                        "source": "Deberías descansar más. Sinceramente, tengo sentimientos encontrados.",
+                        "target": "もっと 休んだ ほう が いい よ。 正直 に 言う と 、複雑 な 気持ち です 。"
+                      },
+                      {
+                        "source": "Deberías beber más agua. Parece que esto está cambiando.",
+                        "target": "もっと 水 を 飲むべきです。 これ は 変わって きて いる よう です 。"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "glossary": [
+                {
+                  "term": "もっと 休んだ ほう が いい よ。 正直 に 言う と 、複雑 な 気持ち です 。",
+                  "translations": [
+                    "Deberías descansar más. Sinceramente, tengo sentimientos encontrados."
+                  ]
+                },
+                {
+                  "term": "もっと 水 を 飲むべきです。 これ は 変わって きて いる よう です 。",
+                  "translations": [
+                    "Deberías beber más agua. Parece que esto está cambiando."
+                  ]
+                },
+                {
+                  "term": "8時間 寝た ほう が いい よ。 私 の 観点 で は 、妥当 な 選択 です 。",
+                  "translations": [
+                    "Deberías dormir ocho horas. Desde mi punto de vista, es una opción razonable."
+                  ]
+                }
+              ],
+              "exercises": [
+                {
+                  "type": "MultipleChoice",
+                  "id": "es-ja-b2-u05-l04-e01",
+                  "question": "¿Cuál es la opción correcta para «Deberías descansar más. Sinceramente, tengo sentimientos encontrados.»?",
+                  "options": [
+                    "もっと 休んだ ほう が いい よ。 正直 に 言う と 、複雑 な 気持ち です 。",
+                    "もっと 水 を 飲むべきです。 これ は 変わって きて いる よう です 。",
+                    "8時間 寝た ほう が いい よ。 私 の 観点 で は 、妥当 な 選択 です 。"
+                  ],
+                  "correctIndex": 0,
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "«Deberías descansar más. Sinceramente, tengo sentimientos encontrados.» se dice «もっと 休んだ ほう が いい よ。 正直 に 言う と 、複雑 な 気持ち です 。».",
+                    "ruleRef": "gp-b2-modal-perfect"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has elegido la traducción correcta."
+                  }
+                },
+                {
+                  "type": "OrderWords",
+                  "id": "es-ja-b2-u05-l04-e02",
+                  "tokens": [
+                    "休んだ",
+                    "ほう",
+                    "が",
+                    "いい",
+                    "よ。",
+                    "正直",
+                    "に",
+                    "言う",
+                    "と",
+                    "、複雑",
+                    "な",
+                    "気持ち",
+                    "です",
+                    "。",
+                    "もっと"
+                  ],
+                  "answerTokens": [
+                    "もっと",
+                    "休んだ",
+                    "ほう",
+                    "が",
+                    "いい",
+                    "よ。",
+                    "正直",
+                    "に",
+                    "言う",
+                    "と",
+                    "、複雑",
+                    "な",
+                    "気持ち",
+                    "です",
+                    "。"
+                  ],
+                  "sourcePhrase": "Deberías descansar más. Sinceramente, tengo sentimientos encontrados.",
+                  "feedbackOnError": {
+                    "type": "word_order",
+                    "explanation": "El orden correcto es «もっと 休んだ ほう が いい よ。 正直 に 言う と 、複雑 な 気持ち です 。».",
+                    "ruleRef": "gp-b2-modal-perfect"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "El orden produce una frase natural."
+                  }
+                },
+                {
+                  "type": "ClozeDragDrop",
+                  "id": "es-ja-b2-u05-l04-e03",
+                  "passage": "{{b1}} {{b2}} ほう が いい よ",
+                  "blanks": [
+                    {
+                      "id": "b1",
+                      "answer": "もっと",
+                      "options": [
+                        "もっと",
+                        "ほう",
+                        "いい"
+                      ]
+                    },
+                    {
+                      "id": "b2",
+                      "answer": "休んだ",
+                      "options": [
+                        "休んだ",
+                        "ほう",
+                        "いい"
+                      ]
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "Las dos formas deben encajar con el contexto de la frase.",
+                    "ruleRef": "gp-b2-subjunctive"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Los dos huecos encajan con la situación."
+                  }
+                },
+                {
+                  "type": "SemanticMatch",
+                  "id": "es-ja-b2-u05-l04-e04",
+                  "instructions": "Clasifica la función comunicativa de cada intervención.",
+                  "pairs": [
+                    {
+                      "left": "もっと 休んだ ほう が いい よ。 正直 に 言う と 、複雑 な 気持ち です 。",
+                      "right": "Planteamiento",
+                      "register": "formal",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    },
+                    {
+                      "left": "もっと 水 を 飲むべきです。 これ は 変わって きて いる よう です 。",
+                      "right": "Concesión",
+                      "register": "neutral",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    },
+                    {
+                      "left": "8時間 寝た ほう が いい よ。 私 の 観点 で は 、妥当 な 選択 です 。",
+                      "right": "Conclusión",
+                      "register": "informal",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "Cada intervención cumple una función comunicativa distinta.",
+                    "ruleRef": "gp-b2-modal-perfect"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has identificado la función de cada intervención."
+                  }
+                },
+                {
+                  "type": "SemanticMatch",
+                  "id": "es-ja-b2-u05-l04-e05",
+                  "instructions": "Distingue el registro de cada intervención.",
+                  "pairs": [
+                    {
+                      "left": "もっと 休んだ ほう が いい よ。 正直 に 言う と 、複雑 な 気持ち です 。",
+                      "right": "Formal",
+                      "register": "formal",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    },
+                    {
+                      "left": "もっと 水 を 飲むべきです。 これ は 変わって きて いる よう です 。",
+                      "right": "Neutral",
+                      "register": "neutral",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    },
+                    {
+                      "left": "8時間 寝た ほう が いい よ。 私 の 観点 で は 、妥当 な 選択 です 。",
+                      "right": "Informal",
+                      "register": "informal",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "register",
+                    "explanation": "El registro cambia según el contexto y la relación con el interlocutor.",
+                    "ruleRef": "gp-b2-subjunctive"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has distinguido el registro de cada intervención."
+                  }
+                },
+                {
+                  "type": "AudioOnlyPrompt",
+                  "id": "es-ja-b2-u05-l04-e06",
+                  "audioText": "もっと 水 を 飲むべきです。 これ は 変わって きて いる よう です 。",
+                  "question": "¿Qué ha dicho el hablante?",
+                  "options": [
+                    "もっと 水 を 飲むべきです。 これ は 変わって きて いる よう です 。",
+                    "もっと 休んだ ほう が いい よ。 正直 に 言う と 、複雑 な 気持ち です 。",
+                    "8時間 寝た ほう が いい よ。 私 の 観点 で は 、妥当 な 選択 です 。"
+                  ],
+                  "correctIndex": 0,
+                  "allowSlowPlayback": true,
+                  "feedbackOnError": {
+                    "type": "comprehension",
+                    "explanation": "El audio dice «もっと 水 を 飲むべきです。 これ は 変わって きて いる よう です 。».",
+                    "ruleRef": "gp-b2-modal-perfect"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has comprendido el mensaje del audio."
+                  }
+                },
+                {
+                  "type": "AudioOnlyPrompt",
+                  "id": "es-ja-b2-u05-l04-e07",
+                  "audioText": "8時間 寝た ほう が いい よ。 私 の 観点 で は 、妥当 な 選択 です 。",
+                  "question": "¿Cuál es la idea principal?",
+                  "options": [
+                    "8時間 寝た ほう が いい よ。 私 の 観点 で は 、妥当 な 選択 です 。",
+                    "もっと 休んだ ほう が いい よ。 正直 に 言う と 、複雑 な 気持ち です 。",
+                    "もっと 水 を 飲むべきです。 これ は 変わって きて いる よう です 。"
+                  ],
+                  "correctIndex": 0,
+                  "allowSlowPlayback": false,
+                  "feedbackOnError": {
+                    "type": "comprehension",
+                    "explanation": "El audio dice «8時間 寝た ほう が いい よ。 私 の 観点 で は 、妥当 な 選択 です 。».",
+                    "ruleRef": "gp-b2-subjunctive"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has identificado la idea principal."
+                  }
+                },
+                {
+                  "type": "ListenType",
+                  "id": "es-ja-b2-u05-l04-e08",
+                  "audioText": "8時間 寝た ほう が いい よ。 私 の 観点 で は 、妥当 な 選択 です 。",
+                  "transcription": "8時間 寝た ほう が いい よ。 私 の 観点 で は 、妥当 な 選択 です 。",
+                  "feedbackOnError": {
+                    "type": "spelling",
+                    "explanation": "Escribe exactamente «8時間 寝た ほう が いい よ。 私 の 観点 で は 、妥当 な 選択 です 。».",
+                    "ruleRef": "gp-b2-modal-perfect"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La transcripción coincide con el audio."
+                  }
+                },
+                {
+                  "type": "SpeakRepeat",
+                  "id": "es-ja-b2-u05-l04-e09",
+                  "targetPhrase": "8時間 寝た ほう が いい よ。 私 の 観点 で は 、妥当 な 選択 です 。",
+                  "audioText": "8時間 寝た ほう が いい よ。 私 の 観点 で は 、妥当 な 選択 です 。",
+                  "feedbackOnError": {
+                    "type": "pronunciation",
+                    "explanation": "Repite «8時間 寝た ほう が いい よ。 私 の 観点 で は 、妥当 な 選択 です 。» con claridad.",
+                    "ruleRef": "gp-b2-modal-perfect"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La frase se entiende y mantiene el ritmo."
+                  }
+                },
+                {
+                  "type": "FreeSpeakingPrompt",
+                  "id": "es-ja-b2-u05-l04-e10",
+                  "prompt": "Argumenta y matiza una opinión sobre los consejos de salud.",
+                  "minTokens": 20,
+                  "conceptClusters": [
+                    [
+                      "もっと"
+                    ],
+                    [
+                      "休んだ"
+                    ],
+                    [
+                      "ほう"
+                    ]
+                  ],
+                  "modelAnswer": "もっと 休んだ ほう が いい よ。 正直 に 言う と 、複雑 な 気持ち です 。 もっと 水 を 飲むべきです。 これ は 変わって きて いる よう です 。 8時間 寝た ほう が いい よ。 私 の 観点 で は 、妥当 な 選択 です 。",
+                  "selfAssessmentCriteria": [
+                    "¿La respuesta argumenta y responde a la tarea?",
+                    "¿Usa las dos estructuras gramaticales de la lección?",
+                    "¿Incluye una concesión o una matización?"
+                  ],
+                  "grammarRuleRefs": [
+                    "gp-b2-modal-perfect",
+                    "gp-b2-subjunctive"
+                  ],
+                  "timeLimitSeconds": 90,
+                  "minWpm": 70,
+                  "maxWpm": 160,
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "La respuesta modelo desarrolla una opinión con matices y una concesión.",
+                    "ruleRef": "gp-b2-modal-perfect"
+                  }
+                }
+              ]
+            },
+            {
+              "id": "es-ja-b2-u05-l05",
+              "title": "Have to / don't have to",
+              "cefrLevel": "B2",
+              "scenario": "Situación comunicativa avanzada sobre las obligaciones de salud.",
+              "canDo": "Puedo argumentar y matizar sobre las obligaciones de salud.",
+              "grammarPoints": [
+                {
+                  "id": "gp-b2-modal-perfect",
+                  "label": "Modal perfect",
+                  "description": "Must have, might have y should have especulan sobre el pasado."
+                },
+                {
+                  "id": "gp-b2-subjunctive",
+                  "label": "Subjunctive",
+                  "description": "El subjuntivo expresa deseos, dudas y valoraciones."
+                }
+              ],
+              "vocabFrequencyBand": "3000-5000",
+              "culturalNotes": [
+                {
+                  "idiom": "腰 を 据える",
+                  "note": "Expresión para ponerse a trabajar con constancia.",
+                  "translation": "ponerse en serio"
+                }
+              ],
+              "microLesson": {
+                "title": "Have to / don't have to",
+                "goals": [
+                  "Usar vocabulario avanzado de las obligaciones de salud.",
+                  "Aplicar modal perfect y subjunctive.",
+                  "Argumentar y matizar sobre las obligaciones de salud."
+                ],
+                "sections": [
+                  {
+                    "heading": "Lengua en contexto",
+                    "body": "Modal perfect: Must have, might have y should have especulan sobre el pasado. Subjunctive: El subjuntivo expresa deseos, dudas y valoraciones.",
+                    "examples": [
+                      {
+                        "source": "Tengo que tomar la medicina. Parece que esto está cambiando.",
+                        "target": "薬 を 飲まなければなりません。 これ は 変わって きて いる よう です 。"
+                      },
+                      {
+                        "source": "Tengo que ir al médico. Desde mi punto de vista, es una opción razonable.",
+                        "target": "医者 に 行かなければなりません。 私 の 観点 で は 、妥当 な 選択 です 。"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "glossary": [
+                {
+                  "term": "薬 を 飲まなければなりません。 これ は 変わって きて いる よう です 。",
+                  "translations": [
+                    "Tengo que tomar la medicina. Parece que esto está cambiando."
+                  ]
+                },
+                {
+                  "term": "医者 に 行かなければなりません。 私 の 観点 で は 、妥当 な 選択 です 。",
+                  "translations": [
+                    "Tengo que ir al médico. Desde mi punto de vista, es una opción razonable."
+                  ]
+                },
+                {
+                  "term": "私 は 運動 しなければ なりません。 それでも 、利点 も あります 。",
+                  "translations": [
+                    "Tengo que hacer ejercicio. No obstante, también tiene ventajas."
+                  ]
+                }
+              ],
+              "exercises": [
+                {
+                  "type": "MultipleChoice",
+                  "id": "es-ja-b2-u05-l05-e01",
+                  "question": "¿Cuál es la opción correcta para «Tengo que tomar la medicina. Parece que esto está cambiando.»?",
+                  "options": [
+                    "薬 を 飲まなければなりません。 これ は 変わって きて いる よう です 。",
+                    "医者 に 行かなければなりません。 私 の 観点 で は 、妥当 な 選択 です 。",
+                    "私 は 運動 しなければ なりません。 それでも 、利点 も あります 。"
+                  ],
+                  "correctIndex": 0,
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "«Tengo que tomar la medicina. Parece que esto está cambiando.» se dice «薬 を 飲まなければなりません。 これ は 変わって きて いる よう です 。».",
+                    "ruleRef": "gp-b2-modal-perfect"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has elegido la traducción correcta."
+                  }
+                },
+                {
+                  "type": "OrderWords",
+                  "id": "es-ja-b2-u05-l05-e02",
+                  "tokens": [
+                    "を",
+                    "飲まなければなりません。",
+                    "これ",
+                    "は",
+                    "変わって",
+                    "きて",
+                    "いる",
+                    "よう",
+                    "です",
+                    "。",
+                    "薬"
+                  ],
+                  "answerTokens": [
+                    "薬",
+                    "を",
+                    "飲まなければなりません。",
+                    "これ",
+                    "は",
+                    "変わって",
+                    "きて",
+                    "いる",
+                    "よう",
+                    "です",
+                    "。"
+                  ],
+                  "sourcePhrase": "Tengo que tomar la medicina. Parece que esto está cambiando.",
+                  "feedbackOnError": {
+                    "type": "word_order",
+                    "explanation": "El orden correcto es «薬 を 飲まなければなりません。 これ は 変わって きて いる よう です 。».",
+                    "ruleRef": "gp-b2-modal-perfect"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "El orden produce una frase natural."
+                  }
+                },
+                {
+                  "type": "ClozeDragDrop",
+                  "id": "es-ja-b2-u05-l05-e03",
+                  "passage": "{{b1}} {{b2}} 飲まなければなりません",
+                  "blanks": [
+                    {
+                      "id": "b1",
+                      "answer": "薬",
+                      "options": [
+                        "薬",
+                        "飲まなければなりません",
+                        "とても"
+                      ]
+                    },
+                    {
+                      "id": "b2",
+                      "answer": "を",
+                      "options": [
+                        "を",
+                        "飲まなければなりません",
+                        "とても"
+                      ]
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "Las dos formas deben encajar con el contexto de la frase.",
+                    "ruleRef": "gp-b2-subjunctive"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Los dos huecos encajan con la situación."
+                  }
+                },
+                {
+                  "type": "SemanticMatch",
+                  "id": "es-ja-b2-u05-l05-e04",
+                  "instructions": "Clasifica la función comunicativa de cada intervención.",
+                  "pairs": [
+                    {
+                      "left": "薬 を 飲まなければなりません。 これ は 変わって きて いる よう です 。",
+                      "right": "Planteamiento",
+                      "register": "formal",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    },
+                    {
+                      "left": "医者 に 行かなければなりません。 私 の 観点 で は 、妥当 な 選択 です 。",
+                      "right": "Concesión",
+                      "register": "neutral",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    },
+                    {
+                      "left": "私 は 運動 しなければ なりません。 それでも 、利点 も あります 。",
+                      "right": "Conclusión",
+                      "register": "informal",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "Cada intervención cumple una función comunicativa distinta.",
+                    "ruleRef": "gp-b2-modal-perfect"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has identificado la función de cada intervención."
+                  }
+                },
+                {
+                  "type": "SemanticMatch",
+                  "id": "es-ja-b2-u05-l05-e05",
+                  "instructions": "Distingue el registro de cada intervención.",
+                  "pairs": [
+                    {
+                      "left": "薬 を 飲まなければなりません。 これ は 変わって きて いる よう です 。",
+                      "right": "Formal",
+                      "register": "formal",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    },
+                    {
+                      "left": "医者 に 行かなければなりません。 私 の 観点 で は 、妥当 な 選択 です 。",
+                      "right": "Neutral",
+                      "register": "neutral",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    },
+                    {
+                      "left": "私 は 運動 しなければ なりません。 それでも 、利点 も あります 。",
+                      "right": "Informal",
+                      "register": "informal",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "register",
+                    "explanation": "El registro cambia según el contexto y la relación con el interlocutor.",
+                    "ruleRef": "gp-b2-subjunctive"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has distinguido el registro de cada intervención."
+                  }
+                },
+                {
+                  "type": "AudioOnlyPrompt",
+                  "id": "es-ja-b2-u05-l05-e06",
+                  "audioText": "医者 に 行かなければなりません。 私 の 観点 で は 、妥当 な 選択 です 。",
+                  "question": "¿Qué ha dicho el hablante?",
+                  "options": [
+                    "医者 に 行かなければなりません。 私 の 観点 で は 、妥当 な 選択 です 。",
+                    "薬 を 飲まなければなりません。 これ は 変わって きて いる よう です 。",
+                    "私 は 運動 しなければ なりません。 それでも 、利点 も あります 。"
+                  ],
+                  "correctIndex": 0,
+                  "allowSlowPlayback": true,
+                  "feedbackOnError": {
+                    "type": "comprehension",
+                    "explanation": "El audio dice «医者 に 行かなければなりません。 私 の 観点 で は 、妥当 な 選択 です 。».",
+                    "ruleRef": "gp-b2-modal-perfect"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has comprendido el mensaje del audio."
+                  }
+                },
+                {
+                  "type": "AudioOnlyPrompt",
+                  "id": "es-ja-b2-u05-l05-e07",
+                  "audioText": "私 は 運動 しなければ なりません。 それでも 、利点 も あります 。",
+                  "question": "¿Cuál es la idea principal?",
+                  "options": [
+                    "私 は 運動 しなければ なりません。 それでも 、利点 も あります 。",
+                    "薬 を 飲まなければなりません。 これ は 変わって きて いる よう です 。",
+                    "医者 に 行かなければなりません。 私 の 観点 で は 、妥当 な 選択 です 。"
+                  ],
+                  "correctIndex": 0,
+                  "allowSlowPlayback": false,
+                  "feedbackOnError": {
+                    "type": "comprehension",
+                    "explanation": "El audio dice «私 は 運動 しなければ なりません。 それでも 、利点 も あります 。».",
+                    "ruleRef": "gp-b2-subjunctive"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has identificado la idea principal."
+                  }
+                },
+                {
+                  "type": "ListenType",
+                  "id": "es-ja-b2-u05-l05-e08",
+                  "audioText": "私 は 運動 しなければ なりません。 それでも 、利点 も あります 。",
+                  "transcription": "私 は 運動 しなければ なりません。 それでも 、利点 も あります 。",
+                  "feedbackOnError": {
+                    "type": "spelling",
+                    "explanation": "Escribe exactamente «私 は 運動 しなければ なりません。 それでも 、利点 も あります 。».",
+                    "ruleRef": "gp-b2-modal-perfect"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La transcripción coincide con el audio."
+                  }
+                },
+                {
+                  "type": "SpeakRepeat",
+                  "id": "es-ja-b2-u05-l05-e09",
+                  "targetPhrase": "私 は 運動 しなければ なりません。 それでも 、利点 も あります 。",
+                  "audioText": "私 は 運動 しなければ なりません。 それでも 、利点 も あります 。",
+                  "feedbackOnError": {
+                    "type": "pronunciation",
+                    "explanation": "Repite «私 は 運動 しなければ なりません。 それでも 、利点 も あります 。» con claridad.",
+                    "ruleRef": "gp-b2-modal-perfect"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La frase se entiende y mantiene el ritmo."
+                  }
+                },
+                {
+                  "type": "FreeSpeakingPrompt",
+                  "id": "es-ja-b2-u05-l05-e10",
+                  "prompt": "Argumenta y matiza una opinión sobre las obligaciones de salud.",
+                  "minTokens": 20,
+                  "conceptClusters": [
+                    [
+                      "飲まなければなりません。"
+                    ],
+                    [
+                      "これ"
+                    ],
+                    [
+                      "変わって"
+                    ]
+                  ],
+                  "modelAnswer": "薬 を 飲まなければなりません。 これ は 変わって きて いる よう です 。 医者 に 行かなければなりません。 私 の 観点 で は 、妥当 な 選択 です 。 私 は 運動 しなければ なりません。 それでも 、利点 も あります 。",
+                  "selfAssessmentCriteria": [
+                    "¿La respuesta argumenta y responde a la tarea?",
+                    "¿Usa las dos estructuras gramaticales de la lección?",
+                    "¿Incluye una concesión o una matización?"
+                  ],
+                  "grammarRuleRefs": [
+                    "gp-b2-modal-perfect",
+                    "gp-b2-subjunctive"
+                  ],
+                  "timeLimitSeconds": 90,
+                  "minWpm": 70,
+                  "maxWpm": 160,
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "La respuesta modelo desarrolla una opinión con matices y una concesión.",
+                    "ruleRef": "gp-b2-modal-perfect"
+                  }
+                }
+              ]
+            },
+            {
+              "id": "es-ja-b2-u05-l06",
+              "title": "En la consulta médica",
+              "cefrLevel": "B2",
+              "scenario": "Situación comunicativa avanzada sobre la consulta médica.",
+              "canDo": "Puedo argumentar y matizar sobre la consulta médica.",
+              "grammarPoints": [
+                {
+                  "id": "gp-b2-modal-perfect",
+                  "label": "Modal perfect",
+                  "description": "Must have, might have y should have especulan sobre el pasado."
+                },
+                {
+                  "id": "gp-b2-subjunctive",
+                  "label": "Subjunctive",
+                  "description": "El subjuntivo expresa deseos, dudas y valoraciones."
+                }
+              ],
+              "vocabFrequencyBand": "3000-5000",
+              "culturalNotes": [
+                {
+                  "idiom": "目 を つぶる",
+                  "note": "Expresión para ignorar algo a propósito.",
+                  "translation": "hacer la vista gorda"
+                }
+              ],
+              "microLesson": {
+                "title": "En la consulta médica",
+                "goals": [
+                  "Usar vocabulario avanzado de la consulta médica.",
+                  "Aplicar modal perfect y subjunctive.",
+                  "Argumentar y matizar sobre la consulta médica."
+                ],
+                "sections": [
+                  {
+                    "heading": "Lengua en contexto",
+                    "body": "Modal perfect: Must have, might have y should have especulan sobre el pasado. Subjunctive: El subjuntivo expresa deseos, dudas y valoraciones.",
+                    "examples": [
+                      {
+                        "source": "Me duele el estómago desde ayer. Desde mi punto de vista, es una opción razonable.",
+                        "target": "昨日 から お腹 が 痛いです。 私 の 観点 で は 、妥当 な 選択 です 。"
+                      },
+                      {
+                        "source": "¿Puedo tomar este medicamento? No obstante, también tiene ventajas.",
+                        "target": "この 薬 を 飲んで も いいです か。 それでも 、利点 も あります 。"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "glossary": [
+                {
+                  "term": "昨日 から お腹 が 痛いです。 私 の 観点 で は 、妥当 な 選択 です 。",
+                  "translations": [
+                    "Me duele el estómago desde ayer. Desde mi punto de vista, es una opción razonable."
+                  ]
+                },
+                {
+                  "term": "この 薬 を 飲んで も いいです か。 それでも 、利点 も あります 。",
+                  "translations": [
+                    "¿Puedo tomar este medicamento? No obstante, también tiene ventajas."
+                  ]
+                },
+                {
+                  "term": "休んで 水 を 飲まなければなりません。 結局 、優先 する 必要 が あります 。",
+                  "translations": [
+                    "Tiene que descansar y beber agua. A fin de cuentas, hay que priorizar."
+                  ]
+                }
+              ],
+              "exercises": [
+                {
+                  "type": "MultipleChoice",
+                  "id": "es-ja-b2-u05-l06-e01",
+                  "question": "¿Cuál es la opción correcta para «Me duele el estómago desde ayer. Desde mi punto de vista, es una opción razonable.»?",
+                  "options": [
+                    "昨日 から お腹 が 痛いです。 私 の 観点 で は 、妥当 な 選択 です 。",
+                    "この 薬 を 飲んで も いいです か。 それでも 、利点 も あります 。",
+                    "休んで 水 を 飲まなければなりません。 結局 、優先 する 必要 が あります 。"
+                  ],
+                  "correctIndex": 0,
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "«Me duele el estómago desde ayer. Desde mi punto de vista, es una opción razonable.» se dice «昨日 から お腹 が 痛いです。 私 の 観点 で は 、妥当 な 選択 です 。».",
+                    "ruleRef": "gp-b2-modal-perfect"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has elegido la traducción correcta."
+                  }
+                },
+                {
+                  "type": "OrderWords",
+                  "id": "es-ja-b2-u05-l06-e02",
+                  "tokens": [
+                    "から",
+                    "お腹",
+                    "が",
+                    "痛いです。",
+                    "私",
+                    "の",
+                    "観点",
+                    "で",
+                    "は",
+                    "、妥当",
+                    "な",
+                    "選択",
+                    "です",
+                    "。",
+                    "昨日"
+                  ],
+                  "answerTokens": [
+                    "昨日",
+                    "から",
+                    "お腹",
+                    "が",
+                    "痛いです。",
+                    "私",
+                    "の",
+                    "観点",
+                    "で",
+                    "は",
+                    "、妥当",
+                    "な",
+                    "選択",
+                    "です",
+                    "。"
+                  ],
+                  "sourcePhrase": "Me duele el estómago desde ayer. Desde mi punto de vista, es una opción razonable.",
+                  "feedbackOnError": {
+                    "type": "word_order",
+                    "explanation": "El orden correcto es «昨日 から お腹 が 痛いです。 私 の 観点 で は 、妥当 な 選択 です 。».",
+                    "ruleRef": "gp-b2-modal-perfect"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "El orden produce una frase natural."
+                  }
+                },
+                {
+                  "type": "ClozeDragDrop",
+                  "id": "es-ja-b2-u05-l06-e03",
+                  "passage": "{{b1}} から {{b2}} が 痛いです",
+                  "blanks": [
+                    {
+                      "id": "b1",
+                      "answer": "昨日",
+                      "options": [
+                        "昨日",
+                        "痛いです",
+                        "とても"
+                      ]
+                    },
+                    {
+                      "id": "b2",
+                      "answer": "お腹",
+                      "options": [
+                        "お腹",
+                        "痛いです",
+                        "とても"
+                      ]
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "Las dos formas deben encajar con el contexto de la frase.",
+                    "ruleRef": "gp-b2-subjunctive"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Los dos huecos encajan con la situación."
+                  }
+                },
+                {
+                  "type": "SemanticMatch",
+                  "id": "es-ja-b2-u05-l06-e04",
+                  "instructions": "Clasifica la función comunicativa de cada intervención.",
+                  "pairs": [
+                    {
+                      "left": "昨日 から お腹 が 痛いです。 私 の 観点 で は 、妥当 な 選択 です 。",
+                      "right": "Planteamiento",
+                      "register": "formal",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    },
+                    {
+                      "left": "この 薬 を 飲んで も いいです か。 それでも 、利点 も あります 。",
+                      "right": "Concesión",
+                      "register": "neutral",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    },
+                    {
+                      "left": "休んで 水 を 飲まなければなりません。 結局 、優先 する 必要 が あります 。",
+                      "right": "Conclusión",
+                      "register": "informal",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "Cada intervención cumple una función comunicativa distinta.",
+                    "ruleRef": "gp-b2-modal-perfect"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has identificado la función de cada intervención."
+                  }
+                },
+                {
+                  "type": "SemanticMatch",
+                  "id": "es-ja-b2-u05-l06-e05",
+                  "instructions": "Distingue el registro de cada intervención.",
+                  "pairs": [
+                    {
+                      "left": "昨日 から お腹 が 痛いです。 私 の 観点 で は 、妥当 な 選択 です 。",
+                      "right": "Formal",
+                      "register": "formal",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    },
+                    {
+                      "left": "この 薬 を 飲んで も いいです か。 それでも 、利点 も あります 。",
+                      "right": "Neutral",
+                      "register": "neutral",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    },
+                    {
+                      "left": "休んで 水 を 飲まなければなりません。 結局 、優先 する 必要 が あります 。",
+                      "right": "Informal",
+                      "register": "informal",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "register",
+                    "explanation": "El registro cambia según el contexto y la relación con el interlocutor.",
+                    "ruleRef": "gp-b2-subjunctive"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has distinguido el registro de cada intervención."
+                  }
+                },
+                {
+                  "type": "AudioOnlyPrompt",
+                  "id": "es-ja-b2-u05-l06-e06",
+                  "audioText": "この 薬 を 飲んで も いいです か。 それでも 、利点 も あります 。",
+                  "question": "¿Qué ha dicho el hablante?",
+                  "options": [
+                    "この 薬 を 飲んで も いいです か。 それでも 、利点 も あります 。",
+                    "昨日 から お腹 が 痛いです。 私 の 観点 で は 、妥当 な 選択 です 。",
+                    "休んで 水 を 飲まなければなりません。 結局 、優先 する 必要 が あります 。"
+                  ],
+                  "correctIndex": 0,
+                  "allowSlowPlayback": true,
+                  "feedbackOnError": {
+                    "type": "comprehension",
+                    "explanation": "El audio dice «この 薬 を 飲んで も いいです か。 それでも 、利点 も あります 。».",
+                    "ruleRef": "gp-b2-modal-perfect"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has comprendido el mensaje del audio."
+                  }
+                },
+                {
+                  "type": "AudioOnlyPrompt",
+                  "id": "es-ja-b2-u05-l06-e07",
+                  "audioText": "休んで 水 を 飲まなければなりません。 結局 、優先 する 必要 が あります 。",
+                  "question": "¿Cuál es la idea principal?",
+                  "options": [
+                    "休んで 水 を 飲まなければなりません。 結局 、優先 する 必要 が あります 。",
+                    "昨日 から お腹 が 痛いです。 私 の 観点 で は 、妥当 な 選択 です 。",
+                    "この 薬 を 飲んで も いいです か。 それでも 、利点 も あります 。"
+                  ],
+                  "correctIndex": 0,
+                  "allowSlowPlayback": false,
+                  "feedbackOnError": {
+                    "type": "comprehension",
+                    "explanation": "El audio dice «休んで 水 を 飲まなければなりません。 結局 、優先 する 必要 が あります 。».",
+                    "ruleRef": "gp-b2-subjunctive"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has identificado la idea principal."
+                  }
+                },
+                {
+                  "type": "ListenType",
+                  "id": "es-ja-b2-u05-l06-e08",
+                  "audioText": "休んで 水 を 飲まなければなりません。 結局 、優先 する 必要 が あります 。",
+                  "transcription": "休んで 水 を 飲まなければなりません。 結局 、優先 する 必要 が あります 。",
+                  "feedbackOnError": {
+                    "type": "spelling",
+                    "explanation": "Escribe exactamente «休んで 水 を 飲まなければなりません。 結局 、優先 する 必要 が あります 。».",
+                    "ruleRef": "gp-b2-modal-perfect"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La transcripción coincide con el audio."
+                  }
+                },
+                {
+                  "type": "SpeakRepeat",
+                  "id": "es-ja-b2-u05-l06-e09",
+                  "targetPhrase": "休んで 水 を 飲まなければなりません。 結局 、優先 する 必要 が あります 。",
+                  "audioText": "休んで 水 を 飲まなければなりません。 結局 、優先 する 必要 が あります 。",
+                  "feedbackOnError": {
+                    "type": "pronunciation",
+                    "explanation": "Repite «休んで 水 を 飲まなければなりません。 結局 、優先 する 必要 が あります 。» con claridad.",
+                    "ruleRef": "gp-b2-modal-perfect"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La frase se entiende y mantiene el ritmo."
+                  }
+                },
+                {
+                  "type": "FreeSpeakingPrompt",
+                  "id": "es-ja-b2-u05-l06-e10",
+                  "prompt": "Argumenta y matiza una opinión sobre la consulta médica.",
+                  "minTokens": 20,
+                  "conceptClusters": [
+                    [
+                      "昨日"
+                    ],
+                    [
+                      "お腹"
+                    ],
+                    [
+                      "痛いです。"
+                    ]
+                  ],
+                  "modelAnswer": "昨日 から お腹 が 痛いです。 私 の 観点 で は 、妥当 な 選択 です 。 この 薬 を 飲んで も いいです か。 それでも 、利点 も あります 。 休んで 水 を 飲まなければなりません。 結局 、優先 する 必要 が あります 。",
+                  "selfAssessmentCriteria": [
+                    "¿La respuesta argumenta y responde a la tarea?",
+                    "¿Usa las dos estructuras gramaticales de la lección?",
+                    "¿Incluye una concesión o una matización?"
+                  ],
+                  "grammarRuleRefs": [
+                    "gp-b2-modal-perfect",
+                    "gp-b2-subjunctive"
+                  ],
+                  "timeLimitSeconds": 90,
+                  "minWpm": 70,
+                  "maxWpm": 160,
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "La respuesta modelo desarrolla una opinión con matices y una concesión.",
+                    "ruleRef": "gp-b2-modal-perfect"
+                  }
+                }
+              ]
+            },
+            {
+              "id": "es-ja-b2-u05-l07",
+              "title": "Consejos de salud",
+              "cefrLevel": "B2",
+              "scenario": "Situación comunicativa avanzada sobre los hábitos saludables.",
+              "canDo": "Puedo argumentar y matizar sobre los hábitos saludables.",
+              "grammarPoints": [
+                {
+                  "id": "gp-b2-modal-perfect",
+                  "label": "Modal perfect",
+                  "description": "Must have, might have y should have especulan sobre el pasado."
+                },
+                {
+                  "id": "gp-b2-subjunctive",
+                  "label": "Subjunctive",
+                  "description": "El subjuntivo expresa deseos, dudas y valoraciones."
+                }
+              ],
+              "vocabFrequencyBand": "3000-5000",
+              "culturalNotes": [
+                {
+                  "idiom": "話 を する",
+                  "note": "Expresión para conversar.",
+                  "translation": "conversar"
+                }
+              ],
+              "microLesson": {
+                "title": "Consejos de salud",
+                "goals": [
+                  "Usar vocabulario avanzado de los hábitos saludables.",
+                  "Aplicar modal perfect y subjunctive.",
+                  "Argumentar y matizar sobre los hábitos saludables."
+                ],
+                "sections": [
+                  {
+                    "heading": "Lengua en contexto",
+                    "body": "Modal perfect: Must have, might have y should have especulan sobre el pasado. Subjunctive: El subjuntivo expresa deseos, dudas y valoraciones.",
+                    "examples": [
+                      {
+                        "source": "Deberías caminar treinta minutos al día. No obstante, también tiene ventajas.",
+                        "target": "一日 に 三十分 歩くべきです。 それでも 、利点 も あります 。"
+                      },
+                      {
+                        "source": "No deberías comer tanto azúcar. A fin de cuentas, hay que priorizar.",
+                        "target": "そんなに 砂糖 を 食べるべきで は ありません。 結局 、優先 する 必要 が あります 。"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "glossary": [
+                {
+                  "term": "一日 に 三十分 歩くべきです。 それでも 、利点 も あります 。",
+                  "translations": [
+                    "Deberías caminar treinta minutos al día. No obstante, también tiene ventajas."
+                  ]
+                },
+                {
+                  "term": "そんなに 砂糖 を 食べるべきで は ありません。 結局 、優先 する 必要 が あります 。",
+                  "translations": [
+                    "No deberías comer tanto azúcar. A fin de cuentas, hay que priorizar."
+                  ]
+                },
+                {
+                  "term": "もっと よく 寝た ほう が いい よ。 要するに 、複雑 な 問題 です 。",
+                  "translations": [
+                    "Deberías dormir mejor. En resumen, es un tema complejo."
+                  ]
+                }
+              ],
+              "exercises": [
+                {
+                  "type": "MultipleChoice",
+                  "id": "es-ja-b2-u05-l07-e01",
+                  "question": "¿Cuál es la opción correcta para «Deberías caminar treinta minutos al día. No obstante, también tiene ventajas.»?",
+                  "options": [
+                    "一日 に 三十分 歩くべきです。 それでも 、利点 も あります 。",
+                    "そんなに 砂糖 を 食べるべきで は ありません。 結局 、優先 する 必要 が あります 。",
+                    "もっと よく 寝た ほう が いい よ。 要するに 、複雑 な 問題 です 。"
+                  ],
+                  "correctIndex": 0,
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "«Deberías caminar treinta minutos al día. No obstante, también tiene ventajas.» se dice «一日 に 三十分 歩くべきです。 それでも 、利点 も あります 。».",
+                    "ruleRef": "gp-b2-modal-perfect"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has elegido la traducción correcta."
+                  }
+                },
+                {
+                  "type": "OrderWords",
+                  "id": "es-ja-b2-u05-l07-e02",
+                  "tokens": [
+                    "に",
+                    "三十分",
+                    "歩くべきです。",
+                    "それでも",
+                    "、利点",
+                    "も",
+                    "あります",
+                    "。",
+                    "一日"
+                  ],
+                  "answerTokens": [
+                    "一日",
+                    "に",
+                    "三十分",
+                    "歩くべきです。",
+                    "それでも",
+                    "、利点",
+                    "も",
+                    "あります",
+                    "。"
+                  ],
+                  "sourcePhrase": "Deberías caminar treinta minutos al día. No obstante, también tiene ventajas.",
+                  "feedbackOnError": {
+                    "type": "word_order",
+                    "explanation": "El orden correcto es «一日 に 三十分 歩くべきです。 それでも 、利点 も あります 。».",
+                    "ruleRef": "gp-b2-modal-perfect"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "El orden produce una frase natural."
+                  }
+                },
+                {
+                  "type": "ClozeDragDrop",
+                  "id": "es-ja-b2-u05-l07-e03",
+                  "passage": "{{b1}} に {{b2}} 歩くべきです",
+                  "blanks": [
+                    {
+                      "id": "b1",
+                      "answer": "一日",
+                      "options": [
+                        "一日",
+                        "歩くべきです",
+                        "とても"
+                      ]
+                    },
+                    {
+                      "id": "b2",
+                      "answer": "三十分",
+                      "options": [
+                        "三十分",
+                        "歩くべきです",
+                        "とても"
+                      ]
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "Las dos formas deben encajar con el contexto de la frase.",
+                    "ruleRef": "gp-b2-subjunctive"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Los dos huecos encajan con la situación."
+                  }
+                },
+                {
+                  "type": "SemanticMatch",
+                  "id": "es-ja-b2-u05-l07-e04",
+                  "instructions": "Clasifica la función comunicativa de cada intervención.",
+                  "pairs": [
+                    {
+                      "left": "一日 に 三十分 歩くべきです。 それでも 、利点 も あります 。",
+                      "right": "Planteamiento",
+                      "register": "formal",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    },
+                    {
+                      "left": "そんなに 砂糖 を 食べるべきで は ありません。 結局 、優先 する 必要 が あります 。",
+                      "right": "Concesión",
+                      "register": "neutral",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    },
+                    {
+                      "left": "もっと よく 寝た ほう が いい よ。 要するに 、複雑 な 問題 です 。",
+                      "right": "Conclusión",
+                      "register": "informal",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "Cada intervención cumple una función comunicativa distinta.",
+                    "ruleRef": "gp-b2-modal-perfect"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has identificado la función de cada intervención."
+                  }
+                },
+                {
+                  "type": "SemanticMatch",
+                  "id": "es-ja-b2-u05-l07-e05",
+                  "instructions": "Distingue el registro de cada intervención.",
+                  "pairs": [
+                    {
+                      "left": "一日 に 三十分 歩くべきです。 それでも 、利点 も あります 。",
+                      "right": "Formal",
+                      "register": "formal",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    },
+                    {
+                      "left": "そんなに 砂糖 を 食べるべきで は ありません。 結局 、優先 する 必要 が あります 。",
+                      "right": "Neutral",
+                      "register": "neutral",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    },
+                    {
+                      "left": "もっと よく 寝た ほう が いい よ。 要するに 、複雑 な 問題 です 。",
+                      "right": "Informal",
+                      "register": "informal",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "register",
+                    "explanation": "El registro cambia según el contexto y la relación con el interlocutor.",
+                    "ruleRef": "gp-b2-subjunctive"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has distinguido el registro de cada intervención."
+                  }
+                },
+                {
+                  "type": "AudioOnlyPrompt",
+                  "id": "es-ja-b2-u05-l07-e06",
+                  "audioText": "そんなに 砂糖 を 食べるべきで は ありません。 結局 、優先 する 必要 が あります 。",
+                  "question": "¿Qué ha dicho el hablante?",
+                  "options": [
+                    "そんなに 砂糖 を 食べるべきで は ありません。 結局 、優先 する 必要 が あります 。",
+                    "一日 に 三十分 歩くべきです。 それでも 、利点 も あります 。",
+                    "もっと よく 寝た ほう が いい よ。 要するに 、複雑 な 問題 です 。"
+                  ],
+                  "correctIndex": 0,
+                  "allowSlowPlayback": true,
+                  "feedbackOnError": {
+                    "type": "comprehension",
+                    "explanation": "El audio dice «そんなに 砂糖 を 食べるべきで は ありません。 結局 、優先 する 必要 が あります 。».",
+                    "ruleRef": "gp-b2-modal-perfect"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has comprendido el mensaje del audio."
+                  }
+                },
+                {
+                  "type": "AudioOnlyPrompt",
+                  "id": "es-ja-b2-u05-l07-e07",
+                  "audioText": "もっと よく 寝た ほう が いい よ。 要するに 、複雑 な 問題 です 。",
+                  "question": "¿Cuál es la idea principal?",
+                  "options": [
+                    "もっと よく 寝た ほう が いい よ。 要するに 、複雑 な 問題 です 。",
+                    "一日 に 三十分 歩くべきです。 それでも 、利点 も あります 。",
+                    "そんなに 砂糖 を 食べるべきで は ありません。 結局 、優先 する 必要 が あります 。"
+                  ],
+                  "correctIndex": 0,
+                  "allowSlowPlayback": false,
+                  "feedbackOnError": {
+                    "type": "comprehension",
+                    "explanation": "El audio dice «もっと よく 寝た ほう が いい よ。 要するに 、複雑 な 問題 です 。».",
+                    "ruleRef": "gp-b2-subjunctive"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has identificado la idea principal."
+                  }
+                },
+                {
+                  "type": "ListenType",
+                  "id": "es-ja-b2-u05-l07-e08",
+                  "audioText": "もっと よく 寝た ほう が いい よ。 要するに 、複雑 な 問題 です 。",
+                  "transcription": "もっと よく 寝た ほう が いい よ。 要するに 、複雑 な 問題 です 。",
+                  "feedbackOnError": {
+                    "type": "spelling",
+                    "explanation": "Escribe exactamente «もっと よく 寝た ほう が いい よ。 要するに 、複雑 な 問題 です 。».",
+                    "ruleRef": "gp-b2-modal-perfect"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La transcripción coincide con el audio."
+                  }
+                },
+                {
+                  "type": "SpeakRepeat",
+                  "id": "es-ja-b2-u05-l07-e09",
+                  "targetPhrase": "もっと よく 寝た ほう が いい よ。 要するに 、複雑 な 問題 です 。",
+                  "audioText": "もっと よく 寝た ほう が いい よ。 要するに 、複雑 な 問題 です 。",
+                  "feedbackOnError": {
+                    "type": "pronunciation",
+                    "explanation": "Repite «もっと よく 寝た ほう が いい よ。 要するに 、複雑 な 問題 です 。» con claridad.",
+                    "ruleRef": "gp-b2-modal-perfect"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La frase se entiende y mantiene el ritmo."
+                  }
+                },
+                {
+                  "type": "FreeSpeakingPrompt",
+                  "id": "es-ja-b2-u05-l07-e10",
+                  "prompt": "Argumenta y matiza una opinión sobre los hábitos saludables.",
+                  "minTokens": 20,
+                  "conceptClusters": [
+                    [
+                      "一日"
+                    ],
+                    [
+                      "三十分"
+                    ],
+                    [
+                      "歩くべきです。"
+                    ]
+                  ],
+                  "modelAnswer": "一日 に 三十分 歩くべきです。 それでも 、利点 も あります 。 そんなに 砂糖 を 食べるべきで は ありません。 結局 、優先 する 必要 が あります 。 もっと よく 寝た ほう が いい よ。 要するに 、複雑 な 問題 です 。",
+                  "selfAssessmentCriteria": [
+                    "¿La respuesta argumenta y responde a la tarea?",
+                    "¿Usa las dos estructuras gramaticales de la lección?",
+                    "¿Incluye una concesión o una matización?"
+                  ],
+                  "grammarRuleRefs": [
+                    "gp-b2-modal-perfect",
+                    "gp-b2-subjunctive"
+                  ],
+                  "timeLimitSeconds": 90,
+                  "minWpm": 70,
+                  "maxWpm": 160,
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "La respuesta modelo desarrolla una opinión con matices y una concesión.",
+                    "ruleRef": "gp-b2-modal-perfect"
+                  }
+                }
+              ]
+            },
+            {
+              "id": "es-ja-b2-u05-l08",
+              "title": "Hábitos saludables",
+              "cefrLevel": "B2",
+              "scenario": "Situación comunicativa avanzada sobre mi rutina saludable.",
+              "canDo": "Puedo argumentar y matizar sobre mi rutina saludable.",
+              "grammarPoints": [
+                {
+                  "id": "gp-b2-modal-perfect",
+                  "label": "Modal perfect",
+                  "description": "Must have, might have y should have especulan sobre el pasado."
+                },
+                {
+                  "id": "gp-b2-subjunctive",
+                  "label": "Subjunctive",
+                  "description": "El subjuntivo expresa deseos, dudas y valoraciones."
+                }
+              ],
+              "vocabFrequencyBand": "3000-5000",
+              "culturalNotes": [
+                {
+                  "idiom": "理解 する",
+                  "note": "Expresión para comprender algo.",
+                  "translation": "comprender"
+                }
+              ],
+              "microLesson": {
+                "title": "Hábitos saludables",
+                "goals": [
+                  "Usar vocabulario avanzado de mi rutina saludable.",
+                  "Aplicar modal perfect y subjunctive.",
+                  "Argumentar y matizar sobre mi rutina saludable."
+                ],
+                "sections": [
+                  {
+                    "heading": "Lengua en contexto",
+                    "body": "Modal perfect: Must have, might have y should have especulan sobre el pasado. Subjunctive: El subjuntivo expresa deseos, dudas y valoraciones.",
+                    "examples": [
+                      {
+                        "source": "Desayuno fruta y cereales. A fin de cuentas, hay que priorizar.",
+                        "target": "朝食 の フルーツと シリアル。 結局 、優先 する 必要 が あります 。"
+                      },
+                      {
+                        "source": "Camino al trabajo todos los días. En resumen, es un tema complejo.",
+                        "target": "私 は 毎日 歩いて 仕事 に 行きます。 要するに 、複雑 な 問題 です 。"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "glossary": [
+                {
+                  "term": "朝食 の フルーツと シリアル。 結局 、優先 する 必要 が あります 。",
+                  "translations": [
+                    "Desayuno fruta y cereales. A fin de cuentas, hay que priorizar."
+                  ]
+                },
+                {
+                  "term": "私 は 毎日 歩いて 仕事 に 行きます。 要するに 、複雑 な 問題 です 。",
+                  "translations": [
+                    "Camino al trabajo todos los días. En resumen, es un tema complejo."
+                  ]
+                },
+                {
+                  "term": "私 は 毎晩8時間 寝ます。 しかし 、それを 明確 に する 必要 が あります 。",
+                  "translations": [
+                    "Duermo ocho horas cada noche. Sin embargo, conviene matizarlo."
+                  ]
+                }
+              ],
+              "exercises": [
+                {
+                  "type": "MultipleChoice",
+                  "id": "es-ja-b2-u05-l08-e01",
+                  "question": "¿Cuál es la opción correcta para «Desayuno fruta y cereales. A fin de cuentas, hay que priorizar.»?",
+                  "options": [
+                    "朝食 の フルーツと シリアル。 結局 、優先 する 必要 が あります 。",
+                    "私 は 毎日 歩いて 仕事 に 行きます。 要するに 、複雑 な 問題 です 。",
+                    "私 は 毎晩8時間 寝ます。 しかし 、それを 明確 に する 必要 が あります 。"
+                  ],
+                  "correctIndex": 0,
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "«Desayuno fruta y cereales. A fin de cuentas, hay que priorizar.» se dice «朝食 の フルーツと シリアル。 結局 、優先 する 必要 が あります 。».",
+                    "ruleRef": "gp-b2-modal-perfect"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has elegido la traducción correcta."
+                  }
+                },
+                {
+                  "type": "OrderWords",
+                  "id": "es-ja-b2-u05-l08-e02",
+                  "tokens": [
+                    "の",
+                    "フルーツと",
+                    "シリアル。",
+                    "結局",
+                    "、優先",
+                    "する",
+                    "必要",
+                    "が",
+                    "あります",
+                    "。",
+                    "朝食"
+                  ],
+                  "answerTokens": [
+                    "朝食",
+                    "の",
+                    "フルーツと",
+                    "シリアル。",
+                    "結局",
+                    "、優先",
+                    "する",
+                    "必要",
+                    "が",
+                    "あります",
+                    "。"
+                  ],
+                  "sourcePhrase": "Desayuno fruta y cereales. A fin de cuentas, hay que priorizar.",
+                  "feedbackOnError": {
+                    "type": "word_order",
+                    "explanation": "El orden correcto es «朝食 の フルーツと シリアル。 結局 、優先 する 必要 が あります 。».",
+                    "ruleRef": "gp-b2-modal-perfect"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "El orden produce una frase natural."
+                  }
+                },
+                {
+                  "type": "ClozeDragDrop",
+                  "id": "es-ja-b2-u05-l08-e03",
+                  "passage": "{{b1}} の {{b2}} シリアル",
+                  "blanks": [
+                    {
+                      "id": "b1",
+                      "answer": "朝食",
+                      "options": [
+                        "朝食",
+                        "シリアル",
+                        "とても"
+                      ]
+                    },
+                    {
+                      "id": "b2",
+                      "answer": "フルーツと",
+                      "options": [
+                        "フルーツと",
+                        "シリアル",
+                        "とても"
+                      ]
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "Las dos formas deben encajar con el contexto de la frase.",
+                    "ruleRef": "gp-b2-subjunctive"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Los dos huecos encajan con la situación."
+                  }
+                },
+                {
+                  "type": "SemanticMatch",
+                  "id": "es-ja-b2-u05-l08-e04",
+                  "instructions": "Clasifica la función comunicativa de cada intervención.",
+                  "pairs": [
+                    {
+                      "left": "朝食 の フルーツと シリアル。 結局 、優先 する 必要 が あります 。",
+                      "right": "Planteamiento",
+                      "register": "formal",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    },
+                    {
+                      "left": "私 は 毎日 歩いて 仕事 に 行きます。 要するに 、複雑 な 問題 です 。",
+                      "right": "Concesión",
+                      "register": "neutral",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    },
+                    {
+                      "left": "私 は 毎晩8時間 寝ます。 しかし 、それを 明確 に する 必要 が あります 。",
+                      "right": "Conclusión",
+                      "register": "informal",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "Cada intervención cumple una función comunicativa distinta.",
+                    "ruleRef": "gp-b2-modal-perfect"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has identificado la función de cada intervención."
+                  }
+                },
+                {
+                  "type": "SemanticMatch",
+                  "id": "es-ja-b2-u05-l08-e05",
+                  "instructions": "Distingue el registro de cada intervención.",
+                  "pairs": [
+                    {
+                      "left": "朝食 の フルーツと シリアル。 結局 、優先 する 必要 が あります 。",
+                      "right": "Formal",
+                      "register": "formal",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    },
+                    {
+                      "left": "私 は 毎日 歩いて 仕事 に 行きます。 要するに 、複雑 な 問題 です 。",
+                      "right": "Neutral",
+                      "register": "neutral",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    },
+                    {
+                      "left": "私 は 毎晩8時間 寝ます。 しかし 、それを 明確 に する 必要 が あります 。",
+                      "right": "Informal",
+                      "register": "informal",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "register",
+                    "explanation": "El registro cambia según el contexto y la relación con el interlocutor.",
+                    "ruleRef": "gp-b2-subjunctive"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has distinguido el registro de cada intervención."
+                  }
+                },
+                {
+                  "type": "AudioOnlyPrompt",
+                  "id": "es-ja-b2-u05-l08-e06",
+                  "audioText": "私 は 毎日 歩いて 仕事 に 行きます。 要するに 、複雑 な 問題 です 。",
+                  "question": "¿Qué ha dicho el hablante?",
+                  "options": [
+                    "私 は 毎日 歩いて 仕事 に 行きます。 要するに 、複雑 な 問題 です 。",
+                    "朝食 の フルーツと シリアル。 結局 、優先 する 必要 が あります 。",
+                    "私 は 毎晩8時間 寝ます。 しかし 、それを 明確 に する 必要 が あります 。"
+                  ],
+                  "correctIndex": 0,
+                  "allowSlowPlayback": true,
+                  "feedbackOnError": {
+                    "type": "comprehension",
+                    "explanation": "El audio dice «私 は 毎日 歩いて 仕事 に 行きます。 要するに 、複雑 な 問題 です 。».",
+                    "ruleRef": "gp-b2-modal-perfect"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has comprendido el mensaje del audio."
+                  }
+                },
+                {
+                  "type": "AudioOnlyPrompt",
+                  "id": "es-ja-b2-u05-l08-e07",
+                  "audioText": "私 は 毎晩8時間 寝ます。 しかし 、それを 明確 に する 必要 が あります 。",
+                  "question": "¿Cuál es la idea principal?",
+                  "options": [
+                    "私 は 毎晩8時間 寝ます。 しかし 、それを 明確 に する 必要 が あります 。",
+                    "朝食 の フルーツと シリアル。 結局 、優先 する 必要 が あります 。",
+                    "私 は 毎日 歩いて 仕事 に 行きます。 要するに 、複雑 な 問題 です 。"
+                  ],
+                  "correctIndex": 0,
+                  "allowSlowPlayback": false,
+                  "feedbackOnError": {
+                    "type": "comprehension",
+                    "explanation": "El audio dice «私 は 毎晩8時間 寝ます。 しかし 、それを 明確 に する 必要 が あります 。».",
+                    "ruleRef": "gp-b2-subjunctive"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has identificado la idea principal."
+                  }
+                },
+                {
+                  "type": "ListenType",
+                  "id": "es-ja-b2-u05-l08-e08",
+                  "audioText": "私 は 毎晩8時間 寝ます。 しかし 、それを 明確 に する 必要 が あります 。",
+                  "transcription": "私 は 毎晩8時間 寝ます。 しかし 、それを 明確 に する 必要 が あります 。",
+                  "feedbackOnError": {
+                    "type": "spelling",
+                    "explanation": "Escribe exactamente «私 は 毎晩8時間 寝ます。 しかし 、それを 明確 に する 必要 が あります 。».",
+                    "ruleRef": "gp-b2-modal-perfect"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La transcripción coincide con el audio."
+                  }
+                },
+                {
+                  "type": "SpeakRepeat",
+                  "id": "es-ja-b2-u05-l08-e09",
+                  "targetPhrase": "私 は 毎晩8時間 寝ます。 しかし 、それを 明確 に する 必要 が あります 。",
+                  "audioText": "私 は 毎晩8時間 寝ます。 しかし 、それを 明確 に する 必要 が あります 。",
+                  "feedbackOnError": {
+                    "type": "pronunciation",
+                    "explanation": "Repite «私 は 毎晩8時間 寝ます。 しかし 、それを 明確 に する 必要 が あります 。» con claridad.",
+                    "ruleRef": "gp-b2-modal-perfect"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La frase se entiende y mantiene el ritmo."
+                  }
+                },
+                {
+                  "type": "FreeSpeakingPrompt",
+                  "id": "es-ja-b2-u05-l08-e10",
+                  "prompt": "Argumenta y matiza una opinión sobre mi rutina saludable.",
+                  "minTokens": 20,
+                  "conceptClusters": [
+                    [
+                      "朝食"
+                    ],
+                    [
+                      "フルーツと"
+                    ],
+                    [
+                      "シリアル。"
+                    ]
+                  ],
+                  "modelAnswer": "朝食 の フルーツと シリアル。 結局 、優先 する 必要 が あります 。 私 は 毎日 歩いて 仕事 に 行きます。 要するに 、複雑 な 問題 です 。 私 は 毎晩8時間 寝ます。 しかし 、それを 明確 に する 必要 が あります 。",
+                  "selfAssessmentCriteria": [
+                    "¿La respuesta argumenta y responde a la tarea?",
+                    "¿Usa las dos estructuras gramaticales de la lección?",
+                    "¿Incluye una concesión o una matización?"
+                  ],
+                  "grammarRuleRefs": [
+                    "gp-b2-modal-perfect",
+                    "gp-b2-subjunctive"
+                  ],
+                  "timeLimitSeconds": 90,
+                  "minWpm": 70,
+                  "maxWpm": 160,
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "La respuesta modelo desarrolla una opinión con matices y una concesión.",
+                    "ruleRef": "gp-b2-modal-perfect"
+                  }
+                }
+              ]
+            },
+            {
+              "id": "es-ja-b2-u05-l09",
+              "title": "Integración: plan de bienestar",
+              "cefrLevel": "B2",
+              "scenario": "Situación comunicativa avanzada sobre un plan de bienestar.",
+              "canDo": "Puedo argumentar y matizar sobre un plan de bienestar.",
+              "grammarPoints": [
+                {
+                  "id": "gp-b2-modal-perfect",
+                  "label": "Modal perfect",
+                  "description": "Must have, might have y should have especulan sobre el pasado."
+                },
+                {
+                  "id": "gp-b2-subjunctive",
+                  "label": "Subjunctive",
+                  "description": "El subjuntivo expresa deseos, dudas y valoraciones."
+                }
+              ],
+              "vocabFrequencyBand": "3000-5000",
+              "culturalNotes": [
+                {
+                  "idiom": "目 を 光らせる",
+                  "note": "Expresión para vigilar algo.",
+                  "translation": "estar atento"
+                }
+              ],
+              "microLesson": {
+                "title": "Integración: plan de bienestar",
+                "goals": [
+                  "Usar vocabulario avanzado de un plan de bienestar.",
+                  "Aplicar modal perfect y subjunctive.",
+                  "Argumentar y matizar sobre un plan de bienestar."
+                ],
+                "sections": [
+                  {
+                    "heading": "Lengua en contexto",
+                    "body": "Modal perfect: Must have, might have y should have especulan sobre el pasado. Subjunctive: El subjuntivo expresa deseos, dudas y valoraciones.",
+                    "examples": [
+                      {
+                        "source": "Voy a hacer ejercicio tres veces por semana. En resumen, es un tema complejo.",
+                        "target": "私 は 週 に 3回運動する つもりです。 要するに 、複雑 な 問題 です 。"
+                      },
+                      {
+                        "source": "También voy a beber más agua. Sin embargo, conviene matizarlo.",
+                        "target": "水 も もっと 飲む つもりです。 しかし 、それを 明確 に する 必要 が あります 。"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "glossary": [
+                {
+                  "term": "私 は 週 に 3回運動する つもりです。 要するに 、複雑 な 問題 です 。",
+                  "translations": [
+                    "Voy a hacer ejercicio tres veces por semana. En resumen, es un tema complejo."
+                  ]
+                },
+                {
+                  "term": "水 も もっと 飲む つもりです。 しかし 、それを 明確 に する 必要 が あります 。",
+                  "translations": [
+                    "También voy a beber más agua. Sin embargo, conviene matizarlo."
+                  ]
+                },
+                {
+                  "term": "そして よく 眠れる よう に なります。 そう は いえ 、状況 に よります 。",
+                  "translations": [
+                    "Y voy a dormir mejor. Dicho esto, depende del contexto."
+                  ]
+                }
+              ],
+              "exercises": [
+                {
+                  "type": "MultipleChoice",
+                  "id": "es-ja-b2-u05-l09-e01",
+                  "question": "¿Cuál es la opción correcta para «Voy a hacer ejercicio tres veces por semana. En resumen, es un tema complejo.»?",
+                  "options": [
+                    "私 は 週 に 3回運動する つもりです。 要するに 、複雑 な 問題 です 。",
+                    "水 も もっと 飲む つもりです。 しかし 、それを 明確 に する 必要 が あります 。",
+                    "そして よく 眠れる よう に なります。 そう は いえ 、状況 に よります 。"
+                  ],
+                  "correctIndex": 0,
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "«Voy a hacer ejercicio tres veces por semana. En resumen, es un tema complejo.» se dice «私 は 週 に 3回運動する つもりです。 要するに 、複雑 な 問題 です 。».",
+                    "ruleRef": "gp-b2-modal-perfect"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has elegido la traducción correcta."
+                  }
+                },
+                {
+                  "type": "OrderWords",
+                  "id": "es-ja-b2-u05-l09-e02",
+                  "tokens": [
+                    "は",
+                    "週",
+                    "に",
+                    "3回運動する",
+                    "つもりです。",
+                    "要するに",
+                    "、複雑",
+                    "な",
+                    "問題",
+                    "です",
+                    "。",
+                    "私"
+                  ],
+                  "answerTokens": [
+                    "私",
+                    "は",
+                    "週",
+                    "に",
+                    "3回運動する",
+                    "つもりです。",
+                    "要するに",
+                    "、複雑",
+                    "な",
+                    "問題",
+                    "です",
+                    "。"
+                  ],
+                  "sourcePhrase": "Voy a hacer ejercicio tres veces por semana. En resumen, es un tema complejo.",
+                  "feedbackOnError": {
+                    "type": "word_order",
+                    "explanation": "El orden correcto es «私 は 週 に 3回運動する つもりです。 要するに 、複雑 な 問題 です 。».",
+                    "ruleRef": "gp-b2-modal-perfect"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "El orden produce una frase natural."
+                  }
+                },
+                {
+                  "type": "ClozeDragDrop",
+                  "id": "es-ja-b2-u05-l09-e03",
+                  "passage": "私 は 週 に {{b1}} {{b2}}",
+                  "blanks": [
+                    {
+                      "id": "b1",
+                      "answer": "3回運動する",
+                      "options": [
+                        "3回運動する",
+                        "とても",
+                        "今日"
+                      ]
+                    },
+                    {
+                      "id": "b2",
+                      "answer": "つもりです",
+                      "options": [
+                        "つもりです",
+                        "とても",
+                        "今日"
+                      ]
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "Las dos formas deben encajar con el contexto de la frase.",
+                    "ruleRef": "gp-b2-subjunctive"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Los dos huecos encajan con la situación."
+                  }
+                },
+                {
+                  "type": "SemanticMatch",
+                  "id": "es-ja-b2-u05-l09-e04",
+                  "instructions": "Clasifica la función comunicativa de cada intervención.",
+                  "pairs": [
+                    {
+                      "left": "私 は 週 に 3回運動する つもりです。 要するに 、複雑 な 問題 です 。",
+                      "right": "Planteamiento",
+                      "register": "formal",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    },
+                    {
+                      "left": "水 も もっと 飲む つもりです。 しかし 、それを 明確 に する 必要 が あります 。",
+                      "right": "Concesión",
+                      "register": "neutral",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    },
+                    {
+                      "left": "そして よく 眠れる よう に なります。 そう は いえ 、状況 に よります 。",
+                      "right": "Conclusión",
+                      "register": "informal",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "Cada intervención cumple una función comunicativa distinta.",
+                    "ruleRef": "gp-b2-modal-perfect"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has identificado la función de cada intervención."
+                  }
+                },
+                {
+                  "type": "SemanticMatch",
+                  "id": "es-ja-b2-u05-l09-e05",
+                  "instructions": "Distingue el registro de cada intervención.",
+                  "pairs": [
+                    {
+                      "left": "私 は 週 に 3回運動する つもりです。 要するに 、複雑 な 問題 です 。",
+                      "right": "Formal",
+                      "register": "formal",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    },
+                    {
+                      "left": "水 も もっと 飲む つもりです。 しかし 、それを 明確 に する 必要 が あります 。",
+                      "right": "Neutral",
+                      "register": "neutral",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    },
+                    {
+                      "left": "そして よく 眠れる よう に なります。 そう は いえ 、状況 に よります 。",
+                      "right": "Informal",
+                      "register": "informal",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "register",
+                    "explanation": "El registro cambia según el contexto y la relación con el interlocutor.",
+                    "ruleRef": "gp-b2-subjunctive"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has distinguido el registro de cada intervención."
+                  }
+                },
+                {
+                  "type": "AudioOnlyPrompt",
+                  "id": "es-ja-b2-u05-l09-e06",
+                  "audioText": "水 も もっと 飲む つもりです。 しかし 、それを 明確 に する 必要 が あります 。",
+                  "question": "¿Qué ha dicho el hablante?",
+                  "options": [
+                    "水 も もっと 飲む つもりです。 しかし 、それを 明確 に する 必要 が あります 。",
+                    "私 は 週 に 3回運動する つもりです。 要するに 、複雑 な 問題 です 。",
+                    "そして よく 眠れる よう に なります。 そう は いえ 、状況 に よります 。"
+                  ],
+                  "correctIndex": 0,
+                  "allowSlowPlayback": true,
+                  "feedbackOnError": {
+                    "type": "comprehension",
+                    "explanation": "El audio dice «水 も もっと 飲む つもりです。 しかし 、それを 明確 に する 必要 が あります 。».",
+                    "ruleRef": "gp-b2-modal-perfect"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has comprendido el mensaje del audio."
+                  }
+                },
+                {
+                  "type": "AudioOnlyPrompt",
+                  "id": "es-ja-b2-u05-l09-e07",
+                  "audioText": "そして よく 眠れる よう に なります。 そう は いえ 、状況 に よります 。",
+                  "question": "¿Cuál es la idea principal?",
+                  "options": [
+                    "そして よく 眠れる よう に なります。 そう は いえ 、状況 に よります 。",
+                    "私 は 週 に 3回運動する つもりです。 要するに 、複雑 な 問題 です 。",
+                    "水 も もっと 飲む つもりです。 しかし 、それを 明確 に する 必要 が あります 。"
+                  ],
+                  "correctIndex": 0,
+                  "allowSlowPlayback": false,
+                  "feedbackOnError": {
+                    "type": "comprehension",
+                    "explanation": "El audio dice «そして よく 眠れる よう に なります。 そう は いえ 、状況 に よります 。».",
+                    "ruleRef": "gp-b2-subjunctive"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has identificado la idea principal."
+                  }
+                },
+                {
+                  "type": "ListenType",
+                  "id": "es-ja-b2-u05-l09-e08",
+                  "audioText": "そして よく 眠れる よう に なります。 そう は いえ 、状況 に よります 。",
+                  "transcription": "そして よく 眠れる よう に なります。 そう は いえ 、状況 に よります 。",
+                  "feedbackOnError": {
+                    "type": "spelling",
+                    "explanation": "Escribe exactamente «そして よく 眠れる よう に なります。 そう は いえ 、状況 に よります 。».",
+                    "ruleRef": "gp-b2-modal-perfect"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La transcripción coincide con el audio."
+                  }
+                },
+                {
+                  "type": "SpeakRepeat",
+                  "id": "es-ja-b2-u05-l09-e09",
+                  "targetPhrase": "そして よく 眠れる よう に なります。 そう は いえ 、状況 に よります 。",
+                  "audioText": "そして よく 眠れる よう に なります。 そう は いえ 、状況 に よります 。",
+                  "feedbackOnError": {
+                    "type": "pronunciation",
+                    "explanation": "Repite «そして よく 眠れる よう に なります。 そう は いえ 、状況 に よります 。» con claridad.",
+                    "ruleRef": "gp-b2-modal-perfect"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La frase se entiende y mantiene el ritmo."
+                  }
+                },
+                {
+                  "type": "FreeSpeakingPrompt",
+                  "id": "es-ja-b2-u05-l09-e10",
+                  "prompt": "Argumenta y matiza una opinión sobre un plan de bienestar.",
+                  "minTokens": 20,
+                  "conceptClusters": [
+                    [
+                      "3回運動する"
+                    ],
+                    [
+                      "つもりです。"
+                    ],
+                    [
+                      "要するに"
+                    ]
+                  ],
+                  "modelAnswer": "私 は 週 に 3回運動する つもりです。 要するに 、複雑 な 問題 です 。 水 も もっと 飲む つもりです。 しかし 、それを 明確 に する 必要 が あります 。 そして よく 眠れる よう に なります。 そう は いえ 、状況 に よります 。",
+                  "selfAssessmentCriteria": [
+                    "¿La respuesta argumenta y responde a la tarea?",
+                    "¿Usa las dos estructuras gramaticales de la lección?",
+                    "¿Incluye una concesión o una matización?"
+                  ],
+                  "grammarRuleRefs": [
+                    "gp-b2-modal-perfect",
+                    "gp-b2-subjunctive"
+                  ],
+                  "timeLimitSeconds": 90,
+                  "minWpm": 70,
+                  "maxWpm": 160,
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "La respuesta modelo desarrolla una opinión con matices y una concesión.",
+                    "ruleRef": "gp-b2-modal-perfect"
+                  }
+                }
+              ]
+            },
+            {
+              "id": "es-ja-b2-u05-l10",
+              "title": "Evaluación: mi salud",
+              "cefrLevel": "B2",
+              "scenario": "Situación comunicativa avanzada sobre mi salud.",
+              "canDo": "Puedo argumentar y matizar sobre mi salud.",
+              "grammarPoints": [
+                {
+                  "id": "gp-b2-modal-perfect",
+                  "label": "Modal perfect",
+                  "description": "Must have, might have y should have especulan sobre el pasado."
+                },
+                {
+                  "id": "gp-b2-subjunctive",
+                  "label": "Subjunctive",
+                  "description": "El subjuntivo expresa deseos, dudas y valoraciones."
+                }
+              ],
+              "vocabFrequencyBand": "3000-5000",
+              "culturalNotes": [
+                {
+                  "idiom": "目 が 飛び出る ほど 高い",
+                  "note": "Expresión para decir que algo es muy caro.",
+                  "translation": "carísimo"
+                }
+              ],
+              "microLesson": {
+                "title": "Evaluación: mi salud",
+                "goals": [
+                  "Usar vocabulario avanzado de mi salud.",
+                  "Aplicar modal perfect y subjunctive.",
+                  "Argumentar y matizar sobre mi salud."
+                ],
+                "sections": [
+                  {
+                    "heading": "Lengua en contexto",
+                    "body": "Modal perfect: Must have, might have y should have especulan sobre el pasado. Subjunctive: El subjuntivo expresa deseos, dudas y valoraciones.",
+                    "examples": [
+                      {
+                        "source": "Me siento mejor que antes. Sin embargo, conviene matizarlo.",
+                        "target": "以前 より 気分 が 良く なりました。 しかし 、それを 明確 に する 必要 が あります 。"
+                      },
+                      {
+                        "source": "He empezado a caminar cada día. Dicho esto, depende del contexto.",
+                        "target": "毎日 歩く よう に なりました。 そう は いえ 、状況 に よります 。"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "glossary": [
+                {
+                  "term": "以前 より 気分 が 良く なりました。 しかし 、それを 明確 に する 必要 が あります 。",
+                  "translations": [
+                    "Me siento mejor que antes. Sin embargo, conviene matizarlo."
+                  ]
+                },
+                {
+                  "term": "毎日 歩く よう に なりました。 そう は いえ 、状況 に よります 。",
+                  "translations": [
+                    "He empezado a caminar cada día. Dicho esto, depende del contexto."
+                  ]
+                },
+                {
+                  "term": "まだまだ 休まなければなりません。 つまり 、検討 する 価値 が あります 。",
+                  "translations": [
+                    "Todavía tengo que descansar más. En otras palabras, merece la pena considerarlo."
+                  ]
+                }
+              ],
+              "exercises": [
+                {
+                  "type": "MultipleChoice",
+                  "id": "es-ja-b2-u05-l10-e01",
+                  "question": "¿Cuál es la opción correcta para «Me siento mejor que antes. Sin embargo, conviene matizarlo.»?",
+                  "options": [
+                    "以前 より 気分 が 良く なりました。 しかし 、それを 明確 に する 必要 が あります 。",
+                    "毎日 歩く よう に なりました。 そう は いえ 、状況 に よります 。",
+                    "まだまだ 休まなければなりません。 つまり 、検討 する 価値 が あります 。"
+                  ],
+                  "correctIndex": 0,
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "«Me siento mejor que antes. Sin embargo, conviene matizarlo.» se dice «以前 より 気分 が 良く なりました。 しかし 、それを 明確 に する 必要 が あります 。».",
+                    "ruleRef": "gp-b2-modal-perfect"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has elegido la traducción correcta."
+                  }
+                },
+                {
+                  "type": "OrderWords",
+                  "id": "es-ja-b2-u05-l10-e02",
+                  "tokens": [
+                    "より",
+                    "気分",
+                    "が",
+                    "良く",
+                    "なりました。",
+                    "しかし",
+                    "、それを",
+                    "明確",
+                    "に",
+                    "する",
+                    "必要",
+                    "が",
+                    "あります",
+                    "。",
+                    "以前"
+                  ],
+                  "answerTokens": [
+                    "以前",
+                    "より",
+                    "気分",
+                    "が",
+                    "良く",
+                    "なりました。",
+                    "しかし",
+                    "、それを",
+                    "明確",
+                    "に",
+                    "する",
+                    "必要",
+                    "が",
+                    "あります",
+                    "。"
+                  ],
+                  "sourcePhrase": "Me siento mejor que antes. Sin embargo, conviene matizarlo.",
+                  "feedbackOnError": {
+                    "type": "word_order",
+                    "explanation": "El orden correcto es «以前 より 気分 が 良く なりました。 しかし 、それを 明確 に する 必要 が あります 。».",
+                    "ruleRef": "gp-b2-modal-perfect"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "El orden produce una frase natural."
+                  }
+                },
+                {
+                  "type": "ClozeDragDrop",
+                  "id": "es-ja-b2-u05-l10-e03",
+                  "passage": "{{b1}} より {{b2}} が 良く なりました",
+                  "blanks": [
+                    {
+                      "id": "b1",
+                      "answer": "以前",
+                      "options": [
+                        "以前",
+                        "良く",
+                        "なりました"
+                      ]
+                    },
+                    {
+                      "id": "b2",
+                      "answer": "気分",
+                      "options": [
+                        "気分",
+                        "良く",
+                        "なりました"
+                      ]
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "Las dos formas deben encajar con el contexto de la frase.",
+                    "ruleRef": "gp-b2-subjunctive"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Los dos huecos encajan con la situación."
+                  }
+                },
+                {
+                  "type": "SemanticMatch",
+                  "id": "es-ja-b2-u05-l10-e04",
+                  "instructions": "Clasifica la función comunicativa de cada intervención.",
+                  "pairs": [
+                    {
+                      "left": "以前 より 気分 が 良く なりました。 しかし 、それを 明確 に する 必要 が あります 。",
+                      "right": "Planteamiento",
+                      "register": "formal",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    },
+                    {
+                      "left": "毎日 歩く よう に なりました。 そう は いえ 、状況 に よります 。",
+                      "right": "Concesión",
+                      "register": "neutral",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    },
+                    {
+                      "left": "まだまだ 休まなければなりません。 つまり 、検討 する 価値 が あります 。",
+                      "right": "Conclusión",
+                      "register": "informal",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "Cada intervención cumple una función comunicativa distinta.",
+                    "ruleRef": "gp-b2-modal-perfect"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has identificado la función de cada intervención."
+                  }
+                },
+                {
+                  "type": "SemanticMatch",
+                  "id": "es-ja-b2-u05-l10-e05",
+                  "instructions": "Distingue el registro de cada intervención.",
+                  "pairs": [
+                    {
+                      "left": "以前 より 気分 が 良く なりました。 しかし 、それを 明確 に する 必要 が あります 。",
+                      "right": "Formal",
+                      "register": "formal",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    },
+                    {
+                      "left": "毎日 歩く よう に なりました。 そう は いえ 、状況 に よります 。",
+                      "right": "Neutral",
+                      "register": "neutral",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    },
+                    {
+                      "left": "まだまだ 休まなければなりません。 つまり 、検討 する 価値 が あります 。",
+                      "right": "Informal",
+                      "register": "informal",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "register",
+                    "explanation": "El registro cambia según el contexto y la relación con el interlocutor.",
+                    "ruleRef": "gp-b2-subjunctive"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has distinguido el registro de cada intervención."
+                  }
+                },
+                {
+                  "type": "AudioOnlyPrompt",
+                  "id": "es-ja-b2-u05-l10-e06",
+                  "audioText": "毎日 歩く よう に なりました。 そう は いえ 、状況 に よります 。",
+                  "question": "¿Qué ha dicho el hablante?",
+                  "options": [
+                    "毎日 歩く よう に なりました。 そう は いえ 、状況 に よります 。",
+                    "以前 より 気分 が 良く なりました。 しかし 、それを 明確 に する 必要 が あります 。",
+                    "まだまだ 休まなければなりません。 つまり 、検討 する 価値 が あります 。"
+                  ],
+                  "correctIndex": 0,
+                  "allowSlowPlayback": true,
+                  "feedbackOnError": {
+                    "type": "comprehension",
+                    "explanation": "El audio dice «毎日 歩く よう に なりました。 そう は いえ 、状況 に よります 。».",
+                    "ruleRef": "gp-b2-modal-perfect"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has comprendido el mensaje del audio."
+                  }
+                },
+                {
+                  "type": "AudioOnlyPrompt",
+                  "id": "es-ja-b2-u05-l10-e07",
+                  "audioText": "まだまだ 休まなければなりません。 つまり 、検討 する 価値 が あります 。",
+                  "question": "¿Cuál es la idea principal?",
+                  "options": [
+                    "まだまだ 休まなければなりません。 つまり 、検討 する 価値 が あります 。",
+                    "以前 より 気分 が 良く なりました。 しかし 、それを 明確 に する 必要 が あります 。",
+                    "毎日 歩く よう に なりました。 そう は いえ 、状況 に よります 。"
+                  ],
+                  "correctIndex": 0,
+                  "allowSlowPlayback": false,
+                  "feedbackOnError": {
+                    "type": "comprehension",
+                    "explanation": "El audio dice «まだまだ 休まなければなりません。 つまり 、検討 する 価値 が あります 。».",
+                    "ruleRef": "gp-b2-subjunctive"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has identificado la idea principal."
+                  }
+                },
+                {
+                  "type": "ListenType",
+                  "id": "es-ja-b2-u05-l10-e08",
+                  "audioText": "まだまだ 休まなければなりません。 つまり 、検討 する 価値 が あります 。",
+                  "transcription": "まだまだ 休まなければなりません。 つまり 、検討 する 価値 が あります 。",
+                  "feedbackOnError": {
+                    "type": "spelling",
+                    "explanation": "Escribe exactamente «まだまだ 休まなければなりません。 つまり 、検討 する 価値 が あります 。».",
+                    "ruleRef": "gp-b2-modal-perfect"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La transcripción coincide con el audio."
+                  }
+                },
+                {
+                  "type": "SpeakRepeat",
+                  "id": "es-ja-b2-u05-l10-e09",
+                  "targetPhrase": "まだまだ 休まなければなりません。 つまり 、検討 する 価値 が あります 。",
+                  "audioText": "まだまだ 休まなければなりません。 つまり 、検討 する 価値 が あります 。",
+                  "feedbackOnError": {
+                    "type": "pronunciation",
+                    "explanation": "Repite «まだまだ 休まなければなりません。 つまり 、検討 する 価値 が あります 。» con claridad.",
+                    "ruleRef": "gp-b2-modal-perfect"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La frase se entiende y mantiene el ritmo."
+                  }
+                },
+                {
+                  "type": "FreeSpeakingPrompt",
+                  "id": "es-ja-b2-u05-l10-e10",
+                  "prompt": "Argumenta y matiza una opinión sobre mi salud.",
+                  "minTokens": 20,
+                  "conceptClusters": [
+                    [
+                      "以前"
+                    ],
+                    [
+                      "気分"
+                    ],
+                    [
+                      "良く"
+                    ]
+                  ],
+                  "modelAnswer": "以前 より 気分 が 良く なりました。 しかし 、それを 明確 に する 必要 が あります 。 毎日 歩く よう に なりました。 そう は いえ 、状況 に よります 。 まだまだ 休まなければなりません。 つまり 、検討 する 価値 が あります 。",
+                  "selfAssessmentCriteria": [
+                    "¿La respuesta argumenta y responde a la tarea?",
+                    "¿Usa las dos estructuras gramaticales de la lección?",
+                    "¿Incluye una concesión o una matización?"
+                  ],
+                  "grammarRuleRefs": [
+                    "gp-b2-modal-perfect",
+                    "gp-b2-subjunctive"
+                  ],
+                  "timeLimitSeconds": 90,
+                  "minWpm": 70,
+                  "maxWpm": 160,
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "La respuesta modelo desarrolla una opinión con matices y una concesión.",
+                    "ruleRef": "gp-b2-modal-perfect"
+                  }
+                }
+              ]
+            }
+          ]
         }
       ]
     },
