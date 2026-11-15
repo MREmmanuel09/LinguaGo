@@ -53967,6 +53967,2194 @@
               ]
             }
           ]
+        },
+        {
+          "id": "es-fr-a2-u09",
+          "title": "A2 · Comida y restaurantes",
+          "lessons": [
+            {
+              "id": "es-fr-a2-u09-l01",
+              "title": "Repaso: casa",
+              "cefrLevel": "A2",
+              "vocabFrequencyBand": "2000-3000",
+              "canDo": "Puedo recordar cómo es mi casa y mi barrio.",
+              "microLesson": {
+                "title": "Repaso: casa",
+                "goals": [
+                  "Reconocer vocabulario de mi casa.",
+                  "Usar frases sencillas sobre mi casa.",
+                  "Producir un mensaje breve sobre mi casa."
+                ],
+                "sections": [
+                  {
+                    "heading": "Foco gramatical",
+                    "body": "Presente simple: Usa el presente simple para rutinas y hechos habituales. Preposiciones de lugar: In, on y at sitúan personas y objetos en el espacio.",
+                    "examples": [
+                      {
+                        "source": "Vivo en un piso pequeño con dos habitaciones.",
+                        "target": "Je vis dans un petit appartement avec deux chambres."
+                      },
+                      {
+                        "source": "La cocina es grande y luminosa.",
+                        "target": "La cuisine est grande et lumineuse."
+                      }
+                    ]
+                  },
+                  {
+                    "heading": "En contexto",
+                    "body": "Observa cómo se usa presente simple en una situación de mi casa.",
+                    "examples": [
+                      {
+                        "source": "Me gusta pasar tiempo en casa.",
+                        "target": "J'aime passer du temps à la maison."
+                      }
+                    ]
+                  }
+                ]
+              },
+              "glossary": [
+                {
+                  "term": "Je vis dans un petit appartement avec deux chambres.",
+                  "translations": [
+                    "Vivo en un piso pequeño con dos habitaciones."
+                  ]
+                },
+                {
+                  "term": "La cuisine est grande et lumineuse.",
+                  "translations": [
+                    "La cocina es grande y luminosa."
+                  ]
+                },
+                {
+                  "term": "J'aime passer du temps à la maison.",
+                  "translations": [
+                    "Me gusta pasar tiempo en casa."
+                  ]
+                }
+              ],
+              "exercises": [
+                {
+                  "type": "MultipleChoice",
+                  "id": "es-fr-a2-u09-l01-e01",
+                  "question": "¿Cómo se dice «Vivo en un piso pequeño con dos habitaciones.»?",
+                  "options": [
+                    "Je vis dans un petit appartement avec deux chambres.",
+                    "La cuisine est grande et lumineuse.",
+                    "J'aime passer du temps à la maison."
+                  ],
+                  "correctIndex": 0,
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "«Vivo en un piso pequeño con dos habitaciones.» se dice «Je vis dans un petit appartement avec deux chambres.»."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has elegido la traducción correcta."
+                  }
+                },
+                {
+                  "type": "Translate",
+                  "id": "es-fr-a2-u09-l01-e02",
+                  "sourcePhrase": "Vivo en un piso pequeño con dos habitaciones.",
+                  "correctTokens": [
+                    "Je",
+                    "vis",
+                    "dans",
+                    "un",
+                    "petit",
+                    "appartement",
+                    "avec",
+                    "deux",
+                    "chambres"
+                  ],
+                  "distractorTokens": [
+                    "La",
+                    "cuisine",
+                    "est"
+                  ],
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "El orden correcto es «Je vis dans un petit appartement avec deux chambres». Presente simple: Usa el presente simple para rutinas y hechos habituales.",
+                    "ruleRef": "gp-present-simple"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La frase conserva el orden y el significado."
+                  }
+                },
+                {
+                  "type": "OrderWords",
+                  "id": "es-fr-a2-u09-l01-e03",
+                  "tokens": [
+                    "cuisine",
+                    "est",
+                    "grande",
+                    "et",
+                    "lumineuse",
+                    "La"
+                  ],
+                  "answerTokens": [
+                    "La",
+                    "cuisine",
+                    "est",
+                    "grande",
+                    "et",
+                    "lumineuse"
+                  ],
+                  "sourcePhrase": "La cocina es grande y luminosa.",
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "La frase correcta es «La cuisine est grande et lumineuse». Presente simple: Usa el presente simple para rutinas y hechos habituales.",
+                    "ruleRef": "gp-present-simple"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "El orden produce una frase natural."
+                  }
+                },
+                {
+                  "type": "MatchPairs",
+                  "id": "es-fr-a2-u09-l01-e04",
+                  "pairs": [
+                    {
+                      "left": "Vivo en un piso pequeño con dos habitaciones.",
+                      "right": "Je vis dans un petit appartement avec deux chambres."
+                    },
+                    {
+                      "left": "La cocina es grande y luminosa.",
+                      "right": "La cuisine est grande et lumineuse."
+                    },
+                    {
+                      "left": "Me gusta pasar tiempo en casa.",
+                      "right": "J'aime passer du temps à la maison."
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "Cada expresión tiene una traducción distinta."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has asociado cada expresión con su traducción."
+                  }
+                },
+                {
+                  "type": "ListenChoose",
+                  "id": "es-fr-a2-u09-l01-e05",
+                  "audioText": "J'aime passer du temps à la maison.",
+                  "options": [
+                    "Je vis dans un petit appartement avec deux chambres.",
+                    "La cuisine est grande et lumineuse.",
+                    "J'aime passer du temps à la maison."
+                  ],
+                  "correctIndex": 0,
+                  "feedbackOnError": {
+                    "type": "comprehension",
+                    "explanation": "El audio dice «J'aime passer du temps à la maison.»."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has reconocido la frase del audio."
+                  }
+                },
+                {
+                  "type": "ListenType",
+                  "id": "es-fr-a2-u09-l01-e06",
+                  "audioText": "J'aime passer du temps à la maison.",
+                  "transcription": "J'aime passer du temps à la maison.",
+                  "feedbackOnError": {
+                    "type": "spelling",
+                    "explanation": "Escribe exactamente «J'aime passer du temps à la maison.»."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La transcripción coincide con el audio."
+                  }
+                },
+                {
+                  "type": "SpeakRepeat",
+                  "id": "es-fr-a2-u09-l01-e07",
+                  "targetPhrase": "J'aime passer du temps à la maison.",
+                  "audioText": "J'aime passer du temps à la maison.",
+                  "feedbackOnError": {
+                    "type": "pronunciation",
+                    "explanation": "Repite «J'aime passer du temps à la maison.» con claridad."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La frase se entiende y mantiene el ritmo."
+                  }
+                }
+              ],
+              "grammarPoints": [
+                {
+                  "id": "gp-present-simple",
+                  "label": "Presente simple",
+                  "description": "Usa el presente simple para rutinas y hechos habituales."
+                },
+                {
+                  "id": "gp-prepositions",
+                  "label": "Preposiciones de lugar",
+                  "description": "In, on y at sitúan personas y objetos en el espacio."
+                }
+              ]
+            },
+            {
+              "id": "es-fr-a2-u09-l02",
+              "title": "En el mercado",
+              "cefrLevel": "A2",
+              "vocabFrequencyBand": "2000-3000",
+              "canDo": "Puedo comprar alimentos en el mercado.",
+              "microLesson": {
+                "title": "En el mercado",
+                "goals": [
+                  "Reconocer vocabulario de el mercado.",
+                  "Usar frases sencillas sobre el mercado.",
+                  "Producir un mensaje breve sobre el mercado."
+                ],
+                "sections": [
+                  {
+                    "heading": "Foco gramatical",
+                    "body": "Cantidad: Some, much, many, a lot of y enough expresan cantidad.",
+                    "examples": [
+                      {
+                        "source": "Necesito un kilo de tomates",
+                        "target": "J'ai besoin d'un kilo de tomates"
+                      },
+                      {
+                        "source": "Necesito una barra de pan",
+                        "target": "J'ai besoin d'une baguette de pain"
+                      }
+                    ]
+                  },
+                  {
+                    "heading": "En contexto",
+                    "body": "Observa cómo se usa cantidad en una situación de el mercado.",
+                    "examples": [
+                      {
+                        "source": "Necesito un trozo de queso",
+                        "target": "J'ai besoin d'un morceau de fromage"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "glossary": [
+                {
+                  "term": "un kilo de tomates",
+                  "translations": [
+                    "un kilo de tomates"
+                  ]
+                },
+                {
+                  "term": "une baguette de pain",
+                  "translations": [
+                    "una barra de pan"
+                  ]
+                },
+                {
+                  "term": "un morceau de fromage",
+                  "translations": [
+                    "un trozo de queso"
+                  ]
+                }
+              ],
+              "exercises": [
+                {
+                  "type": "MultipleChoice",
+                  "id": "es-fr-a2-u09-l02-e01",
+                  "question": "¿Cómo se dice «un kilo de tomates»?",
+                  "options": [
+                    "un kilo de tomates",
+                    "une baguette de pain",
+                    "un morceau de fromage"
+                  ],
+                  "correctIndex": 0,
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "«un kilo de tomates» se dice «un kilo de tomates»."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has elegido la traducción correcta."
+                  }
+                },
+                {
+                  "type": "Translate",
+                  "id": "es-fr-a2-u09-l02-e02",
+                  "sourcePhrase": "Necesito un kilo de tomates",
+                  "correctTokens": [
+                    "J'ai",
+                    "besoin",
+                    "d'un",
+                    "kilo",
+                    "de",
+                    "tomates"
+                  ],
+                  "distractorTokens": [
+                    "d'une",
+                    "baguette",
+                    "pain"
+                  ],
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "El orden correcto es «J'ai besoin d'un kilo de tomates». Cantidad: Some, much, many, a lot of y enough expresan cantidad.",
+                    "ruleRef": "gp-quantity"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La frase conserva el orden y el significado."
+                  }
+                },
+                {
+                  "type": "OrderWords",
+                  "id": "es-fr-a2-u09-l02-e03",
+                  "tokens": [
+                    "besoin",
+                    "d'une",
+                    "baguette",
+                    "de",
+                    "pain",
+                    "J'ai"
+                  ],
+                  "answerTokens": [
+                    "J'ai",
+                    "besoin",
+                    "d'une",
+                    "baguette",
+                    "de",
+                    "pain"
+                  ],
+                  "sourcePhrase": "Necesito una barra de pan",
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "La frase correcta es «J'ai besoin d'une baguette de pain». Cantidad: Some, much, many, a lot of y enough expresan cantidad.",
+                    "ruleRef": "gp-quantity"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "El orden produce una frase natural."
+                  }
+                },
+                {
+                  "type": "MatchPairs",
+                  "id": "es-fr-a2-u09-l02-e04",
+                  "pairs": [
+                    {
+                      "left": "un kilo de tomates",
+                      "right": "un kilo de tomates"
+                    },
+                    {
+                      "left": "una barra de pan",
+                      "right": "une baguette de pain"
+                    },
+                    {
+                      "left": "un trozo de queso",
+                      "right": "un morceau de fromage"
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "Cada expresión tiene una traducción distinta."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has asociado cada expresión con su traducción."
+                  }
+                },
+                {
+                  "type": "ListenChoose",
+                  "id": "es-fr-a2-u09-l02-e05",
+                  "audioText": "J'ai besoin d'un morceau de fromage",
+                  "options": [
+                    "J'ai besoin d'un kilo de tomates",
+                    "J'ai besoin d'une baguette de pain",
+                    "J'ai besoin d'un morceau de fromage"
+                  ],
+                  "correctIndex": 0,
+                  "feedbackOnError": {
+                    "type": "comprehension",
+                    "explanation": "El audio dice «J'ai besoin d'un morceau de fromage»."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has reconocido la frase del audio."
+                  }
+                },
+                {
+                  "type": "ListenType",
+                  "id": "es-fr-a2-u09-l02-e06",
+                  "audioText": "J'ai besoin d'un morceau de fromage",
+                  "transcription": "J'ai besoin d'un morceau de fromage",
+                  "feedbackOnError": {
+                    "type": "spelling",
+                    "explanation": "Escribe exactamente «J'ai besoin d'un morceau de fromage»."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La transcripción coincide con el audio."
+                  }
+                },
+                {
+                  "type": "SpeakRepeat",
+                  "id": "es-fr-a2-u09-l02-e07",
+                  "targetPhrase": "J'ai besoin d'un morceau de fromage",
+                  "audioText": "J'ai besoin d'un morceau de fromage",
+                  "feedbackOnError": {
+                    "type": "pronunciation",
+                    "explanation": "Repite «J'ai besoin d'un morceau de fromage» con claridad."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La frase se entiende y mantiene el ritmo."
+                  }
+                }
+              ],
+              "grammarPoints": [
+                {
+                  "id": "gp-quantity",
+                  "label": "Cantidad",
+                  "description": "Some, much, many, a lot of y enough expresan cantidad."
+                }
+              ]
+            },
+            {
+              "id": "es-fr-a2-u09-l03",
+              "title": "Ingredientes y platos",
+              "cefrLevel": "A2",
+              "vocabFrequencyBand": "2000-3000",
+              "canDo": "Puedo nombrar ingredientes y hablar de platos.",
+              "microLesson": {
+                "title": "Ingredientes y platos",
+                "goals": [
+                  "Reconocer vocabulario de los ingredientes.",
+                  "Usar frases sencillas sobre los ingredientes.",
+                  "Producir un mensaje breve sobre los ingredientes."
+                ],
+                "sections": [
+                  {
+                    "heading": "Foco gramatical",
+                    "body": "Cantidad: Some, much, many, a lot of y enough expresan cantidad. Contables e incontables: Los contables tienen plural; los incontables no se cuentan con unidades.",
+                    "examples": [
+                      {
+                        "source": "Necesito arroz",
+                        "target": "J'ai besoin de du riz"
+                      },
+                      {
+                        "source": "Necesito pollo",
+                        "target": "J'ai besoin de du poulet"
+                      }
+                    ]
+                  },
+                  {
+                    "heading": "En contexto",
+                    "body": "Observa cómo se usa cantidad en una situación de los ingredientes.",
+                    "examples": [
+                      {
+                        "source": "Necesito verduras frescas",
+                        "target": "J'ai besoin de des légumes frais"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "glossary": [
+                {
+                  "term": "du riz",
+                  "translations": [
+                    "arroz"
+                  ]
+                },
+                {
+                  "term": "du poulet",
+                  "translations": [
+                    "pollo"
+                  ]
+                },
+                {
+                  "term": "des légumes frais",
+                  "translations": [
+                    "verduras frescas"
+                  ]
+                }
+              ],
+              "exercises": [
+                {
+                  "type": "MultipleChoice",
+                  "id": "es-fr-a2-u09-l03-e01",
+                  "question": "¿Cómo se dice «arroz»?",
+                  "options": [
+                    "du riz",
+                    "du poulet",
+                    "des légumes frais"
+                  ],
+                  "correctIndex": 0,
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "«arroz» se dice «du riz»."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has elegido la traducción correcta."
+                  }
+                },
+                {
+                  "type": "Translate",
+                  "id": "es-fr-a2-u09-l03-e02",
+                  "sourcePhrase": "Necesito arroz",
+                  "correctTokens": [
+                    "J'ai",
+                    "besoin",
+                    "de",
+                    "du",
+                    "riz"
+                  ],
+                  "distractorTokens": [
+                    "poulet",
+                    "des",
+                    "légumes"
+                  ],
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "El orden correcto es «J'ai besoin de du riz». Cantidad: Some, much, many, a lot of y enough expresan cantidad.",
+                    "ruleRef": "gp-quantity"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La frase conserva el orden y el significado."
+                  }
+                },
+                {
+                  "type": "OrderWords",
+                  "id": "es-fr-a2-u09-l03-e03",
+                  "tokens": [
+                    "besoin",
+                    "de",
+                    "du",
+                    "poulet",
+                    "J'ai"
+                  ],
+                  "answerTokens": [
+                    "J'ai",
+                    "besoin",
+                    "de",
+                    "du",
+                    "poulet"
+                  ],
+                  "sourcePhrase": "Necesito pollo",
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "La frase correcta es «J'ai besoin de du poulet». Cantidad: Some, much, many, a lot of y enough expresan cantidad.",
+                    "ruleRef": "gp-quantity"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "El orden produce una frase natural."
+                  }
+                },
+                {
+                  "type": "MatchPairs",
+                  "id": "es-fr-a2-u09-l03-e04",
+                  "pairs": [
+                    {
+                      "left": "arroz",
+                      "right": "du riz"
+                    },
+                    {
+                      "left": "pollo",
+                      "right": "du poulet"
+                    },
+                    {
+                      "left": "verduras frescas",
+                      "right": "des légumes frais"
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "Cada expresión tiene una traducción distinta."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has asociado cada expresión con su traducción."
+                  }
+                },
+                {
+                  "type": "ListenChoose",
+                  "id": "es-fr-a2-u09-l03-e05",
+                  "audioText": "J'ai besoin de des légumes frais",
+                  "options": [
+                    "J'ai besoin de du riz",
+                    "J'ai besoin de du poulet",
+                    "J'ai besoin de des légumes frais"
+                  ],
+                  "correctIndex": 0,
+                  "feedbackOnError": {
+                    "type": "comprehension",
+                    "explanation": "El audio dice «J'ai besoin de des légumes frais»."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has reconocido la frase del audio."
+                  }
+                },
+                {
+                  "type": "ListenType",
+                  "id": "es-fr-a2-u09-l03-e06",
+                  "audioText": "J'ai besoin de des légumes frais",
+                  "transcription": "J'ai besoin de des légumes frais",
+                  "feedbackOnError": {
+                    "type": "spelling",
+                    "explanation": "Escribe exactamente «J'ai besoin de des légumes frais»."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La transcripción coincide con el audio."
+                  }
+                },
+                {
+                  "type": "SpeakRepeat",
+                  "id": "es-fr-a2-u09-l03-e07",
+                  "targetPhrase": "J'ai besoin de des légumes frais",
+                  "audioText": "J'ai besoin de des légumes frais",
+                  "feedbackOnError": {
+                    "type": "pronunciation",
+                    "explanation": "Repite «J'ai besoin de des légumes frais» con claridad."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La frase se entiende y mantiene el ritmo."
+                  }
+                }
+              ],
+              "grammarPoints": [
+                {
+                  "id": "gp-quantity",
+                  "label": "Cantidad",
+                  "description": "Some, much, many, a lot of y enough expresan cantidad."
+                },
+                {
+                  "id": "gp-countable-uncountable",
+                  "label": "Contables e incontables",
+                  "description": "Los contables tienen plural; los incontables no se cuentan con unidades."
+                }
+              ]
+            },
+            {
+              "id": "es-fr-a2-u09-l04",
+              "title": "Countable / uncountable",
+              "cefrLevel": "A2",
+              "vocabFrequencyBand": "2000-3000",
+              "canDo": "Puedo distinguir sustantivos contables e incontables.",
+              "microLesson": {
+                "title": "Countable / uncountable",
+                "goals": [
+                  "Reconocer vocabulario de los contables e incontables.",
+                  "Usar frases sencillas sobre los contables e incontables.",
+                  "Producir un mensaje breve sobre los contables e incontables."
+                ],
+                "sections": [
+                  {
+                    "heading": "Foco gramatical",
+                    "body": "Contables e incontables: Los contables tienen plural; los incontables no se cuentan con unidades.",
+                    "examples": [
+                      {
+                        "source": "Hay mucha agua en la botella.",
+                        "target": "Il y a beaucoup d'eau dans la bouteille."
+                      },
+                      {
+                        "source": "Necesito tres manzanas para la receta.",
+                        "target": "J'ai besoin de trois pommes pour la recette."
+                      }
+                    ]
+                  },
+                  {
+                    "heading": "En contexto",
+                    "body": "Observa cómo se usa contables e incontables en una situación de los contables e incontables.",
+                    "examples": [
+                      {
+                        "source": "No queda mucha leche.",
+                        "target": "Il ne reste pas beaucoup de lait."
+                      }
+                    ]
+                  }
+                ]
+              },
+              "glossary": [
+                {
+                  "term": "Il y a beaucoup d'eau dans la bouteille.",
+                  "translations": [
+                    "Hay mucha agua en la botella."
+                  ]
+                },
+                {
+                  "term": "J'ai besoin de trois pommes pour la recette.",
+                  "translations": [
+                    "Necesito tres manzanas para la receta."
+                  ]
+                },
+                {
+                  "term": "Il ne reste pas beaucoup de lait.",
+                  "translations": [
+                    "No queda mucha leche."
+                  ]
+                }
+              ],
+              "exercises": [
+                {
+                  "type": "MultipleChoice",
+                  "id": "es-fr-a2-u09-l04-e01",
+                  "question": "¿Cómo se dice «Hay mucha agua en la botella.»?",
+                  "options": [
+                    "Il y a beaucoup d'eau dans la bouteille.",
+                    "J'ai besoin de trois pommes pour la recette.",
+                    "Il ne reste pas beaucoup de lait."
+                  ],
+                  "correctIndex": 0,
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "«Hay mucha agua en la botella.» se dice «Il y a beaucoup d'eau dans la bouteille.»."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has elegido la traducción correcta."
+                  }
+                },
+                {
+                  "type": "Translate",
+                  "id": "es-fr-a2-u09-l04-e02",
+                  "sourcePhrase": "Hay mucha agua en la botella.",
+                  "correctTokens": [
+                    "Il",
+                    "y",
+                    "a",
+                    "beaucoup",
+                    "d'eau",
+                    "dans",
+                    "la",
+                    "bouteille"
+                  ],
+                  "distractorTokens": [
+                    "J'ai",
+                    "besoin",
+                    "de"
+                  ],
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "El orden correcto es «Il y a beaucoup d'eau dans la bouteille». Contables e incontables: Los contables tienen plural; los incontables no se cuentan con unidades.",
+                    "ruleRef": "gp-countable-uncountable"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La frase conserva el orden y el significado."
+                  }
+                },
+                {
+                  "type": "OrderWords",
+                  "id": "es-fr-a2-u09-l04-e03",
+                  "tokens": [
+                    "besoin",
+                    "de",
+                    "trois",
+                    "pommes",
+                    "pour",
+                    "la",
+                    "recette",
+                    "J'ai"
+                  ],
+                  "answerTokens": [
+                    "J'ai",
+                    "besoin",
+                    "de",
+                    "trois",
+                    "pommes",
+                    "pour",
+                    "la",
+                    "recette"
+                  ],
+                  "sourcePhrase": "Necesito tres manzanas para la receta.",
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "La frase correcta es «J'ai besoin de trois pommes pour la recette». Contables e incontables: Los contables tienen plural; los incontables no se cuentan con unidades.",
+                    "ruleRef": "gp-countable-uncountable"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "El orden produce una frase natural."
+                  }
+                },
+                {
+                  "type": "MatchPairs",
+                  "id": "es-fr-a2-u09-l04-e04",
+                  "pairs": [
+                    {
+                      "left": "Hay mucha agua en la botella.",
+                      "right": "Il y a beaucoup d'eau dans la bouteille."
+                    },
+                    {
+                      "left": "Necesito tres manzanas para la receta.",
+                      "right": "J'ai besoin de trois pommes pour la recette."
+                    },
+                    {
+                      "left": "No queda mucha leche.",
+                      "right": "Il ne reste pas beaucoup de lait."
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "Cada expresión tiene una traducción distinta."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has asociado cada expresión con su traducción."
+                  }
+                },
+                {
+                  "type": "ListenChoose",
+                  "id": "es-fr-a2-u09-l04-e05",
+                  "audioText": "Il ne reste pas beaucoup de lait.",
+                  "options": [
+                    "Il y a beaucoup d'eau dans la bouteille.",
+                    "J'ai besoin de trois pommes pour la recette.",
+                    "Il ne reste pas beaucoup de lait."
+                  ],
+                  "correctIndex": 0,
+                  "feedbackOnError": {
+                    "type": "comprehension",
+                    "explanation": "El audio dice «Il ne reste pas beaucoup de lait.»."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has reconocido la frase del audio."
+                  }
+                },
+                {
+                  "type": "ListenType",
+                  "id": "es-fr-a2-u09-l04-e06",
+                  "audioText": "Il ne reste pas beaucoup de lait.",
+                  "transcription": "Il ne reste pas beaucoup de lait.",
+                  "feedbackOnError": {
+                    "type": "spelling",
+                    "explanation": "Escribe exactamente «Il ne reste pas beaucoup de lait.»."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La transcripción coincide con el audio."
+                  }
+                },
+                {
+                  "type": "SpeakRepeat",
+                  "id": "es-fr-a2-u09-l04-e07",
+                  "targetPhrase": "Il ne reste pas beaucoup de lait.",
+                  "audioText": "Il ne reste pas beaucoup de lait.",
+                  "feedbackOnError": {
+                    "type": "pronunciation",
+                    "explanation": "Repite «Il ne reste pas beaucoup de lait.» con claridad."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La frase se entiende y mantiene el ritmo."
+                  }
+                }
+              ],
+              "grammarPoints": [
+                {
+                  "id": "gp-countable-uncountable",
+                  "label": "Contables e incontables",
+                  "description": "Los contables tienen plural; los incontables no se cuentan con unidades."
+                }
+              ]
+            },
+            {
+              "id": "es-fr-a2-u09-l05",
+              "title": "Some / any / much / many",
+              "cefrLevel": "A2",
+              "vocabFrequencyBand": "2000-3000",
+              "canDo": "Puedo usar some, any, much y many.",
+              "microLesson": {
+                "title": "Some / any / much / many",
+                "goals": [
+                  "Reconocer vocabulario de las cantidades.",
+                  "Usar frases sencillas sobre las cantidades.",
+                  "Producir un mensaje breve sobre las cantidades."
+                ],
+                "sections": [
+                  {
+                    "heading": "Foco gramatical",
+                    "body": "Some y any: Some aparece en afirmativas; any, en negativas y preguntas. Cantidad: Some, much, many, a lot of y enough expresan cantidad.",
+                    "examples": [
+                      {
+                        "source": "Hay fruta en la nevera.",
+                        "target": "Il y a des fruits dans le frigo."
+                      },
+                      {
+                        "source": "No hay leche.",
+                        "target": "Il n'y a pas de lait."
+                      }
+                    ]
+                  },
+                  {
+                    "heading": "En contexto",
+                    "body": "Observa cómo se usa some y any en una situación de las cantidades.",
+                    "examples": [
+                      {
+                        "source": "¿Tienes azúcar?",
+                        "target": "Tu as du sucre ?"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "glossary": [
+                {
+                  "term": "Il y a des fruits dans le frigo.",
+                  "translations": [
+                    "Hay fruta en la nevera."
+                  ]
+                },
+                {
+                  "term": "Il n'y a pas de lait.",
+                  "translations": [
+                    "No hay leche."
+                  ]
+                },
+                {
+                  "term": "Tu as du sucre ?",
+                  "translations": [
+                    "¿Tienes azúcar?"
+                  ]
+                }
+              ],
+              "exercises": [
+                {
+                  "type": "MultipleChoice",
+                  "id": "es-fr-a2-u09-l05-e01",
+                  "question": "¿Cómo se dice «Hay fruta en la nevera.»?",
+                  "options": [
+                    "Il y a des fruits dans le frigo.",
+                    "Il n'y a pas de lait.",
+                    "Tu as du sucre ?"
+                  ],
+                  "correctIndex": 0,
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "«Hay fruta en la nevera.» se dice «Il y a des fruits dans le frigo.»."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has elegido la traducción correcta."
+                  }
+                },
+                {
+                  "type": "Translate",
+                  "id": "es-fr-a2-u09-l05-e02",
+                  "sourcePhrase": "Hay fruta en la nevera.",
+                  "correctTokens": [
+                    "Il",
+                    "y",
+                    "a",
+                    "des",
+                    "fruits",
+                    "dans",
+                    "le",
+                    "frigo"
+                  ],
+                  "distractorTokens": [
+                    "n'y",
+                    "pas",
+                    "de"
+                  ],
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "El orden correcto es «Il y a des fruits dans le frigo». Some y any: Some aparece en afirmativas; any, en negativas y preguntas.",
+                    "ruleRef": "gp-some-any"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La frase conserva el orden y el significado."
+                  }
+                },
+                {
+                  "type": "OrderWords",
+                  "id": "es-fr-a2-u09-l05-e03",
+                  "tokens": [
+                    "n'y",
+                    "a",
+                    "pas",
+                    "de",
+                    "lait",
+                    "Il"
+                  ],
+                  "answerTokens": [
+                    "Il",
+                    "n'y",
+                    "a",
+                    "pas",
+                    "de",
+                    "lait"
+                  ],
+                  "sourcePhrase": "No hay leche.",
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "La frase correcta es «Il n'y a pas de lait». Some y any: Some aparece en afirmativas; any, en negativas y preguntas.",
+                    "ruleRef": "gp-some-any"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "El orden produce una frase natural."
+                  }
+                },
+                {
+                  "type": "MatchPairs",
+                  "id": "es-fr-a2-u09-l05-e04",
+                  "pairs": [
+                    {
+                      "left": "Hay fruta en la nevera.",
+                      "right": "Il y a des fruits dans le frigo."
+                    },
+                    {
+                      "left": "No hay leche.",
+                      "right": "Il n'y a pas de lait."
+                    },
+                    {
+                      "left": "¿Tienes azúcar?",
+                      "right": "Tu as du sucre ?"
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "Cada expresión tiene una traducción distinta."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has asociado cada expresión con su traducción."
+                  }
+                },
+                {
+                  "type": "ListenChoose",
+                  "id": "es-fr-a2-u09-l05-e05",
+                  "audioText": "Tu as du sucre ?",
+                  "options": [
+                    "Il y a des fruits dans le frigo.",
+                    "Il n'y a pas de lait.",
+                    "Tu as du sucre ?"
+                  ],
+                  "correctIndex": 0,
+                  "feedbackOnError": {
+                    "type": "comprehension",
+                    "explanation": "El audio dice «Tu as du sucre ?»."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has reconocido la frase del audio."
+                  }
+                },
+                {
+                  "type": "ListenType",
+                  "id": "es-fr-a2-u09-l05-e06",
+                  "audioText": "Tu as du sucre ?",
+                  "transcription": "Tu as du sucre ?",
+                  "feedbackOnError": {
+                    "type": "spelling",
+                    "explanation": "Escribe exactamente «Tu as du sucre ?»."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La transcripción coincide con el audio."
+                  }
+                },
+                {
+                  "type": "SpeakRepeat",
+                  "id": "es-fr-a2-u09-l05-e07",
+                  "targetPhrase": "Tu as du sucre ?",
+                  "audioText": "Tu as du sucre ?",
+                  "feedbackOnError": {
+                    "type": "pronunciation",
+                    "explanation": "Repite «Tu as du sucre ?» con claridad."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La frase se entiende y mantiene el ritmo."
+                  }
+                }
+              ],
+              "grammarPoints": [
+                {
+                  "id": "gp-some-any",
+                  "label": "Some y any",
+                  "description": "Some aparece en afirmativas; any, en negativas y preguntas."
+                },
+                {
+                  "id": "gp-quantity",
+                  "label": "Cantidad",
+                  "description": "Some, much, many, a lot of y enough expresan cantidad."
+                }
+              ]
+            },
+            {
+              "id": "es-fr-a2-u09-l06",
+              "title": "Pedir en un restaurante",
+              "cefrLevel": "A2",
+              "vocabFrequencyBand": "2000-3000",
+              "canDo": "Puedo pedir en un restaurante con cortesía.",
+              "microLesson": {
+                "title": "Pedir en un restaurante",
+                "goals": [
+                  "Reconocer vocabulario de el restaurante.",
+                  "Usar frases sencillas sobre el restaurante.",
+                  "Producir un mensaje breve sobre el restaurante."
+                ],
+                "sections": [
+                  {
+                    "heading": "Foco gramatical",
+                    "body": "Peticiones corteses: Could you...? y Would you...? suavizan una petición. Preguntas: El orden auxiliar + sujeto + verbo forma preguntas claras.",
+                    "examples": [
+                      {
+                        "source": "¿Tienen una mesa para dos?",
+                        "target": "Avez-vous une table pour deux ?"
+                      },
+                      {
+                        "source": "Quisiera el menú del día.",
+                        "target": "Je voudrais le menu du jour."
+                      }
+                    ]
+                  },
+                  {
+                    "heading": "En contexto",
+                    "body": "Observa cómo se usa peticiones corteses en una situación de el restaurante.",
+                    "examples": [
+                      {
+                        "source": "¿Nos trae la cuenta, por favor?",
+                        "target": "Pourriez-vous nous apporter l'addition, s'il vous plaît ?"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "glossary": [
+                {
+                  "term": "Avez-vous une table pour deux ?",
+                  "translations": [
+                    "¿Tienen una mesa para dos?"
+                  ]
+                },
+                {
+                  "term": "Je voudrais le menu du jour.",
+                  "translations": [
+                    "Quisiera el menú del día."
+                  ]
+                },
+                {
+                  "term": "Pourriez-vous nous apporter l'addition, s'il vous plaît ?",
+                  "translations": [
+                    "¿Nos trae la cuenta, por favor?"
+                  ]
+                }
+              ],
+              "exercises": [
+                {
+                  "type": "MultipleChoice",
+                  "id": "es-fr-a2-u09-l06-e01",
+                  "question": "¿Cómo se dice «¿Tienen una mesa para dos?»?",
+                  "options": [
+                    "Avez-vous une table pour deux ?",
+                    "Je voudrais le menu du jour.",
+                    "Pourriez-vous nous apporter l'addition, s'il vous plaît ?"
+                  ],
+                  "correctIndex": 0,
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "«¿Tienen una mesa para dos?» se dice «Avez-vous une table pour deux ?»."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has elegido la traducción correcta."
+                  }
+                },
+                {
+                  "type": "Translate",
+                  "id": "es-fr-a2-u09-l06-e02",
+                  "sourcePhrase": "¿Tienen una mesa para dos?",
+                  "correctTokens": [
+                    "Avez",
+                    "vous",
+                    "une",
+                    "table",
+                    "pour",
+                    "deux"
+                  ],
+                  "distractorTokens": [
+                    "Je",
+                    "voudrais",
+                    "le"
+                  ],
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "El orden correcto es «Avez vous une table pour deux». Peticiones corteses: Could you...? y Would you...? suavizan una petición.",
+                    "ruleRef": "gp-polite-requests"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La frase conserva el orden y el significado."
+                  }
+                },
+                {
+                  "type": "OrderWords",
+                  "id": "es-fr-a2-u09-l06-e03",
+                  "tokens": [
+                    "voudrais",
+                    "le",
+                    "menu",
+                    "du",
+                    "jour",
+                    "Je"
+                  ],
+                  "answerTokens": [
+                    "Je",
+                    "voudrais",
+                    "le",
+                    "menu",
+                    "du",
+                    "jour"
+                  ],
+                  "sourcePhrase": "Quisiera el menú del día.",
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "La frase correcta es «Je voudrais le menu du jour». Peticiones corteses: Could you...? y Would you...? suavizan una petición.",
+                    "ruleRef": "gp-polite-requests"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "El orden produce una frase natural."
+                  }
+                },
+                {
+                  "type": "MatchPairs",
+                  "id": "es-fr-a2-u09-l06-e04",
+                  "pairs": [
+                    {
+                      "left": "¿Tienen una mesa para dos?",
+                      "right": "Avez-vous une table pour deux ?"
+                    },
+                    {
+                      "left": "Quisiera el menú del día.",
+                      "right": "Je voudrais le menu du jour."
+                    },
+                    {
+                      "left": "¿Nos trae la cuenta, por favor?",
+                      "right": "Pourriez-vous nous apporter l'addition, s'il vous plaît ?"
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "Cada expresión tiene una traducción distinta."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has asociado cada expresión con su traducción."
+                  }
+                },
+                {
+                  "type": "ListenChoose",
+                  "id": "es-fr-a2-u09-l06-e05",
+                  "audioText": "Pourriez-vous nous apporter l'addition, s'il vous plaît ?",
+                  "options": [
+                    "Avez-vous une table pour deux ?",
+                    "Je voudrais le menu du jour.",
+                    "Pourriez-vous nous apporter l'addition, s'il vous plaît ?"
+                  ],
+                  "correctIndex": 0,
+                  "feedbackOnError": {
+                    "type": "comprehension",
+                    "explanation": "El audio dice «Pourriez-vous nous apporter l'addition, s'il vous plaît ?»."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has reconocido la frase del audio."
+                  }
+                },
+                {
+                  "type": "ListenType",
+                  "id": "es-fr-a2-u09-l06-e06",
+                  "audioText": "Pourriez-vous nous apporter l'addition, s'il vous plaît ?",
+                  "transcription": "Pourriez-vous nous apporter l'addition, s'il vous plaît ?",
+                  "feedbackOnError": {
+                    "type": "spelling",
+                    "explanation": "Escribe exactamente «Pourriez-vous nous apporter l'addition, s'il vous plaît ?»."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La transcripción coincide con el audio."
+                  }
+                },
+                {
+                  "type": "SpeakRepeat",
+                  "id": "es-fr-a2-u09-l06-e07",
+                  "targetPhrase": "Pourriez-vous nous apporter l'addition, s'il vous plaît ?",
+                  "audioText": "Pourriez-vous nous apporter l'addition, s'il vous plaît ?",
+                  "feedbackOnError": {
+                    "type": "pronunciation",
+                    "explanation": "Repite «Pourriez-vous nous apporter l'addition, s'il vous plaît ?» con claridad."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La frase se entiende y mantiene el ritmo."
+                  }
+                }
+              ],
+              "grammarPoints": [
+                {
+                  "id": "gp-polite-requests",
+                  "label": "Peticiones corteses",
+                  "description": "Could you...? y Would you...? suavizan una petición."
+                },
+                {
+                  "id": "gp-questions",
+                  "label": "Preguntas",
+                  "description": "El orden auxiliar + sujeto + verbo forma preguntas claras."
+                }
+              ]
+            },
+            {
+              "id": "es-fr-a2-u09-l07",
+              "title": "Reseña de un restaurante",
+              "cefrLevel": "A2",
+              "vocabFrequencyBand": "2000-3000",
+              "canDo": "Puedo describir y valorar un restaurante.",
+              "microLesson": {
+                "title": "Reseña de un restaurante",
+                "goals": [
+                  "Reconocer vocabulario de una reseña gastronómica.",
+                  "Usar frases sencillas sobre una reseña gastronómica.",
+                  "Producir un mensaje breve sobre una reseña gastronómica."
+                ],
+                "sections": [
+                  {
+                    "heading": "Foco gramatical",
+                    "body": "Pasado simple: El pasado simple describe acciones terminadas en un momento concreto. Adjetivos: El adjetivo describe el sustantivo y no cambia de forma en inglés.",
+                    "examples": [
+                      {
+                        "source": "El restaurante es pequeño pero acogedor.",
+                        "target": "Le restaurant est petit mais accueillant."
+                      },
+                      {
+                        "source": "La comida estaba deliciosa y el servicio fue rápido.",
+                        "target": "La nourriture était délicieuse et le service rapide."
+                      }
+                    ]
+                  },
+                  {
+                    "heading": "En contexto",
+                    "body": "Observa cómo se usa pasado simple en una situación de una reseña gastronómica.",
+                    "examples": [
+                      {
+                        "source": "Volvería sin dudarlo.",
+                        "target": "J'y retournerais sans hésiter."
+                      }
+                    ]
+                  }
+                ]
+              },
+              "glossary": [
+                {
+                  "term": "Le restaurant est petit mais accueillant.",
+                  "translations": [
+                    "El restaurante es pequeño pero acogedor."
+                  ]
+                },
+                {
+                  "term": "La nourriture était délicieuse et le service rapide.",
+                  "translations": [
+                    "La comida estaba deliciosa y el servicio fue rápido."
+                  ]
+                },
+                {
+                  "term": "J'y retournerais sans hésiter.",
+                  "translations": [
+                    "Volvería sin dudarlo."
+                  ]
+                }
+              ],
+              "exercises": [
+                {
+                  "type": "MultipleChoice",
+                  "id": "es-fr-a2-u09-l07-e01",
+                  "question": "¿Cómo se dice «El restaurante es pequeño pero acogedor.»?",
+                  "options": [
+                    "Le restaurant est petit mais accueillant.",
+                    "La nourriture était délicieuse et le service rapide.",
+                    "J'y retournerais sans hésiter."
+                  ],
+                  "correctIndex": 0,
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "«El restaurante es pequeño pero acogedor.» se dice «Le restaurant est petit mais accueillant.»."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has elegido la traducción correcta."
+                  }
+                },
+                {
+                  "type": "Translate",
+                  "id": "es-fr-a2-u09-l07-e02",
+                  "sourcePhrase": "El restaurante es pequeño pero acogedor.",
+                  "correctTokens": [
+                    "Le",
+                    "restaurant",
+                    "est",
+                    "petit",
+                    "mais",
+                    "accueillant"
+                  ],
+                  "distractorTokens": [
+                    "La",
+                    "nourriture",
+                    "était"
+                  ],
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "El orden correcto es «Le restaurant est petit mais accueillant». Pasado simple: El pasado simple describe acciones terminadas en un momento concreto.",
+                    "ruleRef": "gp-past-simple"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La frase conserva el orden y el significado."
+                  }
+                },
+                {
+                  "type": "OrderWords",
+                  "id": "es-fr-a2-u09-l07-e03",
+                  "tokens": [
+                    "nourriture",
+                    "était",
+                    "délicieuse",
+                    "et",
+                    "le",
+                    "service",
+                    "rapide",
+                    "La"
+                  ],
+                  "answerTokens": [
+                    "La",
+                    "nourriture",
+                    "était",
+                    "délicieuse",
+                    "et",
+                    "le",
+                    "service",
+                    "rapide"
+                  ],
+                  "sourcePhrase": "La comida estaba deliciosa y el servicio fue rápido.",
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "La frase correcta es «La nourriture était délicieuse et le service rapide». Pasado simple: El pasado simple describe acciones terminadas en un momento concreto.",
+                    "ruleRef": "gp-past-simple"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "El orden produce una frase natural."
+                  }
+                },
+                {
+                  "type": "MatchPairs",
+                  "id": "es-fr-a2-u09-l07-e04",
+                  "pairs": [
+                    {
+                      "left": "El restaurante es pequeño pero acogedor.",
+                      "right": "Le restaurant est petit mais accueillant."
+                    },
+                    {
+                      "left": "La comida estaba deliciosa y el servicio fue rápido.",
+                      "right": "La nourriture était délicieuse et le service rapide."
+                    },
+                    {
+                      "left": "Volvería sin dudarlo.",
+                      "right": "J'y retournerais sans hésiter."
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "Cada expresión tiene una traducción distinta."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has asociado cada expresión con su traducción."
+                  }
+                },
+                {
+                  "type": "ListenChoose",
+                  "id": "es-fr-a2-u09-l07-e05",
+                  "audioText": "J'y retournerais sans hésiter.",
+                  "options": [
+                    "Le restaurant est petit mais accueillant.",
+                    "La nourriture était délicieuse et le service rapide.",
+                    "J'y retournerais sans hésiter."
+                  ],
+                  "correctIndex": 0,
+                  "feedbackOnError": {
+                    "type": "comprehension",
+                    "explanation": "El audio dice «J'y retournerais sans hésiter.»."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has reconocido la frase del audio."
+                  }
+                },
+                {
+                  "type": "ListenType",
+                  "id": "es-fr-a2-u09-l07-e06",
+                  "audioText": "J'y retournerais sans hésiter.",
+                  "transcription": "J'y retournerais sans hésiter.",
+                  "feedbackOnError": {
+                    "type": "spelling",
+                    "explanation": "Escribe exactamente «J'y retournerais sans hésiter.»."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La transcripción coincide con el audio."
+                  }
+                },
+                {
+                  "type": "SpeakRepeat",
+                  "id": "es-fr-a2-u09-l07-e07",
+                  "targetPhrase": "J'y retournerais sans hésiter.",
+                  "audioText": "J'y retournerais sans hésiter.",
+                  "feedbackOnError": {
+                    "type": "pronunciation",
+                    "explanation": "Repite «J'y retournerais sans hésiter.» con claridad."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La frase se entiende y mantiene el ritmo."
+                  }
+                }
+              ],
+              "grammarPoints": [
+                {
+                  "id": "gp-past-simple",
+                  "label": "Pasado simple",
+                  "description": "El pasado simple describe acciones terminadas en un momento concreto."
+                },
+                {
+                  "id": "gp-adjectives",
+                  "label": "Adjetivos",
+                  "description": "El adjetivo describe el sustantivo y no cambia de forma en inglés."
+                }
+              ]
+            },
+            {
+              "id": "es-fr-a2-u09-l08",
+              "title": "Escribir una receta",
+              "cefrLevel": "A2",
+              "vocabFrequencyBand": "2000-3000",
+              "canDo": "Puedo escribir los pasos de una receta sencilla.",
+              "microLesson": {
+                "title": "Escribir una receta",
+                "goals": [
+                  "Reconocer vocabulario de una receta.",
+                  "Usar frases sencillas sobre una receta.",
+                  "Producir un mensaje breve sobre una receta."
+                ],
+                "sections": [
+                  {
+                    "heading": "Foco gramatical",
+                    "body": "Imperativos: El imperativo da instrucciones y consejos directos. Contables e incontables: Los contables tienen plural; los incontables no se cuentan con unidades.",
+                    "examples": [
+                      {
+                        "source": "Primero corta las verduras.",
+                        "target": "D'abord, coupe les légumes."
+                      },
+                      {
+                        "source": "Después añade el arroz y el agua.",
+                        "target": "Ensuite, ajoute le riz et l'eau."
+                      }
+                    ]
+                  },
+                  {
+                    "heading": "En contexto",
+                    "body": "Observa cómo se usa imperativos en una situación de una receta.",
+                    "examples": [
+                      {
+                        "source": "Cocina todo durante veinte minutos.",
+                        "target": "Fais cuire le tout pendant vingt minutes."
+                      }
+                    ]
+                  }
+                ]
+              },
+              "glossary": [
+                {
+                  "term": "D'abord, coupe les légumes.",
+                  "translations": [
+                    "Primero corta las verduras."
+                  ]
+                },
+                {
+                  "term": "Ensuite, ajoute le riz et l'eau.",
+                  "translations": [
+                    "Después añade el arroz y el agua."
+                  ]
+                },
+                {
+                  "term": "Fais cuire le tout pendant vingt minutes.",
+                  "translations": [
+                    "Cocina todo durante veinte minutos."
+                  ]
+                }
+              ],
+              "exercises": [
+                {
+                  "type": "MultipleChoice",
+                  "id": "es-fr-a2-u09-l08-e01",
+                  "question": "¿Cómo se dice «Primero corta las verduras.»?",
+                  "options": [
+                    "D'abord, coupe les légumes.",
+                    "Ensuite, ajoute le riz et l'eau.",
+                    "Fais cuire le tout pendant vingt minutes."
+                  ],
+                  "correctIndex": 0,
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "«Primero corta las verduras.» se dice «D'abord, coupe les légumes.»."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has elegido la traducción correcta."
+                  }
+                },
+                {
+                  "type": "Translate",
+                  "id": "es-fr-a2-u09-l08-e02",
+                  "sourcePhrase": "Primero corta las verduras.",
+                  "correctTokens": [
+                    "D'abord",
+                    "coupe",
+                    "les",
+                    "légumes"
+                  ],
+                  "distractorTokens": [
+                    "Ensuite",
+                    "ajoute",
+                    "le"
+                  ],
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "El orden correcto es «D'abord coupe les légumes». Imperativos: El imperativo da instrucciones y consejos directos.",
+                    "ruleRef": "gp-imperatives"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La frase conserva el orden y el significado."
+                  }
+                },
+                {
+                  "type": "OrderWords",
+                  "id": "es-fr-a2-u09-l08-e03",
+                  "tokens": [
+                    "ajoute",
+                    "le",
+                    "riz",
+                    "et",
+                    "l'eau",
+                    "Ensuite"
+                  ],
+                  "answerTokens": [
+                    "Ensuite",
+                    "ajoute",
+                    "le",
+                    "riz",
+                    "et",
+                    "l'eau"
+                  ],
+                  "sourcePhrase": "Después añade el arroz y el agua.",
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "La frase correcta es «Ensuite ajoute le riz et l'eau». Imperativos: El imperativo da instrucciones y consejos directos.",
+                    "ruleRef": "gp-imperatives"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "El orden produce una frase natural."
+                  }
+                },
+                {
+                  "type": "MatchPairs",
+                  "id": "es-fr-a2-u09-l08-e04",
+                  "pairs": [
+                    {
+                      "left": "Primero corta las verduras.",
+                      "right": "D'abord, coupe les légumes."
+                    },
+                    {
+                      "left": "Después añade el arroz y el agua.",
+                      "right": "Ensuite, ajoute le riz et l'eau."
+                    },
+                    {
+                      "left": "Cocina todo durante veinte minutos.",
+                      "right": "Fais cuire le tout pendant vingt minutes."
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "Cada expresión tiene una traducción distinta."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has asociado cada expresión con su traducción."
+                  }
+                },
+                {
+                  "type": "ListenChoose",
+                  "id": "es-fr-a2-u09-l08-e05",
+                  "audioText": "Fais cuire le tout pendant vingt minutes.",
+                  "options": [
+                    "D'abord, coupe les légumes.",
+                    "Ensuite, ajoute le riz et l'eau.",
+                    "Fais cuire le tout pendant vingt minutes."
+                  ],
+                  "correctIndex": 0,
+                  "feedbackOnError": {
+                    "type": "comprehension",
+                    "explanation": "El audio dice «Fais cuire le tout pendant vingt minutes.»."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has reconocido la frase del audio."
+                  }
+                },
+                {
+                  "type": "ListenType",
+                  "id": "es-fr-a2-u09-l08-e06",
+                  "audioText": "Fais cuire le tout pendant vingt minutes.",
+                  "transcription": "Fais cuire le tout pendant vingt minutes.",
+                  "feedbackOnError": {
+                    "type": "spelling",
+                    "explanation": "Escribe exactamente «Fais cuire le tout pendant vingt minutes.»."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La transcripción coincide con el audio."
+                  }
+                },
+                {
+                  "type": "SpeakRepeat",
+                  "id": "es-fr-a2-u09-l08-e07",
+                  "targetPhrase": "Fais cuire le tout pendant vingt minutes.",
+                  "audioText": "Fais cuire le tout pendant vingt minutes.",
+                  "feedbackOnError": {
+                    "type": "pronunciation",
+                    "explanation": "Repite «Fais cuire le tout pendant vingt minutes.» con claridad."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La frase se entiende y mantiene el ritmo."
+                  }
+                }
+              ],
+              "grammarPoints": [
+                {
+                  "id": "gp-imperatives",
+                  "label": "Imperativos",
+                  "description": "El imperativo da instrucciones y consejos directos."
+                },
+                {
+                  "id": "gp-countable-uncountable",
+                  "label": "Contables e incontables",
+                  "description": "Los contables tienen plural; los incontables no se cuentan con unidades."
+                }
+              ]
+            },
+            {
+              "id": "es-fr-a2-u09-l09",
+              "title": "Integración: organizar una cena",
+              "cefrLevel": "A2",
+              "vocabFrequencyBand": "2000-3000",
+              "canDo": "Puedo organizar una cena y explicar lo que necesito.",
+              "microLesson": {
+                "title": "Integración: organizar una cena",
+                "goals": [
+                  "Reconocer vocabulario de una cena con amigos.",
+                  "Usar frases sencillas sobre una cena con amigos.",
+                  "Producir un mensaje breve sobre una cena con amigos."
+                ],
+                "sections": [
+                  {
+                    "heading": "Foco gramatical",
+                    "body": "Going to: Going to expresa planes e intenciones ya decididos. Cantidad: Some, much, many, a lot of y enough expresan cantidad.",
+                    "examples": [
+                      {
+                        "source": "Voy a organizar una cena el sábado.",
+                        "target": "Je vais organiser un dîner samedi."
+                      },
+                      {
+                        "source": "Necesito comprar comida para seis personas.",
+                        "target": "J'ai besoin d'acheter de la nourriture pour six personnes."
+                      }
+                    ]
+                  },
+                  {
+                    "heading": "En contexto",
+                    "body": "Observa cómo se usa going to en una situación de una cena con amigos.",
+                    "examples": [
+                      {
+                        "source": "También voy a preparar una tarta.",
+                        "target": "Je vais aussi préparer un gâteau."
+                      }
+                    ]
+                  }
+                ]
+              },
+              "glossary": [
+                {
+                  "term": "Je vais organiser un dîner samedi.",
+                  "translations": [
+                    "Voy a organizar una cena el sábado."
+                  ]
+                },
+                {
+                  "term": "J'ai besoin d'acheter de la nourriture pour six personnes.",
+                  "translations": [
+                    "Necesito comprar comida para seis personas."
+                  ]
+                },
+                {
+                  "term": "Je vais aussi préparer un gâteau.",
+                  "translations": [
+                    "También voy a preparar una tarta."
+                  ]
+                }
+              ],
+              "exercises": [
+                {
+                  "type": "MultipleChoice",
+                  "id": "es-fr-a2-u09-l09-e01",
+                  "question": "¿Cómo se dice «Voy a organizar una cena el sábado.»?",
+                  "options": [
+                    "Je vais organiser un dîner samedi.",
+                    "J'ai besoin d'acheter de la nourriture pour six personnes.",
+                    "Je vais aussi préparer un gâteau."
+                  ],
+                  "correctIndex": 0,
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "«Voy a organizar una cena el sábado.» se dice «Je vais organiser un dîner samedi.»."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has elegido la traducción correcta."
+                  }
+                },
+                {
+                  "type": "Translate",
+                  "id": "es-fr-a2-u09-l09-e02",
+                  "sourcePhrase": "Voy a organizar una cena el sábado.",
+                  "correctTokens": [
+                    "Je",
+                    "vais",
+                    "organiser",
+                    "un",
+                    "dîner",
+                    "samedi"
+                  ],
+                  "distractorTokens": [
+                    "J'ai",
+                    "besoin",
+                    "d'acheter"
+                  ],
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "El orden correcto es «Je vais organiser un dîner samedi». Going to: Going to expresa planes e intenciones ya decididos.",
+                    "ruleRef": "gp-going-to"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La frase conserva el orden y el significado."
+                  }
+                },
+                {
+                  "type": "OrderWords",
+                  "id": "es-fr-a2-u09-l09-e03",
+                  "tokens": [
+                    "besoin",
+                    "d'acheter",
+                    "de",
+                    "la",
+                    "nourriture",
+                    "pour",
+                    "six",
+                    "personnes",
+                    "J'ai"
+                  ],
+                  "answerTokens": [
+                    "J'ai",
+                    "besoin",
+                    "d'acheter",
+                    "de",
+                    "la",
+                    "nourriture",
+                    "pour",
+                    "six",
+                    "personnes"
+                  ],
+                  "sourcePhrase": "Necesito comprar comida para seis personas.",
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "La frase correcta es «J'ai besoin d'acheter de la nourriture pour six personnes». Going to: Going to expresa planes e intenciones ya decididos.",
+                    "ruleRef": "gp-going-to"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "El orden produce una frase natural."
+                  }
+                },
+                {
+                  "type": "MatchPairs",
+                  "id": "es-fr-a2-u09-l09-e04",
+                  "pairs": [
+                    {
+                      "left": "Voy a organizar una cena el sábado.",
+                      "right": "Je vais organiser un dîner samedi."
+                    },
+                    {
+                      "left": "Necesito comprar comida para seis personas.",
+                      "right": "J'ai besoin d'acheter de la nourriture pour six personnes."
+                    },
+                    {
+                      "left": "También voy a preparar una tarta.",
+                      "right": "Je vais aussi préparer un gâteau."
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "Cada expresión tiene una traducción distinta."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has asociado cada expresión con su traducción."
+                  }
+                },
+                {
+                  "type": "ListenChoose",
+                  "id": "es-fr-a2-u09-l09-e05",
+                  "audioText": "Je vais aussi préparer un gâteau.",
+                  "options": [
+                    "Je vais organiser un dîner samedi.",
+                    "J'ai besoin d'acheter de la nourriture pour six personnes.",
+                    "Je vais aussi préparer un gâteau."
+                  ],
+                  "correctIndex": 0,
+                  "feedbackOnError": {
+                    "type": "comprehension",
+                    "explanation": "El audio dice «Je vais aussi préparer un gâteau.»."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has reconocido la frase del audio."
+                  }
+                },
+                {
+                  "type": "ListenType",
+                  "id": "es-fr-a2-u09-l09-e06",
+                  "audioText": "Je vais aussi préparer un gâteau.",
+                  "transcription": "Je vais aussi préparer un gâteau.",
+                  "feedbackOnError": {
+                    "type": "spelling",
+                    "explanation": "Escribe exactamente «Je vais aussi préparer un gâteau.»."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La transcripción coincide con el audio."
+                  }
+                },
+                {
+                  "type": "SpeakRepeat",
+                  "id": "es-fr-a2-u09-l09-e07",
+                  "targetPhrase": "Je vais aussi préparer un gâteau.",
+                  "audioText": "Je vais aussi préparer un gâteau.",
+                  "feedbackOnError": {
+                    "type": "pronunciation",
+                    "explanation": "Repite «Je vais aussi préparer un gâteau.» con claridad."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La frase se entiende y mantiene el ritmo."
+                  }
+                }
+              ],
+              "grammarPoints": [
+                {
+                  "id": "gp-going-to",
+                  "label": "Going to",
+                  "description": "Going to expresa planes e intenciones ya decididos."
+                },
+                {
+                  "id": "gp-quantity",
+                  "label": "Cantidad",
+                  "description": "Some, much, many, a lot of y enough expresan cantidad."
+                }
+              ]
+            },
+            {
+              "id": "es-fr-a2-u09-l10",
+              "title": "Evaluación: mi comida favorita",
+              "cefrLevel": "A2",
+              "vocabFrequencyBand": "2000-3000",
+              "canDo": "Puedo hablar de mi comida favorita y de su preparación.",
+              "microLesson": {
+                "title": "Evaluación: mi comida favorita",
+                "goals": [
+                  "Reconocer vocabulario de mi comida favorita.",
+                  "Usar frases sencillas sobre mi comida favorita.",
+                  "Producir un mensaje breve sobre mi comida favorita."
+                ],
+                "sections": [
+                  {
+                    "heading": "Foco gramatical",
+                    "body": "Presente simple: Usa el presente simple para rutinas y hechos habituales. Contables e incontables: Los contables tienen plural; los incontables no se cuentan con unidades.",
+                    "examples": [
+                      {
+                        "source": "Mi comida favorita es la paella.",
+                        "target": "Mon plat préféré est la paella."
+                      },
+                      {
+                        "source": "Me gusta porque tiene arroz, marisco y verduras.",
+                        "target": "J'aime parce qu'il a du riz et des légumes."
+                      }
+                    ]
+                  },
+                  {
+                    "heading": "En contexto",
+                    "body": "Observa cómo se usa presente simple en una situación de mi comida favorita.",
+                    "examples": [
+                      {
+                        "source": "Mi familia la prepara los domingos.",
+                        "target": "Ma famille la prépare le dimanche."
+                      }
+                    ]
+                  }
+                ]
+              },
+              "glossary": [
+                {
+                  "term": "Mon plat préféré est la paella.",
+                  "translations": [
+                    "Mi comida favorita es la paella."
+                  ]
+                },
+                {
+                  "term": "J'aime parce qu'il a du riz et des légumes.",
+                  "translations": [
+                    "Me gusta porque tiene arroz, marisco y verduras."
+                  ]
+                },
+                {
+                  "term": "Ma famille la prépare le dimanche.",
+                  "translations": [
+                    "Mi familia la prepara los domingos."
+                  ]
+                }
+              ],
+              "exercises": [
+                {
+                  "type": "MultipleChoice",
+                  "id": "es-fr-a2-u09-l10-e01",
+                  "question": "¿Cómo se dice «Mi comida favorita es la paella.»?",
+                  "options": [
+                    "Mon plat préféré est la paella.",
+                    "J'aime parce qu'il a du riz et des légumes.",
+                    "Ma famille la prépare le dimanche."
+                  ],
+                  "correctIndex": 0,
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "«Mi comida favorita es la paella.» se dice «Mon plat préféré est la paella.»."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has elegido la traducción correcta."
+                  }
+                },
+                {
+                  "type": "Translate",
+                  "id": "es-fr-a2-u09-l10-e02",
+                  "sourcePhrase": "Mi comida favorita es la paella.",
+                  "correctTokens": [
+                    "Mon",
+                    "plat",
+                    "préféré",
+                    "est",
+                    "la",
+                    "paella"
+                  ],
+                  "distractorTokens": [
+                    "J'aime",
+                    "parce",
+                    "qu'il"
+                  ],
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "El orden correcto es «Mon plat préféré est la paella». Presente simple: Usa el presente simple para rutinas y hechos habituales.",
+                    "ruleRef": "gp-present-simple"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La frase conserva el orden y el significado."
+                  }
+                },
+                {
+                  "type": "OrderWords",
+                  "id": "es-fr-a2-u09-l10-e03",
+                  "tokens": [
+                    "parce",
+                    "qu'il",
+                    "a",
+                    "du",
+                    "riz",
+                    "et",
+                    "des",
+                    "légumes",
+                    "J'aime"
+                  ],
+                  "answerTokens": [
+                    "J'aime",
+                    "parce",
+                    "qu'il",
+                    "a",
+                    "du",
+                    "riz",
+                    "et",
+                    "des",
+                    "légumes"
+                  ],
+                  "sourcePhrase": "Me gusta porque tiene arroz, marisco y verduras.",
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "La frase correcta es «J'aime parce qu'il a du riz et des légumes». Presente simple: Usa el presente simple para rutinas y hechos habituales.",
+                    "ruleRef": "gp-present-simple"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "El orden produce una frase natural."
+                  }
+                },
+                {
+                  "type": "MatchPairs",
+                  "id": "es-fr-a2-u09-l10-e04",
+                  "pairs": [
+                    {
+                      "left": "Mi comida favorita es la paella.",
+                      "right": "Mon plat préféré est la paella."
+                    },
+                    {
+                      "left": "Me gusta porque tiene arroz, marisco y verduras.",
+                      "right": "J'aime parce qu'il a du riz et des légumes."
+                    },
+                    {
+                      "left": "Mi familia la prepara los domingos.",
+                      "right": "Ma famille la prépare le dimanche."
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "Cada expresión tiene una traducción distinta."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has asociado cada expresión con su traducción."
+                  }
+                },
+                {
+                  "type": "ListenChoose",
+                  "id": "es-fr-a2-u09-l10-e05",
+                  "audioText": "Ma famille la prépare le dimanche.",
+                  "options": [
+                    "Mon plat préféré est la paella.",
+                    "J'aime parce qu'il a du riz et des légumes.",
+                    "Ma famille la prépare le dimanche."
+                  ],
+                  "correctIndex": 0,
+                  "feedbackOnError": {
+                    "type": "comprehension",
+                    "explanation": "El audio dice «Ma famille la prépare le dimanche.»."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has reconocido la frase del audio."
+                  }
+                },
+                {
+                  "type": "ListenType",
+                  "id": "es-fr-a2-u09-l10-e06",
+                  "audioText": "Ma famille la prépare le dimanche.",
+                  "transcription": "Ma famille la prépare le dimanche.",
+                  "feedbackOnError": {
+                    "type": "spelling",
+                    "explanation": "Escribe exactamente «Ma famille la prépare le dimanche.»."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La transcripción coincide con el audio."
+                  }
+                },
+                {
+                  "type": "SpeakRepeat",
+                  "id": "es-fr-a2-u09-l10-e07",
+                  "targetPhrase": "Ma famille la prépare le dimanche.",
+                  "audioText": "Ma famille la prépare le dimanche.",
+                  "feedbackOnError": {
+                    "type": "pronunciation",
+                    "explanation": "Repite «Ma famille la prépare le dimanche.» con claridad."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La frase se entiende y mantiene el ritmo."
+                  }
+                }
+              ],
+              "grammarPoints": [
+                {
+                  "id": "gp-present-simple",
+                  "label": "Presente simple",
+                  "description": "Usa el presente simple para rutinas y hechos habituales."
+                },
+                {
+                  "id": "gp-countable-uncountable",
+                  "label": "Contables e incontables",
+                  "description": "Los contables tienen plural; los incontables no se cuentan con unidades."
+                }
+              ]
+            }
+          ]
         }
       ]
     },
