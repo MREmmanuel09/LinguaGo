@@ -296568,6 +296568,790 @@
                 ]
               }
             ]
+          },
+          {
+            "id": "es-en-c2-u15",
+            "title": "C2 · Proyecto final",
+            "lessons": [
+              {
+                "id": "es-en-c2-u15-l01",
+                "title": "Repaso de hitos A2",
+                "cefrLevel": "C2",
+                "scenario": "Situación comunicativa avanzada sobre los hitos de A2.",
+                "canDo": "Puedo argumentar con matices y precisión sobre los hitos de A2.",
+                "grammarPoints": [
+                  {
+                    "id": "gp-c2-dry-irony",
+                    "label": "Dry irony",
+                    "description": "La ironía seca dice lo contrario de lo que sugiere el contexto."
+                  },
+                  {
+                    "id": "gp-c2-rhetorical-questions",
+                    "label": "Rhetorical questions",
+                    "description": "Las preguntas retóricas orientan la argumentación."
+                  }
+                ],
+                "vocabFrequencyBand": "12000+",
+                "culturalNotes": [
+                  {
+                    "idiom": "damn with faint praise",
+                    "note": "Expresión para elogiar de forma que en realidad critica.",
+                    "translation": "elogiar con tibieza"
+                  }
+                ],
+                "microLesson": {
+                  "title": "Repaso de hitos A2",
+                  "goals": [
+                    "Usar vocabulario avanzado de los hitos de A2.",
+                    "Aplicar dry irony y rhetorical questions.",
+                    "Argumentar con matices sobre los hitos de A2."
+                  ],
+                  "sections": [
+                    {
+                      "heading": "Lengua en contexto",
+                      "body": "Dry irony: La ironía seca dice lo contrario de lo que sugiere el contexto. Rhetorical questions: Las preguntas retóricas orientan la argumentación.",
+                      "examples": [
+                        {
+                          "source": "He aprendido a contar historias en pasado. Huelga decir que el matiz escapa a una lectura literal.",
+                          "target": "I have learned to tell stories in the past. Needless to say, the nuance escapes a literal reading."
+                        },
+                        {
+                          "source": "También puedo hablar de planes y comparar opciones. En rigor, la afirmación admite lecturas encontradas.",
+                          "target": "I can also talk about plans and compare options. Strictly speaking, the claim admits conflicting readings."
+                        }
+                      ]
+                    }
+                  ]
+                },
+                "glossary": [
+                  {
+                    "term": "I have learned to tell stories in the past. Needless to say, the nuance escapes a literal reading.",
+                    "translations": [
+                      "He aprendido a contar historias en pasado. Huelga decir que el matiz escapa a una lectura literal."
+                    ]
+                  },
+                  {
+                    "term": "I can also talk about plans and compare options. Strictly speaking, the claim admits conflicting readings.",
+                    "translations": [
+                      "También puedo hablar de planes y comparar opciones. En rigor, la afirmación admite lecturas encontradas."
+                    ]
+                  },
+                  {
+                    "term": "I still want to practise conversation more. At the risk of oversimplifying, the argument borders on contradiction.",
+                    "translations": [
+                      "Todavía quiero practicar más la conversación. A riesgo de simplificar, el argumento roza la contradicción."
+                    ]
+                  }
+                ],
+                "exercises": [
+                  {
+                    "type": "MultipleChoice",
+                    "id": "es-en-c2-u15-l01-e01",
+                    "question": "¿Cuál es la opción correcta para «He aprendido a contar historias en pasado. Huelga decir que el matiz escapa a una lectura literal.»?",
+                    "options": [
+                      "I have learned to tell stories in the past. Needless to say, the nuance escapes a literal reading.",
+                      "I can also talk about plans and compare options. Strictly speaking, the claim admits conflicting readings.",
+                      "I still want to practise conversation more. At the risk of oversimplifying, the argument borders on contradiction."
+                    ],
+                    "correctIndex": 0,
+                    "feedbackOnError": {
+                      "type": "vocabulary",
+                      "explanation": "«He aprendido a contar historias en pasado. Huelga decir que el matiz escapa a una lectura literal.» se dice «I have learned to tell stories in the past. Needless to say, the nuance escapes a literal reading.».",
+                      "ruleRef": "gp-c2-dry-irony"
+                    },
+                    "feedbackOnSuccess": {
+                      "explanation": "Has elegido la opción precisa."
+                    }
+                  },
+                  {
+                    "type": "Translate",
+                    "id": "es-en-c2-u15-l01-e02",
+                    "sourcePhrase": "He aprendido a contar historias en pasado. Huelga decir que el matiz escapa a una lectura literal.",
+                    "correctTokens": [
+                      "I",
+                      "have",
+                      "learned",
+                      "to",
+                      "tell",
+                      "stories",
+                      "in",
+                      "the",
+                      "past",
+                      "Needless",
+                      "to",
+                      "say",
+                      "the",
+                      "nuance",
+                      "escapes",
+                      "a",
+                      "literal",
+                      "reading"
+                    ],
+                    "distractorTokens": [
+                      "can",
+                      "also",
+                      "talk"
+                    ],
+                    "feedbackOnError": {
+                      "type": "grammar",
+                      "explanation": "El orden correcto es «I have learned to tell stories in the past Needless to say the nuance escapes a literal reading».",
+                      "ruleRef": "gp-c2-dry-irony"
+                    },
+                    "feedbackOnSuccess": {
+                      "explanation": "La frase conserva el orden y el significado."
+                    }
+                  },
+                  {
+                    "type": "ClozeDragDrop",
+                    "id": "es-en-c2-u15-l01-e03",
+                    "passage": "I have {{b1}} to {{b2}} stories in the past.",
+                    "blanks": [
+                      {
+                        "id": "b1",
+                        "answer": "learned",
+                        "options": [
+                          "learned",
+                          "stories",
+                          "past"
+                        ]
+                      },
+                      {
+                        "id": "b2",
+                        "answer": "tell",
+                        "options": [
+                          "tell",
+                          "stories",
+                          "past"
+                        ]
+                      }
+                    ],
+                    "feedbackOnError": {
+                      "type": "grammar",
+                      "explanation": "Las dos formas deben encajar con el contexto de la frase.",
+                      "ruleRef": "gp-c2-rhetorical-questions"
+                    },
+                    "feedbackOnSuccess": {
+                      "explanation": "Los dos huecos encajan con la situación."
+                    }
+                  },
+                  {
+                    "type": "ClozeDragDrop",
+                    "id": "es-en-c2-u15-l01-e04",
+                    "passage": "I can also {{b1}} about {{b2}} and compare options.",
+                    "blanks": [
+                      {
+                        "id": "b1",
+                        "answer": "talk",
+                        "options": [
+                          "talk",
+                          "compare",
+                          "options"
+                        ]
+                      },
+                      {
+                        "id": "b2",
+                        "answer": "plans",
+                        "options": [
+                          "plans",
+                          "compare",
+                          "options"
+                        ]
+                      }
+                    ],
+                    "feedbackOnError": {
+                      "type": "grammar",
+                      "explanation": "Las dos formas deben encajar con el contexto de la frase.",
+                      "ruleRef": "gp-c2-rhetorical-questions"
+                    },
+                    "feedbackOnSuccess": {
+                      "explanation": "Los dos huecos encajan con la situación."
+                    }
+                  },
+                  {
+                    "type": "ClozeDragDrop",
+                    "id": "es-en-c2-u15-l01-e05",
+                    "passage": "I {{b1}} {{b2}} to practise conversation more.",
+                    "blanks": [
+                      {
+                        "id": "b1",
+                        "answer": "still",
+                        "options": [
+                          "still",
+                          "practise",
+                          "conversation"
+                        ]
+                      },
+                      {
+                        "id": "b2",
+                        "answer": "want",
+                        "options": [
+                          "want",
+                          "practise",
+                          "conversation"
+                        ]
+                      }
+                    ],
+                    "feedbackOnError": {
+                      "type": "grammar",
+                      "explanation": "Las dos formas deben encajar con el contexto de la frase.",
+                      "ruleRef": "gp-c2-rhetorical-questions"
+                    },
+                    "feedbackOnSuccess": {
+                      "explanation": "Los dos huecos encajan con la situación."
+                    }
+                  },
+                  {
+                    "type": "SemanticMatch",
+                    "id": "es-en-c2-u15-l01-e06",
+                    "instructions": "Clasifica la función y el registro de cada intervención.",
+                    "pairs": [
+                      {
+                        "left": "I have learned to tell stories in the past. Needless to say, the nuance escapes a literal reading.",
+                        "right": "Ironía seca",
+                        "register": "literary",
+                        "nuance": "Clasifica la función y el registro de la intervención."
+                      },
+                      {
+                        "left": "I can also talk about plans and compare options. Strictly speaking, the claim admits conflicting readings.",
+                        "right": "Atenuación",
+                        "register": "formal",
+                        "nuance": "Clasifica la función y el registro de la intervención."
+                      },
+                      {
+                        "left": "I still want to practise conversation more. At the risk of oversimplifying, the argument borders on contradiction.",
+                        "right": "Conclusión",
+                        "register": "neutral",
+                        "nuance": "Clasifica la función y el registro de la intervención."
+                      }
+                    ],
+                    "feedbackOnError": {
+                      "type": "register",
+                      "explanation": "Cada intervención cumple una función retórica distinta.",
+                      "ruleRef": "gp-c2-dry-irony"
+                    },
+                    "feedbackOnSuccess": {
+                      "explanation": "Has identificado función y registro."
+                    }
+                  },
+                  {
+                    "type": "ListenChoose",
+                    "id": "es-en-c2-u15-l01-e07",
+                    "audioText": "I can also talk about plans and compare options. Strictly speaking, the claim admits conflicting readings.",
+                    "options": [
+                      "I can also talk about plans and compare options. Strictly speaking, the claim admits conflicting readings.",
+                      "I have learned to tell stories in the past. Needless to say, the nuance escapes a literal reading.",
+                      "I still want to practise conversation more. At the risk of oversimplifying, the argument borders on contradiction."
+                    ],
+                    "correctIndex": 0,
+                    "feedbackOnError": {
+                      "type": "comprehension",
+                      "explanation": "El audio dice «I can also talk about plans and compare options. Strictly speaking, the claim admits conflicting readings.».",
+                      "ruleRef": "gp-c2-dry-irony"
+                    },
+                    "feedbackOnSuccess": {
+                      "explanation": "Has reconocido la frase del audio."
+                    }
+                  },
+                  {
+                    "type": "AudioOnlyPrompt",
+                    "id": "es-en-c2-u15-l01-e08",
+                    "audioText": "I still want to practise conversation more. At the risk of oversimplifying, the argument borders on contradiction.",
+                    "question": "¿Qué implica el hablante?",
+                    "options": [
+                      "I still want to practise conversation more. At the risk of oversimplifying, the argument borders on contradiction.",
+                      "I have learned to tell stories in the past. Needless to say, the nuance escapes a literal reading.",
+                      "I can also talk about plans and compare options. Strictly speaking, the claim admits conflicting readings."
+                    ],
+                    "correctIndex": 0,
+                    "allowSlowPlayback": false,
+                    "feedbackOnError": {
+                      "type": "comprehension",
+                      "explanation": "El audio dice «I still want to practise conversation more. At the risk of oversimplifying, the argument borders on contradiction.».",
+                      "ruleRef": "gp-c2-rhetorical-questions"
+                    },
+                    "feedbackOnSuccess": {
+                      "explanation": "Has interpretado la implicación."
+                    }
+                  },
+                  {
+                    "type": "ListenType",
+                    "id": "es-en-c2-u15-l01-e09",
+                    "audioText": "I still want to practise conversation more. At the risk of oversimplifying, the argument borders on contradiction.",
+                    "transcription": "I still want to practise conversation more. At the risk of oversimplifying, the argument borders on contradiction.",
+                    "feedbackOnError": {
+                      "type": "spelling",
+                      "explanation": "Escribe exactamente «I still want to practise conversation more. At the risk of oversimplifying, the argument borders on contradiction.».",
+                      "ruleRef": "gp-c2-dry-irony"
+                    },
+                    "feedbackOnSuccess": {
+                      "explanation": "La transcripción coincide con el audio."
+                    }
+                  },
+                  {
+                    "type": "SpeakRepeat",
+                    "id": "es-en-c2-u15-l01-e10",
+                    "targetPhrase": "I still want to practise conversation more. At the risk of oversimplifying, the argument borders on contradiction.",
+                    "audioText": "I still want to practise conversation more. At the risk of oversimplifying, the argument borders on contradiction.",
+                    "feedbackOnError": {
+                      "type": "pronunciation",
+                      "explanation": "Repite «I still want to practise conversation more. At the risk of oversimplifying, the argument borders on contradiction.» con claridad.",
+                      "ruleRef": "gp-c2-dry-irony"
+                    },
+                    "feedbackOnSuccess": {
+                      "explanation": "La frase se entiende y mantiene el ritmo."
+                    }
+                  },
+                  {
+                    "type": "MatchPairs",
+                    "id": "es-en-c2-u15-l01-e11",
+                    "pairs": [
+                      {
+                        "left": "He aprendido a contar historias en pasado. Huelga decir que el matiz escapa a una lectura literal.",
+                        "right": "I have learned to tell stories in the past. Needless to say, the nuance escapes a literal reading."
+                      },
+                      {
+                        "left": "También puedo hablar de planes y comparar opciones. En rigor, la afirmación admite lecturas encontradas.",
+                        "right": "I can also talk about plans and compare options. Strictly speaking, the claim admits conflicting readings."
+                      },
+                      {
+                        "left": "Todavía quiero practicar más la conversación. A riesgo de simplificar, el argumento roza la contradicción.",
+                        "right": "I still want to practise conversation more. At the risk of oversimplifying, the argument borders on contradiction."
+                      }
+                    ],
+                    "feedbackOnError": {
+                      "type": "vocabulary",
+                      "explanation": "Cada expresión tiene una traducción distinta.",
+                      "ruleRef": "gp-c2-dry-irony"
+                    },
+                    "feedbackOnSuccess": {
+                      "explanation": "Has asociado cada expresión con su traducción."
+                    }
+                  },
+                  {
+                    "type": "FreeSpeakingPrompt",
+                    "id": "es-en-c2-u15-l01-e12",
+                    "prompt": "Defiende una interpretación matizada sobre los hitos de A2.",
+                    "minTokens": 40,
+                    "conceptClusters": [
+                      [
+                        "learned"
+                      ],
+                      [
+                        "tell"
+                      ],
+                      [
+                        "stories"
+                      ]
+                    ],
+                    "modelAnswer": "I have learned to tell stories in the past. Needless to say, the nuance escapes a literal reading. I can also talk about plans and compare options. Strictly speaking, the claim admits conflicting readings. I still want to practise conversation more. At the risk of oversimplifying, the argument borders on contradiction.",
+                    "selfAssessmentCriteria": [
+                      "¿La respuesta argumenta y responde a la tarea?",
+                      "¿Usa las dos estructuras gramaticales de la lección?",
+                      "¿Incluye una concesión, una ironía o una atenuación?"
+                    ],
+                    "grammarRuleRefs": [
+                      "gp-c2-dry-irony",
+                      "gp-c2-rhetorical-questions"
+                    ],
+                    "timeLimitSeconds": 120,
+                    "minWpm": 70,
+                    "maxWpm": 160,
+                    "feedbackOnError": {
+                      "type": "grammar",
+                      "explanation": "La respuesta modelo desarrolla una interpretación matizada.",
+                      "ruleRef": "gp-c2-dry-irony"
+                    }
+                  }
+                ]
+              },
+              {
+                "id": "es-en-c2-u15-l02",
+                "title": "Mi historia personal",
+                "cefrLevel": "C2",
+                "scenario": "Situación comunicativa avanzada sobre mi historia personal.",
+                "canDo": "Puedo argumentar con matices y precisión sobre mi historia personal.",
+                "grammarPoints": [
+                  {
+                    "id": "gp-c2-dry-irony",
+                    "label": "Dry irony",
+                    "description": "La ironía seca dice lo contrario de lo que sugiere el contexto."
+                  },
+                  {
+                    "id": "gp-c2-rhetorical-questions",
+                    "label": "Rhetorical questions",
+                    "description": "Las preguntas retóricas orientan la argumentación."
+                  }
+                ],
+                "vocabFrequencyBand": "12000+",
+                "culturalNotes": [
+                  {
+                    "idiom": "bury the lede",
+                    "note": "Expresión para ocultar la información más importante.",
+                    "translation": "enterrar lo importante"
+                  }
+                ],
+                "microLesson": {
+                  "title": "Mi historia personal",
+                  "goals": [
+                    "Usar vocabulario avanzado de mi historia personal.",
+                    "Aplicar dry irony y rhetorical questions.",
+                    "Argumentar con matices sobre mi historia personal."
+                  ],
+                  "sections": [
+                    {
+                      "heading": "Lengua en contexto",
+                      "body": "Dry irony: La ironía seca dice lo contrario de lo que sugiere el contexto. Rhetorical questions: Las preguntas retóricas orientan la argumentación.",
+                      "examples": [
+                        {
+                          "source": "Nací en una ciudad pequeña. En rigor, la afirmación admite lecturas encontradas.",
+                          "target": "I was born in a small city. Strictly speaking, the claim admits conflicting readings."
+                        },
+                        {
+                          "source": "Crecí con mis padres y mis dos hermanos. A riesgo de simplificar, el argumento roza la contradicción.",
+                          "target": "I grew up with my parents and my two brothers. At the risk of oversimplifying, the argument borders on contradiction."
+                        }
+                      ]
+                    }
+                  ]
+                },
+                "glossary": [
+                  {
+                    "term": "I was born in a small city. Strictly speaking, the claim admits conflicting readings.",
+                    "translations": [
+                      "Nací en una ciudad pequeña. En rigor, la afirmación admite lecturas encontradas."
+                    ]
+                  },
+                  {
+                    "term": "I grew up with my parents and my two brothers. At the risk of oversimplifying, the argument borders on contradiction.",
+                    "translations": [
+                      "Crecí con mis padres y mis dos hermanos. A riesgo de simplificar, el argumento roza la contradicción."
+                    ]
+                  },
+                  {
+                    "term": "At eighteen I moved to Madrid. Paradoxically, excessive caution undermines credibility.",
+                    "translations": [
+                      "A los dieciocho años me mudé a Madrid. Paradójicamente, el exceso de cautela resta credibilidad."
+                    ]
+                  }
+                ],
+                "exercises": [
+                  {
+                    "type": "MultipleChoice",
+                    "id": "es-en-c2-u15-l02-e01",
+                    "question": "¿Cuál es la opción correcta para «Nací en una ciudad pequeña. En rigor, la afirmación admite lecturas encontradas.»?",
+                    "options": [
+                      "I was born in a small city. Strictly speaking, the claim admits conflicting readings.",
+                      "I grew up with my parents and my two brothers. At the risk of oversimplifying, the argument borders on contradiction.",
+                      "At eighteen I moved to Madrid. Paradoxically, excessive caution undermines credibility."
+                    ],
+                    "correctIndex": 0,
+                    "feedbackOnError": {
+                      "type": "vocabulary",
+                      "explanation": "«Nací en una ciudad pequeña. En rigor, la afirmación admite lecturas encontradas.» se dice «I was born in a small city. Strictly speaking, the claim admits conflicting readings.».",
+                      "ruleRef": "gp-c2-dry-irony"
+                    },
+                    "feedbackOnSuccess": {
+                      "explanation": "Has elegido la opción precisa."
+                    }
+                  },
+                  {
+                    "type": "Translate",
+                    "id": "es-en-c2-u15-l02-e02",
+                    "sourcePhrase": "Nací en una ciudad pequeña. En rigor, la afirmación admite lecturas encontradas.",
+                    "correctTokens": [
+                      "I",
+                      "was",
+                      "born",
+                      "in",
+                      "a",
+                      "small",
+                      "city",
+                      "Strictly",
+                      "speaking",
+                      "the",
+                      "claim",
+                      "admits",
+                      "conflicting",
+                      "readings"
+                    ],
+                    "distractorTokens": [
+                      "grew",
+                      "up",
+                      "with"
+                    ],
+                    "feedbackOnError": {
+                      "type": "grammar",
+                      "explanation": "El orden correcto es «I was born in a small city Strictly speaking the claim admits conflicting readings».",
+                      "ruleRef": "gp-c2-dry-irony"
+                    },
+                    "feedbackOnSuccess": {
+                      "explanation": "La frase conserva el orden y el significado."
+                    }
+                  },
+                  {
+                    "type": "ClozeDragDrop",
+                    "id": "es-en-c2-u15-l02-e03",
+                    "passage": "I was {{b1}} in a {{b2}} city.",
+                    "blanks": [
+                      {
+                        "id": "b1",
+                        "answer": "born",
+                        "options": [
+                          "born",
+                          "city",
+                          "very"
+                        ]
+                      },
+                      {
+                        "id": "b2",
+                        "answer": "small",
+                        "options": [
+                          "small",
+                          "city",
+                          "very"
+                        ]
+                      }
+                    ],
+                    "feedbackOnError": {
+                      "type": "grammar",
+                      "explanation": "Las dos formas deben encajar con el contexto de la frase.",
+                      "ruleRef": "gp-c2-rhetorical-questions"
+                    },
+                    "feedbackOnSuccess": {
+                      "explanation": "Los dos huecos encajan con la situación."
+                    }
+                  },
+                  {
+                    "type": "ClozeDragDrop",
+                    "id": "es-en-c2-u15-l02-e04",
+                    "passage": "I {{b1}} up with my {{b2}} and my two brothers.",
+                    "blanks": [
+                      {
+                        "id": "b1",
+                        "answer": "grew",
+                        "options": [
+                          "grew",
+                          "two",
+                          "brothers"
+                        ]
+                      },
+                      {
+                        "id": "b2",
+                        "answer": "parents",
+                        "options": [
+                          "parents",
+                          "two",
+                          "brothers"
+                        ]
+                      }
+                    ],
+                    "feedbackOnError": {
+                      "type": "grammar",
+                      "explanation": "Las dos formas deben encajar con el contexto de la frase.",
+                      "ruleRef": "gp-c2-rhetorical-questions"
+                    },
+                    "feedbackOnSuccess": {
+                      "explanation": "Los dos huecos encajan con la situación."
+                    }
+                  },
+                  {
+                    "type": "ClozeDragDrop",
+                    "id": "es-en-c2-u15-l02-e05",
+                    "passage": "At {{b1}} I {{b2}} to Madrid.",
+                    "blanks": [
+                      {
+                        "id": "b1",
+                        "answer": "eighteen",
+                        "options": [
+                          "eighteen",
+                          "Madrid",
+                          "very"
+                        ]
+                      },
+                      {
+                        "id": "b2",
+                        "answer": "moved",
+                        "options": [
+                          "moved",
+                          "Madrid",
+                          "very"
+                        ]
+                      }
+                    ],
+                    "feedbackOnError": {
+                      "type": "grammar",
+                      "explanation": "Las dos formas deben encajar con el contexto de la frase.",
+                      "ruleRef": "gp-c2-rhetorical-questions"
+                    },
+                    "feedbackOnSuccess": {
+                      "explanation": "Los dos huecos encajan con la situación."
+                    }
+                  },
+                  {
+                    "type": "SemanticMatch",
+                    "id": "es-en-c2-u15-l02-e06",
+                    "instructions": "Clasifica la función y el registro de cada intervención.",
+                    "pairs": [
+                      {
+                        "left": "I was born in a small city. Strictly speaking, the claim admits conflicting readings.",
+                        "right": "Ironía seca",
+                        "register": "literary",
+                        "nuance": "Clasifica la función y el registro de la intervención."
+                      },
+                      {
+                        "left": "I grew up with my parents and my two brothers. At the risk of oversimplifying, the argument borders on contradiction.",
+                        "right": "Atenuación",
+                        "register": "formal",
+                        "nuance": "Clasifica la función y el registro de la intervención."
+                      },
+                      {
+                        "left": "At eighteen I moved to Madrid. Paradoxically, excessive caution undermines credibility.",
+                        "right": "Conclusión",
+                        "register": "neutral",
+                        "nuance": "Clasifica la función y el registro de la intervención."
+                      }
+                    ],
+                    "feedbackOnError": {
+                      "type": "register",
+                      "explanation": "Cada intervención cumple una función retórica distinta.",
+                      "ruleRef": "gp-c2-dry-irony"
+                    },
+                    "feedbackOnSuccess": {
+                      "explanation": "Has identificado función y registro."
+                    }
+                  },
+                  {
+                    "type": "ListenChoose",
+                    "id": "es-en-c2-u15-l02-e07",
+                    "audioText": "I grew up with my parents and my two brothers. At the risk of oversimplifying, the argument borders on contradiction.",
+                    "options": [
+                      "I grew up with my parents and my two brothers. At the risk of oversimplifying, the argument borders on contradiction.",
+                      "I was born in a small city. Strictly speaking, the claim admits conflicting readings.",
+                      "At eighteen I moved to Madrid. Paradoxically, excessive caution undermines credibility."
+                    ],
+                    "correctIndex": 0,
+                    "feedbackOnError": {
+                      "type": "comprehension",
+                      "explanation": "El audio dice «I grew up with my parents and my two brothers. At the risk of oversimplifying, the argument borders on contradiction.».",
+                      "ruleRef": "gp-c2-dry-irony"
+                    },
+                    "feedbackOnSuccess": {
+                      "explanation": "Has reconocido la frase del audio."
+                    }
+                  },
+                  {
+                    "type": "AudioOnlyPrompt",
+                    "id": "es-en-c2-u15-l02-e08",
+                    "audioText": "At eighteen I moved to Madrid. Paradoxically, excessive caution undermines credibility.",
+                    "question": "¿Qué implica el hablante?",
+                    "options": [
+                      "At eighteen I moved to Madrid. Paradoxically, excessive caution undermines credibility.",
+                      "I was born in a small city. Strictly speaking, the claim admits conflicting readings.",
+                      "I grew up with my parents and my two brothers. At the risk of oversimplifying, the argument borders on contradiction."
+                    ],
+                    "correctIndex": 0,
+                    "allowSlowPlayback": false,
+                    "feedbackOnError": {
+                      "type": "comprehension",
+                      "explanation": "El audio dice «At eighteen I moved to Madrid. Paradoxically, excessive caution undermines credibility.».",
+                      "ruleRef": "gp-c2-rhetorical-questions"
+                    },
+                    "feedbackOnSuccess": {
+                      "explanation": "Has interpretado la implicación."
+                    }
+                  },
+                  {
+                    "type": "ListenType",
+                    "id": "es-en-c2-u15-l02-e09",
+                    "audioText": "At eighteen I moved to Madrid. Paradoxically, excessive caution undermines credibility.",
+                    "transcription": "At eighteen I moved to Madrid. Paradoxically, excessive caution undermines credibility.",
+                    "feedbackOnError": {
+                      "type": "spelling",
+                      "explanation": "Escribe exactamente «At eighteen I moved to Madrid. Paradoxically, excessive caution undermines credibility.».",
+                      "ruleRef": "gp-c2-dry-irony"
+                    },
+                    "feedbackOnSuccess": {
+                      "explanation": "La transcripción coincide con el audio."
+                    }
+                  },
+                  {
+                    "type": "SpeakRepeat",
+                    "id": "es-en-c2-u15-l02-e10",
+                    "targetPhrase": "At eighteen I moved to Madrid. Paradoxically, excessive caution undermines credibility.",
+                    "audioText": "At eighteen I moved to Madrid. Paradoxically, excessive caution undermines credibility.",
+                    "feedbackOnError": {
+                      "type": "pronunciation",
+                      "explanation": "Repite «At eighteen I moved to Madrid. Paradoxically, excessive caution undermines credibility.» con claridad.",
+                      "ruleRef": "gp-c2-dry-irony"
+                    },
+                    "feedbackOnSuccess": {
+                      "explanation": "La frase se entiende y mantiene el ritmo."
+                    }
+                  },
+                  {
+                    "type": "MatchPairs",
+                    "id": "es-en-c2-u15-l02-e11",
+                    "pairs": [
+                      {
+                        "left": "Nací en una ciudad pequeña. En rigor, la afirmación admite lecturas encontradas.",
+                        "right": "I was born in a small city. Strictly speaking, the claim admits conflicting readings."
+                      },
+                      {
+                        "left": "Crecí con mis padres y mis dos hermanos. A riesgo de simplificar, el argumento roza la contradicción.",
+                        "right": "I grew up with my parents and my two brothers. At the risk of oversimplifying, the argument borders on contradiction."
+                      },
+                      {
+                        "left": "A los dieciocho años me mudé a Madrid. Paradójicamente, el exceso de cautela resta credibilidad.",
+                        "right": "At eighteen I moved to Madrid. Paradoxically, excessive caution undermines credibility."
+                      }
+                    ],
+                    "feedbackOnError": {
+                      "type": "vocabulary",
+                      "explanation": "Cada expresión tiene una traducción distinta.",
+                      "ruleRef": "gp-c2-dry-irony"
+                    },
+                    "feedbackOnSuccess": {
+                      "explanation": "Has asociado cada expresión con su traducción."
+                    }
+                  },
+                  {
+                    "type": "FreeSpeakingPrompt",
+                    "id": "es-en-c2-u15-l02-e12",
+                    "prompt": "Defiende una interpretación matizada sobre mi historia personal.",
+                    "minTokens": 40,
+                    "conceptClusters": [
+                      [
+                        "born"
+                      ],
+                      [
+                        "small"
+                      ],
+                      [
+                        "city"
+                      ]
+                    ],
+                    "modelAnswer": "I was born in a small city. Strictly speaking, the claim admits conflicting readings. I grew up with my parents and my two brothers. At the risk of oversimplifying, the argument borders on contradiction. At eighteen I moved to Madrid. Paradoxically, excessive caution undermines credibility.",
+                    "selfAssessmentCriteria": [
+                      "¿La respuesta argumenta y responde a la tarea?",
+                      "¿Usa las dos estructuras gramaticales de la lección?",
+                      "¿Incluye una concesión, una ironía o una atenuación?"
+                    ],
+                    "grammarRuleRefs": [
+                      "gp-c2-dry-irony",
+                      "gp-c2-rhetorical-questions"
+                    ],
+                    "timeLimitSeconds": 120,
+                    "minWpm": 70,
+                    "maxWpm": 160,
+                    "feedbackOnError": {
+                      "type": "grammar",
+                      "explanation": "La respuesta modelo desarrolla una interpretación matizada.",
+                      "ruleRef": "gp-c2-dry-irony"
+                    }
+                  }
+                ]
+              }
+            ]
           }
         ]
       }
