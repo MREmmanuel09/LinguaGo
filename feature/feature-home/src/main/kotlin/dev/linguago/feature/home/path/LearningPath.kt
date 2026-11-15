@@ -16,7 +16,6 @@ import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
-import androidx.compose.foundation.layout.offset
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.widthIn
 import androidx.compose.foundation.lazy.LazyColumn
@@ -39,8 +38,6 @@ import androidx.compose.ui.graphics.drawscope.Stroke
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
-import dev.linguago.core.ui.components.LumiMascot
-import dev.linguago.core.ui.components.LumiMood
 import dev.linguago.core.ui.components.path.PathNode
 import dev.linguago.core.ui.components.path.PathNodeState
 import dev.linguago.core.ui.components.path.UnitHeader
@@ -109,23 +106,6 @@ fun LearningPath(
                                         }
                                     },
                                 )
-                                if (item.node.state == PathNodeState.AVAILABLE ||
-                                    item.node.state == PathNodeState.IN_PROGRESS
-                                ) {
-                                    LumiMascot(
-                                        size = 26.dp,
-                                        mood =
-                                            if (item.node.state == PathNodeState.IN_PROGRESS) {
-                                                LumiMood.ENCOURAGING
-                                            } else {
-                                                LumiMood.IDLE
-                                            },
-                                        modifier =
-                                            Modifier
-                                                .align(Alignment.TopEnd)
-                                                .offset(x = 8.dp, y = (-18).dp),
-                                    )
-                                }
                             }
                             Spacer(Modifier.weight((0.5f - row.bias).coerceAtLeast(0.06f)))
                         }
@@ -136,7 +116,7 @@ fun LearningPath(
                                 when (item.node.state) {
                                     PathNodeState.LOCKED,
                                     PathNodeState.CHEST_LOCKED,
-                                    -> MaterialTheme.colorScheme.onSurfaceVariant.copy(alpha = 0.7f)
+                                    -> MaterialTheme.colorScheme.onSurfaceVariant.copy(alpha = 0.9f)
                                     else -> MaterialTheme.colorScheme.onSurface
                                 },
                             textAlign = TextAlign.Center,
@@ -152,12 +132,7 @@ fun LearningPath(
                             PathConnector(
                                 fromBias = row.bias,
                                 toBias = nextBias,
-                                color =
-                                    if (item.node.state == PathNodeState.COMPLETED) {
-                                        LinguaTokens.Accent
-                                    } else {
-                                        MaterialTheme.colorScheme.outline
-                                    },
+                                color = LinguaTokens.TanEdge,
                                 animated =
                                     item.node.state == PathNodeState.AVAILABLE ||
                                         item.node.state == PathNodeState.IN_PROGRESS,

@@ -2,21 +2,22 @@ package dev.linguago.feature.home
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
+import androidx.compose.foundation.border
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
-import androidx.compose.foundation.layout.Spacer
+import androidx.compose.foundation.layout.fillMaxHeight
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
-import androidx.compose.foundation.layout.height
+import androidx.compose.foundation.layout.heightIn
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
+import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.ExtendedFloatingActionButton
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
-import androidx.compose.material3.TextButton
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
@@ -25,17 +26,20 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.ColorFilter
 import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import dev.linguago.core.ui.components.ChestRewardSheet
 import dev.linguago.core.ui.components.CourseSwitcherSheet
+import dev.linguago.core.ui.components.GemsChip
 import dev.linguago.core.ui.components.HeartsCounter
 import dev.linguago.core.ui.components.LinguaIcons
-import dev.linguago.core.ui.components.LiquidXpBar
+import dev.linguago.core.ui.components.PillButton
 import dev.linguago.core.ui.components.StreakIndicator
 import dev.linguago.core.ui.components.path.PathNodeState
 import dev.linguago.core.ui.components.path.PathNodeUi
@@ -43,7 +47,6 @@ import dev.linguago.core.ui.feedback.FeedbackCue
 import dev.linguago.core.ui.feedback.feedbackClickable
 import dev.linguago.core.ui.theme.LinguaTheme
 import dev.linguago.core.ui.theme.LinguaTokens
-import dev.linguago.core.ui.theme.linguaExtendedColors
 import dev.linguago.feature.home.path.LearningPath
 import dev.linguago.feature.home.path.PathItem
 
@@ -115,7 +118,7 @@ private fun PathHomeContent(
             )
             if (courseId != null && nextLesson?.lessonId != null) {
                 ExtendedFloatingActionButton(
-                    text = { Text(text = "Ir a mi lección") },
+                    text = { Text(text = "Ir a la lección") },
                     icon = {
                         Image(
                             painter = painterResource(LinguaIcons.PlayRes),
@@ -127,6 +130,7 @@ private fun PathHomeContent(
                     onClick = { onLessonSelected(courseId, nextLesson.lessonId) },
                     containerColor = colors.primary,
                     contentColor = colors.onPrimary,
+                    shape = RoundedCornerShape(LinguaTokens.RADIUS_PILL_DP.dp),
                     modifier = Modifier.align(Alignment.BottomEnd),
                 )
             }
@@ -173,45 +177,40 @@ private fun HomeHeader(
         Row(
             modifier = Modifier.fillMaxWidth(),
             verticalAlignment = Alignment.CenterVertically,
+            horizontalArrangement = Arrangement.SpaceBetween,
         ) {
             StreakIndicator(days = uiState.streakDays)
-            if (showHud) {
-                Spacer(Modifier.weight(1f))
-                HeartsCounter(hearts = uiState.hearts)
-            }
+            GemsChip(count = null)
+            HeartsCounter(hearts = uiState.hearts)
         }
 
-        Row(
-            modifier = Modifier.fillMaxWidth(),
-            verticalAlignment = Alignment.CenterVertically,
-            horizontalArrangement = Arrangement.spacedBy(8.dp),
-        ) {
-            Text(
-                text =
-                    when {
-                        uiState.courseTitle != null -> uiState.courseTitle
-                        uiState.loading -> "Preparando tu ruta…"
-                        else -> "Selecciona un curso en ajustes"
-                    },
-                style = MaterialTheme.typography.headlineMedium,
-                color = colors.onBackground,
-                modifier = Modifier.weight(1f),
-            )
-            if (uiState.courseTitle != null && uiState.courses.isNotEmpty()) {
-                TextButton(onClick = onSwitchCourse) {
-                    Text(text = "Cambiar")
+        Column(verticalArrangement = Arrangement.spacedBy(2.dp)) {
+            Row(
+                modifier = Modifier.fillMaxWidth(),
+                verticalAlignment = Alignment.CenterVertically,
+                horizontalArrangement = Arrangement.spacedBy(8.dp),
+            ) {
+                Text(
+                    text =
+                        when {
+                            uiState.courseTitle != null -> uiState.courseTitle
+                            uiState.loading -> "Preparando tu ruta…"
+                            else -> "Selecciona un curso en ajustes"
+                        },
+                    style = MaterialTheme.typography.headlineLarge,
+                    color = colors.onBackground,
+                    modifier = Modifier.weight(1f),
+                )
+                if (uiState.courseTitle != null && uiState.courses.isNotEmpty()) {
+                    PillButton(text = "Cambiar", onClick = onSwitchCourse)
                 }
             }
-        }
-
-        if (showHud) {
-            Column(verticalArrangement = Arrangement.spacedBy(4.dp)) {
+            if (uiState.courseTitle != null) {
                 Text(
                     text = "Nivel ${uiState.level}",
                     style = MaterialTheme.typography.labelLarge,
                     color = colors.onSurfaceVariant,
                 )
-                LiquidXpBar(progress = uiState.xpIntoLevel)
             }
         }
 
@@ -233,33 +232,52 @@ private fun HomeHeader(
     }
 }
 
+/** Tarjeta «Repasar ahora» del prototipo: crema, barra terracota y marcador dorado (ADR-055). */
 @Composable
 private fun ReviewCard(
     count: Int,
     onClick: () -> Unit,
     modifier: Modifier = Modifier,
 ) {
-    val colors = MaterialTheme.colorScheme
-
-    Column(
+    Row(
         modifier =
             modifier
                 .fillMaxWidth()
-                .clip(RoundedCornerShape(LinguaTokens.RADIUS_CARD_DP.dp))
-                .background(colors.primary.copy(alpha = 0.12f))
-                .feedbackClickable(FeedbackCue.TAP, onClick = onClick)
-                .padding(16.dp),
+                .heightIn(min = 72.dp)
+                .clip(RoundedCornerShape(LinguaTokens.RADIUS_BUTTON_DP.dp))
+                .background(LinguaTokens.BgSecondary)
+                .border(1.dp, LinguaTokens.TanEdge, RoundedCornerShape(LinguaTokens.RADIUS_BUTTON_DP.dp))
+                .feedbackClickable(FeedbackCue.TAP, onClick = onClick),
+        verticalAlignment = Alignment.CenterVertically,
     ) {
-        Text(
-            text = "Repasar ahora",
-            style = MaterialTheme.typography.titleMedium,
-            color = linguaExtendedColors().primaryInk,
+        Box(
+            modifier =
+                Modifier
+                    .width(4.dp)
+                    .fillMaxHeight()
+                    .background(LinguaTokens.Terracotta),
         )
-        Spacer(Modifier.height(4.dp))
-        Text(
-            text = "$count tarjetas pendientes de repaso",
-            style = MaterialTheme.typography.bodySmall,
-            color = colors.onSurfaceVariant,
+        Column(
+            modifier = Modifier.weight(1f).padding(horizontal = 16.dp, vertical = 14.dp),
+            verticalArrangement = Arrangement.spacedBy(2.dp),
+        ) {
+            Text(
+                text = "Repasar ahora",
+                style = MaterialTheme.typography.titleMedium,
+                fontWeight = FontWeight.Bold,
+                color = LinguaTokens.Fg,
+            )
+            Text(
+                text = "$count tarjetas pendientes",
+                style = MaterialTheme.typography.bodySmall,
+                color = LinguaTokens.FgMuted,
+            )
+        }
+        Image(
+            painter = painterResource(LinguaIcons.StarRes),
+            contentDescription = null,
+            modifier = Modifier.padding(end = 16.dp).size(24.dp),
+            colorFilter = ColorFilter.tint(Color(LinguaTokens.CHEST_GOLD_HEX)),
         )
     }
 }
