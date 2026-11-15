@@ -221551,6 +221551,3676 @@
                 ]
               }
             ]
+          },
+          {
+            "id": "es-en-c1-u12",
+            "title": "C1 · Relaciones y opiniones",
+            "lessons": [
+              {
+                "id": "es-en-c1-u12-l01",
+                "title": "Repaso: medio ambiente",
+                "cefrLevel": "C1",
+                "scenario": "Situación comunicativa avanzada sobre el medio ambiente.",
+                "canDo": "Puedo argumentar con matices y precisión sobre el medio ambiente.",
+                "grammarPoints": [
+                  {
+                    "id": "gp-c1-inversion",
+                    "label": "Inversion",
+                    "description": "La inversión enfática coloca el auxiliar antes del sujeto."
+                  },
+                  {
+                    "id": "gp-c1-concession",
+                    "label": "Concession",
+                    "description": "Although, despite y however introducen concesiones."
+                  }
+                ],
+                "vocabFrequencyBand": "8000-12000",
+                "culturalNotes": [
+                  {
+                    "idiom": "sweep under the rug",
+                    "note": "Expresión para ocultar un problema.",
+                    "translation": "barrer debajo de la alfombra"
+                  }
+                ],
+                "microLesson": {
+                  "title": "Repaso: medio ambiente",
+                  "goals": [
+                    "Usar vocabulario avanzado de el medio ambiente.",
+                    "Aplicar inversion y concession.",
+                    "Argumentar con matices sobre el medio ambiente."
+                  ],
+                  "sections": [
+                    {
+                      "heading": "Lengua en contexto",
+                      "body": "Inversion: La inversión enfática coloca el auxiliar antes del sujeto. Concession: Although, despite y however introducen concesiones.",
+                      "examples": [
+                        {
+                          "source": "He reducido el consumo de plástico. En términos generales, la postura es defendible.",
+                          "target": "I have reduced plastic consumption. Broadly speaking, the position is defensible."
+                        },
+                        {
+                          "source": "También camino más y uso menos el coche. Dicho de otro modo, conviene sopesar los costes.",
+                          "target": "I also walk more and use the car less. In other words, we should weigh the costs."
+                        }
+                      ]
+                    }
+                  ]
+                },
+                "glossary": [
+                  {
+                    "term": "I have reduced plastic consumption. Broadly speaking, the position is defensible.",
+                    "translations": [
+                      "He reducido el consumo de plástico. En términos generales, la postura es defendible."
+                    ]
+                  },
+                  {
+                    "term": "I also walk more and use the car less. In other words, we should weigh the costs.",
+                    "translations": [
+                      "También camino más y uso menos el coche. Dicho de otro modo, conviene sopesar los costes."
+                    ]
+                  },
+                  {
+                    "term": "If everyone does something, change will be possible. While this is true, we should not ignore the context.",
+                    "translations": [
+                      "Si todos hacemos algo, el cambio será posible. Si bien es cierto, no deberíamos obviar el contexto."
+                    ]
+                  }
+                ],
+                "exercises": [
+                  {
+                    "type": "MultipleChoice",
+                    "id": "es-en-c1-u12-l01-e01",
+                    "question": "¿Cuál es la opción correcta para «He reducido el consumo de plástico. En términos generales, la postura es defendible.»?",
+                    "options": [
+                      "I have reduced plastic consumption. Broadly speaking, the position is defensible.",
+                      "I also walk more and use the car less. In other words, we should weigh the costs.",
+                      "If everyone does something, change will be possible. While this is true, we should not ignore the context."
+                    ],
+                    "correctIndex": 0,
+                    "feedbackOnError": {
+                      "type": "vocabulary",
+                      "explanation": "«He reducido el consumo de plástico. En términos generales, la postura es defendible.» se dice «I have reduced plastic consumption. Broadly speaking, the position is defensible.».",
+                      "ruleRef": "gp-c1-inversion"
+                    },
+                    "feedbackOnSuccess": {
+                      "explanation": "Has elegido la opción precisa."
+                    }
+                  },
+                  {
+                    "type": "OrderWords",
+                    "id": "es-en-c1-u12-l01-e02",
+                    "tokens": [
+                      "have",
+                      "reduced",
+                      "plastic",
+                      "consumption",
+                      "Broadly",
+                      "speaking",
+                      "the",
+                      "position",
+                      "is",
+                      "defensible",
+                      "I"
+                    ],
+                    "answerTokens": [
+                      "I",
+                      "have",
+                      "reduced",
+                      "plastic",
+                      "consumption",
+                      "Broadly",
+                      "speaking",
+                      "the",
+                      "position",
+                      "is",
+                      "defensible"
+                    ],
+                    "sourcePhrase": "He reducido el consumo de plástico. En términos generales, la postura es defendible.",
+                    "feedbackOnError": {
+                      "type": "word_order",
+                      "explanation": "El orden correcto es «I have reduced plastic consumption Broadly speaking the position is defensible».",
+                      "ruleRef": "gp-c1-inversion"
+                    },
+                    "feedbackOnSuccess": {
+                      "explanation": "El orden produce una frase natural."
+                    }
+                  },
+                  {
+                    "type": "Translate",
+                    "id": "es-en-c1-u12-l01-e03",
+                    "sourcePhrase": "También camino más y uso menos el coche. Dicho de otro modo, conviene sopesar los costes.",
+                    "correctTokens": [
+                      "I",
+                      "also",
+                      "walk",
+                      "more",
+                      "and",
+                      "use",
+                      "the",
+                      "car",
+                      "less",
+                      "In",
+                      "other",
+                      "words",
+                      "we",
+                      "should",
+                      "weigh",
+                      "the",
+                      "costs"
+                    ],
+                    "distractorTokens": [
+                      "have",
+                      "reduced",
+                      "plastic"
+                    ],
+                    "feedbackOnError": {
+                      "type": "grammar",
+                      "explanation": "El orden correcto es «I also walk more and use the car less In other words we should weigh the costs».",
+                      "ruleRef": "gp-c1-concession"
+                    },
+                    "feedbackOnSuccess": {
+                      "explanation": "La frase conserva el orden y el significado."
+                    }
+                  },
+                  {
+                    "type": "ClozeDragDrop",
+                    "id": "es-en-c1-u12-l01-e04",
+                    "passage": "I have {{b1}} {{b2}} consumption.",
+                    "blanks": [
+                      {
+                        "id": "b1",
+                        "answer": "reduced",
+                        "options": [
+                          "reduced",
+                          "consumption",
+                          "very"
+                        ]
+                      },
+                      {
+                        "id": "b2",
+                        "answer": "plastic",
+                        "options": [
+                          "plastic",
+                          "consumption",
+                          "very"
+                        ]
+                      }
+                    ],
+                    "feedbackOnError": {
+                      "type": "grammar",
+                      "explanation": "Las dos formas deben encajar con el contexto de la frase.",
+                      "ruleRef": "gp-c1-concession"
+                    },
+                    "feedbackOnSuccess": {
+                      "explanation": "Los dos huecos encajan con la situación."
+                    }
+                  },
+                  {
+                    "type": "SemanticMatch",
+                    "id": "es-en-c1-u12-l01-e05",
+                    "instructions": "Clasifica la función y el registro de cada intervención.",
+                    "pairs": [
+                      {
+                        "left": "I have reduced plastic consumption. Broadly speaking, the position is defensible.",
+                        "right": "Planteamiento",
+                        "register": "formal",
+                        "nuance": "Clasifica la función y el registro de la intervención."
+                      },
+                      {
+                        "left": "I also walk more and use the car less. In other words, we should weigh the costs.",
+                        "right": "Concesión",
+                        "register": "neutral",
+                        "nuance": "Clasifica la función y el registro de la intervención."
+                      },
+                      {
+                        "left": "If everyone does something, change will be possible. While this is true, we should not ignore the context.",
+                        "right": "Conclusión",
+                        "register": "informal",
+                        "nuance": "Clasifica la función y el registro de la intervención."
+                      }
+                    ],
+                    "feedbackOnError": {
+                      "type": "register",
+                      "explanation": "Cada intervención cumple una función y un registro distintos.",
+                      "ruleRef": "gp-c1-inversion"
+                    },
+                    "feedbackOnSuccess": {
+                      "explanation": "Has identificado función y registro."
+                    }
+                  },
+                  {
+                    "type": "ListenChoose",
+                    "id": "es-en-c1-u12-l01-e06",
+                    "audioText": "I also walk more and use the car less. In other words, we should weigh the costs.",
+                    "options": [
+                      "I also walk more and use the car less. In other words, we should weigh the costs.",
+                      "I have reduced plastic consumption. Broadly speaking, the position is defensible.",
+                      "If everyone does something, change will be possible. While this is true, we should not ignore the context."
+                    ],
+                    "correctIndex": 0,
+                    "feedbackOnError": {
+                      "type": "comprehension",
+                      "explanation": "El audio dice «I also walk more and use the car less. In other words, we should weigh the costs.».",
+                      "ruleRef": "gp-c1-inversion"
+                    },
+                    "feedbackOnSuccess": {
+                      "explanation": "Has reconocido la frase del audio."
+                    }
+                  },
+                  {
+                    "type": "AudioOnlyPrompt",
+                    "id": "es-en-c1-u12-l01-e07",
+                    "audioText": "If everyone does something, change will be possible. While this is true, we should not ignore the context.",
+                    "question": "¿Cuál es la idea principal?",
+                    "options": [
+                      "If everyone does something, change will be possible. While this is true, we should not ignore the context.",
+                      "I have reduced plastic consumption. Broadly speaking, the position is defensible.",
+                      "I also walk more and use the car less. In other words, we should weigh the costs."
+                    ],
+                    "correctIndex": 0,
+                    "allowSlowPlayback": false,
+                    "feedbackOnError": {
+                      "type": "comprehension",
+                      "explanation": "El audio dice «If everyone does something, change will be possible. While this is true, we should not ignore the context.».",
+                      "ruleRef": "gp-c1-concession"
+                    },
+                    "feedbackOnSuccess": {
+                      "explanation": "Has identificado la idea principal."
+                    }
+                  },
+                  {
+                    "type": "ListenType",
+                    "id": "es-en-c1-u12-l01-e08",
+                    "audioText": "If everyone does something, change will be possible. While this is true, we should not ignore the context.",
+                    "transcription": "If everyone does something, change will be possible. While this is true, we should not ignore the context.",
+                    "feedbackOnError": {
+                      "type": "spelling",
+                      "explanation": "Escribe exactamente «If everyone does something, change will be possible. While this is true, we should not ignore the context.».",
+                      "ruleRef": "gp-c1-inversion"
+                    },
+                    "feedbackOnSuccess": {
+                      "explanation": "La transcripción coincide con el audio."
+                    }
+                  },
+                  {
+                    "type": "SpeakRepeat",
+                    "id": "es-en-c1-u12-l01-e09",
+                    "targetPhrase": "If everyone does something, change will be possible. While this is true, we should not ignore the context.",
+                    "audioText": "If everyone does something, change will be possible. While this is true, we should not ignore the context.",
+                    "feedbackOnError": {
+                      "type": "pronunciation",
+                      "explanation": "Repite «If everyone does something, change will be possible. While this is true, we should not ignore the context.» con claridad.",
+                      "ruleRef": "gp-c1-inversion"
+                    },
+                    "feedbackOnSuccess": {
+                      "explanation": "La frase se entiende y mantiene el ritmo."
+                    }
+                  },
+                  {
+                    "type": "MatchPairs",
+                    "id": "es-en-c1-u12-l01-e10",
+                    "pairs": [
+                      {
+                        "left": "He reducido el consumo de plástico. En términos generales, la postura es defendible.",
+                        "right": "I have reduced plastic consumption. Broadly speaking, the position is defensible."
+                      },
+                      {
+                        "left": "También camino más y uso menos el coche. Dicho de otro modo, conviene sopesar los costes.",
+                        "right": "I also walk more and use the car less. In other words, we should weigh the costs."
+                      },
+                      {
+                        "left": "Si todos hacemos algo, el cambio será posible. Si bien es cierto, no deberíamos obviar el contexto.",
+                        "right": "If everyone does something, change will be possible. While this is true, we should not ignore the context."
+                      }
+                    ],
+                    "feedbackOnError": {
+                      "type": "vocabulary",
+                      "explanation": "Cada expresión tiene una traducción distinta.",
+                      "ruleRef": "gp-c1-inversion"
+                    },
+                    "feedbackOnSuccess": {
+                      "explanation": "Has asociado cada expresión con su traducción."
+                    }
+                  },
+                  {
+                    "type": "FreeSpeakingPrompt",
+                    "id": "es-en-c1-u12-l01-e11",
+                    "prompt": "Argumenta con matices sobre el medio ambiente y justifica tu postura.",
+                    "minTokens": 30,
+                    "conceptClusters": [
+                      [
+                        "reduced"
+                      ],
+                      [
+                        "plastic"
+                      ],
+                      [
+                        "consumption"
+                      ]
+                    ],
+                    "modelAnswer": "I have reduced plastic consumption. Broadly speaking, the position is defensible. I also walk more and use the car less. In other words, we should weigh the costs. If everyone does something, change will be possible. While this is true, we should not ignore the context.",
+                    "selfAssessmentCriteria": [
+                      "¿La respuesta argumenta y responde a la tarea?",
+                      "¿Usa las dos estructuras gramaticales de la lección?",
+                      "¿Incluye una concesión o una matización?"
+                    ],
+                    "grammarRuleRefs": [
+                      "gp-c1-inversion",
+                      "gp-c1-concession"
+                    ],
+                    "timeLimitSeconds": 90,
+                    "minWpm": 70,
+                    "maxWpm": 160,
+                    "feedbackOnError": {
+                      "type": "grammar",
+                      "explanation": "La respuesta modelo desarrolla una argumentación matizada.",
+                      "ruleRef": "gp-c1-inversion"
+                    }
+                  }
+                ]
+              },
+              {
+                "id": "es-en-c1-u12-l02",
+                "title": "Amistades y familia",
+                "cefrLevel": "C1",
+                "scenario": "Situación comunicativa avanzada sobre las amistades y la familia.",
+                "canDo": "Puedo argumentar con matices y precisión sobre las amistades y la familia.",
+                "grammarPoints": [
+                  {
+                    "id": "gp-c1-inversion",
+                    "label": "Inversion",
+                    "description": "La inversión enfática coloca el auxiliar antes del sujeto."
+                  },
+                  {
+                    "id": "gp-c1-concession",
+                    "label": "Concession",
+                    "description": "Although, despite y however introducen concesiones."
+                  }
+                ],
+                "vocabFrequencyBand": "8000-12000",
+                "culturalNotes": [
+                  {
+                    "idiom": "take the moral high ground",
+                    "note": "Expresión para adoptar una postura moral superior.",
+                    "translation": "adoptar superioridad moral"
+                  }
+                ],
+                "microLesson": {
+                  "title": "Amistades y familia",
+                  "goals": [
+                    "Usar vocabulario avanzado de las amistades y la familia.",
+                    "Aplicar inversion y concession.",
+                    "Argumentar con matices sobre las amistades y la familia."
+                  ],
+                  "sections": [
+                    {
+                      "heading": "Lengua en contexto",
+                      "body": "Inversion: La inversión enfática coloca el auxiliar antes del sujeto. Concession: Although, despite y however introducen concesiones.",
+                      "examples": [
+                        {
+                          "source": "Mi mejor amiga se llama Laura. Dicho de otro modo, conviene sopesar los costes.",
+                          "target": "My best friend's name is Laura. In other words, we should weigh the costs."
+                        },
+                        {
+                          "source": "Nos conocimos en la universidad. Si bien es cierto, no deberíamos obviar el contexto.",
+                          "target": "We met at university. While this is true, we should not ignore the context."
+                        }
+                      ]
+                    }
+                  ]
+                },
+                "glossary": [
+                  {
+                    "term": "My best friend's name is Laura. In other words, we should weigh the costs.",
+                    "translations": [
+                      "Mi mejor amiga se llama Laura. Dicho de otro modo, conviene sopesar los costes."
+                    ]
+                  },
+                  {
+                    "term": "We met at university. While this is true, we should not ignore the context.",
+                    "translations": [
+                      "Nos conocimos en la universidad. Si bien es cierto, no deberíamos obviar el contexto."
+                    ]
+                  },
+                  {
+                    "term": "We always support each other when we have problems. In my judgement, the most plausible interpretation is different.",
+                    "translations": [
+                      "Siempre nos apoyamos cuando tenemos problemas. A mi juicio, la interpretación más plausible es otra."
+                    ]
+                  }
+                ],
+                "exercises": [
+                  {
+                    "type": "MultipleChoice",
+                    "id": "es-en-c1-u12-l02-e01",
+                    "question": "¿Cuál es la opción correcta para «Mi mejor amiga se llama Laura. Dicho de otro modo, conviene sopesar los costes.»?",
+                    "options": [
+                      "My best friend's name is Laura. In other words, we should weigh the costs.",
+                      "We met at university. While this is true, we should not ignore the context.",
+                      "We always support each other when we have problems. In my judgement, the most plausible interpretation is different."
+                    ],
+                    "correctIndex": 0,
+                    "feedbackOnError": {
+                      "type": "vocabulary",
+                      "explanation": "«Mi mejor amiga se llama Laura. Dicho de otro modo, conviene sopesar los costes.» se dice «My best friend's name is Laura. In other words, we should weigh the costs.».",
+                      "ruleRef": "gp-c1-inversion"
+                    },
+                    "feedbackOnSuccess": {
+                      "explanation": "Has elegido la opción precisa."
+                    }
+                  },
+                  {
+                    "type": "OrderWords",
+                    "id": "es-en-c1-u12-l02-e02",
+                    "tokens": [
+                      "best",
+                      "friend's",
+                      "name",
+                      "is",
+                      "Laura",
+                      "In",
+                      "other",
+                      "words",
+                      "we",
+                      "should",
+                      "weigh",
+                      "the",
+                      "costs",
+                      "My"
+                    ],
+                    "answerTokens": [
+                      "My",
+                      "best",
+                      "friend's",
+                      "name",
+                      "is",
+                      "Laura",
+                      "In",
+                      "other",
+                      "words",
+                      "we",
+                      "should",
+                      "weigh",
+                      "the",
+                      "costs"
+                    ],
+                    "sourcePhrase": "Mi mejor amiga se llama Laura. Dicho de otro modo, conviene sopesar los costes.",
+                    "feedbackOnError": {
+                      "type": "word_order",
+                      "explanation": "El orden correcto es «My best friend's name is Laura In other words we should weigh the costs».",
+                      "ruleRef": "gp-c1-inversion"
+                    },
+                    "feedbackOnSuccess": {
+                      "explanation": "El orden produce una frase natural."
+                    }
+                  },
+                  {
+                    "type": "Translate",
+                    "id": "es-en-c1-u12-l02-e03",
+                    "sourcePhrase": "Nos conocimos en la universidad. Si bien es cierto, no deberíamos obviar el contexto.",
+                    "correctTokens": [
+                      "We",
+                      "met",
+                      "at",
+                      "university",
+                      "While",
+                      "this",
+                      "is",
+                      "true",
+                      "we",
+                      "should",
+                      "not",
+                      "ignore",
+                      "the",
+                      "context"
+                    ],
+                    "distractorTokens": [
+                      "My",
+                      "best",
+                      "friend's"
+                    ],
+                    "feedbackOnError": {
+                      "type": "grammar",
+                      "explanation": "El orden correcto es «We met at university While this is true we should not ignore the context».",
+                      "ruleRef": "gp-c1-concession"
+                    },
+                    "feedbackOnSuccess": {
+                      "explanation": "La frase conserva el orden y el significado."
+                    }
+                  },
+                  {
+                    "type": "ClozeDragDrop",
+                    "id": "es-en-c1-u12-l02-e04",
+                    "passage": "My {{b1}} {{b2}} name is Laura.",
+                    "blanks": [
+                      {
+                        "id": "b1",
+                        "answer": "best",
+                        "options": [
+                          "best",
+                          "name",
+                          "Laura"
+                        ]
+                      },
+                      {
+                        "id": "b2",
+                        "answer": "friend's",
+                        "options": [
+                          "friend's",
+                          "name",
+                          "Laura"
+                        ]
+                      }
+                    ],
+                    "feedbackOnError": {
+                      "type": "grammar",
+                      "explanation": "Las dos formas deben encajar con el contexto de la frase.",
+                      "ruleRef": "gp-c1-concession"
+                    },
+                    "feedbackOnSuccess": {
+                      "explanation": "Los dos huecos encajan con la situación."
+                    }
+                  },
+                  {
+                    "type": "SemanticMatch",
+                    "id": "es-en-c1-u12-l02-e05",
+                    "instructions": "Clasifica la función y el registro de cada intervención.",
+                    "pairs": [
+                      {
+                        "left": "My best friend's name is Laura. In other words, we should weigh the costs.",
+                        "right": "Planteamiento",
+                        "register": "formal",
+                        "nuance": "Clasifica la función y el registro de la intervención."
+                      },
+                      {
+                        "left": "We met at university. While this is true, we should not ignore the context.",
+                        "right": "Concesión",
+                        "register": "neutral",
+                        "nuance": "Clasifica la función y el registro de la intervención."
+                      },
+                      {
+                        "left": "We always support each other when we have problems. In my judgement, the most plausible interpretation is different.",
+                        "right": "Conclusión",
+                        "register": "informal",
+                        "nuance": "Clasifica la función y el registro de la intervención."
+                      }
+                    ],
+                    "feedbackOnError": {
+                      "type": "register",
+                      "explanation": "Cada intervención cumple una función y un registro distintos.",
+                      "ruleRef": "gp-c1-inversion"
+                    },
+                    "feedbackOnSuccess": {
+                      "explanation": "Has identificado función y registro."
+                    }
+                  },
+                  {
+                    "type": "ListenChoose",
+                    "id": "es-en-c1-u12-l02-e06",
+                    "audioText": "We met at university. While this is true, we should not ignore the context.",
+                    "options": [
+                      "We met at university. While this is true, we should not ignore the context.",
+                      "My best friend's name is Laura. In other words, we should weigh the costs.",
+                      "We always support each other when we have problems. In my judgement, the most plausible interpretation is different."
+                    ],
+                    "correctIndex": 0,
+                    "feedbackOnError": {
+                      "type": "comprehension",
+                      "explanation": "El audio dice «We met at university. While this is true, we should not ignore the context.».",
+                      "ruleRef": "gp-c1-inversion"
+                    },
+                    "feedbackOnSuccess": {
+                      "explanation": "Has reconocido la frase del audio."
+                    }
+                  },
+                  {
+                    "type": "AudioOnlyPrompt",
+                    "id": "es-en-c1-u12-l02-e07",
+                    "audioText": "We always support each other when we have problems. In my judgement, the most plausible interpretation is different.",
+                    "question": "¿Cuál es la idea principal?",
+                    "options": [
+                      "We always support each other when we have problems. In my judgement, the most plausible interpretation is different.",
+                      "My best friend's name is Laura. In other words, we should weigh the costs.",
+                      "We met at university. While this is true, we should not ignore the context."
+                    ],
+                    "correctIndex": 0,
+                    "allowSlowPlayback": false,
+                    "feedbackOnError": {
+                      "type": "comprehension",
+                      "explanation": "El audio dice «We always support each other when we have problems. In my judgement, the most plausible interpretation is different.».",
+                      "ruleRef": "gp-c1-concession"
+                    },
+                    "feedbackOnSuccess": {
+                      "explanation": "Has identificado la idea principal."
+                    }
+                  },
+                  {
+                    "type": "ListenType",
+                    "id": "es-en-c1-u12-l02-e08",
+                    "audioText": "We always support each other when we have problems. In my judgement, the most plausible interpretation is different.",
+                    "transcription": "We always support each other when we have problems. In my judgement, the most plausible interpretation is different.",
+                    "feedbackOnError": {
+                      "type": "spelling",
+                      "explanation": "Escribe exactamente «We always support each other when we have problems. In my judgement, the most plausible interpretation is different.».",
+                      "ruleRef": "gp-c1-inversion"
+                    },
+                    "feedbackOnSuccess": {
+                      "explanation": "La transcripción coincide con el audio."
+                    }
+                  },
+                  {
+                    "type": "SpeakRepeat",
+                    "id": "es-en-c1-u12-l02-e09",
+                    "targetPhrase": "We always support each other when we have problems. In my judgement, the most plausible interpretation is different.",
+                    "audioText": "We always support each other when we have problems. In my judgement, the most plausible interpretation is different.",
+                    "feedbackOnError": {
+                      "type": "pronunciation",
+                      "explanation": "Repite «We always support each other when we have problems. In my judgement, the most plausible interpretation is different.» con claridad.",
+                      "ruleRef": "gp-c1-inversion"
+                    },
+                    "feedbackOnSuccess": {
+                      "explanation": "La frase se entiende y mantiene el ritmo."
+                    }
+                  },
+                  {
+                    "type": "MatchPairs",
+                    "id": "es-en-c1-u12-l02-e10",
+                    "pairs": [
+                      {
+                        "left": "Mi mejor amiga se llama Laura. Dicho de otro modo, conviene sopesar los costes.",
+                        "right": "My best friend's name is Laura. In other words, we should weigh the costs."
+                      },
+                      {
+                        "left": "Nos conocimos en la universidad. Si bien es cierto, no deberíamos obviar el contexto.",
+                        "right": "We met at university. While this is true, we should not ignore the context."
+                      },
+                      {
+                        "left": "Siempre nos apoyamos cuando tenemos problemas. A mi juicio, la interpretación más plausible es otra.",
+                        "right": "We always support each other when we have problems. In my judgement, the most plausible interpretation is different."
+                      }
+                    ],
+                    "feedbackOnError": {
+                      "type": "vocabulary",
+                      "explanation": "Cada expresión tiene una traducción distinta.",
+                      "ruleRef": "gp-c1-inversion"
+                    },
+                    "feedbackOnSuccess": {
+                      "explanation": "Has asociado cada expresión con su traducción."
+                    }
+                  },
+                  {
+                    "type": "FreeSpeakingPrompt",
+                    "id": "es-en-c1-u12-l02-e11",
+                    "prompt": "Argumenta con matices sobre las amistades y la familia y justifica tu postura.",
+                    "minTokens": 30,
+                    "conceptClusters": [
+                      [
+                        "best"
+                      ],
+                      [
+                        "friend's"
+                      ],
+                      [
+                        "name"
+                      ]
+                    ],
+                    "modelAnswer": "My best friend's name is Laura. In other words, we should weigh the costs. We met at university. While this is true, we should not ignore the context. We always support each other when we have problems. In my judgement, the most plausible interpretation is different.",
+                    "selfAssessmentCriteria": [
+                      "¿La respuesta argumenta y responde a la tarea?",
+                      "¿Usa las dos estructuras gramaticales de la lección?",
+                      "¿Incluye una concesión o una matización?"
+                    ],
+                    "grammarRuleRefs": [
+                      "gp-c1-inversion",
+                      "gp-c1-concession"
+                    ],
+                    "timeLimitSeconds": 90,
+                    "minWpm": 70,
+                    "maxWpm": 160,
+                    "feedbackOnError": {
+                      "type": "grammar",
+                      "explanation": "La respuesta modelo desarrolla una argumentación matizada.",
+                      "ruleRef": "gp-c1-inversion"
+                    }
+                  }
+                ]
+              },
+              {
+                "id": "es-en-c1-u12-l03",
+                "title": "Rasgos y emociones",
+                "cefrLevel": "C1",
+                "scenario": "Situación comunicativa avanzada sobre los rasgos y las emociones.",
+                "canDo": "Puedo argumentar con matices y precisión sobre los rasgos y las emociones.",
+                "grammarPoints": [
+                  {
+                    "id": "gp-c1-inversion",
+                    "label": "Inversion",
+                    "description": "La inversión enfática coloca el auxiliar antes del sujeto."
+                  },
+                  {
+                    "id": "gp-c1-concession",
+                    "label": "Concession",
+                    "description": "Although, despite y however introducen concesiones."
+                  }
+                ],
+                "vocabFrequencyBand": "8000-12000",
+                "culturalNotes": [
+                  {
+                    "idiom": "damn with faint praise",
+                    "note": "Expresión para elogiar de forma que en realidad critica.",
+                    "translation": "elogiar con tibieza"
+                  }
+                ],
+                "microLesson": {
+                  "title": "Rasgos y emociones",
+                  "goals": [
+                    "Usar vocabulario avanzado de los rasgos y las emociones.",
+                    "Aplicar inversion y concession.",
+                    "Argumentar con matices sobre los rasgos y las emociones."
+                  ],
+                  "sections": [
+                    {
+                      "heading": "Lengua en contexto",
+                      "body": "Inversion: La inversión enfática coloca el auxiliar antes del sujeto. Concession: Although, despite y however introducen concesiones.",
+                      "examples": [
+                        {
+                          "source": "Mi hermano es muy divertido. Si bien es cierto, no deberíamos obviar el contexto.",
+                          "target": "My brother is very funny. While this is true, we should not ignore the context."
+                        },
+                        {
+                          "source": "Mi madre es paciente y generosa. A mi juicio, la interpretación más plausible es otra.",
+                          "target": "My mother is patient and generous. In my judgement, the most plausible interpretation is different."
+                        }
+                      ]
+                    }
+                  ]
+                },
+                "glossary": [
+                  {
+                    "term": "My brother is very funny. While this is true, we should not ignore the context.",
+                    "translations": [
+                      "Mi hermano es muy divertido. Si bien es cierto, no deberíamos obviar el contexto."
+                    ]
+                  },
+                  {
+                    "term": "My mother is patient and generous. In my judgement, the most plausible interpretation is different.",
+                    "translations": [
+                      "Mi madre es paciente y generosa. A mi juicio, la interpretación más plausible es otra."
+                    ]
+                  },
+                  {
+                    "term": "Sometimes I feel nervous before speaking in public. Ultimately, professional judgement prevails.",
+                    "translations": [
+                      "A veces me siento nervioso antes de hablar en público. En última instancia, prevalece el criterio profesional."
+                    ]
+                  }
+                ],
+                "exercises": [
+                  {
+                    "type": "MultipleChoice",
+                    "id": "es-en-c1-u12-l03-e01",
+                    "question": "¿Cuál es la opción correcta para «Mi hermano es muy divertido. Si bien es cierto, no deberíamos obviar el contexto.»?",
+                    "options": [
+                      "My brother is very funny. While this is true, we should not ignore the context.",
+                      "My mother is patient and generous. In my judgement, the most plausible interpretation is different.",
+                      "Sometimes I feel nervous before speaking in public. Ultimately, professional judgement prevails."
+                    ],
+                    "correctIndex": 0,
+                    "feedbackOnError": {
+                      "type": "vocabulary",
+                      "explanation": "«Mi hermano es muy divertido. Si bien es cierto, no deberíamos obviar el contexto.» se dice «My brother is very funny. While this is true, we should not ignore the context.».",
+                      "ruleRef": "gp-c1-inversion"
+                    },
+                    "feedbackOnSuccess": {
+                      "explanation": "Has elegido la opción precisa."
+                    }
+                  },
+                  {
+                    "type": "OrderWords",
+                    "id": "es-en-c1-u12-l03-e02",
+                    "tokens": [
+                      "brother",
+                      "is",
+                      "very",
+                      "funny",
+                      "While",
+                      "this",
+                      "is",
+                      "true",
+                      "we",
+                      "should",
+                      "not",
+                      "ignore",
+                      "the",
+                      "context",
+                      "My"
+                    ],
+                    "answerTokens": [
+                      "My",
+                      "brother",
+                      "is",
+                      "very",
+                      "funny",
+                      "While",
+                      "this",
+                      "is",
+                      "true",
+                      "we",
+                      "should",
+                      "not",
+                      "ignore",
+                      "the",
+                      "context"
+                    ],
+                    "sourcePhrase": "Mi hermano es muy divertido. Si bien es cierto, no deberíamos obviar el contexto.",
+                    "feedbackOnError": {
+                      "type": "word_order",
+                      "explanation": "El orden correcto es «My brother is very funny While this is true we should not ignore the context».",
+                      "ruleRef": "gp-c1-inversion"
+                    },
+                    "feedbackOnSuccess": {
+                      "explanation": "El orden produce una frase natural."
+                    }
+                  },
+                  {
+                    "type": "Translate",
+                    "id": "es-en-c1-u12-l03-e03",
+                    "sourcePhrase": "Mi madre es paciente y generosa. A mi juicio, la interpretación más plausible es otra.",
+                    "correctTokens": [
+                      "My",
+                      "mother",
+                      "is",
+                      "patient",
+                      "and",
+                      "generous",
+                      "In",
+                      "my",
+                      "judgement",
+                      "the",
+                      "most",
+                      "plausible",
+                      "interpretation",
+                      "is",
+                      "different"
+                    ],
+                    "distractorTokens": [
+                      "brother",
+                      "very",
+                      "funny"
+                    ],
+                    "feedbackOnError": {
+                      "type": "grammar",
+                      "explanation": "El orden correcto es «My mother is patient and generous In my judgement the most plausible interpretation is different».",
+                      "ruleRef": "gp-c1-concession"
+                    },
+                    "feedbackOnSuccess": {
+                      "explanation": "La frase conserva el orden y el significado."
+                    }
+                  },
+                  {
+                    "type": "ClozeDragDrop",
+                    "id": "es-en-c1-u12-l03-e04",
+                    "passage": "My {{b1}} is very {{b2}}.",
+                    "blanks": [
+                      {
+                        "id": "b1",
+                        "answer": "brother",
+                        "options": [
+                          "brother",
+                          "very",
+                          "today"
+                        ]
+                      },
+                      {
+                        "id": "b2",
+                        "answer": "funny",
+                        "options": [
+                          "funny",
+                          "very",
+                          "today"
+                        ]
+                      }
+                    ],
+                    "feedbackOnError": {
+                      "type": "grammar",
+                      "explanation": "Las dos formas deben encajar con el contexto de la frase.",
+                      "ruleRef": "gp-c1-concession"
+                    },
+                    "feedbackOnSuccess": {
+                      "explanation": "Los dos huecos encajan con la situación."
+                    }
+                  },
+                  {
+                    "type": "SemanticMatch",
+                    "id": "es-en-c1-u12-l03-e05",
+                    "instructions": "Clasifica la función y el registro de cada intervención.",
+                    "pairs": [
+                      {
+                        "left": "My brother is very funny. While this is true, we should not ignore the context.",
+                        "right": "Planteamiento",
+                        "register": "formal",
+                        "nuance": "Clasifica la función y el registro de la intervención."
+                      },
+                      {
+                        "left": "My mother is patient and generous. In my judgement, the most plausible interpretation is different.",
+                        "right": "Concesión",
+                        "register": "neutral",
+                        "nuance": "Clasifica la función y el registro de la intervención."
+                      },
+                      {
+                        "left": "Sometimes I feel nervous before speaking in public. Ultimately, professional judgement prevails.",
+                        "right": "Conclusión",
+                        "register": "informal",
+                        "nuance": "Clasifica la función y el registro de la intervención."
+                      }
+                    ],
+                    "feedbackOnError": {
+                      "type": "register",
+                      "explanation": "Cada intervención cumple una función y un registro distintos.",
+                      "ruleRef": "gp-c1-inversion"
+                    },
+                    "feedbackOnSuccess": {
+                      "explanation": "Has identificado función y registro."
+                    }
+                  },
+                  {
+                    "type": "ListenChoose",
+                    "id": "es-en-c1-u12-l03-e06",
+                    "audioText": "My mother is patient and generous. In my judgement, the most plausible interpretation is different.",
+                    "options": [
+                      "My mother is patient and generous. In my judgement, the most plausible interpretation is different.",
+                      "My brother is very funny. While this is true, we should not ignore the context.",
+                      "Sometimes I feel nervous before speaking in public. Ultimately, professional judgement prevails."
+                    ],
+                    "correctIndex": 0,
+                    "feedbackOnError": {
+                      "type": "comprehension",
+                      "explanation": "El audio dice «My mother is patient and generous. In my judgement, the most plausible interpretation is different.».",
+                      "ruleRef": "gp-c1-inversion"
+                    },
+                    "feedbackOnSuccess": {
+                      "explanation": "Has reconocido la frase del audio."
+                    }
+                  },
+                  {
+                    "type": "AudioOnlyPrompt",
+                    "id": "es-en-c1-u12-l03-e07",
+                    "audioText": "Sometimes I feel nervous before speaking in public. Ultimately, professional judgement prevails.",
+                    "question": "¿Cuál es la idea principal?",
+                    "options": [
+                      "Sometimes I feel nervous before speaking in public. Ultimately, professional judgement prevails.",
+                      "My brother is very funny. While this is true, we should not ignore the context.",
+                      "My mother is patient and generous. In my judgement, the most plausible interpretation is different."
+                    ],
+                    "correctIndex": 0,
+                    "allowSlowPlayback": false,
+                    "feedbackOnError": {
+                      "type": "comprehension",
+                      "explanation": "El audio dice «Sometimes I feel nervous before speaking in public. Ultimately, professional judgement prevails.».",
+                      "ruleRef": "gp-c1-concession"
+                    },
+                    "feedbackOnSuccess": {
+                      "explanation": "Has identificado la idea principal."
+                    }
+                  },
+                  {
+                    "type": "ListenType",
+                    "id": "es-en-c1-u12-l03-e08",
+                    "audioText": "Sometimes I feel nervous before speaking in public. Ultimately, professional judgement prevails.",
+                    "transcription": "Sometimes I feel nervous before speaking in public. Ultimately, professional judgement prevails.",
+                    "feedbackOnError": {
+                      "type": "spelling",
+                      "explanation": "Escribe exactamente «Sometimes I feel nervous before speaking in public. Ultimately, professional judgement prevails.».",
+                      "ruleRef": "gp-c1-inversion"
+                    },
+                    "feedbackOnSuccess": {
+                      "explanation": "La transcripción coincide con el audio."
+                    }
+                  },
+                  {
+                    "type": "SpeakRepeat",
+                    "id": "es-en-c1-u12-l03-e09",
+                    "targetPhrase": "Sometimes I feel nervous before speaking in public. Ultimately, professional judgement prevails.",
+                    "audioText": "Sometimes I feel nervous before speaking in public. Ultimately, professional judgement prevails.",
+                    "feedbackOnError": {
+                      "type": "pronunciation",
+                      "explanation": "Repite «Sometimes I feel nervous before speaking in public. Ultimately, professional judgement prevails.» con claridad.",
+                      "ruleRef": "gp-c1-inversion"
+                    },
+                    "feedbackOnSuccess": {
+                      "explanation": "La frase se entiende y mantiene el ritmo."
+                    }
+                  },
+                  {
+                    "type": "MatchPairs",
+                    "id": "es-en-c1-u12-l03-e10",
+                    "pairs": [
+                      {
+                        "left": "Mi hermano es muy divertido. Si bien es cierto, no deberíamos obviar el contexto.",
+                        "right": "My brother is very funny. While this is true, we should not ignore the context."
+                      },
+                      {
+                        "left": "Mi madre es paciente y generosa. A mi juicio, la interpretación más plausible es otra.",
+                        "right": "My mother is patient and generous. In my judgement, the most plausible interpretation is different."
+                      },
+                      {
+                        "left": "A veces me siento nervioso antes de hablar en público. En última instancia, prevalece el criterio profesional.",
+                        "right": "Sometimes I feel nervous before speaking in public. Ultimately, professional judgement prevails."
+                      }
+                    ],
+                    "feedbackOnError": {
+                      "type": "vocabulary",
+                      "explanation": "Cada expresión tiene una traducción distinta.",
+                      "ruleRef": "gp-c1-inversion"
+                    },
+                    "feedbackOnSuccess": {
+                      "explanation": "Has asociado cada expresión con su traducción."
+                    }
+                  },
+                  {
+                    "type": "FreeSpeakingPrompt",
+                    "id": "es-en-c1-u12-l03-e11",
+                    "prompt": "Argumenta con matices sobre los rasgos y las emociones y justifica tu postura.",
+                    "minTokens": 30,
+                    "conceptClusters": [
+                      [
+                        "brother"
+                      ],
+                      [
+                        "funny"
+                      ],
+                      [
+                        "While"
+                      ]
+                    ],
+                    "modelAnswer": "My brother is very funny. While this is true, we should not ignore the context. My mother is patient and generous. In my judgement, the most plausible interpretation is different. Sometimes I feel nervous before speaking in public. Ultimately, professional judgement prevails.",
+                    "selfAssessmentCriteria": [
+                      "¿La respuesta argumenta y responde a la tarea?",
+                      "¿Usa las dos estructuras gramaticales de la lección?",
+                      "¿Incluye una concesión o una matización?"
+                    ],
+                    "grammarRuleRefs": [
+                      "gp-c1-inversion",
+                      "gp-c1-concession"
+                    ],
+                    "timeLimitSeconds": 90,
+                    "minWpm": 70,
+                    "maxWpm": 160,
+                    "feedbackOnError": {
+                      "type": "grammar",
+                      "explanation": "La respuesta modelo desarrolla una argumentación matizada.",
+                      "ruleRef": "gp-c1-inversion"
+                    }
+                  }
+                ]
+              },
+              {
+                "id": "es-en-c1-u12-l04",
+                "title": "Verbo + infinitivo o gerundio",
+                "cefrLevel": "C1",
+                "scenario": "Situación comunicativa avanzada sobre los patrones verbales.",
+                "canDo": "Puedo argumentar con matices y precisión sobre los patrones verbales.",
+                "grammarPoints": [
+                  {
+                    "id": "gp-c1-inversion",
+                    "label": "Inversion",
+                    "description": "La inversión enfática coloca el auxiliar antes del sujeto."
+                  },
+                  {
+                    "id": "gp-c1-concession",
+                    "label": "Concession",
+                    "description": "Although, despite y however introducen concesiones."
+                  }
+                ],
+                "vocabFrequencyBand": "8000-12000",
+                "culturalNotes": [
+                  {
+                    "idiom": "bury the lede",
+                    "note": "Expresión para ocultar la información más importante.",
+                    "translation": "enterrar lo importante"
+                  }
+                ],
+                "microLesson": {
+                  "title": "Verbo + infinitivo o gerundio",
+                  "goals": [
+                    "Usar vocabulario avanzado de los patrones verbales.",
+                    "Aplicar inversion y concession.",
+                    "Argumentar con matices sobre los patrones verbales."
+                  ],
+                  "sections": [
+                    {
+                      "heading": "Lengua en contexto",
+                      "body": "Inversion: La inversión enfática coloca el auxiliar antes del sujeto. Concession: Although, despite y however introducen concesiones.",
+                      "examples": [
+                        {
+                          "source": "Quiero aprender a cocinar mejor. A mi juicio, la interpretación más plausible es otra.",
+                          "target": "I want to learn to cook better. In my judgement, the most plausible interpretation is different."
+                        },
+                        {
+                          "source": "Me gusta pasar tiempo con mi familia. En última instancia, prevalece el criterio profesional.",
+                          "target": "I like spending time with my family. Ultimately, professional judgement prevails."
+                        }
+                      ]
+                    }
+                  ]
+                },
+                "glossary": [
+                  {
+                    "term": "I want to learn to cook better. In my judgement, the most plausible interpretation is different.",
+                    "translations": [
+                      "Quiero aprender a cocinar mejor. A mi juicio, la interpretación más plausible es otra."
+                    ]
+                  },
+                  {
+                    "term": "I like spending time with my family. Ultimately, professional judgement prevails.",
+                    "translations": [
+                      "Me gusta pasar tiempo con mi familia. En última instancia, prevalece el criterio profesional."
+                    ]
+                  },
+                  {
+                    "term": "I prefer staying at home on Fridays. Nevertheless, it would be rash to draw conclusions.",
+                    "translations": [
+                      "Prefiero quedarme en casa los viernes. No obstante, sería precipitado extraer conclusiones."
+                    ]
+                  }
+                ],
+                "exercises": [
+                  {
+                    "type": "MultipleChoice",
+                    "id": "es-en-c1-u12-l04-e01",
+                    "question": "¿Cuál es la opción correcta para «Quiero aprender a cocinar mejor. A mi juicio, la interpretación más plausible es otra.»?",
+                    "options": [
+                      "I want to learn to cook better. In my judgement, the most plausible interpretation is different.",
+                      "I like spending time with my family. Ultimately, professional judgement prevails.",
+                      "I prefer staying at home on Fridays. Nevertheless, it would be rash to draw conclusions."
+                    ],
+                    "correctIndex": 0,
+                    "feedbackOnError": {
+                      "type": "vocabulary",
+                      "explanation": "«Quiero aprender a cocinar mejor. A mi juicio, la interpretación más plausible es otra.» se dice «I want to learn to cook better. In my judgement, the most plausible interpretation is different.».",
+                      "ruleRef": "gp-c1-inversion"
+                    },
+                    "feedbackOnSuccess": {
+                      "explanation": "Has elegido la opción precisa."
+                    }
+                  },
+                  {
+                    "type": "OrderWords",
+                    "id": "es-en-c1-u12-l04-e02",
+                    "tokens": [
+                      "want",
+                      "to",
+                      "learn",
+                      "to",
+                      "cook",
+                      "better",
+                      "In",
+                      "my",
+                      "judgement",
+                      "the",
+                      "most",
+                      "plausible",
+                      "interpretation",
+                      "is",
+                      "different",
+                      "I"
+                    ],
+                    "answerTokens": [
+                      "I",
+                      "want",
+                      "to",
+                      "learn",
+                      "to",
+                      "cook",
+                      "better",
+                      "In",
+                      "my",
+                      "judgement",
+                      "the",
+                      "most",
+                      "plausible",
+                      "interpretation",
+                      "is",
+                      "different"
+                    ],
+                    "sourcePhrase": "Quiero aprender a cocinar mejor. A mi juicio, la interpretación más plausible es otra.",
+                    "feedbackOnError": {
+                      "type": "word_order",
+                      "explanation": "El orden correcto es «I want to learn to cook better In my judgement the most plausible interpretation is different».",
+                      "ruleRef": "gp-c1-inversion"
+                    },
+                    "feedbackOnSuccess": {
+                      "explanation": "El orden produce una frase natural."
+                    }
+                  },
+                  {
+                    "type": "Translate",
+                    "id": "es-en-c1-u12-l04-e03",
+                    "sourcePhrase": "Me gusta pasar tiempo con mi familia. En última instancia, prevalece el criterio profesional.",
+                    "correctTokens": [
+                      "I",
+                      "like",
+                      "spending",
+                      "time",
+                      "with",
+                      "my",
+                      "family",
+                      "Ultimately",
+                      "professional",
+                      "judgement",
+                      "prevails"
+                    ],
+                    "distractorTokens": [
+                      "want",
+                      "to",
+                      "learn"
+                    ],
+                    "feedbackOnError": {
+                      "type": "grammar",
+                      "explanation": "El orden correcto es «I like spending time with my family Ultimately professional judgement prevails».",
+                      "ruleRef": "gp-c1-concession"
+                    },
+                    "feedbackOnSuccess": {
+                      "explanation": "La frase conserva el orden y el significado."
+                    }
+                  },
+                  {
+                    "type": "ClozeDragDrop",
+                    "id": "es-en-c1-u12-l04-e04",
+                    "passage": "I {{b1}} to {{b2}} to cook better.",
+                    "blanks": [
+                      {
+                        "id": "b1",
+                        "answer": "want",
+                        "options": [
+                          "want",
+                          "cook",
+                          "better"
+                        ]
+                      },
+                      {
+                        "id": "b2",
+                        "answer": "learn",
+                        "options": [
+                          "learn",
+                          "cook",
+                          "better"
+                        ]
+                      }
+                    ],
+                    "feedbackOnError": {
+                      "type": "grammar",
+                      "explanation": "Las dos formas deben encajar con el contexto de la frase.",
+                      "ruleRef": "gp-c1-concession"
+                    },
+                    "feedbackOnSuccess": {
+                      "explanation": "Los dos huecos encajan con la situación."
+                    }
+                  },
+                  {
+                    "type": "SemanticMatch",
+                    "id": "es-en-c1-u12-l04-e05",
+                    "instructions": "Clasifica la función y el registro de cada intervención.",
+                    "pairs": [
+                      {
+                        "left": "I want to learn to cook better. In my judgement, the most plausible interpretation is different.",
+                        "right": "Planteamiento",
+                        "register": "formal",
+                        "nuance": "Clasifica la función y el registro de la intervención."
+                      },
+                      {
+                        "left": "I like spending time with my family. Ultimately, professional judgement prevails.",
+                        "right": "Concesión",
+                        "register": "neutral",
+                        "nuance": "Clasifica la función y el registro de la intervención."
+                      },
+                      {
+                        "left": "I prefer staying at home on Fridays. Nevertheless, it would be rash to draw conclusions.",
+                        "right": "Conclusión",
+                        "register": "informal",
+                        "nuance": "Clasifica la función y el registro de la intervención."
+                      }
+                    ],
+                    "feedbackOnError": {
+                      "type": "register",
+                      "explanation": "Cada intervención cumple una función y un registro distintos.",
+                      "ruleRef": "gp-c1-inversion"
+                    },
+                    "feedbackOnSuccess": {
+                      "explanation": "Has identificado función y registro."
+                    }
+                  },
+                  {
+                    "type": "ListenChoose",
+                    "id": "es-en-c1-u12-l04-e06",
+                    "audioText": "I like spending time with my family. Ultimately, professional judgement prevails.",
+                    "options": [
+                      "I like spending time with my family. Ultimately, professional judgement prevails.",
+                      "I want to learn to cook better. In my judgement, the most plausible interpretation is different.",
+                      "I prefer staying at home on Fridays. Nevertheless, it would be rash to draw conclusions."
+                    ],
+                    "correctIndex": 0,
+                    "feedbackOnError": {
+                      "type": "comprehension",
+                      "explanation": "El audio dice «I like spending time with my family. Ultimately, professional judgement prevails.».",
+                      "ruleRef": "gp-c1-inversion"
+                    },
+                    "feedbackOnSuccess": {
+                      "explanation": "Has reconocido la frase del audio."
+                    }
+                  },
+                  {
+                    "type": "AudioOnlyPrompt",
+                    "id": "es-en-c1-u12-l04-e07",
+                    "audioText": "I prefer staying at home on Fridays. Nevertheless, it would be rash to draw conclusions.",
+                    "question": "¿Cuál es la idea principal?",
+                    "options": [
+                      "I prefer staying at home on Fridays. Nevertheless, it would be rash to draw conclusions.",
+                      "I want to learn to cook better. In my judgement, the most plausible interpretation is different.",
+                      "I like spending time with my family. Ultimately, professional judgement prevails."
+                    ],
+                    "correctIndex": 0,
+                    "allowSlowPlayback": false,
+                    "feedbackOnError": {
+                      "type": "comprehension",
+                      "explanation": "El audio dice «I prefer staying at home on Fridays. Nevertheless, it would be rash to draw conclusions.».",
+                      "ruleRef": "gp-c1-concession"
+                    },
+                    "feedbackOnSuccess": {
+                      "explanation": "Has identificado la idea principal."
+                    }
+                  },
+                  {
+                    "type": "ListenType",
+                    "id": "es-en-c1-u12-l04-e08",
+                    "audioText": "I prefer staying at home on Fridays. Nevertheless, it would be rash to draw conclusions.",
+                    "transcription": "I prefer staying at home on Fridays. Nevertheless, it would be rash to draw conclusions.",
+                    "feedbackOnError": {
+                      "type": "spelling",
+                      "explanation": "Escribe exactamente «I prefer staying at home on Fridays. Nevertheless, it would be rash to draw conclusions.».",
+                      "ruleRef": "gp-c1-inversion"
+                    },
+                    "feedbackOnSuccess": {
+                      "explanation": "La transcripción coincide con el audio."
+                    }
+                  },
+                  {
+                    "type": "SpeakRepeat",
+                    "id": "es-en-c1-u12-l04-e09",
+                    "targetPhrase": "I prefer staying at home on Fridays. Nevertheless, it would be rash to draw conclusions.",
+                    "audioText": "I prefer staying at home on Fridays. Nevertheless, it would be rash to draw conclusions.",
+                    "feedbackOnError": {
+                      "type": "pronunciation",
+                      "explanation": "Repite «I prefer staying at home on Fridays. Nevertheless, it would be rash to draw conclusions.» con claridad.",
+                      "ruleRef": "gp-c1-inversion"
+                    },
+                    "feedbackOnSuccess": {
+                      "explanation": "La frase se entiende y mantiene el ritmo."
+                    }
+                  },
+                  {
+                    "type": "MatchPairs",
+                    "id": "es-en-c1-u12-l04-e10",
+                    "pairs": [
+                      {
+                        "left": "Quiero aprender a cocinar mejor. A mi juicio, la interpretación más plausible es otra.",
+                        "right": "I want to learn to cook better. In my judgement, the most plausible interpretation is different."
+                      },
+                      {
+                        "left": "Me gusta pasar tiempo con mi familia. En última instancia, prevalece el criterio profesional.",
+                        "right": "I like spending time with my family. Ultimately, professional judgement prevails."
+                      },
+                      {
+                        "left": "Prefiero quedarme en casa los viernes. No obstante, sería precipitado extraer conclusiones.",
+                        "right": "I prefer staying at home on Fridays. Nevertheless, it would be rash to draw conclusions."
+                      }
+                    ],
+                    "feedbackOnError": {
+                      "type": "vocabulary",
+                      "explanation": "Cada expresión tiene una traducción distinta.",
+                      "ruleRef": "gp-c1-inversion"
+                    },
+                    "feedbackOnSuccess": {
+                      "explanation": "Has asociado cada expresión con su traducción."
+                    }
+                  },
+                  {
+                    "type": "FreeSpeakingPrompt",
+                    "id": "es-en-c1-u12-l04-e11",
+                    "prompt": "Argumenta con matices sobre los patrones verbales y justifica tu postura.",
+                    "minTokens": 30,
+                    "conceptClusters": [
+                      [
+                        "want"
+                      ],
+                      [
+                        "learn"
+                      ],
+                      [
+                        "cook"
+                      ]
+                    ],
+                    "modelAnswer": "I want to learn to cook better. In my judgement, the most plausible interpretation is different. I like spending time with my family. Ultimately, professional judgement prevails. I prefer staying at home on Fridays. Nevertheless, it would be rash to draw conclusions.",
+                    "selfAssessmentCriteria": [
+                      "¿La respuesta argumenta y responde a la tarea?",
+                      "¿Usa las dos estructuras gramaticales de la lección?",
+                      "¿Incluye una concesión o una matización?"
+                    ],
+                    "grammarRuleRefs": [
+                      "gp-c1-inversion",
+                      "gp-c1-concession"
+                    ],
+                    "timeLimitSeconds": 90,
+                    "minWpm": 70,
+                    "maxWpm": 160,
+                    "feedbackOnError": {
+                      "type": "grammar",
+                      "explanation": "La respuesta modelo desarrolla una argumentación matizada.",
+                      "ruleRef": "gp-c1-inversion"
+                    }
+                  }
+                ]
+              },
+              {
+                "id": "es-en-c1-u12-l05",
+                "title": "Oraciones de relativo",
+                "cefrLevel": "C1",
+                "scenario": "Situación comunicativa avanzada sobre las oraciones de relativo.",
+                "canDo": "Puedo argumentar con matices y precisión sobre las oraciones de relativo.",
+                "grammarPoints": [
+                  {
+                    "id": "gp-c1-inversion",
+                    "label": "Inversion",
+                    "description": "La inversión enfática coloca el auxiliar antes del sujeto."
+                  },
+                  {
+                    "id": "gp-c1-concession",
+                    "label": "Concession",
+                    "description": "Although, despite y however introducen concesiones."
+                  }
+                ],
+                "vocabFrequencyBand": "8000-12000",
+                "culturalNotes": [
+                  {
+                    "idiom": "jump the shark",
+                    "note": "Expresión para señalar que algo ha perdido calidad.",
+                    "translation": "tocar fondo"
+                  }
+                ],
+                "microLesson": {
+                  "title": "Oraciones de relativo",
+                  "goals": [
+                    "Usar vocabulario avanzado de las oraciones de relativo.",
+                    "Aplicar inversion y concession.",
+                    "Argumentar con matices sobre las oraciones de relativo."
+                  ],
+                  "sections": [
+                    {
+                      "heading": "Lengua en contexto",
+                      "body": "Inversion: La inversión enfática coloca el auxiliar antes del sujeto. Concession: Although, despite y however introducen concesiones.",
+                      "examples": [
+                        {
+                          "source": "La persona que me ayudó es mi vecina. En última instancia, prevalece el criterio profesional.",
+                          "target": "The person who helped me is my neighbour. Ultimately, professional judgement prevails."
+                        },
+                        {
+                          "source": "El libro que estoy leyendo es muy interesante. No obstante, sería precipitado extraer conclusiones.",
+                          "target": "The book I am reading is very interesting. Nevertheless, it would be rash to draw conclusions."
+                        }
+                      ]
+                    }
+                  ]
+                },
+                "glossary": [
+                  {
+                    "term": "The person who helped me is my neighbour. Ultimately, professional judgement prevails.",
+                    "translations": [
+                      "La persona que me ayudó es mi vecina. En última instancia, prevalece el criterio profesional."
+                    ]
+                  },
+                  {
+                    "term": "The book I am reading is very interesting. Nevertheless, it would be rash to draw conclusions.",
+                    "translations": [
+                      "El libro que estoy leyendo es muy interesante. No obstante, sería precipitado extraer conclusiones."
+                    ]
+                  },
+                  {
+                    "term": "The place where we met is a park. From a critical perspective, the argument holds.",
+                    "translations": [
+                      "El lugar donde nos conocimos es un parque. Desde una perspectiva crítica, el argumento se sostiene."
+                    ]
+                  }
+                ],
+                "exercises": [
+                  {
+                    "type": "MultipleChoice",
+                    "id": "es-en-c1-u12-l05-e01",
+                    "question": "¿Cuál es la opción correcta para «La persona que me ayudó es mi vecina. En última instancia, prevalece el criterio profesional.»?",
+                    "options": [
+                      "The person who helped me is my neighbour. Ultimately, professional judgement prevails.",
+                      "The book I am reading is very interesting. Nevertheless, it would be rash to draw conclusions.",
+                      "The place where we met is a park. From a critical perspective, the argument holds."
+                    ],
+                    "correctIndex": 0,
+                    "feedbackOnError": {
+                      "type": "vocabulary",
+                      "explanation": "«La persona que me ayudó es mi vecina. En última instancia, prevalece el criterio profesional.» se dice «The person who helped me is my neighbour. Ultimately, professional judgement prevails.».",
+                      "ruleRef": "gp-c1-inversion"
+                    },
+                    "feedbackOnSuccess": {
+                      "explanation": "Has elegido la opción precisa."
+                    }
+                  },
+                  {
+                    "type": "OrderWords",
+                    "id": "es-en-c1-u12-l05-e02",
+                    "tokens": [
+                      "person",
+                      "who",
+                      "helped",
+                      "me",
+                      "is",
+                      "my",
+                      "neighbour",
+                      "Ultimately",
+                      "professional",
+                      "judgement",
+                      "prevails",
+                      "The"
+                    ],
+                    "answerTokens": [
+                      "The",
+                      "person",
+                      "who",
+                      "helped",
+                      "me",
+                      "is",
+                      "my",
+                      "neighbour",
+                      "Ultimately",
+                      "professional",
+                      "judgement",
+                      "prevails"
+                    ],
+                    "sourcePhrase": "La persona que me ayudó es mi vecina. En última instancia, prevalece el criterio profesional.",
+                    "feedbackOnError": {
+                      "type": "word_order",
+                      "explanation": "El orden correcto es «The person who helped me is my neighbour Ultimately professional judgement prevails».",
+                      "ruleRef": "gp-c1-inversion"
+                    },
+                    "feedbackOnSuccess": {
+                      "explanation": "El orden produce una frase natural."
+                    }
+                  },
+                  {
+                    "type": "Translate",
+                    "id": "es-en-c1-u12-l05-e03",
+                    "sourcePhrase": "El libro que estoy leyendo es muy interesante. No obstante, sería precipitado extraer conclusiones.",
+                    "correctTokens": [
+                      "The",
+                      "book",
+                      "I",
+                      "am",
+                      "reading",
+                      "is",
+                      "very",
+                      "interesting",
+                      "Nevertheless",
+                      "it",
+                      "would",
+                      "be",
+                      "rash",
+                      "to",
+                      "draw",
+                      "conclusions"
+                    ],
+                    "distractorTokens": [
+                      "person",
+                      "who",
+                      "helped"
+                    ],
+                    "feedbackOnError": {
+                      "type": "grammar",
+                      "explanation": "El orden correcto es «The book I am reading is very interesting Nevertheless it would be rash to draw conclusions».",
+                      "ruleRef": "gp-c1-concession"
+                    },
+                    "feedbackOnSuccess": {
+                      "explanation": "La frase conserva el orden y el significado."
+                    }
+                  },
+                  {
+                    "type": "ClozeDragDrop",
+                    "id": "es-en-c1-u12-l05-e04",
+                    "passage": "The {{b1}} {{b2}} helped me is my neighbour.",
+                    "blanks": [
+                      {
+                        "id": "b1",
+                        "answer": "person",
+                        "options": [
+                          "person",
+                          "helped",
+                          "neighbour"
+                        ]
+                      },
+                      {
+                        "id": "b2",
+                        "answer": "who",
+                        "options": [
+                          "who",
+                          "helped",
+                          "neighbour"
+                        ]
+                      }
+                    ],
+                    "feedbackOnError": {
+                      "type": "grammar",
+                      "explanation": "Las dos formas deben encajar con el contexto de la frase.",
+                      "ruleRef": "gp-c1-concession"
+                    },
+                    "feedbackOnSuccess": {
+                      "explanation": "Los dos huecos encajan con la situación."
+                    }
+                  },
+                  {
+                    "type": "SemanticMatch",
+                    "id": "es-en-c1-u12-l05-e05",
+                    "instructions": "Clasifica la función y el registro de cada intervención.",
+                    "pairs": [
+                      {
+                        "left": "The person who helped me is my neighbour. Ultimately, professional judgement prevails.",
+                        "right": "Planteamiento",
+                        "register": "formal",
+                        "nuance": "Clasifica la función y el registro de la intervención."
+                      },
+                      {
+                        "left": "The book I am reading is very interesting. Nevertheless, it would be rash to draw conclusions.",
+                        "right": "Concesión",
+                        "register": "neutral",
+                        "nuance": "Clasifica la función y el registro de la intervención."
+                      },
+                      {
+                        "left": "The place where we met is a park. From a critical perspective, the argument holds.",
+                        "right": "Conclusión",
+                        "register": "informal",
+                        "nuance": "Clasifica la función y el registro de la intervención."
+                      }
+                    ],
+                    "feedbackOnError": {
+                      "type": "register",
+                      "explanation": "Cada intervención cumple una función y un registro distintos.",
+                      "ruleRef": "gp-c1-inversion"
+                    },
+                    "feedbackOnSuccess": {
+                      "explanation": "Has identificado función y registro."
+                    }
+                  },
+                  {
+                    "type": "ListenChoose",
+                    "id": "es-en-c1-u12-l05-e06",
+                    "audioText": "The book I am reading is very interesting. Nevertheless, it would be rash to draw conclusions.",
+                    "options": [
+                      "The book I am reading is very interesting. Nevertheless, it would be rash to draw conclusions.",
+                      "The person who helped me is my neighbour. Ultimately, professional judgement prevails.",
+                      "The place where we met is a park. From a critical perspective, the argument holds."
+                    ],
+                    "correctIndex": 0,
+                    "feedbackOnError": {
+                      "type": "comprehension",
+                      "explanation": "El audio dice «The book I am reading is very interesting. Nevertheless, it would be rash to draw conclusions.».",
+                      "ruleRef": "gp-c1-inversion"
+                    },
+                    "feedbackOnSuccess": {
+                      "explanation": "Has reconocido la frase del audio."
+                    }
+                  },
+                  {
+                    "type": "AudioOnlyPrompt",
+                    "id": "es-en-c1-u12-l05-e07",
+                    "audioText": "The place where we met is a park. From a critical perspective, the argument holds.",
+                    "question": "¿Cuál es la idea principal?",
+                    "options": [
+                      "The place where we met is a park. From a critical perspective, the argument holds.",
+                      "The person who helped me is my neighbour. Ultimately, professional judgement prevails.",
+                      "The book I am reading is very interesting. Nevertheless, it would be rash to draw conclusions."
+                    ],
+                    "correctIndex": 0,
+                    "allowSlowPlayback": false,
+                    "feedbackOnError": {
+                      "type": "comprehension",
+                      "explanation": "El audio dice «The place where we met is a park. From a critical perspective, the argument holds.».",
+                      "ruleRef": "gp-c1-concession"
+                    },
+                    "feedbackOnSuccess": {
+                      "explanation": "Has identificado la idea principal."
+                    }
+                  },
+                  {
+                    "type": "ListenType",
+                    "id": "es-en-c1-u12-l05-e08",
+                    "audioText": "The place where we met is a park. From a critical perspective, the argument holds.",
+                    "transcription": "The place where we met is a park. From a critical perspective, the argument holds.",
+                    "feedbackOnError": {
+                      "type": "spelling",
+                      "explanation": "Escribe exactamente «The place where we met is a park. From a critical perspective, the argument holds.».",
+                      "ruleRef": "gp-c1-inversion"
+                    },
+                    "feedbackOnSuccess": {
+                      "explanation": "La transcripción coincide con el audio."
+                    }
+                  },
+                  {
+                    "type": "SpeakRepeat",
+                    "id": "es-en-c1-u12-l05-e09",
+                    "targetPhrase": "The place where we met is a park. From a critical perspective, the argument holds.",
+                    "audioText": "The place where we met is a park. From a critical perspective, the argument holds.",
+                    "feedbackOnError": {
+                      "type": "pronunciation",
+                      "explanation": "Repite «The place where we met is a park. From a critical perspective, the argument holds.» con claridad.",
+                      "ruleRef": "gp-c1-inversion"
+                    },
+                    "feedbackOnSuccess": {
+                      "explanation": "La frase se entiende y mantiene el ritmo."
+                    }
+                  },
+                  {
+                    "type": "MatchPairs",
+                    "id": "es-en-c1-u12-l05-e10",
+                    "pairs": [
+                      {
+                        "left": "La persona que me ayudó es mi vecina. En última instancia, prevalece el criterio profesional.",
+                        "right": "The person who helped me is my neighbour. Ultimately, professional judgement prevails."
+                      },
+                      {
+                        "left": "El libro que estoy leyendo es muy interesante. No obstante, sería precipitado extraer conclusiones.",
+                        "right": "The book I am reading is very interesting. Nevertheless, it would be rash to draw conclusions."
+                      },
+                      {
+                        "left": "El lugar donde nos conocimos es un parque. Desde una perspectiva crítica, el argumento se sostiene.",
+                        "right": "The place where we met is a park. From a critical perspective, the argument holds."
+                      }
+                    ],
+                    "feedbackOnError": {
+                      "type": "vocabulary",
+                      "explanation": "Cada expresión tiene una traducción distinta.",
+                      "ruleRef": "gp-c1-inversion"
+                    },
+                    "feedbackOnSuccess": {
+                      "explanation": "Has asociado cada expresión con su traducción."
+                    }
+                  },
+                  {
+                    "type": "FreeSpeakingPrompt",
+                    "id": "es-en-c1-u12-l05-e11",
+                    "prompt": "Argumenta con matices sobre las oraciones de relativo y justifica tu postura.",
+                    "minTokens": 30,
+                    "conceptClusters": [
+                      [
+                        "person"
+                      ],
+                      [
+                        "who"
+                      ],
+                      [
+                        "helped"
+                      ]
+                    ],
+                    "modelAnswer": "The person who helped me is my neighbour. Ultimately, professional judgement prevails. The book I am reading is very interesting. Nevertheless, it would be rash to draw conclusions. The place where we met is a park. From a critical perspective, the argument holds.",
+                    "selfAssessmentCriteria": [
+                      "¿La respuesta argumenta y responde a la tarea?",
+                      "¿Usa las dos estructuras gramaticales de la lección?",
+                      "¿Incluye una concesión o una matización?"
+                    ],
+                    "grammarRuleRefs": [
+                      "gp-c1-inversion",
+                      "gp-c1-concession"
+                    ],
+                    "timeLimitSeconds": 90,
+                    "minWpm": 70,
+                    "maxWpm": 160,
+                    "feedbackOnError": {
+                      "type": "grammar",
+                      "explanation": "La respuesta modelo desarrolla una argumentación matizada.",
+                      "ruleRef": "gp-c1-inversion"
+                    }
+                  }
+                ]
+              },
+              {
+                "id": "es-en-c1-u12-l06",
+                "title": "Acuerdo y desacuerdo",
+                "cefrLevel": "C1",
+                "scenario": "Situación comunicativa avanzada sobre las opiniones.",
+                "canDo": "Puedo argumentar con matices y precisión sobre las opiniones.",
+                "grammarPoints": [
+                  {
+                    "id": "gp-c1-inversion",
+                    "label": "Inversion",
+                    "description": "La inversión enfática coloca el auxiliar antes del sujeto."
+                  },
+                  {
+                    "id": "gp-c1-concession",
+                    "label": "Concession",
+                    "description": "Although, despite y however introducen concesiones."
+                  }
+                ],
+                "vocabFrequencyBand": "8000-12000",
+                "culturalNotes": [
+                  {
+                    "idiom": "throw shade",
+                    "note": "Expresión para criticar de forma indirecta.",
+                    "translation": "lanzar una indirecta"
+                  }
+                ],
+                "microLesson": {
+                  "title": "Acuerdo y desacuerdo",
+                  "goals": [
+                    "Usar vocabulario avanzado de las opiniones.",
+                    "Aplicar inversion y concession.",
+                    "Argumentar con matices sobre las opiniones."
+                  ],
+                  "sections": [
+                    {
+                      "heading": "Lengua en contexto",
+                      "body": "Inversion: La inversión enfática coloca el auxiliar antes del sujeto. Concession: Although, despite y however introducen concesiones.",
+                      "examples": [
+                        {
+                          "source": "Estoy de acuerdo con tu opinión. No obstante, sería precipitado extraer conclusiones.",
+                          "target": "I agree with your opinion. Nevertheless, it would be rash to draw conclusions."
+                        },
+                        {
+                          "source": "No estoy de acuerdo con esa idea. Desde una perspectiva crítica, el argumento se sostiene.",
+                          "target": "I don't agree with that idea. From a critical perspective, the argument holds."
+                        }
+                      ]
+                    }
+                  ]
+                },
+                "glossary": [
+                  {
+                    "term": "I agree with your opinion. Nevertheless, it would be rash to draw conclusions.",
+                    "translations": [
+                      "Estoy de acuerdo con tu opinión. No obstante, sería precipitado extraer conclusiones."
+                    ]
+                  },
+                  {
+                    "term": "I don't agree with that idea. From a critical perspective, the argument holds.",
+                    "translations": [
+                      "No estoy de acuerdo con esa idea. Desde una perspectiva crítica, el argumento se sostiene."
+                    ]
+                  },
+                  {
+                    "term": "I think there is another solution. In practical terms, the alternative is viable.",
+                    "translations": [
+                      "Creo que hay otra solución. A efectos prácticos, la alternativa es viable."
+                    ]
+                  }
+                ],
+                "exercises": [
+                  {
+                    "type": "MultipleChoice",
+                    "id": "es-en-c1-u12-l06-e01",
+                    "question": "¿Cuál es la opción correcta para «Estoy de acuerdo con tu opinión. No obstante, sería precipitado extraer conclusiones.»?",
+                    "options": [
+                      "I agree with your opinion. Nevertheless, it would be rash to draw conclusions.",
+                      "I don't agree with that idea. From a critical perspective, the argument holds.",
+                      "I think there is another solution. In practical terms, the alternative is viable."
+                    ],
+                    "correctIndex": 0,
+                    "feedbackOnError": {
+                      "type": "vocabulary",
+                      "explanation": "«Estoy de acuerdo con tu opinión. No obstante, sería precipitado extraer conclusiones.» se dice «I agree with your opinion. Nevertheless, it would be rash to draw conclusions.».",
+                      "ruleRef": "gp-c1-inversion"
+                    },
+                    "feedbackOnSuccess": {
+                      "explanation": "Has elegido la opción precisa."
+                    }
+                  },
+                  {
+                    "type": "OrderWords",
+                    "id": "es-en-c1-u12-l06-e02",
+                    "tokens": [
+                      "agree",
+                      "with",
+                      "your",
+                      "opinion",
+                      "Nevertheless",
+                      "it",
+                      "would",
+                      "be",
+                      "rash",
+                      "to",
+                      "draw",
+                      "conclusions",
+                      "I"
+                    ],
+                    "answerTokens": [
+                      "I",
+                      "agree",
+                      "with",
+                      "your",
+                      "opinion",
+                      "Nevertheless",
+                      "it",
+                      "would",
+                      "be",
+                      "rash",
+                      "to",
+                      "draw",
+                      "conclusions"
+                    ],
+                    "sourcePhrase": "Estoy de acuerdo con tu opinión. No obstante, sería precipitado extraer conclusiones.",
+                    "feedbackOnError": {
+                      "type": "word_order",
+                      "explanation": "El orden correcto es «I agree with your opinion Nevertheless it would be rash to draw conclusions».",
+                      "ruleRef": "gp-c1-inversion"
+                    },
+                    "feedbackOnSuccess": {
+                      "explanation": "El orden produce una frase natural."
+                    }
+                  },
+                  {
+                    "type": "Translate",
+                    "id": "es-en-c1-u12-l06-e03",
+                    "sourcePhrase": "No estoy de acuerdo con esa idea. Desde una perspectiva crítica, el argumento se sostiene.",
+                    "correctTokens": [
+                      "I",
+                      "don't",
+                      "agree",
+                      "with",
+                      "that",
+                      "idea",
+                      "From",
+                      "a",
+                      "critical",
+                      "perspective",
+                      "the",
+                      "argument",
+                      "holds"
+                    ],
+                    "distractorTokens": [
+                      "your",
+                      "opinion",
+                      "Nevertheless"
+                    ],
+                    "feedbackOnError": {
+                      "type": "grammar",
+                      "explanation": "El orden correcto es «I don't agree with that idea From a critical perspective the argument holds».",
+                      "ruleRef": "gp-c1-concession"
+                    },
+                    "feedbackOnSuccess": {
+                      "explanation": "La frase conserva el orden y el significado."
+                    }
+                  },
+                  {
+                    "type": "ClozeDragDrop",
+                    "id": "es-en-c1-u12-l06-e04",
+                    "passage": "I {{b1}} with your {{b2}}.",
+                    "blanks": [
+                      {
+                        "id": "b1",
+                        "answer": "agree",
+                        "options": [
+                          "agree",
+                          "very",
+                          "today"
+                        ]
+                      },
+                      {
+                        "id": "b2",
+                        "answer": "opinion",
+                        "options": [
+                          "opinion",
+                          "very",
+                          "today"
+                        ]
+                      }
+                    ],
+                    "feedbackOnError": {
+                      "type": "grammar",
+                      "explanation": "Las dos formas deben encajar con el contexto de la frase.",
+                      "ruleRef": "gp-c1-concession"
+                    },
+                    "feedbackOnSuccess": {
+                      "explanation": "Los dos huecos encajan con la situación."
+                    }
+                  },
+                  {
+                    "type": "SemanticMatch",
+                    "id": "es-en-c1-u12-l06-e05",
+                    "instructions": "Clasifica la función y el registro de cada intervención.",
+                    "pairs": [
+                      {
+                        "left": "I agree with your opinion. Nevertheless, it would be rash to draw conclusions.",
+                        "right": "Planteamiento",
+                        "register": "formal",
+                        "nuance": "Clasifica la función y el registro de la intervención."
+                      },
+                      {
+                        "left": "I don't agree with that idea. From a critical perspective, the argument holds.",
+                        "right": "Concesión",
+                        "register": "neutral",
+                        "nuance": "Clasifica la función y el registro de la intervención."
+                      },
+                      {
+                        "left": "I think there is another solution. In practical terms, the alternative is viable.",
+                        "right": "Conclusión",
+                        "register": "informal",
+                        "nuance": "Clasifica la función y el registro de la intervención."
+                      }
+                    ],
+                    "feedbackOnError": {
+                      "type": "register",
+                      "explanation": "Cada intervención cumple una función y un registro distintos.",
+                      "ruleRef": "gp-c1-inversion"
+                    },
+                    "feedbackOnSuccess": {
+                      "explanation": "Has identificado función y registro."
+                    }
+                  },
+                  {
+                    "type": "ListenChoose",
+                    "id": "es-en-c1-u12-l06-e06",
+                    "audioText": "I don't agree with that idea. From a critical perspective, the argument holds.",
+                    "options": [
+                      "I don't agree with that idea. From a critical perspective, the argument holds.",
+                      "I agree with your opinion. Nevertheless, it would be rash to draw conclusions.",
+                      "I think there is another solution. In practical terms, the alternative is viable."
+                    ],
+                    "correctIndex": 0,
+                    "feedbackOnError": {
+                      "type": "comprehension",
+                      "explanation": "El audio dice «I don't agree with that idea. From a critical perspective, the argument holds.».",
+                      "ruleRef": "gp-c1-inversion"
+                    },
+                    "feedbackOnSuccess": {
+                      "explanation": "Has reconocido la frase del audio."
+                    }
+                  },
+                  {
+                    "type": "AudioOnlyPrompt",
+                    "id": "es-en-c1-u12-l06-e07",
+                    "audioText": "I think there is another solution. In practical terms, the alternative is viable.",
+                    "question": "¿Cuál es la idea principal?",
+                    "options": [
+                      "I think there is another solution. In practical terms, the alternative is viable.",
+                      "I agree with your opinion. Nevertheless, it would be rash to draw conclusions.",
+                      "I don't agree with that idea. From a critical perspective, the argument holds."
+                    ],
+                    "correctIndex": 0,
+                    "allowSlowPlayback": false,
+                    "feedbackOnError": {
+                      "type": "comprehension",
+                      "explanation": "El audio dice «I think there is another solution. In practical terms, the alternative is viable.».",
+                      "ruleRef": "gp-c1-concession"
+                    },
+                    "feedbackOnSuccess": {
+                      "explanation": "Has identificado la idea principal."
+                    }
+                  },
+                  {
+                    "type": "ListenType",
+                    "id": "es-en-c1-u12-l06-e08",
+                    "audioText": "I think there is another solution. In practical terms, the alternative is viable.",
+                    "transcription": "I think there is another solution. In practical terms, the alternative is viable.",
+                    "feedbackOnError": {
+                      "type": "spelling",
+                      "explanation": "Escribe exactamente «I think there is another solution. In practical terms, the alternative is viable.».",
+                      "ruleRef": "gp-c1-inversion"
+                    },
+                    "feedbackOnSuccess": {
+                      "explanation": "La transcripción coincide con el audio."
+                    }
+                  },
+                  {
+                    "type": "SpeakRepeat",
+                    "id": "es-en-c1-u12-l06-e09",
+                    "targetPhrase": "I think there is another solution. In practical terms, the alternative is viable.",
+                    "audioText": "I think there is another solution. In practical terms, the alternative is viable.",
+                    "feedbackOnError": {
+                      "type": "pronunciation",
+                      "explanation": "Repite «I think there is another solution. In practical terms, the alternative is viable.» con claridad.",
+                      "ruleRef": "gp-c1-inversion"
+                    },
+                    "feedbackOnSuccess": {
+                      "explanation": "La frase se entiende y mantiene el ritmo."
+                    }
+                  },
+                  {
+                    "type": "MatchPairs",
+                    "id": "es-en-c1-u12-l06-e10",
+                    "pairs": [
+                      {
+                        "left": "Estoy de acuerdo con tu opinión. No obstante, sería precipitado extraer conclusiones.",
+                        "right": "I agree with your opinion. Nevertheless, it would be rash to draw conclusions."
+                      },
+                      {
+                        "left": "No estoy de acuerdo con esa idea. Desde una perspectiva crítica, el argumento se sostiene.",
+                        "right": "I don't agree with that idea. From a critical perspective, the argument holds."
+                      },
+                      {
+                        "left": "Creo que hay otra solución. A efectos prácticos, la alternativa es viable.",
+                        "right": "I think there is another solution. In practical terms, the alternative is viable."
+                      }
+                    ],
+                    "feedbackOnError": {
+                      "type": "vocabulary",
+                      "explanation": "Cada expresión tiene una traducción distinta.",
+                      "ruleRef": "gp-c1-inversion"
+                    },
+                    "feedbackOnSuccess": {
+                      "explanation": "Has asociado cada expresión con su traducción."
+                    }
+                  },
+                  {
+                    "type": "FreeSpeakingPrompt",
+                    "id": "es-en-c1-u12-l06-e11",
+                    "prompt": "Argumenta con matices sobre las opiniones y justifica tu postura.",
+                    "minTokens": 30,
+                    "conceptClusters": [
+                      [
+                        "agree"
+                      ],
+                      [
+                        "opinion"
+                      ],
+                      [
+                        "Nevertheless"
+                      ]
+                    ],
+                    "modelAnswer": "I agree with your opinion. Nevertheless, it would be rash to draw conclusions. I don't agree with that idea. From a critical perspective, the argument holds. I think there is another solution. In practical terms, the alternative is viable.",
+                    "selfAssessmentCriteria": [
+                      "¿La respuesta argumenta y responde a la tarea?",
+                      "¿Usa las dos estructuras gramaticales de la lección?",
+                      "¿Incluye una concesión o una matización?"
+                    ],
+                    "grammarRuleRefs": [
+                      "gp-c1-inversion",
+                      "gp-c1-concession"
+                    ],
+                    "timeLimitSeconds": 90,
+                    "minWpm": 70,
+                    "maxWpm": 160,
+                    "feedbackOnError": {
+                      "type": "grammar",
+                      "explanation": "La respuesta modelo desarrolla una argumentación matizada.",
+                      "ruleRef": "gp-c1-inversion"
+                    }
+                  }
+                ]
+              },
+              {
+                "id": "es-en-c1-u12-l07",
+                "title": "Conversación difícil",
+                "cefrLevel": "C1",
+                "scenario": "Situación comunicativa avanzada sobre una conversación difícil.",
+                "canDo": "Puedo argumentar con matices y precisión sobre una conversación difícil.",
+                "grammarPoints": [
+                  {
+                    "id": "gp-c1-inversion",
+                    "label": "Inversion",
+                    "description": "La inversión enfática coloca el auxiliar antes del sujeto."
+                  },
+                  {
+                    "id": "gp-c1-concession",
+                    "label": "Concession",
+                    "description": "Although, despite y however introducen concesiones."
+                  }
+                ],
+                "vocabFrequencyBand": "8000-12000",
+                "culturalNotes": [
+                  {
+                    "idiom": "spill the tea",
+                    "note": "Expresión para revelar un cotilleo.",
+                    "translation": "contar el cotilleo"
+                  }
+                ],
+                "microLesson": {
+                  "title": "Conversación difícil",
+                  "goals": [
+                    "Usar vocabulario avanzado de una conversación difícil.",
+                    "Aplicar inversion y concession.",
+                    "Argumentar con matices sobre una conversación difícil."
+                  ],
+                  "sections": [
+                    {
+                      "heading": "Lengua en contexto",
+                      "body": "Inversion: La inversión enfática coloca el auxiliar antes del sujeto. Concession: Although, despite y however introducen concesiones.",
+                      "examples": [
+                        {
+                          "source": "Necesito hablar contigo de algo importante. Desde una perspectiva crítica, el argumento se sostiene.",
+                          "target": "I need to talk to you about something important. From a critical perspective, the argument holds."
+                        },
+                        {
+                          "source": "Entiendo cómo te sientes y quiero ayudar. A efectos prácticos, la alternativa es viable.",
+                          "target": "I understand how you feel and I want to help. In practical terms, the alternative is viable."
+                        }
+                      ]
+                    }
+                  ]
+                },
+                "glossary": [
+                  {
+                    "term": "I need to talk to you about something important. From a critical perspective, the argument holds.",
+                    "translations": [
+                      "Necesito hablar contigo de algo importante. Desde una perspectiva crítica, el argumento se sostiene."
+                    ]
+                  },
+                  {
+                    "term": "I understand how you feel and I want to help. In practical terms, the alternative is viable.",
+                    "translations": [
+                      "Entiendo cómo te sientes y quiero ayudar. A efectos prácticos, la alternativa es viable."
+                    ]
+                  },
+                  {
+                    "term": "Can we find a solution together? In short, the debate remains open.",
+                    "translations": [
+                      "¿Podemos buscar una solución juntos? En definitiva, el debate sigue abierto."
+                    ]
+                  }
+                ],
+                "exercises": [
+                  {
+                    "type": "MultipleChoice",
+                    "id": "es-en-c1-u12-l07-e01",
+                    "question": "¿Cuál es la opción correcta para «Necesito hablar contigo de algo importante. Desde una perspectiva crítica, el argumento se sostiene.»?",
+                    "options": [
+                      "I need to talk to you about something important. From a critical perspective, the argument holds.",
+                      "I understand how you feel and I want to help. In practical terms, the alternative is viable.",
+                      "Can we find a solution together? In short, the debate remains open."
+                    ],
+                    "correctIndex": 0,
+                    "feedbackOnError": {
+                      "type": "vocabulary",
+                      "explanation": "«Necesito hablar contigo de algo importante. Desde una perspectiva crítica, el argumento se sostiene.» se dice «I need to talk to you about something important. From a critical perspective, the argument holds.».",
+                      "ruleRef": "gp-c1-inversion"
+                    },
+                    "feedbackOnSuccess": {
+                      "explanation": "Has elegido la opción precisa."
+                    }
+                  },
+                  {
+                    "type": "OrderWords",
+                    "id": "es-en-c1-u12-l07-e02",
+                    "tokens": [
+                      "need",
+                      "to",
+                      "talk",
+                      "to",
+                      "you",
+                      "about",
+                      "something",
+                      "important",
+                      "From",
+                      "a",
+                      "critical",
+                      "perspective",
+                      "the",
+                      "argument",
+                      "holds",
+                      "I"
+                    ],
+                    "answerTokens": [
+                      "I",
+                      "need",
+                      "to",
+                      "talk",
+                      "to",
+                      "you",
+                      "about",
+                      "something",
+                      "important",
+                      "From",
+                      "a",
+                      "critical",
+                      "perspective",
+                      "the",
+                      "argument",
+                      "holds"
+                    ],
+                    "sourcePhrase": "Necesito hablar contigo de algo importante. Desde una perspectiva crítica, el argumento se sostiene.",
+                    "feedbackOnError": {
+                      "type": "word_order",
+                      "explanation": "El orden correcto es «I need to talk to you about something important From a critical perspective the argument holds».",
+                      "ruleRef": "gp-c1-inversion"
+                    },
+                    "feedbackOnSuccess": {
+                      "explanation": "El orden produce una frase natural."
+                    }
+                  },
+                  {
+                    "type": "Translate",
+                    "id": "es-en-c1-u12-l07-e03",
+                    "sourcePhrase": "Entiendo cómo te sientes y quiero ayudar. A efectos prácticos, la alternativa es viable.",
+                    "correctTokens": [
+                      "I",
+                      "understand",
+                      "how",
+                      "you",
+                      "feel",
+                      "and",
+                      "I",
+                      "want",
+                      "to",
+                      "help",
+                      "In",
+                      "practical",
+                      "terms",
+                      "the",
+                      "alternative",
+                      "is",
+                      "viable"
+                    ],
+                    "distractorTokens": [
+                      "need",
+                      "talk",
+                      "about"
+                    ],
+                    "feedbackOnError": {
+                      "type": "grammar",
+                      "explanation": "El orden correcto es «I understand how you feel and I want to help In practical terms the alternative is viable».",
+                      "ruleRef": "gp-c1-concession"
+                    },
+                    "feedbackOnSuccess": {
+                      "explanation": "La frase conserva el orden y el significado."
+                    }
+                  },
+                  {
+                    "type": "ClozeDragDrop",
+                    "id": "es-en-c1-u12-l07-e04",
+                    "passage": "I {{b1}} to {{b2}} to you about something important.",
+                    "blanks": [
+                      {
+                        "id": "b1",
+                        "answer": "need",
+                        "options": [
+                          "need",
+                          "something",
+                          "important"
+                        ]
+                      },
+                      {
+                        "id": "b2",
+                        "answer": "talk",
+                        "options": [
+                          "talk",
+                          "something",
+                          "important"
+                        ]
+                      }
+                    ],
+                    "feedbackOnError": {
+                      "type": "grammar",
+                      "explanation": "Las dos formas deben encajar con el contexto de la frase.",
+                      "ruleRef": "gp-c1-concession"
+                    },
+                    "feedbackOnSuccess": {
+                      "explanation": "Los dos huecos encajan con la situación."
+                    }
+                  },
+                  {
+                    "type": "SemanticMatch",
+                    "id": "es-en-c1-u12-l07-e05",
+                    "instructions": "Clasifica la función y el registro de cada intervención.",
+                    "pairs": [
+                      {
+                        "left": "I need to talk to you about something important. From a critical perspective, the argument holds.",
+                        "right": "Planteamiento",
+                        "register": "formal",
+                        "nuance": "Clasifica la función y el registro de la intervención."
+                      },
+                      {
+                        "left": "I understand how you feel and I want to help. In practical terms, the alternative is viable.",
+                        "right": "Concesión",
+                        "register": "neutral",
+                        "nuance": "Clasifica la función y el registro de la intervención."
+                      },
+                      {
+                        "left": "Can we find a solution together? In short, the debate remains open.",
+                        "right": "Conclusión",
+                        "register": "informal",
+                        "nuance": "Clasifica la función y el registro de la intervención."
+                      }
+                    ],
+                    "feedbackOnError": {
+                      "type": "register",
+                      "explanation": "Cada intervención cumple una función y un registro distintos.",
+                      "ruleRef": "gp-c1-inversion"
+                    },
+                    "feedbackOnSuccess": {
+                      "explanation": "Has identificado función y registro."
+                    }
+                  },
+                  {
+                    "type": "ListenChoose",
+                    "id": "es-en-c1-u12-l07-e06",
+                    "audioText": "I understand how you feel and I want to help. In practical terms, the alternative is viable.",
+                    "options": [
+                      "I understand how you feel and I want to help. In practical terms, the alternative is viable.",
+                      "I need to talk to you about something important. From a critical perspective, the argument holds.",
+                      "Can we find a solution together? In short, the debate remains open."
+                    ],
+                    "correctIndex": 0,
+                    "feedbackOnError": {
+                      "type": "comprehension",
+                      "explanation": "El audio dice «I understand how you feel and I want to help. In practical terms, the alternative is viable.».",
+                      "ruleRef": "gp-c1-inversion"
+                    },
+                    "feedbackOnSuccess": {
+                      "explanation": "Has reconocido la frase del audio."
+                    }
+                  },
+                  {
+                    "type": "AudioOnlyPrompt",
+                    "id": "es-en-c1-u12-l07-e07",
+                    "audioText": "Can we find a solution together? In short, the debate remains open.",
+                    "question": "¿Cuál es la idea principal?",
+                    "options": [
+                      "Can we find a solution together? In short, the debate remains open.",
+                      "I need to talk to you about something important. From a critical perspective, the argument holds.",
+                      "I understand how you feel and I want to help. In practical terms, the alternative is viable."
+                    ],
+                    "correctIndex": 0,
+                    "allowSlowPlayback": false,
+                    "feedbackOnError": {
+                      "type": "comprehension",
+                      "explanation": "El audio dice «Can we find a solution together? In short, the debate remains open.».",
+                      "ruleRef": "gp-c1-concession"
+                    },
+                    "feedbackOnSuccess": {
+                      "explanation": "Has identificado la idea principal."
+                    }
+                  },
+                  {
+                    "type": "ListenType",
+                    "id": "es-en-c1-u12-l07-e08",
+                    "audioText": "Can we find a solution together? In short, the debate remains open.",
+                    "transcription": "Can we find a solution together? In short, the debate remains open.",
+                    "feedbackOnError": {
+                      "type": "spelling",
+                      "explanation": "Escribe exactamente «Can we find a solution together? In short, the debate remains open.».",
+                      "ruleRef": "gp-c1-inversion"
+                    },
+                    "feedbackOnSuccess": {
+                      "explanation": "La transcripción coincide con el audio."
+                    }
+                  },
+                  {
+                    "type": "SpeakRepeat",
+                    "id": "es-en-c1-u12-l07-e09",
+                    "targetPhrase": "Can we find a solution together? In short, the debate remains open.",
+                    "audioText": "Can we find a solution together? In short, the debate remains open.",
+                    "feedbackOnError": {
+                      "type": "pronunciation",
+                      "explanation": "Repite «Can we find a solution together? In short, the debate remains open.» con claridad.",
+                      "ruleRef": "gp-c1-inversion"
+                    },
+                    "feedbackOnSuccess": {
+                      "explanation": "La frase se entiende y mantiene el ritmo."
+                    }
+                  },
+                  {
+                    "type": "MatchPairs",
+                    "id": "es-en-c1-u12-l07-e10",
+                    "pairs": [
+                      {
+                        "left": "Necesito hablar contigo de algo importante. Desde una perspectiva crítica, el argumento se sostiene.",
+                        "right": "I need to talk to you about something important. From a critical perspective, the argument holds."
+                      },
+                      {
+                        "left": "Entiendo cómo te sientes y quiero ayudar. A efectos prácticos, la alternativa es viable.",
+                        "right": "I understand how you feel and I want to help. In practical terms, the alternative is viable."
+                      },
+                      {
+                        "left": "¿Podemos buscar una solución juntos? En definitiva, el debate sigue abierto.",
+                        "right": "Can we find a solution together? In short, the debate remains open."
+                      }
+                    ],
+                    "feedbackOnError": {
+                      "type": "vocabulary",
+                      "explanation": "Cada expresión tiene una traducción distinta.",
+                      "ruleRef": "gp-c1-inversion"
+                    },
+                    "feedbackOnSuccess": {
+                      "explanation": "Has asociado cada expresión con su traducción."
+                    }
+                  },
+                  {
+                    "type": "FreeSpeakingPrompt",
+                    "id": "es-en-c1-u12-l07-e11",
+                    "prompt": "Argumenta con matices sobre una conversación difícil y justifica tu postura.",
+                    "minTokens": 30,
+                    "conceptClusters": [
+                      [
+                        "need"
+                      ],
+                      [
+                        "talk"
+                      ],
+                      [
+                        "something"
+                      ]
+                    ],
+                    "modelAnswer": "I need to talk to you about something important. From a critical perspective, the argument holds. I understand how you feel and I want to help. In practical terms, the alternative is viable. Can we find a solution together? In short, the debate remains open.",
+                    "selfAssessmentCriteria": [
+                      "¿La respuesta argumenta y responde a la tarea?",
+                      "¿Usa las dos estructuras gramaticales de la lección?",
+                      "¿Incluye una concesión o una matización?"
+                    ],
+                    "grammarRuleRefs": [
+                      "gp-c1-inversion",
+                      "gp-c1-concession"
+                    ],
+                    "timeLimitSeconds": 90,
+                    "minWpm": 70,
+                    "maxWpm": 160,
+                    "feedbackOnError": {
+                      "type": "grammar",
+                      "explanation": "La respuesta modelo desarrolla una argumentación matizada.",
+                      "ruleRef": "gp-c1-inversion"
+                    }
+                  }
+                ]
+              },
+              {
+                "id": "es-en-c1-u12-l08",
+                "title": "Carta de opinión",
+                "cefrLevel": "C1",
+                "scenario": "Situación comunicativa avanzada sobre una carta de opinión.",
+                "canDo": "Puedo argumentar con matices y precisión sobre una carta de opinión.",
+                "grammarPoints": [
+                  {
+                    "id": "gp-c1-inversion",
+                    "label": "Inversion",
+                    "description": "La inversión enfática coloca el auxiliar antes del sujeto."
+                  },
+                  {
+                    "id": "gp-c1-concession",
+                    "label": "Concession",
+                    "description": "Although, despite y however introducen concesiones."
+                  }
+                ],
+                "vocabFrequencyBand": "8000-12000",
+                "culturalNotes": [
+                  {
+                    "idiom": "read the riot act",
+                    "note": "Expresión para reprender con severidad.",
+                    "translation": "leer la cartilla"
+                  }
+                ],
+                "microLesson": {
+                  "title": "Carta de opinión",
+                  "goals": [
+                    "Usar vocabulario avanzado de una carta de opinión.",
+                    "Aplicar inversion y concession.",
+                    "Argumentar con matices sobre una carta de opinión."
+                  ],
+                  "sections": [
+                    {
+                      "heading": "Lengua en contexto",
+                      "body": "Inversion: La inversión enfática coloca el auxiliar antes del sujeto. Concession: Although, despite y however introducen concesiones.",
+                      "examples": [
+                        {
+                          "source": "Escribo para expresar mi opinión sobre el tema. A efectos prácticos, la alternativa es viable.",
+                          "target": "I am writing to express my opinion on the topic. In practical terms, the alternative is viable."
+                        },
+                        {
+                          "source": "Creo que la educación es fundamental. En definitiva, el debate sigue abierto.",
+                          "target": "I think education is essential. In short, the debate remains open."
+                        }
+                      ]
+                    }
+                  ]
+                },
+                "glossary": [
+                  {
+                    "term": "I am writing to express my opinion on the topic. In practical terms, the alternative is viable.",
+                    "translations": [
+                      "Escribo para expresar mi opinión sobre el tema. A efectos prácticos, la alternativa es viable."
+                    ]
+                  },
+                  {
+                    "term": "I think education is essential. In short, the debate remains open.",
+                    "translations": [
+                      "Creo que la educación es fundamental. En definitiva, el debate sigue abierto."
+                    ]
+                  },
+                  {
+                    "term": "That is why I ask for more investment in schools. It is worth noting that this nuance is decisive.",
+                    "translations": [
+                      "Por eso pido más inversión en las escuelas. Cabe señalar que este matiz resulta decisivo."
+                    ]
+                  }
+                ],
+                "exercises": [
+                  {
+                    "type": "MultipleChoice",
+                    "id": "es-en-c1-u12-l08-e01",
+                    "question": "¿Cuál es la opción correcta para «Escribo para expresar mi opinión sobre el tema. A efectos prácticos, la alternativa es viable.»?",
+                    "options": [
+                      "I am writing to express my opinion on the topic. In practical terms, the alternative is viable.",
+                      "I think education is essential. In short, the debate remains open.",
+                      "That is why I ask for more investment in schools. It is worth noting that this nuance is decisive."
+                    ],
+                    "correctIndex": 0,
+                    "feedbackOnError": {
+                      "type": "vocabulary",
+                      "explanation": "«Escribo para expresar mi opinión sobre el tema. A efectos prácticos, la alternativa es viable.» se dice «I am writing to express my opinion on the topic. In practical terms, the alternative is viable.».",
+                      "ruleRef": "gp-c1-inversion"
+                    },
+                    "feedbackOnSuccess": {
+                      "explanation": "Has elegido la opción precisa."
+                    }
+                  },
+                  {
+                    "type": "OrderWords",
+                    "id": "es-en-c1-u12-l08-e02",
+                    "tokens": [
+                      "am",
+                      "writing",
+                      "to",
+                      "express",
+                      "my",
+                      "opinion",
+                      "on",
+                      "the",
+                      "topic",
+                      "In",
+                      "practical",
+                      "terms",
+                      "the",
+                      "alternative",
+                      "is",
+                      "viable",
+                      "I"
+                    ],
+                    "answerTokens": [
+                      "I",
+                      "am",
+                      "writing",
+                      "to",
+                      "express",
+                      "my",
+                      "opinion",
+                      "on",
+                      "the",
+                      "topic",
+                      "In",
+                      "practical",
+                      "terms",
+                      "the",
+                      "alternative",
+                      "is",
+                      "viable"
+                    ],
+                    "sourcePhrase": "Escribo para expresar mi opinión sobre el tema. A efectos prácticos, la alternativa es viable.",
+                    "feedbackOnError": {
+                      "type": "word_order",
+                      "explanation": "El orden correcto es «I am writing to express my opinion on the topic In practical terms the alternative is viable».",
+                      "ruleRef": "gp-c1-inversion"
+                    },
+                    "feedbackOnSuccess": {
+                      "explanation": "El orden produce una frase natural."
+                    }
+                  },
+                  {
+                    "type": "Translate",
+                    "id": "es-en-c1-u12-l08-e03",
+                    "sourcePhrase": "Creo que la educación es fundamental. En definitiva, el debate sigue abierto.",
+                    "correctTokens": [
+                      "I",
+                      "think",
+                      "education",
+                      "is",
+                      "essential",
+                      "In",
+                      "short",
+                      "the",
+                      "debate",
+                      "remains",
+                      "open"
+                    ],
+                    "distractorTokens": [
+                      "am",
+                      "writing",
+                      "to"
+                    ],
+                    "feedbackOnError": {
+                      "type": "grammar",
+                      "explanation": "El orden correcto es «I think education is essential In short the debate remains open».",
+                      "ruleRef": "gp-c1-concession"
+                    },
+                    "feedbackOnSuccess": {
+                      "explanation": "La frase conserva el orden y el significado."
+                    }
+                  },
+                  {
+                    "type": "ClozeDragDrop",
+                    "id": "es-en-c1-u12-l08-e04",
+                    "passage": "I am {{b1}} to {{b2}} my opinion on the topic.",
+                    "blanks": [
+                      {
+                        "id": "b1",
+                        "answer": "writing",
+                        "options": [
+                          "writing",
+                          "opinion",
+                          "topic"
+                        ]
+                      },
+                      {
+                        "id": "b2",
+                        "answer": "express",
+                        "options": [
+                          "express",
+                          "opinion",
+                          "topic"
+                        ]
+                      }
+                    ],
+                    "feedbackOnError": {
+                      "type": "grammar",
+                      "explanation": "Las dos formas deben encajar con el contexto de la frase.",
+                      "ruleRef": "gp-c1-concession"
+                    },
+                    "feedbackOnSuccess": {
+                      "explanation": "Los dos huecos encajan con la situación."
+                    }
+                  },
+                  {
+                    "type": "SemanticMatch",
+                    "id": "es-en-c1-u12-l08-e05",
+                    "instructions": "Clasifica la función y el registro de cada intervención.",
+                    "pairs": [
+                      {
+                        "left": "I am writing to express my opinion on the topic. In practical terms, the alternative is viable.",
+                        "right": "Planteamiento",
+                        "register": "formal",
+                        "nuance": "Clasifica la función y el registro de la intervención."
+                      },
+                      {
+                        "left": "I think education is essential. In short, the debate remains open.",
+                        "right": "Concesión",
+                        "register": "neutral",
+                        "nuance": "Clasifica la función y el registro de la intervención."
+                      },
+                      {
+                        "left": "That is why I ask for more investment in schools. It is worth noting that this nuance is decisive.",
+                        "right": "Conclusión",
+                        "register": "informal",
+                        "nuance": "Clasifica la función y el registro de la intervención."
+                      }
+                    ],
+                    "feedbackOnError": {
+                      "type": "register",
+                      "explanation": "Cada intervención cumple una función y un registro distintos.",
+                      "ruleRef": "gp-c1-inversion"
+                    },
+                    "feedbackOnSuccess": {
+                      "explanation": "Has identificado función y registro."
+                    }
+                  },
+                  {
+                    "type": "ListenChoose",
+                    "id": "es-en-c1-u12-l08-e06",
+                    "audioText": "I think education is essential. In short, the debate remains open.",
+                    "options": [
+                      "I think education is essential. In short, the debate remains open.",
+                      "I am writing to express my opinion on the topic. In practical terms, the alternative is viable.",
+                      "That is why I ask for more investment in schools. It is worth noting that this nuance is decisive."
+                    ],
+                    "correctIndex": 0,
+                    "feedbackOnError": {
+                      "type": "comprehension",
+                      "explanation": "El audio dice «I think education is essential. In short, the debate remains open.».",
+                      "ruleRef": "gp-c1-inversion"
+                    },
+                    "feedbackOnSuccess": {
+                      "explanation": "Has reconocido la frase del audio."
+                    }
+                  },
+                  {
+                    "type": "AudioOnlyPrompt",
+                    "id": "es-en-c1-u12-l08-e07",
+                    "audioText": "That is why I ask for more investment in schools. It is worth noting that this nuance is decisive.",
+                    "question": "¿Cuál es la idea principal?",
+                    "options": [
+                      "That is why I ask for more investment in schools. It is worth noting that this nuance is decisive.",
+                      "I am writing to express my opinion on the topic. In practical terms, the alternative is viable.",
+                      "I think education is essential. In short, the debate remains open."
+                    ],
+                    "correctIndex": 0,
+                    "allowSlowPlayback": false,
+                    "feedbackOnError": {
+                      "type": "comprehension",
+                      "explanation": "El audio dice «That is why I ask for more investment in schools. It is worth noting that this nuance is decisive.».",
+                      "ruleRef": "gp-c1-concession"
+                    },
+                    "feedbackOnSuccess": {
+                      "explanation": "Has identificado la idea principal."
+                    }
+                  },
+                  {
+                    "type": "ListenType",
+                    "id": "es-en-c1-u12-l08-e08",
+                    "audioText": "That is why I ask for more investment in schools. It is worth noting that this nuance is decisive.",
+                    "transcription": "That is why I ask for more investment in schools. It is worth noting that this nuance is decisive.",
+                    "feedbackOnError": {
+                      "type": "spelling",
+                      "explanation": "Escribe exactamente «That is why I ask for more investment in schools. It is worth noting that this nuance is decisive.».",
+                      "ruleRef": "gp-c1-inversion"
+                    },
+                    "feedbackOnSuccess": {
+                      "explanation": "La transcripción coincide con el audio."
+                    }
+                  },
+                  {
+                    "type": "SpeakRepeat",
+                    "id": "es-en-c1-u12-l08-e09",
+                    "targetPhrase": "That is why I ask for more investment in schools. It is worth noting that this nuance is decisive.",
+                    "audioText": "That is why I ask for more investment in schools. It is worth noting that this nuance is decisive.",
+                    "feedbackOnError": {
+                      "type": "pronunciation",
+                      "explanation": "Repite «That is why I ask for more investment in schools. It is worth noting that this nuance is decisive.» con claridad.",
+                      "ruleRef": "gp-c1-inversion"
+                    },
+                    "feedbackOnSuccess": {
+                      "explanation": "La frase se entiende y mantiene el ritmo."
+                    }
+                  },
+                  {
+                    "type": "MatchPairs",
+                    "id": "es-en-c1-u12-l08-e10",
+                    "pairs": [
+                      {
+                        "left": "Escribo para expresar mi opinión sobre el tema. A efectos prácticos, la alternativa es viable.",
+                        "right": "I am writing to express my opinion on the topic. In practical terms, the alternative is viable."
+                      },
+                      {
+                        "left": "Creo que la educación es fundamental. En definitiva, el debate sigue abierto.",
+                        "right": "I think education is essential. In short, the debate remains open."
+                      },
+                      {
+                        "left": "Por eso pido más inversión en las escuelas. Cabe señalar que este matiz resulta decisivo.",
+                        "right": "That is why I ask for more investment in schools. It is worth noting that this nuance is decisive."
+                      }
+                    ],
+                    "feedbackOnError": {
+                      "type": "vocabulary",
+                      "explanation": "Cada expresión tiene una traducción distinta.",
+                      "ruleRef": "gp-c1-inversion"
+                    },
+                    "feedbackOnSuccess": {
+                      "explanation": "Has asociado cada expresión con su traducción."
+                    }
+                  },
+                  {
+                    "type": "FreeSpeakingPrompt",
+                    "id": "es-en-c1-u12-l08-e11",
+                    "prompt": "Argumenta con matices sobre una carta de opinión y justifica tu postura.",
+                    "minTokens": 30,
+                    "conceptClusters": [
+                      [
+                        "writing"
+                      ],
+                      [
+                        "express"
+                      ],
+                      [
+                        "opinion"
+                      ]
+                    ],
+                    "modelAnswer": "I am writing to express my opinion on the topic. In practical terms, the alternative is viable. I think education is essential. In short, the debate remains open. That is why I ask for more investment in schools. It is worth noting that this nuance is decisive.",
+                    "selfAssessmentCriteria": [
+                      "¿La respuesta argumenta y responde a la tarea?",
+                      "¿Usa las dos estructuras gramaticales de la lección?",
+                      "¿Incluye una concesión o una matización?"
+                    ],
+                    "grammarRuleRefs": [
+                      "gp-c1-inversion",
+                      "gp-c1-concession"
+                    ],
+                    "timeLimitSeconds": 90,
+                    "minWpm": 70,
+                    "maxWpm": 160,
+                    "feedbackOnError": {
+                      "type": "grammar",
+                      "explanation": "La respuesta modelo desarrolla una argumentación matizada.",
+                      "ruleRef": "gp-c1-inversion"
+                    }
+                  }
+                ]
+              },
+              {
+                "id": "es-en-c1-u12-l09",
+                "title": "Integración: resolver un conflicto",
+                "cefrLevel": "C1",
+                "scenario": "Situación comunicativa avanzada sobre resolver un conflicto.",
+                "canDo": "Puedo argumentar con matices y precisión sobre resolver un conflicto.",
+                "grammarPoints": [
+                  {
+                    "id": "gp-c1-inversion",
+                    "label": "Inversion",
+                    "description": "La inversión enfática coloca el auxiliar antes del sujeto."
+                  },
+                  {
+                    "id": "gp-c1-concession",
+                    "label": "Concession",
+                    "description": "Although, despite y however introducen concesiones."
+                  }
+                ],
+                "vocabFrequencyBand": "8000-12000",
+                "culturalNotes": [
+                  {
+                    "idiom": "move the goalposts",
+                    "note": "Expresión para cambiar las condiciones a mitad del proceso.",
+                    "translation": "cambiar las reglas"
+                  }
+                ],
+                "microLesson": {
+                  "title": "Integración: resolver un conflicto",
+                  "goals": [
+                    "Usar vocabulario avanzado de resolver un conflicto.",
+                    "Aplicar inversion y concession.",
+                    "Argumentar con matices sobre resolver un conflicto."
+                  ],
+                  "sections": [
+                    {
+                      "heading": "Lengua en contexto",
+                      "body": "Inversion: La inversión enfática coloca el auxiliar antes del sujeto. Concession: Although, despite y however introducen concesiones.",
+                      "examples": [
+                        {
+                          "source": "Tuvimos un malentendido y discutimos. En definitiva, el debate sigue abierto.",
+                          "target": "We had a misunderstanding and argued. In short, the debate remains open."
+                        },
+                        {
+                          "source": "Después hablamos con calma y pedimos perdón. Cabe señalar que este matiz resulta decisivo.",
+                          "target": "Then we talked calmly and apologised. It is worth noting that this nuance is decisive."
+                        }
+                      ]
+                    }
+                  ]
+                },
+                "glossary": [
+                  {
+                    "term": "We had a misunderstanding and argued. In short, the debate remains open.",
+                    "translations": [
+                      "Tuvimos un malentendido y discutimos. En definitiva, el debate sigue abierto."
+                    ]
+                  },
+                  {
+                    "term": "Then we talked calmly and apologised. It is worth noting that this nuance is decisive.",
+                    "translations": [
+                      "Después hablamos con calma y pedimos perdón. Cabe señalar que este matiz resulta decisivo."
+                    ]
+                  },
+                  {
+                    "term": "Now our relationship is stronger. Broadly speaking, the position is defensible.",
+                    "translations": [
+                      "Ahora nuestra relación es más fuerte. En términos generales, la postura es defendible."
+                    ]
+                  }
+                ],
+                "exercises": [
+                  {
+                    "type": "MultipleChoice",
+                    "id": "es-en-c1-u12-l09-e01",
+                    "question": "¿Cuál es la opción correcta para «Tuvimos un malentendido y discutimos. En definitiva, el debate sigue abierto.»?",
+                    "options": [
+                      "We had a misunderstanding and argued. In short, the debate remains open.",
+                      "Then we talked calmly and apologised. It is worth noting that this nuance is decisive.",
+                      "Now our relationship is stronger. Broadly speaking, the position is defensible."
+                    ],
+                    "correctIndex": 0,
+                    "feedbackOnError": {
+                      "type": "vocabulary",
+                      "explanation": "«Tuvimos un malentendido y discutimos. En definitiva, el debate sigue abierto.» se dice «We had a misunderstanding and argued. In short, the debate remains open.».",
+                      "ruleRef": "gp-c1-inversion"
+                    },
+                    "feedbackOnSuccess": {
+                      "explanation": "Has elegido la opción precisa."
+                    }
+                  },
+                  {
+                    "type": "OrderWords",
+                    "id": "es-en-c1-u12-l09-e02",
+                    "tokens": [
+                      "had",
+                      "a",
+                      "misunderstanding",
+                      "and",
+                      "argued",
+                      "In",
+                      "short",
+                      "the",
+                      "debate",
+                      "remains",
+                      "open",
+                      "We"
+                    ],
+                    "answerTokens": [
+                      "We",
+                      "had",
+                      "a",
+                      "misunderstanding",
+                      "and",
+                      "argued",
+                      "In",
+                      "short",
+                      "the",
+                      "debate",
+                      "remains",
+                      "open"
+                    ],
+                    "sourcePhrase": "Tuvimos un malentendido y discutimos. En definitiva, el debate sigue abierto.",
+                    "feedbackOnError": {
+                      "type": "word_order",
+                      "explanation": "El orden correcto es «We had a misunderstanding and argued In short the debate remains open».",
+                      "ruleRef": "gp-c1-inversion"
+                    },
+                    "feedbackOnSuccess": {
+                      "explanation": "El orden produce una frase natural."
+                    }
+                  },
+                  {
+                    "type": "Translate",
+                    "id": "es-en-c1-u12-l09-e03",
+                    "sourcePhrase": "Después hablamos con calma y pedimos perdón. Cabe señalar que este matiz resulta decisivo.",
+                    "correctTokens": [
+                      "Then",
+                      "we",
+                      "talked",
+                      "calmly",
+                      "and",
+                      "apologised",
+                      "It",
+                      "is",
+                      "worth",
+                      "noting",
+                      "that",
+                      "this",
+                      "nuance",
+                      "is",
+                      "decisive"
+                    ],
+                    "distractorTokens": [
+                      "We",
+                      "had",
+                      "a"
+                    ],
+                    "feedbackOnError": {
+                      "type": "grammar",
+                      "explanation": "El orden correcto es «Then we talked calmly and apologised It is worth noting that this nuance is decisive».",
+                      "ruleRef": "gp-c1-concession"
+                    },
+                    "feedbackOnSuccess": {
+                      "explanation": "La frase conserva el orden y el significado."
+                    }
+                  },
+                  {
+                    "type": "ClozeDragDrop",
+                    "id": "es-en-c1-u12-l09-e04",
+                    "passage": "We had a {{b1}} and {{b2}}.",
+                    "blanks": [
+                      {
+                        "id": "b1",
+                        "answer": "misunderstanding",
+                        "options": [
+                          "misunderstanding",
+                          "very",
+                          "today"
+                        ]
+                      },
+                      {
+                        "id": "b2",
+                        "answer": "argued",
+                        "options": [
+                          "argued",
+                          "very",
+                          "today"
+                        ]
+                      }
+                    ],
+                    "feedbackOnError": {
+                      "type": "grammar",
+                      "explanation": "Las dos formas deben encajar con el contexto de la frase.",
+                      "ruleRef": "gp-c1-concession"
+                    },
+                    "feedbackOnSuccess": {
+                      "explanation": "Los dos huecos encajan con la situación."
+                    }
+                  },
+                  {
+                    "type": "SemanticMatch",
+                    "id": "es-en-c1-u12-l09-e05",
+                    "instructions": "Clasifica la función y el registro de cada intervención.",
+                    "pairs": [
+                      {
+                        "left": "We had a misunderstanding and argued. In short, the debate remains open.",
+                        "right": "Planteamiento",
+                        "register": "formal",
+                        "nuance": "Clasifica la función y el registro de la intervención."
+                      },
+                      {
+                        "left": "Then we talked calmly and apologised. It is worth noting that this nuance is decisive.",
+                        "right": "Concesión",
+                        "register": "neutral",
+                        "nuance": "Clasifica la función y el registro de la intervención."
+                      },
+                      {
+                        "left": "Now our relationship is stronger. Broadly speaking, the position is defensible.",
+                        "right": "Conclusión",
+                        "register": "informal",
+                        "nuance": "Clasifica la función y el registro de la intervención."
+                      }
+                    ],
+                    "feedbackOnError": {
+                      "type": "register",
+                      "explanation": "Cada intervención cumple una función y un registro distintos.",
+                      "ruleRef": "gp-c1-inversion"
+                    },
+                    "feedbackOnSuccess": {
+                      "explanation": "Has identificado función y registro."
+                    }
+                  },
+                  {
+                    "type": "ListenChoose",
+                    "id": "es-en-c1-u12-l09-e06",
+                    "audioText": "Then we talked calmly and apologised. It is worth noting that this nuance is decisive.",
+                    "options": [
+                      "Then we talked calmly and apologised. It is worth noting that this nuance is decisive.",
+                      "We had a misunderstanding and argued. In short, the debate remains open.",
+                      "Now our relationship is stronger. Broadly speaking, the position is defensible."
+                    ],
+                    "correctIndex": 0,
+                    "feedbackOnError": {
+                      "type": "comprehension",
+                      "explanation": "El audio dice «Then we talked calmly and apologised. It is worth noting that this nuance is decisive.».",
+                      "ruleRef": "gp-c1-inversion"
+                    },
+                    "feedbackOnSuccess": {
+                      "explanation": "Has reconocido la frase del audio."
+                    }
+                  },
+                  {
+                    "type": "AudioOnlyPrompt",
+                    "id": "es-en-c1-u12-l09-e07",
+                    "audioText": "Now our relationship is stronger. Broadly speaking, the position is defensible.",
+                    "question": "¿Cuál es la idea principal?",
+                    "options": [
+                      "Now our relationship is stronger. Broadly speaking, the position is defensible.",
+                      "We had a misunderstanding and argued. In short, the debate remains open.",
+                      "Then we talked calmly and apologised. It is worth noting that this nuance is decisive."
+                    ],
+                    "correctIndex": 0,
+                    "allowSlowPlayback": false,
+                    "feedbackOnError": {
+                      "type": "comprehension",
+                      "explanation": "El audio dice «Now our relationship is stronger. Broadly speaking, the position is defensible.».",
+                      "ruleRef": "gp-c1-concession"
+                    },
+                    "feedbackOnSuccess": {
+                      "explanation": "Has identificado la idea principal."
+                    }
+                  },
+                  {
+                    "type": "ListenType",
+                    "id": "es-en-c1-u12-l09-e08",
+                    "audioText": "Now our relationship is stronger. Broadly speaking, the position is defensible.",
+                    "transcription": "Now our relationship is stronger. Broadly speaking, the position is defensible.",
+                    "feedbackOnError": {
+                      "type": "spelling",
+                      "explanation": "Escribe exactamente «Now our relationship is stronger. Broadly speaking, the position is defensible.».",
+                      "ruleRef": "gp-c1-inversion"
+                    },
+                    "feedbackOnSuccess": {
+                      "explanation": "La transcripción coincide con el audio."
+                    }
+                  },
+                  {
+                    "type": "SpeakRepeat",
+                    "id": "es-en-c1-u12-l09-e09",
+                    "targetPhrase": "Now our relationship is stronger. Broadly speaking, the position is defensible.",
+                    "audioText": "Now our relationship is stronger. Broadly speaking, the position is defensible.",
+                    "feedbackOnError": {
+                      "type": "pronunciation",
+                      "explanation": "Repite «Now our relationship is stronger. Broadly speaking, the position is defensible.» con claridad.",
+                      "ruleRef": "gp-c1-inversion"
+                    },
+                    "feedbackOnSuccess": {
+                      "explanation": "La frase se entiende y mantiene el ritmo."
+                    }
+                  },
+                  {
+                    "type": "MatchPairs",
+                    "id": "es-en-c1-u12-l09-e10",
+                    "pairs": [
+                      {
+                        "left": "Tuvimos un malentendido y discutimos. En definitiva, el debate sigue abierto.",
+                        "right": "We had a misunderstanding and argued. In short, the debate remains open."
+                      },
+                      {
+                        "left": "Después hablamos con calma y pedimos perdón. Cabe señalar que este matiz resulta decisivo.",
+                        "right": "Then we talked calmly and apologised. It is worth noting that this nuance is decisive."
+                      },
+                      {
+                        "left": "Ahora nuestra relación es más fuerte. En términos generales, la postura es defendible.",
+                        "right": "Now our relationship is stronger. Broadly speaking, the position is defensible."
+                      }
+                    ],
+                    "feedbackOnError": {
+                      "type": "vocabulary",
+                      "explanation": "Cada expresión tiene una traducción distinta.",
+                      "ruleRef": "gp-c1-inversion"
+                    },
+                    "feedbackOnSuccess": {
+                      "explanation": "Has asociado cada expresión con su traducción."
+                    }
+                  },
+                  {
+                    "type": "FreeSpeakingPrompt",
+                    "id": "es-en-c1-u12-l09-e11",
+                    "prompt": "Argumenta con matices sobre resolver un conflicto y justifica tu postura.",
+                    "minTokens": 30,
+                    "conceptClusters": [
+                      [
+                        "misunderstanding"
+                      ],
+                      [
+                        "argued"
+                      ],
+                      [
+                        "short"
+                      ]
+                    ],
+                    "modelAnswer": "We had a misunderstanding and argued. In short, the debate remains open. Then we talked calmly and apologised. It is worth noting that this nuance is decisive. Now our relationship is stronger. Broadly speaking, the position is defensible.",
+                    "selfAssessmentCriteria": [
+                      "¿La respuesta argumenta y responde a la tarea?",
+                      "¿Usa las dos estructuras gramaticales de la lección?",
+                      "¿Incluye una concesión o una matización?"
+                    ],
+                    "grammarRuleRefs": [
+                      "gp-c1-inversion",
+                      "gp-c1-concession"
+                    ],
+                    "timeLimitSeconds": 90,
+                    "minWpm": 70,
+                    "maxWpm": 160,
+                    "feedbackOnError": {
+                      "type": "grammar",
+                      "explanation": "La respuesta modelo desarrolla una argumentación matizada.",
+                      "ruleRef": "gp-c1-inversion"
+                    }
+                  }
+                ]
+              },
+              {
+                "id": "es-en-c1-u12-l10",
+                "title": "Evaluación: mis relaciones",
+                "cefrLevel": "C1",
+                "scenario": "Situación comunicativa avanzada sobre mis relaciones.",
+                "canDo": "Puedo argumentar con matices y precisión sobre mis relaciones.",
+                "grammarPoints": [
+                  {
+                    "id": "gp-c1-inversion",
+                    "label": "Inversion",
+                    "description": "La inversión enfática coloca el auxiliar antes del sujeto."
+                  },
+                  {
+                    "id": "gp-c1-concession",
+                    "label": "Concession",
+                    "description": "Although, despite y however introducen concesiones."
+                  }
+                ],
+                "vocabFrequencyBand": "8000-12000",
+                "culturalNotes": [
+                  {
+                    "idiom": "take umbrage",
+                    "note": "Expresión para ofenderse por algo.",
+                    "translation": "ofenderse"
+                  }
+                ],
+                "microLesson": {
+                  "title": "Evaluación: mis relaciones",
+                  "goals": [
+                    "Usar vocabulario avanzado de mis relaciones.",
+                    "Aplicar inversion y concession.",
+                    "Argumentar con matices sobre mis relaciones."
+                  ],
+                  "sections": [
+                    {
+                      "heading": "Lengua en contexto",
+                      "body": "Inversion: La inversión enfática coloca el auxiliar antes del sujeto. Concession: Although, despite y however introducen concesiones.",
+                      "examples": [
+                        {
+                          "source": "Las relaciones importantes necesitan tiempo y respeto. Cabe señalar que este matiz resulta decisivo.",
+                          "target": "Important relationships need time and respect. It is worth noting that this nuance is decisive."
+                        },
+                        {
+                          "source": "Aprendo de las personas que me rodean. En términos generales, la postura es defendible.",
+                          "target": "I learn from the people around me. Broadly speaking, the position is defensible."
+                        }
+                      ]
+                    }
+                  ]
+                },
+                "glossary": [
+                  {
+                    "term": "Important relationships need time and respect. It is worth noting that this nuance is decisive.",
+                    "translations": [
+                      "Las relaciones importantes necesitan tiempo y respeto. Cabe señalar que este matiz resulta decisivo."
+                    ]
+                  },
+                  {
+                    "term": "I learn from the people around me. Broadly speaking, the position is defensible.",
+                    "translations": [
+                      "Aprendo de las personas que me rodean. En términos generales, la postura es defendible."
+                    ]
+                  },
+                  {
+                    "term": "I try to listen before giving my opinion. In other words, we should weigh the costs.",
+                    "translations": [
+                      "Intento escuchar antes de opinar. Dicho de otro modo, conviene sopesar los costes."
+                    ]
+                  }
+                ],
+                "exercises": [
+                  {
+                    "type": "MultipleChoice",
+                    "id": "es-en-c1-u12-l10-e01",
+                    "question": "¿Cuál es la opción correcta para «Las relaciones importantes necesitan tiempo y respeto. Cabe señalar que este matiz resulta decisivo.»?",
+                    "options": [
+                      "Important relationships need time and respect. It is worth noting that this nuance is decisive.",
+                      "I learn from the people around me. Broadly speaking, the position is defensible.",
+                      "I try to listen before giving my opinion. In other words, we should weigh the costs."
+                    ],
+                    "correctIndex": 0,
+                    "feedbackOnError": {
+                      "type": "vocabulary",
+                      "explanation": "«Las relaciones importantes necesitan tiempo y respeto. Cabe señalar que este matiz resulta decisivo.» se dice «Important relationships need time and respect. It is worth noting that this nuance is decisive.».",
+                      "ruleRef": "gp-c1-inversion"
+                    },
+                    "feedbackOnSuccess": {
+                      "explanation": "Has elegido la opción precisa."
+                    }
+                  },
+                  {
+                    "type": "OrderWords",
+                    "id": "es-en-c1-u12-l10-e02",
+                    "tokens": [
+                      "relationships",
+                      "need",
+                      "time",
+                      "and",
+                      "respect",
+                      "It",
+                      "is",
+                      "worth",
+                      "noting",
+                      "that",
+                      "this",
+                      "nuance",
+                      "is",
+                      "decisive",
+                      "Important"
+                    ],
+                    "answerTokens": [
+                      "Important",
+                      "relationships",
+                      "need",
+                      "time",
+                      "and",
+                      "respect",
+                      "It",
+                      "is",
+                      "worth",
+                      "noting",
+                      "that",
+                      "this",
+                      "nuance",
+                      "is",
+                      "decisive"
+                    ],
+                    "sourcePhrase": "Las relaciones importantes necesitan tiempo y respeto. Cabe señalar que este matiz resulta decisivo.",
+                    "feedbackOnError": {
+                      "type": "word_order",
+                      "explanation": "El orden correcto es «Important relationships need time and respect It is worth noting that this nuance is decisive».",
+                      "ruleRef": "gp-c1-inversion"
+                    },
+                    "feedbackOnSuccess": {
+                      "explanation": "El orden produce una frase natural."
+                    }
+                  },
+                  {
+                    "type": "Translate",
+                    "id": "es-en-c1-u12-l10-e03",
+                    "sourcePhrase": "Aprendo de las personas que me rodean. En términos generales, la postura es defendible.",
+                    "correctTokens": [
+                      "I",
+                      "learn",
+                      "from",
+                      "the",
+                      "people",
+                      "around",
+                      "me",
+                      "Broadly",
+                      "speaking",
+                      "the",
+                      "position",
+                      "is",
+                      "defensible"
+                    ],
+                    "distractorTokens": [
+                      "Important",
+                      "relationships",
+                      "need"
+                    ],
+                    "feedbackOnError": {
+                      "type": "grammar",
+                      "explanation": "El orden correcto es «I learn from the people around me Broadly speaking the position is defensible».",
+                      "ruleRef": "gp-c1-concession"
+                    },
+                    "feedbackOnSuccess": {
+                      "explanation": "La frase conserva el orden y el significado."
+                    }
+                  },
+                  {
+                    "type": "ClozeDragDrop",
+                    "id": "es-en-c1-u12-l10-e04",
+                    "passage": "{{b1}} {{b2}} need time and respect.",
+                    "blanks": [
+                      {
+                        "id": "b1",
+                        "answer": "Important",
+                        "options": [
+                          "Important",
+                          "need",
+                          "time"
+                        ]
+                      },
+                      {
+                        "id": "b2",
+                        "answer": "relationships",
+                        "options": [
+                          "relationships",
+                          "need",
+                          "time"
+                        ]
+                      }
+                    ],
+                    "feedbackOnError": {
+                      "type": "grammar",
+                      "explanation": "Las dos formas deben encajar con el contexto de la frase.",
+                      "ruleRef": "gp-c1-concession"
+                    },
+                    "feedbackOnSuccess": {
+                      "explanation": "Los dos huecos encajan con la situación."
+                    }
+                  },
+                  {
+                    "type": "SemanticMatch",
+                    "id": "es-en-c1-u12-l10-e05",
+                    "instructions": "Clasifica la función y el registro de cada intervención.",
+                    "pairs": [
+                      {
+                        "left": "Important relationships need time and respect. It is worth noting that this nuance is decisive.",
+                        "right": "Planteamiento",
+                        "register": "formal",
+                        "nuance": "Clasifica la función y el registro de la intervención."
+                      },
+                      {
+                        "left": "I learn from the people around me. Broadly speaking, the position is defensible.",
+                        "right": "Concesión",
+                        "register": "neutral",
+                        "nuance": "Clasifica la función y el registro de la intervención."
+                      },
+                      {
+                        "left": "I try to listen before giving my opinion. In other words, we should weigh the costs.",
+                        "right": "Conclusión",
+                        "register": "informal",
+                        "nuance": "Clasifica la función y el registro de la intervención."
+                      }
+                    ],
+                    "feedbackOnError": {
+                      "type": "register",
+                      "explanation": "Cada intervención cumple una función y un registro distintos.",
+                      "ruleRef": "gp-c1-inversion"
+                    },
+                    "feedbackOnSuccess": {
+                      "explanation": "Has identificado función y registro."
+                    }
+                  },
+                  {
+                    "type": "ListenChoose",
+                    "id": "es-en-c1-u12-l10-e06",
+                    "audioText": "I learn from the people around me. Broadly speaking, the position is defensible.",
+                    "options": [
+                      "I learn from the people around me. Broadly speaking, the position is defensible.",
+                      "Important relationships need time and respect. It is worth noting that this nuance is decisive.",
+                      "I try to listen before giving my opinion. In other words, we should weigh the costs."
+                    ],
+                    "correctIndex": 0,
+                    "feedbackOnError": {
+                      "type": "comprehension",
+                      "explanation": "El audio dice «I learn from the people around me. Broadly speaking, the position is defensible.».",
+                      "ruleRef": "gp-c1-inversion"
+                    },
+                    "feedbackOnSuccess": {
+                      "explanation": "Has reconocido la frase del audio."
+                    }
+                  },
+                  {
+                    "type": "AudioOnlyPrompt",
+                    "id": "es-en-c1-u12-l10-e07",
+                    "audioText": "I try to listen before giving my opinion. In other words, we should weigh the costs.",
+                    "question": "¿Cuál es la idea principal?",
+                    "options": [
+                      "I try to listen before giving my opinion. In other words, we should weigh the costs.",
+                      "Important relationships need time and respect. It is worth noting that this nuance is decisive.",
+                      "I learn from the people around me. Broadly speaking, the position is defensible."
+                    ],
+                    "correctIndex": 0,
+                    "allowSlowPlayback": false,
+                    "feedbackOnError": {
+                      "type": "comprehension",
+                      "explanation": "El audio dice «I try to listen before giving my opinion. In other words, we should weigh the costs.».",
+                      "ruleRef": "gp-c1-concession"
+                    },
+                    "feedbackOnSuccess": {
+                      "explanation": "Has identificado la idea principal."
+                    }
+                  },
+                  {
+                    "type": "ListenType",
+                    "id": "es-en-c1-u12-l10-e08",
+                    "audioText": "I try to listen before giving my opinion. In other words, we should weigh the costs.",
+                    "transcription": "I try to listen before giving my opinion. In other words, we should weigh the costs.",
+                    "feedbackOnError": {
+                      "type": "spelling",
+                      "explanation": "Escribe exactamente «I try to listen before giving my opinion. In other words, we should weigh the costs.».",
+                      "ruleRef": "gp-c1-inversion"
+                    },
+                    "feedbackOnSuccess": {
+                      "explanation": "La transcripción coincide con el audio."
+                    }
+                  },
+                  {
+                    "type": "SpeakRepeat",
+                    "id": "es-en-c1-u12-l10-e09",
+                    "targetPhrase": "I try to listen before giving my opinion. In other words, we should weigh the costs.",
+                    "audioText": "I try to listen before giving my opinion. In other words, we should weigh the costs.",
+                    "feedbackOnError": {
+                      "type": "pronunciation",
+                      "explanation": "Repite «I try to listen before giving my opinion. In other words, we should weigh the costs.» con claridad.",
+                      "ruleRef": "gp-c1-inversion"
+                    },
+                    "feedbackOnSuccess": {
+                      "explanation": "La frase se entiende y mantiene el ritmo."
+                    }
+                  },
+                  {
+                    "type": "MatchPairs",
+                    "id": "es-en-c1-u12-l10-e10",
+                    "pairs": [
+                      {
+                        "left": "Las relaciones importantes necesitan tiempo y respeto. Cabe señalar que este matiz resulta decisivo.",
+                        "right": "Important relationships need time and respect. It is worth noting that this nuance is decisive."
+                      },
+                      {
+                        "left": "Aprendo de las personas que me rodean. En términos generales, la postura es defendible.",
+                        "right": "I learn from the people around me. Broadly speaking, the position is defensible."
+                      },
+                      {
+                        "left": "Intento escuchar antes de opinar. Dicho de otro modo, conviene sopesar los costes.",
+                        "right": "I try to listen before giving my opinion. In other words, we should weigh the costs."
+                      }
+                    ],
+                    "feedbackOnError": {
+                      "type": "vocabulary",
+                      "explanation": "Cada expresión tiene una traducción distinta.",
+                      "ruleRef": "gp-c1-inversion"
+                    },
+                    "feedbackOnSuccess": {
+                      "explanation": "Has asociado cada expresión con su traducción."
+                    }
+                  },
+                  {
+                    "type": "FreeSpeakingPrompt",
+                    "id": "es-en-c1-u12-l10-e11",
+                    "prompt": "Argumenta con matices sobre mis relaciones y justifica tu postura.",
+                    "minTokens": 30,
+                    "conceptClusters": [
+                      [
+                        "Important"
+                      ],
+                      [
+                        "relationships"
+                      ],
+                      [
+                        "need"
+                      ]
+                    ],
+                    "modelAnswer": "Important relationships need time and respect. It is worth noting that this nuance is decisive. I learn from the people around me. Broadly speaking, the position is defensible. I try to listen before giving my opinion. In other words, we should weigh the costs.",
+                    "selfAssessmentCriteria": [
+                      "¿La respuesta argumenta y responde a la tarea?",
+                      "¿Usa las dos estructuras gramaticales de la lección?",
+                      "¿Incluye una concesión o una matización?"
+                    ],
+                    "grammarRuleRefs": [
+                      "gp-c1-inversion",
+                      "gp-c1-concession"
+                    ],
+                    "timeLimitSeconds": 90,
+                    "minWpm": 70,
+                    "maxWpm": 160,
+                    "feedbackOnError": {
+                      "type": "grammar",
+                      "explanation": "La respuesta modelo desarrolla una argumentación matizada.",
+                      "ruleRef": "gp-c1-inversion"
+                    }
+                  }
+                ]
+              }
+            ]
           }
         ]
       },
