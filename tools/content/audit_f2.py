@@ -11,7 +11,9 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[2]
 COURSES = {
     "es-en": ROOT / "content/content-es-en/src/main/assets/courses/es-en/course.json",
+    "es-pt": ROOT / "content/content-es-pt/src/main/assets/courses/es-pt/course.json",
     "es-fr": ROOT / "content/content-es-fr/src/main/assets/courses/es-fr/course.json",
+    "es-ja": ROOT / "content/content-es-ja/src/main/assets/courses/es-ja/course.json",
 }
 MAX_TOKENS = 12
 
@@ -107,6 +109,12 @@ def main() -> None:
             "unique_exercise_ids": len(exercises)
             == len({exercise["id"] for exercise in exercises}),
         }
+        if course_id == "es-ja":
+            report[course_id]["max_japanese_characters"] = max(
+                len((exercise.get("audioText") or "").replace(" ", ""))
+                for exercise in exercises
+                if exercise["type"] in {"ListenType", "SpeakRepeat", "ListenChoose"}
+            )
         print(course_id, report[course_id])
 
     out = ROOT / "build" / "reports" / "f2-audit.json"
