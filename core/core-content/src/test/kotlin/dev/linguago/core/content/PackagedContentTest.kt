@@ -125,7 +125,9 @@ class PackagedContentTest {
 
         val a2Lessons =
             lessons.filter { lesson ->
-                lesson.id.value.startsWith("es-en-a2-") && !lesson.id.value.contains("-p0-")
+                lesson.id.value.startsWith("es-en-a2-") &&
+                    !lesson.id.value.contains("-p0-") &&
+                    !lesson.id.value.matches(Regex("es-en-a2-u\\d{2}-l\\d{2}"))
             }
         assertEquals(16, a2Lessons.size)
         assertTrue(
@@ -774,7 +776,9 @@ class PackagedContentTest {
             val lessons = course!!.levels.flatMap { level -> level.units.flatMap { unit -> unit.lessons } }
             val a2Lessons =
                 lessons.filter { lesson ->
-                    lesson.cefrLevel == CefrLevel.A2 && !lesson.id.value.contains("-p0-")
+                    lesson.cefrLevel == CefrLevel.A2 &&
+                        !lesson.id.value.contains("-p0-") &&
+                        !lesson.id.value.matches(Regex("$courseId-a2-u\\d{2}-l\\d{2}"))
                 }
             assertEquals("$courseId debe tener 8 lecciones A2", 8, a2Lessons.size)
             assertEquals(
