@@ -154975,6 +154975,3424 @@
               ]
             }
           ]
+        },
+        {
+          "id": "es-fr-b2-u08",
+          "title": "B2 · Casa y convivencia",
+          "lessons": [
+            {
+              "id": "es-fr-b2-u08-l01",
+              "title": "Repaso: trabajo",
+              "cefrLevel": "B2",
+              "scenario": "Situación comunicativa avanzada sobre la experiencia profesional.",
+              "canDo": "Puedo argumentar y matizar sobre la experiencia profesional.",
+              "grammarPoints": [
+                {
+                  "id": "gp-b2-concession",
+                  "label": "Concession",
+                  "description": "Although, despite y however introducen concesiones."
+                },
+                {
+                  "id": "gp-b2-modal-perfect",
+                  "label": "Modal perfect",
+                  "description": "Must have, might have y should have especulan sobre el pasado."
+                }
+              ],
+              "vocabFrequencyBand": "3000-5000",
+              "culturalNotes": [
+                {
+                  "idiom": "donner un coup de main",
+                  "note": "Expresión para ofrecer ayuda.",
+                  "translation": "echar una mano"
+                }
+              ],
+              "microLesson": {
+                "title": "Repaso: trabajo",
+                "goals": [
+                  "Usar vocabulario avanzado de la experiencia profesional.",
+                  "Aplicar concession y modal perfect.",
+                  "Argumentar y matizar sobre la experiencia profesional."
+                ],
+                "sections": [
+                  {
+                    "heading": "Lengua en contexto",
+                    "body": "Concession: Although, despite y however introducen concesiones. Modal perfect: Must have, might have y should have especulan sobre el pasado.",
+                    "examples": [
+                      {
+                        "source": "He trabajado en tres países. Dicho esto, depende del contexto.",
+                        "target": "J'ai travaillé dans trois pays. Cela dit, cela dépend du contexte."
+                      },
+                      {
+                        "source": "Tengo experiencia en atención al cliente. En otras palabras, merece la pena considerarlo.",
+                        "target": "J'ai de l'expérience dans le service client. En d'autres termes, cela vaut la peine d'être considéré."
+                      }
+                    ]
+                  }
+                ]
+              },
+              "glossary": [
+                {
+                  "term": "J'ai travaillé dans trois pays. Cela dit, cela dépend du contexte.",
+                  "translations": [
+                    "He trabajado en tres países. Dicho esto, depende del contexto."
+                  ]
+                },
+                {
+                  "term": "J'ai de l'expérience dans le service client. En d'autres termes, cela vaut la peine d'être considéré.",
+                  "translations": [
+                    "Tengo experiencia en atención al cliente. En otras palabras, merece la pena considerarlo."
+                  ]
+                },
+                {
+                  "term": "Je veux apprendre de nouvelles compétences. Je crains que ce soit plus compliqué.",
+                  "translations": [
+                    "Quiero aprender nuevas habilidades. Me temo que puede ser más complicado."
+                  ]
+                }
+              ],
+              "exercises": [
+                {
+                  "type": "MultipleChoice",
+                  "id": "es-fr-b2-u08-l01-e01",
+                  "question": "¿Cuál es la opción correcta para «He trabajado en tres países. Dicho esto, depende del contexto.»?",
+                  "options": [
+                    "J'ai travaillé dans trois pays. Cela dit, cela dépend du contexte.",
+                    "J'ai de l'expérience dans le service client. En d'autres termes, cela vaut la peine d'être considéré.",
+                    "Je veux apprendre de nouvelles compétences. Je crains que ce soit plus compliqué."
+                  ],
+                  "correctIndex": 0,
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "«He trabajado en tres países. Dicho esto, depende del contexto.» se dice «J'ai travaillé dans trois pays. Cela dit, cela dépend du contexte.».",
+                    "ruleRef": "gp-b2-concession"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has elegido la traducción correcta."
+                  }
+                },
+                {
+                  "type": "OrderWords",
+                  "id": "es-fr-b2-u08-l01-e02",
+                  "tokens": [
+                    "travaillé",
+                    "dans",
+                    "trois",
+                    "pays",
+                    "Cela",
+                    "dit",
+                    "cela",
+                    "dépend",
+                    "du",
+                    "contexte",
+                    "J'ai"
+                  ],
+                  "answerTokens": [
+                    "J'ai",
+                    "travaillé",
+                    "dans",
+                    "trois",
+                    "pays",
+                    "Cela",
+                    "dit",
+                    "cela",
+                    "dépend",
+                    "du",
+                    "contexte"
+                  ],
+                  "sourcePhrase": "He trabajado en tres países. Dicho esto, depende del contexto.",
+                  "feedbackOnError": {
+                    "type": "word_order",
+                    "explanation": "El orden correcto es «J'ai travaillé dans trois pays Cela dit cela dépend du contexte».",
+                    "ruleRef": "gp-b2-concession"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "El orden produce una frase natural."
+                  }
+                },
+                {
+                  "type": "ClozeDragDrop",
+                  "id": "es-fr-b2-u08-l01-e03",
+                  "passage": "{{b1}} {{b2}} dans trois pays.",
+                  "blanks": [
+                    {
+                      "id": "b1",
+                      "answer": "J'ai",
+                      "options": [
+                        "J'ai",
+                        "trois",
+                        "pays"
+                      ]
+                    },
+                    {
+                      "id": "b2",
+                      "answer": "travaillé",
+                      "options": [
+                        "travaillé",
+                        "trois",
+                        "pays"
+                      ]
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "Las dos formas deben encajar con el contexto de la frase.",
+                    "ruleRef": "gp-b2-modal-perfect"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Los dos huecos encajan con la situación."
+                  }
+                },
+                {
+                  "type": "SemanticMatch",
+                  "id": "es-fr-b2-u08-l01-e04",
+                  "instructions": "Clasifica la función comunicativa de cada intervención.",
+                  "pairs": [
+                    {
+                      "left": "J'ai travaillé dans trois pays. Cela dit, cela dépend du contexte.",
+                      "right": "Planteamiento",
+                      "register": "formal",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    },
+                    {
+                      "left": "J'ai de l'expérience dans le service client. En d'autres termes, cela vaut la peine d'être considéré.",
+                      "right": "Concesión",
+                      "register": "neutral",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    },
+                    {
+                      "left": "Je veux apprendre de nouvelles compétences. Je crains que ce soit plus compliqué.",
+                      "right": "Conclusión",
+                      "register": "informal",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "Cada intervención cumple una función comunicativa distinta.",
+                    "ruleRef": "gp-b2-concession"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has identificado la función de cada intervención."
+                  }
+                },
+                {
+                  "type": "SemanticMatch",
+                  "id": "es-fr-b2-u08-l01-e05",
+                  "instructions": "Distingue el registro de cada intervención.",
+                  "pairs": [
+                    {
+                      "left": "J'ai travaillé dans trois pays. Cela dit, cela dépend du contexte.",
+                      "right": "Formal",
+                      "register": "formal",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    },
+                    {
+                      "left": "J'ai de l'expérience dans le service client. En d'autres termes, cela vaut la peine d'être considéré.",
+                      "right": "Neutral",
+                      "register": "neutral",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    },
+                    {
+                      "left": "Je veux apprendre de nouvelles compétences. Je crains que ce soit plus compliqué.",
+                      "right": "Informal",
+                      "register": "informal",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "register",
+                    "explanation": "El registro cambia según el contexto y la relación con el interlocutor.",
+                    "ruleRef": "gp-b2-modal-perfect"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has distinguido el registro de cada intervención."
+                  }
+                },
+                {
+                  "type": "AudioOnlyPrompt",
+                  "id": "es-fr-b2-u08-l01-e06",
+                  "audioText": "J'ai de l'expérience dans le service client. En d'autres termes, cela vaut la peine d'être considéré.",
+                  "question": "¿Qué ha dicho el hablante?",
+                  "options": [
+                    "J'ai de l'expérience dans le service client. En d'autres termes, cela vaut la peine d'être considéré.",
+                    "J'ai travaillé dans trois pays. Cela dit, cela dépend du contexte.",
+                    "Je veux apprendre de nouvelles compétences. Je crains que ce soit plus compliqué."
+                  ],
+                  "correctIndex": 0,
+                  "allowSlowPlayback": true,
+                  "feedbackOnError": {
+                    "type": "comprehension",
+                    "explanation": "El audio dice «J'ai de l'expérience dans le service client. En d'autres termes, cela vaut la peine d'être considéré.».",
+                    "ruleRef": "gp-b2-concession"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has comprendido el mensaje del audio."
+                  }
+                },
+                {
+                  "type": "AudioOnlyPrompt",
+                  "id": "es-fr-b2-u08-l01-e07",
+                  "audioText": "Je veux apprendre de nouvelles compétences. Je crains que ce soit plus compliqué.",
+                  "question": "¿Cuál es la idea principal?",
+                  "options": [
+                    "Je veux apprendre de nouvelles compétences. Je crains que ce soit plus compliqué.",
+                    "J'ai travaillé dans trois pays. Cela dit, cela dépend du contexte.",
+                    "J'ai de l'expérience dans le service client. En d'autres termes, cela vaut la peine d'être considéré."
+                  ],
+                  "correctIndex": 0,
+                  "allowSlowPlayback": false,
+                  "feedbackOnError": {
+                    "type": "comprehension",
+                    "explanation": "El audio dice «Je veux apprendre de nouvelles compétences. Je crains que ce soit plus compliqué.».",
+                    "ruleRef": "gp-b2-modal-perfect"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has identificado la idea principal."
+                  }
+                },
+                {
+                  "type": "ListenType",
+                  "id": "es-fr-b2-u08-l01-e08",
+                  "audioText": "Je veux apprendre de nouvelles compétences. Je crains que ce soit plus compliqué.",
+                  "transcription": "Je veux apprendre de nouvelles compétences. Je crains que ce soit plus compliqué.",
+                  "feedbackOnError": {
+                    "type": "spelling",
+                    "explanation": "Escribe exactamente «Je veux apprendre de nouvelles compétences. Je crains que ce soit plus compliqué.».",
+                    "ruleRef": "gp-b2-concession"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La transcripción coincide con el audio."
+                  }
+                },
+                {
+                  "type": "SpeakRepeat",
+                  "id": "es-fr-b2-u08-l01-e09",
+                  "targetPhrase": "Je veux apprendre de nouvelles compétences. Je crains que ce soit plus compliqué.",
+                  "audioText": "Je veux apprendre de nouvelles compétences. Je crains que ce soit plus compliqué.",
+                  "feedbackOnError": {
+                    "type": "pronunciation",
+                    "explanation": "Repite «Je veux apprendre de nouvelles compétences. Je crains que ce soit plus compliqué.» con claridad.",
+                    "ruleRef": "gp-b2-concession"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La frase se entiende y mantiene el ritmo."
+                  }
+                },
+                {
+                  "type": "FreeSpeakingPrompt",
+                  "id": "es-fr-b2-u08-l01-e10",
+                  "prompt": "Argumenta y matiza una opinión sobre la experiencia profesional.",
+                  "minTokens": 20,
+                  "conceptClusters": [
+                    [
+                      "J'ai"
+                    ],
+                    [
+                      "travaillé"
+                    ],
+                    [
+                      "trois"
+                    ]
+                  ],
+                  "modelAnswer": "J'ai travaillé dans trois pays. Cela dit, cela dépend du contexte. J'ai de l'expérience dans le service client. En d'autres termes, cela vaut la peine d'être considéré. Je veux apprendre de nouvelles compétences. Je crains que ce soit plus compliqué.",
+                  "selfAssessmentCriteria": [
+                    "¿La respuesta argumenta y responde a la tarea?",
+                    "¿Usa las dos estructuras gramaticales de la lección?",
+                    "¿Incluye una concesión o una matización?"
+                  ],
+                  "grammarRuleRefs": [
+                    "gp-b2-concession",
+                    "gp-b2-modal-perfect"
+                  ],
+                  "timeLimitSeconds": 90,
+                  "minWpm": 70,
+                  "maxWpm": 160,
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "La respuesta modelo desarrolla una opinión con matices y una concesión.",
+                    "ruleRef": "gp-b2-concession"
+                  }
+                }
+              ]
+            },
+            {
+              "id": "es-fr-b2-u08-l02",
+              "title": "Mi casa y sus habitaciones",
+              "cefrLevel": "B2",
+              "scenario": "Situación comunicativa avanzada sobre mi casa.",
+              "canDo": "Puedo argumentar y matizar sobre mi casa.",
+              "grammarPoints": [
+                {
+                  "id": "gp-b2-concession",
+                  "label": "Concession",
+                  "description": "Although, despite y however introducen concesiones."
+                },
+                {
+                  "id": "gp-b2-modal-perfect",
+                  "label": "Modal perfect",
+                  "description": "Must have, might have y should have especulan sobre el pasado."
+                }
+              ],
+              "vocabFrequencyBand": "3000-5000",
+              "culturalNotes": [
+                {
+                  "idiom": "être dans le coup",
+                  "note": "Expresión para estar al tanto.",
+                  "translation": "estar al tanto"
+                }
+              ],
+              "microLesson": {
+                "title": "Mi casa y sus habitaciones",
+                "goals": [
+                  "Usar vocabulario avanzado de mi casa.",
+                  "Aplicar concession y modal perfect.",
+                  "Argumentar y matizar sobre mi casa."
+                ],
+                "sections": [
+                  {
+                    "heading": "Lengua en contexto",
+                    "body": "Concession: Although, despite y however introducen concesiones. Modal perfect: Must have, might have y should have especulan sobre el pasado.",
+                    "examples": [
+                      {
+                        "source": "Vivo en un piso pequeño con dos habitaciones. En otras palabras, merece la pena considerarlo.",
+                        "target": "Je vis dans un petit appartement avec deux chambres. En d'autres termes, cela vaut la peine d'être considéré."
+                      },
+                      {
+                        "source": "La cocina es grande y luminosa. Me temo que puede ser más complicado.",
+                        "target": "La cuisine est grande et lumineuse. Je crains que ce soit plus compliqué."
+                      }
+                    ]
+                  }
+                ]
+              },
+              "glossary": [
+                {
+                  "term": "Je vis dans un petit appartement avec deux chambres. En d'autres termes, cela vaut la peine d'être considéré.",
+                  "translations": [
+                    "Vivo en un piso pequeño con dos habitaciones. En otras palabras, merece la pena considerarlo."
+                  ]
+                },
+                {
+                  "term": "La cuisine est grande et lumineuse. Je crains que ce soit plus compliqué.",
+                  "translations": [
+                    "La cocina es grande y luminosa. Me temo que puede ser más complicado."
+                  ]
+                },
+                {
+                  "term": "Il y a un balcon avec vue sur la rue. Pour être honnête, j'ai des sentiments mitigés.",
+                  "translations": [
+                    "Hay un balcón con vistas a la calle. Sinceramente, tengo sentimientos encontrados."
+                  ]
+                }
+              ],
+              "exercises": [
+                {
+                  "type": "MultipleChoice",
+                  "id": "es-fr-b2-u08-l02-e01",
+                  "question": "¿Cuál es la opción correcta para «Vivo en un piso pequeño con dos habitaciones. En otras palabras, merece la pena considerarlo.»?",
+                  "options": [
+                    "Je vis dans un petit appartement avec deux chambres. En d'autres termes, cela vaut la peine d'être considéré.",
+                    "La cuisine est grande et lumineuse. Je crains que ce soit plus compliqué.",
+                    "Il y a un balcon avec vue sur la rue. Pour être honnête, j'ai des sentiments mitigés."
+                  ],
+                  "correctIndex": 0,
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "«Vivo en un piso pequeño con dos habitaciones. En otras palabras, merece la pena considerarlo.» se dice «Je vis dans un petit appartement avec deux chambres. En d'autres termes, cela vaut la peine d'être considéré.».",
+                    "ruleRef": "gp-b2-concession"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has elegido la traducción correcta."
+                  }
+                },
+                {
+                  "type": "OrderWords",
+                  "id": "es-fr-b2-u08-l02-e02",
+                  "tokens": [
+                    "vis",
+                    "dans",
+                    "un",
+                    "petit",
+                    "appartement",
+                    "avec",
+                    "deux",
+                    "chambres",
+                    "En",
+                    "d'autres",
+                    "termes",
+                    "cela",
+                    "vaut",
+                    "la",
+                    "peine",
+                    "d'être",
+                    "considéré",
+                    "Je"
+                  ],
+                  "answerTokens": [
+                    "Je",
+                    "vis",
+                    "dans",
+                    "un",
+                    "petit",
+                    "appartement",
+                    "avec",
+                    "deux",
+                    "chambres",
+                    "En",
+                    "d'autres",
+                    "termes",
+                    "cela",
+                    "vaut",
+                    "la",
+                    "peine",
+                    "d'être",
+                    "considéré"
+                  ],
+                  "sourcePhrase": "Vivo en un piso pequeño con dos habitaciones. En otras palabras, merece la pena considerarlo.",
+                  "feedbackOnError": {
+                    "type": "word_order",
+                    "explanation": "El orden correcto es «Je vis dans un petit appartement avec deux chambres En d'autres termes cela vaut la peine d'être considéré».",
+                    "ruleRef": "gp-b2-concession"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "El orden produce una frase natural."
+                  }
+                },
+                {
+                  "type": "ClozeDragDrop",
+                  "id": "es-fr-b2-u08-l02-e03",
+                  "passage": "Je {{b1}} dans un {{b2}} appartement avec deux chambres.",
+                  "blanks": [
+                    {
+                      "id": "b1",
+                      "answer": "vis",
+                      "options": [
+                        "vis",
+                        "appartement",
+                        "deux"
+                      ]
+                    },
+                    {
+                      "id": "b2",
+                      "answer": "petit",
+                      "options": [
+                        "petit",
+                        "appartement",
+                        "deux"
+                      ]
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "Las dos formas deben encajar con el contexto de la frase.",
+                    "ruleRef": "gp-b2-modal-perfect"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Los dos huecos encajan con la situación."
+                  }
+                },
+                {
+                  "type": "SemanticMatch",
+                  "id": "es-fr-b2-u08-l02-e04",
+                  "instructions": "Clasifica la función comunicativa de cada intervención.",
+                  "pairs": [
+                    {
+                      "left": "Je vis dans un petit appartement avec deux chambres. En d'autres termes, cela vaut la peine d'être considéré.",
+                      "right": "Planteamiento",
+                      "register": "formal",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    },
+                    {
+                      "left": "La cuisine est grande et lumineuse. Je crains que ce soit plus compliqué.",
+                      "right": "Concesión",
+                      "register": "neutral",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    },
+                    {
+                      "left": "Il y a un balcon avec vue sur la rue. Pour être honnête, j'ai des sentiments mitigés.",
+                      "right": "Conclusión",
+                      "register": "informal",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "Cada intervención cumple una función comunicativa distinta.",
+                    "ruleRef": "gp-b2-concession"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has identificado la función de cada intervención."
+                  }
+                },
+                {
+                  "type": "SemanticMatch",
+                  "id": "es-fr-b2-u08-l02-e05",
+                  "instructions": "Distingue el registro de cada intervención.",
+                  "pairs": [
+                    {
+                      "left": "Je vis dans un petit appartement avec deux chambres. En d'autres termes, cela vaut la peine d'être considéré.",
+                      "right": "Formal",
+                      "register": "formal",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    },
+                    {
+                      "left": "La cuisine est grande et lumineuse. Je crains que ce soit plus compliqué.",
+                      "right": "Neutral",
+                      "register": "neutral",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    },
+                    {
+                      "left": "Il y a un balcon avec vue sur la rue. Pour être honnête, j'ai des sentiments mitigés.",
+                      "right": "Informal",
+                      "register": "informal",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "register",
+                    "explanation": "El registro cambia según el contexto y la relación con el interlocutor.",
+                    "ruleRef": "gp-b2-modal-perfect"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has distinguido el registro de cada intervención."
+                  }
+                },
+                {
+                  "type": "AudioOnlyPrompt",
+                  "id": "es-fr-b2-u08-l02-e06",
+                  "audioText": "La cuisine est grande et lumineuse. Je crains que ce soit plus compliqué.",
+                  "question": "¿Qué ha dicho el hablante?",
+                  "options": [
+                    "La cuisine est grande et lumineuse. Je crains que ce soit plus compliqué.",
+                    "Je vis dans un petit appartement avec deux chambres. En d'autres termes, cela vaut la peine d'être considéré.",
+                    "Il y a un balcon avec vue sur la rue. Pour être honnête, j'ai des sentiments mitigés."
+                  ],
+                  "correctIndex": 0,
+                  "allowSlowPlayback": true,
+                  "feedbackOnError": {
+                    "type": "comprehension",
+                    "explanation": "El audio dice «La cuisine est grande et lumineuse. Je crains que ce soit plus compliqué.».",
+                    "ruleRef": "gp-b2-concession"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has comprendido el mensaje del audio."
+                  }
+                },
+                {
+                  "type": "AudioOnlyPrompt",
+                  "id": "es-fr-b2-u08-l02-e07",
+                  "audioText": "Il y a un balcon avec vue sur la rue. Pour être honnête, j'ai des sentiments mitigés.",
+                  "question": "¿Cuál es la idea principal?",
+                  "options": [
+                    "Il y a un balcon avec vue sur la rue. Pour être honnête, j'ai des sentiments mitigés.",
+                    "Je vis dans un petit appartement avec deux chambres. En d'autres termes, cela vaut la peine d'être considéré.",
+                    "La cuisine est grande et lumineuse. Je crains que ce soit plus compliqué."
+                  ],
+                  "correctIndex": 0,
+                  "allowSlowPlayback": false,
+                  "feedbackOnError": {
+                    "type": "comprehension",
+                    "explanation": "El audio dice «Il y a un balcon avec vue sur la rue. Pour être honnête, j'ai des sentiments mitigés.».",
+                    "ruleRef": "gp-b2-modal-perfect"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has identificado la idea principal."
+                  }
+                },
+                {
+                  "type": "ListenType",
+                  "id": "es-fr-b2-u08-l02-e08",
+                  "audioText": "Il y a un balcon avec vue sur la rue. Pour être honnête, j'ai des sentiments mitigés.",
+                  "transcription": "Il y a un balcon avec vue sur la rue. Pour être honnête, j'ai des sentiments mitigés.",
+                  "feedbackOnError": {
+                    "type": "spelling",
+                    "explanation": "Escribe exactamente «Il y a un balcon avec vue sur la rue. Pour être honnête, j'ai des sentiments mitigés.».",
+                    "ruleRef": "gp-b2-concession"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La transcripción coincide con el audio."
+                  }
+                },
+                {
+                  "type": "SpeakRepeat",
+                  "id": "es-fr-b2-u08-l02-e09",
+                  "targetPhrase": "Il y a un balcon avec vue sur la rue. Pour être honnête, j'ai des sentiments mitigés.",
+                  "audioText": "Il y a un balcon avec vue sur la rue. Pour être honnête, j'ai des sentiments mitigés.",
+                  "feedbackOnError": {
+                    "type": "pronunciation",
+                    "explanation": "Repite «Il y a un balcon avec vue sur la rue. Pour être honnête, j'ai des sentiments mitigés.» con claridad.",
+                    "ruleRef": "gp-b2-concession"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La frase se entiende y mantiene el ritmo."
+                  }
+                },
+                {
+                  "type": "FreeSpeakingPrompt",
+                  "id": "es-fr-b2-u08-l02-e10",
+                  "prompt": "Argumenta y matiza una opinión sobre mi casa.",
+                  "minTokens": 20,
+                  "conceptClusters": [
+                    [
+                      "vis"
+                    ],
+                    [
+                      "petit"
+                    ],
+                    [
+                      "appartement"
+                    ]
+                  ],
+                  "modelAnswer": "Je vis dans un petit appartement avec deux chambres. En d'autres termes, cela vaut la peine d'être considéré. La cuisine est grande et lumineuse. Je crains que ce soit plus compliqué. Il y a un balcon avec vue sur la rue. Pour être honnête, j'ai des sentiments mitigés.",
+                  "selfAssessmentCriteria": [
+                    "¿La respuesta argumenta y responde a la tarea?",
+                    "¿Usa las dos estructuras gramaticales de la lección?",
+                    "¿Incluye una concesión o una matización?"
+                  ],
+                  "grammarRuleRefs": [
+                    "gp-b2-concession",
+                    "gp-b2-modal-perfect"
+                  ],
+                  "timeLimitSeconds": 90,
+                  "minWpm": 70,
+                  "maxWpm": 160,
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "La respuesta modelo desarrolla una opinión con matices y una concesión.",
+                    "ruleRef": "gp-b2-concession"
+                  }
+                }
+              ]
+            },
+            {
+              "id": "es-fr-b2-u08-l03",
+              "title": "Muebles y tareas",
+              "cefrLevel": "B2",
+              "scenario": "Situación comunicativa avanzada sobre los muebles y las tareas.",
+              "canDo": "Puedo argumentar y matizar sobre los muebles y las tareas.",
+              "grammarPoints": [
+                {
+                  "id": "gp-b2-concession",
+                  "label": "Concession",
+                  "description": "Although, despite y however introducen concesiones."
+                },
+                {
+                  "id": "gp-b2-modal-perfect",
+                  "label": "Modal perfect",
+                  "description": "Must have, might have y should have especulan sobre el pasado."
+                }
+              ],
+              "vocabFrequencyBand": "3000-5000",
+              "culturalNotes": [
+                {
+                  "idiom": "se mettre au travail",
+                  "note": "Expresión para empezar a trabajar.",
+                  "translation": "ponerse a trabajar"
+                }
+              ],
+              "microLesson": {
+                "title": "Muebles y tareas",
+                "goals": [
+                  "Usar vocabulario avanzado de los muebles y las tareas.",
+                  "Aplicar concession y modal perfect.",
+                  "Argumentar y matizar sobre los muebles y las tareas."
+                ],
+                "sections": [
+                  {
+                    "heading": "Lengua en contexto",
+                    "body": "Concession: Although, despite y however introducen concesiones. Modal perfect: Must have, might have y should have especulan sobre el pasado.",
+                    "examples": [
+                      {
+                        "source": "Necesito una lavadora. Me temo que puede ser más complicado.",
+                        "target": "J'ai besoin d'une machine à laver. Je crains que ce soit plus compliqué."
+                      },
+                      {
+                        "source": "Necesito una mesa grande. Sinceramente, tengo sentimientos encontrados.",
+                        "target": "J'ai besoin d'une grande table. Pour être honnête, j'ai des sentiments mitigés."
+                      }
+                    ]
+                  }
+                ]
+              },
+              "glossary": [
+                {
+                  "term": "J'ai besoin d'une machine à laver. Je crains que ce soit plus compliqué.",
+                  "translations": [
+                    "Necesito una lavadora. Me temo que puede ser más complicado."
+                  ]
+                },
+                {
+                  "term": "J'ai besoin d'une grande table. Pour être honnête, j'ai des sentiments mitigés.",
+                  "translations": [
+                    "Necesito una mesa grande. Sinceramente, tengo sentimientos encontrados."
+                  ]
+                },
+                {
+                  "term": "J'ai besoin d'une nouvelle armoire. Il semble que cela change.",
+                  "translations": [
+                    "Necesito un armario nuevo. Parece que esto está cambiando."
+                  ]
+                }
+              ],
+              "exercises": [
+                {
+                  "type": "MultipleChoice",
+                  "id": "es-fr-b2-u08-l03-e01",
+                  "question": "¿Cuál es la opción correcta para «Necesito una lavadora. Me temo que puede ser más complicado.»?",
+                  "options": [
+                    "J'ai besoin d'une machine à laver. Je crains que ce soit plus compliqué.",
+                    "J'ai besoin d'une grande table. Pour être honnête, j'ai des sentiments mitigés.",
+                    "J'ai besoin d'une nouvelle armoire. Il semble que cela change."
+                  ],
+                  "correctIndex": 0,
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "«Necesito una lavadora. Me temo que puede ser más complicado.» se dice «J'ai besoin d'une machine à laver. Je crains que ce soit plus compliqué.».",
+                    "ruleRef": "gp-b2-concession"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has elegido la traducción correcta."
+                  }
+                },
+                {
+                  "type": "OrderWords",
+                  "id": "es-fr-b2-u08-l03-e02",
+                  "tokens": [
+                    "besoin",
+                    "d'une",
+                    "machine",
+                    "à",
+                    "laver",
+                    "Je",
+                    "crains",
+                    "que",
+                    "ce",
+                    "soit",
+                    "plus",
+                    "compliqué",
+                    "J'ai"
+                  ],
+                  "answerTokens": [
+                    "J'ai",
+                    "besoin",
+                    "d'une",
+                    "machine",
+                    "à",
+                    "laver",
+                    "Je",
+                    "crains",
+                    "que",
+                    "ce",
+                    "soit",
+                    "plus",
+                    "compliqué"
+                  ],
+                  "sourcePhrase": "Necesito una lavadora. Me temo que puede ser más complicado.",
+                  "feedbackOnError": {
+                    "type": "word_order",
+                    "explanation": "El orden correcto es «J'ai besoin d'une machine à laver Je crains que ce soit plus compliqué».",
+                    "ruleRef": "gp-b2-concession"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "El orden produce una frase natural."
+                  }
+                },
+                {
+                  "type": "ClozeDragDrop",
+                  "id": "es-fr-b2-u08-l03-e03",
+                  "passage": "{{b1}} {{b2}} d'une machine à laver",
+                  "blanks": [
+                    {
+                      "id": "b1",
+                      "answer": "J'ai",
+                      "options": [
+                        "J'ai",
+                        "d'une",
+                        "machine"
+                      ]
+                    },
+                    {
+                      "id": "b2",
+                      "answer": "besoin",
+                      "options": [
+                        "besoin",
+                        "d'une",
+                        "machine"
+                      ]
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "Las dos formas deben encajar con el contexto de la frase.",
+                    "ruleRef": "gp-b2-modal-perfect"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Los dos huecos encajan con la situación."
+                  }
+                },
+                {
+                  "type": "SemanticMatch",
+                  "id": "es-fr-b2-u08-l03-e04",
+                  "instructions": "Clasifica la función comunicativa de cada intervención.",
+                  "pairs": [
+                    {
+                      "left": "J'ai besoin d'une machine à laver. Je crains que ce soit plus compliqué.",
+                      "right": "Planteamiento",
+                      "register": "formal",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    },
+                    {
+                      "left": "J'ai besoin d'une grande table. Pour être honnête, j'ai des sentiments mitigés.",
+                      "right": "Concesión",
+                      "register": "neutral",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    },
+                    {
+                      "left": "J'ai besoin d'une nouvelle armoire. Il semble que cela change.",
+                      "right": "Conclusión",
+                      "register": "informal",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "Cada intervención cumple una función comunicativa distinta.",
+                    "ruleRef": "gp-b2-concession"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has identificado la función de cada intervención."
+                  }
+                },
+                {
+                  "type": "SemanticMatch",
+                  "id": "es-fr-b2-u08-l03-e05",
+                  "instructions": "Distingue el registro de cada intervención.",
+                  "pairs": [
+                    {
+                      "left": "J'ai besoin d'une machine à laver. Je crains que ce soit plus compliqué.",
+                      "right": "Formal",
+                      "register": "formal",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    },
+                    {
+                      "left": "J'ai besoin d'une grande table. Pour être honnête, j'ai des sentiments mitigés.",
+                      "right": "Neutral",
+                      "register": "neutral",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    },
+                    {
+                      "left": "J'ai besoin d'une nouvelle armoire. Il semble que cela change.",
+                      "right": "Informal",
+                      "register": "informal",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "register",
+                    "explanation": "El registro cambia según el contexto y la relación con el interlocutor.",
+                    "ruleRef": "gp-b2-modal-perfect"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has distinguido el registro de cada intervención."
+                  }
+                },
+                {
+                  "type": "AudioOnlyPrompt",
+                  "id": "es-fr-b2-u08-l03-e06",
+                  "audioText": "J'ai besoin d'une grande table. Pour être honnête, j'ai des sentiments mitigés.",
+                  "question": "¿Qué ha dicho el hablante?",
+                  "options": [
+                    "J'ai besoin d'une grande table. Pour être honnête, j'ai des sentiments mitigés.",
+                    "J'ai besoin d'une machine à laver. Je crains que ce soit plus compliqué.",
+                    "J'ai besoin d'une nouvelle armoire. Il semble que cela change."
+                  ],
+                  "correctIndex": 0,
+                  "allowSlowPlayback": true,
+                  "feedbackOnError": {
+                    "type": "comprehension",
+                    "explanation": "El audio dice «J'ai besoin d'une grande table. Pour être honnête, j'ai des sentiments mitigés.».",
+                    "ruleRef": "gp-b2-concession"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has comprendido el mensaje del audio."
+                  }
+                },
+                {
+                  "type": "AudioOnlyPrompt",
+                  "id": "es-fr-b2-u08-l03-e07",
+                  "audioText": "J'ai besoin d'une nouvelle armoire. Il semble que cela change.",
+                  "question": "¿Cuál es la idea principal?",
+                  "options": [
+                    "J'ai besoin d'une nouvelle armoire. Il semble que cela change.",
+                    "J'ai besoin d'une machine à laver. Je crains que ce soit plus compliqué.",
+                    "J'ai besoin d'une grande table. Pour être honnête, j'ai des sentiments mitigés."
+                  ],
+                  "correctIndex": 0,
+                  "allowSlowPlayback": false,
+                  "feedbackOnError": {
+                    "type": "comprehension",
+                    "explanation": "El audio dice «J'ai besoin d'une nouvelle armoire. Il semble que cela change.».",
+                    "ruleRef": "gp-b2-modal-perfect"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has identificado la idea principal."
+                  }
+                },
+                {
+                  "type": "ListenType",
+                  "id": "es-fr-b2-u08-l03-e08",
+                  "audioText": "J'ai besoin d'une nouvelle armoire. Il semble que cela change.",
+                  "transcription": "J'ai besoin d'une nouvelle armoire. Il semble que cela change.",
+                  "feedbackOnError": {
+                    "type": "spelling",
+                    "explanation": "Escribe exactamente «J'ai besoin d'une nouvelle armoire. Il semble que cela change.».",
+                    "ruleRef": "gp-b2-concession"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La transcripción coincide con el audio."
+                  }
+                },
+                {
+                  "type": "SpeakRepeat",
+                  "id": "es-fr-b2-u08-l03-e09",
+                  "targetPhrase": "J'ai besoin d'une nouvelle armoire. Il semble que cela change.",
+                  "audioText": "J'ai besoin d'une nouvelle armoire. Il semble que cela change.",
+                  "feedbackOnError": {
+                    "type": "pronunciation",
+                    "explanation": "Repite «J'ai besoin d'une nouvelle armoire. Il semble que cela change.» con claridad.",
+                    "ruleRef": "gp-b2-concession"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La frase se entiende y mantiene el ritmo."
+                  }
+                },
+                {
+                  "type": "FreeSpeakingPrompt",
+                  "id": "es-fr-b2-u08-l03-e10",
+                  "prompt": "Argumenta y matiza una opinión sobre los muebles y las tareas.",
+                  "minTokens": 20,
+                  "conceptClusters": [
+                    [
+                      "J'ai"
+                    ],
+                    [
+                      "besoin"
+                    ],
+                    [
+                      "d'une"
+                    ]
+                  ],
+                  "modelAnswer": "J'ai besoin d'une machine à laver. Je crains que ce soit plus compliqué. J'ai besoin d'une grande table. Pour être honnête, j'ai des sentiments mitigés. J'ai besoin d'une nouvelle armoire. Il semble que cela change.",
+                  "selfAssessmentCriteria": [
+                    "¿La respuesta argumenta y responde a la tarea?",
+                    "¿Usa las dos estructuras gramaticales de la lección?",
+                    "¿Incluye una concesión o una matización?"
+                  ],
+                  "grammarRuleRefs": [
+                    "gp-b2-concession",
+                    "gp-b2-modal-perfect"
+                  ],
+                  "timeLimitSeconds": 90,
+                  "minWpm": 70,
+                  "maxWpm": 160,
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "La respuesta modelo desarrolla una opinión con matices y una concesión.",
+                    "ruleRef": "gp-b2-concession"
+                  }
+                }
+              ]
+            },
+            {
+              "id": "es-fr-b2-u08-l04",
+              "title": "Must / mustn't",
+              "cefrLevel": "B2",
+              "scenario": "Situación comunicativa avanzada sobre las normas de la casa.",
+              "canDo": "Puedo argumentar y matizar sobre las normas de la casa.",
+              "grammarPoints": [
+                {
+                  "id": "gp-b2-concession",
+                  "label": "Concession",
+                  "description": "Although, despite y however introducen concesiones."
+                },
+                {
+                  "id": "gp-b2-modal-perfect",
+                  "label": "Modal perfect",
+                  "description": "Must have, might have y should have especulan sobre el pasado."
+                }
+              ],
+              "vocabFrequencyBand": "3000-5000",
+              "culturalNotes": [
+                {
+                  "idiom": "fermer les yeux",
+                  "note": "Expresión para ignorar algo a propósito.",
+                  "translation": "hacer la vista gorda"
+                }
+              ],
+              "microLesson": {
+                "title": "Must / mustn't",
+                "goals": [
+                  "Usar vocabulario avanzado de las normas de la casa.",
+                  "Aplicar concession y modal perfect.",
+                  "Argumentar y matizar sobre las normas de la casa."
+                ],
+                "sections": [
+                  {
+                    "heading": "Lengua en contexto",
+                    "body": "Concession: Although, despite y however introducen concesiones. Modal perfect: Must have, might have y should have especulan sobre el pasado.",
+                    "examples": [
+                      {
+                        "source": "Debes respetar el silencio por la noche. Sinceramente, tengo sentimientos encontrados.",
+                        "target": "Tu dois respecter le silence la nuit. Pour être honnête, j'ai des sentiments mitigés."
+                      },
+                      {
+                        "source": "Debes limpiar la cocina después de cocinar. Parece que esto está cambiando.",
+                        "target": "Tu dois nettoyer la cuisine après avoir cuisiné. Il semble que cela change."
+                      }
+                    ]
+                  }
+                ]
+              },
+              "glossary": [
+                {
+                  "term": "Tu dois respecter le silence la nuit. Pour être honnête, j'ai des sentiments mitigés.",
+                  "translations": [
+                    "Debes respetar el silencio por la noche. Sinceramente, tengo sentimientos encontrados."
+                  ]
+                },
+                {
+                  "term": "Tu dois nettoyer la cuisine après avoir cuisiné. Il semble que cela change.",
+                  "translations": [
+                    "Debes limpiar la cocina después de cocinar. Parece que esto está cambiando."
+                  ]
+                },
+                {
+                  "term": "Tu dois fermer la porte à clé. De mon point de vue, c'est une option raisonnable.",
+                  "translations": [
+                    "Debes cerrar la puerta con llave. Desde mi punto de vista, es una opción razonable."
+                  ]
+                }
+              ],
+              "exercises": [
+                {
+                  "type": "MultipleChoice",
+                  "id": "es-fr-b2-u08-l04-e01",
+                  "question": "¿Cuál es la opción correcta para «Debes respetar el silencio por la noche. Sinceramente, tengo sentimientos encontrados.»?",
+                  "options": [
+                    "Tu dois respecter le silence la nuit. Pour être honnête, j'ai des sentiments mitigés.",
+                    "Tu dois nettoyer la cuisine après avoir cuisiné. Il semble que cela change.",
+                    "Tu dois fermer la porte à clé. De mon point de vue, c'est une option raisonnable."
+                  ],
+                  "correctIndex": 0,
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "«Debes respetar el silencio por la noche. Sinceramente, tengo sentimientos encontrados.» se dice «Tu dois respecter le silence la nuit. Pour être honnête, j'ai des sentiments mitigés.».",
+                    "ruleRef": "gp-b2-concession"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has elegido la traducción correcta."
+                  }
+                },
+                {
+                  "type": "OrderWords",
+                  "id": "es-fr-b2-u08-l04-e02",
+                  "tokens": [
+                    "dois",
+                    "respecter",
+                    "le",
+                    "silence",
+                    "la",
+                    "nuit",
+                    "Pour",
+                    "être",
+                    "honnête",
+                    "j'ai",
+                    "des",
+                    "sentiments",
+                    "mitigés",
+                    "Tu"
+                  ],
+                  "answerTokens": [
+                    "Tu",
+                    "dois",
+                    "respecter",
+                    "le",
+                    "silence",
+                    "la",
+                    "nuit",
+                    "Pour",
+                    "être",
+                    "honnête",
+                    "j'ai",
+                    "des",
+                    "sentiments",
+                    "mitigés"
+                  ],
+                  "sourcePhrase": "Debes respetar el silencio por la noche. Sinceramente, tengo sentimientos encontrados.",
+                  "feedbackOnError": {
+                    "type": "word_order",
+                    "explanation": "El orden correcto es «Tu dois respecter le silence la nuit Pour être honnête j'ai des sentiments mitigés».",
+                    "ruleRef": "gp-b2-concession"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "El orden produce una frase natural."
+                  }
+                },
+                {
+                  "type": "ClozeDragDrop",
+                  "id": "es-fr-b2-u08-l04-e03",
+                  "passage": "Tu {{b1}} {{b2}} le silence la nuit",
+                  "blanks": [
+                    {
+                      "id": "b1",
+                      "answer": "dois",
+                      "options": [
+                        "dois",
+                        "silence",
+                        "nuit"
+                      ]
+                    },
+                    {
+                      "id": "b2",
+                      "answer": "respecter",
+                      "options": [
+                        "respecter",
+                        "silence",
+                        "nuit"
+                      ]
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "Las dos formas deben encajar con el contexto de la frase.",
+                    "ruleRef": "gp-b2-modal-perfect"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Los dos huecos encajan con la situación."
+                  }
+                },
+                {
+                  "type": "SemanticMatch",
+                  "id": "es-fr-b2-u08-l04-e04",
+                  "instructions": "Clasifica la función comunicativa de cada intervención.",
+                  "pairs": [
+                    {
+                      "left": "Tu dois respecter le silence la nuit. Pour être honnête, j'ai des sentiments mitigés.",
+                      "right": "Planteamiento",
+                      "register": "formal",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    },
+                    {
+                      "left": "Tu dois nettoyer la cuisine après avoir cuisiné. Il semble que cela change.",
+                      "right": "Concesión",
+                      "register": "neutral",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    },
+                    {
+                      "left": "Tu dois fermer la porte à clé. De mon point de vue, c'est une option raisonnable.",
+                      "right": "Conclusión",
+                      "register": "informal",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "Cada intervención cumple una función comunicativa distinta.",
+                    "ruleRef": "gp-b2-concession"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has identificado la función de cada intervención."
+                  }
+                },
+                {
+                  "type": "SemanticMatch",
+                  "id": "es-fr-b2-u08-l04-e05",
+                  "instructions": "Distingue el registro de cada intervención.",
+                  "pairs": [
+                    {
+                      "left": "Tu dois respecter le silence la nuit. Pour être honnête, j'ai des sentiments mitigés.",
+                      "right": "Formal",
+                      "register": "formal",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    },
+                    {
+                      "left": "Tu dois nettoyer la cuisine après avoir cuisiné. Il semble que cela change.",
+                      "right": "Neutral",
+                      "register": "neutral",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    },
+                    {
+                      "left": "Tu dois fermer la porte à clé. De mon point de vue, c'est une option raisonnable.",
+                      "right": "Informal",
+                      "register": "informal",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "register",
+                    "explanation": "El registro cambia según el contexto y la relación con el interlocutor.",
+                    "ruleRef": "gp-b2-modal-perfect"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has distinguido el registro de cada intervención."
+                  }
+                },
+                {
+                  "type": "AudioOnlyPrompt",
+                  "id": "es-fr-b2-u08-l04-e06",
+                  "audioText": "Tu dois nettoyer la cuisine après avoir cuisiné. Il semble que cela change.",
+                  "question": "¿Qué ha dicho el hablante?",
+                  "options": [
+                    "Tu dois nettoyer la cuisine après avoir cuisiné. Il semble que cela change.",
+                    "Tu dois respecter le silence la nuit. Pour être honnête, j'ai des sentiments mitigés.",
+                    "Tu dois fermer la porte à clé. De mon point de vue, c'est une option raisonnable."
+                  ],
+                  "correctIndex": 0,
+                  "allowSlowPlayback": true,
+                  "feedbackOnError": {
+                    "type": "comprehension",
+                    "explanation": "El audio dice «Tu dois nettoyer la cuisine après avoir cuisiné. Il semble que cela change.».",
+                    "ruleRef": "gp-b2-concession"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has comprendido el mensaje del audio."
+                  }
+                },
+                {
+                  "type": "AudioOnlyPrompt",
+                  "id": "es-fr-b2-u08-l04-e07",
+                  "audioText": "Tu dois fermer la porte à clé. De mon point de vue, c'est une option raisonnable.",
+                  "question": "¿Cuál es la idea principal?",
+                  "options": [
+                    "Tu dois fermer la porte à clé. De mon point de vue, c'est une option raisonnable.",
+                    "Tu dois respecter le silence la nuit. Pour être honnête, j'ai des sentiments mitigés.",
+                    "Tu dois nettoyer la cuisine après avoir cuisiné. Il semble que cela change."
+                  ],
+                  "correctIndex": 0,
+                  "allowSlowPlayback": false,
+                  "feedbackOnError": {
+                    "type": "comprehension",
+                    "explanation": "El audio dice «Tu dois fermer la porte à clé. De mon point de vue, c'est une option raisonnable.».",
+                    "ruleRef": "gp-b2-modal-perfect"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has identificado la idea principal."
+                  }
+                },
+                {
+                  "type": "ListenType",
+                  "id": "es-fr-b2-u08-l04-e08",
+                  "audioText": "Tu dois fermer la porte à clé. De mon point de vue, c'est une option raisonnable.",
+                  "transcription": "Tu dois fermer la porte à clé. De mon point de vue, c'est une option raisonnable.",
+                  "feedbackOnError": {
+                    "type": "spelling",
+                    "explanation": "Escribe exactamente «Tu dois fermer la porte à clé. De mon point de vue, c'est une option raisonnable.».",
+                    "ruleRef": "gp-b2-concession"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La transcripción coincide con el audio."
+                  }
+                },
+                {
+                  "type": "SpeakRepeat",
+                  "id": "es-fr-b2-u08-l04-e09",
+                  "targetPhrase": "Tu dois fermer la porte à clé. De mon point de vue, c'est une option raisonnable.",
+                  "audioText": "Tu dois fermer la porte à clé. De mon point de vue, c'est une option raisonnable.",
+                  "feedbackOnError": {
+                    "type": "pronunciation",
+                    "explanation": "Repite «Tu dois fermer la porte à clé. De mon point de vue, c'est une option raisonnable.» con claridad.",
+                    "ruleRef": "gp-b2-concession"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La frase se entiende y mantiene el ritmo."
+                  }
+                },
+                {
+                  "type": "FreeSpeakingPrompt",
+                  "id": "es-fr-b2-u08-l04-e10",
+                  "prompt": "Argumenta y matiza una opinión sobre las normas de la casa.",
+                  "minTokens": 20,
+                  "conceptClusters": [
+                    [
+                      "dois"
+                    ],
+                    [
+                      "respecter"
+                    ],
+                    [
+                      "silence"
+                    ]
+                  ],
+                  "modelAnswer": "Tu dois respecter le silence la nuit. Pour être honnête, j'ai des sentiments mitigés. Tu dois nettoyer la cuisine après avoir cuisiné. Il semble que cela change. Tu dois fermer la porte à clé. De mon point de vue, c'est une option raisonnable.",
+                  "selfAssessmentCriteria": [
+                    "¿La respuesta argumenta y responde a la tarea?",
+                    "¿Usa las dos estructuras gramaticales de la lección?",
+                    "¿Incluye una concesión o una matización?"
+                  ],
+                  "grammarRuleRefs": [
+                    "gp-b2-concession",
+                    "gp-b2-modal-perfect"
+                  ],
+                  "timeLimitSeconds": 90,
+                  "minWpm": 70,
+                  "maxWpm": 160,
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "La respuesta modelo desarrolla una opinión con matices y una concesión.",
+                    "ruleRef": "gp-b2-concession"
+                  }
+                }
+              ]
+            },
+            {
+              "id": "es-fr-b2-u08-l05",
+              "title": "Have to / allowed to",
+              "cefrLevel": "B2",
+              "scenario": "Situación comunicativa avanzada sobre las obligaciones de la casa.",
+              "canDo": "Puedo argumentar y matizar sobre las obligaciones de la casa.",
+              "grammarPoints": [
+                {
+                  "id": "gp-b2-concession",
+                  "label": "Concession",
+                  "description": "Although, despite y however introducen concesiones."
+                },
+                {
+                  "id": "gp-b2-modal-perfect",
+                  "label": "Modal perfect",
+                  "description": "Must have, might have y should have especulan sobre el pasado."
+                }
+              ],
+              "vocabFrequencyBand": "3000-5000",
+              "culturalNotes": [
+                {
+                  "idiom": "tailler une bavette",
+                  "note": "Expresión para conversar informalmente.",
+                  "translation": "charolar"
+                }
+              ],
+              "microLesson": {
+                "title": "Have to / allowed to",
+                "goals": [
+                  "Usar vocabulario avanzado de las obligaciones de la casa.",
+                  "Aplicar concession y modal perfect.",
+                  "Argumentar y matizar sobre las obligaciones de la casa."
+                ],
+                "sections": [
+                  {
+                    "heading": "Lengua en contexto",
+                    "body": "Concession: Although, despite y however introducen concesiones. Modal perfect: Must have, might have y should have especulan sobre el pasado.",
+                    "examples": [
+                      {
+                        "source": "Tengo que pagar el alquiler el primer día. Parece que esto está cambiando.",
+                        "target": "Je dois payer le loyer le premier jour. Il semble que cela change."
+                      },
+                      {
+                        "source": "Tengo que sacar la basura los martes. Desde mi punto de vista, es una opción razonable.",
+                        "target": "Je dois sortir les poubelles le mardi. De mon point de vue, c'est une option raisonnable."
+                      }
+                    ]
+                  }
+                ]
+              },
+              "glossary": [
+                {
+                  "term": "Je dois payer le loyer le premier jour. Il semble que cela change.",
+                  "translations": [
+                    "Tengo que pagar el alquiler el primer día. Parece que esto está cambiando."
+                  ]
+                },
+                {
+                  "term": "Je dois sortir les poubelles le mardi. De mon point de vue, c'est une option raisonnable.",
+                  "translations": [
+                    "Tengo que sacar la basura los martes. Desde mi punto de vista, es una opción razonable."
+                  ]
+                },
+                {
+                  "term": "Je dois partager les dépenses. Néanmoins, il y a aussi des avantages.",
+                  "translations": [
+                    "Tengo que compartir los gastos. No obstante, también tiene ventajas."
+                  ]
+                }
+              ],
+              "exercises": [
+                {
+                  "type": "MultipleChoice",
+                  "id": "es-fr-b2-u08-l05-e01",
+                  "question": "¿Cuál es la opción correcta para «Tengo que pagar el alquiler el primer día. Parece que esto está cambiando.»?",
+                  "options": [
+                    "Je dois payer le loyer le premier jour. Il semble que cela change.",
+                    "Je dois sortir les poubelles le mardi. De mon point de vue, c'est une option raisonnable.",
+                    "Je dois partager les dépenses. Néanmoins, il y a aussi des avantages."
+                  ],
+                  "correctIndex": 0,
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "«Tengo que pagar el alquiler el primer día. Parece que esto está cambiando.» se dice «Je dois payer le loyer le premier jour. Il semble que cela change.».",
+                    "ruleRef": "gp-b2-concession"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has elegido la traducción correcta."
+                  }
+                },
+                {
+                  "type": "OrderWords",
+                  "id": "es-fr-b2-u08-l05-e02",
+                  "tokens": [
+                    "dois",
+                    "payer",
+                    "le",
+                    "loyer",
+                    "le",
+                    "premier",
+                    "jour",
+                    "Il",
+                    "semble",
+                    "que",
+                    "cela",
+                    "change",
+                    "Je"
+                  ],
+                  "answerTokens": [
+                    "Je",
+                    "dois",
+                    "payer",
+                    "le",
+                    "loyer",
+                    "le",
+                    "premier",
+                    "jour",
+                    "Il",
+                    "semble",
+                    "que",
+                    "cela",
+                    "change"
+                  ],
+                  "sourcePhrase": "Tengo que pagar el alquiler el primer día. Parece que esto está cambiando.",
+                  "feedbackOnError": {
+                    "type": "word_order",
+                    "explanation": "El orden correcto es «Je dois payer le loyer le premier jour Il semble que cela change».",
+                    "ruleRef": "gp-b2-concession"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "El orden produce una frase natural."
+                  }
+                },
+                {
+                  "type": "ClozeDragDrop",
+                  "id": "es-fr-b2-u08-l05-e03",
+                  "passage": "Je {{b1}} {{b2}} le loyer le premier jour",
+                  "blanks": [
+                    {
+                      "id": "b1",
+                      "answer": "dois",
+                      "options": [
+                        "dois",
+                        "loyer",
+                        "premier"
+                      ]
+                    },
+                    {
+                      "id": "b2",
+                      "answer": "payer",
+                      "options": [
+                        "payer",
+                        "loyer",
+                        "premier"
+                      ]
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "Las dos formas deben encajar con el contexto de la frase.",
+                    "ruleRef": "gp-b2-modal-perfect"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Los dos huecos encajan con la situación."
+                  }
+                },
+                {
+                  "type": "SemanticMatch",
+                  "id": "es-fr-b2-u08-l05-e04",
+                  "instructions": "Clasifica la función comunicativa de cada intervención.",
+                  "pairs": [
+                    {
+                      "left": "Je dois payer le loyer le premier jour. Il semble que cela change.",
+                      "right": "Planteamiento",
+                      "register": "formal",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    },
+                    {
+                      "left": "Je dois sortir les poubelles le mardi. De mon point de vue, c'est une option raisonnable.",
+                      "right": "Concesión",
+                      "register": "neutral",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    },
+                    {
+                      "left": "Je dois partager les dépenses. Néanmoins, il y a aussi des avantages.",
+                      "right": "Conclusión",
+                      "register": "informal",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "Cada intervención cumple una función comunicativa distinta.",
+                    "ruleRef": "gp-b2-concession"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has identificado la función de cada intervención."
+                  }
+                },
+                {
+                  "type": "SemanticMatch",
+                  "id": "es-fr-b2-u08-l05-e05",
+                  "instructions": "Distingue el registro de cada intervención.",
+                  "pairs": [
+                    {
+                      "left": "Je dois payer le loyer le premier jour. Il semble que cela change.",
+                      "right": "Formal",
+                      "register": "formal",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    },
+                    {
+                      "left": "Je dois sortir les poubelles le mardi. De mon point de vue, c'est une option raisonnable.",
+                      "right": "Neutral",
+                      "register": "neutral",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    },
+                    {
+                      "left": "Je dois partager les dépenses. Néanmoins, il y a aussi des avantages.",
+                      "right": "Informal",
+                      "register": "informal",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "register",
+                    "explanation": "El registro cambia según el contexto y la relación con el interlocutor.",
+                    "ruleRef": "gp-b2-modal-perfect"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has distinguido el registro de cada intervención."
+                  }
+                },
+                {
+                  "type": "AudioOnlyPrompt",
+                  "id": "es-fr-b2-u08-l05-e06",
+                  "audioText": "Je dois sortir les poubelles le mardi. De mon point de vue, c'est une option raisonnable.",
+                  "question": "¿Qué ha dicho el hablante?",
+                  "options": [
+                    "Je dois sortir les poubelles le mardi. De mon point de vue, c'est une option raisonnable.",
+                    "Je dois payer le loyer le premier jour. Il semble que cela change.",
+                    "Je dois partager les dépenses. Néanmoins, il y a aussi des avantages."
+                  ],
+                  "correctIndex": 0,
+                  "allowSlowPlayback": true,
+                  "feedbackOnError": {
+                    "type": "comprehension",
+                    "explanation": "El audio dice «Je dois sortir les poubelles le mardi. De mon point de vue, c'est une option raisonnable.».",
+                    "ruleRef": "gp-b2-concession"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has comprendido el mensaje del audio."
+                  }
+                },
+                {
+                  "type": "AudioOnlyPrompt",
+                  "id": "es-fr-b2-u08-l05-e07",
+                  "audioText": "Je dois partager les dépenses. Néanmoins, il y a aussi des avantages.",
+                  "question": "¿Cuál es la idea principal?",
+                  "options": [
+                    "Je dois partager les dépenses. Néanmoins, il y a aussi des avantages.",
+                    "Je dois payer le loyer le premier jour. Il semble que cela change.",
+                    "Je dois sortir les poubelles le mardi. De mon point de vue, c'est une option raisonnable."
+                  ],
+                  "correctIndex": 0,
+                  "allowSlowPlayback": false,
+                  "feedbackOnError": {
+                    "type": "comprehension",
+                    "explanation": "El audio dice «Je dois partager les dépenses. Néanmoins, il y a aussi des avantages.».",
+                    "ruleRef": "gp-b2-modal-perfect"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has identificado la idea principal."
+                  }
+                },
+                {
+                  "type": "ListenType",
+                  "id": "es-fr-b2-u08-l05-e08",
+                  "audioText": "Je dois partager les dépenses. Néanmoins, il y a aussi des avantages.",
+                  "transcription": "Je dois partager les dépenses. Néanmoins, il y a aussi des avantages.",
+                  "feedbackOnError": {
+                    "type": "spelling",
+                    "explanation": "Escribe exactamente «Je dois partager les dépenses. Néanmoins, il y a aussi des avantages.».",
+                    "ruleRef": "gp-b2-concession"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La transcripción coincide con el audio."
+                  }
+                },
+                {
+                  "type": "SpeakRepeat",
+                  "id": "es-fr-b2-u08-l05-e09",
+                  "targetPhrase": "Je dois partager les dépenses. Néanmoins, il y a aussi des avantages.",
+                  "audioText": "Je dois partager les dépenses. Néanmoins, il y a aussi des avantages.",
+                  "feedbackOnError": {
+                    "type": "pronunciation",
+                    "explanation": "Repite «Je dois partager les dépenses. Néanmoins, il y a aussi des avantages.» con claridad.",
+                    "ruleRef": "gp-b2-concession"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La frase se entiende y mantiene el ritmo."
+                  }
+                },
+                {
+                  "type": "FreeSpeakingPrompt",
+                  "id": "es-fr-b2-u08-l05-e10",
+                  "prompt": "Argumenta y matiza una opinión sobre las obligaciones de la casa.",
+                  "minTokens": 20,
+                  "conceptClusters": [
+                    [
+                      "dois"
+                    ],
+                    [
+                      "payer"
+                    ],
+                    [
+                      "loyer"
+                    ]
+                  ],
+                  "modelAnswer": "Je dois payer le loyer le premier jour. Il semble que cela change. Je dois sortir les poubelles le mardi. De mon point de vue, c'est une option raisonnable. Je dois partager les dépenses. Néanmoins, il y a aussi des avantages.",
+                  "selfAssessmentCriteria": [
+                    "¿La respuesta argumenta y responde a la tarea?",
+                    "¿Usa las dos estructuras gramaticales de la lección?",
+                    "¿Incluye una concesión o una matización?"
+                  ],
+                  "grammarRuleRefs": [
+                    "gp-b2-concession",
+                    "gp-b2-modal-perfect"
+                  ],
+                  "timeLimitSeconds": 90,
+                  "minWpm": 70,
+                  "maxWpm": 160,
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "La respuesta modelo desarrolla una opinión con matices y una concesión.",
+                    "ruleRef": "gp-b2-concession"
+                  }
+                }
+              ]
+            },
+            {
+              "id": "es-fr-b2-u08-l06",
+              "title": "Normas de convivencia",
+              "cefrLevel": "B2",
+              "scenario": "Situación comunicativa avanzada sobre la convivencia.",
+              "canDo": "Puedo argumentar y matizar sobre la convivencia.",
+              "grammarPoints": [
+                {
+                  "id": "gp-b2-concession",
+                  "label": "Concession",
+                  "description": "Although, despite y however introducen concesiones."
+                },
+                {
+                  "id": "gp-b2-modal-perfect",
+                  "label": "Modal perfect",
+                  "description": "Must have, might have y should have especulan sobre el pasado."
+                }
+              ],
+              "vocabFrequencyBand": "3000-5000",
+              "culturalNotes": [
+                {
+                  "idiom": "percuter",
+                  "note": "Expresión para comprender algo de repente.",
+                  "translation": "caer en la cuenta"
+                }
+              ],
+              "microLesson": {
+                "title": "Normas de convivencia",
+                "goals": [
+                  "Usar vocabulario avanzado de la convivencia.",
+                  "Aplicar concession y modal perfect.",
+                  "Argumentar y matizar sobre la convivencia."
+                ],
+                "sections": [
+                  {
+                    "heading": "Lengua en contexto",
+                    "body": "Concession: Although, despite y however introducen concesiones. Modal perfect: Must have, might have y should have especulan sobre el pasado.",
+                    "examples": [
+                      {
+                        "source": "En casa tenemos que respetar el descanso. Desde mi punto de vista, es una opción razonable.",
+                        "target": "À la maison, nous devons respecter le repos. De mon point de vue, c'est une option raisonnable."
+                      },
+                      {
+                        "source": "No se puede fumar dentro. No obstante, también tiene ventajas.",
+                        "target": "On ne peut pas fumer à l'intérieur. Néanmoins, il y a aussi des avantages."
+                      }
+                    ]
+                  }
+                ]
+              },
+              "glossary": [
+                {
+                  "term": "À la maison, nous devons respecter le repos. De mon point de vue, c'est une option raisonnable.",
+                  "translations": [
+                    "En casa tenemos que respetar el descanso. Desde mi punto de vista, es una opción razonable."
+                  ]
+                },
+                {
+                  "term": "On ne peut pas fumer à l'intérieur. Néanmoins, il y a aussi des avantages.",
+                  "translations": [
+                    "No se puede fumar dentro. No obstante, también tiene ventajas."
+                  ]
+                },
+                {
+                  "term": "Chacun nettoie sa chambre. En fin de compte, il faut prioriser.",
+                  "translations": [
+                    "Cada uno limpia su habitación. A fin de cuentas, hay que priorizar."
+                  ]
+                }
+              ],
+              "exercises": [
+                {
+                  "type": "MultipleChoice",
+                  "id": "es-fr-b2-u08-l06-e01",
+                  "question": "¿Cuál es la opción correcta para «En casa tenemos que respetar el descanso. Desde mi punto de vista, es una opción razonable.»?",
+                  "options": [
+                    "À la maison, nous devons respecter le repos. De mon point de vue, c'est une option raisonnable.",
+                    "On ne peut pas fumer à l'intérieur. Néanmoins, il y a aussi des avantages.",
+                    "Chacun nettoie sa chambre. En fin de compte, il faut prioriser."
+                  ],
+                  "correctIndex": 0,
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "«En casa tenemos que respetar el descanso. Desde mi punto de vista, es una opción razonable.» se dice «À la maison, nous devons respecter le repos. De mon point de vue, c'est une option raisonnable.».",
+                    "ruleRef": "gp-b2-concession"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has elegido la traducción correcta."
+                  }
+                },
+                {
+                  "type": "OrderWords",
+                  "id": "es-fr-b2-u08-l06-e02",
+                  "tokens": [
+                    "la",
+                    "maison",
+                    "nous",
+                    "devons",
+                    "respecter",
+                    "le",
+                    "repos",
+                    "De",
+                    "mon",
+                    "point",
+                    "de",
+                    "vue",
+                    "c'est",
+                    "une",
+                    "option",
+                    "raisonnable",
+                    "À"
+                  ],
+                  "answerTokens": [
+                    "À",
+                    "la",
+                    "maison",
+                    "nous",
+                    "devons",
+                    "respecter",
+                    "le",
+                    "repos",
+                    "De",
+                    "mon",
+                    "point",
+                    "de",
+                    "vue",
+                    "c'est",
+                    "une",
+                    "option",
+                    "raisonnable"
+                  ],
+                  "sourcePhrase": "En casa tenemos que respetar el descanso. Desde mi punto de vista, es una opción razonable.",
+                  "feedbackOnError": {
+                    "type": "word_order",
+                    "explanation": "El orden correcto es «À la maison nous devons respecter le repos De mon point de vue c'est une option raisonnable».",
+                    "ruleRef": "gp-b2-concession"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "El orden produce una frase natural."
+                  }
+                },
+                {
+                  "type": "ClozeDragDrop",
+                  "id": "es-fr-b2-u08-l06-e03",
+                  "passage": "À la {{b1}}, nous {{b2}} respecter le repos.",
+                  "blanks": [
+                    {
+                      "id": "b1",
+                      "answer": "maison",
+                      "options": [
+                        "maison",
+                        "respecter",
+                        "repos"
+                      ]
+                    },
+                    {
+                      "id": "b2",
+                      "answer": "devons",
+                      "options": [
+                        "devons",
+                        "respecter",
+                        "repos"
+                      ]
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "Las dos formas deben encajar con el contexto de la frase.",
+                    "ruleRef": "gp-b2-modal-perfect"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Los dos huecos encajan con la situación."
+                  }
+                },
+                {
+                  "type": "SemanticMatch",
+                  "id": "es-fr-b2-u08-l06-e04",
+                  "instructions": "Clasifica la función comunicativa de cada intervención.",
+                  "pairs": [
+                    {
+                      "left": "À la maison, nous devons respecter le repos. De mon point de vue, c'est une option raisonnable.",
+                      "right": "Planteamiento",
+                      "register": "formal",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    },
+                    {
+                      "left": "On ne peut pas fumer à l'intérieur. Néanmoins, il y a aussi des avantages.",
+                      "right": "Concesión",
+                      "register": "neutral",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    },
+                    {
+                      "left": "Chacun nettoie sa chambre. En fin de compte, il faut prioriser.",
+                      "right": "Conclusión",
+                      "register": "informal",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "Cada intervención cumple una función comunicativa distinta.",
+                    "ruleRef": "gp-b2-concession"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has identificado la función de cada intervención."
+                  }
+                },
+                {
+                  "type": "SemanticMatch",
+                  "id": "es-fr-b2-u08-l06-e05",
+                  "instructions": "Distingue el registro de cada intervención.",
+                  "pairs": [
+                    {
+                      "left": "À la maison, nous devons respecter le repos. De mon point de vue, c'est une option raisonnable.",
+                      "right": "Formal",
+                      "register": "formal",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    },
+                    {
+                      "left": "On ne peut pas fumer à l'intérieur. Néanmoins, il y a aussi des avantages.",
+                      "right": "Neutral",
+                      "register": "neutral",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    },
+                    {
+                      "left": "Chacun nettoie sa chambre. En fin de compte, il faut prioriser.",
+                      "right": "Informal",
+                      "register": "informal",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "register",
+                    "explanation": "El registro cambia según el contexto y la relación con el interlocutor.",
+                    "ruleRef": "gp-b2-modal-perfect"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has distinguido el registro de cada intervención."
+                  }
+                },
+                {
+                  "type": "AudioOnlyPrompt",
+                  "id": "es-fr-b2-u08-l06-e06",
+                  "audioText": "On ne peut pas fumer à l'intérieur. Néanmoins, il y a aussi des avantages.",
+                  "question": "¿Qué ha dicho el hablante?",
+                  "options": [
+                    "On ne peut pas fumer à l'intérieur. Néanmoins, il y a aussi des avantages.",
+                    "À la maison, nous devons respecter le repos. De mon point de vue, c'est une option raisonnable.",
+                    "Chacun nettoie sa chambre. En fin de compte, il faut prioriser."
+                  ],
+                  "correctIndex": 0,
+                  "allowSlowPlayback": true,
+                  "feedbackOnError": {
+                    "type": "comprehension",
+                    "explanation": "El audio dice «On ne peut pas fumer à l'intérieur. Néanmoins, il y a aussi des avantages.».",
+                    "ruleRef": "gp-b2-concession"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has comprendido el mensaje del audio."
+                  }
+                },
+                {
+                  "type": "AudioOnlyPrompt",
+                  "id": "es-fr-b2-u08-l06-e07",
+                  "audioText": "Chacun nettoie sa chambre. En fin de compte, il faut prioriser.",
+                  "question": "¿Cuál es la idea principal?",
+                  "options": [
+                    "Chacun nettoie sa chambre. En fin de compte, il faut prioriser.",
+                    "À la maison, nous devons respecter le repos. De mon point de vue, c'est une option raisonnable.",
+                    "On ne peut pas fumer à l'intérieur. Néanmoins, il y a aussi des avantages."
+                  ],
+                  "correctIndex": 0,
+                  "allowSlowPlayback": false,
+                  "feedbackOnError": {
+                    "type": "comprehension",
+                    "explanation": "El audio dice «Chacun nettoie sa chambre. En fin de compte, il faut prioriser.».",
+                    "ruleRef": "gp-b2-modal-perfect"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has identificado la idea principal."
+                  }
+                },
+                {
+                  "type": "ListenType",
+                  "id": "es-fr-b2-u08-l06-e08",
+                  "audioText": "Chacun nettoie sa chambre. En fin de compte, il faut prioriser.",
+                  "transcription": "Chacun nettoie sa chambre. En fin de compte, il faut prioriser.",
+                  "feedbackOnError": {
+                    "type": "spelling",
+                    "explanation": "Escribe exactamente «Chacun nettoie sa chambre. En fin de compte, il faut prioriser.».",
+                    "ruleRef": "gp-b2-concession"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La transcripción coincide con el audio."
+                  }
+                },
+                {
+                  "type": "SpeakRepeat",
+                  "id": "es-fr-b2-u08-l06-e09",
+                  "targetPhrase": "Chacun nettoie sa chambre. En fin de compte, il faut prioriser.",
+                  "audioText": "Chacun nettoie sa chambre. En fin de compte, il faut prioriser.",
+                  "feedbackOnError": {
+                    "type": "pronunciation",
+                    "explanation": "Repite «Chacun nettoie sa chambre. En fin de compte, il faut prioriser.» con claridad.",
+                    "ruleRef": "gp-b2-concession"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La frase se entiende y mantiene el ritmo."
+                  }
+                },
+                {
+                  "type": "FreeSpeakingPrompt",
+                  "id": "es-fr-b2-u08-l06-e10",
+                  "prompt": "Argumenta y matiza una opinión sobre la convivencia.",
+                  "minTokens": 20,
+                  "conceptClusters": [
+                    [
+                      "maison"
+                    ],
+                    [
+                      "devons"
+                    ],
+                    [
+                      "respecter"
+                    ]
+                  ],
+                  "modelAnswer": "À la maison, nous devons respecter le repos. De mon point de vue, c'est une option raisonnable. On ne peut pas fumer à l'intérieur. Néanmoins, il y a aussi des avantages. Chacun nettoie sa chambre. En fin de compte, il faut prioriser.",
+                  "selfAssessmentCriteria": [
+                    "¿La respuesta argumenta y responde a la tarea?",
+                    "¿Usa las dos estructuras gramaticales de la lección?",
+                    "¿Incluye una concesión o una matización?"
+                  ],
+                  "grammarRuleRefs": [
+                    "gp-b2-concession",
+                    "gp-b2-modal-perfect"
+                  ],
+                  "timeLimitSeconds": 90,
+                  "minWpm": 70,
+                  "maxWpm": 160,
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "La respuesta modelo desarrolla una opinión con matices y una concesión.",
+                    "ruleRef": "gp-b2-concession"
+                  }
+                }
+              ]
+            },
+            {
+              "id": "es-fr-b2-u08-l07",
+              "title": "Anuncio de piso",
+              "cefrLevel": "B2",
+              "scenario": "Situación comunicativa avanzada sobre un anuncio de alquiler.",
+              "canDo": "Puedo argumentar y matizar sobre un anuncio de alquiler.",
+              "grammarPoints": [
+                {
+                  "id": "gp-b2-concession",
+                  "label": "Concession",
+                  "description": "Although, despite y however introducen concesiones."
+                },
+                {
+                  "id": "gp-b2-modal-perfect",
+                  "label": "Modal perfect",
+                  "description": "Must have, might have y should have especulan sobre el pasado."
+                }
+              ],
+              "vocabFrequencyBand": "3000-5000",
+              "culturalNotes": [
+                {
+                  "idiom": "garder un œil sur",
+                  "note": "Expresión para vigilar algo.",
+                  "translation": "estar pendiente"
+                }
+              ],
+              "microLesson": {
+                "title": "Anuncio de piso",
+                "goals": [
+                  "Usar vocabulario avanzado de un anuncio de alquiler.",
+                  "Aplicar concession y modal perfect.",
+                  "Argumentar y matizar sobre un anuncio de alquiler."
+                ],
+                "sections": [
+                  {
+                    "heading": "Lengua en contexto",
+                    "body": "Concession: Although, despite y however introducen concesiones. Modal perfect: Must have, might have y should have especulan sobre el pasado.",
+                    "examples": [
+                      {
+                        "source": "Se alquila piso de dos habitaciones. No obstante, también tiene ventajas.",
+                        "target": "Appartement de deux chambres à louer. Néanmoins, il y a aussi des avantages."
+                      },
+                      {
+                        "source": "Está amueblado y tiene ascensor. A fin de cuentas, hay que priorizar.",
+                        "target": "Il est meublé et dispose d'un ascenseur. En fin de compte, il faut prioriser."
+                      }
+                    ]
+                  }
+                ]
+              },
+              "glossary": [
+                {
+                  "term": "Appartement de deux chambres à louer. Néanmoins, il y a aussi des avantages.",
+                  "translations": [
+                    "Se alquila piso de dos habitaciones. No obstante, también tiene ventajas."
+                  ]
+                },
+                {
+                  "term": "Il est meublé et dispose d'un ascenseur. En fin de compte, il faut prioriser.",
+                  "translations": [
+                    "Está amueblado y tiene ascensor. A fin de cuentas, hay que priorizar."
+                  ]
+                },
+                {
+                  "term": "Le loyer est de huit cents euros par mois. En bref, c'est un sujet complexe.",
+                  "translations": [
+                    "El alquiler es de ochocientos euros al mes. En resumen, es un tema complejo."
+                  ]
+                }
+              ],
+              "exercises": [
+                {
+                  "type": "MultipleChoice",
+                  "id": "es-fr-b2-u08-l07-e01",
+                  "question": "¿Cuál es la opción correcta para «Se alquila piso de dos habitaciones. No obstante, también tiene ventajas.»?",
+                  "options": [
+                    "Appartement de deux chambres à louer. Néanmoins, il y a aussi des avantages.",
+                    "Il est meublé et dispose d'un ascenseur. En fin de compte, il faut prioriser.",
+                    "Le loyer est de huit cents euros par mois. En bref, c'est un sujet complexe."
+                  ],
+                  "correctIndex": 0,
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "«Se alquila piso de dos habitaciones. No obstante, también tiene ventajas.» se dice «Appartement de deux chambres à louer. Néanmoins, il y a aussi des avantages.».",
+                    "ruleRef": "gp-b2-concession"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has elegido la traducción correcta."
+                  }
+                },
+                {
+                  "type": "OrderWords",
+                  "id": "es-fr-b2-u08-l07-e02",
+                  "tokens": [
+                    "de",
+                    "deux",
+                    "chambres",
+                    "à",
+                    "louer",
+                    "Néanmoins",
+                    "il",
+                    "y",
+                    "a",
+                    "aussi",
+                    "des",
+                    "avantages",
+                    "Appartement"
+                  ],
+                  "answerTokens": [
+                    "Appartement",
+                    "de",
+                    "deux",
+                    "chambres",
+                    "à",
+                    "louer",
+                    "Néanmoins",
+                    "il",
+                    "y",
+                    "a",
+                    "aussi",
+                    "des",
+                    "avantages"
+                  ],
+                  "sourcePhrase": "Se alquila piso de dos habitaciones. No obstante, también tiene ventajas.",
+                  "feedbackOnError": {
+                    "type": "word_order",
+                    "explanation": "El orden correcto es «Appartement de deux chambres à louer Néanmoins il y a aussi des avantages».",
+                    "ruleRef": "gp-b2-concession"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "El orden produce una frase natural."
+                  }
+                },
+                {
+                  "type": "ClozeDragDrop",
+                  "id": "es-fr-b2-u08-l07-e03",
+                  "passage": "{{b1}} de {{b2}} chambres à louer.",
+                  "blanks": [
+                    {
+                      "id": "b1",
+                      "answer": "Appartement",
+                      "options": [
+                        "Appartement",
+                        "chambres",
+                        "louer"
+                      ]
+                    },
+                    {
+                      "id": "b2",
+                      "answer": "deux",
+                      "options": [
+                        "deux",
+                        "chambres",
+                        "louer"
+                      ]
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "Las dos formas deben encajar con el contexto de la frase.",
+                    "ruleRef": "gp-b2-modal-perfect"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Los dos huecos encajan con la situación."
+                  }
+                },
+                {
+                  "type": "SemanticMatch",
+                  "id": "es-fr-b2-u08-l07-e04",
+                  "instructions": "Clasifica la función comunicativa de cada intervención.",
+                  "pairs": [
+                    {
+                      "left": "Appartement de deux chambres à louer. Néanmoins, il y a aussi des avantages.",
+                      "right": "Planteamiento",
+                      "register": "formal",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    },
+                    {
+                      "left": "Il est meublé et dispose d'un ascenseur. En fin de compte, il faut prioriser.",
+                      "right": "Concesión",
+                      "register": "neutral",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    },
+                    {
+                      "left": "Le loyer est de huit cents euros par mois. En bref, c'est un sujet complexe.",
+                      "right": "Conclusión",
+                      "register": "informal",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "Cada intervención cumple una función comunicativa distinta.",
+                    "ruleRef": "gp-b2-concession"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has identificado la función de cada intervención."
+                  }
+                },
+                {
+                  "type": "SemanticMatch",
+                  "id": "es-fr-b2-u08-l07-e05",
+                  "instructions": "Distingue el registro de cada intervención.",
+                  "pairs": [
+                    {
+                      "left": "Appartement de deux chambres à louer. Néanmoins, il y a aussi des avantages.",
+                      "right": "Formal",
+                      "register": "formal",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    },
+                    {
+                      "left": "Il est meublé et dispose d'un ascenseur. En fin de compte, il faut prioriser.",
+                      "right": "Neutral",
+                      "register": "neutral",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    },
+                    {
+                      "left": "Le loyer est de huit cents euros par mois. En bref, c'est un sujet complexe.",
+                      "right": "Informal",
+                      "register": "informal",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "register",
+                    "explanation": "El registro cambia según el contexto y la relación con el interlocutor.",
+                    "ruleRef": "gp-b2-modal-perfect"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has distinguido el registro de cada intervención."
+                  }
+                },
+                {
+                  "type": "AudioOnlyPrompt",
+                  "id": "es-fr-b2-u08-l07-e06",
+                  "audioText": "Il est meublé et dispose d'un ascenseur. En fin de compte, il faut prioriser.",
+                  "question": "¿Qué ha dicho el hablante?",
+                  "options": [
+                    "Il est meublé et dispose d'un ascenseur. En fin de compte, il faut prioriser.",
+                    "Appartement de deux chambres à louer. Néanmoins, il y a aussi des avantages.",
+                    "Le loyer est de huit cents euros par mois. En bref, c'est un sujet complexe."
+                  ],
+                  "correctIndex": 0,
+                  "allowSlowPlayback": true,
+                  "feedbackOnError": {
+                    "type": "comprehension",
+                    "explanation": "El audio dice «Il est meublé et dispose d'un ascenseur. En fin de compte, il faut prioriser.».",
+                    "ruleRef": "gp-b2-concession"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has comprendido el mensaje del audio."
+                  }
+                },
+                {
+                  "type": "AudioOnlyPrompt",
+                  "id": "es-fr-b2-u08-l07-e07",
+                  "audioText": "Le loyer est de huit cents euros par mois. En bref, c'est un sujet complexe.",
+                  "question": "¿Cuál es la idea principal?",
+                  "options": [
+                    "Le loyer est de huit cents euros par mois. En bref, c'est un sujet complexe.",
+                    "Appartement de deux chambres à louer. Néanmoins, il y a aussi des avantages.",
+                    "Il est meublé et dispose d'un ascenseur. En fin de compte, il faut prioriser."
+                  ],
+                  "correctIndex": 0,
+                  "allowSlowPlayback": false,
+                  "feedbackOnError": {
+                    "type": "comprehension",
+                    "explanation": "El audio dice «Le loyer est de huit cents euros par mois. En bref, c'est un sujet complexe.».",
+                    "ruleRef": "gp-b2-modal-perfect"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has identificado la idea principal."
+                  }
+                },
+                {
+                  "type": "ListenType",
+                  "id": "es-fr-b2-u08-l07-e08",
+                  "audioText": "Le loyer est de huit cents euros par mois. En bref, c'est un sujet complexe.",
+                  "transcription": "Le loyer est de huit cents euros par mois. En bref, c'est un sujet complexe.",
+                  "feedbackOnError": {
+                    "type": "spelling",
+                    "explanation": "Escribe exactamente «Le loyer est de huit cents euros par mois. En bref, c'est un sujet complexe.».",
+                    "ruleRef": "gp-b2-concession"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La transcripción coincide con el audio."
+                  }
+                },
+                {
+                  "type": "SpeakRepeat",
+                  "id": "es-fr-b2-u08-l07-e09",
+                  "targetPhrase": "Le loyer est de huit cents euros par mois. En bref, c'est un sujet complexe.",
+                  "audioText": "Le loyer est de huit cents euros par mois. En bref, c'est un sujet complexe.",
+                  "feedbackOnError": {
+                    "type": "pronunciation",
+                    "explanation": "Repite «Le loyer est de huit cents euros par mois. En bref, c'est un sujet complexe.» con claridad.",
+                    "ruleRef": "gp-b2-concession"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La frase se entiende y mantiene el ritmo."
+                  }
+                },
+                {
+                  "type": "FreeSpeakingPrompt",
+                  "id": "es-fr-b2-u08-l07-e10",
+                  "prompt": "Argumenta y matiza una opinión sobre un anuncio de alquiler.",
+                  "minTokens": 20,
+                  "conceptClusters": [
+                    [
+                      "Appartement"
+                    ],
+                    [
+                      "deux"
+                    ],
+                    [
+                      "chambres"
+                    ]
+                  ],
+                  "modelAnswer": "Appartement de deux chambres à louer. Néanmoins, il y a aussi des avantages. Il est meublé et dispose d'un ascenseur. En fin de compte, il faut prioriser. Le loyer est de huit cents euros par mois. En bref, c'est un sujet complexe.",
+                  "selfAssessmentCriteria": [
+                    "¿La respuesta argumenta y responde a la tarea?",
+                    "¿Usa las dos estructuras gramaticales de la lección?",
+                    "¿Incluye una concesión o una matización?"
+                  ],
+                  "grammarRuleRefs": [
+                    "gp-b2-concession",
+                    "gp-b2-modal-perfect"
+                  ],
+                  "timeLimitSeconds": 90,
+                  "minWpm": 70,
+                  "maxWpm": 160,
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "La respuesta modelo desarrolla una opinión con matices y una concesión.",
+                    "ruleRef": "gp-b2-concession"
+                  }
+                }
+              ]
+            },
+            {
+              "id": "es-fr-b2-u08-l08",
+              "title": "Negociar tareas",
+              "cefrLevel": "B2",
+              "scenario": "Situación comunicativa avanzada sobre repartir las tareas.",
+              "canDo": "Puedo argumentar y matizar sobre repartir las tareas.",
+              "grammarPoints": [
+                {
+                  "id": "gp-b2-concession",
+                  "label": "Concession",
+                  "description": "Although, despite y however introducen concesiones."
+                },
+                {
+                  "id": "gp-b2-modal-perfect",
+                  "label": "Modal perfect",
+                  "description": "Must have, might have y should have especulan sobre el pasado."
+                }
+              ],
+              "vocabFrequencyBand": "3000-5000",
+              "culturalNotes": [
+                {
+                  "idiom": "coûter les yeux de la tête",
+                  "note": "Expresión para decir que algo es muy caro.",
+                  "translation": "costar un ojo de la cara"
+                }
+              ],
+              "microLesson": {
+                "title": "Negociar tareas",
+                "goals": [
+                  "Usar vocabulario avanzado de repartir las tareas.",
+                  "Aplicar concession y modal perfect.",
+                  "Argumentar y matizar sobre repartir las tareas."
+                ],
+                "sections": [
+                  {
+                    "heading": "Lengua en contexto",
+                    "body": "Concession: Although, despite y however introducen concesiones. Modal perfect: Must have, might have y should have especulan sobre el pasado.",
+                    "examples": [
+                      {
+                        "source": "¿Podrías encargarte de la compra esta semana? A fin de cuentas, hay que priorizar.",
+                        "target": "Pourrais-tu faire les courses cette semaine ? En fin de compte, il faut prioriser."
+                      },
+                      {
+                        "source": "Yo puedo limpiar el baño. En resumen, es un tema complejo.",
+                        "target": "Je peux nettoyer la salle de bain. En bref, c'est un sujet complexe."
+                      }
+                    ]
+                  }
+                ]
+              },
+              "glossary": [
+                {
+                  "term": "Pourrais-tu faire les courses cette semaine ? En fin de compte, il faut prioriser.",
+                  "translations": [
+                    "¿Podrías encargarte de la compra esta semana? A fin de cuentas, hay que priorizar."
+                  ]
+                },
+                {
+                  "term": "Je peux nettoyer la salle de bain. En bref, c'est un sujet complexe.",
+                  "translations": [
+                    "Yo puedo limpiar el baño. En resumen, es un tema complejo."
+                  ]
+                },
+                {
+                  "term": "Ça te va si on échange les tâches ? Cependant, il convient de nuancer.",
+                  "translations": [
+                    "¿Te parece bien si cambiamos las tareas? Sin embargo, conviene matizarlo."
+                  ]
+                }
+              ],
+              "exercises": [
+                {
+                  "type": "MultipleChoice",
+                  "id": "es-fr-b2-u08-l08-e01",
+                  "question": "¿Cuál es la opción correcta para «¿Podrías encargarte de la compra esta semana? A fin de cuentas, hay que priorizar.»?",
+                  "options": [
+                    "Pourrais-tu faire les courses cette semaine ? En fin de compte, il faut prioriser.",
+                    "Je peux nettoyer la salle de bain. En bref, c'est un sujet complexe.",
+                    "Ça te va si on échange les tâches ? Cependant, il convient de nuancer."
+                  ],
+                  "correctIndex": 0,
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "«¿Podrías encargarte de la compra esta semana? A fin de cuentas, hay que priorizar.» se dice «Pourrais-tu faire les courses cette semaine ? En fin de compte, il faut prioriser.».",
+                    "ruleRef": "gp-b2-concession"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has elegido la traducción correcta."
+                  }
+                },
+                {
+                  "type": "OrderWords",
+                  "id": "es-fr-b2-u08-l08-e02",
+                  "tokens": [
+                    "tu",
+                    "faire",
+                    "les",
+                    "courses",
+                    "cette",
+                    "semaine",
+                    "En",
+                    "fin",
+                    "de",
+                    "compte",
+                    "il",
+                    "faut",
+                    "prioriser",
+                    "Pourrais"
+                  ],
+                  "answerTokens": [
+                    "Pourrais",
+                    "tu",
+                    "faire",
+                    "les",
+                    "courses",
+                    "cette",
+                    "semaine",
+                    "En",
+                    "fin",
+                    "de",
+                    "compte",
+                    "il",
+                    "faut",
+                    "prioriser"
+                  ],
+                  "sourcePhrase": "¿Podrías encargarte de la compra esta semana? A fin de cuentas, hay que priorizar.",
+                  "feedbackOnError": {
+                    "type": "word_order",
+                    "explanation": "El orden correcto es «Pourrais tu faire les courses cette semaine En fin de compte il faut prioriser».",
+                    "ruleRef": "gp-b2-concession"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "El orden produce una frase natural."
+                  }
+                },
+                {
+                  "type": "ClozeDragDrop",
+                  "id": "es-fr-b2-u08-l08-e03",
+                  "passage": "{{b1}}-tu {{b2}} les courses cette semaine ?",
+                  "blanks": [
+                    {
+                      "id": "b1",
+                      "answer": "Pourrais",
+                      "options": [
+                        "Pourrais",
+                        "courses",
+                        "semaine"
+                      ]
+                    },
+                    {
+                      "id": "b2",
+                      "answer": "faire",
+                      "options": [
+                        "faire",
+                        "courses",
+                        "semaine"
+                      ]
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "Las dos formas deben encajar con el contexto de la frase.",
+                    "ruleRef": "gp-b2-modal-perfect"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Los dos huecos encajan con la situación."
+                  }
+                },
+                {
+                  "type": "SemanticMatch",
+                  "id": "es-fr-b2-u08-l08-e04",
+                  "instructions": "Clasifica la función comunicativa de cada intervención.",
+                  "pairs": [
+                    {
+                      "left": "Pourrais-tu faire les courses cette semaine ? En fin de compte, il faut prioriser.",
+                      "right": "Planteamiento",
+                      "register": "formal",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    },
+                    {
+                      "left": "Je peux nettoyer la salle de bain. En bref, c'est un sujet complexe.",
+                      "right": "Concesión",
+                      "register": "neutral",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    },
+                    {
+                      "left": "Ça te va si on échange les tâches ? Cependant, il convient de nuancer.",
+                      "right": "Conclusión",
+                      "register": "informal",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "Cada intervención cumple una función comunicativa distinta.",
+                    "ruleRef": "gp-b2-concession"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has identificado la función de cada intervención."
+                  }
+                },
+                {
+                  "type": "SemanticMatch",
+                  "id": "es-fr-b2-u08-l08-e05",
+                  "instructions": "Distingue el registro de cada intervención.",
+                  "pairs": [
+                    {
+                      "left": "Pourrais-tu faire les courses cette semaine ? En fin de compte, il faut prioriser.",
+                      "right": "Formal",
+                      "register": "formal",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    },
+                    {
+                      "left": "Je peux nettoyer la salle de bain. En bref, c'est un sujet complexe.",
+                      "right": "Neutral",
+                      "register": "neutral",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    },
+                    {
+                      "left": "Ça te va si on échange les tâches ? Cependant, il convient de nuancer.",
+                      "right": "Informal",
+                      "register": "informal",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "register",
+                    "explanation": "El registro cambia según el contexto y la relación con el interlocutor.",
+                    "ruleRef": "gp-b2-modal-perfect"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has distinguido el registro de cada intervención."
+                  }
+                },
+                {
+                  "type": "AudioOnlyPrompt",
+                  "id": "es-fr-b2-u08-l08-e06",
+                  "audioText": "Je peux nettoyer la salle de bain. En bref, c'est un sujet complexe.",
+                  "question": "¿Qué ha dicho el hablante?",
+                  "options": [
+                    "Je peux nettoyer la salle de bain. En bref, c'est un sujet complexe.",
+                    "Pourrais-tu faire les courses cette semaine ? En fin de compte, il faut prioriser.",
+                    "Ça te va si on échange les tâches ? Cependant, il convient de nuancer."
+                  ],
+                  "correctIndex": 0,
+                  "allowSlowPlayback": true,
+                  "feedbackOnError": {
+                    "type": "comprehension",
+                    "explanation": "El audio dice «Je peux nettoyer la salle de bain. En bref, c'est un sujet complexe.».",
+                    "ruleRef": "gp-b2-concession"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has comprendido el mensaje del audio."
+                  }
+                },
+                {
+                  "type": "AudioOnlyPrompt",
+                  "id": "es-fr-b2-u08-l08-e07",
+                  "audioText": "Ça te va si on échange les tâches ? Cependant, il convient de nuancer.",
+                  "question": "¿Cuál es la idea principal?",
+                  "options": [
+                    "Ça te va si on échange les tâches ? Cependant, il convient de nuancer.",
+                    "Pourrais-tu faire les courses cette semaine ? En fin de compte, il faut prioriser.",
+                    "Je peux nettoyer la salle de bain. En bref, c'est un sujet complexe."
+                  ],
+                  "correctIndex": 0,
+                  "allowSlowPlayback": false,
+                  "feedbackOnError": {
+                    "type": "comprehension",
+                    "explanation": "El audio dice «Ça te va si on échange les tâches ? Cependant, il convient de nuancer.».",
+                    "ruleRef": "gp-b2-modal-perfect"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has identificado la idea principal."
+                  }
+                },
+                {
+                  "type": "ListenType",
+                  "id": "es-fr-b2-u08-l08-e08",
+                  "audioText": "Ça te va si on échange les tâches ? Cependant, il convient de nuancer.",
+                  "transcription": "Ça te va si on échange les tâches ? Cependant, il convient de nuancer.",
+                  "feedbackOnError": {
+                    "type": "spelling",
+                    "explanation": "Escribe exactamente «Ça te va si on échange les tâches ? Cependant, il convient de nuancer.».",
+                    "ruleRef": "gp-b2-concession"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La transcripción coincide con el audio."
+                  }
+                },
+                {
+                  "type": "SpeakRepeat",
+                  "id": "es-fr-b2-u08-l08-e09",
+                  "targetPhrase": "Ça te va si on échange les tâches ? Cependant, il convient de nuancer.",
+                  "audioText": "Ça te va si on échange les tâches ? Cependant, il convient de nuancer.",
+                  "feedbackOnError": {
+                    "type": "pronunciation",
+                    "explanation": "Repite «Ça te va si on échange les tâches ? Cependant, il convient de nuancer.» con claridad.",
+                    "ruleRef": "gp-b2-concession"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La frase se entiende y mantiene el ritmo."
+                  }
+                },
+                {
+                  "type": "FreeSpeakingPrompt",
+                  "id": "es-fr-b2-u08-l08-e10",
+                  "prompt": "Argumenta y matiza una opinión sobre repartir las tareas.",
+                  "minTokens": 20,
+                  "conceptClusters": [
+                    [
+                      "Pourrais"
+                    ],
+                    [
+                      "faire"
+                    ],
+                    [
+                      "courses"
+                    ]
+                  ],
+                  "modelAnswer": "Pourrais-tu faire les courses cette semaine ? En fin de compte, il faut prioriser. Je peux nettoyer la salle de bain. En bref, c'est un sujet complexe. Ça te va si on échange les tâches ? Cependant, il convient de nuancer.",
+                  "selfAssessmentCriteria": [
+                    "¿La respuesta argumenta y responde a la tarea?",
+                    "¿Usa las dos estructuras gramaticales de la lección?",
+                    "¿Incluye una concesión o una matización?"
+                  ],
+                  "grammarRuleRefs": [
+                    "gp-b2-concession",
+                    "gp-b2-modal-perfect"
+                  ],
+                  "timeLimitSeconds": 90,
+                  "minWpm": 70,
+                  "maxWpm": 160,
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "La respuesta modelo desarrolla una opinión con matices y una concesión.",
+                    "ruleRef": "gp-b2-concession"
+                  }
+                }
+              ]
+            },
+            {
+              "id": "es-fr-b2-u08-l09",
+              "title": "Integración: contrato",
+              "cefrLevel": "B2",
+              "scenario": "Situación comunicativa avanzada sobre un contrato de alquiler.",
+              "canDo": "Puedo argumentar y matizar sobre un contrato de alquiler.",
+              "grammarPoints": [
+                {
+                  "id": "gp-b2-concession",
+                  "label": "Concession",
+                  "description": "Although, despite y however introducen concesiones."
+                },
+                {
+                  "id": "gp-b2-modal-perfect",
+                  "label": "Modal perfect",
+                  "description": "Must have, might have y should have especulan sobre el pasado."
+                }
+              ],
+              "vocabFrequencyBand": "3000-5000",
+              "culturalNotes": [
+                {
+                  "idiom": "travailler tard",
+                  "note": "Expresión para trabajar hasta muy tarde.",
+                  "translation": "trabajar hasta tarde"
+                }
+              ],
+              "microLesson": {
+                "title": "Integración: contrato",
+                "goals": [
+                  "Usar vocabulario avanzado de un contrato de alquiler.",
+                  "Aplicar concession y modal perfect.",
+                  "Argumentar y matizar sobre un contrato de alquiler."
+                ],
+                "sections": [
+                  {
+                    "heading": "Lengua en contexto",
+                    "body": "Concession: Although, despite y however introducen concesiones. Modal perfect: Must have, might have y should have especulan sobre el pasado.",
+                    "examples": [
+                      {
+                        "source": "Antes de firmar, lee las condiciones del contrato. En resumen, es un tema complejo.",
+                        "target": "Avant de signer, lis les conditions du contrat. En bref, c'est un sujet complexe."
+                      },
+                      {
+                        "source": "Comprueba la duración y la fianza. Sin embargo, conviene matizarlo.",
+                        "target": "Vérifie la durée et le dépôt de garantie. Cependant, il convient de nuancer."
+                      }
+                    ]
+                  }
+                ]
+              },
+              "glossary": [
+                {
+                  "term": "Avant de signer, lis les conditions du contrat. En bref, c'est un sujet complexe.",
+                  "translations": [
+                    "Antes de firmar, lee las condiciones del contrato. En resumen, es un tema complejo."
+                  ]
+                },
+                {
+                  "term": "Vérifie la durée et le dépôt de garantie. Cependant, il convient de nuancer.",
+                  "translations": [
+                    "Comprueba la duración y la fianza. Sin embargo, conviene matizarlo."
+                  ]
+                },
+                {
+                  "term": "Garde une copie signée. Cela dit, cela dépend du contexte.",
+                  "translations": [
+                    "Guarda una copia firmada. Dicho esto, depende del contexto."
+                  ]
+                }
+              ],
+              "exercises": [
+                {
+                  "type": "MultipleChoice",
+                  "id": "es-fr-b2-u08-l09-e01",
+                  "question": "¿Cuál es la opción correcta para «Antes de firmar, lee las condiciones del contrato. En resumen, es un tema complejo.»?",
+                  "options": [
+                    "Avant de signer, lis les conditions du contrat. En bref, c'est un sujet complexe.",
+                    "Vérifie la durée et le dépôt de garantie. Cependant, il convient de nuancer.",
+                    "Garde une copie signée. Cela dit, cela dépend du contexte."
+                  ],
+                  "correctIndex": 0,
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "«Antes de firmar, lee las condiciones del contrato. En resumen, es un tema complejo.» se dice «Avant de signer, lis les conditions du contrat. En bref, c'est un sujet complexe.».",
+                    "ruleRef": "gp-b2-concession"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has elegido la traducción correcta."
+                  }
+                },
+                {
+                  "type": "OrderWords",
+                  "id": "es-fr-b2-u08-l09-e02",
+                  "tokens": [
+                    "de",
+                    "signer",
+                    "lis",
+                    "les",
+                    "conditions",
+                    "du",
+                    "contrat",
+                    "En",
+                    "bref",
+                    "c'est",
+                    "un",
+                    "sujet",
+                    "complexe",
+                    "Avant"
+                  ],
+                  "answerTokens": [
+                    "Avant",
+                    "de",
+                    "signer",
+                    "lis",
+                    "les",
+                    "conditions",
+                    "du",
+                    "contrat",
+                    "En",
+                    "bref",
+                    "c'est",
+                    "un",
+                    "sujet",
+                    "complexe"
+                  ],
+                  "sourcePhrase": "Antes de firmar, lee las condiciones del contrato. En resumen, es un tema complejo.",
+                  "feedbackOnError": {
+                    "type": "word_order",
+                    "explanation": "El orden correcto es «Avant de signer lis les conditions du contrat En bref c'est un sujet complexe».",
+                    "ruleRef": "gp-b2-concession"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "El orden produce una frase natural."
+                  }
+                },
+                {
+                  "type": "ClozeDragDrop",
+                  "id": "es-fr-b2-u08-l09-e03",
+                  "passage": "{{b1}} de {{b2}}, lis les conditions du contrat.",
+                  "blanks": [
+                    {
+                      "id": "b1",
+                      "answer": "Avant",
+                      "options": [
+                        "Avant",
+                        "lis",
+                        "conditions"
+                      ]
+                    },
+                    {
+                      "id": "b2",
+                      "answer": "signer",
+                      "options": [
+                        "signer",
+                        "lis",
+                        "conditions"
+                      ]
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "Las dos formas deben encajar con el contexto de la frase.",
+                    "ruleRef": "gp-b2-modal-perfect"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Los dos huecos encajan con la situación."
+                  }
+                },
+                {
+                  "type": "SemanticMatch",
+                  "id": "es-fr-b2-u08-l09-e04",
+                  "instructions": "Clasifica la función comunicativa de cada intervención.",
+                  "pairs": [
+                    {
+                      "left": "Avant de signer, lis les conditions du contrat. En bref, c'est un sujet complexe.",
+                      "right": "Planteamiento",
+                      "register": "formal",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    },
+                    {
+                      "left": "Vérifie la durée et le dépôt de garantie. Cependant, il convient de nuancer.",
+                      "right": "Concesión",
+                      "register": "neutral",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    },
+                    {
+                      "left": "Garde une copie signée. Cela dit, cela dépend du contexte.",
+                      "right": "Conclusión",
+                      "register": "informal",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "Cada intervención cumple una función comunicativa distinta.",
+                    "ruleRef": "gp-b2-concession"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has identificado la función de cada intervención."
+                  }
+                },
+                {
+                  "type": "SemanticMatch",
+                  "id": "es-fr-b2-u08-l09-e05",
+                  "instructions": "Distingue el registro de cada intervención.",
+                  "pairs": [
+                    {
+                      "left": "Avant de signer, lis les conditions du contrat. En bref, c'est un sujet complexe.",
+                      "right": "Formal",
+                      "register": "formal",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    },
+                    {
+                      "left": "Vérifie la durée et le dépôt de garantie. Cependant, il convient de nuancer.",
+                      "right": "Neutral",
+                      "register": "neutral",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    },
+                    {
+                      "left": "Garde une copie signée. Cela dit, cela dépend du contexte.",
+                      "right": "Informal",
+                      "register": "informal",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "register",
+                    "explanation": "El registro cambia según el contexto y la relación con el interlocutor.",
+                    "ruleRef": "gp-b2-modal-perfect"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has distinguido el registro de cada intervención."
+                  }
+                },
+                {
+                  "type": "AudioOnlyPrompt",
+                  "id": "es-fr-b2-u08-l09-e06",
+                  "audioText": "Vérifie la durée et le dépôt de garantie. Cependant, il convient de nuancer.",
+                  "question": "¿Qué ha dicho el hablante?",
+                  "options": [
+                    "Vérifie la durée et le dépôt de garantie. Cependant, il convient de nuancer.",
+                    "Avant de signer, lis les conditions du contrat. En bref, c'est un sujet complexe.",
+                    "Garde une copie signée. Cela dit, cela dépend du contexte."
+                  ],
+                  "correctIndex": 0,
+                  "allowSlowPlayback": true,
+                  "feedbackOnError": {
+                    "type": "comprehension",
+                    "explanation": "El audio dice «Vérifie la durée et le dépôt de garantie. Cependant, il convient de nuancer.».",
+                    "ruleRef": "gp-b2-concession"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has comprendido el mensaje del audio."
+                  }
+                },
+                {
+                  "type": "AudioOnlyPrompt",
+                  "id": "es-fr-b2-u08-l09-e07",
+                  "audioText": "Garde une copie signée. Cela dit, cela dépend du contexte.",
+                  "question": "¿Cuál es la idea principal?",
+                  "options": [
+                    "Garde une copie signée. Cela dit, cela dépend du contexte.",
+                    "Avant de signer, lis les conditions du contrat. En bref, c'est un sujet complexe.",
+                    "Vérifie la durée et le dépôt de garantie. Cependant, il convient de nuancer."
+                  ],
+                  "correctIndex": 0,
+                  "allowSlowPlayback": false,
+                  "feedbackOnError": {
+                    "type": "comprehension",
+                    "explanation": "El audio dice «Garde une copie signée. Cela dit, cela dépend du contexte.».",
+                    "ruleRef": "gp-b2-modal-perfect"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has identificado la idea principal."
+                  }
+                },
+                {
+                  "type": "ListenType",
+                  "id": "es-fr-b2-u08-l09-e08",
+                  "audioText": "Garde une copie signée. Cela dit, cela dépend du contexte.",
+                  "transcription": "Garde une copie signée. Cela dit, cela dépend du contexte.",
+                  "feedbackOnError": {
+                    "type": "spelling",
+                    "explanation": "Escribe exactamente «Garde une copie signée. Cela dit, cela dépend du contexte.».",
+                    "ruleRef": "gp-b2-concession"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La transcripción coincide con el audio."
+                  }
+                },
+                {
+                  "type": "SpeakRepeat",
+                  "id": "es-fr-b2-u08-l09-e09",
+                  "targetPhrase": "Garde une copie signée. Cela dit, cela dépend du contexte.",
+                  "audioText": "Garde une copie signée. Cela dit, cela dépend du contexte.",
+                  "feedbackOnError": {
+                    "type": "pronunciation",
+                    "explanation": "Repite «Garde une copie signée. Cela dit, cela dépend du contexte.» con claridad.",
+                    "ruleRef": "gp-b2-concession"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La frase se entiende y mantiene el ritmo."
+                  }
+                },
+                {
+                  "type": "FreeSpeakingPrompt",
+                  "id": "es-fr-b2-u08-l09-e10",
+                  "prompt": "Argumenta y matiza una opinión sobre un contrato de alquiler.",
+                  "minTokens": 20,
+                  "conceptClusters": [
+                    [
+                      "Avant"
+                    ],
+                    [
+                      "signer"
+                    ],
+                    [
+                      "lis"
+                    ]
+                  ],
+                  "modelAnswer": "Avant de signer, lis les conditions du contrat. En bref, c'est un sujet complexe. Vérifie la durée et le dépôt de garantie. Cependant, il convient de nuancer. Garde une copie signée. Cela dit, cela dépend du contexte.",
+                  "selfAssessmentCriteria": [
+                    "¿La respuesta argumenta y responde a la tarea?",
+                    "¿Usa las dos estructuras gramaticales de la lección?",
+                    "¿Incluye una concesión o una matización?"
+                  ],
+                  "grammarRuleRefs": [
+                    "gp-b2-concession",
+                    "gp-b2-modal-perfect"
+                  ],
+                  "timeLimitSeconds": 90,
+                  "minWpm": 70,
+                  "maxWpm": 160,
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "La respuesta modelo desarrolla una opinión con matices y una concesión.",
+                    "ruleRef": "gp-b2-concession"
+                  }
+                }
+              ]
+            },
+            {
+              "id": "es-fr-b2-u08-l10",
+              "title": "Evaluación: mi casa ideal",
+              "cefrLevel": "B2",
+              "scenario": "Situación comunicativa avanzada sobre mi casa ideal.",
+              "canDo": "Puedo argumentar y matizar sobre mi casa ideal.",
+              "grammarPoints": [
+                {
+                  "id": "gp-b2-concession",
+                  "label": "Concession",
+                  "description": "Although, despite y however introducen concesiones."
+                },
+                {
+                  "id": "gp-b2-modal-perfect",
+                  "label": "Modal perfect",
+                  "description": "Must have, might have y should have especulan sobre el pasado."
+                }
+              ],
+              "vocabFrequencyBand": "3000-5000",
+              "culturalNotes": [
+                {
+                  "idiom": "l'essentiel",
+                  "note": "Expresión para señalar lo esencial.",
+                  "translation": "lo esencial"
+                }
+              ],
+              "microLesson": {
+                "title": "Evaluación: mi casa ideal",
+                "goals": [
+                  "Usar vocabulario avanzado de mi casa ideal.",
+                  "Aplicar concession y modal perfect.",
+                  "Argumentar y matizar sobre mi casa ideal."
+                ],
+                "sections": [
+                  {
+                    "heading": "Lengua en contexto",
+                    "body": "Concession: Although, despite y however introducen concesiones. Modal perfect: Must have, might have y should have especulan sobre el pasado.",
+                    "examples": [
+                      {
+                        "source": "Mi casa ideal es luminosa y tiene un jardín. Sin embargo, conviene matizarlo.",
+                        "target": "Ma maison idéale est lumineuse et a un jardin. Cependant, il convient de nuancer."
+                      },
+                      {
+                        "source": "Me gustaría vivir cerca del centro. Dicho esto, depende del contexto.",
+                        "target": "J'aimerais vivre près du centre. Cela dit, cela dépend du contexte."
+                      }
+                    ]
+                  }
+                ]
+              },
+              "glossary": [
+                {
+                  "term": "Ma maison idéale est lumineuse et a un jardin. Cependant, il convient de nuancer.",
+                  "translations": [
+                    "Mi casa ideal es luminosa y tiene un jardín. Sin embargo, conviene matizarlo."
+                  ]
+                },
+                {
+                  "term": "J'aimerais vivre près du centre. Cela dit, cela dépend du contexte.",
+                  "translations": [
+                    "Me gustaría vivir cerca del centro. Dicho esto, depende del contexto."
+                  ]
+                },
+                {
+                  "term": "Mais j'ai aussi besoin d'un espace calme. En d'autres termes, cela vaut la peine d'être considéré.",
+                  "translations": [
+                    "Pero también necesito un espacio tranquilo. En otras palabras, merece la pena considerarlo."
+                  ]
+                }
+              ],
+              "exercises": [
+                {
+                  "type": "MultipleChoice",
+                  "id": "es-fr-b2-u08-l10-e01",
+                  "question": "¿Cuál es la opción correcta para «Mi casa ideal es luminosa y tiene un jardín. Sin embargo, conviene matizarlo.»?",
+                  "options": [
+                    "Ma maison idéale est lumineuse et a un jardin. Cependant, il convient de nuancer.",
+                    "J'aimerais vivre près du centre. Cela dit, cela dépend du contexte.",
+                    "Mais j'ai aussi besoin d'un espace calme. En d'autres termes, cela vaut la peine d'être considéré."
+                  ],
+                  "correctIndex": 0,
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "«Mi casa ideal es luminosa y tiene un jardín. Sin embargo, conviene matizarlo.» se dice «Ma maison idéale est lumineuse et a un jardin. Cependant, il convient de nuancer.».",
+                    "ruleRef": "gp-b2-concession"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has elegido la traducción correcta."
+                  }
+                },
+                {
+                  "type": "OrderWords",
+                  "id": "es-fr-b2-u08-l10-e02",
+                  "tokens": [
+                    "maison",
+                    "idéale",
+                    "est",
+                    "lumineuse",
+                    "et",
+                    "a",
+                    "un",
+                    "jardin",
+                    "Cependant",
+                    "il",
+                    "convient",
+                    "de",
+                    "nuancer",
+                    "Ma"
+                  ],
+                  "answerTokens": [
+                    "Ma",
+                    "maison",
+                    "idéale",
+                    "est",
+                    "lumineuse",
+                    "et",
+                    "a",
+                    "un",
+                    "jardin",
+                    "Cependant",
+                    "il",
+                    "convient",
+                    "de",
+                    "nuancer"
+                  ],
+                  "sourcePhrase": "Mi casa ideal es luminosa y tiene un jardín. Sin embargo, conviene matizarlo.",
+                  "feedbackOnError": {
+                    "type": "word_order",
+                    "explanation": "El orden correcto es «Ma maison idéale est lumineuse et a un jardin Cependant il convient de nuancer».",
+                    "ruleRef": "gp-b2-concession"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "El orden produce una frase natural."
+                  }
+                },
+                {
+                  "type": "ClozeDragDrop",
+                  "id": "es-fr-b2-u08-l10-e03",
+                  "passage": "Ma {{b1}} {{b2}} est lumineuse et a un jardin.",
+                  "blanks": [
+                    {
+                      "id": "b1",
+                      "answer": "maison",
+                      "options": [
+                        "maison",
+                        "lumineuse",
+                        "jardin"
+                      ]
+                    },
+                    {
+                      "id": "b2",
+                      "answer": "idéale",
+                      "options": [
+                        "idéale",
+                        "lumineuse",
+                        "jardin"
+                      ]
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "Las dos formas deben encajar con el contexto de la frase.",
+                    "ruleRef": "gp-b2-modal-perfect"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Los dos huecos encajan con la situación."
+                  }
+                },
+                {
+                  "type": "SemanticMatch",
+                  "id": "es-fr-b2-u08-l10-e04",
+                  "instructions": "Clasifica la función comunicativa de cada intervención.",
+                  "pairs": [
+                    {
+                      "left": "Ma maison idéale est lumineuse et a un jardin. Cependant, il convient de nuancer.",
+                      "right": "Planteamiento",
+                      "register": "formal",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    },
+                    {
+                      "left": "J'aimerais vivre près du centre. Cela dit, cela dépend du contexte.",
+                      "right": "Concesión",
+                      "register": "neutral",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    },
+                    {
+                      "left": "Mais j'ai aussi besoin d'un espace calme. En d'autres termes, cela vaut la peine d'être considéré.",
+                      "right": "Conclusión",
+                      "register": "informal",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "Cada intervención cumple una función comunicativa distinta.",
+                    "ruleRef": "gp-b2-concession"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has identificado la función de cada intervención."
+                  }
+                },
+                {
+                  "type": "SemanticMatch",
+                  "id": "es-fr-b2-u08-l10-e05",
+                  "instructions": "Distingue el registro de cada intervención.",
+                  "pairs": [
+                    {
+                      "left": "Ma maison idéale est lumineuse et a un jardin. Cependant, il convient de nuancer.",
+                      "right": "Formal",
+                      "register": "formal",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    },
+                    {
+                      "left": "J'aimerais vivre près du centre. Cela dit, cela dépend du contexte.",
+                      "right": "Neutral",
+                      "register": "neutral",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    },
+                    {
+                      "left": "Mais j'ai aussi besoin d'un espace calme. En d'autres termes, cela vaut la peine d'être considéré.",
+                      "right": "Informal",
+                      "register": "informal",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "register",
+                    "explanation": "El registro cambia según el contexto y la relación con el interlocutor.",
+                    "ruleRef": "gp-b2-modal-perfect"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has distinguido el registro de cada intervención."
+                  }
+                },
+                {
+                  "type": "AudioOnlyPrompt",
+                  "id": "es-fr-b2-u08-l10-e06",
+                  "audioText": "J'aimerais vivre près du centre. Cela dit, cela dépend du contexte.",
+                  "question": "¿Qué ha dicho el hablante?",
+                  "options": [
+                    "J'aimerais vivre près du centre. Cela dit, cela dépend du contexte.",
+                    "Ma maison idéale est lumineuse et a un jardin. Cependant, il convient de nuancer.",
+                    "Mais j'ai aussi besoin d'un espace calme. En d'autres termes, cela vaut la peine d'être considéré."
+                  ],
+                  "correctIndex": 0,
+                  "allowSlowPlayback": true,
+                  "feedbackOnError": {
+                    "type": "comprehension",
+                    "explanation": "El audio dice «J'aimerais vivre près du centre. Cela dit, cela dépend du contexte.».",
+                    "ruleRef": "gp-b2-concession"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has comprendido el mensaje del audio."
+                  }
+                },
+                {
+                  "type": "AudioOnlyPrompt",
+                  "id": "es-fr-b2-u08-l10-e07",
+                  "audioText": "Mais j'ai aussi besoin d'un espace calme. En d'autres termes, cela vaut la peine d'être considéré.",
+                  "question": "¿Cuál es la idea principal?",
+                  "options": [
+                    "Mais j'ai aussi besoin d'un espace calme. En d'autres termes, cela vaut la peine d'être considéré.",
+                    "Ma maison idéale est lumineuse et a un jardin. Cependant, il convient de nuancer.",
+                    "J'aimerais vivre près du centre. Cela dit, cela dépend du contexte."
+                  ],
+                  "correctIndex": 0,
+                  "allowSlowPlayback": false,
+                  "feedbackOnError": {
+                    "type": "comprehension",
+                    "explanation": "El audio dice «Mais j'ai aussi besoin d'un espace calme. En d'autres termes, cela vaut la peine d'être considéré.».",
+                    "ruleRef": "gp-b2-modal-perfect"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has identificado la idea principal."
+                  }
+                },
+                {
+                  "type": "ListenType",
+                  "id": "es-fr-b2-u08-l10-e08",
+                  "audioText": "Mais j'ai aussi besoin d'un espace calme. En d'autres termes, cela vaut la peine d'être considéré.",
+                  "transcription": "Mais j'ai aussi besoin d'un espace calme. En d'autres termes, cela vaut la peine d'être considéré.",
+                  "feedbackOnError": {
+                    "type": "spelling",
+                    "explanation": "Escribe exactamente «Mais j'ai aussi besoin d'un espace calme. En d'autres termes, cela vaut la peine d'être considéré.».",
+                    "ruleRef": "gp-b2-concession"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La transcripción coincide con el audio."
+                  }
+                },
+                {
+                  "type": "SpeakRepeat",
+                  "id": "es-fr-b2-u08-l10-e09",
+                  "targetPhrase": "Mais j'ai aussi besoin d'un espace calme. En d'autres termes, cela vaut la peine d'être considéré.",
+                  "audioText": "Mais j'ai aussi besoin d'un espace calme. En d'autres termes, cela vaut la peine d'être considéré.",
+                  "feedbackOnError": {
+                    "type": "pronunciation",
+                    "explanation": "Repite «Mais j'ai aussi besoin d'un espace calme. En d'autres termes, cela vaut la peine d'être considéré.» con claridad.",
+                    "ruleRef": "gp-b2-concession"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La frase se entiende y mantiene el ritmo."
+                  }
+                },
+                {
+                  "type": "FreeSpeakingPrompt",
+                  "id": "es-fr-b2-u08-l10-e10",
+                  "prompt": "Argumenta y matiza una opinión sobre mi casa ideal.",
+                  "minTokens": 20,
+                  "conceptClusters": [
+                    [
+                      "maison"
+                    ],
+                    [
+                      "idéale"
+                    ],
+                    [
+                      "lumineuse"
+                    ]
+                  ],
+                  "modelAnswer": "Ma maison idéale est lumineuse et a un jardin. Cependant, il convient de nuancer. J'aimerais vivre près du centre. Cela dit, cela dépend du contexte. Mais j'ai aussi besoin d'un espace calme. En d'autres termes, cela vaut la peine d'être considéré.",
+                  "selfAssessmentCriteria": [
+                    "¿La respuesta argumenta y responde a la tarea?",
+                    "¿Usa las dos estructuras gramaticales de la lección?",
+                    "¿Incluye una concesión o una matización?"
+                  ],
+                  "grammarRuleRefs": [
+                    "gp-b2-concession",
+                    "gp-b2-modal-perfect"
+                  ],
+                  "timeLimitSeconds": 90,
+                  "minWpm": 70,
+                  "maxWpm": 160,
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "La respuesta modelo desarrolla una opinión con matices y una concesión.",
+                    "ruleRef": "gp-b2-concession"
+                  }
+                }
+              ]
+            }
+          ]
         }
       ]
     },
