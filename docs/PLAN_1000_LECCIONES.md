@@ -1,7 +1,7 @@
 # Plan de expansión a 1.020 lecciones por idioma
 
 > **Estado:** F1 completa con aprobación técnica (ADR-054). A1 170/170 en los
-> cuatro cursos. Release 3.2.0 en publicación; la revisión nativa humana queda
+> cuatro cursos. Release 3.2.0 **publicado**; la revisión nativa humana queda
 > como deuda de calidad 3.2.x.
 > **Objetivo:** mínimo 1.000 lecciones por cada curso de destino, con la misma
 > cantidad en cada nivel CEFR.
@@ -307,7 +307,7 @@ intacto.
 | Aprobación técnica 3.2.0 (`docs/qa/review-3.2.0/`) | ✅ ADR-054 |
 | Keystore de distribución | ✅ |
 | Revisión nativa humana de F0/F1 | Pendiente (deuda 3.2.x) |
-| Release estable 3.2.0 | En publicación |
+| Release estable 3.2.0 | ✅ Publicado (`v3.2.0`, 2026-11-15) |
 
 Las réplicas PT/FR/JA cierran F0 con unidades de repaso construidas sobre
 lecciones ya validadas del mismo nivel. La auditoría asistida está cerrada;

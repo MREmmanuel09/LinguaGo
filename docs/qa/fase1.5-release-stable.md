@@ -1,7 +1,7 @@
 # F1.5 — Cierre del release estable 3.2.0
 
 **Fecha:** 2026-11-15
-**Estado:** listo para publicar con aprobación técnica (ADR-054).
+**Estado:** **publicado** con aprobación técnica (ADR-054).
 **Release candidate:** `v3.2.0-rc1` (versionCode 15).
 
 ## 1. Lo que ya está hecho
@@ -75,7 +75,22 @@ linguago.keyPassword=...
 - `docs/qa/fase1.5-release-candidate.md`
 - `tools/release/README.md`
 
-## 6. Decisión
+## 6. Release publicado
+
+- **Tag:** [`v3.2.0`](https://github.com/MREmmanuel09/LinguaGo/releases/tag/v3.2.0)
+- **versionCode:** 16 · **versionName:** 3.2.0
+- **Fecha de publicación:** 2026-11-15
+- **Firma:** `CN=LinguaGo, OU=Release, O=LinguaGo, L=Madrid, ST=Madrid, C=ES`
+
+| Asset | Tamaño | SHA-256 |
+|---|---|---|
+| `LinguaGo-3.2.0-global.apk` | 398.119.002 B | `8E322C08E3435F860DC33250F3EDF4ACA05A8BCDEB7A3531D0FC877D07C7B1D2` |
+| `LinguaGo-3.2.0-arm64.apk` | 357.549.786 B | `656ED2F45C3B908D45F548166724BA9055B04BB727D825939278377A5C982CEF` |
+
+Los artefactos locales están en `dist/v3.2.0/` con `SHA256SUMS.txt` y
+`RELEASE.md`.
+
+## 7. Decisión
 
 El release **3.2.0 se publica con aprobación técnica** (ADR-054). La revisión
 nativa humana de F0/F1 queda como deuda de calidad y, si detecta incidencias,
