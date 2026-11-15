@@ -40,13 +40,32 @@
 
 ```powershell
 python tools/content/prepare_native_review.py
-# rellenar los CSV con review_status=approved
+# revisar y registrar por lotes:
+python tools/release/mark_reviewed.py --course es-en --level A1 `
+  --status approved --reviewer "Tu nombre" --include-idioms
 python tools/release/check_native_review.py
 powershell -ExecutionPolicy Bypass -File tools/release/publish_3_2_0.ps1
 ```
 
 El script hace el bump a `3.2.0` (`versionCode 16`), el gate, el build release,
 la verificación de firma, el commit, el tag y la publicación en GitHub.
+
+### Keystore
+
+```powershell
+& "$env:JAVA_HOME\bin\keytool.exe" -genkeypair -v `
+  -keystore "D:\Proyectos\LinguaGo\linguago-release.jks" `
+  -alias linguago -keyalg RSA -keysize 2048 -validity 10000
+```
+
+Y en `local.properties`:
+
+```properties
+linguago.storeFile=D:\\Proyectos\\LinguaGo\\linguago-release.jks
+linguago.storePassword=...
+linguago.keyAlias=linguago
+linguago.keyPassword=...
+```
 
 ## 5. Documentos relacionados
 

@@ -42,6 +42,50 @@ El segundo comando debe terminar con:
 Revisión nativa completa: release desbloqueado.
 ```
 
+## Registrar la revisión por lotes
+
+Después de revisar un curso/nivel, marca el lote:
+
+```powershell
+python tools/release/mark_reviewed.py --course es-en --level A1 `
+  --status approved --reviewer "Tu nombre" --include-idioms
+```
+
+Para una lección concreta:
+
+```powershell
+python tools/release/mark_reviewed.py --lesson-id es-en-a1-p0-u1-l01 `
+  --status approved --reviewer "Tu nombre"
+```
+
+Si encuentras un problema:
+
+```powershell
+python tools/release/mark_reviewed.py --lesson-id es-en-a1-p0-u1-l01 `
+  --status needs_change --reviewer "Tu nombre" --notes "Corregir '...'"
+```
+
+El release queda bloqueado mientras haya filas `pending` o `needs_change`.
+
+## Keystore de distribución
+
+Si no tienes keystore, créalo una sola vez:
+
+```powershell
+& "$env:JAVA_HOME\bin\keytool.exe" -genkeypair -v `
+  -keystore "D:\Proyectos\LinguaGo\linguago-release.jks" `
+  -alias linguago -keyalg RSA -keysize 2048 -validity 10000
+```
+
+Añade a `local.properties` (no se commitea):
+
+```properties
+linguago.storeFile=D:\\Proyectos\\LinguaGo\\linguago-release.jks
+linguago.storePassword=...
+linguago.keyAlias=linguago
+linguago.keyPassword=...
+```
+
 ## Publicación
 
 ```powershell
