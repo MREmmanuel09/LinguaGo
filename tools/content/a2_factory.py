@@ -13,7 +13,7 @@ import re
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[2]
-TARGET_INDEX = {"en": 1, "fr": 2}
+TARGET_INDEX = {"en": 1, "fr": 2, "pt": 1, "ja": 1}
 VOCAB_BAND = "2000-3000"
 MAX_TOKENS = 12
 
@@ -193,6 +193,13 @@ GRAMMAR = {
 
 def tokens(text: str) -> list[str]:
     return re.findall(r"[A-Za-zÀ-ÖØ-öø-ÿ0-9']+", text)
+
+
+def tokens_for(text: str, lang: str) -> list[str]:
+    """El japonés se segmenta con espacios; el resto, con el tokenizador latino."""
+    if lang == "ja":
+        return [token for token in text.split() if token]
+    return tokens(text)
 
 
 def fr_de(phrase: str) -> str:
@@ -427,6 +434,10 @@ def safe_distractors(correct: list[str], candidates: list[list[str]], lang: str)
         ["very", "today", "here", "now", "also", "too"]
         if lang == "en"
         else ["très", "aujourd'hui", "ici", "maintenant", "aussi", "toujours"]
+        if lang == "fr"
+        else ["muito", "hoje", "aqui", "agora", "também", "sempre"]
+        if lang == "pt"
+        else ["とても", "今日", "ここ", "今", "も", "いつも"]
     )
     for fallback in fallbacks:
         if len(pool) >= 3:
@@ -477,9 +488,9 @@ def build_lesson(
         raise ValueError(f"{lesson_id}: A2 admite como máximo 2 focos gramaticales")
 
     first_es, first_target = items[0][0], target_items[0]
-    s0_tokens = tokens(target_sentences[0])
-    s1_tokens = tokens(target_sentences[1])
-    s2_tokens = tokens(target_sentences[2])
+    s0_tokens = tokens_for(target_sentences[0], lang)
+    s1_tokens = tokens_for(target_sentences[1], lang)
+    s2_tokens = tokens_for(target_sentences[2], lang)
     rule_ref = grammar[0]["id"] if grammar else None
 
     def feedback(
@@ -696,7 +707,11 @@ def build_unit(
             elif exercise["type"] in {"ListenType", "SpeakRepeat", "ListenChoose"}:
                 texts.append(exercise["audioText"])
             for text in texts:
-                longest = max(len(part.split()) for part in re.split(r"[.!?]+", text) if part.strip())
+                longest = max(
+                    len(part.split())
+                    for part in re.split(r"[.!?。！？]+", text)
+                    if part.strip()
+                )
                 if longest > MAX_TOKENS:
                     raise ValueError(
                         f"{exercise['id']}: frase de {longest} tokens (máximo {MAX_TOKENS})"
