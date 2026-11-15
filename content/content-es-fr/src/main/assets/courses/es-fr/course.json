@@ -283125,6 +283125,3893 @@
                 ]
               }
             ]
+          },
+          {
+            "id": "es-fr-c2-u09",
+            "title": "C2 · Comida y restaurantes",
+            "lessons": [
+              {
+                "id": "es-fr-c2-u09-l01",
+                "title": "Repaso: casa",
+                "cefrLevel": "C2",
+                "scenario": "Situación comunicativa avanzada sobre mi casa.",
+                "canDo": "Puedo argumentar con matices y precisión sobre mi casa.",
+                "grammarPoints": [
+                  {
+                    "id": "gp-c2-litotes",
+                    "label": "Litotes",
+                    "description": "La litote afirma algo negando lo contrario."
+                  },
+                  {
+                    "id": "gp-c2-apposition",
+                    "label": "Apposition",
+                    "description": "La aposición añade una explicación al sustantivo."
+                  }
+                ],
+                "vocabFrequencyBand": "12000+",
+                "culturalNotes": [
+                  {
+                    "idiom": "garder contenance",
+                    "note": "Expresión para mantener la compostura.",
+                    "translation": "mantener la compostura"
+                  }
+                ],
+                "microLesson": {
+                  "title": "Repaso: casa",
+                  "goals": [
+                    "Usar vocabulario avanzado de mi casa.",
+                    "Aplicar litotes y apposition.",
+                    "Argumentar con matices sobre mi casa."
+                  ],
+                  "sections": [
+                    {
+                      "heading": "Lengua en contexto",
+                      "body": "Litotes: La litote afirma algo negando lo contrario. Apposition: La aposición añade una explicación al sustantivo.",
+                      "examples": [
+                        {
+                          "source": "Vivo en un piso pequeño con dos habitaciones. Huelga decir que el matiz escapa a una lectura literal.",
+                          "target": "Je vis dans un petit appartement avec deux chambres. Inutile de dire que la nuance échappe à une lecture littérale."
+                        },
+                        {
+                          "source": "La cocina es grande y luminosa. En rigor, la afirmación admite lecturas encontradas.",
+                          "target": "La cuisine est grande et lumineuse. À proprement parler, l'affirmation admet des lectures contradictoires."
+                        }
+                      ]
+                    }
+                  ]
+                },
+                "glossary": [
+                  {
+                    "term": "Je vis dans un petit appartement avec deux chambres. Inutile de dire que la nuance échappe à une lecture littérale.",
+                    "translations": [
+                      "Vivo en un piso pequeño con dos habitaciones. Huelga decir que el matiz escapa a una lectura literal."
+                    ]
+                  },
+                  {
+                    "term": "La cuisine est grande et lumineuse. À proprement parler, l'affirmation admet des lectures contradictoires.",
+                    "translations": [
+                      "La cocina es grande y luminosa. En rigor, la afirmación admite lecturas encontradas."
+                    ]
+                  },
+                  {
+                    "term": "J'aime passer du temps à la maison. Au risque de simplifier, l'argument frôle la contradiction.",
+                    "translations": [
+                      "Me gusta pasar tiempo en casa. A riesgo de simplificar, el argumento roza la contradicción."
+                    ]
+                  }
+                ],
+                "exercises": [
+                  {
+                    "type": "MultipleChoice",
+                    "id": "es-fr-c2-u09-l01-e01",
+                    "question": "¿Cuál es la opción correcta para «Vivo en un piso pequeño con dos habitaciones. Huelga decir que el matiz escapa a una lectura literal.»?",
+                    "options": [
+                      "Je vis dans un petit appartement avec deux chambres. Inutile de dire que la nuance échappe à une lecture littérale.",
+                      "La cuisine est grande et lumineuse. À proprement parler, l'affirmation admet des lectures contradictoires.",
+                      "J'aime passer du temps à la maison. Au risque de simplifier, l'argument frôle la contradiction."
+                    ],
+                    "correctIndex": 0,
+                    "feedbackOnError": {
+                      "type": "vocabulary",
+                      "explanation": "«Vivo en un piso pequeño con dos habitaciones. Huelga decir que el matiz escapa a una lectura literal.» se dice «Je vis dans un petit appartement avec deux chambres. Inutile de dire que la nuance échappe à une lecture littérale.».",
+                      "ruleRef": "gp-c2-litotes"
+                    },
+                    "feedbackOnSuccess": {
+                      "explanation": "Has elegido la opción precisa."
+                    }
+                  },
+                  {
+                    "type": "Translate",
+                    "id": "es-fr-c2-u09-l01-e02",
+                    "sourcePhrase": "Vivo en un piso pequeño con dos habitaciones. Huelga decir que el matiz escapa a una lectura literal.",
+                    "correctTokens": [
+                      "Je",
+                      "vis",
+                      "dans",
+                      "un",
+                      "petit",
+                      "appartement",
+                      "avec",
+                      "deux",
+                      "chambres",
+                      "Inutile",
+                      "de",
+                      "dire",
+                      "que",
+                      "la",
+                      "nuance",
+                      "échappe",
+                      "à",
+                      "une",
+                      "lecture",
+                      "littérale"
+                    ],
+                    "distractorTokens": [
+                      "La",
+                      "cuisine",
+                      "est"
+                    ],
+                    "feedbackOnError": {
+                      "type": "grammar",
+                      "explanation": "El orden correcto es «Je vis dans un petit appartement avec deux chambres Inutile de dire que la nuance échappe à une lecture littérale».",
+                      "ruleRef": "gp-c2-litotes"
+                    },
+                    "feedbackOnSuccess": {
+                      "explanation": "La frase conserva el orden y el significado."
+                    }
+                  },
+                  {
+                    "type": "ClozeDragDrop",
+                    "id": "es-fr-c2-u09-l01-e03",
+                    "passage": "Je {{b1}} dans un {{b2}} appartement avec deux chambres.",
+                    "blanks": [
+                      {
+                        "id": "b1",
+                        "answer": "vis",
+                        "options": [
+                          "vis",
+                          "appartement",
+                          "deux"
+                        ]
+                      },
+                      {
+                        "id": "b2",
+                        "answer": "petit",
+                        "options": [
+                          "petit",
+                          "appartement",
+                          "deux"
+                        ]
+                      }
+                    ],
+                    "feedbackOnError": {
+                      "type": "grammar",
+                      "explanation": "Las dos formas deben encajar con el contexto de la frase.",
+                      "ruleRef": "gp-c2-apposition"
+                    },
+                    "feedbackOnSuccess": {
+                      "explanation": "Los dos huecos encajan con la situación."
+                    }
+                  },
+                  {
+                    "type": "ClozeDragDrop",
+                    "id": "es-fr-c2-u09-l01-e04",
+                    "passage": "La {{b1}} est {{b2}} et lumineuse.",
+                    "blanks": [
+                      {
+                        "id": "b1",
+                        "answer": "cuisine",
+                        "options": [
+                          "cuisine",
+                          "lumineuse",
+                          "très"
+                        ]
+                      },
+                      {
+                        "id": "b2",
+                        "answer": "grande",
+                        "options": [
+                          "grande",
+                          "lumineuse",
+                          "très"
+                        ]
+                      }
+                    ],
+                    "feedbackOnError": {
+                      "type": "grammar",
+                      "explanation": "Las dos formas deben encajar con el contexto de la frase.",
+                      "ruleRef": "gp-c2-apposition"
+                    },
+                    "feedbackOnSuccess": {
+                      "explanation": "Los dos huecos encajan con la situación."
+                    }
+                  },
+                  {
+                    "type": "ClozeDragDrop",
+                    "id": "es-fr-c2-u09-l01-e05",
+                    "passage": "{{b1}} {{b2}} du temps à la maison.",
+                    "blanks": [
+                      {
+                        "id": "b1",
+                        "answer": "J'aime",
+                        "options": [
+                          "J'aime",
+                          "temps",
+                          "maison"
+                        ]
+                      },
+                      {
+                        "id": "b2",
+                        "answer": "passer",
+                        "options": [
+                          "passer",
+                          "temps",
+                          "maison"
+                        ]
+                      }
+                    ],
+                    "feedbackOnError": {
+                      "type": "grammar",
+                      "explanation": "Las dos formas deben encajar con el contexto de la frase.",
+                      "ruleRef": "gp-c2-apposition"
+                    },
+                    "feedbackOnSuccess": {
+                      "explanation": "Los dos huecos encajan con la situación."
+                    }
+                  },
+                  {
+                    "type": "SemanticMatch",
+                    "id": "es-fr-c2-u09-l01-e06",
+                    "instructions": "Clasifica la función y el registro de cada intervención.",
+                    "pairs": [
+                      {
+                        "left": "Je vis dans un petit appartement avec deux chambres. Inutile de dire que la nuance échappe à une lecture littérale.",
+                        "right": "Ironía seca",
+                        "register": "literary",
+                        "nuance": "Clasifica la función y el registro de la intervención."
+                      },
+                      {
+                        "left": "La cuisine est grande et lumineuse. À proprement parler, l'affirmation admet des lectures contradictoires.",
+                        "right": "Atenuación",
+                        "register": "formal",
+                        "nuance": "Clasifica la función y el registro de la intervención."
+                      },
+                      {
+                        "left": "J'aime passer du temps à la maison. Au risque de simplifier, l'argument frôle la contradiction.",
+                        "right": "Conclusión",
+                        "register": "neutral",
+                        "nuance": "Clasifica la función y el registro de la intervención."
+                      }
+                    ],
+                    "feedbackOnError": {
+                      "type": "register",
+                      "explanation": "Cada intervención cumple una función retórica distinta.",
+                      "ruleRef": "gp-c2-litotes"
+                    },
+                    "feedbackOnSuccess": {
+                      "explanation": "Has identificado función y registro."
+                    }
+                  },
+                  {
+                    "type": "ListenChoose",
+                    "id": "es-fr-c2-u09-l01-e07",
+                    "audioText": "La cuisine est grande et lumineuse. À proprement parler, l'affirmation admet des lectures contradictoires.",
+                    "options": [
+                      "La cuisine est grande et lumineuse. À proprement parler, l'affirmation admet des lectures contradictoires.",
+                      "Je vis dans un petit appartement avec deux chambres. Inutile de dire que la nuance échappe à une lecture littérale.",
+                      "J'aime passer du temps à la maison. Au risque de simplifier, l'argument frôle la contradiction."
+                    ],
+                    "correctIndex": 0,
+                    "feedbackOnError": {
+                      "type": "comprehension",
+                      "explanation": "El audio dice «La cuisine est grande et lumineuse. À proprement parler, l'affirmation admet des lectures contradictoires.».",
+                      "ruleRef": "gp-c2-litotes"
+                    },
+                    "feedbackOnSuccess": {
+                      "explanation": "Has reconocido la frase del audio."
+                    }
+                  },
+                  {
+                    "type": "AudioOnlyPrompt",
+                    "id": "es-fr-c2-u09-l01-e08",
+                    "audioText": "J'aime passer du temps à la maison. Au risque de simplifier, l'argument frôle la contradiction.",
+                    "question": "¿Qué implica el hablante?",
+                    "options": [
+                      "J'aime passer du temps à la maison. Au risque de simplifier, l'argument frôle la contradiction.",
+                      "Je vis dans un petit appartement avec deux chambres. Inutile de dire que la nuance échappe à une lecture littérale.",
+                      "La cuisine est grande et lumineuse. À proprement parler, l'affirmation admet des lectures contradictoires."
+                    ],
+                    "correctIndex": 0,
+                    "allowSlowPlayback": false,
+                    "feedbackOnError": {
+                      "type": "comprehension",
+                      "explanation": "El audio dice «J'aime passer du temps à la maison. Au risque de simplifier, l'argument frôle la contradiction.».",
+                      "ruleRef": "gp-c2-apposition"
+                    },
+                    "feedbackOnSuccess": {
+                      "explanation": "Has interpretado la implicación."
+                    }
+                  },
+                  {
+                    "type": "ListenType",
+                    "id": "es-fr-c2-u09-l01-e09",
+                    "audioText": "J'aime passer du temps à la maison. Au risque de simplifier, l'argument frôle la contradiction.",
+                    "transcription": "J'aime passer du temps à la maison. Au risque de simplifier, l'argument frôle la contradiction.",
+                    "feedbackOnError": {
+                      "type": "spelling",
+                      "explanation": "Escribe exactamente «J'aime passer du temps à la maison. Au risque de simplifier, l'argument frôle la contradiction.».",
+                      "ruleRef": "gp-c2-litotes"
+                    },
+                    "feedbackOnSuccess": {
+                      "explanation": "La transcripción coincide con el audio."
+                    }
+                  },
+                  {
+                    "type": "SpeakRepeat",
+                    "id": "es-fr-c2-u09-l01-e10",
+                    "targetPhrase": "J'aime passer du temps à la maison. Au risque de simplifier, l'argument frôle la contradiction.",
+                    "audioText": "J'aime passer du temps à la maison. Au risque de simplifier, l'argument frôle la contradiction.",
+                    "feedbackOnError": {
+                      "type": "pronunciation",
+                      "explanation": "Repite «J'aime passer du temps à la maison. Au risque de simplifier, l'argument frôle la contradiction.» con claridad.",
+                      "ruleRef": "gp-c2-litotes"
+                    },
+                    "feedbackOnSuccess": {
+                      "explanation": "La frase se entiende y mantiene el ritmo."
+                    }
+                  },
+                  {
+                    "type": "MatchPairs",
+                    "id": "es-fr-c2-u09-l01-e11",
+                    "pairs": [
+                      {
+                        "left": "Vivo en un piso pequeño con dos habitaciones. Huelga decir que el matiz escapa a una lectura literal.",
+                        "right": "Je vis dans un petit appartement avec deux chambres. Inutile de dire que la nuance échappe à une lecture littérale."
+                      },
+                      {
+                        "left": "La cocina es grande y luminosa. En rigor, la afirmación admite lecturas encontradas.",
+                        "right": "La cuisine est grande et lumineuse. À proprement parler, l'affirmation admet des lectures contradictoires."
+                      },
+                      {
+                        "left": "Me gusta pasar tiempo en casa. A riesgo de simplificar, el argumento roza la contradicción.",
+                        "right": "J'aime passer du temps à la maison. Au risque de simplifier, l'argument frôle la contradiction."
+                      }
+                    ],
+                    "feedbackOnError": {
+                      "type": "vocabulary",
+                      "explanation": "Cada expresión tiene una traducción distinta.",
+                      "ruleRef": "gp-c2-litotes"
+                    },
+                    "feedbackOnSuccess": {
+                      "explanation": "Has asociado cada expresión con su traducción."
+                    }
+                  },
+                  {
+                    "type": "FreeSpeakingPrompt",
+                    "id": "es-fr-c2-u09-l01-e12",
+                    "prompt": "Defiende una interpretación matizada sobre mi casa.",
+                    "minTokens": 40,
+                    "conceptClusters": [
+                      [
+                        "vis"
+                      ],
+                      [
+                        "petit"
+                      ],
+                      [
+                        "appartement"
+                      ]
+                    ],
+                    "modelAnswer": "Je vis dans un petit appartement avec deux chambres. Inutile de dire que la nuance échappe à une lecture littérale. La cuisine est grande et lumineuse. À proprement parler, l'affirmation admet des lectures contradictoires. J'aime passer du temps à la maison. Au risque de simplifier, l'argument frôle la contradiction.",
+                    "selfAssessmentCriteria": [
+                      "¿La respuesta argumenta y responde a la tarea?",
+                      "¿Usa las dos estructuras gramaticales de la lección?",
+                      "¿Incluye una concesión, una ironía o una atenuación?"
+                    ],
+                    "grammarRuleRefs": [
+                      "gp-c2-litotes",
+                      "gp-c2-apposition"
+                    ],
+                    "timeLimitSeconds": 120,
+                    "minWpm": 70,
+                    "maxWpm": 160,
+                    "feedbackOnError": {
+                      "type": "grammar",
+                      "explanation": "La respuesta modelo desarrolla una interpretación matizada.",
+                      "ruleRef": "gp-c2-litotes"
+                    }
+                  }
+                ]
+              },
+              {
+                "id": "es-fr-c2-u09-l02",
+                "title": "En el mercado",
+                "cefrLevel": "C2",
+                "scenario": "Situación comunicativa avanzada sobre el mercado.",
+                "canDo": "Puedo argumentar con matices y precisión sobre el mercado.",
+                "grammarPoints": [
+                  {
+                    "id": "gp-c2-litotes",
+                    "label": "Litotes",
+                    "description": "La litote afirma algo negando lo contrario."
+                  },
+                  {
+                    "id": "gp-c2-apposition",
+                    "label": "Apposition",
+                    "description": "La aposición añade una explicación al sustantivo."
+                  }
+                ],
+                "vocabFrequencyBand": "12000+",
+                "culturalNotes": [
+                  {
+                    "idiom": "donner un tour de passe-passe",
+                    "note": "Expresión para presentar algo desde un ángulo interesado.",
+                    "translation": "darle un giro"
+                  }
+                ],
+                "microLesson": {
+                  "title": "En el mercado",
+                  "goals": [
+                    "Usar vocabulario avanzado de el mercado.",
+                    "Aplicar litotes y apposition.",
+                    "Argumentar con matices sobre el mercado."
+                  ],
+                  "sections": [
+                    {
+                      "heading": "Lengua en contexto",
+                      "body": "Litotes: La litote afirma algo negando lo contrario. Apposition: La aposición añade una explicación al sustantivo.",
+                      "examples": [
+                        {
+                          "source": "Necesito un kilo de tomates. En rigor, la afirmación admite lecturas encontradas.",
+                          "target": "J'ai besoin d'un kilo de tomates. À proprement parler, l'affirmation admet des lectures contradictoires."
+                        },
+                        {
+                          "source": "Necesito una barra de pan. A riesgo de simplificar, el argumento roza la contradicción.",
+                          "target": "J'ai besoin d'une baguette de pain. Au risque de simplifier, l'argument frôle la contradiction."
+                        }
+                      ]
+                    }
+                  ]
+                },
+                "glossary": [
+                  {
+                    "term": "J'ai besoin d'un kilo de tomates. À proprement parler, l'affirmation admet des lectures contradictoires.",
+                    "translations": [
+                      "Necesito un kilo de tomates. En rigor, la afirmación admite lecturas encontradas."
+                    ]
+                  },
+                  {
+                    "term": "J'ai besoin d'une baguette de pain. Au risque de simplifier, l'argument frôle la contradiction.",
+                    "translations": [
+                      "Necesito una barra de pan. A riesgo de simplificar, el argumento roza la contradicción."
+                    ]
+                  },
+                  {
+                    "term": "J'ai besoin d'un morceau de fromage. Paradoxalement, l'excès de prudence nuit à la crédibilité.",
+                    "translations": [
+                      "Necesito un trozo de queso. Paradójicamente, el exceso de cautela resta credibilidad."
+                    ]
+                  }
+                ],
+                "exercises": [
+                  {
+                    "type": "MultipleChoice",
+                    "id": "es-fr-c2-u09-l02-e01",
+                    "question": "¿Cuál es la opción correcta para «Necesito un kilo de tomates. En rigor, la afirmación admite lecturas encontradas.»?",
+                    "options": [
+                      "J'ai besoin d'un kilo de tomates. À proprement parler, l'affirmation admet des lectures contradictoires.",
+                      "J'ai besoin d'une baguette de pain. Au risque de simplifier, l'argument frôle la contradiction.",
+                      "J'ai besoin d'un morceau de fromage. Paradoxalement, l'excès de prudence nuit à la crédibilité."
+                    ],
+                    "correctIndex": 0,
+                    "feedbackOnError": {
+                      "type": "vocabulary",
+                      "explanation": "«Necesito un kilo de tomates. En rigor, la afirmación admite lecturas encontradas.» se dice «J'ai besoin d'un kilo de tomates. À proprement parler, l'affirmation admet des lectures contradictoires.».",
+                      "ruleRef": "gp-c2-litotes"
+                    },
+                    "feedbackOnSuccess": {
+                      "explanation": "Has elegido la opción precisa."
+                    }
+                  },
+                  {
+                    "type": "Translate",
+                    "id": "es-fr-c2-u09-l02-e02",
+                    "sourcePhrase": "Necesito un kilo de tomates. En rigor, la afirmación admite lecturas encontradas.",
+                    "correctTokens": [
+                      "J'ai",
+                      "besoin",
+                      "d'un",
+                      "kilo",
+                      "de",
+                      "tomates",
+                      "À",
+                      "proprement",
+                      "parler",
+                      "l'affirmation",
+                      "admet",
+                      "des",
+                      "lectures",
+                      "contradictoires"
+                    ],
+                    "distractorTokens": [
+                      "d'une",
+                      "baguette",
+                      "pain"
+                    ],
+                    "feedbackOnError": {
+                      "type": "grammar",
+                      "explanation": "El orden correcto es «J'ai besoin d'un kilo de tomates À proprement parler l'affirmation admet des lectures contradictoires».",
+                      "ruleRef": "gp-c2-litotes"
+                    },
+                    "feedbackOnSuccess": {
+                      "explanation": "La frase conserva el orden y el significado."
+                    }
+                  },
+                  {
+                    "type": "ClozeDragDrop",
+                    "id": "es-fr-c2-u09-l02-e03",
+                    "passage": "{{b1}} {{b2}} d'un kilo de tomates",
+                    "blanks": [
+                      {
+                        "id": "b1",
+                        "answer": "J'ai",
+                        "options": [
+                          "J'ai",
+                          "d'un",
+                          "kilo"
+                        ]
+                      },
+                      {
+                        "id": "b2",
+                        "answer": "besoin",
+                        "options": [
+                          "besoin",
+                          "d'un",
+                          "kilo"
+                        ]
+                      }
+                    ],
+                    "feedbackOnError": {
+                      "type": "grammar",
+                      "explanation": "Las dos formas deben encajar con el contexto de la frase.",
+                      "ruleRef": "gp-c2-apposition"
+                    },
+                    "feedbackOnSuccess": {
+                      "explanation": "Los dos huecos encajan con la situación."
+                    }
+                  },
+                  {
+                    "type": "ClozeDragDrop",
+                    "id": "es-fr-c2-u09-l02-e04",
+                    "passage": "{{b1}} {{b2}} d'une baguette de pain",
+                    "blanks": [
+                      {
+                        "id": "b1",
+                        "answer": "J'ai",
+                        "options": [
+                          "J'ai",
+                          "d'une",
+                          "baguette"
+                        ]
+                      },
+                      {
+                        "id": "b2",
+                        "answer": "besoin",
+                        "options": [
+                          "besoin",
+                          "d'une",
+                          "baguette"
+                        ]
+                      }
+                    ],
+                    "feedbackOnError": {
+                      "type": "grammar",
+                      "explanation": "Las dos formas deben encajar con el contexto de la frase.",
+                      "ruleRef": "gp-c2-apposition"
+                    },
+                    "feedbackOnSuccess": {
+                      "explanation": "Los dos huecos encajan con la situación."
+                    }
+                  },
+                  {
+                    "type": "ClozeDragDrop",
+                    "id": "es-fr-c2-u09-l02-e05",
+                    "passage": "{{b1}} {{b2}} d'un morceau de fromage",
+                    "blanks": [
+                      {
+                        "id": "b1",
+                        "answer": "J'ai",
+                        "options": [
+                          "J'ai",
+                          "d'un",
+                          "morceau"
+                        ]
+                      },
+                      {
+                        "id": "b2",
+                        "answer": "besoin",
+                        "options": [
+                          "besoin",
+                          "d'un",
+                          "morceau"
+                        ]
+                      }
+                    ],
+                    "feedbackOnError": {
+                      "type": "grammar",
+                      "explanation": "Las dos formas deben encajar con el contexto de la frase.",
+                      "ruleRef": "gp-c2-apposition"
+                    },
+                    "feedbackOnSuccess": {
+                      "explanation": "Los dos huecos encajan con la situación."
+                    }
+                  },
+                  {
+                    "type": "SemanticMatch",
+                    "id": "es-fr-c2-u09-l02-e06",
+                    "instructions": "Clasifica la función y el registro de cada intervención.",
+                    "pairs": [
+                      {
+                        "left": "J'ai besoin d'un kilo de tomates. À proprement parler, l'affirmation admet des lectures contradictoires.",
+                        "right": "Ironía seca",
+                        "register": "literary",
+                        "nuance": "Clasifica la función y el registro de la intervención."
+                      },
+                      {
+                        "left": "J'ai besoin d'une baguette de pain. Au risque de simplifier, l'argument frôle la contradiction.",
+                        "right": "Atenuación",
+                        "register": "formal",
+                        "nuance": "Clasifica la función y el registro de la intervención."
+                      },
+                      {
+                        "left": "J'ai besoin d'un morceau de fromage. Paradoxalement, l'excès de prudence nuit à la crédibilité.",
+                        "right": "Conclusión",
+                        "register": "neutral",
+                        "nuance": "Clasifica la función y el registro de la intervención."
+                      }
+                    ],
+                    "feedbackOnError": {
+                      "type": "register",
+                      "explanation": "Cada intervención cumple una función retórica distinta.",
+                      "ruleRef": "gp-c2-litotes"
+                    },
+                    "feedbackOnSuccess": {
+                      "explanation": "Has identificado función y registro."
+                    }
+                  },
+                  {
+                    "type": "ListenChoose",
+                    "id": "es-fr-c2-u09-l02-e07",
+                    "audioText": "J'ai besoin d'une baguette de pain. Au risque de simplifier, l'argument frôle la contradiction.",
+                    "options": [
+                      "J'ai besoin d'une baguette de pain. Au risque de simplifier, l'argument frôle la contradiction.",
+                      "J'ai besoin d'un kilo de tomates. À proprement parler, l'affirmation admet des lectures contradictoires.",
+                      "J'ai besoin d'un morceau de fromage. Paradoxalement, l'excès de prudence nuit à la crédibilité."
+                    ],
+                    "correctIndex": 0,
+                    "feedbackOnError": {
+                      "type": "comprehension",
+                      "explanation": "El audio dice «J'ai besoin d'une baguette de pain. Au risque de simplifier, l'argument frôle la contradiction.».",
+                      "ruleRef": "gp-c2-litotes"
+                    },
+                    "feedbackOnSuccess": {
+                      "explanation": "Has reconocido la frase del audio."
+                    }
+                  },
+                  {
+                    "type": "AudioOnlyPrompt",
+                    "id": "es-fr-c2-u09-l02-e08",
+                    "audioText": "J'ai besoin d'un morceau de fromage. Paradoxalement, l'excès de prudence nuit à la crédibilité.",
+                    "question": "¿Qué implica el hablante?",
+                    "options": [
+                      "J'ai besoin d'un morceau de fromage. Paradoxalement, l'excès de prudence nuit à la crédibilité.",
+                      "J'ai besoin d'un kilo de tomates. À proprement parler, l'affirmation admet des lectures contradictoires.",
+                      "J'ai besoin d'une baguette de pain. Au risque de simplifier, l'argument frôle la contradiction."
+                    ],
+                    "correctIndex": 0,
+                    "allowSlowPlayback": false,
+                    "feedbackOnError": {
+                      "type": "comprehension",
+                      "explanation": "El audio dice «J'ai besoin d'un morceau de fromage. Paradoxalement, l'excès de prudence nuit à la crédibilité.».",
+                      "ruleRef": "gp-c2-apposition"
+                    },
+                    "feedbackOnSuccess": {
+                      "explanation": "Has interpretado la implicación."
+                    }
+                  },
+                  {
+                    "type": "ListenType",
+                    "id": "es-fr-c2-u09-l02-e09",
+                    "audioText": "J'ai besoin d'un morceau de fromage. Paradoxalement, l'excès de prudence nuit à la crédibilité.",
+                    "transcription": "J'ai besoin d'un morceau de fromage. Paradoxalement, l'excès de prudence nuit à la crédibilité.",
+                    "feedbackOnError": {
+                      "type": "spelling",
+                      "explanation": "Escribe exactamente «J'ai besoin d'un morceau de fromage. Paradoxalement, l'excès de prudence nuit à la crédibilité.».",
+                      "ruleRef": "gp-c2-litotes"
+                    },
+                    "feedbackOnSuccess": {
+                      "explanation": "La transcripción coincide con el audio."
+                    }
+                  },
+                  {
+                    "type": "SpeakRepeat",
+                    "id": "es-fr-c2-u09-l02-e10",
+                    "targetPhrase": "J'ai besoin d'un morceau de fromage. Paradoxalement, l'excès de prudence nuit à la crédibilité.",
+                    "audioText": "J'ai besoin d'un morceau de fromage. Paradoxalement, l'excès de prudence nuit à la crédibilité.",
+                    "feedbackOnError": {
+                      "type": "pronunciation",
+                      "explanation": "Repite «J'ai besoin d'un morceau de fromage. Paradoxalement, l'excès de prudence nuit à la crédibilité.» con claridad.",
+                      "ruleRef": "gp-c2-litotes"
+                    },
+                    "feedbackOnSuccess": {
+                      "explanation": "La frase se entiende y mantiene el ritmo."
+                    }
+                  },
+                  {
+                    "type": "MatchPairs",
+                    "id": "es-fr-c2-u09-l02-e11",
+                    "pairs": [
+                      {
+                        "left": "Necesito un kilo de tomates. En rigor, la afirmación admite lecturas encontradas.",
+                        "right": "J'ai besoin d'un kilo de tomates. À proprement parler, l'affirmation admet des lectures contradictoires."
+                      },
+                      {
+                        "left": "Necesito una barra de pan. A riesgo de simplificar, el argumento roza la contradicción.",
+                        "right": "J'ai besoin d'une baguette de pain. Au risque de simplifier, l'argument frôle la contradiction."
+                      },
+                      {
+                        "left": "Necesito un trozo de queso. Paradójicamente, el exceso de cautela resta credibilidad.",
+                        "right": "J'ai besoin d'un morceau de fromage. Paradoxalement, l'excès de prudence nuit à la crédibilité."
+                      }
+                    ],
+                    "feedbackOnError": {
+                      "type": "vocabulary",
+                      "explanation": "Cada expresión tiene una traducción distinta.",
+                      "ruleRef": "gp-c2-litotes"
+                    },
+                    "feedbackOnSuccess": {
+                      "explanation": "Has asociado cada expresión con su traducción."
+                    }
+                  },
+                  {
+                    "type": "FreeSpeakingPrompt",
+                    "id": "es-fr-c2-u09-l02-e12",
+                    "prompt": "Defiende una interpretación matizada sobre el mercado.",
+                    "minTokens": 40,
+                    "conceptClusters": [
+                      [
+                        "J'ai"
+                      ],
+                      [
+                        "besoin"
+                      ],
+                      [
+                        "d'un"
+                      ]
+                    ],
+                    "modelAnswer": "J'ai besoin d'un kilo de tomates. À proprement parler, l'affirmation admet des lectures contradictoires. J'ai besoin d'une baguette de pain. Au risque de simplifier, l'argument frôle la contradiction. J'ai besoin d'un morceau de fromage. Paradoxalement, l'excès de prudence nuit à la crédibilité.",
+                    "selfAssessmentCriteria": [
+                      "¿La respuesta argumenta y responde a la tarea?",
+                      "¿Usa las dos estructuras gramaticales de la lección?",
+                      "¿Incluye una concesión, una ironía o una atenuación?"
+                    ],
+                    "grammarRuleRefs": [
+                      "gp-c2-litotes",
+                      "gp-c2-apposition"
+                    ],
+                    "timeLimitSeconds": 120,
+                    "minWpm": 70,
+                    "maxWpm": 160,
+                    "feedbackOnError": {
+                      "type": "grammar",
+                      "explanation": "La respuesta modelo desarrolla una interpretación matizada.",
+                      "ruleRef": "gp-c2-litotes"
+                    }
+                  }
+                ]
+              },
+              {
+                "id": "es-fr-c2-u09-l03",
+                "title": "Ingredientes y platos",
+                "cefrLevel": "C2",
+                "scenario": "Situación comunicativa avanzada sobre los ingredientes.",
+                "canDo": "Puedo argumentar con matices y precisión sobre los ingredientes.",
+                "grammarPoints": [
+                  {
+                    "id": "gp-c2-litotes",
+                    "label": "Litotes",
+                    "description": "La litote afirma algo negando lo contrario."
+                  },
+                  {
+                    "id": "gp-c2-apposition",
+                    "label": "Apposition",
+                    "description": "La aposición añade una explicación al sustantivo."
+                  }
+                ],
+                "vocabFrequencyBand": "12000+",
+                "culturalNotes": [
+                  {
+                    "idiom": "balayer sous le tapis",
+                    "note": "Expresión para ocultar un problema.",
+                    "translation": "barrer debajo de la alfombra"
+                  }
+                ],
+                "microLesson": {
+                  "title": "Ingredientes y platos",
+                  "goals": [
+                    "Usar vocabulario avanzado de los ingredientes.",
+                    "Aplicar litotes y apposition.",
+                    "Argumentar con matices sobre los ingredientes."
+                  ],
+                  "sections": [
+                    {
+                      "heading": "Lengua en contexto",
+                      "body": "Litotes: La litote afirma algo negando lo contrario. Apposition: La aposición añade una explicación al sustantivo.",
+                      "examples": [
+                        {
+                          "source": "Necesito arroz. A riesgo de simplificar, el argumento roza la contradicción.",
+                          "target": "J'ai besoin de du riz. Au risque de simplifier, l'argument frôle la contradiction."
+                        },
+                        {
+                          "source": "Necesito pollo. Paradójicamente, el exceso de cautela resta credibilidad.",
+                          "target": "J'ai besoin de du poulet. Paradoxalement, l'excès de prudence nuit à la crédibilité."
+                        }
+                      ]
+                    }
+                  ]
+                },
+                "glossary": [
+                  {
+                    "term": "J'ai besoin de du riz. Au risque de simplifier, l'argument frôle la contradiction.",
+                    "translations": [
+                      "Necesito arroz. A riesgo de simplificar, el argumento roza la contradicción."
+                    ]
+                  },
+                  {
+                    "term": "J'ai besoin de du poulet. Paradoxalement, l'excès de prudence nuit à la crédibilité.",
+                    "translations": [
+                      "Necesito pollo. Paradójicamente, el exceso de cautela resta credibilidad."
+                    ]
+                  },
+                  {
+                    "term": "J'ai besoin de des légumes frais. Avec la distance critique requise, la thèse est suggestive.",
+                    "translations": [
+                      "Necesito verduras frescas. Con la debida distancia crítica, la tesis resulta sugerente."
+                    ]
+                  }
+                ],
+                "exercises": [
+                  {
+                    "type": "MultipleChoice",
+                    "id": "es-fr-c2-u09-l03-e01",
+                    "question": "¿Cuál es la opción correcta para «Necesito arroz. A riesgo de simplificar, el argumento roza la contradicción.»?",
+                    "options": [
+                      "J'ai besoin de du riz. Au risque de simplifier, l'argument frôle la contradiction.",
+                      "J'ai besoin de du poulet. Paradoxalement, l'excès de prudence nuit à la crédibilité.",
+                      "J'ai besoin de des légumes frais. Avec la distance critique requise, la thèse est suggestive."
+                    ],
+                    "correctIndex": 0,
+                    "feedbackOnError": {
+                      "type": "vocabulary",
+                      "explanation": "«Necesito arroz. A riesgo de simplificar, el argumento roza la contradicción.» se dice «J'ai besoin de du riz. Au risque de simplifier, l'argument frôle la contradiction.».",
+                      "ruleRef": "gp-c2-litotes"
+                    },
+                    "feedbackOnSuccess": {
+                      "explanation": "Has elegido la opción precisa."
+                    }
+                  },
+                  {
+                    "type": "Translate",
+                    "id": "es-fr-c2-u09-l03-e02",
+                    "sourcePhrase": "Necesito arroz. A riesgo de simplificar, el argumento roza la contradicción.",
+                    "correctTokens": [
+                      "J'ai",
+                      "besoin",
+                      "de",
+                      "du",
+                      "riz",
+                      "Au",
+                      "risque",
+                      "de",
+                      "simplifier",
+                      "l'argument",
+                      "frôle",
+                      "la",
+                      "contradiction"
+                    ],
+                    "distractorTokens": [
+                      "poulet",
+                      "Paradoxalement",
+                      "l'excès"
+                    ],
+                    "feedbackOnError": {
+                      "type": "grammar",
+                      "explanation": "El orden correcto es «J'ai besoin de du riz Au risque de simplifier l'argument frôle la contradiction».",
+                      "ruleRef": "gp-c2-litotes"
+                    },
+                    "feedbackOnSuccess": {
+                      "explanation": "La frase conserva el orden y el significado."
+                    }
+                  },
+                  {
+                    "type": "ClozeDragDrop",
+                    "id": "es-fr-c2-u09-l03-e03",
+                    "passage": "{{b1}} {{b2}} de du riz",
+                    "blanks": [
+                      {
+                        "id": "b1",
+                        "answer": "J'ai",
+                        "options": [
+                          "J'ai",
+                          "riz",
+                          "très"
+                        ]
+                      },
+                      {
+                        "id": "b2",
+                        "answer": "besoin",
+                        "options": [
+                          "besoin",
+                          "riz",
+                          "très"
+                        ]
+                      }
+                    ],
+                    "feedbackOnError": {
+                      "type": "grammar",
+                      "explanation": "Las dos formas deben encajar con el contexto de la frase.",
+                      "ruleRef": "gp-c2-apposition"
+                    },
+                    "feedbackOnSuccess": {
+                      "explanation": "Los dos huecos encajan con la situación."
+                    }
+                  },
+                  {
+                    "type": "ClozeDragDrop",
+                    "id": "es-fr-c2-u09-l03-e04",
+                    "passage": "{{b1}} {{b2}} de du poulet",
+                    "blanks": [
+                      {
+                        "id": "b1",
+                        "answer": "J'ai",
+                        "options": [
+                          "J'ai",
+                          "poulet",
+                          "très"
+                        ]
+                      },
+                      {
+                        "id": "b2",
+                        "answer": "besoin",
+                        "options": [
+                          "besoin",
+                          "poulet",
+                          "très"
+                        ]
+                      }
+                    ],
+                    "feedbackOnError": {
+                      "type": "grammar",
+                      "explanation": "Las dos formas deben encajar con el contexto de la frase.",
+                      "ruleRef": "gp-c2-apposition"
+                    },
+                    "feedbackOnSuccess": {
+                      "explanation": "Los dos huecos encajan con la situación."
+                    }
+                  },
+                  {
+                    "type": "ClozeDragDrop",
+                    "id": "es-fr-c2-u09-l03-e05",
+                    "passage": "{{b1}} {{b2}} de des légumes frais",
+                    "blanks": [
+                      {
+                        "id": "b1",
+                        "answer": "J'ai",
+                        "options": [
+                          "J'ai",
+                          "légumes",
+                          "frais"
+                        ]
+                      },
+                      {
+                        "id": "b2",
+                        "answer": "besoin",
+                        "options": [
+                          "besoin",
+                          "légumes",
+                          "frais"
+                        ]
+                      }
+                    ],
+                    "feedbackOnError": {
+                      "type": "grammar",
+                      "explanation": "Las dos formas deben encajar con el contexto de la frase.",
+                      "ruleRef": "gp-c2-apposition"
+                    },
+                    "feedbackOnSuccess": {
+                      "explanation": "Los dos huecos encajan con la situación."
+                    }
+                  },
+                  {
+                    "type": "SemanticMatch",
+                    "id": "es-fr-c2-u09-l03-e06",
+                    "instructions": "Clasifica la función y el registro de cada intervención.",
+                    "pairs": [
+                      {
+                        "left": "J'ai besoin de du riz. Au risque de simplifier, l'argument frôle la contradiction.",
+                        "right": "Ironía seca",
+                        "register": "literary",
+                        "nuance": "Clasifica la función y el registro de la intervención."
+                      },
+                      {
+                        "left": "J'ai besoin de du poulet. Paradoxalement, l'excès de prudence nuit à la crédibilité.",
+                        "right": "Atenuación",
+                        "register": "formal",
+                        "nuance": "Clasifica la función y el registro de la intervención."
+                      },
+                      {
+                        "left": "J'ai besoin de des légumes frais. Avec la distance critique requise, la thèse est suggestive.",
+                        "right": "Conclusión",
+                        "register": "neutral",
+                        "nuance": "Clasifica la función y el registro de la intervención."
+                      }
+                    ],
+                    "feedbackOnError": {
+                      "type": "register",
+                      "explanation": "Cada intervención cumple una función retórica distinta.",
+                      "ruleRef": "gp-c2-litotes"
+                    },
+                    "feedbackOnSuccess": {
+                      "explanation": "Has identificado función y registro."
+                    }
+                  },
+                  {
+                    "type": "ListenChoose",
+                    "id": "es-fr-c2-u09-l03-e07",
+                    "audioText": "J'ai besoin de du poulet. Paradoxalement, l'excès de prudence nuit à la crédibilité.",
+                    "options": [
+                      "J'ai besoin de du poulet. Paradoxalement, l'excès de prudence nuit à la crédibilité.",
+                      "J'ai besoin de du riz. Au risque de simplifier, l'argument frôle la contradiction.",
+                      "J'ai besoin de des légumes frais. Avec la distance critique requise, la thèse est suggestive."
+                    ],
+                    "correctIndex": 0,
+                    "feedbackOnError": {
+                      "type": "comprehension",
+                      "explanation": "El audio dice «J'ai besoin de du poulet. Paradoxalement, l'excès de prudence nuit à la crédibilité.».",
+                      "ruleRef": "gp-c2-litotes"
+                    },
+                    "feedbackOnSuccess": {
+                      "explanation": "Has reconocido la frase del audio."
+                    }
+                  },
+                  {
+                    "type": "AudioOnlyPrompt",
+                    "id": "es-fr-c2-u09-l03-e08",
+                    "audioText": "J'ai besoin de des légumes frais. Avec la distance critique requise, la thèse est suggestive.",
+                    "question": "¿Qué implica el hablante?",
+                    "options": [
+                      "J'ai besoin de des légumes frais. Avec la distance critique requise, la thèse est suggestive.",
+                      "J'ai besoin de du riz. Au risque de simplifier, l'argument frôle la contradiction.",
+                      "J'ai besoin de du poulet. Paradoxalement, l'excès de prudence nuit à la crédibilité."
+                    ],
+                    "correctIndex": 0,
+                    "allowSlowPlayback": false,
+                    "feedbackOnError": {
+                      "type": "comprehension",
+                      "explanation": "El audio dice «J'ai besoin de des légumes frais. Avec la distance critique requise, la thèse est suggestive.».",
+                      "ruleRef": "gp-c2-apposition"
+                    },
+                    "feedbackOnSuccess": {
+                      "explanation": "Has interpretado la implicación."
+                    }
+                  },
+                  {
+                    "type": "ListenType",
+                    "id": "es-fr-c2-u09-l03-e09",
+                    "audioText": "J'ai besoin de des légumes frais. Avec la distance critique requise, la thèse est suggestive.",
+                    "transcription": "J'ai besoin de des légumes frais. Avec la distance critique requise, la thèse est suggestive.",
+                    "feedbackOnError": {
+                      "type": "spelling",
+                      "explanation": "Escribe exactamente «J'ai besoin de des légumes frais. Avec la distance critique requise, la thèse est suggestive.».",
+                      "ruleRef": "gp-c2-litotes"
+                    },
+                    "feedbackOnSuccess": {
+                      "explanation": "La transcripción coincide con el audio."
+                    }
+                  },
+                  {
+                    "type": "SpeakRepeat",
+                    "id": "es-fr-c2-u09-l03-e10",
+                    "targetPhrase": "J'ai besoin de des légumes frais. Avec la distance critique requise, la thèse est suggestive.",
+                    "audioText": "J'ai besoin de des légumes frais. Avec la distance critique requise, la thèse est suggestive.",
+                    "feedbackOnError": {
+                      "type": "pronunciation",
+                      "explanation": "Repite «J'ai besoin de des légumes frais. Avec la distance critique requise, la thèse est suggestive.» con claridad.",
+                      "ruleRef": "gp-c2-litotes"
+                    },
+                    "feedbackOnSuccess": {
+                      "explanation": "La frase se entiende y mantiene el ritmo."
+                    }
+                  },
+                  {
+                    "type": "MatchPairs",
+                    "id": "es-fr-c2-u09-l03-e11",
+                    "pairs": [
+                      {
+                        "left": "Necesito arroz. A riesgo de simplificar, el argumento roza la contradicción.",
+                        "right": "J'ai besoin de du riz. Au risque de simplifier, l'argument frôle la contradiction."
+                      },
+                      {
+                        "left": "Necesito pollo. Paradójicamente, el exceso de cautela resta credibilidad.",
+                        "right": "J'ai besoin de du poulet. Paradoxalement, l'excès de prudence nuit à la crédibilité."
+                      },
+                      {
+                        "left": "Necesito verduras frescas. Con la debida distancia crítica, la tesis resulta sugerente.",
+                        "right": "J'ai besoin de des légumes frais. Avec la distance critique requise, la thèse est suggestive."
+                      }
+                    ],
+                    "feedbackOnError": {
+                      "type": "vocabulary",
+                      "explanation": "Cada expresión tiene una traducción distinta.",
+                      "ruleRef": "gp-c2-litotes"
+                    },
+                    "feedbackOnSuccess": {
+                      "explanation": "Has asociado cada expresión con su traducción."
+                    }
+                  },
+                  {
+                    "type": "FreeSpeakingPrompt",
+                    "id": "es-fr-c2-u09-l03-e12",
+                    "prompt": "Defiende una interpretación matizada sobre los ingredientes.",
+                    "minTokens": 40,
+                    "conceptClusters": [
+                      [
+                        "J'ai"
+                      ],
+                      [
+                        "besoin"
+                      ],
+                      [
+                        "riz"
+                      ]
+                    ],
+                    "modelAnswer": "J'ai besoin de du riz. Au risque de simplifier, l'argument frôle la contradiction. J'ai besoin de du poulet. Paradoxalement, l'excès de prudence nuit à la crédibilité. J'ai besoin de des légumes frais. Avec la distance critique requise, la thèse est suggestive.",
+                    "selfAssessmentCriteria": [
+                      "¿La respuesta argumenta y responde a la tarea?",
+                      "¿Usa las dos estructuras gramaticales de la lección?",
+                      "¿Incluye una concesión, una ironía o una atenuación?"
+                    ],
+                    "grammarRuleRefs": [
+                      "gp-c2-litotes",
+                      "gp-c2-apposition"
+                    ],
+                    "timeLimitSeconds": 120,
+                    "minWpm": 70,
+                    "maxWpm": 160,
+                    "feedbackOnError": {
+                      "type": "grammar",
+                      "explanation": "La respuesta modelo desarrolla una interpretación matizada.",
+                      "ruleRef": "gp-c2-litotes"
+                    }
+                  }
+                ]
+              },
+              {
+                "id": "es-fr-c2-u09-l04",
+                "title": "Countable / uncountable",
+                "cefrLevel": "C2",
+                "scenario": "Situación comunicativa avanzada sobre los contables e incontables.",
+                "canDo": "Puedo argumentar con matices y precisión sobre los contables e incontables.",
+                "grammarPoints": [
+                  {
+                    "id": "gp-c2-litotes",
+                    "label": "Litotes",
+                    "description": "La litote afirma algo negando lo contrario."
+                  },
+                  {
+                    "id": "gp-c2-apposition",
+                    "label": "Apposition",
+                    "description": "La aposición añade una explicación al sustantivo."
+                  }
+                ],
+                "vocabFrequencyBand": "12000+",
+                "culturalNotes": [
+                  {
+                    "idiom": "prendre de haut",
+                    "note": "Expresión para adoptar una postura moral superior.",
+                    "translation": "adoptar superioridad moral"
+                  }
+                ],
+                "microLesson": {
+                  "title": "Countable / uncountable",
+                  "goals": [
+                    "Usar vocabulario avanzado de los contables e incontables.",
+                    "Aplicar litotes y apposition.",
+                    "Argumentar con matices sobre los contables e incontables."
+                  ],
+                  "sections": [
+                    {
+                      "heading": "Lengua en contexto",
+                      "body": "Litotes: La litote afirma algo negando lo contrario. Apposition: La aposición añade una explicación al sustantivo.",
+                      "examples": [
+                        {
+                          "source": "Hay mucha agua en la botella. Paradójicamente, el exceso de cautela resta credibilidad.",
+                          "target": "Il y a beaucoup d'eau dans la bouteille. Paradoxalement, l'excès de prudence nuit à la crédibilité."
+                        },
+                        {
+                          "source": "Necesito tres manzanas para la receta. Con la debida distancia crítica, la tesis resulta sugerente.",
+                          "target": "J'ai besoin de trois pommes pour la recette. Avec la distance critique requise, la thèse est suggestive."
+                        }
+                      ]
+                    }
+                  ]
+                },
+                "glossary": [
+                  {
+                    "term": "Il y a beaucoup d'eau dans la bouteille. Paradoxalement, l'excès de prudence nuit à la crédibilité.",
+                    "translations": [
+                      "Hay mucha agua en la botella. Paradójicamente, el exceso de cautela resta credibilidad."
+                    ]
+                  },
+                  {
+                    "term": "J'ai besoin de trois pommes pour la recette. Avec la distance critique requise, la thèse est suggestive.",
+                    "translations": [
+                      "Necesito tres manzanas para la receta. Con la debida distancia crítica, la tesis resulta sugerente."
+                    ]
+                  },
+                  {
+                    "term": "Il ne reste pas beaucoup de lait. Si l'on me permet l'ironie, le résultat était prévisible.",
+                    "translations": [
+                      "No queda mucha leche. Si se me permite la ironía, el resultado era previsible."
+                    ]
+                  }
+                ],
+                "exercises": [
+                  {
+                    "type": "MultipleChoice",
+                    "id": "es-fr-c2-u09-l04-e01",
+                    "question": "¿Cuál es la opción correcta para «Hay mucha agua en la botella. Paradójicamente, el exceso de cautela resta credibilidad.»?",
+                    "options": [
+                      "Il y a beaucoup d'eau dans la bouteille. Paradoxalement, l'excès de prudence nuit à la crédibilité.",
+                      "J'ai besoin de trois pommes pour la recette. Avec la distance critique requise, la thèse est suggestive.",
+                      "Il ne reste pas beaucoup de lait. Si l'on me permet l'ironie, le résultat était prévisible."
+                    ],
+                    "correctIndex": 0,
+                    "feedbackOnError": {
+                      "type": "vocabulary",
+                      "explanation": "«Hay mucha agua en la botella. Paradójicamente, el exceso de cautela resta credibilidad.» se dice «Il y a beaucoup d'eau dans la bouteille. Paradoxalement, l'excès de prudence nuit à la crédibilité.».",
+                      "ruleRef": "gp-c2-litotes"
+                    },
+                    "feedbackOnSuccess": {
+                      "explanation": "Has elegido la opción precisa."
+                    }
+                  },
+                  {
+                    "type": "Translate",
+                    "id": "es-fr-c2-u09-l04-e02",
+                    "sourcePhrase": "Hay mucha agua en la botella. Paradójicamente, el exceso de cautela resta credibilidad.",
+                    "correctTokens": [
+                      "Il",
+                      "y",
+                      "a",
+                      "beaucoup",
+                      "d'eau",
+                      "dans",
+                      "la",
+                      "bouteille",
+                      "Paradoxalement",
+                      "l'excès",
+                      "de",
+                      "prudence",
+                      "nuit",
+                      "à",
+                      "la",
+                      "crédibilité"
+                    ],
+                    "distractorTokens": [
+                      "J'ai",
+                      "besoin",
+                      "trois"
+                    ],
+                    "feedbackOnError": {
+                      "type": "grammar",
+                      "explanation": "El orden correcto es «Il y a beaucoup d'eau dans la bouteille Paradoxalement l'excès de prudence nuit à la crédibilité».",
+                      "ruleRef": "gp-c2-litotes"
+                    },
+                    "feedbackOnSuccess": {
+                      "explanation": "La frase conserva el orden y el significado."
+                    }
+                  },
+                  {
+                    "type": "ClozeDragDrop",
+                    "id": "es-fr-c2-u09-l04-e03",
+                    "passage": "Il y a {{b1}} {{b2}} dans la bouteille.",
+                    "blanks": [
+                      {
+                        "id": "b1",
+                        "answer": "beaucoup",
+                        "options": [
+                          "beaucoup",
+                          "bouteille",
+                          "très"
+                        ]
+                      },
+                      {
+                        "id": "b2",
+                        "answer": "d'eau",
+                        "options": [
+                          "d'eau",
+                          "bouteille",
+                          "très"
+                        ]
+                      }
+                    ],
+                    "feedbackOnError": {
+                      "type": "grammar",
+                      "explanation": "Las dos formas deben encajar con el contexto de la frase.",
+                      "ruleRef": "gp-c2-apposition"
+                    },
+                    "feedbackOnSuccess": {
+                      "explanation": "Los dos huecos encajan con la situación."
+                    }
+                  },
+                  {
+                    "type": "ClozeDragDrop",
+                    "id": "es-fr-c2-u09-l04-e04",
+                    "passage": "{{b1}} {{b2}} de trois pommes pour la recette.",
+                    "blanks": [
+                      {
+                        "id": "b1",
+                        "answer": "J'ai",
+                        "options": [
+                          "J'ai",
+                          "trois",
+                          "pommes"
+                        ]
+                      },
+                      {
+                        "id": "b2",
+                        "answer": "besoin",
+                        "options": [
+                          "besoin",
+                          "trois",
+                          "pommes"
+                        ]
+                      }
+                    ],
+                    "feedbackOnError": {
+                      "type": "grammar",
+                      "explanation": "Las dos formas deben encajar con el contexto de la frase.",
+                      "ruleRef": "gp-c2-apposition"
+                    },
+                    "feedbackOnSuccess": {
+                      "explanation": "Los dos huecos encajan con la situación."
+                    }
+                  },
+                  {
+                    "type": "ClozeDragDrop",
+                    "id": "es-fr-c2-u09-l04-e05",
+                    "passage": "Il ne {{b1}} pas {{b2}} de lait.",
+                    "blanks": [
+                      {
+                        "id": "b1",
+                        "answer": "reste",
+                        "options": [
+                          "reste",
+                          "lait",
+                          "très"
+                        ]
+                      },
+                      {
+                        "id": "b2",
+                        "answer": "beaucoup",
+                        "options": [
+                          "beaucoup",
+                          "lait",
+                          "très"
+                        ]
+                      }
+                    ],
+                    "feedbackOnError": {
+                      "type": "grammar",
+                      "explanation": "Las dos formas deben encajar con el contexto de la frase.",
+                      "ruleRef": "gp-c2-apposition"
+                    },
+                    "feedbackOnSuccess": {
+                      "explanation": "Los dos huecos encajan con la situación."
+                    }
+                  },
+                  {
+                    "type": "SemanticMatch",
+                    "id": "es-fr-c2-u09-l04-e06",
+                    "instructions": "Clasifica la función y el registro de cada intervención.",
+                    "pairs": [
+                      {
+                        "left": "Il y a beaucoup d'eau dans la bouteille. Paradoxalement, l'excès de prudence nuit à la crédibilité.",
+                        "right": "Ironía seca",
+                        "register": "literary",
+                        "nuance": "Clasifica la función y el registro de la intervención."
+                      },
+                      {
+                        "left": "J'ai besoin de trois pommes pour la recette. Avec la distance critique requise, la thèse est suggestive.",
+                        "right": "Atenuación",
+                        "register": "formal",
+                        "nuance": "Clasifica la función y el registro de la intervención."
+                      },
+                      {
+                        "left": "Il ne reste pas beaucoup de lait. Si l'on me permet l'ironie, le résultat était prévisible.",
+                        "right": "Conclusión",
+                        "register": "neutral",
+                        "nuance": "Clasifica la función y el registro de la intervención."
+                      }
+                    ],
+                    "feedbackOnError": {
+                      "type": "register",
+                      "explanation": "Cada intervención cumple una función retórica distinta.",
+                      "ruleRef": "gp-c2-litotes"
+                    },
+                    "feedbackOnSuccess": {
+                      "explanation": "Has identificado función y registro."
+                    }
+                  },
+                  {
+                    "type": "ListenChoose",
+                    "id": "es-fr-c2-u09-l04-e07",
+                    "audioText": "J'ai besoin de trois pommes pour la recette. Avec la distance critique requise, la thèse est suggestive.",
+                    "options": [
+                      "J'ai besoin de trois pommes pour la recette. Avec la distance critique requise, la thèse est suggestive.",
+                      "Il y a beaucoup d'eau dans la bouteille. Paradoxalement, l'excès de prudence nuit à la crédibilité.",
+                      "Il ne reste pas beaucoup de lait. Si l'on me permet l'ironie, le résultat était prévisible."
+                    ],
+                    "correctIndex": 0,
+                    "feedbackOnError": {
+                      "type": "comprehension",
+                      "explanation": "El audio dice «J'ai besoin de trois pommes pour la recette. Avec la distance critique requise, la thèse est suggestive.».",
+                      "ruleRef": "gp-c2-litotes"
+                    },
+                    "feedbackOnSuccess": {
+                      "explanation": "Has reconocido la frase del audio."
+                    }
+                  },
+                  {
+                    "type": "AudioOnlyPrompt",
+                    "id": "es-fr-c2-u09-l04-e08",
+                    "audioText": "Il ne reste pas beaucoup de lait. Si l'on me permet l'ironie, le résultat était prévisible.",
+                    "question": "¿Qué implica el hablante?",
+                    "options": [
+                      "Il ne reste pas beaucoup de lait. Si l'on me permet l'ironie, le résultat était prévisible.",
+                      "Il y a beaucoup d'eau dans la bouteille. Paradoxalement, l'excès de prudence nuit à la crédibilité.",
+                      "J'ai besoin de trois pommes pour la recette. Avec la distance critique requise, la thèse est suggestive."
+                    ],
+                    "correctIndex": 0,
+                    "allowSlowPlayback": false,
+                    "feedbackOnError": {
+                      "type": "comprehension",
+                      "explanation": "El audio dice «Il ne reste pas beaucoup de lait. Si l'on me permet l'ironie, le résultat était prévisible.».",
+                      "ruleRef": "gp-c2-apposition"
+                    },
+                    "feedbackOnSuccess": {
+                      "explanation": "Has interpretado la implicación."
+                    }
+                  },
+                  {
+                    "type": "ListenType",
+                    "id": "es-fr-c2-u09-l04-e09",
+                    "audioText": "Il ne reste pas beaucoup de lait. Si l'on me permet l'ironie, le résultat était prévisible.",
+                    "transcription": "Il ne reste pas beaucoup de lait. Si l'on me permet l'ironie, le résultat était prévisible.",
+                    "feedbackOnError": {
+                      "type": "spelling",
+                      "explanation": "Escribe exactamente «Il ne reste pas beaucoup de lait. Si l'on me permet l'ironie, le résultat était prévisible.».",
+                      "ruleRef": "gp-c2-litotes"
+                    },
+                    "feedbackOnSuccess": {
+                      "explanation": "La transcripción coincide con el audio."
+                    }
+                  },
+                  {
+                    "type": "SpeakRepeat",
+                    "id": "es-fr-c2-u09-l04-e10",
+                    "targetPhrase": "Il ne reste pas beaucoup de lait. Si l'on me permet l'ironie, le résultat était prévisible.",
+                    "audioText": "Il ne reste pas beaucoup de lait. Si l'on me permet l'ironie, le résultat était prévisible.",
+                    "feedbackOnError": {
+                      "type": "pronunciation",
+                      "explanation": "Repite «Il ne reste pas beaucoup de lait. Si l'on me permet l'ironie, le résultat était prévisible.» con claridad.",
+                      "ruleRef": "gp-c2-litotes"
+                    },
+                    "feedbackOnSuccess": {
+                      "explanation": "La frase se entiende y mantiene el ritmo."
+                    }
+                  },
+                  {
+                    "type": "MatchPairs",
+                    "id": "es-fr-c2-u09-l04-e11",
+                    "pairs": [
+                      {
+                        "left": "Hay mucha agua en la botella. Paradójicamente, el exceso de cautela resta credibilidad.",
+                        "right": "Il y a beaucoup d'eau dans la bouteille. Paradoxalement, l'excès de prudence nuit à la crédibilité."
+                      },
+                      {
+                        "left": "Necesito tres manzanas para la receta. Con la debida distancia crítica, la tesis resulta sugerente.",
+                        "right": "J'ai besoin de trois pommes pour la recette. Avec la distance critique requise, la thèse est suggestive."
+                      },
+                      {
+                        "left": "No queda mucha leche. Si se me permite la ironía, el resultado era previsible.",
+                        "right": "Il ne reste pas beaucoup de lait. Si l'on me permet l'ironie, le résultat était prévisible."
+                      }
+                    ],
+                    "feedbackOnError": {
+                      "type": "vocabulary",
+                      "explanation": "Cada expresión tiene una traducción distinta.",
+                      "ruleRef": "gp-c2-litotes"
+                    },
+                    "feedbackOnSuccess": {
+                      "explanation": "Has asociado cada expresión con su traducción."
+                    }
+                  },
+                  {
+                    "type": "FreeSpeakingPrompt",
+                    "id": "es-fr-c2-u09-l04-e12",
+                    "prompt": "Defiende una interpretación matizada sobre los contables e incontables.",
+                    "minTokens": 40,
+                    "conceptClusters": [
+                      [
+                        "beaucoup"
+                      ],
+                      [
+                        "d'eau"
+                      ],
+                      [
+                        "bouteille"
+                      ]
+                    ],
+                    "modelAnswer": "Il y a beaucoup d'eau dans la bouteille. Paradoxalement, l'excès de prudence nuit à la crédibilité. J'ai besoin de trois pommes pour la recette. Avec la distance critique requise, la thèse est suggestive. Il ne reste pas beaucoup de lait. Si l'on me permet l'ironie, le résultat était prévisible.",
+                    "selfAssessmentCriteria": [
+                      "¿La respuesta argumenta y responde a la tarea?",
+                      "¿Usa las dos estructuras gramaticales de la lección?",
+                      "¿Incluye una concesión, una ironía o una atenuación?"
+                    ],
+                    "grammarRuleRefs": [
+                      "gp-c2-litotes",
+                      "gp-c2-apposition"
+                    ],
+                    "timeLimitSeconds": 120,
+                    "minWpm": 70,
+                    "maxWpm": 160,
+                    "feedbackOnError": {
+                      "type": "grammar",
+                      "explanation": "La respuesta modelo desarrolla una interpretación matizada.",
+                      "ruleRef": "gp-c2-litotes"
+                    }
+                  }
+                ]
+              },
+              {
+                "id": "es-fr-c2-u09-l05",
+                "title": "Some / any / much / many",
+                "cefrLevel": "C2",
+                "scenario": "Situación comunicativa avanzada sobre las cantidades.",
+                "canDo": "Puedo argumentar con matices y precisión sobre las cantidades.",
+                "grammarPoints": [
+                  {
+                    "id": "gp-c2-litotes",
+                    "label": "Litotes",
+                    "description": "La litote afirma algo negando lo contrario."
+                  },
+                  {
+                    "id": "gp-c2-apposition",
+                    "label": "Apposition",
+                    "description": "La aposición añade una explicación al sustantivo."
+                  }
+                ],
+                "vocabFrequencyBand": "12000+",
+                "culturalNotes": [
+                  {
+                    "idiom": "louer du bout des lèvres",
+                    "note": "Expresión para elogiar de forma que en realidad critica.",
+                    "translation": "elogiar con tibieza"
+                  }
+                ],
+                "microLesson": {
+                  "title": "Some / any / much / many",
+                  "goals": [
+                    "Usar vocabulario avanzado de las cantidades.",
+                    "Aplicar litotes y apposition.",
+                    "Argumentar con matices sobre las cantidades."
+                  ],
+                  "sections": [
+                    {
+                      "heading": "Lengua en contexto",
+                      "body": "Litotes: La litote afirma algo negando lo contrario. Apposition: La aposición añade una explicación al sustantivo.",
+                      "examples": [
+                        {
+                          "source": "Hay fruta en la nevera. Con la debida distancia crítica, la tesis resulta sugerente.",
+                          "target": "Il y a des fruits dans le frigo. Avec la distance critique requise, la thèse est suggestive."
+                        },
+                        {
+                          "source": "No hay leche. Si se me permite la ironía, el resultado era previsible.",
+                          "target": "Il n'y a pas de lait. Si l'on me permet l'ironie, le résultat était prévisible."
+                        }
+                      ]
+                    }
+                  ]
+                },
+                "glossary": [
+                  {
+                    "term": "Il y a des fruits dans le frigo. Avec la distance critique requise, la thèse est suggestive.",
+                    "translations": [
+                      "Hay fruta en la nevera. Con la debida distancia crítica, la tesis resulta sugerente."
+                    ]
+                  },
+                  {
+                    "term": "Il n'y a pas de lait. Si l'on me permet l'ironie, le résultat était prévisible.",
+                    "translations": [
+                      "No hay leche. Si se me permite la ironía, el resultado era previsible."
+                    ]
+                  },
+                  {
+                    "term": "Tu as du sucre ? En dernière instance, une tension irrésolue sous-tend le débat.",
+                    "translations": [
+                      "¿Tienes azúcar? En última instancia, subyace una tensión no resuelta."
+                    ]
+                  }
+                ],
+                "exercises": [
+                  {
+                    "type": "MultipleChoice",
+                    "id": "es-fr-c2-u09-l05-e01",
+                    "question": "¿Cuál es la opción correcta para «Hay fruta en la nevera. Con la debida distancia crítica, la tesis resulta sugerente.»?",
+                    "options": [
+                      "Il y a des fruits dans le frigo. Avec la distance critique requise, la thèse est suggestive.",
+                      "Il n'y a pas de lait. Si l'on me permet l'ironie, le résultat était prévisible.",
+                      "Tu as du sucre ? En dernière instance, une tension irrésolue sous-tend le débat."
+                    ],
+                    "correctIndex": 0,
+                    "feedbackOnError": {
+                      "type": "vocabulary",
+                      "explanation": "«Hay fruta en la nevera. Con la debida distancia crítica, la tesis resulta sugerente.» se dice «Il y a des fruits dans le frigo. Avec la distance critique requise, la thèse est suggestive.».",
+                      "ruleRef": "gp-c2-litotes"
+                    },
+                    "feedbackOnSuccess": {
+                      "explanation": "Has elegido la opción precisa."
+                    }
+                  },
+                  {
+                    "type": "Translate",
+                    "id": "es-fr-c2-u09-l05-e02",
+                    "sourcePhrase": "Hay fruta en la nevera. Con la debida distancia crítica, la tesis resulta sugerente.",
+                    "correctTokens": [
+                      "Il",
+                      "y",
+                      "a",
+                      "des",
+                      "fruits",
+                      "dans",
+                      "le",
+                      "frigo",
+                      "Avec",
+                      "la",
+                      "distance",
+                      "critique",
+                      "requise",
+                      "la",
+                      "thèse",
+                      "est",
+                      "suggestive"
+                    ],
+                    "distractorTokens": [
+                      "n'y",
+                      "pas",
+                      "de"
+                    ],
+                    "feedbackOnError": {
+                      "type": "grammar",
+                      "explanation": "El orden correcto es «Il y a des fruits dans le frigo Avec la distance critique requise la thèse est suggestive».",
+                      "ruleRef": "gp-c2-litotes"
+                    },
+                    "feedbackOnSuccess": {
+                      "explanation": "La frase conserva el orden y el significado."
+                    }
+                  },
+                  {
+                    "type": "ClozeDragDrop",
+                    "id": "es-fr-c2-u09-l05-e03",
+                    "passage": "Il y a des {{b1}} dans le {{b2}}.",
+                    "blanks": [
+                      {
+                        "id": "b1",
+                        "answer": "fruits",
+                        "options": [
+                          "fruits",
+                          "très",
+                          "aujourd'hui"
+                        ]
+                      },
+                      {
+                        "id": "b2",
+                        "answer": "frigo",
+                        "options": [
+                          "frigo",
+                          "très",
+                          "aujourd'hui"
+                        ]
+                      }
+                    ],
+                    "feedbackOnError": {
+                      "type": "grammar",
+                      "explanation": "Las dos formas deben encajar con el contexto de la frase.",
+                      "ruleRef": "gp-c2-apposition"
+                    },
+                    "feedbackOnSuccess": {
+                      "explanation": "Los dos huecos encajan con la situación."
+                    }
+                  },
+                  {
+                    "type": "ClozeDragDrop",
+                    "id": "es-fr-c2-u09-l05-e04",
+                    "passage": "Il {{b1}} a pas de {{b2}}.",
+                    "blanks": [
+                      {
+                        "id": "b1",
+                        "answer": "n'y",
+                        "options": [
+                          "n'y",
+                          "très",
+                          "aujourd'hui"
+                        ]
+                      },
+                      {
+                        "id": "b2",
+                        "answer": "lait",
+                        "options": [
+                          "lait",
+                          "très",
+                          "aujourd'hui"
+                        ]
+                      }
+                    ],
+                    "feedbackOnError": {
+                      "type": "grammar",
+                      "explanation": "Las dos formas deben encajar con el contexto de la frase.",
+                      "ruleRef": "gp-c2-apposition"
+                    },
+                    "feedbackOnSuccess": {
+                      "explanation": "Los dos huecos encajan con la situación."
+                    }
+                  },
+                  {
+                    "type": "ClozeDragDrop",
+                    "id": "es-fr-c2-u09-l05-e05",
+                    "passage": "{{b1}} {{b2}} du sucre ?",
+                    "blanks": [
+                      {
+                        "id": "b1",
+                        "answer": "Tu",
+                        "options": [
+                          "Tu",
+                          "du",
+                          "sucre"
+                        ]
+                      },
+                      {
+                        "id": "b2",
+                        "answer": "as",
+                        "options": [
+                          "as",
+                          "du",
+                          "sucre"
+                        ]
+                      }
+                    ],
+                    "feedbackOnError": {
+                      "type": "grammar",
+                      "explanation": "Las dos formas deben encajar con el contexto de la frase.",
+                      "ruleRef": "gp-c2-apposition"
+                    },
+                    "feedbackOnSuccess": {
+                      "explanation": "Los dos huecos encajan con la situación."
+                    }
+                  },
+                  {
+                    "type": "SemanticMatch",
+                    "id": "es-fr-c2-u09-l05-e06",
+                    "instructions": "Clasifica la función y el registro de cada intervención.",
+                    "pairs": [
+                      {
+                        "left": "Il y a des fruits dans le frigo. Avec la distance critique requise, la thèse est suggestive.",
+                        "right": "Ironía seca",
+                        "register": "literary",
+                        "nuance": "Clasifica la función y el registro de la intervención."
+                      },
+                      {
+                        "left": "Il n'y a pas de lait. Si l'on me permet l'ironie, le résultat était prévisible.",
+                        "right": "Atenuación",
+                        "register": "formal",
+                        "nuance": "Clasifica la función y el registro de la intervención."
+                      },
+                      {
+                        "left": "Tu as du sucre ? En dernière instance, une tension irrésolue sous-tend le débat.",
+                        "right": "Conclusión",
+                        "register": "neutral",
+                        "nuance": "Clasifica la función y el registro de la intervención."
+                      }
+                    ],
+                    "feedbackOnError": {
+                      "type": "register",
+                      "explanation": "Cada intervención cumple una función retórica distinta.",
+                      "ruleRef": "gp-c2-litotes"
+                    },
+                    "feedbackOnSuccess": {
+                      "explanation": "Has identificado función y registro."
+                    }
+                  },
+                  {
+                    "type": "ListenChoose",
+                    "id": "es-fr-c2-u09-l05-e07",
+                    "audioText": "Il n'y a pas de lait. Si l'on me permet l'ironie, le résultat était prévisible.",
+                    "options": [
+                      "Il n'y a pas de lait. Si l'on me permet l'ironie, le résultat était prévisible.",
+                      "Il y a des fruits dans le frigo. Avec la distance critique requise, la thèse est suggestive.",
+                      "Tu as du sucre ? En dernière instance, une tension irrésolue sous-tend le débat."
+                    ],
+                    "correctIndex": 0,
+                    "feedbackOnError": {
+                      "type": "comprehension",
+                      "explanation": "El audio dice «Il n'y a pas de lait. Si l'on me permet l'ironie, le résultat était prévisible.».",
+                      "ruleRef": "gp-c2-litotes"
+                    },
+                    "feedbackOnSuccess": {
+                      "explanation": "Has reconocido la frase del audio."
+                    }
+                  },
+                  {
+                    "type": "AudioOnlyPrompt",
+                    "id": "es-fr-c2-u09-l05-e08",
+                    "audioText": "Tu as du sucre ? En dernière instance, une tension irrésolue sous-tend le débat.",
+                    "question": "¿Qué implica el hablante?",
+                    "options": [
+                      "Tu as du sucre ? En dernière instance, une tension irrésolue sous-tend le débat.",
+                      "Il y a des fruits dans le frigo. Avec la distance critique requise, la thèse est suggestive.",
+                      "Il n'y a pas de lait. Si l'on me permet l'ironie, le résultat était prévisible."
+                    ],
+                    "correctIndex": 0,
+                    "allowSlowPlayback": false,
+                    "feedbackOnError": {
+                      "type": "comprehension",
+                      "explanation": "El audio dice «Tu as du sucre ? En dernière instance, une tension irrésolue sous-tend le débat.».",
+                      "ruleRef": "gp-c2-apposition"
+                    },
+                    "feedbackOnSuccess": {
+                      "explanation": "Has interpretado la implicación."
+                    }
+                  },
+                  {
+                    "type": "ListenType",
+                    "id": "es-fr-c2-u09-l05-e09",
+                    "audioText": "Tu as du sucre ? En dernière instance, une tension irrésolue sous-tend le débat.",
+                    "transcription": "Tu as du sucre ? En dernière instance, une tension irrésolue sous-tend le débat.",
+                    "feedbackOnError": {
+                      "type": "spelling",
+                      "explanation": "Escribe exactamente «Tu as du sucre ? En dernière instance, une tension irrésolue sous-tend le débat.».",
+                      "ruleRef": "gp-c2-litotes"
+                    },
+                    "feedbackOnSuccess": {
+                      "explanation": "La transcripción coincide con el audio."
+                    }
+                  },
+                  {
+                    "type": "SpeakRepeat",
+                    "id": "es-fr-c2-u09-l05-e10",
+                    "targetPhrase": "Tu as du sucre ? En dernière instance, une tension irrésolue sous-tend le débat.",
+                    "audioText": "Tu as du sucre ? En dernière instance, une tension irrésolue sous-tend le débat.",
+                    "feedbackOnError": {
+                      "type": "pronunciation",
+                      "explanation": "Repite «Tu as du sucre ? En dernière instance, une tension irrésolue sous-tend le débat.» con claridad.",
+                      "ruleRef": "gp-c2-litotes"
+                    },
+                    "feedbackOnSuccess": {
+                      "explanation": "La frase se entiende y mantiene el ritmo."
+                    }
+                  },
+                  {
+                    "type": "MatchPairs",
+                    "id": "es-fr-c2-u09-l05-e11",
+                    "pairs": [
+                      {
+                        "left": "Hay fruta en la nevera. Con la debida distancia crítica, la tesis resulta sugerente.",
+                        "right": "Il y a des fruits dans le frigo. Avec la distance critique requise, la thèse est suggestive."
+                      },
+                      {
+                        "left": "No hay leche. Si se me permite la ironía, el resultado era previsible.",
+                        "right": "Il n'y a pas de lait. Si l'on me permet l'ironie, le résultat était prévisible."
+                      },
+                      {
+                        "left": "¿Tienes azúcar? En última instancia, subyace una tensión no resuelta.",
+                        "right": "Tu as du sucre ? En dernière instance, une tension irrésolue sous-tend le débat."
+                      }
+                    ],
+                    "feedbackOnError": {
+                      "type": "vocabulary",
+                      "explanation": "Cada expresión tiene una traducción distinta.",
+                      "ruleRef": "gp-c2-litotes"
+                    },
+                    "feedbackOnSuccess": {
+                      "explanation": "Has asociado cada expresión con su traducción."
+                    }
+                  },
+                  {
+                    "type": "FreeSpeakingPrompt",
+                    "id": "es-fr-c2-u09-l05-e12",
+                    "prompt": "Defiende una interpretación matizada sobre las cantidades.",
+                    "minTokens": 40,
+                    "conceptClusters": [
+                      [
+                        "fruits"
+                      ],
+                      [
+                        "frigo"
+                      ],
+                      [
+                        "distance"
+                      ]
+                    ],
+                    "modelAnswer": "Il y a des fruits dans le frigo. Avec la distance critique requise, la thèse est suggestive. Il n'y a pas de lait. Si l'on me permet l'ironie, le résultat était prévisible. Tu as du sucre ? En dernière instance, une tension irrésolue sous-tend le débat.",
+                    "selfAssessmentCriteria": [
+                      "¿La respuesta argumenta y responde a la tarea?",
+                      "¿Usa las dos estructuras gramaticales de la lección?",
+                      "¿Incluye una concesión, una ironía o una atenuación?"
+                    ],
+                    "grammarRuleRefs": [
+                      "gp-c2-litotes",
+                      "gp-c2-apposition"
+                    ],
+                    "timeLimitSeconds": 120,
+                    "minWpm": 70,
+                    "maxWpm": 160,
+                    "feedbackOnError": {
+                      "type": "grammar",
+                      "explanation": "La respuesta modelo desarrolla una interpretación matizada.",
+                      "ruleRef": "gp-c2-litotes"
+                    }
+                  }
+                ]
+              },
+              {
+                "id": "es-fr-c2-u09-l06",
+                "title": "Pedir en un restaurante",
+                "cefrLevel": "C2",
+                "scenario": "Situación comunicativa avanzada sobre el restaurante.",
+                "canDo": "Puedo argumentar con matices y precisión sobre el restaurante.",
+                "grammarPoints": [
+                  {
+                    "id": "gp-c2-litotes",
+                    "label": "Litotes",
+                    "description": "La litote afirma algo negando lo contrario."
+                  },
+                  {
+                    "id": "gp-c2-apposition",
+                    "label": "Apposition",
+                    "description": "La aposición añade una explicación al sustantivo."
+                  }
+                ],
+                "vocabFrequencyBand": "12000+",
+                "culturalNotes": [
+                  {
+                    "idiom": "enterrer l'essentiel",
+                    "note": "Expresión para ocultar la información más importante.",
+                    "translation": "enterrar lo importante"
+                  }
+                ],
+                "microLesson": {
+                  "title": "Pedir en un restaurante",
+                  "goals": [
+                    "Usar vocabulario avanzado de el restaurante.",
+                    "Aplicar litotes y apposition.",
+                    "Argumentar con matices sobre el restaurante."
+                  ],
+                  "sections": [
+                    {
+                      "heading": "Lengua en contexto",
+                      "body": "Litotes: La litote afirma algo negando lo contrario. Apposition: La aposición añade una explicación al sustantivo.",
+                      "examples": [
+                        {
+                          "source": "¿Tienen una mesa para dos? Si se me permite la ironía, el resultado era previsible.",
+                          "target": "Avez-vous une table pour deux ? Si l'on me permet l'ironie, le résultat était prévisible."
+                        },
+                        {
+                          "source": "Quisiera el menú del día. En última instancia, subyace una tensión no resuelta.",
+                          "target": "Je voudrais le menu du jour. En dernière instance, une tension irrésolue sous-tend le débat."
+                        }
+                      ]
+                    }
+                  ]
+                },
+                "glossary": [
+                  {
+                    "term": "Avez-vous une table pour deux ? Si l'on me permet l'ironie, le résultat était prévisible.",
+                    "translations": [
+                      "¿Tienen una mesa para dos? Si se me permite la ironía, el resultado era previsible."
+                    ]
+                  },
+                  {
+                    "term": "Je voudrais le menu du jour. En dernière instance, une tension irrésolue sous-tend le débat.",
+                    "translations": [
+                      "Quisiera el menú del día. En última instancia, subyace una tensión no resuelta."
+                    ]
+                  },
+                  {
+                    "term": "Pourriez-vous nous apporter l'addition, s'il vous plaît ? Franchement, la proposition manque de fondement.",
+                    "translations": [
+                      "¿Nos trae la cuenta, por favor? Dicho sin ambages, la propuesta carece de sustento."
+                    ]
+                  }
+                ],
+                "exercises": [
+                  {
+                    "type": "MultipleChoice",
+                    "id": "es-fr-c2-u09-l06-e01",
+                    "question": "¿Cuál es la opción correcta para «¿Tienen una mesa para dos? Si se me permite la ironía, el resultado era previsible.»?",
+                    "options": [
+                      "Avez-vous une table pour deux ? Si l'on me permet l'ironie, le résultat était prévisible.",
+                      "Je voudrais le menu du jour. En dernière instance, une tension irrésolue sous-tend le débat.",
+                      "Pourriez-vous nous apporter l'addition, s'il vous plaît ? Franchement, la proposition manque de fondement."
+                    ],
+                    "correctIndex": 0,
+                    "feedbackOnError": {
+                      "type": "vocabulary",
+                      "explanation": "«¿Tienen una mesa para dos? Si se me permite la ironía, el resultado era previsible.» se dice «Avez-vous une table pour deux ? Si l'on me permet l'ironie, le résultat était prévisible.».",
+                      "ruleRef": "gp-c2-litotes"
+                    },
+                    "feedbackOnSuccess": {
+                      "explanation": "Has elegido la opción precisa."
+                    }
+                  },
+                  {
+                    "type": "Translate",
+                    "id": "es-fr-c2-u09-l06-e02",
+                    "sourcePhrase": "¿Tienen una mesa para dos? Si se me permite la ironía, el resultado era previsible.",
+                    "correctTokens": [
+                      "Avez",
+                      "vous",
+                      "une",
+                      "table",
+                      "pour",
+                      "deux",
+                      "Si",
+                      "l'on",
+                      "me",
+                      "permet",
+                      "l'ironie",
+                      "le",
+                      "résultat",
+                      "était",
+                      "prévisible"
+                    ],
+                    "distractorTokens": [
+                      "Je",
+                      "voudrais",
+                      "menu"
+                    ],
+                    "feedbackOnError": {
+                      "type": "grammar",
+                      "explanation": "El orden correcto es «Avez vous une table pour deux Si l'on me permet l'ironie le résultat était prévisible».",
+                      "ruleRef": "gp-c2-litotes"
+                    },
+                    "feedbackOnSuccess": {
+                      "explanation": "La frase conserva el orden y el significado."
+                    }
+                  },
+                  {
+                    "type": "ClozeDragDrop",
+                    "id": "es-fr-c2-u09-l06-e03",
+                    "passage": "{{b1}}-vous une {{b2}} pour deux ?",
+                    "blanks": [
+                      {
+                        "id": "b1",
+                        "answer": "Avez",
+                        "options": [
+                          "Avez",
+                          "deux",
+                          "très"
+                        ]
+                      },
+                      {
+                        "id": "b2",
+                        "answer": "table",
+                        "options": [
+                          "table",
+                          "deux",
+                          "très"
+                        ]
+                      }
+                    ],
+                    "feedbackOnError": {
+                      "type": "grammar",
+                      "explanation": "Las dos formas deben encajar con el contexto de la frase.",
+                      "ruleRef": "gp-c2-apposition"
+                    },
+                    "feedbackOnSuccess": {
+                      "explanation": "Los dos huecos encajan con la situación."
+                    }
+                  },
+                  {
+                    "type": "ClozeDragDrop",
+                    "id": "es-fr-c2-u09-l06-e04",
+                    "passage": "Je {{b1}} le {{b2}} du jour.",
+                    "blanks": [
+                      {
+                        "id": "b1",
+                        "answer": "voudrais",
+                        "options": [
+                          "voudrais",
+                          "jour",
+                          "très"
+                        ]
+                      },
+                      {
+                        "id": "b2",
+                        "answer": "menu",
+                        "options": [
+                          "menu",
+                          "jour",
+                          "très"
+                        ]
+                      }
+                    ],
+                    "feedbackOnError": {
+                      "type": "grammar",
+                      "explanation": "Las dos formas deben encajar con el contexto de la frase.",
+                      "ruleRef": "gp-c2-apposition"
+                    },
+                    "feedbackOnSuccess": {
+                      "explanation": "Los dos huecos encajan con la situación."
+                    }
+                  },
+                  {
+                    "type": "ClozeDragDrop",
+                    "id": "es-fr-c2-u09-l06-e05",
+                    "passage": "{{b1}}-vous nous {{b2}} l'addition, s'il vous plaît ?",
+                    "blanks": [
+                      {
+                        "id": "b1",
+                        "answer": "Pourriez",
+                        "options": [
+                          "Pourriez",
+                          "l'addition",
+                          "s'il"
+                        ]
+                      },
+                      {
+                        "id": "b2",
+                        "answer": "apporter",
+                        "options": [
+                          "apporter",
+                          "l'addition",
+                          "s'il"
+                        ]
+                      }
+                    ],
+                    "feedbackOnError": {
+                      "type": "grammar",
+                      "explanation": "Las dos formas deben encajar con el contexto de la frase.",
+                      "ruleRef": "gp-c2-apposition"
+                    },
+                    "feedbackOnSuccess": {
+                      "explanation": "Los dos huecos encajan con la situación."
+                    }
+                  },
+                  {
+                    "type": "SemanticMatch",
+                    "id": "es-fr-c2-u09-l06-e06",
+                    "instructions": "Clasifica la función y el registro de cada intervención.",
+                    "pairs": [
+                      {
+                        "left": "Avez-vous une table pour deux ? Si l'on me permet l'ironie, le résultat était prévisible.",
+                        "right": "Ironía seca",
+                        "register": "literary",
+                        "nuance": "Clasifica la función y el registro de la intervención."
+                      },
+                      {
+                        "left": "Je voudrais le menu du jour. En dernière instance, une tension irrésolue sous-tend le débat.",
+                        "right": "Atenuación",
+                        "register": "formal",
+                        "nuance": "Clasifica la función y el registro de la intervención."
+                      },
+                      {
+                        "left": "Pourriez-vous nous apporter l'addition, s'il vous plaît ? Franchement, la proposition manque de fondement.",
+                        "right": "Conclusión",
+                        "register": "neutral",
+                        "nuance": "Clasifica la función y el registro de la intervención."
+                      }
+                    ],
+                    "feedbackOnError": {
+                      "type": "register",
+                      "explanation": "Cada intervención cumple una función retórica distinta.",
+                      "ruleRef": "gp-c2-litotes"
+                    },
+                    "feedbackOnSuccess": {
+                      "explanation": "Has identificado función y registro."
+                    }
+                  },
+                  {
+                    "type": "ListenChoose",
+                    "id": "es-fr-c2-u09-l06-e07",
+                    "audioText": "Je voudrais le menu du jour. En dernière instance, une tension irrésolue sous-tend le débat.",
+                    "options": [
+                      "Je voudrais le menu du jour. En dernière instance, une tension irrésolue sous-tend le débat.",
+                      "Avez-vous une table pour deux ? Si l'on me permet l'ironie, le résultat était prévisible.",
+                      "Pourriez-vous nous apporter l'addition, s'il vous plaît ? Franchement, la proposition manque de fondement."
+                    ],
+                    "correctIndex": 0,
+                    "feedbackOnError": {
+                      "type": "comprehension",
+                      "explanation": "El audio dice «Je voudrais le menu du jour. En dernière instance, une tension irrésolue sous-tend le débat.».",
+                      "ruleRef": "gp-c2-litotes"
+                    },
+                    "feedbackOnSuccess": {
+                      "explanation": "Has reconocido la frase del audio."
+                    }
+                  },
+                  {
+                    "type": "AudioOnlyPrompt",
+                    "id": "es-fr-c2-u09-l06-e08",
+                    "audioText": "Pourriez-vous nous apporter l'addition, s'il vous plaît ? Franchement, la proposition manque de fondement.",
+                    "question": "¿Qué implica el hablante?",
+                    "options": [
+                      "Pourriez-vous nous apporter l'addition, s'il vous plaît ? Franchement, la proposition manque de fondement.",
+                      "Avez-vous une table pour deux ? Si l'on me permet l'ironie, le résultat était prévisible.",
+                      "Je voudrais le menu du jour. En dernière instance, une tension irrésolue sous-tend le débat."
+                    ],
+                    "correctIndex": 0,
+                    "allowSlowPlayback": false,
+                    "feedbackOnError": {
+                      "type": "comprehension",
+                      "explanation": "El audio dice «Pourriez-vous nous apporter l'addition, s'il vous plaît ? Franchement, la proposition manque de fondement.».",
+                      "ruleRef": "gp-c2-apposition"
+                    },
+                    "feedbackOnSuccess": {
+                      "explanation": "Has interpretado la implicación."
+                    }
+                  },
+                  {
+                    "type": "ListenType",
+                    "id": "es-fr-c2-u09-l06-e09",
+                    "audioText": "Pourriez-vous nous apporter l'addition, s'il vous plaît ? Franchement, la proposition manque de fondement.",
+                    "transcription": "Pourriez-vous nous apporter l'addition, s'il vous plaît ? Franchement, la proposition manque de fondement.",
+                    "feedbackOnError": {
+                      "type": "spelling",
+                      "explanation": "Escribe exactamente «Pourriez-vous nous apporter l'addition, s'il vous plaît ? Franchement, la proposition manque de fondement.».",
+                      "ruleRef": "gp-c2-litotes"
+                    },
+                    "feedbackOnSuccess": {
+                      "explanation": "La transcripción coincide con el audio."
+                    }
+                  },
+                  {
+                    "type": "SpeakRepeat",
+                    "id": "es-fr-c2-u09-l06-e10",
+                    "targetPhrase": "Pourriez-vous nous apporter l'addition, s'il vous plaît ? Franchement, la proposition manque de fondement.",
+                    "audioText": "Pourriez-vous nous apporter l'addition, s'il vous plaît ? Franchement, la proposition manque de fondement.",
+                    "feedbackOnError": {
+                      "type": "pronunciation",
+                      "explanation": "Repite «Pourriez-vous nous apporter l'addition, s'il vous plaît ? Franchement, la proposition manque de fondement.» con claridad.",
+                      "ruleRef": "gp-c2-litotes"
+                    },
+                    "feedbackOnSuccess": {
+                      "explanation": "La frase se entiende y mantiene el ritmo."
+                    }
+                  },
+                  {
+                    "type": "MatchPairs",
+                    "id": "es-fr-c2-u09-l06-e11",
+                    "pairs": [
+                      {
+                        "left": "¿Tienen una mesa para dos? Si se me permite la ironía, el resultado era previsible.",
+                        "right": "Avez-vous une table pour deux ? Si l'on me permet l'ironie, le résultat était prévisible."
+                      },
+                      {
+                        "left": "Quisiera el menú del día. En última instancia, subyace una tensión no resuelta.",
+                        "right": "Je voudrais le menu du jour. En dernière instance, une tension irrésolue sous-tend le débat."
+                      },
+                      {
+                        "left": "¿Nos trae la cuenta, por favor? Dicho sin ambages, la propuesta carece de sustento.",
+                        "right": "Pourriez-vous nous apporter l'addition, s'il vous plaît ? Franchement, la proposition manque de fondement."
+                      }
+                    ],
+                    "feedbackOnError": {
+                      "type": "vocabulary",
+                      "explanation": "Cada expresión tiene una traducción distinta.",
+                      "ruleRef": "gp-c2-litotes"
+                    },
+                    "feedbackOnSuccess": {
+                      "explanation": "Has asociado cada expresión con su traducción."
+                    }
+                  },
+                  {
+                    "type": "FreeSpeakingPrompt",
+                    "id": "es-fr-c2-u09-l06-e12",
+                    "prompt": "Defiende una interpretación matizada sobre el restaurante.",
+                    "minTokens": 40,
+                    "conceptClusters": [
+                      [
+                        "Avez"
+                      ],
+                      [
+                        "table"
+                      ],
+                      [
+                        "deux"
+                      ]
+                    ],
+                    "modelAnswer": "Avez-vous une table pour deux ? Si l'on me permet l'ironie, le résultat était prévisible. Je voudrais le menu du jour. En dernière instance, une tension irrésolue sous-tend le débat. Pourriez-vous nous apporter l'addition, s'il vous plaît ? Franchement, la proposition manque de fondement.",
+                    "selfAssessmentCriteria": [
+                      "¿La respuesta argumenta y responde a la tarea?",
+                      "¿Usa las dos estructuras gramaticales de la lección?",
+                      "¿Incluye una concesión, una ironía o una atenuación?"
+                    ],
+                    "grammarRuleRefs": [
+                      "gp-c2-litotes",
+                      "gp-c2-apposition"
+                    ],
+                    "timeLimitSeconds": 120,
+                    "minWpm": 70,
+                    "maxWpm": 160,
+                    "feedbackOnError": {
+                      "type": "grammar",
+                      "explanation": "La respuesta modelo desarrolla una interpretación matizada.",
+                      "ruleRef": "gp-c2-litotes"
+                    }
+                  }
+                ]
+              },
+              {
+                "id": "es-fr-c2-u09-l07",
+                "title": "Reseña de un restaurante",
+                "cefrLevel": "C2",
+                "scenario": "Situación comunicativa avanzada sobre una reseña gastronómica.",
+                "canDo": "Puedo argumentar con matices y precisión sobre una reseña gastronómica.",
+                "grammarPoints": [
+                  {
+                    "id": "gp-c2-litotes",
+                    "label": "Litotes",
+                    "description": "La litote afirma algo negando lo contrario."
+                  },
+                  {
+                    "id": "gp-c2-apposition",
+                    "label": "Apposition",
+                    "description": "La aposición añade una explicación al sustantivo."
+                  }
+                ],
+                "vocabFrequencyBand": "12000+",
+                "culturalNotes": [
+                  {
+                    "idiom": "perdre de sa superbe",
+                    "note": "Expresión para señalar que algo ha perdido calidad.",
+                    "translation": "tocar fondo"
+                  }
+                ],
+                "microLesson": {
+                  "title": "Reseña de un restaurante",
+                  "goals": [
+                    "Usar vocabulario avanzado de una reseña gastronómica.",
+                    "Aplicar litotes y apposition.",
+                    "Argumentar con matices sobre una reseña gastronómica."
+                  ],
+                  "sections": [
+                    {
+                      "heading": "Lengua en contexto",
+                      "body": "Litotes: La litote afirma algo negando lo contrario. Apposition: La aposición añade una explicación al sustantivo.",
+                      "examples": [
+                        {
+                          "source": "El restaurante es pequeño pero acogedor. En última instancia, subyace una tensión no resuelta.",
+                          "target": "Le restaurant est petit mais accueillant. En dernière instance, une tension irrésolue sous-tend le débat."
+                        },
+                        {
+                          "source": "La comida estaba deliciosa y el servicio fue rápido. Dicho sin ambages, la propuesta carece de sustento.",
+                          "target": "La nourriture était délicieuse et le service rapide. Franchement, la proposition manque de fondement."
+                        }
+                      ]
+                    }
+                  ]
+                },
+                "glossary": [
+                  {
+                    "term": "Le restaurant est petit mais accueillant. En dernière instance, une tension irrésolue sous-tend le débat.",
+                    "translations": [
+                      "El restaurante es pequeño pero acogedor. En última instancia, subyace una tensión no resuelta."
+                    ]
+                  },
+                  {
+                    "term": "La nourriture était délicieuse et le service rapide. Franchement, la proposition manque de fondement.",
+                    "translations": [
+                      "La comida estaba deliciosa y el servicio fue rápido. Dicho sin ambages, la propuesta carece de sustento."
+                    ]
+                  },
+                  {
+                    "term": "J'y retournerais sans hésiter. De toute évidence, l'approche mérite une seconde lecture.",
+                    "translations": [
+                      "Volvería sin dudarlo. A todas luces, conviene releer el planteamiento."
+                    ]
+                  }
+                ],
+                "exercises": [
+                  {
+                    "type": "MultipleChoice",
+                    "id": "es-fr-c2-u09-l07-e01",
+                    "question": "¿Cuál es la opción correcta para «El restaurante es pequeño pero acogedor. En última instancia, subyace una tensión no resuelta.»?",
+                    "options": [
+                      "Le restaurant est petit mais accueillant. En dernière instance, une tension irrésolue sous-tend le débat.",
+                      "La nourriture était délicieuse et le service rapide. Franchement, la proposition manque de fondement.",
+                      "J'y retournerais sans hésiter. De toute évidence, l'approche mérite une seconde lecture."
+                    ],
+                    "correctIndex": 0,
+                    "feedbackOnError": {
+                      "type": "vocabulary",
+                      "explanation": "«El restaurante es pequeño pero acogedor. En última instancia, subyace una tensión no resuelta.» se dice «Le restaurant est petit mais accueillant. En dernière instance, une tension irrésolue sous-tend le débat.».",
+                      "ruleRef": "gp-c2-litotes"
+                    },
+                    "feedbackOnSuccess": {
+                      "explanation": "Has elegido la opción precisa."
+                    }
+                  },
+                  {
+                    "type": "Translate",
+                    "id": "es-fr-c2-u09-l07-e02",
+                    "sourcePhrase": "El restaurante es pequeño pero acogedor. En última instancia, subyace una tensión no resuelta.",
+                    "correctTokens": [
+                      "Le",
+                      "restaurant",
+                      "est",
+                      "petit",
+                      "mais",
+                      "accueillant",
+                      "En",
+                      "dernière",
+                      "instance",
+                      "une",
+                      "tension",
+                      "irrésolue",
+                      "sous",
+                      "tend",
+                      "le",
+                      "débat"
+                    ],
+                    "distractorTokens": [
+                      "La",
+                      "nourriture",
+                      "était"
+                    ],
+                    "feedbackOnError": {
+                      "type": "grammar",
+                      "explanation": "El orden correcto es «Le restaurant est petit mais accueillant En dernière instance une tension irrésolue sous tend le débat».",
+                      "ruleRef": "gp-c2-litotes"
+                    },
+                    "feedbackOnSuccess": {
+                      "explanation": "La frase conserva el orden y el significado."
+                    }
+                  },
+                  {
+                    "type": "ClozeDragDrop",
+                    "id": "es-fr-c2-u09-l07-e03",
+                    "passage": "Le {{b1}} est {{b2}} mais accueillant.",
+                    "blanks": [
+                      {
+                        "id": "b1",
+                        "answer": "restaurant",
+                        "options": [
+                          "restaurant",
+                          "accueillant",
+                          "très"
+                        ]
+                      },
+                      {
+                        "id": "b2",
+                        "answer": "petit",
+                        "options": [
+                          "petit",
+                          "accueillant",
+                          "très"
+                        ]
+                      }
+                    ],
+                    "feedbackOnError": {
+                      "type": "grammar",
+                      "explanation": "Las dos formas deben encajar con el contexto de la frase.",
+                      "ruleRef": "gp-c2-apposition"
+                    },
+                    "feedbackOnSuccess": {
+                      "explanation": "Los dos huecos encajan con la situación."
+                    }
+                  },
+                  {
+                    "type": "ClozeDragDrop",
+                    "id": "es-fr-c2-u09-l07-e04",
+                    "passage": "La {{b1}} était {{b2}} et le service rapide.",
+                    "blanks": [
+                      {
+                        "id": "b1",
+                        "answer": "nourriture",
+                        "options": [
+                          "nourriture",
+                          "service",
+                          "rapide"
+                        ]
+                      },
+                      {
+                        "id": "b2",
+                        "answer": "délicieuse",
+                        "options": [
+                          "délicieuse",
+                          "service",
+                          "rapide"
+                        ]
+                      }
+                    ],
+                    "feedbackOnError": {
+                      "type": "grammar",
+                      "explanation": "Las dos formas deben encajar con el contexto de la frase.",
+                      "ruleRef": "gp-c2-apposition"
+                    },
+                    "feedbackOnSuccess": {
+                      "explanation": "Los dos huecos encajan con la situación."
+                    }
+                  },
+                  {
+                    "type": "ClozeDragDrop",
+                    "id": "es-fr-c2-u09-l07-e05",
+                    "passage": "{{b1}} {{b2}} sans hésiter.",
+                    "blanks": [
+                      {
+                        "id": "b1",
+                        "answer": "J'y",
+                        "options": [
+                          "J'y",
+                          "sans",
+                          "hésiter"
+                        ]
+                      },
+                      {
+                        "id": "b2",
+                        "answer": "retournerais",
+                        "options": [
+                          "retournerais",
+                          "sans",
+                          "hésiter"
+                        ]
+                      }
+                    ],
+                    "feedbackOnError": {
+                      "type": "grammar",
+                      "explanation": "Las dos formas deben encajar con el contexto de la frase.",
+                      "ruleRef": "gp-c2-apposition"
+                    },
+                    "feedbackOnSuccess": {
+                      "explanation": "Los dos huecos encajan con la situación."
+                    }
+                  },
+                  {
+                    "type": "SemanticMatch",
+                    "id": "es-fr-c2-u09-l07-e06",
+                    "instructions": "Clasifica la función y el registro de cada intervención.",
+                    "pairs": [
+                      {
+                        "left": "Le restaurant est petit mais accueillant. En dernière instance, une tension irrésolue sous-tend le débat.",
+                        "right": "Ironía seca",
+                        "register": "literary",
+                        "nuance": "Clasifica la función y el registro de la intervención."
+                      },
+                      {
+                        "left": "La nourriture était délicieuse et le service rapide. Franchement, la proposition manque de fondement.",
+                        "right": "Atenuación",
+                        "register": "formal",
+                        "nuance": "Clasifica la función y el registro de la intervención."
+                      },
+                      {
+                        "left": "J'y retournerais sans hésiter. De toute évidence, l'approche mérite une seconde lecture.",
+                        "right": "Conclusión",
+                        "register": "neutral",
+                        "nuance": "Clasifica la función y el registro de la intervención."
+                      }
+                    ],
+                    "feedbackOnError": {
+                      "type": "register",
+                      "explanation": "Cada intervención cumple una función retórica distinta.",
+                      "ruleRef": "gp-c2-litotes"
+                    },
+                    "feedbackOnSuccess": {
+                      "explanation": "Has identificado función y registro."
+                    }
+                  },
+                  {
+                    "type": "ListenChoose",
+                    "id": "es-fr-c2-u09-l07-e07",
+                    "audioText": "La nourriture était délicieuse et le service rapide. Franchement, la proposition manque de fondement.",
+                    "options": [
+                      "La nourriture était délicieuse et le service rapide. Franchement, la proposition manque de fondement.",
+                      "Le restaurant est petit mais accueillant. En dernière instance, une tension irrésolue sous-tend le débat.",
+                      "J'y retournerais sans hésiter. De toute évidence, l'approche mérite une seconde lecture."
+                    ],
+                    "correctIndex": 0,
+                    "feedbackOnError": {
+                      "type": "comprehension",
+                      "explanation": "El audio dice «La nourriture était délicieuse et le service rapide. Franchement, la proposition manque de fondement.».",
+                      "ruleRef": "gp-c2-litotes"
+                    },
+                    "feedbackOnSuccess": {
+                      "explanation": "Has reconocido la frase del audio."
+                    }
+                  },
+                  {
+                    "type": "AudioOnlyPrompt",
+                    "id": "es-fr-c2-u09-l07-e08",
+                    "audioText": "J'y retournerais sans hésiter. De toute évidence, l'approche mérite une seconde lecture.",
+                    "question": "¿Qué implica el hablante?",
+                    "options": [
+                      "J'y retournerais sans hésiter. De toute évidence, l'approche mérite une seconde lecture.",
+                      "Le restaurant est petit mais accueillant. En dernière instance, une tension irrésolue sous-tend le débat.",
+                      "La nourriture était délicieuse et le service rapide. Franchement, la proposition manque de fondement."
+                    ],
+                    "correctIndex": 0,
+                    "allowSlowPlayback": false,
+                    "feedbackOnError": {
+                      "type": "comprehension",
+                      "explanation": "El audio dice «J'y retournerais sans hésiter. De toute évidence, l'approche mérite une seconde lecture.».",
+                      "ruleRef": "gp-c2-apposition"
+                    },
+                    "feedbackOnSuccess": {
+                      "explanation": "Has interpretado la implicación."
+                    }
+                  },
+                  {
+                    "type": "ListenType",
+                    "id": "es-fr-c2-u09-l07-e09",
+                    "audioText": "J'y retournerais sans hésiter. De toute évidence, l'approche mérite une seconde lecture.",
+                    "transcription": "J'y retournerais sans hésiter. De toute évidence, l'approche mérite une seconde lecture.",
+                    "feedbackOnError": {
+                      "type": "spelling",
+                      "explanation": "Escribe exactamente «J'y retournerais sans hésiter. De toute évidence, l'approche mérite une seconde lecture.».",
+                      "ruleRef": "gp-c2-litotes"
+                    },
+                    "feedbackOnSuccess": {
+                      "explanation": "La transcripción coincide con el audio."
+                    }
+                  },
+                  {
+                    "type": "SpeakRepeat",
+                    "id": "es-fr-c2-u09-l07-e10",
+                    "targetPhrase": "J'y retournerais sans hésiter. De toute évidence, l'approche mérite une seconde lecture.",
+                    "audioText": "J'y retournerais sans hésiter. De toute évidence, l'approche mérite une seconde lecture.",
+                    "feedbackOnError": {
+                      "type": "pronunciation",
+                      "explanation": "Repite «J'y retournerais sans hésiter. De toute évidence, l'approche mérite une seconde lecture.» con claridad.",
+                      "ruleRef": "gp-c2-litotes"
+                    },
+                    "feedbackOnSuccess": {
+                      "explanation": "La frase se entiende y mantiene el ritmo."
+                    }
+                  },
+                  {
+                    "type": "MatchPairs",
+                    "id": "es-fr-c2-u09-l07-e11",
+                    "pairs": [
+                      {
+                        "left": "El restaurante es pequeño pero acogedor. En última instancia, subyace una tensión no resuelta.",
+                        "right": "Le restaurant est petit mais accueillant. En dernière instance, une tension irrésolue sous-tend le débat."
+                      },
+                      {
+                        "left": "La comida estaba deliciosa y el servicio fue rápido. Dicho sin ambages, la propuesta carece de sustento.",
+                        "right": "La nourriture était délicieuse et le service rapide. Franchement, la proposition manque de fondement."
+                      },
+                      {
+                        "left": "Volvería sin dudarlo. A todas luces, conviene releer el planteamiento.",
+                        "right": "J'y retournerais sans hésiter. De toute évidence, l'approche mérite une seconde lecture."
+                      }
+                    ],
+                    "feedbackOnError": {
+                      "type": "vocabulary",
+                      "explanation": "Cada expresión tiene una traducción distinta.",
+                      "ruleRef": "gp-c2-litotes"
+                    },
+                    "feedbackOnSuccess": {
+                      "explanation": "Has asociado cada expresión con su traducción."
+                    }
+                  },
+                  {
+                    "type": "FreeSpeakingPrompt",
+                    "id": "es-fr-c2-u09-l07-e12",
+                    "prompt": "Defiende una interpretación matizada sobre una reseña gastronómica.",
+                    "minTokens": 40,
+                    "conceptClusters": [
+                      [
+                        "restaurant"
+                      ],
+                      [
+                        "petit"
+                      ],
+                      [
+                        "accueillant"
+                      ]
+                    ],
+                    "modelAnswer": "Le restaurant est petit mais accueillant. En dernière instance, une tension irrésolue sous-tend le débat. La nourriture était délicieuse et le service rapide. Franchement, la proposition manque de fondement. J'y retournerais sans hésiter. De toute évidence, l'approche mérite une seconde lecture.",
+                    "selfAssessmentCriteria": [
+                      "¿La respuesta argumenta y responde a la tarea?",
+                      "¿Usa las dos estructuras gramaticales de la lección?",
+                      "¿Incluye una concesión, una ironía o una atenuación?"
+                    ],
+                    "grammarRuleRefs": [
+                      "gp-c2-litotes",
+                      "gp-c2-apposition"
+                    ],
+                    "timeLimitSeconds": 120,
+                    "minWpm": 70,
+                    "maxWpm": 160,
+                    "feedbackOnError": {
+                      "type": "grammar",
+                      "explanation": "La respuesta modelo desarrolla una interpretación matizada.",
+                      "ruleRef": "gp-c2-litotes"
+                    }
+                  }
+                ]
+              },
+              {
+                "id": "es-fr-c2-u09-l08",
+                "title": "Escribir una receta",
+                "cefrLevel": "C2",
+                "scenario": "Situación comunicativa avanzada sobre una receta.",
+                "canDo": "Puedo argumentar con matices y precisión sobre una receta.",
+                "grammarPoints": [
+                  {
+                    "id": "gp-c2-litotes",
+                    "label": "Litotes",
+                    "description": "La litote afirma algo negando lo contrario."
+                  },
+                  {
+                    "id": "gp-c2-apposition",
+                    "label": "Apposition",
+                    "description": "La aposición añade una explicación al sustantivo."
+                  }
+                ],
+                "vocabFrequencyBand": "12000+",
+                "culturalNotes": [
+                  {
+                    "idiom": "lancer une pique",
+                    "note": "Expresión para criticar de forma indirecta.",
+                    "translation": "lanzar una indirecta"
+                  }
+                ],
+                "microLesson": {
+                  "title": "Escribir una receta",
+                  "goals": [
+                    "Usar vocabulario avanzado de una receta.",
+                    "Aplicar litotes y apposition.",
+                    "Argumentar con matices sobre una receta."
+                  ],
+                  "sections": [
+                    {
+                      "heading": "Lengua en contexto",
+                      "body": "Litotes: La litote afirma algo negando lo contrario. Apposition: La aposición añade una explicación al sustantivo.",
+                      "examples": [
+                        {
+                          "source": "Primero corta las verduras. Dicho sin ambages, la propuesta carece de sustento.",
+                          "target": "D'abord, coupe les légumes. Franchement, la proposition manque de fondement."
+                        },
+                        {
+                          "source": "Después añade el arroz y el agua. A todas luces, conviene releer el planteamiento.",
+                          "target": "Ensuite, ajoute le riz et l'eau. De toute évidence, l'approche mérite une seconde lecture."
+                        }
+                      ]
+                    }
+                  ]
+                },
+                "glossary": [
+                  {
+                    "term": "D'abord, coupe les légumes. Franchement, la proposition manque de fondement.",
+                    "translations": [
+                      "Primero corta las verduras. Dicho sin ambages, la propuesta carece de sustento."
+                    ]
+                  },
+                  {
+                    "term": "Ensuite, ajoute le riz et l'eau. De toute évidence, l'approche mérite une seconde lecture.",
+                    "translations": [
+                      "Después añade el arroz y el agua. A todas luces, conviene releer el planteamiento."
+                    ]
+                  },
+                  {
+                    "term": "Fais cuire le tout pendant vingt minutes. Ce qui, soit dit en passant, n'est pas sans ironie.",
+                    "translations": [
+                      "Cocina todo durante veinte minutos. Lo cual, dicho sea de paso, no deja de ser irónico."
+                    ]
+                  }
+                ],
+                "exercises": [
+                  {
+                    "type": "MultipleChoice",
+                    "id": "es-fr-c2-u09-l08-e01",
+                    "question": "¿Cuál es la opción correcta para «Primero corta las verduras. Dicho sin ambages, la propuesta carece de sustento.»?",
+                    "options": [
+                      "D'abord, coupe les légumes. Franchement, la proposition manque de fondement.",
+                      "Ensuite, ajoute le riz et l'eau. De toute évidence, l'approche mérite une seconde lecture.",
+                      "Fais cuire le tout pendant vingt minutes. Ce qui, soit dit en passant, n'est pas sans ironie."
+                    ],
+                    "correctIndex": 0,
+                    "feedbackOnError": {
+                      "type": "vocabulary",
+                      "explanation": "«Primero corta las verduras. Dicho sin ambages, la propuesta carece de sustento.» se dice «D'abord, coupe les légumes. Franchement, la proposition manque de fondement.».",
+                      "ruleRef": "gp-c2-litotes"
+                    },
+                    "feedbackOnSuccess": {
+                      "explanation": "Has elegido la opción precisa."
+                    }
+                  },
+                  {
+                    "type": "Translate",
+                    "id": "es-fr-c2-u09-l08-e02",
+                    "sourcePhrase": "Primero corta las verduras. Dicho sin ambages, la propuesta carece de sustento.",
+                    "correctTokens": [
+                      "D'abord",
+                      "coupe",
+                      "les",
+                      "légumes",
+                      "Franchement",
+                      "la",
+                      "proposition",
+                      "manque",
+                      "de",
+                      "fondement"
+                    ],
+                    "distractorTokens": [
+                      "Ensuite",
+                      "ajoute",
+                      "le"
+                    ],
+                    "feedbackOnError": {
+                      "type": "grammar",
+                      "explanation": "El orden correcto es «D'abord coupe les légumes Franchement la proposition manque de fondement».",
+                      "ruleRef": "gp-c2-litotes"
+                    },
+                    "feedbackOnSuccess": {
+                      "explanation": "La frase conserva el orden y el significado."
+                    }
+                  },
+                  {
+                    "type": "ClozeDragDrop",
+                    "id": "es-fr-c2-u09-l08-e03",
+                    "passage": "{{b1}}, {{b2}} les légumes.",
+                    "blanks": [
+                      {
+                        "id": "b1",
+                        "answer": "D'abord",
+                        "options": [
+                          "D'abord",
+                          "légumes",
+                          "très"
+                        ]
+                      },
+                      {
+                        "id": "b2",
+                        "answer": "coupe",
+                        "options": [
+                          "coupe",
+                          "légumes",
+                          "très"
+                        ]
+                      }
+                    ],
+                    "feedbackOnError": {
+                      "type": "grammar",
+                      "explanation": "Las dos formas deben encajar con el contexto de la frase.",
+                      "ruleRef": "gp-c2-apposition"
+                    },
+                    "feedbackOnSuccess": {
+                      "explanation": "Los dos huecos encajan con la situación."
+                    }
+                  },
+                  {
+                    "type": "ClozeDragDrop",
+                    "id": "es-fr-c2-u09-l08-e04",
+                    "passage": "{{b1}}, {{b2}} le riz et l'eau.",
+                    "blanks": [
+                      {
+                        "id": "b1",
+                        "answer": "Ensuite",
+                        "options": [
+                          "Ensuite",
+                          "riz",
+                          "l'eau"
+                        ]
+                      },
+                      {
+                        "id": "b2",
+                        "answer": "ajoute",
+                        "options": [
+                          "ajoute",
+                          "riz",
+                          "l'eau"
+                        ]
+                      }
+                    ],
+                    "feedbackOnError": {
+                      "type": "grammar",
+                      "explanation": "Las dos formas deben encajar con el contexto de la frase.",
+                      "ruleRef": "gp-c2-apposition"
+                    },
+                    "feedbackOnSuccess": {
+                      "explanation": "Los dos huecos encajan con la situación."
+                    }
+                  },
+                  {
+                    "type": "ClozeDragDrop",
+                    "id": "es-fr-c2-u09-l08-e05",
+                    "passage": "{{b1}} {{b2}} le tout pendant vingt minutes.",
+                    "blanks": [
+                      {
+                        "id": "b1",
+                        "answer": "Fais",
+                        "options": [
+                          "Fais",
+                          "tout",
+                          "pendant"
+                        ]
+                      },
+                      {
+                        "id": "b2",
+                        "answer": "cuire",
+                        "options": [
+                          "cuire",
+                          "tout",
+                          "pendant"
+                        ]
+                      }
+                    ],
+                    "feedbackOnError": {
+                      "type": "grammar",
+                      "explanation": "Las dos formas deben encajar con el contexto de la frase.",
+                      "ruleRef": "gp-c2-apposition"
+                    },
+                    "feedbackOnSuccess": {
+                      "explanation": "Los dos huecos encajan con la situación."
+                    }
+                  },
+                  {
+                    "type": "SemanticMatch",
+                    "id": "es-fr-c2-u09-l08-e06",
+                    "instructions": "Clasifica la función y el registro de cada intervención.",
+                    "pairs": [
+                      {
+                        "left": "D'abord, coupe les légumes. Franchement, la proposition manque de fondement.",
+                        "right": "Ironía seca",
+                        "register": "literary",
+                        "nuance": "Clasifica la función y el registro de la intervención."
+                      },
+                      {
+                        "left": "Ensuite, ajoute le riz et l'eau. De toute évidence, l'approche mérite une seconde lecture.",
+                        "right": "Atenuación",
+                        "register": "formal",
+                        "nuance": "Clasifica la función y el registro de la intervención."
+                      },
+                      {
+                        "left": "Fais cuire le tout pendant vingt minutes. Ce qui, soit dit en passant, n'est pas sans ironie.",
+                        "right": "Conclusión",
+                        "register": "neutral",
+                        "nuance": "Clasifica la función y el registro de la intervención."
+                      }
+                    ],
+                    "feedbackOnError": {
+                      "type": "register",
+                      "explanation": "Cada intervención cumple una función retórica distinta.",
+                      "ruleRef": "gp-c2-litotes"
+                    },
+                    "feedbackOnSuccess": {
+                      "explanation": "Has identificado función y registro."
+                    }
+                  },
+                  {
+                    "type": "ListenChoose",
+                    "id": "es-fr-c2-u09-l08-e07",
+                    "audioText": "Ensuite, ajoute le riz et l'eau. De toute évidence, l'approche mérite une seconde lecture.",
+                    "options": [
+                      "Ensuite, ajoute le riz et l'eau. De toute évidence, l'approche mérite une seconde lecture.",
+                      "D'abord, coupe les légumes. Franchement, la proposition manque de fondement.",
+                      "Fais cuire le tout pendant vingt minutes. Ce qui, soit dit en passant, n'est pas sans ironie."
+                    ],
+                    "correctIndex": 0,
+                    "feedbackOnError": {
+                      "type": "comprehension",
+                      "explanation": "El audio dice «Ensuite, ajoute le riz et l'eau. De toute évidence, l'approche mérite une seconde lecture.».",
+                      "ruleRef": "gp-c2-litotes"
+                    },
+                    "feedbackOnSuccess": {
+                      "explanation": "Has reconocido la frase del audio."
+                    }
+                  },
+                  {
+                    "type": "AudioOnlyPrompt",
+                    "id": "es-fr-c2-u09-l08-e08",
+                    "audioText": "Fais cuire le tout pendant vingt minutes. Ce qui, soit dit en passant, n'est pas sans ironie.",
+                    "question": "¿Qué implica el hablante?",
+                    "options": [
+                      "Fais cuire le tout pendant vingt minutes. Ce qui, soit dit en passant, n'est pas sans ironie.",
+                      "D'abord, coupe les légumes. Franchement, la proposition manque de fondement.",
+                      "Ensuite, ajoute le riz et l'eau. De toute évidence, l'approche mérite une seconde lecture."
+                    ],
+                    "correctIndex": 0,
+                    "allowSlowPlayback": false,
+                    "feedbackOnError": {
+                      "type": "comprehension",
+                      "explanation": "El audio dice «Fais cuire le tout pendant vingt minutes. Ce qui, soit dit en passant, n'est pas sans ironie.».",
+                      "ruleRef": "gp-c2-apposition"
+                    },
+                    "feedbackOnSuccess": {
+                      "explanation": "Has interpretado la implicación."
+                    }
+                  },
+                  {
+                    "type": "ListenType",
+                    "id": "es-fr-c2-u09-l08-e09",
+                    "audioText": "Fais cuire le tout pendant vingt minutes. Ce qui, soit dit en passant, n'est pas sans ironie.",
+                    "transcription": "Fais cuire le tout pendant vingt minutes. Ce qui, soit dit en passant, n'est pas sans ironie.",
+                    "feedbackOnError": {
+                      "type": "spelling",
+                      "explanation": "Escribe exactamente «Fais cuire le tout pendant vingt minutes. Ce qui, soit dit en passant, n'est pas sans ironie.».",
+                      "ruleRef": "gp-c2-litotes"
+                    },
+                    "feedbackOnSuccess": {
+                      "explanation": "La transcripción coincide con el audio."
+                    }
+                  },
+                  {
+                    "type": "SpeakRepeat",
+                    "id": "es-fr-c2-u09-l08-e10",
+                    "targetPhrase": "Fais cuire le tout pendant vingt minutes. Ce qui, soit dit en passant, n'est pas sans ironie.",
+                    "audioText": "Fais cuire le tout pendant vingt minutes. Ce qui, soit dit en passant, n'est pas sans ironie.",
+                    "feedbackOnError": {
+                      "type": "pronunciation",
+                      "explanation": "Repite «Fais cuire le tout pendant vingt minutes. Ce qui, soit dit en passant, n'est pas sans ironie.» con claridad.",
+                      "ruleRef": "gp-c2-litotes"
+                    },
+                    "feedbackOnSuccess": {
+                      "explanation": "La frase se entiende y mantiene el ritmo."
+                    }
+                  },
+                  {
+                    "type": "MatchPairs",
+                    "id": "es-fr-c2-u09-l08-e11",
+                    "pairs": [
+                      {
+                        "left": "Primero corta las verduras. Dicho sin ambages, la propuesta carece de sustento.",
+                        "right": "D'abord, coupe les légumes. Franchement, la proposition manque de fondement."
+                      },
+                      {
+                        "left": "Después añade el arroz y el agua. A todas luces, conviene releer el planteamiento.",
+                        "right": "Ensuite, ajoute le riz et l'eau. De toute évidence, l'approche mérite une seconde lecture."
+                      },
+                      {
+                        "left": "Cocina todo durante veinte minutos. Lo cual, dicho sea de paso, no deja de ser irónico.",
+                        "right": "Fais cuire le tout pendant vingt minutes. Ce qui, soit dit en passant, n'est pas sans ironie."
+                      }
+                    ],
+                    "feedbackOnError": {
+                      "type": "vocabulary",
+                      "explanation": "Cada expresión tiene una traducción distinta.",
+                      "ruleRef": "gp-c2-litotes"
+                    },
+                    "feedbackOnSuccess": {
+                      "explanation": "Has asociado cada expresión con su traducción."
+                    }
+                  },
+                  {
+                    "type": "FreeSpeakingPrompt",
+                    "id": "es-fr-c2-u09-l08-e12",
+                    "prompt": "Defiende una interpretación matizada sobre una receta.",
+                    "minTokens": 40,
+                    "conceptClusters": [
+                      [
+                        "D'abord"
+                      ],
+                      [
+                        "coupe"
+                      ],
+                      [
+                        "légumes"
+                      ]
+                    ],
+                    "modelAnswer": "D'abord, coupe les légumes. Franchement, la proposition manque de fondement. Ensuite, ajoute le riz et l'eau. De toute évidence, l'approche mérite une seconde lecture. Fais cuire le tout pendant vingt minutes. Ce qui, soit dit en passant, n'est pas sans ironie.",
+                    "selfAssessmentCriteria": [
+                      "¿La respuesta argumenta y responde a la tarea?",
+                      "¿Usa las dos estructuras gramaticales de la lección?",
+                      "¿Incluye una concesión, una ironía o una atenuación?"
+                    ],
+                    "grammarRuleRefs": [
+                      "gp-c2-litotes",
+                      "gp-c2-apposition"
+                    ],
+                    "timeLimitSeconds": 120,
+                    "minWpm": 70,
+                    "maxWpm": 160,
+                    "feedbackOnError": {
+                      "type": "grammar",
+                      "explanation": "La respuesta modelo desarrolla una interpretación matizada.",
+                      "ruleRef": "gp-c2-litotes"
+                    }
+                  }
+                ]
+              },
+              {
+                "id": "es-fr-c2-u09-l09",
+                "title": "Integración: organizar una cena",
+                "cefrLevel": "C2",
+                "scenario": "Situación comunicativa avanzada sobre una cena con amigos.",
+                "canDo": "Puedo argumentar con matices y precisión sobre una cena con amigos.",
+                "grammarPoints": [
+                  {
+                    "id": "gp-c2-litotes",
+                    "label": "Litotes",
+                    "description": "La litote afirma algo negando lo contrario."
+                  },
+                  {
+                    "id": "gp-c2-apposition",
+                    "label": "Apposition",
+                    "description": "La aposición añade una explicación al sustantivo."
+                  }
+                ],
+                "vocabFrequencyBand": "12000+",
+                "culturalNotes": [
+                  {
+                    "idiom": "révéler le pot aux roses",
+                    "note": "Expresión para revelar un cotilleo.",
+                    "translation": "contar el cotilleo"
+                  }
+                ],
+                "microLesson": {
+                  "title": "Integración: organizar una cena",
+                  "goals": [
+                    "Usar vocabulario avanzado de una cena con amigos.",
+                    "Aplicar litotes y apposition.",
+                    "Argumentar con matices sobre una cena con amigos."
+                  ],
+                  "sections": [
+                    {
+                      "heading": "Lengua en contexto",
+                      "body": "Litotes: La litote afirma algo negando lo contrario. Apposition: La aposición añade una explicación al sustantivo.",
+                      "examples": [
+                        {
+                          "source": "Voy a organizar una cena el sábado. A todas luces, conviene releer el planteamiento.",
+                          "target": "Je vais organiser un dîner samedi. De toute évidence, l'approche mérite une seconde lecture."
+                        },
+                        {
+                          "source": "Necesito comprar comida para seis personas. Lo cual, dicho sea de paso, no deja de ser irónico.",
+                          "target": "J'ai besoin d'acheter de la nourriture pour six personnes. Ce qui, soit dit en passant, n'est pas sans ironie."
+                        }
+                      ]
+                    }
+                  ]
+                },
+                "glossary": [
+                  {
+                    "term": "Je vais organiser un dîner samedi. De toute évidence, l'approche mérite une seconde lecture.",
+                    "translations": [
+                      "Voy a organizar una cena el sábado. A todas luces, conviene releer el planteamiento."
+                    ]
+                  },
+                  {
+                    "term": "J'ai besoin d'acheter de la nourriture pour six personnes. Ce qui, soit dit en passant, n'est pas sans ironie.",
+                    "translations": [
+                      "Necesito comprar comida para seis personas. Lo cual, dicho sea de paso, no deja de ser irónico."
+                    ]
+                  },
+                  {
+                    "term": "Je vais aussi préparer un gâteau. Inutile de dire que la nuance échappe à une lecture littérale.",
+                    "translations": [
+                      "También voy a preparar una tarta. Huelga decir que el matiz escapa a una lectura literal."
+                    ]
+                  }
+                ],
+                "exercises": [
+                  {
+                    "type": "MultipleChoice",
+                    "id": "es-fr-c2-u09-l09-e01",
+                    "question": "¿Cuál es la opción correcta para «Voy a organizar una cena el sábado. A todas luces, conviene releer el planteamiento.»?",
+                    "options": [
+                      "Je vais organiser un dîner samedi. De toute évidence, l'approche mérite une seconde lecture.",
+                      "J'ai besoin d'acheter de la nourriture pour six personnes. Ce qui, soit dit en passant, n'est pas sans ironie.",
+                      "Je vais aussi préparer un gâteau. Inutile de dire que la nuance échappe à une lecture littérale."
+                    ],
+                    "correctIndex": 0,
+                    "feedbackOnError": {
+                      "type": "vocabulary",
+                      "explanation": "«Voy a organizar una cena el sábado. A todas luces, conviene releer el planteamiento.» se dice «Je vais organiser un dîner samedi. De toute évidence, l'approche mérite une seconde lecture.».",
+                      "ruleRef": "gp-c2-litotes"
+                    },
+                    "feedbackOnSuccess": {
+                      "explanation": "Has elegido la opción precisa."
+                    }
+                  },
+                  {
+                    "type": "Translate",
+                    "id": "es-fr-c2-u09-l09-e02",
+                    "sourcePhrase": "Voy a organizar una cena el sábado. A todas luces, conviene releer el planteamiento.",
+                    "correctTokens": [
+                      "Je",
+                      "vais",
+                      "organiser",
+                      "un",
+                      "dîner",
+                      "samedi",
+                      "De",
+                      "toute",
+                      "évidence",
+                      "l'approche",
+                      "mérite",
+                      "une",
+                      "seconde",
+                      "lecture"
+                    ],
+                    "distractorTokens": [
+                      "J'ai",
+                      "besoin",
+                      "d'acheter"
+                    ],
+                    "feedbackOnError": {
+                      "type": "grammar",
+                      "explanation": "El orden correcto es «Je vais organiser un dîner samedi De toute évidence l'approche mérite une seconde lecture».",
+                      "ruleRef": "gp-c2-litotes"
+                    },
+                    "feedbackOnSuccess": {
+                      "explanation": "La frase conserva el orden y el significado."
+                    }
+                  },
+                  {
+                    "type": "ClozeDragDrop",
+                    "id": "es-fr-c2-u09-l09-e03",
+                    "passage": "Je {{b1}} {{b2}} un dîner samedi.",
+                    "blanks": [
+                      {
+                        "id": "b1",
+                        "answer": "vais",
+                        "options": [
+                          "vais",
+                          "dîner",
+                          "samedi"
+                        ]
+                      },
+                      {
+                        "id": "b2",
+                        "answer": "organiser",
+                        "options": [
+                          "organiser",
+                          "dîner",
+                          "samedi"
+                        ]
+                      }
+                    ],
+                    "feedbackOnError": {
+                      "type": "grammar",
+                      "explanation": "Las dos formas deben encajar con el contexto de la frase.",
+                      "ruleRef": "gp-c2-apposition"
+                    },
+                    "feedbackOnSuccess": {
+                      "explanation": "Los dos huecos encajan con la situación."
+                    }
+                  },
+                  {
+                    "type": "ClozeDragDrop",
+                    "id": "es-fr-c2-u09-l09-e04",
+                    "passage": "{{b1}} {{b2}} d'acheter de la nourriture pour six personnes.",
+                    "blanks": [
+                      {
+                        "id": "b1",
+                        "answer": "J'ai",
+                        "options": [
+                          "J'ai",
+                          "d'acheter",
+                          "nourriture"
+                        ]
+                      },
+                      {
+                        "id": "b2",
+                        "answer": "besoin",
+                        "options": [
+                          "besoin",
+                          "d'acheter",
+                          "nourriture"
+                        ]
+                      }
+                    ],
+                    "feedbackOnError": {
+                      "type": "grammar",
+                      "explanation": "Las dos formas deben encajar con el contexto de la frase.",
+                      "ruleRef": "gp-c2-apposition"
+                    },
+                    "feedbackOnSuccess": {
+                      "explanation": "Los dos huecos encajan con la situación."
+                    }
+                  },
+                  {
+                    "type": "ClozeDragDrop",
+                    "id": "es-fr-c2-u09-l09-e05",
+                    "passage": "Je {{b1}} aussi {{b2}} un gâteau.",
+                    "blanks": [
+                      {
+                        "id": "b1",
+                        "answer": "vais",
+                        "options": [
+                          "vais",
+                          "gâteau",
+                          "très"
+                        ]
+                      },
+                      {
+                        "id": "b2",
+                        "answer": "préparer",
+                        "options": [
+                          "préparer",
+                          "gâteau",
+                          "très"
+                        ]
+                      }
+                    ],
+                    "feedbackOnError": {
+                      "type": "grammar",
+                      "explanation": "Las dos formas deben encajar con el contexto de la frase.",
+                      "ruleRef": "gp-c2-apposition"
+                    },
+                    "feedbackOnSuccess": {
+                      "explanation": "Los dos huecos encajan con la situación."
+                    }
+                  },
+                  {
+                    "type": "SemanticMatch",
+                    "id": "es-fr-c2-u09-l09-e06",
+                    "instructions": "Clasifica la función y el registro de cada intervención.",
+                    "pairs": [
+                      {
+                        "left": "Je vais organiser un dîner samedi. De toute évidence, l'approche mérite une seconde lecture.",
+                        "right": "Ironía seca",
+                        "register": "literary",
+                        "nuance": "Clasifica la función y el registro de la intervención."
+                      },
+                      {
+                        "left": "J'ai besoin d'acheter de la nourriture pour six personnes. Ce qui, soit dit en passant, n'est pas sans ironie.",
+                        "right": "Atenuación",
+                        "register": "formal",
+                        "nuance": "Clasifica la función y el registro de la intervención."
+                      },
+                      {
+                        "left": "Je vais aussi préparer un gâteau. Inutile de dire que la nuance échappe à une lecture littérale.",
+                        "right": "Conclusión",
+                        "register": "neutral",
+                        "nuance": "Clasifica la función y el registro de la intervención."
+                      }
+                    ],
+                    "feedbackOnError": {
+                      "type": "register",
+                      "explanation": "Cada intervención cumple una función retórica distinta.",
+                      "ruleRef": "gp-c2-litotes"
+                    },
+                    "feedbackOnSuccess": {
+                      "explanation": "Has identificado función y registro."
+                    }
+                  },
+                  {
+                    "type": "ListenChoose",
+                    "id": "es-fr-c2-u09-l09-e07",
+                    "audioText": "J'ai besoin d'acheter de la nourriture pour six personnes. Ce qui, soit dit en passant, n'est pas sans ironie.",
+                    "options": [
+                      "J'ai besoin d'acheter de la nourriture pour six personnes. Ce qui, soit dit en passant, n'est pas sans ironie.",
+                      "Je vais organiser un dîner samedi. De toute évidence, l'approche mérite une seconde lecture.",
+                      "Je vais aussi préparer un gâteau. Inutile de dire que la nuance échappe à une lecture littérale."
+                    ],
+                    "correctIndex": 0,
+                    "feedbackOnError": {
+                      "type": "comprehension",
+                      "explanation": "El audio dice «J'ai besoin d'acheter de la nourriture pour six personnes. Ce qui, soit dit en passant, n'est pas sans ironie.».",
+                      "ruleRef": "gp-c2-litotes"
+                    },
+                    "feedbackOnSuccess": {
+                      "explanation": "Has reconocido la frase del audio."
+                    }
+                  },
+                  {
+                    "type": "AudioOnlyPrompt",
+                    "id": "es-fr-c2-u09-l09-e08",
+                    "audioText": "Je vais aussi préparer un gâteau. Inutile de dire que la nuance échappe à une lecture littérale.",
+                    "question": "¿Qué implica el hablante?",
+                    "options": [
+                      "Je vais aussi préparer un gâteau. Inutile de dire que la nuance échappe à une lecture littérale.",
+                      "Je vais organiser un dîner samedi. De toute évidence, l'approche mérite une seconde lecture.",
+                      "J'ai besoin d'acheter de la nourriture pour six personnes. Ce qui, soit dit en passant, n'est pas sans ironie."
+                    ],
+                    "correctIndex": 0,
+                    "allowSlowPlayback": false,
+                    "feedbackOnError": {
+                      "type": "comprehension",
+                      "explanation": "El audio dice «Je vais aussi préparer un gâteau. Inutile de dire que la nuance échappe à une lecture littérale.».",
+                      "ruleRef": "gp-c2-apposition"
+                    },
+                    "feedbackOnSuccess": {
+                      "explanation": "Has interpretado la implicación."
+                    }
+                  },
+                  {
+                    "type": "ListenType",
+                    "id": "es-fr-c2-u09-l09-e09",
+                    "audioText": "Je vais aussi préparer un gâteau. Inutile de dire que la nuance échappe à une lecture littérale.",
+                    "transcription": "Je vais aussi préparer un gâteau. Inutile de dire que la nuance échappe à une lecture littérale.",
+                    "feedbackOnError": {
+                      "type": "spelling",
+                      "explanation": "Escribe exactamente «Je vais aussi préparer un gâteau. Inutile de dire que la nuance échappe à une lecture littérale.».",
+                      "ruleRef": "gp-c2-litotes"
+                    },
+                    "feedbackOnSuccess": {
+                      "explanation": "La transcripción coincide con el audio."
+                    }
+                  },
+                  {
+                    "type": "SpeakRepeat",
+                    "id": "es-fr-c2-u09-l09-e10",
+                    "targetPhrase": "Je vais aussi préparer un gâteau. Inutile de dire que la nuance échappe à une lecture littérale.",
+                    "audioText": "Je vais aussi préparer un gâteau. Inutile de dire que la nuance échappe à une lecture littérale.",
+                    "feedbackOnError": {
+                      "type": "pronunciation",
+                      "explanation": "Repite «Je vais aussi préparer un gâteau. Inutile de dire que la nuance échappe à une lecture littérale.» con claridad.",
+                      "ruleRef": "gp-c2-litotes"
+                    },
+                    "feedbackOnSuccess": {
+                      "explanation": "La frase se entiende y mantiene el ritmo."
+                    }
+                  },
+                  {
+                    "type": "MatchPairs",
+                    "id": "es-fr-c2-u09-l09-e11",
+                    "pairs": [
+                      {
+                        "left": "Voy a organizar una cena el sábado. A todas luces, conviene releer el planteamiento.",
+                        "right": "Je vais organiser un dîner samedi. De toute évidence, l'approche mérite une seconde lecture."
+                      },
+                      {
+                        "left": "Necesito comprar comida para seis personas. Lo cual, dicho sea de paso, no deja de ser irónico.",
+                        "right": "J'ai besoin d'acheter de la nourriture pour six personnes. Ce qui, soit dit en passant, n'est pas sans ironie."
+                      },
+                      {
+                        "left": "También voy a preparar una tarta. Huelga decir que el matiz escapa a una lectura literal.",
+                        "right": "Je vais aussi préparer un gâteau. Inutile de dire que la nuance échappe à une lecture littérale."
+                      }
+                    ],
+                    "feedbackOnError": {
+                      "type": "vocabulary",
+                      "explanation": "Cada expresión tiene una traducción distinta.",
+                      "ruleRef": "gp-c2-litotes"
+                    },
+                    "feedbackOnSuccess": {
+                      "explanation": "Has asociado cada expresión con su traducción."
+                    }
+                  },
+                  {
+                    "type": "FreeSpeakingPrompt",
+                    "id": "es-fr-c2-u09-l09-e12",
+                    "prompt": "Defiende una interpretación matizada sobre una cena con amigos.",
+                    "minTokens": 40,
+                    "conceptClusters": [
+                      [
+                        "vais"
+                      ],
+                      [
+                        "organiser"
+                      ],
+                      [
+                        "dîner"
+                      ]
+                    ],
+                    "modelAnswer": "Je vais organiser un dîner samedi. De toute évidence, l'approche mérite une seconde lecture. J'ai besoin d'acheter de la nourriture pour six personnes. Ce qui, soit dit en passant, n'est pas sans ironie. Je vais aussi préparer un gâteau. Inutile de dire que la nuance échappe à une lecture littérale.",
+                    "selfAssessmentCriteria": [
+                      "¿La respuesta argumenta y responde a la tarea?",
+                      "¿Usa las dos estructuras gramaticales de la lección?",
+                      "¿Incluye una concesión, una ironía o una atenuación?"
+                    ],
+                    "grammarRuleRefs": [
+                      "gp-c2-litotes",
+                      "gp-c2-apposition"
+                    ],
+                    "timeLimitSeconds": 120,
+                    "minWpm": 70,
+                    "maxWpm": 160,
+                    "feedbackOnError": {
+                      "type": "grammar",
+                      "explanation": "La respuesta modelo desarrolla una interpretación matizada.",
+                      "ruleRef": "gp-c2-litotes"
+                    }
+                  }
+                ]
+              },
+              {
+                "id": "es-fr-c2-u09-l10",
+                "title": "Evaluación: mi comida favorita",
+                "cefrLevel": "C2",
+                "scenario": "Situación comunicativa avanzada sobre mi comida favorita.",
+                "canDo": "Puedo argumentar con matices y precisión sobre mi comida favorita.",
+                "grammarPoints": [
+                  {
+                    "id": "gp-c2-litotes",
+                    "label": "Litotes",
+                    "description": "La litote afirma algo negando lo contrario."
+                  },
+                  {
+                    "id": "gp-c2-apposition",
+                    "label": "Apposition",
+                    "description": "La aposición añade una explicación al sustantivo."
+                  }
+                ],
+                "vocabFrequencyBand": "12000+",
+                "culturalNotes": [
+                  {
+                    "idiom": "faire la leçon",
+                    "note": "Expresión para reprender con severidad.",
+                    "translation": "leer la cartilla"
+                  }
+                ],
+                "microLesson": {
+                  "title": "Evaluación: mi comida favorita",
+                  "goals": [
+                    "Usar vocabulario avanzado de mi comida favorita.",
+                    "Aplicar litotes y apposition.",
+                    "Argumentar con matices sobre mi comida favorita."
+                  ],
+                  "sections": [
+                    {
+                      "heading": "Lengua en contexto",
+                      "body": "Litotes: La litote afirma algo negando lo contrario. Apposition: La aposición añade una explicación al sustantivo.",
+                      "examples": [
+                        {
+                          "source": "Mi comida favorita es la paella. Lo cual, dicho sea de paso, no deja de ser irónico.",
+                          "target": "Mon plat préféré est la paella. Ce qui, soit dit en passant, n'est pas sans ironie."
+                        },
+                        {
+                          "source": "Me gusta porque tiene arroz, marisco y verduras. Huelga decir que el matiz escapa a una lectura literal.",
+                          "target": "J'aime parce qu'il a du riz et des légumes. Inutile de dire que la nuance échappe à une lecture littérale."
+                        }
+                      ]
+                    }
+                  ]
+                },
+                "glossary": [
+                  {
+                    "term": "Mon plat préféré est la paella. Ce qui, soit dit en passant, n'est pas sans ironie.",
+                    "translations": [
+                      "Mi comida favorita es la paella. Lo cual, dicho sea de paso, no deja de ser irónico."
+                    ]
+                  },
+                  {
+                    "term": "J'aime parce qu'il a du riz et des légumes. Inutile de dire que la nuance échappe à une lecture littérale.",
+                    "translations": [
+                      "Me gusta porque tiene arroz, marisco y verduras. Huelga decir que el matiz escapa a una lectura literal."
+                    ]
+                  },
+                  {
+                    "term": "Ma famille la prépare le dimanche. À proprement parler, l'affirmation admet des lectures contradictoires.",
+                    "translations": [
+                      "Mi familia la prepara los domingos. En rigor, la afirmación admite lecturas encontradas."
+                    ]
+                  }
+                ],
+                "exercises": [
+                  {
+                    "type": "MultipleChoice",
+                    "id": "es-fr-c2-u09-l10-e01",
+                    "question": "¿Cuál es la opción correcta para «Mi comida favorita es la paella. Lo cual, dicho sea de paso, no deja de ser irónico.»?",
+                    "options": [
+                      "Mon plat préféré est la paella. Ce qui, soit dit en passant, n'est pas sans ironie.",
+                      "J'aime parce qu'il a du riz et des légumes. Inutile de dire que la nuance échappe à une lecture littérale.",
+                      "Ma famille la prépare le dimanche. À proprement parler, l'affirmation admet des lectures contradictoires."
+                    ],
+                    "correctIndex": 0,
+                    "feedbackOnError": {
+                      "type": "vocabulary",
+                      "explanation": "«Mi comida favorita es la paella. Lo cual, dicho sea de paso, no deja de ser irónico.» se dice «Mon plat préféré est la paella. Ce qui, soit dit en passant, n'est pas sans ironie.».",
+                      "ruleRef": "gp-c2-litotes"
+                    },
+                    "feedbackOnSuccess": {
+                      "explanation": "Has elegido la opción precisa."
+                    }
+                  },
+                  {
+                    "type": "Translate",
+                    "id": "es-fr-c2-u09-l10-e02",
+                    "sourcePhrase": "Mi comida favorita es la paella. Lo cual, dicho sea de paso, no deja de ser irónico.",
+                    "correctTokens": [
+                      "Mon",
+                      "plat",
+                      "préféré",
+                      "est",
+                      "la",
+                      "paella",
+                      "Ce",
+                      "qui",
+                      "soit",
+                      "dit",
+                      "en",
+                      "passant",
+                      "n'est",
+                      "pas",
+                      "sans",
+                      "ironie"
+                    ],
+                    "distractorTokens": [
+                      "J'aime",
+                      "parce",
+                      "qu'il"
+                    ],
+                    "feedbackOnError": {
+                      "type": "grammar",
+                      "explanation": "El orden correcto es «Mon plat préféré est la paella Ce qui soit dit en passant n'est pas sans ironie».",
+                      "ruleRef": "gp-c2-litotes"
+                    },
+                    "feedbackOnSuccess": {
+                      "explanation": "La frase conserva el orden y el significado."
+                    }
+                  },
+                  {
+                    "type": "ClozeDragDrop",
+                    "id": "es-fr-c2-u09-l10-e03",
+                    "passage": "Mon {{b1}} {{b2}} est la paella.",
+                    "blanks": [
+                      {
+                        "id": "b1",
+                        "answer": "plat",
+                        "options": [
+                          "plat",
+                          "paella",
+                          "très"
+                        ]
+                      },
+                      {
+                        "id": "b2",
+                        "answer": "préféré",
+                        "options": [
+                          "préféré",
+                          "paella",
+                          "très"
+                        ]
+                      }
+                    ],
+                    "feedbackOnError": {
+                      "type": "grammar",
+                      "explanation": "Las dos formas deben encajar con el contexto de la frase.",
+                      "ruleRef": "gp-c2-apposition"
+                    },
+                    "feedbackOnSuccess": {
+                      "explanation": "Los dos huecos encajan con la situación."
+                    }
+                  },
+                  {
+                    "type": "ClozeDragDrop",
+                    "id": "es-fr-c2-u09-l10-e04",
+                    "passage": "{{b1}} {{b2}} qu'il a du riz et des légumes.",
+                    "blanks": [
+                      {
+                        "id": "b1",
+                        "answer": "J'aime",
+                        "options": [
+                          "J'aime",
+                          "qu'il",
+                          "riz"
+                        ]
+                      },
+                      {
+                        "id": "b2",
+                        "answer": "parce",
+                        "options": [
+                          "parce",
+                          "qu'il",
+                          "riz"
+                        ]
+                      }
+                    ],
+                    "feedbackOnError": {
+                      "type": "grammar",
+                      "explanation": "Las dos formas deben encajar con el contexto de la frase.",
+                      "ruleRef": "gp-c2-apposition"
+                    },
+                    "feedbackOnSuccess": {
+                      "explanation": "Los dos huecos encajan con la situación."
+                    }
+                  },
+                  {
+                    "type": "ClozeDragDrop",
+                    "id": "es-fr-c2-u09-l10-e05",
+                    "passage": "Ma {{b1}} la {{b2}} le dimanche.",
+                    "blanks": [
+                      {
+                        "id": "b1",
+                        "answer": "famille",
+                        "options": [
+                          "famille",
+                          "dimanche",
+                          "très"
+                        ]
+                      },
+                      {
+                        "id": "b2",
+                        "answer": "prépare",
+                        "options": [
+                          "prépare",
+                          "dimanche",
+                          "très"
+                        ]
+                      }
+                    ],
+                    "feedbackOnError": {
+                      "type": "grammar",
+                      "explanation": "Las dos formas deben encajar con el contexto de la frase.",
+                      "ruleRef": "gp-c2-apposition"
+                    },
+                    "feedbackOnSuccess": {
+                      "explanation": "Los dos huecos encajan con la situación."
+                    }
+                  },
+                  {
+                    "type": "SemanticMatch",
+                    "id": "es-fr-c2-u09-l10-e06",
+                    "instructions": "Clasifica la función y el registro de cada intervención.",
+                    "pairs": [
+                      {
+                        "left": "Mon plat préféré est la paella. Ce qui, soit dit en passant, n'est pas sans ironie.",
+                        "right": "Ironía seca",
+                        "register": "literary",
+                        "nuance": "Clasifica la función y el registro de la intervención."
+                      },
+                      {
+                        "left": "J'aime parce qu'il a du riz et des légumes. Inutile de dire que la nuance échappe à une lecture littérale.",
+                        "right": "Atenuación",
+                        "register": "formal",
+                        "nuance": "Clasifica la función y el registro de la intervención."
+                      },
+                      {
+                        "left": "Ma famille la prépare le dimanche. À proprement parler, l'affirmation admet des lectures contradictoires.",
+                        "right": "Conclusión",
+                        "register": "neutral",
+                        "nuance": "Clasifica la función y el registro de la intervención."
+                      }
+                    ],
+                    "feedbackOnError": {
+                      "type": "register",
+                      "explanation": "Cada intervención cumple una función retórica distinta.",
+                      "ruleRef": "gp-c2-litotes"
+                    },
+                    "feedbackOnSuccess": {
+                      "explanation": "Has identificado función y registro."
+                    }
+                  },
+                  {
+                    "type": "ListenChoose",
+                    "id": "es-fr-c2-u09-l10-e07",
+                    "audioText": "J'aime parce qu'il a du riz et des légumes. Inutile de dire que la nuance échappe à une lecture littérale.",
+                    "options": [
+                      "J'aime parce qu'il a du riz et des légumes. Inutile de dire que la nuance échappe à une lecture littérale.",
+                      "Mon plat préféré est la paella. Ce qui, soit dit en passant, n'est pas sans ironie.",
+                      "Ma famille la prépare le dimanche. À proprement parler, l'affirmation admet des lectures contradictoires."
+                    ],
+                    "correctIndex": 0,
+                    "feedbackOnError": {
+                      "type": "comprehension",
+                      "explanation": "El audio dice «J'aime parce qu'il a du riz et des légumes. Inutile de dire que la nuance échappe à une lecture littérale.».",
+                      "ruleRef": "gp-c2-litotes"
+                    },
+                    "feedbackOnSuccess": {
+                      "explanation": "Has reconocido la frase del audio."
+                    }
+                  },
+                  {
+                    "type": "AudioOnlyPrompt",
+                    "id": "es-fr-c2-u09-l10-e08",
+                    "audioText": "Ma famille la prépare le dimanche. À proprement parler, l'affirmation admet des lectures contradictoires.",
+                    "question": "¿Qué implica el hablante?",
+                    "options": [
+                      "Ma famille la prépare le dimanche. À proprement parler, l'affirmation admet des lectures contradictoires.",
+                      "Mon plat préféré est la paella. Ce qui, soit dit en passant, n'est pas sans ironie.",
+                      "J'aime parce qu'il a du riz et des légumes. Inutile de dire que la nuance échappe à une lecture littérale."
+                    ],
+                    "correctIndex": 0,
+                    "allowSlowPlayback": false,
+                    "feedbackOnError": {
+                      "type": "comprehension",
+                      "explanation": "El audio dice «Ma famille la prépare le dimanche. À proprement parler, l'affirmation admet des lectures contradictoires.».",
+                      "ruleRef": "gp-c2-apposition"
+                    },
+                    "feedbackOnSuccess": {
+                      "explanation": "Has interpretado la implicación."
+                    }
+                  },
+                  {
+                    "type": "ListenType",
+                    "id": "es-fr-c2-u09-l10-e09",
+                    "audioText": "Ma famille la prépare le dimanche. À proprement parler, l'affirmation admet des lectures contradictoires.",
+                    "transcription": "Ma famille la prépare le dimanche. À proprement parler, l'affirmation admet des lectures contradictoires.",
+                    "feedbackOnError": {
+                      "type": "spelling",
+                      "explanation": "Escribe exactamente «Ma famille la prépare le dimanche. À proprement parler, l'affirmation admet des lectures contradictoires.».",
+                      "ruleRef": "gp-c2-litotes"
+                    },
+                    "feedbackOnSuccess": {
+                      "explanation": "La transcripción coincide con el audio."
+                    }
+                  },
+                  {
+                    "type": "SpeakRepeat",
+                    "id": "es-fr-c2-u09-l10-e10",
+                    "targetPhrase": "Ma famille la prépare le dimanche. À proprement parler, l'affirmation admet des lectures contradictoires.",
+                    "audioText": "Ma famille la prépare le dimanche. À proprement parler, l'affirmation admet des lectures contradictoires.",
+                    "feedbackOnError": {
+                      "type": "pronunciation",
+                      "explanation": "Repite «Ma famille la prépare le dimanche. À proprement parler, l'affirmation admet des lectures contradictoires.» con claridad.",
+                      "ruleRef": "gp-c2-litotes"
+                    },
+                    "feedbackOnSuccess": {
+                      "explanation": "La frase se entiende y mantiene el ritmo."
+                    }
+                  },
+                  {
+                    "type": "MatchPairs",
+                    "id": "es-fr-c2-u09-l10-e11",
+                    "pairs": [
+                      {
+                        "left": "Mi comida favorita es la paella. Lo cual, dicho sea de paso, no deja de ser irónico.",
+                        "right": "Mon plat préféré est la paella. Ce qui, soit dit en passant, n'est pas sans ironie."
+                      },
+                      {
+                        "left": "Me gusta porque tiene arroz, marisco y verduras. Huelga decir que el matiz escapa a una lectura literal.",
+                        "right": "J'aime parce qu'il a du riz et des légumes. Inutile de dire que la nuance échappe à une lecture littérale."
+                      },
+                      {
+                        "left": "Mi familia la prepara los domingos. En rigor, la afirmación admite lecturas encontradas.",
+                        "right": "Ma famille la prépare le dimanche. À proprement parler, l'affirmation admet des lectures contradictoires."
+                      }
+                    ],
+                    "feedbackOnError": {
+                      "type": "vocabulary",
+                      "explanation": "Cada expresión tiene una traducción distinta.",
+                      "ruleRef": "gp-c2-litotes"
+                    },
+                    "feedbackOnSuccess": {
+                      "explanation": "Has asociado cada expresión con su traducción."
+                    }
+                  },
+                  {
+                    "type": "FreeSpeakingPrompt",
+                    "id": "es-fr-c2-u09-l10-e12",
+                    "prompt": "Defiende una interpretación matizada sobre mi comida favorita.",
+                    "minTokens": 40,
+                    "conceptClusters": [
+                      [
+                        "plat"
+                      ],
+                      [
+                        "préféré"
+                      ],
+                      [
+                        "paella"
+                      ]
+                    ],
+                    "modelAnswer": "Mon plat préféré est la paella. Ce qui, soit dit en passant, n'est pas sans ironie. J'aime parce qu'il a du riz et des légumes. Inutile de dire que la nuance échappe à une lecture littérale. Ma famille la prépare le dimanche. À proprement parler, l'affirmation admet des lectures contradictoires.",
+                    "selfAssessmentCriteria": [
+                      "¿La respuesta argumenta y responde a la tarea?",
+                      "¿Usa las dos estructuras gramaticales de la lección?",
+                      "¿Incluye una concesión, una ironía o una atenuación?"
+                    ],
+                    "grammarRuleRefs": [
+                      "gp-c2-litotes",
+                      "gp-c2-apposition"
+                    ],
+                    "timeLimitSeconds": 120,
+                    "minWpm": 70,
+                    "maxWpm": 160,
+                    "feedbackOnError": {
+                      "type": "grammar",
+                      "explanation": "La respuesta modelo desarrolla una interpretación matizada.",
+                      "ruleRef": "gp-c2-litotes"
+                    }
+                  }
+                ]
+              }
+            ]
           }
         ]
       }
