@@ -60,8 +60,9 @@ del tope de 12 tokens espaciados.
 1. **Revisión nativa humana de F2.1–F2.4.** No se ha repetido la aprobación
    masiva de ADR-054. El release 3.3.0 exige cerrar esta revisión; la revisión
    de JA es especialmente importante por la segmentación y el registro.
-2. **Release 3.3.0.** No se abre hasta completar la puerta nativa y el gate de
-   release.
+2. **Release 3.3.0.** Aparcado por decisión de producto (2026-11-15). No se
+   abre hasta el QA manual y la puerta nativa; no se ha cambiado la versión ni
+   se ha publicado ningún artefacto.
 
 ## 5. Herramientas
 

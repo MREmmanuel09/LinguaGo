@@ -2,7 +2,8 @@
 
 > **Estado:** F1 completa y release 3.2.0 **publicado**. F2 completo: A2
 > 170/170 en los cuatro cursos (599 lecciones nuevas). La revisión nativa de
-> F2 sigue abierta y el release 3.3.0 no se publica hasta cerrarla.
+> F2 sigue abierta y el release 3.3.0 queda **aparcado por decisión de
+> producto** hasta el QA manual.
 > **Objetivo:** mínimo 1.000 lecciones por cada curso de destino, con la misma
 > cantidad en cada nivel CEFR.
 > **Fecha:** 2026-11-09.
@@ -207,7 +208,7 @@ La ejecución se organiza en **7 fases** (F0–F6) y **14 olas internas**:
 
 > **F2 completo:** A2 170/170 en ES→EN (143 nuevas), ES→PT (152), ES→FR
 > (152) y ES→JA (152). Total: 599 lecciones nuevas. El release 3.3.0 queda
-> bloqueado hasta cerrar la revisión nativa de los cuatro cursos.
+> **aparcado** hasta el QA manual y la revisión nativa de los cuatro cursos.
 
 ### Tres puertas de calidad por fase
 
