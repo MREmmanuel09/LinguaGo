@@ -6,6 +6,25 @@ El formato sigue [Keep a Changelog](https://keepachangelog.com/es-ES/1.1.0/)
 y el versionado sigue [SemVer](https://semver.org/lang/es/).
 Pre-1.0: los cambios incompatibles pueden ocurrir en `0.y.0`.
 
+## [3.4.0] - 2026-11-15
+
+**Cambio de licencia:** el código y el contenido pedagógico pasan a licencia
+comercial propia (todos los derechos reservados, ADR-056). Se añade
+`THIRD_PARTY_NOTICES.md` y la hoja de Ajustes refleja la nueva licencia.
+
+### Añadido
+
+- Licencia propietaria del código (`LICENSE`) y del contenido
+  (`LICENSE-CONTENT`), con notas de las versiones anteriores.
+- `THIRD_PARTY_NOTICES.md` con la atribución de cada dependencia y recurso.
+- Acuerdo de contribución (CLA) obligatorio para PR de código o contenido.
+
+### Nota legal
+
+Las versiones **3.3.0 y anteriores** se publicaron bajo MIT (código) y
+CC BY-SA 4.0 (contenido) y siguen rigiéndose por esas licencias: son
+irrevocables. El texto histórico permanece en la etiqueta `v3.3.0`.
+
 ## [3.3.0] - 2026-11-15
 
 Release de contenido completo. Incluye las 4.080 lecciones (A1–C2) en los
