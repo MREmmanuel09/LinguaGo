@@ -154830,6 +154830,3410 @@
               ]
             }
           ]
+        },
+        {
+          "id": "es-ja-b2-u08",
+          "title": "B2 · Casa y convivencia",
+          "lessons": [
+            {
+              "id": "es-ja-b2-u08-l01",
+              "title": "Repaso: trabajo",
+              "cefrLevel": "B2",
+              "scenario": "Situación comunicativa avanzada sobre la experiencia profesional.",
+              "canDo": "Puedo argumentar y matizar sobre la experiencia profesional.",
+              "grammarPoints": [
+                {
+                  "id": "gp-b2-concession",
+                  "label": "Concession",
+                  "description": "Although, despite y however introducen concesiones."
+                },
+                {
+                  "id": "gp-b2-modal-perfect",
+                  "label": "Modal perfect",
+                  "description": "Must have, might have y should have especulan sobre el pasado."
+                }
+              ],
+              "vocabFrequencyBand": "3000-5000",
+              "culturalNotes": [
+                {
+                  "idiom": "手 を 貸す",
+                  "note": "Expresión para ofrecer ayuda.",
+                  "translation": "echar una mano"
+                }
+              ],
+              "microLesson": {
+                "title": "Repaso: trabajo",
+                "goals": [
+                  "Usar vocabulario avanzado de la experiencia profesional.",
+                  "Aplicar concession y modal perfect.",
+                  "Argumentar y matizar sobre la experiencia profesional."
+                ],
+                "sections": [
+                  {
+                    "heading": "Lengua en contexto",
+                    "body": "Concession: Although, despite y however introducen concesiones. Modal perfect: Must have, might have y should have especulan sobre el pasado.",
+                    "examples": [
+                      {
+                        "source": "He trabajado en tres países. Dicho esto, depende del contexto.",
+                        "target": "私 は 3か国 で 働いてきました。 そう は いえ 、状況 に よります 。"
+                      },
+                      {
+                        "source": "Tengo experiencia en atención al cliente. En otras palabras, merece la pena considerarlo.",
+                        "target": "カスタマーサービス の 経験 が あります。 つまり 、検討 する 価値 が あります 。"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "glossary": [
+                {
+                  "term": "私 は 3か国 で 働いてきました。 そう は いえ 、状況 に よります 。",
+                  "translations": [
+                    "He trabajado en tres países. Dicho esto, depende del contexto."
+                  ]
+                },
+                {
+                  "term": "カスタマーサービス の 経験 が あります。 つまり 、検討 する 価値 が あります 。",
+                  "translations": [
+                    "Tengo experiencia en atención al cliente. En otras palabras, merece la pena considerarlo."
+                  ]
+                },
+                {
+                  "term": "新しい スキル を 学びたいです。 残念 ながら 、もっと 複雑 かも しれません 。",
+                  "translations": [
+                    "Quiero aprender nuevas habilidades. Me temo que puede ser más complicado."
+                  ]
+                }
+              ],
+              "exercises": [
+                {
+                  "type": "MultipleChoice",
+                  "id": "es-ja-b2-u08-l01-e01",
+                  "question": "¿Cuál es la opción correcta para «He trabajado en tres países. Dicho esto, depende del contexto.»?",
+                  "options": [
+                    "私 は 3か国 で 働いてきました。 そう は いえ 、状況 に よります 。",
+                    "カスタマーサービス の 経験 が あります。 つまり 、検討 する 価値 が あります 。",
+                    "新しい スキル を 学びたいです。 残念 ながら 、もっと 複雑 かも しれません 。"
+                  ],
+                  "correctIndex": 0,
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "«He trabajado en tres países. Dicho esto, depende del contexto.» se dice «私 は 3か国 で 働いてきました。 そう は いえ 、状況 に よります 。».",
+                    "ruleRef": "gp-b2-concession"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has elegido la traducción correcta."
+                  }
+                },
+                {
+                  "type": "OrderWords",
+                  "id": "es-ja-b2-u08-l01-e02",
+                  "tokens": [
+                    "は",
+                    "3か国",
+                    "で",
+                    "働いてきました。",
+                    "そう",
+                    "は",
+                    "いえ",
+                    "、状況",
+                    "に",
+                    "よります",
+                    "。",
+                    "私"
+                  ],
+                  "answerTokens": [
+                    "私",
+                    "は",
+                    "3か国",
+                    "で",
+                    "働いてきました。",
+                    "そう",
+                    "は",
+                    "いえ",
+                    "、状況",
+                    "に",
+                    "よります",
+                    "。"
+                  ],
+                  "sourcePhrase": "He trabajado en tres países. Dicho esto, depende del contexto.",
+                  "feedbackOnError": {
+                    "type": "word_order",
+                    "explanation": "El orden correcto es «私 は 3か国 で 働いてきました。 そう は いえ 、状況 に よります 。».",
+                    "ruleRef": "gp-b2-concession"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "El orden produce una frase natural."
+                  }
+                },
+                {
+                  "type": "ClozeDragDrop",
+                  "id": "es-ja-b2-u08-l01-e03",
+                  "passage": "私 は {{b1}} で {{b2}}",
+                  "blanks": [
+                    {
+                      "id": "b1",
+                      "answer": "3か国",
+                      "options": [
+                        "3か国",
+                        "とても",
+                        "今日"
+                      ]
+                    },
+                    {
+                      "id": "b2",
+                      "answer": "働いてきました",
+                      "options": [
+                        "働いてきました",
+                        "とても",
+                        "今日"
+                      ]
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "Las dos formas deben encajar con el contexto de la frase.",
+                    "ruleRef": "gp-b2-modal-perfect"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Los dos huecos encajan con la situación."
+                  }
+                },
+                {
+                  "type": "SemanticMatch",
+                  "id": "es-ja-b2-u08-l01-e04",
+                  "instructions": "Clasifica la función comunicativa de cada intervención.",
+                  "pairs": [
+                    {
+                      "left": "私 は 3か国 で 働いてきました。 そう は いえ 、状況 に よります 。",
+                      "right": "Planteamiento",
+                      "register": "formal",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    },
+                    {
+                      "left": "カスタマーサービス の 経験 が あります。 つまり 、検討 する 価値 が あります 。",
+                      "right": "Concesión",
+                      "register": "neutral",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    },
+                    {
+                      "left": "新しい スキル を 学びたいです。 残念 ながら 、もっと 複雑 かも しれません 。",
+                      "right": "Conclusión",
+                      "register": "informal",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "Cada intervención cumple una función comunicativa distinta.",
+                    "ruleRef": "gp-b2-concession"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has identificado la función de cada intervención."
+                  }
+                },
+                {
+                  "type": "SemanticMatch",
+                  "id": "es-ja-b2-u08-l01-e05",
+                  "instructions": "Distingue el registro de cada intervención.",
+                  "pairs": [
+                    {
+                      "left": "私 は 3か国 で 働いてきました。 そう は いえ 、状況 に よります 。",
+                      "right": "Formal",
+                      "register": "formal",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    },
+                    {
+                      "left": "カスタマーサービス の 経験 が あります。 つまり 、検討 する 価値 が あります 。",
+                      "right": "Neutral",
+                      "register": "neutral",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    },
+                    {
+                      "left": "新しい スキル を 学びたいです。 残念 ながら 、もっと 複雑 かも しれません 。",
+                      "right": "Informal",
+                      "register": "informal",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "register",
+                    "explanation": "El registro cambia según el contexto y la relación con el interlocutor.",
+                    "ruleRef": "gp-b2-modal-perfect"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has distinguido el registro de cada intervención."
+                  }
+                },
+                {
+                  "type": "AudioOnlyPrompt",
+                  "id": "es-ja-b2-u08-l01-e06",
+                  "audioText": "カスタマーサービス の 経験 が あります。 つまり 、検討 する 価値 が あります 。",
+                  "question": "¿Qué ha dicho el hablante?",
+                  "options": [
+                    "カスタマーサービス の 経験 が あります。 つまり 、検討 する 価値 が あります 。",
+                    "私 は 3か国 で 働いてきました。 そう は いえ 、状況 に よります 。",
+                    "新しい スキル を 学びたいです。 残念 ながら 、もっと 複雑 かも しれません 。"
+                  ],
+                  "correctIndex": 0,
+                  "allowSlowPlayback": true,
+                  "feedbackOnError": {
+                    "type": "comprehension",
+                    "explanation": "El audio dice «カスタマーサービス の 経験 が あります。 つまり 、検討 する 価値 が あります 。».",
+                    "ruleRef": "gp-b2-concession"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has comprendido el mensaje del audio."
+                  }
+                },
+                {
+                  "type": "AudioOnlyPrompt",
+                  "id": "es-ja-b2-u08-l01-e07",
+                  "audioText": "新しい スキル を 学びたいです。 残念 ながら 、もっと 複雑 かも しれません 。",
+                  "question": "¿Cuál es la idea principal?",
+                  "options": [
+                    "新しい スキル を 学びたいです。 残念 ながら 、もっと 複雑 かも しれません 。",
+                    "私 は 3か国 で 働いてきました。 そう は いえ 、状況 に よります 。",
+                    "カスタマーサービス の 経験 が あります。 つまり 、検討 する 価値 が あります 。"
+                  ],
+                  "correctIndex": 0,
+                  "allowSlowPlayback": false,
+                  "feedbackOnError": {
+                    "type": "comprehension",
+                    "explanation": "El audio dice «新しい スキル を 学びたいです。 残念 ながら 、もっと 複雑 かも しれません 。».",
+                    "ruleRef": "gp-b2-modal-perfect"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has identificado la idea principal."
+                  }
+                },
+                {
+                  "type": "ListenType",
+                  "id": "es-ja-b2-u08-l01-e08",
+                  "audioText": "新しい スキル を 学びたいです。 残念 ながら 、もっと 複雑 かも しれません 。",
+                  "transcription": "新しい スキル を 学びたいです。 残念 ながら 、もっと 複雑 かも しれません 。",
+                  "feedbackOnError": {
+                    "type": "spelling",
+                    "explanation": "Escribe exactamente «新しい スキル を 学びたいです。 残念 ながら 、もっと 複雑 かも しれません 。».",
+                    "ruleRef": "gp-b2-concession"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La transcripción coincide con el audio."
+                  }
+                },
+                {
+                  "type": "SpeakRepeat",
+                  "id": "es-ja-b2-u08-l01-e09",
+                  "targetPhrase": "新しい スキル を 学びたいです。 残念 ながら 、もっと 複雑 かも しれません 。",
+                  "audioText": "新しい スキル を 学びたいです。 残念 ながら 、もっと 複雑 かも しれません 。",
+                  "feedbackOnError": {
+                    "type": "pronunciation",
+                    "explanation": "Repite «新しい スキル を 学びたいです。 残念 ながら 、もっと 複雑 かも しれません 。» con claridad.",
+                    "ruleRef": "gp-b2-concession"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La frase se entiende y mantiene el ritmo."
+                  }
+                },
+                {
+                  "type": "FreeSpeakingPrompt",
+                  "id": "es-ja-b2-u08-l01-e10",
+                  "prompt": "Argumenta y matiza una opinión sobre la experiencia profesional.",
+                  "minTokens": 20,
+                  "conceptClusters": [
+                    [
+                      "3か国"
+                    ],
+                    [
+                      "働いてきました。"
+                    ],
+                    [
+                      "そう"
+                    ]
+                  ],
+                  "modelAnswer": "私 は 3か国 で 働いてきました。 そう は いえ 、状況 に よります 。 カスタマーサービス の 経験 が あります。 つまり 、検討 する 価値 が あります 。 新しい スキル を 学びたいです。 残念 ながら 、もっと 複雑 かも しれません 。",
+                  "selfAssessmentCriteria": [
+                    "¿La respuesta argumenta y responde a la tarea?",
+                    "¿Usa las dos estructuras gramaticales de la lección?",
+                    "¿Incluye una concesión o una matización?"
+                  ],
+                  "grammarRuleRefs": [
+                    "gp-b2-concession",
+                    "gp-b2-modal-perfect"
+                  ],
+                  "timeLimitSeconds": 90,
+                  "minWpm": 70,
+                  "maxWpm": 160,
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "La respuesta modelo desarrolla una opinión con matices y una concesión.",
+                    "ruleRef": "gp-b2-concession"
+                  }
+                }
+              ]
+            },
+            {
+              "id": "es-ja-b2-u08-l02",
+              "title": "Mi casa y sus habitaciones",
+              "cefrLevel": "B2",
+              "scenario": "Situación comunicativa avanzada sobre mi casa.",
+              "canDo": "Puedo argumentar y matizar sobre mi casa.",
+              "grammarPoints": [
+                {
+                  "id": "gp-b2-concession",
+                  "label": "Concession",
+                  "description": "Although, despite y however introducen concesiones."
+                },
+                {
+                  "id": "gp-b2-modal-perfect",
+                  "label": "Modal perfect",
+                  "description": "Must have, might have y should have especulan sobre el pasado."
+                }
+              ],
+              "vocabFrequencyBand": "3000-5000",
+              "culturalNotes": [
+                {
+                  "idiom": "事情 を 知る",
+                  "note": "Expresión para conocer un asunto.",
+                  "translation": "estar al tanto"
+                }
+              ],
+              "microLesson": {
+                "title": "Mi casa y sus habitaciones",
+                "goals": [
+                  "Usar vocabulario avanzado de mi casa.",
+                  "Aplicar concession y modal perfect.",
+                  "Argumentar y matizar sobre mi casa."
+                ],
+                "sections": [
+                  {
+                    "heading": "Lengua en contexto",
+                    "body": "Concession: Although, despite y however introducen concesiones. Modal perfect: Must have, might have y should have especulan sobre el pasado.",
+                    "examples": [
+                      {
+                        "source": "Vivo en un piso pequeño con dos habitaciones. En otras palabras, merece la pena considerarlo.",
+                        "target": "私 は 部屋 が 2つ ある 小さな アパート に 住んでいます。 つまり 、検討 する 価値 が あります 。"
+                      },
+                      {
+                        "source": "La cocina es grande y luminosa. Me temo que puede ser más complicado.",
+                        "target": "キッチン は 広くて 明るいです。 残念 ながら 、もっと 複雑 かも しれません 。"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "glossary": [
+                {
+                  "term": "私 は 部屋 が 2つ ある 小さな アパート に 住んでいます。 つまり 、検討 する 価値 が あります 。",
+                  "translations": [
+                    "Vivo en un piso pequeño con dos habitaciones. En otras palabras, merece la pena considerarlo."
+                  ]
+                },
+                {
+                  "term": "キッチン は 広くて 明るいです。 残念 ながら 、もっと 複雑 かも しれません 。",
+                  "translations": [
+                    "La cocina es grande y luminosa. Me temo que puede ser más complicado."
+                  ]
+                },
+                {
+                  "term": "通り を 見渡す バルコニー が 付いています。 正直 に 言う と 、複雑 な 気持ち です 。",
+                  "translations": [
+                    "Hay un balcón con vistas a la calle. Sinceramente, tengo sentimientos encontrados."
+                  ]
+                }
+              ],
+              "exercises": [
+                {
+                  "type": "MultipleChoice",
+                  "id": "es-ja-b2-u08-l02-e01",
+                  "question": "¿Cuál es la opción correcta para «Vivo en un piso pequeño con dos habitaciones. En otras palabras, merece la pena considerarlo.»?",
+                  "options": [
+                    "私 は 部屋 が 2つ ある 小さな アパート に 住んでいます。 つまり 、検討 する 価値 が あります 。",
+                    "キッチン は 広くて 明るいです。 残念 ながら 、もっと 複雑 かも しれません 。",
+                    "通り を 見渡す バルコニー が 付いています。 正直 に 言う と 、複雑 な 気持ち です 。"
+                  ],
+                  "correctIndex": 0,
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "«Vivo en un piso pequeño con dos habitaciones. En otras palabras, merece la pena considerarlo.» se dice «私 は 部屋 が 2つ ある 小さな アパート に 住んでいます。 つまり 、検討 する 価値 が あります 。».",
+                    "ruleRef": "gp-b2-concession"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has elegido la traducción correcta."
+                  }
+                },
+                {
+                  "type": "OrderWords",
+                  "id": "es-ja-b2-u08-l02-e02",
+                  "tokens": [
+                    "は",
+                    "部屋",
+                    "が",
+                    "2つ",
+                    "ある",
+                    "小さな",
+                    "アパート",
+                    "に",
+                    "住んでいます。",
+                    "つまり",
+                    "、検討",
+                    "する",
+                    "価値",
+                    "が",
+                    "あります",
+                    "。",
+                    "私"
+                  ],
+                  "answerTokens": [
+                    "私",
+                    "は",
+                    "部屋",
+                    "が",
+                    "2つ",
+                    "ある",
+                    "小さな",
+                    "アパート",
+                    "に",
+                    "住んでいます。",
+                    "つまり",
+                    "、検討",
+                    "する",
+                    "価値",
+                    "が",
+                    "あります",
+                    "。"
+                  ],
+                  "sourcePhrase": "Vivo en un piso pequeño con dos habitaciones. En otras palabras, merece la pena considerarlo.",
+                  "feedbackOnError": {
+                    "type": "word_order",
+                    "explanation": "El orden correcto es «私 は 部屋 が 2つ ある 小さな アパート に 住んでいます。 つまり 、検討 する 価値 が あります 。».",
+                    "ruleRef": "gp-b2-concession"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "El orden produce una frase natural."
+                  }
+                },
+                {
+                  "type": "ClozeDragDrop",
+                  "id": "es-ja-b2-u08-l02-e03",
+                  "passage": "私 は {{b1}} が {{b2}} ある 小さな アパート に 住んでいます",
+                  "blanks": [
+                    {
+                      "id": "b1",
+                      "answer": "部屋",
+                      "options": [
+                        "部屋",
+                        "ある",
+                        "小さな"
+                      ]
+                    },
+                    {
+                      "id": "b2",
+                      "answer": "2つ",
+                      "options": [
+                        "2つ",
+                        "ある",
+                        "小さな"
+                      ]
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "Las dos formas deben encajar con el contexto de la frase.",
+                    "ruleRef": "gp-b2-modal-perfect"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Los dos huecos encajan con la situación."
+                  }
+                },
+                {
+                  "type": "SemanticMatch",
+                  "id": "es-ja-b2-u08-l02-e04",
+                  "instructions": "Clasifica la función comunicativa de cada intervención.",
+                  "pairs": [
+                    {
+                      "left": "私 は 部屋 が 2つ ある 小さな アパート に 住んでいます。 つまり 、検討 する 価値 が あります 。",
+                      "right": "Planteamiento",
+                      "register": "formal",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    },
+                    {
+                      "left": "キッチン は 広くて 明るいです。 残念 ながら 、もっと 複雑 かも しれません 。",
+                      "right": "Concesión",
+                      "register": "neutral",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    },
+                    {
+                      "left": "通り を 見渡す バルコニー が 付いています。 正直 に 言う と 、複雑 な 気持ち です 。",
+                      "right": "Conclusión",
+                      "register": "informal",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "Cada intervención cumple una función comunicativa distinta.",
+                    "ruleRef": "gp-b2-concession"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has identificado la función de cada intervención."
+                  }
+                },
+                {
+                  "type": "SemanticMatch",
+                  "id": "es-ja-b2-u08-l02-e05",
+                  "instructions": "Distingue el registro de cada intervención.",
+                  "pairs": [
+                    {
+                      "left": "私 は 部屋 が 2つ ある 小さな アパート に 住んでいます。 つまり 、検討 する 価値 が あります 。",
+                      "right": "Formal",
+                      "register": "formal",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    },
+                    {
+                      "left": "キッチン は 広くて 明るいです。 残念 ながら 、もっと 複雑 かも しれません 。",
+                      "right": "Neutral",
+                      "register": "neutral",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    },
+                    {
+                      "left": "通り を 見渡す バルコニー が 付いています。 正直 に 言う と 、複雑 な 気持ち です 。",
+                      "right": "Informal",
+                      "register": "informal",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "register",
+                    "explanation": "El registro cambia según el contexto y la relación con el interlocutor.",
+                    "ruleRef": "gp-b2-modal-perfect"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has distinguido el registro de cada intervención."
+                  }
+                },
+                {
+                  "type": "AudioOnlyPrompt",
+                  "id": "es-ja-b2-u08-l02-e06",
+                  "audioText": "キッチン は 広くて 明るいです。 残念 ながら 、もっと 複雑 かも しれません 。",
+                  "question": "¿Qué ha dicho el hablante?",
+                  "options": [
+                    "キッチン は 広くて 明るいです。 残念 ながら 、もっと 複雑 かも しれません 。",
+                    "私 は 部屋 が 2つ ある 小さな アパート に 住んでいます。 つまり 、検討 する 価値 が あります 。",
+                    "通り を 見渡す バルコニー が 付いています。 正直 に 言う と 、複雑 な 気持ち です 。"
+                  ],
+                  "correctIndex": 0,
+                  "allowSlowPlayback": true,
+                  "feedbackOnError": {
+                    "type": "comprehension",
+                    "explanation": "El audio dice «キッチン は 広くて 明るいです。 残念 ながら 、もっと 複雑 かも しれません 。».",
+                    "ruleRef": "gp-b2-concession"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has comprendido el mensaje del audio."
+                  }
+                },
+                {
+                  "type": "AudioOnlyPrompt",
+                  "id": "es-ja-b2-u08-l02-e07",
+                  "audioText": "通り を 見渡す バルコニー が 付いています。 正直 に 言う と 、複雑 な 気持ち です 。",
+                  "question": "¿Cuál es la idea principal?",
+                  "options": [
+                    "通り を 見渡す バルコニー が 付いています。 正直 に 言う と 、複雑 な 気持ち です 。",
+                    "私 は 部屋 が 2つ ある 小さな アパート に 住んでいます。 つまり 、検討 する 価値 が あります 。",
+                    "キッチン は 広くて 明るいです。 残念 ながら 、もっと 複雑 かも しれません 。"
+                  ],
+                  "correctIndex": 0,
+                  "allowSlowPlayback": false,
+                  "feedbackOnError": {
+                    "type": "comprehension",
+                    "explanation": "El audio dice «通り を 見渡す バルコニー が 付いています。 正直 に 言う と 、複雑 な 気持ち です 。».",
+                    "ruleRef": "gp-b2-modal-perfect"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has identificado la idea principal."
+                  }
+                },
+                {
+                  "type": "ListenType",
+                  "id": "es-ja-b2-u08-l02-e08",
+                  "audioText": "通り を 見渡す バルコニー が 付いています。 正直 に 言う と 、複雑 な 気持ち です 。",
+                  "transcription": "通り を 見渡す バルコニー が 付いています。 正直 に 言う と 、複雑 な 気持ち です 。",
+                  "feedbackOnError": {
+                    "type": "spelling",
+                    "explanation": "Escribe exactamente «通り を 見渡す バルコニー が 付いています。 正直 に 言う と 、複雑 な 気持ち です 。».",
+                    "ruleRef": "gp-b2-concession"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La transcripción coincide con el audio."
+                  }
+                },
+                {
+                  "type": "SpeakRepeat",
+                  "id": "es-ja-b2-u08-l02-e09",
+                  "targetPhrase": "通り を 見渡す バルコニー が 付いています。 正直 に 言う と 、複雑 な 気持ち です 。",
+                  "audioText": "通り を 見渡す バルコニー が 付いています。 正直 に 言う と 、複雑 な 気持ち です 。",
+                  "feedbackOnError": {
+                    "type": "pronunciation",
+                    "explanation": "Repite «通り を 見渡す バルコニー が 付いています。 正直 に 言う と 、複雑 な 気持ち です 。» con claridad.",
+                    "ruleRef": "gp-b2-concession"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La frase se entiende y mantiene el ritmo."
+                  }
+                },
+                {
+                  "type": "FreeSpeakingPrompt",
+                  "id": "es-ja-b2-u08-l02-e10",
+                  "prompt": "Argumenta y matiza una opinión sobre mi casa.",
+                  "minTokens": 20,
+                  "conceptClusters": [
+                    [
+                      "部屋"
+                    ],
+                    [
+                      "2つ"
+                    ],
+                    [
+                      "ある"
+                    ]
+                  ],
+                  "modelAnswer": "私 は 部屋 が 2つ ある 小さな アパート に 住んでいます。 つまり 、検討 する 価値 が あります 。 キッチン は 広くて 明るいです。 残念 ながら 、もっと 複雑 かも しれません 。 通り を 見渡す バルコニー が 付いています。 正直 に 言う と 、複雑 な 気持ち です 。",
+                  "selfAssessmentCriteria": [
+                    "¿La respuesta argumenta y responde a la tarea?",
+                    "¿Usa las dos estructuras gramaticales de la lección?",
+                    "¿Incluye una concesión o una matización?"
+                  ],
+                  "grammarRuleRefs": [
+                    "gp-b2-concession",
+                    "gp-b2-modal-perfect"
+                  ],
+                  "timeLimitSeconds": 90,
+                  "minWpm": 70,
+                  "maxWpm": 160,
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "La respuesta modelo desarrolla una opinión con matices y una concesión.",
+                    "ruleRef": "gp-b2-concession"
+                  }
+                }
+              ]
+            },
+            {
+              "id": "es-ja-b2-u08-l03",
+              "title": "Muebles y tareas",
+              "cefrLevel": "B2",
+              "scenario": "Situación comunicativa avanzada sobre los muebles y las tareas.",
+              "canDo": "Puedo argumentar y matizar sobre los muebles y las tareas.",
+              "grammarPoints": [
+                {
+                  "id": "gp-b2-concession",
+                  "label": "Concession",
+                  "description": "Although, despite y however introducen concesiones."
+                },
+                {
+                  "id": "gp-b2-modal-perfect",
+                  "label": "Modal perfect",
+                  "description": "Must have, might have y should have especulan sobre el pasado."
+                }
+              ],
+              "vocabFrequencyBand": "3000-5000",
+              "culturalNotes": [
+                {
+                  "idiom": "腰 を 据える",
+                  "note": "Expresión para ponerse a trabajar con constancia.",
+                  "translation": "ponerse en serio"
+                }
+              ],
+              "microLesson": {
+                "title": "Muebles y tareas",
+                "goals": [
+                  "Usar vocabulario avanzado de los muebles y las tareas.",
+                  "Aplicar concession y modal perfect.",
+                  "Argumentar y matizar sobre los muebles y las tareas."
+                ],
+                "sections": [
+                  {
+                    "heading": "Lengua en contexto",
+                    "body": "Concession: Although, despite y however introducen concesiones. Modal perfect: Must have, might have y should have especulan sobre el pasado.",
+                    "examples": [
+                      {
+                        "source": "Necesito una lavadora. Me temo que puede ser más complicado.",
+                        "target": "洗濯機 が 必要です。 残念 ながら 、もっと 複雑 かも しれません 。"
+                      },
+                      {
+                        "source": "Necesito una mesa grande. Sinceramente, tengo sentimientos encontrados.",
+                        "target": "大きな テーブル が 必要です。 正直 に 言う と 、複雑 な 気持ち です 。"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "glossary": [
+                {
+                  "term": "洗濯機 が 必要です。 残念 ながら 、もっと 複雑 かも しれません 。",
+                  "translations": [
+                    "Necesito una lavadora. Me temo que puede ser más complicado."
+                  ]
+                },
+                {
+                  "term": "大きな テーブル が 必要です。 正直 に 言う と 、複雑 な 気持ち です 。",
+                  "translations": [
+                    "Necesito una mesa grande. Sinceramente, tengo sentimientos encontrados."
+                  ]
+                },
+                {
+                  "term": "新しい クローゼット が 必要です。 これ は 変わって きて いる よう です 。",
+                  "translations": [
+                    "Necesito un armario nuevo. Parece que esto está cambiando."
+                  ]
+                }
+              ],
+              "exercises": [
+                {
+                  "type": "MultipleChoice",
+                  "id": "es-ja-b2-u08-l03-e01",
+                  "question": "¿Cuál es la opción correcta para «Necesito una lavadora. Me temo que puede ser más complicado.»?",
+                  "options": [
+                    "洗濯機 が 必要です。 残念 ながら 、もっと 複雑 かも しれません 。",
+                    "大きな テーブル が 必要です。 正直 に 言う と 、複雑 な 気持ち です 。",
+                    "新しい クローゼット が 必要です。 これ は 変わって きて いる よう です 。"
+                  ],
+                  "correctIndex": 0,
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "«Necesito una lavadora. Me temo que puede ser más complicado.» se dice «洗濯機 が 必要です。 残念 ながら 、もっと 複雑 かも しれません 。».",
+                    "ruleRef": "gp-b2-concession"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has elegido la traducción correcta."
+                  }
+                },
+                {
+                  "type": "OrderWords",
+                  "id": "es-ja-b2-u08-l03-e02",
+                  "tokens": [
+                    "が",
+                    "必要です。",
+                    "残念",
+                    "ながら",
+                    "、もっと",
+                    "複雑",
+                    "かも",
+                    "しれません",
+                    "。",
+                    "洗濯機"
+                  ],
+                  "answerTokens": [
+                    "洗濯機",
+                    "が",
+                    "必要です。",
+                    "残念",
+                    "ながら",
+                    "、もっと",
+                    "複雑",
+                    "かも",
+                    "しれません",
+                    "。"
+                  ],
+                  "sourcePhrase": "Necesito una lavadora. Me temo que puede ser más complicado.",
+                  "feedbackOnError": {
+                    "type": "word_order",
+                    "explanation": "El orden correcto es «洗濯機 が 必要です。 残念 ながら 、もっと 複雑 かも しれません 。».",
+                    "ruleRef": "gp-b2-concession"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "El orden produce una frase natural."
+                  }
+                },
+                {
+                  "type": "ClozeDragDrop",
+                  "id": "es-ja-b2-u08-l03-e03",
+                  "passage": "{{b1}} が {{b2}}",
+                  "blanks": [
+                    {
+                      "id": "b1",
+                      "answer": "洗濯機",
+                      "options": [
+                        "洗濯機",
+                        "とても",
+                        "今日"
+                      ]
+                    },
+                    {
+                      "id": "b2",
+                      "answer": "必要です",
+                      "options": [
+                        "必要です",
+                        "とても",
+                        "今日"
+                      ]
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "Las dos formas deben encajar con el contexto de la frase.",
+                    "ruleRef": "gp-b2-modal-perfect"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Los dos huecos encajan con la situación."
+                  }
+                },
+                {
+                  "type": "SemanticMatch",
+                  "id": "es-ja-b2-u08-l03-e04",
+                  "instructions": "Clasifica la función comunicativa de cada intervención.",
+                  "pairs": [
+                    {
+                      "left": "洗濯機 が 必要です。 残念 ながら 、もっと 複雑 かも しれません 。",
+                      "right": "Planteamiento",
+                      "register": "formal",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    },
+                    {
+                      "left": "大きな テーブル が 必要です。 正直 に 言う と 、複雑 な 気持ち です 。",
+                      "right": "Concesión",
+                      "register": "neutral",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    },
+                    {
+                      "left": "新しい クローゼット が 必要です。 これ は 変わって きて いる よう です 。",
+                      "right": "Conclusión",
+                      "register": "informal",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "Cada intervención cumple una función comunicativa distinta.",
+                    "ruleRef": "gp-b2-concession"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has identificado la función de cada intervención."
+                  }
+                },
+                {
+                  "type": "SemanticMatch",
+                  "id": "es-ja-b2-u08-l03-e05",
+                  "instructions": "Distingue el registro de cada intervención.",
+                  "pairs": [
+                    {
+                      "left": "洗濯機 が 必要です。 残念 ながら 、もっと 複雑 かも しれません 。",
+                      "right": "Formal",
+                      "register": "formal",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    },
+                    {
+                      "left": "大きな テーブル が 必要です。 正直 に 言う と 、複雑 な 気持ち です 。",
+                      "right": "Neutral",
+                      "register": "neutral",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    },
+                    {
+                      "left": "新しい クローゼット が 必要です。 これ は 変わって きて いる よう です 。",
+                      "right": "Informal",
+                      "register": "informal",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "register",
+                    "explanation": "El registro cambia según el contexto y la relación con el interlocutor.",
+                    "ruleRef": "gp-b2-modal-perfect"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has distinguido el registro de cada intervención."
+                  }
+                },
+                {
+                  "type": "AudioOnlyPrompt",
+                  "id": "es-ja-b2-u08-l03-e06",
+                  "audioText": "大きな テーブル が 必要です。 正直 に 言う と 、複雑 な 気持ち です 。",
+                  "question": "¿Qué ha dicho el hablante?",
+                  "options": [
+                    "大きな テーブル が 必要です。 正直 に 言う と 、複雑 な 気持ち です 。",
+                    "洗濯機 が 必要です。 残念 ながら 、もっと 複雑 かも しれません 。",
+                    "新しい クローゼット が 必要です。 これ は 変わって きて いる よう です 。"
+                  ],
+                  "correctIndex": 0,
+                  "allowSlowPlayback": true,
+                  "feedbackOnError": {
+                    "type": "comprehension",
+                    "explanation": "El audio dice «大きな テーブル が 必要です。 正直 に 言う と 、複雑 な 気持ち です 。».",
+                    "ruleRef": "gp-b2-concession"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has comprendido el mensaje del audio."
+                  }
+                },
+                {
+                  "type": "AudioOnlyPrompt",
+                  "id": "es-ja-b2-u08-l03-e07",
+                  "audioText": "新しい クローゼット が 必要です。 これ は 変わって きて いる よう です 。",
+                  "question": "¿Cuál es la idea principal?",
+                  "options": [
+                    "新しい クローゼット が 必要です。 これ は 変わって きて いる よう です 。",
+                    "洗濯機 が 必要です。 残念 ながら 、もっと 複雑 かも しれません 。",
+                    "大きな テーブル が 必要です。 正直 に 言う と 、複雑 な 気持ち です 。"
+                  ],
+                  "correctIndex": 0,
+                  "allowSlowPlayback": false,
+                  "feedbackOnError": {
+                    "type": "comprehension",
+                    "explanation": "El audio dice «新しい クローゼット が 必要です。 これ は 変わって きて いる よう です 。».",
+                    "ruleRef": "gp-b2-modal-perfect"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has identificado la idea principal."
+                  }
+                },
+                {
+                  "type": "ListenType",
+                  "id": "es-ja-b2-u08-l03-e08",
+                  "audioText": "新しい クローゼット が 必要です。 これ は 変わって きて いる よう です 。",
+                  "transcription": "新しい クローゼット が 必要です。 これ は 変わって きて いる よう です 。",
+                  "feedbackOnError": {
+                    "type": "spelling",
+                    "explanation": "Escribe exactamente «新しい クローゼット が 必要です。 これ は 変わって きて いる よう です 。».",
+                    "ruleRef": "gp-b2-concession"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La transcripción coincide con el audio."
+                  }
+                },
+                {
+                  "type": "SpeakRepeat",
+                  "id": "es-ja-b2-u08-l03-e09",
+                  "targetPhrase": "新しい クローゼット が 必要です。 これ は 変わって きて いる よう です 。",
+                  "audioText": "新しい クローゼット が 必要です。 これ は 変わって きて いる よう です 。",
+                  "feedbackOnError": {
+                    "type": "pronunciation",
+                    "explanation": "Repite «新しい クローゼット が 必要です。 これ は 変わって きて いる よう です 。» con claridad.",
+                    "ruleRef": "gp-b2-concession"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La frase se entiende y mantiene el ritmo."
+                  }
+                },
+                {
+                  "type": "FreeSpeakingPrompt",
+                  "id": "es-ja-b2-u08-l03-e10",
+                  "prompt": "Argumenta y matiza una opinión sobre los muebles y las tareas.",
+                  "minTokens": 20,
+                  "conceptClusters": [
+                    [
+                      "洗濯機"
+                    ],
+                    [
+                      "必要です。"
+                    ],
+                    [
+                      "残念"
+                    ]
+                  ],
+                  "modelAnswer": "洗濯機 が 必要です。 残念 ながら 、もっと 複雑 かも しれません 。 大きな テーブル が 必要です。 正直 に 言う と 、複雑 な 気持ち です 。 新しい クローゼット が 必要です。 これ は 変わって きて いる よう です 。",
+                  "selfAssessmentCriteria": [
+                    "¿La respuesta argumenta y responde a la tarea?",
+                    "¿Usa las dos estructuras gramaticales de la lección?",
+                    "¿Incluye una concesión o una matización?"
+                  ],
+                  "grammarRuleRefs": [
+                    "gp-b2-concession",
+                    "gp-b2-modal-perfect"
+                  ],
+                  "timeLimitSeconds": 90,
+                  "minWpm": 70,
+                  "maxWpm": 160,
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "La respuesta modelo desarrolla una opinión con matices y una concesión.",
+                    "ruleRef": "gp-b2-concession"
+                  }
+                }
+              ]
+            },
+            {
+              "id": "es-ja-b2-u08-l04",
+              "title": "Must / mustn't",
+              "cefrLevel": "B2",
+              "scenario": "Situación comunicativa avanzada sobre las normas de la casa.",
+              "canDo": "Puedo argumentar y matizar sobre las normas de la casa.",
+              "grammarPoints": [
+                {
+                  "id": "gp-b2-concession",
+                  "label": "Concession",
+                  "description": "Although, despite y however introducen concesiones."
+                },
+                {
+                  "id": "gp-b2-modal-perfect",
+                  "label": "Modal perfect",
+                  "description": "Must have, might have y should have especulan sobre el pasado."
+                }
+              ],
+              "vocabFrequencyBand": "3000-5000",
+              "culturalNotes": [
+                {
+                  "idiom": "目 を つぶる",
+                  "note": "Expresión para ignorar algo a propósito.",
+                  "translation": "hacer la vista gorda"
+                }
+              ],
+              "microLesson": {
+                "title": "Must / mustn't",
+                "goals": [
+                  "Usar vocabulario avanzado de las normas de la casa.",
+                  "Aplicar concession y modal perfect.",
+                  "Argumentar y matizar sobre las normas de la casa."
+                ],
+                "sections": [
+                  {
+                    "heading": "Lengua en contexto",
+                    "body": "Concession: Although, despite y however introducen concesiones. Modal perfect: Must have, might have y should have especulan sobre el pasado.",
+                    "examples": [
+                      {
+                        "source": "Debes respetar el silencio por la noche. Sinceramente, tengo sentimientos encontrados.",
+                        "target": "夜 の 静けさ を 尊重しなければなりません。 正直 に 言う と 、複雑 な 気持ち です 。"
+                      },
+                      {
+                        "source": "Debes limpiar la cocina después de cocinar. Parece que esto está cambiando.",
+                        "target": "料理 を した 後 は キッチン を 掃除しなければなりません。 これ は 変わって きて いる よう です 。"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "glossary": [
+                {
+                  "term": "夜 の 静けさ を 尊重しなければなりません。 正直 に 言う と 、複雑 な 気持ち です 。",
+                  "translations": [
+                    "Debes respetar el silencio por la noche. Sinceramente, tengo sentimientos encontrados."
+                  ]
+                },
+                {
+                  "term": "料理 を した 後 は キッチン を 掃除しなければなりません。 これ は 変わって きて いる よう です 。",
+                  "translations": [
+                    "Debes limpiar la cocina después de cocinar. Parece que esto está cambiando."
+                  ]
+                },
+                {
+                  "term": "あなた は ドア に 鍵 を かけなければなりません。 私 の 観点 で は 、妥当 な 選択 です 。",
+                  "translations": [
+                    "Debes cerrar la puerta con llave. Desde mi punto de vista, es una opción razonable."
+                  ]
+                }
+              ],
+              "exercises": [
+                {
+                  "type": "MultipleChoice",
+                  "id": "es-ja-b2-u08-l04-e01",
+                  "question": "¿Cuál es la opción correcta para «Debes respetar el silencio por la noche. Sinceramente, tengo sentimientos encontrados.»?",
+                  "options": [
+                    "夜 の 静けさ を 尊重しなければなりません。 正直 に 言う と 、複雑 な 気持ち です 。",
+                    "料理 を した 後 は キッチン を 掃除しなければなりません。 これ は 変わって きて いる よう です 。",
+                    "あなた は ドア に 鍵 を かけなければなりません。 私 の 観点 で は 、妥当 な 選択 です 。"
+                  ],
+                  "correctIndex": 0,
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "«Debes respetar el silencio por la noche. Sinceramente, tengo sentimientos encontrados.» se dice «夜 の 静けさ を 尊重しなければなりません。 正直 に 言う と 、複雑 な 気持ち です 。».",
+                    "ruleRef": "gp-b2-concession"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has elegido la traducción correcta."
+                  }
+                },
+                {
+                  "type": "OrderWords",
+                  "id": "es-ja-b2-u08-l04-e02",
+                  "tokens": [
+                    "の",
+                    "静けさ",
+                    "を",
+                    "尊重しなければなりません。",
+                    "正直",
+                    "に",
+                    "言う",
+                    "と",
+                    "、複雑",
+                    "な",
+                    "気持ち",
+                    "です",
+                    "。",
+                    "夜"
+                  ],
+                  "answerTokens": [
+                    "夜",
+                    "の",
+                    "静けさ",
+                    "を",
+                    "尊重しなければなりません。",
+                    "正直",
+                    "に",
+                    "言う",
+                    "と",
+                    "、複雑",
+                    "な",
+                    "気持ち",
+                    "です",
+                    "。"
+                  ],
+                  "sourcePhrase": "Debes respetar el silencio por la noche. Sinceramente, tengo sentimientos encontrados.",
+                  "feedbackOnError": {
+                    "type": "word_order",
+                    "explanation": "El orden correcto es «夜 の 静けさ を 尊重しなければなりません。 正直 に 言う と 、複雑 な 気持ち です 。».",
+                    "ruleRef": "gp-b2-concession"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "El orden produce una frase natural."
+                  }
+                },
+                {
+                  "type": "ClozeDragDrop",
+                  "id": "es-ja-b2-u08-l04-e03",
+                  "passage": "夜 の {{b1}} を {{b2}}",
+                  "blanks": [
+                    {
+                      "id": "b1",
+                      "answer": "静けさ",
+                      "options": [
+                        "静けさ",
+                        "とても",
+                        "今日"
+                      ]
+                    },
+                    {
+                      "id": "b2",
+                      "answer": "尊重しなければなりません",
+                      "options": [
+                        "尊重しなければなりません",
+                        "とても",
+                        "今日"
+                      ]
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "Las dos formas deben encajar con el contexto de la frase.",
+                    "ruleRef": "gp-b2-modal-perfect"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Los dos huecos encajan con la situación."
+                  }
+                },
+                {
+                  "type": "SemanticMatch",
+                  "id": "es-ja-b2-u08-l04-e04",
+                  "instructions": "Clasifica la función comunicativa de cada intervención.",
+                  "pairs": [
+                    {
+                      "left": "夜 の 静けさ を 尊重しなければなりません。 正直 に 言う と 、複雑 な 気持ち です 。",
+                      "right": "Planteamiento",
+                      "register": "formal",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    },
+                    {
+                      "left": "料理 を した 後 は キッチン を 掃除しなければなりません。 これ は 変わって きて いる よう です 。",
+                      "right": "Concesión",
+                      "register": "neutral",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    },
+                    {
+                      "left": "あなた は ドア に 鍵 を かけなければなりません。 私 の 観点 で は 、妥当 な 選択 です 。",
+                      "right": "Conclusión",
+                      "register": "informal",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "Cada intervención cumple una función comunicativa distinta.",
+                    "ruleRef": "gp-b2-concession"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has identificado la función de cada intervención."
+                  }
+                },
+                {
+                  "type": "SemanticMatch",
+                  "id": "es-ja-b2-u08-l04-e05",
+                  "instructions": "Distingue el registro de cada intervención.",
+                  "pairs": [
+                    {
+                      "left": "夜 の 静けさ を 尊重しなければなりません。 正直 に 言う と 、複雑 な 気持ち です 。",
+                      "right": "Formal",
+                      "register": "formal",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    },
+                    {
+                      "left": "料理 を した 後 は キッチン を 掃除しなければなりません。 これ は 変わって きて いる よう です 。",
+                      "right": "Neutral",
+                      "register": "neutral",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    },
+                    {
+                      "left": "あなた は ドア に 鍵 を かけなければなりません。 私 の 観点 で は 、妥当 な 選択 です 。",
+                      "right": "Informal",
+                      "register": "informal",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "register",
+                    "explanation": "El registro cambia según el contexto y la relación con el interlocutor.",
+                    "ruleRef": "gp-b2-modal-perfect"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has distinguido el registro de cada intervención."
+                  }
+                },
+                {
+                  "type": "AudioOnlyPrompt",
+                  "id": "es-ja-b2-u08-l04-e06",
+                  "audioText": "料理 を した 後 は キッチン を 掃除しなければなりません。 これ は 変わって きて いる よう です 。",
+                  "question": "¿Qué ha dicho el hablante?",
+                  "options": [
+                    "料理 を した 後 は キッチン を 掃除しなければなりません。 これ は 変わって きて いる よう です 。",
+                    "夜 の 静けさ を 尊重しなければなりません。 正直 に 言う と 、複雑 な 気持ち です 。",
+                    "あなた は ドア に 鍵 を かけなければなりません。 私 の 観点 で は 、妥当 な 選択 です 。"
+                  ],
+                  "correctIndex": 0,
+                  "allowSlowPlayback": true,
+                  "feedbackOnError": {
+                    "type": "comprehension",
+                    "explanation": "El audio dice «料理 を した 後 は キッチン を 掃除しなければなりません。 これ は 変わって きて いる よう です 。».",
+                    "ruleRef": "gp-b2-concession"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has comprendido el mensaje del audio."
+                  }
+                },
+                {
+                  "type": "AudioOnlyPrompt",
+                  "id": "es-ja-b2-u08-l04-e07",
+                  "audioText": "あなた は ドア に 鍵 を かけなければなりません。 私 の 観点 で は 、妥当 な 選択 です 。",
+                  "question": "¿Cuál es la idea principal?",
+                  "options": [
+                    "あなた は ドア に 鍵 を かけなければなりません。 私 の 観点 で は 、妥当 な 選択 です 。",
+                    "夜 の 静けさ を 尊重しなければなりません。 正直 に 言う と 、複雑 な 気持ち です 。",
+                    "料理 を した 後 は キッチン を 掃除しなければなりません。 これ は 変わって きて いる よう です 。"
+                  ],
+                  "correctIndex": 0,
+                  "allowSlowPlayback": false,
+                  "feedbackOnError": {
+                    "type": "comprehension",
+                    "explanation": "El audio dice «あなた は ドア に 鍵 を かけなければなりません。 私 の 観点 で は 、妥当 な 選択 です 。».",
+                    "ruleRef": "gp-b2-modal-perfect"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has identificado la idea principal."
+                  }
+                },
+                {
+                  "type": "ListenType",
+                  "id": "es-ja-b2-u08-l04-e08",
+                  "audioText": "あなた は ドア に 鍵 を かけなければなりません。 私 の 観点 で は 、妥当 な 選択 です 。",
+                  "transcription": "あなた は ドア に 鍵 を かけなければなりません。 私 の 観点 で は 、妥当 な 選択 です 。",
+                  "feedbackOnError": {
+                    "type": "spelling",
+                    "explanation": "Escribe exactamente «あなた は ドア に 鍵 を かけなければなりません。 私 の 観点 で は 、妥当 な 選択 です 。».",
+                    "ruleRef": "gp-b2-concession"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La transcripción coincide con el audio."
+                  }
+                },
+                {
+                  "type": "SpeakRepeat",
+                  "id": "es-ja-b2-u08-l04-e09",
+                  "targetPhrase": "あなた は ドア に 鍵 を かけなければなりません。 私 の 観点 で は 、妥当 な 選択 です 。",
+                  "audioText": "あなた は ドア に 鍵 を かけなければなりません。 私 の 観点 で は 、妥当 な 選択 です 。",
+                  "feedbackOnError": {
+                    "type": "pronunciation",
+                    "explanation": "Repite «あなた は ドア に 鍵 を かけなければなりません。 私 の 観点 で は 、妥当 な 選択 です 。» con claridad.",
+                    "ruleRef": "gp-b2-concession"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La frase se entiende y mantiene el ritmo."
+                  }
+                },
+                {
+                  "type": "FreeSpeakingPrompt",
+                  "id": "es-ja-b2-u08-l04-e10",
+                  "prompt": "Argumenta y matiza una opinión sobre las normas de la casa.",
+                  "minTokens": 20,
+                  "conceptClusters": [
+                    [
+                      "静けさ"
+                    ],
+                    [
+                      "尊重しなければなりません。"
+                    ],
+                    [
+                      "正直"
+                    ]
+                  ],
+                  "modelAnswer": "夜 の 静けさ を 尊重しなければなりません。 正直 に 言う と 、複雑 な 気持ち です 。 料理 を した 後 は キッチン を 掃除しなければなりません。 これ は 変わって きて いる よう です 。 あなた は ドア に 鍵 を かけなければなりません。 私 の 観点 で は 、妥当 な 選択 です 。",
+                  "selfAssessmentCriteria": [
+                    "¿La respuesta argumenta y responde a la tarea?",
+                    "¿Usa las dos estructuras gramaticales de la lección?",
+                    "¿Incluye una concesión o una matización?"
+                  ],
+                  "grammarRuleRefs": [
+                    "gp-b2-concession",
+                    "gp-b2-modal-perfect"
+                  ],
+                  "timeLimitSeconds": 90,
+                  "minWpm": 70,
+                  "maxWpm": 160,
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "La respuesta modelo desarrolla una opinión con matices y una concesión.",
+                    "ruleRef": "gp-b2-concession"
+                  }
+                }
+              ]
+            },
+            {
+              "id": "es-ja-b2-u08-l05",
+              "title": "Have to / allowed to",
+              "cefrLevel": "B2",
+              "scenario": "Situación comunicativa avanzada sobre las obligaciones de la casa.",
+              "canDo": "Puedo argumentar y matizar sobre las obligaciones de la casa.",
+              "grammarPoints": [
+                {
+                  "id": "gp-b2-concession",
+                  "label": "Concession",
+                  "description": "Although, despite y however introducen concesiones."
+                },
+                {
+                  "id": "gp-b2-modal-perfect",
+                  "label": "Modal perfect",
+                  "description": "Must have, might have y should have especulan sobre el pasado."
+                }
+              ],
+              "vocabFrequencyBand": "3000-5000",
+              "culturalNotes": [
+                {
+                  "idiom": "話 を する",
+                  "note": "Expresión para conversar.",
+                  "translation": "conversar"
+                }
+              ],
+              "microLesson": {
+                "title": "Have to / allowed to",
+                "goals": [
+                  "Usar vocabulario avanzado de las obligaciones de la casa.",
+                  "Aplicar concession y modal perfect.",
+                  "Argumentar y matizar sobre las obligaciones de la casa."
+                ],
+                "sections": [
+                  {
+                    "heading": "Lengua en contexto",
+                    "body": "Concession: Although, despite y however introducen concesiones. Modal perfect: Must have, might have y should have especulan sobre el pasado.",
+                    "examples": [
+                      {
+                        "source": "Tengo que pagar el alquiler el primer día. Parece que esto está cambiando.",
+                        "target": "初日 に 家賃 を 支払わなければなりません。 これ は 変わって きて いる よう です 。"
+                      },
+                      {
+                        "source": "Tengo que sacar la basura los martes. Desde mi punto de vista, es una opción razonable.",
+                        "target": "私 は 火曜日 に ゴミ を 出さなければなりません。 私 の 観点 で は 、妥当 な 選択 です 。"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "glossary": [
+                {
+                  "term": "初日 に 家賃 を 支払わなければなりません。 これ は 変わって きて いる よう です 。",
+                  "translations": [
+                    "Tengo que pagar el alquiler el primer día. Parece que esto está cambiando."
+                  ]
+                },
+                {
+                  "term": "私 は 火曜日 に ゴミ を 出さなければなりません。 私 の 観点 で は 、妥当 な 選択 です 。",
+                  "translations": [
+                    "Tengo que sacar la basura los martes. Desde mi punto de vista, es una opción razonable."
+                  ]
+                },
+                {
+                  "term": "費用 を 分担しなければなりません。 それでも 、利点 も あります 。",
+                  "translations": [
+                    "Tengo que compartir los gastos. No obstante, también tiene ventajas."
+                  ]
+                }
+              ],
+              "exercises": [
+                {
+                  "type": "MultipleChoice",
+                  "id": "es-ja-b2-u08-l05-e01",
+                  "question": "¿Cuál es la opción correcta para «Tengo que pagar el alquiler el primer día. Parece que esto está cambiando.»?",
+                  "options": [
+                    "初日 に 家賃 を 支払わなければなりません。 これ は 変わって きて いる よう です 。",
+                    "私 は 火曜日 に ゴミ を 出さなければなりません。 私 の 観点 で は 、妥当 な 選択 です 。",
+                    "費用 を 分担しなければなりません。 それでも 、利点 も あります 。"
+                  ],
+                  "correctIndex": 0,
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "«Tengo que pagar el alquiler el primer día. Parece que esto está cambiando.» se dice «初日 に 家賃 を 支払わなければなりません。 これ は 変わって きて いる よう です 。».",
+                    "ruleRef": "gp-b2-concession"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has elegido la traducción correcta."
+                  }
+                },
+                {
+                  "type": "OrderWords",
+                  "id": "es-ja-b2-u08-l05-e02",
+                  "tokens": [
+                    "に",
+                    "家賃",
+                    "を",
+                    "支払わなければなりません。",
+                    "これ",
+                    "は",
+                    "変わって",
+                    "きて",
+                    "いる",
+                    "よう",
+                    "です",
+                    "。",
+                    "初日"
+                  ],
+                  "answerTokens": [
+                    "初日",
+                    "に",
+                    "家賃",
+                    "を",
+                    "支払わなければなりません。",
+                    "これ",
+                    "は",
+                    "変わって",
+                    "きて",
+                    "いる",
+                    "よう",
+                    "です",
+                    "。"
+                  ],
+                  "sourcePhrase": "Tengo que pagar el alquiler el primer día. Parece que esto está cambiando.",
+                  "feedbackOnError": {
+                    "type": "word_order",
+                    "explanation": "El orden correcto es «初日 に 家賃 を 支払わなければなりません。 これ は 変わって きて いる よう です 。».",
+                    "ruleRef": "gp-b2-concession"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "El orden produce una frase natural."
+                  }
+                },
+                {
+                  "type": "ClozeDragDrop",
+                  "id": "es-ja-b2-u08-l05-e03",
+                  "passage": "{{b1}} に {{b2}} を 支払わなければなりません",
+                  "blanks": [
+                    {
+                      "id": "b1",
+                      "answer": "初日",
+                      "options": [
+                        "初日",
+                        "支払わなければなりません",
+                        "とても"
+                      ]
+                    },
+                    {
+                      "id": "b2",
+                      "answer": "家賃",
+                      "options": [
+                        "家賃",
+                        "支払わなければなりません",
+                        "とても"
+                      ]
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "Las dos formas deben encajar con el contexto de la frase.",
+                    "ruleRef": "gp-b2-modal-perfect"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Los dos huecos encajan con la situación."
+                  }
+                },
+                {
+                  "type": "SemanticMatch",
+                  "id": "es-ja-b2-u08-l05-e04",
+                  "instructions": "Clasifica la función comunicativa de cada intervención.",
+                  "pairs": [
+                    {
+                      "left": "初日 に 家賃 を 支払わなければなりません。 これ は 変わって きて いる よう です 。",
+                      "right": "Planteamiento",
+                      "register": "formal",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    },
+                    {
+                      "left": "私 は 火曜日 に ゴミ を 出さなければなりません。 私 の 観点 で は 、妥当 な 選択 です 。",
+                      "right": "Concesión",
+                      "register": "neutral",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    },
+                    {
+                      "left": "費用 を 分担しなければなりません。 それでも 、利点 も あります 。",
+                      "right": "Conclusión",
+                      "register": "informal",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "Cada intervención cumple una función comunicativa distinta.",
+                    "ruleRef": "gp-b2-concession"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has identificado la función de cada intervención."
+                  }
+                },
+                {
+                  "type": "SemanticMatch",
+                  "id": "es-ja-b2-u08-l05-e05",
+                  "instructions": "Distingue el registro de cada intervención.",
+                  "pairs": [
+                    {
+                      "left": "初日 に 家賃 を 支払わなければなりません。 これ は 変わって きて いる よう です 。",
+                      "right": "Formal",
+                      "register": "formal",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    },
+                    {
+                      "left": "私 は 火曜日 に ゴミ を 出さなければなりません。 私 の 観点 で は 、妥当 な 選択 です 。",
+                      "right": "Neutral",
+                      "register": "neutral",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    },
+                    {
+                      "left": "費用 を 分担しなければなりません。 それでも 、利点 も あります 。",
+                      "right": "Informal",
+                      "register": "informal",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "register",
+                    "explanation": "El registro cambia según el contexto y la relación con el interlocutor.",
+                    "ruleRef": "gp-b2-modal-perfect"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has distinguido el registro de cada intervención."
+                  }
+                },
+                {
+                  "type": "AudioOnlyPrompt",
+                  "id": "es-ja-b2-u08-l05-e06",
+                  "audioText": "私 は 火曜日 に ゴミ を 出さなければなりません。 私 の 観点 で は 、妥当 な 選択 です 。",
+                  "question": "¿Qué ha dicho el hablante?",
+                  "options": [
+                    "私 は 火曜日 に ゴミ を 出さなければなりません。 私 の 観点 で は 、妥当 な 選択 です 。",
+                    "初日 に 家賃 を 支払わなければなりません。 これ は 変わって きて いる よう です 。",
+                    "費用 を 分担しなければなりません。 それでも 、利点 も あります 。"
+                  ],
+                  "correctIndex": 0,
+                  "allowSlowPlayback": true,
+                  "feedbackOnError": {
+                    "type": "comprehension",
+                    "explanation": "El audio dice «私 は 火曜日 に ゴミ を 出さなければなりません。 私 の 観点 で は 、妥当 な 選択 です 。».",
+                    "ruleRef": "gp-b2-concession"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has comprendido el mensaje del audio."
+                  }
+                },
+                {
+                  "type": "AudioOnlyPrompt",
+                  "id": "es-ja-b2-u08-l05-e07",
+                  "audioText": "費用 を 分担しなければなりません。 それでも 、利点 も あります 。",
+                  "question": "¿Cuál es la idea principal?",
+                  "options": [
+                    "費用 を 分担しなければなりません。 それでも 、利点 も あります 。",
+                    "初日 に 家賃 を 支払わなければなりません。 これ は 変わって きて いる よう です 。",
+                    "私 は 火曜日 に ゴミ を 出さなければなりません。 私 の 観点 で は 、妥当 な 選択 です 。"
+                  ],
+                  "correctIndex": 0,
+                  "allowSlowPlayback": false,
+                  "feedbackOnError": {
+                    "type": "comprehension",
+                    "explanation": "El audio dice «費用 を 分担しなければなりません。 それでも 、利点 も あります 。».",
+                    "ruleRef": "gp-b2-modal-perfect"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has identificado la idea principal."
+                  }
+                },
+                {
+                  "type": "ListenType",
+                  "id": "es-ja-b2-u08-l05-e08",
+                  "audioText": "費用 を 分担しなければなりません。 それでも 、利点 も あります 。",
+                  "transcription": "費用 を 分担しなければなりません。 それでも 、利点 も あります 。",
+                  "feedbackOnError": {
+                    "type": "spelling",
+                    "explanation": "Escribe exactamente «費用 を 分担しなければなりません。 それでも 、利点 も あります 。».",
+                    "ruleRef": "gp-b2-concession"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La transcripción coincide con el audio."
+                  }
+                },
+                {
+                  "type": "SpeakRepeat",
+                  "id": "es-ja-b2-u08-l05-e09",
+                  "targetPhrase": "費用 を 分担しなければなりません。 それでも 、利点 も あります 。",
+                  "audioText": "費用 を 分担しなければなりません。 それでも 、利点 も あります 。",
+                  "feedbackOnError": {
+                    "type": "pronunciation",
+                    "explanation": "Repite «費用 を 分担しなければなりません。 それでも 、利点 も あります 。» con claridad.",
+                    "ruleRef": "gp-b2-concession"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La frase se entiende y mantiene el ritmo."
+                  }
+                },
+                {
+                  "type": "FreeSpeakingPrompt",
+                  "id": "es-ja-b2-u08-l05-e10",
+                  "prompt": "Argumenta y matiza una opinión sobre las obligaciones de la casa.",
+                  "minTokens": 20,
+                  "conceptClusters": [
+                    [
+                      "初日"
+                    ],
+                    [
+                      "家賃"
+                    ],
+                    [
+                      "支払わなければなりません。"
+                    ]
+                  ],
+                  "modelAnswer": "初日 に 家賃 を 支払わなければなりません。 これ は 変わって きて いる よう です 。 私 は 火曜日 に ゴミ を 出さなければなりません。 私 の 観点 で は 、妥当 な 選択 です 。 費用 を 分担しなければなりません。 それでも 、利点 も あります 。",
+                  "selfAssessmentCriteria": [
+                    "¿La respuesta argumenta y responde a la tarea?",
+                    "¿Usa las dos estructuras gramaticales de la lección?",
+                    "¿Incluye una concesión o una matización?"
+                  ],
+                  "grammarRuleRefs": [
+                    "gp-b2-concession",
+                    "gp-b2-modal-perfect"
+                  ],
+                  "timeLimitSeconds": 90,
+                  "minWpm": 70,
+                  "maxWpm": 160,
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "La respuesta modelo desarrolla una opinión con matices y una concesión.",
+                    "ruleRef": "gp-b2-concession"
+                  }
+                }
+              ]
+            },
+            {
+              "id": "es-ja-b2-u08-l06",
+              "title": "Normas de convivencia",
+              "cefrLevel": "B2",
+              "scenario": "Situación comunicativa avanzada sobre la convivencia.",
+              "canDo": "Puedo argumentar y matizar sobre la convivencia.",
+              "grammarPoints": [
+                {
+                  "id": "gp-b2-concession",
+                  "label": "Concession",
+                  "description": "Although, despite y however introducen concesiones."
+                },
+                {
+                  "id": "gp-b2-modal-perfect",
+                  "label": "Modal perfect",
+                  "description": "Must have, might have y should have especulan sobre el pasado."
+                }
+              ],
+              "vocabFrequencyBand": "3000-5000",
+              "culturalNotes": [
+                {
+                  "idiom": "理解 する",
+                  "note": "Expresión para comprender algo.",
+                  "translation": "comprender"
+                }
+              ],
+              "microLesson": {
+                "title": "Normas de convivencia",
+                "goals": [
+                  "Usar vocabulario avanzado de la convivencia.",
+                  "Aplicar concession y modal perfect.",
+                  "Argumentar y matizar sobre la convivencia."
+                ],
+                "sections": [
+                  {
+                    "heading": "Lengua en contexto",
+                    "body": "Concession: Although, despite y however introducen concesiones. Modal perfect: Must have, might have y should have especulan sobre el pasado.",
+                    "examples": [
+                      {
+                        "source": "En casa tenemos que respetar el descanso. Desde mi punto de vista, es una opción razonable.",
+                        "target": "家 で は 休息 を 尊重しなければなりません。 私 の 観点 で は 、妥当 な 選択 です 。"
+                      },
+                      {
+                        "source": "No se puede fumar dentro. No obstante, también tiene ventajas.",
+                        "target": "屋内 で は 喫煙できません。 それでも 、利点 も あります 。"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "glossary": [
+                {
+                  "term": "家 で は 休息 を 尊重しなければなりません。 私 の 観点 で は 、妥当 な 選択 です 。",
+                  "translations": [
+                    "En casa tenemos que respetar el descanso. Desde mi punto de vista, es una opción razonable."
+                  ]
+                },
+                {
+                  "term": "屋内 で は 喫煙できません。 それでも 、利点 も あります 。",
+                  "translations": [
+                    "No se puede fumar dentro. No obstante, también tiene ventajas."
+                  ]
+                },
+                {
+                  "term": "誰 も が 自分 の 部屋 を 掃除します。 結局 、優先 する 必要 が あります 。",
+                  "translations": [
+                    "Cada uno limpia su habitación. A fin de cuentas, hay que priorizar."
+                  ]
+                }
+              ],
+              "exercises": [
+                {
+                  "type": "MultipleChoice",
+                  "id": "es-ja-b2-u08-l06-e01",
+                  "question": "¿Cuál es la opción correcta para «En casa tenemos que respetar el descanso. Desde mi punto de vista, es una opción razonable.»?",
+                  "options": [
+                    "家 で は 休息 を 尊重しなければなりません。 私 の 観点 で は 、妥当 な 選択 です 。",
+                    "屋内 で は 喫煙できません。 それでも 、利点 も あります 。",
+                    "誰 も が 自分 の 部屋 を 掃除します。 結局 、優先 する 必要 が あります 。"
+                  ],
+                  "correctIndex": 0,
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "«En casa tenemos que respetar el descanso. Desde mi punto de vista, es una opción razonable.» se dice «家 で は 休息 を 尊重しなければなりません。 私 の 観点 で は 、妥当 な 選択 です 。».",
+                    "ruleRef": "gp-b2-concession"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has elegido la traducción correcta."
+                  }
+                },
+                {
+                  "type": "OrderWords",
+                  "id": "es-ja-b2-u08-l06-e02",
+                  "tokens": [
+                    "で",
+                    "は",
+                    "休息",
+                    "を",
+                    "尊重しなければなりません。",
+                    "私",
+                    "の",
+                    "観点",
+                    "で",
+                    "は",
+                    "、妥当",
+                    "な",
+                    "選択",
+                    "です",
+                    "。",
+                    "家"
+                  ],
+                  "answerTokens": [
+                    "家",
+                    "で",
+                    "は",
+                    "休息",
+                    "を",
+                    "尊重しなければなりません。",
+                    "私",
+                    "の",
+                    "観点",
+                    "で",
+                    "は",
+                    "、妥当",
+                    "な",
+                    "選択",
+                    "です",
+                    "。"
+                  ],
+                  "sourcePhrase": "En casa tenemos que respetar el descanso. Desde mi punto de vista, es una opción razonable.",
+                  "feedbackOnError": {
+                    "type": "word_order",
+                    "explanation": "El orden correcto es «家 で は 休息 を 尊重しなければなりません。 私 の 観点 で は 、妥当 な 選択 です 。».",
+                    "ruleRef": "gp-b2-concession"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "El orden produce una frase natural."
+                  }
+                },
+                {
+                  "type": "ClozeDragDrop",
+                  "id": "es-ja-b2-u08-l06-e03",
+                  "passage": "家 で は {{b1}} を {{b2}}",
+                  "blanks": [
+                    {
+                      "id": "b1",
+                      "answer": "休息",
+                      "options": [
+                        "休息",
+                        "とても",
+                        "今日"
+                      ]
+                    },
+                    {
+                      "id": "b2",
+                      "answer": "尊重しなければなりません",
+                      "options": [
+                        "尊重しなければなりません",
+                        "とても",
+                        "今日"
+                      ]
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "Las dos formas deben encajar con el contexto de la frase.",
+                    "ruleRef": "gp-b2-modal-perfect"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Los dos huecos encajan con la situación."
+                  }
+                },
+                {
+                  "type": "SemanticMatch",
+                  "id": "es-ja-b2-u08-l06-e04",
+                  "instructions": "Clasifica la función comunicativa de cada intervención.",
+                  "pairs": [
+                    {
+                      "left": "家 で は 休息 を 尊重しなければなりません。 私 の 観点 で は 、妥当 な 選択 です 。",
+                      "right": "Planteamiento",
+                      "register": "formal",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    },
+                    {
+                      "left": "屋内 で は 喫煙できません。 それでも 、利点 も あります 。",
+                      "right": "Concesión",
+                      "register": "neutral",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    },
+                    {
+                      "left": "誰 も が 自分 の 部屋 を 掃除します。 結局 、優先 する 必要 が あります 。",
+                      "right": "Conclusión",
+                      "register": "informal",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "Cada intervención cumple una función comunicativa distinta.",
+                    "ruleRef": "gp-b2-concession"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has identificado la función de cada intervención."
+                  }
+                },
+                {
+                  "type": "SemanticMatch",
+                  "id": "es-ja-b2-u08-l06-e05",
+                  "instructions": "Distingue el registro de cada intervención.",
+                  "pairs": [
+                    {
+                      "left": "家 で は 休息 を 尊重しなければなりません。 私 の 観点 で は 、妥当 な 選択 です 。",
+                      "right": "Formal",
+                      "register": "formal",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    },
+                    {
+                      "left": "屋内 で は 喫煙できません。 それでも 、利点 も あります 。",
+                      "right": "Neutral",
+                      "register": "neutral",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    },
+                    {
+                      "left": "誰 も が 自分 の 部屋 を 掃除します。 結局 、優先 する 必要 が あります 。",
+                      "right": "Informal",
+                      "register": "informal",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "register",
+                    "explanation": "El registro cambia según el contexto y la relación con el interlocutor.",
+                    "ruleRef": "gp-b2-modal-perfect"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has distinguido el registro de cada intervención."
+                  }
+                },
+                {
+                  "type": "AudioOnlyPrompt",
+                  "id": "es-ja-b2-u08-l06-e06",
+                  "audioText": "屋内 で は 喫煙できません。 それでも 、利点 も あります 。",
+                  "question": "¿Qué ha dicho el hablante?",
+                  "options": [
+                    "屋内 で は 喫煙できません。 それでも 、利点 も あります 。",
+                    "家 で は 休息 を 尊重しなければなりません。 私 の 観点 で は 、妥当 な 選択 です 。",
+                    "誰 も が 自分 の 部屋 を 掃除します。 結局 、優先 する 必要 が あります 。"
+                  ],
+                  "correctIndex": 0,
+                  "allowSlowPlayback": true,
+                  "feedbackOnError": {
+                    "type": "comprehension",
+                    "explanation": "El audio dice «屋内 で は 喫煙できません。 それでも 、利点 も あります 。».",
+                    "ruleRef": "gp-b2-concession"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has comprendido el mensaje del audio."
+                  }
+                },
+                {
+                  "type": "AudioOnlyPrompt",
+                  "id": "es-ja-b2-u08-l06-e07",
+                  "audioText": "誰 も が 自分 の 部屋 を 掃除します。 結局 、優先 する 必要 が あります 。",
+                  "question": "¿Cuál es la idea principal?",
+                  "options": [
+                    "誰 も が 自分 の 部屋 を 掃除します。 結局 、優先 する 必要 が あります 。",
+                    "家 で は 休息 を 尊重しなければなりません。 私 の 観点 で は 、妥当 な 選択 です 。",
+                    "屋内 で は 喫煙できません。 それでも 、利点 も あります 。"
+                  ],
+                  "correctIndex": 0,
+                  "allowSlowPlayback": false,
+                  "feedbackOnError": {
+                    "type": "comprehension",
+                    "explanation": "El audio dice «誰 も が 自分 の 部屋 を 掃除します。 結局 、優先 する 必要 が あります 。».",
+                    "ruleRef": "gp-b2-modal-perfect"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has identificado la idea principal."
+                  }
+                },
+                {
+                  "type": "ListenType",
+                  "id": "es-ja-b2-u08-l06-e08",
+                  "audioText": "誰 も が 自分 の 部屋 を 掃除します。 結局 、優先 する 必要 が あります 。",
+                  "transcription": "誰 も が 自分 の 部屋 を 掃除します。 結局 、優先 する 必要 が あります 。",
+                  "feedbackOnError": {
+                    "type": "spelling",
+                    "explanation": "Escribe exactamente «誰 も が 自分 の 部屋 を 掃除します。 結局 、優先 する 必要 が あります 。».",
+                    "ruleRef": "gp-b2-concession"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La transcripción coincide con el audio."
+                  }
+                },
+                {
+                  "type": "SpeakRepeat",
+                  "id": "es-ja-b2-u08-l06-e09",
+                  "targetPhrase": "誰 も が 自分 の 部屋 を 掃除します。 結局 、優先 する 必要 が あります 。",
+                  "audioText": "誰 も が 自分 の 部屋 を 掃除します。 結局 、優先 する 必要 が あります 。",
+                  "feedbackOnError": {
+                    "type": "pronunciation",
+                    "explanation": "Repite «誰 も が 自分 の 部屋 を 掃除します。 結局 、優先 する 必要 が あります 。» con claridad.",
+                    "ruleRef": "gp-b2-concession"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La frase se entiende y mantiene el ritmo."
+                  }
+                },
+                {
+                  "type": "FreeSpeakingPrompt",
+                  "id": "es-ja-b2-u08-l06-e10",
+                  "prompt": "Argumenta y matiza una opinión sobre la convivencia.",
+                  "minTokens": 20,
+                  "conceptClusters": [
+                    [
+                      "休息"
+                    ],
+                    [
+                      "尊重しなければなりません。"
+                    ],
+                    [
+                      "観点"
+                    ]
+                  ],
+                  "modelAnswer": "家 で は 休息 を 尊重しなければなりません。 私 の 観点 で は 、妥当 な 選択 です 。 屋内 で は 喫煙できません。 それでも 、利点 も あります 。 誰 も が 自分 の 部屋 を 掃除します。 結局 、優先 する 必要 が あります 。",
+                  "selfAssessmentCriteria": [
+                    "¿La respuesta argumenta y responde a la tarea?",
+                    "¿Usa las dos estructuras gramaticales de la lección?",
+                    "¿Incluye una concesión o una matización?"
+                  ],
+                  "grammarRuleRefs": [
+                    "gp-b2-concession",
+                    "gp-b2-modal-perfect"
+                  ],
+                  "timeLimitSeconds": 90,
+                  "minWpm": 70,
+                  "maxWpm": 160,
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "La respuesta modelo desarrolla una opinión con matices y una concesión.",
+                    "ruleRef": "gp-b2-concession"
+                  }
+                }
+              ]
+            },
+            {
+              "id": "es-ja-b2-u08-l07",
+              "title": "Anuncio de piso",
+              "cefrLevel": "B2",
+              "scenario": "Situación comunicativa avanzada sobre un anuncio de alquiler.",
+              "canDo": "Puedo argumentar y matizar sobre un anuncio de alquiler.",
+              "grammarPoints": [
+                {
+                  "id": "gp-b2-concession",
+                  "label": "Concession",
+                  "description": "Although, despite y however introducen concesiones."
+                },
+                {
+                  "id": "gp-b2-modal-perfect",
+                  "label": "Modal perfect",
+                  "description": "Must have, might have y should have especulan sobre el pasado."
+                }
+              ],
+              "vocabFrequencyBand": "3000-5000",
+              "culturalNotes": [
+                {
+                  "idiom": "目 を 光らせる",
+                  "note": "Expresión para vigilar algo.",
+                  "translation": "estar atento"
+                }
+              ],
+              "microLesson": {
+                "title": "Anuncio de piso",
+                "goals": [
+                  "Usar vocabulario avanzado de un anuncio de alquiler.",
+                  "Aplicar concession y modal perfect.",
+                  "Argumentar y matizar sobre un anuncio de alquiler."
+                ],
+                "sections": [
+                  {
+                    "heading": "Lengua en contexto",
+                    "body": "Concession: Although, despite y however introducen concesiones. Modal perfect: Must have, might have y should have especulan sobre el pasado.",
+                    "examples": [
+                      {
+                        "source": "Se alquila piso de dos habitaciones. No obstante, también tiene ventajas.",
+                        "target": "2ベッドルーム の 賃貸アパート。 それでも 、利点 も あります 。"
+                      },
+                      {
+                        "source": "Está amueblado y tiene ascensor. A fin de cuentas, hay que priorizar.",
+                        "target": "家具付きエレベーター あり。 結局 、優先 する 必要 が あります 。"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "glossary": [
+                {
+                  "term": "2ベッドルーム の 賃貸アパート。 それでも 、利点 も あります 。",
+                  "translations": [
+                    "Se alquila piso de dos habitaciones. No obstante, también tiene ventajas."
+                  ]
+                },
+                {
+                  "term": "家具付きエレベーター あり。 結局 、優先 する 必要 が あります 。",
+                  "translations": [
+                    "Está amueblado y tiene ascensor. A fin de cuentas, hay que priorizar."
+                  ]
+                },
+                {
+                  "term": "家賃 は 月額800ユーロです。 要するに 、複雑 な 問題 です 。",
+                  "translations": [
+                    "El alquiler es de ochocientos euros al mes. En resumen, es un tema complejo."
+                  ]
+                }
+              ],
+              "exercises": [
+                {
+                  "type": "MultipleChoice",
+                  "id": "es-ja-b2-u08-l07-e01",
+                  "question": "¿Cuál es la opción correcta para «Se alquila piso de dos habitaciones. No obstante, también tiene ventajas.»?",
+                  "options": [
+                    "2ベッドルーム の 賃貸アパート。 それでも 、利点 も あります 。",
+                    "家具付きエレベーター あり。 結局 、優先 する 必要 が あります 。",
+                    "家賃 は 月額800ユーロです。 要するに 、複雑 な 問題 です 。"
+                  ],
+                  "correctIndex": 0,
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "«Se alquila piso de dos habitaciones. No obstante, también tiene ventajas.» se dice «2ベッドルーム の 賃貸アパート。 それでも 、利点 も あります 。».",
+                    "ruleRef": "gp-b2-concession"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has elegido la traducción correcta."
+                  }
+                },
+                {
+                  "type": "OrderWords",
+                  "id": "es-ja-b2-u08-l07-e02",
+                  "tokens": [
+                    "の",
+                    "賃貸アパート。",
+                    "それでも",
+                    "、利点",
+                    "も",
+                    "あります",
+                    "。",
+                    "2ベッドルーム"
+                  ],
+                  "answerTokens": [
+                    "2ベッドルーム",
+                    "の",
+                    "賃貸アパート。",
+                    "それでも",
+                    "、利点",
+                    "も",
+                    "あります",
+                    "。"
+                  ],
+                  "sourcePhrase": "Se alquila piso de dos habitaciones. No obstante, también tiene ventajas.",
+                  "feedbackOnError": {
+                    "type": "word_order",
+                    "explanation": "El orden correcto es «2ベッドルーム の 賃貸アパート。 それでも 、利点 も あります 。».",
+                    "ruleRef": "gp-b2-concession"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "El orden produce una frase natural."
+                  }
+                },
+                {
+                  "type": "ClozeDragDrop",
+                  "id": "es-ja-b2-u08-l07-e03",
+                  "passage": "{{b1}} の {{b2}}",
+                  "blanks": [
+                    {
+                      "id": "b1",
+                      "answer": "2ベッドルーム",
+                      "options": [
+                        "2ベッドルーム",
+                        "とても",
+                        "今日"
+                      ]
+                    },
+                    {
+                      "id": "b2",
+                      "answer": "賃貸アパート",
+                      "options": [
+                        "賃貸アパート",
+                        "とても",
+                        "今日"
+                      ]
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "Las dos formas deben encajar con el contexto de la frase.",
+                    "ruleRef": "gp-b2-modal-perfect"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Los dos huecos encajan con la situación."
+                  }
+                },
+                {
+                  "type": "SemanticMatch",
+                  "id": "es-ja-b2-u08-l07-e04",
+                  "instructions": "Clasifica la función comunicativa de cada intervención.",
+                  "pairs": [
+                    {
+                      "left": "2ベッドルーム の 賃貸アパート。 それでも 、利点 も あります 。",
+                      "right": "Planteamiento",
+                      "register": "formal",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    },
+                    {
+                      "left": "家具付きエレベーター あり。 結局 、優先 する 必要 が あります 。",
+                      "right": "Concesión",
+                      "register": "neutral",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    },
+                    {
+                      "left": "家賃 は 月額800ユーロです。 要するに 、複雑 な 問題 です 。",
+                      "right": "Conclusión",
+                      "register": "informal",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "Cada intervención cumple una función comunicativa distinta.",
+                    "ruleRef": "gp-b2-concession"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has identificado la función de cada intervención."
+                  }
+                },
+                {
+                  "type": "SemanticMatch",
+                  "id": "es-ja-b2-u08-l07-e05",
+                  "instructions": "Distingue el registro de cada intervención.",
+                  "pairs": [
+                    {
+                      "left": "2ベッドルーム の 賃貸アパート。 それでも 、利点 も あります 。",
+                      "right": "Formal",
+                      "register": "formal",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    },
+                    {
+                      "left": "家具付きエレベーター あり。 結局 、優先 する 必要 が あります 。",
+                      "right": "Neutral",
+                      "register": "neutral",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    },
+                    {
+                      "left": "家賃 は 月額800ユーロです。 要するに 、複雑 な 問題 です 。",
+                      "right": "Informal",
+                      "register": "informal",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "register",
+                    "explanation": "El registro cambia según el contexto y la relación con el interlocutor.",
+                    "ruleRef": "gp-b2-modal-perfect"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has distinguido el registro de cada intervención."
+                  }
+                },
+                {
+                  "type": "AudioOnlyPrompt",
+                  "id": "es-ja-b2-u08-l07-e06",
+                  "audioText": "家具付きエレベーター あり。 結局 、優先 する 必要 が あります 。",
+                  "question": "¿Qué ha dicho el hablante?",
+                  "options": [
+                    "家具付きエレベーター あり。 結局 、優先 する 必要 が あります 。",
+                    "2ベッドルーム の 賃貸アパート。 それでも 、利点 も あります 。",
+                    "家賃 は 月額800ユーロです。 要するに 、複雑 な 問題 です 。"
+                  ],
+                  "correctIndex": 0,
+                  "allowSlowPlayback": true,
+                  "feedbackOnError": {
+                    "type": "comprehension",
+                    "explanation": "El audio dice «家具付きエレベーター あり。 結局 、優先 する 必要 が あります 。».",
+                    "ruleRef": "gp-b2-concession"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has comprendido el mensaje del audio."
+                  }
+                },
+                {
+                  "type": "AudioOnlyPrompt",
+                  "id": "es-ja-b2-u08-l07-e07",
+                  "audioText": "家賃 は 月額800ユーロです。 要するに 、複雑 な 問題 です 。",
+                  "question": "¿Cuál es la idea principal?",
+                  "options": [
+                    "家賃 は 月額800ユーロです。 要するに 、複雑 な 問題 です 。",
+                    "2ベッドルーム の 賃貸アパート。 それでも 、利点 も あります 。",
+                    "家具付きエレベーター あり。 結局 、優先 する 必要 が あります 。"
+                  ],
+                  "correctIndex": 0,
+                  "allowSlowPlayback": false,
+                  "feedbackOnError": {
+                    "type": "comprehension",
+                    "explanation": "El audio dice «家賃 は 月額800ユーロです。 要するに 、複雑 な 問題 です 。».",
+                    "ruleRef": "gp-b2-modal-perfect"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has identificado la idea principal."
+                  }
+                },
+                {
+                  "type": "ListenType",
+                  "id": "es-ja-b2-u08-l07-e08",
+                  "audioText": "家賃 は 月額800ユーロです。 要するに 、複雑 な 問題 です 。",
+                  "transcription": "家賃 は 月額800ユーロです。 要するに 、複雑 な 問題 です 。",
+                  "feedbackOnError": {
+                    "type": "spelling",
+                    "explanation": "Escribe exactamente «家賃 は 月額800ユーロです。 要するに 、複雑 な 問題 です 。».",
+                    "ruleRef": "gp-b2-concession"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La transcripción coincide con el audio."
+                  }
+                },
+                {
+                  "type": "SpeakRepeat",
+                  "id": "es-ja-b2-u08-l07-e09",
+                  "targetPhrase": "家賃 は 月額800ユーロです。 要するに 、複雑 な 問題 です 。",
+                  "audioText": "家賃 は 月額800ユーロです。 要するに 、複雑 な 問題 です 。",
+                  "feedbackOnError": {
+                    "type": "pronunciation",
+                    "explanation": "Repite «家賃 は 月額800ユーロです。 要するに 、複雑 な 問題 です 。» con claridad.",
+                    "ruleRef": "gp-b2-concession"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La frase se entiende y mantiene el ritmo."
+                  }
+                },
+                {
+                  "type": "FreeSpeakingPrompt",
+                  "id": "es-ja-b2-u08-l07-e10",
+                  "prompt": "Argumenta y matiza una opinión sobre un anuncio de alquiler.",
+                  "minTokens": 20,
+                  "conceptClusters": [
+                    [
+                      "2ベッドルーム"
+                    ],
+                    [
+                      "賃貸アパート。"
+                    ],
+                    [
+                      "それでも"
+                    ]
+                  ],
+                  "modelAnswer": "2ベッドルーム の 賃貸アパート。 それでも 、利点 も あります 。 家具付きエレベーター あり。 結局 、優先 する 必要 が あります 。 家賃 は 月額800ユーロです。 要するに 、複雑 な 問題 です 。",
+                  "selfAssessmentCriteria": [
+                    "¿La respuesta argumenta y responde a la tarea?",
+                    "¿Usa las dos estructuras gramaticales de la lección?",
+                    "¿Incluye una concesión o una matización?"
+                  ],
+                  "grammarRuleRefs": [
+                    "gp-b2-concession",
+                    "gp-b2-modal-perfect"
+                  ],
+                  "timeLimitSeconds": 90,
+                  "minWpm": 70,
+                  "maxWpm": 160,
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "La respuesta modelo desarrolla una opinión con matices y una concesión.",
+                    "ruleRef": "gp-b2-concession"
+                  }
+                }
+              ]
+            },
+            {
+              "id": "es-ja-b2-u08-l08",
+              "title": "Negociar tareas",
+              "cefrLevel": "B2",
+              "scenario": "Situación comunicativa avanzada sobre repartir las tareas.",
+              "canDo": "Puedo argumentar y matizar sobre repartir las tareas.",
+              "grammarPoints": [
+                {
+                  "id": "gp-b2-concession",
+                  "label": "Concession",
+                  "description": "Although, despite y however introducen concesiones."
+                },
+                {
+                  "id": "gp-b2-modal-perfect",
+                  "label": "Modal perfect",
+                  "description": "Must have, might have y should have especulan sobre el pasado."
+                }
+              ],
+              "vocabFrequencyBand": "3000-5000",
+              "culturalNotes": [
+                {
+                  "idiom": "目 が 飛び出る ほど 高い",
+                  "note": "Expresión para decir que algo es muy caro.",
+                  "translation": "carísimo"
+                }
+              ],
+              "microLesson": {
+                "title": "Negociar tareas",
+                "goals": [
+                  "Usar vocabulario avanzado de repartir las tareas.",
+                  "Aplicar concession y modal perfect.",
+                  "Argumentar y matizar sobre repartir las tareas."
+                ],
+                "sections": [
+                  {
+                    "heading": "Lengua en contexto",
+                    "body": "Concession: Although, despite y however introducen concesiones. Modal perfect: Must have, might have y should have especulan sobre el pasado.",
+                    "examples": [
+                      {
+                        "source": "¿Podrías encargarte de la compra esta semana? A fin de cuentas, hay que priorizar.",
+                        "target": "今週 の 買い物 を 手伝ってもらえます か。 結局 、優先 する 必要 が あります 。"
+                      },
+                      {
+                        "source": "Yo puedo limpiar el baño. En resumen, es un tema complejo.",
+                        "target": "お風呂掃除 も できる よ。 要するに 、複雑 な 問題 です 。"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "glossary": [
+                {
+                  "term": "今週 の 買い物 を 手伝ってもらえます か。 結局 、優先 する 必要 が あります 。",
+                  "translations": [
+                    "¿Podrías encargarte de la compra esta semana? A fin de cuentas, hay que priorizar."
+                  ]
+                },
+                {
+                  "term": "お風呂掃除 も できる よ。 要するに 、複雑 な 問題 です 。",
+                  "translations": [
+                    "Yo puedo limpiar el baño. En resumen, es un tema complejo."
+                  ]
+                },
+                {
+                  "term": "タスク を 変更して も 大丈夫です か。 しかし 、それを 明確 に する 必要 が あります 。",
+                  "translations": [
+                    "¿Te parece bien si cambiamos las tareas? Sin embargo, conviene matizarlo."
+                  ]
+                }
+              ],
+              "exercises": [
+                {
+                  "type": "MultipleChoice",
+                  "id": "es-ja-b2-u08-l08-e01",
+                  "question": "¿Cuál es la opción correcta para «¿Podrías encargarte de la compra esta semana? A fin de cuentas, hay que priorizar.»?",
+                  "options": [
+                    "今週 の 買い物 を 手伝ってもらえます か。 結局 、優先 する 必要 が あります 。",
+                    "お風呂掃除 も できる よ。 要するに 、複雑 な 問題 です 。",
+                    "タスク を 変更して も 大丈夫です か。 しかし 、それを 明確 に する 必要 が あります 。"
+                  ],
+                  "correctIndex": 0,
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "«¿Podrías encargarte de la compra esta semana? A fin de cuentas, hay que priorizar.» se dice «今週 の 買い物 を 手伝ってもらえます か。 結局 、優先 する 必要 が あります 。».",
+                    "ruleRef": "gp-b2-concession"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has elegido la traducción correcta."
+                  }
+                },
+                {
+                  "type": "OrderWords",
+                  "id": "es-ja-b2-u08-l08-e02",
+                  "tokens": [
+                    "の",
+                    "買い物",
+                    "を",
+                    "手伝ってもらえます",
+                    "か。",
+                    "結局",
+                    "、優先",
+                    "する",
+                    "必要",
+                    "が",
+                    "あります",
+                    "。",
+                    "今週"
+                  ],
+                  "answerTokens": [
+                    "今週",
+                    "の",
+                    "買い物",
+                    "を",
+                    "手伝ってもらえます",
+                    "か。",
+                    "結局",
+                    "、優先",
+                    "する",
+                    "必要",
+                    "が",
+                    "あります",
+                    "。"
+                  ],
+                  "sourcePhrase": "¿Podrías encargarte de la compra esta semana? A fin de cuentas, hay que priorizar.",
+                  "feedbackOnError": {
+                    "type": "word_order",
+                    "explanation": "El orden correcto es «今週 の 買い物 を 手伝ってもらえます か。 結局 、優先 する 必要 が あります 。».",
+                    "ruleRef": "gp-b2-concession"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "El orden produce una frase natural."
+                  }
+                },
+                {
+                  "type": "ClozeDragDrop",
+                  "id": "es-ja-b2-u08-l08-e03",
+                  "passage": "{{b1}} の {{b2}} を 手伝ってもらえます か",
+                  "blanks": [
+                    {
+                      "id": "b1",
+                      "answer": "今週",
+                      "options": [
+                        "今週",
+                        "手伝ってもらえます",
+                        "とても"
+                      ]
+                    },
+                    {
+                      "id": "b2",
+                      "answer": "買い物",
+                      "options": [
+                        "買い物",
+                        "手伝ってもらえます",
+                        "とても"
+                      ]
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "Las dos formas deben encajar con el contexto de la frase.",
+                    "ruleRef": "gp-b2-modal-perfect"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Los dos huecos encajan con la situación."
+                  }
+                },
+                {
+                  "type": "SemanticMatch",
+                  "id": "es-ja-b2-u08-l08-e04",
+                  "instructions": "Clasifica la función comunicativa de cada intervención.",
+                  "pairs": [
+                    {
+                      "left": "今週 の 買い物 を 手伝ってもらえます か。 結局 、優先 する 必要 が あります 。",
+                      "right": "Planteamiento",
+                      "register": "formal",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    },
+                    {
+                      "left": "お風呂掃除 も できる よ。 要するに 、複雑 な 問題 です 。",
+                      "right": "Concesión",
+                      "register": "neutral",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    },
+                    {
+                      "left": "タスク を 変更して も 大丈夫です か。 しかし 、それを 明確 に する 必要 が あります 。",
+                      "right": "Conclusión",
+                      "register": "informal",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "Cada intervención cumple una función comunicativa distinta.",
+                    "ruleRef": "gp-b2-concession"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has identificado la función de cada intervención."
+                  }
+                },
+                {
+                  "type": "SemanticMatch",
+                  "id": "es-ja-b2-u08-l08-e05",
+                  "instructions": "Distingue el registro de cada intervención.",
+                  "pairs": [
+                    {
+                      "left": "今週 の 買い物 を 手伝ってもらえます か。 結局 、優先 する 必要 が あります 。",
+                      "right": "Formal",
+                      "register": "formal",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    },
+                    {
+                      "left": "お風呂掃除 も できる よ。 要するに 、複雑 な 問題 です 。",
+                      "right": "Neutral",
+                      "register": "neutral",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    },
+                    {
+                      "left": "タスク を 変更して も 大丈夫です か。 しかし 、それを 明確 に する 必要 が あります 。",
+                      "right": "Informal",
+                      "register": "informal",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "register",
+                    "explanation": "El registro cambia según el contexto y la relación con el interlocutor.",
+                    "ruleRef": "gp-b2-modal-perfect"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has distinguido el registro de cada intervención."
+                  }
+                },
+                {
+                  "type": "AudioOnlyPrompt",
+                  "id": "es-ja-b2-u08-l08-e06",
+                  "audioText": "お風呂掃除 も できる よ。 要するに 、複雑 な 問題 です 。",
+                  "question": "¿Qué ha dicho el hablante?",
+                  "options": [
+                    "お風呂掃除 も できる よ。 要するに 、複雑 な 問題 です 。",
+                    "今週 の 買い物 を 手伝ってもらえます か。 結局 、優先 する 必要 が あります 。",
+                    "タスク を 変更して も 大丈夫です か。 しかし 、それを 明確 に する 必要 が あります 。"
+                  ],
+                  "correctIndex": 0,
+                  "allowSlowPlayback": true,
+                  "feedbackOnError": {
+                    "type": "comprehension",
+                    "explanation": "El audio dice «お風呂掃除 も できる よ。 要するに 、複雑 な 問題 です 。».",
+                    "ruleRef": "gp-b2-concession"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has comprendido el mensaje del audio."
+                  }
+                },
+                {
+                  "type": "AudioOnlyPrompt",
+                  "id": "es-ja-b2-u08-l08-e07",
+                  "audioText": "タスク を 変更して も 大丈夫です か。 しかし 、それを 明確 に する 必要 が あります 。",
+                  "question": "¿Cuál es la idea principal?",
+                  "options": [
+                    "タスク を 変更して も 大丈夫です か。 しかし 、それを 明確 に する 必要 が あります 。",
+                    "今週 の 買い物 を 手伝ってもらえます か。 結局 、優先 する 必要 が あります 。",
+                    "お風呂掃除 も できる よ。 要するに 、複雑 な 問題 です 。"
+                  ],
+                  "correctIndex": 0,
+                  "allowSlowPlayback": false,
+                  "feedbackOnError": {
+                    "type": "comprehension",
+                    "explanation": "El audio dice «タスク を 変更して も 大丈夫です か。 しかし 、それを 明確 に する 必要 が あります 。».",
+                    "ruleRef": "gp-b2-modal-perfect"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has identificado la idea principal."
+                  }
+                },
+                {
+                  "type": "ListenType",
+                  "id": "es-ja-b2-u08-l08-e08",
+                  "audioText": "タスク を 変更して も 大丈夫です か。 しかし 、それを 明確 に する 必要 が あります 。",
+                  "transcription": "タスク を 変更して も 大丈夫です か。 しかし 、それを 明確 に する 必要 が あります 。",
+                  "feedbackOnError": {
+                    "type": "spelling",
+                    "explanation": "Escribe exactamente «タスク を 変更して も 大丈夫です か。 しかし 、それを 明確 に する 必要 が あります 。».",
+                    "ruleRef": "gp-b2-concession"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La transcripción coincide con el audio."
+                  }
+                },
+                {
+                  "type": "SpeakRepeat",
+                  "id": "es-ja-b2-u08-l08-e09",
+                  "targetPhrase": "タスク を 変更して も 大丈夫です か。 しかし 、それを 明確 に する 必要 が あります 。",
+                  "audioText": "タスク を 変更して も 大丈夫です か。 しかし 、それを 明確 に する 必要 が あります 。",
+                  "feedbackOnError": {
+                    "type": "pronunciation",
+                    "explanation": "Repite «タスク を 変更して も 大丈夫です か。 しかし 、それを 明確 に する 必要 が あります 。» con claridad.",
+                    "ruleRef": "gp-b2-concession"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La frase se entiende y mantiene el ritmo."
+                  }
+                },
+                {
+                  "type": "FreeSpeakingPrompt",
+                  "id": "es-ja-b2-u08-l08-e10",
+                  "prompt": "Argumenta y matiza una opinión sobre repartir las tareas.",
+                  "minTokens": 20,
+                  "conceptClusters": [
+                    [
+                      "今週"
+                    ],
+                    [
+                      "買い物"
+                    ],
+                    [
+                      "手伝ってもらえます"
+                    ]
+                  ],
+                  "modelAnswer": "今週 の 買い物 を 手伝ってもらえます か。 結局 、優先 する 必要 が あります 。 お風呂掃除 も できる よ。 要するに 、複雑 な 問題 です 。 タスク を 変更して も 大丈夫です か。 しかし 、それを 明確 に する 必要 が あります 。",
+                  "selfAssessmentCriteria": [
+                    "¿La respuesta argumenta y responde a la tarea?",
+                    "¿Usa las dos estructuras gramaticales de la lección?",
+                    "¿Incluye una concesión o una matización?"
+                  ],
+                  "grammarRuleRefs": [
+                    "gp-b2-concession",
+                    "gp-b2-modal-perfect"
+                  ],
+                  "timeLimitSeconds": 90,
+                  "minWpm": 70,
+                  "maxWpm": 160,
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "La respuesta modelo desarrolla una opinión con matices y una concesión.",
+                    "ruleRef": "gp-b2-concession"
+                  }
+                }
+              ]
+            },
+            {
+              "id": "es-ja-b2-u08-l09",
+              "title": "Integración: contrato",
+              "cefrLevel": "B2",
+              "scenario": "Situación comunicativa avanzada sobre un contrato de alquiler.",
+              "canDo": "Puedo argumentar y matizar sobre un contrato de alquiler.",
+              "grammarPoints": [
+                {
+                  "id": "gp-b2-concession",
+                  "label": "Concession",
+                  "description": "Although, despite y however introducen concesiones."
+                },
+                {
+                  "id": "gp-b2-modal-perfect",
+                  "label": "Modal perfect",
+                  "description": "Must have, might have y should have especulan sobre el pasado."
+                }
+              ],
+              "vocabFrequencyBand": "3000-5000",
+              "culturalNotes": [
+                {
+                  "idiom": "夜遅く まで 働く",
+                  "note": "Expresión para trabajar hasta muy tarde.",
+                  "translation": "trabajar hasta tarde"
+                }
+              ],
+              "microLesson": {
+                "title": "Integración: contrato",
+                "goals": [
+                  "Usar vocabulario avanzado de un contrato de alquiler.",
+                  "Aplicar concession y modal perfect.",
+                  "Argumentar y matizar sobre un contrato de alquiler."
+                ],
+                "sections": [
+                  {
+                    "heading": "Lengua en contexto",
+                    "body": "Concession: Although, despite y however introducen concesiones. Modal perfect: Must have, might have y should have especulan sobre el pasado.",
+                    "examples": [
+                      {
+                        "source": "Antes de firmar, lee las condiciones del contrato. En resumen, es un tema complejo.",
+                        "target": "署名する 前 に 契約条件 を お 読みください。 要するに 、複雑 な 問題 です 。"
+                      },
+                      {
+                        "source": "Comprueba la duración y la fianza. Sin embargo, conviene matizarlo.",
+                        "target": "期間 と 入金 を 確認してください。 しかし 、それを 明確 に する 必要 が あります 。"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "glossary": [
+                {
+                  "term": "署名する 前 に 契約条件 を お 読みください。 要するに 、複雑 な 問題 です 。",
+                  "translations": [
+                    "Antes de firmar, lee las condiciones del contrato. En resumen, es un tema complejo."
+                  ]
+                },
+                {
+                  "term": "期間 と 入金 を 確認してください。 しかし 、それを 明確 に する 必要 が あります 。",
+                  "translations": [
+                    "Comprueba la duración y la fianza. Sin embargo, conviene matizarlo."
+                  ]
+                },
+                {
+                  "term": "署名済み の コピー を 保管してください。 そう は いえ 、状況 に よります 。",
+                  "translations": [
+                    "Guarda una copia firmada. Dicho esto, depende del contexto."
+                  ]
+                }
+              ],
+              "exercises": [
+                {
+                  "type": "MultipleChoice",
+                  "id": "es-ja-b2-u08-l09-e01",
+                  "question": "¿Cuál es la opción correcta para «Antes de firmar, lee las condiciones del contrato. En resumen, es un tema complejo.»?",
+                  "options": [
+                    "署名する 前 に 契約条件 を お 読みください。 要するに 、複雑 な 問題 です 。",
+                    "期間 と 入金 を 確認してください。 しかし 、それを 明確 に する 必要 が あります 。",
+                    "署名済み の コピー を 保管してください。 そう は いえ 、状況 に よります 。"
+                  ],
+                  "correctIndex": 0,
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "«Antes de firmar, lee las condiciones del contrato. En resumen, es un tema complejo.» se dice «署名する 前 に 契約条件 を お 読みください。 要するに 、複雑 な 問題 です 。».",
+                    "ruleRef": "gp-b2-concession"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has elegido la traducción correcta."
+                  }
+                },
+                {
+                  "type": "OrderWords",
+                  "id": "es-ja-b2-u08-l09-e02",
+                  "tokens": [
+                    "前",
+                    "に",
+                    "契約条件",
+                    "を",
+                    "お",
+                    "読みください。",
+                    "要するに",
+                    "、複雑",
+                    "な",
+                    "問題",
+                    "です",
+                    "。",
+                    "署名する"
+                  ],
+                  "answerTokens": [
+                    "署名する",
+                    "前",
+                    "に",
+                    "契約条件",
+                    "を",
+                    "お",
+                    "読みください。",
+                    "要するに",
+                    "、複雑",
+                    "な",
+                    "問題",
+                    "です",
+                    "。"
+                  ],
+                  "sourcePhrase": "Antes de firmar, lee las condiciones del contrato. En resumen, es un tema complejo.",
+                  "feedbackOnError": {
+                    "type": "word_order",
+                    "explanation": "El orden correcto es «署名する 前 に 契約条件 を お 読みください。 要するに 、複雑 な 問題 です 。».",
+                    "ruleRef": "gp-b2-concession"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "El orden produce una frase natural."
+                  }
+                },
+                {
+                  "type": "ClozeDragDrop",
+                  "id": "es-ja-b2-u08-l09-e03",
+                  "passage": "{{b1}} 前 に {{b2}} を お 読みください",
+                  "blanks": [
+                    {
+                      "id": "b1",
+                      "answer": "署名する",
+                      "options": [
+                        "署名する",
+                        "読みください",
+                        "とても"
+                      ]
+                    },
+                    {
+                      "id": "b2",
+                      "answer": "契約条件",
+                      "options": [
+                        "契約条件",
+                        "読みください",
+                        "とても"
+                      ]
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "Las dos formas deben encajar con el contexto de la frase.",
+                    "ruleRef": "gp-b2-modal-perfect"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Los dos huecos encajan con la situación."
+                  }
+                },
+                {
+                  "type": "SemanticMatch",
+                  "id": "es-ja-b2-u08-l09-e04",
+                  "instructions": "Clasifica la función comunicativa de cada intervención.",
+                  "pairs": [
+                    {
+                      "left": "署名する 前 に 契約条件 を お 読みください。 要するに 、複雑 な 問題 です 。",
+                      "right": "Planteamiento",
+                      "register": "formal",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    },
+                    {
+                      "left": "期間 と 入金 を 確認してください。 しかし 、それを 明確 に する 必要 が あります 。",
+                      "right": "Concesión",
+                      "register": "neutral",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    },
+                    {
+                      "left": "署名済み の コピー を 保管してください。 そう は いえ 、状況 に よります 。",
+                      "right": "Conclusión",
+                      "register": "informal",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "Cada intervención cumple una función comunicativa distinta.",
+                    "ruleRef": "gp-b2-concession"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has identificado la función de cada intervención."
+                  }
+                },
+                {
+                  "type": "SemanticMatch",
+                  "id": "es-ja-b2-u08-l09-e05",
+                  "instructions": "Distingue el registro de cada intervención.",
+                  "pairs": [
+                    {
+                      "left": "署名する 前 に 契約条件 を お 読みください。 要するに 、複雑 な 問題 です 。",
+                      "right": "Formal",
+                      "register": "formal",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    },
+                    {
+                      "left": "期間 と 入金 を 確認してください。 しかし 、それを 明確 に する 必要 が あります 。",
+                      "right": "Neutral",
+                      "register": "neutral",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    },
+                    {
+                      "left": "署名済み の コピー を 保管してください。 そう は いえ 、状況 に よります 。",
+                      "right": "Informal",
+                      "register": "informal",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "register",
+                    "explanation": "El registro cambia según el contexto y la relación con el interlocutor.",
+                    "ruleRef": "gp-b2-modal-perfect"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has distinguido el registro de cada intervención."
+                  }
+                },
+                {
+                  "type": "AudioOnlyPrompt",
+                  "id": "es-ja-b2-u08-l09-e06",
+                  "audioText": "期間 と 入金 を 確認してください。 しかし 、それを 明確 に する 必要 が あります 。",
+                  "question": "¿Qué ha dicho el hablante?",
+                  "options": [
+                    "期間 と 入金 を 確認してください。 しかし 、それを 明確 に する 必要 が あります 。",
+                    "署名する 前 に 契約条件 を お 読みください。 要するに 、複雑 な 問題 です 。",
+                    "署名済み の コピー を 保管してください。 そう は いえ 、状況 に よります 。"
+                  ],
+                  "correctIndex": 0,
+                  "allowSlowPlayback": true,
+                  "feedbackOnError": {
+                    "type": "comprehension",
+                    "explanation": "El audio dice «期間 と 入金 を 確認してください。 しかし 、それを 明確 に する 必要 が あります 。».",
+                    "ruleRef": "gp-b2-concession"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has comprendido el mensaje del audio."
+                  }
+                },
+                {
+                  "type": "AudioOnlyPrompt",
+                  "id": "es-ja-b2-u08-l09-e07",
+                  "audioText": "署名済み の コピー を 保管してください。 そう は いえ 、状況 に よります 。",
+                  "question": "¿Cuál es la idea principal?",
+                  "options": [
+                    "署名済み の コピー を 保管してください。 そう は いえ 、状況 に よります 。",
+                    "署名する 前 に 契約条件 を お 読みください。 要するに 、複雑 な 問題 です 。",
+                    "期間 と 入金 を 確認してください。 しかし 、それを 明確 に する 必要 が あります 。"
+                  ],
+                  "correctIndex": 0,
+                  "allowSlowPlayback": false,
+                  "feedbackOnError": {
+                    "type": "comprehension",
+                    "explanation": "El audio dice «署名済み の コピー を 保管してください。 そう は いえ 、状況 に よります 。».",
+                    "ruleRef": "gp-b2-modal-perfect"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has identificado la idea principal."
+                  }
+                },
+                {
+                  "type": "ListenType",
+                  "id": "es-ja-b2-u08-l09-e08",
+                  "audioText": "署名済み の コピー を 保管してください。 そう は いえ 、状況 に よります 。",
+                  "transcription": "署名済み の コピー を 保管してください。 そう は いえ 、状況 に よります 。",
+                  "feedbackOnError": {
+                    "type": "spelling",
+                    "explanation": "Escribe exactamente «署名済み の コピー を 保管してください。 そう は いえ 、状況 に よります 。».",
+                    "ruleRef": "gp-b2-concession"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La transcripción coincide con el audio."
+                  }
+                },
+                {
+                  "type": "SpeakRepeat",
+                  "id": "es-ja-b2-u08-l09-e09",
+                  "targetPhrase": "署名済み の コピー を 保管してください。 そう は いえ 、状況 に よります 。",
+                  "audioText": "署名済み の コピー を 保管してください。 そう は いえ 、状況 に よります 。",
+                  "feedbackOnError": {
+                    "type": "pronunciation",
+                    "explanation": "Repite «署名済み の コピー を 保管してください。 そう は いえ 、状況 に よります 。» con claridad.",
+                    "ruleRef": "gp-b2-concession"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La frase se entiende y mantiene el ritmo."
+                  }
+                },
+                {
+                  "type": "FreeSpeakingPrompt",
+                  "id": "es-ja-b2-u08-l09-e10",
+                  "prompt": "Argumenta y matiza una opinión sobre un contrato de alquiler.",
+                  "minTokens": 20,
+                  "conceptClusters": [
+                    [
+                      "署名する"
+                    ],
+                    [
+                      "契約条件"
+                    ],
+                    [
+                      "読みください。"
+                    ]
+                  ],
+                  "modelAnswer": "署名する 前 に 契約条件 を お 読みください。 要するに 、複雑 な 問題 です 。 期間 と 入金 を 確認してください。 しかし 、それを 明確 に する 必要 が あります 。 署名済み の コピー を 保管してください。 そう は いえ 、状況 に よります 。",
+                  "selfAssessmentCriteria": [
+                    "¿La respuesta argumenta y responde a la tarea?",
+                    "¿Usa las dos estructuras gramaticales de la lección?",
+                    "¿Incluye una concesión o una matización?"
+                  ],
+                  "grammarRuleRefs": [
+                    "gp-b2-concession",
+                    "gp-b2-modal-perfect"
+                  ],
+                  "timeLimitSeconds": 90,
+                  "minWpm": 70,
+                  "maxWpm": 160,
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "La respuesta modelo desarrolla una opinión con matices y una concesión.",
+                    "ruleRef": "gp-b2-concession"
+                  }
+                }
+              ]
+            },
+            {
+              "id": "es-ja-b2-u08-l10",
+              "title": "Evaluación: mi casa ideal",
+              "cefrLevel": "B2",
+              "scenario": "Situación comunicativa avanzada sobre mi casa ideal.",
+              "canDo": "Puedo argumentar y matizar sobre mi casa ideal.",
+              "grammarPoints": [
+                {
+                  "id": "gp-b2-concession",
+                  "label": "Concession",
+                  "description": "Although, despite y however introducen concesiones."
+                },
+                {
+                  "id": "gp-b2-modal-perfect",
+                  "label": "Modal perfect",
+                  "description": "Must have, might have y should have especulan sobre el pasado."
+                }
+              ],
+              "vocabFrequencyBand": "3000-5000",
+              "culturalNotes": [
+                {
+                  "idiom": "要点",
+                  "note": "Expresión para señalar lo esencial.",
+                  "translation": "lo esencial"
+                }
+              ],
+              "microLesson": {
+                "title": "Evaluación: mi casa ideal",
+                "goals": [
+                  "Usar vocabulario avanzado de mi casa ideal.",
+                  "Aplicar concession y modal perfect.",
+                  "Argumentar y matizar sobre mi casa ideal."
+                ],
+                "sections": [
+                  {
+                    "heading": "Lengua en contexto",
+                    "body": "Concession: Although, despite y however introducen concesiones. Modal perfect: Must have, might have y should have especulan sobre el pasado.",
+                    "examples": [
+                      {
+                        "source": "Mi casa ideal es luminosa y tiene un jardín. Sin embargo, conviene matizarlo.",
+                        "target": "私 の 理想 は 明るくて 庭 の ある 家です。 しかし 、それを 明確 に する 必要 が あります 。"
+                      },
+                      {
+                        "source": "Me gustaría vivir cerca del centro. Dicho esto, depende del contexto.",
+                        "target": "中心部 の 近く に 住みたい と 思っています。 そう は いえ 、状況 に よります 。"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "glossary": [
+                {
+                  "term": "私 の 理想 は 明るくて 庭 の ある 家です。 しかし 、それを 明確 に する 必要 が あります 。",
+                  "translations": [
+                    "Mi casa ideal es luminosa y tiene un jardín. Sin embargo, conviene matizarlo."
+                  ]
+                },
+                {
+                  "term": "中心部 の 近く に 住みたい と 思っています。 そう は いえ 、状況 に よります 。",
+                  "translations": [
+                    "Me gustaría vivir cerca del centro. Dicho esto, depende del contexto."
+                  ]
+                },
+                {
+                  "term": "しかし 静かな 空間 も 必要です。 つまり 、検討 する 価値 が あります 。",
+                  "translations": [
+                    "Pero también necesito un espacio tranquilo. En otras palabras, merece la pena considerarlo."
+                  ]
+                }
+              ],
+              "exercises": [
+                {
+                  "type": "MultipleChoice",
+                  "id": "es-ja-b2-u08-l10-e01",
+                  "question": "¿Cuál es la opción correcta para «Mi casa ideal es luminosa y tiene un jardín. Sin embargo, conviene matizarlo.»?",
+                  "options": [
+                    "私 の 理想 は 明るくて 庭 の ある 家です。 しかし 、それを 明確 に する 必要 が あります 。",
+                    "中心部 の 近く に 住みたい と 思っています。 そう は いえ 、状況 に よります 。",
+                    "しかし 静かな 空間 も 必要です。 つまり 、検討 する 価値 が あります 。"
+                  ],
+                  "correctIndex": 0,
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "«Mi casa ideal es luminosa y tiene un jardín. Sin embargo, conviene matizarlo.» se dice «私 の 理想 は 明るくて 庭 の ある 家です。 しかし 、それを 明確 に する 必要 が あります 。».",
+                    "ruleRef": "gp-b2-concession"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has elegido la traducción correcta."
+                  }
+                },
+                {
+                  "type": "OrderWords",
+                  "id": "es-ja-b2-u08-l10-e02",
+                  "tokens": [
+                    "の",
+                    "理想",
+                    "は",
+                    "明るくて",
+                    "庭",
+                    "の",
+                    "ある",
+                    "家です。",
+                    "しかし",
+                    "、それを",
+                    "明確",
+                    "に",
+                    "する",
+                    "必要",
+                    "が",
+                    "あります",
+                    "。",
+                    "私"
+                  ],
+                  "answerTokens": [
+                    "私",
+                    "の",
+                    "理想",
+                    "は",
+                    "明るくて",
+                    "庭",
+                    "の",
+                    "ある",
+                    "家です。",
+                    "しかし",
+                    "、それを",
+                    "明確",
+                    "に",
+                    "する",
+                    "必要",
+                    "が",
+                    "あります",
+                    "。"
+                  ],
+                  "sourcePhrase": "Mi casa ideal es luminosa y tiene un jardín. Sin embargo, conviene matizarlo.",
+                  "feedbackOnError": {
+                    "type": "word_order",
+                    "explanation": "El orden correcto es «私 の 理想 は 明るくて 庭 の ある 家です。 しかし 、それを 明確 に する 必要 が あります 。».",
+                    "ruleRef": "gp-b2-concession"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "El orden produce una frase natural."
+                  }
+                },
+                {
+                  "type": "ClozeDragDrop",
+                  "id": "es-ja-b2-u08-l10-e03",
+                  "passage": "私 の {{b1}} は {{b2}} 庭 の ある 家です",
+                  "blanks": [
+                    {
+                      "id": "b1",
+                      "answer": "理想",
+                      "options": [
+                        "理想",
+                        "ある",
+                        "家です"
+                      ]
+                    },
+                    {
+                      "id": "b2",
+                      "answer": "明るくて",
+                      "options": [
+                        "明るくて",
+                        "ある",
+                        "家です"
+                      ]
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "Las dos formas deben encajar con el contexto de la frase.",
+                    "ruleRef": "gp-b2-modal-perfect"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Los dos huecos encajan con la situación."
+                  }
+                },
+                {
+                  "type": "SemanticMatch",
+                  "id": "es-ja-b2-u08-l10-e04",
+                  "instructions": "Clasifica la función comunicativa de cada intervención.",
+                  "pairs": [
+                    {
+                      "left": "私 の 理想 は 明るくて 庭 の ある 家です。 しかし 、それを 明確 に する 必要 が あります 。",
+                      "right": "Planteamiento",
+                      "register": "formal",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    },
+                    {
+                      "left": "中心部 の 近く に 住みたい と 思っています。 そう は いえ 、状況 に よります 。",
+                      "right": "Concesión",
+                      "register": "neutral",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    },
+                    {
+                      "left": "しかし 静かな 空間 も 必要です。 つまり 、検討 する 価値 が あります 。",
+                      "right": "Conclusión",
+                      "register": "informal",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "Cada intervención cumple una función comunicativa distinta.",
+                    "ruleRef": "gp-b2-concession"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has identificado la función de cada intervención."
+                  }
+                },
+                {
+                  "type": "SemanticMatch",
+                  "id": "es-ja-b2-u08-l10-e05",
+                  "instructions": "Distingue el registro de cada intervención.",
+                  "pairs": [
+                    {
+                      "left": "私 の 理想 は 明るくて 庭 の ある 家です。 しかし 、それを 明確 に する 必要 が あります 。",
+                      "right": "Formal",
+                      "register": "formal",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    },
+                    {
+                      "left": "中心部 の 近く に 住みたい と 思っています。 そう は いえ 、状況 に よります 。",
+                      "right": "Neutral",
+                      "register": "neutral",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    },
+                    {
+                      "left": "しかし 静かな 空間 も 必要です。 つまり 、検討 する 価値 が あります 。",
+                      "right": "Informal",
+                      "register": "informal",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "register",
+                    "explanation": "El registro cambia según el contexto y la relación con el interlocutor.",
+                    "ruleRef": "gp-b2-modal-perfect"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has distinguido el registro de cada intervención."
+                  }
+                },
+                {
+                  "type": "AudioOnlyPrompt",
+                  "id": "es-ja-b2-u08-l10-e06",
+                  "audioText": "中心部 の 近く に 住みたい と 思っています。 そう は いえ 、状況 に よります 。",
+                  "question": "¿Qué ha dicho el hablante?",
+                  "options": [
+                    "中心部 の 近く に 住みたい と 思っています。 そう は いえ 、状況 に よります 。",
+                    "私 の 理想 は 明るくて 庭 の ある 家です。 しかし 、それを 明確 に する 必要 が あります 。",
+                    "しかし 静かな 空間 も 必要です。 つまり 、検討 する 価値 が あります 。"
+                  ],
+                  "correctIndex": 0,
+                  "allowSlowPlayback": true,
+                  "feedbackOnError": {
+                    "type": "comprehension",
+                    "explanation": "El audio dice «中心部 の 近く に 住みたい と 思っています。 そう は いえ 、状況 に よります 。».",
+                    "ruleRef": "gp-b2-concession"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has comprendido el mensaje del audio."
+                  }
+                },
+                {
+                  "type": "AudioOnlyPrompt",
+                  "id": "es-ja-b2-u08-l10-e07",
+                  "audioText": "しかし 静かな 空間 も 必要です。 つまり 、検討 する 価値 が あります 。",
+                  "question": "¿Cuál es la idea principal?",
+                  "options": [
+                    "しかし 静かな 空間 も 必要です。 つまり 、検討 する 価値 が あります 。",
+                    "私 の 理想 は 明るくて 庭 の ある 家です。 しかし 、それを 明確 に する 必要 が あります 。",
+                    "中心部 の 近く に 住みたい と 思っています。 そう は いえ 、状況 に よります 。"
+                  ],
+                  "correctIndex": 0,
+                  "allowSlowPlayback": false,
+                  "feedbackOnError": {
+                    "type": "comprehension",
+                    "explanation": "El audio dice «しかし 静かな 空間 も 必要です。 つまり 、検討 する 価値 が あります 。».",
+                    "ruleRef": "gp-b2-modal-perfect"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has identificado la idea principal."
+                  }
+                },
+                {
+                  "type": "ListenType",
+                  "id": "es-ja-b2-u08-l10-e08",
+                  "audioText": "しかし 静かな 空間 も 必要です。 つまり 、検討 する 価値 が あります 。",
+                  "transcription": "しかし 静かな 空間 も 必要です。 つまり 、検討 する 価値 が あります 。",
+                  "feedbackOnError": {
+                    "type": "spelling",
+                    "explanation": "Escribe exactamente «しかし 静かな 空間 も 必要です。 つまり 、検討 する 価値 が あります 。».",
+                    "ruleRef": "gp-b2-concession"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La transcripción coincide con el audio."
+                  }
+                },
+                {
+                  "type": "SpeakRepeat",
+                  "id": "es-ja-b2-u08-l10-e09",
+                  "targetPhrase": "しかし 静かな 空間 も 必要です。 つまり 、検討 する 価値 が あります 。",
+                  "audioText": "しかし 静かな 空間 も 必要です。 つまり 、検討 する 価値 が あります 。",
+                  "feedbackOnError": {
+                    "type": "pronunciation",
+                    "explanation": "Repite «しかし 静かな 空間 も 必要です。 つまり 、検討 する 価値 が あります 。» con claridad.",
+                    "ruleRef": "gp-b2-concession"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La frase se entiende y mantiene el ritmo."
+                  }
+                },
+                {
+                  "type": "FreeSpeakingPrompt",
+                  "id": "es-ja-b2-u08-l10-e10",
+                  "prompt": "Argumenta y matiza una opinión sobre mi casa ideal.",
+                  "minTokens": 20,
+                  "conceptClusters": [
+                    [
+                      "理想"
+                    ],
+                    [
+                      "明るくて"
+                    ],
+                    [
+                      "ある"
+                    ]
+                  ],
+                  "modelAnswer": "私 の 理想 は 明るくて 庭 の ある 家です。 しかし 、それを 明確 に する 必要 が あります 。 中心部 の 近く に 住みたい と 思っています。 そう は いえ 、状況 に よります 。 しかし 静かな 空間 も 必要です。 つまり 、検討 する 価値 が あります 。",
+                  "selfAssessmentCriteria": [
+                    "¿La respuesta argumenta y responde a la tarea?",
+                    "¿Usa las dos estructuras gramaticales de la lección?",
+                    "¿Incluye una concesión o una matización?"
+                  ],
+                  "grammarRuleRefs": [
+                    "gp-b2-concession",
+                    "gp-b2-modal-perfect"
+                  ],
+                  "timeLimitSeconds": 90,
+                  "minWpm": 70,
+                  "maxWpm": 160,
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "La respuesta modelo desarrolla una opinión con matices y una concesión.",
+                    "ruleRef": "gp-b2-concession"
+                  }
+                }
+              ]
+            }
+          ]
         }
       ]
     },
