@@ -1,7 +1,9 @@
 package dev.linguago.feature.review
 
 import androidx.compose.foundation.background
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
+import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
@@ -9,9 +11,11 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.verticalScroll
+import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
@@ -20,8 +24,11 @@ import androidx.compose.runtime.getValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
-import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.platform.LocalDensity
+import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.semantics.Role
+import androidx.compose.ui.semantics.contentDescription
+import androidx.compose.ui.semantics.role
+import androidx.compose.ui.semantics.semantics
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
@@ -31,10 +38,10 @@ import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import dev.linguago.core.domain.logic.ReviewRating
 import dev.linguago.core.domain.model.WordProgress
 import dev.linguago.core.ui.components.AudioPlayerCard
-import dev.linguago.core.ui.components.FlipCard3D
+import dev.linguago.core.ui.components.GradeBar
 import dev.linguago.core.ui.components.HeartsCounter
-import dev.linguago.core.ui.components.LinguaTopBar
 import dev.linguago.core.ui.components.PrimaryButton3D
+import dev.linguago.core.ui.components.ReviewDeckStack
 import dev.linguago.core.ui.feedback.FeedbackCue
 import dev.linguago.core.ui.feedback.LocalInteractionFeedback
 import dev.linguago.core.ui.theme.LinguaTheme
@@ -42,9 +49,10 @@ import dev.linguago.core.ui.theme.LinguaTokens
 import java.time.Instant
 
 /**
- * Repaso espaciado (ADR-016, ADR-034): flashcard 3D palabra→traducción con
- * calificación FSRS de 4 niveles. Invariante I3: no hay bloqueo; se puede
- * salir en cualquier momento.
+ * Repaso espaciado (ADR-016, ADR-034) con el prototipo «Warm Cream & Teal»
+ * (ADR-055): baraja de tarjetas, onda bicolor y calificación FSRS de 4
+ * niveles con la barra coral/ámbar/sage/teal. Invariante I3: no hay bloqueo;
+ * se puede salir en cualquier momento. La lógica FSRS vive en el dominio.
  */
 @Composable
 public fun ReviewScreen(
@@ -87,14 +95,36 @@ private fun ReviewContent(
                 .fillMaxSize()
                 .background(colors.background)
                 .verticalScroll(rememberScrollState())
-                .padding(24.dp),
+                .padding(horizontal = 20.dp, vertical = 16.dp),
         verticalArrangement = Arrangement.spacedBy(16.dp),
     ) {
-        LinguaTopBar(
-            title = "Repaso",
-            onBack = onExit,
-            actions = { HeartsCounter(hearts = state.hearts) },
-        )
+        Row(
+            modifier = Modifier.fillMaxWidth(),
+            verticalAlignment = Alignment.CenterVertically,
+            horizontalArrangement = Arrangement.spacedBy(8.dp),
+        ) {
+            BackButton(onClick = onExit)
+            Spacer(Modifier.weight(1f))
+            if (state.total > 0) {
+                DeckCounterPill(text = "Tarjeta ${state.index + 1} de ${state.total}")
+            }
+            Spacer(Modifier.weight(1f))
+            HeartsCounter(hearts = state.hearts)
+        }
+        Column(verticalArrangement = Arrangement.spacedBy(8.dp)) {
+            Text(
+                text = "Repaso",
+                style = MaterialTheme.typography.headlineLarge,
+                color = colors.onBackground,
+            )
+            Box(
+                modifier =
+                    Modifier
+                        .fillMaxWidth()
+                        .height(1.5.dp)
+                        .background(LinguaTokens.TanEdge),
+            )
+        }
 
         when {
             state.loading ->
@@ -119,70 +149,34 @@ private fun ReviewContent(
                 )
 
             else -> {
-                Text(
-                    text = "Tarjeta ${state.index + 1} de ${state.total}",
-                    style = MaterialTheme.typography.labelLarge,
-                    color = colors.onSurfaceVariant,
-                )
-                Text(
-                    text = "Marcar «Otra vez» cuesta 1 vida. Sé honesto: el repaso se adapta a ti.",
-                    style = MaterialTheme.typography.bodySmall,
-                    color = colors.onSurfaceVariant,
-                )
-                if (state.heartProgress > 0) {
-                    Text(
-                        text = "${state.heartProgress}/5 tarjetas para recuperar 1 ❤",
-                        style = MaterialTheme.typography.labelMedium,
-                        color = colors.primary,
-                    )
-                }
-
                 state.current?.let { card ->
-                    FlipCard3D(
-                        revealed = state.revealed,
-                        onFlip = onReveal,
-                        modifier = Modifier.fillMaxWidth(),
-                        front = {
-                            Text(
-                                text = "Palabra",
-                                style = MaterialTheme.typography.labelLarge,
-                                color = colors.onSurfaceVariant,
-                            )
-                            Spacer(Modifier.height(12.dp))
-                            Text(
-                                text = card.word,
-                                style = MaterialTheme.typography.headlineLarge,
-                                fontWeight = FontWeight.SemiBold,
-                                color = colors.onSurface,
-                                textAlign = TextAlign.Center,
-                                modifier = Modifier.fillMaxWidth(),
-                            )
-                            Spacer(Modifier.height(20.dp))
-                            Text(
-                                text = "Toca la tarjeta para ver la traducción",
-                                style = MaterialTheme.typography.bodySmall,
-                                color = colors.onSurfaceVariant,
-                                textAlign = TextAlign.Center,
-                                modifier = Modifier.fillMaxWidth(),
-                            )
-                        },
-                        back = {
-                            Text(
-                                text = "Traducción",
-                                style = MaterialTheme.typography.labelLarge,
-                                color = colors.onSurfaceVariant,
-                            )
-                            Spacer(Modifier.height(12.dp))
+                    ReviewDeckStack(modifier = Modifier.fillMaxWidth()) {
+                        if (state.revealed) {
+                            DeckBadge(text = "Traducción")
+                        } else {
+                            DeckBadge(text = "Palabra")
+                        }
+                        Spacer(Modifier.height(12.dp))
+                        Text(
+                            text = card.word,
+                            style = MaterialTheme.typography.headlineLarge,
+                            fontWeight = FontWeight.Bold,
+                            color = colors.onBackground,
+                            textAlign = TextAlign.Center,
+                            modifier = Modifier.fillMaxWidth(),
+                        )
+                        if (state.revealed) {
+                            Spacer(Modifier.height(8.dp))
                             Text(
                                 text = card.translation,
-                                style = MaterialTheme.typography.headlineSmall,
-                                color = colors.primary,
+                                style = MaterialTheme.typography.titleLarge,
+                                color = colors.onBackground,
                                 textAlign = TextAlign.Center,
                                 modifier = Modifier.fillMaxWidth(),
                             )
                             Spacer(Modifier.height(12.dp))
                             AudioPlayerCard(
-                                title = "Pronunciación",
+                                title = "",
                                 playing = state.speaking,
                                 enabled = state.speechAvailable,
                                 onPlay = {
@@ -205,14 +199,36 @@ private fun ReviewContent(
                                     modifier =
                                         Modifier
                                             .fillMaxWidth()
-                                            .clip(RoundedCornerShape(LinguaTokens.RADIUS_CARD_DP.dp))
-                                            .background(colors.surfaceVariant)
+                                            .clip(RoundedCornerShape(12.dp))
+                                            .background(LinguaTokens.BgSecondary)
                                             .padding(12.dp),
                                 )
                             }
-                        },
+                        } else {
+                            Spacer(Modifier.height(8.dp))
+                            Text(
+                                text = "Descubre la traducción y califica tu recuerdo",
+                                style = MaterialTheme.typography.bodySmall,
+                                color = colors.onSurfaceVariant,
+                                textAlign = TextAlign.Center,
+                                modifier = Modifier.fillMaxWidth(),
+                            )
+                        }
+                    }
+                }
+
+                if (state.heartProgress > 0) {
+                    Text(
+                        text = "${state.heartProgress}/5 tarjetas para recuperar 1 ❤",
+                        style = MaterialTheme.typography.labelMedium,
+                        color = MaterialTheme.colorScheme.primary,
                     )
                 }
+                Text(
+                    text = "Marcar «Otra vez» cuesta 1 vida. Sé honesto: el repaso se adapta a ti.",
+                    style = MaterialTheme.typography.bodySmall,
+                    color = colors.onSurfaceVariant,
+                )
 
                 if (!state.revealed) {
                     PrimaryButton3D(
@@ -223,10 +239,13 @@ private fun ReviewContent(
                 } else {
                     Text(
                         text = "¿Qué tal te salió?",
-                        style = MaterialTheme.typography.labelLarge,
-                        color = colors.onSurfaceVariant,
+                        style = MaterialTheme.typography.titleSmall,
+                        fontWeight = FontWeight.Bold,
+                        color = colors.onBackground,
+                        textAlign = TextAlign.Center,
+                        modifier = Modifier.fillMaxWidth(),
                     )
-                    RatingRow(onRate = onRate)
+                    GradeBar(onRate = onRate)
                 }
             }
         }
@@ -235,72 +254,71 @@ private fun ReviewContent(
             Text(
                 text = message,
                 style = MaterialTheme.typography.bodyMedium,
-                color = colors.error,
+                color = MaterialTheme.colorScheme.primary,
             )
         }
     }
 }
 
-/** Fila (o cuadrícula 2×2 en fuente grande) de calificación FSRS (ADR-034/048). */
+/** Botón de retorno del repaso (icono ← con objetivo táctil de 44dp). */
 @Composable
-private fun RatingRow(onRate: (ReviewRating) -> Unit) {
-    val largeFont = LocalDensity.current.fontScale >= 1.5f
-    val specs =
-        listOf(
-            RatingSpec("Otra vez", ReviewRating.AGAIN, LinguaTokens.Destructive, LinguaTokens.Destructive.copy(alpha = 0.72f), Color.White),
-            RatingSpec("Difícil", ReviewRating.HARD, LinguaTokens.Warning, Color(LinguaTokens.CHEST_EDGE_HEX), LinguaTokens.Fg),
-            RatingSpec("Bien", ReviewRating.GOOD, LinguaTokens.Accent, LinguaTokens.Accent.copy(alpha = 0.72f), Color.White),
-            RatingSpec("Fácil", ReviewRating.EASY, LinguaTokens.Primary, LinguaTokens.PrimaryEdge, Color.White),
-        )
-    val rows = if (largeFont) specs.chunked(2) else listOf(specs)
-    Column(verticalArrangement = Arrangement.spacedBy(6.dp)) {
-        rows.forEach { row ->
-            Row(
-                modifier = Modifier.fillMaxWidth(),
-                horizontalArrangement = Arrangement.spacedBy(6.dp),
-            ) {
-                row.forEach { spec ->
-                    RatingButton(
-                        label = spec.label,
-                        rating = spec.rating,
-                        bodyColor = spec.bodyColor,
-                        edgeColor = spec.edgeColor,
-                        contentColor = spec.contentColor,
-                        onRate = onRate,
-                        modifier = Modifier.weight(1f),
-                    )
-                }
-            }
-        }
-    }
-}
-
-private data class RatingSpec(
-    val label: String,
-    val rating: ReviewRating,
-    val bodyColor: Color,
-    val edgeColor: Color,
-    val contentColor: Color,
-)
-
-@Composable
-private fun RatingButton(
-    label: String,
-    rating: ReviewRating,
-    bodyColor: Color,
-    edgeColor: Color,
-    contentColor: Color,
-    onRate: (ReviewRating) -> Unit,
+private fun BackButton(
+    onClick: () -> Unit,
     modifier: Modifier = Modifier,
 ) {
-    PrimaryButton3D(
-        text = label,
-        onClick = { onRate(rating) },
-        modifier = modifier,
-        bodyColor = bodyColor,
-        edgeColor = edgeColor,
-        contentColor = contentColor,
-        compact = true,
+    val feedback = LocalInteractionFeedback.current
+    Icon(
+        painter = painterResource(dev.linguago.core.ui.components.LinguaIcons.ArrowBackRes),
+        contentDescription = null,
+        tint = MaterialTheme.colorScheme.onBackground,
+        modifier =
+            modifier
+                .size(24.dp)
+                .clickable {
+                    feedback.play(FeedbackCue.TAP)
+                    onClick()
+                }.semantics {
+                    role = Role.Button
+                    contentDescription = "Volver"
+                }.padding(0.dp),
+    )
+}
+
+/** Píldora tan del contador de tarjetas del prototipo (ADR-055). */
+@Composable
+private fun DeckCounterPill(
+    text: String,
+    modifier: Modifier = Modifier,
+) {
+    Text(
+        text = text,
+        style = MaterialTheme.typography.labelLarge,
+        fontWeight = FontWeight.Bold,
+        color = LinguaTokens.Fg,
+        modifier =
+            modifier
+                .clip(RoundedCornerShape(LinguaTokens.RADIUS_PILL_DP.dp))
+                .background(LinguaTokens.Tan)
+                .padding(horizontal = 12.dp, vertical = 6.dp),
+    )
+}
+
+/** Etiqueta tan de la tarjeta activa de la baraja (ADR-055). */
+@Composable
+private fun DeckBadge(
+    text: String,
+    modifier: Modifier = Modifier,
+) {
+    Text(
+        text = text,
+        style = MaterialTheme.typography.labelLarge,
+        fontWeight = FontWeight.Bold,
+        color = LinguaTokens.Fg,
+        modifier =
+            modifier
+                .clip(RoundedCornerShape(8.dp))
+                .background(LinguaTokens.Tan)
+                .padding(horizontal = 12.dp, vertical = 6.dp),
     )
 }
 
@@ -316,8 +334,8 @@ private fun FinishPanel(
         modifier =
             Modifier
                 .fillMaxWidth()
-                .clip(RoundedCornerShape(LinguaTokens.RADIUS_CARD_DP.dp))
-                .background(colors.surfaceVariant)
+                .clip(RoundedCornerShape(LinguaTokens.RADIUS_CARD_LARGE_DP.dp))
+                .background(LinguaTokens.BgSecondary)
                 .padding(20.dp),
         horizontalAlignment = Alignment.CenterHorizontally,
         verticalArrangement = Arrangement.spacedBy(8.dp),
@@ -326,7 +344,7 @@ private fun FinishPanel(
             text = title,
             style = MaterialTheme.typography.titleLarge,
             fontWeight = FontWeight.SemiBold,
-            color = colors.onSurface,
+            color = colors.onBackground,
             textAlign = TextAlign.Center,
         )
         Text(
@@ -365,6 +383,7 @@ private fun ReviewScreenPreview() {
                             stability = 3.7f,
                             difficulty = 5.2f,
                         ),
+                    revealed = true,
                 ),
             onReveal = {},
             onSpeak = {},
