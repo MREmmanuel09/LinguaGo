@@ -1,5 +1,6 @@
 package dev.linguago.core.data.repository
 
+import android.content.Context
 import androidx.room.Room
 import androidx.test.core.app.ApplicationProvider
 import androidx.test.ext.junit.runners.AndroidJUnit4
@@ -7,6 +8,7 @@ import dev.linguago.core.common.DefaultDispatcherProvider
 import dev.linguago.core.common.Result
 import dev.linguago.core.data.database.LinguagoDatabase
 import dev.linguago.core.data.database.WordProgressEntity
+import dev.linguago.core.data.preferences.GemsStore
 import dev.linguago.core.domain.model.LessonId
 import dev.linguago.core.domain.model.SyncSnapshot
 import kotlinx.coroutines.flow.first
@@ -30,14 +32,15 @@ public class ProgressRepositoryV5Test {
 
     @Before
     public fun setUp() {
+        val context = ApplicationProvider.getApplicationContext<Context>()
         database =
             Room
                 .inMemoryDatabaseBuilder(
-                    ApplicationProvider.getApplicationContext(),
+                    context,
                     LinguagoDatabase::class.java,
                 ).allowMainThreadQueries()
                 .build()
-        repository = ProgressRepositoryImpl(database, DefaultDispatcherProvider())
+        repository = ProgressRepositoryImpl(database, GemsStore(context), DefaultDispatcherProvider())
     }
 
     @After

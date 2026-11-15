@@ -10,6 +10,7 @@ import androidx.compose.ui.semantics.ProgressBarRangeInfo
 import androidx.compose.ui.semantics.Role
 import androidx.compose.ui.semantics.SemanticsActions
 import androidx.compose.ui.semantics.SemanticsProperties
+import androidx.compose.ui.test.ExperimentalTestApi
 import androidx.compose.ui.test.SemanticsMatcher
 import androidx.compose.ui.test.assert
 import androidx.compose.ui.test.assertHeightIsAtLeast
@@ -22,6 +23,7 @@ import androidx.compose.ui.test.longClick
 import androidx.compose.ui.test.onNodeWithContentDescription
 import androidx.compose.ui.test.onNodeWithText
 import androidx.compose.ui.test.performClick
+import androidx.compose.ui.test.performCustomAccessibilityActionWithLabel
 import androidx.compose.ui.test.performTouchInput
 import androidx.compose.ui.unit.Density
 import androidx.compose.ui.unit.dp
@@ -213,6 +215,7 @@ public class DesignSystemAccessibilityTest {
         compose.onNodeWithText("orilla").assertIsDisplayed()
     }
 
+    @OptIn(ExperimentalTestApi::class)
     @Test
     public fun wordGlossaryText_resuelveModismosPorFrase() {
         compose.setContent {
@@ -225,9 +228,11 @@ public class DesignSystemAccessibilityTest {
             }
         }
 
-        compose.onNodeWithText("play it by ear").performTouchInput { longClick() }
+        compose.onNodeWithText("play it by ear").performCustomAccessibilityActionWithLabel("Ver traducciones")
 
-        compose.onNodeWithText("improvisar según las circunstancias").assertIsDisplayed()
+        compose
+            .onNodeWithText("play it by ear: improvisar según las circunstancias")
+            .assertIsDisplayed()
     }
 
     @Test
