@@ -24,4 +24,6 @@ object LinguaIcons {
     val StarRes: Int = R.drawable.ic_star
     val CardsRes: Int = R.drawable.ic_cards
     val ArrowBackRes: Int = R.drawable.ic_arrow_back
+    val MicRes: Int = R.drawable.ic_mic
+    val ChevronDownRes: Int = R.drawable.ic_chevron_down
 }

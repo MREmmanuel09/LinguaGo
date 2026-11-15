@@ -1,6 +1,7 @@
 package dev.linguago.core.ui.components
 
 import androidx.compose.foundation.background
+import androidx.compose.foundation.border
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
@@ -56,7 +57,7 @@ public fun AudioPlayerCard(
     val colors = MaterialTheme.colorScheme
     val feedback = LocalInteractionFeedback.current
     var slow by remember { mutableStateOf(false) }
-    val background = if (enabled) colors.secondaryContainer else colors.surfaceVariant
+    val background = if (enabled) LinguaTokens.BgSecondary else colors.surfaceVariant
 
     Column(
         modifier =
@@ -64,6 +65,7 @@ public fun AudioPlayerCard(
                 .fillMaxWidth()
                 .clip(RoundedCornerShape(LinguaTokens.RADIUS_CARD_DP.dp))
                 .background(background)
+                .border(1.dp, LinguaTokens.TanEdge, RoundedCornerShape(LinguaTokens.RADIUS_CARD_DP.dp))
                 .padding(16.dp),
         verticalArrangement = Arrangement.spacedBy(12.dp),
     ) {
@@ -89,7 +91,7 @@ public fun AudioPlayerCard(
                     Icon(
                         painter = painterResource(LinguaIcons.PlayRes),
                         contentDescription = "Reproducir audio",
-                        tint = if (enabled) Color.White else colors.onSurfaceVariant,
+                        tint = if (enabled) LinguaTokens.Bg else colors.onSurfaceVariant,
                     )
                 }
             }
@@ -97,11 +99,13 @@ public fun AudioPlayerCard(
                 modifier = Modifier.weight(1f),
                 verticalArrangement = Arrangement.spacedBy(4.dp),
             ) {
-                Text(
-                    text = title,
-                    style = MaterialTheme.typography.titleMedium,
-                    color = if (enabled) colors.onSecondaryContainer else colors.onSurfaceVariant,
-                )
+                if (title.isNotBlank()) {
+                    Text(
+                        text = title,
+                        style = MaterialTheme.typography.titleMedium,
+                        color = if (enabled) colors.onBackground else colors.onSurfaceVariant,
+                    )
+                }
                 if (enabled) {
                     VoiceWaveIndicator(active = playing)
                 }
@@ -112,7 +116,8 @@ public fun AudioPlayerCard(
                 modifier =
                     Modifier
                         .clip(RoundedCornerShape(LinguaTokens.RADIUS_PILL_DP.dp))
-                        .background(colors.surface)
+                        .background(LinguaTokens.BgSecondary)
+                        .border(1.dp, LinguaTokens.TanEdge, RoundedCornerShape(LinguaTokens.RADIUS_PILL_DP.dp))
                         .padding(2.dp)
                         .selectableGroup(),
                 horizontalArrangement = Arrangement.spacedBy(2.dp),
@@ -135,12 +140,12 @@ private fun SpeedSegment(
         text = label,
         style = MaterialTheme.typography.labelLarge,
         fontWeight = if (selected) FontWeight.Bold else FontWeight.Medium,
-        color = if (selected) MaterialTheme.colorScheme.onPrimary else MaterialTheme.colorScheme.onSurfaceVariant,
+        color = if (selected) LinguaTokens.Fg else LinguaTokens.FgMuted,
         modifier =
             Modifier
-                .heightIn(min = 48.dp)
+                .heightIn(min = 44.dp)
                 .clip(RoundedCornerShape(LinguaTokens.RADIUS_PILL_DP.dp))
-                .background(if (selected) LinguaTokens.Primary else Color.Transparent)
+                .background(if (selected) LinguaTokens.Tan else Color.Transparent)
                 .selectable(
                     selected = selected,
                     role = Role.RadioButton,

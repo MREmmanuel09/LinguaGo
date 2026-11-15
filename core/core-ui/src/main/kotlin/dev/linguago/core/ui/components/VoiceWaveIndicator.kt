@@ -24,7 +24,8 @@ import kotlin.math.PI
 import kotlin.math.sin
 
 /**
- * Onda de voz del design system (ADR-033): barras que pulsan mientras hay
+ * Onda de voz del prototipo «Warm Cream & Teal» (ADR-055): barras bicolor
+ * espejadas — teal arriba y terracota abajo — que pulsan mientras hay
  * reproducción TTS o escucha activa. Con reduced motion muestra una forma
  * estática; nunca es la única señal de estado (I8).
  */
@@ -45,14 +46,14 @@ public fun VoiceWaveIndicator(
             ),
         label = "voiceWavePhase",
     )
-    val activeColor = LinguaTokens.Primary
-    val idleColor = MaterialTheme.colorScheme.outlineVariant
+    val topColor = if (active) LinguaTokens.Primary else MaterialTheme.colorScheme.outlineVariant
+    val bottomColor = if (active) LinguaTokens.Terracotta else MaterialTheme.colorScheme.outlineVariant
 
     Canvas(
         modifier =
             modifier
                 .fillMaxWidth()
-                .height(24.dp)
+                .height(28.dp)
                 .semantics {
                     contentDescription = if (active) "Reproduciendo audio" else "Audio inactivo"
                 },
@@ -60,22 +61,30 @@ public fun VoiceWaveIndicator(
         val count = bars.coerceAtLeast(1)
         val slot = size.width / count
         val barWidth = (slot * 0.5f).coerceAtLeast(1f)
-        val minHeight = 4.dp.toPx()
-        val maxHeight = size.height
+        val minHeight = 3.dp.toPx()
+        val maxHalf = size.height / 2f
+        val centerY = size.height / 2f
         for (index in 0 until count) {
             val wave =
                 when {
-                    !active -> 0f
-                    !animations -> 0.35f + 0.15f * (index % 3)
+                    !active -> 0.12f
+                    !animations -> 0.35f + 0.35f * (index % 3) / 2f
                     else -> 0.35f + 0.45f * ((sin(phase + index * 0.7f) + 1f) / 2f)
                 }
-            val height = minHeight + wave * (maxHeight - minHeight)
+            val halfLength = minHeight / 2f + wave * (maxHalf - minHeight / 2f)
             val x = index * slot + (slot - barWidth) / 2f
+            val radius = CornerRadius(barWidth / 2f, barWidth / 2f)
             drawRoundRect(
-                color = if (active) activeColor else idleColor,
-                topLeft = Offset(x, (size.height - height) / 2f),
-                size = Size(barWidth, height),
-                cornerRadius = CornerRadius(barWidth / 2f, barWidth / 2f),
+                color = topColor,
+                topLeft = Offset(x, centerY - halfLength),
+                size = Size(barWidth, halfLength),
+                cornerRadius = radius,
+            )
+            drawRoundRect(
+                color = bottomColor,
+                topLeft = Offset(x, centerY),
+                size = Size(barWidth, halfLength),
+                cornerRadius = radius,
             )
         }
     }

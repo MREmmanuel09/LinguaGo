@@ -12,7 +12,6 @@ import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.progressSemantics
 import androidx.compose.foundation.shape.RoundedCornerShape
-import androidx.compose.material3.MaterialTheme
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
 import androidx.compose.ui.Modifier
@@ -55,7 +54,6 @@ fun LiquidXpBar(
             ),
         label = "liquidXpPhase",
     )
-    val trackBorder = MaterialTheme.colorScheme.outlineVariant
 
     Canvas(
         modifier =
@@ -63,7 +61,7 @@ fun LiquidXpBar(
                 .fillMaxWidth()
                 .height(12.dp)
                 .clip(RoundedCornerShape(6.dp))
-                .background(MaterialTheme.colorScheme.surfaceVariant)
+                .background(LinguaTokens.Tan)
                 .progressSemantics(target),
     ) {
         if (animated > 0f) {
@@ -83,11 +81,11 @@ fun LiquidXpBar(
                     }
                     close()
                 }
-            drawPath(path = path, color = LinguaTokens.Accent)
+            drawPath(path = path, color = LinguaTokens.Primary)
         }
         // Límites del track visibles en ambos temas (ADR-037).
         drawRoundRect(
-            color = trackBorder,
+            color = LinguaTokens.TanEdge,
             size = size,
             style = Stroke(width = 1.dp.toPx()),
             cornerRadius = CornerRadius(size.height / 2f),

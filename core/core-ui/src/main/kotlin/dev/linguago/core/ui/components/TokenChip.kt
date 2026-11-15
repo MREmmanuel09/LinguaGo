@@ -59,7 +59,6 @@ public fun TokenChip(
     translations: List<String>? = null,
     status: OptionStatus = OptionStatus.NEUTRAL,
 ) {
-    val colors = MaterialTheme.colorScheme
     val extended = linguaExtendedColors()
     val feedback = LocalInteractionFeedback.current
     val animations = rememberAnimationsEnabled()
@@ -68,7 +67,8 @@ public fun TokenChip(
             when (status) {
                 OptionStatus.CORRECT -> LinguaTokens.Accent.copy(alpha = 0.12f)
                 OptionStatus.INCORRECT -> LinguaTokens.Destructive.copy(alpha = 0.12f)
-                OptionStatus.NEUTRAL -> if (selected) colors.primary else colors.surface
+                OptionStatus.NEUTRAL ->
+                    if (selected) LinguaTokens.Tan else LinguaTokens.BgSecondary
             },
         animationSpec = if (animations) tween(durationMillis = 160) else snap(),
         label = "tokenBackground",
@@ -78,8 +78,7 @@ public fun TokenChip(
             when (status) {
                 OptionStatus.CORRECT -> LinguaTokens.Accent.copy(alpha = 0.62f)
                 OptionStatus.INCORRECT -> LinguaTokens.Destructive.copy(alpha = 0.62f)
-                OptionStatus.NEUTRAL ->
-                    if (selected) LinguaTokens.PrimaryEdge else colors.outline.copy(alpha = 0.55f)
+                OptionStatus.NEUTRAL -> LinguaTokens.TanShadow
             },
         animationSpec = if (animations) tween(durationMillis = 160) else snap(),
         label = "tokenEdge",
@@ -89,7 +88,7 @@ public fun TokenChip(
             when (status) {
                 OptionStatus.CORRECT -> extended.accentInk
                 OptionStatus.INCORRECT -> extended.destructiveInk
-                OptionStatus.NEUTRAL -> if (selected) colors.onPrimary else colors.onSurface
+                OptionStatus.NEUTRAL -> LinguaTokens.Fg
             },
         animationSpec = if (animations) tween(durationMillis = 160) else snap(),
         label = "tokenContent",
@@ -99,7 +98,7 @@ public fun TokenChip(
             when (status) {
                 OptionStatus.CORRECT -> LinguaTokens.Accent
                 OptionStatus.INCORRECT -> LinguaTokens.Destructive
-                OptionStatus.NEUTRAL -> if (selected) colors.primary else colors.outline
+                OptionStatus.NEUTRAL -> LinguaTokens.TanEdge
             },
         animationSpec = if (animations) tween(durationMillis = 160) else snap(),
         label = "tokenBorder",
