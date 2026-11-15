@@ -19500,30 +19500,30 @@
                 }
               ]
             },
-            {
+                        {
               "id": "es-en-a1-u09-l05",
-              "title": "Direcciones · Viajes",
+              "title": "En el aeropuerto",
               "cefrLevel": "A1",
               "vocabFrequencyBand": "1000-2000",
-              "canDo": "Puedo usar frases sencillas sobre las direcciones.",
+              "canDo": "Puedo usar frases sencillas sobre el aeropuerto.",
               "microLesson": {
-                "title": "Direcciones · Viajes",
+                "title": "En el aeropuerto",
                 "goals": [
-                  "Reconocer vocabulario de las direcciones.",
-                  "Usar frases sencillas sobre las direcciones."
+                  "Reconocer vocabulario de el aeropuerto.",
+                  "Usar frases sencillas sobre el aeropuerto."
                 ],
                 "sections": [
                   {
                     "heading": "Palabras y frases",
-                    "body": "Vocabulario básico de las direcciones. Fíjate en el orden de la frase y en las palabras nuevas.",
+                    "body": "Vocabulario básico de el aeropuerto. Fíjate en el orden de la frase y en las palabras nuevas.",
                     "examples": [
                       {
-                        "source": "Ve a la izquierda",
-                        "target": "Go left"
+                        "source": "Estoy en el aeropuerto",
+                        "target": "I am in the airport"
                       },
                       {
-                        "source": "Ve a la derecha",
-                        "target": "Go right"
+                        "source": "Estoy en la terminal",
+                        "target": "I am in the terminal"
                       }
                     ]
                   }
@@ -19531,21 +19531,21 @@
               },
               "glossary": [
                 {
-                  "term": "left",
+                  "term": "the airport",
                   "translations": [
-                    "a la izquierda"
+                    "el aeropuerto"
                   ]
                 },
                 {
-                  "term": "right",
+                  "term": "the terminal",
                   "translations": [
-                    "a la derecha"
+                    "la terminal"
                   ]
                 },
                 {
-                  "term": "straight",
+                  "term": "the waiting room",
                   "translations": [
-                    "todo recto"
+                    "la sala de espera"
                   ]
                 }
               ],
@@ -19553,16 +19553,16 @@
                 {
                   "type": "MultipleChoice",
                   "id": "es-en-a1-u09-l05-e01",
-                  "question": "¿Cómo se dice «a la izquierda»?",
+                  "question": "¿Cómo se dice «el aeropuerto»?",
                   "options": [
-                    "left",
-                    "right",
-                    "straight"
+                    "the airport",
+                    "the terminal",
+                    "the waiting room"
                   ],
                   "correctIndex": 0,
                   "feedbackOnError": {
                     "type": "vocabulary",
-                    "explanation": "«a la izquierda» se dice «left»."
+                    "explanation": "«el aeropuerto» se dice «the airport»."
                   },
                   "feedbackOnSuccess": {
                     "explanation": "Has elegido la traducción correcta."
@@ -19571,19 +19571,22 @@
                 {
                   "type": "Translate",
                   "id": "es-en-a1-u09-l05-e02",
-                  "sourcePhrase": "Ve a la izquierda",
+                  "sourcePhrase": "Estoy en el aeropuerto",
                   "correctTokens": [
-                    "Go",
-                    "left"
+                    "I",
+                    "am",
+                    "in",
+                    "the",
+                    "airport"
                   ],
                   "distractorTokens": [
-                    "right",
-                    "straight",
-                    "very"
+                    "terminal",
+                    "not",
+                    "waiting"
                   ],
                   "feedbackOnError": {
                     "type": "word_order",
-                    "explanation": "El orden correcto es «Go left»."
+                    "explanation": "El orden correcto es «I am in the airport»."
                   },
                   "feedbackOnSuccess": {
                     "explanation": "La frase conserva el orden y el significado."
@@ -19593,17 +19596,23 @@
                   "type": "OrderWords",
                   "id": "es-en-a1-u09-l05-e03",
                   "tokens": [
-                    "right",
-                    "Go"
+                    "am",
+                    "in",
+                    "the",
+                    "terminal",
+                    "I"
                   ],
                   "answerTokens": [
-                    "Go",
-                    "right"
+                    "I",
+                    "am",
+                    "in",
+                    "the",
+                    "terminal"
                   ],
-                  "sourcePhrase": "Ve a la derecha",
+                  "sourcePhrase": "Estoy en la terminal",
                   "feedbackOnError": {
                     "type": "word_order",
-                    "explanation": "La frase correcta es «Go right»."
+                    "explanation": "La frase correcta es «I am in the terminal»."
                   },
                   "feedbackOnSuccess": {
                     "explanation": "El orden produce una frase natural."
@@ -19614,16 +19623,16 @@
                   "id": "es-en-a1-u09-l05-e04",
                   "pairs": [
                     {
-                      "left": "a la izquierda",
-                      "right": "left"
+                      "left": "el aeropuerto",
+                      "right": "the airport"
                     },
                     {
-                      "left": "a la derecha",
-                      "right": "right"
+                      "left": "la terminal",
+                      "right": "the terminal"
                     },
                     {
-                      "left": "todo recto",
-                      "right": "straight"
+                      "left": "la sala de espera",
+                      "right": "the waiting room"
                     }
                   ],
                   "feedbackOnError": {
@@ -19637,16 +19646,16 @@
                 {
                   "type": "ListenChoose",
                   "id": "es-en-a1-u09-l05-e05",
-                  "audioText": "Go straight",
+                  "audioText": "I am not in the waiting room",
                   "options": [
-                    "Go left",
-                    "Go right",
-                    "Go straight"
+                    "I am in the airport",
+                    "I am in the terminal",
+                    "I am not in the waiting room"
                   ],
                   "correctIndex": 0,
                   "feedbackOnError": {
                     "type": "comprehension",
-                    "explanation": "El audio dice «Go straight»."
+                    "explanation": "El audio dice «I am not in the waiting room»."
                   },
                   "feedbackOnSuccess": {
                     "explanation": "Has reconocido la frase del audio."
@@ -19655,11 +19664,11 @@
                 {
                   "type": "ListenType",
                   "id": "es-en-a1-u09-l05-e06",
-                  "audioText": "Go straight",
-                  "transcription": "Go straight",
+                  "audioText": "I am not in the waiting room",
+                  "transcription": "I am not in the waiting room",
                   "feedbackOnError": {
                     "type": "spelling",
-                    "explanation": "Escribe exactamente «Go straight»."
+                    "explanation": "Escribe exactamente «I am not in the waiting room»."
                   },
                   "feedbackOnSuccess": {
                     "explanation": "La transcripción coincide con el audio."
@@ -19668,11 +19677,11 @@
                 {
                   "type": "SpeakRepeat",
                   "id": "es-en-a1-u09-l05-e07",
-                  "targetPhrase": "Go straight",
-                  "audioText": "Go straight",
+                  "targetPhrase": "I am not in the waiting room",
+                  "audioText": "I am not in the waiting room",
                   "feedbackOnError": {
                     "type": "pronunciation",
-                    "explanation": "Repite «Go straight» con claridad."
+                    "explanation": "Repite «I am not in the waiting room» con claridad."
                   },
                   "feedbackOnSuccess": {
                     "explanation": "La frase se entiende y mantiene el ritmo."
@@ -21171,14 +21180,14 @@
                 }
               ]
             },
-            {
+                        {
               "id": "es-en-a1-u10-l04",
-              "title": "Deporte",
+              "title": "Más deporte",
               "cefrLevel": "A1",
               "vocabFrequencyBand": "1000-2000",
               "canDo": "Puedo usar frases sencillas sobre el deporte.",
               "microLesson": {
-                "title": "Deporte",
+                "title": "Más deporte",
                 "goals": [
                   "Reconocer vocabulario de el deporte.",
                   "Usar frases sencillas sobre el deporte."
@@ -21189,12 +21198,12 @@
                     "body": "Vocabulario básico de el deporte. Fíjate en el orden de la frase y en las palabras nuevas.",
                     "examples": [
                       {
-                        "source": "Juego al fútbol",
-                        "target": "I play football"
+                        "source": "Juego al voleibol",
+                        "target": "I play volleyball"
                       },
                       {
-                        "source": "Juego al tenis",
-                        "target": "I play tennis"
+                        "source": "Juego al bádminton",
+                        "target": "I play badminton"
                       }
                     ]
                   }
@@ -21202,21 +21211,21 @@
               },
               "glossary": [
                 {
-                  "term": "football",
+                  "term": "volleyball",
                   "translations": [
-                    "al fútbol"
+                    "al voleibol"
                   ]
                 },
                 {
-                  "term": "tennis",
+                  "term": "badminton",
                   "translations": [
-                    "al tenis"
+                    "al bádminton"
                   ]
                 },
                 {
-                  "term": "basketball",
+                  "term": "rugby",
                   "translations": [
-                    "al baloncesto"
+                    "al rugby"
                   ]
                 }
               ],
@@ -21224,16 +21233,16 @@
                 {
                   "type": "MultipleChoice",
                   "id": "es-en-a1-u10-l04-e01",
-                  "question": "¿Cómo se dice «al fútbol»?",
+                  "question": "¿Cómo se dice «al voleibol»?",
                   "options": [
-                    "football",
-                    "tennis",
-                    "basketball"
+                    "volleyball",
+                    "badminton",
+                    "rugby"
                   ],
                   "correctIndex": 0,
                   "feedbackOnError": {
                     "type": "vocabulary",
-                    "explanation": "«al fútbol» se dice «football»."
+                    "explanation": "«al voleibol» se dice «volleyball»."
                   },
                   "feedbackOnSuccess": {
                     "explanation": "Has elegido la traducción correcta."
@@ -21242,20 +21251,20 @@
                 {
                   "type": "Translate",
                   "id": "es-en-a1-u10-l04-e02",
-                  "sourcePhrase": "Juego al fútbol",
+                  "sourcePhrase": "Juego al voleibol",
                   "correctTokens": [
                     "I",
                     "play",
-                    "football"
+                    "volleyball"
                   ],
                   "distractorTokens": [
-                    "tennis",
+                    "badminton",
                     "don't",
-                    "basketball"
+                    "rugby"
                   ],
                   "feedbackOnError": {
                     "type": "word_order",
-                    "explanation": "El orden correcto es «I play football»."
+                    "explanation": "El orden correcto es «I play volleyball»."
                   },
                   "feedbackOnSuccess": {
                     "explanation": "La frase conserva el orden y el significado."
@@ -21266,18 +21275,18 @@
                   "id": "es-en-a1-u10-l04-e03",
                   "tokens": [
                     "play",
-                    "tennis",
+                    "badminton",
                     "I"
                   ],
                   "answerTokens": [
                     "I",
                     "play",
-                    "tennis"
+                    "badminton"
                   ],
-                  "sourcePhrase": "Juego al tenis",
+                  "sourcePhrase": "Juego al bádminton",
                   "feedbackOnError": {
                     "type": "word_order",
-                    "explanation": "La frase correcta es «I play tennis»."
+                    "explanation": "La frase correcta es «I play badminton»."
                   },
                   "feedbackOnSuccess": {
                     "explanation": "El orden produce una frase natural."
@@ -21288,16 +21297,16 @@
                   "id": "es-en-a1-u10-l04-e04",
                   "pairs": [
                     {
-                      "left": "al fútbol",
-                      "right": "football"
+                      "left": "al voleibol",
+                      "right": "volleyball"
                     },
                     {
-                      "left": "al tenis",
-                      "right": "tennis"
+                      "left": "al bádminton",
+                      "right": "badminton"
                     },
                     {
-                      "left": "al baloncesto",
-                      "right": "basketball"
+                      "left": "al rugby",
+                      "right": "rugby"
                     }
                   ],
                   "feedbackOnError": {
@@ -21311,16 +21320,16 @@
                 {
                   "type": "ListenChoose",
                   "id": "es-en-a1-u10-l04-e05",
-                  "audioText": "I don't play basketball",
+                  "audioText": "I don't play rugby",
                   "options": [
-                    "I play football",
-                    "I play tennis",
-                    "I don't play basketball"
+                    "I play volleyball",
+                    "I play badminton",
+                    "I don't play rugby"
                   ],
                   "correctIndex": 0,
                   "feedbackOnError": {
                     "type": "comprehension",
-                    "explanation": "El audio dice «I don't play basketball»."
+                    "explanation": "El audio dice «I don't play rugby»."
                   },
                   "feedbackOnSuccess": {
                     "explanation": "Has reconocido la frase del audio."
@@ -21329,11 +21338,11 @@
                 {
                   "type": "ListenType",
                   "id": "es-en-a1-u10-l04-e06",
-                  "audioText": "I don't play basketball",
-                  "transcription": "I don't play basketball",
+                  "audioText": "I don't play rugby",
+                  "transcription": "I don't play rugby",
                   "feedbackOnError": {
                     "type": "spelling",
-                    "explanation": "Escribe exactamente «I don't play basketball»."
+                    "explanation": "Escribe exactamente «I don't play rugby»."
                   },
                   "feedbackOnSuccess": {
                     "explanation": "La transcripción coincide con el audio."
@@ -21342,11 +21351,11 @@
                 {
                   "type": "SpeakRepeat",
                   "id": "es-en-a1-u10-l04-e07",
-                  "targetPhrase": "I don't play basketball",
-                  "audioText": "I don't play basketball",
+                  "targetPhrase": "I don't play rugby",
+                  "audioText": "I don't play rugby",
                   "feedbackOnError": {
                     "type": "pronunciation",
-                    "explanation": "Repite «I don't play basketball» con claridad."
+                    "explanation": "Repite «I don't play rugby» con claridad."
                   },
                   "feedbackOnSuccess": {
                     "explanation": "La frase se entiende y mantiene el ritmo."
@@ -29223,14 +29232,14 @@
                 }
               ]
             },
-            {
+                        {
               "id": "es-en-a1-u14-l07",
-              "title": "Invitaciones · Repaso y proyectos",
+              "title": "Más invitaciones",
               "cefrLevel": "A1",
               "vocabFrequencyBand": "1000-2000",
               "canDo": "Puedo usar frases sencillas sobre las invitaciones.",
               "microLesson": {
-                "title": "Invitaciones · Repaso y proyectos",
+                "title": "Más invitaciones",
                 "goals": [
                   "Reconocer vocabulario de las invitaciones.",
                   "Usar frases sencillas sobre las invitaciones."
@@ -29241,12 +29250,12 @@
                     "body": "Vocabulario básico de las invitaciones. Fíjate en el orden de la frase y en las palabras nuevas.",
                     "examples": [
                       {
-                        "source": "¿Quieres salir?",
-                        "target": "Do you want to go out?"
+                        "source": "¿Quieres ir al cine?",
+                        "target": "Do you want to go to the cinema?"
                       },
                       {
-                        "source": "¿Quieres cenar?",
-                        "target": "Do you want to have dinner?"
+                        "source": "¿Quieres tomar un café?",
+                        "target": "Do you want to have a coffee?"
                       }
                     ]
                   }
@@ -29254,21 +29263,21 @@
               },
               "glossary": [
                 {
-                  "term": "go out",
+                  "term": "go to the cinema",
                   "translations": [
-                    "salir"
+                    "ir al cine"
                   ]
                 },
                 {
-                  "term": "have dinner",
+                  "term": "have a coffee",
                   "translations": [
-                    "cenar"
+                    "tomar un café"
                   ]
                 },
                 {
-                  "term": "watch a film",
+                  "term": "go on a trip",
                   "translations": [
-                    "ver una película"
+                    "hacer una excursión"
                   ]
                 }
               ],
@@ -29276,16 +29285,16 @@
                 {
                   "type": "MultipleChoice",
                   "id": "es-en-a1-u14-l07-e01",
-                  "question": "¿Cómo se dice «salir»?",
+                  "question": "¿Cómo se dice «ir al cine»?",
                   "options": [
-                    "go out",
-                    "have dinner",
-                    "watch a film"
+                    "go to the cinema",
+                    "have a coffee",
+                    "go on a trip"
                   ],
                   "correctIndex": 0,
                   "feedbackOnError": {
                     "type": "vocabulary",
-                    "explanation": "«salir» se dice «go out»."
+                    "explanation": "«ir al cine» se dice «go to the cinema»."
                   },
                   "feedbackOnSuccess": {
                     "explanation": "Has elegido la traducción correcta."
@@ -29294,23 +29303,25 @@
                 {
                   "type": "Translate",
                   "id": "es-en-a1-u14-l07-e02",
-                  "sourcePhrase": "¿Quieres salir?",
+                  "sourcePhrase": "¿Quieres ir al cine?",
                   "correctTokens": [
                     "Do",
                     "you",
                     "want",
                     "to",
                     "go",
-                    "out"
+                    "to",
+                    "the",
+                    "cinema"
                   ],
                   "distractorTokens": [
                     "have",
-                    "dinner",
-                    "watch"
+                    "a",
+                    "coffee"
                   ],
                   "feedbackOnError": {
                     "type": "word_order",
-                    "explanation": "El orden correcto es «Do you want to go out»."
+                    "explanation": "El orden correcto es «Do you want to go to the cinema»."
                   },
                   "feedbackOnSuccess": {
                     "explanation": "La frase conserva el orden y el significado."
@@ -29324,7 +29335,8 @@
                     "want",
                     "to",
                     "have",
-                    "dinner",
+                    "a",
+                    "coffee",
                     "Do"
                   ],
                   "answerTokens": [
@@ -29333,12 +29345,13 @@
                     "want",
                     "to",
                     "have",
-                    "dinner"
+                    "a",
+                    "coffee"
                   ],
-                  "sourcePhrase": "¿Quieres cenar?",
+                  "sourcePhrase": "¿Quieres tomar un café?",
                   "feedbackOnError": {
                     "type": "word_order",
-                    "explanation": "La frase correcta es «Do you want to have dinner»."
+                    "explanation": "La frase correcta es «Do you want to have a coffee»."
                   },
                   "feedbackOnSuccess": {
                     "explanation": "El orden produce una frase natural."
@@ -29349,16 +29362,16 @@
                   "id": "es-en-a1-u14-l07-e04",
                   "pairs": [
                     {
-                      "left": "salir",
-                      "right": "go out"
+                      "left": "ir al cine",
+                      "right": "go to the cinema"
                     },
                     {
-                      "left": "cenar",
-                      "right": "have dinner"
+                      "left": "tomar un café",
+                      "right": "have a coffee"
                     },
                     {
-                      "left": "ver una película",
-                      "right": "watch a film"
+                      "left": "hacer una excursión",
+                      "right": "go on a trip"
                     }
                   ],
                   "feedbackOnError": {
@@ -29372,16 +29385,16 @@
                 {
                   "type": "ListenChoose",
                   "id": "es-en-a1-u14-l07-e05",
-                  "audioText": "Do you want to watch a film?",
+                  "audioText": "Do you want to go on a trip?",
                   "options": [
-                    "Do you want to go out?",
-                    "Do you want to have dinner?",
-                    "Do you want to watch a film?"
+                    "Do you want to go to the cinema?",
+                    "Do you want to have a coffee?",
+                    "Do you want to go on a trip?"
                   ],
                   "correctIndex": 0,
                   "feedbackOnError": {
                     "type": "comprehension",
-                    "explanation": "El audio dice «Do you want to watch a film?»."
+                    "explanation": "El audio dice «Do you want to go on a trip?»."
                   },
                   "feedbackOnSuccess": {
                     "explanation": "Has reconocido la frase del audio."
@@ -29390,11 +29403,11 @@
                 {
                   "type": "ListenType",
                   "id": "es-en-a1-u14-l07-e06",
-                  "audioText": "Do you want to watch a film?",
-                  "transcription": "Do you want to watch a film?",
+                  "audioText": "Do you want to go on a trip?",
+                  "transcription": "Do you want to go on a trip?",
                   "feedbackOnError": {
                     "type": "spelling",
-                    "explanation": "Escribe exactamente «Do you want to watch a film?»."
+                    "explanation": "Escribe exactamente «Do you want to go on a trip?»."
                   },
                   "feedbackOnSuccess": {
                     "explanation": "La transcripción coincide con el audio."
@@ -29403,11 +29416,11 @@
                 {
                   "type": "SpeakRepeat",
                   "id": "es-en-a1-u14-l07-e07",
-                  "targetPhrase": "Do you want to watch a film?",
-                  "audioText": "Do you want to watch a film?",
+                  "targetPhrase": "Do you want to go on a trip?",
+                  "audioText": "Do you want to go on a trip?",
                   "feedbackOnError": {
                     "type": "pronunciation",
-                    "explanation": "Repite «Do you want to watch a film?» con claridad."
+                    "explanation": "Repite «Do you want to go on a trip?» con claridad."
                   },
                   "feedbackOnSuccess": {
                     "explanation": "La frase se entiende y mantiene el ritmo."
@@ -29601,26 +29614,26 @@
                 }
               ]
             },
-            {
+                        {
               "id": "es-en-a1-u14-l09",
-              "title": "Problemas y soluciones",
+              "title": "Dudas y preguntas",
               "cefrLevel": "A1",
               "vocabFrequencyBand": "1000-2000",
-              "canDo": "Puedo usar frases sencillas sobre los problemas.",
+              "canDo": "Puedo usar frases sencillas sobre las dudas.",
               "microLesson": {
-                "title": "Problemas y soluciones",
+                "title": "Dudas y preguntas",
                 "goals": [
-                  "Reconocer vocabulario de los problemas.",
-                  "Usar frases sencillas sobre los problemas."
+                  "Reconocer vocabulario de las dudas.",
+                  "Usar frases sencillas sobre las dudas."
                 ],
                 "sections": [
                   {
                     "heading": "Palabras y frases",
-                    "body": "Vocabulario básico de los problemas. Fíjate en el orden de la frase y en las palabras nuevas.",
+                    "body": "Vocabulario básico de las dudas. Fíjate en el orden de la frase y en las palabras nuevas.",
                     "examples": [
                       {
-                        "source": "Tengo un problema",
-                        "target": "I have a problem"
+                        "source": "Tengo una duda",
+                        "target": "I have a doubt"
                       },
                       {
                         "source": "Tengo una pregunta",
@@ -29632,9 +29645,9 @@
               },
               "glossary": [
                 {
-                  "term": "a problem",
+                  "term": "a doubt",
                   "translations": [
-                    "un problema"
+                    "una duda"
                   ]
                 },
                 {
@@ -29644,9 +29657,9 @@
                   ]
                 },
                 {
-                  "term": "a solution",
+                  "term": "an idea",
                   "translations": [
-                    "una solución"
+                    "una idea"
                   ]
                 }
               ],
@@ -29654,16 +29667,16 @@
                 {
                   "type": "MultipleChoice",
                   "id": "es-en-a1-u14-l09-e01",
-                  "question": "¿Cómo se dice «un problema»?",
+                  "question": "¿Cómo se dice «una duda»?",
                   "options": [
-                    "a problem",
+                    "a doubt",
                     "a question",
-                    "a solution"
+                    "an idea"
                   ],
                   "correctIndex": 0,
                   "feedbackOnError": {
                     "type": "vocabulary",
-                    "explanation": "«un problema» se dice «a problem»."
+                    "explanation": "«una duda» se dice «a doubt»."
                   },
                   "feedbackOnSuccess": {
                     "explanation": "Has elegido la traducción correcta."
@@ -29672,21 +29685,21 @@
                 {
                   "type": "Translate",
                   "id": "es-en-a1-u14-l09-e02",
-                  "sourcePhrase": "Tengo un problema",
+                  "sourcePhrase": "Tengo una duda",
                   "correctTokens": [
                     "I",
                     "have",
                     "a",
-                    "problem"
+                    "doubt"
                   ],
                   "distractorTokens": [
                     "question",
                     "don't",
-                    "solution"
+                    "an"
                   ],
                   "feedbackOnError": {
                     "type": "word_order",
-                    "explanation": "El orden correcto es «I have a problem»."
+                    "explanation": "El orden correcto es «I have a doubt»."
                   },
                   "feedbackOnSuccess": {
                     "explanation": "La frase conserva el orden y el significado."
@@ -29721,16 +29734,16 @@
                   "id": "es-en-a1-u14-l09-e04",
                   "pairs": [
                     {
-                      "left": "un problema",
-                      "right": "a problem"
+                      "left": "una duda",
+                      "right": "a doubt"
                     },
                     {
                       "left": "una pregunta",
                       "right": "a question"
                     },
                     {
-                      "left": "una solución",
-                      "right": "a solution"
+                      "left": "una idea",
+                      "right": "an idea"
                     }
                   ],
                   "feedbackOnError": {
@@ -29744,16 +29757,16 @@
                 {
                   "type": "ListenChoose",
                   "id": "es-en-a1-u14-l09-e05",
-                  "audioText": "I don't have a solution",
+                  "audioText": "I don't have an idea",
                   "options": [
-                    "I have a problem",
+                    "I have a doubt",
                     "I have a question",
-                    "I don't have a solution"
+                    "I don't have an idea"
                   ],
                   "correctIndex": 0,
                   "feedbackOnError": {
                     "type": "comprehension",
-                    "explanation": "El audio dice «I don't have a solution»."
+                    "explanation": "El audio dice «I don't have an idea»."
                   },
                   "feedbackOnSuccess": {
                     "explanation": "Has reconocido la frase del audio."
@@ -29762,11 +29775,11 @@
                 {
                   "type": "ListenType",
                   "id": "es-en-a1-u14-l09-e06",
-                  "audioText": "I don't have a solution",
-                  "transcription": "I don't have a solution",
+                  "audioText": "I don't have an idea",
+                  "transcription": "I don't have an idea",
                   "feedbackOnError": {
                     "type": "spelling",
-                    "explanation": "Escribe exactamente «I don't have a solution»."
+                    "explanation": "Escribe exactamente «I don't have an idea»."
                   },
                   "feedbackOnSuccess": {
                     "explanation": "La transcripción coincide con el audio."
@@ -29775,11 +29788,11 @@
                 {
                   "type": "SpeakRepeat",
                   "id": "es-en-a1-u14-l09-e07",
-                  "targetPhrase": "I don't have a solution",
-                  "audioText": "I don't have a solution",
+                  "targetPhrase": "I don't have an idea",
+                  "audioText": "I don't have an idea",
                   "feedbackOnError": {
                     "type": "pronunciation",
-                    "explanation": "Repite «I don't have a solution» con claridad."
+                    "explanation": "Repite «I don't have an idea» con claridad."
                   },
                   "feedbackOnSuccess": {
                     "explanation": "La frase se entiende y mantiene el ritmo."
@@ -29787,30 +29800,30 @@
                 }
               ]
             },
-            {
+                        {
               "id": "es-en-a1-u14-l10",
-              "title": "Evaluación",
+              "title": "Resultados",
               "cefrLevel": "A1",
               "vocabFrequencyBand": "1000-2000",
-              "canDo": "Puedo usar frases sencillas sobre el repaso.",
+              "canDo": "Puedo usar frases sencillas sobre los resultados.",
               "microLesson": {
-                "title": "Evaluación",
+                "title": "Resultados",
                 "goals": [
-                  "Reconocer vocabulario de el repaso.",
-                  "Usar frases sencillas sobre el repaso."
+                  "Reconocer vocabulario de los resultados.",
+                  "Usar frases sencillas sobre los resultados."
                 ],
                 "sections": [
                   {
                     "heading": "Palabras y frases",
-                    "body": "Vocabulario básico de el repaso. Fíjate en el orden de la frase y en las palabras nuevas.",
+                    "body": "Vocabulario básico de los resultados. Fíjate en el orden de la frase y en las palabras nuevas.",
                     "examples": [
                       {
-                        "source": "Tengo un libro",
-                        "target": "I have a book"
+                        "source": "Tengo un examen",
+                        "target": "I have an exam"
                       },
                       {
-                        "source": "Quiero una mochila",
-                        "target": "I want a backpack"
+                        "source": "Tengo una nota",
+                        "target": "I have a grade"
                       }
                     ]
                   }
@@ -29818,21 +29831,21 @@
               },
               "glossary": [
                 {
-                  "term": "a book",
+                  "term": "an exam",
                   "translations": [
-                    "un libro"
+                    "un examen"
                   ]
                 },
                 {
-                  "term": "a backpack",
+                  "term": "a grade",
                   "translations": [
-                    "una mochila"
+                    "una nota"
                   ]
                 },
                 {
-                  "term": "a pen",
+                  "term": "a result",
                   "translations": [
-                    "un bolígrafo"
+                    "un resultado"
                   ]
                 }
               ],
@@ -29840,16 +29853,16 @@
                 {
                   "type": "MultipleChoice",
                   "id": "es-en-a1-u14-l10-e01",
-                  "question": "¿Cómo se dice «un libro»?",
+                  "question": "¿Cómo se dice «un examen»?",
                   "options": [
-                    "a book",
-                    "a backpack",
-                    "a pen"
+                    "an exam",
+                    "a grade",
+                    "a result"
                   ],
                   "correctIndex": 0,
                   "feedbackOnError": {
                     "type": "vocabulary",
-                    "explanation": "«un libro» se dice «a book»."
+                    "explanation": "«un examen» se dice «an exam»."
                   },
                   "feedbackOnSuccess": {
                     "explanation": "Has elegido la traducción correcta."
@@ -29858,21 +29871,21 @@
                 {
                   "type": "Translate",
                   "id": "es-en-a1-u14-l10-e02",
-                  "sourcePhrase": "Tengo un libro",
+                  "sourcePhrase": "Tengo un examen",
                   "correctTokens": [
                     "I",
                     "have",
-                    "a",
-                    "book"
+                    "an",
+                    "exam"
                   ],
                   "distractorTokens": [
-                    "want",
-                    "backpack",
-                    "need"
+                    "a",
+                    "grade",
+                    "don't"
                   ],
                   "feedbackOnError": {
                     "type": "word_order",
-                    "explanation": "El orden correcto es «I have a book»."
+                    "explanation": "El orden correcto es «I have an exam»."
                   },
                   "feedbackOnSuccess": {
                     "explanation": "La frase conserva el orden y el significado."
@@ -29882,21 +29895,21 @@
                   "type": "OrderWords",
                   "id": "es-en-a1-u14-l10-e03",
                   "tokens": [
-                    "want",
+                    "have",
                     "a",
-                    "backpack",
+                    "grade",
                     "I"
                   ],
                   "answerTokens": [
                     "I",
-                    "want",
+                    "have",
                     "a",
-                    "backpack"
+                    "grade"
                   ],
-                  "sourcePhrase": "Quiero una mochila",
+                  "sourcePhrase": "Tengo una nota",
                   "feedbackOnError": {
                     "type": "word_order",
-                    "explanation": "La frase correcta es «I want a backpack»."
+                    "explanation": "La frase correcta es «I have a grade»."
                   },
                   "feedbackOnSuccess": {
                     "explanation": "El orden produce una frase natural."
@@ -29907,16 +29920,16 @@
                   "id": "es-en-a1-u14-l10-e04",
                   "pairs": [
                     {
-                      "left": "un libro",
-                      "right": "a book"
+                      "left": "un examen",
+                      "right": "an exam"
                     },
                     {
-                      "left": "una mochila",
-                      "right": "a backpack"
+                      "left": "una nota",
+                      "right": "a grade"
                     },
                     {
-                      "left": "un bolígrafo",
-                      "right": "a pen"
+                      "left": "un resultado",
+                      "right": "a result"
                     }
                   ],
                   "feedbackOnError": {
@@ -29930,16 +29943,16 @@
                 {
                   "type": "ListenChoose",
                   "id": "es-en-a1-u14-l10-e05",
-                  "audioText": "I need a pen",
+                  "audioText": "I don't have a result",
                   "options": [
-                    "I have a book",
-                    "I want a backpack",
-                    "I need a pen"
+                    "I have an exam",
+                    "I have a grade",
+                    "I don't have a result"
                   ],
                   "correctIndex": 0,
                   "feedbackOnError": {
                     "type": "comprehension",
-                    "explanation": "El audio dice «I need a pen»."
+                    "explanation": "El audio dice «I don't have a result»."
                   },
                   "feedbackOnSuccess": {
                     "explanation": "Has reconocido la frase del audio."
@@ -29948,11 +29961,11 @@
                 {
                   "type": "ListenType",
                   "id": "es-en-a1-u14-l10-e06",
-                  "audioText": "I need a pen",
-                  "transcription": "I need a pen",
+                  "audioText": "I don't have a result",
+                  "transcription": "I don't have a result",
                   "feedbackOnError": {
                     "type": "spelling",
-                    "explanation": "Escribe exactamente «I need a pen»."
+                    "explanation": "Escribe exactamente «I don't have a result»."
                   },
                   "feedbackOnSuccess": {
                     "explanation": "La transcripción coincide con el audio."
@@ -29961,11 +29974,11 @@
                 {
                   "type": "SpeakRepeat",
                   "id": "es-en-a1-u14-l10-e07",
-                  "targetPhrase": "I need a pen",
-                  "audioText": "I need a pen",
+                  "targetPhrase": "I don't have a result",
+                  "audioText": "I don't have a result",
                   "feedbackOnError": {
                     "type": "pronunciation",
-                    "explanation": "Repite «I need a pen» con claridad."
+                    "explanation": "Repite «I don't have a result» con claridad."
                   },
                   "feedbackOnSuccess": {
                     "explanation": "La frase se entiende y mantiene el ritmo."

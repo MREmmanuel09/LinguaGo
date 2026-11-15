@@ -19972,30 +19972,30 @@
                 }
               ]
             },
-            {
+                        {
               "id": "es-pt-a1-u09-l05",
-              "title": "Direções · Viagens",
+              "title": "No aeroporto",
               "cefrLevel": "A1",
               "vocabFrequencyBand": "1000-2000",
-              "canDo": "Puedo usar frases sencillas sobre as direções en portugués.",
+              "canDo": "Puedo usar frases sencillas sobre o aeroporto.",
               "microLesson": {
-                "title": "Direções · Viagens",
+                "title": "No aeroporto",
                 "goals": [
-                  "Reconocer vocabulario de as direções.",
-                  "Usar frases sencillas sobre as direções en portugués."
+                  "Reconocer vocabulario de o aeroporto.",
+                  "Usar frases sencillas sobre o aeroporto."
                 ],
                 "sections": [
                   {
-                    "heading": "Palavras e frases",
-                    "body": "Vocabulario básico de as direções. Fíjate en el orden de la frase y en las palabras nuevas.",
+                    "heading": "Palabras y frases",
+                    "body": "Vocabulario básico de o aeroporto. Fíjate en el orden de la frase y en las palabras nuevas.",
                     "examples": [
                       {
-                        "source": "Ve a la izquierda",
-                        "target": "Vá à esquerda"
+                        "source": "Estoy en el aeropuerto",
+                        "target": "Eu estou no aeroporto"
                       },
                       {
-                        "source": "Ve a la derecha",
-                        "target": "Vá à direita"
+                        "source": "Estoy en la terminal",
+                        "target": "Eu estou no terminal"
                       }
                     ]
                   }
@@ -20003,21 +20003,21 @@
               },
               "glossary": [
                 {
-                  "term": "à esquerda",
+                  "term": "o aeroporto",
                   "translations": [
-                    "a la izquierda"
+                    "el aeropuerto"
                   ]
                 },
                 {
-                  "term": "à direita",
+                  "term": "o terminal",
                   "translations": [
-                    "a la derecha"
+                    "la terminal"
                   ]
                 },
                 {
-                  "term": "em frente",
+                  "term": "a sala de espera",
                   "translations": [
-                    "todo recto"
+                    "la sala de espera"
                   ]
                 }
               ],
@@ -20025,16 +20025,16 @@
                 {
                   "type": "MultipleChoice",
                   "id": "es-pt-a1-u09-l05-e01",
-                  "question": "¿Cómo se dice «a la izquierda» en portugués?",
+                  "question": "¿Cómo se dice «el aeropuerto»?",
                   "options": [
-                    "à esquerda",
-                    "à direita",
-                    "em frente"
+                    "o aeroporto",
+                    "o terminal",
+                    "a sala de espera"
                   ],
                   "correctIndex": 0,
                   "feedbackOnError": {
                     "type": "vocabulary",
-                    "explanation": "«a la izquierda» se dice «à esquerda»."
+                    "explanation": "«el aeropuerto» se dice «o aeroporto»."
                   },
                   "feedbackOnSuccess": {
                     "explanation": "Has elegido la traducción correcta."
@@ -20043,20 +20043,21 @@
                 {
                   "type": "Translate",
                   "id": "es-pt-a1-u09-l05-e02",
-                  "sourcePhrase": "Ve a la izquierda",
+                  "sourcePhrase": "Estoy en el aeropuerto",
                   "correctTokens": [
-                    "Vá",
-                    "à",
-                    "esquerda"
+                    "Eu",
+                    "estou",
+                    "no",
+                    "aeroporto"
                   ],
                   "distractorTokens": [
-                    "direita",
-                    "em",
-                    "frente"
+                    "terminal",
+                    "n",
+                    "o"
                   ],
                   "feedbackOnError": {
                     "type": "word_order",
-                    "explanation": "El orden correcto es «Vá à esquerda»."
+                    "explanation": "El orden correcto es «Eu estou no aeroporto»."
                   },
                   "feedbackOnSuccess": {
                     "explanation": "La frase conserva el orden y el significado."
@@ -20066,19 +20067,21 @@
                   "type": "OrderWords",
                   "id": "es-pt-a1-u09-l05-e03",
                   "tokens": [
-                    "à",
-                    "direita",
-                    "Vá"
+                    "estou",
+                    "no",
+                    "terminal",
+                    "Eu"
                   ],
                   "answerTokens": [
-                    "Vá",
-                    "à",
-                    "direita"
+                    "Eu",
+                    "estou",
+                    "no",
+                    "terminal"
                   ],
-                  "sourcePhrase": "Ve a la derecha",
+                  "sourcePhrase": "Estoy en la terminal",
                   "feedbackOnError": {
                     "type": "word_order",
-                    "explanation": "La frase correcta es «Vá à direita»."
+                    "explanation": "La frase correcta es «Eu estou no terminal»."
                   },
                   "feedbackOnSuccess": {
                     "explanation": "El orden produce una frase natural."
@@ -20089,16 +20092,16 @@
                   "id": "es-pt-a1-u09-l05-e04",
                   "pairs": [
                     {
-                      "left": "a la izquierda",
-                      "right": "à esquerda"
+                      "left": "el aeropuerto",
+                      "right": "o aeroporto"
                     },
                     {
-                      "left": "a la derecha",
-                      "right": "à direita"
+                      "left": "la terminal",
+                      "right": "o terminal"
                     },
                     {
-                      "left": "todo recto",
-                      "right": "em frente"
+                      "left": "la sala de espera",
+                      "right": "a sala de espera"
                     }
                   ],
                   "feedbackOnError": {
@@ -20112,16 +20115,16 @@
                 {
                   "type": "ListenChoose",
                   "id": "es-pt-a1-u09-l05-e05",
-                  "audioText": "Vá em frente",
+                  "audioText": "Eu não estou na sala de espera",
                   "options": [
-                    "Vá à esquerda",
-                    "Vá à direita",
-                    "Vá em frente"
+                    "Eu estou no aeroporto",
+                    "Eu estou no terminal",
+                    "Eu não estou na sala de espera"
                   ],
                   "correctIndex": 0,
                   "feedbackOnError": {
                     "type": "comprehension",
-                    "explanation": "El audio dice «Vá em frente»."
+                    "explanation": "El audio dice «Eu não estou na sala de espera»."
                   },
                   "feedbackOnSuccess": {
                     "explanation": "Has reconocido la frase del audio."
@@ -20130,11 +20133,11 @@
                 {
                   "type": "ListenType",
                   "id": "es-pt-a1-u09-l05-e06",
-                  "audioText": "Vá em frente",
-                  "transcription": "Vá em frente",
+                  "audioText": "Eu não estou na sala de espera",
+                  "transcription": "Eu não estou na sala de espera",
                   "feedbackOnError": {
                     "type": "spelling",
-                    "explanation": "Escribe exactamente «Vá em frente»."
+                    "explanation": "Escribe exactamente «Eu não estou na sala de espera»."
                   },
                   "feedbackOnSuccess": {
                     "explanation": "La transcripción coincide con el audio."
@@ -20143,11 +20146,11 @@
                 {
                   "type": "SpeakRepeat",
                   "id": "es-pt-a1-u09-l05-e07",
-                  "targetPhrase": "Vá em frente",
-                  "audioText": "Vá em frente",
+                  "targetPhrase": "Eu não estou na sala de espera",
+                  "audioText": "Eu não estou na sala de espera",
                   "feedbackOnError": {
                     "type": "pronunciation",
-                    "explanation": "Repite «Vá em frente» con claridad."
+                    "explanation": "Repite «Eu não estou na sala de espera» con claridad."
                   },
                   "feedbackOnSuccess": {
                     "explanation": "La frase se entiende y mantiene el ritmo."
@@ -21638,30 +21641,30 @@
                 }
               ]
             },
-            {
+                        {
               "id": "es-pt-a1-u10-l04",
-              "title": "Esporte",
+              "title": "Mais esporte",
               "cefrLevel": "A1",
               "vocabFrequencyBand": "1000-2000",
-              "canDo": "Puedo usar frases sencillas sobre o esporte en portugués.",
+              "canDo": "Puedo usar frases sencillas sobre o esporte.",
               "microLesson": {
-                "title": "Esporte",
+                "title": "Mais esporte",
                 "goals": [
                   "Reconocer vocabulario de o esporte.",
-                  "Usar frases sencillas sobre o esporte en portugués."
+                  "Usar frases sencillas sobre o esporte."
                 ],
                 "sections": [
                   {
-                    "heading": "Palavras e frases",
+                    "heading": "Palabras y frases",
                     "body": "Vocabulario básico de o esporte. Fíjate en el orden de la frase y en las palabras nuevas.",
                     "examples": [
                       {
-                        "source": "Juego al fútbol",
-                        "target": "Eu jogo futebol"
+                        "source": "Juego al voleibol",
+                        "target": "Eu jogo vôlei"
                       },
                       {
-                        "source": "Juego al tenis",
-                        "target": "Eu jogo tênis"
+                        "source": "Juego al bádminton",
+                        "target": "Eu jogo badminton"
                       }
                     ]
                   }
@@ -21669,21 +21672,21 @@
               },
               "glossary": [
                 {
-                  "term": "futebol",
+                  "term": "vôlei",
                   "translations": [
-                    "al fútbol"
+                    "al voleibol"
                   ]
                 },
                 {
-                  "term": "tênis",
+                  "term": "badminton",
                   "translations": [
-                    "al tenis"
+                    "al bádminton"
                   ]
                 },
                 {
-                  "term": "basquete",
+                  "term": "rúgbi",
                   "translations": [
-                    "al baloncesto"
+                    "al rugby"
                   ]
                 }
               ],
@@ -21691,16 +21694,16 @@
                 {
                   "type": "MultipleChoice",
                   "id": "es-pt-a1-u10-l04-e01",
-                  "question": "¿Cómo se dice «al fútbol» en portugués?",
+                  "question": "¿Cómo se dice «al voleibol»?",
                   "options": [
-                    "futebol",
-                    "tênis",
-                    "basquete"
+                    "vôlei",
+                    "badminton",
+                    "rúgbi"
                   ],
                   "correctIndex": 0,
                   "feedbackOnError": {
                     "type": "vocabulary",
-                    "explanation": "«al fútbol» se dice «futebol»."
+                    "explanation": "«al voleibol» se dice «vôlei»."
                   },
                   "feedbackOnSuccess": {
                     "explanation": "Has elegido la traducción correcta."
@@ -21709,20 +21712,21 @@
                 {
                   "type": "Translate",
                   "id": "es-pt-a1-u10-l04-e02",
-                  "sourcePhrase": "Juego al fútbol",
+                  "sourcePhrase": "Juego al voleibol",
                   "correctTokens": [
                     "Eu",
                     "jogo",
-                    "futebol"
+                    "v",
+                    "lei"
                   ],
                   "distractorTokens": [
-                    "tênis",
-                    "não",
-                    "basquete"
+                    "badminton",
+                    "n",
+                    "o"
                   ],
                   "feedbackOnError": {
                     "type": "word_order",
-                    "explanation": "El orden correcto es «Eu jogo futebol»."
+                    "explanation": "El orden correcto es «Eu jogo v lei»."
                   },
                   "feedbackOnSuccess": {
                     "explanation": "La frase conserva el orden y el significado."
@@ -21733,18 +21737,18 @@
                   "id": "es-pt-a1-u10-l04-e03",
                   "tokens": [
                     "jogo",
-                    "tênis",
+                    "badminton",
                     "Eu"
                   ],
                   "answerTokens": [
                     "Eu",
                     "jogo",
-                    "tênis"
+                    "badminton"
                   ],
-                  "sourcePhrase": "Juego al tenis",
+                  "sourcePhrase": "Juego al bádminton",
                   "feedbackOnError": {
                     "type": "word_order",
-                    "explanation": "La frase correcta es «Eu jogo tênis»."
+                    "explanation": "La frase correcta es «Eu jogo badminton»."
                   },
                   "feedbackOnSuccess": {
                     "explanation": "El orden produce una frase natural."
@@ -21755,16 +21759,16 @@
                   "id": "es-pt-a1-u10-l04-e04",
                   "pairs": [
                     {
-                      "left": "al fútbol",
-                      "right": "futebol"
+                      "left": "al voleibol",
+                      "right": "vôlei"
                     },
                     {
-                      "left": "al tenis",
-                      "right": "tênis"
+                      "left": "al bádminton",
+                      "right": "badminton"
                     },
                     {
-                      "left": "al baloncesto",
-                      "right": "basquete"
+                      "left": "al rugby",
+                      "right": "rúgbi"
                     }
                   ],
                   "feedbackOnError": {
@@ -21778,16 +21782,16 @@
                 {
                   "type": "ListenChoose",
                   "id": "es-pt-a1-u10-l04-e05",
-                  "audioText": "Eu não jogo basquete",
+                  "audioText": "Eu não jogo rúgbi",
                   "options": [
-                    "Eu jogo futebol",
-                    "Eu jogo tênis",
-                    "Eu não jogo basquete"
+                    "Eu jogo vôlei",
+                    "Eu jogo badminton",
+                    "Eu não jogo rúgbi"
                   ],
                   "correctIndex": 0,
                   "feedbackOnError": {
                     "type": "comprehension",
-                    "explanation": "El audio dice «Eu não jogo basquete»."
+                    "explanation": "El audio dice «Eu não jogo rúgbi»."
                   },
                   "feedbackOnSuccess": {
                     "explanation": "Has reconocido la frase del audio."
@@ -21796,11 +21800,11 @@
                 {
                   "type": "ListenType",
                   "id": "es-pt-a1-u10-l04-e06",
-                  "audioText": "Eu não jogo basquete",
-                  "transcription": "Eu não jogo basquete",
+                  "audioText": "Eu não jogo rúgbi",
+                  "transcription": "Eu não jogo rúgbi",
                   "feedbackOnError": {
                     "type": "spelling",
-                    "explanation": "Escribe exactamente «Eu não jogo basquete»."
+                    "explanation": "Escribe exactamente «Eu não jogo rúgbi»."
                   },
                   "feedbackOnSuccess": {
                     "explanation": "La transcripción coincide con el audio."
@@ -21809,11 +21813,11 @@
                 {
                   "type": "SpeakRepeat",
                   "id": "es-pt-a1-u10-l04-e07",
-                  "targetPhrase": "Eu não jogo basquete",
-                  "audioText": "Eu não jogo basquete",
+                  "targetPhrase": "Eu não jogo rúgbi",
+                  "audioText": "Eu não jogo rúgbi",
                   "feedbackOnError": {
                     "type": "pronunciation",
-                    "explanation": "Repite «Eu não jogo basquete» con claridad."
+                    "explanation": "Repite «Eu não jogo rúgbi» con claridad."
                   },
                   "feedbackOnSuccess": {
                     "explanation": "La frase se entiende y mantiene el ritmo."
@@ -29642,30 +29646,30 @@
                 }
               ]
             },
-            {
+                        {
               "id": "es-pt-a1-u14-l07",
-              "title": "Convites · Revisão e projetos",
+              "title": "Mais convites",
               "cefrLevel": "A1",
               "vocabFrequencyBand": "1000-2000",
-              "canDo": "Puedo usar frases sencillas sobre os convites en portugués.",
+              "canDo": "Puedo usar frases sencillas sobre os convites.",
               "microLesson": {
-                "title": "Convites · Revisão e projetos",
+                "title": "Mais convites",
                 "goals": [
                   "Reconocer vocabulario de os convites.",
-                  "Usar frases sencillas sobre os convites en portugués."
+                  "Usar frases sencillas sobre os convites."
                 ],
                 "sections": [
                   {
-                    "heading": "Palavras e frases",
+                    "heading": "Palabras y frases",
                     "body": "Vocabulario básico de os convites. Fíjate en el orden de la frase y en las palabras nuevas.",
                     "examples": [
                       {
-                        "source": "¿Quieres salir?",
-                        "target": "Você quer sair?"
+                        "source": "¿Quieres ir al cine?",
+                        "target": "Você quer ir ao cinema?"
                       },
                       {
-                        "source": "¿Quieres cenar?",
-                        "target": "Você quer jantar?"
+                        "source": "¿Quieres tomar un café?",
+                        "target": "Você quer tomar um café?"
                       }
                     ]
                   }
@@ -29673,21 +29677,21 @@
               },
               "glossary": [
                 {
-                  "term": "sair",
+                  "term": "ir ao cinema",
                   "translations": [
-                    "salir"
+                    "ir al cine"
                   ]
                 },
                 {
-                  "term": "jantar",
+                  "term": "tomar um café",
                   "translations": [
-                    "cenar"
+                    "tomar un café"
                   ]
                 },
                 {
-                  "term": "ver um filme",
+                  "term": "fazer uma excursão",
                   "translations": [
-                    "ver una película"
+                    "hacer una excursión"
                   ]
                 }
               ],
@@ -29695,16 +29699,16 @@
                 {
                   "type": "MultipleChoice",
                   "id": "es-pt-a1-u14-l07-e01",
-                  "question": "¿Cómo se dice «salir» en portugués?",
+                  "question": "¿Cómo se dice «ir al cine»?",
                   "options": [
-                    "sair",
-                    "jantar",
-                    "ver um filme"
+                    "ir ao cinema",
+                    "tomar um café",
+                    "fazer uma excursão"
                   ],
                   "correctIndex": 0,
                   "feedbackOnError": {
                     "type": "vocabulary",
-                    "explanation": "«salir» se dice «sair»."
+                    "explanation": "«ir al cine» se dice «ir ao cinema»."
                   },
                   "feedbackOnSuccess": {
                     "explanation": "Has elegido la traducción correcta."
@@ -29713,20 +29717,22 @@
                 {
                   "type": "Translate",
                   "id": "es-pt-a1-u14-l07-e02",
-                  "sourcePhrase": "¿Quieres salir?",
+                  "sourcePhrase": "¿Quieres ir al cine?",
                   "correctTokens": [
-                    "Você",
+                    "Voc",
                     "quer",
-                    "sair"
+                    "ir",
+                    "ao",
+                    "cinema"
                   ],
                   "distractorTokens": [
-                    "jantar",
-                    "ver",
-                    "um"
+                    "tomar",
+                    "um",
+                    "café"
                   ],
                   "feedbackOnError": {
                     "type": "word_order",
-                    "explanation": "El orden correcto es «Você quer sair»."
+                    "explanation": "El orden correcto es «Voc quer ir ao cinema»."
                   },
                   "feedbackOnSuccess": {
                     "explanation": "La frase conserva el orden y el significado."
@@ -29737,18 +29743,22 @@
                   "id": "es-pt-a1-u14-l07-e03",
                   "tokens": [
                     "quer",
-                    "jantar",
-                    "Você"
+                    "tomar",
+                    "um",
+                    "café",
+                    "Voc"
                   ],
                   "answerTokens": [
-                    "Você",
+                    "Voc",
                     "quer",
-                    "jantar"
+                    "tomar",
+                    "um",
+                    "café"
                   ],
-                  "sourcePhrase": "¿Quieres cenar?",
+                  "sourcePhrase": "¿Quieres tomar un café?",
                   "feedbackOnError": {
                     "type": "word_order",
-                    "explanation": "La frase correcta es «Você quer jantar»."
+                    "explanation": "La frase correcta es «Voc quer tomar um café»."
                   },
                   "feedbackOnSuccess": {
                     "explanation": "El orden produce una frase natural."
@@ -29759,16 +29769,16 @@
                   "id": "es-pt-a1-u14-l07-e04",
                   "pairs": [
                     {
-                      "left": "salir",
-                      "right": "sair"
+                      "left": "ir al cine",
+                      "right": "ir ao cinema"
                     },
                     {
-                      "left": "cenar",
-                      "right": "jantar"
+                      "left": "tomar un café",
+                      "right": "tomar um café"
                     },
                     {
-                      "left": "ver una película",
-                      "right": "ver um filme"
+                      "left": "hacer una excursión",
+                      "right": "fazer uma excursão"
                     }
                   ],
                   "feedbackOnError": {
@@ -29782,16 +29792,16 @@
                 {
                   "type": "ListenChoose",
                   "id": "es-pt-a1-u14-l07-e05",
-                  "audioText": "Você quer ver um filme?",
+                  "audioText": "Você quer fazer uma excursão?",
                   "options": [
-                    "Você quer sair?",
-                    "Você quer jantar?",
-                    "Você quer ver um filme?"
+                    "Você quer ir ao cinema?",
+                    "Você quer tomar um café?",
+                    "Você quer fazer uma excursão?"
                   ],
                   "correctIndex": 0,
                   "feedbackOnError": {
                     "type": "comprehension",
-                    "explanation": "El audio dice «Você quer ver um filme?»."
+                    "explanation": "El audio dice «Você quer fazer uma excursão?»."
                   },
                   "feedbackOnSuccess": {
                     "explanation": "Has reconocido la frase del audio."
@@ -29800,11 +29810,11 @@
                 {
                   "type": "ListenType",
                   "id": "es-pt-a1-u14-l07-e06",
-                  "audioText": "Você quer ver um filme?",
-                  "transcription": "Você quer ver um filme?",
+                  "audioText": "Você quer fazer uma excursão?",
+                  "transcription": "Você quer fazer uma excursão?",
                   "feedbackOnError": {
                     "type": "spelling",
-                    "explanation": "Escribe exactamente «Você quer ver um filme?»."
+                    "explanation": "Escribe exactamente «Você quer fazer uma excursão?»."
                   },
                   "feedbackOnSuccess": {
                     "explanation": "La transcripción coincide con el audio."
@@ -29813,11 +29823,11 @@
                 {
                   "type": "SpeakRepeat",
                   "id": "es-pt-a1-u14-l07-e07",
-                  "targetPhrase": "Você quer ver um filme?",
-                  "audioText": "Você quer ver um filme?",
+                  "targetPhrase": "Você quer fazer uma excursão?",
+                  "audioText": "Você quer fazer uma excursão?",
                   "feedbackOnError": {
                     "type": "pronunciation",
-                    "explanation": "Repite «Você quer ver um filme?» con claridad."
+                    "explanation": "Repite «Você quer fazer uma excursão?» con claridad."
                   },
                   "feedbackOnSuccess": {
                     "explanation": "La frase se entiende y mantiene el ritmo."
@@ -30011,26 +30021,26 @@
                 }
               ]
             },
-            {
+                        {
               "id": "es-pt-a1-u14-l09",
-              "title": "Problemas e soluções",
+              "title": "Dúvidas e perguntas",
               "cefrLevel": "A1",
               "vocabFrequencyBand": "1000-2000",
-              "canDo": "Puedo usar frases sencillas sobre os problemas en portugués.",
+              "canDo": "Puedo usar frases sencillas sobre as dúvidas.",
               "microLesson": {
-                "title": "Problemas e soluções",
+                "title": "Dúvidas e perguntas",
                 "goals": [
-                  "Reconocer vocabulario de os problemas.",
-                  "Usar frases sencillas sobre os problemas en portugués."
+                  "Reconocer vocabulario de as dúvidas.",
+                  "Usar frases sencillas sobre as dúvidas."
                 ],
                 "sections": [
                   {
-                    "heading": "Palavras e frases",
-                    "body": "Vocabulario básico de os problemas. Fíjate en el orden de la frase y en las palabras nuevas.",
+                    "heading": "Palabras y frases",
+                    "body": "Vocabulario básico de as dúvidas. Fíjate en el orden de la frase y en las palabras nuevas.",
                     "examples": [
                       {
-                        "source": "Tengo un problema",
-                        "target": "Eu tenho um problema"
+                        "source": "Tengo una duda",
+                        "target": "Eu tenho uma dúvida"
                       },
                       {
                         "source": "Tengo una pregunta",
@@ -30042,9 +30052,9 @@
               },
               "glossary": [
                 {
-                  "term": "um problema",
+                  "term": "uma dúvida",
                   "translations": [
-                    "un problema"
+                    "una duda"
                   ]
                 },
                 {
@@ -30054,9 +30064,9 @@
                   ]
                 },
                 {
-                  "term": "uma solução",
+                  "term": "uma ideia",
                   "translations": [
-                    "una solución"
+                    "una idea"
                   ]
                 }
               ],
@@ -30064,16 +30074,16 @@
                 {
                   "type": "MultipleChoice",
                   "id": "es-pt-a1-u14-l09-e01",
-                  "question": "¿Cómo se dice «un problema» en portugués?",
+                  "question": "¿Cómo se dice «una duda»?",
                   "options": [
-                    "um problema",
+                    "uma dúvida",
                     "uma pergunta",
-                    "uma solução"
+                    "uma ideia"
                   ],
                   "correctIndex": 0,
                   "feedbackOnError": {
                     "type": "vocabulary",
-                    "explanation": "«un problema» se dice «um problema»."
+                    "explanation": "«una duda» se dice «uma dúvida»."
                   },
                   "feedbackOnSuccess": {
                     "explanation": "Has elegido la traducción correcta."
@@ -30082,21 +30092,21 @@
                 {
                   "type": "Translate",
                   "id": "es-pt-a1-u14-l09-e02",
-                  "sourcePhrase": "Tengo un problema",
+                  "sourcePhrase": "Tengo una duda",
                   "correctTokens": [
                     "Eu",
                     "tenho",
-                    "um",
-                    "problema"
+                    "uma",
+                    "dúvida"
                   ],
                   "distractorTokens": [
-                    "uma",
                     "pergunta",
-                    "não"
+                    "n",
+                    "o"
                   ],
                   "feedbackOnError": {
                     "type": "word_order",
-                    "explanation": "El orden correcto es «Eu tenho um problema»."
+                    "explanation": "El orden correcto es «Eu tenho uma dúvida»."
                   },
                   "feedbackOnSuccess": {
                     "explanation": "La frase conserva el orden y el significado."
@@ -30131,16 +30141,16 @@
                   "id": "es-pt-a1-u14-l09-e04",
                   "pairs": [
                     {
-                      "left": "un problema",
-                      "right": "um problema"
+                      "left": "una duda",
+                      "right": "uma dúvida"
                     },
                     {
                       "left": "una pregunta",
                       "right": "uma pergunta"
                     },
                     {
-                      "left": "una solución",
-                      "right": "uma solução"
+                      "left": "una idea",
+                      "right": "uma ideia"
                     }
                   ],
                   "feedbackOnError": {
@@ -30154,16 +30164,16 @@
                 {
                   "type": "ListenChoose",
                   "id": "es-pt-a1-u14-l09-e05",
-                  "audioText": "Eu não tenho uma solução",
+                  "audioText": "Eu não tenho uma ideia",
                   "options": [
-                    "Eu tenho um problema",
+                    "Eu tenho uma dúvida",
                     "Eu tenho uma pergunta",
-                    "Eu não tenho uma solução"
+                    "Eu não tenho uma ideia"
                   ],
                   "correctIndex": 0,
                   "feedbackOnError": {
                     "type": "comprehension",
-                    "explanation": "El audio dice «Eu não tenho uma solução»."
+                    "explanation": "El audio dice «Eu não tenho uma ideia»."
                   },
                   "feedbackOnSuccess": {
                     "explanation": "Has reconocido la frase del audio."
@@ -30172,11 +30182,11 @@
                 {
                   "type": "ListenType",
                   "id": "es-pt-a1-u14-l09-e06",
-                  "audioText": "Eu não tenho uma solução",
-                  "transcription": "Eu não tenho uma solução",
+                  "audioText": "Eu não tenho uma ideia",
+                  "transcription": "Eu não tenho uma ideia",
                   "feedbackOnError": {
                     "type": "spelling",
-                    "explanation": "Escribe exactamente «Eu não tenho uma solução»."
+                    "explanation": "Escribe exactamente «Eu não tenho uma ideia»."
                   },
                   "feedbackOnSuccess": {
                     "explanation": "La transcripción coincide con el audio."
@@ -30185,11 +30195,11 @@
                 {
                   "type": "SpeakRepeat",
                   "id": "es-pt-a1-u14-l09-e07",
-                  "targetPhrase": "Eu não tenho uma solução",
-                  "audioText": "Eu não tenho uma solução",
+                  "targetPhrase": "Eu não tenho uma ideia",
+                  "audioText": "Eu não tenho uma ideia",
                   "feedbackOnError": {
                     "type": "pronunciation",
-                    "explanation": "Repite «Eu não tenho uma solução» con claridad."
+                    "explanation": "Repite «Eu não tenho uma ideia» con claridad."
                   },
                   "feedbackOnSuccess": {
                     "explanation": "La frase se entiende y mantiene el ritmo."
@@ -30197,30 +30207,30 @@
                 }
               ]
             },
-            {
+                        {
               "id": "es-pt-a1-u14-l10",
-              "title": "Avaliação",
+              "title": "Resultados",
               "cefrLevel": "A1",
               "vocabFrequencyBand": "1000-2000",
-              "canDo": "Puedo usar frases sencillas sobre a revisão en portugués.",
+              "canDo": "Puedo usar frases sencillas sobre os resultados.",
               "microLesson": {
-                "title": "Avaliação",
+                "title": "Resultados",
                 "goals": [
-                  "Reconocer vocabulario de a revisão.",
-                  "Usar frases sencillas sobre a revisão en portugués."
+                  "Reconocer vocabulario de os resultados.",
+                  "Usar frases sencillas sobre os resultados."
                 ],
                 "sections": [
                   {
-                    "heading": "Palavras e frases",
-                    "body": "Vocabulario básico de a revisão. Fíjate en el orden de la frase y en las palabras nuevas.",
+                    "heading": "Palabras y frases",
+                    "body": "Vocabulario básico de os resultados. Fíjate en el orden de la frase y en las palabras nuevas.",
                     "examples": [
                       {
-                        "source": "Tengo un libro",
-                        "target": "Eu tenho um livro"
+                        "source": "Tengo un examen",
+                        "target": "Eu tenho um exame"
                       },
                       {
-                        "source": "Quiero una mochila",
-                        "target": "Eu quero uma mochila"
+                        "source": "Tengo una nota",
+                        "target": "Eu tenho uma nota"
                       }
                     ]
                   }
@@ -30228,21 +30238,21 @@
               },
               "glossary": [
                 {
-                  "term": "um livro",
+                  "term": "um exame",
                   "translations": [
-                    "un libro"
+                    "un examen"
                   ]
                 },
                 {
-                  "term": "uma mochila",
+                  "term": "uma nota",
                   "translations": [
-                    "una mochila"
+                    "una nota"
                   ]
                 },
                 {
-                  "term": "uma caneta",
+                  "term": "um resultado",
                   "translations": [
-                    "un bolígrafo"
+                    "un resultado"
                   ]
                 }
               ],
@@ -30250,16 +30260,16 @@
                 {
                   "type": "MultipleChoice",
                   "id": "es-pt-a1-u14-l10-e01",
-                  "question": "¿Cómo se dice «un libro» en portugués?",
+                  "question": "¿Cómo se dice «un examen»?",
                   "options": [
-                    "um livro",
-                    "uma mochila",
-                    "uma caneta"
+                    "um exame",
+                    "uma nota",
+                    "um resultado"
                   ],
                   "correctIndex": 0,
                   "feedbackOnError": {
                     "type": "vocabulary",
-                    "explanation": "«un libro» se dice «um livro»."
+                    "explanation": "«un examen» se dice «um exame»."
                   },
                   "feedbackOnSuccess": {
                     "explanation": "Has elegido la traducción correcta."
@@ -30268,21 +30278,21 @@
                 {
                   "type": "Translate",
                   "id": "es-pt-a1-u14-l10-e02",
-                  "sourcePhrase": "Tengo un libro",
+                  "sourcePhrase": "Tengo un examen",
                   "correctTokens": [
                     "Eu",
                     "tenho",
                     "um",
-                    "livro"
+                    "exame"
                   ],
                   "distractorTokens": [
-                    "quero",
                     "uma",
-                    "mochila"
+                    "nota",
+                    "n"
                   ],
                   "feedbackOnError": {
                     "type": "word_order",
-                    "explanation": "El orden correcto es «Eu tenho um livro»."
+                    "explanation": "El orden correcto es «Eu tenho um exame»."
                   },
                   "feedbackOnSuccess": {
                     "explanation": "La frase conserva el orden y el significado."
@@ -30292,21 +30302,21 @@
                   "type": "OrderWords",
                   "id": "es-pt-a1-u14-l10-e03",
                   "tokens": [
-                    "quero",
+                    "tenho",
                     "uma",
-                    "mochila",
+                    "nota",
                     "Eu"
                   ],
                   "answerTokens": [
                     "Eu",
-                    "quero",
+                    "tenho",
                     "uma",
-                    "mochila"
+                    "nota"
                   ],
-                  "sourcePhrase": "Quiero una mochila",
+                  "sourcePhrase": "Tengo una nota",
                   "feedbackOnError": {
                     "type": "word_order",
-                    "explanation": "La frase correcta es «Eu quero uma mochila»."
+                    "explanation": "La frase correcta es «Eu tenho uma nota»."
                   },
                   "feedbackOnSuccess": {
                     "explanation": "El orden produce una frase natural."
@@ -30317,16 +30327,16 @@
                   "id": "es-pt-a1-u14-l10-e04",
                   "pairs": [
                     {
-                      "left": "un libro",
-                      "right": "um livro"
+                      "left": "un examen",
+                      "right": "um exame"
                     },
                     {
-                      "left": "una mochila",
-                      "right": "uma mochila"
+                      "left": "una nota",
+                      "right": "uma nota"
                     },
                     {
-                      "left": "un bolígrafo",
-                      "right": "uma caneta"
+                      "left": "un resultado",
+                      "right": "um resultado"
                     }
                   ],
                   "feedbackOnError": {
@@ -30340,16 +30350,16 @@
                 {
                   "type": "ListenChoose",
                   "id": "es-pt-a1-u14-l10-e05",
-                  "audioText": "Eu preciso de uma caneta",
+                  "audioText": "Eu não tenho um resultado",
                   "options": [
-                    "Eu tenho um livro",
-                    "Eu quero uma mochila",
-                    "Eu preciso de uma caneta"
+                    "Eu tenho um exame",
+                    "Eu tenho uma nota",
+                    "Eu não tenho um resultado"
                   ],
                   "correctIndex": 0,
                   "feedbackOnError": {
                     "type": "comprehension",
-                    "explanation": "El audio dice «Eu preciso de uma caneta»."
+                    "explanation": "El audio dice «Eu não tenho um resultado»."
                   },
                   "feedbackOnSuccess": {
                     "explanation": "Has reconocido la frase del audio."
@@ -30358,11 +30368,11 @@
                 {
                   "type": "ListenType",
                   "id": "es-pt-a1-u14-l10-e06",
-                  "audioText": "Eu preciso de uma caneta",
-                  "transcription": "Eu preciso de uma caneta",
+                  "audioText": "Eu não tenho um resultado",
+                  "transcription": "Eu não tenho um resultado",
                   "feedbackOnError": {
                     "type": "spelling",
-                    "explanation": "Escribe exactamente «Eu preciso de uma caneta»."
+                    "explanation": "Escribe exactamente «Eu não tenho um resultado»."
                   },
                   "feedbackOnSuccess": {
                     "explanation": "La transcripción coincide con el audio."
@@ -30371,11 +30381,11 @@
                 {
                   "type": "SpeakRepeat",
                   "id": "es-pt-a1-u14-l10-e07",
-                  "targetPhrase": "Eu preciso de uma caneta",
-                  "audioText": "Eu preciso de uma caneta",
+                  "targetPhrase": "Eu não tenho um resultado",
+                  "audioText": "Eu não tenho um resultado",
                   "feedbackOnError": {
                     "type": "pronunciation",
-                    "explanation": "Repite «Eu preciso de uma caneta» con claridad."
+                    "explanation": "Repite «Eu não tenho um resultado» con claridad."
                   },
                   "feedbackOnSuccess": {
                     "explanation": "La frase se entiende y mantiene el ritmo."

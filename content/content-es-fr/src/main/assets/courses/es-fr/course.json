@@ -19962,30 +19962,30 @@
                 }
               ]
             },
-            {
+                        {
               "id": "es-fr-a1-u09-l05",
-              "title": "Directions · Voyages",
+              "title": "À l'aéroport",
               "cefrLevel": "A1",
               "vocabFrequencyBand": "1000-2000",
-              "canDo": "Puedo usar frases sencillas sobre les directions en francés.",
+              "canDo": "Puedo usar frases sencillas sobre l'aéroport.",
               "microLesson": {
-                "title": "Directions · Voyages",
+                "title": "À l'aéroport",
                 "goals": [
-                  "Reconocer vocabulario de les directions.",
-                  "Usar frases sencillas sobre les directions en francés."
+                  "Reconocer vocabulario de l'aéroport.",
+                  "Usar frases sencillas sobre l'aéroport."
                 ],
                 "sections": [
                   {
-                    "heading": "Mots et phrases",
-                    "body": "Vocabulario básico de les directions. Fíjate en el orden de la frase y en las palabras nuevas.",
+                    "heading": "Palabras y frases",
+                    "body": "Vocabulario básico de l'aéroport. Fíjate en el orden de la frase y en las palabras nuevas.",
                     "examples": [
                       {
-                        "source": "Ve a la izquierda",
-                        "target": "Va à gauche"
+                        "source": "Estoy en el aeropuerto",
+                        "target": "Je suis à l'aéroport"
                       },
                       {
-                        "source": "Ve a la derecha",
-                        "target": "Va à droite"
+                        "source": "Estoy en la terminal",
+                        "target": "Je suis au terminal"
                       }
                     ]
                   }
@@ -19993,21 +19993,21 @@
               },
               "glossary": [
                 {
-                  "term": "à gauche",
+                  "term": "l'aéroport",
                   "translations": [
-                    "a la izquierda"
+                    "el aeropuerto"
                   ]
                 },
                 {
-                  "term": "à droite",
+                  "term": "le terminal",
                   "translations": [
-                    "a la derecha"
+                    "la terminal"
                   ]
                 },
                 {
-                  "term": "tout droit",
+                  "term": "la salle d'attente",
                   "translations": [
-                    "todo recto"
+                    "la sala de espera"
                   ]
                 }
               ],
@@ -20015,16 +20015,16 @@
                 {
                   "type": "MultipleChoice",
                   "id": "es-fr-a1-u09-l05-e01",
-                  "question": "¿Cómo se dice «a la izquierda» en francés?",
+                  "question": "¿Cómo se dice «el aeropuerto»?",
                   "options": [
-                    "à gauche",
-                    "à droite",
-                    "tout droit"
+                    "l'aéroport",
+                    "le terminal",
+                    "la salle d'attente"
                   ],
                   "correctIndex": 0,
                   "feedbackOnError": {
                     "type": "vocabulary",
-                    "explanation": "«a la izquierda» se dice «à gauche»."
+                    "explanation": "«el aeropuerto» se dice «l'aéroport»."
                   },
                   "feedbackOnSuccess": {
                     "explanation": "Has elegido la traducción correcta."
@@ -20033,20 +20033,20 @@
                 {
                   "type": "Translate",
                   "id": "es-fr-a1-u09-l05-e02",
-                  "sourcePhrase": "Ve a la izquierda",
+                  "sourcePhrase": "Estoy en el aeropuerto",
                   "correctTokens": [
-                    "Va",
-                    "à",
-                    "gauche"
+                    "Je",
+                    "suis",
+                    "l'aéroport"
                   ],
                   "distractorTokens": [
-                    "droite",
-                    "tout",
-                    "droit"
+                    "au",
+                    "terminal",
+                    "la"
                   ],
                   "feedbackOnError": {
                     "type": "word_order",
-                    "explanation": "El orden correcto es «Va à gauche»."
+                    "explanation": "El orden correcto es «Je suis l'aéroport»."
                   },
                   "feedbackOnSuccess": {
                     "explanation": "La frase conserva el orden y el significado."
@@ -20056,19 +20056,21 @@
                   "type": "OrderWords",
                   "id": "es-fr-a1-u09-l05-e03",
                   "tokens": [
-                    "à",
-                    "droite",
-                    "Va"
+                    "suis",
+                    "au",
+                    "terminal",
+                    "Je"
                   ],
                   "answerTokens": [
-                    "Va",
-                    "à",
-                    "droite"
+                    "Je",
+                    "suis",
+                    "au",
+                    "terminal"
                   ],
-                  "sourcePhrase": "Ve a la derecha",
+                  "sourcePhrase": "Estoy en la terminal",
                   "feedbackOnError": {
                     "type": "word_order",
-                    "explanation": "La frase correcta es «Va à droite»."
+                    "explanation": "La frase correcta es «Je suis au terminal»."
                   },
                   "feedbackOnSuccess": {
                     "explanation": "El orden produce una frase natural."
@@ -20079,16 +20081,16 @@
                   "id": "es-fr-a1-u09-l05-e04",
                   "pairs": [
                     {
-                      "left": "a la izquierda",
-                      "right": "à gauche"
+                      "left": "el aeropuerto",
+                      "right": "l'aéroport"
                     },
                     {
-                      "left": "a la derecha",
-                      "right": "à droite"
+                      "left": "la terminal",
+                      "right": "le terminal"
                     },
                     {
-                      "left": "todo recto",
-                      "right": "tout droit"
+                      "left": "la sala de espera",
+                      "right": "la salle d'attente"
                     }
                   ],
                   "feedbackOnError": {
@@ -20102,16 +20104,16 @@
                 {
                   "type": "ListenChoose",
                   "id": "es-fr-a1-u09-l05-e05",
-                  "audioText": "Va tout droit",
+                  "audioText": "Je suis à la salle d'attente",
                   "options": [
-                    "Va à gauche",
-                    "Va à droite",
-                    "Va tout droit"
+                    "Je suis à l'aéroport",
+                    "Je suis au terminal",
+                    "Je suis à la salle d'attente"
                   ],
                   "correctIndex": 0,
                   "feedbackOnError": {
                     "type": "comprehension",
-                    "explanation": "El audio dice «Va tout droit»."
+                    "explanation": "El audio dice «Je suis à la salle d'attente»."
                   },
                   "feedbackOnSuccess": {
                     "explanation": "Has reconocido la frase del audio."
@@ -20120,11 +20122,11 @@
                 {
                   "type": "ListenType",
                   "id": "es-fr-a1-u09-l05-e06",
-                  "audioText": "Va tout droit",
-                  "transcription": "Va tout droit",
+                  "audioText": "Je suis à la salle d'attente",
+                  "transcription": "Je suis à la salle d'attente",
                   "feedbackOnError": {
                     "type": "spelling",
-                    "explanation": "Escribe exactamente «Va tout droit»."
+                    "explanation": "Escribe exactamente «Je suis à la salle d'attente»."
                   },
                   "feedbackOnSuccess": {
                     "explanation": "La transcripción coincide con el audio."
@@ -20133,11 +20135,11 @@
                 {
                   "type": "SpeakRepeat",
                   "id": "es-fr-a1-u09-l05-e07",
-                  "targetPhrase": "Va tout droit",
-                  "audioText": "Va tout droit",
+                  "targetPhrase": "Je suis à la salle d'attente",
+                  "audioText": "Je suis à la salle d'attente",
                   "feedbackOnError": {
                     "type": "pronunciation",
-                    "explanation": "Repite «Va tout droit» con claridad."
+                    "explanation": "Repite «Je suis à la salle d'attente» con claridad."
                   },
                   "feedbackOnSuccess": {
                     "explanation": "La frase se entiende y mantiene el ritmo."
@@ -21630,30 +21632,30 @@
                 }
               ]
             },
-            {
+                        {
               "id": "es-fr-a1-u10-l04",
-              "title": "Sport",
+              "title": "Plus de sport",
               "cefrLevel": "A1",
               "vocabFrequencyBand": "1000-2000",
-              "canDo": "Puedo usar frases sencillas sobre le sport en francés.",
+              "canDo": "Puedo usar frases sencillas sobre le sport.",
               "microLesson": {
-                "title": "Sport",
+                "title": "Plus de sport",
                 "goals": [
                   "Reconocer vocabulario de le sport.",
-                  "Usar frases sencillas sobre le sport en francés."
+                  "Usar frases sencillas sobre le sport."
                 ],
                 "sections": [
                   {
-                    "heading": "Mots et phrases",
+                    "heading": "Palabras y frases",
                     "body": "Vocabulario básico de le sport. Fíjate en el orden de la frase y en las palabras nuevas.",
                     "examples": [
                       {
-                        "source": "Juego al fútbol",
-                        "target": "Je joue au football"
+                        "source": "Juego al voleibol",
+                        "target": "Je joue au volley"
                       },
                       {
-                        "source": "Juego al tenis",
-                        "target": "Je joue au tennis"
+                        "source": "Juego al bádminton",
+                        "target": "Je joue au badminton"
                       }
                     ]
                   }
@@ -21661,21 +21663,21 @@
               },
               "glossary": [
                 {
-                  "term": "au football",
+                  "term": "au volley",
                   "translations": [
-                    "al fútbol"
+                    "al voleibol"
                   ]
                 },
                 {
-                  "term": "au tennis",
+                  "term": "au badminton",
                   "translations": [
-                    "al tenis"
+                    "al bádminton"
                   ]
                 },
                 {
-                  "term": "au basket",
+                  "term": "au rugby",
                   "translations": [
-                    "al baloncesto"
+                    "al rugby"
                   ]
                 }
               ],
@@ -21683,16 +21685,16 @@
                 {
                   "type": "MultipleChoice",
                   "id": "es-fr-a1-u10-l04-e01",
-                  "question": "¿Cómo se dice «al fútbol» en francés?",
+                  "question": "¿Cómo se dice «al voleibol»?",
                   "options": [
-                    "au football",
-                    "au tennis",
-                    "au basket"
+                    "au volley",
+                    "au badminton",
+                    "au rugby"
                   ],
                   "correctIndex": 0,
                   "feedbackOnError": {
                     "type": "vocabulary",
-                    "explanation": "«al fútbol» se dice «au football»."
+                    "explanation": "«al voleibol» se dice «au volley»."
                   },
                   "feedbackOnSuccess": {
                     "explanation": "Has elegido la traducción correcta."
@@ -21701,21 +21703,21 @@
                 {
                   "type": "Translate",
                   "id": "es-fr-a1-u10-l04-e02",
-                  "sourcePhrase": "Juego al fútbol",
+                  "sourcePhrase": "Juego al voleibol",
                   "correctTokens": [
                     "Je",
                     "joue",
                     "au",
-                    "football"
+                    "volley"
                   ],
                   "distractorTokens": [
-                    "tennis",
-                    "basket",
+                    "badminton",
+                    "rugby",
                     "très"
                   ],
                   "feedbackOnError": {
                     "type": "word_order",
-                    "explanation": "El orden correcto es «Je joue au football»."
+                    "explanation": "El orden correcto es «Je joue au volley»."
                   },
                   "feedbackOnSuccess": {
                     "explanation": "La frase conserva el orden y el significado."
@@ -21727,19 +21729,19 @@
                   "tokens": [
                     "joue",
                     "au",
-                    "tennis",
+                    "badminton",
                     "Je"
                   ],
                   "answerTokens": [
                     "Je",
                     "joue",
                     "au",
-                    "tennis"
+                    "badminton"
                   ],
-                  "sourcePhrase": "Juego al tenis",
+                  "sourcePhrase": "Juego al bádminton",
                   "feedbackOnError": {
                     "type": "word_order",
-                    "explanation": "La frase correcta es «Je joue au tennis»."
+                    "explanation": "La frase correcta es «Je joue au badminton»."
                   },
                   "feedbackOnSuccess": {
                     "explanation": "El orden produce una frase natural."
@@ -21750,16 +21752,16 @@
                   "id": "es-fr-a1-u10-l04-e04",
                   "pairs": [
                     {
-                      "left": "al fútbol",
-                      "right": "au football"
+                      "left": "al voleibol",
+                      "right": "au volley"
                     },
                     {
-                      "left": "al tenis",
-                      "right": "au tennis"
+                      "left": "al bádminton",
+                      "right": "au badminton"
                     },
                     {
-                      "left": "al baloncesto",
-                      "right": "au basket"
+                      "left": "al rugby",
+                      "right": "au rugby"
                     }
                   ],
                   "feedbackOnError": {
@@ -21773,16 +21775,16 @@
                 {
                   "type": "ListenChoose",
                   "id": "es-fr-a1-u10-l04-e05",
-                  "audioText": "Je joue au basket",
+                  "audioText": "Je joue au rugby",
                   "options": [
-                    "Je joue au football",
-                    "Je joue au tennis",
-                    "Je joue au basket"
+                    "Je joue au volley",
+                    "Je joue au badminton",
+                    "Je joue au rugby"
                   ],
                   "correctIndex": 0,
                   "feedbackOnError": {
                     "type": "comprehension",
-                    "explanation": "El audio dice «Je joue au basket»."
+                    "explanation": "El audio dice «Je joue au rugby»."
                   },
                   "feedbackOnSuccess": {
                     "explanation": "Has reconocido la frase del audio."
@@ -21791,11 +21793,11 @@
                 {
                   "type": "ListenType",
                   "id": "es-fr-a1-u10-l04-e06",
-                  "audioText": "Je joue au basket",
-                  "transcription": "Je joue au basket",
+                  "audioText": "Je joue au rugby",
+                  "transcription": "Je joue au rugby",
                   "feedbackOnError": {
                     "type": "spelling",
-                    "explanation": "Escribe exactamente «Je joue au basket»."
+                    "explanation": "Escribe exactamente «Je joue au rugby»."
                   },
                   "feedbackOnSuccess": {
                     "explanation": "La transcripción coincide con el audio."
@@ -21804,11 +21806,11 @@
                 {
                   "type": "SpeakRepeat",
                   "id": "es-fr-a1-u10-l04-e07",
-                  "targetPhrase": "Je joue au basket",
-                  "audioText": "Je joue au basket",
+                  "targetPhrase": "Je joue au rugby",
+                  "audioText": "Je joue au rugby",
                   "feedbackOnError": {
                     "type": "pronunciation",
-                    "explanation": "Repite «Je joue au basket» con claridad."
+                    "explanation": "Repite «Je joue au rugby» con claridad."
                   },
                   "feedbackOnSuccess": {
                     "explanation": "La frase se entiende y mantiene el ritmo."
@@ -29630,30 +29632,30 @@
                 }
               ]
             },
-            {
+                        {
               "id": "es-fr-a1-u14-l07",
-              "title": "Invitations · Révision et projets",
+              "title": "Plus d'invitations",
               "cefrLevel": "A1",
               "vocabFrequencyBand": "1000-2000",
-              "canDo": "Puedo usar frases sencillas sobre les invitations en francés.",
+              "canDo": "Puedo usar frases sencillas sobre les invitations.",
               "microLesson": {
-                "title": "Invitations · Révision et projets",
+                "title": "Plus d'invitations",
                 "goals": [
                   "Reconocer vocabulario de les invitations.",
-                  "Usar frases sencillas sobre les invitations en francés."
+                  "Usar frases sencillas sobre les invitations."
                 ],
                 "sections": [
                   {
-                    "heading": "Mots et phrases",
+                    "heading": "Palabras y frases",
                     "body": "Vocabulario básico de les invitations. Fíjate en el orden de la frase y en las palabras nuevas.",
                     "examples": [
                       {
-                        "source": "¿Quieres salir?",
-                        "target": "Tu veux sortir ?"
+                        "source": "¿Quieres ir al cine?",
+                        "target": "Tu veux aller au cinéma ?"
                       },
                       {
-                        "source": "¿Quieres cenar?",
-                        "target": "Tu veux dîner ?"
+                        "source": "¿Quieres tomar un café?",
+                        "target": "Tu veux prendre un café ?"
                       }
                     ]
                   }
@@ -29661,21 +29663,21 @@
               },
               "glossary": [
                 {
-                  "term": "sortir",
+                  "term": "aller au cinéma",
                   "translations": [
-                    "salir"
+                    "ir al cine"
                   ]
                 },
                 {
-                  "term": "dîner",
+                  "term": "prendre un café",
                   "translations": [
-                    "cenar"
+                    "tomar un café"
                   ]
                 },
                 {
-                  "term": "regarder un film",
+                  "term": "faire une excursion",
                   "translations": [
-                    "ver una película"
+                    "hacer una excursión"
                   ]
                 }
               ],
@@ -29683,16 +29685,16 @@
                 {
                   "type": "MultipleChoice",
                   "id": "es-fr-a1-u14-l07-e01",
-                  "question": "¿Cómo se dice «salir» en francés?",
+                  "question": "¿Cómo se dice «ir al cine»?",
                   "options": [
-                    "sortir",
-                    "dîner",
-                    "regarder un film"
+                    "aller au cinéma",
+                    "prendre un café",
+                    "faire une excursion"
                   ],
                   "correctIndex": 0,
                   "feedbackOnError": {
                     "type": "vocabulary",
-                    "explanation": "«salir» se dice «sortir»."
+                    "explanation": "«ir al cine» se dice «aller au cinéma»."
                   },
                   "feedbackOnSuccess": {
                     "explanation": "Has elegido la traducción correcta."
@@ -29701,20 +29703,22 @@
                 {
                   "type": "Translate",
                   "id": "es-fr-a1-u14-l07-e02",
-                  "sourcePhrase": "¿Quieres salir?",
+                  "sourcePhrase": "¿Quieres ir al cine?",
                   "correctTokens": [
                     "Tu",
                     "veux",
-                    "sortir"
+                    "aller",
+                    "au",
+                    "cinéma"
                   ],
                   "distractorTokens": [
-                    "dîner",
-                    "regarder",
-                    "un"
+                    "prendre",
+                    "un",
+                    "café"
                   ],
                   "feedbackOnError": {
                     "type": "word_order",
-                    "explanation": "El orden correcto es «Tu veux sortir»."
+                    "explanation": "El orden correcto es «Tu veux aller au cinéma»."
                   },
                   "feedbackOnSuccess": {
                     "explanation": "La frase conserva el orden y el significado."
@@ -29725,18 +29729,22 @@
                   "id": "es-fr-a1-u14-l07-e03",
                   "tokens": [
                     "veux",
-                    "dîner",
+                    "prendre",
+                    "un",
+                    "café",
                     "Tu"
                   ],
                   "answerTokens": [
                     "Tu",
                     "veux",
-                    "dîner"
+                    "prendre",
+                    "un",
+                    "café"
                   ],
-                  "sourcePhrase": "¿Quieres cenar?",
+                  "sourcePhrase": "¿Quieres tomar un café?",
                   "feedbackOnError": {
                     "type": "word_order",
-                    "explanation": "La frase correcta es «Tu veux dîner»."
+                    "explanation": "La frase correcta es «Tu veux prendre un café»."
                   },
                   "feedbackOnSuccess": {
                     "explanation": "El orden produce una frase natural."
@@ -29747,16 +29755,16 @@
                   "id": "es-fr-a1-u14-l07-e04",
                   "pairs": [
                     {
-                      "left": "salir",
-                      "right": "sortir"
+                      "left": "ir al cine",
+                      "right": "aller au cinéma"
                     },
                     {
-                      "left": "cenar",
-                      "right": "dîner"
+                      "left": "tomar un café",
+                      "right": "prendre un café"
                     },
                     {
-                      "left": "ver una película",
-                      "right": "regarder un film"
+                      "left": "hacer una excursión",
+                      "right": "faire une excursion"
                     }
                   ],
                   "feedbackOnError": {
@@ -29770,16 +29778,16 @@
                 {
                   "type": "ListenChoose",
                   "id": "es-fr-a1-u14-l07-e05",
-                  "audioText": "Tu veux regarder un film ?",
+                  "audioText": "Tu veux faire une excursion ?",
                   "options": [
-                    "Tu veux sortir ?",
-                    "Tu veux dîner ?",
-                    "Tu veux regarder un film ?"
+                    "Tu veux aller au cinéma ?",
+                    "Tu veux prendre un café ?",
+                    "Tu veux faire une excursion ?"
                   ],
                   "correctIndex": 0,
                   "feedbackOnError": {
                     "type": "comprehension",
-                    "explanation": "El audio dice «Tu veux regarder un film ?»."
+                    "explanation": "El audio dice «Tu veux faire une excursion ?»."
                   },
                   "feedbackOnSuccess": {
                     "explanation": "Has reconocido la frase del audio."
@@ -29788,11 +29796,11 @@
                 {
                   "type": "ListenType",
                   "id": "es-fr-a1-u14-l07-e06",
-                  "audioText": "Tu veux regarder un film ?",
-                  "transcription": "Tu veux regarder un film ?",
+                  "audioText": "Tu veux faire une excursion ?",
+                  "transcription": "Tu veux faire une excursion ?",
                   "feedbackOnError": {
                     "type": "spelling",
-                    "explanation": "Escribe exactamente «Tu veux regarder un film ?»."
+                    "explanation": "Escribe exactamente «Tu veux faire une excursion ?»."
                   },
                   "feedbackOnSuccess": {
                     "explanation": "La transcripción coincide con el audio."
@@ -29801,11 +29809,11 @@
                 {
                   "type": "SpeakRepeat",
                   "id": "es-fr-a1-u14-l07-e07",
-                  "targetPhrase": "Tu veux regarder un film ?",
-                  "audioText": "Tu veux regarder un film ?",
+                  "targetPhrase": "Tu veux faire une excursion ?",
+                  "audioText": "Tu veux faire une excursion ?",
                   "feedbackOnError": {
                     "type": "pronunciation",
-                    "explanation": "Repite «Tu veux regarder un film ?» con claridad."
+                    "explanation": "Repite «Tu veux faire une excursion ?» con claridad."
                   },
                   "feedbackOnSuccess": {
                     "explanation": "La frase se entiende y mantiene el ritmo."
@@ -29999,26 +30007,26 @@
                 }
               ]
             },
-            {
+                        {
               "id": "es-fr-a1-u14-l09",
-              "title": "Problèmes et solutions",
+              "title": "Doutes et questions",
               "cefrLevel": "A1",
               "vocabFrequencyBand": "1000-2000",
-              "canDo": "Puedo usar frases sencillas sobre les problèmes en francés.",
+              "canDo": "Puedo usar frases sencillas sobre les doutes.",
               "microLesson": {
-                "title": "Problèmes et solutions",
+                "title": "Doutes et questions",
                 "goals": [
-                  "Reconocer vocabulario de les problèmes.",
-                  "Usar frases sencillas sobre les problèmes en francés."
+                  "Reconocer vocabulario de les doutes.",
+                  "Usar frases sencillas sobre les doutes."
                 ],
                 "sections": [
                   {
-                    "heading": "Mots et phrases",
-                    "body": "Vocabulario básico de les problèmes. Fíjate en el orden de la frase y en las palabras nuevas.",
+                    "heading": "Palabras y frases",
+                    "body": "Vocabulario básico de les doutes. Fíjate en el orden de la frase y en las palabras nuevas.",
                     "examples": [
                       {
-                        "source": "Tengo un problema",
-                        "target": "J'ai un problème"
+                        "source": "Tengo una duda",
+                        "target": "J'ai un doute"
                       },
                       {
                         "source": "Tengo una pregunta",
@@ -30030,9 +30038,9 @@
               },
               "glossary": [
                 {
-                  "term": "un problème",
+                  "term": "un doute",
                   "translations": [
-                    "un problema"
+                    "una duda"
                   ]
                 },
                 {
@@ -30042,9 +30050,9 @@
                   ]
                 },
                 {
-                  "term": "une solution",
+                  "term": "une idée",
                   "translations": [
-                    "una solución"
+                    "una idea"
                   ]
                 }
               ],
@@ -30052,16 +30060,16 @@
                 {
                   "type": "MultipleChoice",
                   "id": "es-fr-a1-u14-l09-e01",
-                  "question": "¿Cómo se dice «un problema» en francés?",
+                  "question": "¿Cómo se dice «una duda»?",
                   "options": [
-                    "un problème",
+                    "un doute",
                     "une question",
-                    "une solution"
+                    "une idée"
                   ],
                   "correctIndex": 0,
                   "feedbackOnError": {
                     "type": "vocabulary",
-                    "explanation": "«un problema» se dice «un problème»."
+                    "explanation": "«una duda» se dice «un doute»."
                   },
                   "feedbackOnSuccess": {
                     "explanation": "Has elegido la traducción correcta."
@@ -30070,20 +30078,20 @@
                 {
                   "type": "Translate",
                   "id": "es-fr-a1-u14-l09-e02",
-                  "sourcePhrase": "Tengo un problema",
+                  "sourcePhrase": "Tengo una duda",
                   "correctTokens": [
                     "J'ai",
                     "un",
-                    "problème"
+                    "doute"
                   ],
                   "distractorTokens": [
                     "une",
                     "question",
-                    "solution"
+                    "idée"
                   ],
                   "feedbackOnError": {
                     "type": "word_order",
-                    "explanation": "El orden correcto es «J'ai un problème»."
+                    "explanation": "El orden correcto es «J'ai un doute»."
                   },
                   "feedbackOnSuccess": {
                     "explanation": "La frase conserva el orden y el significado."
@@ -30116,16 +30124,16 @@
                   "id": "es-fr-a1-u14-l09-e04",
                   "pairs": [
                     {
-                      "left": "un problema",
-                      "right": "un problème"
+                      "left": "una duda",
+                      "right": "un doute"
                     },
                     {
                       "left": "una pregunta",
                       "right": "une question"
                     },
                     {
-                      "left": "una solución",
-                      "right": "une solution"
+                      "left": "una idea",
+                      "right": "une idée"
                     }
                   ],
                   "feedbackOnError": {
@@ -30139,16 +30147,16 @@
                 {
                   "type": "ListenChoose",
                   "id": "es-fr-a1-u14-l09-e05",
-                  "audioText": "J'ai une solution",
+                  "audioText": "J'ai une idée",
                   "options": [
-                    "J'ai un problème",
+                    "J'ai un doute",
                     "J'ai une question",
-                    "J'ai une solution"
+                    "J'ai une idée"
                   ],
                   "correctIndex": 0,
                   "feedbackOnError": {
                     "type": "comprehension",
-                    "explanation": "El audio dice «J'ai une solution»."
+                    "explanation": "El audio dice «J'ai une idée»."
                   },
                   "feedbackOnSuccess": {
                     "explanation": "Has reconocido la frase del audio."
@@ -30157,11 +30165,11 @@
                 {
                   "type": "ListenType",
                   "id": "es-fr-a1-u14-l09-e06",
-                  "audioText": "J'ai une solution",
-                  "transcription": "J'ai une solution",
+                  "audioText": "J'ai une idée",
+                  "transcription": "J'ai une idée",
                   "feedbackOnError": {
                     "type": "spelling",
-                    "explanation": "Escribe exactamente «J'ai une solution»."
+                    "explanation": "Escribe exactamente «J'ai une idée»."
                   },
                   "feedbackOnSuccess": {
                     "explanation": "La transcripción coincide con el audio."
@@ -30170,11 +30178,11 @@
                 {
                   "type": "SpeakRepeat",
                   "id": "es-fr-a1-u14-l09-e07",
-                  "targetPhrase": "J'ai une solution",
-                  "audioText": "J'ai une solution",
+                  "targetPhrase": "J'ai une idée",
+                  "audioText": "J'ai une idée",
                   "feedbackOnError": {
                     "type": "pronunciation",
-                    "explanation": "Repite «J'ai une solution» con claridad."
+                    "explanation": "Repite «J'ai une idée» con claridad."
                   },
                   "feedbackOnSuccess": {
                     "explanation": "La frase se entiende y mantiene el ritmo."
@@ -30182,30 +30190,30 @@
                 }
               ]
             },
-            {
+                        {
               "id": "es-fr-a1-u14-l10",
-              "title": "Évaluation",
+              "title": "Résultats",
               "cefrLevel": "A1",
               "vocabFrequencyBand": "1000-2000",
-              "canDo": "Puedo usar frases sencillas sobre la révision en francés.",
+              "canDo": "Puedo usar frases sencillas sobre les résultats.",
               "microLesson": {
-                "title": "Évaluation",
+                "title": "Résultats",
                 "goals": [
-                  "Reconocer vocabulario de la révision.",
-                  "Usar frases sencillas sobre la révision en francés."
+                  "Reconocer vocabulario de les résultats.",
+                  "Usar frases sencillas sobre les résultats."
                 ],
                 "sections": [
                   {
-                    "heading": "Mots et phrases",
-                    "body": "Vocabulario básico de la révision. Fíjate en el orden de la frase y en las palabras nuevas.",
+                    "heading": "Palabras y frases",
+                    "body": "Vocabulario básico de les résultats. Fíjate en el orden de la frase y en las palabras nuevas.",
                     "examples": [
                       {
-                        "source": "Tengo un libro",
-                        "target": "J'ai un livre"
+                        "source": "Tengo un examen",
+                        "target": "J'ai un examen"
                       },
                       {
-                        "source": "Quiero una mochila",
-                        "target": "Je veux un sac à dos"
+                        "source": "Tengo una nota",
+                        "target": "J'ai une note"
                       }
                     ]
                   }
@@ -30213,21 +30221,21 @@
               },
               "glossary": [
                 {
-                  "term": "un livre",
+                  "term": "un examen",
                   "translations": [
-                    "un libro"
+                    "un examen"
                   ]
                 },
                 {
-                  "term": "un sac à dos",
+                  "term": "une note",
                   "translations": [
-                    "una mochila"
+                    "una nota"
                   ]
                 },
                 {
-                  "term": "un stylo",
+                  "term": "un résultat",
                   "translations": [
-                    "un bolígrafo"
+                    "un resultado"
                   ]
                 }
               ],
@@ -30235,16 +30243,16 @@
                 {
                   "type": "MultipleChoice",
                   "id": "es-fr-a1-u14-l10-e01",
-                  "question": "¿Cómo se dice «un libro» en francés?",
+                  "question": "¿Cómo se dice «un examen»?",
                   "options": [
-                    "un livre",
-                    "un sac à dos",
-                    "un stylo"
+                    "un examen",
+                    "une note",
+                    "un résultat"
                   ],
                   "correctIndex": 0,
                   "feedbackOnError": {
                     "type": "vocabulary",
-                    "explanation": "«un libro» se dice «un livre»."
+                    "explanation": "«un examen» se dice «un examen»."
                   },
                   "feedbackOnSuccess": {
                     "explanation": "Has elegido la traducción correcta."
@@ -30253,20 +30261,20 @@
                 {
                   "type": "Translate",
                   "id": "es-fr-a1-u14-l10-e02",
-                  "sourcePhrase": "Tengo un libro",
+                  "sourcePhrase": "Tengo un examen",
                   "correctTokens": [
                     "J'ai",
                     "un",
-                    "livre"
+                    "examen"
                   ],
                   "distractorTokens": [
-                    "Je",
-                    "veux",
-                    "sac"
+                    "une",
+                    "note",
+                    "résultat"
                   ],
                   "feedbackOnError": {
                     "type": "word_order",
-                    "explanation": "El orden correcto es «J'ai un livre»."
+                    "explanation": "El orden correcto es «J'ai un examen»."
                   },
                   "feedbackOnSuccess": {
                     "explanation": "La frase conserva el orden y el significado."
@@ -30276,25 +30284,19 @@
                   "type": "OrderWords",
                   "id": "es-fr-a1-u14-l10-e03",
                   "tokens": [
-                    "veux",
-                    "un",
-                    "sac",
-                    "à",
-                    "dos",
-                    "Je"
+                    "une",
+                    "note",
+                    "J'ai"
                   ],
                   "answerTokens": [
-                    "Je",
-                    "veux",
-                    "un",
-                    "sac",
-                    "à",
-                    "dos"
+                    "J'ai",
+                    "une",
+                    "note"
                   ],
-                  "sourcePhrase": "Quiero una mochila",
+                  "sourcePhrase": "Tengo una nota",
                   "feedbackOnError": {
                     "type": "word_order",
-                    "explanation": "La frase correcta es «Je veux un sac à dos»."
+                    "explanation": "La frase correcta es «J'ai une note»."
                   },
                   "feedbackOnSuccess": {
                     "explanation": "El orden produce una frase natural."
@@ -30305,16 +30307,16 @@
                   "id": "es-fr-a1-u14-l10-e04",
                   "pairs": [
                     {
-                      "left": "un libro",
-                      "right": "un livre"
+                      "left": "un examen",
+                      "right": "un examen"
                     },
                     {
-                      "left": "una mochila",
-                      "right": "un sac à dos"
+                      "left": "una nota",
+                      "right": "une note"
                     },
                     {
-                      "left": "un bolígrafo",
-                      "right": "un stylo"
+                      "left": "un resultado",
+                      "right": "un résultat"
                     }
                   ],
                   "feedbackOnError": {
@@ -30328,16 +30330,16 @@
                 {
                   "type": "ListenChoose",
                   "id": "es-fr-a1-u14-l10-e05",
-                  "audioText": "J'ai besoin d'un stylo",
+                  "audioText": "J'ai un résultat",
                   "options": [
-                    "J'ai un livre",
-                    "Je veux un sac à dos",
-                    "J'ai besoin d'un stylo"
+                    "J'ai un examen",
+                    "J'ai une note",
+                    "J'ai un résultat"
                   ],
                   "correctIndex": 0,
                   "feedbackOnError": {
                     "type": "comprehension",
-                    "explanation": "El audio dice «J'ai besoin d'un stylo»."
+                    "explanation": "El audio dice «J'ai un résultat»."
                   },
                   "feedbackOnSuccess": {
                     "explanation": "Has reconocido la frase del audio."
@@ -30346,11 +30348,11 @@
                 {
                   "type": "ListenType",
                   "id": "es-fr-a1-u14-l10-e06",
-                  "audioText": "J'ai besoin d'un stylo",
-                  "transcription": "J'ai besoin d'un stylo",
+                  "audioText": "J'ai un résultat",
+                  "transcription": "J'ai un résultat",
                   "feedbackOnError": {
                     "type": "spelling",
-                    "explanation": "Escribe exactamente «J'ai besoin d'un stylo»."
+                    "explanation": "Escribe exactamente «J'ai un résultat»."
                   },
                   "feedbackOnSuccess": {
                     "explanation": "La transcripción coincide con el audio."
@@ -30359,11 +30361,11 @@
                 {
                   "type": "SpeakRepeat",
                   "id": "es-fr-a1-u14-l10-e07",
-                  "targetPhrase": "J'ai besoin d'un stylo",
-                  "audioText": "J'ai besoin d'un stylo",
+                  "targetPhrase": "J'ai un résultat",
+                  "audioText": "J'ai un résultat",
                   "feedbackOnError": {
                     "type": "pronunciation",
-                    "explanation": "Repite «J'ai besoin d'un stylo» con claridad."
+                    "explanation": "Repite «J'ai un résultat» con claridad."
                   },
                   "feedbackOnSuccess": {
                     "explanation": "La frase se entiende y mantiene el ritmo."
