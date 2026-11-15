@@ -171,7 +171,9 @@ class PackagedContentTest {
 
         val c1Lessons =
             lessons.filter { lesson ->
-                lesson.cefrLevel == CefrLevel.C1 && !lesson.id.value.contains("-p0-")
+                lesson.cefrLevel == CefrLevel.C1 &&
+                    !lesson.id.value.contains("-p0-") &&
+                    !lesson.id.value.matches(Regex("es-en-c1-u\\d{2}-l\\d{2}"))
             }
         assertEquals("es-en debe tener 24 lecciones C1", 24, c1Lessons.size)
         assertEquals(
@@ -219,7 +221,9 @@ class PackagedContentTest {
 
         val c2Lessons =
             lessons.filter { lesson ->
-                lesson.cefrLevel == CefrLevel.C2 && !lesson.id.value.contains("-p0-")
+                lesson.cefrLevel == CefrLevel.C2 &&
+                    !lesson.id.value.contains("-p0-") &&
+                    !lesson.id.value.matches(Regex("es-en-c2-u\\d{2}-l\\d{2}"))
             }
         assertEquals("es-en debe tener 18 lecciones C2", 18, c2Lessons.size)
         assertEquals(
@@ -359,6 +363,97 @@ class PackagedContentTest {
     }
 
     @Test
+    fun es_en_c1_completa_f5() {
+        val course = CourseJson.parseCourse(readAsset("es-en", COURSE_FILE))
+        assertTrue("es-en debe decodificar en v2", course != null)
+        val allLessons = course!!.levels.flatMap { level -> level.units.flatMap { unit -> unit.lessons } }
+        val c1Lessons = allLessons.filter { lesson -> lesson.cefrLevel == CefrLevel.C1 }
+        assertEquals("es-en debe tener 170 lecciones C1", 170, c1Lessons.size)
+        val units =
+            course.levels.flatMap { level -> level.units }.filter { unit ->
+                unit.id.value.matches(Regex("es-en-c1-u\\d{2}"))
+            }
+        assertEquals("F5 debe añadir 14 unidades C1 a es-en", 14, units.size)
+        assertTrue(
+            "Las 13 primeras unidades de F5 deben tener 10 lecciones",
+            units.take(13).all { unit -> unit.lessons.size == 10 },
+        )
+        assertEquals("La unidad de cierre debe tener 6 lecciones", 6, units.last().lessons.size)
+        val lessons = units.flatMap { unit -> unit.lessons }
+        assertEquals("F5 debe añadir 136 lecciones C1 a es-en", 136, lessons.size)
+        assertTrue(lessons.all { lesson -> lesson.cefrLevel == CefrLevel.C1 })
+        assertTrue(lessons.all { lesson -> lesson.exercises.size == 11 })
+        assertTrue(lessons.all { lesson -> lesson.grammarPoints.size == 2 })
+        assertTrue(lessons.all { lesson -> !lesson.scenario.isNullOrBlank() && !lesson.canDo.isNullOrBlank() })
+        assertTrue(lessons.all { lesson -> lesson.vocabFrequencyBand == VocabFrequencyBand.BAND_8000_12000 })
+        assertTrue(lessons.all { lesson -> lesson.culturalNotes.isNotEmpty() })
+        assertTrue(lessons.all { lesson -> lesson.microLesson != null && lesson.glossary.isNotEmpty() })
+        assertEquals("Los títulos de F5 de es-en deben ser únicos", 136, lessons.map { lesson -> lesson.title }.distinct().size)
+        assertTrue(
+            "Todos los ejercicios de F5 de es-en deben tener feedbackOnError",
+            lessons.flatMap { lesson -> lesson.exercises }.all { exercise -> exercise.feedbackOnError != null },
+        )
+        val exercises = lessons.flatMap { lesson -> lesson.exercises }
+        assertEquals(exercises.size, exercises.map { exercise -> exercise.id.value }.distinct().size)
+        assertEquals(136, exercises.count { exercise -> exercise is Exercise.MultipleChoice })
+        assertEquals(136, exercises.count { exercise -> exercise is Exercise.OrderWords })
+        assertEquals(136, exercises.count { exercise -> exercise is Exercise.Translate })
+        assertEquals(136, exercises.count { exercise -> exercise is Exercise.ClozeDragDrop })
+        assertEquals(136, exercises.count { exercise -> exercise is Exercise.SemanticMatch })
+        assertEquals(136, exercises.count { exercise -> exercise is Exercise.ListenChoose })
+        assertEquals(136, exercises.count { exercise -> exercise is Exercise.AudioOnlyPrompt })
+        assertEquals(136, exercises.count { exercise -> exercise is Exercise.ListenType })
+        assertEquals(136, exercises.count { exercise -> exercise is Exercise.SpeakRepeat })
+        assertEquals(136, exercises.count { exercise -> exercise is Exercise.MatchPairs })
+        assertEquals(136, exercises.count { exercise -> exercise is Exercise.FreeSpeakingPrompt })
+    }
+
+    @Test
+    fun es_en_c2_completa_f6() {
+        val course = CourseJson.parseCourse(readAsset("es-en", COURSE_FILE))
+        assertTrue("es-en debe decodificar en v2", course != null)
+        val allLessons = course!!.levels.flatMap { level -> level.units.flatMap { unit -> unit.lessons } }
+        val c2Lessons = allLessons.filter { lesson -> lesson.cefrLevel == CefrLevel.C2 }
+        assertEquals("es-en debe tener 170 lecciones C2", 170, c2Lessons.size)
+        val units =
+            course.levels.flatMap { level -> level.units }.filter { unit ->
+                unit.id.value.matches(Regex("es-en-c2-u\\d{2}"))
+            }
+        assertEquals("F6 debe añadir 15 unidades C2 a es-en", 15, units.size)
+        assertTrue(
+            "Las 14 primeras unidades de F6 deben tener 10 lecciones",
+            units.take(14).all { unit -> unit.lessons.size == 10 },
+        )
+        assertEquals("La unidad de cierre debe tener 2 lecciones", 2, units.last().lessons.size)
+        val lessons = units.flatMap { unit -> unit.lessons }
+        assertEquals("F6 debe añadir 142 lecciones C2 a es-en", 142, lessons.size)
+        assertTrue(lessons.all { lesson -> lesson.cefrLevel == CefrLevel.C2 })
+        assertTrue(lessons.all { lesson -> lesson.exercises.size == 12 })
+        assertTrue(lessons.all { lesson -> lesson.grammarPoints.size == 2 })
+        assertTrue(lessons.all { lesson -> !lesson.scenario.isNullOrBlank() && !lesson.canDo.isNullOrBlank() })
+        assertTrue(lessons.all { lesson -> lesson.vocabFrequencyBand == VocabFrequencyBand.BAND_12000_PLUS })
+        assertTrue(lessons.all { lesson -> lesson.culturalNotes.isNotEmpty() })
+        assertTrue(lessons.all { lesson -> lesson.microLesson != null && lesson.glossary.isNotEmpty() })
+        assertEquals("Los títulos de F6 de es-en deben ser únicos", 142, lessons.map { lesson -> lesson.title }.distinct().size)
+        assertTrue(
+            "Todos los ejercicios de F6 de es-en deben tener feedbackOnError",
+            lessons.flatMap { lesson -> lesson.exercises }.all { exercise -> exercise.feedbackOnError != null },
+        )
+        val exercises = lessons.flatMap { lesson -> lesson.exercises }
+        assertEquals(exercises.size, exercises.map { exercise -> exercise.id.value }.distinct().size)
+        assertEquals(142, exercises.count { exercise -> exercise is Exercise.MultipleChoice })
+        assertEquals(142, exercises.count { exercise -> exercise is Exercise.Translate })
+        assertEquals(426, exercises.count { exercise -> exercise is Exercise.ClozeDragDrop })
+        assertEquals(142, exercises.count { exercise -> exercise is Exercise.SemanticMatch })
+        assertEquals(142, exercises.count { exercise -> exercise is Exercise.ListenChoose })
+        assertEquals(142, exercises.count { exercise -> exercise is Exercise.AudioOnlyPrompt })
+        assertEquals(142, exercises.count { exercise -> exercise is Exercise.ListenType })
+        assertEquals(142, exercises.count { exercise -> exercise is Exercise.SpeakRepeat })
+        assertEquals(142, exercises.count { exercise -> exercise is Exercise.MatchPairs })
+        assertEquals(142, exercises.count { exercise -> exercise is Exercise.FreeSpeakingPrompt })
+    }
+
+    @Test
     fun cursos_de_arranque_estrenan_b2() {
         for (courseId in listOf("es-fr", "es-pt", "es-ja")) {
             val course = CourseJson.parseCourse(readAsset(courseId, COURSE_FILE))
@@ -467,6 +562,99 @@ class PackagedContentTest {
             assertEquals(138, exercises.count { exercise -> exercise is Exercise.ListenType })
             assertEquals(138, exercises.count { exercise -> exercise is Exercise.SpeakRepeat })
             assertEquals(138, exercises.count { exercise -> exercise is Exercise.FreeSpeakingPrompt })
+        }
+    }
+
+    @Test
+    fun cursos_de_arranque_completan_c1_f5() {
+        for (courseId in listOf("es-pt", "es-fr", "es-ja")) {
+            val course = CourseJson.parseCourse(readAsset(courseId, COURSE_FILE))
+            assertTrue("El curso $courseId no decodifica", course != null)
+            val units =
+                course!!.levels.flatMap { level -> level.units }.filter { unit ->
+                    unit.id.value.matches(Regex("$courseId-c1-u\\d{2}"))
+                }
+            assertEquals("F5 debe añadir 14 unidades C1 a $courseId", 14, units.size)
+            assertTrue(
+                "Las 13 primeras unidades de F5 de $courseId deben tener 10 lecciones",
+                units.take(13).all { unit -> unit.lessons.size == 10 },
+            )
+            assertEquals("La unidad de cierre debe tener 6 lecciones", 6, units.last().lessons.size)
+            val lessons = units.flatMap { unit -> unit.lessons }
+            assertEquals("F5 debe añadir 136 lecciones C1 a $courseId", 136, lessons.size)
+            assertTrue(lessons.all { lesson -> lesson.exercises.size == 11 })
+            assertTrue(lessons.all { lesson -> lesson.grammarPoints.size == 2 })
+            assertTrue(lessons.all { lesson -> lesson.vocabFrequencyBand == VocabFrequencyBand.BAND_8000_12000 })
+            assertTrue(lessons.all { lesson -> lesson.culturalNotes.isNotEmpty() })
+            assertTrue(lessons.all { lesson -> lesson.microLesson != null && lesson.glossary.isNotEmpty() })
+            assertEquals(
+                "Los títulos de F5 de $courseId deben ser únicos",
+                136,
+                lessons.map { lesson -> lesson.title }.distinct().size,
+            )
+            assertTrue(
+                "Todos los ejercicios de F5 de $courseId deben tener feedbackOnError",
+                lessons.flatMap { lesson -> lesson.exercises }.all { exercise -> exercise.feedbackOnError != null },
+            )
+            val exercises = lessons.flatMap { lesson -> lesson.exercises }
+            assertEquals(exercises.size, exercises.map { exercise -> exercise.id.value }.distinct().size)
+            assertEquals(136, exercises.count { exercise -> exercise is Exercise.MultipleChoice })
+            assertEquals(136, exercises.count { exercise -> exercise is Exercise.OrderWords })
+            assertEquals(136, exercises.count { exercise -> exercise is Exercise.Translate })
+            assertEquals(136, exercises.count { exercise -> exercise is Exercise.ClozeDragDrop })
+            assertEquals(136, exercises.count { exercise -> exercise is Exercise.SemanticMatch })
+            assertEquals(136, exercises.count { exercise -> exercise is Exercise.ListenChoose })
+            assertEquals(136, exercises.count { exercise -> exercise is Exercise.AudioOnlyPrompt })
+            assertEquals(136, exercises.count { exercise -> exercise is Exercise.ListenType })
+            assertEquals(136, exercises.count { exercise -> exercise is Exercise.SpeakRepeat })
+            assertEquals(136, exercises.count { exercise -> exercise is Exercise.MatchPairs })
+            assertEquals(136, exercises.count { exercise -> exercise is Exercise.FreeSpeakingPrompt })
+        }
+    }
+
+    @Test
+    fun cursos_de_arranque_completan_c2_f6() {
+        for (courseId in listOf("es-pt", "es-fr", "es-ja")) {
+            val course = CourseJson.parseCourse(readAsset(courseId, COURSE_FILE))
+            assertTrue("El curso $courseId no decodifica", course != null)
+            val units =
+                course!!.levels.flatMap { level -> level.units }.filter { unit ->
+                    unit.id.value.matches(Regex("$courseId-c2-u\\d{2}"))
+                }
+            assertEquals("F6 debe añadir 15 unidades C2 a $courseId", 15, units.size)
+            assertTrue(
+                "Las 14 primeras unidades de F6 de $courseId deben tener 10 lecciones",
+                units.take(14).all { unit -> unit.lessons.size == 10 },
+            )
+            assertEquals("La unidad de cierre debe tener 2 lecciones", 2, units.last().lessons.size)
+            val lessons = units.flatMap { unit -> unit.lessons }
+            assertEquals("F6 debe añadir 142 lecciones C2 a $courseId", 142, lessons.size)
+            assertTrue(lessons.all { lesson -> lesson.exercises.size == 12 })
+            assertTrue(lessons.all { lesson -> lesson.grammarPoints.size == 2 })
+            assertTrue(lessons.all { lesson -> lesson.vocabFrequencyBand == VocabFrequencyBand.BAND_12000_PLUS })
+            assertTrue(lessons.all { lesson -> lesson.culturalNotes.isNotEmpty() })
+            assertTrue(lessons.all { lesson -> lesson.microLesson != null && lesson.glossary.isNotEmpty() })
+            assertEquals(
+                "Los títulos de F6 de $courseId deben ser únicos",
+                142,
+                lessons.map { lesson -> lesson.title }.distinct().size,
+            )
+            assertTrue(
+                "Todos los ejercicios de F6 de $courseId deben tener feedbackOnError",
+                lessons.flatMap { lesson -> lesson.exercises }.all { exercise -> exercise.feedbackOnError != null },
+            )
+            val exercises = lessons.flatMap { lesson -> lesson.exercises }
+            assertEquals(exercises.size, exercises.map { exercise -> exercise.id.value }.distinct().size)
+            assertEquals(142, exercises.count { exercise -> exercise is Exercise.MultipleChoice })
+            assertEquals(142, exercises.count { exercise -> exercise is Exercise.Translate })
+            assertEquals(426, exercises.count { exercise -> exercise is Exercise.ClozeDragDrop })
+            assertEquals(142, exercises.count { exercise -> exercise is Exercise.SemanticMatch })
+            assertEquals(142, exercises.count { exercise -> exercise is Exercise.ListenChoose })
+            assertEquals(142, exercises.count { exercise -> exercise is Exercise.AudioOnlyPrompt })
+            assertEquals(142, exercises.count { exercise -> exercise is Exercise.ListenType })
+            assertEquals(142, exercises.count { exercise -> exercise is Exercise.SpeakRepeat })
+            assertEquals(142, exercises.count { exercise -> exercise is Exercise.MatchPairs })
+            assertEquals(142, exercises.count { exercise -> exercise is Exercise.FreeSpeakingPrompt })
         }
     }
 
@@ -1166,11 +1354,15 @@ class PackagedContentTest {
             assertTrue("$courseId debe decodificar en v2", course != null)
             val lessons = course!!.levels.flatMap { level -> level.units.flatMap { unit -> unit.lessons } }
             val c1Lessons = lessons.filter { lesson -> lesson.cefrLevel == CefrLevel.C1 }
-            val historicC1Lessons = c1Lessons.filter { lesson -> !lesson.id.value.contains("-p0-") }
+            val historicC1Lessons =
+                c1Lessons.filter { lesson ->
+                    !lesson.id.value.contains("-p0-") &&
+                        !lesson.id.value.matches(Regex("$courseId-c1-u\\d{2}-l\\d{2}"))
+                }
             val pilotC1Lessons = c1Lessons.filter { lesson -> lesson.id.value.contains("-p0-") }
             assertEquals("$courseId debe tener 24 lecciones C1 históricas", 24, historicC1Lessons.size)
             assertEquals("El piloto C1 de $courseId debe tener 10 lecciones", 10, pilotC1Lessons.size)
-            assertEquals("$courseId debe tener 34 lecciones C1 con el piloto", 34, c1Lessons.size)
+            assertEquals("$courseId debe tener 170 lecciones C1 con el piloto", 170, c1Lessons.size)
             assertEquals(
                 (1..6).flatMap { unit -> (1..4).map { lesson -> "$courseId-c1-un-$unit-ls-$lesson" } },
                 historicC1Lessons.map { lesson -> lesson.id.value },
@@ -1197,7 +1389,7 @@ class PackagedContentTest {
             )
             assertEquals(
                 "Cada lección C1 de $courseId debe tener un FreeSpeakingPrompt",
-                34,
+                170,
                 c1Lessons.sumOf { lesson -> lesson.exercises.count { exercise -> exercise is Exercise.FreeSpeakingPrompt } },
             )
         }
@@ -1210,11 +1402,15 @@ class PackagedContentTest {
             assertTrue("$courseId debe decodificar en v2", course != null)
             val lessons = course!!.levels.flatMap { level -> level.units.flatMap { unit -> unit.lessons } }
             val c2Lessons = lessons.filter { lesson -> lesson.cefrLevel == CefrLevel.C2 }
-            val historicC2Lessons = c2Lessons.filter { lesson -> !lesson.id.value.contains("-p0-") }
+            val historicC2Lessons =
+                c2Lessons.filter { lesson ->
+                    !lesson.id.value.contains("-p0-") &&
+                        !lesson.id.value.matches(Regex("$courseId-c2-u\\d{2}-l\\d{2}"))
+                }
             val pilotC2Lessons = c2Lessons.filter { lesson -> lesson.id.value.contains("-p0-") }
             assertEquals("$courseId debe tener 18 lecciones C2 históricas", 18, historicC2Lessons.size)
             assertEquals("El piloto C2 de $courseId debe tener 10 lecciones", 10, pilotC2Lessons.size)
-            assertEquals("$courseId debe tener 28 lecciones C2 con el piloto", 28, c2Lessons.size)
+            assertEquals("$courseId debe tener 170 lecciones C2 con el piloto", 170, c2Lessons.size)
             assertEquals(
                 (1..3).flatMap { unit -> (1..4).map { lesson -> "$courseId-c2-un-$unit-ls-$lesson" } } +
                     (1..6).map { lesson -> "$courseId-c2-un-4-ls-$lesson" },
@@ -1242,7 +1438,7 @@ class PackagedContentTest {
             )
             assertEquals(
                 "Cada lección C2 de $courseId debe tener un FreeSpeakingPrompt",
-                28,
+                170,
                 c2Lessons.sumOf { lesson -> lesson.exercises.count { exercise -> exercise is Exercise.FreeSpeakingPrompt } },
             )
         }
