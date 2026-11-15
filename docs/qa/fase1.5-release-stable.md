@@ -22,7 +22,7 @@
 | Revisión nativa F0/F1 | 0/840 lecciones, 0/40 modismos | Completar los CSV y firmar el acta |
 | Keystore de distribución | No configurado | Añadir las 4 propiedades a `local.properties` |
 | GitHub CLI | Sin autenticar | `gh auth login` |
-| Árbol de trabajo | Limpio | Mantenerlo limpio antes del release |
+| Árbol de trabajo | Limpio (solo tracked) | Mantenerlo limpio antes del release |
 
 ## 3. Criterios de aceptación
 

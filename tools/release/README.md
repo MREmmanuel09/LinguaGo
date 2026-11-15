@@ -26,7 +26,8 @@ la revisión nativa y la firma estén listas.
    gh auth login
    ```
 
-4. **Árbol de trabajo limpio** (`git status --porcelain` vacío).
+4. **Árbol de trabajo limpio** (sin cambios tracked; los directorios locales no
+   versionados no bloquean).
 
 ## Comprobación previa
 
