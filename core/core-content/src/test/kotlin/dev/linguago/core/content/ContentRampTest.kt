@@ -182,10 +182,7 @@ class ContentRampTest {
                         !lesson.id.value.matches(Regex(".*-a2-u\\d{2}-l\\d{2}"))
                 }
             assertEquals("$courseId debe tener 8 lecciones A2 históricas", 8, historicA2Lessons.size)
-            assertTrue(
-                "$courseId debe conservar al menos 18 lecciones A2",
-                a2Lessons.size >= 18,
-            )
+            assertEquals("$courseId debe tener 170 lecciones A2", 170, a2Lessons.size)
             for (lesson in a2Lessons) {
                 assertEquals("${lesson.id.value} debe tener 7 ejercicios", 7, lesson.exercises.size)
                 assertTrue(
