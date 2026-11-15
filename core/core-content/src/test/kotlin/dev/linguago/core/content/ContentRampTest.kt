@@ -236,7 +236,7 @@ class ContentRampTest {
     fun `los cursos de arranque amplian la rampa B2`() {
         for (courseId in STARTER_COURSES) {
             val b2Lessons = lessonsFor(courseId).filter { lesson -> lesson.cefrLevel == CefrLevel.B2 }
-            assertEquals("$courseId debe tener 32 lecciones B2", 32, b2Lessons.size)
+            assertEquals("$courseId debe tener 170 lecciones B2", 170, b2Lessons.size)
             for (lesson in b2Lessons) {
                 assertEquals("${lesson.id.value} debe tener 10 ejercicios", 10, lesson.exercises.size)
                 assertEquals("${lesson.id.value} debe declarar 2 focos gramaticales", 2, lesson.grammarPoints.size)
