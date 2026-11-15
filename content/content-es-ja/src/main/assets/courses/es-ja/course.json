@@ -69320,6 +69320,464 @@
               ]
             }
           ]
+        },
+        {
+          "id": "es-ja-a2-u16",
+          "title": "A2 · Projeto final e autonomia",
+          "lessons": [
+            {
+              "id": "es-ja-a2-u16-l01",
+              "title": "Diálogo final: una conversación",
+              "cefrLevel": "A2",
+              "vocabFrequencyBand": "2000-3000",
+              "canDo": "Puedo mantener una conversación sencilla y responder a preguntas.",
+              "microLesson": {
+                "title": "Diálogo final: una conversación",
+                "goals": [
+                  "Reconocer vocabulario de una conversación cotidiana.",
+                  "Usar frases sencillas sobre una conversación cotidiana.",
+                  "Producir un mensaje breve sobre una conversación cotidiana."
+                ],
+                "sections": [
+                  {
+                    "heading": "Foco gramatical",
+                    "body": "Preguntas: El orden auxiliar + sujeto + verbo forma preguntas claras. Presente simple: Usa el presente simple para rutinas y hechos habituales.",
+                    "examples": [
+                      {
+                        "source": "¿Qué haces los fines de semana?",
+                        "target": "週末 は 何 を します か "
+                      },
+                      {
+                        "source": "Normalmente quedo con amigos y voy al cine.",
+                        "target": "私 は よく 友達 に 会ったり 映画 を 見 に 行ったり します"
+                      }
+                    ]
+                  },
+                  {
+                    "heading": "En contexto",
+                    "body": "Observa cómo se usa preguntas en una situación de una conversación cotidiana.",
+                    "examples": [
+                      {
+                        "source": "¿Te gustaría venir con nosotros?",
+                        "target": "一緒 に 行きません か"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "glossary": [
+                {
+                  "term": "週末 は 何 を します か ",
+                  "translations": [
+                    "¿Qué haces los fines de semana?"
+                  ]
+                },
+                {
+                  "term": "私 は よく 友達 に 会ったり 映画 を 見 に 行ったり します",
+                  "translations": [
+                    "Normalmente quedo con amigos y voy al cine."
+                  ]
+                },
+                {
+                  "term": "一緒 に 行きません か",
+                  "translations": [
+                    "¿Te gustaría venir con nosotros?"
+                  ]
+                }
+              ],
+              "exercises": [
+                {
+                  "type": "MultipleChoice",
+                  "id": "es-ja-a2-u16-l01-e01",
+                  "question": "¿Cómo se dice «¿Qué haces los fines de semana?»?",
+                  "options": [
+                    "週末 は 何 を します か ",
+                    "私 は よく 友達 に 会ったり 映画 を 見 に 行ったり します",
+                    "一緒 に 行きません か"
+                  ],
+                  "correctIndex": 0,
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "«¿Qué haces los fines de semana?» se dice «週末 は 何 を します か »."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has elegido la traducción correcta."
+                  }
+                },
+                {
+                  "type": "Translate",
+                  "id": "es-ja-a2-u16-l01-e02",
+                  "sourcePhrase": "¿Qué haces los fines de semana?",
+                  "correctTokens": [
+                    "週末",
+                    "は",
+                    "何",
+                    "を",
+                    "します",
+                    "か"
+                  ],
+                  "distractorTokens": [
+                    "私",
+                    "よく",
+                    "友達"
+                  ],
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "El orden correcto es «週末 は 何 を します か». Preguntas: El orden auxiliar + sujeto + verbo forma preguntas claras.",
+                    "ruleRef": "gp-questions"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La frase conserva el orden y el significado."
+                  }
+                },
+                {
+                  "type": "OrderWords",
+                  "id": "es-ja-a2-u16-l01-e03",
+                  "tokens": [
+                    "は",
+                    "よく",
+                    "友達",
+                    "に",
+                    "会ったり",
+                    "映画",
+                    "を",
+                    "見",
+                    "に",
+                    "行ったり",
+                    "します",
+                    "私"
+                  ],
+                  "answerTokens": [
+                    "私",
+                    "は",
+                    "よく",
+                    "友達",
+                    "に",
+                    "会ったり",
+                    "映画",
+                    "を",
+                    "見",
+                    "に",
+                    "行ったり",
+                    "します"
+                  ],
+                  "sourcePhrase": "Normalmente quedo con amigos y voy al cine.",
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "La frase correcta es «私 は よく 友達 に 会ったり 映画 を 見 に 行ったり します». Preguntas: El orden auxiliar + sujeto + verbo forma preguntas claras.",
+                    "ruleRef": "gp-questions"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "El orden produce una frase natural."
+                  }
+                },
+                {
+                  "type": "MatchPairs",
+                  "id": "es-ja-a2-u16-l01-e04",
+                  "pairs": [
+                    {
+                      "left": "¿Qué haces los fines de semana?",
+                      "right": "週末 は 何 を します か "
+                    },
+                    {
+                      "left": "Normalmente quedo con amigos y voy al cine.",
+                      "right": "私 は よく 友達 に 会ったり 映画 を 見 に 行ったり します"
+                    },
+                    {
+                      "left": "¿Te gustaría venir con nosotros?",
+                      "right": "一緒 に 行きません か"
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "Cada expresión tiene una traducción distinta."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has asociado cada expresión con su traducción."
+                  }
+                },
+                {
+                  "type": "ListenChoose",
+                  "id": "es-ja-a2-u16-l01-e05",
+                  "audioText": "一緒 に 行きません か",
+                  "options": [
+                    "週末 は 何 を します か ",
+                    "私 は よく 友達 に 会ったり 映画 を 見 に 行ったり します",
+                    "一緒 に 行きません か"
+                  ],
+                  "correctIndex": 0,
+                  "feedbackOnError": {
+                    "type": "comprehension",
+                    "explanation": "El audio dice «一緒 に 行きません か»."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has reconocido la frase del audio."
+                  }
+                },
+                {
+                  "type": "ListenType",
+                  "id": "es-ja-a2-u16-l01-e06",
+                  "audioText": "一緒 に 行きません か",
+                  "transcription": "一緒 に 行きません か",
+                  "feedbackOnError": {
+                    "type": "spelling",
+                    "explanation": "Escribe exactamente «一緒 に 行きません か»."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La transcripción coincide con el audio."
+                  }
+                },
+                {
+                  "type": "SpeakRepeat",
+                  "id": "es-ja-a2-u16-l01-e07",
+                  "targetPhrase": "一緒 に 行きません か",
+                  "audioText": "一緒 に 行きません か",
+                  "feedbackOnError": {
+                    "type": "pronunciation",
+                    "explanation": "Repite «一緒 に 行きません か» con claridad."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La frase se entiende y mantiene el ritmo."
+                  }
+                }
+              ],
+              "grammarPoints": [
+                {
+                  "id": "gp-questions",
+                  "label": "Preguntas",
+                  "description": "El orden auxiliar + sujeto + verbo forma preguntas claras."
+                },
+                {
+                  "id": "gp-present-simple",
+                  "label": "Presente simple",
+                  "description": "Usa el presente simple para rutinas y hechos habituales."
+                }
+              ]
+            },
+            {
+              "id": "es-ja-a2-u16-l02",
+              "title": "Autoevaluación y metas",
+              "cefrLevel": "A2",
+              "vocabFrequencyBand": "2000-3000",
+              "canDo": "Puedo hablar de lo que he aprendido y de mis próximos objetivos.",
+              "microLesson": {
+                "title": "Autoevaluación y metas",
+                "goals": [
+                  "Reconocer vocabulario de mis metas de aprendizaje.",
+                  "Usar frases sencillas sobre mis metas de aprendizaje.",
+                  "Producir un mensaje breve sobre mis metas de aprendizaje."
+                ],
+                "sections": [
+                  {
+                    "heading": "Foco gramatical",
+                    "body": "Presente perfecto: Have/has + participio conecta una experiencia pasada con el presente. Going to: Going to expresa planes e intenciones ya decididos.",
+                    "examples": [
+                      {
+                        "source": "He aprendido a contar historias en pasado.",
+                        "target": "私 は 過去形 で 物語 を 語る こと を 学びました"
+                      },
+                      {
+                        "source": "Todavía necesito practicar la pronunciación.",
+                        "target": "まだ 発音 を 練習する 必要 が あります"
+                      }
+                    ]
+                  },
+                  {
+                    "heading": "En contexto",
+                    "body": "Observa cómo se usa presente perfecto en una situación de mis metas de aprendizaje.",
+                    "examples": [
+                      {
+                        "source": "El próximo mes voy a leer un libro en inglés.",
+                        "target": "来月 は 英語 で 本 を 読む つもりです"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "glossary": [
+                {
+                  "term": "私 は 過去形 で 物語 を 語る こと を 学びました",
+                  "translations": [
+                    "He aprendido a contar historias en pasado."
+                  ]
+                },
+                {
+                  "term": "まだ 発音 を 練習する 必要 が あります",
+                  "translations": [
+                    "Todavía necesito practicar la pronunciación."
+                  ]
+                },
+                {
+                  "term": "来月 は 英語 で 本 を 読む つもりです",
+                  "translations": [
+                    "El próximo mes voy a leer un libro en inglés."
+                  ]
+                }
+              ],
+              "exercises": [
+                {
+                  "type": "MultipleChoice",
+                  "id": "es-ja-a2-u16-l02-e01",
+                  "question": "¿Cómo se dice «He aprendido a contar historias en pasado.»?",
+                  "options": [
+                    "私 は 過去形 で 物語 を 語る こと を 学びました",
+                    "まだ 発音 を 練習する 必要 が あります",
+                    "来月 は 英語 で 本 を 読む つもりです"
+                  ],
+                  "correctIndex": 0,
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "«He aprendido a contar historias en pasado.» se dice «私 は 過去形 で 物語 を 語る こと を 学びました»."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has elegido la traducción correcta."
+                  }
+                },
+                {
+                  "type": "Translate",
+                  "id": "es-ja-a2-u16-l02-e02",
+                  "sourcePhrase": "He aprendido a contar historias en pasado.",
+                  "correctTokens": [
+                    "私",
+                    "は",
+                    "過去形",
+                    "で",
+                    "物語",
+                    "を",
+                    "語る",
+                    "こと",
+                    "を",
+                    "学びました"
+                  ],
+                  "distractorTokens": [
+                    "まだ",
+                    "発音",
+                    "練習する"
+                  ],
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "El orden correcto es «私 は 過去形 で 物語 を 語る こと を 学びました». Presente perfecto: Have/has + participio conecta una experiencia pasada con el presente.",
+                    "ruleRef": "gp-present-perfect"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La frase conserva el orden y el significado."
+                  }
+                },
+                {
+                  "type": "OrderWords",
+                  "id": "es-ja-a2-u16-l02-e03",
+                  "tokens": [
+                    "発音",
+                    "を",
+                    "練習する",
+                    "必要",
+                    "が",
+                    "あります",
+                    "まだ"
+                  ],
+                  "answerTokens": [
+                    "まだ",
+                    "発音",
+                    "を",
+                    "練習する",
+                    "必要",
+                    "が",
+                    "あります"
+                  ],
+                  "sourcePhrase": "Todavía necesito practicar la pronunciación.",
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "La frase correcta es «まだ 発音 を 練習する 必要 が あります». Presente perfecto: Have/has + participio conecta una experiencia pasada con el presente.",
+                    "ruleRef": "gp-present-perfect"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "El orden produce una frase natural."
+                  }
+                },
+                {
+                  "type": "MatchPairs",
+                  "id": "es-ja-a2-u16-l02-e04",
+                  "pairs": [
+                    {
+                      "left": "He aprendido a contar historias en pasado.",
+                      "right": "私 は 過去形 で 物語 を 語る こと を 学びました"
+                    },
+                    {
+                      "left": "Todavía necesito practicar la pronunciación.",
+                      "right": "まだ 発音 を 練習する 必要 が あります"
+                    },
+                    {
+                      "left": "El próximo mes voy a leer un libro en inglés.",
+                      "right": "来月 は 英語 で 本 を 読む つもりです"
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "Cada expresión tiene una traducción distinta."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has asociado cada expresión con su traducción."
+                  }
+                },
+                {
+                  "type": "ListenChoose",
+                  "id": "es-ja-a2-u16-l02-e05",
+                  "audioText": "来月 は 英語 で 本 を 読む つもりです",
+                  "options": [
+                    "私 は 過去形 で 物語 を 語る こと を 学びました",
+                    "まだ 発音 を 練習する 必要 が あります",
+                    "来月 は 英語 で 本 を 読む つもりです"
+                  ],
+                  "correctIndex": 0,
+                  "feedbackOnError": {
+                    "type": "comprehension",
+                    "explanation": "El audio dice «来月 は 英語 で 本 を 読む つもりです»."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has reconocido la frase del audio."
+                  }
+                },
+                {
+                  "type": "ListenType",
+                  "id": "es-ja-a2-u16-l02-e06",
+                  "audioText": "来月 は 英語 で 本 を 読む つもりです",
+                  "transcription": "来月 は 英語 で 本 を 読む つもりです",
+                  "feedbackOnError": {
+                    "type": "spelling",
+                    "explanation": "Escribe exactamente «来月 は 英語 で 本 を 読む つもりです»."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La transcripción coincide con el audio."
+                  }
+                },
+                {
+                  "type": "SpeakRepeat",
+                  "id": "es-ja-a2-u16-l02-e07",
+                  "targetPhrase": "来月 は 英語 で 本 を 読む つもりです",
+                  "audioText": "来月 は 英語 で 本 を 読む つもりです",
+                  "feedbackOnError": {
+                    "type": "pronunciation",
+                    "explanation": "Repite «来月 は 英語 で 本 を 読む つもりです» con claridad."
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La frase se entiende y mantiene el ritmo."
+                  }
+                }
+              ],
+              "grammarPoints": [
+                {
+                  "id": "gp-present-perfect",
+                  "label": "Presente perfecto",
+                  "description": "Have/has + participio conecta una experiencia pasada con el presente."
+                },
+                {
+                  "id": "gp-going-to",
+                  "label": "Going to",
+                  "description": "Going to expresa planes e intenciones ya decididos."
+                }
+              ]
+            }
+          ]
         }
       ]
     },
