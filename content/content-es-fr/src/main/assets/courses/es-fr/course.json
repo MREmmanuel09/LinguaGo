@@ -306488,6 +306488,792 @@
                 ]
               }
             ]
+          },
+          {
+            "id": "es-fr-c2-u15",
+            "title": "C2 · Proyecto final",
+            "lessons": [
+              {
+                "id": "es-fr-c2-u15-l01",
+                "title": "Repaso de hitos A2",
+                "cefrLevel": "C2",
+                "scenario": "Situación comunicativa avanzada sobre los hitos de A2.",
+                "canDo": "Puedo argumentar con matices y precisión sobre los hitos de A2.",
+                "grammarPoints": [
+                  {
+                    "id": "gp-c2-dry-irony",
+                    "label": "Dry irony",
+                    "description": "La ironía seca dice lo contrario de lo que sugiere el contexto."
+                  },
+                  {
+                    "id": "gp-c2-rhetorical-questions",
+                    "label": "Rhetorical questions",
+                    "description": "Las preguntas retóricas orientan la argumentación."
+                  }
+                ],
+                "vocabFrequencyBand": "12000+",
+                "culturalNotes": [
+                  {
+                    "idiom": "louer du bout des lèvres",
+                    "note": "Expresión para elogiar de forma que en realidad critica.",
+                    "translation": "elogiar con tibieza"
+                  }
+                ],
+                "microLesson": {
+                  "title": "Repaso de hitos A2",
+                  "goals": [
+                    "Usar vocabulario avanzado de los hitos de A2.",
+                    "Aplicar dry irony y rhetorical questions.",
+                    "Argumentar con matices sobre los hitos de A2."
+                  ],
+                  "sections": [
+                    {
+                      "heading": "Lengua en contexto",
+                      "body": "Dry irony: La ironía seca dice lo contrario de lo que sugiere el contexto. Rhetorical questions: Las preguntas retóricas orientan la argumentación.",
+                      "examples": [
+                        {
+                          "source": "He aprendido a contar historias en pasado. Huelga decir que el matiz escapa a una lectura literal.",
+                          "target": "J'ai appris à raconter des histoires au passé. Inutile de dire que la nuance échappe à une lecture littérale."
+                        },
+                        {
+                          "source": "También puedo hablar de planes y comparar opciones. En rigor, la afirmación admite lecturas encontradas.",
+                          "target": "Je peux aussi parler de projets et comparer des options. À proprement parler, l'affirmation admet des lectures contradictoires."
+                        }
+                      ]
+                    }
+                  ]
+                },
+                "glossary": [
+                  {
+                    "term": "J'ai appris à raconter des histoires au passé. Inutile de dire que la nuance échappe à une lecture littérale.",
+                    "translations": [
+                      "He aprendido a contar historias en pasado. Huelga decir que el matiz escapa a una lectura literal."
+                    ]
+                  },
+                  {
+                    "term": "Je peux aussi parler de projets et comparer des options. À proprement parler, l'affirmation admet des lectures contradictoires.",
+                    "translations": [
+                      "También puedo hablar de planes y comparar opciones. En rigor, la afirmación admite lecturas encontradas."
+                    ]
+                  },
+                  {
+                    "term": "Je veux encore pratiquer davantage la conversation. Au risque de simplifier, l'argument frôle la contradiction.",
+                    "translations": [
+                      "Todavía quiero practicar más la conversación. A riesgo de simplificar, el argumento roza la contradicción."
+                    ]
+                  }
+                ],
+                "exercises": [
+                  {
+                    "type": "MultipleChoice",
+                    "id": "es-fr-c2-u15-l01-e01",
+                    "question": "¿Cuál es la opción correcta para «He aprendido a contar historias en pasado. Huelga decir que el matiz escapa a una lectura literal.»?",
+                    "options": [
+                      "J'ai appris à raconter des histoires au passé. Inutile de dire que la nuance échappe à une lecture littérale.",
+                      "Je peux aussi parler de projets et comparer des options. À proprement parler, l'affirmation admet des lectures contradictoires.",
+                      "Je veux encore pratiquer davantage la conversation. Au risque de simplifier, l'argument frôle la contradiction."
+                    ],
+                    "correctIndex": 0,
+                    "feedbackOnError": {
+                      "type": "vocabulary",
+                      "explanation": "«He aprendido a contar historias en pasado. Huelga decir que el matiz escapa a una lectura literal.» se dice «J'ai appris à raconter des histoires au passé. Inutile de dire que la nuance échappe à une lecture littérale.».",
+                      "ruleRef": "gp-c2-dry-irony"
+                    },
+                    "feedbackOnSuccess": {
+                      "explanation": "Has elegido la opción precisa."
+                    }
+                  },
+                  {
+                    "type": "Translate",
+                    "id": "es-fr-c2-u15-l01-e02",
+                    "sourcePhrase": "He aprendido a contar historias en pasado. Huelga decir que el matiz escapa a una lectura literal.",
+                    "correctTokens": [
+                      "J'ai",
+                      "appris",
+                      "à",
+                      "raconter",
+                      "des",
+                      "histoires",
+                      "au",
+                      "passé",
+                      "Inutile",
+                      "de",
+                      "dire",
+                      "que",
+                      "la",
+                      "nuance",
+                      "échappe",
+                      "à",
+                      "une",
+                      "lecture",
+                      "littérale"
+                    ],
+                    "distractorTokens": [
+                      "Je",
+                      "peux",
+                      "aussi"
+                    ],
+                    "feedbackOnError": {
+                      "type": "grammar",
+                      "explanation": "El orden correcto es «J'ai appris à raconter des histoires au passé Inutile de dire que la nuance échappe à une lecture littérale».",
+                      "ruleRef": "gp-c2-dry-irony"
+                    },
+                    "feedbackOnSuccess": {
+                      "explanation": "La frase conserva el orden y el significado."
+                    }
+                  },
+                  {
+                    "type": "ClozeDragDrop",
+                    "id": "es-fr-c2-u15-l01-e03",
+                    "passage": "{{b1}} {{b2}} à raconter des histoires au passé.",
+                    "blanks": [
+                      {
+                        "id": "b1",
+                        "answer": "J'ai",
+                        "options": [
+                          "J'ai",
+                          "raconter",
+                          "histoires"
+                        ]
+                      },
+                      {
+                        "id": "b2",
+                        "answer": "appris",
+                        "options": [
+                          "appris",
+                          "raconter",
+                          "histoires"
+                        ]
+                      }
+                    ],
+                    "feedbackOnError": {
+                      "type": "grammar",
+                      "explanation": "Las dos formas deben encajar con el contexto de la frase.",
+                      "ruleRef": "gp-c2-rhetorical-questions"
+                    },
+                    "feedbackOnSuccess": {
+                      "explanation": "Los dos huecos encajan con la situación."
+                    }
+                  },
+                  {
+                    "type": "ClozeDragDrop",
+                    "id": "es-fr-c2-u15-l01-e04",
+                    "passage": "Je {{b1}} aussi {{b2}} de projets et comparer des options.",
+                    "blanks": [
+                      {
+                        "id": "b1",
+                        "answer": "peux",
+                        "options": [
+                          "peux",
+                          "projets",
+                          "comparer"
+                        ]
+                      },
+                      {
+                        "id": "b2",
+                        "answer": "parler",
+                        "options": [
+                          "parler",
+                          "projets",
+                          "comparer"
+                        ]
+                      }
+                    ],
+                    "feedbackOnError": {
+                      "type": "grammar",
+                      "explanation": "Las dos formas deben encajar con el contexto de la frase.",
+                      "ruleRef": "gp-c2-rhetorical-questions"
+                    },
+                    "feedbackOnSuccess": {
+                      "explanation": "Los dos huecos encajan con la situación."
+                    }
+                  },
+                  {
+                    "type": "ClozeDragDrop",
+                    "id": "es-fr-c2-u15-l01-e05",
+                    "passage": "Je {{b1}} {{b2}} pratiquer davantage la conversation.",
+                    "blanks": [
+                      {
+                        "id": "b1",
+                        "answer": "veux",
+                        "options": [
+                          "veux",
+                          "pratiquer",
+                          "davantage"
+                        ]
+                      },
+                      {
+                        "id": "b2",
+                        "answer": "encore",
+                        "options": [
+                          "encore",
+                          "pratiquer",
+                          "davantage"
+                        ]
+                      }
+                    ],
+                    "feedbackOnError": {
+                      "type": "grammar",
+                      "explanation": "Las dos formas deben encajar con el contexto de la frase.",
+                      "ruleRef": "gp-c2-rhetorical-questions"
+                    },
+                    "feedbackOnSuccess": {
+                      "explanation": "Los dos huecos encajan con la situación."
+                    }
+                  },
+                  {
+                    "type": "SemanticMatch",
+                    "id": "es-fr-c2-u15-l01-e06",
+                    "instructions": "Clasifica la función y el registro de cada intervención.",
+                    "pairs": [
+                      {
+                        "left": "J'ai appris à raconter des histoires au passé. Inutile de dire que la nuance échappe à une lecture littérale.",
+                        "right": "Ironía seca",
+                        "register": "literary",
+                        "nuance": "Clasifica la función y el registro de la intervención."
+                      },
+                      {
+                        "left": "Je peux aussi parler de projets et comparer des options. À proprement parler, l'affirmation admet des lectures contradictoires.",
+                        "right": "Atenuación",
+                        "register": "formal",
+                        "nuance": "Clasifica la función y el registro de la intervención."
+                      },
+                      {
+                        "left": "Je veux encore pratiquer davantage la conversation. Au risque de simplifier, l'argument frôle la contradiction.",
+                        "right": "Conclusión",
+                        "register": "neutral",
+                        "nuance": "Clasifica la función y el registro de la intervención."
+                      }
+                    ],
+                    "feedbackOnError": {
+                      "type": "register",
+                      "explanation": "Cada intervención cumple una función retórica distinta.",
+                      "ruleRef": "gp-c2-dry-irony"
+                    },
+                    "feedbackOnSuccess": {
+                      "explanation": "Has identificado función y registro."
+                    }
+                  },
+                  {
+                    "type": "ListenChoose",
+                    "id": "es-fr-c2-u15-l01-e07",
+                    "audioText": "Je peux aussi parler de projets et comparer des options. À proprement parler, l'affirmation admet des lectures contradictoires.",
+                    "options": [
+                      "Je peux aussi parler de projets et comparer des options. À proprement parler, l'affirmation admet des lectures contradictoires.",
+                      "J'ai appris à raconter des histoires au passé. Inutile de dire que la nuance échappe à une lecture littérale.",
+                      "Je veux encore pratiquer davantage la conversation. Au risque de simplifier, l'argument frôle la contradiction."
+                    ],
+                    "correctIndex": 0,
+                    "feedbackOnError": {
+                      "type": "comprehension",
+                      "explanation": "El audio dice «Je peux aussi parler de projets et comparer des options. À proprement parler, l'affirmation admet des lectures contradictoires.».",
+                      "ruleRef": "gp-c2-dry-irony"
+                    },
+                    "feedbackOnSuccess": {
+                      "explanation": "Has reconocido la frase del audio."
+                    }
+                  },
+                  {
+                    "type": "AudioOnlyPrompt",
+                    "id": "es-fr-c2-u15-l01-e08",
+                    "audioText": "Je veux encore pratiquer davantage la conversation. Au risque de simplifier, l'argument frôle la contradiction.",
+                    "question": "¿Qué implica el hablante?",
+                    "options": [
+                      "Je veux encore pratiquer davantage la conversation. Au risque de simplifier, l'argument frôle la contradiction.",
+                      "J'ai appris à raconter des histoires au passé. Inutile de dire que la nuance échappe à une lecture littérale.",
+                      "Je peux aussi parler de projets et comparer des options. À proprement parler, l'affirmation admet des lectures contradictoires."
+                    ],
+                    "correctIndex": 0,
+                    "allowSlowPlayback": false,
+                    "feedbackOnError": {
+                      "type": "comprehension",
+                      "explanation": "El audio dice «Je veux encore pratiquer davantage la conversation. Au risque de simplifier, l'argument frôle la contradiction.».",
+                      "ruleRef": "gp-c2-rhetorical-questions"
+                    },
+                    "feedbackOnSuccess": {
+                      "explanation": "Has interpretado la implicación."
+                    }
+                  },
+                  {
+                    "type": "ListenType",
+                    "id": "es-fr-c2-u15-l01-e09",
+                    "audioText": "Je veux encore pratiquer davantage la conversation. Au risque de simplifier, l'argument frôle la contradiction.",
+                    "transcription": "Je veux encore pratiquer davantage la conversation. Au risque de simplifier, l'argument frôle la contradiction.",
+                    "feedbackOnError": {
+                      "type": "spelling",
+                      "explanation": "Escribe exactamente «Je veux encore pratiquer davantage la conversation. Au risque de simplifier, l'argument frôle la contradiction.».",
+                      "ruleRef": "gp-c2-dry-irony"
+                    },
+                    "feedbackOnSuccess": {
+                      "explanation": "La transcripción coincide con el audio."
+                    }
+                  },
+                  {
+                    "type": "SpeakRepeat",
+                    "id": "es-fr-c2-u15-l01-e10",
+                    "targetPhrase": "Je veux encore pratiquer davantage la conversation. Au risque de simplifier, l'argument frôle la contradiction.",
+                    "audioText": "Je veux encore pratiquer davantage la conversation. Au risque de simplifier, l'argument frôle la contradiction.",
+                    "feedbackOnError": {
+                      "type": "pronunciation",
+                      "explanation": "Repite «Je veux encore pratiquer davantage la conversation. Au risque de simplifier, l'argument frôle la contradiction.» con claridad.",
+                      "ruleRef": "gp-c2-dry-irony"
+                    },
+                    "feedbackOnSuccess": {
+                      "explanation": "La frase se entiende y mantiene el ritmo."
+                    }
+                  },
+                  {
+                    "type": "MatchPairs",
+                    "id": "es-fr-c2-u15-l01-e11",
+                    "pairs": [
+                      {
+                        "left": "He aprendido a contar historias en pasado. Huelga decir que el matiz escapa a una lectura literal.",
+                        "right": "J'ai appris à raconter des histoires au passé. Inutile de dire que la nuance échappe à une lecture littérale."
+                      },
+                      {
+                        "left": "También puedo hablar de planes y comparar opciones. En rigor, la afirmación admite lecturas encontradas.",
+                        "right": "Je peux aussi parler de projets et comparer des options. À proprement parler, l'affirmation admet des lectures contradictoires."
+                      },
+                      {
+                        "left": "Todavía quiero practicar más la conversación. A riesgo de simplificar, el argumento roza la contradicción.",
+                        "right": "Je veux encore pratiquer davantage la conversation. Au risque de simplifier, l'argument frôle la contradiction."
+                      }
+                    ],
+                    "feedbackOnError": {
+                      "type": "vocabulary",
+                      "explanation": "Cada expresión tiene una traducción distinta.",
+                      "ruleRef": "gp-c2-dry-irony"
+                    },
+                    "feedbackOnSuccess": {
+                      "explanation": "Has asociado cada expresión con su traducción."
+                    }
+                  },
+                  {
+                    "type": "FreeSpeakingPrompt",
+                    "id": "es-fr-c2-u15-l01-e12",
+                    "prompt": "Defiende una interpretación matizada sobre los hitos de A2.",
+                    "minTokens": 40,
+                    "conceptClusters": [
+                      [
+                        "J'ai"
+                      ],
+                      [
+                        "appris"
+                      ],
+                      [
+                        "raconter"
+                      ]
+                    ],
+                    "modelAnswer": "J'ai appris à raconter des histoires au passé. Inutile de dire que la nuance échappe à une lecture littérale. Je peux aussi parler de projets et comparer des options. À proprement parler, l'affirmation admet des lectures contradictoires. Je veux encore pratiquer davantage la conversation. Au risque de simplifier, l'argument frôle la contradiction.",
+                    "selfAssessmentCriteria": [
+                      "¿La respuesta argumenta y responde a la tarea?",
+                      "¿Usa las dos estructuras gramaticales de la lección?",
+                      "¿Incluye una concesión, una ironía o una atenuación?"
+                    ],
+                    "grammarRuleRefs": [
+                      "gp-c2-dry-irony",
+                      "gp-c2-rhetorical-questions"
+                    ],
+                    "timeLimitSeconds": 120,
+                    "minWpm": 70,
+                    "maxWpm": 160,
+                    "feedbackOnError": {
+                      "type": "grammar",
+                      "explanation": "La respuesta modelo desarrolla una interpretación matizada.",
+                      "ruleRef": "gp-c2-dry-irony"
+                    }
+                  }
+                ]
+              },
+              {
+                "id": "es-fr-c2-u15-l02",
+                "title": "Mi historia personal",
+                "cefrLevel": "C2",
+                "scenario": "Situación comunicativa avanzada sobre mi historia personal.",
+                "canDo": "Puedo argumentar con matices y precisión sobre mi historia personal.",
+                "grammarPoints": [
+                  {
+                    "id": "gp-c2-dry-irony",
+                    "label": "Dry irony",
+                    "description": "La ironía seca dice lo contrario de lo que sugiere el contexto."
+                  },
+                  {
+                    "id": "gp-c2-rhetorical-questions",
+                    "label": "Rhetorical questions",
+                    "description": "Las preguntas retóricas orientan la argumentación."
+                  }
+                ],
+                "vocabFrequencyBand": "12000+",
+                "culturalNotes": [
+                  {
+                    "idiom": "enterrer l'essentiel",
+                    "note": "Expresión para ocultar la información más importante.",
+                    "translation": "enterrar lo importante"
+                  }
+                ],
+                "microLesson": {
+                  "title": "Mi historia personal",
+                  "goals": [
+                    "Usar vocabulario avanzado de mi historia personal.",
+                    "Aplicar dry irony y rhetorical questions.",
+                    "Argumentar con matices sobre mi historia personal."
+                  ],
+                  "sections": [
+                    {
+                      "heading": "Lengua en contexto",
+                      "body": "Dry irony: La ironía seca dice lo contrario de lo que sugiere el contexto. Rhetorical questions: Las preguntas retóricas orientan la argumentación.",
+                      "examples": [
+                        {
+                          "source": "Nací en una ciudad pequeña. En rigor, la afirmación admite lecturas encontradas.",
+                          "target": "Je suis né dans une petite ville. À proprement parler, l'affirmation admet des lectures contradictoires."
+                        },
+                        {
+                          "source": "Crecí con mis padres y mis dos hermanos. A riesgo de simplificar, el argumento roza la contradicción.",
+                          "target": "J'ai grandi avec mes parents et mes deux frères. Au risque de simplifier, l'argument frôle la contradiction."
+                        }
+                      ]
+                    }
+                  ]
+                },
+                "glossary": [
+                  {
+                    "term": "Je suis né dans une petite ville. À proprement parler, l'affirmation admet des lectures contradictoires.",
+                    "translations": [
+                      "Nací en una ciudad pequeña. En rigor, la afirmación admite lecturas encontradas."
+                    ]
+                  },
+                  {
+                    "term": "J'ai grandi avec mes parents et mes deux frères. Au risque de simplifier, l'argument frôle la contradiction.",
+                    "translations": [
+                      "Crecí con mis padres y mis dos hermanos. A riesgo de simplificar, el argumento roza la contradicción."
+                    ]
+                  },
+                  {
+                    "term": "À dix-huit ans, j'ai déménagé à Madrid. Paradoxalement, l'excès de prudence nuit à la crédibilité.",
+                    "translations": [
+                      "A los dieciocho años me mudé a Madrid. Paradójicamente, el exceso de cautela resta credibilidad."
+                    ]
+                  }
+                ],
+                "exercises": [
+                  {
+                    "type": "MultipleChoice",
+                    "id": "es-fr-c2-u15-l02-e01",
+                    "question": "¿Cuál es la opción correcta para «Nací en una ciudad pequeña. En rigor, la afirmación admite lecturas encontradas.»?",
+                    "options": [
+                      "Je suis né dans une petite ville. À proprement parler, l'affirmation admet des lectures contradictoires.",
+                      "J'ai grandi avec mes parents et mes deux frères. Au risque de simplifier, l'argument frôle la contradiction.",
+                      "À dix-huit ans, j'ai déménagé à Madrid. Paradoxalement, l'excès de prudence nuit à la crédibilité."
+                    ],
+                    "correctIndex": 0,
+                    "feedbackOnError": {
+                      "type": "vocabulary",
+                      "explanation": "«Nací en una ciudad pequeña. En rigor, la afirmación admite lecturas encontradas.» se dice «Je suis né dans une petite ville. À proprement parler, l'affirmation admet des lectures contradictoires.».",
+                      "ruleRef": "gp-c2-dry-irony"
+                    },
+                    "feedbackOnSuccess": {
+                      "explanation": "Has elegido la opción precisa."
+                    }
+                  },
+                  {
+                    "type": "Translate",
+                    "id": "es-fr-c2-u15-l02-e02",
+                    "sourcePhrase": "Nací en una ciudad pequeña. En rigor, la afirmación admite lecturas encontradas.",
+                    "correctTokens": [
+                      "Je",
+                      "suis",
+                      "né",
+                      "dans",
+                      "une",
+                      "petite",
+                      "ville",
+                      "À",
+                      "proprement",
+                      "parler",
+                      "l'affirmation",
+                      "admet",
+                      "des",
+                      "lectures",
+                      "contradictoires"
+                    ],
+                    "distractorTokens": [
+                      "J'ai",
+                      "grandi",
+                      "avec"
+                    ],
+                    "feedbackOnError": {
+                      "type": "grammar",
+                      "explanation": "El orden correcto es «Je suis né dans une petite ville À proprement parler l'affirmation admet des lectures contradictoires».",
+                      "ruleRef": "gp-c2-dry-irony"
+                    },
+                    "feedbackOnSuccess": {
+                      "explanation": "La frase conserva el orden y el significado."
+                    }
+                  },
+                  {
+                    "type": "ClozeDragDrop",
+                    "id": "es-fr-c2-u15-l02-e03",
+                    "passage": "Je {{b1}} né dans une {{b2}} ville.",
+                    "blanks": [
+                      {
+                        "id": "b1",
+                        "answer": "suis",
+                        "options": [
+                          "suis",
+                          "ville",
+                          "très"
+                        ]
+                      },
+                      {
+                        "id": "b2",
+                        "answer": "petite",
+                        "options": [
+                          "petite",
+                          "ville",
+                          "très"
+                        ]
+                      }
+                    ],
+                    "feedbackOnError": {
+                      "type": "grammar",
+                      "explanation": "Las dos formas deben encajar con el contexto de la frase.",
+                      "ruleRef": "gp-c2-rhetorical-questions"
+                    },
+                    "feedbackOnSuccess": {
+                      "explanation": "Los dos huecos encajan con la situación."
+                    }
+                  },
+                  {
+                    "type": "ClozeDragDrop",
+                    "id": "es-fr-c2-u15-l02-e04",
+                    "passage": "{{b1}} {{b2}} avec mes parents et mes deux frères.",
+                    "blanks": [
+                      {
+                        "id": "b1",
+                        "answer": "J'ai",
+                        "options": [
+                          "J'ai",
+                          "parents",
+                          "deux"
+                        ]
+                      },
+                      {
+                        "id": "b2",
+                        "answer": "grandi",
+                        "options": [
+                          "grandi",
+                          "parents",
+                          "deux"
+                        ]
+                      }
+                    ],
+                    "feedbackOnError": {
+                      "type": "grammar",
+                      "explanation": "Las dos formas deben encajar con el contexto de la frase.",
+                      "ruleRef": "gp-c2-rhetorical-questions"
+                    },
+                    "feedbackOnSuccess": {
+                      "explanation": "Los dos huecos encajan con la situación."
+                    }
+                  },
+                  {
+                    "type": "ClozeDragDrop",
+                    "id": "es-fr-c2-u15-l02-e05",
+                    "passage": "À {{b1}}-{{b2}} ans, j'ai déménagé à Madrid.",
+                    "blanks": [
+                      {
+                        "id": "b1",
+                        "answer": "dix",
+                        "options": [
+                          "dix",
+                          "ans",
+                          "j'ai"
+                        ]
+                      },
+                      {
+                        "id": "b2",
+                        "answer": "huit",
+                        "options": [
+                          "huit",
+                          "ans",
+                          "j'ai"
+                        ]
+                      }
+                    ],
+                    "feedbackOnError": {
+                      "type": "grammar",
+                      "explanation": "Las dos formas deben encajar con el contexto de la frase.",
+                      "ruleRef": "gp-c2-rhetorical-questions"
+                    },
+                    "feedbackOnSuccess": {
+                      "explanation": "Los dos huecos encajan con la situación."
+                    }
+                  },
+                  {
+                    "type": "SemanticMatch",
+                    "id": "es-fr-c2-u15-l02-e06",
+                    "instructions": "Clasifica la función y el registro de cada intervención.",
+                    "pairs": [
+                      {
+                        "left": "Je suis né dans une petite ville. À proprement parler, l'affirmation admet des lectures contradictoires.",
+                        "right": "Ironía seca",
+                        "register": "literary",
+                        "nuance": "Clasifica la función y el registro de la intervención."
+                      },
+                      {
+                        "left": "J'ai grandi avec mes parents et mes deux frères. Au risque de simplifier, l'argument frôle la contradiction.",
+                        "right": "Atenuación",
+                        "register": "formal",
+                        "nuance": "Clasifica la función y el registro de la intervención."
+                      },
+                      {
+                        "left": "À dix-huit ans, j'ai déménagé à Madrid. Paradoxalement, l'excès de prudence nuit à la crédibilité.",
+                        "right": "Conclusión",
+                        "register": "neutral",
+                        "nuance": "Clasifica la función y el registro de la intervención."
+                      }
+                    ],
+                    "feedbackOnError": {
+                      "type": "register",
+                      "explanation": "Cada intervención cumple una función retórica distinta.",
+                      "ruleRef": "gp-c2-dry-irony"
+                    },
+                    "feedbackOnSuccess": {
+                      "explanation": "Has identificado función y registro."
+                    }
+                  },
+                  {
+                    "type": "ListenChoose",
+                    "id": "es-fr-c2-u15-l02-e07",
+                    "audioText": "J'ai grandi avec mes parents et mes deux frères. Au risque de simplifier, l'argument frôle la contradiction.",
+                    "options": [
+                      "J'ai grandi avec mes parents et mes deux frères. Au risque de simplifier, l'argument frôle la contradiction.",
+                      "Je suis né dans une petite ville. À proprement parler, l'affirmation admet des lectures contradictoires.",
+                      "À dix-huit ans, j'ai déménagé à Madrid. Paradoxalement, l'excès de prudence nuit à la crédibilité."
+                    ],
+                    "correctIndex": 0,
+                    "feedbackOnError": {
+                      "type": "comprehension",
+                      "explanation": "El audio dice «J'ai grandi avec mes parents et mes deux frères. Au risque de simplifier, l'argument frôle la contradiction.».",
+                      "ruleRef": "gp-c2-dry-irony"
+                    },
+                    "feedbackOnSuccess": {
+                      "explanation": "Has reconocido la frase del audio."
+                    }
+                  },
+                  {
+                    "type": "AudioOnlyPrompt",
+                    "id": "es-fr-c2-u15-l02-e08",
+                    "audioText": "À dix-huit ans, j'ai déménagé à Madrid. Paradoxalement, l'excès de prudence nuit à la crédibilité.",
+                    "question": "¿Qué implica el hablante?",
+                    "options": [
+                      "À dix-huit ans, j'ai déménagé à Madrid. Paradoxalement, l'excès de prudence nuit à la crédibilité.",
+                      "Je suis né dans une petite ville. À proprement parler, l'affirmation admet des lectures contradictoires.",
+                      "J'ai grandi avec mes parents et mes deux frères. Au risque de simplifier, l'argument frôle la contradiction."
+                    ],
+                    "correctIndex": 0,
+                    "allowSlowPlayback": false,
+                    "feedbackOnError": {
+                      "type": "comprehension",
+                      "explanation": "El audio dice «À dix-huit ans, j'ai déménagé à Madrid. Paradoxalement, l'excès de prudence nuit à la crédibilité.».",
+                      "ruleRef": "gp-c2-rhetorical-questions"
+                    },
+                    "feedbackOnSuccess": {
+                      "explanation": "Has interpretado la implicación."
+                    }
+                  },
+                  {
+                    "type": "ListenType",
+                    "id": "es-fr-c2-u15-l02-e09",
+                    "audioText": "À dix-huit ans, j'ai déménagé à Madrid. Paradoxalement, l'excès de prudence nuit à la crédibilité.",
+                    "transcription": "À dix-huit ans, j'ai déménagé à Madrid. Paradoxalement, l'excès de prudence nuit à la crédibilité.",
+                    "feedbackOnError": {
+                      "type": "spelling",
+                      "explanation": "Escribe exactamente «À dix-huit ans, j'ai déménagé à Madrid. Paradoxalement, l'excès de prudence nuit à la crédibilité.».",
+                      "ruleRef": "gp-c2-dry-irony"
+                    },
+                    "feedbackOnSuccess": {
+                      "explanation": "La transcripción coincide con el audio."
+                    }
+                  },
+                  {
+                    "type": "SpeakRepeat",
+                    "id": "es-fr-c2-u15-l02-e10",
+                    "targetPhrase": "À dix-huit ans, j'ai déménagé à Madrid. Paradoxalement, l'excès de prudence nuit à la crédibilité.",
+                    "audioText": "À dix-huit ans, j'ai déménagé à Madrid. Paradoxalement, l'excès de prudence nuit à la crédibilité.",
+                    "feedbackOnError": {
+                      "type": "pronunciation",
+                      "explanation": "Repite «À dix-huit ans, j'ai déménagé à Madrid. Paradoxalement, l'excès de prudence nuit à la crédibilité.» con claridad.",
+                      "ruleRef": "gp-c2-dry-irony"
+                    },
+                    "feedbackOnSuccess": {
+                      "explanation": "La frase se entiende y mantiene el ritmo."
+                    }
+                  },
+                  {
+                    "type": "MatchPairs",
+                    "id": "es-fr-c2-u15-l02-e11",
+                    "pairs": [
+                      {
+                        "left": "Nací en una ciudad pequeña. En rigor, la afirmación admite lecturas encontradas.",
+                        "right": "Je suis né dans une petite ville. À proprement parler, l'affirmation admet des lectures contradictoires."
+                      },
+                      {
+                        "left": "Crecí con mis padres y mis dos hermanos. A riesgo de simplificar, el argumento roza la contradicción.",
+                        "right": "J'ai grandi avec mes parents et mes deux frères. Au risque de simplifier, l'argument frôle la contradiction."
+                      },
+                      {
+                        "left": "A los dieciocho años me mudé a Madrid. Paradójicamente, el exceso de cautela resta credibilidad.",
+                        "right": "À dix-huit ans, j'ai déménagé à Madrid. Paradoxalement, l'excès de prudence nuit à la crédibilité."
+                      }
+                    ],
+                    "feedbackOnError": {
+                      "type": "vocabulary",
+                      "explanation": "Cada expresión tiene una traducción distinta.",
+                      "ruleRef": "gp-c2-dry-irony"
+                    },
+                    "feedbackOnSuccess": {
+                      "explanation": "Has asociado cada expresión con su traducción."
+                    }
+                  },
+                  {
+                    "type": "FreeSpeakingPrompt",
+                    "id": "es-fr-c2-u15-l02-e12",
+                    "prompt": "Defiende una interpretación matizada sobre mi historia personal.",
+                    "minTokens": 40,
+                    "conceptClusters": [
+                      [
+                        "suis"
+                      ],
+                      [
+                        "petite"
+                      ],
+                      [
+                        "ville"
+                      ]
+                    ],
+                    "modelAnswer": "Je suis né dans une petite ville. À proprement parler, l'affirmation admet des lectures contradictoires. J'ai grandi avec mes parents et mes deux frères. Au risque de simplifier, l'argument frôle la contradiction. À dix-huit ans, j'ai déménagé à Madrid. Paradoxalement, l'excès de prudence nuit à la crédibilité.",
+                    "selfAssessmentCriteria": [
+                      "¿La respuesta argumenta y responde a la tarea?",
+                      "¿Usa las dos estructuras gramaticales de la lección?",
+                      "¿Incluye una concesión, una ironía o una atenuación?"
+                    ],
+                    "grammarRuleRefs": [
+                      "gp-c2-dry-irony",
+                      "gp-c2-rhetorical-questions"
+                    ],
+                    "timeLimitSeconds": 120,
+                    "minWpm": 70,
+                    "maxWpm": 160,
+                    "feedbackOnError": {
+                      "type": "grammar",
+                      "explanation": "La respuesta modelo desarrolla una interpretación matizada.",
+                      "ruleRef": "gp-c2-dry-irony"
+                    }
+                  }
+                ]
+              }
+            ]
           }
         ]
       }
