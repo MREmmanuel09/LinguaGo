@@ -149992,6 +149992,3390 @@
               ]
             }
           ]
+        },
+        {
+          "id": "es-pt-b2-u07",
+          "title": "B2 · Trabajo y estudios",
+          "lessons": [
+            {
+              "id": "es-pt-b2-u07-l01",
+              "title": "Repaso: compras",
+              "cefrLevel": "B2",
+              "scenario": "Situación comunicativa avanzada sobre una compra reciente.",
+              "canDo": "Puedo argumentar y matizar sobre una compra reciente.",
+              "grammarPoints": [
+                {
+                  "id": "gp-b2-reported-speech",
+                  "label": "Reported speech",
+                  "description": "El estilo indirecto ajusta tiempos, pronombres y referencias."
+                },
+                {
+                  "id": "gp-b2-hedging",
+                  "label": "Hedging",
+                  "description": "Matizar una opinión con I'm afraid, it seems o might."
+                }
+              ],
+              "vocabFrequencyBand": "3000-5000",
+              "culturalNotes": [
+                {
+                  "idiom": "bater um papo",
+                  "note": "Expresión para conversar informalmente.",
+                  "translation": "charolar"
+                }
+              ],
+              "microLesson": {
+                "title": "Repaso: compras",
+                "goals": [
+                  "Usar vocabulario avanzado de una compra reciente.",
+                  "Aplicar reported speech y hedging.",
+                  "Argumentar y matizar sobre una compra reciente."
+                ],
+                "sections": [
+                  {
+                    "heading": "Lengua en contexto",
+                    "body": "Reported speech: El estilo indirecto ajusta tiempos, pronombres y referencias. Hedging: Matizar una opinión con I'm afraid, it seems o might.",
+                    "examples": [
+                      {
+                        "source": "Ayer fui a la tienda a cambiar una camiseta. Dicho esto, depende del contexto.",
+                        "target": "Ontem fui à loja trocar de camisa. Dito isto, depende do contexto."
+                      },
+                      {
+                        "source": "El dependiente me ayudó mucho. En otras palabras, merece la pena considerarlo.",
+                        "target": "O atendente me ajudou muito. Por outras palavras, vale a pena considerar."
+                      }
+                    ]
+                  }
+                ]
+              },
+              "glossary": [
+                {
+                  "term": "Ontem fui à loja trocar de camisa. Dito isto, depende do contexto.",
+                  "translations": [
+                    "Ayer fui a la tienda a cambiar una camiseta. Dicho esto, depende del contexto."
+                  ]
+                },
+                {
+                  "term": "O atendente me ajudou muito. Por outras palavras, vale a pena considerar.",
+                  "translations": [
+                    "El dependiente me ayudó mucho. En otras palabras, merece la pena considerarlo."
+                  ]
+                },
+                {
+                  "term": "No final comprei uma jaqueta. Receio que possa ser mais complicado.",
+                  "translations": [
+                    "Al final compré una chaqueta. Me temo que puede ser más complicado."
+                  ]
+                }
+              ],
+              "exercises": [
+                {
+                  "type": "MultipleChoice",
+                  "id": "es-pt-b2-u07-l01-e01",
+                  "question": "¿Cuál es la opción correcta para «Ayer fui a la tienda a cambiar una camiseta. Dicho esto, depende del contexto.»?",
+                  "options": [
+                    "Ontem fui à loja trocar de camisa. Dito isto, depende do contexto.",
+                    "O atendente me ajudou muito. Por outras palavras, vale a pena considerar.",
+                    "No final comprei uma jaqueta. Receio que possa ser mais complicado."
+                  ],
+                  "correctIndex": 0,
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "«Ayer fui a la tienda a cambiar una camiseta. Dicho esto, depende del contexto.» se dice «Ontem fui à loja trocar de camisa. Dito isto, depende do contexto.».",
+                    "ruleRef": "gp-b2-reported-speech"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has elegido la traducción correcta."
+                  }
+                },
+                {
+                  "type": "OrderWords",
+                  "id": "es-pt-b2-u07-l01-e02",
+                  "tokens": [
+                    "fui",
+                    "à",
+                    "loja",
+                    "trocar",
+                    "de",
+                    "camisa",
+                    "Dito",
+                    "isto",
+                    "depende",
+                    "do",
+                    "contexto",
+                    "Ontem"
+                  ],
+                  "answerTokens": [
+                    "Ontem",
+                    "fui",
+                    "à",
+                    "loja",
+                    "trocar",
+                    "de",
+                    "camisa",
+                    "Dito",
+                    "isto",
+                    "depende",
+                    "do",
+                    "contexto"
+                  ],
+                  "sourcePhrase": "Ayer fui a la tienda a cambiar una camiseta. Dicho esto, depende del contexto.",
+                  "feedbackOnError": {
+                    "type": "word_order",
+                    "explanation": "El orden correcto es «Ontem fui à loja trocar de camisa Dito isto depende do contexto».",
+                    "ruleRef": "gp-b2-reported-speech"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "El orden produce una frase natural."
+                  }
+                },
+                {
+                  "type": "ClozeDragDrop",
+                  "id": "es-pt-b2-u07-l01-e03",
+                  "passage": "{{b1}} {{b2}} à loja trocar de camisa",
+                  "blanks": [
+                    {
+                      "id": "b1",
+                      "answer": "Ontem",
+                      "options": [
+                        "Ontem",
+                        "loja",
+                        "trocar"
+                      ]
+                    },
+                    {
+                      "id": "b2",
+                      "answer": "fui",
+                      "options": [
+                        "fui",
+                        "loja",
+                        "trocar"
+                      ]
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "Las dos formas deben encajar con el contexto de la frase.",
+                    "ruleRef": "gp-b2-hedging"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Los dos huecos encajan con la situación."
+                  }
+                },
+                {
+                  "type": "SemanticMatch",
+                  "id": "es-pt-b2-u07-l01-e04",
+                  "instructions": "Clasifica la función comunicativa de cada intervención.",
+                  "pairs": [
+                    {
+                      "left": "Ontem fui à loja trocar de camisa. Dito isto, depende do contexto.",
+                      "right": "Planteamiento",
+                      "register": "formal",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    },
+                    {
+                      "left": "O atendente me ajudou muito. Por outras palavras, vale a pena considerar.",
+                      "right": "Concesión",
+                      "register": "neutral",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    },
+                    {
+                      "left": "No final comprei uma jaqueta. Receio que possa ser mais complicado.",
+                      "right": "Conclusión",
+                      "register": "informal",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "Cada intervención cumple una función comunicativa distinta.",
+                    "ruleRef": "gp-b2-reported-speech"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has identificado la función de cada intervención."
+                  }
+                },
+                {
+                  "type": "SemanticMatch",
+                  "id": "es-pt-b2-u07-l01-e05",
+                  "instructions": "Distingue el registro de cada intervención.",
+                  "pairs": [
+                    {
+                      "left": "Ontem fui à loja trocar de camisa. Dito isto, depende do contexto.",
+                      "right": "Formal",
+                      "register": "formal",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    },
+                    {
+                      "left": "O atendente me ajudou muito. Por outras palavras, vale a pena considerar.",
+                      "right": "Neutral",
+                      "register": "neutral",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    },
+                    {
+                      "left": "No final comprei uma jaqueta. Receio que possa ser mais complicado.",
+                      "right": "Informal",
+                      "register": "informal",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "register",
+                    "explanation": "El registro cambia según el contexto y la relación con el interlocutor.",
+                    "ruleRef": "gp-b2-hedging"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has distinguido el registro de cada intervención."
+                  }
+                },
+                {
+                  "type": "AudioOnlyPrompt",
+                  "id": "es-pt-b2-u07-l01-e06",
+                  "audioText": "O atendente me ajudou muito. Por outras palavras, vale a pena considerar.",
+                  "question": "¿Qué ha dicho el hablante?",
+                  "options": [
+                    "O atendente me ajudou muito. Por outras palavras, vale a pena considerar.",
+                    "Ontem fui à loja trocar de camisa. Dito isto, depende do contexto.",
+                    "No final comprei uma jaqueta. Receio que possa ser mais complicado."
+                  ],
+                  "correctIndex": 0,
+                  "allowSlowPlayback": true,
+                  "feedbackOnError": {
+                    "type": "comprehension",
+                    "explanation": "El audio dice «O atendente me ajudou muito. Por outras palavras, vale a pena considerar.».",
+                    "ruleRef": "gp-b2-reported-speech"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has comprendido el mensaje del audio."
+                  }
+                },
+                {
+                  "type": "AudioOnlyPrompt",
+                  "id": "es-pt-b2-u07-l01-e07",
+                  "audioText": "No final comprei uma jaqueta. Receio que possa ser mais complicado.",
+                  "question": "¿Cuál es la idea principal?",
+                  "options": [
+                    "No final comprei uma jaqueta. Receio que possa ser mais complicado.",
+                    "Ontem fui à loja trocar de camisa. Dito isto, depende do contexto.",
+                    "O atendente me ajudou muito. Por outras palavras, vale a pena considerar."
+                  ],
+                  "correctIndex": 0,
+                  "allowSlowPlayback": false,
+                  "feedbackOnError": {
+                    "type": "comprehension",
+                    "explanation": "El audio dice «No final comprei uma jaqueta. Receio que possa ser mais complicado.».",
+                    "ruleRef": "gp-b2-hedging"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has identificado la idea principal."
+                  }
+                },
+                {
+                  "type": "ListenType",
+                  "id": "es-pt-b2-u07-l01-e08",
+                  "audioText": "No final comprei uma jaqueta. Receio que possa ser mais complicado.",
+                  "transcription": "No final comprei uma jaqueta. Receio que possa ser mais complicado.",
+                  "feedbackOnError": {
+                    "type": "spelling",
+                    "explanation": "Escribe exactamente «No final comprei uma jaqueta. Receio que possa ser mais complicado.».",
+                    "ruleRef": "gp-b2-reported-speech"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La transcripción coincide con el audio."
+                  }
+                },
+                {
+                  "type": "SpeakRepeat",
+                  "id": "es-pt-b2-u07-l01-e09",
+                  "targetPhrase": "No final comprei uma jaqueta. Receio que possa ser mais complicado.",
+                  "audioText": "No final comprei uma jaqueta. Receio que possa ser mais complicado.",
+                  "feedbackOnError": {
+                    "type": "pronunciation",
+                    "explanation": "Repite «No final comprei uma jaqueta. Receio que possa ser mais complicado.» con claridad.",
+                    "ruleRef": "gp-b2-reported-speech"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La frase se entiende y mantiene el ritmo."
+                  }
+                },
+                {
+                  "type": "FreeSpeakingPrompt",
+                  "id": "es-pt-b2-u07-l01-e10",
+                  "prompt": "Argumenta y matiza una opinión sobre una compra reciente.",
+                  "minTokens": 20,
+                  "conceptClusters": [
+                    [
+                      "Ontem"
+                    ],
+                    [
+                      "fui"
+                    ],
+                    [
+                      "loja"
+                    ]
+                  ],
+                  "modelAnswer": "Ontem fui à loja trocar de camisa. Dito isto, depende do contexto. O atendente me ajudou muito. Por outras palavras, vale a pena considerar. No final comprei uma jaqueta. Receio que possa ser mais complicado.",
+                  "selfAssessmentCriteria": [
+                    "¿La respuesta argumenta y responde a la tarea?",
+                    "¿Usa las dos estructuras gramaticales de la lección?",
+                    "¿Incluye una concesión o una matización?"
+                  ],
+                  "grammarRuleRefs": [
+                    "gp-b2-reported-speech",
+                    "gp-b2-hedging"
+                  ],
+                  "timeLimitSeconds": 90,
+                  "minWpm": 70,
+                  "maxWpm": 160,
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "La respuesta modelo desarrolla una opinión con matices y una concesión.",
+                    "ruleRef": "gp-b2-reported-speech"
+                  }
+                }
+              ]
+            },
+            {
+              "id": "es-pt-b2-u07-l02",
+              "title": "Mi trabajo y mis estudios",
+              "cefrLevel": "B2",
+              "scenario": "Situación comunicativa avanzada sobre el trabajo y los estudios.",
+              "canDo": "Puedo argumentar y matizar sobre el trabajo y los estudios.",
+              "grammarPoints": [
+                {
+                  "id": "gp-b2-reported-speech",
+                  "label": "Reported speech",
+                  "description": "El estilo indirecto ajusta tiempos, pronombres y referencias."
+                },
+                {
+                  "id": "gp-b2-hedging",
+                  "label": "Hedging",
+                  "description": "Matizar una opinión con I'm afraid, it seems o might."
+                }
+              ],
+              "vocabFrequencyBand": "3000-5000",
+              "culturalNotes": [
+                {
+                  "idiom": "cair a ficha",
+                  "note": "Expresión para comprender algo de repente.",
+                  "translation": "caer en la cuenta"
+                }
+              ],
+              "microLesson": {
+                "title": "Mi trabajo y mis estudios",
+                "goals": [
+                  "Usar vocabulario avanzado de el trabajo y los estudios.",
+                  "Aplicar reported speech y hedging.",
+                  "Argumentar y matizar sobre el trabajo y los estudios."
+                ],
+                "sections": [
+                  {
+                    "heading": "Lengua en contexto",
+                    "body": "Reported speech: El estilo indirecto ajusta tiempos, pronombres y referencias. Hedging: Matizar una opinión con I'm afraid, it seems o might.",
+                    "examples": [
+                      {
+                        "source": "Trabajo en una oficina pequeña. En otras palabras, merece la pena considerarlo.",
+                        "target": "Eu trabalho em um pequeno escritório. Por outras palavras, vale a pena considerar."
+                      },
+                      {
+                        "source": "Estudio inglés dos veces por semana. Me temo que puede ser más complicado.",
+                        "target": "Eu estudo inglês duas vezes por semana. Receio que possa ser mais complicado."
+                      }
+                    ]
+                  }
+                ]
+              },
+              "glossary": [
+                {
+                  "term": "Eu trabalho em um pequeno escritório. Por outras palavras, vale a pena considerar.",
+                  "translations": [
+                    "Trabajo en una oficina pequeña. En otras palabras, merece la pena considerarlo."
+                  ]
+                },
+                {
+                  "term": "Eu estudo inglês duas vezes por semana. Receio que possa ser mais complicado.",
+                  "translations": [
+                    "Estudio inglés dos veces por semana. Me temo que puede ser más complicado."
+                  ]
+                },
+                {
+                  "term": "Quero melhorar meu currículo. Para ser honesto, tenho sentimentos mistos.",
+                  "translations": [
+                    "Quiero mejorar mi currículum. Sinceramente, tengo sentimientos encontrados."
+                  ]
+                }
+              ],
+              "exercises": [
+                {
+                  "type": "MultipleChoice",
+                  "id": "es-pt-b2-u07-l02-e01",
+                  "question": "¿Cuál es la opción correcta para «Trabajo en una oficina pequeña. En otras palabras, merece la pena considerarlo.»?",
+                  "options": [
+                    "Eu trabalho em um pequeno escritório. Por outras palavras, vale a pena considerar.",
+                    "Eu estudo inglês duas vezes por semana. Receio que possa ser mais complicado.",
+                    "Quero melhorar meu currículo. Para ser honesto, tenho sentimentos mistos."
+                  ],
+                  "correctIndex": 0,
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "«Trabajo en una oficina pequeña. En otras palabras, merece la pena considerarlo.» se dice «Eu trabalho em um pequeno escritório. Por outras palavras, vale a pena considerar.».",
+                    "ruleRef": "gp-b2-reported-speech"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has elegido la traducción correcta."
+                  }
+                },
+                {
+                  "type": "OrderWords",
+                  "id": "es-pt-b2-u07-l02-e02",
+                  "tokens": [
+                    "trabalho",
+                    "em",
+                    "um",
+                    "pequeno",
+                    "escritório",
+                    "Por",
+                    "outras",
+                    "palavras",
+                    "vale",
+                    "a",
+                    "pena",
+                    "considerar",
+                    "Eu"
+                  ],
+                  "answerTokens": [
+                    "Eu",
+                    "trabalho",
+                    "em",
+                    "um",
+                    "pequeno",
+                    "escritório",
+                    "Por",
+                    "outras",
+                    "palavras",
+                    "vale",
+                    "a",
+                    "pena",
+                    "considerar"
+                  ],
+                  "sourcePhrase": "Trabajo en una oficina pequeña. En otras palabras, merece la pena considerarlo.",
+                  "feedbackOnError": {
+                    "type": "word_order",
+                    "explanation": "El orden correcto es «Eu trabalho em um pequeno escritório Por outras palavras vale a pena considerar».",
+                    "ruleRef": "gp-b2-reported-speech"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "El orden produce una frase natural."
+                  }
+                },
+                {
+                  "type": "ClozeDragDrop",
+                  "id": "es-pt-b2-u07-l02-e03",
+                  "passage": "Eu {{b1}} em um {{b2}} escritório",
+                  "blanks": [
+                    {
+                      "id": "b1",
+                      "answer": "trabalho",
+                      "options": [
+                        "trabalho",
+                        "escritório",
+                        "muito"
+                      ]
+                    },
+                    {
+                      "id": "b2",
+                      "answer": "pequeno",
+                      "options": [
+                        "pequeno",
+                        "escritório",
+                        "muito"
+                      ]
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "Las dos formas deben encajar con el contexto de la frase.",
+                    "ruleRef": "gp-b2-hedging"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Los dos huecos encajan con la situación."
+                  }
+                },
+                {
+                  "type": "SemanticMatch",
+                  "id": "es-pt-b2-u07-l02-e04",
+                  "instructions": "Clasifica la función comunicativa de cada intervención.",
+                  "pairs": [
+                    {
+                      "left": "Eu trabalho em um pequeno escritório. Por outras palavras, vale a pena considerar.",
+                      "right": "Planteamiento",
+                      "register": "formal",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    },
+                    {
+                      "left": "Eu estudo inglês duas vezes por semana. Receio que possa ser mais complicado.",
+                      "right": "Concesión",
+                      "register": "neutral",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    },
+                    {
+                      "left": "Quero melhorar meu currículo. Para ser honesto, tenho sentimentos mistos.",
+                      "right": "Conclusión",
+                      "register": "informal",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "Cada intervención cumple una función comunicativa distinta.",
+                    "ruleRef": "gp-b2-reported-speech"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has identificado la función de cada intervención."
+                  }
+                },
+                {
+                  "type": "SemanticMatch",
+                  "id": "es-pt-b2-u07-l02-e05",
+                  "instructions": "Distingue el registro de cada intervención.",
+                  "pairs": [
+                    {
+                      "left": "Eu trabalho em um pequeno escritório. Por outras palavras, vale a pena considerar.",
+                      "right": "Formal",
+                      "register": "formal",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    },
+                    {
+                      "left": "Eu estudo inglês duas vezes por semana. Receio que possa ser mais complicado.",
+                      "right": "Neutral",
+                      "register": "neutral",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    },
+                    {
+                      "left": "Quero melhorar meu currículo. Para ser honesto, tenho sentimentos mistos.",
+                      "right": "Informal",
+                      "register": "informal",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "register",
+                    "explanation": "El registro cambia según el contexto y la relación con el interlocutor.",
+                    "ruleRef": "gp-b2-hedging"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has distinguido el registro de cada intervención."
+                  }
+                },
+                {
+                  "type": "AudioOnlyPrompt",
+                  "id": "es-pt-b2-u07-l02-e06",
+                  "audioText": "Eu estudo inglês duas vezes por semana. Receio que possa ser mais complicado.",
+                  "question": "¿Qué ha dicho el hablante?",
+                  "options": [
+                    "Eu estudo inglês duas vezes por semana. Receio que possa ser mais complicado.",
+                    "Eu trabalho em um pequeno escritório. Por outras palavras, vale a pena considerar.",
+                    "Quero melhorar meu currículo. Para ser honesto, tenho sentimentos mistos."
+                  ],
+                  "correctIndex": 0,
+                  "allowSlowPlayback": true,
+                  "feedbackOnError": {
+                    "type": "comprehension",
+                    "explanation": "El audio dice «Eu estudo inglês duas vezes por semana. Receio que possa ser mais complicado.».",
+                    "ruleRef": "gp-b2-reported-speech"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has comprendido el mensaje del audio."
+                  }
+                },
+                {
+                  "type": "AudioOnlyPrompt",
+                  "id": "es-pt-b2-u07-l02-e07",
+                  "audioText": "Quero melhorar meu currículo. Para ser honesto, tenho sentimentos mistos.",
+                  "question": "¿Cuál es la idea principal?",
+                  "options": [
+                    "Quero melhorar meu currículo. Para ser honesto, tenho sentimentos mistos.",
+                    "Eu trabalho em um pequeno escritório. Por outras palavras, vale a pena considerar.",
+                    "Eu estudo inglês duas vezes por semana. Receio que possa ser mais complicado."
+                  ],
+                  "correctIndex": 0,
+                  "allowSlowPlayback": false,
+                  "feedbackOnError": {
+                    "type": "comprehension",
+                    "explanation": "El audio dice «Quero melhorar meu currículo. Para ser honesto, tenho sentimentos mistos.».",
+                    "ruleRef": "gp-b2-hedging"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has identificado la idea principal."
+                  }
+                },
+                {
+                  "type": "ListenType",
+                  "id": "es-pt-b2-u07-l02-e08",
+                  "audioText": "Quero melhorar meu currículo. Para ser honesto, tenho sentimentos mistos.",
+                  "transcription": "Quero melhorar meu currículo. Para ser honesto, tenho sentimentos mistos.",
+                  "feedbackOnError": {
+                    "type": "spelling",
+                    "explanation": "Escribe exactamente «Quero melhorar meu currículo. Para ser honesto, tenho sentimentos mistos.».",
+                    "ruleRef": "gp-b2-reported-speech"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La transcripción coincide con el audio."
+                  }
+                },
+                {
+                  "type": "SpeakRepeat",
+                  "id": "es-pt-b2-u07-l02-e09",
+                  "targetPhrase": "Quero melhorar meu currículo. Para ser honesto, tenho sentimentos mistos.",
+                  "audioText": "Quero melhorar meu currículo. Para ser honesto, tenho sentimentos mistos.",
+                  "feedbackOnError": {
+                    "type": "pronunciation",
+                    "explanation": "Repite «Quero melhorar meu currículo. Para ser honesto, tenho sentimentos mistos.» con claridad.",
+                    "ruleRef": "gp-b2-reported-speech"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La frase se entiende y mantiene el ritmo."
+                  }
+                },
+                {
+                  "type": "FreeSpeakingPrompt",
+                  "id": "es-pt-b2-u07-l02-e10",
+                  "prompt": "Argumenta y matiza una opinión sobre el trabajo y los estudios.",
+                  "minTokens": 20,
+                  "conceptClusters": [
+                    [
+                      "trabalho"
+                    ],
+                    [
+                      "pequeno"
+                    ],
+                    [
+                      "escritório"
+                    ]
+                  ],
+                  "modelAnswer": "Eu trabalho em um pequeno escritório. Por outras palavras, vale a pena considerar. Eu estudo inglês duas vezes por semana. Receio que possa ser mais complicado. Quero melhorar meu currículo. Para ser honesto, tenho sentimentos mistos.",
+                  "selfAssessmentCriteria": [
+                    "¿La respuesta argumenta y responde a la tarea?",
+                    "¿Usa las dos estructuras gramaticales de la lección?",
+                    "¿Incluye una concesión o una matización?"
+                  ],
+                  "grammarRuleRefs": [
+                    "gp-b2-reported-speech",
+                    "gp-b2-hedging"
+                  ],
+                  "timeLimitSeconds": 90,
+                  "minWpm": 70,
+                  "maxWpm": 160,
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "La respuesta modelo desarrolla una opinión con matices y una concesión.",
+                    "ruleRef": "gp-b2-reported-speech"
+                  }
+                }
+              ]
+            },
+            {
+              "id": "es-pt-b2-u07-l03",
+              "title": "Tareas y responsabilidades",
+              "cefrLevel": "B2",
+              "scenario": "Situación comunicativa avanzada sobre las tareas del trabajo.",
+              "canDo": "Puedo argumentar y matizar sobre las tareas del trabajo.",
+              "grammarPoints": [
+                {
+                  "id": "gp-b2-reported-speech",
+                  "label": "Reported speech",
+                  "description": "El estilo indirecto ajusta tiempos, pronombres y referencias."
+                },
+                {
+                  "id": "gp-b2-hedging",
+                  "label": "Hedging",
+                  "description": "Matizar una opinión con I'm afraid, it seems o might."
+                }
+              ],
+              "vocabFrequencyBand": "3000-5000",
+              "culturalNotes": [
+                {
+                  "idiom": "ficar de olho",
+                  "note": "Expresión para vigilar algo.",
+                  "translation": "estar pendiente"
+                }
+              ],
+              "microLesson": {
+                "title": "Tareas y responsabilidades",
+                "goals": [
+                  "Usar vocabulario avanzado de las tareas del trabajo.",
+                  "Aplicar reported speech y hedging.",
+                  "Argumentar y matizar sobre las tareas del trabajo."
+                ],
+                "sections": [
+                  {
+                    "heading": "Lengua en contexto",
+                    "body": "Reported speech: El estilo indirecto ajusta tiempos, pronombres y referencias. Hedging: Matizar una opinión con I'm afraid, it seems o might.",
+                    "examples": [
+                      {
+                        "source": "Tengo que responder correos. Me temo que puede ser más complicado.",
+                        "target": "Eu tenho que responder e-mails. Receio que possa ser mais complicado."
+                      },
+                      {
+                        "source": "Tengo que preparar reuniones. Sinceramente, tengo sentimientos encontrados.",
+                        "target": "Eu tenho que preparar reuniões. Para ser honesto, tenho sentimentos mistos."
+                      }
+                    ]
+                  }
+                ]
+              },
+              "glossary": [
+                {
+                  "term": "Eu tenho que responder e-mails. Receio que possa ser mais complicado.",
+                  "translations": [
+                    "Tengo que responder correos. Me temo que puede ser más complicado."
+                  ]
+                },
+                {
+                  "term": "Eu tenho que preparar reuniões. Para ser honesto, tenho sentimentos mistos.",
+                  "translations": [
+                    "Tengo que preparar reuniones. Sinceramente, tengo sentimientos encontrados."
+                  ]
+                },
+                {
+                  "term": "Eu tenho que falar com os clientes. Parece que isto está a mudar.",
+                  "translations": [
+                    "Tengo que hablar con clientes. Parece que esto está cambiando."
+                  ]
+                }
+              ],
+              "exercises": [
+                {
+                  "type": "MultipleChoice",
+                  "id": "es-pt-b2-u07-l03-e01",
+                  "question": "¿Cuál es la opción correcta para «Tengo que responder correos. Me temo que puede ser más complicado.»?",
+                  "options": [
+                    "Eu tenho que responder e-mails. Receio que possa ser mais complicado.",
+                    "Eu tenho que preparar reuniões. Para ser honesto, tenho sentimentos mistos.",
+                    "Eu tenho que falar com os clientes. Parece que isto está a mudar."
+                  ],
+                  "correctIndex": 0,
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "«Tengo que responder correos. Me temo que puede ser más complicado.» se dice «Eu tenho que responder e-mails. Receio que possa ser mais complicado.».",
+                    "ruleRef": "gp-b2-reported-speech"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has elegido la traducción correcta."
+                  }
+                },
+                {
+                  "type": "OrderWords",
+                  "id": "es-pt-b2-u07-l03-e02",
+                  "tokens": [
+                    "tenho",
+                    "que",
+                    "responder",
+                    "e",
+                    "mails",
+                    "Receio",
+                    "que",
+                    "possa",
+                    "ser",
+                    "mais",
+                    "complicado",
+                    "Eu"
+                  ],
+                  "answerTokens": [
+                    "Eu",
+                    "tenho",
+                    "que",
+                    "responder",
+                    "e",
+                    "mails",
+                    "Receio",
+                    "que",
+                    "possa",
+                    "ser",
+                    "mais",
+                    "complicado"
+                  ],
+                  "sourcePhrase": "Tengo que responder correos. Me temo que puede ser más complicado.",
+                  "feedbackOnError": {
+                    "type": "word_order",
+                    "explanation": "El orden correcto es «Eu tenho que responder e mails Receio que possa ser mais complicado».",
+                    "ruleRef": "gp-b2-reported-speech"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "El orden produce una frase natural."
+                  }
+                },
+                {
+                  "type": "ClozeDragDrop",
+                  "id": "es-pt-b2-u07-l03-e03",
+                  "passage": "Eu {{b1}} que {{b2}} e-mails",
+                  "blanks": [
+                    {
+                      "id": "b1",
+                      "answer": "tenho",
+                      "options": [
+                        "tenho",
+                        "mails",
+                        "muito"
+                      ]
+                    },
+                    {
+                      "id": "b2",
+                      "answer": "responder",
+                      "options": [
+                        "responder",
+                        "mails",
+                        "muito"
+                      ]
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "Las dos formas deben encajar con el contexto de la frase.",
+                    "ruleRef": "gp-b2-hedging"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Los dos huecos encajan con la situación."
+                  }
+                },
+                {
+                  "type": "SemanticMatch",
+                  "id": "es-pt-b2-u07-l03-e04",
+                  "instructions": "Clasifica la función comunicativa de cada intervención.",
+                  "pairs": [
+                    {
+                      "left": "Eu tenho que responder e-mails. Receio que possa ser mais complicado.",
+                      "right": "Planteamiento",
+                      "register": "formal",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    },
+                    {
+                      "left": "Eu tenho que preparar reuniões. Para ser honesto, tenho sentimentos mistos.",
+                      "right": "Concesión",
+                      "register": "neutral",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    },
+                    {
+                      "left": "Eu tenho que falar com os clientes. Parece que isto está a mudar.",
+                      "right": "Conclusión",
+                      "register": "informal",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "Cada intervención cumple una función comunicativa distinta.",
+                    "ruleRef": "gp-b2-reported-speech"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has identificado la función de cada intervención."
+                  }
+                },
+                {
+                  "type": "SemanticMatch",
+                  "id": "es-pt-b2-u07-l03-e05",
+                  "instructions": "Distingue el registro de cada intervención.",
+                  "pairs": [
+                    {
+                      "left": "Eu tenho que responder e-mails. Receio que possa ser mais complicado.",
+                      "right": "Formal",
+                      "register": "formal",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    },
+                    {
+                      "left": "Eu tenho que preparar reuniões. Para ser honesto, tenho sentimentos mistos.",
+                      "right": "Neutral",
+                      "register": "neutral",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    },
+                    {
+                      "left": "Eu tenho que falar com os clientes. Parece que isto está a mudar.",
+                      "right": "Informal",
+                      "register": "informal",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "register",
+                    "explanation": "El registro cambia según el contexto y la relación con el interlocutor.",
+                    "ruleRef": "gp-b2-hedging"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has distinguido el registro de cada intervención."
+                  }
+                },
+                {
+                  "type": "AudioOnlyPrompt",
+                  "id": "es-pt-b2-u07-l03-e06",
+                  "audioText": "Eu tenho que preparar reuniões. Para ser honesto, tenho sentimentos mistos.",
+                  "question": "¿Qué ha dicho el hablante?",
+                  "options": [
+                    "Eu tenho que preparar reuniões. Para ser honesto, tenho sentimentos mistos.",
+                    "Eu tenho que responder e-mails. Receio que possa ser mais complicado.",
+                    "Eu tenho que falar com os clientes. Parece que isto está a mudar."
+                  ],
+                  "correctIndex": 0,
+                  "allowSlowPlayback": true,
+                  "feedbackOnError": {
+                    "type": "comprehension",
+                    "explanation": "El audio dice «Eu tenho que preparar reuniões. Para ser honesto, tenho sentimentos mistos.».",
+                    "ruleRef": "gp-b2-reported-speech"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has comprendido el mensaje del audio."
+                  }
+                },
+                {
+                  "type": "AudioOnlyPrompt",
+                  "id": "es-pt-b2-u07-l03-e07",
+                  "audioText": "Eu tenho que falar com os clientes. Parece que isto está a mudar.",
+                  "question": "¿Cuál es la idea principal?",
+                  "options": [
+                    "Eu tenho que falar com os clientes. Parece que isto está a mudar.",
+                    "Eu tenho que responder e-mails. Receio que possa ser mais complicado.",
+                    "Eu tenho que preparar reuniões. Para ser honesto, tenho sentimentos mistos."
+                  ],
+                  "correctIndex": 0,
+                  "allowSlowPlayback": false,
+                  "feedbackOnError": {
+                    "type": "comprehension",
+                    "explanation": "El audio dice «Eu tenho que falar com os clientes. Parece que isto está a mudar.».",
+                    "ruleRef": "gp-b2-hedging"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has identificado la idea principal."
+                  }
+                },
+                {
+                  "type": "ListenType",
+                  "id": "es-pt-b2-u07-l03-e08",
+                  "audioText": "Eu tenho que falar com os clientes. Parece que isto está a mudar.",
+                  "transcription": "Eu tenho que falar com os clientes. Parece que isto está a mudar.",
+                  "feedbackOnError": {
+                    "type": "spelling",
+                    "explanation": "Escribe exactamente «Eu tenho que falar com os clientes. Parece que isto está a mudar.».",
+                    "ruleRef": "gp-b2-reported-speech"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La transcripción coincide con el audio."
+                  }
+                },
+                {
+                  "type": "SpeakRepeat",
+                  "id": "es-pt-b2-u07-l03-e09",
+                  "targetPhrase": "Eu tenho que falar com os clientes. Parece que isto está a mudar.",
+                  "audioText": "Eu tenho que falar com os clientes. Parece que isto está a mudar.",
+                  "feedbackOnError": {
+                    "type": "pronunciation",
+                    "explanation": "Repite «Eu tenho que falar com os clientes. Parece que isto está a mudar.» con claridad.",
+                    "ruleRef": "gp-b2-reported-speech"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La frase se entiende y mantiene el ritmo."
+                  }
+                },
+                {
+                  "type": "FreeSpeakingPrompt",
+                  "id": "es-pt-b2-u07-l03-e10",
+                  "prompt": "Argumenta y matiza una opinión sobre las tareas del trabajo.",
+                  "minTokens": 20,
+                  "conceptClusters": [
+                    [
+                      "tenho"
+                    ],
+                    [
+                      "responder"
+                    ],
+                    [
+                      "mails"
+                    ]
+                  ],
+                  "modelAnswer": "Eu tenho que responder e-mails. Receio que possa ser mais complicado. Eu tenho que preparar reuniões. Para ser honesto, tenho sentimentos mistos. Eu tenho que falar com os clientes. Parece que isto está a mudar.",
+                  "selfAssessmentCriteria": [
+                    "¿La respuesta argumenta y responde a la tarea?",
+                    "¿Usa las dos estructuras gramaticales de la lección?",
+                    "¿Incluye una concesión o una matización?"
+                  ],
+                  "grammarRuleRefs": [
+                    "gp-b2-reported-speech",
+                    "gp-b2-hedging"
+                  ],
+                  "timeLimitSeconds": 90,
+                  "minWpm": 70,
+                  "maxWpm": 160,
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "La respuesta modelo desarrolla una opinión con matices y una concesión.",
+                    "ruleRef": "gp-b2-reported-speech"
+                  }
+                }
+              ]
+            },
+            {
+              "id": "es-pt-b2-u07-l04",
+              "title": "Present perfect",
+              "cefrLevel": "B2",
+              "scenario": "Situación comunicativa avanzada sobre las experiencias profesionales.",
+              "canDo": "Puedo argumentar y matizar sobre las experiencias profesionales.",
+              "grammarPoints": [
+                {
+                  "id": "gp-b2-reported-speech",
+                  "label": "Reported speech",
+                  "description": "El estilo indirecto ajusta tiempos, pronombres y referencias."
+                },
+                {
+                  "id": "gp-b2-hedging",
+                  "label": "Hedging",
+                  "description": "Matizar una opinión con I'm afraid, it seems o might."
+                }
+              ],
+              "vocabFrequencyBand": "3000-5000",
+              "culturalNotes": [
+                {
+                  "idiom": "custar os olhos da cara",
+                  "note": "Expresión para decir que algo es muy caro.",
+                  "translation": "costar un ojo de la cara"
+                }
+              ],
+              "microLesson": {
+                "title": "Present perfect",
+                "goals": [
+                  "Usar vocabulario avanzado de las experiencias profesionales.",
+                  "Aplicar reported speech y hedging.",
+                  "Argumentar y matizar sobre las experiencias profesionales."
+                ],
+                "sections": [
+                  {
+                    "heading": "Lengua en contexto",
+                    "body": "Reported speech: El estilo indirecto ajusta tiempos, pronombres y referencias. Hedging: Matizar una opinión con I'm afraid, it seems o might.",
+                    "examples": [
+                      {
+                        "source": "He trabajado en tres países. Sinceramente, tengo sentimientos encontrados.",
+                        "target": "Trabalhei em três países. Para ser honesto, tenho sentimentos mistos."
+                      },
+                      {
+                        "source": "He estudiado inglés durante años. Parece que esto está cambiando.",
+                        "target": "Eu estudei inglês por anos. Parece que isto está a mudar."
+                      }
+                    ]
+                  }
+                ]
+              },
+              "glossary": [
+                {
+                  "term": "Trabalhei em três países. Para ser honesto, tenho sentimentos mistos.",
+                  "translations": [
+                    "He trabajado en tres países. Sinceramente, tengo sentimientos encontrados."
+                  ]
+                },
+                {
+                  "term": "Eu estudei inglês por anos. Parece que isto está a mudar.",
+                  "translations": [
+                    "He estudiado inglés durante años. Parece que esto está cambiando."
+                  ]
+                },
+                {
+                  "term": "Aprendi a usar uma nova ferramenta. Do meu ponto de vista, é uma opção razoável.",
+                  "translations": [
+                    "He aprendido a usar una nueva herramienta. Desde mi punto de vista, es una opción razonable."
+                  ]
+                }
+              ],
+              "exercises": [
+                {
+                  "type": "MultipleChoice",
+                  "id": "es-pt-b2-u07-l04-e01",
+                  "question": "¿Cuál es la opción correcta para «He trabajado en tres países. Sinceramente, tengo sentimientos encontrados.»?",
+                  "options": [
+                    "Trabalhei em três países. Para ser honesto, tenho sentimentos mistos.",
+                    "Eu estudei inglês por anos. Parece que isto está a mudar.",
+                    "Aprendi a usar uma nova ferramenta. Do meu ponto de vista, é uma opção razoável."
+                  ],
+                  "correctIndex": 0,
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "«He trabajado en tres países. Sinceramente, tengo sentimientos encontrados.» se dice «Trabalhei em três países. Para ser honesto, tenho sentimentos mistos.».",
+                    "ruleRef": "gp-b2-reported-speech"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has elegido la traducción correcta."
+                  }
+                },
+                {
+                  "type": "OrderWords",
+                  "id": "es-pt-b2-u07-l04-e02",
+                  "tokens": [
+                    "em",
+                    "três",
+                    "países",
+                    "Para",
+                    "ser",
+                    "honesto",
+                    "tenho",
+                    "sentimentos",
+                    "mistos",
+                    "Trabalhei"
+                  ],
+                  "answerTokens": [
+                    "Trabalhei",
+                    "em",
+                    "três",
+                    "países",
+                    "Para",
+                    "ser",
+                    "honesto",
+                    "tenho",
+                    "sentimentos",
+                    "mistos"
+                  ],
+                  "sourcePhrase": "He trabajado en tres países. Sinceramente, tengo sentimientos encontrados.",
+                  "feedbackOnError": {
+                    "type": "word_order",
+                    "explanation": "El orden correcto es «Trabalhei em três países Para ser honesto tenho sentimentos mistos».",
+                    "ruleRef": "gp-b2-reported-speech"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "El orden produce una frase natural."
+                  }
+                },
+                {
+                  "type": "ClozeDragDrop",
+                  "id": "es-pt-b2-u07-l04-e03",
+                  "passage": "{{b1}} em {{b2}} países",
+                  "blanks": [
+                    {
+                      "id": "b1",
+                      "answer": "Trabalhei",
+                      "options": [
+                        "Trabalhei",
+                        "países",
+                        "muito"
+                      ]
+                    },
+                    {
+                      "id": "b2",
+                      "answer": "três",
+                      "options": [
+                        "três",
+                        "países",
+                        "muito"
+                      ]
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "Las dos formas deben encajar con el contexto de la frase.",
+                    "ruleRef": "gp-b2-hedging"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Los dos huecos encajan con la situación."
+                  }
+                },
+                {
+                  "type": "SemanticMatch",
+                  "id": "es-pt-b2-u07-l04-e04",
+                  "instructions": "Clasifica la función comunicativa de cada intervención.",
+                  "pairs": [
+                    {
+                      "left": "Trabalhei em três países. Para ser honesto, tenho sentimentos mistos.",
+                      "right": "Planteamiento",
+                      "register": "formal",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    },
+                    {
+                      "left": "Eu estudei inglês por anos. Parece que isto está a mudar.",
+                      "right": "Concesión",
+                      "register": "neutral",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    },
+                    {
+                      "left": "Aprendi a usar uma nova ferramenta. Do meu ponto de vista, é uma opção razoável.",
+                      "right": "Conclusión",
+                      "register": "informal",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "Cada intervención cumple una función comunicativa distinta.",
+                    "ruleRef": "gp-b2-reported-speech"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has identificado la función de cada intervención."
+                  }
+                },
+                {
+                  "type": "SemanticMatch",
+                  "id": "es-pt-b2-u07-l04-e05",
+                  "instructions": "Distingue el registro de cada intervención.",
+                  "pairs": [
+                    {
+                      "left": "Trabalhei em três países. Para ser honesto, tenho sentimentos mistos.",
+                      "right": "Formal",
+                      "register": "formal",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    },
+                    {
+                      "left": "Eu estudei inglês por anos. Parece que isto está a mudar.",
+                      "right": "Neutral",
+                      "register": "neutral",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    },
+                    {
+                      "left": "Aprendi a usar uma nova ferramenta. Do meu ponto de vista, é uma opção razoável.",
+                      "right": "Informal",
+                      "register": "informal",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "register",
+                    "explanation": "El registro cambia según el contexto y la relación con el interlocutor.",
+                    "ruleRef": "gp-b2-hedging"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has distinguido el registro de cada intervención."
+                  }
+                },
+                {
+                  "type": "AudioOnlyPrompt",
+                  "id": "es-pt-b2-u07-l04-e06",
+                  "audioText": "Eu estudei inglês por anos. Parece que isto está a mudar.",
+                  "question": "¿Qué ha dicho el hablante?",
+                  "options": [
+                    "Eu estudei inglês por anos. Parece que isto está a mudar.",
+                    "Trabalhei em três países. Para ser honesto, tenho sentimentos mistos.",
+                    "Aprendi a usar uma nova ferramenta. Do meu ponto de vista, é uma opção razoável."
+                  ],
+                  "correctIndex": 0,
+                  "allowSlowPlayback": true,
+                  "feedbackOnError": {
+                    "type": "comprehension",
+                    "explanation": "El audio dice «Eu estudei inglês por anos. Parece que isto está a mudar.».",
+                    "ruleRef": "gp-b2-reported-speech"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has comprendido el mensaje del audio."
+                  }
+                },
+                {
+                  "type": "AudioOnlyPrompt",
+                  "id": "es-pt-b2-u07-l04-e07",
+                  "audioText": "Aprendi a usar uma nova ferramenta. Do meu ponto de vista, é uma opção razoável.",
+                  "question": "¿Cuál es la idea principal?",
+                  "options": [
+                    "Aprendi a usar uma nova ferramenta. Do meu ponto de vista, é uma opção razoável.",
+                    "Trabalhei em três países. Para ser honesto, tenho sentimentos mistos.",
+                    "Eu estudei inglês por anos. Parece que isto está a mudar."
+                  ],
+                  "correctIndex": 0,
+                  "allowSlowPlayback": false,
+                  "feedbackOnError": {
+                    "type": "comprehension",
+                    "explanation": "El audio dice «Aprendi a usar uma nova ferramenta. Do meu ponto de vista, é uma opção razoável.».",
+                    "ruleRef": "gp-b2-hedging"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has identificado la idea principal."
+                  }
+                },
+                {
+                  "type": "ListenType",
+                  "id": "es-pt-b2-u07-l04-e08",
+                  "audioText": "Aprendi a usar uma nova ferramenta. Do meu ponto de vista, é uma opção razoável.",
+                  "transcription": "Aprendi a usar uma nova ferramenta. Do meu ponto de vista, é uma opção razoável.",
+                  "feedbackOnError": {
+                    "type": "spelling",
+                    "explanation": "Escribe exactamente «Aprendi a usar uma nova ferramenta. Do meu ponto de vista, é uma opção razoável.».",
+                    "ruleRef": "gp-b2-reported-speech"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La transcripción coincide con el audio."
+                  }
+                },
+                {
+                  "type": "SpeakRepeat",
+                  "id": "es-pt-b2-u07-l04-e09",
+                  "targetPhrase": "Aprendi a usar uma nova ferramenta. Do meu ponto de vista, é uma opção razoável.",
+                  "audioText": "Aprendi a usar uma nova ferramenta. Do meu ponto de vista, é uma opção razoável.",
+                  "feedbackOnError": {
+                    "type": "pronunciation",
+                    "explanation": "Repite «Aprendi a usar uma nova ferramenta. Do meu ponto de vista, é uma opção razoável.» con claridad.",
+                    "ruleRef": "gp-b2-reported-speech"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La frase se entiende y mantiene el ritmo."
+                  }
+                },
+                {
+                  "type": "FreeSpeakingPrompt",
+                  "id": "es-pt-b2-u07-l04-e10",
+                  "prompt": "Argumenta y matiza una opinión sobre las experiencias profesionales.",
+                  "minTokens": 20,
+                  "conceptClusters": [
+                    [
+                      "Trabalhei"
+                    ],
+                    [
+                      "três"
+                    ],
+                    [
+                      "países"
+                    ]
+                  ],
+                  "modelAnswer": "Trabalhei em três países. Para ser honesto, tenho sentimentos mistos. Eu estudei inglês por anos. Parece que isto está a mudar. Aprendi a usar uma nova ferramenta. Do meu ponto de vista, é uma opção razoável.",
+                  "selfAssessmentCriteria": [
+                    "¿La respuesta argumenta y responde a la tarea?",
+                    "¿Usa las dos estructuras gramaticales de la lección?",
+                    "¿Incluye una concesión o una matización?"
+                  ],
+                  "grammarRuleRefs": [
+                    "gp-b2-reported-speech",
+                    "gp-b2-hedging"
+                  ],
+                  "timeLimitSeconds": 90,
+                  "minWpm": 70,
+                  "maxWpm": 160,
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "La respuesta modelo desarrolla una opinión con matices y una concesión.",
+                    "ruleRef": "gp-b2-reported-speech"
+                  }
+                }
+              ]
+            },
+            {
+              "id": "es-pt-b2-u07-l05",
+              "title": "For y since",
+              "cefrLevel": "B2",
+              "scenario": "Situación comunicativa avanzada sobre la duración.",
+              "canDo": "Puedo argumentar y matizar sobre la duración.",
+              "grammarPoints": [
+                {
+                  "id": "gp-b2-reported-speech",
+                  "label": "Reported speech",
+                  "description": "El estilo indirecto ajusta tiempos, pronombres y referencias."
+                },
+                {
+                  "id": "gp-b2-hedging",
+                  "label": "Hedging",
+                  "description": "Matizar una opinión con I'm afraid, it seems o might."
+                }
+              ],
+              "vocabFrequencyBand": "3000-5000",
+              "culturalNotes": [
+                {
+                  "idiom": "virar a noite",
+                  "note": "Expresión para trabajar hasta muy tarde.",
+                  "translation": "trasnochar"
+                }
+              ],
+              "microLesson": {
+                "title": "For y since",
+                "goals": [
+                  "Usar vocabulario avanzado de la duración.",
+                  "Aplicar reported speech y hedging.",
+                  "Argumentar y matizar sobre la duración."
+                ],
+                "sections": [
+                  {
+                    "heading": "Lengua en contexto",
+                    "body": "Reported speech: El estilo indirecto ajusta tiempos, pronombres y referencias. Hedging: Matizar una opinión con I'm afraid, it seems o might.",
+                    "examples": [
+                      {
+                        "source": "Vivo en Madrid desde 2019. Parece que esto está cambiando.",
+                        "target": "Moro em Madri desde 2019. Parece que isto está a mudar."
+                      },
+                      {
+                        "source": "Trabajo aquí desde hace tres años. Desde mi punto de vista, es una opción razonable.",
+                        "target": "Trabalho aqui há três anos. Do meu ponto de vista, é uma opção razoável."
+                      }
+                    ]
+                  }
+                ]
+              },
+              "glossary": [
+                {
+                  "term": "Moro em Madri desde 2019. Parece que isto está a mudar.",
+                  "translations": [
+                    "Vivo en Madrid desde 2019. Parece que esto está cambiando."
+                  ]
+                },
+                {
+                  "term": "Trabalho aqui há três anos. Do meu ponto de vista, é uma opção razoável.",
+                  "translations": [
+                    "Trabajo aquí desde hace tres años. Desde mi punto de vista, es una opción razonable."
+                  ]
+                },
+                {
+                  "term": "Estou estudando inglês desde o ano passado. Ainda assim, também há vantagens.",
+                  "translations": [
+                    "Estudio inglés desde el año pasado. No obstante, también tiene ventajas."
+                  ]
+                }
+              ],
+              "exercises": [
+                {
+                  "type": "MultipleChoice",
+                  "id": "es-pt-b2-u07-l05-e01",
+                  "question": "¿Cuál es la opción correcta para «Vivo en Madrid desde 2019. Parece que esto está cambiando.»?",
+                  "options": [
+                    "Moro em Madri desde 2019. Parece que isto está a mudar.",
+                    "Trabalho aqui há três anos. Do meu ponto de vista, é uma opção razoável.",
+                    "Estou estudando inglês desde o ano passado. Ainda assim, também há vantagens."
+                  ],
+                  "correctIndex": 0,
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "«Vivo en Madrid desde 2019. Parece que esto está cambiando.» se dice «Moro em Madri desde 2019. Parece que isto está a mudar.».",
+                    "ruleRef": "gp-b2-reported-speech"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has elegido la traducción correcta."
+                  }
+                },
+                {
+                  "type": "OrderWords",
+                  "id": "es-pt-b2-u07-l05-e02",
+                  "tokens": [
+                    "em",
+                    "Madri",
+                    "desde",
+                    "2019",
+                    "Parece",
+                    "que",
+                    "isto",
+                    "está",
+                    "a",
+                    "mudar",
+                    "Moro"
+                  ],
+                  "answerTokens": [
+                    "Moro",
+                    "em",
+                    "Madri",
+                    "desde",
+                    "2019",
+                    "Parece",
+                    "que",
+                    "isto",
+                    "está",
+                    "a",
+                    "mudar"
+                  ],
+                  "sourcePhrase": "Vivo en Madrid desde 2019. Parece que esto está cambiando.",
+                  "feedbackOnError": {
+                    "type": "word_order",
+                    "explanation": "El orden correcto es «Moro em Madri desde 2019 Parece que isto está a mudar».",
+                    "ruleRef": "gp-b2-reported-speech"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "El orden produce una frase natural."
+                  }
+                },
+                {
+                  "type": "ClozeDragDrop",
+                  "id": "es-pt-b2-u07-l05-e03",
+                  "passage": "{{b1}} em {{b2}} desde 2019",
+                  "blanks": [
+                    {
+                      "id": "b1",
+                      "answer": "Moro",
+                      "options": [
+                        "Moro",
+                        "desde",
+                        "2019"
+                      ]
+                    },
+                    {
+                      "id": "b2",
+                      "answer": "Madri",
+                      "options": [
+                        "Madri",
+                        "desde",
+                        "2019"
+                      ]
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "Las dos formas deben encajar con el contexto de la frase.",
+                    "ruleRef": "gp-b2-hedging"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Los dos huecos encajan con la situación."
+                  }
+                },
+                {
+                  "type": "SemanticMatch",
+                  "id": "es-pt-b2-u07-l05-e04",
+                  "instructions": "Clasifica la función comunicativa de cada intervención.",
+                  "pairs": [
+                    {
+                      "left": "Moro em Madri desde 2019. Parece que isto está a mudar.",
+                      "right": "Planteamiento",
+                      "register": "formal",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    },
+                    {
+                      "left": "Trabalho aqui há três anos. Do meu ponto de vista, é uma opção razoável.",
+                      "right": "Concesión",
+                      "register": "neutral",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    },
+                    {
+                      "left": "Estou estudando inglês desde o ano passado. Ainda assim, também há vantagens.",
+                      "right": "Conclusión",
+                      "register": "informal",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "Cada intervención cumple una función comunicativa distinta.",
+                    "ruleRef": "gp-b2-reported-speech"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has identificado la función de cada intervención."
+                  }
+                },
+                {
+                  "type": "SemanticMatch",
+                  "id": "es-pt-b2-u07-l05-e05",
+                  "instructions": "Distingue el registro de cada intervención.",
+                  "pairs": [
+                    {
+                      "left": "Moro em Madri desde 2019. Parece que isto está a mudar.",
+                      "right": "Formal",
+                      "register": "formal",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    },
+                    {
+                      "left": "Trabalho aqui há três anos. Do meu ponto de vista, é uma opção razoável.",
+                      "right": "Neutral",
+                      "register": "neutral",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    },
+                    {
+                      "left": "Estou estudando inglês desde o ano passado. Ainda assim, também há vantagens.",
+                      "right": "Informal",
+                      "register": "informal",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "register",
+                    "explanation": "El registro cambia según el contexto y la relación con el interlocutor.",
+                    "ruleRef": "gp-b2-hedging"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has distinguido el registro de cada intervención."
+                  }
+                },
+                {
+                  "type": "AudioOnlyPrompt",
+                  "id": "es-pt-b2-u07-l05-e06",
+                  "audioText": "Trabalho aqui há três anos. Do meu ponto de vista, é uma opção razoável.",
+                  "question": "¿Qué ha dicho el hablante?",
+                  "options": [
+                    "Trabalho aqui há três anos. Do meu ponto de vista, é uma opção razoável.",
+                    "Moro em Madri desde 2019. Parece que isto está a mudar.",
+                    "Estou estudando inglês desde o ano passado. Ainda assim, também há vantagens."
+                  ],
+                  "correctIndex": 0,
+                  "allowSlowPlayback": true,
+                  "feedbackOnError": {
+                    "type": "comprehension",
+                    "explanation": "El audio dice «Trabalho aqui há três anos. Do meu ponto de vista, é uma opção razoável.».",
+                    "ruleRef": "gp-b2-reported-speech"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has comprendido el mensaje del audio."
+                  }
+                },
+                {
+                  "type": "AudioOnlyPrompt",
+                  "id": "es-pt-b2-u07-l05-e07",
+                  "audioText": "Estou estudando inglês desde o ano passado. Ainda assim, também há vantagens.",
+                  "question": "¿Cuál es la idea principal?",
+                  "options": [
+                    "Estou estudando inglês desde o ano passado. Ainda assim, também há vantagens.",
+                    "Moro em Madri desde 2019. Parece que isto está a mudar.",
+                    "Trabalho aqui há três anos. Do meu ponto de vista, é uma opção razoável."
+                  ],
+                  "correctIndex": 0,
+                  "allowSlowPlayback": false,
+                  "feedbackOnError": {
+                    "type": "comprehension",
+                    "explanation": "El audio dice «Estou estudando inglês desde o ano passado. Ainda assim, também há vantagens.».",
+                    "ruleRef": "gp-b2-hedging"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has identificado la idea principal."
+                  }
+                },
+                {
+                  "type": "ListenType",
+                  "id": "es-pt-b2-u07-l05-e08",
+                  "audioText": "Estou estudando inglês desde o ano passado. Ainda assim, também há vantagens.",
+                  "transcription": "Estou estudando inglês desde o ano passado. Ainda assim, também há vantagens.",
+                  "feedbackOnError": {
+                    "type": "spelling",
+                    "explanation": "Escribe exactamente «Estou estudando inglês desde o ano passado. Ainda assim, também há vantagens.».",
+                    "ruleRef": "gp-b2-reported-speech"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La transcripción coincide con el audio."
+                  }
+                },
+                {
+                  "type": "SpeakRepeat",
+                  "id": "es-pt-b2-u07-l05-e09",
+                  "targetPhrase": "Estou estudando inglês desde o ano passado. Ainda assim, também há vantagens.",
+                  "audioText": "Estou estudando inglês desde o ano passado. Ainda assim, também há vantagens.",
+                  "feedbackOnError": {
+                    "type": "pronunciation",
+                    "explanation": "Repite «Estou estudando inglês desde o ano passado. Ainda assim, também há vantagens.» con claridad.",
+                    "ruleRef": "gp-b2-reported-speech"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La frase se entiende y mantiene el ritmo."
+                  }
+                },
+                {
+                  "type": "FreeSpeakingPrompt",
+                  "id": "es-pt-b2-u07-l05-e10",
+                  "prompt": "Argumenta y matiza una opinión sobre la duración.",
+                  "minTokens": 20,
+                  "conceptClusters": [
+                    [
+                      "Moro"
+                    ],
+                    [
+                      "Madri"
+                    ],
+                    [
+                      "desde"
+                    ]
+                  ],
+                  "modelAnswer": "Moro em Madri desde 2019. Parece que isto está a mudar. Trabalho aqui há três anos. Do meu ponto de vista, é uma opção razoável. Estou estudando inglês desde o ano passado. Ainda assim, também há vantagens.",
+                  "selfAssessmentCriteria": [
+                    "¿La respuesta argumenta y responde a la tarea?",
+                    "¿Usa las dos estructuras gramaticales de la lección?",
+                    "¿Incluye una concesión o una matización?"
+                  ],
+                  "grammarRuleRefs": [
+                    "gp-b2-reported-speech",
+                    "gp-b2-hedging"
+                  ],
+                  "timeLimitSeconds": 90,
+                  "minWpm": 70,
+                  "maxWpm": 160,
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "La respuesta modelo desarrolla una opinión con matices y una concesión.",
+                    "ruleRef": "gp-b2-reported-speech"
+                  }
+                }
+              ]
+            },
+            {
+              "id": "es-pt-b2-u07-l06",
+              "title": "Entrevista",
+              "cefrLevel": "B2",
+              "scenario": "Situación comunicativa avanzada sobre una entrevista de trabajo.",
+              "canDo": "Puedo argumentar y matizar sobre una entrevista de trabajo.",
+              "grammarPoints": [
+                {
+                  "id": "gp-b2-reported-speech",
+                  "label": "Reported speech",
+                  "description": "El estilo indirecto ajusta tiempos, pronombres y referencias."
+                },
+                {
+                  "id": "gp-b2-hedging",
+                  "label": "Hedging",
+                  "description": "Matizar una opinión con I'm afraid, it seems o might."
+                }
+              ],
+              "vocabFrequencyBand": "3000-5000",
+              "culturalNotes": [
+                {
+                  "idiom": "o que importa",
+                  "note": "Expresión para señalar lo esencial.",
+                  "translation": "lo que importa"
+                }
+              ],
+              "microLesson": {
+                "title": "Entrevista",
+                "goals": [
+                  "Usar vocabulario avanzado de una entrevista de trabajo.",
+                  "Aplicar reported speech y hedging.",
+                  "Argumentar y matizar sobre una entrevista de trabajo."
+                ],
+                "sections": [
+                  {
+                    "heading": "Lengua en contexto",
+                    "body": "Reported speech: El estilo indirecto ajusta tiempos, pronombres y referencias. Hedging: Matizar una opinión con I'm afraid, it seems o might.",
+                    "examples": [
+                      {
+                        "source": "¿Cuál es su experiencia profesional? Desde mi punto de vista, es una opción razonable.",
+                        "target": "Qual é a sua experiência profissional. Do meu ponto de vista, é uma opção razoável."
+                      },
+                      {
+                        "source": "He trabajado en atención al cliente. No obstante, también tiene ventajas.",
+                        "target": "Já trabalhei em atendimento ao cliente. Ainda assim, também há vantagens."
+                      }
+                    ]
+                  }
+                ]
+              },
+              "glossary": [
+                {
+                  "term": "Qual é a sua experiência profissional. Do meu ponto de vista, é uma opção razoável.",
+                  "translations": [
+                    "¿Cuál es su experiencia profesional? Desde mi punto de vista, es una opción razonable."
+                  ]
+                },
+                {
+                  "term": "Já trabalhei em atendimento ao cliente. Ainda assim, também há vantagens.",
+                  "translations": [
+                    "He trabajado en atención al cliente. No obstante, también tiene ventajas."
+                  ]
+                },
+                {
+                  "term": "Por que você quer trabalhar conosco. No fim do dia, é preciso priorizar.",
+                  "translations": [
+                    "¿Por qué quiere trabajar con nosotros? A fin de cuentas, hay que priorizar."
+                  ]
+                }
+              ],
+              "exercises": [
+                {
+                  "type": "MultipleChoice",
+                  "id": "es-pt-b2-u07-l06-e01",
+                  "question": "¿Cuál es la opción correcta para «¿Cuál es su experiencia profesional? Desde mi punto de vista, es una opción razonable.»?",
+                  "options": [
+                    "Qual é a sua experiência profissional. Do meu ponto de vista, é uma opção razoável.",
+                    "Já trabalhei em atendimento ao cliente. Ainda assim, também há vantagens.",
+                    "Por que você quer trabalhar conosco. No fim do dia, é preciso priorizar."
+                  ],
+                  "correctIndex": 0,
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "«¿Cuál es su experiencia profesional? Desde mi punto de vista, es una opción razonable.» se dice «Qual é a sua experiência profissional. Do meu ponto de vista, é uma opção razoável.».",
+                    "ruleRef": "gp-b2-reported-speech"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has elegido la traducción correcta."
+                  }
+                },
+                {
+                  "type": "OrderWords",
+                  "id": "es-pt-b2-u07-l06-e02",
+                  "tokens": [
+                    "é",
+                    "a",
+                    "sua",
+                    "experiência",
+                    "profissional",
+                    "Do",
+                    "meu",
+                    "ponto",
+                    "de",
+                    "vista",
+                    "é",
+                    "uma",
+                    "opção",
+                    "razoável",
+                    "Qual"
+                  ],
+                  "answerTokens": [
+                    "Qual",
+                    "é",
+                    "a",
+                    "sua",
+                    "experiência",
+                    "profissional",
+                    "Do",
+                    "meu",
+                    "ponto",
+                    "de",
+                    "vista",
+                    "é",
+                    "uma",
+                    "opção",
+                    "razoável"
+                  ],
+                  "sourcePhrase": "¿Cuál es su experiencia profesional? Desde mi punto de vista, es una opción razonable.",
+                  "feedbackOnError": {
+                    "type": "word_order",
+                    "explanation": "El orden correcto es «Qual é a sua experiência profissional Do meu ponto de vista é uma opção razoável».",
+                    "ruleRef": "gp-b2-reported-speech"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "El orden produce una frase natural."
+                  }
+                },
+                {
+                  "type": "ClozeDragDrop",
+                  "id": "es-pt-b2-u07-l06-e03",
+                  "passage": "{{b1}} é a sua {{b2}} profissional",
+                  "blanks": [
+                    {
+                      "id": "b1",
+                      "answer": "Qual",
+                      "options": [
+                        "Qual",
+                        "profissional",
+                        "muito"
+                      ]
+                    },
+                    {
+                      "id": "b2",
+                      "answer": "experiência",
+                      "options": [
+                        "experiência",
+                        "profissional",
+                        "muito"
+                      ]
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "Las dos formas deben encajar con el contexto de la frase.",
+                    "ruleRef": "gp-b2-hedging"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Los dos huecos encajan con la situación."
+                  }
+                },
+                {
+                  "type": "SemanticMatch",
+                  "id": "es-pt-b2-u07-l06-e04",
+                  "instructions": "Clasifica la función comunicativa de cada intervención.",
+                  "pairs": [
+                    {
+                      "left": "Qual é a sua experiência profissional. Do meu ponto de vista, é uma opção razoável.",
+                      "right": "Planteamiento",
+                      "register": "formal",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    },
+                    {
+                      "left": "Já trabalhei em atendimento ao cliente. Ainda assim, também há vantagens.",
+                      "right": "Concesión",
+                      "register": "neutral",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    },
+                    {
+                      "left": "Por que você quer trabalhar conosco. No fim do dia, é preciso priorizar.",
+                      "right": "Conclusión",
+                      "register": "informal",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "Cada intervención cumple una función comunicativa distinta.",
+                    "ruleRef": "gp-b2-reported-speech"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has identificado la función de cada intervención."
+                  }
+                },
+                {
+                  "type": "SemanticMatch",
+                  "id": "es-pt-b2-u07-l06-e05",
+                  "instructions": "Distingue el registro de cada intervención.",
+                  "pairs": [
+                    {
+                      "left": "Qual é a sua experiência profissional. Do meu ponto de vista, é uma opção razoável.",
+                      "right": "Formal",
+                      "register": "formal",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    },
+                    {
+                      "left": "Já trabalhei em atendimento ao cliente. Ainda assim, também há vantagens.",
+                      "right": "Neutral",
+                      "register": "neutral",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    },
+                    {
+                      "left": "Por que você quer trabalhar conosco. No fim do dia, é preciso priorizar.",
+                      "right": "Informal",
+                      "register": "informal",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "register",
+                    "explanation": "El registro cambia según el contexto y la relación con el interlocutor.",
+                    "ruleRef": "gp-b2-hedging"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has distinguido el registro de cada intervención."
+                  }
+                },
+                {
+                  "type": "AudioOnlyPrompt",
+                  "id": "es-pt-b2-u07-l06-e06",
+                  "audioText": "Já trabalhei em atendimento ao cliente. Ainda assim, também há vantagens.",
+                  "question": "¿Qué ha dicho el hablante?",
+                  "options": [
+                    "Já trabalhei em atendimento ao cliente. Ainda assim, também há vantagens.",
+                    "Qual é a sua experiência profissional. Do meu ponto de vista, é uma opção razoável.",
+                    "Por que você quer trabalhar conosco. No fim do dia, é preciso priorizar."
+                  ],
+                  "correctIndex": 0,
+                  "allowSlowPlayback": true,
+                  "feedbackOnError": {
+                    "type": "comprehension",
+                    "explanation": "El audio dice «Já trabalhei em atendimento ao cliente. Ainda assim, também há vantagens.».",
+                    "ruleRef": "gp-b2-reported-speech"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has comprendido el mensaje del audio."
+                  }
+                },
+                {
+                  "type": "AudioOnlyPrompt",
+                  "id": "es-pt-b2-u07-l06-e07",
+                  "audioText": "Por que você quer trabalhar conosco. No fim do dia, é preciso priorizar.",
+                  "question": "¿Cuál es la idea principal?",
+                  "options": [
+                    "Por que você quer trabalhar conosco. No fim do dia, é preciso priorizar.",
+                    "Qual é a sua experiência profissional. Do meu ponto de vista, é uma opção razoável.",
+                    "Já trabalhei em atendimento ao cliente. Ainda assim, também há vantagens."
+                  ],
+                  "correctIndex": 0,
+                  "allowSlowPlayback": false,
+                  "feedbackOnError": {
+                    "type": "comprehension",
+                    "explanation": "El audio dice «Por que você quer trabalhar conosco. No fim do dia, é preciso priorizar.».",
+                    "ruleRef": "gp-b2-hedging"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has identificado la idea principal."
+                  }
+                },
+                {
+                  "type": "ListenType",
+                  "id": "es-pt-b2-u07-l06-e08",
+                  "audioText": "Por que você quer trabalhar conosco. No fim do dia, é preciso priorizar.",
+                  "transcription": "Por que você quer trabalhar conosco. No fim do dia, é preciso priorizar.",
+                  "feedbackOnError": {
+                    "type": "spelling",
+                    "explanation": "Escribe exactamente «Por que você quer trabalhar conosco. No fim do dia, é preciso priorizar.».",
+                    "ruleRef": "gp-b2-reported-speech"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La transcripción coincide con el audio."
+                  }
+                },
+                {
+                  "type": "SpeakRepeat",
+                  "id": "es-pt-b2-u07-l06-e09",
+                  "targetPhrase": "Por que você quer trabalhar conosco. No fim do dia, é preciso priorizar.",
+                  "audioText": "Por que você quer trabalhar conosco. No fim do dia, é preciso priorizar.",
+                  "feedbackOnError": {
+                    "type": "pronunciation",
+                    "explanation": "Repite «Por que você quer trabalhar conosco. No fim do dia, é preciso priorizar.» con claridad.",
+                    "ruleRef": "gp-b2-reported-speech"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La frase se entiende y mantiene el ritmo."
+                  }
+                },
+                {
+                  "type": "FreeSpeakingPrompt",
+                  "id": "es-pt-b2-u07-l06-e10",
+                  "prompt": "Argumenta y matiza una opinión sobre una entrevista de trabajo.",
+                  "minTokens": 20,
+                  "conceptClusters": [
+                    [
+                      "Qual"
+                    ],
+                    [
+                      "experiência"
+                    ],
+                    [
+                      "profissional"
+                    ]
+                  ],
+                  "modelAnswer": "Qual é a sua experiência profissional. Do meu ponto de vista, é uma opção razoável. Já trabalhei em atendimento ao cliente. Ainda assim, também há vantagens. Por que você quer trabalhar conosco. No fim do dia, é preciso priorizar.",
+                  "selfAssessmentCriteria": [
+                    "¿La respuesta argumenta y responde a la tarea?",
+                    "¿Usa las dos estructuras gramaticales de la lección?",
+                    "¿Incluye una concesión o una matización?"
+                  ],
+                  "grammarRuleRefs": [
+                    "gp-b2-reported-speech",
+                    "gp-b2-hedging"
+                  ],
+                  "timeLimitSeconds": 90,
+                  "minWpm": 70,
+                  "maxWpm": 160,
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "La respuesta modelo desarrolla una opinión con matices y una concesión.",
+                    "ruleRef": "gp-b2-reported-speech"
+                  }
+                }
+              ]
+            },
+            {
+              "id": "es-pt-b2-u07-l07",
+              "title": "Oferta de trabajo",
+              "cefrLevel": "B2",
+              "scenario": "Situación comunicativa avanzada sobre una oferta de trabajo.",
+              "canDo": "Puedo argumentar y matizar sobre una oferta de trabajo.",
+              "grammarPoints": [
+                {
+                  "id": "gp-b2-reported-speech",
+                  "label": "Reported speech",
+                  "description": "El estilo indirecto ajusta tiempos, pronombres y referencias."
+                },
+                {
+                  "id": "gp-b2-hedging",
+                  "label": "Hedging",
+                  "description": "Matizar una opinión con I'm afraid, it seems o might."
+                }
+              ],
+              "vocabFrequencyBand": "3000-5000",
+              "culturalNotes": [
+                {
+                  "idiom": "quebrar o gelo",
+                  "note": "Expresión para iniciar una conversación.",
+                  "translation": "romper el hielo"
+                }
+              ],
+              "microLesson": {
+                "title": "Oferta de trabajo",
+                "goals": [
+                  "Usar vocabulario avanzado de una oferta de trabajo.",
+                  "Aplicar reported speech y hedging.",
+                  "Argumentar y matizar sobre una oferta de trabajo."
+                ],
+                "sections": [
+                  {
+                    "heading": "Lengua en contexto",
+                    "body": "Reported speech: El estilo indirecto ajusta tiempos, pronombres y referencias. Hedging: Matizar una opinión con I'm afraid, it seems o might.",
+                    "examples": [
+                      {
+                        "source": "La empresa busca un asistente administrativo. No obstante, también tiene ventajas.",
+                        "target": "A empresa está em busca de auxiliar administrativo. Ainda assim, também há vantagens."
+                      },
+                      {
+                        "source": "El puesto es a tiempo completo. A fin de cuentas, hay que priorizar.",
+                        "target": "A posição é em tempo integral. No fim do dia, é preciso priorizar."
+                      }
+                    ]
+                  }
+                ]
+              },
+              "glossary": [
+                {
+                  "term": "A empresa está em busca de auxiliar administrativo. Ainda assim, também há vantagens.",
+                  "translations": [
+                    "La empresa busca un asistente administrativo. No obstante, también tiene ventajas."
+                  ]
+                },
+                {
+                  "term": "A posição é em tempo integral. No fim do dia, é preciso priorizar.",
+                  "translations": [
+                    "El puesto es a tiempo completo. A fin de cuentas, hay que priorizar."
+                  ]
+                },
+                {
+                  "term": "Eles oferecem treinamento e horários flexíveis. Em resumo, é um tema complexo.",
+                  "translations": [
+                    "Ofrecen formación y horario flexible. En resumen, es un tema complejo."
+                  ]
+                }
+              ],
+              "exercises": [
+                {
+                  "type": "MultipleChoice",
+                  "id": "es-pt-b2-u07-l07-e01",
+                  "question": "¿Cuál es la opción correcta para «La empresa busca un asistente administrativo. No obstante, también tiene ventajas.»?",
+                  "options": [
+                    "A empresa está em busca de auxiliar administrativo. Ainda assim, também há vantagens.",
+                    "A posição é em tempo integral. No fim do dia, é preciso priorizar.",
+                    "Eles oferecem treinamento e horários flexíveis. Em resumo, é um tema complexo."
+                  ],
+                  "correctIndex": 0,
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "«La empresa busca un asistente administrativo. No obstante, también tiene ventajas.» se dice «A empresa está em busca de auxiliar administrativo. Ainda assim, também há vantagens.».",
+                    "ruleRef": "gp-b2-reported-speech"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has elegido la traducción correcta."
+                  }
+                },
+                {
+                  "type": "OrderWords",
+                  "id": "es-pt-b2-u07-l07-e02",
+                  "tokens": [
+                    "empresa",
+                    "está",
+                    "em",
+                    "busca",
+                    "de",
+                    "auxiliar",
+                    "administrativo",
+                    "Ainda",
+                    "assim",
+                    "também",
+                    "há",
+                    "vantagens",
+                    "A"
+                  ],
+                  "answerTokens": [
+                    "A",
+                    "empresa",
+                    "está",
+                    "em",
+                    "busca",
+                    "de",
+                    "auxiliar",
+                    "administrativo",
+                    "Ainda",
+                    "assim",
+                    "também",
+                    "há",
+                    "vantagens"
+                  ],
+                  "sourcePhrase": "La empresa busca un asistente administrativo. No obstante, también tiene ventajas.",
+                  "feedbackOnError": {
+                    "type": "word_order",
+                    "explanation": "El orden correcto es «A empresa está em busca de auxiliar administrativo Ainda assim também há vantagens».",
+                    "ruleRef": "gp-b2-reported-speech"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "El orden produce una frase natural."
+                  }
+                },
+                {
+                  "type": "ClozeDragDrop",
+                  "id": "es-pt-b2-u07-l07-e03",
+                  "passage": "A {{b1}} {{b2}} em busca de auxiliar administrativo",
+                  "blanks": [
+                    {
+                      "id": "b1",
+                      "answer": "empresa",
+                      "options": [
+                        "empresa",
+                        "busca",
+                        "auxiliar"
+                      ]
+                    },
+                    {
+                      "id": "b2",
+                      "answer": "está",
+                      "options": [
+                        "está",
+                        "busca",
+                        "auxiliar"
+                      ]
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "Las dos formas deben encajar con el contexto de la frase.",
+                    "ruleRef": "gp-b2-hedging"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Los dos huecos encajan con la situación."
+                  }
+                },
+                {
+                  "type": "SemanticMatch",
+                  "id": "es-pt-b2-u07-l07-e04",
+                  "instructions": "Clasifica la función comunicativa de cada intervención.",
+                  "pairs": [
+                    {
+                      "left": "A empresa está em busca de auxiliar administrativo. Ainda assim, também há vantagens.",
+                      "right": "Planteamiento",
+                      "register": "formal",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    },
+                    {
+                      "left": "A posição é em tempo integral. No fim do dia, é preciso priorizar.",
+                      "right": "Concesión",
+                      "register": "neutral",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    },
+                    {
+                      "left": "Eles oferecem treinamento e horários flexíveis. Em resumo, é um tema complexo.",
+                      "right": "Conclusión",
+                      "register": "informal",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "Cada intervención cumple una función comunicativa distinta.",
+                    "ruleRef": "gp-b2-reported-speech"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has identificado la función de cada intervención."
+                  }
+                },
+                {
+                  "type": "SemanticMatch",
+                  "id": "es-pt-b2-u07-l07-e05",
+                  "instructions": "Distingue el registro de cada intervención.",
+                  "pairs": [
+                    {
+                      "left": "A empresa está em busca de auxiliar administrativo. Ainda assim, também há vantagens.",
+                      "right": "Formal",
+                      "register": "formal",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    },
+                    {
+                      "left": "A posição é em tempo integral. No fim do dia, é preciso priorizar.",
+                      "right": "Neutral",
+                      "register": "neutral",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    },
+                    {
+                      "left": "Eles oferecem treinamento e horários flexíveis. Em resumo, é um tema complexo.",
+                      "right": "Informal",
+                      "register": "informal",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "register",
+                    "explanation": "El registro cambia según el contexto y la relación con el interlocutor.",
+                    "ruleRef": "gp-b2-hedging"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has distinguido el registro de cada intervención."
+                  }
+                },
+                {
+                  "type": "AudioOnlyPrompt",
+                  "id": "es-pt-b2-u07-l07-e06",
+                  "audioText": "A posição é em tempo integral. No fim do dia, é preciso priorizar.",
+                  "question": "¿Qué ha dicho el hablante?",
+                  "options": [
+                    "A posição é em tempo integral. No fim do dia, é preciso priorizar.",
+                    "A empresa está em busca de auxiliar administrativo. Ainda assim, também há vantagens.",
+                    "Eles oferecem treinamento e horários flexíveis. Em resumo, é um tema complexo."
+                  ],
+                  "correctIndex": 0,
+                  "allowSlowPlayback": true,
+                  "feedbackOnError": {
+                    "type": "comprehension",
+                    "explanation": "El audio dice «A posição é em tempo integral. No fim do dia, é preciso priorizar.».",
+                    "ruleRef": "gp-b2-reported-speech"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has comprendido el mensaje del audio."
+                  }
+                },
+                {
+                  "type": "AudioOnlyPrompt",
+                  "id": "es-pt-b2-u07-l07-e07",
+                  "audioText": "Eles oferecem treinamento e horários flexíveis. Em resumo, é um tema complexo.",
+                  "question": "¿Cuál es la idea principal?",
+                  "options": [
+                    "Eles oferecem treinamento e horários flexíveis. Em resumo, é um tema complexo.",
+                    "A empresa está em busca de auxiliar administrativo. Ainda assim, também há vantagens.",
+                    "A posição é em tempo integral. No fim do dia, é preciso priorizar."
+                  ],
+                  "correctIndex": 0,
+                  "allowSlowPlayback": false,
+                  "feedbackOnError": {
+                    "type": "comprehension",
+                    "explanation": "El audio dice «Eles oferecem treinamento e horários flexíveis. Em resumo, é um tema complexo.».",
+                    "ruleRef": "gp-b2-hedging"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has identificado la idea principal."
+                  }
+                },
+                {
+                  "type": "ListenType",
+                  "id": "es-pt-b2-u07-l07-e08",
+                  "audioText": "Eles oferecem treinamento e horários flexíveis. Em resumo, é um tema complexo.",
+                  "transcription": "Eles oferecem treinamento e horários flexíveis. Em resumo, é um tema complexo.",
+                  "feedbackOnError": {
+                    "type": "spelling",
+                    "explanation": "Escribe exactamente «Eles oferecem treinamento e horários flexíveis. Em resumo, é um tema complexo.».",
+                    "ruleRef": "gp-b2-reported-speech"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La transcripción coincide con el audio."
+                  }
+                },
+                {
+                  "type": "SpeakRepeat",
+                  "id": "es-pt-b2-u07-l07-e09",
+                  "targetPhrase": "Eles oferecem treinamento e horários flexíveis. Em resumo, é um tema complexo.",
+                  "audioText": "Eles oferecem treinamento e horários flexíveis. Em resumo, é um tema complexo.",
+                  "feedbackOnError": {
+                    "type": "pronunciation",
+                    "explanation": "Repite «Eles oferecem treinamento e horários flexíveis. Em resumo, é um tema complexo.» con claridad.",
+                    "ruleRef": "gp-b2-reported-speech"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La frase se entiende y mantiene el ritmo."
+                  }
+                },
+                {
+                  "type": "FreeSpeakingPrompt",
+                  "id": "es-pt-b2-u07-l07-e10",
+                  "prompt": "Argumenta y matiza una opinión sobre una oferta de trabajo.",
+                  "minTokens": 20,
+                  "conceptClusters": [
+                    [
+                      "empresa"
+                    ],
+                    [
+                      "está"
+                    ],
+                    [
+                      "busca"
+                    ]
+                  ],
+                  "modelAnswer": "A empresa está em busca de auxiliar administrativo. Ainda assim, também há vantagens. A posição é em tempo integral. No fim do dia, é preciso priorizar. Eles oferecem treinamento e horários flexíveis. Em resumo, é um tema complexo.",
+                  "selfAssessmentCriteria": [
+                    "¿La respuesta argumenta y responde a la tarea?",
+                    "¿Usa las dos estructuras gramaticales de la lección?",
+                    "¿Incluye una concesión o una matización?"
+                  ],
+                  "grammarRuleRefs": [
+                    "gp-b2-reported-speech",
+                    "gp-b2-hedging"
+                  ],
+                  "timeLimitSeconds": 90,
+                  "minWpm": 70,
+                  "maxWpm": 160,
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "La respuesta modelo desarrolla una opinión con matices y una concesión.",
+                    "ruleRef": "gp-b2-reported-speech"
+                  }
+                }
+              ]
+            },
+            {
+              "id": "es-pt-b2-u07-l08",
+              "title": "Correo profesional",
+              "cefrLevel": "B2",
+              "scenario": "Situación comunicativa avanzada sobre un correo profesional.",
+              "canDo": "Puedo argumentar y matizar sobre un correo profesional.",
+              "grammarPoints": [
+                {
+                  "id": "gp-b2-reported-speech",
+                  "label": "Reported speech",
+                  "description": "El estilo indirecto ajusta tiempos, pronombres y referencias."
+                },
+                {
+                  "id": "gp-b2-hedging",
+                  "label": "Hedging",
+                  "description": "Matizar una opinión con I'm afraid, it seems o might."
+                }
+              ],
+              "vocabFrequencyBand": "3000-5000",
+              "culturalNotes": [
+                {
+                  "idiom": "encerrar o dia",
+                  "note": "Expresión para terminar la jornada.",
+                  "translation": "cerrar el día"
+                }
+              ],
+              "microLesson": {
+                "title": "Correo profesional",
+                "goals": [
+                  "Usar vocabulario avanzado de un correo profesional.",
+                  "Aplicar reported speech y hedging.",
+                  "Argumentar y matizar sobre un correo profesional."
+                ],
+                "sections": [
+                  {
+                    "heading": "Lengua en contexto",
+                    "body": "Reported speech: El estilo indirecto ajusta tiempos, pronombres y referencias. Hedging: Matizar una opinión con I'm afraid, it seems o might.",
+                    "examples": [
+                      {
+                        "source": "Escribo para solicitar una entrevista. A fin de cuentas, hay que priorizar.",
+                        "target": "Estou escrevendo para solicitar uma entrevista. No fim do dia, é preciso priorizar."
+                      },
+                      {
+                        "source": "Adjunto mi currículum y una carta de presentación. En resumen, es un tema complejo.",
+                        "target": "Anexei meu currículo e uma carta de apresentação. Em resumo, é um tema complexo."
+                      }
+                    ]
+                  }
+                ]
+              },
+              "glossary": [
+                {
+                  "term": "Estou escrevendo para solicitar uma entrevista. No fim do dia, é preciso priorizar.",
+                  "translations": [
+                    "Escribo para solicitar una entrevista. A fin de cuentas, hay que priorizar."
+                  ]
+                },
+                {
+                  "term": "Anexei meu currículo e uma carta de apresentação. Em resumo, é um tema complexo.",
+                  "translations": [
+                    "Adjunto mi currículum y una carta de presentación. En resumen, es un tema complejo."
+                  ]
+                },
+                {
+                  "term": "Permaneço à sua disposição para maiores informações. No entanto, vale a pena qualificar.",
+                  "translations": [
+                    "Quedo a su disposición para ampliar la información. Sin embargo, conviene matizarlo."
+                  ]
+                }
+              ],
+              "exercises": [
+                {
+                  "type": "MultipleChoice",
+                  "id": "es-pt-b2-u07-l08-e01",
+                  "question": "¿Cuál es la opción correcta para «Escribo para solicitar una entrevista. A fin de cuentas, hay que priorizar.»?",
+                  "options": [
+                    "Estou escrevendo para solicitar uma entrevista. No fim do dia, é preciso priorizar.",
+                    "Anexei meu currículo e uma carta de apresentação. Em resumo, é um tema complexo.",
+                    "Permaneço à sua disposição para maiores informações. No entanto, vale a pena qualificar."
+                  ],
+                  "correctIndex": 0,
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "«Escribo para solicitar una entrevista. A fin de cuentas, hay que priorizar.» se dice «Estou escrevendo para solicitar uma entrevista. No fim do dia, é preciso priorizar.».",
+                    "ruleRef": "gp-b2-reported-speech"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has elegido la traducción correcta."
+                  }
+                },
+                {
+                  "type": "OrderWords",
+                  "id": "es-pt-b2-u07-l08-e02",
+                  "tokens": [
+                    "escrevendo",
+                    "para",
+                    "solicitar",
+                    "uma",
+                    "entrevista",
+                    "No",
+                    "fim",
+                    "do",
+                    "dia",
+                    "é",
+                    "preciso",
+                    "priorizar",
+                    "Estou"
+                  ],
+                  "answerTokens": [
+                    "Estou",
+                    "escrevendo",
+                    "para",
+                    "solicitar",
+                    "uma",
+                    "entrevista",
+                    "No",
+                    "fim",
+                    "do",
+                    "dia",
+                    "é",
+                    "preciso",
+                    "priorizar"
+                  ],
+                  "sourcePhrase": "Escribo para solicitar una entrevista. A fin de cuentas, hay que priorizar.",
+                  "feedbackOnError": {
+                    "type": "word_order",
+                    "explanation": "El orden correcto es «Estou escrevendo para solicitar uma entrevista No fim do dia é preciso priorizar».",
+                    "ruleRef": "gp-b2-reported-speech"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "El orden produce una frase natural."
+                  }
+                },
+                {
+                  "type": "ClozeDragDrop",
+                  "id": "es-pt-b2-u07-l08-e03",
+                  "passage": "{{b1}} {{b2}} para solicitar uma entrevista",
+                  "blanks": [
+                    {
+                      "id": "b1",
+                      "answer": "Estou",
+                      "options": [
+                        "Estou",
+                        "solicitar",
+                        "entrevista"
+                      ]
+                    },
+                    {
+                      "id": "b2",
+                      "answer": "escrevendo",
+                      "options": [
+                        "escrevendo",
+                        "solicitar",
+                        "entrevista"
+                      ]
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "Las dos formas deben encajar con el contexto de la frase.",
+                    "ruleRef": "gp-b2-hedging"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Los dos huecos encajan con la situación."
+                  }
+                },
+                {
+                  "type": "SemanticMatch",
+                  "id": "es-pt-b2-u07-l08-e04",
+                  "instructions": "Clasifica la función comunicativa de cada intervención.",
+                  "pairs": [
+                    {
+                      "left": "Estou escrevendo para solicitar uma entrevista. No fim do dia, é preciso priorizar.",
+                      "right": "Planteamiento",
+                      "register": "formal",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    },
+                    {
+                      "left": "Anexei meu currículo e uma carta de apresentação. Em resumo, é um tema complexo.",
+                      "right": "Concesión",
+                      "register": "neutral",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    },
+                    {
+                      "left": "Permaneço à sua disposição para maiores informações. No entanto, vale a pena qualificar.",
+                      "right": "Conclusión",
+                      "register": "informal",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "Cada intervención cumple una función comunicativa distinta.",
+                    "ruleRef": "gp-b2-reported-speech"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has identificado la función de cada intervención."
+                  }
+                },
+                {
+                  "type": "SemanticMatch",
+                  "id": "es-pt-b2-u07-l08-e05",
+                  "instructions": "Distingue el registro de cada intervención.",
+                  "pairs": [
+                    {
+                      "left": "Estou escrevendo para solicitar uma entrevista. No fim do dia, é preciso priorizar.",
+                      "right": "Formal",
+                      "register": "formal",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    },
+                    {
+                      "left": "Anexei meu currículo e uma carta de apresentação. Em resumo, é um tema complexo.",
+                      "right": "Neutral",
+                      "register": "neutral",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    },
+                    {
+                      "left": "Permaneço à sua disposição para maiores informações. No entanto, vale a pena qualificar.",
+                      "right": "Informal",
+                      "register": "informal",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "register",
+                    "explanation": "El registro cambia según el contexto y la relación con el interlocutor.",
+                    "ruleRef": "gp-b2-hedging"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has distinguido el registro de cada intervención."
+                  }
+                },
+                {
+                  "type": "AudioOnlyPrompt",
+                  "id": "es-pt-b2-u07-l08-e06",
+                  "audioText": "Anexei meu currículo e uma carta de apresentação. Em resumo, é um tema complexo.",
+                  "question": "¿Qué ha dicho el hablante?",
+                  "options": [
+                    "Anexei meu currículo e uma carta de apresentação. Em resumo, é um tema complexo.",
+                    "Estou escrevendo para solicitar uma entrevista. No fim do dia, é preciso priorizar.",
+                    "Permaneço à sua disposição para maiores informações. No entanto, vale a pena qualificar."
+                  ],
+                  "correctIndex": 0,
+                  "allowSlowPlayback": true,
+                  "feedbackOnError": {
+                    "type": "comprehension",
+                    "explanation": "El audio dice «Anexei meu currículo e uma carta de apresentação. Em resumo, é um tema complexo.».",
+                    "ruleRef": "gp-b2-reported-speech"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has comprendido el mensaje del audio."
+                  }
+                },
+                {
+                  "type": "AudioOnlyPrompt",
+                  "id": "es-pt-b2-u07-l08-e07",
+                  "audioText": "Permaneço à sua disposição para maiores informações. No entanto, vale a pena qualificar.",
+                  "question": "¿Cuál es la idea principal?",
+                  "options": [
+                    "Permaneço à sua disposição para maiores informações. No entanto, vale a pena qualificar.",
+                    "Estou escrevendo para solicitar uma entrevista. No fim do dia, é preciso priorizar.",
+                    "Anexei meu currículo e uma carta de apresentação. Em resumo, é um tema complexo."
+                  ],
+                  "correctIndex": 0,
+                  "allowSlowPlayback": false,
+                  "feedbackOnError": {
+                    "type": "comprehension",
+                    "explanation": "El audio dice «Permaneço à sua disposição para maiores informações. No entanto, vale a pena qualificar.».",
+                    "ruleRef": "gp-b2-hedging"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has identificado la idea principal."
+                  }
+                },
+                {
+                  "type": "ListenType",
+                  "id": "es-pt-b2-u07-l08-e08",
+                  "audioText": "Permaneço à sua disposição para maiores informações. No entanto, vale a pena qualificar.",
+                  "transcription": "Permaneço à sua disposição para maiores informações. No entanto, vale a pena qualificar.",
+                  "feedbackOnError": {
+                    "type": "spelling",
+                    "explanation": "Escribe exactamente «Permaneço à sua disposição para maiores informações. No entanto, vale a pena qualificar.».",
+                    "ruleRef": "gp-b2-reported-speech"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La transcripción coincide con el audio."
+                  }
+                },
+                {
+                  "type": "SpeakRepeat",
+                  "id": "es-pt-b2-u07-l08-e09",
+                  "targetPhrase": "Permaneço à sua disposição para maiores informações. No entanto, vale a pena qualificar.",
+                  "audioText": "Permaneço à sua disposição para maiores informações. No entanto, vale a pena qualificar.",
+                  "feedbackOnError": {
+                    "type": "pronunciation",
+                    "explanation": "Repite «Permaneço à sua disposição para maiores informações. No entanto, vale a pena qualificar.» con claridad.",
+                    "ruleRef": "gp-b2-reported-speech"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La frase se entiende y mantiene el ritmo."
+                  }
+                },
+                {
+                  "type": "FreeSpeakingPrompt",
+                  "id": "es-pt-b2-u07-l08-e10",
+                  "prompt": "Argumenta y matiza una opinión sobre un correo profesional.",
+                  "minTokens": 20,
+                  "conceptClusters": [
+                    [
+                      "Estou"
+                    ],
+                    [
+                      "escrevendo"
+                    ],
+                    [
+                      "solicitar"
+                    ]
+                  ],
+                  "modelAnswer": "Estou escrevendo para solicitar uma entrevista. No fim do dia, é preciso priorizar. Anexei meu currículo e uma carta de apresentação. Em resumo, é um tema complexo. Permaneço à sua disposição para maiores informações. No entanto, vale a pena qualificar.",
+                  "selfAssessmentCriteria": [
+                    "¿La respuesta argumenta y responde a la tarea?",
+                    "¿Usa las dos estructuras gramaticales de la lección?",
+                    "¿Incluye una concesión o una matización?"
+                  ],
+                  "grammarRuleRefs": [
+                    "gp-b2-reported-speech",
+                    "gp-b2-hedging"
+                  ],
+                  "timeLimitSeconds": 90,
+                  "minWpm": 70,
+                  "maxWpm": 160,
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "La respuesta modelo desarrolla una opinión con matices y una concesión.",
+                    "ruleRef": "gp-b2-reported-speech"
+                  }
+                }
+              ]
+            },
+            {
+              "id": "es-pt-b2-u07-l09",
+              "title": "Integración: trayectoria",
+              "cefrLevel": "B2",
+              "scenario": "Situación comunicativa avanzada sobre mi trayectoria profesional.",
+              "canDo": "Puedo argumentar y matizar sobre mi trayectoria profesional.",
+              "grammarPoints": [
+                {
+                  "id": "gp-b2-reported-speech",
+                  "label": "Reported speech",
+                  "description": "El estilo indirecto ajusta tiempos, pronombres y referencias."
+                },
+                {
+                  "id": "gp-b2-hedging",
+                  "label": "Hedging",
+                  "description": "Matizar una opinión con I'm afraid, it seems o might."
+                }
+              ],
+              "vocabFrequencyBand": "3000-5000",
+              "culturalNotes": [
+                {
+                  "idiom": "fazer nas coxas",
+                  "note": "Expresión para hacer algo con poco cuidado.",
+                  "translation": "hacerlo de cualquier manera"
+                }
+              ],
+              "microLesson": {
+                "title": "Integración: trayectoria",
+                "goals": [
+                  "Usar vocabulario avanzado de mi trayectoria profesional.",
+                  "Aplicar reported speech y hedging.",
+                  "Argumentar y matizar sobre mi trayectoria profesional."
+                ],
+                "sections": [
+                  {
+                    "heading": "Lengua en contexto",
+                    "body": "Reported speech: El estilo indirecto ajusta tiempos, pronombres y referencias. Hedging: Matizar una opinión con I'm afraid, it seems o might.",
+                    "examples": [
+                      {
+                        "source": "Empecé como becario en una empresa pequeña. En resumen, es un tema complejo.",
+                        "target": "Comecei como estagiário em uma pequena empresa. Em resumo, é um tema complexo."
+                      },
+                      {
+                        "source": "Después trabajé en varios proyectos internacionales. Sin embargo, conviene matizarlo.",
+                        "target": "Posteriormente trabalhei em vários projetos internacionais. No entanto, vale a pena qualificar."
+                      }
+                    ]
+                  }
+                ]
+              },
+              "glossary": [
+                {
+                  "term": "Comecei como estagiário em uma pequena empresa. Em resumo, é um tema complexo.",
+                  "translations": [
+                    "Empecé como becario en una empresa pequeña. En resumen, es un tema complejo."
+                  ]
+                },
+                {
+                  "term": "Posteriormente trabalhei em vários projetos internacionais. No entanto, vale a pena qualificar.",
+                  "translations": [
+                    "Después trabajé en varios proyectos internacionales. Sin embargo, conviene matizarlo."
+                  ]
+                },
+                {
+                  "term": "Agora quero assumir mais responsabilidades. Dito isto, depende do contexto.",
+                  "translations": [
+                    "Ahora quiero asumir más responsabilidades. Dicho esto, depende del contexto."
+                  ]
+                }
+              ],
+              "exercises": [
+                {
+                  "type": "MultipleChoice",
+                  "id": "es-pt-b2-u07-l09-e01",
+                  "question": "¿Cuál es la opción correcta para «Empecé como becario en una empresa pequeña. En resumen, es un tema complejo.»?",
+                  "options": [
+                    "Comecei como estagiário em uma pequena empresa. Em resumo, é um tema complexo.",
+                    "Posteriormente trabalhei em vários projetos internacionais. No entanto, vale a pena qualificar.",
+                    "Agora quero assumir mais responsabilidades. Dito isto, depende do contexto."
+                  ],
+                  "correctIndex": 0,
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "«Empecé como becario en una empresa pequeña. En resumen, es un tema complejo.» se dice «Comecei como estagiário em uma pequena empresa. Em resumo, é um tema complexo.».",
+                    "ruleRef": "gp-b2-reported-speech"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has elegido la traducción correcta."
+                  }
+                },
+                {
+                  "type": "OrderWords",
+                  "id": "es-pt-b2-u07-l09-e02",
+                  "tokens": [
+                    "como",
+                    "estagiário",
+                    "em",
+                    "uma",
+                    "pequena",
+                    "empresa",
+                    "Em",
+                    "resumo",
+                    "é",
+                    "um",
+                    "tema",
+                    "complexo",
+                    "Comecei"
+                  ],
+                  "answerTokens": [
+                    "Comecei",
+                    "como",
+                    "estagiário",
+                    "em",
+                    "uma",
+                    "pequena",
+                    "empresa",
+                    "Em",
+                    "resumo",
+                    "é",
+                    "um",
+                    "tema",
+                    "complexo"
+                  ],
+                  "sourcePhrase": "Empecé como becario en una empresa pequeña. En resumen, es un tema complejo.",
+                  "feedbackOnError": {
+                    "type": "word_order",
+                    "explanation": "El orden correcto es «Comecei como estagiário em uma pequena empresa Em resumo é um tema complexo».",
+                    "ruleRef": "gp-b2-reported-speech"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "El orden produce una frase natural."
+                  }
+                },
+                {
+                  "type": "ClozeDragDrop",
+                  "id": "es-pt-b2-u07-l09-e03",
+                  "passage": "{{b1}} como {{b2}} em uma pequena empresa",
+                  "blanks": [
+                    {
+                      "id": "b1",
+                      "answer": "Comecei",
+                      "options": [
+                        "Comecei",
+                        "pequena",
+                        "empresa"
+                      ]
+                    },
+                    {
+                      "id": "b2",
+                      "answer": "estagiário",
+                      "options": [
+                        "estagiário",
+                        "pequena",
+                        "empresa"
+                      ]
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "Las dos formas deben encajar con el contexto de la frase.",
+                    "ruleRef": "gp-b2-hedging"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Los dos huecos encajan con la situación."
+                  }
+                },
+                {
+                  "type": "SemanticMatch",
+                  "id": "es-pt-b2-u07-l09-e04",
+                  "instructions": "Clasifica la función comunicativa de cada intervención.",
+                  "pairs": [
+                    {
+                      "left": "Comecei como estagiário em uma pequena empresa. Em resumo, é um tema complexo.",
+                      "right": "Planteamiento",
+                      "register": "formal",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    },
+                    {
+                      "left": "Posteriormente trabalhei em vários projetos internacionais. No entanto, vale a pena qualificar.",
+                      "right": "Concesión",
+                      "register": "neutral",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    },
+                    {
+                      "left": "Agora quero assumir mais responsabilidades. Dito isto, depende do contexto.",
+                      "right": "Conclusión",
+                      "register": "informal",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "Cada intervención cumple una función comunicativa distinta.",
+                    "ruleRef": "gp-b2-reported-speech"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has identificado la función de cada intervención."
+                  }
+                },
+                {
+                  "type": "SemanticMatch",
+                  "id": "es-pt-b2-u07-l09-e05",
+                  "instructions": "Distingue el registro de cada intervención.",
+                  "pairs": [
+                    {
+                      "left": "Comecei como estagiário em uma pequena empresa. Em resumo, é um tema complexo.",
+                      "right": "Formal",
+                      "register": "formal",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    },
+                    {
+                      "left": "Posteriormente trabalhei em vários projetos internacionais. No entanto, vale a pena qualificar.",
+                      "right": "Neutral",
+                      "register": "neutral",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    },
+                    {
+                      "left": "Agora quero assumir mais responsabilidades. Dito isto, depende do contexto.",
+                      "right": "Informal",
+                      "register": "informal",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "register",
+                    "explanation": "El registro cambia según el contexto y la relación con el interlocutor.",
+                    "ruleRef": "gp-b2-hedging"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has distinguido el registro de cada intervención."
+                  }
+                },
+                {
+                  "type": "AudioOnlyPrompt",
+                  "id": "es-pt-b2-u07-l09-e06",
+                  "audioText": "Posteriormente trabalhei em vários projetos internacionais. No entanto, vale a pena qualificar.",
+                  "question": "¿Qué ha dicho el hablante?",
+                  "options": [
+                    "Posteriormente trabalhei em vários projetos internacionais. No entanto, vale a pena qualificar.",
+                    "Comecei como estagiário em uma pequena empresa. Em resumo, é um tema complexo.",
+                    "Agora quero assumir mais responsabilidades. Dito isto, depende do contexto."
+                  ],
+                  "correctIndex": 0,
+                  "allowSlowPlayback": true,
+                  "feedbackOnError": {
+                    "type": "comprehension",
+                    "explanation": "El audio dice «Posteriormente trabalhei em vários projetos internacionais. No entanto, vale a pena qualificar.».",
+                    "ruleRef": "gp-b2-reported-speech"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has comprendido el mensaje del audio."
+                  }
+                },
+                {
+                  "type": "AudioOnlyPrompt",
+                  "id": "es-pt-b2-u07-l09-e07",
+                  "audioText": "Agora quero assumir mais responsabilidades. Dito isto, depende do contexto.",
+                  "question": "¿Cuál es la idea principal?",
+                  "options": [
+                    "Agora quero assumir mais responsabilidades. Dito isto, depende do contexto.",
+                    "Comecei como estagiário em uma pequena empresa. Em resumo, é um tema complexo.",
+                    "Posteriormente trabalhei em vários projetos internacionais. No entanto, vale a pena qualificar."
+                  ],
+                  "correctIndex": 0,
+                  "allowSlowPlayback": false,
+                  "feedbackOnError": {
+                    "type": "comprehension",
+                    "explanation": "El audio dice «Agora quero assumir mais responsabilidades. Dito isto, depende do contexto.».",
+                    "ruleRef": "gp-b2-hedging"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has identificado la idea principal."
+                  }
+                },
+                {
+                  "type": "ListenType",
+                  "id": "es-pt-b2-u07-l09-e08",
+                  "audioText": "Agora quero assumir mais responsabilidades. Dito isto, depende do contexto.",
+                  "transcription": "Agora quero assumir mais responsabilidades. Dito isto, depende do contexto.",
+                  "feedbackOnError": {
+                    "type": "spelling",
+                    "explanation": "Escribe exactamente «Agora quero assumir mais responsabilidades. Dito isto, depende do contexto.».",
+                    "ruleRef": "gp-b2-reported-speech"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La transcripción coincide con el audio."
+                  }
+                },
+                {
+                  "type": "SpeakRepeat",
+                  "id": "es-pt-b2-u07-l09-e09",
+                  "targetPhrase": "Agora quero assumir mais responsabilidades. Dito isto, depende do contexto.",
+                  "audioText": "Agora quero assumir mais responsabilidades. Dito isto, depende do contexto.",
+                  "feedbackOnError": {
+                    "type": "pronunciation",
+                    "explanation": "Repite «Agora quero assumir mais responsabilidades. Dito isto, depende do contexto.» con claridad.",
+                    "ruleRef": "gp-b2-reported-speech"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La frase se entiende y mantiene el ritmo."
+                  }
+                },
+                {
+                  "type": "FreeSpeakingPrompt",
+                  "id": "es-pt-b2-u07-l09-e10",
+                  "prompt": "Argumenta y matiza una opinión sobre mi trayectoria profesional.",
+                  "minTokens": 20,
+                  "conceptClusters": [
+                    [
+                      "Comecei"
+                    ],
+                    [
+                      "estagiário"
+                    ],
+                    [
+                      "pequena"
+                    ]
+                  ],
+                  "modelAnswer": "Comecei como estagiário em uma pequena empresa. Em resumo, é um tema complexo. Posteriormente trabalhei em vários projetos internacionais. No entanto, vale a pena qualificar. Agora quero assumir mais responsabilidades. Dito isto, depende do contexto.",
+                  "selfAssessmentCriteria": [
+                    "¿La respuesta argumenta y responde a la tarea?",
+                    "¿Usa las dos estructuras gramaticales de la lección?",
+                    "¿Incluye una concesión o una matización?"
+                  ],
+                  "grammarRuleRefs": [
+                    "gp-b2-reported-speech",
+                    "gp-b2-hedging"
+                  ],
+                  "timeLimitSeconds": 90,
+                  "minWpm": 70,
+                  "maxWpm": 160,
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "La respuesta modelo desarrolla una opinión con matices y una concesión.",
+                    "ruleRef": "gp-b2-reported-speech"
+                  }
+                }
+              ]
+            },
+            {
+              "id": "es-pt-b2-u07-l10",
+              "title": "Evaluación: mi perfil",
+              "cefrLevel": "B2",
+              "scenario": "Situación comunicativa avanzada sobre mi perfil profesional.",
+              "canDo": "Puedo argumentar y matizar sobre mi perfil profesional.",
+              "grammarPoints": [
+                {
+                  "id": "gp-b2-reported-speech",
+                  "label": "Reported speech",
+                  "description": "El estilo indirecto ajusta tiempos, pronombres y referencias."
+                },
+                {
+                  "id": "gp-b2-hedging",
+                  "label": "Hedging",
+                  "description": "Matizar una opinión con I'm afraid, it seems o might."
+                }
+              ],
+              "vocabFrequencyBand": "3000-5000",
+              "culturalNotes": [
+                {
+                  "idiom": "estar de baixo do tempo",
+                  "note": "Expresión para decir que alguien no se siente bien.",
+                  "translation": "sentirse mal"
+                }
+              ],
+              "microLesson": {
+                "title": "Evaluación: mi perfil",
+                "goals": [
+                  "Usar vocabulario avanzado de mi perfil profesional.",
+                  "Aplicar reported speech y hedging.",
+                  "Argumentar y matizar sobre mi perfil profesional."
+                ],
+                "sections": [
+                  {
+                    "heading": "Lengua en contexto",
+                    "body": "Reported speech: El estilo indirecto ajusta tiempos, pronombres y referencias. Hedging: Matizar una opinión con I'm afraid, it seems o might.",
+                    "examples": [
+                      {
+                        "source": "Tengo experiencia en atención al cliente. Sin embargo, conviene matizarlo.",
+                        "target": "Tenho experiência em atendimento ao cliente. No entanto, vale a pena qualificar."
+                      },
+                      {
+                        "source": "He trabajado en equipo durante cinco años. Dicho esto, depende del contexto.",
+                        "target": "Trabalhei em equipe por cinco anos. Dito isto, depende do contexto."
+                      }
+                    ]
+                  }
+                ]
+              },
+              "glossary": [
+                {
+                  "term": "Tenho experiência em atendimento ao cliente. No entanto, vale a pena qualificar.",
+                  "translations": [
+                    "Tengo experiencia en atención al cliente. Sin embargo, conviene matizarlo."
+                  ]
+                },
+                {
+                  "term": "Trabalhei em equipe por cinco anos. Dito isto, depende do contexto.",
+                  "translations": [
+                    "He trabajado en equipo durante cinco años. Dicho esto, depende del contexto."
+                  ]
+                },
+                {
+                  "term": "Eu gostaria de aprender novas habilidades. Por outras palavras, vale a pena considerar.",
+                  "translations": [
+                    "Me gustaría aprender nuevas habilidades. En otras palabras, merece la pena considerarlo."
+                  ]
+                }
+              ],
+              "exercises": [
+                {
+                  "type": "MultipleChoice",
+                  "id": "es-pt-b2-u07-l10-e01",
+                  "question": "¿Cuál es la opción correcta para «Tengo experiencia en atención al cliente. Sin embargo, conviene matizarlo.»?",
+                  "options": [
+                    "Tenho experiência em atendimento ao cliente. No entanto, vale a pena qualificar.",
+                    "Trabalhei em equipe por cinco anos. Dito isto, depende do contexto.",
+                    "Eu gostaria de aprender novas habilidades. Por outras palavras, vale a pena considerar."
+                  ],
+                  "correctIndex": 0,
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "«Tengo experiencia en atención al cliente. Sin embargo, conviene matizarlo.» se dice «Tenho experiência em atendimento ao cliente. No entanto, vale a pena qualificar.».",
+                    "ruleRef": "gp-b2-reported-speech"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has elegido la traducción correcta."
+                  }
+                },
+                {
+                  "type": "OrderWords",
+                  "id": "es-pt-b2-u07-l10-e02",
+                  "tokens": [
+                    "experiência",
+                    "em",
+                    "atendimento",
+                    "ao",
+                    "cliente",
+                    "No",
+                    "entanto",
+                    "vale",
+                    "a",
+                    "pena",
+                    "qualificar",
+                    "Tenho"
+                  ],
+                  "answerTokens": [
+                    "Tenho",
+                    "experiência",
+                    "em",
+                    "atendimento",
+                    "ao",
+                    "cliente",
+                    "No",
+                    "entanto",
+                    "vale",
+                    "a",
+                    "pena",
+                    "qualificar"
+                  ],
+                  "sourcePhrase": "Tengo experiencia en atención al cliente. Sin embargo, conviene matizarlo.",
+                  "feedbackOnError": {
+                    "type": "word_order",
+                    "explanation": "El orden correcto es «Tenho experiência em atendimento ao cliente No entanto vale a pena qualificar».",
+                    "ruleRef": "gp-b2-reported-speech"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "El orden produce una frase natural."
+                  }
+                },
+                {
+                  "type": "ClozeDragDrop",
+                  "id": "es-pt-b2-u07-l10-e03",
+                  "passage": "{{b1}} {{b2}} em atendimento ao cliente",
+                  "blanks": [
+                    {
+                      "id": "b1",
+                      "answer": "Tenho",
+                      "options": [
+                        "Tenho",
+                        "atendimento",
+                        "cliente"
+                      ]
+                    },
+                    {
+                      "id": "b2",
+                      "answer": "experiência",
+                      "options": [
+                        "experiência",
+                        "atendimento",
+                        "cliente"
+                      ]
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "Las dos formas deben encajar con el contexto de la frase.",
+                    "ruleRef": "gp-b2-hedging"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Los dos huecos encajan con la situación."
+                  }
+                },
+                {
+                  "type": "SemanticMatch",
+                  "id": "es-pt-b2-u07-l10-e04",
+                  "instructions": "Clasifica la función comunicativa de cada intervención.",
+                  "pairs": [
+                    {
+                      "left": "Tenho experiência em atendimento ao cliente. No entanto, vale a pena qualificar.",
+                      "right": "Planteamiento",
+                      "register": "formal",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    },
+                    {
+                      "left": "Trabalhei em equipe por cinco anos. Dito isto, depende do contexto.",
+                      "right": "Concesión",
+                      "register": "neutral",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    },
+                    {
+                      "left": "Eu gostaria de aprender novas habilidades. Por outras palavras, vale a pena considerar.",
+                      "right": "Conclusión",
+                      "register": "informal",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "Cada intervención cumple una función comunicativa distinta.",
+                    "ruleRef": "gp-b2-reported-speech"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has identificado la función de cada intervención."
+                  }
+                },
+                {
+                  "type": "SemanticMatch",
+                  "id": "es-pt-b2-u07-l10-e05",
+                  "instructions": "Distingue el registro de cada intervención.",
+                  "pairs": [
+                    {
+                      "left": "Tenho experiência em atendimento ao cliente. No entanto, vale a pena qualificar.",
+                      "right": "Formal",
+                      "register": "formal",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    },
+                    {
+                      "left": "Trabalhei em equipe por cinco anos. Dito isto, depende do contexto.",
+                      "right": "Neutral",
+                      "register": "neutral",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    },
+                    {
+                      "left": "Eu gostaria de aprender novas habilidades. Por outras palavras, vale a pena considerar.",
+                      "right": "Informal",
+                      "register": "informal",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "register",
+                    "explanation": "El registro cambia según el contexto y la relación con el interlocutor.",
+                    "ruleRef": "gp-b2-hedging"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has distinguido el registro de cada intervención."
+                  }
+                },
+                {
+                  "type": "AudioOnlyPrompt",
+                  "id": "es-pt-b2-u07-l10-e06",
+                  "audioText": "Trabalhei em equipe por cinco anos. Dito isto, depende do contexto.",
+                  "question": "¿Qué ha dicho el hablante?",
+                  "options": [
+                    "Trabalhei em equipe por cinco anos. Dito isto, depende do contexto.",
+                    "Tenho experiência em atendimento ao cliente. No entanto, vale a pena qualificar.",
+                    "Eu gostaria de aprender novas habilidades. Por outras palavras, vale a pena considerar."
+                  ],
+                  "correctIndex": 0,
+                  "allowSlowPlayback": true,
+                  "feedbackOnError": {
+                    "type": "comprehension",
+                    "explanation": "El audio dice «Trabalhei em equipe por cinco anos. Dito isto, depende do contexto.».",
+                    "ruleRef": "gp-b2-reported-speech"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has comprendido el mensaje del audio."
+                  }
+                },
+                {
+                  "type": "AudioOnlyPrompt",
+                  "id": "es-pt-b2-u07-l10-e07",
+                  "audioText": "Eu gostaria de aprender novas habilidades. Por outras palavras, vale a pena considerar.",
+                  "question": "¿Cuál es la idea principal?",
+                  "options": [
+                    "Eu gostaria de aprender novas habilidades. Por outras palavras, vale a pena considerar.",
+                    "Tenho experiência em atendimento ao cliente. No entanto, vale a pena qualificar.",
+                    "Trabalhei em equipe por cinco anos. Dito isto, depende do contexto."
+                  ],
+                  "correctIndex": 0,
+                  "allowSlowPlayback": false,
+                  "feedbackOnError": {
+                    "type": "comprehension",
+                    "explanation": "El audio dice «Eu gostaria de aprender novas habilidades. Por outras palavras, vale a pena considerar.».",
+                    "ruleRef": "gp-b2-hedging"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has identificado la idea principal."
+                  }
+                },
+                {
+                  "type": "ListenType",
+                  "id": "es-pt-b2-u07-l10-e08",
+                  "audioText": "Eu gostaria de aprender novas habilidades. Por outras palavras, vale a pena considerar.",
+                  "transcription": "Eu gostaria de aprender novas habilidades. Por outras palavras, vale a pena considerar.",
+                  "feedbackOnError": {
+                    "type": "spelling",
+                    "explanation": "Escribe exactamente «Eu gostaria de aprender novas habilidades. Por outras palavras, vale a pena considerar.».",
+                    "ruleRef": "gp-b2-reported-speech"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La transcripción coincide con el audio."
+                  }
+                },
+                {
+                  "type": "SpeakRepeat",
+                  "id": "es-pt-b2-u07-l10-e09",
+                  "targetPhrase": "Eu gostaria de aprender novas habilidades. Por outras palavras, vale a pena considerar.",
+                  "audioText": "Eu gostaria de aprender novas habilidades. Por outras palavras, vale a pena considerar.",
+                  "feedbackOnError": {
+                    "type": "pronunciation",
+                    "explanation": "Repite «Eu gostaria de aprender novas habilidades. Por outras palavras, vale a pena considerar.» con claridad.",
+                    "ruleRef": "gp-b2-reported-speech"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La frase se entiende y mantiene el ritmo."
+                  }
+                },
+                {
+                  "type": "FreeSpeakingPrompt",
+                  "id": "es-pt-b2-u07-l10-e10",
+                  "prompt": "Argumenta y matiza una opinión sobre mi perfil profesional.",
+                  "minTokens": 20,
+                  "conceptClusters": [
+                    [
+                      "Tenho"
+                    ],
+                    [
+                      "experiência"
+                    ],
+                    [
+                      "atendimento"
+                    ]
+                  ],
+                  "modelAnswer": "Tenho experiência em atendimento ao cliente. No entanto, vale a pena qualificar. Trabalhei em equipe por cinco anos. Dito isto, depende do contexto. Eu gostaria de aprender novas habilidades. Por outras palavras, vale a pena considerar.",
+                  "selfAssessmentCriteria": [
+                    "¿La respuesta argumenta y responde a la tarea?",
+                    "¿Usa las dos estructuras gramaticales de la lección?",
+                    "¿Incluye una concesión o una matización?"
+                  ],
+                  "grammarRuleRefs": [
+                    "gp-b2-reported-speech",
+                    "gp-b2-hedging"
+                  ],
+                  "timeLimitSeconds": 90,
+                  "minWpm": 70,
+                  "maxWpm": 160,
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "La respuesta modelo desarrolla una opinión con matices y una concesión.",
+                    "ruleRef": "gp-b2-reported-speech"
+                  }
+                }
+              ]
+            }
+          ]
         }
       ]
     },
