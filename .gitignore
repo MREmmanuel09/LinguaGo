@@ -28,6 +28,10 @@ local.properties
 **/hs_err_pid*.log
 **/replay_pid*.log
 
+# Python
+__pycache__/
+*.pyc
+
 # Modelos de audio (se descargan en build/CI, nunca se commitean)
 models/*
 !models/manifest.json
