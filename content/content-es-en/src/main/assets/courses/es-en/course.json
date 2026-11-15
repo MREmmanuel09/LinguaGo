@@ -138298,6 +138298,3424 @@
               ]
             }
           ]
+        },
+        {
+          "id": "es-en-b2-u06",
+          "title": "B2 · Compras y servicios",
+          "lessons": [
+            {
+              "id": "es-en-b2-u06-l01",
+              "title": "Repaso: salud",
+              "cefrLevel": "B2",
+              "scenario": "Situación comunicativa avanzada sobre los hábitos saludables.",
+              "canDo": "Puedo argumentar y matizar sobre los hábitos saludables.",
+              "grammarPoints": [
+                {
+                  "id": "gp-b2-advanced-quantifiers",
+                  "label": "Advanced quantifiers",
+                  "description": "Little, few, plenty of y most matizan la cantidad."
+                },
+                {
+                  "id": "gp-b2-passive-voice",
+                  "label": "Passive voice",
+                  "description": "Be + participio desplaza el foco a la acción o al resultado."
+                }
+              ],
+              "vocabFrequencyBand": "3000-5000",
+              "culturalNotes": [
+                {
+                  "idiom": "back to square one",
+                  "note": "Modismo avanzado útil para hablar de los hábitos saludables.",
+                  "translation": "expresión figurada"
+                }
+              ],
+              "microLesson": {
+                "title": "Repaso: salud",
+                "goals": [
+                  "Usar vocabulario avanzado de los hábitos saludables.",
+                  "Aplicar advanced quantifiers y passive voice.",
+                  "Argumentar y matizar sobre los hábitos saludables."
+                ],
+                "sections": [
+                  {
+                    "heading": "Lengua en contexto",
+                    "body": "Advanced quantifiers: Little, few, plenty of y most matizan la cantidad. Passive voice: Be + participio desplaza el foco a la acción o al resultado.",
+                    "examples": [
+                      {
+                        "source": "He empezado a hacer ejercicio. Dicho esto, depende del contexto.",
+                        "target": "I have started exercising. That said, it depends on the context."
+                      },
+                      {
+                        "source": "Como más fruta y bebo más agua. En otras palabras, merece la pena considerarlo.",
+                        "target": "I eat more fruit and drink more water. In other words, it is worth considering."
+                      }
+                    ]
+                  }
+                ]
+              },
+              "glossary": [
+                {
+                  "term": "I have started exercising. That said, it depends on the context.",
+                  "translations": [
+                    "He empezado a hacer ejercicio. Dicho esto, depende del contexto."
+                  ]
+                },
+                {
+                  "term": "I eat more fruit and drink more water. In other words, it is worth considering.",
+                  "translations": [
+                    "Como más fruta y bebo más agua. En otras palabras, merece la pena considerarlo."
+                  ]
+                },
+                {
+                  "term": "I feel much better. I'm afraid it may be more complicated.",
+                  "translations": [
+                    "Me siento mucho mejor. Me temo que puede ser más complicado."
+                  ]
+                }
+              ],
+              "exercises": [
+                {
+                  "type": "MultipleChoice",
+                  "id": "es-en-b2-u06-l01-e01",
+                  "question": "¿Cuál es la opción correcta para «He empezado a hacer ejercicio. Dicho esto, depende del contexto.»?",
+                  "options": [
+                    "I have started exercising. That said, it depends on the context.",
+                    "I eat more fruit and drink more water. In other words, it is worth considering.",
+                    "I feel much better. I'm afraid it may be more complicated."
+                  ],
+                  "correctIndex": 0,
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "«He empezado a hacer ejercicio. Dicho esto, depende del contexto.» se dice «I have started exercising. That said, it depends on the context.».",
+                    "ruleRef": "gp-b2-advanced-quantifiers"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has elegido la traducción correcta."
+                  }
+                },
+                {
+                  "type": "OrderWords",
+                  "id": "es-en-b2-u06-l01-e02",
+                  "tokens": [
+                    "have",
+                    "started",
+                    "exercising",
+                    "That",
+                    "said",
+                    "it",
+                    "depends",
+                    "on",
+                    "the",
+                    "context",
+                    "I"
+                  ],
+                  "answerTokens": [
+                    "I",
+                    "have",
+                    "started",
+                    "exercising",
+                    "That",
+                    "said",
+                    "it",
+                    "depends",
+                    "on",
+                    "the",
+                    "context"
+                  ],
+                  "sourcePhrase": "He empezado a hacer ejercicio. Dicho esto, depende del contexto.",
+                  "feedbackOnError": {
+                    "type": "word_order",
+                    "explanation": "El orden correcto es «I have started exercising That said it depends on the context».",
+                    "ruleRef": "gp-b2-advanced-quantifiers"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "El orden produce una frase natural."
+                  }
+                },
+                {
+                  "type": "ClozeDragDrop",
+                  "id": "es-en-b2-u06-l01-e03",
+                  "passage": "I have {{b1}} {{b2}}.",
+                  "blanks": [
+                    {
+                      "id": "b1",
+                      "answer": "started",
+                      "options": [
+                        "started",
+                        "very",
+                        "today"
+                      ]
+                    },
+                    {
+                      "id": "b2",
+                      "answer": "exercising",
+                      "options": [
+                        "exercising",
+                        "very",
+                        "today"
+                      ]
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "Las dos formas deben encajar con el contexto de la frase.",
+                    "ruleRef": "gp-b2-passive-voice"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Los dos huecos encajan con la situación."
+                  }
+                },
+                {
+                  "type": "SemanticMatch",
+                  "id": "es-en-b2-u06-l01-e04",
+                  "instructions": "Clasifica la función comunicativa de cada intervención.",
+                  "pairs": [
+                    {
+                      "left": "I have started exercising. That said, it depends on the context.",
+                      "right": "Planteamiento",
+                      "register": "formal",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    },
+                    {
+                      "left": "I eat more fruit and drink more water. In other words, it is worth considering.",
+                      "right": "Concesión",
+                      "register": "neutral",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    },
+                    {
+                      "left": "I feel much better. I'm afraid it may be more complicated.",
+                      "right": "Conclusión",
+                      "register": "informal",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "Cada intervención cumple una función comunicativa distinta.",
+                    "ruleRef": "gp-b2-advanced-quantifiers"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has identificado la función de cada intervención."
+                  }
+                },
+                {
+                  "type": "SemanticMatch",
+                  "id": "es-en-b2-u06-l01-e05",
+                  "instructions": "Distingue el registro de cada intervención.",
+                  "pairs": [
+                    {
+                      "left": "I have started exercising. That said, it depends on the context.",
+                      "right": "Formal",
+                      "register": "formal",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    },
+                    {
+                      "left": "I eat more fruit and drink more water. In other words, it is worth considering.",
+                      "right": "Neutral",
+                      "register": "neutral",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    },
+                    {
+                      "left": "I feel much better. I'm afraid it may be more complicated.",
+                      "right": "Informal",
+                      "register": "informal",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "register",
+                    "explanation": "El registro cambia según el contexto y la relación con el interlocutor.",
+                    "ruleRef": "gp-b2-passive-voice"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has distinguido el registro de cada intervención."
+                  }
+                },
+                {
+                  "type": "AudioOnlyPrompt",
+                  "id": "es-en-b2-u06-l01-e06",
+                  "audioText": "I eat more fruit and drink more water. In other words, it is worth considering.",
+                  "question": "¿Qué ha dicho el hablante?",
+                  "options": [
+                    "I eat more fruit and drink more water. In other words, it is worth considering.",
+                    "I have started exercising. That said, it depends on the context.",
+                    "I feel much better. I'm afraid it may be more complicated."
+                  ],
+                  "correctIndex": 0,
+                  "allowSlowPlayback": true,
+                  "feedbackOnError": {
+                    "type": "comprehension",
+                    "explanation": "El audio dice «I eat more fruit and drink more water. In other words, it is worth considering.».",
+                    "ruleRef": "gp-b2-advanced-quantifiers"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has comprendido el mensaje del audio."
+                  }
+                },
+                {
+                  "type": "AudioOnlyPrompt",
+                  "id": "es-en-b2-u06-l01-e07",
+                  "audioText": "I feel much better. I'm afraid it may be more complicated.",
+                  "question": "¿Cuál es la idea principal?",
+                  "options": [
+                    "I feel much better. I'm afraid it may be more complicated.",
+                    "I have started exercising. That said, it depends on the context.",
+                    "I eat more fruit and drink more water. In other words, it is worth considering."
+                  ],
+                  "correctIndex": 0,
+                  "allowSlowPlayback": false,
+                  "feedbackOnError": {
+                    "type": "comprehension",
+                    "explanation": "El audio dice «I feel much better. I'm afraid it may be more complicated.».",
+                    "ruleRef": "gp-b2-passive-voice"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has identificado la idea principal."
+                  }
+                },
+                {
+                  "type": "ListenType",
+                  "id": "es-en-b2-u06-l01-e08",
+                  "audioText": "I feel much better. I'm afraid it may be more complicated.",
+                  "transcription": "I feel much better. I'm afraid it may be more complicated.",
+                  "feedbackOnError": {
+                    "type": "spelling",
+                    "explanation": "Escribe exactamente «I feel much better. I'm afraid it may be more complicated.».",
+                    "ruleRef": "gp-b2-advanced-quantifiers"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La transcripción coincide con el audio."
+                  }
+                },
+                {
+                  "type": "SpeakRepeat",
+                  "id": "es-en-b2-u06-l01-e09",
+                  "targetPhrase": "I feel much better. I'm afraid it may be more complicated.",
+                  "audioText": "I feel much better. I'm afraid it may be more complicated.",
+                  "feedbackOnError": {
+                    "type": "pronunciation",
+                    "explanation": "Repite «I feel much better. I'm afraid it may be more complicated.» con claridad.",
+                    "ruleRef": "gp-b2-advanced-quantifiers"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La frase se entiende y mantiene el ritmo."
+                  }
+                },
+                {
+                  "type": "FreeSpeakingPrompt",
+                  "id": "es-en-b2-u06-l01-e10",
+                  "prompt": "Argumenta y matiza una opinión sobre los hábitos saludables.",
+                  "minTokens": 20,
+                  "conceptClusters": [
+                    [
+                      "started"
+                    ],
+                    [
+                      "exercising"
+                    ],
+                    [
+                      "said"
+                    ]
+                  ],
+                  "modelAnswer": "I have started exercising. That said, it depends on the context. I eat more fruit and drink more water. In other words, it is worth considering. I feel much better. I'm afraid it may be more complicated.",
+                  "selfAssessmentCriteria": [
+                    "¿La respuesta argumenta y responde a la tarea?",
+                    "¿Usa las dos estructuras gramaticales de la lección?",
+                    "¿Incluye una concesión o una matización?"
+                  ],
+                  "grammarRuleRefs": [
+                    "gp-b2-advanced-quantifiers",
+                    "gp-b2-passive-voice"
+                  ],
+                  "timeLimitSeconds": 90,
+                  "minWpm": 70,
+                  "maxWpm": 160,
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "La respuesta modelo desarrolla una opinión con matices y una concesión.",
+                    "ruleRef": "gp-b2-advanced-quantifiers"
+                  }
+                }
+              ]
+            },
+            {
+              "id": "es-en-b2-u06-l02",
+              "title": "En la tienda",
+              "cefrLevel": "B2",
+              "scenario": "Situación comunicativa avanzada sobre las compras de ropa.",
+              "canDo": "Puedo argumentar y matizar sobre las compras de ropa.",
+              "grammarPoints": [
+                {
+                  "id": "gp-b2-advanced-quantifiers",
+                  "label": "Advanced quantifiers",
+                  "description": "Little, few, plenty of y most matizan la cantidad."
+                },
+                {
+                  "id": "gp-b2-passive-voice",
+                  "label": "Passive voice",
+                  "description": "Be + participio desplaza el foco a la acción o al resultado."
+                }
+              ],
+              "vocabFrequencyBand": "3000-5000",
+              "culturalNotes": [
+                {
+                  "idiom": "behind the scenes",
+                  "note": "Modismo avanzado útil para hablar de las compras de ropa.",
+                  "translation": "expresión figurada"
+                }
+              ],
+              "microLesson": {
+                "title": "En la tienda",
+                "goals": [
+                  "Usar vocabulario avanzado de las compras de ropa.",
+                  "Aplicar advanced quantifiers y passive voice.",
+                  "Argumentar y matizar sobre las compras de ropa."
+                ],
+                "sections": [
+                  {
+                    "heading": "Lengua en contexto",
+                    "body": "Advanced quantifiers: Little, few, plenty of y most matizan la cantidad. Passive voice: Be + participio desplaza el foco a la acción o al resultado.",
+                    "examples": [
+                      {
+                        "source": "¿Cuánto cuesta esta camiseta? En otras palabras, merece la pena considerarlo.",
+                        "target": "How much is this T-shirt? In other words, it is worth considering."
+                      },
+                      {
+                        "source": "¿La tiene en talla mediana? Me temo que puede ser más complicado.",
+                        "target": "Do you have it in medium? I'm afraid it may be more complicated."
+                      }
+                    ]
+                  }
+                ]
+              },
+              "glossary": [
+                {
+                  "term": "How much is this T-shirt? In other words, it is worth considering.",
+                  "translations": [
+                    "¿Cuánto cuesta esta camiseta? En otras palabras, merece la pena considerarlo."
+                  ]
+                },
+                {
+                  "term": "Do you have it in medium? I'm afraid it may be more complicated.",
+                  "translations": [
+                    "¿La tiene en talla mediana? Me temo que puede ser más complicado."
+                  ]
+                },
+                {
+                  "term": "I'll take it, thanks. To be honest, I have mixed feelings.",
+                  "translations": [
+                    "Me la llevo, gracias. Sinceramente, tengo sentimientos encontrados."
+                  ]
+                }
+              ],
+              "exercises": [
+                {
+                  "type": "MultipleChoice",
+                  "id": "es-en-b2-u06-l02-e01",
+                  "question": "¿Cuál es la opción correcta para «¿Cuánto cuesta esta camiseta? En otras palabras, merece la pena considerarlo.»?",
+                  "options": [
+                    "How much is this T-shirt? In other words, it is worth considering.",
+                    "Do you have it in medium? I'm afraid it may be more complicated.",
+                    "I'll take it, thanks. To be honest, I have mixed feelings."
+                  ],
+                  "correctIndex": 0,
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "«¿Cuánto cuesta esta camiseta? En otras palabras, merece la pena considerarlo.» se dice «How much is this T-shirt? In other words, it is worth considering.».",
+                    "ruleRef": "gp-b2-advanced-quantifiers"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has elegido la traducción correcta."
+                  }
+                },
+                {
+                  "type": "OrderWords",
+                  "id": "es-en-b2-u06-l02-e02",
+                  "tokens": [
+                    "much",
+                    "is",
+                    "this",
+                    "T",
+                    "shirt",
+                    "In",
+                    "other",
+                    "words",
+                    "it",
+                    "is",
+                    "worth",
+                    "considering",
+                    "How"
+                  ],
+                  "answerTokens": [
+                    "How",
+                    "much",
+                    "is",
+                    "this",
+                    "T",
+                    "shirt",
+                    "In",
+                    "other",
+                    "words",
+                    "it",
+                    "is",
+                    "worth",
+                    "considering"
+                  ],
+                  "sourcePhrase": "¿Cuánto cuesta esta camiseta? En otras palabras, merece la pena considerarlo.",
+                  "feedbackOnError": {
+                    "type": "word_order",
+                    "explanation": "El orden correcto es «How much is this T shirt In other words it is worth considering».",
+                    "ruleRef": "gp-b2-advanced-quantifiers"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "El orden produce una frase natural."
+                  }
+                },
+                {
+                  "type": "ClozeDragDrop",
+                  "id": "es-en-b2-u06-l02-e03",
+                  "passage": "{{b1}} {{b2}} is this T-shirt?",
+                  "blanks": [
+                    {
+                      "id": "b1",
+                      "answer": "How",
+                      "options": [
+                        "How",
+                        "shirt",
+                        "very"
+                      ]
+                    },
+                    {
+                      "id": "b2",
+                      "answer": "much",
+                      "options": [
+                        "much",
+                        "shirt",
+                        "very"
+                      ]
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "Las dos formas deben encajar con el contexto de la frase.",
+                    "ruleRef": "gp-b2-passive-voice"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Los dos huecos encajan con la situación."
+                  }
+                },
+                {
+                  "type": "SemanticMatch",
+                  "id": "es-en-b2-u06-l02-e04",
+                  "instructions": "Clasifica la función comunicativa de cada intervención.",
+                  "pairs": [
+                    {
+                      "left": "How much is this T-shirt? In other words, it is worth considering.",
+                      "right": "Planteamiento",
+                      "register": "formal",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    },
+                    {
+                      "left": "Do you have it in medium? I'm afraid it may be more complicated.",
+                      "right": "Concesión",
+                      "register": "neutral",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    },
+                    {
+                      "left": "I'll take it, thanks. To be honest, I have mixed feelings.",
+                      "right": "Conclusión",
+                      "register": "informal",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "Cada intervención cumple una función comunicativa distinta.",
+                    "ruleRef": "gp-b2-advanced-quantifiers"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has identificado la función de cada intervención."
+                  }
+                },
+                {
+                  "type": "SemanticMatch",
+                  "id": "es-en-b2-u06-l02-e05",
+                  "instructions": "Distingue el registro de cada intervención.",
+                  "pairs": [
+                    {
+                      "left": "How much is this T-shirt? In other words, it is worth considering.",
+                      "right": "Formal",
+                      "register": "formal",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    },
+                    {
+                      "left": "Do you have it in medium? I'm afraid it may be more complicated.",
+                      "right": "Neutral",
+                      "register": "neutral",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    },
+                    {
+                      "left": "I'll take it, thanks. To be honest, I have mixed feelings.",
+                      "right": "Informal",
+                      "register": "informal",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "register",
+                    "explanation": "El registro cambia según el contexto y la relación con el interlocutor.",
+                    "ruleRef": "gp-b2-passive-voice"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has distinguido el registro de cada intervención."
+                  }
+                },
+                {
+                  "type": "AudioOnlyPrompt",
+                  "id": "es-en-b2-u06-l02-e06",
+                  "audioText": "Do you have it in medium? I'm afraid it may be more complicated.",
+                  "question": "¿Qué ha dicho el hablante?",
+                  "options": [
+                    "Do you have it in medium? I'm afraid it may be more complicated.",
+                    "How much is this T-shirt? In other words, it is worth considering.",
+                    "I'll take it, thanks. To be honest, I have mixed feelings."
+                  ],
+                  "correctIndex": 0,
+                  "allowSlowPlayback": true,
+                  "feedbackOnError": {
+                    "type": "comprehension",
+                    "explanation": "El audio dice «Do you have it in medium? I'm afraid it may be more complicated.».",
+                    "ruleRef": "gp-b2-advanced-quantifiers"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has comprendido el mensaje del audio."
+                  }
+                },
+                {
+                  "type": "AudioOnlyPrompt",
+                  "id": "es-en-b2-u06-l02-e07",
+                  "audioText": "I'll take it, thanks. To be honest, I have mixed feelings.",
+                  "question": "¿Cuál es la idea principal?",
+                  "options": [
+                    "I'll take it, thanks. To be honest, I have mixed feelings.",
+                    "How much is this T-shirt? In other words, it is worth considering.",
+                    "Do you have it in medium? I'm afraid it may be more complicated."
+                  ],
+                  "correctIndex": 0,
+                  "allowSlowPlayback": false,
+                  "feedbackOnError": {
+                    "type": "comprehension",
+                    "explanation": "El audio dice «I'll take it, thanks. To be honest, I have mixed feelings.».",
+                    "ruleRef": "gp-b2-passive-voice"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has identificado la idea principal."
+                  }
+                },
+                {
+                  "type": "ListenType",
+                  "id": "es-en-b2-u06-l02-e08",
+                  "audioText": "I'll take it, thanks. To be honest, I have mixed feelings.",
+                  "transcription": "I'll take it, thanks. To be honest, I have mixed feelings.",
+                  "feedbackOnError": {
+                    "type": "spelling",
+                    "explanation": "Escribe exactamente «I'll take it, thanks. To be honest, I have mixed feelings.».",
+                    "ruleRef": "gp-b2-advanced-quantifiers"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La transcripción coincide con el audio."
+                  }
+                },
+                {
+                  "type": "SpeakRepeat",
+                  "id": "es-en-b2-u06-l02-e09",
+                  "targetPhrase": "I'll take it, thanks. To be honest, I have mixed feelings.",
+                  "audioText": "I'll take it, thanks. To be honest, I have mixed feelings.",
+                  "feedbackOnError": {
+                    "type": "pronunciation",
+                    "explanation": "Repite «I'll take it, thanks. To be honest, I have mixed feelings.» con claridad.",
+                    "ruleRef": "gp-b2-advanced-quantifiers"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La frase se entiende y mantiene el ritmo."
+                  }
+                },
+                {
+                  "type": "FreeSpeakingPrompt",
+                  "id": "es-en-b2-u06-l02-e10",
+                  "prompt": "Argumenta y matiza una opinión sobre las compras de ropa.",
+                  "minTokens": 20,
+                  "conceptClusters": [
+                    [
+                      "How"
+                    ],
+                    [
+                      "much"
+                    ],
+                    [
+                      "shirt"
+                    ]
+                  ],
+                  "modelAnswer": "How much is this T-shirt? In other words, it is worth considering. Do you have it in medium? I'm afraid it may be more complicated. I'll take it, thanks. To be honest, I have mixed feelings.",
+                  "selfAssessmentCriteria": [
+                    "¿La respuesta argumenta y responde a la tarea?",
+                    "¿Usa las dos estructuras gramaticales de la lección?",
+                    "¿Incluye una concesión o una matización?"
+                  ],
+                  "grammarRuleRefs": [
+                    "gp-b2-advanced-quantifiers",
+                    "gp-b2-passive-voice"
+                  ],
+                  "timeLimitSeconds": 90,
+                  "minWpm": 70,
+                  "maxWpm": 160,
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "La respuesta modelo desarrolla una opinión con matices y una concesión.",
+                    "ruleRef": "gp-b2-advanced-quantifiers"
+                  }
+                }
+              ]
+            },
+            {
+              "id": "es-en-b2-u06-l03",
+              "title": "Ropa y tallas",
+              "cefrLevel": "B2",
+              "scenario": "Situación comunicativa avanzada sobre la ropa.",
+              "canDo": "Puedo argumentar y matizar sobre la ropa.",
+              "grammarPoints": [
+                {
+                  "id": "gp-b2-advanced-quantifiers",
+                  "label": "Advanced quantifiers",
+                  "description": "Little, few, plenty of y most matizan la cantidad."
+                },
+                {
+                  "id": "gp-b2-passive-voice",
+                  "label": "Passive voice",
+                  "description": "Be + participio desplaza el foco a la acción o al resultado."
+                }
+              ],
+              "vocabFrequencyBand": "3000-5000",
+              "culturalNotes": [
+                {
+                  "idiom": "bend over backwards",
+                  "note": "Modismo avanzado útil para hablar de la ropa.",
+                  "translation": "expresión figurada"
+                }
+              ],
+              "microLesson": {
+                "title": "Ropa y tallas",
+                "goals": [
+                  "Usar vocabulario avanzado de la ropa.",
+                  "Aplicar advanced quantifiers y passive voice.",
+                  "Argumentar y matizar sobre la ropa."
+                ],
+                "sections": [
+                  {
+                    "heading": "Lengua en contexto",
+                    "body": "Advanced quantifiers: Little, few, plenty of y most matizan la cantidad. Passive voice: Be + participio desplaza el foco a la acción o al resultado.",
+                    "examples": [
+                      {
+                        "source": "Necesito una camiseta azul. Me temo que puede ser más complicado.",
+                        "target": "I need a blue T-shirt. I'm afraid it may be more complicated."
+                      },
+                      {
+                        "source": "Necesito unos pantalones negros. Sinceramente, tengo sentimientos encontrados.",
+                        "target": "I need black trousers. To be honest, I have mixed feelings."
+                      }
+                    ]
+                  }
+                ]
+              },
+              "glossary": [
+                {
+                  "term": "I need a blue T-shirt. I'm afraid it may be more complicated.",
+                  "translations": [
+                    "Necesito una camiseta azul. Me temo que puede ser más complicado."
+                  ]
+                },
+                {
+                  "term": "I need black trousers. To be honest, I have mixed feelings.",
+                  "translations": [
+                    "Necesito unos pantalones negros. Sinceramente, tengo sentimientos encontrados."
+                  ]
+                },
+                {
+                  "term": "I need a light jacket. It seems that this is changing.",
+                  "translations": [
+                    "Necesito una chaqueta ligera. Parece que esto está cambiando."
+                  ]
+                }
+              ],
+              "exercises": [
+                {
+                  "type": "MultipleChoice",
+                  "id": "es-en-b2-u06-l03-e01",
+                  "question": "¿Cuál es la opción correcta para «Necesito una camiseta azul. Me temo que puede ser más complicado.»?",
+                  "options": [
+                    "I need a blue T-shirt. I'm afraid it may be more complicated.",
+                    "I need black trousers. To be honest, I have mixed feelings.",
+                    "I need a light jacket. It seems that this is changing."
+                  ],
+                  "correctIndex": 0,
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "«Necesito una camiseta azul. Me temo que puede ser más complicado.» se dice «I need a blue T-shirt. I'm afraid it may be more complicated.».",
+                    "ruleRef": "gp-b2-advanced-quantifiers"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has elegido la traducción correcta."
+                  }
+                },
+                {
+                  "type": "OrderWords",
+                  "id": "es-en-b2-u06-l03-e02",
+                  "tokens": [
+                    "need",
+                    "a",
+                    "blue",
+                    "T",
+                    "shirt",
+                    "I'm",
+                    "afraid",
+                    "it",
+                    "may",
+                    "be",
+                    "more",
+                    "complicated",
+                    "I"
+                  ],
+                  "answerTokens": [
+                    "I",
+                    "need",
+                    "a",
+                    "blue",
+                    "T",
+                    "shirt",
+                    "I'm",
+                    "afraid",
+                    "it",
+                    "may",
+                    "be",
+                    "more",
+                    "complicated"
+                  ],
+                  "sourcePhrase": "Necesito una camiseta azul. Me temo que puede ser más complicado.",
+                  "feedbackOnError": {
+                    "type": "word_order",
+                    "explanation": "El orden correcto es «I need a blue T shirt I'm afraid it may be more complicated».",
+                    "ruleRef": "gp-b2-advanced-quantifiers"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "El orden produce una frase natural."
+                  }
+                },
+                {
+                  "type": "ClozeDragDrop",
+                  "id": "es-en-b2-u06-l03-e03",
+                  "passage": "I {{b1}} a {{b2}} T-shirt",
+                  "blanks": [
+                    {
+                      "id": "b1",
+                      "answer": "need",
+                      "options": [
+                        "need",
+                        "shirt",
+                        "very"
+                      ]
+                    },
+                    {
+                      "id": "b2",
+                      "answer": "blue",
+                      "options": [
+                        "blue",
+                        "shirt",
+                        "very"
+                      ]
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "Las dos formas deben encajar con el contexto de la frase.",
+                    "ruleRef": "gp-b2-passive-voice"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Los dos huecos encajan con la situación."
+                  }
+                },
+                {
+                  "type": "SemanticMatch",
+                  "id": "es-en-b2-u06-l03-e04",
+                  "instructions": "Clasifica la función comunicativa de cada intervención.",
+                  "pairs": [
+                    {
+                      "left": "I need a blue T-shirt. I'm afraid it may be more complicated.",
+                      "right": "Planteamiento",
+                      "register": "formal",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    },
+                    {
+                      "left": "I need black trousers. To be honest, I have mixed feelings.",
+                      "right": "Concesión",
+                      "register": "neutral",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    },
+                    {
+                      "left": "I need a light jacket. It seems that this is changing.",
+                      "right": "Conclusión",
+                      "register": "informal",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "Cada intervención cumple una función comunicativa distinta.",
+                    "ruleRef": "gp-b2-advanced-quantifiers"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has identificado la función de cada intervención."
+                  }
+                },
+                {
+                  "type": "SemanticMatch",
+                  "id": "es-en-b2-u06-l03-e05",
+                  "instructions": "Distingue el registro de cada intervención.",
+                  "pairs": [
+                    {
+                      "left": "I need a blue T-shirt. I'm afraid it may be more complicated.",
+                      "right": "Formal",
+                      "register": "formal",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    },
+                    {
+                      "left": "I need black trousers. To be honest, I have mixed feelings.",
+                      "right": "Neutral",
+                      "register": "neutral",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    },
+                    {
+                      "left": "I need a light jacket. It seems that this is changing.",
+                      "right": "Informal",
+                      "register": "informal",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "register",
+                    "explanation": "El registro cambia según el contexto y la relación con el interlocutor.",
+                    "ruleRef": "gp-b2-passive-voice"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has distinguido el registro de cada intervención."
+                  }
+                },
+                {
+                  "type": "AudioOnlyPrompt",
+                  "id": "es-en-b2-u06-l03-e06",
+                  "audioText": "I need black trousers. To be honest, I have mixed feelings.",
+                  "question": "¿Qué ha dicho el hablante?",
+                  "options": [
+                    "I need black trousers. To be honest, I have mixed feelings.",
+                    "I need a blue T-shirt. I'm afraid it may be more complicated.",
+                    "I need a light jacket. It seems that this is changing."
+                  ],
+                  "correctIndex": 0,
+                  "allowSlowPlayback": true,
+                  "feedbackOnError": {
+                    "type": "comprehension",
+                    "explanation": "El audio dice «I need black trousers. To be honest, I have mixed feelings.».",
+                    "ruleRef": "gp-b2-advanced-quantifiers"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has comprendido el mensaje del audio."
+                  }
+                },
+                {
+                  "type": "AudioOnlyPrompt",
+                  "id": "es-en-b2-u06-l03-e07",
+                  "audioText": "I need a light jacket. It seems that this is changing.",
+                  "question": "¿Cuál es la idea principal?",
+                  "options": [
+                    "I need a light jacket. It seems that this is changing.",
+                    "I need a blue T-shirt. I'm afraid it may be more complicated.",
+                    "I need black trousers. To be honest, I have mixed feelings."
+                  ],
+                  "correctIndex": 0,
+                  "allowSlowPlayback": false,
+                  "feedbackOnError": {
+                    "type": "comprehension",
+                    "explanation": "El audio dice «I need a light jacket. It seems that this is changing.».",
+                    "ruleRef": "gp-b2-passive-voice"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has identificado la idea principal."
+                  }
+                },
+                {
+                  "type": "ListenType",
+                  "id": "es-en-b2-u06-l03-e08",
+                  "audioText": "I need a light jacket. It seems that this is changing.",
+                  "transcription": "I need a light jacket. It seems that this is changing.",
+                  "feedbackOnError": {
+                    "type": "spelling",
+                    "explanation": "Escribe exactamente «I need a light jacket. It seems that this is changing.».",
+                    "ruleRef": "gp-b2-advanced-quantifiers"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La transcripción coincide con el audio."
+                  }
+                },
+                {
+                  "type": "SpeakRepeat",
+                  "id": "es-en-b2-u06-l03-e09",
+                  "targetPhrase": "I need a light jacket. It seems that this is changing.",
+                  "audioText": "I need a light jacket. It seems that this is changing.",
+                  "feedbackOnError": {
+                    "type": "pronunciation",
+                    "explanation": "Repite «I need a light jacket. It seems that this is changing.» con claridad.",
+                    "ruleRef": "gp-b2-advanced-quantifiers"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La frase se entiende y mantiene el ritmo."
+                  }
+                },
+                {
+                  "type": "FreeSpeakingPrompt",
+                  "id": "es-en-b2-u06-l03-e10",
+                  "prompt": "Argumenta y matiza una opinión sobre la ropa.",
+                  "minTokens": 20,
+                  "conceptClusters": [
+                    [
+                      "need"
+                    ],
+                    [
+                      "blue"
+                    ],
+                    [
+                      "shirt"
+                    ]
+                  ],
+                  "modelAnswer": "I need a blue T-shirt. I'm afraid it may be more complicated. I need black trousers. To be honest, I have mixed feelings. I need a light jacket. It seems that this is changing.",
+                  "selfAssessmentCriteria": [
+                    "¿La respuesta argumenta y responde a la tarea?",
+                    "¿Usa las dos estructuras gramaticales de la lección?",
+                    "¿Incluye una concesión o una matización?"
+                  ],
+                  "grammarRuleRefs": [
+                    "gp-b2-advanced-quantifiers",
+                    "gp-b2-passive-voice"
+                  ],
+                  "timeLimitSeconds": 90,
+                  "minWpm": 70,
+                  "maxWpm": 160,
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "La respuesta modelo desarrolla una opinión con matices y una concesión.",
+                    "ruleRef": "gp-b2-advanced-quantifiers"
+                  }
+                }
+              ]
+            },
+            {
+              "id": "es-en-b2-u06-l04",
+              "title": "Too much / too many",
+              "cefrLevel": "B2",
+              "scenario": "Situación comunicativa avanzada sobre las cantidades excesivas.",
+              "canDo": "Puedo argumentar y matizar sobre las cantidades excesivas.",
+              "grammarPoints": [
+                {
+                  "id": "gp-b2-advanced-quantifiers",
+                  "label": "Advanced quantifiers",
+                  "description": "Little, few, plenty of y most matizan la cantidad."
+                },
+                {
+                  "id": "gp-b2-passive-voice",
+                  "label": "Passive voice",
+                  "description": "Be + participio desplaza el foco a la acción o al resultado."
+                }
+              ],
+              "vocabFrequencyBand": "3000-5000",
+              "culturalNotes": [
+                {
+                  "idiom": "big picture",
+                  "note": "Modismo avanzado útil para hablar de las cantidades excesivas.",
+                  "translation": "expresión figurada"
+                }
+              ],
+              "microLesson": {
+                "title": "Too much / too many",
+                "goals": [
+                  "Usar vocabulario avanzado de las cantidades excesivas.",
+                  "Aplicar advanced quantifiers y passive voice.",
+                  "Argumentar y matizar sobre las cantidades excesivas."
+                ],
+                "sections": [
+                  {
+                    "heading": "Lengua en contexto",
+                    "body": "Advanced quantifiers: Little, few, plenty of y most matizan la cantidad. Passive voice: Be + participio desplaza el foco a la acción o al resultado.",
+                    "examples": [
+                      {
+                        "source": "Hay demasiado tráfico en el centro. Sinceramente, tengo sentimientos encontrados.",
+                        "target": "There is too much traffic in the centre. To be honest, I have mixed feelings."
+                      },
+                      {
+                        "source": "Hay demasiado ruido por la noche. Parece que esto está cambiando.",
+                        "target": "There is too much noise at night. It seems that this is changing."
+                      }
+                    ]
+                  }
+                ]
+              },
+              "glossary": [
+                {
+                  "term": "There is too much traffic in the centre. To be honest, I have mixed feelings.",
+                  "translations": [
+                    "Hay demasiado tráfico en el centro. Sinceramente, tengo sentimientos encontrados."
+                  ]
+                },
+                {
+                  "term": "There is too much noise at night. It seems that this is changing.",
+                  "translations": [
+                    "Hay demasiado ruido por la noche. Parece que esto está cambiando."
+                  ]
+                },
+                {
+                  "term": "There is too much pollution in the city. From my point of view, it is a reasonable option.",
+                  "translations": [
+                    "Hay demasiado contaminación en la ciudad. Desde mi punto de vista, es una opción razonable."
+                  ]
+                }
+              ],
+              "exercises": [
+                {
+                  "type": "MultipleChoice",
+                  "id": "es-en-b2-u06-l04-e01",
+                  "question": "¿Cuál es la opción correcta para «Hay demasiado tráfico en el centro. Sinceramente, tengo sentimientos encontrados.»?",
+                  "options": [
+                    "There is too much traffic in the centre. To be honest, I have mixed feelings.",
+                    "There is too much noise at night. It seems that this is changing.",
+                    "There is too much pollution in the city. From my point of view, it is a reasonable option."
+                  ],
+                  "correctIndex": 0,
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "«Hay demasiado tráfico en el centro. Sinceramente, tengo sentimientos encontrados.» se dice «There is too much traffic in the centre. To be honest, I have mixed feelings.».",
+                    "ruleRef": "gp-b2-advanced-quantifiers"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has elegido la traducción correcta."
+                  }
+                },
+                {
+                  "type": "OrderWords",
+                  "id": "es-en-b2-u06-l04-e02",
+                  "tokens": [
+                    "is",
+                    "too",
+                    "much",
+                    "traffic",
+                    "in",
+                    "the",
+                    "centre",
+                    "To",
+                    "be",
+                    "honest",
+                    "I",
+                    "have",
+                    "mixed",
+                    "feelings",
+                    "There"
+                  ],
+                  "answerTokens": [
+                    "There",
+                    "is",
+                    "too",
+                    "much",
+                    "traffic",
+                    "in",
+                    "the",
+                    "centre",
+                    "To",
+                    "be",
+                    "honest",
+                    "I",
+                    "have",
+                    "mixed",
+                    "feelings"
+                  ],
+                  "sourcePhrase": "Hay demasiado tráfico en el centro. Sinceramente, tengo sentimientos encontrados.",
+                  "feedbackOnError": {
+                    "type": "word_order",
+                    "explanation": "El orden correcto es «There is too much traffic in the centre To be honest I have mixed feelings».",
+                    "ruleRef": "gp-b2-advanced-quantifiers"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "El orden produce una frase natural."
+                  }
+                },
+                {
+                  "type": "ClozeDragDrop",
+                  "id": "es-en-b2-u06-l04-e03",
+                  "passage": "There is {{b1}} {{b2}} traffic in the centre",
+                  "blanks": [
+                    {
+                      "id": "b1",
+                      "answer": "too",
+                      "options": [
+                        "too",
+                        "traffic",
+                        "centre"
+                      ]
+                    },
+                    {
+                      "id": "b2",
+                      "answer": "much",
+                      "options": [
+                        "much",
+                        "traffic",
+                        "centre"
+                      ]
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "Las dos formas deben encajar con el contexto de la frase.",
+                    "ruleRef": "gp-b2-passive-voice"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Los dos huecos encajan con la situación."
+                  }
+                },
+                {
+                  "type": "SemanticMatch",
+                  "id": "es-en-b2-u06-l04-e04",
+                  "instructions": "Clasifica la función comunicativa de cada intervención.",
+                  "pairs": [
+                    {
+                      "left": "There is too much traffic in the centre. To be honest, I have mixed feelings.",
+                      "right": "Planteamiento",
+                      "register": "formal",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    },
+                    {
+                      "left": "There is too much noise at night. It seems that this is changing.",
+                      "right": "Concesión",
+                      "register": "neutral",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    },
+                    {
+                      "left": "There is too much pollution in the city. From my point of view, it is a reasonable option.",
+                      "right": "Conclusión",
+                      "register": "informal",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "Cada intervención cumple una función comunicativa distinta.",
+                    "ruleRef": "gp-b2-advanced-quantifiers"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has identificado la función de cada intervención."
+                  }
+                },
+                {
+                  "type": "SemanticMatch",
+                  "id": "es-en-b2-u06-l04-e05",
+                  "instructions": "Distingue el registro de cada intervención.",
+                  "pairs": [
+                    {
+                      "left": "There is too much traffic in the centre. To be honest, I have mixed feelings.",
+                      "right": "Formal",
+                      "register": "formal",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    },
+                    {
+                      "left": "There is too much noise at night. It seems that this is changing.",
+                      "right": "Neutral",
+                      "register": "neutral",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    },
+                    {
+                      "left": "There is too much pollution in the city. From my point of view, it is a reasonable option.",
+                      "right": "Informal",
+                      "register": "informal",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "register",
+                    "explanation": "El registro cambia según el contexto y la relación con el interlocutor.",
+                    "ruleRef": "gp-b2-passive-voice"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has distinguido el registro de cada intervención."
+                  }
+                },
+                {
+                  "type": "AudioOnlyPrompt",
+                  "id": "es-en-b2-u06-l04-e06",
+                  "audioText": "There is too much noise at night. It seems that this is changing.",
+                  "question": "¿Qué ha dicho el hablante?",
+                  "options": [
+                    "There is too much noise at night. It seems that this is changing.",
+                    "There is too much traffic in the centre. To be honest, I have mixed feelings.",
+                    "There is too much pollution in the city. From my point of view, it is a reasonable option."
+                  ],
+                  "correctIndex": 0,
+                  "allowSlowPlayback": true,
+                  "feedbackOnError": {
+                    "type": "comprehension",
+                    "explanation": "El audio dice «There is too much noise at night. It seems that this is changing.».",
+                    "ruleRef": "gp-b2-advanced-quantifiers"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has comprendido el mensaje del audio."
+                  }
+                },
+                {
+                  "type": "AudioOnlyPrompt",
+                  "id": "es-en-b2-u06-l04-e07",
+                  "audioText": "There is too much pollution in the city. From my point of view, it is a reasonable option.",
+                  "question": "¿Cuál es la idea principal?",
+                  "options": [
+                    "There is too much pollution in the city. From my point of view, it is a reasonable option.",
+                    "There is too much traffic in the centre. To be honest, I have mixed feelings.",
+                    "There is too much noise at night. It seems that this is changing."
+                  ],
+                  "correctIndex": 0,
+                  "allowSlowPlayback": false,
+                  "feedbackOnError": {
+                    "type": "comprehension",
+                    "explanation": "El audio dice «There is too much pollution in the city. From my point of view, it is a reasonable option.».",
+                    "ruleRef": "gp-b2-passive-voice"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has identificado la idea principal."
+                  }
+                },
+                {
+                  "type": "ListenType",
+                  "id": "es-en-b2-u06-l04-e08",
+                  "audioText": "There is too much pollution in the city. From my point of view, it is a reasonable option.",
+                  "transcription": "There is too much pollution in the city. From my point of view, it is a reasonable option.",
+                  "feedbackOnError": {
+                    "type": "spelling",
+                    "explanation": "Escribe exactamente «There is too much pollution in the city. From my point of view, it is a reasonable option.».",
+                    "ruleRef": "gp-b2-advanced-quantifiers"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La transcripción coincide con el audio."
+                  }
+                },
+                {
+                  "type": "SpeakRepeat",
+                  "id": "es-en-b2-u06-l04-e09",
+                  "targetPhrase": "There is too much pollution in the city. From my point of view, it is a reasonable option.",
+                  "audioText": "There is too much pollution in the city. From my point of view, it is a reasonable option.",
+                  "feedbackOnError": {
+                    "type": "pronunciation",
+                    "explanation": "Repite «There is too much pollution in the city. From my point of view, it is a reasonable option.» con claridad.",
+                    "ruleRef": "gp-b2-advanced-quantifiers"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La frase se entiende y mantiene el ritmo."
+                  }
+                },
+                {
+                  "type": "FreeSpeakingPrompt",
+                  "id": "es-en-b2-u06-l04-e10",
+                  "prompt": "Argumenta y matiza una opinión sobre las cantidades excesivas.",
+                  "minTokens": 20,
+                  "conceptClusters": [
+                    [
+                      "too"
+                    ],
+                    [
+                      "much"
+                    ],
+                    [
+                      "traffic"
+                    ]
+                  ],
+                  "modelAnswer": "There is too much traffic in the centre. To be honest, I have mixed feelings. There is too much noise at night. It seems that this is changing. There is too much pollution in the city. From my point of view, it is a reasonable option.",
+                  "selfAssessmentCriteria": [
+                    "¿La respuesta argumenta y responde a la tarea?",
+                    "¿Usa las dos estructuras gramaticales de la lección?",
+                    "¿Incluye una concesión o una matización?"
+                  ],
+                  "grammarRuleRefs": [
+                    "gp-b2-advanced-quantifiers",
+                    "gp-b2-passive-voice"
+                  ],
+                  "timeLimitSeconds": 90,
+                  "minWpm": 70,
+                  "maxWpm": 160,
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "La respuesta modelo desarrolla una opinión con matices y una concesión.",
+                    "ruleRef": "gp-b2-advanced-quantifiers"
+                  }
+                }
+              ]
+            },
+            {
+              "id": "es-en-b2-u06-l05",
+              "title": "Enough / not enough",
+              "cefrLevel": "B2",
+              "scenario": "Situación comunicativa avanzada sobre la cantidad suficiente.",
+              "canDo": "Puedo argumentar y matizar sobre la cantidad suficiente.",
+              "grammarPoints": [
+                {
+                  "id": "gp-b2-advanced-quantifiers",
+                  "label": "Advanced quantifiers",
+                  "description": "Little, few, plenty of y most matizan la cantidad."
+                },
+                {
+                  "id": "gp-b2-passive-voice",
+                  "label": "Passive voice",
+                  "description": "Be + participio desplaza el foco a la acción o al resultado."
+                }
+              ],
+              "vocabFrequencyBand": "3000-5000",
+              "culturalNotes": [
+                {
+                  "idiom": "blow off steam",
+                  "note": "Modismo avanzado útil para hablar de la cantidad suficiente.",
+                  "translation": "expresión figurada"
+                }
+              ],
+              "microLesson": {
+                "title": "Enough / not enough",
+                "goals": [
+                  "Usar vocabulario avanzado de la cantidad suficiente.",
+                  "Aplicar advanced quantifiers y passive voice.",
+                  "Argumentar y matizar sobre la cantidad suficiente."
+                ],
+                "sections": [
+                  {
+                    "heading": "Lengua en contexto",
+                    "body": "Advanced quantifiers: Little, few, plenty of y most matizan la cantidad. Passive voice: Be + participio desplaza el foco a la acción o al resultado.",
+                    "examples": [
+                      {
+                        "source": "No hay suficiente tiempo para descansar. Parece que esto está cambiando.",
+                        "target": "There isn't enough time to rest. It seems that this is changing."
+                      },
+                      {
+                        "source": "No hay suficiente dinero para un regalo. Desde mi punto de vista, es una opción razonable.",
+                        "target": "There isn't enough money for a present. From my point of view, it is a reasonable option."
+                      }
+                    ]
+                  }
+                ]
+              },
+              "glossary": [
+                {
+                  "term": "There isn't enough time to rest. It seems that this is changing.",
+                  "translations": [
+                    "No hay suficiente tiempo para descansar. Parece que esto está cambiando."
+                  ]
+                },
+                {
+                  "term": "There isn't enough money for a present. From my point of view, it is a reasonable option.",
+                  "translations": [
+                    "No hay suficiente dinero para un regalo. Desde mi punto de vista, es una opción razonable."
+                  ]
+                },
+                {
+                  "term": "There isn't enough space in the suitcase. Nevertheless, there are also advantages.",
+                  "translations": [
+                    "No hay suficiente espacio en la maleta. No obstante, también tiene ventajas."
+                  ]
+                }
+              ],
+              "exercises": [
+                {
+                  "type": "MultipleChoice",
+                  "id": "es-en-b2-u06-l05-e01",
+                  "question": "¿Cuál es la opción correcta para «No hay suficiente tiempo para descansar. Parece que esto está cambiando.»?",
+                  "options": [
+                    "There isn't enough time to rest. It seems that this is changing.",
+                    "There isn't enough money for a present. From my point of view, it is a reasonable option.",
+                    "There isn't enough space in the suitcase. Nevertheless, there are also advantages."
+                  ],
+                  "correctIndex": 0,
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "«No hay suficiente tiempo para descansar. Parece que esto está cambiando.» se dice «There isn't enough time to rest. It seems that this is changing.».",
+                    "ruleRef": "gp-b2-advanced-quantifiers"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has elegido la traducción correcta."
+                  }
+                },
+                {
+                  "type": "OrderWords",
+                  "id": "es-en-b2-u06-l05-e02",
+                  "tokens": [
+                    "isn't",
+                    "enough",
+                    "time",
+                    "to",
+                    "rest",
+                    "It",
+                    "seems",
+                    "that",
+                    "this",
+                    "is",
+                    "changing",
+                    "There"
+                  ],
+                  "answerTokens": [
+                    "There",
+                    "isn't",
+                    "enough",
+                    "time",
+                    "to",
+                    "rest",
+                    "It",
+                    "seems",
+                    "that",
+                    "this",
+                    "is",
+                    "changing"
+                  ],
+                  "sourcePhrase": "No hay suficiente tiempo para descansar. Parece que esto está cambiando.",
+                  "feedbackOnError": {
+                    "type": "word_order",
+                    "explanation": "El orden correcto es «There isn't enough time to rest It seems that this is changing».",
+                    "ruleRef": "gp-b2-advanced-quantifiers"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "El orden produce una frase natural."
+                  }
+                },
+                {
+                  "type": "ClozeDragDrop",
+                  "id": "es-en-b2-u06-l05-e03",
+                  "passage": "There {{b1}} {{b2}} time to rest",
+                  "blanks": [
+                    {
+                      "id": "b1",
+                      "answer": "isn't",
+                      "options": [
+                        "isn't",
+                        "time",
+                        "rest"
+                      ]
+                    },
+                    {
+                      "id": "b2",
+                      "answer": "enough",
+                      "options": [
+                        "enough",
+                        "time",
+                        "rest"
+                      ]
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "Las dos formas deben encajar con el contexto de la frase.",
+                    "ruleRef": "gp-b2-passive-voice"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Los dos huecos encajan con la situación."
+                  }
+                },
+                {
+                  "type": "SemanticMatch",
+                  "id": "es-en-b2-u06-l05-e04",
+                  "instructions": "Clasifica la función comunicativa de cada intervención.",
+                  "pairs": [
+                    {
+                      "left": "There isn't enough time to rest. It seems that this is changing.",
+                      "right": "Planteamiento",
+                      "register": "formal",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    },
+                    {
+                      "left": "There isn't enough money for a present. From my point of view, it is a reasonable option.",
+                      "right": "Concesión",
+                      "register": "neutral",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    },
+                    {
+                      "left": "There isn't enough space in the suitcase. Nevertheless, there are also advantages.",
+                      "right": "Conclusión",
+                      "register": "informal",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "Cada intervención cumple una función comunicativa distinta.",
+                    "ruleRef": "gp-b2-advanced-quantifiers"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has identificado la función de cada intervención."
+                  }
+                },
+                {
+                  "type": "SemanticMatch",
+                  "id": "es-en-b2-u06-l05-e05",
+                  "instructions": "Distingue el registro de cada intervención.",
+                  "pairs": [
+                    {
+                      "left": "There isn't enough time to rest. It seems that this is changing.",
+                      "right": "Formal",
+                      "register": "formal",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    },
+                    {
+                      "left": "There isn't enough money for a present. From my point of view, it is a reasonable option.",
+                      "right": "Neutral",
+                      "register": "neutral",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    },
+                    {
+                      "left": "There isn't enough space in the suitcase. Nevertheless, there are also advantages.",
+                      "right": "Informal",
+                      "register": "informal",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "register",
+                    "explanation": "El registro cambia según el contexto y la relación con el interlocutor.",
+                    "ruleRef": "gp-b2-passive-voice"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has distinguido el registro de cada intervención."
+                  }
+                },
+                {
+                  "type": "AudioOnlyPrompt",
+                  "id": "es-en-b2-u06-l05-e06",
+                  "audioText": "There isn't enough money for a present. From my point of view, it is a reasonable option.",
+                  "question": "¿Qué ha dicho el hablante?",
+                  "options": [
+                    "There isn't enough money for a present. From my point of view, it is a reasonable option.",
+                    "There isn't enough time to rest. It seems that this is changing.",
+                    "There isn't enough space in the suitcase. Nevertheless, there are also advantages."
+                  ],
+                  "correctIndex": 0,
+                  "allowSlowPlayback": true,
+                  "feedbackOnError": {
+                    "type": "comprehension",
+                    "explanation": "El audio dice «There isn't enough money for a present. From my point of view, it is a reasonable option.».",
+                    "ruleRef": "gp-b2-advanced-quantifiers"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has comprendido el mensaje del audio."
+                  }
+                },
+                {
+                  "type": "AudioOnlyPrompt",
+                  "id": "es-en-b2-u06-l05-e07",
+                  "audioText": "There isn't enough space in the suitcase. Nevertheless, there are also advantages.",
+                  "question": "¿Cuál es la idea principal?",
+                  "options": [
+                    "There isn't enough space in the suitcase. Nevertheless, there are also advantages.",
+                    "There isn't enough time to rest. It seems that this is changing.",
+                    "There isn't enough money for a present. From my point of view, it is a reasonable option."
+                  ],
+                  "correctIndex": 0,
+                  "allowSlowPlayback": false,
+                  "feedbackOnError": {
+                    "type": "comprehension",
+                    "explanation": "El audio dice «There isn't enough space in the suitcase. Nevertheless, there are also advantages.».",
+                    "ruleRef": "gp-b2-passive-voice"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has identificado la idea principal."
+                  }
+                },
+                {
+                  "type": "ListenType",
+                  "id": "es-en-b2-u06-l05-e08",
+                  "audioText": "There isn't enough space in the suitcase. Nevertheless, there are also advantages.",
+                  "transcription": "There isn't enough space in the suitcase. Nevertheless, there are also advantages.",
+                  "feedbackOnError": {
+                    "type": "spelling",
+                    "explanation": "Escribe exactamente «There isn't enough space in the suitcase. Nevertheless, there are also advantages.».",
+                    "ruleRef": "gp-b2-advanced-quantifiers"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La transcripción coincide con el audio."
+                  }
+                },
+                {
+                  "type": "SpeakRepeat",
+                  "id": "es-en-b2-u06-l05-e09",
+                  "targetPhrase": "There isn't enough space in the suitcase. Nevertheless, there are also advantages.",
+                  "audioText": "There isn't enough space in the suitcase. Nevertheless, there are also advantages.",
+                  "feedbackOnError": {
+                    "type": "pronunciation",
+                    "explanation": "Repite «There isn't enough space in the suitcase. Nevertheless, there are also advantages.» con claridad.",
+                    "ruleRef": "gp-b2-advanced-quantifiers"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La frase se entiende y mantiene el ritmo."
+                  }
+                },
+                {
+                  "type": "FreeSpeakingPrompt",
+                  "id": "es-en-b2-u06-l05-e10",
+                  "prompt": "Argumenta y matiza una opinión sobre la cantidad suficiente.",
+                  "minTokens": 20,
+                  "conceptClusters": [
+                    [
+                      "isn't"
+                    ],
+                    [
+                      "enough"
+                    ],
+                    [
+                      "time"
+                    ]
+                  ],
+                  "modelAnswer": "There isn't enough time to rest. It seems that this is changing. There isn't enough money for a present. From my point of view, it is a reasonable option. There isn't enough space in the suitcase. Nevertheless, there are also advantages.",
+                  "selfAssessmentCriteria": [
+                    "¿La respuesta argumenta y responde a la tarea?",
+                    "¿Usa las dos estructuras gramaticales de la lección?",
+                    "¿Incluye una concesión o una matización?"
+                  ],
+                  "grammarRuleRefs": [
+                    "gp-b2-advanced-quantifiers",
+                    "gp-b2-passive-voice"
+                  ],
+                  "timeLimitSeconds": 90,
+                  "minWpm": 70,
+                  "maxWpm": 160,
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "La respuesta modelo desarrolla una opinión con matices y una concesión.",
+                    "ruleRef": "gp-b2-advanced-quantifiers"
+                  }
+                }
+              ]
+            },
+            {
+              "id": "es-en-b2-u06-l06",
+              "title": "Cambiar o devolver",
+              "cefrLevel": "B2",
+              "scenario": "Situación comunicativa avanzada sobre los cambios y devoluciones.",
+              "canDo": "Puedo argumentar y matizar sobre los cambios y devoluciones.",
+              "grammarPoints": [
+                {
+                  "id": "gp-b2-advanced-quantifiers",
+                  "label": "Advanced quantifiers",
+                  "description": "Little, few, plenty of y most matizan la cantidad."
+                },
+                {
+                  "id": "gp-b2-passive-voice",
+                  "label": "Passive voice",
+                  "description": "Be + participio desplaza el foco a la acción o al resultado."
+                }
+              ],
+              "vocabFrequencyBand": "3000-5000",
+              "culturalNotes": [
+                {
+                  "idiom": "break the bank",
+                  "note": "Modismo avanzado útil para hablar de los cambios y devoluciones.",
+                  "translation": "expresión figurada"
+                }
+              ],
+              "microLesson": {
+                "title": "Cambiar o devolver",
+                "goals": [
+                  "Usar vocabulario avanzado de los cambios y devoluciones.",
+                  "Aplicar advanced quantifiers y passive voice.",
+                  "Argumentar y matizar sobre los cambios y devoluciones."
+                ],
+                "sections": [
+                  {
+                    "heading": "Lengua en contexto",
+                    "body": "Advanced quantifiers: Little, few, plenty of y most matizan la cantidad. Passive voice: Be + participio desplaza el foco a la acción o al resultado.",
+                    "examples": [
+                      {
+                        "source": "¿Podrías cambiar esta camiseta? Desde mi punto de vista, es una opción razonable.",
+                        "target": "Could you change this T-shirt? From my point of view, it is a reasonable option."
+                      },
+                      {
+                        "source": "¿Podrías devolver estos zapatos? No obstante, también tiene ventajas.",
+                        "target": "Could you return these shoes? Nevertheless, there are also advantages."
+                      }
+                    ]
+                  }
+                ]
+              },
+              "glossary": [
+                {
+                  "term": "Could you change this T-shirt? From my point of view, it is a reasonable option.",
+                  "translations": [
+                    "¿Podrías cambiar esta camiseta? Desde mi punto de vista, es una opción razonable."
+                  ]
+                },
+                {
+                  "term": "Could you return these shoes? Nevertheless, there are also advantages.",
+                  "translations": [
+                    "¿Podrías devolver estos zapatos? No obstante, también tiene ventajas."
+                  ]
+                },
+                {
+                  "term": "Could you give me a receipt? At the end of the day, we need to prioritise.",
+                  "translations": [
+                    "¿Podrías darme un recibo? A fin de cuentas, hay que priorizar."
+                  ]
+                }
+              ],
+              "exercises": [
+                {
+                  "type": "MultipleChoice",
+                  "id": "es-en-b2-u06-l06-e01",
+                  "question": "¿Cuál es la opción correcta para «¿Podrías cambiar esta camiseta? Desde mi punto de vista, es una opción razonable.»?",
+                  "options": [
+                    "Could you change this T-shirt? From my point of view, it is a reasonable option.",
+                    "Could you return these shoes? Nevertheless, there are also advantages.",
+                    "Could you give me a receipt? At the end of the day, we need to prioritise."
+                  ],
+                  "correctIndex": 0,
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "«¿Podrías cambiar esta camiseta? Desde mi punto de vista, es una opción razonable.» se dice «Could you change this T-shirt? From my point of view, it is a reasonable option.».",
+                    "ruleRef": "gp-b2-advanced-quantifiers"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has elegido la traducción correcta."
+                  }
+                },
+                {
+                  "type": "OrderWords",
+                  "id": "es-en-b2-u06-l06-e02",
+                  "tokens": [
+                    "you",
+                    "change",
+                    "this",
+                    "T",
+                    "shirt",
+                    "From",
+                    "my",
+                    "point",
+                    "of",
+                    "view",
+                    "it",
+                    "is",
+                    "a",
+                    "reasonable",
+                    "option",
+                    "Could"
+                  ],
+                  "answerTokens": [
+                    "Could",
+                    "you",
+                    "change",
+                    "this",
+                    "T",
+                    "shirt",
+                    "From",
+                    "my",
+                    "point",
+                    "of",
+                    "view",
+                    "it",
+                    "is",
+                    "a",
+                    "reasonable",
+                    "option"
+                  ],
+                  "sourcePhrase": "¿Podrías cambiar esta camiseta? Desde mi punto de vista, es una opción razonable.",
+                  "feedbackOnError": {
+                    "type": "word_order",
+                    "explanation": "El orden correcto es «Could you change this T shirt From my point of view it is a reasonable option».",
+                    "ruleRef": "gp-b2-advanced-quantifiers"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "El orden produce una frase natural."
+                  }
+                },
+                {
+                  "type": "ClozeDragDrop",
+                  "id": "es-en-b2-u06-l06-e03",
+                  "passage": "Could you {{b1}} this T-{{b2}}?",
+                  "blanks": [
+                    {
+                      "id": "b1",
+                      "answer": "change",
+                      "options": [
+                        "change",
+                        "very",
+                        "today"
+                      ]
+                    },
+                    {
+                      "id": "b2",
+                      "answer": "shirt",
+                      "options": [
+                        "shirt",
+                        "very",
+                        "today"
+                      ]
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "Las dos formas deben encajar con el contexto de la frase.",
+                    "ruleRef": "gp-b2-passive-voice"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Los dos huecos encajan con la situación."
+                  }
+                },
+                {
+                  "type": "SemanticMatch",
+                  "id": "es-en-b2-u06-l06-e04",
+                  "instructions": "Clasifica la función comunicativa de cada intervención.",
+                  "pairs": [
+                    {
+                      "left": "Could you change this T-shirt? From my point of view, it is a reasonable option.",
+                      "right": "Planteamiento",
+                      "register": "formal",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    },
+                    {
+                      "left": "Could you return these shoes? Nevertheless, there are also advantages.",
+                      "right": "Concesión",
+                      "register": "neutral",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    },
+                    {
+                      "left": "Could you give me a receipt? At the end of the day, we need to prioritise.",
+                      "right": "Conclusión",
+                      "register": "informal",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "Cada intervención cumple una función comunicativa distinta.",
+                    "ruleRef": "gp-b2-advanced-quantifiers"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has identificado la función de cada intervención."
+                  }
+                },
+                {
+                  "type": "SemanticMatch",
+                  "id": "es-en-b2-u06-l06-e05",
+                  "instructions": "Distingue el registro de cada intervención.",
+                  "pairs": [
+                    {
+                      "left": "Could you change this T-shirt? From my point of view, it is a reasonable option.",
+                      "right": "Formal",
+                      "register": "formal",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    },
+                    {
+                      "left": "Could you return these shoes? Nevertheless, there are also advantages.",
+                      "right": "Neutral",
+                      "register": "neutral",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    },
+                    {
+                      "left": "Could you give me a receipt? At the end of the day, we need to prioritise.",
+                      "right": "Informal",
+                      "register": "informal",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "register",
+                    "explanation": "El registro cambia según el contexto y la relación con el interlocutor.",
+                    "ruleRef": "gp-b2-passive-voice"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has distinguido el registro de cada intervención."
+                  }
+                },
+                {
+                  "type": "AudioOnlyPrompt",
+                  "id": "es-en-b2-u06-l06-e06",
+                  "audioText": "Could you return these shoes? Nevertheless, there are also advantages.",
+                  "question": "¿Qué ha dicho el hablante?",
+                  "options": [
+                    "Could you return these shoes? Nevertheless, there are also advantages.",
+                    "Could you change this T-shirt? From my point of view, it is a reasonable option.",
+                    "Could you give me a receipt? At the end of the day, we need to prioritise."
+                  ],
+                  "correctIndex": 0,
+                  "allowSlowPlayback": true,
+                  "feedbackOnError": {
+                    "type": "comprehension",
+                    "explanation": "El audio dice «Could you return these shoes? Nevertheless, there are also advantages.».",
+                    "ruleRef": "gp-b2-advanced-quantifiers"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has comprendido el mensaje del audio."
+                  }
+                },
+                {
+                  "type": "AudioOnlyPrompt",
+                  "id": "es-en-b2-u06-l06-e07",
+                  "audioText": "Could you give me a receipt? At the end of the day, we need to prioritise.",
+                  "question": "¿Cuál es la idea principal?",
+                  "options": [
+                    "Could you give me a receipt? At the end of the day, we need to prioritise.",
+                    "Could you change this T-shirt? From my point of view, it is a reasonable option.",
+                    "Could you return these shoes? Nevertheless, there are also advantages."
+                  ],
+                  "correctIndex": 0,
+                  "allowSlowPlayback": false,
+                  "feedbackOnError": {
+                    "type": "comprehension",
+                    "explanation": "El audio dice «Could you give me a receipt? At the end of the day, we need to prioritise.».",
+                    "ruleRef": "gp-b2-passive-voice"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has identificado la idea principal."
+                  }
+                },
+                {
+                  "type": "ListenType",
+                  "id": "es-en-b2-u06-l06-e08",
+                  "audioText": "Could you give me a receipt? At the end of the day, we need to prioritise.",
+                  "transcription": "Could you give me a receipt? At the end of the day, we need to prioritise.",
+                  "feedbackOnError": {
+                    "type": "spelling",
+                    "explanation": "Escribe exactamente «Could you give me a receipt? At the end of the day, we need to prioritise.».",
+                    "ruleRef": "gp-b2-advanced-quantifiers"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La transcripción coincide con el audio."
+                  }
+                },
+                {
+                  "type": "SpeakRepeat",
+                  "id": "es-en-b2-u06-l06-e09",
+                  "targetPhrase": "Could you give me a receipt? At the end of the day, we need to prioritise.",
+                  "audioText": "Could you give me a receipt? At the end of the day, we need to prioritise.",
+                  "feedbackOnError": {
+                    "type": "pronunciation",
+                    "explanation": "Repite «Could you give me a receipt? At the end of the day, we need to prioritise.» con claridad.",
+                    "ruleRef": "gp-b2-advanced-quantifiers"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La frase se entiende y mantiene el ritmo."
+                  }
+                },
+                {
+                  "type": "FreeSpeakingPrompt",
+                  "id": "es-en-b2-u06-l06-e10",
+                  "prompt": "Argumenta y matiza una opinión sobre los cambios y devoluciones.",
+                  "minTokens": 20,
+                  "conceptClusters": [
+                    [
+                      "change"
+                    ],
+                    [
+                      "shirt"
+                    ],
+                    [
+                      "point"
+                    ]
+                  ],
+                  "modelAnswer": "Could you change this T-shirt? From my point of view, it is a reasonable option. Could you return these shoes? Nevertheless, there are also advantages. Could you give me a receipt? At the end of the day, we need to prioritise.",
+                  "selfAssessmentCriteria": [
+                    "¿La respuesta argumenta y responde a la tarea?",
+                    "¿Usa las dos estructuras gramaticales de la lección?",
+                    "¿Incluye una concesión o una matización?"
+                  ],
+                  "grammarRuleRefs": [
+                    "gp-b2-advanced-quantifiers",
+                    "gp-b2-passive-voice"
+                  ],
+                  "timeLimitSeconds": 90,
+                  "minWpm": 70,
+                  "maxWpm": 160,
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "La respuesta modelo desarrolla una opinión con matices y una concesión.",
+                    "ruleRef": "gp-b2-advanced-quantifiers"
+                  }
+                }
+              ]
+            },
+            {
+              "id": "es-en-b2-u06-l07",
+              "title": "Atención al cliente",
+              "cefrLevel": "B2",
+              "scenario": "Situación comunicativa avanzada sobre la atención al cliente.",
+              "canDo": "Puedo argumentar y matizar sobre la atención al cliente.",
+              "grammarPoints": [
+                {
+                  "id": "gp-b2-advanced-quantifiers",
+                  "label": "Advanced quantifiers",
+                  "description": "Little, few, plenty of y most matizan la cantidad."
+                },
+                {
+                  "id": "gp-b2-passive-voice",
+                  "label": "Passive voice",
+                  "description": "Be + participio desplaza el foco a la acción o al resultado."
+                }
+              ],
+              "vocabFrequencyBand": "3000-5000",
+              "culturalNotes": [
+                {
+                  "idiom": "bring to the table",
+                  "note": "Modismo avanzado útil para hablar de la atención al cliente.",
+                  "translation": "expresión figurada"
+                }
+              ],
+              "microLesson": {
+                "title": "Atención al cliente",
+                "goals": [
+                  "Usar vocabulario avanzado de la atención al cliente.",
+                  "Aplicar advanced quantifiers y passive voice.",
+                  "Argumentar y matizar sobre la atención al cliente."
+                ],
+                "sections": [
+                  {
+                    "heading": "Lengua en contexto",
+                    "body": "Advanced quantifiers: Little, few, plenty of y most matizan la cantidad. Passive voice: Be + participio desplaza el foco a la acción o al resultado.",
+                    "examples": [
+                      {
+                        "source": "Hola, compré este producto ayer. No obstante, también tiene ventajas.",
+                        "target": "Hello, I bought this product yesterday. Nevertheless, there are also advantages."
+                      },
+                      {
+                        "source": "No funciona y quiero cambiarlo. A fin de cuentas, hay que priorizar.",
+                        "target": "It doesn't work and I want to change it. At the end of the day, we need to prioritise."
+                      }
+                    ]
+                  }
+                ]
+              },
+              "glossary": [
+                {
+                  "term": "Hello, I bought this product yesterday. Nevertheless, there are also advantages.",
+                  "translations": [
+                    "Hola, compré este producto ayer. No obstante, también tiene ventajas."
+                  ]
+                },
+                {
+                  "term": "It doesn't work and I want to change it. At the end of the day, we need to prioritise.",
+                  "translations": [
+                    "No funciona y quiero cambiarlo. A fin de cuentas, hay que priorizar."
+                  ]
+                },
+                {
+                  "term": "Can you help me, please? In short, it is a complex issue.",
+                  "translations": [
+                    "¿Puede ayudarme, por favor? En resumen, es un tema complejo."
+                  ]
+                }
+              ],
+              "exercises": [
+                {
+                  "type": "MultipleChoice",
+                  "id": "es-en-b2-u06-l07-e01",
+                  "question": "¿Cuál es la opción correcta para «Hola, compré este producto ayer. No obstante, también tiene ventajas.»?",
+                  "options": [
+                    "Hello, I bought this product yesterday. Nevertheless, there are also advantages.",
+                    "It doesn't work and I want to change it. At the end of the day, we need to prioritise.",
+                    "Can you help me, please? In short, it is a complex issue."
+                  ],
+                  "correctIndex": 0,
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "«Hola, compré este producto ayer. No obstante, también tiene ventajas.» se dice «Hello, I bought this product yesterday. Nevertheless, there are also advantages.».",
+                    "ruleRef": "gp-b2-advanced-quantifiers"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has elegido la traducción correcta."
+                  }
+                },
+                {
+                  "type": "OrderWords",
+                  "id": "es-en-b2-u06-l07-e02",
+                  "tokens": [
+                    "I",
+                    "bought",
+                    "this",
+                    "product",
+                    "yesterday",
+                    "Nevertheless",
+                    "there",
+                    "are",
+                    "also",
+                    "advantages",
+                    "Hello"
+                  ],
+                  "answerTokens": [
+                    "Hello",
+                    "I",
+                    "bought",
+                    "this",
+                    "product",
+                    "yesterday",
+                    "Nevertheless",
+                    "there",
+                    "are",
+                    "also",
+                    "advantages"
+                  ],
+                  "sourcePhrase": "Hola, compré este producto ayer. No obstante, también tiene ventajas.",
+                  "feedbackOnError": {
+                    "type": "word_order",
+                    "explanation": "El orden correcto es «Hello I bought this product yesterday Nevertheless there are also advantages».",
+                    "ruleRef": "gp-b2-advanced-quantifiers"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "El orden produce una frase natural."
+                  }
+                },
+                {
+                  "type": "ClozeDragDrop",
+                  "id": "es-en-b2-u06-l07-e03",
+                  "passage": "{{b1}}, I {{b2}} this product yesterday.",
+                  "blanks": [
+                    {
+                      "id": "b1",
+                      "answer": "Hello",
+                      "options": [
+                        "Hello",
+                        "product",
+                        "yesterday"
+                      ]
+                    },
+                    {
+                      "id": "b2",
+                      "answer": "bought",
+                      "options": [
+                        "bought",
+                        "product",
+                        "yesterday"
+                      ]
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "Las dos formas deben encajar con el contexto de la frase.",
+                    "ruleRef": "gp-b2-passive-voice"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Los dos huecos encajan con la situación."
+                  }
+                },
+                {
+                  "type": "SemanticMatch",
+                  "id": "es-en-b2-u06-l07-e04",
+                  "instructions": "Clasifica la función comunicativa de cada intervención.",
+                  "pairs": [
+                    {
+                      "left": "Hello, I bought this product yesterday. Nevertheless, there are also advantages.",
+                      "right": "Planteamiento",
+                      "register": "formal",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    },
+                    {
+                      "left": "It doesn't work and I want to change it. At the end of the day, we need to prioritise.",
+                      "right": "Concesión",
+                      "register": "neutral",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    },
+                    {
+                      "left": "Can you help me, please? In short, it is a complex issue.",
+                      "right": "Conclusión",
+                      "register": "informal",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "Cada intervención cumple una función comunicativa distinta.",
+                    "ruleRef": "gp-b2-advanced-quantifiers"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has identificado la función de cada intervención."
+                  }
+                },
+                {
+                  "type": "SemanticMatch",
+                  "id": "es-en-b2-u06-l07-e05",
+                  "instructions": "Distingue el registro de cada intervención.",
+                  "pairs": [
+                    {
+                      "left": "Hello, I bought this product yesterday. Nevertheless, there are also advantages.",
+                      "right": "Formal",
+                      "register": "formal",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    },
+                    {
+                      "left": "It doesn't work and I want to change it. At the end of the day, we need to prioritise.",
+                      "right": "Neutral",
+                      "register": "neutral",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    },
+                    {
+                      "left": "Can you help me, please? In short, it is a complex issue.",
+                      "right": "Informal",
+                      "register": "informal",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "register",
+                    "explanation": "El registro cambia según el contexto y la relación con el interlocutor.",
+                    "ruleRef": "gp-b2-passive-voice"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has distinguido el registro de cada intervención."
+                  }
+                },
+                {
+                  "type": "AudioOnlyPrompt",
+                  "id": "es-en-b2-u06-l07-e06",
+                  "audioText": "It doesn't work and I want to change it. At the end of the day, we need to prioritise.",
+                  "question": "¿Qué ha dicho el hablante?",
+                  "options": [
+                    "It doesn't work and I want to change it. At the end of the day, we need to prioritise.",
+                    "Hello, I bought this product yesterday. Nevertheless, there are also advantages.",
+                    "Can you help me, please? In short, it is a complex issue."
+                  ],
+                  "correctIndex": 0,
+                  "allowSlowPlayback": true,
+                  "feedbackOnError": {
+                    "type": "comprehension",
+                    "explanation": "El audio dice «It doesn't work and I want to change it. At the end of the day, we need to prioritise.».",
+                    "ruleRef": "gp-b2-advanced-quantifiers"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has comprendido el mensaje del audio."
+                  }
+                },
+                {
+                  "type": "AudioOnlyPrompt",
+                  "id": "es-en-b2-u06-l07-e07",
+                  "audioText": "Can you help me, please? In short, it is a complex issue.",
+                  "question": "¿Cuál es la idea principal?",
+                  "options": [
+                    "Can you help me, please? In short, it is a complex issue.",
+                    "Hello, I bought this product yesterday. Nevertheless, there are also advantages.",
+                    "It doesn't work and I want to change it. At the end of the day, we need to prioritise."
+                  ],
+                  "correctIndex": 0,
+                  "allowSlowPlayback": false,
+                  "feedbackOnError": {
+                    "type": "comprehension",
+                    "explanation": "El audio dice «Can you help me, please? In short, it is a complex issue.».",
+                    "ruleRef": "gp-b2-passive-voice"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has identificado la idea principal."
+                  }
+                },
+                {
+                  "type": "ListenType",
+                  "id": "es-en-b2-u06-l07-e08",
+                  "audioText": "Can you help me, please? In short, it is a complex issue.",
+                  "transcription": "Can you help me, please? In short, it is a complex issue.",
+                  "feedbackOnError": {
+                    "type": "spelling",
+                    "explanation": "Escribe exactamente «Can you help me, please? In short, it is a complex issue.».",
+                    "ruleRef": "gp-b2-advanced-quantifiers"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La transcripción coincide con el audio."
+                  }
+                },
+                {
+                  "type": "SpeakRepeat",
+                  "id": "es-en-b2-u06-l07-e09",
+                  "targetPhrase": "Can you help me, please? In short, it is a complex issue.",
+                  "audioText": "Can you help me, please? In short, it is a complex issue.",
+                  "feedbackOnError": {
+                    "type": "pronunciation",
+                    "explanation": "Repite «Can you help me, please? In short, it is a complex issue.» con claridad.",
+                    "ruleRef": "gp-b2-advanced-quantifiers"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La frase se entiende y mantiene el ritmo."
+                  }
+                },
+                {
+                  "type": "FreeSpeakingPrompt",
+                  "id": "es-en-b2-u06-l07-e10",
+                  "prompt": "Argumenta y matiza una opinión sobre la atención al cliente.",
+                  "minTokens": 20,
+                  "conceptClusters": [
+                    [
+                      "Hello"
+                    ],
+                    [
+                      "bought"
+                    ],
+                    [
+                      "product"
+                    ]
+                  ],
+                  "modelAnswer": "Hello, I bought this product yesterday. Nevertheless, there are also advantages. It doesn't work and I want to change it. At the end of the day, we need to prioritise. Can you help me, please? In short, it is a complex issue.",
+                  "selfAssessmentCriteria": [
+                    "¿La respuesta argumenta y responde a la tarea?",
+                    "¿Usa las dos estructuras gramaticales de la lección?",
+                    "¿Incluye una concesión o una matización?"
+                  ],
+                  "grammarRuleRefs": [
+                    "gp-b2-advanced-quantifiers",
+                    "gp-b2-passive-voice"
+                  ],
+                  "timeLimitSeconds": 90,
+                  "minWpm": 70,
+                  "maxWpm": 160,
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "La respuesta modelo desarrolla una opinión con matices y una concesión.",
+                    "ruleRef": "gp-b2-advanced-quantifiers"
+                  }
+                }
+              ]
+            },
+            {
+              "id": "es-en-b2-u06-l08",
+              "title": "Escribir una reclamación",
+              "cefrLevel": "B2",
+              "scenario": "Situación comunicativa avanzada sobre una reclamación.",
+              "canDo": "Puedo argumentar y matizar sobre una reclamación.",
+              "grammarPoints": [
+                {
+                  "id": "gp-b2-advanced-quantifiers",
+                  "label": "Advanced quantifiers",
+                  "description": "Little, few, plenty of y most matizan la cantidad."
+                },
+                {
+                  "id": "gp-b2-passive-voice",
+                  "label": "Passive voice",
+                  "description": "Be + participio desplaza el foco a la acción o al resultado."
+                }
+              ],
+              "vocabFrequencyBand": "3000-5000",
+              "culturalNotes": [
+                {
+                  "idiom": "call the shots",
+                  "note": "Modismo avanzado útil para hablar de una reclamación.",
+                  "translation": "expresión figurada"
+                }
+              ],
+              "microLesson": {
+                "title": "Escribir una reclamación",
+                "goals": [
+                  "Usar vocabulario avanzado de una reclamación.",
+                  "Aplicar advanced quantifiers y passive voice.",
+                  "Argumentar y matizar sobre una reclamación."
+                ],
+                "sections": [
+                  {
+                    "heading": "Lengua en contexto",
+                    "body": "Advanced quantifiers: Little, few, plenty of y most matizan la cantidad. Passive voice: Be + participio desplaza el foco a la acción o al resultado.",
+                    "examples": [
+                      {
+                        "source": "Escribo para reclamar un pedido defectuoso. A fin de cuentas, hay que priorizar.",
+                        "target": "I am writing to complain about a faulty order. At the end of the day, we need to prioritise."
+                      },
+                      {
+                        "source": "El producto llegó roto y faltan piezas. En resumen, es un tema complejo.",
+                        "target": "The product arrived broken and parts are missing. In short, it is a complex issue."
+                      }
+                    ]
+                  }
+                ]
+              },
+              "glossary": [
+                {
+                  "term": "I am writing to complain about a faulty order. At the end of the day, we need to prioritise.",
+                  "translations": [
+                    "Escribo para reclamar un pedido defectuoso. A fin de cuentas, hay que priorizar."
+                  ]
+                },
+                {
+                  "term": "The product arrived broken and parts are missing. In short, it is a complex issue.",
+                  "translations": [
+                    "El producto llegó roto y faltan piezas. En resumen, es un tema complejo."
+                  ]
+                },
+                {
+                  "term": "I request a replacement or a refund. However, it is worth qualifying that.",
+                  "translations": [
+                    "Solicito un reemplazo o un reembolso. Sin embargo, conviene matizarlo."
+                  ]
+                }
+              ],
+              "exercises": [
+                {
+                  "type": "MultipleChoice",
+                  "id": "es-en-b2-u06-l08-e01",
+                  "question": "¿Cuál es la opción correcta para «Escribo para reclamar un pedido defectuoso. A fin de cuentas, hay que priorizar.»?",
+                  "options": [
+                    "I am writing to complain about a faulty order. At the end of the day, we need to prioritise.",
+                    "The product arrived broken and parts are missing. In short, it is a complex issue.",
+                    "I request a replacement or a refund. However, it is worth qualifying that."
+                  ],
+                  "correctIndex": 0,
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "«Escribo para reclamar un pedido defectuoso. A fin de cuentas, hay que priorizar.» se dice «I am writing to complain about a faulty order. At the end of the day, we need to prioritise.».",
+                    "ruleRef": "gp-b2-advanced-quantifiers"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has elegido la traducción correcta."
+                  }
+                },
+                {
+                  "type": "OrderWords",
+                  "id": "es-en-b2-u06-l08-e02",
+                  "tokens": [
+                    "am",
+                    "writing",
+                    "to",
+                    "complain",
+                    "about",
+                    "a",
+                    "faulty",
+                    "order",
+                    "At",
+                    "the",
+                    "end",
+                    "of",
+                    "the",
+                    "day",
+                    "we",
+                    "need",
+                    "to",
+                    "prioritise",
+                    "I"
+                  ],
+                  "answerTokens": [
+                    "I",
+                    "am",
+                    "writing",
+                    "to",
+                    "complain",
+                    "about",
+                    "a",
+                    "faulty",
+                    "order",
+                    "At",
+                    "the",
+                    "end",
+                    "of",
+                    "the",
+                    "day",
+                    "we",
+                    "need",
+                    "to",
+                    "prioritise"
+                  ],
+                  "sourcePhrase": "Escribo para reclamar un pedido defectuoso. A fin de cuentas, hay que priorizar.",
+                  "feedbackOnError": {
+                    "type": "word_order",
+                    "explanation": "El orden correcto es «I am writing to complain about a faulty order At the end of the day we need to prioritise».",
+                    "ruleRef": "gp-b2-advanced-quantifiers"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "El orden produce una frase natural."
+                  }
+                },
+                {
+                  "type": "ClozeDragDrop",
+                  "id": "es-en-b2-u06-l08-e03",
+                  "passage": "I am {{b1}} to {{b2}} about a faulty order.",
+                  "blanks": [
+                    {
+                      "id": "b1",
+                      "answer": "writing",
+                      "options": [
+                        "writing",
+                        "faulty",
+                        "order"
+                      ]
+                    },
+                    {
+                      "id": "b2",
+                      "answer": "complain",
+                      "options": [
+                        "complain",
+                        "faulty",
+                        "order"
+                      ]
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "Las dos formas deben encajar con el contexto de la frase.",
+                    "ruleRef": "gp-b2-passive-voice"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Los dos huecos encajan con la situación."
+                  }
+                },
+                {
+                  "type": "SemanticMatch",
+                  "id": "es-en-b2-u06-l08-e04",
+                  "instructions": "Clasifica la función comunicativa de cada intervención.",
+                  "pairs": [
+                    {
+                      "left": "I am writing to complain about a faulty order. At the end of the day, we need to prioritise.",
+                      "right": "Planteamiento",
+                      "register": "formal",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    },
+                    {
+                      "left": "The product arrived broken and parts are missing. In short, it is a complex issue.",
+                      "right": "Concesión",
+                      "register": "neutral",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    },
+                    {
+                      "left": "I request a replacement or a refund. However, it is worth qualifying that.",
+                      "right": "Conclusión",
+                      "register": "informal",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "Cada intervención cumple una función comunicativa distinta.",
+                    "ruleRef": "gp-b2-advanced-quantifiers"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has identificado la función de cada intervención."
+                  }
+                },
+                {
+                  "type": "SemanticMatch",
+                  "id": "es-en-b2-u06-l08-e05",
+                  "instructions": "Distingue el registro de cada intervención.",
+                  "pairs": [
+                    {
+                      "left": "I am writing to complain about a faulty order. At the end of the day, we need to prioritise.",
+                      "right": "Formal",
+                      "register": "formal",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    },
+                    {
+                      "left": "The product arrived broken and parts are missing. In short, it is a complex issue.",
+                      "right": "Neutral",
+                      "register": "neutral",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    },
+                    {
+                      "left": "I request a replacement or a refund. However, it is worth qualifying that.",
+                      "right": "Informal",
+                      "register": "informal",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "register",
+                    "explanation": "El registro cambia según el contexto y la relación con el interlocutor.",
+                    "ruleRef": "gp-b2-passive-voice"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has distinguido el registro de cada intervención."
+                  }
+                },
+                {
+                  "type": "AudioOnlyPrompt",
+                  "id": "es-en-b2-u06-l08-e06",
+                  "audioText": "The product arrived broken and parts are missing. In short, it is a complex issue.",
+                  "question": "¿Qué ha dicho el hablante?",
+                  "options": [
+                    "The product arrived broken and parts are missing. In short, it is a complex issue.",
+                    "I am writing to complain about a faulty order. At the end of the day, we need to prioritise.",
+                    "I request a replacement or a refund. However, it is worth qualifying that."
+                  ],
+                  "correctIndex": 0,
+                  "allowSlowPlayback": true,
+                  "feedbackOnError": {
+                    "type": "comprehension",
+                    "explanation": "El audio dice «The product arrived broken and parts are missing. In short, it is a complex issue.».",
+                    "ruleRef": "gp-b2-advanced-quantifiers"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has comprendido el mensaje del audio."
+                  }
+                },
+                {
+                  "type": "AudioOnlyPrompt",
+                  "id": "es-en-b2-u06-l08-e07",
+                  "audioText": "I request a replacement or a refund. However, it is worth qualifying that.",
+                  "question": "¿Cuál es la idea principal?",
+                  "options": [
+                    "I request a replacement or a refund. However, it is worth qualifying that.",
+                    "I am writing to complain about a faulty order. At the end of the day, we need to prioritise.",
+                    "The product arrived broken and parts are missing. In short, it is a complex issue."
+                  ],
+                  "correctIndex": 0,
+                  "allowSlowPlayback": false,
+                  "feedbackOnError": {
+                    "type": "comprehension",
+                    "explanation": "El audio dice «I request a replacement or a refund. However, it is worth qualifying that.».",
+                    "ruleRef": "gp-b2-passive-voice"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has identificado la idea principal."
+                  }
+                },
+                {
+                  "type": "ListenType",
+                  "id": "es-en-b2-u06-l08-e08",
+                  "audioText": "I request a replacement or a refund. However, it is worth qualifying that.",
+                  "transcription": "I request a replacement or a refund. However, it is worth qualifying that.",
+                  "feedbackOnError": {
+                    "type": "spelling",
+                    "explanation": "Escribe exactamente «I request a replacement or a refund. However, it is worth qualifying that.».",
+                    "ruleRef": "gp-b2-advanced-quantifiers"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La transcripción coincide con el audio."
+                  }
+                },
+                {
+                  "type": "SpeakRepeat",
+                  "id": "es-en-b2-u06-l08-e09",
+                  "targetPhrase": "I request a replacement or a refund. However, it is worth qualifying that.",
+                  "audioText": "I request a replacement or a refund. However, it is worth qualifying that.",
+                  "feedbackOnError": {
+                    "type": "pronunciation",
+                    "explanation": "Repite «I request a replacement or a refund. However, it is worth qualifying that.» con claridad.",
+                    "ruleRef": "gp-b2-advanced-quantifiers"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La frase se entiende y mantiene el ritmo."
+                  }
+                },
+                {
+                  "type": "FreeSpeakingPrompt",
+                  "id": "es-en-b2-u06-l08-e10",
+                  "prompt": "Argumenta y matiza una opinión sobre una reclamación.",
+                  "minTokens": 20,
+                  "conceptClusters": [
+                    [
+                      "writing"
+                    ],
+                    [
+                      "complain"
+                    ],
+                    [
+                      "faulty"
+                    ]
+                  ],
+                  "modelAnswer": "I am writing to complain about a faulty order. At the end of the day, we need to prioritise. The product arrived broken and parts are missing. In short, it is a complex issue. I request a replacement or a refund. However, it is worth qualifying that.",
+                  "selfAssessmentCriteria": [
+                    "¿La respuesta argumenta y responde a la tarea?",
+                    "¿Usa las dos estructuras gramaticales de la lección?",
+                    "¿Incluye una concesión o una matización?"
+                  ],
+                  "grammarRuleRefs": [
+                    "gp-b2-advanced-quantifiers",
+                    "gp-b2-passive-voice"
+                  ],
+                  "timeLimitSeconds": 90,
+                  "minWpm": 70,
+                  "maxWpm": 160,
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "La respuesta modelo desarrolla una opinión con matices y una concesión.",
+                    "ruleRef": "gp-b2-advanced-quantifiers"
+                  }
+                }
+              ]
+            },
+            {
+              "id": "es-en-b2-u06-l09",
+              "title": "Integración: compra online",
+              "cefrLevel": "B2",
+              "scenario": "Situación comunicativa avanzada sobre una compra online.",
+              "canDo": "Puedo argumentar y matizar sobre una compra online.",
+              "grammarPoints": [
+                {
+                  "id": "gp-b2-advanced-quantifiers",
+                  "label": "Advanced quantifiers",
+                  "description": "Little, few, plenty of y most matizan la cantidad."
+                },
+                {
+                  "id": "gp-b2-passive-voice",
+                  "label": "Passive voice",
+                  "description": "Be + participio desplaza el foco a la acción o al resultado."
+                }
+              ],
+              "vocabFrequencyBand": "3000-5000",
+              "culturalNotes": [
+                {
+                  "idiom": "carry the day",
+                  "note": "Modismo avanzado útil para hablar de una compra online.",
+                  "translation": "expresión figurada"
+                }
+              ],
+              "microLesson": {
+                "title": "Integración: compra online",
+                "goals": [
+                  "Usar vocabulario avanzado de una compra online.",
+                  "Aplicar advanced quantifiers y passive voice.",
+                  "Argumentar y matizar sobre una compra online."
+                ],
+                "sections": [
+                  {
+                    "heading": "Lengua en contexto",
+                    "body": "Advanced quantifiers: Little, few, plenty of y most matizan la cantidad. Passive voice: Be + participio desplaza el foco a la acción o al resultado.",
+                    "examples": [
+                      {
+                        "source": "Compré una mochila en una tienda online. En resumen, es un tema complejo.",
+                        "target": "I bought a backpack in an online shop. In short, it is a complex issue."
+                      },
+                      {
+                        "source": "La talla no era la correcta. Sin embargo, conviene matizarlo.",
+                        "target": "The size was not right. However, it is worth qualifying that."
+                      }
+                    ]
+                  }
+                ]
+              },
+              "glossary": [
+                {
+                  "term": "I bought a backpack in an online shop. In short, it is a complex issue.",
+                  "translations": [
+                    "Compré una mochila en una tienda online. En resumen, es un tema complejo."
+                  ]
+                },
+                {
+                  "term": "The size was not right. However, it is worth qualifying that.",
+                  "translations": [
+                    "La talla no era la correcta. Sin embargo, conviene matizarlo."
+                  ]
+                },
+                {
+                  "term": "I returned it and ordered another one. That said, it depends on the context.",
+                  "translations": [
+                    "La devolví y pedí otra. Dicho esto, depende del contexto."
+                  ]
+                }
+              ],
+              "exercises": [
+                {
+                  "type": "MultipleChoice",
+                  "id": "es-en-b2-u06-l09-e01",
+                  "question": "¿Cuál es la opción correcta para «Compré una mochila en una tienda online. En resumen, es un tema complejo.»?",
+                  "options": [
+                    "I bought a backpack in an online shop. In short, it is a complex issue.",
+                    "The size was not right. However, it is worth qualifying that.",
+                    "I returned it and ordered another one. That said, it depends on the context."
+                  ],
+                  "correctIndex": 0,
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "«Compré una mochila en una tienda online. En resumen, es un tema complejo.» se dice «I bought a backpack in an online shop. In short, it is a complex issue.».",
+                    "ruleRef": "gp-b2-advanced-quantifiers"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has elegido la traducción correcta."
+                  }
+                },
+                {
+                  "type": "OrderWords",
+                  "id": "es-en-b2-u06-l09-e02",
+                  "tokens": [
+                    "bought",
+                    "a",
+                    "backpack",
+                    "in",
+                    "an",
+                    "online",
+                    "shop",
+                    "In",
+                    "short",
+                    "it",
+                    "is",
+                    "a",
+                    "complex",
+                    "issue",
+                    "I"
+                  ],
+                  "answerTokens": [
+                    "I",
+                    "bought",
+                    "a",
+                    "backpack",
+                    "in",
+                    "an",
+                    "online",
+                    "shop",
+                    "In",
+                    "short",
+                    "it",
+                    "is",
+                    "a",
+                    "complex",
+                    "issue"
+                  ],
+                  "sourcePhrase": "Compré una mochila en una tienda online. En resumen, es un tema complejo.",
+                  "feedbackOnError": {
+                    "type": "word_order",
+                    "explanation": "El orden correcto es «I bought a backpack in an online shop In short it is a complex issue».",
+                    "ruleRef": "gp-b2-advanced-quantifiers"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "El orden produce una frase natural."
+                  }
+                },
+                {
+                  "type": "ClozeDragDrop",
+                  "id": "es-en-b2-u06-l09-e03",
+                  "passage": "I {{b1}} a {{b2}} in an online shop.",
+                  "blanks": [
+                    {
+                      "id": "b1",
+                      "answer": "bought",
+                      "options": [
+                        "bought",
+                        "online",
+                        "shop"
+                      ]
+                    },
+                    {
+                      "id": "b2",
+                      "answer": "backpack",
+                      "options": [
+                        "backpack",
+                        "online",
+                        "shop"
+                      ]
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "Las dos formas deben encajar con el contexto de la frase.",
+                    "ruleRef": "gp-b2-passive-voice"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Los dos huecos encajan con la situación."
+                  }
+                },
+                {
+                  "type": "SemanticMatch",
+                  "id": "es-en-b2-u06-l09-e04",
+                  "instructions": "Clasifica la función comunicativa de cada intervención.",
+                  "pairs": [
+                    {
+                      "left": "I bought a backpack in an online shop. In short, it is a complex issue.",
+                      "right": "Planteamiento",
+                      "register": "formal",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    },
+                    {
+                      "left": "The size was not right. However, it is worth qualifying that.",
+                      "right": "Concesión",
+                      "register": "neutral",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    },
+                    {
+                      "left": "I returned it and ordered another one. That said, it depends on the context.",
+                      "right": "Conclusión",
+                      "register": "informal",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "Cada intervención cumple una función comunicativa distinta.",
+                    "ruleRef": "gp-b2-advanced-quantifiers"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has identificado la función de cada intervención."
+                  }
+                },
+                {
+                  "type": "SemanticMatch",
+                  "id": "es-en-b2-u06-l09-e05",
+                  "instructions": "Distingue el registro de cada intervención.",
+                  "pairs": [
+                    {
+                      "left": "I bought a backpack in an online shop. In short, it is a complex issue.",
+                      "right": "Formal",
+                      "register": "formal",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    },
+                    {
+                      "left": "The size was not right. However, it is worth qualifying that.",
+                      "right": "Neutral",
+                      "register": "neutral",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    },
+                    {
+                      "left": "I returned it and ordered another one. That said, it depends on the context.",
+                      "right": "Informal",
+                      "register": "informal",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "register",
+                    "explanation": "El registro cambia según el contexto y la relación con el interlocutor.",
+                    "ruleRef": "gp-b2-passive-voice"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has distinguido el registro de cada intervención."
+                  }
+                },
+                {
+                  "type": "AudioOnlyPrompt",
+                  "id": "es-en-b2-u06-l09-e06",
+                  "audioText": "The size was not right. However, it is worth qualifying that.",
+                  "question": "¿Qué ha dicho el hablante?",
+                  "options": [
+                    "The size was not right. However, it is worth qualifying that.",
+                    "I bought a backpack in an online shop. In short, it is a complex issue.",
+                    "I returned it and ordered another one. That said, it depends on the context."
+                  ],
+                  "correctIndex": 0,
+                  "allowSlowPlayback": true,
+                  "feedbackOnError": {
+                    "type": "comprehension",
+                    "explanation": "El audio dice «The size was not right. However, it is worth qualifying that.».",
+                    "ruleRef": "gp-b2-advanced-quantifiers"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has comprendido el mensaje del audio."
+                  }
+                },
+                {
+                  "type": "AudioOnlyPrompt",
+                  "id": "es-en-b2-u06-l09-e07",
+                  "audioText": "I returned it and ordered another one. That said, it depends on the context.",
+                  "question": "¿Cuál es la idea principal?",
+                  "options": [
+                    "I returned it and ordered another one. That said, it depends on the context.",
+                    "I bought a backpack in an online shop. In short, it is a complex issue.",
+                    "The size was not right. However, it is worth qualifying that."
+                  ],
+                  "correctIndex": 0,
+                  "allowSlowPlayback": false,
+                  "feedbackOnError": {
+                    "type": "comprehension",
+                    "explanation": "El audio dice «I returned it and ordered another one. That said, it depends on the context.».",
+                    "ruleRef": "gp-b2-passive-voice"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has identificado la idea principal."
+                  }
+                },
+                {
+                  "type": "ListenType",
+                  "id": "es-en-b2-u06-l09-e08",
+                  "audioText": "I returned it and ordered another one. That said, it depends on the context.",
+                  "transcription": "I returned it and ordered another one. That said, it depends on the context.",
+                  "feedbackOnError": {
+                    "type": "spelling",
+                    "explanation": "Escribe exactamente «I returned it and ordered another one. That said, it depends on the context.».",
+                    "ruleRef": "gp-b2-advanced-quantifiers"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La transcripción coincide con el audio."
+                  }
+                },
+                {
+                  "type": "SpeakRepeat",
+                  "id": "es-en-b2-u06-l09-e09",
+                  "targetPhrase": "I returned it and ordered another one. That said, it depends on the context.",
+                  "audioText": "I returned it and ordered another one. That said, it depends on the context.",
+                  "feedbackOnError": {
+                    "type": "pronunciation",
+                    "explanation": "Repite «I returned it and ordered another one. That said, it depends on the context.» con claridad.",
+                    "ruleRef": "gp-b2-advanced-quantifiers"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La frase se entiende y mantiene el ritmo."
+                  }
+                },
+                {
+                  "type": "FreeSpeakingPrompt",
+                  "id": "es-en-b2-u06-l09-e10",
+                  "prompt": "Argumenta y matiza una opinión sobre una compra online.",
+                  "minTokens": 20,
+                  "conceptClusters": [
+                    [
+                      "bought"
+                    ],
+                    [
+                      "backpack"
+                    ],
+                    [
+                      "online"
+                    ]
+                  ],
+                  "modelAnswer": "I bought a backpack in an online shop. In short, it is a complex issue. The size was not right. However, it is worth qualifying that. I returned it and ordered another one. That said, it depends on the context.",
+                  "selfAssessmentCriteria": [
+                    "¿La respuesta argumenta y responde a la tarea?",
+                    "¿Usa las dos estructuras gramaticales de la lección?",
+                    "¿Incluye una concesión o una matización?"
+                  ],
+                  "grammarRuleRefs": [
+                    "gp-b2-advanced-quantifiers",
+                    "gp-b2-passive-voice"
+                  ],
+                  "timeLimitSeconds": 90,
+                  "minWpm": 70,
+                  "maxWpm": 160,
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "La respuesta modelo desarrolla una opinión con matices y una concesión.",
+                    "ruleRef": "gp-b2-advanced-quantifiers"
+                  }
+                }
+              ]
+            },
+            {
+              "id": "es-en-b2-u06-l10",
+              "title": "Evaluación: una compra",
+              "cefrLevel": "B2",
+              "scenario": "Situación comunicativa avanzada sobre una compra reciente.",
+              "canDo": "Puedo argumentar y matizar sobre una compra reciente.",
+              "grammarPoints": [
+                {
+                  "id": "gp-b2-advanced-quantifiers",
+                  "label": "Advanced quantifiers",
+                  "description": "Little, few, plenty of y most matizan la cantidad."
+                },
+                {
+                  "id": "gp-b2-passive-voice",
+                  "label": "Passive voice",
+                  "description": "Be + participio desplaza el foco a la acción o al resultado."
+                }
+              ],
+              "vocabFrequencyBand": "3000-5000",
+              "culturalNotes": [
+                {
+                  "idiom": "change of heart",
+                  "note": "Modismo avanzado útil para hablar de una compra reciente.",
+                  "translation": "expresión figurada"
+                }
+              ],
+              "microLesson": {
+                "title": "Evaluación: una compra",
+                "goals": [
+                  "Usar vocabulario avanzado de una compra reciente.",
+                  "Aplicar advanced quantifiers y passive voice.",
+                  "Argumentar y matizar sobre una compra reciente."
+                ],
+                "sections": [
+                  {
+                    "heading": "Lengua en contexto",
+                    "body": "Advanced quantifiers: Little, few, plenty of y most matizan la cantidad. Passive voice: Be + participio desplaza el foco a la acción o al resultado.",
+                    "examples": [
+                      {
+                        "source": "Fui a la tienda a cambiar una camiseta. Sin embargo, conviene matizarlo.",
+                        "target": "I went to the shop to change a T-shirt. However, it is worth qualifying that."
+                      },
+                      {
+                        "source": "El dependiente fue muy amable. Dicho esto, depende del contexto.",
+                        "target": "The shop assistant was very kind. That said, it depends on the context."
+                      }
+                    ]
+                  }
+                ]
+              },
+              "glossary": [
+                {
+                  "term": "I went to the shop to change a T-shirt. However, it is worth qualifying that.",
+                  "translations": [
+                    "Fui a la tienda a cambiar una camiseta. Sin embargo, conviene matizarlo."
+                  ]
+                },
+                {
+                  "term": "The shop assistant was very kind. That said, it depends on the context.",
+                  "translations": [
+                    "El dependiente fue muy amable. Dicho esto, depende del contexto."
+                  ]
+                },
+                {
+                  "term": "In the end I bought a cheaper jacket. In other words, it is worth considering.",
+                  "translations": [
+                    "Al final compré una chaqueta más barata. En otras palabras, merece la pena considerarlo."
+                  ]
+                }
+              ],
+              "exercises": [
+                {
+                  "type": "MultipleChoice",
+                  "id": "es-en-b2-u06-l10-e01",
+                  "question": "¿Cuál es la opción correcta para «Fui a la tienda a cambiar una camiseta. Sin embargo, conviene matizarlo.»?",
+                  "options": [
+                    "I went to the shop to change a T-shirt. However, it is worth qualifying that.",
+                    "The shop assistant was very kind. That said, it depends on the context.",
+                    "In the end I bought a cheaper jacket. In other words, it is worth considering."
+                  ],
+                  "correctIndex": 0,
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "«Fui a la tienda a cambiar una camiseta. Sin embargo, conviene matizarlo.» se dice «I went to the shop to change a T-shirt. However, it is worth qualifying that.».",
+                    "ruleRef": "gp-b2-advanced-quantifiers"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has elegido la traducción correcta."
+                  }
+                },
+                {
+                  "type": "OrderWords",
+                  "id": "es-en-b2-u06-l10-e02",
+                  "tokens": [
+                    "went",
+                    "to",
+                    "the",
+                    "shop",
+                    "to",
+                    "change",
+                    "a",
+                    "T",
+                    "shirt",
+                    "However",
+                    "it",
+                    "is",
+                    "worth",
+                    "qualifying",
+                    "that",
+                    "I"
+                  ],
+                  "answerTokens": [
+                    "I",
+                    "went",
+                    "to",
+                    "the",
+                    "shop",
+                    "to",
+                    "change",
+                    "a",
+                    "T",
+                    "shirt",
+                    "However",
+                    "it",
+                    "is",
+                    "worth",
+                    "qualifying",
+                    "that"
+                  ],
+                  "sourcePhrase": "Fui a la tienda a cambiar una camiseta. Sin embargo, conviene matizarlo.",
+                  "feedbackOnError": {
+                    "type": "word_order",
+                    "explanation": "El orden correcto es «I went to the shop to change a T shirt However it is worth qualifying that».",
+                    "ruleRef": "gp-b2-advanced-quantifiers"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "El orden produce una frase natural."
+                  }
+                },
+                {
+                  "type": "ClozeDragDrop",
+                  "id": "es-en-b2-u06-l10-e03",
+                  "passage": "I {{b1}} to the {{b2}} to change a T-shirt.",
+                  "blanks": [
+                    {
+                      "id": "b1",
+                      "answer": "went",
+                      "options": [
+                        "went",
+                        "change",
+                        "shirt"
+                      ]
+                    },
+                    {
+                      "id": "b2",
+                      "answer": "shop",
+                      "options": [
+                        "shop",
+                        "change",
+                        "shirt"
+                      ]
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "Las dos formas deben encajar con el contexto de la frase.",
+                    "ruleRef": "gp-b2-passive-voice"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Los dos huecos encajan con la situación."
+                  }
+                },
+                {
+                  "type": "SemanticMatch",
+                  "id": "es-en-b2-u06-l10-e04",
+                  "instructions": "Clasifica la función comunicativa de cada intervención.",
+                  "pairs": [
+                    {
+                      "left": "I went to the shop to change a T-shirt. However, it is worth qualifying that.",
+                      "right": "Planteamiento",
+                      "register": "formal",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    },
+                    {
+                      "left": "The shop assistant was very kind. That said, it depends on the context.",
+                      "right": "Concesión",
+                      "register": "neutral",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    },
+                    {
+                      "left": "In the end I bought a cheaper jacket. In other words, it is worth considering.",
+                      "right": "Conclusión",
+                      "register": "informal",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "vocabulary",
+                    "explanation": "Cada intervención cumple una función comunicativa distinta.",
+                    "ruleRef": "gp-b2-advanced-quantifiers"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has identificado la función de cada intervención."
+                  }
+                },
+                {
+                  "type": "SemanticMatch",
+                  "id": "es-en-b2-u06-l10-e05",
+                  "instructions": "Distingue el registro de cada intervención.",
+                  "pairs": [
+                    {
+                      "left": "I went to the shop to change a T-shirt. However, it is worth qualifying that.",
+                      "right": "Formal",
+                      "register": "formal",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    },
+                    {
+                      "left": "The shop assistant was very kind. That said, it depends on the context.",
+                      "right": "Neutral",
+                      "register": "neutral",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    },
+                    {
+                      "left": "In the end I bought a cheaper jacket. In other words, it is worth considering.",
+                      "right": "Informal",
+                      "register": "informal",
+                      "nuance": "Clasifica la función comunicativa de la intervención."
+                    }
+                  ],
+                  "feedbackOnError": {
+                    "type": "register",
+                    "explanation": "El registro cambia según el contexto y la relación con el interlocutor.",
+                    "ruleRef": "gp-b2-passive-voice"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has distinguido el registro de cada intervención."
+                  }
+                },
+                {
+                  "type": "AudioOnlyPrompt",
+                  "id": "es-en-b2-u06-l10-e06",
+                  "audioText": "The shop assistant was very kind. That said, it depends on the context.",
+                  "question": "¿Qué ha dicho el hablante?",
+                  "options": [
+                    "The shop assistant was very kind. That said, it depends on the context.",
+                    "I went to the shop to change a T-shirt. However, it is worth qualifying that.",
+                    "In the end I bought a cheaper jacket. In other words, it is worth considering."
+                  ],
+                  "correctIndex": 0,
+                  "allowSlowPlayback": true,
+                  "feedbackOnError": {
+                    "type": "comprehension",
+                    "explanation": "El audio dice «The shop assistant was very kind. That said, it depends on the context.».",
+                    "ruleRef": "gp-b2-advanced-quantifiers"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has comprendido el mensaje del audio."
+                  }
+                },
+                {
+                  "type": "AudioOnlyPrompt",
+                  "id": "es-en-b2-u06-l10-e07",
+                  "audioText": "In the end I bought a cheaper jacket. In other words, it is worth considering.",
+                  "question": "¿Cuál es la idea principal?",
+                  "options": [
+                    "In the end I bought a cheaper jacket. In other words, it is worth considering.",
+                    "I went to the shop to change a T-shirt. However, it is worth qualifying that.",
+                    "The shop assistant was very kind. That said, it depends on the context."
+                  ],
+                  "correctIndex": 0,
+                  "allowSlowPlayback": false,
+                  "feedbackOnError": {
+                    "type": "comprehension",
+                    "explanation": "El audio dice «In the end I bought a cheaper jacket. In other words, it is worth considering.».",
+                    "ruleRef": "gp-b2-passive-voice"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "Has identificado la idea principal."
+                  }
+                },
+                {
+                  "type": "ListenType",
+                  "id": "es-en-b2-u06-l10-e08",
+                  "audioText": "In the end I bought a cheaper jacket. In other words, it is worth considering.",
+                  "transcription": "In the end I bought a cheaper jacket. In other words, it is worth considering.",
+                  "feedbackOnError": {
+                    "type": "spelling",
+                    "explanation": "Escribe exactamente «In the end I bought a cheaper jacket. In other words, it is worth considering.».",
+                    "ruleRef": "gp-b2-advanced-quantifiers"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La transcripción coincide con el audio."
+                  }
+                },
+                {
+                  "type": "SpeakRepeat",
+                  "id": "es-en-b2-u06-l10-e09",
+                  "targetPhrase": "In the end I bought a cheaper jacket. In other words, it is worth considering.",
+                  "audioText": "In the end I bought a cheaper jacket. In other words, it is worth considering.",
+                  "feedbackOnError": {
+                    "type": "pronunciation",
+                    "explanation": "Repite «In the end I bought a cheaper jacket. In other words, it is worth considering.» con claridad.",
+                    "ruleRef": "gp-b2-advanced-quantifiers"
+                  },
+                  "feedbackOnSuccess": {
+                    "explanation": "La frase se entiende y mantiene el ritmo."
+                  }
+                },
+                {
+                  "type": "FreeSpeakingPrompt",
+                  "id": "es-en-b2-u06-l10-e10",
+                  "prompt": "Argumenta y matiza una opinión sobre una compra reciente.",
+                  "minTokens": 20,
+                  "conceptClusters": [
+                    [
+                      "went"
+                    ],
+                    [
+                      "shop"
+                    ],
+                    [
+                      "change"
+                    ]
+                  ],
+                  "modelAnswer": "I went to the shop to change a T-shirt. However, it is worth qualifying that. The shop assistant was very kind. That said, it depends on the context. In the end I bought a cheaper jacket. In other words, it is worth considering.",
+                  "selfAssessmentCriteria": [
+                    "¿La respuesta argumenta y responde a la tarea?",
+                    "¿Usa las dos estructuras gramaticales de la lección?",
+                    "¿Incluye una concesión o una matización?"
+                  ],
+                  "grammarRuleRefs": [
+                    "gp-b2-advanced-quantifiers",
+                    "gp-b2-passive-voice"
+                  ],
+                  "timeLimitSeconds": 90,
+                  "minWpm": 70,
+                  "maxWpm": 160,
+                  "feedbackOnError": {
+                    "type": "grammar",
+                    "explanation": "La respuesta modelo desarrolla una opinión con matices y una concesión.",
+                    "ruleRef": "gp-b2-advanced-quantifiers"
+                  }
+                }
+              ]
+            }
+          ]
         }
       ]
     },
