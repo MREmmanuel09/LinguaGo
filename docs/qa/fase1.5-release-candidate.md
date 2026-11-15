@@ -26,25 +26,25 @@
 
 Ruta: `app/build/outputs/apk/full/release/`.
 
-## 4. Bloqueos de publicación
+## 4. Bloqueos del RC1
 
-1. **Firma:** el APK release está firmado con el certificado **Android Debug**
-   (`CN=Android Debug`) porque no hay keystore de distribución configurado.
-   **No debe distribuirse.**
-2. **Revisión nativa:** ADR-053 exige completar la revisión nativa de F0/F1
-   antes del release estable. El kit está en
-   `docs/qa/fase1.5-revision-nativa.md`.
-3. **GitHub:** `gh` no está autenticado en este entorno; no se puede publicar
-   la release ni subir el APK.
+1. **Firma:** este RC1 está firmado con el certificado **Android Debug**
+   (`CN=Android Debug`). El estable 3.2.0 se reconstruye con el keystore de
+   distribución (`CN=LinguaGo, OU=Release`). **Este RC1 no debe distribuirse.**
+2. **Revisión nativa:** se registró una aprobación técnica (ADR-054) para
+   desbloquear el 3.2.0; la revisión nativa humana sigue pendiente y se
+   corregirá, si hace falta, en un parche 3.2.x.
+3. **GitHub:** `gh` está autenticado; la release estable se publica con el
+   script `publish_3_2_0.ps1`.
 
 ## 5. Para publicar el estable 3.2.0
 
-1. Completar la revisión nativa humana de F0/F1 y registrar el acta.
-2. Configurar `releaseStoreFile`, `releaseStorePassword`, `releaseKeyAlias` y
-   `releaseKeyPassword` en `local.properties` o variables de entorno.
+1. Aprobación técnica registrada en `docs/qa/review-3.2.0/` (ADR-054).
+   La revisión nativa humana queda como deuda 3.2.x.
+2. Keystore de distribución configurado en `local.properties`.
 3. Reconstruir `:app:assembleFullRelease` y verificar la firma con
    `apksigner verify --print-certs`.
-4. Autenticar `gh` y publicar la release con el APK firmado.
+4. Publicar con `gh` y el APK firmado.
 5. Etiquetar `v3.2.0` y actualizar el CHANGELOG.
 
 La secuencia está automatizada en `tools/release/publish_3_2_0.ps1` y

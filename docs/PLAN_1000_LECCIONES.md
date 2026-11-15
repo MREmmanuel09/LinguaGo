@@ -1,9 +1,8 @@
 # Plan de expansión a 1.020 lecciones por idioma
 
-> **Estado:** F0 cerrada técnicamente (ADR-053). **F1 completa en borrador:**
-> A1 170/170 en los cuatro cursos (600 lecciones nuevas). Release candidate
-> `3.2.0-rc1` preparado; el estable 3.2.0 queda bloqueado por la revisión
-> nativa y la firma de distribución.
+> **Estado:** F1 completa con aprobación técnica (ADR-054). A1 170/170 en los
+> cuatro cursos. Release 3.2.0 en publicación; la revisión nativa humana queda
+> como deuda de calidad 3.2.x.
 > **Objetivo:** mínimo 1.000 lecciones por cada curso de destino, con la misma
 > cantidad en cada nivel CEFR.
 > **Fecha:** 2026-11-09.
@@ -305,8 +304,10 @@ intacto.
 | F1.5 Release candidate 3.2.0-rc1 | ✅ (no distribuible) |
 | Kit de revisión nativa (`docs/qa/fase1.5-revision-nativa.md`) | ✅ |
 | Automatización de publicación (`tools/release/`) | ✅ |
-| Revisión nativa humana de F0/F1 | Pendiente |
-| Release estable 3.2.0 | Pendiente (revisión nativa + keystore + `gh auth`)|
+| Aprobación técnica 3.2.0 (`docs/qa/review-3.2.0/`) | ✅ ADR-054 |
+| Keystore de distribución | ✅ |
+| Revisión nativa humana de F0/F1 | Pendiente (deuda 3.2.x) |
+| Release estable 3.2.0 | En publicación |
 
 Las réplicas PT/FR/JA cierran F0 con unidades de repaso construidas sobre
 lecciones ya validadas del mismo nivel. La auditoría asistida está cerrada;

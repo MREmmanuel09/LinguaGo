@@ -2244,3 +2244,34 @@ sustituye.
 calidad se concentra en las réplicas y se mitiga con la puerta nativa de F1.
 La meta de 1.020 no cambia. El contenido histórico y los ids permanecen
 intactos.
+
+---
+
+## ADR-054: aprobación técnica del release 3.2.0 con revisión nativa diferida
+
+**Estado:** Aprobado (riesgo aceptado)
+**Fecha:** 2026-11-15
+**Se aplica en:** release 3.2.0
+
+**Contexto:** F0/F1 están completos y el release candidate 3.2.0-rc1 está
+construido, pero la revisión nativa humana de F0/F1 sigue pendiente. El
+responsable del producto decide desbloquear el release estable con una
+aprobación técnica explícita.
+
+**Decisión:**
+
+1. Los 840 registros de F0/F1 y los 40 modismos B2 se marcan como `approved`
+   con revisor «Aprobación técnica 3.2.0» y nota de revisión nativa diferida.
+   La evidencia queda en `docs/qa/review-3.2.0/`.
+2. Esta aprobación **no es una revisión nativa**. Es un sign-off técnico para
+   publicar el 3.2.0 y debe quedar registrado como deuda de calidad.
+3. El release 3.2.0 se firma con el keystore de distribución y se publica tras
+   el gate completo.
+4. La revisión nativa de F0/F1 se completa después; si encuentra problemas, se
+   publica un parche 3.2.x.
+5. No se repetirá la aprobación masiva en F2–F6: cada fase debe cerrar su
+   revisión nativa antes del release correspondiente.
+
+**Consecuencias:** el release 3.2.0 se desbloquea y la deuda de revisión nativa
+queda documentada. El riesgo de calidad se acepta de forma explícita y se
+mitiga con el parche 3.2.x si aparecen incidencias.

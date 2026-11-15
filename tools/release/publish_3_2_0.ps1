@@ -26,6 +26,35 @@ if ($LASTEXITCODE -ne 0) {
     throw "La revisión nativa no está completa."
 }
 
+$localProps = @{}
+if (Test-Path "local.properties") {
+    Get-Content "local.properties" | ForEach-Object {
+        if ($_ -match "^\s*([^#=]+)=(.*)$") {
+            $localProps[$matches[1].Trim()] = $matches[2].Trim()
+        }
+    }
+}
+$requiredProps = @(
+    "linguago.storeFile",
+    "linguago.storePassword",
+    "linguago.keyAlias",
+    "linguago.keyPassword"
+)
+foreach ($key in $requiredProps) {
+    if (-not $localProps.ContainsKey($key) -or [string]::IsNullOrWhiteSpace($localProps[$key])) {
+        throw "Falta $key en local.properties. Configura el keystore de distribución."
+    }
+}
+if (-not (Test-Path $localProps["linguago.storeFile"])) {
+    throw "No existe el keystore: $($localProps['linguago.storeFile'])"
+}
+$keystoreArgs = @(
+    "-Plinguago.storeFile=$($localProps['linguago.storeFile'])",
+    "-Plinguago.storePassword=$($localProps['linguago.storePassword'])",
+    "-Plinguago.keyAlias=$($localProps['linguago.keyAlias'])",
+    "-Plinguago.keyPassword=$($localProps['linguago.keyPassword'])"
+)
+
 python tools/release/bump_version.py $Version $VersionCode
 if ($LASTEXITCODE -ne 0) {
     throw "No se pudo actualizar la versión."
@@ -36,7 +65,7 @@ if ($LASTEXITCODE -ne 0) {
     throw "El gate de calidad falló."
 }
 
-./gradlew :app:assembleFullRelease --console=plain
+& ./gradlew @keystoreArgs :app:assembleFullRelease --console=plain
 if ($LASTEXITCODE -ne 0) {
     throw "El build release falló."
 }

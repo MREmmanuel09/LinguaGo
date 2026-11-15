@@ -2,7 +2,11 @@
 
 **Fecha:** 2026-11-15
 **Estado:** plan preparado; revisión humana pendiente.
-**Decisión:** ADR-052 y ADR-053.
+**Decisión:** ADR-052, ADR-053 y ADR-054.
+
+> El release 3.2.0 se publica con **aprobación técnica** (ADR-054). Esta
+> revisión nativa sigue pendiente y se usará para corregir el contenido en un
+> parche 3.2.x si aparecen incidencias.
 
 ## 1. Alcance
 

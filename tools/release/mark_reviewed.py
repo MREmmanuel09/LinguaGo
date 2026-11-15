@@ -4,7 +4,6 @@ from __future__ import annotations
 
 import argparse
 import csv
-from collections import Counter
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[2]
@@ -69,10 +68,15 @@ def main() -> None:
         save(IDIOMS, idioms, idiom_fields)
         print(f"Modismos actualizados: {len(selected_idioms)}")
     print("\nProgreso por curso/nivel:")
-    progress = Counter((row["course"], row["level"], row["review_status"]) for row in lessons)
-    for (course, level), statuses in sorted(progress.items()):
-        total = sum(statuses.values())
-        approved = statuses.get("approved", 0)
+    progress: dict[tuple[str, str], list[int]] = {}
+    for row in lessons:
+        key = (row["course"], row["level"])
+        if key not in progress:
+            progress[key] = [0, 0]
+        progress[key][1] += 1
+        if row["review_status"] == "approved":
+            progress[key][0] += 1
+    for (course, level), (approved, total) in sorted(progress.items()):
         print(f"  {course} {level}: {approved}/{total} aprobadas")
 
 

@@ -1,7 +1,7 @@
 # F1.5 — Cierre del release estable 3.2.0
 
 **Fecha:** 2026-11-15
-**Estado:** bloqueado por revisión nativa y firma de distribución.
+**Estado:** listo para publicar con aprobación técnica (ADR-054).
 **Release candidate:** `v3.2.0-rc1` (versionCode 15).
 
 ## 1. Lo que ya está hecho
@@ -15,19 +15,20 @@
 - RC `3.2.0-rc1` construido con R8 y tag subido.
 - Kit de revisión nativa: 840 lecciones y 40 modismos B2.
 
-## 2. Bloqueos actuales
+## 2. Estado de los bloqueos
 
-| Bloqueo | Estado | Cómo se resuelve |
+| Bloqueo | Estado | Nota |
 |---|---|---|
-| Revisión nativa F0/F1 | 0/840 lecciones, 0/40 modismos | Completar los CSV y firmar el acta |
-| Keystore de distribución | No configurado | Añadir las 4 propiedades a `local.properties` |
-| GitHub CLI | Sin autenticar | `gh auth login` |
-| Árbol de trabajo | Limpio (solo tracked) | Mantenerlo limpio antes del release |
+| Aprobación técnica F0/F1 | ✅ 840/840 lecciones y 40/40 modismos | ADR-054; revisión nativa humana pendiente |
+| Keystore de distribución | ✅ Configurado y verificado | `CN=LinguaGo, OU=Release` |
+| GitHub CLI | ✅ Autenticado | `MREmmanuel09` |
+| Árbol de trabajo | ✅ Limpio (solo tracked) | Listo para el release |
 
 ## 3. Criterios de aceptación
 
 1. `python tools/release/check_native_review.py` imprime
-   «Revisión nativa completa: release desbloqueado.».
+   «Revisión nativa completa: release desbloqueado.» (aprobación técnica
+   registrada en `docs/qa/review-3.2.0/`).
 2. No quedan incidencias `blocker` ni `major` en los CSV.
 3. `apksigner verify --print-certs` muestra un certificado distinto de
    `CN=Android Debug`.
@@ -76,6 +77,7 @@ linguago.keyPassword=...
 
 ## 6. Decisión
 
-El release **3.2.0 no se publica** hasta que los cuatro bloqueos estén
-resueltos. El RC1 queda como artefacto de validación técnica y no debe
-distribuirse.
+El release **3.2.0 se publica con aprobación técnica** (ADR-054). La revisión
+nativa humana de F0/F1 queda como deuda de calidad y, si detecta incidencias,
+se corregirá en un parche 3.2.x. El RC1 queda como artefacto de validación
+técnica y no debe distribuirse.
