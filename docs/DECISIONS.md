@@ -2275,3 +2275,77 @@ aprobación técnica explícita.
 **Consecuencias:** el release 3.2.0 se desbloquea y la deuda de revisión nativa
 queda documentada. El riesgo de calidad se acepta de forma explícita y se
 mitiga con el parche 3.2.x si aparecen incidencias.
+
+---
+
+## ADR-055: rediseño de identidad visual al prototipo «Warm Cream & Teal»
+
+**Estado:** Propuesto (pendiente de aprobación del responsable)
+**Fecha:** 2026-11-15
+**Se aplica en:** `core-ui` (tokens, tipografía, componentes) y pantallas de
+`feature-*`. El plan operativo está en `docs/PLAN_REDESIGN_UI.md`.
+
+**Contexto:** existe un prototipo de diseño nuevo (vídeo de referencia y cuatro
+pantallas: ruta, lección, escucha/STT y repaso) con una identidad cálida de
+fondos crema, acentos teal y notas terracota. La identidad actual (violeta
+`#6C5CE7`, fondo blanco, Material 3 por defecto) no coincide. Cambiar los
+tokens es un cambio de identidad y exige ADR. Las invariantes I1–I9 no se
+tocan: FSRS, Room y el progreso intocable se mantienen; la nueva métrica
+«gemas» vive en DataStore y en el snapshot de sincronización, no en Room.
+
+**Decisión:**
+
+1. **Paleta canónica «Warm Cream & Teal»** (valores hex que reemplazan a los
+   actuales en `LinguaTokens`; se expone el mapa de sustitución):
+
+   | Token actual | Nuevo | Hex |
+   |---|---|---|
+   | `PRIMARY_HEX` | `TEAL_HEX` | `0xFF1F6E64` |
+   | `PRIMARY_EDGE_HEX` | `TEAL_EDGE_HEX` | `0xFF0E4B44` |
+   | `ACCENT_HEX` | `SAGE_HEX` | `0xFFA3C4A8` |
+   | `DESTRUCTIVE_HEX` | `CORAL_HEX` | `0xFFE2725B` |
+   | `WARNING_HEX` | `AMBER_HEX` | `0xFFE2A83D` |
+   | `INFO_HEX` | `SLATE_HEX` | `0xFF6E7B8B` |
+   | `BG_HEX` | `CREAM_HEX` | `0xFFF6F2E9` |
+   | `BG_SECONDARY_HEX` | `CREAM_SURFACE_HEX` | `0xFFFCF8EF` |
+   | `BORDER_HEX` | `CREAM_BORDER_HEX` | `0xFFE2D8C3` |
+
+   Tokens nuevos: `TAN_HEX 0xFFE4D3B4`, `TAN_EDGE_HEX 0xFFC9B58C`,
+   `TAN_SHADOW_HEX 0xFFB99F76`, `TERRACOTTA_HEX 0xFFC96A4A`,
+   `SHEET_WARM_HEX 0xFFF6DFC8`, `SHEET_WARM_SURFACE_HEX 0xFFEBD5B5`,
+   `SHEET_TITLE_INK_HEX 0xFFA6552F`, y tintas AA: `TEAL_INK 0xFFF2F7F5`,
+   `SAGE_INK 0xFF2F4A33`, `CORAL_INK 0xFFFDF3EF`, `AMBER_INK 0xFF5A3E08`.
+   `HEART_RED` y `CHEST_GOLD` se conservan (coinciden con el prototipo).
+
+2. **Tipografía:** Manrope (variable, pesos 400/500/700/800) empaquetada en
+   `res/font` para respetar I1 (offline). Fallback Roboto.
+
+3. **Formas y sombras:** píldoras `RoundedCornerShape(999)`, tarjetas 16–20 dp,
+   chips con borde tan y sombra inferior marrón (`TAN_SHADOW`) para el efecto
+   3D; bottom sheet con esquina superior 24 dp y fondo `SHEET_WARM`.
+
+4. **Movimiento:** el vídeo del prototipo es la referencia. Duraciones en
+   `LinguaMotion`: chips 80 ms (escala 0,97), sheet 350 ms desacelerado,
+   nodos del camino 220 ms spring, micrófono con anillos 1,2 s en bucle,
+   baraja de repaso 260 ms, botón Continuar 200 ms.
+
+5. **Gemas (💎):** nueva métrica de gamificación en DataStore, incluida en el
+   snapshot de sincronización con fusión monótona (máximo, I4). No se toca
+   Room. La pestaña actual `Home` pasa a llamarse «Ruta» y `Profile` «Progreso»
+   (solo strings y navegación, sin cambios de modelo).
+
+6. **Mascota Lumi:** el prototipo no la muestra. Se oculta de la ruta en R4 y
+   su futuro se decide en R7 (no se elimina código todavía).
+
+7. **Modo oscuro:** se deriva de la paleta nueva y se define en R7 con tests
+   de contraste; no bloquea R1–R6.
+
+**Alternativas consideradas:** conservar el violeta (descartada: el prototipo
+es la referencia del producto); adoptar solo parte de la paleta (descartada
+por incoherencia); `dynamicColor` de Material (descartada: rompe la identidad).
+
+**Consecuencias:** cambia la identidad visual (los tests de identidad de color
+en `core-ui` se actualizan junto con los tokens); los componentes existentes se
+reestilizan y se añaden los del prototipo; el snapshot de sincronización gana
+el campo `gems` con fusión máxima y tests; la mascota queda oculta a la espera
+de decisión; el QA nativo del usuario se hace después del rediseño.
