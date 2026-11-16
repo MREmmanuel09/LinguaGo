@@ -33,8 +33,9 @@ public object PlacementExamGenerator {
      */
     public fun generate(
         course: Course,
-        questionsPerLevel: Int = 4,
+        questionsPerLevel: Int = 10,
         random: Random = Random.Default,
+        supported: (Exercise) -> Boolean = ::isSupported,
     ): PlacementExam {
         val perLevel = questionsPerLevel.coerceAtLeast(1)
         val candidatesByLevel = linkedMapOf<CefrLevel, MutableList<PlacementQuestion>>()
@@ -46,7 +47,7 @@ public object PlacementExamGenerator {
                     val bucket = candidatesByLevel[lesson.cefrLevel] ?: continue
                     lesson.exercises
                         .asSequence()
-                        .filter(::isSupported)
+                        .filter(supported)
                         .forEach { exercise ->
                             bucket +=
                                 PlacementQuestion(
