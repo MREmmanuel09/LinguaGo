@@ -5,6 +5,8 @@ import android.media.AudioAttributes
 import android.media.AudioFormat
 import android.media.AudioTrack
 import android.util.Log
+import com.k2fsa.sherpa.onnx.GeneratedAudio
+import com.k2fsa.sherpa.onnx.GenerationConfig
 import com.k2fsa.sherpa.onnx.OfflineTts
 import com.k2fsa.sherpa.onnx.OfflineTtsConfig
 import com.k2fsa.sherpa.onnx.OfflineTtsModelConfig
@@ -26,13 +28,13 @@ import javax.inject.Inject
 import javax.inject.Singleton
 
 /**
- * TTS offline Piper via sherpa-onnx (ADR-003/ADR-010/ADR-020, Fase 2.2).
- * Carga los paquetes `vits-piper-<voz>` dejados por `fetchVoiceModels`
- * (assets), los instala en filesDir de forma atómica la primera vez,
- * verifica SHA-256 (ModelIntegrity) y sintetiza. El warmup ([warmUp]) corre
- * siempre en `Dispatchers.IO` con Mutex por idioma y estado observable
- * ([stateFor]); [isReadyFor] solo lee memoria. Sin voz instalada degrada y
- * [DefaultTtsEngine] cae al TTS del sistema.
+ * TTS offline Piper via sherpa-onnx 2.0 (ADR-003/ADR-010/ADR-020/ADR-057).
+ * Sin espeak-ng en runtime: las voces usan fonemas IPA precalculados en
+ * `phonemes.bin` (generados en build por tools/tts/prepare_voices.py) y un
+ * lexicón de respaldo. Los paquetes se instalan en filesDir de forma atómica,
+ * se verifican por SHA-256 (onnx + datos fonéticos) y solo entonces se cargan.
+ * [canSpeak] indica cobertura fonética del texto conocido; si no la hay,
+ * [DefaultTtsEngine] degrada al TTS del sistema sin perder la función.
  */
 @Singleton
 public class PiperTtsEngine
@@ -49,6 +51,12 @@ public class PiperTtsEngine
 
         override fun stateFor(language: Language): StateFlow<AudioEngineState> = warmup.stateOf(language)
 
+        /** `true` si la voz Piper puede pronunciar [text] sin fallback del sistema. */
+        public fun canSpeak(
+            language: Language,
+            text: String,
+        ): Boolean = isReadyFor(language) && voices[language]?.phonemes?.canSpeak(text) == true
+
         override suspend fun warmUp(language: Language) {
             warmup.warmUpOnce(language) {
                 withContext(Dispatchers.IO) { warmUpBlocking(language) }
@@ -61,14 +69,39 @@ public class PiperTtsEngine
             speed: Float,
         ) {
             if (!isReadyFor(language)) warmUp(language)
+            val voice = voices[language] ?: return
             lane(language).use { engine ->
                 withContext(Dispatchers.IO) {
                     currentCoroutineContext().ensureActive()
-                    val audio = engine.generate(text = text, sid = 0, speed = speed)
+                    val audio = synthesize(engine, voice, text, speed)
                     currentCoroutineContext().ensureActive()
-                    playBlocking(audio.samples, audio.sampleRate)
+                    if (audio != null) playBlocking(audio.samples, audio.sampleRate)
                 }
             }
+        }
+
+        private fun synthesize(
+            engine: OfflineTts,
+            voice: PiperVoice,
+            text: String,
+            speed: Float,
+        ): GeneratedAudio? {
+            val sentences = voice.phonemes.sentencesFor(text)
+            if (sentences != null) {
+                val config =
+                    GenerationConfig(
+                        speed = speed,
+                        phonemeCodepoints = sentences,
+                    )
+                return runCatching { engine.generateWithConfig("", config) }
+                    .onFailure { error -> Log.w(TAG, "generateWithConfig falló para ${voice.id}", error) }
+                    .getOrNull()
+            }
+            // Fallback local vía lexicón (útil si apareciera texto fuera del
+            // precálculo en desarrollo); la ruta de producción usa canSpeak().
+            return runCatching { engine.generate(text = VoicePhonemeData.normalizeKey(text), sid = 0, speed = speed) }
+                .onFailure { error -> Log.w(TAG, "generate por lexicón falló para ${voice.id}", error) }
+                .getOrNull()
         }
 
         /** Verifica, extrae e instancia la voz en IO; publica el estado. */
@@ -142,67 +175,38 @@ public class PiperTtsEngine
         private fun lane(language: Language): NativeSerialLane<OfflineTts> =
             lanes.computeIfAbsent(language) { NativeSerialLane { engine -> engine.release() } }
 
-        /** Voz instalada en filesDir con onnx verificado por SHA-256. */
+        /** Voz instalada en filesDir con archivos verificados por SHA-256. */
         private fun verifiedVoice(entry: VoiceEntry): PiperVoice? {
             val dir = File(context.filesDir, entry.path)
-            val dataDir = voiceDataDir(dir) ?: return null
-            return if (voiceFilesValid(dir, entry, dataDir)) {
-                PiperVoice(dir = dir, id = entry.id, dataDir = dataDir)
-            } else {
-                null
-            }
+            if (!voiceFilesValid(dir, entry)) return null
+            val phonemes = VoicePhonemeData.load(File(dir, PHONEMES_FILE)) ?: return null
+            return PiperVoice(dir = dir, id = entry.id, phonemes = phonemes)
         }
 
         private fun voiceFilesValid(
             dir: File,
             entry: VoiceEntry,
-            dataDir: File,
-        ): Boolean =
-            hasVoiceFiles(dir, entry.id, dataDir) &&
-                ModelIntegrity
-                    .sha256Hex(File(dir, "${entry.id}.onnx"))
-                    .equals(entry.sha256, ignoreCase = true)
-
-        /**
-         * Datos espeak de la voz: primero la copia local de cachés antiguas y,
-         * si no existe, el árbol compartido extraído una sola vez (ADR-051).
-         */
-        private fun voiceDataDir(voiceDir: File): File? {
-            val local = File(voiceDir, ESPEAK_DIR)
-            if (isEspeakData(local)) return local
-            val shared = File(context.filesDir, SHARED_ESPEAK_PATH)
-            return shared.takeIf(::isEspeakData)
+        ): Boolean {
+            if (!hasVoiceFiles(dir, entry.id)) return false
+            val onnxHash = ModelIntegrity.sha256Hex(File(dir, "${entry.id}.onnx"))
+            if (!onnxHash.equals(entry.sha256, ignoreCase = true)) return false
+            return entry.files.all { file ->
+                val target = File(context.filesDir, file.path)
+                target.isFile && ModelIntegrity.sha256Hex(target).equals(file.sha256, ignoreCase = true)
+            }
         }
 
-        private fun isEspeakData(dir: File): Boolean = dir.isDirectory && dir.list()?.isNotEmpty() == true
-
-        /** Extrae `tts/<id>` y asegura el árbol espeak compartido. */
+        /** Extrae `tts/<id>` de assets e instala atómicamente. */
         private fun extractVoice(entry: VoiceEntry): PiperVoice? {
-            if (!ensureSharedEspeakData()) return null
             val installed =
                 AtomicInstall.install(
                     stagingDir = File(context.filesDir, "${entry.path}.staging"),
                     targetDir = File(context.filesDir, entry.path),
                     copy = { dir -> copyAssetTree(entry.path, dir) },
-                    verify = { dir ->
-                        val dataDir = voiceDataDir(dir)
-                        dataDir != null && voiceFilesValid(dir, entry, dataDir)
-                    },
+                    verify = { dir -> voiceFilesValid(dir, entry) },
                 ) ?: return null
-            val dataDir = voiceDataDir(installed) ?: return null
-            return PiperVoice(dir = installed, id = entry.id, dataDir = dataDir)
-        }
-
-        /** Instala `tts/espeak-ng-data` en filesDir una sola vez y la verifica. */
-        private fun ensureSharedEspeakData(): Boolean {
-            val target = File(context.filesDir, SHARED_ESPEAK_PATH)
-            if (isEspeakData(target)) return true
-            return AtomicInstall.install(
-                stagingDir = File(context.filesDir, "$SHARED_ESPEAK_PATH.staging"),
-                targetDir = target,
-                copy = { dir -> copyAssetTree(SHARED_ESPEAK_PATH, dir) },
-                verify = { dir -> isEspeakData(dir) },
-            ) != null
+            val phonemes = VoicePhonemeData.load(File(installed, PHONEMES_FILE)) ?: return null
+            return PiperVoice(dir = installed, id = entry.id, phonemes = phonemes)
         }
 
         /** Instanciación nativa (JNI, pesada): solo desde el warmup en IO. */
@@ -219,7 +223,7 @@ public class PiperTtsEngine
                             OfflineTtsVitsModelConfig(
                                 model = voice.onnxFile.absolutePath,
                                 tokens = voice.tokensFile.absolutePath,
-                                dataDir = voice.dataDir.absolutePath,
+                                lexicon = voice.lexiconFile.absolutePath,
                             ),
                         numThreads = NUM_THREADS,
                         debug = false,
@@ -232,6 +236,7 @@ public class PiperTtsEngine
             samples: FloatArray,
             sampleRate: Int,
         ) {
+            if (samples.isEmpty()) return
             val chunkSamples = maxOf(MIN_CHUNK_SAMPLES, sampleRate / CHUNKS_PER_SECOND)
             val track =
                 AudioTrack
@@ -281,7 +286,7 @@ public class PiperTtsEngine
                     AudioFormat.ENCODING_PCM_FLOAT,
                 ).coerceAtLeast(MIN_BUFFER_BYTES)
 
-        /** Copia recursiva (dir `espeak-ng-data` incluida). */
+        /** Copia recursiva de un árbol de assets a [target]. */
         private fun copyAssetTree(
             assetPath: String,
             target: File,
@@ -304,11 +309,11 @@ public class PiperTtsEngine
         private fun hasVoiceFiles(
             dir: File,
             id: String,
-            dataDir: File,
         ): Boolean =
             File(dir, "$id.onnx").isFile &&
                 File(dir, TOKENS_FILE).isFile &&
-                dataDir.isDirectory
+                File(dir, PHONEMES_FILE).isFile &&
+                File(dir, LEXICON_FILE).isFile
 
         /** Lee `manifest.json` de assets; vacío si falta o es inválido. */
         private fun readManifest(): List<VoiceEntry> =
@@ -318,12 +323,23 @@ public class PiperTtsEngine
                     val array = root.optJSONArray("tts") ?: JSONArray()
                     (0 until array.length()).map { index ->
                         val item = array.getJSONObject(index)
+                        val files = mutableListOf<VoiceFile>()
+                        val filesArray = item.optJSONArray("files") ?: JSONArray()
+                        for (f in 0 until filesArray.length()) {
+                            val file = filesArray.getJSONObject(f)
+                            files +=
+                                VoiceFile(
+                                    path = file.getString("path"),
+                                    sha256 = file.optString("sha256"),
+                                )
+                        }
                         VoiceEntry(
                             id = item.getString("id"),
                             engine = item.getString("engine"),
                             language = item.getString("language"),
                             path = item.getString("path"),
                             sha256 = item.optString("sha256"),
+                            files = files,
                         )
                     }
                 }
@@ -332,8 +348,8 @@ public class PiperTtsEngine
         private companion object {
             const val PIPER = "piper"
             const val TOKENS_FILE = "tokens.txt"
-            const val ESPEAK_DIR = "espeak-ng-data"
-            const val SHARED_ESPEAK_PATH = "tts/espeak-ng-data"
+            const val PHONEMES_FILE = "phonemes.bin"
+            const val LEXICON_FILE = "lexicon.txt"
             const val VOICE_MANIFEST_ASSET = "manifest.json"
             const val NUM_THREADS = 2
             const val MIN_BUFFER_BYTES = 8192
@@ -344,15 +360,21 @@ public class PiperTtsEngine
         }
     }
 
-/** Paquete Piper instalado: dir con `<id>.onnx` + tokens + espeak-ng-data. */
+/** Paquete Piper instalado con fonemas precalculados (ADR-057). */
 private data class PiperVoice(
     val dir: File,
     val id: String,
-    val dataDir: File,
+    val phonemes: VoicePhonemeData,
 ) {
     val onnxFile: File = File(dir, "$id.onnx")
     val tokensFile: File = File(dir, "tokens.txt")
+    val lexiconFile: File = File(dir, "lexicon.txt")
 }
+
+private data class VoiceFile(
+    val path: String,
+    val sha256: String,
+)
 
 /** Entrada del manifest de voces (models/manifest.json). */
 private data class VoiceEntry(
@@ -361,4 +383,5 @@ private data class VoiceEntry(
     val language: String,
     val path: String,
     val sha256: String,
+    val files: List<VoiceFile>,
 )

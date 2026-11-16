@@ -2421,3 +2421,91 @@ nueva licencia y sus avisos de terceros; las contribuciones externas pasan a
 requerir CLA; las releases antiguas no se pueden «cerrar» y deben seguir
 citándose bajo MIT/CC BY-SA.
 
+
+## ADR-057: TTS Piper sin espeak-ng en runtime y fonemas precalculados
+
+- **Fecha:** 2026-11-15
+- **Estado:** Aceptada
+
+### Contexto
+
+La release 3.4.0 incluía sherpa-onnx 1.13.5, que enlazaba y empaquetaba
+`espeak-ng-data`/símbolos de espeak-ng (GPL), incompatible con la distribución
+comercial propietaria. Además, algunas voces Piper usadas previamente no tenían
+cadena de licencias clara para redistribución comercial dentro del APK.
+
+### Decisión
+
+1. **Runtime sin GPL:** migrar a **sherpa-onnx 2.0.0** (Apache-2.0), que elimina
+   la dependencia de espeak en el binario. El APK no contiene `espeak-ng-data`
+   ni símbolos espeak.
+2. **Fonemas precalculados en build:** usar **espeak-ng 1.52.0** únicamente en
+   tiempo de build (vía `tools/tts/prepare_voices.py` y `espeakng-loader`) para
+   generar fonemas IPA por frase del contenido (`phonemes.bin`, formato LGP2),
+   `lexicon.txt` de respaldo y `tokens.txt` con alias PUA para clusters
+   vocálicos. Estos datos se empaquetan; espeak-ng no se distribuye.
+3. **API de síntesis:** `PiperTtsEngine` pasa `phonemeCodepoints` mediante
+   `GenerationConfig`/`generateWithConfig`. Si un texto no tiene cobertura
+   fonética, `DefaultTtsEngine` degrada al TTS del sistema (I3).
+4. **Voces comerciales empaquetadas:** solo voces con uso comercial permitido:
+   `en_US-ljspeech-medium` (dominio público), `fr_FR-siwis-medium` (CC BY 4.0),
+   `pt_BR-faber-medium` (CC0; base Hi-Fi TTS CC BY 4.0). Las fuentes, hashes
+   originales y atribuciones se fijan en `models/voices.lock.json`.
+5. **Integridad:** `models/manifest.json` incluye SHA-256 del ONNX parcheado y de
+   `phonemes.bin`, `lexicon.txt` y `tokens.txt`, verificados en runtime antes de
+   cargar la voz.
+6. **Distribución:** las voces TTS se empaquetan en los APK de release (no se
+   descargan on-demand). Los datos fonéticos no se commitean y se regeneran con
+   la herramienta de build.
+
+### Consecuencias
+
+- Se elimina el riesgo de copyleft en runtime y se documenta la atribución de
+  datasets/modelos.
+- La calidad de voz depende de la fidelidad del precálculo; `--check` y la
+  comparación de IDs Piper/sherpa previenen desincronizaciones.
+- Añadir texto pronunciable nuevo requiere regenerar datos fonéticos antes de
+  empaquetar un release con voces.
+- CI valida licencias/metadatos (`validateVoiceLicenses`); la generación de
+  modelos sigue siendo un paso manual/local.
+
+
+## ADR-058: Examen de nivelación dinámico con desbloqueo monótono
+
+- **Fecha:** 2026-11-15
+- **Estado:** Aceptada
+
+### Contexto
+
+El progreso se desbloquea de forma secuencial en el camino de aprendizaje
+(`buildPathItems`): una lección no completada bloquea las siguientes. Usuarios
+con conocimientos previos no pueden acceder a contenido acorde a su nivel sin
+completar todo lo anterior (fricción), pero el progreso es intocable (I4).
+
+### Decisión
+
+1. **Examen por idioma/curso, dinámico:** generar en cliente, offline, un examen
+   de nivelación por curso (`es-en/es-pt/es-fr/es-ja`) muestreando ejercicios
+   auto-evaluables del contenido empaquetado, estratificados por CEFR en orden
+   A1→C2. Cada intento usa muestreo aleatorio (preguntas y orden no fijos).
+2. **Tipos soportados (objetivos):** `MultipleChoice`, `Translate`,
+   `MatchPairs`, `OrderWords`, `KanaChoose`, `KanjiReading`, `ParticleFill`,
+   `SemanticMatch`, `ClozeDragDrop` (excluidos `SpeakRepeat`/`FreeSpeakingPrompt`
+   y ejercicios dependientes de audio obligatorio para la calificación).
+3. **Evaluación y umbral:** calificación con `ExerciseGrader`; bloques CEFR
+   consecutivos desde A1 se aprueban al alcanzar el umbral configurado (p. ej.
+   70%). El nivel alcanzado es el máximo bloque consecutivo aprobado.
+4. **Desbloqueo monótono (I4):** al finalizar se marcan como completadas las
+   lecciones del curso con `cefrLevel <= nivel alcanzado` mediante una operación
+   dedicada (`markLessonsCompletedByPlacement`) que **no** otorga XP, gemas,
+   racha ni actividad diaria y **nunca** degrada ni elimina progreso existente.
+   Es compatible con `SyncSnapshot.mergedWith` (OR de `completed`, máximos).
+5. **Acceso:** flujo accesible desde la app (p. ej. Ajustes/Perfil/Inicio) para
+   el curso seleccionado; puede repetirse por idioma sin regresión.
+
+### Consecuencias
+
+- Reduce fricción para usuarios con nivel previo sin romper I1/I3/I4/I9.
+- El muestreo depende del pool disponible por nivel/tipo en cada curso.
+- No sustituye la evaluación formativa de lecciones ni modifica contenidos.
+- Cambios futuros en umbrales/pool/tipos deben mantener la garantía monótona.

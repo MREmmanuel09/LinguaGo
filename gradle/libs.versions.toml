@@ -67,8 +67,10 @@ kotlinx-serialization-json = { module = "org.jetbrains.kotlinx:kotlinx-serializa
 okhttp = { module = "com.squareup.okhttp3:okhttp", version.ref = "okhttp" }
 okhttp-mockwebserver = { module = "com.squareup.okhttp3:mockwebserver", version.ref = "okhttp" }
 
-# Audio (sherpa-onnx vía JitPack, ADR-003)
-sherpa-onnx = { module = "com.github.k2-fsa.sherpa-onnx:sherpa-onnx", version = "v1.13.5" }
+# Audio (sherpa-onnx 2.0.0, ADR-003/ADR-057). AAR local en libs/ porque 2.0.0
+# no expone artefacto Android consumible en JitPack/Maven Central con el
+# mismo módulo; el build release local debe tener libs/sherpa-onnx-v2.0.0.aar.
+sherpa-onnx = { module = "com.github.k2-fsa.sherpa-onnx:sherpa-onnx", version = "v2.0.0" }
 # STT offline (Vosk Small, Maven Central)
 vosk-android = { module = "com.alphacephei:vosk-android", version = "0.3.47" }
 

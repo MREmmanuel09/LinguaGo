@@ -32,15 +32,16 @@ plugins {
     alias(libs.plugins.detekt) apply false
 }
 
-// Descarga manual de los modelos de voz (ADR-003/006/010, Fase 2.2/2.3):
-// TTS Piper (tag `tts-models` de sherpa-onnx, tar.bz2) y STT Vosk Small
-// (alphacephei.com, zip). Recorre `models/manifest.json` y rellena los
-// SHA-256: TTS = hash del `<voz>.onnx`; STT = `files[]` con hash por
-// archivo. Tarea MANUAL: no esta wired al build ni al CI (no descarga
-// ~300 MB por build; sin modelos la app degrada al TTS del sistema, I3).
+// Descarga manual de los modelos de voz (ADR-003/006/010/057).
+// TTS: delega en tools/tts/prepare_voices.py, que descarga las voces fijadas
+// en models/voices.lock.json, precalcula fonemas con espeak-ng 1.52.0 (solo
+// build time) y actualiza la sección `tts` de models/manifest.json.
+// STT (Vosk Small): descarga y rellena `files[]` con SHA-256 por archivo.
+// Tarea MANUAL: no está conectada al build ni al CI; sin modelos la app
+// degrada al TTS/STT del sistema (I3).
 tasks.register("fetchVoiceModels") {
     group = "linguago"
-    description = "Descarga los modelos de voz y llena models/manifest.json."
+    description = "Descarga/prepara los modelos de voz y llena models/manifest.json."
     val modelsRoot = rootDir.absolutePath
     doLast {
         val modelsDir = File(modelsRoot, "models")
@@ -48,6 +49,34 @@ tasks.register("fetchVoiceModels") {
         val downloadsDir = File(modelsRoot, ".voice-downloads")
         val baseUrl = "https://alphacephei.com/vosk/models/"
         downloadsDir.mkdirs()
+
+        // --- TTS: fonemas precalculados + voces limpias (ADR-057) ---
+        val pythonCandidates =
+            listOf("python", "python3", "py").firstOrNull { cmd ->
+                runCatching {
+                    ProcessBuilder(cmd, "--version")
+                        .redirectErrorStream(true)
+                        .start()
+                        .waitFor() == 0
+                }.getOrDefault(false)
+            } ?: throw IllegalStateException(
+                "Se requiere Python para preparar voces TTS (tools/tts/prepare_voices.py). " +
+                    "Instala Python y `pip install -r tools/tts/requirements.txt`.",
+            )
+        val prepare =
+            ProcessBuilder(
+                pythonCandidates,
+                File(modelsRoot, "tools/tts/prepare_voices.py").absolutePath,
+                "--download",
+            ).directory(File(modelsRoot))
+                .redirectErrorStream(true)
+                .start()
+        val prepareOut = prepare.inputStream.bufferedReader().readText()
+        if (prepare.waitFor() != 0) {
+            throw IllegalStateException("prepare_voices.py falló:\n$prepareOut")
+        }
+        println(prepareOut.trimEnd())
+
         val manifest = JsonSlurper().parse(manifestFile) as MutableMap<Any?, Any?>
 
         fun fetch(url: String, target: File) {
@@ -81,52 +110,6 @@ tasks.register("fetchVoiceModels") {
         /** Layouts de vosk: estándar (am/final.mdl) y legacy plano (final.mdl). */
         fun hasRecognizer(dir: File): Boolean =
             dir.walkTopDown().any { file -> file.name.equals("final.mdl", ignoreCase = true) }
-
-        val ttsDirs = mutableListOf<File>()
-        for (entry in manifest["tts"] as List<*>) {
-            val tts = entry as MutableMap<Any?, Any?>
-            val id = tts["id"] as String
-            val asset = "vits-piper-$id.tar.bz2"
-            val tarball = File(downloadsDir, asset)
-            fetch("https://github.com/k2-fsa/sherpa-onnx/releases/download/tts-models/$asset", tarball)
-            val ttsDir = File(modelsDir, "tts")
-            val dir = File(ttsDir, id)
-            if (!File(dir, "$id.onnx").isFile) {
-                ttsDir.mkdirs()
-                println("Extract: $asset -> ${dir.path}")
-                val process = extract(tarball, ttsDir)
-                val out = process.inputStream.bufferedReader().readText()
-                if (process.waitFor() != 0) throw IllegalStateException("tar falló: $out")
-                val srcDir = File(ttsDir, "vits-piper-$id")
-                if (!srcDir.renameTo(dir)) throw IllegalStateException("no se pudo mover a ${dir.path}")
-            }
-            require(File(dir, "$id.onnx").isFile && File(dir, "tokens.txt").isFile) {
-                "paquete $id incompleto"
-            }
-            ttsDirs += dir
-            val hash = sha256Hex(File(dir, "$id.onnx"))
-            println("SHA-256: tts/$id = $hash")
-            tts["sha256"] = hash
-        }
-
-        // Los paquetes Piper repiten el mismo árbol espeak-ng-data (~17 MB)
-        // en cada voz. Se conserva una sola copia bajo models/tts/espeak-ng-data
-        // y el empaquetado la inyecta una vez (ADR-051).
-        val sharedEspeak = File(modelsDir, "tts/espeak-ng-data")
-        if (ttsDirs.any { dir -> File(dir, "espeak-ng-data").isDirectory }) {
-            val source = ttsDirs.first { dir -> File(dir, "espeak-ng-data").isDirectory }
-            if (!sharedEspeak.isDirectory) {
-                println("Dedupe: ${source.name}/espeak-ng-data -> tts/espeak-ng-data")
-                File(source, "espeak-ng-data").copyRecursively(sharedEspeak)
-            }
-            ttsDirs.forEach { dir -> File(dir, "espeak-ng-data").deleteRecursively() }
-        }
-        // Solo hablan las voces EN/PT/FR; los diccionarios de espeak del
-        // resto de idiomas no se cargan y añaden peso (ADR-051).
-        val requiredDictionaries = setOf("en_dict", "pt_dict", "fr_dict", "es_dict")
-        sharedEspeak.listFiles()
-            ?.filter { file -> file.isFile && file.name.endsWith("_dict") && file.name !in requiredDictionaries }
-            ?.forEach { file -> file.delete() }
 
         for (entry in manifest["stt"] as List<*>) {
             val stt = entry as MutableMap<Any?, Any?>
@@ -167,6 +150,60 @@ tasks.register("fetchVoiceModels") {
             JsonOutput.prettyPrint(JsonOutput.toJson(manifest)) + "\n",
         )
         println("OK: models/manifest.json actualizado; `./gradlew :app:assembleFullDebug` empaqueta models/ como assets.")
+    }
+}
+
+// Verificación de licencias de voces TTS (ADR-057). Valida metadatos y
+// atribuciones sin requerir que los modelos estén descargados (CI).
+tasks.register("validateVoiceLicenses") {
+    group = "verification"
+    description = "Valida models/voices.lock.json y la coherencia legal de las voces TTS."
+    val root = rootDir.absolutePath
+    val lockFile = File(root, "models/voices.lock.json")
+    val manifestFile = File(root, "models/manifest.json")
+    val noticesFile = File(root, "THIRD_PARTY_NOTICES.md")
+    inputs.files(lockFile, manifestFile, noticesFile)
+    doLast {
+        if (!lockFile.isFile) {
+            throw org.gradle.api.GradleException("validateVoiceLicenses: falta models/voices.lock.json")
+        }
+        val mapper = ObjectMapper()
+        val lock = mapper.readTree(lockFile)
+        val voices = lock.path("voices")
+        if (!voices.isArray || voices.size() == 0) {
+            throw org.gradle.api.GradleException("validateVoiceLicenses: voices.lock.json sin voces")
+        }
+        val allowed = setOf("public domain", "cc by 4.0", "cc0", "cc0 1.0")
+        val notices = noticesFile.readText()
+        for (voice in voices) {
+            val id = voice.path("id").asText()
+            val license = voice.path("datasetLicense").asText().lowercase()
+            require(license.isNotBlank()) { "validateVoiceLicenses: $id sin datasetLicense" }
+            require(allowed.any { license.contains(it) }) {
+                "validateVoiceLicenses: licencia no permitida para uso comercial en $id: $license"
+            }
+            require(voice.path("rawSha256").asText().isNotBlank()) { "validateVoiceLicenses: $id sin rawSha256" }
+            require(voice.path("attribution").asText().isNotBlank()) { "validateVoiceLicenses: $id sin attribution" }
+            require(notices.contains(id)) { "validateVoiceLicenses: $id no aparece en THIRD_PARTY_NOTICES.md" }
+        }
+        val manifest = mapper.readTree(manifestFile)
+        val tts = manifest.path("tts")
+        if (tts.isArray) {
+            for (entry in tts) {
+                val sha = entry.path("sha256").asText()
+                if (sha.isNotBlank()) {
+                    val files = entry.path("files")
+                    if (files.isArray) {
+                        for (f in files) {
+                            require(f.path("sha256").asText().isNotBlank()) {
+                                "validateVoiceLicenses: hash vacío en files[] de ${entry.path("id").asText()}"
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        println("VALID: licencias de voces TTS (${voices.size()} voces)")
     }
 }
 

@@ -57,6 +57,7 @@ include(
     ":feature:feature-sync",
     ":feature:feature-settings",
     ":feature:feature-review",
+    ":feature:feature-placement",
 )
 
 include(

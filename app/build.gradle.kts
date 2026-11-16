@@ -6,48 +6,40 @@ plugins {
     id("androidx.baselineprofile")
 }
 
-// Distribución por idioma (ADR-017): cada flavor empaqueta SOLO los modelos
-// de voz de su idioma; `full` (dev/CI) lleva los cuatro. Sin límite duro por
-// flavor: se monitoriza el peso (holgura bajo 2 GB en GitHub Releases) sin
-// bloquear el release por diferencias de ±5 MB.
+// Distribución por idioma (ADR-017/ADR-057): cada flavor empaqueta SOLO los
+// modelos de voz de su idioma; `full` (dev/CI) lleva los cuatro. Sin espeak-ng
+// en runtime: los fonemas van precalculados en phonemes.bin/lexicon.txt.
 val modelsRoot = rootProject.file("models")
-val sharedEspeakAsset = "tts/espeak-ng-data"
 val voiceAssetsByFlavor: Map<String, List<String>> =
     linkedMapOf(
         "en" to
             listOf(
-                "tts/en_US-amy-medium",
-                sharedEspeakAsset,
+                "tts/en_US-ljspeech-medium",
                 "stt/vosk-model-small-en-us-0.15",
             ),
         "pt" to
             listOf(
                 "tts/pt_BR-faber-medium",
-                sharedEspeakAsset,
                 "stt/vosk-model-small-pt-0.3",
             ),
         "fr" to
             listOf(
                 "tts/fr_FR-siwis-medium",
-                sharedEspeakAsset,
                 "stt/vosk-model-small-fr-0.22",
             ),
         "ja" to listOf("stt/vosk-model-small-ja-0.22"),
         "full" to
             listOf(
-                "tts/en_US-amy-medium",
+                "tts/en_US-ljspeech-medium",
                 "tts/pt_BR-faber-medium",
                 "tts/fr_FR-siwis-medium",
-                sharedEspeakAsset,
                 "stt",
             ),
     )
 
 // Una tarea Sync por flavor (registrada una sola vez): copia SOLO los
 // modelos del idioma a build/generated/voiceAssets/<flavor> con las rutas
-// de assets que esperan los motores (tts/<voz>, stt/<modelo>). Las voces
-// excluyen su copia local de espeak-ng-data; el árbol compartido se copia
-// una sola vez desde models/tts/espeak-ng-data (ADR-051).
+// de assets que esperan los motores (tts/<voz>, stt/<modelo>).
 val syncVoiceAssetsByFlavor: Map<String, TaskProvider<Sync>> =
     voiceAssetsByFlavor.mapValues { (flavor, paths) ->
         val camel = flavor.replaceFirstChar { it.uppercase() }
@@ -59,15 +51,7 @@ val syncVoiceAssetsByFlavor: Map<String, TaskProvider<Sync>> =
         tasks.register<Sync>("sync${camel}VoiceAssets") {
             into(dest)
             paths.forEach { rel ->
-                if (rel.startsWith("tts/") && rel != sharedEspeakAsset) {
-                    into(rel) {
-                        from(File(modelsRoot, rel)) {
-                            exclude("espeak-ng-data/**")
-                        }
-                    }
-                } else {
-                    into(rel) { from(File(modelsRoot, rel)) }
-                }
+                into(rel) { from(File(modelsRoot, rel)) }
             }
             from(File(modelsRoot, "manifest.json"))
         }
@@ -85,8 +69,8 @@ android {
     namespace = "dev.linguago.app"
     defaultConfig {
         applicationId = "dev.linguago.app"
-        versionCode = 18
-        versionName = "3.4.0"
+        versionCode = 19
+        versionName = "3.5.0"
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
 
         buildConfigField("String", "GOOGLE_CLIENT_ID", "\"$googleClientId\"")
@@ -212,6 +196,7 @@ dependencies {
     implementation(project(":feature:feature-sync"))
     implementation(project(":feature:feature-settings"))
     implementation(project(":feature:feature-review"))
+    implementation(project(":feature:feature-placement"))
 
     implementation(project(":content:content-es-en"))
     implementation(project(":content:content-es-pt"))

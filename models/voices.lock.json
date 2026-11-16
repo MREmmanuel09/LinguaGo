@@ -1,0 +1,49 @@
+{
+    "version": 1,
+    "notes": "Fuente de verdad de las voces Piper empaquetadas (ADR-057). El SHA-256 es el del .onnx original de rhasspy/piper-voices, antes de anadir los metadatos que sherpa-onnx necesita; tools/tts/prepare_voices.py lo verifica en cada descarga. Solo se admiten voces cuya cadena de entrenamiento permite uso comercial segun Piper.",
+    "commercialUseList": "https://github.com/OHF-Voice/piper1-gpl/blob/main/docs/COMMERCIAL_USE.md",
+    "voices": [
+        {
+            "id": "en_US-ljspeech-medium",
+            "language": "en",
+            "espeakVoice": "en",
+            "languageName": "English",
+            "modelUrl": "https://huggingface.co/rhasspy/piper-voices/resolve/main/en/en_US/ljspeech/medium/en_US-ljspeech-medium.onnx?download=true",
+            "configUrl": "https://huggingface.co/rhasspy/piper-voices/resolve/main/en/en_US/ljspeech/medium/en_US-ljspeech-medium.onnx.json?download=true",
+            "modelCardUrl": "https://huggingface.co/rhasspy/piper-voices/resolve/main/en/en_US/ljspeech/medium/MODEL_CARD",
+            "rawSha256": "6f52a751e2349abe7a76735eb09dc1875298c77ea2342ffd2fef79ff81b87f22",
+            "datasetLicense": "Public domain",
+            "datasetUrl": "https://keithito.com/LJ-Speech-Dataset/",
+            "attribution": "LJ Speech Dataset (public domain). Voz entrenada por Bryce Beattie (https://brycebeattie.com/files/tts/).",
+            "licenseText": "licenses/PUBLIC-DOMAIN.txt"
+        },
+        {
+            "id": "fr_FR-siwis-medium",
+            "language": "fr",
+            "espeakVoice": "fr",
+            "languageName": "French",
+            "modelUrl": "https://huggingface.co/rhasspy/piper-voices/resolve/main/fr/fr_FR/siwis/medium/fr_FR-siwis-medium.onnx?download=true",
+            "configUrl": "https://huggingface.co/rhasspy/piper-voices/resolve/main/fr/fr_FR/siwis/medium/fr_FR-siwis-medium.onnx.json?download=true",
+            "modelCardUrl": "https://huggingface.co/rhasspy/piper-voices/resolve/main/fr/fr_FR/siwis/medium/MODEL_CARD",
+            "rawSha256": "b1d946fd68d0347155fa59bce0a018924abbef3c1561181db45ca463d83963ef",
+            "datasetLicense": "CC BY 4.0",
+            "datasetUrl": "https://datashare.is.ed.ac.uk/handle/10283/2353",
+            "attribution": "The SIWIS French Speech Synthesis Database (Yamagishi, Honnet, Garner y Lazaridis, 2017; University of Edinburgh; DOI 10.7488/ds/1705), CC BY 4.0. Modelo base Hi-Fi TTS (voz de Cori Samuel, reader 92), CC BY 4.0.",
+            "licenseText": "licenses/CC-BY-4.0.txt"
+        },
+        {
+            "id": "pt_BR-faber-medium",
+            "language": "pt",
+            "espeakVoice": "pt-br",
+            "languageName": "Portuguese",
+            "modelUrl": "https://huggingface.co/rhasspy/piper-voices/resolve/main/pt/pt_BR/faber/medium/pt_BR-faber-medium.onnx?download=true",
+            "configUrl": "https://huggingface.co/rhasspy/piper-voices/resolve/main/pt/pt_BR/faber/medium/pt_BR-faber-medium.onnx.json?download=true",
+            "modelCardUrl": "https://huggingface.co/rhasspy/piper-voices/resolve/main/pt/pt_BR/faber/medium/MODEL_CARD",
+            "rawSha256": "75e913eb463db0b6ac7ddf68d3e4c9ac19ace36dc3b710a81039b448352b8ffc",
+            "datasetLicense": "CC0",
+            "datasetUrl": "https://github.com/OHF-Voice/voice-datasets",
+            "attribution": "Faber voice dataset (CC0). Modelo base Hi-Fi TTS (voz de Cori Samuel, reader 92), CC BY 4.0.",
+            "licenseText": "licenses/CC0-1.0.txt"
+        }
+    ]
+}

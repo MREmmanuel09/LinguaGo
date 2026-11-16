@@ -51,6 +51,7 @@ import java.util.Locale
 @Composable
 fun SettingsScreen(
     onOpenSync: () -> Unit,
+    onOpenPlacement: (String) -> Unit = {},
     modifier: Modifier = Modifier,
     viewModel: SettingsViewModel = hiltViewModel(),
 ) {
@@ -64,6 +65,7 @@ fun SettingsScreen(
         onSelectCourse = viewModel::selectCourse,
         onClearVoiceCache = viewModel::clearVoiceCache,
         onOpenSync = onOpenSync,
+        onOpenPlacement = { uiState.selectedCourseId?.let(onOpenPlacement) },
         modifier = modifier,
     )
 }
@@ -77,6 +79,7 @@ private fun SettingsContent(
     onSelectCourse: (String) -> Unit,
     onClearVoiceCache: () -> Unit,
     onOpenSync: () -> Unit,
+    onOpenPlacement: () -> Unit = {},
     modifier: Modifier = Modifier,
 ) {
     val colors = MaterialTheme.colorScheme
@@ -184,6 +187,20 @@ private fun SettingsContent(
                 },
             subtitle = uiState.selectedCourseId?.let(::courseTitleFor),
             onClick = { showCourseSwitcher = true },
+            modifier = Modifier.fillMaxWidth(),
+        )
+
+        Spacer(Modifier.height(8.dp))
+        ActionRowCard3D(
+            title = "Examen de nivelación",
+            subtitle =
+                if (uiState.selectedCourseId != null) {
+                    "Descubre tu nivel y desbloquea lecciones (${courseTitleFor(uiState.selectedCourseId)})"
+                } else {
+                    "Elige un curso para hacer el examen"
+                },
+            enabled = uiState.selectedCourseId != null,
+            onClick = onOpenPlacement,
             modifier = Modifier.fillMaxWidth(),
         )
 
@@ -331,6 +348,7 @@ private fun SettingsScreenPreview() {
             onSelectCourse = {},
             onClearVoiceCache = {},
             onOpenSync = {},
+            onOpenPlacement = {},
         )
     }
 }

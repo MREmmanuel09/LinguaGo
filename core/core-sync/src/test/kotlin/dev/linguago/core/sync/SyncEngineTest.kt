@@ -46,6 +46,8 @@ public class SyncEngineTest {
             scorePercent: Int,
         ): Result<Unit> = Result.success(Unit)
 
+        override suspend fun markLessonsCompletedByPlacement(lessonIds: List<LessonId>): Result<Int> = Result.success(0)
+
         override fun observeLessonProgress(): Flow<List<LessonProgress>> = MutableStateFlow(emptyList())
 
         override fun observeDailyActivity(days: Int): Flow<List<DailyActivity>> = MutableStateFlow(emptyList())

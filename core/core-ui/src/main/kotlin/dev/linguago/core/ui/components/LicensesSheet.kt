@@ -15,9 +15,8 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 
 /**
- * Hoja de licencias y créditos (ADR-008/ADR-056): la licencia comercial
- * propia del proyecto y las atribuciones de terceros (OFL, Apache-2.0,
- * MIT/CC0), accesible desde Ajustes.
+ * Hoja de licencias y créditos (ADR-008/ADR-056/ADR-057): licencia comercial
+ * propia y atribuciones de terceros, accesible desde Ajustes.
  */
 @Composable
 public fun LicensesSheet(
@@ -41,27 +40,25 @@ public fun LicensesSheet(
                         "LinguaGo — software propietario: todos los derechos " +
                             "reservados. El uso comercial, la redistribución y la " +
                             "modificación del código y del contenido requieren " +
-                            "autorización previa del titular. El contenido " +
-                            "pedagógico tiene licencia comercial propia.",
+                            "autorización previa del titular.",
                     style = MaterialTheme.typography.bodySmall,
                 )
                 Text(
                     text =
-                        "Componentes de terceros con licencias abiertas: " +
-                            "tipografía Nunito (SIL OFL 1.1), síntesis de voz " +
-                            "Piper y sherpa-onnx (MIT/CC0/Apache-2.0), " +
-                            "reconocimiento de voz Vosk y modelos Kaldi " +
-                            "(Apache-2.0), JNA (LGPL-2.1 o Apache-2.0), " +
-                            "Jetpack Compose, Kotlin y AndroidX (Apache-2.0). " +
-                            "Consulta LICENSE, LICENSE-CONTENT y " +
-                            "THIRD_PARTY_NOTICES.md del repositorio para los " +
-                            "textos completos.",
+                        "Voces TTS Piper empaquetadas (offline, fonemas precalculados): " +
+                            "en_US-ljspeech-medium (LJ Speech, dominio público), " +
+                            "fr_FR-siwis-medium (SIWIS, CC BY 4.0; atribución: Yamagishi et al. 2017, " +
+                            "University of Edinburgh, DOI 10.7488/ds/1705; base Hi-Fi TTS CC BY 4.0), " +
+                            "pt_BR-faber-medium (Faber, CC0 1.0; base Hi-Fi TTS CC BY 4.0). " +
+                            "No se incluye espeak-ng en el APK.",
                     style = MaterialTheme.typography.bodySmall,
                 )
                 Text(
                     text =
-                        "Los modelos de voz no se redistribuyen con la app; se " +
-                            "descargan on-demand y se verifican por SHA-256 (I7).",
+                        "Componentes de terceros: sherpa-onnx 2.0.0, Vosk/Kaldi, AndroidX, " +
+                            "Jetpack Compose, Kotlin, kotlinx, OkHttp/Okio, Dagger Hilt (Apache-2.0), " +
+                            "JNA (LGPL-2.1 o Apache-2.0), tipografía Nunito si aplica (SIL OFL 1.1). " +
+                            "Textos completos en assets/licenses/ y en THIRD_PARTY_NOTICES.md del repositorio.",
                     style = MaterialTheme.typography.bodySmall,
                 )
             }

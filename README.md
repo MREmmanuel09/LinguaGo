@@ -10,7 +10,7 @@ Software propietario · Sin anuncios · Sin backend · 100% offline · Vidas con
 recuperación rápida
 
 [![CI](https://github.com/MREmmanuel09/LinguaGo/actions/workflows/ci.yml/badge.svg)](https://github.com/MREmmanuel09/LinguaGo/actions/workflows/ci.yml)
-![version](https://img.shields.io/badge/version-3.4.0-blue)
+![version](https://img.shields.io/badge/version-3.5.0-blue)
 ![Kotlin](https://img.shields.io/badge/Kotlin-2.4-7F52FF?logo=kotlin&logoColor=white)
 ![Android](https://img.shields.io/badge/Android-26%2B-3DDC84?logo=android&logoColor=white)
 ![License](https://img.shields.io/badge/license-Proprietary-red)
@@ -77,8 +77,8 @@ flowchart LR
 4. **Progreso intocable** — la sincronización nunca elimina avances del usuario.
 5. **Identidad original** — cero elementos de terceros en marca, arte o contenido.
 6. **Software propietario** — código y contenido bajo licencia comercial
-   (todos los derechos reservados desde la 3.4.0); las dependencias de
-   terceros conservan sus licencias (ADR-056).
+   (todos los derechos reservados desde la 3.4.0); las dependencias y recursos
+   de terceros conservan sus licencias y atribuciones (ADR-056/ADR-057).
 7. **Testabilidad** — toda lógica de negocio es testeable en aislamiento.
 8. **Accesibilidad** — TalkBack, contraste y tamaños dinámicos desde el día uno.
 
@@ -141,9 +141,21 @@ cd LinguaGo
 
 ### Modelos de voz (TTS Piper / STT Vosk)
 
-Los modelos de voz **no se commitean** (ADR-006). Se descargan y verifican por
-SHA-256 contra `models/manifest.json`; ver `docs/MODELS.md`. Sin modelos, los
-ejercicios de escucha/pronunciación se degradan sin bloquear la app (I3).
+Los binarios de modelos **no se commitean** (ADR-006). Para un release con voz
+offline se preparan localmente y se empaquetan como assets:
+
+```bash
+# TTS: voces Piper limpias + fonemas precalculados (ADR-057, requiere Python/espeakng-loader)
+python tools/tts/prepare_voices.py --download
+
+# STT y hashes Vosk (también prepara TTS si se usa la tarea Gradle)
+./gradlew fetchVoiceModels
+
+./gradlew :app:assembleFullDebug  # empaqueta models/ como assets
+```
+
+Sin modelos empaquetados, la app degrada al TTS/STT del sistema (I3). Las voces
+TTS distribuidas usan fonemas precalculados y no incluyen espeak-ng en runtime.
 
 ## Sincronización con Google Drive (opcional)
 

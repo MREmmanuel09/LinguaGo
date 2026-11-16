@@ -5,11 +5,11 @@ import kotlinx.coroutines.flow.StateFlow
 import javax.inject.Inject
 
 /**
- * Compone TTS (ADR-010, Fase 2.2): Piper offline si la voz está instalada y
- * verificada; si no, el TTS del sistema (siempre disponible, único fallback
- * para japonés). Estrategia transparente para las features. [stateFor]
- * refleja el warmup del motor offline; [isReadyFor] incluye el fallback del
- * sistema (sin I/O, ADR-020).
+ * Compone TTS (ADR-010/ADR-057): Piper offline cuando la voz está instalada,
+ * verificada y tiene fonemas precalculados para el texto; si no, el TTS del
+ * sistema (siempre disponible y único fallback para japonés o textos sin
+ * cobertura). [stateFor] refleja el warmup del motor offline; [isReadyFor]
+ * incluye el fallback del sistema (sin I/O, ADR-020).
  */
 public class DefaultTtsEngine
     @Inject
@@ -31,7 +31,10 @@ public class DefaultTtsEngine
             language: Language,
             speed: Float,
         ) {
-            if (piper.isReadyFor(language)) {
+            if (!piper.isReadyFor(language)) {
+                piper.warmUp(language)
+            }
+            if (piper.canSpeak(language, text)) {
                 piper.speak(text, language, speed)
             } else {
                 system.speak(text, language, speed)

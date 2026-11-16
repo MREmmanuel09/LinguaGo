@@ -48,6 +48,7 @@ import dev.linguago.core.ui.util.rememberAnimationsEnabled
 import dev.linguago.feature.home.HomeScreen
 import dev.linguago.feature.lesson.LessonScreen
 import dev.linguago.feature.onboarding.OnboardingScreen
+import dev.linguago.feature.placement.PlacementScreen
 import dev.linguago.feature.profile.ProfileScreen
 import dev.linguago.feature.review.ReviewScreen
 import dev.linguago.feature.settings.SettingsScreen
@@ -160,12 +161,32 @@ fun LinguaApp(
                 composable(Routes.SETTINGS) {
                     SettingsScreen(
                         onOpenSync = { navController.navigate(Routes.SYNC) },
+                        onOpenPlacement = { courseId -> navController.navigate(Routes.placement(courseId)) },
                         modifier = Modifier.padding(innerPadding),
                     )
                 }
                 composable(Routes.SYNC) {
                     SyncScreen(
                         onBack = { navController.popBackStack() },
+                        modifier = Modifier.padding(innerPadding),
+                    )
+                }
+                composable(
+                    route = Routes.PLACEMENT,
+                    arguments =
+                        listOf(
+                            navArgument("courseId") {
+                                type = NavType.StringType
+                                defaultValue = "es-en"
+                            },
+                        ),
+                    enterTransition = { pushEnter(animations) },
+                    exitTransition = { pushExit(animations) },
+                    popEnterTransition = { popEnter(animations) },
+                    popExitTransition = { popExit(animations) },
+                ) {
+                    PlacementScreen(
+                        onExit = { navController.popBackStack() },
                         modifier = Modifier.padding(innerPadding),
                     )
                 }

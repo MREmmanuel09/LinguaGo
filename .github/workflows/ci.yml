@@ -42,8 +42,8 @@ jobs:
         with:
           cache-read-only: false
 
-      - name: ktlint + detekt + validateContent + tests
-        run: ./gradlew ktlintCheck detekt validateContent test
+      - name: ktlint + detekt + validateContent + validateVoiceLicenses + tests
+        run: ./gradlew ktlintCheck detekt validateContent validateVoiceLicenses test
 
       - name: assembleDebug (full, todos los idiomas)
         run: ./gradlew assembleFullDebug

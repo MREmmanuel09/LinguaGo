@@ -1,27 +1,69 @@
 {
     "version": 1,
-    "notes": "Los sha256 los llena `fetchVoiceModels` tras descargar cada paquete (ADR-006). tts: un sha por paquete (el .onnx); stt: un file[] con sha por archivo. Campos vac\u00edos = modelo no verificado; el engine no lo carga.",
+    "notes": "Los sha256 los llena tools/tts/prepare_voices.py (tts) y `fetchVoiceModels` (stt). En tts, sha256 es el .onnx ya parcheado con los metadatos de sherpa-onnx y files[] cubre phonemes.bin, lexicon.txt y tokens.txt. Campos vac\u00edos = modelo no verificado; el engine no lo carga.",
     "tts": [
         {
-            "id": "en_US-amy-medium",
+            "id": "en_US-ljspeech-medium",
             "engine": "piper",
             "language": "en",
-            "path": "tts/en_US-amy-medium",
-            "sha256": "fbaa8e36d8f26fe6f3ebb65cab461e629d8b37a5b7c5fb78fb64317db73e1c25"
-        },
-        {
-            "id": "pt_BR-faber-medium",
-            "engine": "piper",
-            "language": "pt",
-            "path": "tts/pt_BR-faber-medium",
-            "sha256": "956b4f1733903891c4ba0973d0603b2a3d8c09c8432fb3bb5203a90a7431daca"
+            "path": "tts/en_US-ljspeech-medium",
+            "sha256": "210a7e9df8e5f791e64e9d358cb175b0c661c3942f0566ef1013d4dbbe0ab8a2",
+            "files": [
+                {
+                    "path": "tts/en_US-ljspeech-medium/phonemes.bin",
+                    "sha256": "35230931526bb061003c91e8746bf11fdab9d8d90cf53de6e8f51c3deee68dc6"
+                },
+                {
+                    "path": "tts/en_US-ljspeech-medium/lexicon.txt",
+                    "sha256": "4033758840d54d6ea956e6611926115421bbbccb1b57be4e569692d0594356d4"
+                },
+                {
+                    "path": "tts/en_US-ljspeech-medium/tokens.txt",
+                    "sha256": "e3041056706c57cf1436ff74a4c9bc7084456be1ef3d597faf149b124caec1b6"
+                }
+            ]
         },
         {
             "id": "fr_FR-siwis-medium",
             "engine": "piper",
             "language": "fr",
             "path": "tts/fr_FR-siwis-medium",
-            "sha256": "b015076c2bedcff22fbedd5da6ffb49b7d0abb2e3bdc51e1a7906e0000e411ed"
+            "sha256": "cdbe82547231ba196df241a8a5606cca4910b53214c8ae4a2cfcc3635cd5b40a",
+            "files": [
+                {
+                    "path": "tts/fr_FR-siwis-medium/phonemes.bin",
+                    "sha256": "e6e6b1241bb9787e23b54d557c940b4394190340cbb15160701054ff277d5446"
+                },
+                {
+                    "path": "tts/fr_FR-siwis-medium/lexicon.txt",
+                    "sha256": "e08a0c80587007e331f761f473426ade8dfc4da48d903a8f6ac4fc49ce6400b5"
+                },
+                {
+                    "path": "tts/fr_FR-siwis-medium/tokens.txt",
+                    "sha256": "b3ac37586ed1e582e69addb9e31a14044b466fd8ace41706585d43e8d76d651f"
+                }
+            ]
+        },
+        {
+            "id": "pt_BR-faber-medium",
+            "engine": "piper",
+            "language": "pt",
+            "path": "tts/pt_BR-faber-medium",
+            "sha256": "6ca7070360c677e3e2fd77ef8f804d37e9bcfa3a17a4a67c4ee743464ba695bd",
+            "files": [
+                {
+                    "path": "tts/pt_BR-faber-medium/phonemes.bin",
+                    "sha256": "02df648e2298d03225f5d6a25d4878f501fc418a510d286372c695363a20dce6"
+                },
+                {
+                    "path": "tts/pt_BR-faber-medium/lexicon.txt",
+                    "sha256": "a0f9810d1725b1c8318a53a0582ff1256dcc22e8a7049c81df3879ccd6ebc0b1"
+                },
+                {
+                    "path": "tts/pt_BR-faber-medium/tokens.txt",
+                    "sha256": "b3ac37586ed1e582e69addb9e31a14044b466fd8ace41706585d43e8d76d651f"
+                }
+            ]
         }
     ],
     "stt": [

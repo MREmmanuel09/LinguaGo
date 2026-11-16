@@ -106,6 +106,8 @@ private class RecordingProgressRepository : ProgressRepository {
         return Result.success(Unit)
     }
 
+    override suspend fun markLessonsCompletedByPlacement(lessonIds: List<LessonId>): Result<Int> = Result.success(0)
+
     override fun observeLessonProgress(): Flow<List<LessonProgress>> = flowOf(emptyList())
 
     override fun observeDailyActivity(days: Int): Flow<List<DailyActivity>> = flowOf(emptyList())

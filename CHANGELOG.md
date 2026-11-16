@@ -6,6 +6,36 @@ El formato sigue [Keep a Changelog](https://keepachangelog.com/es-ES/1.1.0/)
 y el versionado sigue [SemVer](https://semver.org/lang/es/).
 Pre-1.0: los cambios incompatibles pueden ocurrir en `0.y.0`.
 
+## [3.5.0] - 2026-11-15
+
+Release correctiva de licencias y TTS: elimina espeak-ng (GPL) del APK y
+sustituye las voces por variantes con redistribución comercial clara.
+
+### Cambiado
+
+- **sherpa-onnx 2.0.0** (Apache-2.0): síntesis Piper sin espeak-ng en runtime.
+- Voces TTS empaquetadas: `en_US-ljspeech-medium` (dominio público),
+  `fr_FR-siwis-medium` (CC BY 4.0) y `pt_BR-faber-medium` (CC0). Sustituyen a
+  las voces anteriores.
+- TTS por fonemas IPA precalculados en build (`phonemes.bin`, LGP2) con
+  `lexicon.txt`/`tokens.txt` de respaldo; espeak-ng 1.52.0 se usa solo en
+  preparación y no se distribuye (ADR-057).
+- Fallback al TTS del sistema si un texto no tiene cobertura fonética.
+
+### Añadido
+
+- `tools/tts/prepare_voices.py`, `models/voices.lock.json`, hashes de datos
+  fonéticos en `models/manifest.json` y verificación en runtime.
+- Textos de licencia en `app/src/main/assets/licenses/`, atribuciones por voz,
+  ADR-057 y tarea CI `validateVoiceLicenses`.
+- `libs/sherpa-onnx-v2.0.0.aar` para builds locales reproducibles.
+
+### Corregido
+
+- Contenido PT: eliminados caracteres invisibles U+200B en lecciones.
+- `THIRD_PARTY_NOTICES.md` y hoja de licencias en Ajustes sincronizadas con
+  los componentes y voces realmente distribuidos.
+
 ## [3.4.0] - 2026-11-15
 
 **Cambio de licencia:** el código y el contenido pedagógico pasan a licencia

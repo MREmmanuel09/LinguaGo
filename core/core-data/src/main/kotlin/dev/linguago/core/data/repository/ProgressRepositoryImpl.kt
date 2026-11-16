@@ -118,6 +118,36 @@ public class ProgressRepositoryImpl
                 }
             }
 
+        override suspend fun markLessonsCompletedByPlacement(lessonIds: List<LessonId>): Result<Int> =
+            withContext(dispatchers.io) {
+                try {
+                    val dao: LessonProgressDao = database.lessonProgressDao()
+                    var newlyCompleted = 0
+                    lessonIds.distinct().forEach { lessonId ->
+                        val previous = dao.load(lessonId.value)
+                        if (previous?.completed == true) return@forEach
+                        dao.upsert(
+                            LessonProgressEntity(
+                                lessonId = lessonId.value,
+                                completed = true,
+                                xp = previous?.xp ?: 0,
+                                attempts = previous?.attempts ?: 0,
+                                speakingAttempts = previous?.speakingAttempts ?: 0,
+                                speakingPassedAttempts = previous?.speakingPassedAttempts ?: 0,
+                                speakingBestWpm = previous?.speakingBestWpm ?: 0f,
+                                speakingLastScore = previous?.speakingLastScore ?: 0f,
+                                bestScorePercent = previous?.bestScorePercent ?: 0,
+                                lastScorePercent = previous?.lastScorePercent ?: 0,
+                            ),
+                        )
+                        newlyCompleted++
+                    }
+                    Result.success(newlyCompleted)
+                } catch (e: Exception) {
+                    Result.error(LinguaError.Unknown)
+                }
+            }
+
         override suspend fun recordDailyActivity(
             today: LocalDate,
             xpEarned: Int,

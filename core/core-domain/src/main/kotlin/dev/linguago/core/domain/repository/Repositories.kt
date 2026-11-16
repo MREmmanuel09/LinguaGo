@@ -41,6 +41,14 @@ public interface ProgressRepository {
         scorePercent: Int = 0,
     ): Result<Unit>
 
+    /**
+     * Marca lecciones como completadas por examen de nivelación (ADR-058).
+     * Operación monótona (I4): no elimina ni degrada progreso existente y no
+     * otorga XP, gemas, racha ni actividad diaria. Devuelve cuántas lecciones
+     * pasaron a completadas por primera vez.
+     */
+    public suspend fun markLessonsCompletedByPlacement(lessonIds: List<LessonId>): Result<Int>
+
     /** Observa el progreso de las lecciones completadas hasta hoy. */
     public fun observeLessonProgress(): Flow<List<LessonProgress>>
 
