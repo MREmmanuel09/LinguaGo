@@ -226,10 +226,19 @@ public fun PlacementUiState.progressInBlock(): Pair<Int, Int> {
 
 /** Restringe a ejercicios de selección de opción para una UI simple y robusta. */
 private fun PlacementExam.filterToOptionTypes(): PlacementExam {
-    val allowed = setOf("MultipleChoice", "KanaChoose", "KanjiReading", "ParticleFill")
     val blocks =
         blocks.mapNotNull { block ->
-            val qs = block.questions.filter { it.exercise::class.simpleName in allowed }
+            val qs =
+                block.questions.filter { q ->
+                    when (q.exercise) {
+                        is Exercise.MultipleChoice,
+                        is Exercise.KanaChoose,
+                        is Exercise.KanjiReading,
+                        is Exercise.ParticleFill,
+                        -> true
+                        else -> false
+                    }
+                }
             if (qs.isEmpty()) null else block.copy(questions = qs)
         }
     return copy(blocks = blocks)

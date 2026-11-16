@@ -11,21 +11,20 @@ import kotlin.random.Random
  * fácil→difícil; el muestreo aleatorio hace que cada intento sea distinto.
  */
 public object PlacementExamGenerator {
-    /** Tipos aptos para examen objetivo sin STT/audio obligatorio. */
-    public val DEFAULT_SUPPORTED_TYPES: Set<String> =
-        setOf(
-            "MultipleChoice",
-            "Translate",
-            "MatchPairs",
-            "OrderWords",
-            "KanaChoose",
-            "KanjiReading",
-            "ParticleFill",
-            "SemanticMatch",
-            "ClozeDragDrop",
-        )
-
-    public fun isSupported(exercise: Exercise): Boolean = exercise::class.simpleName in DEFAULT_SUPPORTED_TYPES
+    public fun isSupported(exercise: Exercise): Boolean =
+        when (exercise) {
+            is Exercise.MultipleChoice,
+            is Exercise.Translate,
+            is Exercise.MatchPairs,
+            is Exercise.OrderWords,
+            is Exercise.KanaChoose,
+            is Exercise.KanjiReading,
+            is Exercise.ParticleFill,
+            is Exercise.SemanticMatch,
+            is Exercise.ClozeDragDrop,
+            -> true
+            else -> false
+        }
 
     /**
      * Construye un examen para [course]. [questionsPerLevel] limita ítems por
