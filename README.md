@@ -40,13 +40,13 @@ flowchart LR
 
 ## Descargar APK
 
-**[LinguaGo 3.0.0 — APK global](https://github.com/MREmmanuel09/LinguaGo/releases/tag/v3.0.0)**
-(firma de desarrollo; instalación manual con "origen desconocido").
+**[LinguaGo 3.5.1 — APK global](https://github.com/MREmmanuel09/LinguaGo/releases/tag/v3.5.1)**
+(firma de distribución `CN=LinguaGo`; instalación manual con "origen desconocido").
 
-- Android 8.0+ · APK global universal (~509 MB) o variante **arm64** (~392 MB), con los 4 cursos y sus modelos de voz.
+- Android 8.0+ · APK global universal (~401 MB) o variante **arm64** (~360 MB), con los 4 cursos y sus modelos de voz.
 - Checksums en el release (`SHA256SUMS.txt`).
-- Es una firma de desarrollo: si más adelante se publica con un keystore de
-  distribución, habrá que desinstalar antes de instalar la nueva firma.
+- La release 3.5.1 incluye el examen de nivelación con audio, dictado por voz
+  y desbloqueo parcial por nivel.
 
 ## Documentación
 
