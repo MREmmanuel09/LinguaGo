@@ -4,12 +4,16 @@ import androidx.lifecycle.SavedStateHandle
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import dagger.hilt.android.lifecycle.HiltViewModel
+import dev.linguago.core.audio.SttEngine
+import dev.linguago.core.audio.TtsEngine
+import dev.linguago.core.audio.isWarmingUp
 import dev.linguago.core.common.Result
 import dev.linguago.core.domain.logic.ExerciseGrader
 import dev.linguago.core.domain.model.CefrLevel
 import dev.linguago.core.domain.model.Course
 import dev.linguago.core.domain.model.CourseId
 import dev.linguago.core.domain.model.Exercise
+import dev.linguago.core.domain.model.Language
 import dev.linguago.core.domain.placement.PlacementEvaluator
 import dev.linguago.core.domain.placement.PlacementExam
 import dev.linguago.core.domain.placement.PlacementExamGenerator
@@ -18,9 +22,11 @@ import dev.linguago.core.domain.placement.PlacementResult
 import dev.linguago.core.domain.repository.ProgressRepository
 import dev.linguago.core.domain.usecase.ExerciseAnswer
 import dev.linguago.core.domain.usecase.LoadCourseUseCase
+import kotlinx.coroutines.Job
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
+import kotlinx.coroutines.flow.combine
 import kotlinx.coroutines.flow.update
 import kotlinx.coroutines.launch
 import javax.inject.Inject
@@ -34,6 +40,8 @@ public class PlacementViewModel
         savedStateHandle: SavedStateHandle,
         private val loadCourseUseCase: LoadCourseUseCase,
         private val progressRepository: ProgressRepository,
+        private val ttsEngine: TtsEngine,
+        private val sttEngine: SttEngine,
     ) : ViewModel() {
         private val courseIdArg: String = savedStateHandle[PLACEMENT_COURSE_KEY] ?: "es-en"
 
@@ -42,7 +50,10 @@ public class PlacementViewModel
 
         private var course: Course? = null
         private var exam: PlacementExam? = null
+        private var targetLanguage: Language? = null
         private val answers = mutableMapOf<Pair<Int, Int>, ExerciseAnswer>()
+        private var speechJob: Job? = null
+        private var audioStateJob: Job? = null
 
         init {
             viewModelScope.launch { load() }
@@ -54,6 +65,8 @@ public class PlacementViewModel
                 is Result.Error -> _uiState.update { it.copy(loading = false, error = "No se pudo cargar el curso.") }
                 is Result.Success -> {
                     course = result.value
+                    targetLanguage = result.value.toLanguage
+                    warmUpAudio(result.value.toLanguage)
                     val generated =
                         PlacementExamGenerator.generate(
                             course = result.value,
@@ -76,10 +89,94 @@ public class PlacementViewModel
                                 result = null,
                                 applied = false,
                                 unlockedCount = 0,
+                                applyError = null,
+                                speaking = false,
+                                listening = false,
                             ).prepareForQuestion(generated, 0, 0)
                     }
                 }
             }
+        }
+
+        private fun warmUpAudio(language: Language) {
+            audioStateJob?.cancel()
+            viewModelScope.launch { ttsEngine.warmUp(language) }
+            viewModelScope.launch { sttEngine.warmUp(language) }
+            audioStateJob =
+                viewModelScope.launch {
+                    combine(ttsEngine.stateFor(language), sttEngine.stateFor(language)) { tts, stt ->
+                        tts.isWarmingUp || stt.isWarmingUp
+                    }.collect { warmingUp ->
+                        _uiState.update {
+                            it.copy(
+                                audioAvailable = ttsEngine.isReadyFor(language),
+                                speechAvailable = sttEngine.isReadyFor(language),
+                                voiceWarmingUp = warmingUp,
+                            )
+                        }
+                    }
+                }
+        }
+
+        /** Reproduce el audio del ejercicio actual (enunciado). */
+        public fun playAudio() = speakCurrent(NORMAL_PLAYBACK_SPEED)
+
+        /** Reproduce el audio a velocidad lenta. */
+        public fun playAudioSlow() = speakCurrent(SLOW_PLAYBACK_SPEED)
+
+        private fun speakCurrent(speed: Float) {
+            val language = targetLanguage ?: return
+            val audioText =
+                _uiState.value
+                    .currentQuestion()
+                    ?.exercise
+                    ?.audioText
+                    ?.takeIf { it.isNotBlank() } ?: return
+            viewModelScope.launch {
+                _uiState.update { it.copy(speaking = true) }
+                try {
+                    ttsEngine.speak(audioText, language, speed)
+                } finally {
+                    _uiState.update { it.copy(speaking = false, audioAvailable = ttsEngine.isReadyFor(language)) }
+                }
+            }
+        }
+
+        /** Dictado por voz (STT): transcribe y rellena el texto editable. */
+        public fun transcribeSpoken() {
+            val language = targetLanguage ?: return
+            val state = _uiState.value
+            if (state.listening || state.answered || state.finished) return
+            if (!state.speechAvailable) return
+            _uiState.update { it.copy(listening = true) }
+            speechJob?.cancel()
+            speechJob =
+                viewModelScope.launch {
+                    try {
+                        val result = sttEngine.transcribe(language)
+                        _uiState.update {
+                            it.copy(
+                                listening = false,
+                                speechAvailable = sttEngine.isReadyFor(language),
+                                typedText = result.text.ifBlank { it.typedText },
+                            )
+                        }
+                    } catch (_: Exception) {
+                        _uiState.update { it.copy(listening = false) }
+                    }
+                }
+        }
+
+        public fun stopSpoken() {
+            speechJob?.cancel()
+            speechJob = null
+            _uiState.update { it.copy(listening = false) }
+        }
+
+        /** Cierra el examen antes de tiempo con lo respondido hasta ahora. */
+        public fun finishEarly() {
+            if (_uiState.value.finished) return
+            finishExam()
         }
 
         public fun selectOption(displayIndex: Int) {
@@ -216,7 +313,6 @@ public class PlacementViewModel
         public fun next() {
             val state = _uiState.value
             val currentExam = exam ?: return
-            val currentCourse = course ?: return
             if (!state.answered || state.finished) return
 
             val block = currentExam.blocks.getOrNull(state.blockIndex) ?: return
@@ -230,10 +326,11 @@ public class PlacementViewModel
                 return
             }
 
-            val partial = PlacementEvaluator.evaluate(currentExam, answers.toMap(), currentCourse)
-            val blockPassed = partial.levelResults.getOrNull(state.blockIndex)?.passed == true
+            // El examen evalúa cada nivel de forma independiente: avanzar al
+            // siguiente bloque aunque el anterior no llegue al umbral permite
+            // demostrar un nivel superior y no obliga a aprobar todo (ADR-058).
             val nextBlock = state.blockIndex + 1
-            if (blockPassed && nextBlock < currentExam.blocks.size) {
+            if (nextBlock < currentExam.blocks.size) {
                 _uiState.update {
                     it
                         .copy(blockIndex = nextBlock, questionIndex = 0)
@@ -245,6 +342,7 @@ public class PlacementViewModel
         }
 
         private fun finishExam() {
+            stopSpoken()
             val currentExam = exam ?: return
             val currentCourse = course ?: return
             val result = PlacementEvaluator.evaluate(currentExam, answers.toMap(), currentCourse)
@@ -282,6 +380,8 @@ public class PlacementViewModel
 
         private companion object {
             const val QUESTIONS_PER_LEVEL = 10
+            const val NORMAL_PLAYBACK_SPEED = 1.0f
+            const val SLOW_PLAYBACK_SPEED = 0.75f
         }
     }
 
@@ -309,6 +409,11 @@ public data class PlacementUiState(
     val clozeFilled: Map<String, String> = emptyMap(),
     val answered: Boolean = false,
     val lastCorrect: Boolean? = null,
+    val audioAvailable: Boolean = false,
+    val speechAvailable: Boolean = false,
+    val voiceWarmingUp: Boolean = true,
+    val speaking: Boolean = false,
+    val listening: Boolean = false,
     val finished: Boolean = false,
     val result: PlacementResult? = null,
     val applying: Boolean = false,

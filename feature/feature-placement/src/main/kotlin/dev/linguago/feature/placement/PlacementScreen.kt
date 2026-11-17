@@ -1,7 +1,12 @@
 package dev.linguago.feature.placement
 
+import android.Manifest
+import android.content.pm.PackageManager
+import androidx.activity.compose.rememberLauncherForActivityResult
+import androidx.activity.result.contract.ActivityResultContracts
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
+import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.ExperimentalLayoutApi
 import androidx.compose.foundation.layout.FlowRow
@@ -13,25 +18,33 @@ import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.verticalScroll
+import androidx.compose.material3.AlertDialog
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.Text
 import androidx.compose.material3.TextButton
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
+import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
+import androidx.core.content.ContextCompat
 import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import dev.linguago.core.domain.logic.ClozePassageParser
 import dev.linguago.core.domain.model.CefrLevel
 import dev.linguago.core.domain.model.Exercise
+import dev.linguago.core.ui.components.AudioPlayerCard
 import dev.linguago.core.ui.components.ClozeDragDropBoard
 import dev.linguago.core.ui.components.InfoBanner
 import dev.linguago.core.ui.components.LinguaProgressBar
+import dev.linguago.core.ui.components.MicListeningButton
 import dev.linguago.core.ui.components.OptionCard
 import dev.linguago.core.ui.components.OptionStatus
 import dev.linguago.core.ui.components.PillButton
@@ -108,8 +121,13 @@ public fun PlacementScreen(
                         onUnpair = viewModel::unpair,
                         onFillCloze = viewModel::fillClozeBlank,
                         onClearCloze = viewModel::clearClozeBlank,
+                        onPlay = viewModel::playAudio,
+                        onPlaySlow = viewModel::playAudioSlow,
+                        onTranscribe = viewModel::transcribeSpoken,
+                        onStopSpeech = viewModel::stopSpoken,
                         onSubmit = viewModel::submitAnswer,
                         onNext = viewModel::next,
+                        onFinishEarly = viewModel::finishEarly,
                     )
                 }
             }
@@ -130,13 +148,59 @@ private fun PlacementQuestionView(
     onUnpair: (Int) -> Unit,
     onFillCloze: (String, String) -> Unit,
     onClearCloze: (String) -> Unit,
+    onPlay: () -> Unit,
+    onPlaySlow: () -> Unit,
+    onTranscribe: () -> Unit,
+    onStopSpeech: () -> Unit,
     onSubmit: () -> Unit,
     onNext: () -> Unit,
+    onFinishEarly: () -> Unit,
 ) {
     val question = uiState.currentQuestion() ?: return
     val level = uiState.currentLevel() ?: CefrLevel.A1
     val (qNum, qTotal) = uiState.progressInBlock()
     val exercise = question.exercise
+    val context = LocalContext.current
+    var micDenied by remember { mutableStateOf(false) }
+    val micPermissionLauncher =
+        rememberLauncherForActivityResult(ActivityResultContracts.RequestPermission()) { granted ->
+            micDenied = !granted
+            if (granted) onTranscribe()
+        }
+    val micPermission = Manifest.permission.RECORD_AUDIO
+    val requestDictation: () -> Unit = {
+        if (ContextCompat.checkSelfPermission(context, micPermission) == PackageManager.PERMISSION_GRANTED) {
+            micDenied = false
+            onTranscribe()
+        } else {
+            micPermissionLauncher.launch(micPermission)
+        }
+    }
+    var confirmFinish by remember { mutableStateOf(false) }
+
+    if (confirmFinish) {
+        AlertDialog(
+            onDismissRequest = { confirmFinish = false },
+            title = { Text("Finalizar examen") },
+            text = {
+                Text(
+                    "Se evaluará lo respondido hasta ahora y se desbloquearán las lecciones " +
+                        "del nivel que hayas demostrado. No perderás progreso.",
+                )
+            },
+            confirmButton = {
+                TextButton(
+                    onClick = {
+                        confirmFinish = false
+                        onFinishEarly()
+                    },
+                ) { Text("Finalizar") }
+            },
+            dismissButton = {
+                TextButton(onClick = { confirmFinish = false }) { Text("Seguir examinando") }
+            },
+        )
+    }
 
     Column(
         modifier =
@@ -161,6 +225,21 @@ private fun PlacementQuestionView(
         )
 
         ExercisePrompt(exercise = exercise)
+
+        if (exercise is Exercise.ListenChoose || exercise is Exercise.AudioOnlyPrompt || exercise is Exercise.ListenType) {
+            AudioPlayerCard(
+                title =
+                    when {
+                        uiState.voiceWarmingUp -> "Preparando la voz…"
+                        uiState.audioAvailable -> "Escucha el audio"
+                        else -> "Voz no disponible en este dispositivo"
+                    },
+                playing = uiState.speaking,
+                enabled = uiState.audioAvailable && !uiState.speaking,
+                onPlay = onPlay,
+                onPlaySlow = onPlaySlow,
+            )
+        }
 
         when (exercise) {
             is Exercise.MultipleChoice,
@@ -191,6 +270,43 @@ private fun PlacementQuestionView(
                 }
             }
             is Exercise.ListenType -> {
+                if (uiState.speechAvailable) {
+                    Box(
+                        modifier = Modifier.fillMaxWidth(),
+                        contentAlignment = Alignment.Center,
+                    ) {
+                        MicListeningButton(
+                            listening = uiState.listening,
+                            onClick = requestDictation,
+                            enabled = !uiState.listening && !uiState.answered,
+                            contentDescription = "Dictar respuesta",
+                        )
+                    }
+                    Text(
+                        text =
+                            when {
+                                uiState.listening -> "Escuchando… toca «Detener» al terminar"
+                                uiState.answered -> "Respuesta enviada"
+                                else -> "También puedes dictar tu respuesta con el micrófono"
+                            },
+                        style = MaterialTheme.typography.bodyMedium,
+                        color = MaterialTheme.colorScheme.onSurfaceVariant,
+                        modifier = Modifier.fillMaxWidth(),
+                        textAlign = TextAlign.Center,
+                    )
+                    if (uiState.listening) {
+                        PrimaryButton3D(
+                            text = "Detener grabación",
+                            onClick = onStopSpeech,
+                            modifier = Modifier.fillMaxWidth(),
+                        )
+                    }
+                }
+                if (micDenied) {
+                    InfoBanner(
+                        message = "Permiso de micrófono denegado. Puedes escribir el dictado a mano.",
+                    )
+                }
                 OutlinedTextField(
                     value = uiState.typedText,
                     onValueChange = onTypedText,
@@ -285,6 +401,13 @@ private fun PlacementQuestionView(
                 onClick = onNext,
                 modifier = Modifier.fillMaxWidth(),
             )
+        }
+
+        TextButton(
+            onClick = { confirmFinish = true },
+            modifier = Modifier.align(Alignment.CenterHorizontally),
+        ) {
+            Text("Finalizar examen con lo respondido")
         }
     }
 }
@@ -404,7 +527,7 @@ private fun PlacementResultView(
             color = MaterialTheme.colorScheme.primary,
         )
         Text(
-            text = "Puntaje total: ${result.totalCorrect}/${result.totalQuestions} (${result.percentage}%)",
+            text = "Puntaje: ${result.totalCorrect}/${result.totalAttempted} respondidas (${result.percentage}%)",
             style = MaterialTheme.typography.bodyMedium,
             color = MaterialTheme.colorScheme.onBackground,
         )

@@ -6,6 +6,35 @@ El formato sigue [Keep a Changelog](https://keepachangelog.com/es-ES/1.1.0/)
 y el versionado sigue [SemVer](https://semver.org/lang/es/).
 Pre-1.0: los cambios incompatibles pueden ocurrir en `0.y.0`.
 
+## [3.5.1] - 2026-11-17
+
+Release correctiva del examen de nivelación: ahora reproduce audio real,
+permite dictar con voz y desbloquea lo demostrado sin exigir aprobar todo.
+
+### Corregido
+
+- **Audio en nivelación:** los ejercicios `ListenChoose`, `AudioOnlyPrompt` y
+  `ListenType` muestran el reproductor TTS (1x y 0.75x) con el estado de
+  preparación de la voz; antes se generaban sin forma de escucharlos.
+- **Dictado por voz:** `ListenType` incorpora micrófono con permiso
+  `RECORD_AUDIO`, transcripción STT editable y botón de detención; si no hay
+  voz disponible se puede escribir a mano (I3).
+- **Desbloqueo parcial:** cada nivel CEFR se evalúa por separado y se
+  desbloquea el nivel más alto demostrado, sin exigir aprobar A1→C2 en cadena.
+- **Cierre anticipado:** botón para finalizar el examen con lo respondido,
+  evaluando solo lo demostrado y sin reducir progreso (I4).
+
+### Añadido
+
+- **10 preguntas por nivel con mecánicas variadas:** el generador garantiza
+  escucha, dictado, elección, tokens, parejas y cloze cuando el nivel tiene
+  contenido de cada tipo.
+- **Cinco opciones por pregunta de selección:** se completan con distractores
+  del mismo nivel (respaldo del curso) sin alterar la respuesta correcta y se
+  barajan en cada intento.
+- Tests de dominio para evaluación independiente/cierre anticipado y test de
+  contenido real para los cuatro cursos (audio, dictado y 5 opciones).
+
 ## [3.5.0] - 2026-11-15
 
 Release correctiva de licencias y TTS: elimina espeak-ng (GPL) del APK y

@@ -2473,6 +2473,7 @@ cadena de licencias clara para redistribución comercial dentro del APK.
 ## ADR-058: Examen de nivelación dinámico con desbloqueo monótono
 
 - **Fecha:** 2026-11-15
+- **Actualizada:** 2026-11-17 (audio/dictado, evaluación independiente y cierre anticipado)
 - **Estado:** Aceptada
 
 ### Contexto
@@ -2488,24 +2489,41 @@ completar todo lo anterior (fricción), pero el progreso es intocable (I4).
    de nivelación por curso (`es-en/es-pt/es-fr/es-ja`) muestreando ejercicios
    auto-evaluables del contenido empaquetado, estratificados por CEFR en orden
    A1→C2. Cada intento usa muestreo aleatorio (preguntas y orden no fijos).
-2. **Tipos soportados (objetivos):** `MultipleChoice`, `Translate`,
-   `MatchPairs`, `OrderWords`, `KanaChoose`, `KanjiReading`, `ParticleFill`,
+2. **Tipos soportados (objetivos):** `MultipleChoice`, `ListenChoose`,
+   `AudioOnlyPrompt`, `ListenType` (dictado), `Translate`, `MatchPairs`,
+   `OrderWords`, `KanaChoose`, `KanjiReading`, `ParticleFill`,
    `SemanticMatch`, `ClozeDragDrop` (excluidos `SpeakRepeat`/`FreeSpeakingPrompt`
-   y ejercicios dependientes de audio obligatorio para la calificación).
-3. **Evaluación y umbral:** calificación con `ExerciseGrader`; bloques CEFR
-   consecutivos desde A1 se aprueban al alcanzar el umbral configurado (p. ej.
-   70%). El nivel alcanzado es el máximo bloque consecutivo aprobado.
-4. **Desbloqueo monótono (I4):** al finalizar se marcan como completadas las
+   por depender de evaluación oral abierta).
+3. **Audio y voz integrados:** los ejercicios de escucha usan `TtsEngine`
+   (1x y 0.75x) y el dictado usa `SttEngine` con permiso `RECORD_AUDIO`; si el
+   dispositivo no tiene motor para el idioma se degrada sin bloquear el examen
+   (I3) y se permite escribir el dictado a mano.
+4. **Opciones suficientes y barajadas:** los ítems de selección se completan
+   hasta 5 opciones con distractores del mismo nivel (respaldo del curso) sin
+   alterar la respuesta correcta; la UI baraja el orden en cada pregunta.
+5. **Evaluación independiente por bloque:** cada bloque CEFR se aprueba por
+   separado con el umbral configurado (p. ej. 70%) y cobertura mínima del
+   bloque si se cierra antes. No se exige aprobar A1→C2 en cadena: el nivel
+   alcanzado es el bloque aprobado más alto demostrado.
+6. **Cierre anticipado:** el usuario puede finalizar en cualquier momento con
+   lo respondido (`finishEarly`); se evalúa hasta donde llegó y se desbloquea
+   lo demostrado, sin reducir progreso.
+7. **Desbloqueo monótono (I4):** al finalizar se marcan como completadas las
    lecciones del curso con `cefrLevel <= nivel alcanzado` mediante una operación
    dedicada (`markLessonsCompletedByPlacement`) que **no** otorga XP, gemas,
    racha ni actividad diaria y **nunca** degrada ni elimina progreso existente.
    Es compatible con `SyncSnapshot.mergedWith` (OR de `completed`, máximos).
-5. **Acceso:** flujo accesible desde la app (p. ej. Ajustes/Perfil/Inicio) para
+8. **Acceso:** flujo accesible desde la app (p. ej. Ajustes/Perfil/Inicio) para
    el curso seleccionado; puede repetirse por idioma sin regresión.
 
 ### Consecuencias
 
 - Reduce fricción para usuarios con nivel previo sin romper I1/I3/I4/I9.
 - El muestreo depende del pool disponible por nivel/tipo en cada curso.
+- Los distractores sintéticos se toman de otros ejercicios del curso para
+  llegar a 5 opciones; conviene revisar que no introduzcan dobles respuestas
+  válidas al actualizar contenido.
+- TTS/STT dependen de los modelos/voces disponibles en el dispositivo; el
+  examen degrada a dictado escrito sin bloquear (I3).
 - No sustituye la evaluación formativa de lecciones ni modifica contenidos.
 - Cambios futuros en umbrales/pool/tipos deben mantener la garantía monótona.

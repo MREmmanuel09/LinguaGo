@@ -36,7 +36,7 @@ public data class PlacementLevelResult(
     public val percentage: Int get() = if (total == 0) 0 else (correct * 100 / total)
 }
 
-/** Resultado global del examen y niveles alcanzados (consecutivos desde A1). */
+/** Resultado global del examen y nivel más alto demostrado (ADR-058). */
 public data class PlacementResult(
     public val courseId: String,
     public val levelResults: List<PlacementLevelResult>,
@@ -44,6 +44,7 @@ public data class PlacementResult(
     public val unlockedLessonIds: List<LessonId>,
     public val totalCorrect: Int,
     public val totalQuestions: Int,
+    public val totalAttempted: Int = totalQuestions,
 ) {
-    public val percentage: Int get() = if (totalQuestions == 0) 0 else (totalCorrect * 100 / totalQuestions)
+    public val percentage: Int get() = if (totalAttempted == 0) 0 else (totalCorrect * 100 / totalAttempted)
 }
