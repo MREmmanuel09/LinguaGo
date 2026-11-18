@@ -140,7 +140,7 @@ public class ReviewViewModel
         }
 
         /** Reproduce la pronunciación de la traducción (ADR-034). */
-        public fun speakTranslation(slow: Boolean = false) {
+        public fun speakTranslation(speed: Float = NORMAL_SPEED) {
             val state = _uiState.value
             val card = state.current ?: return
             val language = targetLanguage ?: return
@@ -157,7 +157,7 @@ public class ReviewViewModel
             viewModelScope.launch {
                 _uiState.update { it.copy(speaking = true) }
                 try {
-                    ttsEngine.speak(spoken, language, speed = if (slow) SLOW_SPEED else NORMAL_SPEED)
+                    ttsEngine.speak(spoken, language, speed = speed)
                 } finally {
                     _uiState.update { it.copy(speaking = false) }
                 }
@@ -259,7 +259,6 @@ public class ReviewViewModel
             public const val REVIEW_COURSE_KEY: String = "courseId"
             private const val QUEUE_LIMIT = 20
             private const val NORMAL_SPEED = 1.0f
-            private const val SLOW_SPEED = 0.75f
             private val JAPANESE_SCRIPT = Regex("[\\u3040-\\u30FF\\u3400-\\u4DBF\\u4E00-\\u9FFF]")
         }
     }

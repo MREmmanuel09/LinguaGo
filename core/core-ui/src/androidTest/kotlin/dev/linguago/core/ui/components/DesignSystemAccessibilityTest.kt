@@ -368,8 +368,29 @@ public class DesignSystemAccessibilityTest {
     }
 
     @Test
-    public fun audioOnlyPanel_playsSlowlyWhenAllowed() {
-        var slowPlays = 0
+    public fun audioPlayerCard_playsAtHalfSpeed() {
+        var playedSpeed: Float? = null
+        compose.setContent {
+            LinguaTheme {
+                AudioPlayerCard(
+                    title = "Escucha",
+                    playing = false,
+                    enabled = true,
+                    onPlay = {},
+                    onPlayAtSpeed = { playedSpeed = it },
+                )
+            }
+        }
+
+        compose.onNodeWithText("0.50x").performClick()
+        compose.onNodeWithContentDescription("Reproducir audio").performClick()
+
+        compose.runOnIdle { assertEquals(0.50f, playedSpeed!!, 0.0001f) }
+    }
+
+    @Test
+    public fun audioOnlyPanel_playsAtBothSlowSpeedsWhenAllowed() {
+        var playedSpeed: Float? = null
         compose.setContent {
             LinguaTheme {
                 AudioOnlyPromptPanel(
@@ -378,14 +399,16 @@ public class DesignSystemAccessibilityTest {
                     transcript = null,
                     revealTranscript = false,
                     onPlay = {},
-                    onPlaySlow = { slowPlays++ },
+                    onPlayAtSpeed = { playedSpeed = it },
                 )
             }
         }
 
         compose.onNodeWithText("Reproducir más despacio (0.75x)").performClick()
+        compose.runOnIdle { assertEquals(0.75f, playedSpeed!!, 0.0001f) }
 
-        compose.runOnIdle { assertEquals(1, slowPlays) }
+        compose.onNodeWithText("Reproducir mucho más despacio (0.50x)").performClick()
+        compose.runOnIdle { assertEquals(0.50f, playedSpeed!!, 0.0001f) }
     }
 
     @Test
@@ -399,7 +422,7 @@ public class DesignSystemAccessibilityTest {
                     transcript = "The weather is nice today.",
                     revealTranscript = revealed.value,
                     onPlay = {},
-                    onPlaySlow = {},
+                    onPlayAtSpeed = {},
                 )
             }
         }
@@ -413,7 +436,7 @@ public class DesignSystemAccessibilityTest {
     }
 
     @Test
-    public fun audioOnlyPanel_hidesSlowButtonWhenNotAllowed() {
+    public fun audioOnlyPanel_hidesSlowButtonsWhenNotAllowed() {
         compose.setContent {
             LinguaTheme {
                 AudioOnlyPromptPanel(
@@ -422,12 +445,13 @@ public class DesignSystemAccessibilityTest {
                     transcript = null,
                     revealTranscript = false,
                     onPlay = {},
-                    onPlaySlow = {},
+                    onPlayAtSpeed = {},
                 )
             }
         }
 
         compose.onNodeWithText("Reproducir más despacio (0.75x)").assertDoesNotExist()
+        compose.onNodeWithText("Reproducir mucho más despacio (0.50x)").assertDoesNotExist()
     }
 
     @Test

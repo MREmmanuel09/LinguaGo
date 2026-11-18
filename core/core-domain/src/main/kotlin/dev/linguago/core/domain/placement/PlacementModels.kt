@@ -32,8 +32,10 @@ public data class PlacementLevelResult(
     public val correct: Int,
     public val total: Int,
     public val passed: Boolean,
+    public val attempted: Int = total,
 ) {
-    public val percentage: Int get() = if (total == 0) 0 else (correct * 100 / total)
+    /** Acierto sobre las preguntas respondidas (no sobre el total del bloque). */
+    public val percentage: Int get() = if (attempted == 0) 0 else (correct * 100 / attempted)
 }
 
 /** Resultado global del examen y nivel más alto demostrado (ADR-058). */

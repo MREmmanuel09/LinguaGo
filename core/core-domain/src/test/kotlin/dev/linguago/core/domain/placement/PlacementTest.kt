@@ -56,15 +56,45 @@ public class PlacementTest {
     }
 
     @Test
-    public fun `responder poco aunque sea correcto no desbloquea`() {
+    public fun `cerrar antes con tres respuestas correctas desbloquea el nivel`() {
         val exam = PlacementExam("es-en", listOf(block(CefrLevel.A1, 10)))
-        val answers = (0 until 5).associate { (0 to it) to ExerciseAnswer.OptionPicked(0) }
+        val answers = (0 until 3).associate { (0 to it) to ExerciseAnswer.OptionPicked(0) }
+
+        val result = PlacementEvaluator.evaluate(exam, answers, course())
+
+        val level = result.levelResults.single()
+        assertEquals(3, level.attempted)
+        assertEquals(100, level.percentage)
+        assertTrue(level.passed)
+        assertEquals(CefrLevel.A1, result.achievedLevel)
+    }
+
+    @Test
+    public fun `responder menos de tres preguntas no desbloquea`() {
+        val exam = PlacementExam("es-en", listOf(block(CefrLevel.A1, 10)))
+        val answers = (0 until 2).associate { (0 to it) to ExerciseAnswer.OptionPicked(0) }
 
         val result = PlacementEvaluator.evaluate(exam, answers, course())
 
         assertFalse(result.levelResults.single().passed)
         assertEquals(null, result.achievedLevel)
         assertTrue(result.unlockedLessonIds.isEmpty())
+    }
+
+    @Test
+    public fun `tres respuestas con menos del 70 por ciento no desbloquean`() {
+        val exam = PlacementExam("es-en", listOf(block(CefrLevel.A1, 10)))
+        val answers =
+            mapOf(
+                (0 to 0) to ExerciseAnswer.OptionPicked(0),
+                (0 to 1) to ExerciseAnswer.OptionPicked(0),
+                (0 to 2) to ExerciseAnswer.OptionPicked(1),
+            )
+
+        val result = PlacementEvaluator.evaluate(exam, answers, course())
+
+        assertFalse(result.levelResults.single().passed)
+        assertEquals(null, result.achievedLevel)
     }
 
     @Test

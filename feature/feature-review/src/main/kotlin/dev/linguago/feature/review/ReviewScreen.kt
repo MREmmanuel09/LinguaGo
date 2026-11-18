@@ -65,8 +65,8 @@ public fun ReviewScreen(
     ReviewContent(
         state = state,
         onReveal = viewModel::reveal,
-        onSpeak = { viewModel.speakTranslation(slow = false) },
-        onSpeakSlow = { viewModel.speakTranslation(slow = true) },
+        onSpeak = { viewModel.speakTranslation() },
+        onSpeakAtSpeed = { speed -> viewModel.speakTranslation(speed) },
         onRate = viewModel::rate,
         onExit = onExit,
         modifier = modifier,
@@ -78,7 +78,7 @@ private fun ReviewContent(
     state: ReviewUiState,
     onReveal: () -> Unit,
     onSpeak: () -> Unit,
-    onSpeakSlow: () -> Unit,
+    onSpeakAtSpeed: (Float) -> Unit,
     onRate: (ReviewRating) -> Unit,
     onExit: () -> Unit,
     modifier: Modifier = Modifier,
@@ -183,9 +183,9 @@ private fun ReviewContent(
                                     feedback.play(FeedbackCue.TAP)
                                     onSpeak()
                                 },
-                                onPlaySlow = {
+                                onPlayAtSpeed = { speed ->
                                     feedback.play(FeedbackCue.TAP)
-                                    onSpeakSlow()
+                                    onSpeakAtSpeed(speed)
                                 },
                                 modifier = Modifier.fillMaxWidth(),
                             )
@@ -387,7 +387,7 @@ private fun ReviewScreenPreview() {
                 ),
             onReveal = {},
             onSpeak = {},
-            onSpeakSlow = {},
+            onSpeakAtSpeed = {},
             onRate = {},
             onExit = {},
         )

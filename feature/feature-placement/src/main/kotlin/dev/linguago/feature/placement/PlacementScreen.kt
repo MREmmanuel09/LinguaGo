@@ -19,11 +19,13 @@ import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.imePadding
 import androidx.compose.foundation.layout.isImeVisible
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.relocation.BringIntoViewRequester
 import androidx.compose.foundation.relocation.bringIntoViewRequester
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.material3.AlertDialog
+import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.Text
@@ -38,6 +40,9 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.focus.onFocusChanged
 import androidx.compose.ui.platform.LocalContext
+import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.semantics.contentDescription
+import androidx.compose.ui.semantics.semantics
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
@@ -47,9 +52,13 @@ import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import dev.linguago.core.domain.logic.ClozePassageParser
 import dev.linguago.core.domain.model.CefrLevel
 import dev.linguago.core.domain.model.Exercise
+import dev.linguago.core.domain.placement.PlacementEvaluator
+import dev.linguago.core.domain.placement.PlacementLives
+import dev.linguago.core.domain.placement.PlacementResult
 import dev.linguago.core.ui.components.AudioPlayerCard
 import dev.linguago.core.ui.components.ClozeDragDropBoard
 import dev.linguago.core.ui.components.InfoBanner
+import dev.linguago.core.ui.components.LinguaIcons
 import dev.linguago.core.ui.components.LinguaProgressBar
 import dev.linguago.core.ui.components.MicListeningButton
 import dev.linguago.core.ui.components.OptionCard
@@ -59,6 +68,7 @@ import dev.linguago.core.ui.components.PrimaryButton3D
 import dev.linguago.core.ui.components.PuzzleMatchBoard
 import dev.linguago.core.ui.components.PuzzlePairUi
 import dev.linguago.core.ui.components.TokenChip
+import dev.linguago.core.ui.theme.linguaExtendedColors
 
 @Composable
 public fun PlacementScreen(
@@ -89,6 +99,21 @@ public fun PlacementScreen(
             )
             PillButton(text = "Salir", onClick = onExit)
         }
+        if (!uiState.finished && uiState.exam != null) {
+            Spacer(Modifier.height(6.dp))
+            Row(
+                modifier = Modifier.fillMaxWidth(),
+                verticalAlignment = Alignment.CenterVertically,
+                horizontalArrangement = Arrangement.spacedBy(8.dp),
+            ) {
+                PlacementHeartsBar(hearts = uiState.hearts)
+                Text(
+                    text = "Vidas del intento · no se regeneran",
+                    style = MaterialTheme.typography.bodySmall,
+                    color = MaterialTheme.colorScheme.onSurfaceVariant,
+                )
+            }
+        }
         Spacer(Modifier.height(12.dp))
 
         when {
@@ -101,6 +126,7 @@ public fun PlacementScreen(
             uiState.finished && uiState.result != null -> {
                 PlacementResultView(
                     result = uiState.result!!,
+                    finishReason = uiState.finishReason,
                     applying = uiState.applying,
                     applied = uiState.applied,
                     unlockedCount = uiState.unlockedCount,
@@ -130,7 +156,7 @@ public fun PlacementScreen(
                         onFillCloze = viewModel::fillClozeBlank,
                         onClearCloze = viewModel::clearClozeBlank,
                         onPlay = viewModel::playAudio,
-                        onPlaySlow = viewModel::playAudioSlow,
+                        onPlayAtSpeed = viewModel::playAudioAtSpeed,
                         onTranscribe = viewModel::transcribeSpoken,
                         onStopSpeech = viewModel::stopSpoken,
                         onSubmit = viewModel::submitAnswer,
@@ -157,7 +183,7 @@ private fun PlacementQuestionView(
     onFillCloze: (String, String) -> Unit,
     onClearCloze: (String) -> Unit,
     onPlay: () -> Unit,
-    onPlaySlow: () -> Unit,
+    onPlayAtSpeed: (Float) -> Unit,
     onTranscribe: () -> Unit,
     onStopSpeech: () -> Unit,
     onSubmit: () -> Unit,
@@ -235,7 +261,9 @@ private fun PlacementQuestionView(
             modifier = Modifier.fillMaxWidth(),
         )
         Text(
-            text = "Responde según tu nivel. El examen avanza de fácil a difícil y combina distintos tipos de ejercicios.",
+            text =
+                "Responde según tu nivel. Tienes ${PlacementLives.MAX} vidas: cada error resta una " +
+                    "y, si se agotan, el examen termina con lo respondido.",
             style = MaterialTheme.typography.bodySmall,
             color = MaterialTheme.colorScheme.onSurfaceVariant,
         )
@@ -253,7 +281,7 @@ private fun PlacementQuestionView(
                 playing = uiState.speaking,
                 enabled = uiState.audioAvailable && !uiState.speaking,
                 onPlay = onPlay,
-                onPlaySlow = onPlaySlow,
+                onPlayAtSpeed = onPlayAtSpeed,
             )
         }
 
@@ -433,6 +461,32 @@ private fun PlacementQuestionView(
 }
 
 @Composable
+private fun PlacementHeartsBar(
+    hearts: Int,
+    modifier: Modifier = Modifier,
+) {
+    val extended = linguaExtendedColors()
+    val clamped = hearts.coerceIn(0, PlacementLives.MAX)
+    Row(
+        modifier =
+            modifier.semantics(mergeDescendants = true) {
+                contentDescription = "$clamped de ${PlacementLives.MAX} vidas"
+            },
+        horizontalArrangement = Arrangement.spacedBy(2.dp),
+        verticalAlignment = Alignment.CenterVertically,
+    ) {
+        repeat(PlacementLives.MAX) { index ->
+            Icon(
+                painter = painterResource(LinguaIcons.HeartRes),
+                contentDescription = null,
+                tint = if (index < clamped) extended.heartRed else extended.heartEmpty,
+                modifier = Modifier.size(18.dp),
+            )
+        }
+    }
+}
+
+@Composable
 private fun ExercisePrompt(exercise: Exercise) {
     val prompt =
         when (exercise) {
@@ -513,7 +567,8 @@ private fun TokenAnswerArea(
 
 @Composable
 private fun PlacementResultView(
-    result: dev.linguago.core.domain.placement.PlacementResult,
+    result: PlacementResult,
+    finishReason: PlacementFinishReason?,
     applying: Boolean,
     applied: Boolean,
     unlockedCount: Int,
@@ -535,6 +590,15 @@ private fun PlacementResultView(
             color = MaterialTheme.colorScheme.onBackground,
             fontWeight = FontWeight.Bold,
         )
+        when (finishReason) {
+            PlacementFinishReason.OUT_OF_HEARTS ->
+                InfoBanner(
+                    message = "Te quedaste sin vidas. El examen se detuvo y se evaluó hasta donde llegaste.",
+                )
+            PlacementFinishReason.EARLY ->
+                InfoBanner(message = "Cerraste el examen antes de terminar. Se evaluó lo respondido.")
+            else -> Unit
+        }
         val achieved = result.achievedLevel
         Text(
             text =
@@ -547,14 +611,15 @@ private fun PlacementResultView(
             color = MaterialTheme.colorScheme.primary,
         )
         Text(
-            text = "Puntaje: ${result.totalCorrect}/${result.totalAttempted} respondidas (${result.percentage}%)",
+            text = "Puntaje: ${result.totalCorrect} aciertos de ${result.totalAttempted} respondidas (${result.percentage}%)",
             style = MaterialTheme.typography.bodyMedium,
             color = MaterialTheme.colorScheme.onBackground,
         )
 
         result.levelResults.forEach { level ->
             val label =
-                "${level.level.name}: ${level.correct}/${level.total} (${level.percentage}%)" +
+                "${level.level.name}: ${level.correct}/${level.attempted} aciertos (${level.percentage}%)" +
+                    " · ${level.attempted}/${level.total} respondidas" +
                     if (level.passed) " · aprobado" else ""
             Text(
                 text = label,
@@ -565,6 +630,17 @@ private fun PlacementResultView(
                     } else {
                         MaterialTheme.colorScheme.onSurfaceVariant
                     },
+            )
+        }
+
+        if (achieved == null) {
+            Text(
+                text =
+                    "Para desbloquear un nivel necesitas responder al menos " +
+                        "${PlacementEvaluator.MIN_ATTEMPTS_PER_LEVEL} " +
+                        "preguntas con un ${PlacementEvaluator.DEFAULT_PASS_PERCENT}% de aciertos.",
+                style = MaterialTheme.typography.bodySmall,
+                color = MaterialTheme.colorScheme.onSurfaceVariant,
             )
         }
 

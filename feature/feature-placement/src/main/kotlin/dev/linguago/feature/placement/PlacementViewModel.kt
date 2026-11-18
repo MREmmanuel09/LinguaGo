@@ -17,6 +17,7 @@ import dev.linguago.core.domain.model.Language
 import dev.linguago.core.domain.placement.PlacementEvaluator
 import dev.linguago.core.domain.placement.PlacementExam
 import dev.linguago.core.domain.placement.PlacementExamGenerator
+import dev.linguago.core.domain.placement.PlacementLives
 import dev.linguago.core.domain.placement.PlacementQuestion
 import dev.linguago.core.domain.placement.PlacementResult
 import dev.linguago.core.domain.repository.ProgressRepository
@@ -87,6 +88,8 @@ public class PlacementViewModel
                                 lastCorrect = null,
                                 finished = false,
                                 result = null,
+                                finishReason = null,
+                                hearts = PlacementLives.MAX,
                                 applied = false,
                                 unlockedCount = 0,
                                 applyError = null,
@@ -121,8 +124,8 @@ public class PlacementViewModel
         /** Reproduce el audio del ejercicio actual (enunciado). */
         public fun playAudio() = speakCurrent(NORMAL_PLAYBACK_SPEED)
 
-        /** Reproduce el audio a velocidad lenta. */
-        public fun playAudioSlow() = speakCurrent(SLOW_PLAYBACK_SPEED)
+        /** Reproduce el audio a una velocidad concreta (1.0, 0.75 o 0.5). */
+        public fun playAudioAtSpeed(speed: Float) = speakCurrent(speed)
 
         private fun speakCurrent(speed: Float) {
             val language = targetLanguage ?: return
@@ -175,8 +178,16 @@ public class PlacementViewModel
 
         /** Cierra el examen antes de tiempo con lo respondido hasta ahora. */
         public fun finishEarly() {
-            if (_uiState.value.finished) return
-            finishExam()
+            val state = _uiState.value
+            if (state.finished) return
+            val total = exam?.totalQuestions ?: 0
+            val reason =
+                if (total > 0 && answers.size >= total) {
+                    PlacementFinishReason.COMPLETED
+                } else {
+                    PlacementFinishReason.EARLY
+                }
+            finishExam(reason)
         }
 
         public fun selectOption(displayIndex: Int) {
@@ -277,14 +288,17 @@ public class PlacementViewModel
 
         public fun submitAnswer() {
             val state = _uiState.value
-            val currentExam = exam ?: return
             if (!canSubmit(state)) return
             val question = state.currentQuestion() ?: return
             val answer = buildAnswer(question.exercise, state) ?: return
             val key = state.blockIndex to state.questionIndex
             answers[key] = answer
             val correct = ExerciseGrader.isCorrect(question.exercise, answer)
-            _uiState.update { it.copy(answered = true, lastCorrect = correct) }
+            val remainingHearts = if (correct) state.hearts else PlacementLives.afterMistake(state.hearts)
+            _uiState.update { it.copy(answered = true, lastCorrect = correct, hearts = remainingHearts) }
+            if (!correct && PlacementLives.isExhausted(remainingHearts)) {
+                finishExam(PlacementFinishReason.OUT_OF_HEARTS)
+            }
         }
 
         private fun buildAnswer(
@@ -337,16 +351,16 @@ public class PlacementViewModel
                         .prepareForQuestion(currentExam, nextBlock, 0)
                 }
             } else {
-                finishExam()
+                finishExam(PlacementFinishReason.COMPLETED)
             }
         }
 
-        private fun finishExam() {
+        private fun finishExam(reason: PlacementFinishReason) {
             stopSpoken()
             val currentExam = exam ?: return
             val currentCourse = course ?: return
             val result = PlacementEvaluator.evaluate(currentExam, answers.toMap(), currentCourse)
-            _uiState.update { it.copy(finished = true, result = result) }
+            _uiState.update { it.copy(finished = true, result = result, finishReason = reason) }
         }
 
         public fun applyPlacement() {
@@ -381,9 +395,20 @@ public class PlacementViewModel
         private companion object {
             const val QUESTIONS_PER_LEVEL = 10
             const val NORMAL_PLAYBACK_SPEED = 1.0f
-            const val SLOW_PLAYBACK_SPEED = 0.75f
         }
     }
+
+/** Motivo por el que terminó el intento de nivelación. */
+public enum class PlacementFinishReason {
+    /** Se respondieron todas las preguntas del examen. */
+    COMPLETED,
+
+    /** El usuario cerró el examen antes de terminar. */
+    EARLY,
+
+    /** Se agotaron los cinco corazones del intento. */
+    OUT_OF_HEARTS,
+}
 
 public data class PlacementToken(
     val id: Int,
@@ -409,6 +434,7 @@ public data class PlacementUiState(
     val clozeFilled: Map<String, String> = emptyMap(),
     val answered: Boolean = false,
     val lastCorrect: Boolean? = null,
+    val hearts: Int = PlacementLives.MAX,
     val audioAvailable: Boolean = false,
     val speechAvailable: Boolean = false,
     val voiceWarmingUp: Boolean = true,
@@ -416,6 +442,7 @@ public data class PlacementUiState(
     val listening: Boolean = false,
     val finished: Boolean = false,
     val result: PlacementResult? = null,
+    val finishReason: PlacementFinishReason? = null,
     val applying: Boolean = false,
     val applied: Boolean = false,
     val unlockedCount: Int = 0,

@@ -240,8 +240,8 @@ class LessonViewModel
         /** Reproduce el audio del ejercicio actual (escuchar/escribir lo escuchado). */
         fun playAudio() = speakCurrent(NORMAL_PLAYBACK_SPEED)
 
-        /** Reproduce el audio a 0.75x para comprensión con apoyo (F2.4). */
-        fun playAudioSlow() = speakCurrent(SLOW_PLAYBACK_SPEED)
+        /** Reproduce el audio a una velocidad concreta (1.0, 0.75 o 0.50). */
+        fun playAudioAtSpeed(speed: Float) = speakCurrent(speed)
 
         private fun speakCurrent(speed: Float) {
             val language = targetLanguage ?: return
@@ -1172,7 +1172,6 @@ class LessonViewModel
             private const val LESSON_GRADED_IDS_KEY = "lessonGradedIds"
             private const val LESSON_CORRECTING_KEY = "lessonCorrectingMistakes"
             private const val NORMAL_PLAYBACK_SPEED = 1.0f
-            private const val SLOW_PLAYBACK_SPEED = 0.75f
             private const val SILENCE_DB = -60f
             private const val WAVE_BARS = 48
             private const val MAX_SELF_ASSESSMENT_LEVEL = 2

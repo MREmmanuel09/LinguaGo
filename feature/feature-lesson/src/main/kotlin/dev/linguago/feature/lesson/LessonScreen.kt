@@ -194,7 +194,7 @@ fun LessonScreen(
         onRetryMistakes = viewModel::retryMistakes,
         onDismissMistakes = viewModel::dismissMistakeReview,
         onPlayAudio = viewModel::playAudio,
-        onPlaySlow = viewModel::playAudioSlow,
+        onPlayAtSpeed = viewModel::playAudioAtSpeed,
         onBeginLesson = viewModel::beginLesson,
         onOpenBrief = viewModel::openBrief,
         onExit = onExit,
@@ -266,7 +266,7 @@ private fun LessonContent(
     onRetryMistakes: () -> Unit,
     onDismissMistakes: () -> Unit,
     onPlayAudio: () -> Unit,
-    onPlaySlow: () -> Unit,
+    onPlayAtSpeed: (Float) -> Unit,
     onBeginLesson: () -> Unit,
     onOpenBrief: () -> Unit,
     onExit: () -> Unit,
@@ -341,7 +341,7 @@ private fun LessonContent(
                 onReveal = onReveal,
                 onAdvance = onAdvance,
                 onPlayAudio = onPlayAudio,
-                onPlaySlow = onPlaySlow,
+                onPlayAtSpeed = onPlayAtSpeed,
                 onOpenBrief = onOpenBrief,
                 onExit = onExit,
                 onExitRequest = onExitRequest,
@@ -380,7 +380,7 @@ private fun ExerciseStage(
     onReveal: () -> Unit,
     onAdvance: () -> Unit,
     onPlayAudio: () -> Unit,
-    onPlaySlow: () -> Unit,
+    onPlayAtSpeed: (Float) -> Unit,
     onOpenBrief: () -> Unit,
     onExit: () -> Unit,
     onExitRequest: () -> Unit = onExit,
@@ -534,7 +534,7 @@ private fun ExerciseStage(
                         onStopSpeech = onStopSpeech,
                         micPermissionDenied = micPermissionDenied,
                         onPlayAudio = onPlayAudio,
-                        onPlaySlow = onPlaySlow,
+                        onPlayAtSpeed = onPlayAtSpeed,
                         onFreeSpeakStart = onFreeSpeakStart,
                         onFreeSpeakStop = onFreeSpeakStop,
                         onFreeSpeakRate = onFreeSpeakRate,
@@ -613,7 +613,7 @@ private fun Renderer(
     onStopSpeech: () -> Unit = {},
     micPermissionDenied: Boolean = false,
     onPlayAudio: () -> Unit,
-    onPlaySlow: () -> Unit,
+    onPlayAtSpeed: (Float) -> Unit,
     onFreeSpeakStart: () -> Unit,
     onFreeSpeakStop: () -> Unit,
     onFreeSpeakRate: (Int, Int) -> Unit,
@@ -674,7 +674,7 @@ private fun Renderer(
                 AudioPanel(
                     title = "",
                     onPlay = onPlayAudio,
-                    onPlaySlow = onPlaySlow,
+                    onPlayAtSpeed = onPlayAtSpeed,
                     enabled = uiState.audioAvailable,
                     speaking = uiState.speaking,
                 )
@@ -699,7 +699,7 @@ private fun Renderer(
                     transcript = exercise.audioText,
                     revealTranscript = uiState.feedback?.correctAnswer != null,
                     onPlay = onPlayAudio,
-                    onPlaySlow = onPlaySlow,
+                    onPlayAtSpeed = onPlayAtSpeed,
                     speaking = uiState.speaking,
                 )
                 OptionsStep(
@@ -720,7 +720,7 @@ private fun Renderer(
                 value = uiState.typedText,
                 onValueChange = onTypedTextChange,
                 onPlay = onPlayAudio,
-                onPlaySlow = onPlaySlow,
+                onPlayAtSpeed = onPlayAtSpeed,
                 audioEnabled = uiState.audioAvailable,
                 enabled = !uiState.answerLocked,
                 speaking = uiState.speaking,
@@ -735,7 +735,7 @@ private fun Renderer(
                 answerLocked = uiState.answerLocked,
                 glossary = uiState.glossary,
                 onPlay = onPlayAudio,
-                onPlaySlow = onPlaySlow,
+                onPlayAtSpeed = onPlayAtSpeed,
                 onRecord = onSpeakRequest,
                 onStop = onStopSpeech,
                 speaking = uiState.speaking,
@@ -759,7 +759,7 @@ private fun Renderer(
                 audioAvailable = uiState.audioAvailable,
                 speaking = uiState.speaking,
                 onPlay = onPlayAudio,
-                onPlaySlow = onPlaySlow,
+                onPlayAtSpeed = onPlayAtSpeed,
                 onToggleToken = onToggleToken,
             )
         is Exercise.MatchPairs ->
@@ -1039,7 +1039,7 @@ private fun SpeechPanel(
     answerLocked: Boolean,
     glossary: Map<String, List<String>>,
     onPlay: () -> Unit,
-    onPlaySlow: () -> Unit,
+    onPlayAtSpeed: (Float) -> Unit,
     onRecord: () -> Unit,
     onStop: () -> Unit,
     modifier: Modifier = Modifier,
@@ -1050,7 +1050,7 @@ private fun SpeechPanel(
         AudioPanel(
             title = "",
             onPlay = onPlay,
-            onPlaySlow = onPlaySlow,
+            onPlayAtSpeed = onPlayAtSpeed,
             enabled = audioAvailable,
             speaking = speaking,
         )
@@ -1120,7 +1120,7 @@ private fun TypePanel(
     value: String,
     onValueChange: (String) -> Unit,
     onPlay: () -> Unit,
-    onPlaySlow: () -> Unit,
+    onPlayAtSpeed: (Float) -> Unit,
     audioEnabled: Boolean,
     enabled: Boolean,
     modifier: Modifier = Modifier,
@@ -1138,7 +1138,7 @@ private fun TypePanel(
         AudioPanel(
             title = audioTitle,
             onPlay = onPlay,
-            onPlaySlow = onPlaySlow,
+            onPlayAtSpeed = onPlayAtSpeed,
             enabled = audioEnabled,
             speaking = speaking,
         )
@@ -1212,7 +1212,7 @@ private fun AudioPanel(
     onPlay: () -> Unit,
     enabled: Boolean,
     modifier: Modifier = Modifier,
-    onPlaySlow: (() -> Unit)? = null,
+    onPlayAtSpeed: ((Float) -> Unit)? = null,
     speaking: Boolean = false,
 ) {
     AudioPlayerCard(
@@ -1220,7 +1220,7 @@ private fun AudioPanel(
         playing = speaking,
         enabled = enabled,
         onPlay = onPlay,
-        onPlaySlow = onPlaySlow,
+        onPlayAtSpeed = onPlayAtSpeed,
         modifier = modifier,
     )
 }
@@ -1337,7 +1337,7 @@ private fun OrderWordsBoard(
     audioAvailable: Boolean,
     speaking: Boolean,
     onPlay: () -> Unit,
-    onPlaySlow: () -> Unit,
+    onPlayAtSpeed: (Float) -> Unit,
     onToggleToken: (Int) -> Unit,
     modifier: Modifier = Modifier,
 ) {
@@ -1367,7 +1367,7 @@ private fun OrderWordsBoard(
             AudioPanel(
                 title = "",
                 onPlay = onPlay,
-                onPlaySlow = onPlaySlow,
+                onPlayAtSpeed = onPlayAtSpeed,
                 enabled = audioAvailable,
                 speaking = speaking,
             )
@@ -1512,7 +1512,7 @@ private fun LessonScreenPreview() {
             onReveal = {},
             onAdvance = {},
             onPlayAudio = {},
-            onPlaySlow = {},
+            onPlayAtSpeed = {},
             onOpenBrief = {},
             onExit = {},
         )

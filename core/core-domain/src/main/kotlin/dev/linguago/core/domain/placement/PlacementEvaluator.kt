@@ -11,10 +11,17 @@ import dev.linguago.core.domain.usecase.ExerciseAnswer
  * monótono por niveles CEFR (ADR-058). Cada bloque se evalúa de forma
  * independiente: no hace falta aprobar todo el examen para desbloquear lo
  * demostrado, y el nivel alcanzado es el bloque aprobado más alto.
+ *
+ * El porcentaje se calcula sobre las preguntas respondidas. Así, cerrar el
+ * examen antes de tiempo (o quedarse sin vidas) desbloquea el nivel que el
+ * usuario alcanzó a demostrar sin exigir completar los 10 ítems del bloque.
  */
 public object PlacementEvaluator {
     /** Porcentaje mínimo para considerar aprobado un bloque CEFR. */
     public const val DEFAULT_PASS_PERCENT: Int = 70
+
+    /** Respuestas mínimas por bloque para que un cierre anticipado cuente. */
+    public const val MIN_ATTEMPTS_PER_LEVEL: Int = 3
 
     /**
      * [answersByQuestionKey] indexa por (levelOrdinal, questionIndex) para
@@ -53,10 +60,11 @@ public object PlacementEvaluator {
                 if (isCorrect) correct++
             }
             val total = block.questions.size
-            val percent = if (total == 0) 0 else (correct * 100 / total)
-            // Con cierre anticipado se exige cobertura suficiente del bloque
-            // para que un par de aciertos no desbloquee un nivel entero.
-            val minAttempted = if (total == 0) 1 else (total * threshold + 99) / 100
+            val percent = if (attemptedQuestions == 0) 0 else (correct * 100 / attemptedQuestions)
+            // Un cierre anticipado necesita una muestra mínima para que un par
+            // de aciertos no desbloquee un nivel entero. Si el bloque tiene
+            // menos preguntas, se exige responderlas todas.
+            val minAttempted = minOf(MIN_ATTEMPTS_PER_LEVEL, total)
             val passed = total > 0 && attemptedQuestions >= minAttempted && percent >= threshold
             if (passed) highestPassed = block.level
             totalCorrect += correct
@@ -68,6 +76,7 @@ public object PlacementEvaluator {
                     correct = correct,
                     total = total,
                     passed = passed,
+                    attempted = attemptedQuestions,
                 )
         }
 

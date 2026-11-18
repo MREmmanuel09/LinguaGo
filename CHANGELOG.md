@@ -6,6 +6,25 @@ El formato sigue [Keep a Changelog](https://keepachangelog.com/es-ES/1.1.0/)
 y el versionado sigue [SemVer](https://semver.org/lang/es/).
 Pre-1.0: los cambios incompatibles pueden ocurrir en `0.y.0`.
 
+## [3.5.3] - 2026-11-17
+
+Actualización del examen de nivelación: cierre anticipado útil, cinco vidas
+por intento y audio a 0.50x.
+
+### Corregido
+
+- **Cierre anticipado:** el examen evalúa el porcentaje sobre las preguntas
+  respondidas y exige un mínimo de 3 por nivel. Ya no hace falta completar los
+  10 ítems de un bloque ni todo el examen para desbloquear el nivel demostrado.
+- **Audio a 0.50x:** los reproductores de las lecciones, el repaso y la
+  nivelación añaden la velocidad 0.50x además de 1x y 0.75x.
+
+### Añadido
+
+- **Cinco vidas propias del examen:** corazones no regenerables por intento.
+  Cada fallo resta una vida y, al agotarlas, el examen termina con lo
+  respondido y desbloquea el nivel alcanzado.
+
 ## [3.5.2] - 2026-11-17
 
 Release correctiva de los dictados con teclado en móvil.

@@ -2473,7 +2473,7 @@ cadena de licencias clara para redistribución comercial dentro del APK.
 ## ADR-058: Examen de nivelación dinámico con desbloqueo monótono
 
 - **Fecha:** 2026-11-15
-- **Actualizada:** 2026-11-17 (audio/dictado, evaluación independiente y cierre anticipado)
+- **Actualizada:** 2026-11-17 (audio/dictado, evaluación independiente, cierre anticipado, 5 vidas y 0.50x)
 - **Estado:** Aceptada
 
 ### Contexto
@@ -2495,25 +2495,32 @@ completar todo lo anterior (fricción), pero el progreso es intocable (I4).
    `SemanticMatch`, `ClozeDragDrop` (excluidos `SpeakRepeat`/`FreeSpeakingPrompt`
    por depender de evaluación oral abierta).
 3. **Audio y voz integrados:** los ejercicios de escucha usan `TtsEngine`
-   (1x y 0.75x) y el dictado usa `SttEngine` con permiso `RECORD_AUDIO`; si el
-   dispositivo no tiene motor para el idioma se degrada sin bloquear el examen
-   (I3) y se permite escribir el dictado a mano.
+   (1x, 0.75x y 0.50x) y el dictado usa `SttEngine` con permiso `RECORD_AUDIO`;
+   si el dispositivo no tiene motor para el idioma se degrada sin bloquear el
+   examen (I3) y se permite escribir el dictado a mano.
 4. **Opciones suficientes y barajadas:** los ítems de selección se completan
    hasta 5 opciones con distractores del mismo nivel (respaldo del curso) sin
    alterar la respuesta correcta; la UI baraja el orden en cada pregunta.
 5. **Evaluación independiente por bloque:** cada bloque CEFR se aprueba por
-   separado con el umbral configurado (p. ej. 70%) y cobertura mínima del
-   bloque si se cierra antes. No se exige aprobar A1→C2 en cadena: el nivel
-   alcanzado es el bloque aprobado más alto demostrado.
+   separado con el umbral configurado (70%) calculado sobre las preguntas
+   respondidas y un mínimo de 3 respuestas por bloque. No se exige aprobar
+   A1→C2 en cadena: el nivel alcanzado es el bloque aprobado más alto
+   demostrado. Si el bloque tiene menos de 3 preguntas, se exige responderlas
+   todas.
 6. **Cierre anticipado:** el usuario puede finalizar en cualquier momento con
    lo respondido (`finishEarly`); se evalúa hasta donde llegó y se desbloquea
-   lo demostrado, sin reducir progreso.
-7. **Desbloqueo monótono (I4):** al finalizar se marcan como completadas las
+   lo demostrado, sin reducir progreso. El mismo criterio se aplica al cierre
+   automático por vidas.
+7. **Cinco vidas por intento:** el examen tiene su propia barra de 5 corazones,
+   independiente de las vidas globales de las lecciones y sin regeneración.
+   Cada respuesta incorrecta consume un corazón; al llegar a 0 el intento
+   termina y se evalúa lo respondido hasta ese momento.
+8. **Desbloqueo monótono (I4):** al finalizar se marcan como completadas las
    lecciones del curso con `cefrLevel <= nivel alcanzado` mediante una operación
    dedicada (`markLessonsCompletedByPlacement`) que **no** otorga XP, gemas,
    racha ni actividad diaria y **nunca** degrada ni elimina progreso existente.
    Es compatible con `SyncSnapshot.mergedWith` (OR de `completed`, máximos).
-8. **Acceso:** flujo accesible desde la app (p. ej. Ajustes/Perfil/Inicio) para
+9. **Acceso:** flujo accesible desde la app (p. ej. Ajustes/Perfil/Inicio) para
    el curso seleccionado; puede repetirse por idioma sin regresión.
 
 ### Consecuencias
@@ -2523,6 +2530,8 @@ completar todo lo anterior (fricción), pero el progreso es intocable (I4).
 - Los distractores sintéticos se toman de otros ejercicios del curso para
   llegar a 5 opciones; conviene revisar que no introduzcan dobles respuestas
   válidas al actualizar contenido.
+- Las 5 vidas locales no tocan las vidas globales de las lecciones: son solo
+  un límite de duración del intento y se reinician al repetir el examen.
 - TTS/STT dependen de los modelos/voces disponibles en el dispositivo; el
   examen degrada a dictado escrito sin bloquear (I3).
 - No sustituye la evaluación formativa de lecciones ni modifica contenidos.

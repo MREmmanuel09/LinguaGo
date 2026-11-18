@@ -29,8 +29,8 @@ import dev.linguago.core.ui.theme.LinguaTokens
 /**
  * Enunciado de comprensión auditiva pura (F2.4, ADR-018): la transcripción
  * permanece oculta hasta que el usuario responde; solo entonces se revela
- * como refuerzo. La reproducción lenta (0.75x) es opcional por ejercicio y
- * nunca bloquea la respuesta si no hay voz (I1, I3).
+ * como refuerzo. Las reproducciones lentas (0.75x y 0.50x) son opcionales por
+ * ejercicio y nunca bloquean la respuesta si no hay voz (I1, I3).
  */
 @Composable
 public fun AudioOnlyPromptPanel(
@@ -39,7 +39,7 @@ public fun AudioOnlyPromptPanel(
     transcript: String?,
     revealTranscript: Boolean,
     onPlay: () -> Unit,
-    onPlaySlow: () -> Unit,
+    onPlayAtSpeed: (Float) -> Unit,
     modifier: Modifier = Modifier,
     question: String? = null,
     speaking: Boolean = false,
@@ -91,11 +91,20 @@ public fun AudioOnlyPromptPanel(
             TextButton(
                 onClick = {
                     feedback.play(FeedbackCue.TAP)
-                    onPlaySlow()
+                    onPlayAtSpeed(0.75f)
                 },
                 modifier = Modifier.fillMaxWidth().heightIn(min = 48.dp),
             ) {
                 Text(text = "Reproducir más despacio (0.75x)")
+            }
+            TextButton(
+                onClick = {
+                    feedback.play(FeedbackCue.TAP)
+                    onPlayAtSpeed(0.50f)
+                },
+                modifier = Modifier.fillMaxWidth().heightIn(min = 48.dp),
+            ) {
+                Text(text = "Reproducir mucho más despacio (0.50x)")
             }
         }
         if (revealTranscript && transcript != null) {
@@ -134,7 +143,7 @@ private fun AudioOnlyPromptPanelPreview() {
             transcript = "The weather is nice today.",
             revealTranscript = false,
             onPlay = {},
-            onPlaySlow = {},
+            onPlayAtSpeed = {},
             question = "¿Qué tiempo hace?",
         )
     }

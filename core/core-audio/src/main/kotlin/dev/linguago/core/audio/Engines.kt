@@ -20,7 +20,7 @@ interface TtsEngine {
     /** Pre-calienta el motor en `Dispatchers.IO` (idempotente y concurrente). */
     suspend fun warmUp(language: Language)
 
-    /** Sintetiza y reproduce [text] en [language] a [speed] (1.0 = normal, 0.75 = lento). */
+    /** Sintetiza y reproduce [text] en [language] a [speed] (1.0 normal, 0.75 lento, 0.50 muy lento). */
     suspend fun speak(
         text: String,
         language: Language,

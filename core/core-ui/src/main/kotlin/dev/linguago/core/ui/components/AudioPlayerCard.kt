@@ -5,6 +5,8 @@ import androidx.compose.foundation.border
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.ExperimentalLayoutApi
+import androidx.compose.foundation.layout.FlowRow
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
@@ -39,12 +41,14 @@ import dev.linguago.core.ui.theme.LinguaTheme
 import dev.linguago.core.ui.theme.LinguaTokens
 
 /**
- * Reproductor de audio de la lección y el repaso (ADR-037/ADR-038): botón
- * circular de reproducción con diana ≥48dp, onda de voz y conmutador de
- * velocidad en píldora `[1x | 0.75x]` (el 0.75x solo aparece si el llamador
- * ofrece versión lenta). No hay barra de progreso ni seek: el contrato
- * `TtsEngine.speak` sintetiza en streaming, sin duración ni posición.
+ * Reproductor de audio de la lección, el repaso y la nivelación
+ * (ADR-037/ADR-038): botón circular de reproducción con diana ≥48dp, onda de
+ * voz y conmutador de velocidad en píldora `[1x | 0.75x | 0.50x]`. Las
+ * velocidades lentas solo aparecen si el llamador ofrece [onPlayAtSpeed]. No
+ * hay barra de progreso ni seek: el contrato `TtsEngine.speak` sintetiza en
+ * streaming, sin duración ni posición.
  */
+@OptIn(ExperimentalLayoutApi::class)
 @Composable
 public fun AudioPlayerCard(
     title: String,
@@ -52,11 +56,11 @@ public fun AudioPlayerCard(
     enabled: Boolean,
     onPlay: () -> Unit,
     modifier: Modifier = Modifier,
-    onPlaySlow: (() -> Unit)? = null,
+    onPlayAtSpeed: ((Float) -> Unit)? = null,
 ) {
     val colors = MaterialTheme.colorScheme
     val feedback = LocalInteractionFeedback.current
-    var slow by remember { mutableStateOf(false) }
+    var selectedSpeed by remember { mutableStateOf(AudioSpeed.NORMAL) }
     val background = if (enabled) LinguaTokens.BgSecondary else colors.surfaceVariant
 
     Column(
@@ -83,7 +87,11 @@ public fun AudioPlayerCard(
                 IconButton(
                     onClick = {
                         feedback.play(FeedbackCue.TAP)
-                        if (slow && onPlaySlow != null) onPlaySlow() else onPlay()
+                        if (selectedSpeed == AudioSpeed.NORMAL || onPlayAtSpeed == null) {
+                            onPlay()
+                        } else {
+                            onPlayAtSpeed(selectedSpeed.multiplier)
+                        }
                     },
                     enabled = enabled,
                     modifier = Modifier.fillMaxSize(),
@@ -111,8 +119,8 @@ public fun AudioPlayerCard(
                 }
             }
         }
-        if (onPlaySlow != null && enabled) {
-            Row(
+        if (onPlayAtSpeed != null && enabled) {
+            FlowRow(
                 modifier =
                     Modifier
                         .clip(RoundedCornerShape(LinguaTokens.RADIUS_PILL_DP.dp))
@@ -121,12 +129,28 @@ public fun AudioPlayerCard(
                         .padding(2.dp)
                         .selectableGroup(),
                 horizontalArrangement = Arrangement.spacedBy(2.dp),
+                verticalArrangement = Arrangement.spacedBy(2.dp),
             ) {
-                SpeedSegment(label = "1x", selected = !slow, onSelect = { slow = false })
-                SpeedSegment(label = "0.75x", selected = slow, onSelect = { slow = true })
+                AudioSpeed.entries.forEach { speed ->
+                    SpeedSegment(
+                        label = speed.label,
+                        selected = selectedSpeed == speed,
+                        onSelect = { selectedSpeed = speed },
+                    )
+                }
             }
         }
     }
+}
+
+/** Velocidades de reproducción ofrecidas por la tarjeta de audio. */
+private enum class AudioSpeed(
+    val label: String,
+    val multiplier: Float,
+) {
+    NORMAL("1x", 1.0f),
+    SLOW("0.75x", 0.75f),
+    VERY_SLOW("0.50x", 0.50f),
 }
 
 @Composable
@@ -166,7 +190,7 @@ private fun AudioPlayerCardPreview() {
             playing = false,
             enabled = true,
             onPlay = {},
-            onPlaySlow = {},
+            onPlayAtSpeed = {},
         )
     }
 }
