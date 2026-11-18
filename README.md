@@ -10,7 +10,7 @@ Software propietario · Sin anuncios · Sin backend · 100% offline · Vidas con
 recuperación rápida
 
 [![CI](https://github.com/MREmmanuel09/LinguaGo/actions/workflows/ci.yml/badge.svg)](https://github.com/MREmmanuel09/LinguaGo/actions/workflows/ci.yml)
-![version](https://img.shields.io/badge/version-3.5.1-blue)
+![version](https://img.shields.io/badge/version-3.5.3-blue)
 ![Kotlin](https://img.shields.io/badge/Kotlin-2.4-7F52FF?logo=kotlin&logoColor=white)
 ![Android](https://img.shields.io/badge/Android-26%2B-3DDC84?logo=android&logoColor=white)
 ![License](https://img.shields.io/badge/license-Proprietary-red)
@@ -40,13 +40,14 @@ flowchart LR
 
 ## Descargar APK
 
-**[LinguaGo 3.5.1 — APK global](https://github.com/MREmmanuel09/LinguaGo/releases/tag/v3.5.1)**
+**[LinguaGo 3.5.3 - APK global](https://github.com/MREmmanuel09/LinguaGo/releases/tag/v3.5.3)**
 (firma de distribución `CN=LinguaGo`; instalación manual con "origen desconocido").
 
 - Android 8.0+ · APK global universal (~401 MB) o variante **arm64** (~360 MB), con los 4 cursos y sus modelos de voz.
 - Checksums en el release (`SHA256SUMS.txt`).
-- La release 3.5.1 incluye el examen de nivelación con audio, dictado por voz
-  y desbloqueo parcial por nivel.
+- La release 3.5.3 incluye el teclado corregido en los dictados, el examen de
+  nivelación con 5 vidas no regenerables, desbloqueo según el nivel demostrado
+  al cerrar antes de tiempo y audio a 0.50x.
 
 ## Documentación
 

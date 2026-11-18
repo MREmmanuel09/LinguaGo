@@ -6,7 +6,7 @@ El formato sigue [Keep a Changelog](https://keepachangelog.com/es-ES/1.1.0/)
 y el versionado sigue [SemVer](https://semver.org/lang/es/).
 Pre-1.0: los cambios incompatibles pueden ocurrir en `0.y.0`.
 
-## [3.5.3] - 2026-11-17
+## [3.5.3] - 2026-11-18
 
 Actualización del examen de nivelación: cierre anticipado útil, cinco vidas
 por intento y audio a 0.50x.
