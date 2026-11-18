@@ -6,6 +6,17 @@ El formato sigue [Keep a Changelog](https://keepachangelog.com/es-ES/1.1.0/)
 y el versionado sigue [SemVer](https://semver.org/lang/es/).
 Pre-1.0: los cambios incompatibles pueden ocurrir en `0.y.0`.
 
+## [3.5.2] - 2026-11-17
+
+Release correctiva de los dictados con teclado en móvil.
+
+### Corregido
+
+- **Teclado sobre el dictado:** el examen de nivelación y las lecciones
+  aplican ahora los insets del teclado (IME) y desplazan el campo de texto
+  enfocado para que la respuesta escrita quede siempre visible por encima del
+  teclado, sin tapar media pantalla.
+
 ## [3.5.1] - 2026-11-17
 
 Release correctiva del examen de nivelación: ahora reproduce audio real,
