@@ -46,6 +46,7 @@ import dev.linguago.core.ui.feedback.FeedbackCue
 import dev.linguago.core.ui.feedback.LocalInteractionFeedback
 import dev.linguago.core.ui.theme.LinguaTheme
 import dev.linguago.core.ui.theme.LinguaTokens
+import dev.linguago.core.ui.theme.linguaExtendedColors
 import java.time.Instant
 
 /**
@@ -122,7 +123,7 @@ private fun ReviewContent(
                     Modifier
                         .fillMaxWidth()
                         .height(1.5.dp)
-                        .background(LinguaTokens.TanEdge),
+                        .background(MaterialTheme.colorScheme.outlineVariant),
             )
         }
 
@@ -200,7 +201,7 @@ private fun ReviewContent(
                                         Modifier
                                             .fillMaxWidth()
                                             .clip(RoundedCornerShape(12.dp))
-                                            .background(LinguaTokens.BgSecondary)
+                                            .background(colors.surfaceVariant)
                                             .padding(12.dp),
                                 )
                             }
@@ -290,15 +291,17 @@ private fun DeckCounterPill(
     text: String,
     modifier: Modifier = Modifier,
 ) {
+    val colors = MaterialTheme.colorScheme
+    val extended = linguaExtendedColors()
     Text(
         text = text,
         style = MaterialTheme.typography.labelLarge,
         fontWeight = FontWeight.Bold,
-        color = LinguaTokens.Fg,
+        color = colors.onSurface,
         modifier =
             modifier
                 .clip(RoundedCornerShape(LinguaTokens.RADIUS_PILL_DP.dp))
-                .background(LinguaTokens.Tan)
+                .background(extended.tan)
                 .padding(horizontal = 12.dp, vertical = 6.dp),
     )
 }
@@ -309,15 +312,17 @@ private fun DeckBadge(
     text: String,
     modifier: Modifier = Modifier,
 ) {
+    val colors = MaterialTheme.colorScheme
+    val extended = linguaExtendedColors()
     Text(
         text = text,
         style = MaterialTheme.typography.labelLarge,
         fontWeight = FontWeight.Bold,
-        color = LinguaTokens.Fg,
+        color = colors.onSurface,
         modifier =
             modifier
                 .clip(RoundedCornerShape(8.dp))
-                .background(LinguaTokens.Tan)
+                .background(extended.tan)
                 .padding(horizontal = 12.dp, vertical = 6.dp),
     )
 }
@@ -335,7 +340,7 @@ private fun FinishPanel(
             Modifier
                 .fillMaxWidth()
                 .clip(RoundedCornerShape(LinguaTokens.RADIUS_CARD_LARGE_DP.dp))
-                .background(LinguaTokens.BgSecondary)
+                .background(colors.surfaceVariant)
                 .padding(20.dp),
         horizontalAlignment = Alignment.CenterHorizontally,
         verticalArrangement = Arrangement.spacedBy(8.dp),

@@ -13,7 +13,6 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import dev.linguago.core.ui.theme.LinguaTheme
 import dev.linguago.core.ui.theme.LinguaTokens
-import dev.linguago.core.ui.theme.linguaExtendedColors
 
 /**
  * Insignia de tarea del prototipo «Warm Cream & Teal» (ADR-055): píldora
@@ -26,16 +25,16 @@ public fun TaskBadgePill(
     label: String,
     modifier: Modifier = Modifier,
 ) {
-    val extended = linguaExtendedColors()
+    val colors = MaterialTheme.colorScheme
     Text(
         text = label,
         style = MaterialTheme.typography.labelLarge,
         fontWeight = FontWeight.Bold,
-        color = extended.onInfoFill,
+        color = colors.onTertiary,
         modifier =
             modifier
                 .clip(RoundedCornerShape(LinguaTokens.RADIUS_PILL_DP.dp))
-                .background(LinguaTokens.Info)
+                .background(colors.tertiary)
                 .padding(horizontal = 12.dp, vertical = 6.dp),
     )
 }

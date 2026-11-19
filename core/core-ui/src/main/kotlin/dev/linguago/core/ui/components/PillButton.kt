@@ -20,6 +20,7 @@ import dev.linguago.core.ui.feedback.FeedbackCue
 import dev.linguago.core.ui.feedback.feedbackClickable
 import dev.linguago.core.ui.theme.LinguaTheme
 import dev.linguago.core.ui.theme.LinguaTokens
+import dev.linguago.core.ui.theme.linguaExtendedColors
 
 /**
  * Botón píldora con contorno del prototipo «Warm Cream & Teal» (ADR-055):
@@ -33,6 +34,7 @@ public fun PillButton(
     modifier: Modifier = Modifier,
     enabled: Boolean = true,
 ) {
+    val extended = linguaExtendedColors()
     Text(
         text = text,
         style = MaterialTheme.typography.labelLarge,
@@ -43,7 +45,7 @@ public fun PillButton(
                 .heightIn(min = 44.dp)
                 .clip(RoundedCornerShape(LinguaTokens.RADIUS_PILL_DP.dp))
                 .background(MaterialTheme.colorScheme.surface)
-                .border(1.5.dp, LinguaTokens.TanEdge, RoundedCornerShape(LinguaTokens.RADIUS_PILL_DP.dp))
+                .border(1.5.dp, extended.tanEdge, RoundedCornerShape(LinguaTokens.RADIUS_PILL_DP.dp))
                 .feedbackClickable(
                     cue = FeedbackCue.TAP,
                     enabled = enabled,

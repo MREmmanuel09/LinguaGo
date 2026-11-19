@@ -94,7 +94,6 @@ import dev.linguago.core.ui.components.displayText
 import dev.linguago.core.ui.feedback.FeedbackCue
 import dev.linguago.core.ui.feedback.LocalInteractionFeedback
 import dev.linguago.core.ui.theme.LinguaTheme
-import dev.linguago.core.ui.theme.LinguaTokens
 import dev.linguago.core.ui.util.rememberAnimationsEnabled
 
 /**
@@ -1303,7 +1302,7 @@ private fun TokenBoard(
                     Modifier
                         .fillMaxWidth()
                         .height(1.5.dp)
-                        .background(LinguaTokens.TanEdge),
+                        .background(MaterialTheme.colorScheme.outlineVariant),
             )
         }
         FlowRow(
@@ -1411,7 +1410,7 @@ private fun OrderWordsBoard(
                     Modifier
                         .fillMaxWidth()
                         .height(1.5.dp)
-                        .background(LinguaTokens.TanEdge),
+                        .background(MaterialTheme.colorScheme.outlineVariant),
             )
         }
         FlowRow(

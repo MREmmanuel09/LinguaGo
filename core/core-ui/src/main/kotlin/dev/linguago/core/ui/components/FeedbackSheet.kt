@@ -4,13 +4,17 @@ import androidx.compose.animation.AnimatedVisibility
 import androidx.compose.animation.animateContentSize
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.heightIn
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
+import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.shape.RoundedCornerShape
+import androidx.compose.foundation.verticalScroll
 import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
@@ -27,8 +31,10 @@ import androidx.compose.ui.graphics.ColorFilter
 import androidx.compose.ui.graphics.graphicsLayer
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.semantics.LiveRegionMode
+import androidx.compose.ui.semantics.Role
 import androidx.compose.ui.semantics.liveRegion
 import androidx.compose.ui.semantics.semantics
+import androidx.compose.ui.semantics.stateDescription
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
@@ -81,7 +87,8 @@ public fun FeedbackSheet(
                 .fillMaxWidth()
                 .clip(RoundedCornerShape(topStart = 24.dp, topEnd = 24.dp))
                 .background(extended.sheetWarm)
-                .semantics(mergeDescendants = true) {
+                .verticalScroll(rememberScrollState())
+                .semantics {
                     liveRegion = LiveRegionMode.Polite
                 }.padding(horizontal = 20.dp, vertical = 16.dp)
                 .animateContentSize(),
@@ -149,7 +156,20 @@ public fun FeedbackSheet(
                 verticalArrangement = Arrangement.spacedBy(4.dp),
             ) {
                 Row(
-                    modifier = Modifier.fillMaxWidth(),
+                    modifier =
+                        Modifier
+                            .fillMaxWidth()
+                            .heightIn(min = 44.dp)
+                            .clip(RoundedCornerShape(8.dp))
+                            .clickable(
+                                role = Role.Button,
+                                onClickLabel = if (expanded) "Ocultar detalle" else "Ver detalle",
+                            ) {
+                                feedback.play(FeedbackCue.TAP)
+                                expanded = !expanded
+                            }.semantics(mergeDescendants = true) {
+                                stateDescription = if (expanded) "Detalle visible" else "Detalle oculto"
+                            }.padding(horizontal = 4.dp),
                     verticalAlignment = Alignment.CenterVertically,
                     horizontalArrangement = Arrangement.spacedBy(8.dp),
                 ) {

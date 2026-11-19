@@ -87,7 +87,7 @@ fun OptionCard(
         when (status) {
             OptionStatus.CORRECT -> LinguaTokens.Accent.copy(alpha = 0.62f)
             OptionStatus.INCORRECT -> LinguaTokens.Destructive.copy(alpha = 0.62f)
-            OptionStatus.NEUTRAL -> if (selected) LinguaTokens.PrimaryEdge else colors.outline.copy(alpha = 0.55f)
+            OptionStatus.NEUTRAL -> if (selected) colors.primaryContainer else colors.outline.copy(alpha = 0.55f)
         }
     val contentTarget =
         when (status) {

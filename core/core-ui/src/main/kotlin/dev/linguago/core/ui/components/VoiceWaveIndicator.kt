@@ -18,7 +18,7 @@ import androidx.compose.ui.geometry.Size
 import androidx.compose.ui.semantics.contentDescription
 import androidx.compose.ui.semantics.semantics
 import androidx.compose.ui.unit.dp
-import dev.linguago.core.ui.theme.LinguaTokens
+import dev.linguago.core.ui.theme.linguaExtendedColors
 import dev.linguago.core.ui.util.rememberAnimationsEnabled
 import kotlin.math.PI
 import kotlin.math.sin
@@ -36,6 +36,7 @@ public fun VoiceWaveIndicator(
     bars: Int = 12,
 ) {
     val animations = rememberAnimationsEnabled()
+    val extended = linguaExtendedColors()
     val transition = rememberInfiniteTransition(label = "voiceWave")
     val phase by transition.animateFloat(
         initialValue = 0f,
@@ -46,8 +47,8 @@ public fun VoiceWaveIndicator(
             ),
         label = "voiceWavePhase",
     )
-    val topColor = if (active) LinguaTokens.Primary else MaterialTheme.colorScheme.outlineVariant
-    val bottomColor = if (active) LinguaTokens.Terracotta else MaterialTheme.colorScheme.outlineVariant
+    val topColor = if (active) MaterialTheme.colorScheme.primary else MaterialTheme.colorScheme.outlineVariant
+    val bottomColor = if (active) extended.terracotta else MaterialTheme.colorScheme.outlineVariant
 
     Canvas(
         modifier =

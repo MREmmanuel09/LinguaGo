@@ -44,7 +44,9 @@ val Nunito =
 
 /**
  * Escala tipográfica original de LinguaGo. Tamaños en sp para respetar la
- * preferencia del usuario (invariante I8).
+ * preferencia del usuario (invariante I8). El cuerpo usa 17sp SemiBold y los
+ * textos secundarios 15sp para mejorar la lectura en pantallas pequeñas y en
+ * modo oscuro sin recurrir a fuentes externas.
  */
 val LinguaTypography =
     Typography(
@@ -73,84 +75,84 @@ val LinguaTypography =
             TextStyle(
                 fontFamily = Nunito,
                 fontWeight = FontWeight.ExtraBold,
-                fontSize = 32.sp,
-                lineHeight = 40.sp,
+                fontSize = 34.sp,
+                lineHeight = 42.sp,
             ),
         headlineMedium =
             TextStyle(
                 fontFamily = Nunito,
                 fontWeight = FontWeight.ExtraBold,
-                fontSize = 30.sp,
-                lineHeight = 38.sp,
+                fontSize = 32.sp,
+                lineHeight = 40.sp,
             ),
         headlineSmall =
+            TextStyle(
+                fontFamily = Nunito,
+                fontWeight = FontWeight.Bold,
+                fontSize = 24.sp,
+                lineHeight = 32.sp,
+            ),
+        titleLarge =
             TextStyle(
                 fontFamily = Nunito,
                 fontWeight = FontWeight.Bold,
                 fontSize = 22.sp,
                 lineHeight = 30.sp,
             ),
-        titleLarge =
-            TextStyle(
-                fontFamily = Nunito,
-                fontWeight = FontWeight.Bold,
-                fontSize = 20.sp,
-                lineHeight = 28.sp,
-            ),
         titleMedium =
             TextStyle(
                 fontFamily = Nunito,
                 fontWeight = FontWeight.Bold,
-                fontSize = 17.sp,
-                lineHeight = 24.sp,
+                fontSize = 18.sp,
+                lineHeight = 26.sp,
             ),
         titleSmall =
             TextStyle(
                 fontFamily = Nunito,
                 fontWeight = FontWeight.SemiBold,
-                fontSize = 15.sp,
-                lineHeight = 22.sp,
+                fontSize = 16.sp,
+                lineHeight = 24.sp,
             ),
         bodyLarge =
             TextStyle(
                 fontFamily = Nunito,
-                fontWeight = FontWeight.Medium,
-                fontSize = 16.sp,
-                lineHeight = 24.sp,
+                fontWeight = FontWeight.SemiBold,
+                fontSize = 17.sp,
+                lineHeight = 26.sp,
             ),
         bodyMedium =
             TextStyle(
                 fontFamily = Nunito,
-                fontWeight = FontWeight.Medium,
-                fontSize = 16.sp,
-                lineHeight = 24.sp,
+                fontWeight = FontWeight.SemiBold,
+                fontSize = 17.sp,
+                lineHeight = 26.sp,
             ),
         bodySmall =
             TextStyle(
                 fontFamily = Nunito,
                 fontWeight = FontWeight.Medium,
-                fontSize = 14.sp,
-                lineHeight = 20.sp,
+                fontSize = 15.sp,
+                lineHeight = 22.sp,
             ),
         labelLarge =
             TextStyle(
                 fontFamily = Nunito,
                 fontWeight = FontWeight.Bold,
-                fontSize = 14.sp,
-                lineHeight = 20.sp,
+                fontSize = 15.sp,
+                lineHeight = 22.sp,
             ),
         labelMedium =
             TextStyle(
                 fontFamily = Nunito,
                 fontWeight = FontWeight.Bold,
-                fontSize = 12.sp,
-                lineHeight = 16.sp,
+                fontSize = 13.sp,
+                lineHeight = 18.sp,
             ),
         labelSmall =
             TextStyle(
                 fontFamily = Nunito,
                 fontWeight = FontWeight.Bold,
-                fontSize = 11.sp,
-                lineHeight = 16.sp,
+                fontSize = 12.sp,
+                lineHeight = 18.sp,
             ),
     )

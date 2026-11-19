@@ -41,7 +41,6 @@ import androidx.compose.ui.unit.dp
 import dev.linguago.core.ui.components.path.PathNode
 import dev.linguago.core.ui.components.path.PathNodeState
 import dev.linguago.core.ui.components.path.UnitHeader
-import dev.linguago.core.ui.theme.LinguaTokens
 import dev.linguago.core.ui.util.rememberAnimationsEnabled
 
 /**
@@ -132,7 +131,7 @@ fun LearningPath(
                             PathConnector(
                                 fromBias = row.bias,
                                 toBias = nextBias,
-                                color = LinguaTokens.TanEdge,
+                                color = MaterialTheme.colorScheme.outlineVariant,
                                 animated =
                                     item.node.state == PathNodeState.AVAILABLE ||
                                         item.node.state == PathNodeState.IN_PROGRESS,
@@ -154,6 +153,7 @@ private fun PathConnector(
     animated: Boolean,
 ) {
     val animations = rememberAnimationsEnabled()
+    val primaryColor = MaterialTheme.colorScheme.primary
     val active = animated && animations
     val transition = if (active) rememberInfiniteTransition(label = "pathConnector") else null
     val progress by if (transition != null) {
@@ -201,7 +201,7 @@ private fun PathConnector(
             if (measure.length > 0f) {
                 val point = measure.getPosition(measure.length * progress)
                 drawCircle(
-                    color = LinguaTokens.Primary,
+                    color = primaryColor,
                     radius = 3.dp.toPx(),
                     center = point,
                 )

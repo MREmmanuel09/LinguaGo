@@ -12,6 +12,7 @@ import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.progressSemantics
 import androidx.compose.foundation.shape.RoundedCornerShape
+import androidx.compose.material3.MaterialTheme
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
 import androidx.compose.ui.Modifier
@@ -22,7 +23,7 @@ import androidx.compose.ui.graphics.drawscope.Stroke
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import dev.linguago.core.ui.theme.LinguaTheme
-import dev.linguago.core.ui.theme.LinguaTokens
+import dev.linguago.core.ui.theme.linguaExtendedColors
 import dev.linguago.core.ui.util.rememberAnimationsEnabled
 import kotlin.math.PI
 import kotlin.math.sin
@@ -44,6 +45,8 @@ fun LiquidXpBar(
         label = "liquidXpFill",
     )
     val animations = rememberAnimationsEnabled()
+    val colors = MaterialTheme.colorScheme
+    val extended = linguaExtendedColors()
     val transition = rememberInfiniteTransition(label = "liquidXpWave")
     val phase by transition.animateFloat(
         initialValue = 0f,
@@ -61,7 +64,7 @@ fun LiquidXpBar(
                 .fillMaxWidth()
                 .height(12.dp)
                 .clip(RoundedCornerShape(6.dp))
-                .background(LinguaTokens.Tan)
+                .background(extended.tan)
                 .progressSemantics(target),
     ) {
         if (animated > 0f) {
@@ -81,11 +84,11 @@ fun LiquidXpBar(
                     }
                     close()
                 }
-            drawPath(path = path, color = LinguaTokens.Primary)
+            drawPath(path = path, color = colors.primary)
         }
         // Límites del track visibles en ambos temas (ADR-037).
         drawRoundRect(
-            color = LinguaTokens.TanEdge,
+            color = extended.tanEdge,
             size = size,
             style = Stroke(width = 1.dp.toPx()),
             cornerRadius = CornerRadius(size.height / 2f),

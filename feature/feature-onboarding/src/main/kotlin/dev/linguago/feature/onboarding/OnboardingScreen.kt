@@ -217,14 +217,16 @@ private data class LanguageStyle(
     val content: Color,
 )
 
+@Composable
 private fun languageStyle(courseId: String): LanguageStyle {
+    val colors = MaterialTheme.colorScheme
     val suffix = courseId.substringAfterLast('-', courseId).lowercase()
     return when (suffix) {
-        "en" -> LanguageStyle("EN", LinguaTokens.Info, LinguaTokens.Fg)
-        "pt" -> LanguageStyle("PT", LinguaTokens.Accent, Color.White)
-        "fr" -> LanguageStyle("FR", LinguaTokens.Primary, Color.White)
-        "ja" -> LanguageStyle("JA", LinguaTokens.Warning, LinguaTokens.Fg)
-        else -> LanguageStyle(suffix.take(2).uppercase(), LinguaTokens.Primary, Color.White)
+        "en" -> LanguageStyle("EN", colors.tertiary, colors.onTertiary)
+        "pt" -> LanguageStyle("PT", colors.secondary, colors.onSecondary)
+        "fr" -> LanguageStyle("FR", colors.primary, colors.onPrimary)
+        "ja" -> LanguageStyle("JA", LinguaTokens.Warning, LinguaTokens.WarningInk)
+        else -> LanguageStyle(suffix.take(2).uppercase(), colors.primary, colors.onPrimary)
     }
 }
 

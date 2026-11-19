@@ -73,7 +73,12 @@ hacia abajo (tapa el borde) y vuelve con `SpringBouncy`. La escala ya no es la
 ## 4. Tipografía
 
 - **Nunito** (SIL OFL), fuente variable con pesos 400/500/600/700/800.
-- Escala en `sp` (respeta la preferencia del usuario, I8).
+- Escala en `sp` (respeta la preferencia del usuario, I8): cuerpo 17sp
+  SemiBold, secundario 15sp Medium, etiquetas 15/13/12sp y títulos con +2sp
+  (ADR-059).
+- **Modo oscuro:** las superficies y tintas se resuelven con los roles de
+  `MaterialTheme` y `linguaExtendedColors()`; los componentes no deben usar
+  tokens claros fijos (`BgSecondary`, `Tan`, `Fg`) como fondo o texto.
 - **Japonés:** no se empaqueta fuente CJK; el sistema resuelve el fallback.
   Si se decide empaquetar Noto Sans JP (~4 MB), requiere ADR por tamaño de
   APK.

@@ -27,12 +27,13 @@ public fun InfoBanner(
     message: String,
     modifier: Modifier = Modifier,
 ) {
+    val colors = MaterialTheme.colorScheme
     Row(
         modifier =
             modifier
                 .fillMaxWidth()
                 .clip(RoundedCornerShape(LinguaTokens.RADIUS_CARD_DP.dp))
-                .background(LinguaTokens.Info.copy(alpha = 0.18f))
+                .background(colors.tertiary.copy(alpha = 0.18f))
                 .semantics(mergeDescendants = true) {
                     liveRegion = LiveRegionMode.Polite
                 }.padding(horizontal = 16.dp, vertical = 10.dp),

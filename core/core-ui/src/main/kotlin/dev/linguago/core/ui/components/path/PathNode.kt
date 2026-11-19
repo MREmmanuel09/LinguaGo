@@ -91,6 +91,7 @@ fun PathNode(
     modifier: Modifier = Modifier,
 ) {
     val extended = linguaExtendedColors()
+    val colors = MaterialTheme.colorScheme
     val animations = rememberAnimationsEnabled()
     val feedback = LocalInteractionFeedback.current
 
@@ -101,25 +102,25 @@ fun PathNode(
     val ringColor: Color?
     when (node.state) {
         PathNodeState.COMPLETED -> {
-            body = LinguaTokens.Accent
-            edge = LinguaTokens.Accent.copy(alpha = 0.72f)
+            body = colors.secondary
+            edge = colors.secondary.copy(alpha = 0.72f)
             iconRes = LinguaIcons.CheckRes
-            iconTint = LinguaTokens.Bg
+            iconTint = colors.onSecondary
             ringColor = null
         }
         PathNodeState.AVAILABLE -> {
-            body = LinguaTokens.Primary
-            edge = LinguaTokens.PrimaryEdge
+            body = colors.primary
+            edge = colors.primaryContainer
             iconRes = LinguaIcons.PlayRes
-            iconTint = LinguaTokens.Bg
-            ringColor = LinguaTokens.Primary
+            iconTint = colors.onPrimary
+            ringColor = colors.primary
         }
         PathNodeState.IN_PROGRESS -> {
-            body = LinguaTokens.Primary
-            edge = LinguaTokens.PrimaryEdge
+            body = colors.primary
+            edge = colors.primaryContainer
             iconRes = LinguaIcons.PlayRes
-            iconTint = LinguaTokens.Bg
-            ringColor = LinguaTokens.Primary
+            iconTint = colors.onPrimary
+            ringColor = colors.primary
         }
         PathNodeState.CHEST -> {
             body = extended.chestGold
@@ -129,17 +130,17 @@ fun PathNode(
             ringColor = null
         }
         PathNodeState.CHEST_LOCKED -> {
-            body = LinguaTokens.Tan
-            edge = LinguaTokens.TanShadow
+            body = extended.tan
+            edge = extended.tanShadow
             iconRes = LinguaIcons.ChestRes
-            iconTint = LinguaTokens.Fg
+            iconTint = colors.onSurface
             ringColor = null
         }
         PathNodeState.LOCKED -> {
-            body = LinguaTokens.Tan
-            edge = LinguaTokens.TanShadow
+            body = extended.tan
+            edge = extended.tanShadow
             iconRes = LinguaIcons.LockRes
-            iconTint = LinguaTokens.Fg
+            iconTint = colors.onSurface
             ringColor = null
         }
     }

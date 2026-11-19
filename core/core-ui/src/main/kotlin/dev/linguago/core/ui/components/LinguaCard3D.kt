@@ -19,6 +19,7 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import dev.linguago.core.ui.theme.LinguaTheme
 import dev.linguago.core.ui.theme.LinguaTokens
+import dev.linguago.core.ui.theme.linguaExtendedColors
 
 /**
  * Tarjeta con lenguaje flat-3D (ADR-026) y paleta cálida (ADR-055): radio
@@ -31,13 +32,15 @@ fun LinguaCard3D(
     contentPadding: PaddingValues = PaddingValues(16.dp),
     content: @Composable ColumnScope.() -> Unit,
 ) {
+    val colors = MaterialTheme.colorScheme
+    val extended = linguaExtendedColors()
     Column(
         modifier =
             modifier
                 .fillMaxWidth()
                 .clip(RoundedCornerShape(LinguaTokens.RADIUS_CARD_LARGE_DP.dp))
-                .background(LinguaTokens.BgSecondary)
-                .border(1.dp, LinguaTokens.TanEdge, RoundedCornerShape(LinguaTokens.RADIUS_CARD_LARGE_DP.dp)),
+                .background(colors.surfaceVariant)
+                .border(1.dp, extended.tanEdge, RoundedCornerShape(LinguaTokens.RADIUS_CARD_LARGE_DP.dp)),
     ) {
         Column(
             modifier =
@@ -51,7 +54,7 @@ fun LinguaCard3D(
                 Modifier
                     .fillMaxWidth()
                     .height(LinguaTokens.EDGE_BUTTON_DP.dp)
-                    .background(LinguaTokens.TanShadow),
+                    .background(extended.tanShadow),
         )
     }
 }

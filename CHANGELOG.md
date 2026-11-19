@@ -6,6 +6,30 @@ El formato sigue [Keep a Changelog](https://keepachangelog.com/es-ES/1.1.0/)
 y el versionado sigue [SemVer](https://semver.org/lang/es/).
 Pre-1.0: los cambios incompatibles pueden ocurrir en `0.y.0`.
 
+## [3.5.4] - 2026-11-18
+
+Mejora de legibilidad y corrección del contraste en modo oscuro.
+
+### Corregido
+
+- **Modo oscuro:** las tarjetas de audio, repaso, inicio, perfil, ajustes,
+  sincronización, nivelación y los componentes compartidos usan ahora las
+  superficies y tintas del tema. Se elimina el texto claro sobre fondos claros
+  que hacía ilegibles algunas zonas.
+- **Insignias y botones:** etiquetas de tarea, idiomas, contadores, chips de
+  palabras y botones 3D respetan el contraste claro/oscuro.
+- **«Ver por qué» en el feedback:** la cabecera desplegable es ahora un botón
+  táctil real con estado accesible; el detalle se muestra u oculta y el panel
+  puede desplazarse cuando el texto crece.
+
+### Cambiado
+
+- **Tipografía más legible:** cuerpo base a 17sp SemiBold, textos secundarios a
+  15sp y etiquetas a 15/13/12sp; los títulos crecen 2sp con interlineados
+  ajustados. Se mantiene Nunito y el escalado de fuente del sistema (I8).
+- **Firma de los APK:** los releases se firman con los esquemas v2 y v3 para
+  maximizar la compatibilidad con los instaladores de paquetes.
+
 ## [3.5.3] - 2026-11-18
 
 Actualización del examen de nivelación: cierre anticipado útil, cinco vidas

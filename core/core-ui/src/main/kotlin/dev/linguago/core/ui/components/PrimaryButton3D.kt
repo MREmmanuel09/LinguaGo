@@ -51,11 +51,13 @@ fun PrimaryButton3D(
     enabled: Boolean = true,
     bodyColor: Color? = null,
     edgeColor: Color? = null,
-    contentColor: Color = Color.White,
+    contentColor: Color? = null,
     compact: Boolean = false,
 ) {
-    val resolvedBody = bodyColor ?: LinguaTokens.Primary
-    val resolvedEdge = edgeColor ?: LinguaTokens.PrimaryEdge
+    val colors = MaterialTheme.colorScheme
+    val resolvedBody = bodyColor ?: colors.primary
+    val resolvedEdge = edgeColor ?: colors.primaryContainer
+    val resolvedContent = contentColor ?: colors.onPrimary
     val body = if (enabled) resolvedBody else resolvedBody.copy(alpha = 0.35f)
     val edge = if (enabled) resolvedEdge else resolvedEdge.copy(alpha = 0.35f)
     val feedback = LocalInteractionFeedback.current
@@ -105,7 +107,7 @@ fun PrimaryButton3D(
         ) {
             Text(
                 text = text,
-                color = contentColor,
+                color = resolvedContent,
                 textAlign = TextAlign.Center,
                 style = if (compact) MaterialTheme.typography.labelLarge else MaterialTheme.typography.titleMedium,
             )

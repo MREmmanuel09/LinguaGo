@@ -11,6 +11,7 @@ import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.material3.Icon
+import androidx.compose.material3.MaterialTheme
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
 import androidx.compose.ui.Alignment
@@ -27,7 +28,6 @@ import dev.linguago.core.ui.feedback.FeedbackCue
 import dev.linguago.core.ui.feedback.feedbackClickable
 import dev.linguago.core.ui.theme.LinguaMotion
 import dev.linguago.core.ui.theme.LinguaTheme
-import dev.linguago.core.ui.theme.LinguaTokens
 import dev.linguago.core.ui.theme.linguaExtendedColors
 import dev.linguago.core.ui.util.rememberAnimationsEnabled
 
@@ -46,6 +46,7 @@ public fun MicListeningButton(
     contentDescription: String = "Grabar voz",
 ) {
     val extended = linguaExtendedColors()
+    val colors = MaterialTheme.colorScheme
     val animations = rememberAnimationsEnabled()
     val transition = rememberInfiniteTransition(label = "micRipple")
     val pulse by transition.animateFloat(
@@ -98,13 +99,13 @@ public fun MicListeningButton(
                 Modifier
                     .size(72.dp)
                     .clip(CircleShape)
-                    .background(if (listening) LinguaTokens.PrimaryEdge else LinguaTokens.Primary),
+                    .background(if (listening) colors.primaryContainer else colors.primary),
             contentAlignment = Alignment.Center,
         ) {
             Icon(
                 painter = painterResource(LinguaIcons.MicRes),
                 contentDescription = null,
-                tint = LinguaTokens.Bg,
+                tint = if (listening) colors.onPrimaryContainer else colors.onPrimary,
                 modifier = Modifier.size(28.dp),
             )
         }

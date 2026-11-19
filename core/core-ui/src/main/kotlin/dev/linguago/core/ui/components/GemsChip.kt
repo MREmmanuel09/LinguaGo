@@ -17,7 +17,6 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import dev.linguago.core.ui.theme.LinguaTheme
-import dev.linguago.core.ui.theme.LinguaTokens
 
 /**
  * Contador de gemas del prototipo «Warm Cream & Teal» (ADR-055): rombo teal
@@ -41,7 +40,7 @@ public fun GemsChip(
             painter = painterResource(LinguaIcons.GemRes),
             contentDescription = null,
             modifier = Modifier.size(20.dp),
-            colorFilter = ColorFilter.tint(LinguaTokens.Primary),
+            colorFilter = ColorFilter.tint(MaterialTheme.colorScheme.primary),
         )
         Text(
             text = count?.toString() ?: "—",

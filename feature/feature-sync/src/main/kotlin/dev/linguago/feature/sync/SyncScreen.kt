@@ -289,8 +289,8 @@ private fun AccountCard(
             text = actionText,
             onClick = onClick,
             enabled = enabled,
-            bodyColor = if (linked) colors.surfaceVariant else LinguaTokens.Primary,
-            edgeColor = if (linked) colors.outline else LinguaTokens.PrimaryEdge,
+            bodyColor = if (linked) colors.surfaceVariant else colors.primary,
+            edgeColor = if (linked) colors.outline else colors.primaryContainer,
             contentColor = if (linked) colors.onSurface else colors.onPrimary,
             modifier = Modifier.fillMaxWidth(),
         )

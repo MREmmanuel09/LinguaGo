@@ -27,7 +27,6 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
-import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.ColorFilter
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.FontWeight
@@ -48,6 +47,7 @@ import dev.linguago.core.ui.feedback.FeedbackCue
 import dev.linguago.core.ui.feedback.feedbackClickable
 import dev.linguago.core.ui.theme.LinguaTheme
 import dev.linguago.core.ui.theme.LinguaTokens
+import dev.linguago.core.ui.theme.linguaExtendedColors
 import dev.linguago.feature.home.path.LearningPath
 import dev.linguago.feature.home.path.PathItem
 
@@ -240,14 +240,16 @@ private fun ReviewCard(
     onClick: () -> Unit,
     modifier: Modifier = Modifier,
 ) {
+    val colors = MaterialTheme.colorScheme
+    val extended = linguaExtendedColors()
     Row(
         modifier =
             modifier
                 .fillMaxWidth()
                 .height(IntrinsicSize.Min)
                 .clip(RoundedCornerShape(LinguaTokens.RADIUS_BUTTON_DP.dp))
-                .background(LinguaTokens.BgSecondary)
-                .border(1.dp, LinguaTokens.TanEdge, RoundedCornerShape(LinguaTokens.RADIUS_BUTTON_DP.dp))
+                .background(colors.surfaceVariant)
+                .border(1.dp, extended.tanEdge, RoundedCornerShape(LinguaTokens.RADIUS_BUTTON_DP.dp))
                 .feedbackClickable(FeedbackCue.TAP, onClick = onClick),
         verticalAlignment = Alignment.CenterVertically,
     ) {
@@ -256,7 +258,7 @@ private fun ReviewCard(
                 Modifier
                     .width(4.dp)
                     .fillMaxHeight()
-                    .background(LinguaTokens.Terracotta),
+                    .background(extended.terracotta),
         )
         Column(
             modifier = Modifier.weight(1f).padding(horizontal = 16.dp, vertical = 14.dp),
@@ -266,19 +268,19 @@ private fun ReviewCard(
                 text = "Repasar ahora",
                 style = MaterialTheme.typography.titleMedium,
                 fontWeight = FontWeight.Bold,
-                color = LinguaTokens.Fg,
+                color = colors.onSurface,
             )
             Text(
                 text = "$count tarjetas pendientes",
                 style = MaterialTheme.typography.bodySmall,
-                color = LinguaTokens.FgMuted,
+                color = colors.onSurfaceVariant,
             )
         }
         Image(
             painter = painterResource(LinguaIcons.StarRes),
             contentDescription = null,
             modifier = Modifier.padding(end = 16.dp).size(24.dp),
-            colorFilter = ColorFilter.tint(Color(LinguaTokens.CHEST_GOLD_HEX)),
+            colorFilter = ColorFilter.tint(extended.chestGold),
         )
     }
 }

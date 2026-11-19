@@ -168,7 +168,7 @@ private fun ProfileContent(
                 iconRes = LinguaIcons.CardsRes,
                 label = "Tarjetas de repaso",
                 value = uiState.reviewCards.toString(),
-                accent = LinguaTokens.Info,
+                accent = MaterialTheme.colorScheme.tertiary,
                 modifier = Modifier.weight(1f),
             )
             StatCard(

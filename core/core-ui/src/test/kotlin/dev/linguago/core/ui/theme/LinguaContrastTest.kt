@@ -127,6 +127,38 @@ class LinguaContrastTest {
         )
     }
 
+    @Test
+    fun textos_sobre_superficies_cumplen_aa_en_ambos_temas() {
+        assertTrue(
+            "fg sobre bg claro",
+            ratio(LinguaTokens.FG_HEX, LinguaTokens.BG_HEX) >= AA,
+        )
+        assertTrue(
+            "fg sobre bg secundario claro",
+            ratio(LinguaTokens.FG_HEX, LinguaTokens.BG_SECONDARY_HEX) >= AA,
+        )
+        assertTrue(
+            "fgMuted sobre bg secundario claro",
+            ratio(LinguaTokens.FG_MUTED_HEX, LinguaTokens.BG_SECONDARY_HEX) >= AA,
+        )
+        assertTrue(
+            "fg sobre bg oscuro",
+            ratio(LinguaTokens.DARK_FG_HEX, LinguaTokens.DARK_BG_HEX) >= AA,
+        )
+        assertTrue(
+            "fg sobre bg secundario oscuro",
+            ratio(LinguaTokens.DARK_FG_HEX, LinguaTokens.DARK_BG_SECONDARY_HEX) >= AA,
+        )
+        assertTrue(
+            "fgMuted sobre bg secundario oscuro",
+            ratio(LinguaTokens.DARK_FG_MUTED_HEX, LinguaTokens.DARK_BG_SECONDARY_HEX) >= AA,
+        )
+        assertTrue(
+            "fg sobre tan oscuro",
+            ratio(LinguaTokens.DARK_FG_HEX, LinguaTokens.DARK_TAN_HEX) >= AA,
+        )
+    }
+
     /** Composición alfa sRGB: `foreground` con [alpha] sobre `background`. */
     private fun tint(
         foreground: Long,

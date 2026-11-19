@@ -8,12 +8,14 @@ import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.offset
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.shape.RoundedCornerShape
+import androidx.compose.material3.MaterialTheme
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.unit.dp
 import dev.linguago.core.ui.theme.LinguaTokens
+import dev.linguago.core.ui.theme.linguaExtendedColors
 
 private val DECK_SHAPE = RoundedCornerShape(LinguaTokens.RADIUS_CARD_LARGE_DP.dp)
 
@@ -29,6 +31,8 @@ public fun ReviewDeckStack(
     modifier: Modifier = Modifier,
     content: @Composable () -> Unit,
 ) {
+    val colors = MaterialTheme.colorScheme
+    val extended = linguaExtendedColors()
     Box(
         modifier = modifier.fillMaxWidth(),
         contentAlignment = Alignment.TopCenter,
@@ -39,8 +43,8 @@ public fun ReviewDeckStack(
                     .matchParentSize()
                     .offset(y = 16.dp)
                     .clip(DECK_SHAPE)
-                    .background(LinguaTokens.BgSecondary)
-                    .border(1.5.dp, LinguaTokens.TanEdge, DECK_SHAPE),
+                    .background(colors.surfaceVariant)
+                    .border(1.5.dp, extended.tanEdge, DECK_SHAPE),
         )
         Box(
             modifier =
@@ -48,16 +52,16 @@ public fun ReviewDeckStack(
                     .matchParentSize()
                     .offset(y = 8.dp)
                     .clip(DECK_SHAPE)
-                    .background(LinguaTokens.BgSecondary)
-                    .border(1.5.dp, LinguaTokens.TanEdge, DECK_SHAPE),
+                    .background(colors.surfaceVariant)
+                    .border(1.5.dp, extended.tanEdge, DECK_SHAPE),
         )
         Box(
             modifier =
                 Modifier
                     .fillMaxWidth()
                     .clip(DECK_SHAPE)
-                    .background(LinguaTokens.BgSecondary)
-                    .border(1.5.dp, LinguaTokens.TanEdge, DECK_SHAPE)
+                    .background(colors.surfaceVariant)
+                    .border(1.5.dp, extended.tanEdge, DECK_SHAPE)
                     .padding(20.dp),
         ) {
             Column(horizontalAlignment = Alignment.CenterHorizontally) {

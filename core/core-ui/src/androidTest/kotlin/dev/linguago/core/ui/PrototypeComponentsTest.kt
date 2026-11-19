@@ -69,6 +69,28 @@ public class PrototypeComponentsTest {
     }
 
     @Test
+    public fun feedbackSheet_verPorQue_despliegaElDetalle() {
+        composeRule.setContent {
+            LinguaTheme {
+                FeedbackSheet(
+                    isCorrect = false,
+                    message = "Revisa la respuesta",
+                    correctAnswer = "It's seven o'clock",
+                    diagnostic = "Usa It's para la hora y o'clock para la hora en punto.",
+                    onContinue = {},
+                )
+            }
+        }
+
+        composeRule.onNodeWithText("Ver por qué").performClick()
+
+        composeRule.onNodeWithText("Ocultar detalle").assertExists()
+        composeRule
+            .onNodeWithText("Usa It's para la hora y o'clock para la hora en punto.")
+            .assertExists()
+    }
+
+    @Test
     public fun pillButton_y_mic_emiten_toques() {
         var pillTaps = 0
         var micTaps = 0

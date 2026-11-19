@@ -6,11 +6,13 @@ import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.progressSemantics
 import androidx.compose.foundation.shape.RoundedCornerShape
+import androidx.compose.material3.MaterialTheme
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.unit.dp
 import dev.linguago.core.ui.theme.LinguaTokens
+import dev.linguago.core.ui.theme.linguaExtendedColors
 
 /**
  * Barra de progreso del prototipo «Warm Cream & Teal» (ADR-055): píldora de
@@ -22,6 +24,8 @@ fun LinguaProgressBar(
     modifier: Modifier = Modifier,
 ) {
     val clamped = progress.coerceIn(0f, 1f)
+    val colors = MaterialTheme.colorScheme
+    val extended = linguaExtendedColors()
 
     Box(
         modifier =
@@ -29,7 +33,7 @@ fun LinguaProgressBar(
                 .fillMaxWidth()
                 .height(10.dp)
                 .clip(RoundedCornerShape(LinguaTokens.RADIUS_PILL_DP.dp))
-                .background(LinguaTokens.Tan)
+                .background(extended.tan)
                 .progressSemantics(clamped),
     ) {
         Box(
@@ -38,7 +42,7 @@ fun LinguaProgressBar(
                     .fillMaxWidth(fraction = clamped.coerceAtLeast(0.02f))
                     .height(10.dp)
                     .clip(RoundedCornerShape(LinguaTokens.RADIUS_PILL_DP.dp))
-                    .background(LinguaTokens.Primary),
+                    .background(colors.primary),
         )
     }
 }

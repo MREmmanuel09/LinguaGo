@@ -2536,3 +2536,45 @@ completar todo lo anterior (fricción), pero el progreso es intocable (I4).
   examen degrada a dictado escrito sin bloquear (I3).
 - No sustituye la evaluación formativa de lecciones ni modifica contenidos.
 - Cambios futuros en umbrales/pool/tipos deben mantener la garantía monótona.
+
+## ADR-059: legibilidad tipográfica y contraste del modo oscuro
+
+- **Fecha:** 2026-11-18
+- **Estado:** Aceptada
+- **Se aplica en:** `core-ui` (tipografía, tema y componentes compartidos) y
+  las pantallas de `feature-*`.
+
+### Contexto
+
+Se reportaron dos problemas de lectura: el texto base se percibía pequeño y
+poco consistente, y en modo oscuro algunas pantallas mezclaban texto claro de
+`MaterialTheme` con superficies claras fijas (`BgSecondary`, `Tan`, `Fg`,
+`TanEdge`), dejando zonas con contraste insuficiente o directamente ilegibles
+(audio, repaso, tarjetas, insignias y botones).
+
+### Decisión
+
+1. **Escala base más legible:** el cuerpo sube a 17sp SemiBold, el texto
+   secundario a 15sp Medium y las etiquetas a 15/13/12sp; los títulos crecen
+   2sp y sus interlineados se ajustan. Se mantiene Nunito y la semántica de
+   Material 3, por lo que el tamaño de fuente del sistema sigue aplicándose
+   (I8).
+2. **Componentes theme-aware:** las superficies y textos compartidos usan los
+   roles del tema (`surface`, `surfaceVariant`, `onSurface`,
+   `onSurfaceVariant`, `primary`, `onPrimary`, `tertiary`, `onTertiary`) y los
+   tokens extendidos resueltos por tema (`tan`, `tanEdge`, `tanShadow`,
+   `terracotta`). No se usan tokens claros fijos como fondo o tinta cuando el
+   componente debe funcionar en claro y oscuro.
+3. **Identidad intacta:** la paleta canónica y los tokens de ADR-055 no
+   cambian; solo se corrige su resolución en modo oscuro y el tamaño/peso
+   tipográfico.
+4. **Protección de regresión:** se añade un test JVM de contraste para los
+   pares texto/superficie base en ambos temas, además del contrato de Nunito.
+
+### Consecuencias
+
+- La lectura mejora en móviles pequeños y en modo oscuro; algunos componentes
+  ganan altura y siguen apoyándose en los scrolls existentes.
+- Los componentes nuevos deben usar roles de tema en lugar de tokens claros
+  fijos.
+- No cambia lógica, contenido, progreso, sincronización ni el contrato FSRS.

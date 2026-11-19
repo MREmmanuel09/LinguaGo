@@ -39,6 +39,7 @@ import dev.linguago.core.ui.feedback.FeedbackCue
 import dev.linguago.core.ui.feedback.LocalInteractionFeedback
 import dev.linguago.core.ui.theme.LinguaTheme
 import dev.linguago.core.ui.theme.LinguaTokens
+import dev.linguago.core.ui.theme.linguaExtendedColors
 
 /**
  * Reproductor de audio de la lección, el repaso y la nivelación
@@ -59,9 +60,10 @@ public fun AudioPlayerCard(
     onPlayAtSpeed: ((Float) -> Unit)? = null,
 ) {
     val colors = MaterialTheme.colorScheme
+    val extended = linguaExtendedColors()
     val feedback = LocalInteractionFeedback.current
     var selectedSpeed by remember { mutableStateOf(AudioSpeed.NORMAL) }
-    val background = if (enabled) LinguaTokens.BgSecondary else colors.surfaceVariant
+    val background = colors.surfaceVariant
 
     Column(
         modifier =
@@ -69,7 +71,7 @@ public fun AudioPlayerCard(
                 .fillMaxWidth()
                 .clip(RoundedCornerShape(LinguaTokens.RADIUS_CARD_DP.dp))
                 .background(background)
-                .border(1.dp, LinguaTokens.TanEdge, RoundedCornerShape(LinguaTokens.RADIUS_CARD_DP.dp))
+                .border(1.dp, extended.tanEdge, RoundedCornerShape(LinguaTokens.RADIUS_CARD_DP.dp))
                 .padding(16.dp),
         verticalArrangement = Arrangement.spacedBy(12.dp),
     ) {
@@ -82,7 +84,7 @@ public fun AudioPlayerCard(
                     Modifier
                         .size(56.dp)
                         .clip(CircleShape)
-                        .background(if (enabled) LinguaTokens.Primary else colors.outlineVariant),
+                        .background(if (enabled) colors.primary else colors.outlineVariant),
             ) {
                 IconButton(
                     onClick = {
@@ -99,7 +101,7 @@ public fun AudioPlayerCard(
                     Icon(
                         painter = painterResource(LinguaIcons.PlayRes),
                         contentDescription = "Reproducir audio",
-                        tint = if (enabled) LinguaTokens.Bg else colors.onSurfaceVariant,
+                        tint = if (enabled) colors.onPrimary else colors.onSurfaceVariant,
                     )
                 }
             }
@@ -124,8 +126,8 @@ public fun AudioPlayerCard(
                 modifier =
                     Modifier
                         .clip(RoundedCornerShape(LinguaTokens.RADIUS_PILL_DP.dp))
-                        .background(LinguaTokens.BgSecondary)
-                        .border(1.dp, LinguaTokens.TanEdge, RoundedCornerShape(LinguaTokens.RADIUS_PILL_DP.dp))
+                        .background(colors.surface)
+                        .border(1.dp, extended.tanEdge, RoundedCornerShape(LinguaTokens.RADIUS_PILL_DP.dp))
                         .padding(2.dp)
                         .selectableGroup(),
                 horizontalArrangement = Arrangement.spacedBy(2.dp),
@@ -159,17 +161,19 @@ private fun SpeedSegment(
     selected: Boolean,
     onSelect: () -> Unit,
 ) {
+    val colors = MaterialTheme.colorScheme
+    val extended = linguaExtendedColors()
     val feedback = LocalInteractionFeedback.current
     Text(
         text = label,
         style = MaterialTheme.typography.labelLarge,
         fontWeight = if (selected) FontWeight.Bold else FontWeight.Medium,
-        color = if (selected) LinguaTokens.Fg else LinguaTokens.FgMuted,
+        color = if (selected) colors.onSurface else colors.onSurfaceVariant,
         modifier =
             Modifier
                 .heightIn(min = 44.dp)
                 .clip(RoundedCornerShape(LinguaTokens.RADIUS_PILL_DP.dp))
-                .background(if (selected) LinguaTokens.Tan else Color.Transparent)
+                .background(if (selected) extended.tan else Color.Transparent)
                 .selectable(
                     selected = selected,
                     role = Role.RadioButton,

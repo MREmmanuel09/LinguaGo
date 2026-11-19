@@ -69,8 +69,8 @@ android {
     namespace = "dev.linguago.app"
     defaultConfig {
         applicationId = "dev.linguago.app"
-        versionCode = 22
-        versionName = "3.5.3"
+        versionCode = 23
+        versionName = "3.5.4"
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
 
         buildConfigField("String", "GOOGLE_CLIENT_ID", "\"$googleClientId\"")
@@ -89,6 +89,10 @@ android {
                 keyAlias = providers.gradleProperty("linguago.keyAlias").orNull
                 keyPassword = providers.gradleProperty("linguago.keyPassword").orNull
             }
+            // Compatibilidad de instalación: v2/v3 cubren desde Android 8
+            // hasta las versiones actuales y evitan rechazos del instalador.
+            enableV2Signing = true
+            enableV3Signing = true
         }
     }
     buildTypes {
