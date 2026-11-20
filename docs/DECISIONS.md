@@ -66,6 +66,12 @@
 | 054 | Aprobación técnica del release 3.2.0 con revisión nativa diferida | Aprobado |
 | 055 | Rediseño de identidad visual al prototipo «Warm Cream & Teal» | Aprobado |
 | 056 | Licencia comercial del código y del contenido (cierre del modelo open source) | Aprobado |
+| 057 | TTS Piper sin espeak-ng en runtime y fonemas precalculados | Aprobado |
+| 058 | Examen de nivelación dinámico con desbloqueo monótono | Aprobado |
+| 059 | Legibilidad tipográfica y contraste del modo oscuro | Aprobado |
+| 060 | Migración a Kotlin Multiplatform con módulos compartidos y shells nativos | Propuesto |
+| 061 | UI compartida con Compose Multiplatform y shell SwiftUI | Propuesto |
+| 062 | Respaldo cifrado portable entre plataformas | Propuesto |
 
 ---
 ## ADR-000: Convención del registro de decisiones
@@ -2578,3 +2584,238 @@ poco consistente, y en modo oscuro algunas pantallas mezclaban texto claro de
 - Los componentes nuevos deben usar roles de tema en lugar de tokens claros
   fijos.
 - No cambia lógica, contenido, progreso, sincronización ni el contrato FSRS.
+
+---
+
+## ADR-060: migración a Kotlin Multiplatform con módulos compartidos y shells nativos
+
+- **Fecha:** 2026-11-20
+- **Estado:** Propuesto
+- **Se aplica en:** todo el repositorio; plan detallado en
+  [`docs/KMP_MIGRATION_PLAN.md`](KMP_MIGRATION_PLAN.md).
+- **Relacionado con:** ADR-001 (modularización), ADR-005 (persistencia),
+  ADR-061 (UI) y ADR-062 (respaldo portable).
+
+### Contexto
+
+LinguaGo es una app Android nativa de 23 módulos Gradle y ~38.500 líneas
+Kotlin. La arquitectura por capas ya separa dominio, datos, contenido, audio,
+auth, sync, UI y features, pero el producto solo se distribuye en Android.
+Se quiere una base que compile y se mantenga para Android e iOS, sin
+reescribir la app ni congelar el producto. Kotlin Multiplatform es estable y
+las dependencias clave ya tienen soporte KMP o equivalente: Room 2.8.5,
+DataStore 1.3.0, Lifecycle 2.11.0, Navigation 2.9.2, Ktor 3.6.1 y Compose
+Multiplatform 1.12.2. Hilt, en cambio, es Android-only.
+
+### Decisión
+
+1. **Adoptar KMP** con targets `androidTarget`, `iosArm64`,
+   `iosSimulatorArm64` e `iosX64` (este último solo si se necesita un
+   simulador Intel). El código común vive en `commonMain`; las APIs de
+   plataforma se exponen con `expect/actual` o interfaces implementadas en el
+   shell.
+2. **Compartir** dominio, datos, contenido, sync, auth, contratos de audio,
+   design system, pantallas y ViewModels. La UI se comparte con Compose
+   Multiplatform (ADR-061).
+3. **Shells nativos delgados:** `app` sigue siendo la aplicación Android
+   (Activity, flavors, firma, Baseline Profiles) y se añade `iosApp` (Xcode,
+   SwiftUI/UIKit) para ciclo de vida, OAuth, selector de archivos, sesión de
+   audio, Keychain y servicios del sistema. La lógica de negocio no vive en
+   los shells.
+4. **Módulo paraguas `:shared`:** agrega los módulos KMP y exporta `App()` y
+   el framework iOS. No contiene reglas de negocio. Los paths Gradle
+   existentes se conservan para preservar historial y dependencias.
+5. **DI:** Koin 4.2.x en `commonMain` (`koin-core`, `koin-compose`,
+   `koin-compose-viewmodel`). Hilt se retira por fases: primero data/content/
+   sync/auth, después las features. No conviven dos frameworks en el mismo
+   módulo.
+6. **Datos:** Room KMP 2.8.5 con `BundledSQLiteDriver`, DataStore KMP 1.3.0,
+   Okio para archivos, `kotlinx-datetime` 0.8.0/`kotlin.time.Instant` para
+   fechas y Ktor Client 3.6.1 para HTTP. Las migraciones Room se convierten a
+   `SQLiteConnection` y se prueban en Android e iOS.
+7. **Build:** Kotlin 2.4.21, AGP 9.4.1, Gradle 9.8.1. Se añaden convention
+   plugins `linguago.kmp.library` y `linguago.kmp.compose` con `explicitApi`,
+   KSP por target y el gate de calidad actual.
+8. **Migración incremental:** se convierte en el sitio, módulo por módulo,
+   con Android siempre publicable. No hay big-bang ni reescritura paralela.
+   Las features nuevas durante la migración requieren justificación y se
+   implementan KMP-first cuando sea posible.
+9. **iOS mínimo:** iOS 16.0 (pendiente de ratificación D2). Xcode 26.x.
+10. **Distribución:** Android conserva GitHub Releases; iOS usa TestFlight y
+    App Store. La estrategia de tamaño (apps por idioma o Background Assets)
+    se decide en la Fase 5 con medidas reales; no se usan On-Demand
+    Resources, deprecados en iOS 27.
+
+### Alternativas consideradas
+
+- **KMP solo de lógica + SwiftUI nativo:** descartada para la primera
+  versión porque duplica ~15.500 líneas de UI y crea dos bases de diseño;
+  queda como plan B si CMP bloquea un flujo crítico.
+- **Flutter/React Native:** descartada por reescritura, integración de audio
+  nativo y pérdida del dominio Kotlin existente.
+- **Seguir solo Android:** descartada por el objetivo de producto.
+- **Big-bang a un único módulo KMP:** descartada por riesgo y por el tamaño
+  del repositorio.
+
+### Consecuencias
+
+- Una sola base para Android e iOS, con tests comunes y un release dual.
+- Aumenta la complejidad de build (targets, KSP por plataforma, Xcode,
+  CI macOS) y la necesidad de un Mac/iPhone para cerrar la paridad.
+- Hilt→Koin toca todos los ViewModels; Room/DataStore cambian de API y
+  exigen pruebas de migración y actualización desde 3.5.4.
+- El código compartido debe evitar APIs JVM (`java.time`, `java.io`,
+  `java.util.concurrent`, `java.nio`) o aislarlas en `actual`.
+- Los modelos de audio y el tamaño de app pasan a ser una restricción de
+  producto, no solo técnica.
+- Nuevas dependencias deben ser KMP-compatibles; si no, se aíslan por
+  plataforma y se documenta.
+
+---
+
+## ADR-061: UI compartida con Compose Multiplatform y shell SwiftUI
+
+- **Fecha:** 2026-11-20
+- **Estado:** Propuesto
+- **Se aplica en:** `core-ui`, `feature-*`, `:shared` e `iosApp`.
+- **Relacionado con:** ADR-055/ADR-059 (identidad y legibilidad), ADR-060.
+
+### Contexto
+
+La app usa Jetpack Compose de punta a punta: ~6.500 líneas en `core-ui` y
+~9.200 en features, con un design system propio, animaciones, Canvas,
+tipografía Nunito, modo oscuro y semántica de accesibilidad. Compose
+Multiplatform es estable en iOS desde 1.8 y la versión 1.12.2 soporta iOS 14+,
+Navigation, Lifecycle/ViewModel y recursos. Una UI SwiftUI nativa obligaría a
+reescribir todas las pantallas y a mantener dos implementaciones para siempre.
+
+### Decisión
+
+1. **Compartir toda la UI de producto con Compose Multiplatform.** El
+   `:shared` expone un `App()` que contiene tema, navegación, pantallas y
+   ViewModels. Android lo usa desde `MainActivity`; iOS lo hospeda en un
+   `ComposeUIViewController`.
+2. **Shell iOS en SwiftUI/UIKit:** `@main`, `UIViewControllerRepresentable`,
+   ciclo de vida, OAuth (`ASWebAuthenticationSession`), selector de
+   documentos, share sheet, sesión de audio, Keychain, permisos y deep links.
+   El shell no implementa pantallas de negocio.
+3. **Navegación compartida** con `org.jetbrains.androidx.navigation:
+   navigation-compose:2.9.2`, incluyendo back stack, deep links y gesto de
+   vuelta en iOS. No se usa navegación SwiftUI para las pantallas de la app.
+4. **ViewModel/Lifecycle KMP** (`org.jetbrains.androidx.lifecycle:2.11.0`) y
+   Koin (`koinViewModel`) en común. `SavedStateHandle` y
+   `collectAsStateWithLifecycle` se mantienen.
+5. **Recursos con Compose Resources:** fuentes, drawables y strings pasan de
+   `R.*`/`LocalContext` a `composeResources`; los previews Android se quedan
+   en `androidMain` o se migran al preview multiplataforma.
+6. **Integraciones nativas puntuales** solo cuando CMP no sea suficiente:
+   teclado/IME crítico, selector de archivos, OAuth, audio, Keychain y
+   permisos. Cualquier pantalla nativa de fallback requiere ADR y una
+   interfaz común.
+7. **Accesibilidad y rendimiento como gates:** VoiceOver, dynamic type,
+   contraste, touch targets, back gesture, arranque, scroll y memoria se
+   prueban en iPhone real antes de la beta.
+
+### Alternativas consideradas
+
+- **SwiftUI nativo:** máxima sensación iOS, pero duplica la UI y el diseño;
+  descartada para v1, viable solo para pantallas aisladas.
+- **UIKit:** descartada por edad tecnológica y coste.
+- **Web wrapper:** descartada por offline, audio y calidad.
+- **CMP solo en Android:** no aporta nada al objetivo.
+
+### Consecuencias
+
+- Máxima reutilización y una sola UI que mantener; el look-and-feel en iOS es
+  el del design system de LinguaGo, no el de UIKit.
+- Hay que validar IME, dictado, teclado japonés, safe areas, gesto de vuelta,
+  VoiceOver y rendimiento en dispositivos reales.
+- El shell SwiftUI debe mantenerse mínimo para no crear una segunda capa de
+  navegación.
+- Si CMP falla en un flujo crítico, se aísla una pantalla nativa con una
+  interfaz común; no se reescribe toda la app.
+
+---
+
+## ADR-062: respaldo cifrado portable entre plataformas
+
+- **Fecha:** 2026-11-20
+- **Estado:** Propuesto
+- **Se aplica en:** `core-auth`, `core-sync`, `feature-sync`, `iosApp` y la
+  migración de datos de la app Android.
+- **Relacionado con:** ADR-013/ADR-014 (snapshot y cifrado), ADR-050
+  (snapshot v3), ADR-055 (gemas), ADR-060.
+
+### Contexto
+
+El respaldo actual cifra el snapshot con `KeystoreCryptoService`: una clave
+AES aleatoria dentro de AndroidKeyStore, no exportable y no respaldada. El
+payload cifrado se sube a Google Drive, pero la clave solo existe en esa
+instalación. Consecuencias:
+
+- Tras reinstalar la app o cambiar de dispositivo Android, `restore()` no
+  puede descifrar la copia.
+- En iOS sería imposible descifrarla, porque no existe la misma clave.
+- El usuario cree tener un respaldo, pero no es portable; es un bug latente
+  de la app actual y un bloqueador de la paridad.
+
+ADR-014 sigue siendo válido en su requisito de AES-GCM-256 y clave protegida;
+lo que cambia es el modelo de clave para que el respaldo sea portable.
+
+### Decisión
+
+1. **Formato envelope v2** para respaldos en nube:
+   - Se genera una **DEK aleatoria de 256 bits** por conjunto de respaldos.
+   - El snapshot se cifra con **AES-GCM-256** y un nonce aleatorio por
+     operación; la DEK nunca cifra directamente dos payloads con el mismo
+     nonce.
+   - La DEK se envuelve con una clave derivada de un **secreto de
+     recuperación del usuario** (frase de 12 palabras o contraseña) mediante
+     PBKDF2-HMAC-SHA256 con sal aleatoria e iteraciones versionadas
+     (≥600.000) o Argon2id si la implementación KMP es estable.
+   - Opcionalmente, la DEK también se envuelve con la clave del dispositivo
+     (Keystore/Keychain) para restaurar sin pedir el secreto en el mismo
+     dispositivo.
+   - El envelope incluye magia, versión, KDF/parámetros, sal, nonce, DEK(s)
+     envuelta(s) y ciphertext; los metadatos se autentican.
+2. **UX:** el secreto solo se pide al **activar** el respaldo o al restaurar
+   en un dispositivo nuevo. La app lo guarda envuelto por el dispositivo y
+   permite cambiarlo re-envolviendo la DEK sin re-cifrar el snapshot. Se
+   muestra una advertencia clara: sin el secreto no hay restauración.
+3. **Compatibilidad:** los respaldos v1 siguen legibles en el mismo
+   dispositivo Android. No se pueden descifrar en otro dispositivo/iOS; se
+   ofrece exportación local JSON para migrar. Los respaldos nuevos usan v2.
+4. **Implementación:** `SnapshotCrypto` común con `actual` Android (JCE +
+   Keystore) e iOS (CryptoKit/CommonCrypto + Keychain). El `CryptoService`
+   actual se mantiene para tokens de OAuth (ligados al dispositivo), no para
+   el snapshot.
+5. **Seguridad:** secretos fuera de logs, límite de intentos, errores
+   genéricos, borrado de buffers cuando sea posible y opción de biometría
+   para recordar el secreto. No se envía el secreto a ningún servidor.
+6. **Pruebas:** vectores conocidos en JVM/Android/iOS, round-trip
+   Android↔iOS, corrupción/versión inválida, cambio de secreto y migración
+   v1→v2.
+
+### Alternativas consideradas
+
+- **Mantener clave solo de dispositivo:** descartada; rompe reinstalación y
+  cross-platform.
+- **Nube sin cifrar:** descartada por privacidad y ADR-014.
+- **Clave en Google Drive:** descartada; si se compromete la cuenta, se
+  compromete el respaldo.
+- **Clave derivada de la cuenta Google:** no es portable a iOS ni a cuentas
+  no Google.
+- **Solo exportación local:** útil como fallback, pero no sustituye el
+  respaldo en nube.
+
+### Consecuencias
+
+- El respaldo pasa a ser realmente portable y se corrige un riesgo latente de
+  Android.
+- Añade onboarding y soporte (“¿dónde está mi frase?”), y una migración de
+  respaldos v1.
+- Requiere criptografía probada en ambas plataformas y tests cruzados; no se
+  debe implementar a mano sin vectores.
+- El secreto de recuperación se convierte en un dato crítico del usuario; la
+  UI debe explicarlo sin fricción excesiva (I3).
+- ADR-014 se extiende; no se invalida.

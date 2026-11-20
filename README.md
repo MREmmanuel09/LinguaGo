@@ -55,7 +55,8 @@ flowchart LR
 | Documento | Contenido |
 |---|---|
 | [ARCHITECTURE.md](ARCHITECTURE.md) | Mapa técnico: capas, módulos, patrones, stack, datos, sync, testing |
-| [docs/DECISIONS.md](docs/DECISIONS.md) | ADRs 000–041 con índice y registro de pendientes |
+| [docs/DECISIONS.md](docs/DECISIONS.md) | ADRs 000–062 con índice y registro de pendientes |
+| [docs/KMP_MIGRATION_PLAN.md](docs/KMP_MIGRATION_PLAN.md) | Plan de migración a Kotlin Multiplatform (Android + iOS): fases, riesgos y criterios de aceptación |
 | [docs/CONTENT_FORMAT.md](docs/CONTENT_FORMAT.md) | Contrato del contenido v2: lecciones, ejercicios, micro-clase y glosario |
 | [CONTENT_FORMAT.md](CONTENT_FORMAT.md) | Guía histórica del contrato v1 |
 | [docs/MODELS.md](docs/MODELS.md) | Política y estado de los modelos TTS/STT |
