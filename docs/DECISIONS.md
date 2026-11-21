@@ -69,9 +69,9 @@
 | 057 | TTS Piper sin espeak-ng en runtime y fonemas precalculados | Aprobado |
 | 058 | Examen de nivelación dinámico con desbloqueo monótono | Aprobado |
 | 059 | Legibilidad tipográfica y contraste del modo oscuro | Aprobado |
-| 060 | Migración a Kotlin Multiplatform con módulos compartidos y shells nativos | Propuesto |
-| 061 | UI compartida con Compose Multiplatform y shell SwiftUI | Propuesto |
-| 062 | Respaldo cifrado portable entre plataformas | Propuesto |
+| 060 | Migración a Kotlin Multiplatform con módulos compartidos y shells nativos | Aprobado |
+| 061 | UI compartida con Compose Multiplatform y shell SwiftUI | Aprobado |
+| 062 | Respaldo cifrado portable entre plataformas | Aprobado |
 
 ---
 ## ADR-000: Convención del registro de decisiones
@@ -2590,7 +2590,7 @@ poco consistente, y en modo oscuro algunas pantallas mezclaban texto claro de
 ## ADR-060: migración a Kotlin Multiplatform con módulos compartidos y shells nativos
 
 - **Fecha:** 2026-11-20
-- **Estado:** Propuesto
+- **Estado:** Aceptada
 - **Se aplica en:** todo el repositorio; plan detallado en
   [`docs/KMP_MIGRATION_PLAN.md`](KMP_MIGRATION_PLAN.md).
 - **Relacionado con:** ADR-001 (modularización), ADR-005 (persistencia),
@@ -2640,11 +2640,17 @@ Multiplatform 1.12.2. Hilt, en cambio, es Android-only.
    con Android siempre publicable. No hay big-bang ni reescritura paralela.
    Las features nuevas durante la migración requieren justificación y se
    implementan KMP-first cuando sea posible.
-9. **iOS mínimo:** iOS 16.0 (pendiente de ratificación D2). Xcode 26.x.
+9. **iOS mínimo:** iOS 16.0 (D2 ratificada). Xcode 26.x. Se evaluó iOS 17:
+   no simplifica la implementación porque la UI es CMP y el shell es mínimo,
+   y reduce la cobertura de dispositivos.
 10. **Distribución:** Android conserva GitHub Releases; iOS usa TestFlight y
-    App Store. La estrategia de tamaño (apps por idioma o Background Assets)
-    se decide en la Fase 5 con medidas reales; no se usan On-Demand
-    Resources, deprecados en iOS 27.
+    App Store. La beta usa una app universal; en la Fase 5 se mide el IPA real
+    y se decide entre apps por idioma o app única con Background Assets. No se
+    usan On-Demand Resources, deprecados en iOS 27.
+11. **Audio iOS:** sherpa-onnx 2.0.x vía SPM/xcframework para TTS y STT
+    offline, con `AVSpeechSynthesizer` como fallback y degradación a dictado
+    escrito. Android conserva Piper/sherpa-onnx y Vosk durante la migración;
+    unificarlo en sherpa-onnx queda para después de la paridad.
 
 ### Alternativas consideradas
 
@@ -2676,7 +2682,7 @@ Multiplatform 1.12.2. Hilt, en cambio, es Android-only.
 ## ADR-061: UI compartida con Compose Multiplatform y shell SwiftUI
 
 - **Fecha:** 2026-11-20
-- **Estado:** Propuesto
+- **Estado:** Aceptada
 - **Se aplica en:** `core-ui`, `feature-*`, `:shared` e `iosApp`.
 - **Relacionado con:** ADR-055/ADR-059 (identidad y legibilidad), ADR-060.
 
@@ -2740,7 +2746,7 @@ reescribir todas las pantallas y a mantener dos implementaciones para siempre.
 ## ADR-062: respaldo cifrado portable entre plataformas
 
 - **Fecha:** 2026-11-20
-- **Estado:** Propuesto
+- **Estado:** Aceptada
 - **Se aplica en:** `core-auth`, `core-sync`, `feature-sync`, `iosApp` y la
   migración de datos de la app Android.
 - **Relacionado con:** ADR-013/ADR-014 (snapshot y cifrado), ADR-050

@@ -1,15 +1,18 @@
 # Plan de migración a Kotlin Multiplatform (Android + iOS)
 
-> **Estado:** propuesta para aprobación · **Fecha:** 2026-11-20
+> **Estado:** aprobado para ejecución (D1–D5) · **Fecha:** 2026-11-20
+> **Decisiones ratificadas:** D1 Compose Multiplatform · D2 iOS 16.0 ·
+> D3 beta universal y release decidido con medidas · D4 sherpa-onnx +
+> `AVSpeechSynthesizer` · D5 envelope v2 con secreto de recuperación.
+> D6/D7 se cierran al inicio de la Fase 0.
 > **ADRs relacionados:** ADR-060 (arquitectura KMP), ADR-061 (UI compartida),
 > ADR-062 (respaldo cifrado portable).
 > **Alcance:** llevar LinguaGo a Android e iOS sobre una base compartida y
 > dejar un flujo de trabajo que permita seguir añadiendo features a ambas
 > plataformas sin duplicar lógica, datos, diseño ni pruebas.
 >
-> Este documento **no autoriza cambios de producción** hasta que se aprueben
-> las decisiones de la §3. La Fase 0 es precisamente la validación técnica de
-> esas decisiones.
+> La Fase 0 valida la viabilidad técnica de las decisiones en una rama de
+> spikes y no toca código de producción.
 
 ---
 
@@ -123,20 +126,24 @@ La migración se considera cerrada cuando:
 
 ---
 
-## 3. Decisiones que requieren aprobación
+## 3. Decisiones de arquitectura y estado
 
-| ID | Decisión | Recomendación | Alternativas | Impacto si se cambia |
-|---|---|---|---|---|
-| **D1** | Estrategia de UI | **Compose Multiplatform** para todas las pantallas y el design system; SwiftUI solo como shell | KMP de lógica + SwiftUI nativo; UIKit | SwiftUI duplica ~15.500 líneas de UI y crea dos equipos de diseño para siempre |
-| **D2** | Versión mínima de iOS | **iOS 16.0** | iOS 15 (más cobertura, menos APIs modernas); iOS 17 (menos cobertura, más simple) | Cambia el mínimo de Xcode, Background Assets y la matriz de dispositivos |
-| **D3** | Distribución y tamaño | **Beta: app universal** para validar paridad. **Release: decidir con medidas** entre (A) apps por idioma o (B) app única con Background Assets. **No usar On-Demand Resources**: están deprecados en iOS 27 | App universal de ~400 MB; apps por idioma de ~120–180 MB; app única con packs | Afecta I2, conversión de App Store, número de listados y esfuerzo de release |
-| **D4** | Audio iOS | **sherpa-onnx para TTS y STT** en iOS (SPM/xcframework) + `AVSpeechSynthesizer` como fallback; Android conserva sus motores actuales | Vosk iOS (soporte limitado, librería no empaquetada); Apple Speech (no garantiza offline ni modelos propios); WhisperKit (más peso) | Cambia tamaño, latencia, licencias y pipeline de modelos |
-| **D5** | Respaldo multiplataforma | **Envelope v2 con secreto de recuperación** (ADR-062) como prerrequisito de sync en iOS | Solo mismo dispositivo (rompe la promesa); nube sin cifrar (inaceptable); clave en Drive (riesgo) | Sin esto, el respaldo Android no se restaura en iOS ni tras reinstalar |
-| **D6** | iPad | **iPhone-only en v1**; layout adaptativo después | Universal desde el inicio | Añade pruebas, capturas y diseño adaptativo; no bloquea Android |
-| **D7** | Versión de paridad | **4.0.0** para el primer release dual; Android 3.x recibe mantenimiento mientras tanto | iOS 1.0.0 separado de Android 4.0.0 | Simplifica el discurso de producto y las etiquetas; requiere plan de migración de versión |
+| ID | Decisión | Estado | Recomendación | Alternativas | Impacto si se cambia |
+|---|---|---|---|---|---|
+| **D1** | Estrategia de UI | **Aprobado** | **Compose Multiplatform** para todas las pantallas y el design system; SwiftUI solo como shell | KMP de lógica + SwiftUI nativo; UIKit | SwiftUI duplica ~15.500 líneas de UI y crea dos equipos de diseño para siempre |
+| **D2** | Versión mínima de iOS | **Aprobado: iOS 16.0** | **iOS 16.0**. Se evaluó iOS 17: no simplifica la implementación porque la UI es CMP y el shell es mínimo, y además reduce cobertura | iOS 15 (más cobertura, menos APIs modernas); iOS 17 (menos cobertura, sin simplificación material) | Cambia el mínimo de Xcode, Background Assets y la matriz de dispositivos |
+| **D3** | Distribución y tamaño | **Aprobado: beta universal; release con medidas** | **Beta: app universal** para validar paridad. **Release: decidir con medidas** entre (A) apps por idioma o (B) app única con Background Assets. **No usar On-Demand Resources**: están deprecados en iOS 27 | App universal de ~400 MB; apps por idioma de ~120–180 MB; app única con packs | Afecta I2, conversión de App Store, número de listados y esfuerzo de release |
+| **D4** | Audio iOS | **Aprobado: sherpa-onnx + AVSpeechSynthesizer** | **sherpa-onnx para TTS y STT** en iOS (SPM/xcframework) + `AVSpeechSynthesizer` como fallback; Android conserva sus motores actuales | Vosk iOS (soporte limitado, librería no empaquetada); Apple Speech (no garantiza offline ni modelos propios); WhisperKit (más peso) | Cambia tamaño, latencia, licencias y pipeline de modelos |
+| **D5** | Respaldo multiplataforma | **Aprobado: envelope v2** | **Envelope v2 con secreto de recuperación** (ADR-062) como prerrequisito de sync en iOS | Solo mismo dispositivo (rompe la promesa); nube sin cifrar (inaceptable); clave en Drive (riesgo) | Sin esto, el respaldo Android no se restaura en iOS ni tras reinstalar |
+| **D6** | iPad | **Pendiente (Fase 0)** | **iPhone-only en v1**; layout adaptativo después | Universal desde el inicio | Añade pruebas, capturas y diseño adaptativo; no bloquea Android |
+| **D7** | Versión de paridad | **Pendiente (Fase 0)** | **4.0.0** para el primer release dual; Android 3.x recibe mantenimiento mientras tanto | iOS 1.0.0 separado de Android 4.0.0 | Simplifica el discurso de producto y las etiquetas; requiere plan de migración de versión |
 
-Las decisiones D1–D5 se ratifican con los ADR-060/061/062. D6 y D7 pueden
-cerrarse en la Fase 0 sin bloquear el resto.
+Las decisiones D1–D5 se ratificaron el 2026-11-20 y se registran en los
+ADR-060/061/062. **Nota D2:** las APIs que usa el proyecto (`AVAudioSession`,
+`AVAudioEngine`, `ASWebAuthenticationSession`, Keychain, Background Assets)
+tienen equivalente desde iOS 16; las novedades de iOS 17 no reducen el trabajo
+del shell, así que se prioriza la cobertura. D6 y D7 se cierran al inicio de
+la Fase 0 sin bloquear los spikes.
 
 ---
 
@@ -403,7 +410,8 @@ agrega y exporta; no contiene lógica de negocio.
 
 **Tareas**
 
-- Ratificar D1–D5; escribir/actualizar ADR-060, ADR-061 y ADR-062.
+- D1–D5 ya ratificadas (ADR-060/061/062 aceptados); cerrar D6/D7 al inicio
+  de la fase.
 - Preparar Mac con Xcode 26.x, JDK 17, Android Studio + plugin KMP, iPhone
   real, Apple Developer Program y cliente OAuth iOS en Google Cloud.
 - Crear una rama de spikes desechable; no mergear código de producción.
@@ -423,7 +431,7 @@ agrega y exporta; no contiene lógica de negocio.
 - Escribir `docs/KMP_SPIKE_REPORT.md` con medidas, semáforos y estimaciones
   revisadas.
 
-**Entregables:** ADRs propuestos, informe de spikes, matriz de riesgos
+**Entregables:** ADR aceptados, informe de spikes, matriz de riesgos
 actualizada, CI macOS verde, presupuesto de tamaño/latencia.
 
 **Criterios de aceptación**
@@ -433,7 +441,7 @@ actualizada, CI macOS verde, presupuesto de tamaño/latencia.
 - [ ] CMP renderiza una pantalla real con el tema y la tipografía.
 - [ ] El job macOS compila y ejecuta al menos un test de iOS.
 - [ ] No se modificó código de producción fuera de la rama de spikes.
-- [ ] D1–D5 aprobadas y estimaciones revisadas.
+- [ ] D1–D5 ratificadas, D6/D7 cerradas y estimaciones revisadas.
 
 **Riesgo de salida:** si el audio o el tamaño no cumplen, se replantea D3/D4
 antes de seguir; no se fuerza la arquitectura.
@@ -812,7 +820,8 @@ semanas del calendario, pero no del esfuerzo.
 
 **Hitos de decisión (go/no-go):**
 
-- **M0:** los spikes demuestran audio, Room, CMP y CI; se ratifican D1–D5.
+- **M0:** los spikes demuestran audio, Room, CMP y CI; D1–D5 ratificadas y
+  D6/D7 cerradas.
 - **M2:** restore Android↔iOS funciona; si no, no se avanza a UI.
 - **M4:** la lección completa funciona en iPhone; si no, se replantea el
   alcance de la beta.
@@ -898,19 +907,27 @@ Resources, sherpa-onnx iOS (SPM), Fastlane (CI).
 **Mantener Android-only:** Baseline Profiles, macrobenchmark, QA
 instrumentado, `com.android.test`, firma y flavors.
 
-### E. Preguntas abiertas
+### E. Decisiones resueltas y preguntas abiertas
 
-1. ¿CMP para toda la UI o SwiftUI nativo? (D1)
-2. ¿iOS 16, 15 o 17? (D2)
-3. ¿Apps por idioma, app única o Background Assets para el release? (D3)
-4. ¿sherpa-onnx para TTS/STT en iOS, o Vosk/Apple Speech? (D4)
-5. ¿Se aprueba el envelope v2 con secreto de recuperación? (D5)
+**Resueltas el 2026-11-20:**
+
+1. **D1:** Compose Multiplatform para toda la UI; SwiftUI solo como shell.
+2. **D2:** iOS 16.0; iOS 17 no simplifica la implementación y reduce
+   cobertura.
+3. **D3:** beta universal; el release se decide en Fase 5 con el IPA medido.
+4. **D4:** sherpa-onnx para TTS/STT en iOS + `AVSpeechSynthesizer` de
+   fallback.
+5. **D5:** envelope v2 con secreto de recuperación (ADR-062).
+
+**Abiertas:**
+
 6. ¿iPhone-only o iPad también en v1? (D6)
-7. ¿Mac/Xcode/iPhone/Apple Developer disponibles y cuándo?
-8. ¿Se unifica Android STT en sherpa-onnx después de la paridad?
-9. ¿Nombre “LinguaGo” disponible en App Store? ¿Metadata en español o
-   español + inglés?
-10. ¿Revisión legal de licencias, privacidad y export compliance antes del
+7. ¿Versión 4.0.0 para el release dual o iOS 1.0.0 separado? (D7)
+8. ¿Mac/Xcode/iPhone/Apple Developer disponibles y cuándo?
+9. ¿Se unifica Android STT en sherpa-onnx después de la paridad?
+10. ¿Nombre “LinguaGo” disponible en App Store? ¿Metadata en español o
+    español + inglés?
+11. ¿Revisión legal de licencias, privacidad y export compliance antes del
     envío?
 
 ### F. Referencias
@@ -923,20 +940,21 @@ instrumentado, `com.android.test`, firma y flavors.
 - k2-fsa, *sherpa-onnx iOS SwiftUI/SPM* y modelos ASR/TTS.
 - Apple, *Maximum build file sizes*, *On-Demand Resources* (deprecado),
   *Background Assets*, *App Store Review Guidelines*.
-- ADR-003/006/010/014/016/050/057/058/059 del repositorio.
+- ADR-003/006/010/014/016/050/057/058/059/060/061/062 del repositorio.
 
 ---
 
 ## 13. Recomendación final
 
-Aprobar **KMP + Compose Multiplatform** con migración incremental y
-**ADR-062 como prerrequisito de sync**. Empezar por la Fase 0 y no tocar
-producción hasta tener los spikes de audio, Room y CI macOS medidos. La
-decisión de distribución iOS (apps por idioma vs Background Assets) puede
-esperar a la Fase 5, pero el presupuesto de tamaño debe fijarse ya: **< 200 MB
-comprimidos por variante** y **< 400 MB instalados** como límite duro.
+**KMP + Compose Multiplatform** quedan aprobados con migración incremental y
+**ADR-062 como prerrequisito de sync**. El siguiente paso es la Fase 0:
+ramas de spikes para validar audio, Room, CMP y CI macOS antes de tocar
+producción. La distribución iOS (apps por idioma vs Background Assets) se
+decide en la Fase 5 con medidas reales, pero el presupuesto se fija ya:
+**< 200 MB comprimidos por variante** y **< 400 MB instalados** como límite
+duro.
 
-Si el usuario confirma Mac + iPhone + Apple Developer, el camino crítico es
-realista en **6–9 meses a tiempo completo**. Si falta alguno, el plan puede
-avanzar hasta la Fase 2 (datos/sync) y la Fase 3 en simulador, pero la
-paridad y el release quedarán bloqueados.
+El camino crítico es realista en **6–9 meses a tiempo completo** si se cuenta
+con Mac + iPhone + Apple Developer. Si falta alguno, se puede avanzar hasta
+la Fase 2 (datos/sync) y la Fase 3 en simulador, pero la paridad y el release
+quedarán bloqueados.
